@@ -1,0 +1,3408 @@
+1
+00:00:08,460 --> 00:00:11,700
+Rym: It's Monday, May 2nd, 2022.
+
+2
+00:00:11,700 --> 00:00:12,141
+Rym: I'm Rym.
+
+3
+00:00:13,304 --> 00:00:15,249
+Rym: I'm Scott and this is GeekNights.
+
+4
+00:00:15,289 --> 00:00:17,068
+Rym: tonight We're talking about tech debt.
+
+5
+00:00:19,072 --> 00:00:19,781
+Scott: Let's do this.
+
+6
+00:00:21,711 --> 00:00:29,640
+Rym: It's actually, you know, despite the the forecast said it would be like low 60s, but this weekend it was actually mid 60s and super sunny.
+
+7
+00:00:29,660 --> 00:00:31,030
+Rym: it was way nicer.
+
+8
+00:00:31,171 --> 00:00:32,396
+Rym: I have realized I just can't really.
+
+9
+00:00:32,517 --> 00:00:35,008
+Rym: I think the forecast until like the night before.
+
+10
+00:00:35,088 --> 00:00:46,550
+Scott: now I think what happened is, you know, there were similar temperatures, you know earlier But it was very very windy and it wasn't windy over the weekend and that helped quite a bit in terms of the temperature.
+
+11
+00:00:46,691 --> 00:00:47,437
+Rym: It did help.
+
+12
+00:00:47,578 --> 00:00:53,050
+Rym: but also I'm glad we went biking on Friday So we did a big bike ride and then are on Saturday skipped work, right?
+
+13
+00:00:53,190 --> 00:01:02,970
+Rym: No, we don't Saturday because then Sunday I get up and we just go to a little light bike ride to go to that Japan fest and we see a little sign and we're like, all right five borough bike tours fucking everything up today.
+
+14
+00:01:03,753 --> 00:01:06,042
+Rym: I always forget that things happening me until it happens.
+
+15
+00:01:06,625 --> 00:01:15,431
+Rym: There was a line of cars Completely filling Queens are our Crescent Street all the way to the end of Crescent Street because drivers didn't know that the roads were all Closed.
+
+16
+00:01:15,733 --> 00:01:17,119
+Scott: Google Maps indicates it.
+
+17
+00:01:17,139 --> 00:01:17,963
+Scott: so I don't know what people are.
+
+18
+00:01:18,023 --> 00:01:19,570
+Rym: you know, Google Maps is perfect about that.
+
+19
+00:01:19,670 --> 00:01:21,903
+Rym: It not only does it indicate it but it tells you how to get around.
+
+20
+00:01:21,964 --> 00:01:22,970
+Scott: it's all over the news.
+
+21
+00:01:23,131 --> 00:01:23,593
+Scott: It's all over.
+
+22
+00:01:23,634 --> 00:01:29,301
+Scott: it's like what are you is not paying attention to the world at all If you're in New York City at all, it's like you can't miss that.
+
+23
+00:01:29,342 --> 00:01:29,803
+Scott: It's coming.
+
+24
+00:01:29,823 --> 00:01:31,590
+Scott: Yeah, it's like it's everywhere.
+
+25
+00:01:32,672 --> 00:01:37,972
+Rym: I mean, my only thing about it is I avoid it as a biker mostly because it's not that long and the one time I Did it?
+
+26
+00:01:37,992 --> 00:01:39,477
+Scott: Well, so here's the thing, right?
+
+27
+00:01:39,537 --> 00:01:42,067
+Scott: So if on the one hand right?
+
+28
+00:01:42,207 --> 00:01:50,730
+Scott: It's like I like that it fucks over cars But the fact that all those cars idle all you know in waiting is not probably it's you know, who knows anyway?
+
+29
+00:01:51,392 --> 00:01:57,690
+Scott: But it's this event where it you know, it's a big biking event because it has a lot of sponsorship.
+
+30
+00:01:58,171 --> 00:01:59,836
+Scott: The number one sponsor is a bank.
+
+31
+00:01:59,876 --> 00:02:08,039
+Scott: they got money for this thing, right and it's the only one where New York City Closes down major roads completely.
+
+32
+00:02:08,060 --> 00:02:09,664
+Rym: Yeah, you get to bike in some places.
+
+33
+00:02:09,705 --> 00:02:16,986
+Scott: You can normally never bike Right and on top of that some of those roads are places where are normally you could never bike.
+
+34
+00:02:17,267 --> 00:02:18,490
+Scott: BQE is a highway.
+
+35
+00:02:18,570 --> 00:02:21,461
+Scott: Yeah, it's like, you know, Verrazano bridge has no bike lane.
+
+36
+00:02:21,502 --> 00:02:23,529
+Scott: people are trying to get at one it right etc.
+
+37
+00:02:23,991 --> 00:02:27,789
+Scott: so and then there's rest stops and and such and such.
+
+38
+00:02:27,869 --> 00:02:40,122
+Scott: so but in order to participate in this event, you either have to do a big charity thing, which is a lot of money or You have to pay a lot of money and fight for a ticket.
+
+39
+00:02:40,383 --> 00:02:44,697
+Scott: or right or you have to Volunteer and then you get a free ticket the year after.
+
+40
+00:02:45,298 --> 00:02:51,278
+Scott: so I did it what we did it once in 2012 and it's like All right, you know, it's it's.
+
+41
+00:02:51,620 --> 00:02:53,510
+Scott: you know, there's some fun aspect to it.
+
+42
+00:02:53,550 --> 00:02:56,875
+Scott: It's not completely unenjoyable But you know, there's.
+
+43
+00:02:56,996 --> 00:02:58,766
+Scott: there's a part of the man.
+
+44
+00:02:58,806 --> 00:03:04,290
+Scott: parts of it For example would be if you don't start early you get stuck behind a lot of people at the start.
+
+45
+00:03:04,370 --> 00:03:19,388
+Scott: yeah, if you if you Don't get to the end quickly Then basically like you want like people pile up at the finish line and you have to sort of walk like the last Quite a bit because there's no room for anyone to keep right.
+
+46
+00:03:19,428 --> 00:03:26,914
+Rym: over the one year I did it having to walk about a mile before Central Park because they were just so dense like all the buyers a complete dead Stop right?
+
+47
+00:03:26,954 --> 00:03:34,161
+Scott: Well, you think at the finish line people cross the finish line stop the person behind them stops And if the right so it's like you think they know.
+
+48
+00:03:34,181 --> 00:03:34,925
+Rym: you're in New York.
+
+49
+00:03:34,985 --> 00:03:35,910
+Rym: if you're there's an escalator.
+
+50
+00:03:35,930 --> 00:03:37,601
+Rym: You got to start walking as soon as you get off of it.
+
+51
+00:03:37,642 --> 00:03:38,850
+Rym: You can't just stop, right?
+
+52
+00:03:39,050 --> 00:03:45,710
+Scott: So it creates this logjam at the end and soon enough people are stopping before the finish line and walking over the finish line.
+
+53
+00:03:45,770 --> 00:03:55,741
+Scott: Right, so they need to be like have the finish line and say keep biking keep biking until you get so far then get off Your bike right like around the corner or some shit.
+
+54
+00:03:55,761 --> 00:03:58,270
+Scott: so people can you know go through the finish line?
+
+55
+00:03:58,410 --> 00:03:58,993
+Scott: But they don't do that.
+
+56
+00:03:59,255 --> 00:04:09,810
+Scott: And then there's another line at the Staten Island Ferry You know because it fills up and then it leaves and now you stand there waiting Right for the next one and you so on and there's no way to bike home.
+
+57
+00:04:10,111 --> 00:04:15,150
+Rym: You can't even bike right normally except one way during this one of you can't go back over the Verrazano.
+
+58
+00:04:15,270 --> 00:04:18,081
+Scott: So people wait for hours to get on the Staten Island Ferry to get home.
+
+59
+00:04:18,462 --> 00:04:20,649
+Scott: if they weren't one of the first people to finish.
+
+60
+00:04:20,750 --> 00:04:23,567
+Scott: So, you know, it's it's not the greatest event.
+
+61
+00:04:23,607 --> 00:04:29,467
+Scott: It's only 55 miles which sounds like a lot to people who aren't you know cyclists, but it's really.
+
+62
+00:04:29,487 --> 00:04:32,349
+Scott: you know If you can pedal like you can do it.
+
+63
+00:04:32,571 --> 00:04:33,237
+Scott: It's like it's.
+
+64
+00:04:33,399 --> 00:04:34,630
+Scott: there's no major hills.
+
+65
+00:04:34,710 --> 00:04:38,770
+Scott: The Verrazano is the biggest hill and it's if you know how to use a gear you can do it.
+
+66
+00:04:38,810 --> 00:04:42,895
+Scott: It's like if you if you're just fine You're gonna make it.
+
+67
+00:04:42,995 --> 00:04:46,828
+Rym: in the early days of you biking with that bike that was way too big for you You were just fine.
+
+68
+00:04:47,891 --> 00:04:55,450
+Scott: Yes, an old unhealthy person as long as they have a functioning bike on a city bike will make it eventually, right?
+
+69
+00:04:55,590 --> 00:05:01,230
+Scott: It's like a child's is gonna make it eventually, you know people do this thing on folding bikes, right?
+
+70
+00:05:02,210 --> 00:05:08,619
+Rym: Well, apparently it's more because you know, we want to like the Japan fest - there's this In places where there's a lot of people.
+
+71
+00:05:08,900 --> 00:05:11,150
+Rym: if there's an event that's even remotely interesting.
+
+72
+00:05:12,171 --> 00:05:24,870
+Rym: Either it's so expensive that only a few people can go to it or it's accessible price-wise and a million million people want to go to it and it creates logistical nightmares or Impossible waiting lists, right?
+
+73
+00:05:24,990 --> 00:05:30,830
+Scott: So the event itself is not such a great thing to you know, do it once for the experience or whatever.
+
+74
+00:05:30,951 --> 00:05:31,980
+Scott: But it's not right.
+
+75
+00:05:32,202 --> 00:05:42,464
+Scott: as bike rides go It's like you can just get on your bike and ride for free on better routes in other directions right out of the city That are longer and nicer and you know better in every way.
+
+76
+00:05:42,525 --> 00:06:00,722
+Scott: there's tons of them but the thing I like about the ride is that People come and do this ride who are not, you know, the big-time Cyclists, it's like it gets someone who was normally be scared of 55 miles will come out to this thing Because
+
+77
+00:06:00,762 --> 00:06:03,459
+Rym: it's well-supported Big event.
+
+78
+00:06:03,580 --> 00:06:18,790
+Scott: it's a new right thing Yeah, and though some of those people some small percentage of them right realize after doing it Exactly what I realized like 55 miles ain't that far this ride ain't that great?
+
+79
+00:06:19,030 --> 00:06:22,010
+Rym: Well, just like every the Harlem Valley Railroad rest in peace.
+
+80
+00:06:22,292 --> 00:06:28,521
+Rym: There's a reason they had the hundred mile ride in the 80 mile ride But they also had the 50 and the 40 and the 20 and the 12.
+
+81
+00:06:28,521 --> 00:06:29,665
+Scott: but people do.
+
+82
+00:06:29,825 --> 00:06:43,139
+Scott: every year people do this bike tour, which is meh and Then some percentage of them become right the the cyclists that are out filling the other roads Right because they realize like oh wait.
+
+83
+00:06:43,761 --> 00:06:44,644
+Scott: I get it now.
+
+84
+00:06:44,725 --> 00:06:49,239
+Scott: bikes are really really efficient At least on roads is not that scared.
+
+85
+00:06:49,259 --> 00:07:08,370
+Rym: the thing that I'm very happy about is because when I do go to the office I always bike now unless it's like actually raining or extremely cold like below 40 and The number of bikers and I said this last year and the year before but it just keeps going up The number of people biking to work during the rush hour is getting to the point that they got to start adding more bike lanes.
+
+86
+00:07:08,875 --> 00:07:10,390
+Rym: It's starting to be a big traffic problem.
+
+87
+00:07:10,671 --> 00:07:11,675
+Scott: They said they were gonna take.
+
+88
+00:07:11,715 --> 00:07:15,290
+Scott: give us the south outer roadway what it's still held up what this was to fuck the problem?
+
+89
+00:07:15,691 --> 00:07:16,755
+Rym: Oh, uh, I there's.
+
+90
+00:07:16,775 --> 00:07:22,268
+Rym: so part of the problem is there's a bunch of other maintenance happening that went way over schedule that they need some of the space in lanes for.
+
+91
+00:07:23,211 --> 00:07:24,094
+Scott: Yeah, too bad.
+
+92
+00:07:24,154 --> 00:07:26,221
+Scott: Just fix the upper deck without you know deal with it.
+
+93
+00:07:26,442 --> 00:07:26,823
+Rym: They can't.
+
+94
+00:07:27,124 --> 00:07:29,594
+Rym: apparently there's some stupid reason for it I'm mad about.
+
+95
+00:07:29,695 --> 00:07:31,970
+Rym: is at the bait where the bike path is.
+
+96
+00:07:32,050 --> 00:07:35,804
+Rym: They opened up where they used at the base the Queensborough Plaza in Manhattan.
+
+97
+00:07:35,925 --> 00:07:37,310
+Scott: Yeah, I don't I don't go through that hole.
+
+98
+00:07:37,391 --> 00:07:38,237
+Scott: I go to the old hole.
+
+99
+00:07:38,257 --> 00:07:39,930
+Rym: Oh, no, but that hole is a problem.
+
+100
+00:07:40,231 --> 00:07:46,670
+Rym: They leaving that hole closed was fine because only people who don't know the way around actually wanted to go out the hole.
+
+101
+00:07:46,750 --> 00:07:50,782
+Rym: It's way better to go follow the bike path anyway, but now that it's open.
+
+102
+00:07:51,203 --> 00:07:56,770
+Rym: There's a little stop sign there and You have bikers coming down the bridge at speed.
+
+103
+00:07:57,193 --> 00:08:08,854
+Rym: They turn right and try to go straight out the hole But meanwhile, there's other people coming from the normal path who are making a you left turn across their path Onto the Queensborough Bridge.
+
+104
+00:08:09,195 --> 00:08:14,370
+Rym: I have seen three different bike collisions happen there because it's an uncontrolled intersection.
+
+105
+00:08:14,471 --> 00:08:17,309
+Rym: It's bikes like they made a really bad traffic pattern.
+
+106
+00:08:18,272 --> 00:08:19,763
+Scott: Anyway, it's not it's not good.
+
+107
+00:08:20,508 --> 00:08:22,841
+Scott: So All right news tech day.
+
+108
+00:08:22,861 --> 00:08:24,470
+Scott: Let's talk about some actual news.
+
+109
+00:08:25,913 --> 00:08:28,901
+Scott: This news is not in itself is not that exciting right?
+
+110
+00:08:29,041 --> 00:08:32,249
+Scott: It's you know, the just you know, Firefox is doing it already, right?
+
+111
+00:08:33,832 --> 00:08:40,010
+Scott: And Apple has theirs also, but Microsoft Edge is going to also include a built-in VPN, right?
+
+112
+00:08:40,090 --> 00:09:03,769
+Scott: So the way this works is that you know, you open up your Microsoft Edge browser you visit a website your traffic is encrypted and Sent to a Microsoft server somewhere and the Microsoft server will then go and make a request from the actual web server Right and then collect the response and then send you know, the encrypted, you know response back to you.
+
+113
+00:09:05,185 --> 00:09:10,946
+Scott: so VPNs like this have a lot of uses some good uses some bad uses.
+
+114
+00:09:11,046 --> 00:09:12,430
+Scott: some may uses, right?
+
+115
+00:09:12,930 --> 00:09:14,282
+Scott: But it's getting really popular.
+
+116
+00:09:14,403 --> 00:09:25,606
+Scott: for now Even the big tech companies Apple Microsoft right to provide, you know Just VPN service to just to just you at all times, right?
+
+117
+00:09:26,209 --> 00:09:29,195
+Scott: So Why would they do this?
+
+118
+00:09:29,335 --> 00:09:29,556
+Scott: Right?
+
+119
+00:09:29,616 --> 00:09:35,030
+Scott: It's like well, you can't use these, you know, Microsoft VPNs like watch Netflix from another country.
+
+120
+00:09:37,032 --> 00:09:41,085
+Rym: All I mean this one's got a one gigabyte limit even if they didn't I assume have other.
+
+121
+00:09:41,266 --> 00:09:43,249
+Scott: well for you have to pay for Beyond that, right?
+
+122
+00:09:43,390 --> 00:09:49,301
+Scott: So that's one reason is that they might be able to get more money out of you is if you like the app You know the Apple one it's like.
+
+123
+00:09:49,341 --> 00:09:50,410
+Scott: you don't just get that for free.
+
+124
+00:09:50,410 --> 00:09:53,949
+Scott: You I think have to be on iCloud Plus or something like that right in order to use that.
+
+125
+00:09:54,491 --> 00:09:58,143
+Scott: So it's a. it's a service that they can provide cheaply easily.
+
+126
+00:09:58,183 --> 00:10:00,190
+Scott: They don't have to develop it because it's deploy it.
+
+127
+00:10:00,250 --> 00:10:05,968
+Scott: It's really easy to do if the big tech company can manage it if every other comp company in the world has managed it.
+
+128
+00:10:06,028 --> 00:10:07,834
+Scott: Yeah It's so.
+
+129
+00:10:07,874 --> 00:10:10,992
+Scott: it wasn't hard for them and they can make some money on it Why not do it?
+
+130
+00:10:11,615 --> 00:10:16,190
+Scott: and the second reason is that hey, you know, it's a selling point, right?
+
+131
+00:10:16,270 --> 00:10:21,466
+Scott: It's like we can tell our customers are protecting their privacy and their security, which they are in a way, right?
+
+132
+00:10:21,486 --> 00:10:25,841
+Scott: You're protected from Basically two major security threats.
+
+133
+00:10:26,142 --> 00:10:35,230
+Scott: one the other people on your network Like if you're at a coffee shop, you know or something using a public Wi-Fi at a theater or at a square garden, right?
+
+134
+00:10:35,470 --> 00:10:36,564
+Scott: They have a public Wi-Fi.
+
+135
+00:10:36,605 --> 00:10:41,870
+Scott: Yeah And you use one of these VPNs even a Microsoft Apple one.
+
+136
+00:10:41,970 --> 00:10:46,630
+Scott: It's like you're protected from any shenanigans that are going on and those public Wi-Fi is airport.
+
+137
+00:10:46,690 --> 00:10:53,869
+Rym: Well, it gets a little tricky because TLS largely protects 99% of what anyone would do over one of those connections.
+
+138
+00:10:55,591 --> 00:11:03,180
+Rym: Yeah, but yeah, and so the people on the Wi-Fi still like they can figure out your MAC address For tracking purposes.
+
+139
+00:11:03,582 --> 00:11:12,390
+Scott: and the last thing is like, you know If you think about it all of the unencrypted traffic that you send out your network to have any unencrypted traffic?
+
+140
+00:11:12,390 --> 00:11:13,717
+Rym: I was looking every tab I got open.
+
+141
+00:11:13,979 --> 00:11:18,036
+Scott: Yeah, your internet service provider Com not secure.
+
+142
+00:11:18,920 --> 00:11:27,830
+Scott: Yeah, that's gonna be fixed soon Your internet service provider and anyone in between you and the service provider like the coffee shop or whatever right could be.
+
+143
+00:11:28,552 --> 00:11:31,161
+Scott: You know looking at all your data that's not encrypted.
+
+144
+00:11:31,241 --> 00:11:35,437
+Scott: and even if it is encrypted, you know, for example Let's say I visit google.com.
+
+145
+00:11:35,558 --> 00:11:38,090
+Scott: Well, yeah, someone can see that I made a Google search.
+
+146
+00:11:38,190 --> 00:11:42,066
+Scott: They don't know what I searched for right, but they know that I made a guy.
+
+147
+00:11:42,146 --> 00:11:43,170
+Scott: I went to Google, right?
+
+148
+00:11:43,310 --> 00:11:49,630
+Scott: They still know some information especially if you got some DNS going on right if they're your DNS provider, right?
+
+149
+00:11:49,810 --> 00:11:56,903
+Scott: Like, you know Firefox is doing like those secure Hdns over HTTP things right which I disabled because I have a pie hole.
+
+150
+00:11:56,963 --> 00:11:59,190
+Scott: but they also do our L's.
+
+151
+00:11:59,411 --> 00:12:08,490
+Rym: Themselves that contain search strings or other metadata often leak data about you to certain services along the way Depends on how things are encrypted and whatnot.
+
+152
+00:12:08,711 --> 00:12:14,572
+Scott: So when these companies are, you know providing you with VPN service They can.
+
+153
+00:12:14,612 --> 00:12:19,650
+Scott: then if you look at their terms of service, they may or may not be collecting data about you.
+
+154
+00:12:20,072 --> 00:12:38,450
+Scott: They may not be collecting it in a way that can be traced back to you But at bare minimum, they're probably using that data to at least you know Look at general traffic patterns and improve Services and use that data for their own research and business decision-making and whatnot.
+
+155
+00:12:38,591 --> 00:12:41,850
+Scott: So that's why all those reasons combined.
+
+156
+00:12:42,512 --> 00:12:54,749
+Scott: Every company in the in the universe is trying to get you to use their VPN, right and I'm surprised We're not seeing like Verizon or anyone like that Want to fight back against this more than they already are, right?
+
+157
+00:12:56,370 --> 00:13:14,770
+Rym: Yeah, well, it's not it's not I guess I. it's not clear to me or I guess a lot of people exactly how every different group monetizes that kind of stuff because most of the Data people want like companies like Verizon want is mostly I assume just to drive ads And ad networks and sell that data to ad networks.
+
+158
+00:13:15,171 --> 00:13:21,349
+Rym: But they can do that like the websites you're visiting are already doing that to you regardless of how you access them.
+
+159
+00:13:22,195 --> 00:13:32,400
+Rym: Yep, the VPN can at best Obfuscate who you are, but the data point of you were a person with this profile that they guessed at Sought information about XYZ.
+
+160
+00:13:32,440 --> 00:13:34,790
+Rym: that data is still what they are seeking for ads.
+
+161
+00:13:35,873 --> 00:13:39,633
+Scott: yeah, I mean, I really don't you know, but There has to be.
+
+162
+00:13:39,673 --> 00:13:47,298
+Scott: if there's some other explanation as to why every company in the universe is starting up VPNs It's like are they actually just trying to?
+
+163
+00:13:47,358 --> 00:13:51,450
+Scott: you know, Microsoft and Apple do have an interest in protecting user security.
+
+164
+00:13:51,631 --> 00:13:57,871
+Rym: They do because they do not have an interest in other companies showing you ads on their devices Right.
+
+165
+00:13:57,891 --> 00:14:05,231
+Scott: I mean, it's like that is you know, definitely going to decrease like customer service calls or you know other kinds of issues Right.
+
+166
+00:14:05,432 --> 00:14:08,706
+Rym: So it could also be as simple as a lot of reasons that they're doing this.
+
+167
+00:14:08,787 --> 00:14:12,783
+Scott: the point is All these companies are doing this for reasons.
+
+168
+00:14:12,823 --> 00:14:14,690
+Scott: They're not just doing it because whatever.
+
+169
+00:14:14,871 --> 00:14:27,150
+Rym: Also, this is wave two because there was a big wave five to eight years ago of VPNs popping up especially in a lot of Nordic countries offering their services to the world.
+
+170
+00:14:27,250 --> 00:14:28,234
+Scott: Well, but those were right.
+
+171
+00:14:28,254 --> 00:14:32,450
+Scott: So those are third-party via ends or like go get Nord VPN or what?
+
+172
+00:14:32,590 --> 00:14:38,478
+Rym: you know a lot of them were either aimed at nerds or aimed at Criminals and pirates like pretty.
+
+173
+00:14:38,658 --> 00:14:44,431
+Scott: I mean if you go on YouTube even today, you know One of the biggest sponsors of YouTube videos, you know it's like.
+
+174
+00:14:44,491 --> 00:14:54,245
+Scott: I don't I skip past the ads but I can see that it was an ad for some VPN service and Specifically are like watch Netflix from other countries with our VPN service.
+
+175
+00:14:54,285 --> 00:14:57,637
+Scott: Like they say that right up They're not even hiding it which I respect.
+
+176
+00:14:57,858 --> 00:14:58,721
+Scott: Yeah coming out with that.
+
+177
+00:14:59,022 --> 00:15:02,674
+Scott: I respect saying we sell crime By our cry.
+
+178
+00:15:02,754 --> 00:15:03,276
+Scott: I love that.
+
+179
+00:15:03,316 --> 00:15:04,480
+Scott: It's like yes, dude.
+
+180
+00:15:04,500 --> 00:15:05,964
+Scott: Don't don't beat around the bush.
+
+181
+00:15:06,365 --> 00:15:11,758
+Scott: I respect you for coming out with it right, it's like But the Apple and the the Microsoft ones.
+
+182
+00:15:11,858 --> 00:15:13,102
+Scott: they don't provide that service.
+
+183
+00:15:13,162 --> 00:15:21,988
+Scott: those VPNs are gonna be in your country and not help you Do that and they're only gonna be in your browser and not really for all your internet traffic all-encompassing.
+
+184
+00:15:22,108 --> 00:15:27,161
+Scott: So But so one way it could be services means that they're up to something.
+
+185
+00:15:27,442 --> 00:15:41,947
+Rym: one thing could be just trying to get people into Their general ecosystem of stuff because generally once someone starts using something they tend to keep using it Unless something stops them and it's easier to get them to pay to keep access to said thing.
+
+186
+00:15:42,388 --> 00:15:47,730
+Rym: another thing They could be doing would be around trying to head off competitors with ad networks and everything.
+
+187
+00:15:48,932 --> 00:15:53,010
+Rym: It could also be they saw that there's a bunch of companies making money selling VPNs.
+
+188
+00:15:53,731 --> 00:16:03,060
+Rym: Why not just sell one and use the free tier like with this one gigabyte limit just to get an ecosystem people using it You'll upsell to like 5% of your users.
+
+189
+00:16:03,382 --> 00:16:05,249
+Rym: It becomes profitable and you're good to go.
+
+190
+00:16:06,752 --> 00:16:13,829
+Scott: But yeah, it's you know, it's a thing now the the you know relatively past few year right development of going from VPNs.
+
+191
+00:16:13,889 --> 00:16:15,255
+Scott: where First is the thing?
+
+192
+00:16:15,335 --> 00:16:22,287
+Scott: companies did so you could connect to their thing to work from home Right or connect networks in different places to each other, right?
+
+193
+00:16:22,930 --> 00:16:25,177
+Scott: And then they became a thing that you would buy.
+
+194
+00:16:25,197 --> 00:16:32,721
+Scott: that were standalone companies and now the big tech companies are all pushing VPNs on people.
+
+195
+00:16:32,983 --> 00:16:33,104
+Scott: Mm-hmm.
+
+196
+00:16:34,030 --> 00:16:41,583
+Rym: So, uh in some other news and obviously if you want news about the Russian invasion of Ukraine GeekNights is not the place to go for that.
+
+197
+00:16:41,965 --> 00:16:46,535
+Rym: That is we are not journalists in that regard but one minor at what.
+
+198
+00:16:46,635 --> 00:17:07,440
+Rym: one aspect of this war that reg is into technology is interesting is the asymmetry between the stated and expected capabilities of the Russian military in this case the Russian Navy and The reality of modern drone technology and anti-ship missiles and basic things were basically what just happened.
+
+199
+00:17:08,304 --> 00:17:10,738
+Rym: You might have seen earlier not that long ago.
+
+200
+00:17:11,821 --> 00:17:22,460
+Rym: Ukraine was notably the first nation in world history to sink an enemy combatants flagship Despite not having a navy of their own which was interesting.
+
+201
+00:17:23,284 --> 00:17:24,349
+Scott: So Russia have one boat.
+
+202
+00:17:24,752 --> 00:17:30,460
+Rym: No, not even I mean But they don't have like a navy like a blue water, right?
+
+203
+00:17:31,023 --> 00:17:32,530
+Scott: How many boats does it count to you?
+
+204
+00:17:32,550 --> 00:17:34,480
+Scott: do you need for it to be a Navy like if I get to?
+
+205
+00:17:35,120 --> 00:17:36,873
+Scott: Paper little sailboats got Navy.
+
+206
+00:17:36,954 --> 00:17:41,518
+Scott: all that a Navy Boats, right, you know, they go they go.
+
+207
+00:17:42,561 --> 00:17:48,160
+Rym: Well that Navy might be easy to defeat and I thought a lot of subjective judgment over what constitutes a name.
+
+208
+00:17:48,240 --> 00:17:49,245
+Scott: I'm just I'm just.
+
+209
+00:17:49,265 --> 00:17:50,812
+Scott: what I'm saying is like what you know, it's not.
+
+210
+00:17:51,194 --> 00:17:54,811
+Scott: you know, like you have a Navy But then you have like an armada that's even bigger than a name.
+
+211
+00:17:55,334 --> 00:17:56,379
+Scott: That's like two navies.
+
+212
+00:17:57,784 --> 00:17:59,680
+Scott: How many boats do you need to make a Navy?
+
+213
+00:18:00,560 --> 00:18:12,536
+Rym: But so way back in the Falkland Islands conflict the Argentinian land forces sunk a bunch of British ships because it's Really cheap to sink ships with like missiles and things.
+
+214
+00:18:12,878 --> 00:18:13,420
+Scott: but it's funny.
+
+215
+00:18:13,521 --> 00:18:19,074
+Scott: That's just a basic principle of the universe Is that it's easy to destroy things and it's hard to make things we can.
+
+216
+00:18:19,114 --> 00:18:22,848
+Scott: everyone just played with Duplo's knows that You could build a Duplo Tower.
+
+217
+00:18:23,149 --> 00:18:23,570
+Scott: No, it's.
+
+218
+00:18:23,731 --> 00:18:26,240
+Scott: it takes a while knock one down takes two seconds.
+
+219
+00:18:26,381 --> 00:18:33,880
+Rym: Oh, right, but with military stuff, it's not just hard to build things It's also hard to defend against things like missiles.
+
+220
+00:18:33,981 --> 00:18:44,040
+Rym: So if it costs X dollars to make an anti-ship missile It'll cost 10 times or a hundred times X dollars to defend against that one missile like that's just yeah.
+
+221
+00:18:44,060 --> 00:18:46,740
+Scott: I mean think about what does it take to build a boat, right?
+
+222
+00:18:47,121 --> 00:18:51,919
+Scott: You need a dock dry dock and a whole factory and a bunch of people who know what the fuck they're doing.
+
+223
+00:18:51,959 --> 00:18:55,630
+Scott: and you need Materials and expertise and time and resources and energy.
+
+224
+00:18:55,991 --> 00:18:58,740
+Scott: and what does it take to get rid of a boat something that goes boom?
+
+225
+00:18:59,120 --> 00:19:04,574
+Scott: It's like yeah Hey, whatever something there no more boat all that hard work down in the ocean.
+
+226
+00:19:04,714 --> 00:19:06,640
+Scott: Goodbye countermeasure nice one iceberg.
+
+227
+00:19:06,781 --> 00:19:08,448
+Scott: You don't even need a boom giant boat.
+
+228
+00:19:08,468 --> 00:19:09,593
+Scott: They spent all that time on it.
+
+229
+00:19:09,814 --> 00:19:11,340
+Scott: Send it out to see one iceberg.
+
+230
+00:19:11,421 --> 00:19:12,552
+Scott: That's it bottom of the ocean.
+
+231
+00:19:12,593 --> 00:19:13,300
+Scott: Yeah, great.
+
+232
+00:19:14,284 --> 00:19:28,573
+Rym: but also asymmetry in Defense is harder than offense in modern militaries in that The thing the countermeasure to a thing is so much more expensive than the thing that you can never defend yourself against anything Except with extremely advanced technology.
+
+233
+00:19:28,915 --> 00:19:32,450
+Scott: So anyway It's like how do you defend against?
+
+234
+00:19:32,530 --> 00:19:33,254
+Scott: you know a missile?
+
+235
+00:19:33,314 --> 00:19:34,340
+Scott: it's going real fast.
+
+236
+00:19:34,360 --> 00:19:35,465
+Scott: How are you gonna shoot it down?
+
+237
+00:19:35,526 --> 00:19:38,460
+Scott: and then when it hits it blows up real big and real hard?
+
+238
+00:19:38,460 --> 00:19:40,668
+Scott: How are you gonna have an armor to block that?
+
+239
+00:19:40,768 --> 00:19:42,655
+Scott: Yeah, it's like not easily.
+
+240
+00:19:42,916 --> 00:19:46,780
+Rym: so today Footage was released and it appears to now be confirmed.
+
+241
+00:19:47,822 --> 00:19:58,409
+Rym: Russia has well had 17 of these advanced patrol boats which are some of the few ships in their Navy that are post-soviet meaning they were designed and built after the fall of the Soviet Union.
+
+242
+00:19:58,931 --> 00:20:09,938
+Rym: there's some of the more advanced patrol boats they've got and Ukraine just sank two of them with Basically cheap as shit drones and they publish video of themselves doing it.
+
+243
+00:20:10,761 --> 00:20:14,614
+Rym: So Wikipedia already updated it to so show that Russia has lost three of these things.
+
+244
+00:20:14,634 --> 00:20:16,340
+Scott: because apparently you're not talking about.
+
+245
+00:20:16,360 --> 00:20:23,400
+Rym: We're not talking about DJI drones that you can buy right now Not the drone that I've got like a DSLR hanging off of right now.
+
+246
+00:20:23,480 --> 00:20:33,820
+Scott: We're talking about better drones than that but not as good as like the US drones that we you know Bomb people in the Middle East with right, you know, not US war crime level of drone, right?
+
+247
+00:20:34,060 --> 00:20:37,379
+Scott: You know, we're talking about like the shittiest cheapest version of that.
+
+248
+00:20:38,321 --> 00:20:40,349
+Scott: But they are still pretty capable right.
+
+249
+00:20:40,389 --> 00:20:42,176
+Scott: they can fly fast ish right.
+
+250
+00:20:42,216 --> 00:20:43,120
+Scott: they can stay in the air.
+
+251
+00:20:43,561 --> 00:20:45,247
+Scott: You can remote control them reliably.
+
+252
+00:20:45,467 --> 00:20:49,380
+Scott: They can carry an explosive and drop it accurately, right?
+
+253
+00:20:49,540 --> 00:20:51,007
+Scott: So that already is.
+
+254
+00:20:51,208 --> 00:20:56,009
+Scott: you know, despite being crappy compared to what the u.s Has made that's still pretty capable.
+
+255
+00:20:56,129 --> 00:21:00,720
+Rym: drone wise right but when it comes to air power And I don't want this to take up the whole episode.
+
+256
+00:21:00,800 --> 00:21:02,328
+Rym: You can read the article to see all the details.
+
+257
+00:21:02,368 --> 00:21:20,394
+Rym: but the technology aspect of it Is that for basically ever Everyone has assumed that a nation like Russia just like the United States or France or other like major military powers Can defend themselves against the cheapest military technology, right?
+
+258
+00:21:20,414 --> 00:21:23,685
+Scott: Like we just talked about like a missile is going really fast It's hard to shoot down.
+
+259
+00:21:23,726 --> 00:21:24,872
+Scott: It explodes really big.
+
+260
+00:21:24,912 --> 00:21:30,460
+Rym: It's hard to armor against Like your pal axes and all sorts of interesting technology, right?
+
+261
+00:21:30,520 --> 00:21:31,463
+Scott: The u.s.
+
+262
+00:21:31,563 --> 00:21:36,840
+Scott: Drones are gonna be going so fast and they're gonna have such good targeting and they probably got stealth shit.
+
+263
+00:21:36,900 --> 00:21:37,744
+Scott: Who knows what the u.s.
+
+264
+00:21:37,784 --> 00:21:38,327
+Scott: Has right?
+
+265
+00:21:38,428 --> 00:21:39,392
+Scott: It's like you're it's gonna be.
+
+266
+00:21:39,452 --> 00:21:40,960
+Rym: I don't believe there are any drones.
+
+267
+00:21:42,781 --> 00:21:45,899
+Scott: Then I don't know we've made those off head might be secret, right?
+
+268
+00:21:46,520 --> 00:21:49,152
+Rym: I don't know a lot about drones to be honest except what I read read.
+
+269
+00:21:49,293 --> 00:21:53,308
+Scott: looking at after I'm just assuming Right based on what we know about the u.s.
+
+270
+00:21:53,348 --> 00:21:58,247
+Scott: Spending so much money on the military that if it can exist They probably have it.
+
+271
+00:21:58,388 --> 00:22:12,505
+Rym: I guess what I'm getting at is it was Pretty well assumed that this kind of attack is basically futile against the modern military like if this anti-aircraft could have shot these drones down and For whatever reason.
+
+272
+00:22:12,685 --> 00:22:19,828
+Rym: Russia seems like Russia's Navy and military don't actually seem to be able to field basic anti-aircraft capabilities.
+
+273
+00:22:20,670 --> 00:22:28,660
+Scott: and if Ukraine had tried to say send these drones to France to drop bombs on Paris France could have shot them down trivially
+
+274
+00:22:29,883 --> 00:22:30,187
+Rym: Which is
+
+275
+00:22:30,490 --> 00:22:31,360
+Scott: not have been a problem
+
+276
+00:22:31,480 --> 00:22:36,136
+Rym: Which is making this conflict start to look more and more exactly like how Desert Storm looked in terms of.
+
+277
+00:22:36,678 --> 00:22:41,680
+Rym: it was the fourth Largest military in the world and oh it turns out it was literally obsolete.
+
+278
+00:22:42,122 --> 00:22:54,120
+Rym: It's like in sieve when you've got your advanced men at arms and pike and shot Military and then one small musketman boy shows up Yeah, like it's rifleman would be in that case because pike and shot technically has muskets as part of it.
+
+279
+00:22:54,140 --> 00:23:03,294
+Scott: But you get my dress a point at which you know in military wise if you've ever played any You know games are not so inaccurate in this in this one sense at least.
+
+280
+00:23:03,434 --> 00:23:12,080
+Scott: on that if you do have a technological Advantage, you know, it doesn't matter until it's big enough to matter and then it matters a lot, right?
+
+281
+00:23:12,480 --> 00:23:16,900
+Scott: But it also there's like oh you've if it was like, you know, you know if we had nights.
+
+282
+00:23:17,081 --> 00:23:20,277
+Scott: It was medieval times and I had a bunch of nights and you had a bunch of nights, right?
+
+283
+00:23:20,317 --> 00:23:22,607
+Scott: It's like, okay We're pretty equal in numbers, right?
+
+284
+00:23:22,627 --> 00:23:30,559
+Scott: It's like I upgrade my nights to I don't know Some other kind of you know, so anything that's not guns basically.
+
+285
+00:23:31,802 --> 00:23:34,880
+Scott: And it's like, you know, I might have new nights and you have old nights.
+
+286
+00:23:35,020 --> 00:23:38,171
+Scott: But if you outnumber me, it's like it's probably not so great, right?
+
+287
+00:23:38,232 --> 00:23:43,817
+Scott: But if I just got like some guns I suddenly need way way way less night.
+
+288
+00:23:43,837 --> 00:23:50,456
+Rym: like that comic We read that was one marine detachment is in ancient Rome and it takes out like two legions like that thing.
+
+289
+00:23:50,496 --> 00:23:51,840
+Scott: Yeah that exactly right.
+
+290
+00:23:52,001 --> 00:23:52,925
+Scott: Yeah, that's exactly.
+
+291
+00:23:53,226 --> 00:23:57,646
+Scott: but legions against Knights that would be pretty close, you know, yeah Well, it's well.
+
+292
+00:23:57,747 --> 00:24:02,818
+Rym: actually depending on what was going on in the time That can actually be pretty close because there were also the equivalent of.
+
+293
+00:24:02,939 --> 00:24:05,791
+Rym: anyway This is gonna derail but it would still.
+
+294
+00:24:05,811 --> 00:24:07,257
+Scott: the guns would not be interesting.
+
+295
+00:24:07,277 --> 00:24:07,920
+Scott: It'll be one side.
+
+296
+00:24:07,960 --> 00:24:18,944
+Rym: I guess what I'm getting at is if two countries are equivalent military technology most of their weapons on both sides are useless against each other or Are awash in some way.
+
+297
+00:24:18,964 --> 00:24:20,528
+Rym: that comes down to numbers and logistics.
+
+298
+00:24:21,190 --> 00:24:31,840
+Rym: if they're close but not equal then asymmetric warfare happens Like yeah, we got a bunch of aircraft carriers But you've got a bunch of way cheaper missile boats and only one of them has to get through.
+
+299
+00:24:32,622 --> 00:24:48,070
+Rym: but if there's a complete disparity like the disparities great enough then suddenly There are weapons that one side has that the other side doesn't have but their weapons that that are the army in power Normally can't use against anyone.
+
+300
+00:24:48,491 --> 00:24:55,059
+Rym: but because of the lack of technology the other side They can deploy them like old a-10 warthogs that like that kind of old technology.
+
+301
+00:24:55,782 --> 00:25:03,620
+Rym: it's really that's we're starting to see that happen in the Russian conflict and I don't know what that means for the future.
+
+302
+00:25:03,700 --> 00:25:09,619
+Rym: There's a fear that if NATO got involved they would destroy so many Russian forces so quickly that that would cause other kinds of escalations.
+
+303
+00:25:10,830 --> 00:25:16,208
+Rym: well Anyway anyway And another little news tiny little thing because I bumped into this.
+
+304
+00:25:16,228 --> 00:25:23,133
+Rym: there's a reddit thread where someone posted a picture of a wall Plug that was in an apartment.
+
+305
+00:25:23,174 --> 00:25:26,388
+Rym: They moved into or a house They bought and they're like does anyone know what this is?
+
+306
+00:25:26,869 --> 00:25:29,719
+Rym: it looks like an Ethernet port, but it's too small.
+
+307
+00:25:31,582 --> 00:25:33,049
+Scott: Is it just that the telephone?
+
+308
+00:25:33,130 --> 00:25:35,200
+Rym: it's just a telephone jack, okay?
+
+309
+00:25:35,400 --> 00:25:37,739
+Scott: It's just a tell ya people don't know what a landline phone is.
+
+310
+00:25:38,781 --> 00:25:43,899
+Rym: I mean I haven't had a landline since we left our IT, and we unplugged that landline not too long after we moved in.
+
+311
+00:25:45,061 --> 00:25:46,064
+Scott: Yeah, pretty much.
+
+312
+00:25:46,987 --> 00:25:49,595
+Scott: I guess there might if there's one in this apartment.
+
+313
+00:25:49,896 --> 00:25:51,000
+Scott: I don't know where it is.
+
+314
+00:25:51,160 --> 00:25:52,103
+Scott: I there were.
+
+315
+00:25:52,424 --> 00:25:53,707
+Rym: there were some in this room.
+
+316
+00:25:53,727 --> 00:25:57,057
+Rym: I actually replaced the faceplate, and I pushed him into the wall, so they're gone.
+
+317
+00:25:58,180 --> 00:26:00,048
+Scott: I Presumed that I might have to like.
+
+318
+00:26:00,208 --> 00:26:02,940
+Scott: you know there are Ethernet holes that go to the Fios thing.
+
+319
+00:26:03,001 --> 00:26:08,500
+Scott: That's like in the closet And then there's a Fios thing in the trash room and then an even another one in the basement and so on and so forth.
+
+320
+00:26:08,902 --> 00:26:11,658
+Scott: But and then one outside right you know the whole thing.
+
+321
+00:26:11,679 --> 00:26:26,915
+Rym: yeah We got a Fios in the front room and that files does provide phone service, so there must be a way for me to Pay for it and then connect a phone Box does have rj45 just on it if you open that store like there's there.
+
+322
+00:26:26,976 --> 00:26:32,599
+Scott: Oh, yeah, no it definitely does But they're wired up to one that's close to my desk, so why would I yeah mess around with?
+
+323
+00:26:32,660 --> 00:26:32,720
+Scott: oh?
+
+324
+00:26:32,740 --> 00:26:34,760
+Rym: They're not wired up to anything cuz I didn't plug him into anything.
+
+325
+00:26:34,981 --> 00:26:42,460
+Rym: But this apartment has rj45 or rj11 and phone cable going to every room And there's a little breakout box in the front.
+
+326
+00:26:42,480 --> 00:26:46,260
+Rym: There's just nothing's connected to just like we have coax going to every room in the apartment.
+
+327
+00:26:46,320 --> 00:26:47,687
+Rym: And that's how I get the files into the room.
+
+328
+00:26:47,727 --> 00:26:52,748
+Scott: I want it yeah anyway, but yeah Maybe soon they'll make houses.
+
+329
+00:26:52,768 --> 00:26:53,492
+Scott: They don't even have that.
+
+330
+00:26:53,673 --> 00:26:58,330
+Rym: because yeah Just give you I can put put fucking Ethernet cables in houses.
+
+331
+00:26:59,072 --> 00:27:00,777
+Scott: well people don't use people just use Wi-Fi.
+
+332
+00:27:00,797 --> 00:27:01,660
+Scott: people don't want that either.
+
+333
+00:27:01,840 --> 00:27:12,177
+Scott: I know it's want that but anyway things Of the day.
+
+334
+00:27:12,277 --> 00:27:36,878
+Rym: so a while back you used a thing of the day and it was that very satium video where they talked about the the brain teaser the puzzle problem of what if you have a Wire that is like a tenth of a light year long or a light second long some ridiculously long wire Put a battery at one end and a switch at the other end when you click the switch How long before the light bulb lights up.
+
+335
+00:27:37,299 --> 00:27:42,969
+Rym: and they did that really long video and half the internet Claimed that their answer was wrong.
+
+336
+00:27:44,293 --> 00:27:45,801
+Scott: All right, well the internet was wrong.
+
+337
+00:27:46,083 --> 00:27:47,290
+Rym: yep, so they actually.
+
+338
+00:27:47,954 --> 00:27:52,959
+Rym: So they released news as of April 29th 2022 and it's already got a lot of views.
+
+339
+00:27:53,561 --> 00:28:09,776
+Rym: a whole bunch of even serious physicists researchers electrical engineers all sorts of very serious people Claimed that verisatium was wrong in various ways Despite their repeated clarifications, so well I mean I I mean it you know you can.
+
+340
+00:28:10,539 --> 00:28:16,241
+Scott: I hope that at least none of them if they're very if they were truly Very serious physicists who are knowledgeable.
+
+341
+00:28:16,301 --> 00:28:21,698
+Scott: I hope none of them were trying to claim things about The speed of light that were incorrect.
+
+342
+00:28:21,758 --> 00:28:22,180
+Rym: they weren't.
+
+343
+00:28:22,220 --> 00:28:33,558
+Rym: they were they were not other explanation, but yeah They were basically saying they were making a lot of funny arguments And also a lot of the internet who are not experts in these domains.
+
+344
+00:28:34,041 --> 00:28:35,530
+Rym: for a bunch of different reasons.
+
+345
+00:28:35,671 --> 00:28:37,116
+Rym: They were saying this video was wrong.
+
+346
+00:28:37,518 --> 00:28:40,610
+Scott: so very things you love to think but people like to think they know things yep.
+
+347
+00:28:41,072 --> 00:29:20,113
+Rym: So they put together another video where they did the experiment with extremely expensive modern simulations as well as oscilloscopes to absolutely prove it experimentally and They did a whole a much deeper explanation of exactly what's going on to the point that they simulated the entirety of Maxwell's equations for electric fields in three dimensions for Actual circuits and use that to show all of these interactions as they occur fully completely calculated and Honestly.
+
+348
+00:29:20,153 --> 00:29:25,535
+Rym: the reason I'm making this my thing of the day is not because they proved all the people on the internet who were wrong That they are in fact wrong.
+
+349
+00:29:25,997 --> 00:29:27,142
+Rym: that just happens all the time.
+
+350
+00:29:27,845 --> 00:29:30,635
+Rym: these visualizations Actually made it click.
+
+351
+00:29:31,057 --> 00:29:31,559
+Rym: I get it.
+
+352
+00:29:32,321 --> 00:29:33,264
+Rym: I don't get the math don't?
+
+353
+00:29:33,304 --> 00:29:36,093
+Rym: don't think I'm pretending that I get this math Not do?
+
+354
+00:29:36,213 --> 00:29:37,195
+Rym: I'm not claiming that.
+
+355
+00:29:37,636 --> 00:29:40,543
+Rym: but the concept of the field and why?
+
+356
+00:29:40,603 --> 00:29:43,290
+Rym: the answer is 1m over the speed of light.
+
+357
+00:29:43,976 --> 00:29:44,744
+Rym: I get it now.
+
+358
+00:29:45,771 --> 00:29:56,424
+Rym: Okay, the visual is a. it's just nuts mostly to see this like almost quanta level Simulation of an electric circuit that is not software.
+
+359
+00:29:56,504 --> 00:29:59,738
+Rym: I think I have access to All.
+
+360
+00:29:59,758 --> 00:30:03,959
+Scott: right, so There's a. there's a food if you're not aware.
+
+361
+00:30:03,979 --> 00:30:06,690
+Scott: Well, it's sort of a food I guess called furikake.
+
+362
+00:30:06,851 --> 00:30:16,670
+Scott: It's a Japanese thing or basically Dried seaweed some MSG some salt maybe some dried scallions in there garlic, you know drag whatever, right?
+
+363
+00:30:16,951 --> 00:30:25,094
+Scott: It's basically like a dried sort of spice mix but a little bit chunkier right that a ground-up powdery spice mix Right, you know.
+
+364
+00:30:25,235 --> 00:30:28,110
+Scott: and furikake is used in many things, right?
+
+365
+00:30:28,210 --> 00:30:37,067
+Rym: you could take some rice and sort of mix in furikake to basically make flavored rice and when I was poor a lot of My dinners were just rice with furikake on it and some cheap miso soup.
+
+366
+00:30:37,107 --> 00:30:38,535
+Rym: That was the whole dinner Yeah, you.
+
+367
+00:30:38,635 --> 00:30:41,250
+Scott: and then you could like make onigiri with that flavored rice.
+
+368
+00:30:41,330 --> 00:30:43,402
+Scott: Oh, yeah, and it might not even need filling.
+
+369
+00:30:43,443 --> 00:30:55,339
+Scott: if your furikake is good enough You could make a dish like a ramen and you could sprinkle some furikake on, you know I'm like a like a you know, just right on top there, you know You could get sprinkle furikake pretty much almost done anything.
+
+370
+00:30:55,359 --> 00:30:56,482
+Scott: Yeah that it goes with.
+
+371
+00:30:56,503 --> 00:30:56,824
+Rym: you know what.
+
+372
+00:30:56,884 --> 00:30:57,827
+Rym: actually there it's really good.
+
+373
+00:30:57,927 --> 00:31:00,870
+Rym: on omelettes Yeah, it's real good.
+
+374
+00:31:02,178 --> 00:31:02,690
+Scott: Yeah, sure.
+
+375
+00:31:03,711 --> 00:31:07,887
+Scott: So yeah, if you have not experienced, you know, and there's many kinds of furikake, right?
+
+376
+00:31:07,907 --> 00:31:09,634
+Scott: You can mix it up You can get a spicy one.
+
+377
+00:31:09,654 --> 00:31:11,079
+Scott: You can get a plain one.
+
+378
+00:31:11,099 --> 00:31:13,047
+Scott: That's like just scallion or something, right?
+
+379
+00:31:13,067 --> 00:31:14,352
+Scott: or seaweed scallion That's it.
+
+380
+00:31:14,693 --> 00:31:14,914
+Scott: Right.
+
+381
+00:31:15,456 --> 00:31:28,223
+Scott: There's a whole wide world of furikake, but in this cooking video Romell, I believe his name is concox something Truly incredible even something right?
+
+382
+00:31:28,384 --> 00:31:39,329
+Scott: I don't even like Dorito I don't eat chips with weird flavor powders on them, but I did for me the genius idea of Dorito furikake.
+
+383
+00:31:40,053 --> 00:31:44,750
+Rym: Well consider if we step back and what is the flavor powder on a Dorito?
+
+384
+00:31:45,250 --> 00:31:50,450
+Rym: That is basically the science of making a flavor that is addictive to humans.
+
+385
+00:31:51,777 --> 00:31:53,878
+Scott: pretty much It's like.
+
+386
+00:31:53,898 --> 00:32:00,190
+Scott: but now I'm thinking like well What other snacks can I crumble up and you know with some seaweed and some MSG and some scallion?
+
+387
+00:32:00,470 --> 00:32:05,774
+Rym: I mean, I'll say I don't eat Doritos anymore either for a lot of reasons I can't even remember.
+
+388
+00:32:05,794 --> 00:32:11,049
+Scott: It's been so long since I've attempted to eat any flavor powdered chip of any kind.
+
+389
+00:32:12,794 --> 00:32:15,321
+Scott: I don't even remember what a Dorito tastes like.
+
+390
+00:32:15,502 --> 00:32:16,966
+Rym: Oh, I do I can just I can.
+
+391
+00:32:17,167 --> 00:32:18,190
+Rym: I can imagine it.
+
+392
+00:32:18,652 --> 00:32:21,065
+Scott: I have no memory what I try to imagine.
+
+393
+00:32:21,105 --> 00:32:21,910
+Scott: I know what they look like.
+
+394
+00:32:21,930 --> 00:32:23,219
+Scott: I know what the packaging looks like.
+
+395
+00:32:23,280 --> 00:32:24,730
+Scott: I know what the right and it's a triangle.
+
+396
+00:32:25,031 --> 00:32:30,266
+Scott: I can imagine it going into my mouth and I have no memory of what it would the flavor actually.
+
+397
+00:32:30,286 --> 00:32:32,113
+Rym: so something fascinating is happening Like I'm not.
+
+398
+00:32:32,314 --> 00:32:35,210
+Rym: you remember we talked way back about when we learned about a fantasia.
+
+399
+00:32:35,270 --> 00:32:37,982
+Rym: Now some people just don't visualize things in their heads and some people do.
+
+400
+00:32:38,002 --> 00:32:45,126
+Rym: I right now can Perfectly in my head simulate the sensation flavor taste everything of a Dorito.
+
+401
+00:32:45,767 --> 00:32:49,229
+Scott: and I get right I do that and I'm and I'm simulating it.
+
+402
+00:32:49,571 --> 00:32:50,835
+Scott: But there's like the.
+
+403
+00:32:50,975 --> 00:32:53,804
+Scott: there's no flavor being simulated because it's like an unknown.
+
+404
+00:32:53,824 --> 00:32:55,850
+Rym: so something fucked up just happened.
+
+405
+00:32:56,352 --> 00:32:57,518
+Rym: I tasted it in my mind.
+
+406
+00:32:58,100 --> 00:32:58,824
+Rym: I'm salivating.
+
+407
+00:32:59,467 --> 00:33:00,170
+Rym: I started a salad.
+
+408
+00:33:00,971 --> 00:33:01,734
+Rym: Fucking not kidding.
+
+409
+00:33:01,854 --> 00:33:02,697
+Rym: I am salivating.
+
+410
+00:33:02,978 --> 00:33:03,460
+Rym: It's like there's.
+
+411
+00:33:03,660 --> 00:33:05,125
+Rym: there's too much spit my mouth right now.
+
+412
+00:33:05,487 --> 00:33:06,410
+Rym: I'm drooling over this.
+
+413
+00:33:06,550 --> 00:33:08,195
+Scott: Well, think of let's think of a food.
+
+414
+00:33:08,235 --> 00:33:10,442
+Scott: You've never eaten ever right food.
+
+415
+00:33:10,502 --> 00:33:12,970
+Scott: I've never ever whale, right?
+
+416
+00:33:13,290 --> 00:33:15,382
+Scott: It's not imagine yourself eating some whale.
+
+417
+00:33:15,402 --> 00:33:17,494
+Scott: I can't.
+
+418
+00:33:18,031 --> 00:33:19,302
+Scott: Yeah, that's what I'm feeling with.
+
+419
+00:33:19,524 --> 00:33:23,101
+Rym: Wow You you nuked that memory.
+
+420
+00:33:23,342 --> 00:33:24,547
+Rym: I just put that memory aside.
+
+421
+00:33:24,587 --> 00:33:25,110
+Rym: you nuked it.
+
+422
+00:33:25,812 --> 00:33:33,814
+Scott: They must at least last millennium, but if not a couple years ago at The Baroness went.
+
+423
+00:33:33,854 --> 00:33:39,770
+Rym: before they moved they added a new burger for a while and that burger had cool ranch Doritos on the burger.
+
+424
+00:33:41,353 --> 00:33:42,219
+Scott: Not not a bad idea.
+
+425
+00:33:42,239 --> 00:33:45,032
+Rym: You know what that was acceptable Hmm.
+
+426
+00:33:45,293 --> 00:33:47,743
+Scott: Well, I mean, you know Taco Bell's were making their Dorito shells.
+
+427
+00:33:47,803 --> 00:33:49,350
+Rym: And so yeah, I I've never had it.
+
+428
+00:33:49,390 --> 00:33:51,244
+Rym: I'll fuck down drooling again after you said that.
+
+429
+00:33:51,285 --> 00:33:55,185
+Scott: and well I've had co-workers that ate it in the past when it was a new thing, right?
+
+430
+00:33:55,225 --> 00:33:55,969
+Scott: They ran out and got.
+
+431
+00:33:55,989 --> 00:34:04,501
+Rym: I mean I would if I were on a road trip and my choice was Taco Bell or literally any other fast food I'd go to the Taco Bell.
+
+432
+00:34:05,429 --> 00:34:11,069
+Scott: I The talk the fast foods that I would place above Taco Bell are White Castle, but that's just me.
+
+433
+00:34:11,371 --> 00:34:13,715
+Rym: I'm not saying it's better Arby's.
+
+434
+00:34:13,755 --> 00:34:14,949
+Scott: but you know, not the roast beef.
+
+435
+00:34:15,030 --> 00:34:20,909
+Rym: I was about to say you say Arby's you mean the Arby's chicken fingers and maybe you're getting those curly fries.
+
+436
+00:34:21,071 --> 00:34:22,183
+Scott: Yeah, yeah the curly fry.
+
+437
+00:34:22,203 --> 00:34:25,010
+Scott: Yeah Arby's is one Bojangles.
+
+438
+00:34:27,752 --> 00:34:30,100
+Rym: Even eat out of Bojangles, you don't know what a Bojangles is.
+
+439
+00:34:30,380 --> 00:34:31,384
+Scott: You just know this is disgusting.
+
+440
+00:34:36,670 --> 00:34:39,650
+Rym: Anyway this guy made for a cocky out of Doritos.
+
+441
+00:34:40,891 --> 00:34:44,677
+Rym: Yeah, I don't know if you actually said that It's a really good video.
+
+442
+00:34:44,858 --> 00:34:45,783
+Rym: It is a really good video.
+
+443
+00:34:46,103 --> 00:34:50,614
+Rym: I watched it right before we did the show In the meta moment.
+
+444
+00:34:51,014 --> 00:34:55,235
+Rym: the geek guys book club book is Nine fox gambit.
+
+445
+00:34:55,797 --> 00:34:58,085
+Scott: No, it's nine fox gambit.
+
+446
+00:34:58,125 --> 00:34:58,587
+Scott: nine fox.
+
+447
+00:34:58,627 --> 00:34:59,530
+Scott: I believe is one word.
+
+448
+00:34:59,991 --> 00:35:00,594
+Rym: It is one word.
+
+449
+00:35:01,356 --> 00:35:02,521
+Rym: I was gonna do the thing at last.
+
+450
+00:35:02,601 --> 00:35:03,524
+Rym: I'm not eight fox.
+
+451
+00:35:03,926 --> 00:35:06,735
+Rym: Definitely not ten fox That's right.
+
+452
+00:35:06,755 --> 00:35:07,259
+Scott: It's one word.
+
+453
+00:35:07,803 --> 00:35:08,609
+Rym: I said I didn't disagree.
+
+454
+00:35:10,090 --> 00:35:14,890
+Rym: Okay, I just noticed that you've the way you framed this on the website after the Genji debacle.
+
+455
+00:35:19,692 --> 00:35:22,341
+Rym: And don't forget the book club book we just did the city we became.
+
+456
+00:35:22,703 --> 00:35:29,769
+Rym: the sequel is coming imminently to that book probably gonna read that instantly and That one's done the book club books there.
+
+457
+00:35:30,091 --> 00:35:33,825
+Rym: And if you didn't know we have a book club and we've done a bunch of books.
+
+458
+00:35:34,227 --> 00:35:39,464
+Scott: and if you want to read one Of those books despite it being so slow to do book clubs if you look back.
+
+459
+00:35:39,524 --> 00:35:51,948
+Scott: It's like we've done quite a few Considering we're not a book club, you know Exclusive podcast and you know, we just been around so long and we read books so quickly when we do read them.
+
+460
+00:35:52,088 --> 00:35:54,873
+Rym: Yep that Especially pre kovat.
+
+461
+00:35:54,913 --> 00:35:57,642
+Rym: but those books if you want to you know, read the book.
+
+462
+00:35:58,004 --> 00:35:59,749
+Rym: There's at least one mean pre Genji.
+
+463
+00:36:00,115 --> 00:36:05,650
+Rym: Yeah, Genji There's all the at least one gig nice episode where we talk about that book so you can sort of relive it through us.
+
+464
+00:36:06,012 --> 00:36:09,150
+Rym: There's also almost always a pretty long forum thread.
+
+465
+00:36:09,491 --> 00:36:14,330
+Rym: Some of them are on the old forum with a bunch of listeners many of whom I assume are dead or scattered to the winds.
+
+466
+00:36:14,470 --> 00:36:16,456
+Rym: But they talked about the book too.
+
+467
+00:36:16,817 --> 00:36:21,389
+Rym: You can relive the book club experience outside of time if you so wish.
+
+468
+00:36:21,409 --> 00:36:28,786
+Scott: I Can't think of any other meta moments other than the fact that you know weather is improving in New York.
+
+469
+00:36:29,127 --> 00:36:35,650
+Scott: Sorry southern hemisphere It's our turn again and the New York Rangers are in the Stanley Cup playoffs.
+
+470
+00:36:35,730 --> 00:36:36,934
+Rym: Thankfully so far.
+
+471
+00:36:36,995 --> 00:36:41,370
+Scott: so so far so much money that you will be in attendance at Madison Square Garden.
+
+472
+00:36:42,233 --> 00:36:42,875
+Scott: So will we?
+
+473
+00:36:42,895 --> 00:36:46,509
+Rym: yep, let us know I would gladly say all our money.
+
+474
+00:36:46,609 --> 00:36:47,171
+Scott: Bye Bye.
+
+475
+00:36:47,692 --> 00:36:54,790
+Rym: see wearing a mask and seeing you briefly in MSG is not more dangerous than what I'm already gonna do going to MSG.
+
+476
+00:36:55,071 --> 00:36:56,722
+Scott: Yeah, I mean if we win we win.
+
+477
+00:36:59,292 --> 00:37:04,370
+Scott: If we lose we save money, it's like okay It's a win-win situation.
+
+478
+00:37:05,512 --> 00:37:07,721
+Scott: If we get swept good we barely spent any money.
+
+479
+00:37:07,761 --> 00:37:10,793
+Scott: if we win a whole bunch well my money is gone But we won.
+
+480
+00:37:10,894 --> 00:37:12,258
+Scott: so okay yep.
+
+481
+00:37:12,579 --> 00:37:14,165
+Rym: and so far the games.
+
+482
+00:37:14,185 --> 00:37:31,928
+Scott: we have tickets to have Respected the GeekNights schedule, so uh hopefully GeekNights disrupted significantly by this And hopefully the bright though eventually as they have done so long ago 2016 15 and backwards 17 I guess me.
+
+483
+00:37:31,968 --> 00:37:36,565
+Scott: I remember They showed some away games of later rounds in Bryant Park.
+
+484
+00:37:36,605 --> 00:37:37,790
+Scott: who knows if that'll happen again?
+
+485
+00:37:37,870 --> 00:37:39,900
+Scott: Everyone wants it to happen again on one hand.
+
+486
+00:37:39,921 --> 00:37:41,710
+Rym: I want it to happen again on the other hand.
+
+487
+00:37:42,052 --> 00:37:44,491
+Scott: Oh, we want it to happen real bad, but every time it's happened I've.
+
+488
+00:37:44,732 --> 00:37:48,089
+Rym: we have never seen the Rangers win a game where that screen was up.
+
+489
+00:37:48,952 --> 00:37:56,907
+Scott: There are other watch parties that we can probably attend in some fashion if we get to later rounds for away games Yeah, maybe we should even throw one in the gig night.
+
+490
+00:37:56,927 --> 00:38:05,922
+Rym: Siskoord We could restream the the way that all New Yorkers watch hockey Restream an already illegal restream on discord.
+
+491
+00:38:05,942 --> 00:38:07,208
+Scott: see if your discord gets shut down.
+
+492
+00:38:07,268 --> 00:38:11,477
+Rym: hell, yeah All right.
+
+493
+00:38:11,557 --> 00:38:13,350
+Rym: so tech debt now.
+
+494
+00:38:13,491 --> 00:38:22,210
+Rym: This is a big topic and all I got to say is I can't Give a lot of specifics about some of the things I want to talk about especially from recent jobs.
+
+495
+00:38:22,572 --> 00:38:27,854
+Rym: But what I will say is that for those of you who don't know pay a lot of attention to Me in my career.
+
+496
+00:38:28,757 --> 00:38:32,710
+Rym: I basically made my very well-paid law like good career.
+
+497
+00:38:33,432 --> 00:38:43,197
+Rym: I built my entire career mostly on top of the fact that I am willing to embrace technology debt and legacy systems Understand them and help people get off of them.
+
+498
+00:38:43,699 --> 00:38:51,409
+Rym: That's that there is so much money to be made in knowing about old stuff Probably more money than there is to be made knowing about new stuff.
+
+499
+00:38:52,191 --> 00:38:57,063
+Scott: Right, so base the phrase tech debt has been I guess they.
+
+500
+00:38:57,644 --> 00:38:58,426
+Scott: the internet says.
+
+501
+00:38:58,466 --> 00:39:05,630
+Scott: it was coined by one of these people Who a you know was one of the agile manifesto writers or whatever, right?
+
+502
+00:39:05,750 --> 00:39:15,869
+Scott: That may or may not be true, but I've definitely heard the term at least as early as around 2003 Yeah, but it's a. regardless of who invented the term.
+
+503
+00:39:16,351 --> 00:39:30,300
+Scott: The concept is very old in terms of all sorts of engineering and you know Technological developments, but it's especially true for software engineering For reasons that I'm going to explain.
+
+504
+00:39:30,381 --> 00:39:36,079
+Rym: so I would argue that its pace is accelerating due to the way people make software today.
+
+505
+00:39:36,119 --> 00:39:43,773
+Scott: to write the the pace of the tech debt itself is accelerating and also the use of the term is Accelerating.
+
+506
+00:39:43,813 --> 00:39:47,050
+Scott: it's like become a more and more popular topic over time.
+
+507
+00:39:47,651 --> 00:39:54,028
+Scott: So what the idea is is that you know, you have engineered and built some sort of system, right?
+
+508
+00:39:54,108 --> 00:39:56,254
+Scott: It could be Literally anything it's.
+
+509
+00:39:56,354 --> 00:40:01,270
+Scott: obviously we're gonna mostly talk about software, but it could be like I don't know a car right, you know?
+
+510
+00:40:01,490 --> 00:40:03,135
+Scott: Or a bicycle right?
+
+511
+00:40:03,155 --> 00:40:03,556
+Rym: You know what?
+
+512
+00:40:03,656 --> 00:40:05,060
+Rym: I got a guy got a good example.
+
+513
+00:40:05,180 --> 00:40:21,730
+Rym: We could use the entertainment system in airlines Like you make a system like JetBlue did back in the day has little TVs and every seat and it has a way for Someone to watch some show or some movie or something on that little screen.
+
+514
+00:40:21,770 --> 00:40:24,570
+Rym: You got some software a little database something that makes that go.
+
+515
+00:40:24,650 --> 00:40:26,925
+Rym: Let's even skip the hardware and just talk about the software.
+
+516
+00:40:27,529 --> 00:40:27,690
+Scott: sure?
+
+517
+00:40:27,770 --> 00:40:32,490
+Scott: Well, you make a thing and at the time you make it right you start with nothing, right?
+
+518
+00:40:32,530 --> 00:40:33,895
+Scott: It's like we're gonna make a new thing.
+
+519
+00:40:34,015 --> 00:40:36,825
+Scott: airlines have never had little TVs on them before right?
+
+520
+00:40:37,106 --> 00:40:38,430
+Scott: We're gonna make this right?
+
+521
+00:40:38,511 --> 00:40:40,648
+Scott: We came up with this idea and we build it.
+
+522
+00:40:41,111 --> 00:40:53,210
+Scott: So you build it with the technology you have available the knowledge you have available the resources you have available Right and you do presumably the best you can given the circumstances, right?
+
+523
+00:40:53,630 --> 00:40:59,770
+Scott: Now you're gonna have things a you wish you could have done better, but you didn't have the resources or time.
+
+524
+00:41:00,252 --> 00:41:07,689
+Scott: You're gonna have things that you write wish you could have done better But you didn't know better because this is your first time doing it.
+
+525
+00:41:07,830 --> 00:41:12,362
+Scott: Yeah, you're gonna have things you you know could have done better, but they weren't.
+
+526
+00:41:12,402 --> 00:41:16,188
+Scott: those better ways weren't invented yet at the time right?
+
+527
+00:41:17,272 --> 00:41:18,115
+Scott: You know that you made it.
+
+528
+00:41:18,396 --> 00:41:33,095
+Scott: and then lastly right as there are gonna be Requirements that you know there didn't exist when you started or they did exist But you couldn't fulfill them right with your initial Deployment right.
+
+529
+00:41:33,356 --> 00:41:42,350
+Scott: so like maybe the initial thing was oh only you only need to show Movies that are on DVDs in this like centralized movie.
+
+530
+00:41:42,591 --> 00:41:48,892
+Scott: You know DVD carousel at the front of the plane, and that's all anyone can watch right yeah, and then later on It's like oh well.
+
+531
+00:41:48,912 --> 00:41:49,754
+Scott: We need satellite.
+
+532
+00:41:49,954 --> 00:41:51,096
+Scott: You know live TV now.
+
+533
+00:41:51,137 --> 00:41:52,379
+Scott: You know stuff like that right.
+
+534
+00:41:52,399 --> 00:42:11,968
+Scott: so You know all of those things mean that after you build and deploy or even while you're building Right like you're building something and while you're making it you found a better way to do it, and it's like well now You have this difficult situation Right it's like well You know do I just?
+
+535
+00:42:13,110 --> 00:42:18,607
+Scott: Slightly modify what I've already made to incorporate the new thing.
+
+536
+00:42:18,847 --> 00:42:25,650
+Scott: yep, right I could just you know I can make a change and add the new functionality or fix the problem.
+
+537
+00:42:25,830 --> 00:42:29,218
+Scott: Just get meet the requirement you know by just.
+
+538
+00:42:29,559 --> 00:42:44,809
+Rym: you know The DVD carousel with a little server that has a bunch of encoded video files on it But it plays the videos out through the interface that the old carousel did because that was easier to implement.
+
+539
+00:42:45,695 --> 00:42:49,837
+Scott: Yep, exactly so it's like well There's better functionality we could be having there.
+
+540
+00:42:49,977 --> 00:42:55,079
+Scott: everyone on the plane could be watching a different movie instead of you know only being able To choose from eight.
+
+541
+00:42:55,099 --> 00:42:59,830
+Scott: you know we could have a thousand movies But because we couldn't replace that interface without tearing apart the whole plane.
+
+542
+00:43:00,417 --> 00:43:01,932
+Scott: You know it's like yeah We were.
+
+543
+00:43:02,073 --> 00:43:05,010
+Scott: we only able to make it that much better with the duct tape solution.
+
+544
+00:43:05,212 --> 00:43:12,084
+Rym: Yeah, or like one seed is broken Then you have to reboot that server and everyone loses their movie and has to start over.
+
+545
+00:43:12,425 --> 00:43:13,849
+Rym: stuff like that starts to happen.
+
+546
+00:43:14,612 --> 00:43:19,028
+Scott: Yep, and it's like you know working on the system right.
+
+547
+00:43:19,108 --> 00:43:28,623
+Scott: it's like well You originally designed or you know something hopefully right that was somewhat elegant and cohesive Right, but then it's like oh the original design.
+
+548
+00:43:28,643 --> 00:43:35,912
+Scott: Just doesn't accommodate these new things We want to do right going forward in the next version right the next update You know.
+
+549
+00:43:35,973 --> 00:43:47,510
+Scott: and it's like now working on this system right you know initially building It was kind of fun working on it to get it to version 2 version 3 version 4 is not so fun anymore.
+
+550
+00:43:47,691 --> 00:43:49,538
+Scott: It's a pain in the ass something.
+
+551
+00:43:49,859 --> 00:43:50,943
+Scott: You know adding a feature.
+
+552
+00:43:51,003 --> 00:43:59,770
+Scott: That should be easy to add is Very very hard, and you because the current system is so you know old and janky.
+
+553
+00:44:00,031 --> 00:44:02,205
+Rym: I can give a real-world example from a company.
+
+554
+00:44:02,225 --> 00:44:02,970
+Rym: I don't work at anymore.
+
+555
+00:44:03,010 --> 00:44:03,713
+Rym: It's a long time ago.
+
+556
+00:44:03,733 --> 00:44:16,650
+Rym: We had a system that would monitor a certain kind of transaction in high volume and Like over a middleware bus and it would show The status of all the things that were happening over that bus in semi real time.
+
+557
+00:44:17,011 --> 00:44:22,148
+Rym: So you play all the messages through it and it would show you what the end result was of all those messages.
+
+558
+00:44:22,510 --> 00:44:28,350
+Rym: cool That worked fine, but all that logic was done at runtime in the client.
+
+559
+00:44:28,832 --> 00:44:30,599
+Rym: So you play the messages to the client.
+
+560
+00:44:30,900 --> 00:44:33,049
+Rym: it calculates the state pretty easy.
+
+561
+00:44:34,432 --> 00:44:35,884
+Rym: That has a lot of problems.
+
+562
+00:44:35,925 --> 00:44:44,625
+Rym: if you want to say Save that data for later if you want to say Have a thousand users all looking at that same data you want a thousand clients.
+
+563
+00:44:44,645 --> 00:44:46,350
+Rym: do these extremely intense calculations?
+
+564
+00:44:46,492 --> 00:44:48,030
+Rym: Or do you want one central server?
+
+565
+00:44:48,490 --> 00:44:49,254
+Rym: Pre-calculating.
+
+566
+00:44:49,878 --> 00:44:51,125
+Rym: so let's so all right now.
+
+567
+00:44:51,165 --> 00:44:56,588
+Rym: We want to add a feature We want to alert on if a one of these transactions gets into a bad state.
+
+568
+00:44:57,090 --> 00:45:10,979
+Rym: now We're fucked because the alert record be either has to be in the clients or we have to take that client logic pull it into the server and run it there to even be able to detect the situation to raise the alert or Refactor the whole thing.
+
+569
+00:45:11,019 --> 00:45:12,489
+Rym: so it was server-side from the beginning.
+
+570
+00:45:13,410 --> 00:45:16,921
+Rym: Yep, I lived through that and I chose the latter.
+
+571
+00:45:17,121 --> 00:45:18,345
+Rym: I said fuck tech debt.
+
+572
+00:45:18,365 --> 00:45:19,789
+Rym: we're paying this off right now.
+
+573
+00:45:20,632 --> 00:45:22,136
+Scott: Yeah, so that's the issue right?
+
+574
+00:45:22,196 --> 00:45:26,868
+Scott: is that you know when you're working in an employment environment, right?
+
+575
+00:45:26,928 --> 00:45:29,736
+Scott: It's like okay This is what we have an actual goal.
+
+576
+00:45:29,777 --> 00:45:30,860
+Scott: We want to accomplish right.
+
+577
+00:45:30,900 --> 00:45:32,404
+Scott: technology is just the means.
+
+578
+00:45:32,625 --> 00:45:32,866
+Scott: right.
+
+579
+00:45:32,906 --> 00:45:36,044
+Rym: the goal is I have a product I want to make or there's a problem.
+
+580
+00:45:36,084 --> 00:45:36,769
+Rym: I want to solve.
+
+581
+00:45:37,553 --> 00:45:39,984
+Scott: Right it's like I want to deliver this feature or this product.
+
+582
+00:45:40,285 --> 00:45:41,350
+Scott: I want to deliver it soon.
+
+583
+00:45:41,450 --> 00:45:52,196
+Scott: I want it to work well right and it's like well You know if you you know don't redesign you stop to redesign your whole system So that it's always elegant and perfect.
+
+584
+00:45:52,236 --> 00:45:55,728
+Scott: it incorporates everything nicely and cohesively in the best way you can.
+
+585
+00:45:55,748 --> 00:46:02,088
+Scott: then Delivering anything will take a long time and cost a lot of money because you got to start from scratch.
+
+586
+00:46:02,108 --> 00:46:03,873
+Scott: right you look at car Manufacturers.
+
+587
+00:46:04,254 --> 00:46:04,435
+Scott: right.
+
+588
+00:46:04,715 --> 00:46:06,922
+Scott: you look at in a pick some car the 2004 2005 2020. you know right?
+
+589
+00:46:09,750 --> 00:46:11,459
+Scott: It's like they're really similar.
+
+590
+00:46:11,519 --> 00:46:13,750
+Scott: They don't change the car that much year to year.
+
+591
+00:46:14,171 --> 00:46:19,547
+Scott: They change a little bit because they'd have to redo the whole factory right redo everything.
+
+592
+00:46:19,607 --> 00:46:20,530
+Scott: They can't do that right.
+
+593
+00:46:20,590 --> 00:46:24,990
+Scott: They could do that once every so often right like the all-new such-and-such car.
+
+594
+00:46:25,050 --> 00:46:28,022
+Scott: We redesigned the whole thing every five ten years whatever.
+
+595
+00:46:28,042 --> 00:46:32,095
+Scott: I don't know how long cycles are But most years it's.
+
+596
+00:46:32,136 --> 00:46:33,660
+Scott: they just upgrade it a little bit.
+
+597
+00:46:33,941 --> 00:46:41,750
+Rym: you know and don't don't think that the moral of this whole episode is Build everything right the first time and don't cause that's impossible.
+
+598
+00:46:41,971 --> 00:46:42,814
+Rym: It's a possible.
+
+599
+00:46:42,894 --> 00:46:56,610
+Rym: there are very few places where that is the right answer and I would argue those places are the same kinds of Places where if we had functioning governments we would require certified Engineering practices like we do for things like civil infrastructure.
+
+600
+00:46:57,012 --> 00:47:00,529
+Rym: You can't just build a bridge fast and loose and say you're good and deal with it later.
+
+601
+00:47:00,992 --> 00:47:03,670
+Scott: Yes, the bridge has to last a long as time.
+
+602
+00:47:04,116 --> 00:47:13,616
+Rym: Some things need to be over-engineered like the systems on ships that make them go or the things on airplanes that keep them in the air or Medical devices.
+
+603
+00:47:13,938 --> 00:47:16,028
+Rym: pacemakers can't have software bugs in them.
+
+604
+00:47:16,972 --> 00:47:18,135
+Scott: Yeah, exactly so.
+
+605
+00:47:18,235 --> 00:47:29,270
+Rym: but if you're making like something that just plays video over a little screen Are you gonna spend a hundred thousand dollars of developer time making it over engineered solution?
+
+606
+00:47:29,310 --> 00:47:36,190
+Rym: You're gonna spend $10,000 making something that works 99% of the time and it's a pain in the ass to upgrade and that's tomorrow's problem.
+
+607
+00:47:36,772 --> 00:47:41,810
+Scott: Yeah, I mean if you go to a company right like, you know my company or any other company and you're working on software.
+
+608
+00:47:42,352 --> 00:47:47,650
+Scott: You're gonna come in if they have any existing software, even if they just made it five minutes ago, right?
+
+609
+00:47:47,990 --> 00:47:50,984
+Scott: They probably already learned a way to make it better, right?
+
+610
+00:47:51,646 --> 00:47:58,150
+Scott: And it's like alright Are you going to rewrite it and try to make everything perfect and let the perfect become the enemy of the done?
+
+611
+00:47:58,738 --> 00:48:04,791
+Scott: And if you do that You're gonna spend a lot of time and a lot of money and at the end of the day you will have nothing to show For it.
+
+612
+00:48:04,851 --> 00:48:05,354
+Scott: No, right.
+
+613
+00:48:05,414 --> 00:48:06,016
+Scott: It's like it's.
+
+614
+00:48:06,137 --> 00:48:15,273
+Rym: you know, even if you're gonna have someone like me yelling at you now You can have a product manager saying yo, we have to deliver this like it's been right years, you know It's like oh we have.
+
+615
+00:48:15,293 --> 00:48:16,679
+Scott: you know, we want to add this feature.
+
+616
+00:48:16,920 --> 00:48:21,277
+Scott: Oh, well, that feature is very annoying to add Considering our current architecture.
+
+617
+00:48:21,357 --> 00:48:25,170
+Scott: I will have to re-architect to add that feature in an elegant fashion.
+
+618
+00:48:25,270 --> 00:48:26,977
+Scott: That is you know performant and nice.
+
+619
+00:48:27,479 --> 00:48:32,450
+Scott: that's going you know, and you if you spend so long doing it It's like well you just wasted all that.
+
+620
+00:48:32,530 --> 00:48:41,242
+Scott: It's like even if you keep your job that long you spent all that time doing it some some other company Probably did it faster and you just write like there was no point.
+
+621
+00:48:41,262 --> 00:48:42,950
+Scott: No one's gonna use the thing, right?
+
+622
+00:48:43,151 --> 00:48:44,643
+Scott: So you went with a duct tape solution.
+
+623
+00:48:44,925 --> 00:48:50,550
+Scott: you got it out You made the money you made the deal right and it's like but now you made it worse for the next thing you have to.
+
+624
+00:48:50,710 --> 00:48:52,478
+Rym: Yeah, that's that.
+
+625
+00:48:52,558 --> 00:48:56,714
+Rym: so and that's the important thing to internalize the debt We're taught that we talked about.
+
+626
+00:48:56,774 --> 00:49:09,479
+Rym: everyone talks about in this space is debt that your engineers have to pay at some point or not But that Choosing not to pay off technical debt comes down to.
+
+627
+00:49:10,281 --> 00:49:11,624
+Rym: is this thing end of life?
+
+628
+00:49:11,965 --> 00:49:13,389
+Rym: Will it ever be end of life?
+
+629
+00:49:14,330 --> 00:49:14,971
+Rym: Mm-hmm.
+
+630
+00:49:14,991 --> 00:49:32,739
+Scott: Well, so one strategy for for conquering this debt is you know Realizing that whatever thing you're making is so important that you needs to be right the first time and you spend lots and lots of Resources times and monies to make it right, you know, very right you design it very well.
+
+631
+00:49:34,040 --> 00:49:45,160
+Scott: Another way is to just have so many people working for you Google or Facebook or some shit like that Right that you can have some people making new things and people fixing things all at the same time.
+
+632
+00:49:45,281 --> 00:49:45,764
+Scott: You haven't?
+
+633
+00:49:45,804 --> 00:49:47,333
+Scott: you can get everything done, right?
+
+634
+00:49:47,353 --> 00:49:48,118
+Scott: You can just do it all.
+
+635
+00:49:49,621 --> 00:49:57,208
+Rym: There is a third even worse way of you have a ton of people and you can just throw More engineer.
+
+636
+00:49:57,288 --> 00:49:58,596
+Rym: every time you want to update the system.
+
+637
+00:49:58,616 --> 00:50:04,280
+Rym: with a lot of tech debt You just throw more engineers at it than the last time you updated that system and you scale that forever.
+
+638
+00:50:04,843 --> 00:50:06,212
+Rym: I've seen that happen at.
+
+639
+00:50:06,252 --> 00:50:07,299
+Scott: people can do that.
+
+640
+00:50:08,604 --> 00:50:19,560
+Scott: the one thing that can also happen is Engineers are human beings right and even though they need to work to live in a capitalist society Nobody wants to maintain your old cobalt bullshit, right?
+
+641
+00:50:19,801 --> 00:50:29,340
+Scott: It's not fun to work especially on software But other any sort of other project that is so poorly designed and annoying.
+
+642
+00:50:29,461 --> 00:50:32,515
+Scott: It's like you want things to be easy breezy, right?
+
+643
+00:50:32,576 --> 00:50:35,855
+Scott: It's like, you know I can if I the new GeekNights website.
+
+644
+00:50:35,895 --> 00:50:36,740
+Scott: good example, right?
+
+645
+00:50:36,800 --> 00:50:37,784
+Scott: It's like I can add.
+
+646
+00:50:38,286 --> 00:50:44,273
+Scott: you know, the way the new GeekNights website coming soon is done It's really easy for me to add new features to.
+
+647
+00:50:44,313 --> 00:50:45,620
+Scott: it takes like two seconds, right?
+
+648
+00:50:45,921 --> 00:50:50,856
+Scott: If I actually spend time on it the old GeekNights websites are paying in the ass to work with.
+
+649
+00:50:51,077 --> 00:50:53,538
+Scott: it's old and busted Right, it's not fun.
+
+650
+00:50:55,040 --> 00:51:11,060
+Scott: So it's like if it's your job to work at a company that insists on you know Having this old system keeping it operational not replacing it right because that's a weight That's just a bunch of time and money that doesn't actually result in any immediate business benefits.
+
+651
+00:51:11,702 --> 00:51:21,630
+Scott: Then it's not a fun place to work because it's like you're spending days and days and days doing something that should take Minutes, right if the system wasn't garbage.
+
+652
+00:51:21,771 --> 00:51:40,918
+Rym: I've been a product manager at three different companies and Not to give specific examples But I have many times in my career across all of these companies had teams where people quit at a high rate Just because there's a lot of tech debt in that space and it's not fun and no amount of money is gonna get someone Wanting to do that work.
+
+653
+00:51:41,582 --> 00:51:46,846
+Scott: I think it's one of the reasons that you know tech people seem to love going to Startups and whatnot?
+
+654
+00:51:46,927 --> 00:51:49,420
+Scott: because when you go to a startup, they don't have anything there.
+
+655
+00:51:49,501 --> 00:51:53,250
+Scott: You're starting from nut You're always starting from nothing and you never have to deal with this problem.
+
+656
+00:51:53,310 --> 00:51:59,765
+Rym: every engineer thinks I finally get to build something the way I wanted from well getting Well, but they do.
+
+657
+00:52:00,146 --> 00:52:08,300
+Scott: there is one thing and if you keep doing that over and over and it as long as you deliver something If you just start things and never finish anything then you're not anywhere.
+
+658
+00:52:08,560 --> 00:52:18,990
+Scott: but if you go somewhere and build something from scratch and deliver it and then skip the maintenance you just go somewhere else and Start from scratch and deliver again.
+
+659
+00:52:19,191 --> 00:52:21,200
+Scott: and start from scratch and deliver in a cycle.
+
+660
+00:52:21,781 --> 00:52:35,172
+Scott: you will carry forth the lessons you learned on the previous ones and each one you do will be better and better and last longer and longer and Right won't have the problems you had in our designs.
+
+661
+00:52:35,476 --> 00:52:42,898
+Rym: or You build a reputation of delivering things that do actually have a lot of technical debt hanging around But you never have to pay it.
+
+662
+00:52:43,221 --> 00:52:48,560
+Rym: It's like an 18xx game where I get a bunch of debt and then I dump my company on Scott when he's not paying attention.
+
+663
+00:52:49,427 --> 00:52:52,686
+Scott: Yep Like a bunch of money.
+
+664
+00:52:52,786 --> 00:52:55,919
+Scott: and then here you go you have to buy a 5 train for this company to help.
+
+665
+00:52:56,744 --> 00:52:57,490
+Scott: Not my problem.
+
+666
+00:52:57,551 --> 00:52:58,256
+Scott: I sold that shit.
+
+667
+00:52:58,518 --> 00:53:03,765
+Rym: Yep Now I'm of the mind because tech debt is actually a big part of my Professional career.
+
+668
+00:53:03,805 --> 00:53:07,800
+Rym: like that like managing that is something that is has been a big part of my job.
+
+669
+00:53:07,900 --> 00:53:25,895
+Scott: how much time should we spend right because at the weather is a point at which the tech debt becomes so big that Even though you won't have an immediate thing to deliver by fixing it if you do right do it over Then you'll afterwards you'll be able to do so much so quickly, right?
+
+670
+00:53:25,915 --> 00:53:31,688
+Scott: It'd be like, you know, it's like putting you know Jet propellant right on your business there, right.
+
+671
+00:53:32,169 --> 00:53:35,398
+Scott: and also What was I gonna say?
+
+672
+00:53:36,861 --> 00:53:38,565
+Scott: Anyway, well, well, I.
+
+673
+00:53:38,585 --> 00:53:46,088
+Rym: so what I can say is I think a lot about this and I do have very very well-defined professional opinions around this.
+
+674
+00:53:46,470 --> 00:53:48,157
+Rym: I'm curious if scoundrels agree with any of these.
+
+675
+00:53:48,539 --> 00:53:54,958
+Rym: cuz The biggest thing the most important thing I see in the concept of technical debt is that there is either one?
+
+676
+00:53:55,680 --> 00:54:06,754
+Rym: Person or at least one domain in a very very big company or two or in certain situations two domains of people Who should be the ones who decide how much tech debt to take on.
+
+677
+00:54:06,855 --> 00:54:19,787
+Rym: and it is not the engineers the people who decide that are either the product managers or The operational teams that are not engineers that do customer support and maintain the system around the edges.
+
+678
+00:54:20,571 --> 00:54:32,458
+Rym: in my mind the engineers Should be able to outline the rough effort to do something the over-engineered way the like kind of normal ish middle-of-the-roadway.
+
+679
+00:54:32,478 --> 00:54:35,860
+Rym: and What is the duct tape in his fucking way?
+
+680
+00:54:35,960 --> 00:54:42,617
+Rym: You could get this done, but the business should decide which of those is the correct option for any given products.
+
+681
+00:54:43,740 --> 00:54:45,586
+Scott: I Think that you know, I did remember.
+
+682
+00:54:45,606 --> 00:54:53,227
+Scott: what I was gonna say is that the other situation is when your business Literally cannot Continue right.
+
+683
+00:54:53,489 --> 00:54:54,794
+Scott: you hit the wall, right?
+
+684
+00:54:54,874 --> 00:55:00,069
+Rym: So it's like, you know Check that take up the entire team, right?
+
+685
+00:55:00,089 --> 00:55:03,157
+Scott: Well, it's like you cannot deliver the thing you want.
+
+686
+00:55:03,337 --> 00:55:04,360
+Scott: It's not real.
+
+687
+00:55:04,520 --> 00:55:10,460
+Scott: It's not possible or the resources to it to duct tape another thing on are just too great.
+
+688
+00:55:10,540 --> 00:55:11,967
+Scott: It's like you can't go any further.
+
+689
+00:55:12,007 --> 00:55:20,200
+Scott: That's why like I said the car companies do eventually Redesign the whole car because it's like, you know, the technology changes so much at some point.
+
+690
+00:55:20,240 --> 00:55:23,632
+Scott: It's like we can't just tweak last year's model a little bit.
+
+691
+00:55:23,872 --> 00:55:30,313
+Scott: The other cars are so far ahead of us Yeah, and we can't catch up to them with our existing platform, right?
+
+692
+00:55:30,353 --> 00:55:32,380
+Scott: It's like you look at say chip fabs.
+
+693
+00:55:32,440 --> 00:55:33,465
+Scott: They're like listen, we can't.
+
+694
+00:55:33,545 --> 00:55:36,900
+Scott: we can only design so many better chips on the on this process.
+
+695
+00:55:37,020 --> 00:55:42,420
+Scott: We need a new factory with less mill, you know less man animator process to go forward, right?
+
+696
+00:55:42,440 --> 00:55:44,148
+Scott: We're not getting anywhere with this right?
+
+697
+00:55:44,208 --> 00:55:46,337
+Scott: It's like we've hit the design limit.
+
+698
+00:55:46,378 --> 00:55:46,639
+Scott: That's it.
+
+699
+00:55:47,563 --> 00:55:57,600
+Rym: I've been at places where we had teams that own things that hit KTL o meaning they do nothing but keep our system working.
+
+700
+00:55:58,641 --> 00:56:03,214
+Rym: There is no capacity to add anything to that system or change anything about that system.
+
+701
+00:56:03,454 --> 00:56:05,520
+Rym: They are constantly fixing that system.
+
+702
+00:56:05,921 --> 00:56:06,423
+Rym: That's like.
+
+703
+00:56:06,724 --> 00:56:20,519
+Rym: that's when that's about the point when if you didn't already declare bankruptcy on that thing You absolutely have to Right, usually the best strategy is to you know, if you've got something like that, that's really man, right?
+
+704
+00:56:21,160 --> 00:56:27,297
+Scott: You should see that it's man, right and not wait till that KTL o point whatever you call.
+
+705
+00:56:27,338 --> 00:56:28,803
+Rym: don't pretend It's fine.
+
+706
+00:56:28,864 --> 00:56:38,400
+Rym: like as a product manager the product people who work with engineering Engineering has to be very transparent about where it's like what the problems are and the product people have to actually listen to them.
+
+707
+00:56:38,801 --> 00:56:46,340
+Rym: Like if you and I were working on a project and you said look we are having trouble adding more features This is starting to become a problem.
+
+708
+00:56:46,721 --> 00:56:51,140
+Rym: Then we there has to be a business conversation of how much will that affect us in the long term?
+
+709
+00:56:51,660 --> 00:56:54,170
+Rym: Will that tech debt get too big before we phase this thing out?
+
+710
+00:56:54,210 --> 00:56:56,580
+Rym: Like there's no one solution to this.
+
+711
+00:56:56,681 --> 00:56:59,640
+Rym: It's a dialogue between engineers and product managers.
+
+712
+00:57:00,022 --> 00:57:00,745
+Rym: There's no one.
+
+713
+00:57:00,765 --> 00:57:08,880
+Scott: if you if you want to have a business that lasts a long time What you have to do is right, you know, you have to recognize on day one that this is gonna happen.
+
+714
+00:57:09,101 --> 00:57:19,645
+Scott: Right is that you're gonna make a thing and that thing is only gonna be able to carry on so far without some sort of redo refactor Remodel of some kind.
+
+715
+00:57:19,725 --> 00:57:23,560
+Scott: right, you know, you can only fix your kitchen so much eventually need all new cabinets.
+
+716
+00:57:23,620 --> 00:57:27,500
+Scott: Yeah, and you got a time it you have to say all right this, you know, we're working.
+
+717
+00:57:28,022 --> 00:57:29,989
+Scott: Okay, we made it we made it we delivered it.
+
+718
+00:57:30,130 --> 00:57:32,258
+Scott: It's working, you know and we can.
+
+719
+00:57:32,639 --> 00:57:36,871
+Scott: you know We can keep adding to this for this amount of time right?
+
+720
+00:57:37,293 --> 00:57:39,860
+Scott: How long if we start from scratch again?
+
+721
+00:57:40,421 --> 00:57:47,320
+Scott: How long will it take us to make another better one from scratch or at least redo a you know a better version, right?
+
+722
+00:57:47,960 --> 00:58:08,105
+Scott: And you need to get one team of people carrying on with the first one as if it's still your business and delivering features and fixes for the customers and simultaneously Work on the next one such that once the first one hits the end like alright We can't carry that one any further.
+
+723
+00:58:08,527 --> 00:58:13,140
+Scott: The new one is ready and you can sell it as like a new better deal, right?
+
+724
+00:58:13,220 --> 00:58:15,346
+Scott: It's like Windows 3.1.
+
+725
+00:58:15,346 --> 00:58:17,412
+Scott: We can't get any further right.
+
+726
+00:58:17,492 --> 00:58:20,500
+Scott: and then Windows 95 is here a surprise, right?
+
+727
+00:58:20,640 --> 00:58:30,017
+Scott: It's like here it is right if you wait for Windows 3.1 to be dead and then start working on Windows 95 Everyone's gonna be using Macs by the time you're ready with Windows 95, right?
+
+728
+00:58:30,780 --> 00:58:31,001
+Scott: It's not.
+
+729
+00:58:31,041 --> 00:58:35,376
+Scott: they started working on Windows 95, you know way before Windows 3.1 was dead, right?
+
+730
+00:58:36,460 --> 00:58:37,022
+Scott: They had they.
+
+731
+00:58:37,122 --> 00:58:38,286
+Scott: you know, they stagger it.
+
+732
+00:58:38,447 --> 00:58:54,851
+Rym: Yeah now I found the the I'd say the biggest causes of bad technical debt are either business people saying yes to things that Engineering has warned are more expensive than they realize.
+
+733
+00:58:55,192 --> 00:58:56,737
+Rym: like that is a common problem.
+
+734
+00:58:57,078 --> 00:59:03,338
+Rym: business people Agreeing to small features in a vacuum who don't understand the actual underlying systems.
+
+735
+00:59:03,358 --> 00:59:07,069
+Rym: that well I find a lot of success by saying no to people.
+
+736
+00:59:07,491 --> 00:59:11,451
+Rym: very few people in those spaces tend to say no especially when there's money on the line.
+
+737
+00:59:11,773 --> 00:59:21,451
+Rym: a lot of companies will Say yes to a new deal with a customer that requires a new feature that now requires The accumulation of a bunch of tech debt and no one's ever willing to pay it off.
+
+738
+00:59:21,793 --> 00:59:23,980
+Rym: that might actually be the single biggest cause.
+
+739
+00:59:25,663 --> 00:59:30,789
+Rym: and the other cause that I see most commonly is the engineers who built the first system.
+
+740
+00:59:31,351 --> 00:59:39,119
+Rym: built it from one set of requirements, but Nobody in the business ever actually told them what the long-term plan was for that thing.
+
+741
+00:59:40,044 --> 00:59:43,160
+Rym: Like hey build a system to make video play in a plane.
+
+742
+00:59:44,020 --> 00:59:46,733
+Rym: Maybe the product manager should have stepped back and told them.
+
+743
+00:59:47,035 --> 00:59:51,603
+Rym: Yeah, so five years from now We're gonna be selling this on buses cruise ships Etc.
+
+744
+00:59:51,623 --> 00:59:52,891
+Rym: Like whatever the plan is.
+
+745
+00:59:53,031 --> 00:59:54,480
+Rym: What are you gonna do with it in the future?
+
+746
+00:59:55,040 --> 01:00:02,550
+Rym: Because an engineer they might architect something very differently if they know Like what the future is.
+
+747
+01:00:02,912 --> 01:00:15,480
+Rym: if I write when I used to write code I wouldn't make a separate class for something unless I thought that I had some reason to and if I was making something quick and Simple not a lot of classes a lot of a lot of kind of messy code because it wouldn't matter that much.
+
+748
+01:00:17,560 --> 01:00:27,940
+Scott: Hmm Yeah, this you know, this is basically, you know It's a never-ending topic because literally anyone who works anywhere engineering anything right is working with a system.
+
+749
+01:00:28,461 --> 01:00:42,219
+Scott: That is some inherent flaw and they're trying to make it, you know do things that weren't considerations Or weren't properly accounted for when you know the foundation of that system was set up.
+
+750
+01:00:42,359 --> 01:00:50,221
+Scott: Yeah And you know, even if they made the system ten minutes ago, they already found something that's like damn it I got.
+
+751
+01:00:50,322 --> 01:00:51,066
+Scott: it's like that's.
+
+752
+01:00:51,126 --> 01:00:52,734
+Scott: why did the nice website take?
+
+753
+01:00:52,754 --> 01:00:53,860
+Scott: so, you know, it's taking so long.
+
+754
+01:00:53,940 --> 01:00:54,903
+Scott: It's like he find it.
+
+755
+01:00:54,943 --> 01:00:57,290
+Scott: I've already had to like while working on it.
+
+756
+01:00:57,370 --> 01:01:01,625
+Scott: I was like shit like this RSS feed things Supporting.
+
+757
+01:01:01,666 --> 01:01:12,954
+Rym: I have changed this whole thing right now it's easy because in gig nights like Scott is basically both a product manager and the head engineer because There's no there's no business person telling me and Scott what to do.
+
+758
+01:01:12,974 --> 01:01:18,040
+Scott: Like no But it's like, you know you as I learn as I go along, right?
+
+759
+01:01:18,120 --> 01:01:18,543
+Scott: It's like I'm.
+
+760
+01:01:18,664 --> 01:01:21,219
+Scott: you know, I'm redoing it because I you know, I don't want to be.
+
+761
+01:01:22,421 --> 01:01:23,966
+Scott: I'm doing the redo part right now.
+
+762
+01:01:24,066 --> 01:01:28,340
+Scott: I couldn't do it alongside the old one because I'm only one person.
+
+763
+01:01:29,742 --> 01:01:33,354
+Rym: Now I'm not talked about enough aspect of this because there's like.
+
+764
+01:01:33,395 --> 01:01:34,920
+Rym: we can't give really specific advice.
+
+765
+01:01:35,121 --> 01:01:39,900
+Rym: This is a. every project is a totally different calculation in terms of technical debt.
+
+766
+01:01:40,281 --> 01:01:46,583
+Scott: But the thing that the fundamental calculation is still sort of the same right the big the zoomed-out calculation Well, you know what it is.
+
+767
+01:01:46,944 --> 01:01:51,259
+Rym: do things eyes open and tell all the people building something what your plans are for it.
+
+768
+01:01:51,520 --> 01:01:56,500
+Scott: Well, it's like, you know, I this I want to achieve this actual real-world goal, right?
+
+769
+01:01:56,560 --> 01:01:59,015
+Scott: The engineering project is a means to an end, right?
+
+770
+01:01:59,115 --> 01:02:02,560
+Scott: Even if it's a bridge I want people to get across this river more easily, right?
+
+771
+01:02:02,660 --> 01:02:03,464
+Scott: How can we do that?
+
+772
+01:02:03,504 --> 01:02:06,900
+Rym: Tell the people making the bridge what that what the bridge is gonna be used for in the end.
+
+773
+01:02:07,060 --> 01:02:08,385
+Rym: Don't just tell them to make a bridge.
+
+774
+01:02:08,425 --> 01:02:10,894
+Scott: Well, it's like we have this much money, right?
+
+775
+01:02:11,175 --> 01:02:12,660
+Scott: You know, we have this much time.
+
+776
+01:02:13,121 --> 01:02:15,028
+Scott: These are our goals, right?
+
+777
+01:02:15,249 --> 01:02:16,895
+Scott: You know, this is what we want to do.
+
+778
+01:02:16,995 --> 01:02:18,239
+Scott: This is what we need, right?
+
+779
+01:02:18,500 --> 01:02:22,352
+Scott: You just you lay everything out, you know and you and then you'll.
+
+780
+01:02:22,372 --> 01:02:28,536
+Scott: well, you know, you you got to calculate like hey You know, would it be better to just go with a ferry right?
+
+781
+01:02:28,656 --> 01:02:34,555
+Scott: It's like, you know Accept all possible solutions and then once you have one in place, it's like.
+
+782
+01:02:34,635 --> 01:02:36,160
+Scott: and then the next thing comes along.
+
+783
+01:02:36,260 --> 01:02:38,089
+Scott: It's like damn, you know, we want it.
+
+784
+01:02:38,330 --> 01:02:39,575
+Scott: We went with the ferry idea.
+
+785
+01:02:39,636 --> 01:02:40,600
+Scott: That was the best idea.
+
+786
+01:02:40,640 --> 01:02:42,739
+Scott: It was the right idea at the time with what we knew.
+
+787
+01:02:43,422 --> 01:02:56,620
+Scott: But now we want to get cars over and we bought a people-only ferry And the dock we made is a people-only dock and we can't get cars up on the dock Even if we went out and bought a car ferry.
+
+788
+01:02:57,626 --> 01:02:58,194
+Scott: What are we gonna do?
+
+789
+01:03:00,803 --> 01:03:06,223
+Scott: You know that we build a bridge or do we redo the docks and get a new and get a new ferry Right?
+
+790
+01:03:06,383 --> 01:03:11,158
+Rym: and in what we're on the surface seemed like fairly equivalent situations with large platforms.
+
+791
+01:03:11,198 --> 01:03:15,120
+Rym: in my career I have told people Stop all new features.
+
+792
+01:03:15,762 --> 01:03:21,020
+Rym: I'm gonna give you a full year to rebuild this thing from scratch instead of adding anything to the existing platform.
+
+793
+01:03:21,684 --> 01:03:27,820
+Rym: I have in very similar situations said We're just gonna keep this going because three years from now we're shutting the whole thing down.
+
+794
+01:03:27,920 --> 01:03:30,168
+Rym: Anyway, so nope, you're not gonna be architected.
+
+795
+01:03:30,469 --> 01:03:31,251
+Rym: Just heat.
+
+796
+01:03:31,291 --> 01:03:33,740
+Rym: put more and more duct tape on it until we shut it down.
+
+797
+01:03:34,423 --> 01:03:35,729
+Scott: It's like what's the calculation?
+
+798
+01:03:35,789 --> 01:03:38,120
+Scott: how much money you know, how much money we gonna spend right?
+
+799
+01:03:38,300 --> 01:03:39,264
+Scott: Is it worth it to build?
+
+800
+01:03:39,284 --> 01:03:40,389
+Scott: you just calculate it, right?
+
+801
+01:03:40,490 --> 01:03:42,700
+Scott: Is it worth it to do this or not?
+
+802
+01:03:43,040 --> 01:03:48,380
+Rym: But I find the the places where tech debt the interest you're paying on your tech debt gets the worst.
+
+803
+01:03:48,783 --> 01:03:50,840
+Rym: When people have the biggest problem is talked about the least.
+
+804
+01:03:51,721 --> 01:03:59,380
+Rym: Tech debt is usually relatively cheap if the same team that built it originally is still the team working on it today.
+
+805
+01:03:59,882 --> 01:04:07,071
+Rym: But if that original team of say five people Four of them are replaced with new people over five years
+
+806
+01:04:07,492 --> 01:04:08,094
+Scott: and now
+
+807
+01:04:08,676 --> 01:04:16,420
+Rym: you've got to deal with tech debt That tech debt is a lot more expensive because you don't have people who know why it was built the way it was originally
+
+808
+01:04:17,301 --> 01:04:17,883
+Scott: Mm-hmm,
+
+809
+01:04:18,505 --> 01:04:21,715
+Rym: and especially now like right now today in this post couple
+
+810
+01:04:22,156 --> 01:04:23,119
+Scott: the weird
+
+811
+01:04:23,942 --> 01:04:29,880
+Rym: Sort of not quite actually post COVID time and the great resignation and engineers quitting all over the place in changing jobs.
+
+812
+01:04:30,385 --> 01:04:41,859
+Rym: If any of you out there interact with technology debt There is a high chance that interest rate is gonna quadruple as people quit and you lose the only Person left who knows how that code even works.
+
+813
+01:04:42,924 --> 01:04:44,580
+Scott: Well, I mean that could be a thing that you you know.
+
+814
+01:04:44,600 --> 01:04:55,669
+Scott: If you're a if you lose a lot of engineering employees, right that might be like, okay Well the new people who come in right and I want to attract new people Right have a new thing.
+
+815
+01:04:55,729 --> 01:05:10,899
+Rym: don't have them work on the old thing, right, you know That's uh, that's a strategy I have employed to entice people to join my engineering teams over the years like hey I'm gonna let you rebuild this thing from scratch.
+
+816
+01:05:11,922 --> 01:05:14,939
+Rym: Yep, people get real excited about that at least at first.
+
+817
+01:05:15,616 --> 01:05:18,469
+Scott: Yeah because they can not make all the mistakes of the past.
+
+818
+01:05:18,549 --> 01:05:23,747
+Scott: make all new mistakes learn from those new mistakes then go to another place and Learn from those mistakes and so on and so forth.
+
+819
+01:05:23,787 --> 01:05:25,353
+Rym: and don't you're nine dot dot.
+
+820
+01:05:25,574 --> 01:05:28,305
+Rym: don't think you can avoid Making mistakes.
+
+821
+01:05:28,346 --> 01:05:32,142
+Rym: The only way to avoid making mistakes is to treat it like Engineering.
+
+822
+01:05:32,403 --> 01:05:36,033
+Rym: with a capital E and almost no job you get anywhere.
+
+823
+01:05:36,073 --> 01:05:40,104
+Rym: making software will actually treat engineering Like engineering.
+
+824
+01:05:40,204 --> 01:05:46,966
+Scott: that is rare even if you weren't right, but I mean even if you work at NASA where it's capital E engineering It's like they make mistakes.
+
+825
+01:05:47,307 --> 01:05:47,587
+Scott: Yep.
+
+826
+01:05:47,969 --> 01:05:49,092
+Rym: They still make mistakes.
+
+827
+01:05:49,493 --> 01:05:51,680
+Rym: The mistakes are sometimes even more costly.
+
+828
+01:05:51,720 --> 01:05:52,865
+Rym: They live one shot to do.
+
+829
+01:05:52,885 --> 01:05:56,900
+Scott: that's why they make it capital E because the mistakes are so costly.
+
+830
+01:06:01,255 --> 01:06:03,790
+Rym: This has been GeekNights with Rym and Scott.
+
+831
+01:06:03,850 --> 01:06:08,670
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+832
+01:06:08,911 --> 01:06:10,878
+Scott: Be sure to visit our website at front row.
+
+833
+01:06:10,918 --> 01:06:13,910
+Scott: crew calm for show notes discussion news and more.
+
+834
+01:06:14,190 --> 01:06:20,848
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate.
+
+835
+01:06:20,908 --> 01:06:25,126
+Scott: Thursdays GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+836
+01:06:26,392 --> 01:06:29,450
+Scott: GeekNights is recorded live with no studio and no audience.
+
+837
+01:06:29,651 --> 01:06:32,581
+Scott: But unlike those other late shows it's actually recorded at night.
+
+838
+01:06:32,862 --> 01:06:36,936
+Rym: and the patreon patrons who want me to say their names at the end Of this particular episode?
+
+839
+01:06:36,956 --> 01:06:45,163
+Rym: or Alan Joyce Linkichi adrenaline Tenerbrae and a bunch of people who really don't want me to say their names Chris the dog Chris rhymer Clinton Walton Dex Finn shy 85 Rebecca Dunn review.
+
+840
+01:06:45,183 --> 01:06:46,327
+Rym: mad bill 34 cowards.
+
+841
+01:06:46,427 --> 01:06:48,273
+Rym: Sam Erickson Sure, but horrible.
+
+842
+01:06:48,534 --> 01:06:50,522
+Rym: stop all the downloading Taylor Braun.
+
+843
+01:06:50,742 --> 01:06:51,947
+Rym: The next station is st.
+
+844
+01:06:52,067 --> 01:06:55,418
+Rym: Andrew st Andrew station and a bunch of other people.
+
+845
+01:06:56,020 --> 01:06:59,350
+Rym: So well, yeah, we're probably going to that hockey game tomorrow.
+
+846
+01:06:59,912 --> 01:07:03,103
+Rym: Do a show on Wednesday on something Scott hasn't seen orbital children.
+
+847
+01:07:03,123 --> 01:07:05,150
+Rym: I don't know what Scott's watching lately.
+
+848
+01:07:05,230 --> 01:07:10,728
+Rym: I'll figure that out before Wednesday, but for now, I'll leave you simply with.
+
+849
+01:07:15,872 --> 01:07:26,656
+Rym: Then Gandalf the Grey and Gandalf the White and Monty Python and the Holy Grail's Black Knight and the pizza Mussolini and the jubilee And cowboy Curtis and John B the teeny Terminator Captain Kirk and Darth Vader.
+
+850
+01:07:26,676 --> 01:07:27,759
+Rym: no pants Superman.
+
+851
+01:07:27,799 --> 01:07:29,685
+Scott: every single power is a little less custom.
+
+852
+01:07:29,725 --> 01:07:31,745
+Rym: and it or Logan Spock the rock talk.
+

@@ -1,0 +1,3404 @@
+﻿1
+00:00:08,620 --> 00:00:11,189
+Speaker 1: It's Monday, May 13th, 2019.
+
+2
+00:00:11,189 --> 00:00:12,172
+Speaker 1: I'm Rem.
+
+3
+00:00:12,233 --> 00:00:12,674
+Speaker 1: I'm Scott.
+
+4
+00:00:12,795 --> 00:00:14,320
+Speaker 1: And this is Geek Nights Tonight.
+
+5
+00:00:14,521 --> 00:00:17,860
+Speaker 1: We are talking about the Windows Subsystem for Linux.
+
+6
+00:00:19,120 --> 00:00:20,038
+Speaker 0: Let's do this.
+
+7
+00:00:21,580 --> 00:00:27,500
+Speaker 1: So, you know, when we start the show, we always like have a note about either biking, or we complain about the weather in some fashion.
+
+8
+00:00:27,660 --> 00:00:28,855
+Speaker 0: But I don't want to complain about the weather.
+
+9
+00:00:28,875 --> 00:00:29,240
+Speaker 0: It's bad.
+
+10
+00:00:29,440 --> 00:00:35,910
+Speaker 1: Yeah, so normally, but I don't, I complain about the weather in a like, warm today, but I'm not actually that mad about the weather.
+
+11
+00:00:36,412 --> 00:00:38,460
+Speaker 1: And I also really don't like to have conversations.
+
+12
+00:00:38,520 --> 00:00:38,661
+Speaker 0: I'm mad.
+
+13
+00:00:38,681 --> 00:00:44,220
+Speaker 0: It's the middle of May, and it's still like cold and wet, and it hasn't stopped being wet or cold.
+
+14
+00:00:44,620 --> 00:00:47,254
+Speaker 0: Where is the global warming that I've heard about?
+
+15
+00:00:47,636 --> 00:00:48,300
+Speaker 0: I'm not seeing it.
+
+16
+00:00:48,340 --> 00:00:49,428
+Speaker 1: Because it's not global warming.
+
+17
+00:00:49,468 --> 00:00:51,220
+Speaker 1: It's destabilized climate.
+
+18
+00:00:51,680 --> 00:00:52,243
+Speaker 0: That's bullshit.
+
+19
+00:00:52,263 --> 00:00:53,088
+Speaker 0: I want the warming.
+
+20
+00:00:53,692 --> 00:00:54,959
+Speaker 0: Let's go back to what it used to be.
+
+21
+00:00:55,560 --> 00:01:00,020
+Speaker 1: So on Saturday, I got up, and it was like the most perfect, beautiful day.
+
+22
+00:01:00,181 --> 00:01:01,467
+Speaker 0: Yeah, for one day.
+
+23
+00:01:01,588 --> 00:01:03,156
+Speaker 0: Actually, it was kind of cold, but otherwise good.
+
+24
+00:01:03,196 --> 00:01:04,000
+Speaker 0: I have way better than this.
+
+25
+00:01:04,239 --> 00:01:04,622
+Speaker 1: Kind of cold.
+
+26
+00:01:04,924 --> 00:01:05,689
+Speaker 1: I went out in the afternoon.
+
+27
+00:01:05,710 --> 00:01:06,736
+Speaker 1: I ran shirtless.
+
+28
+00:01:06,756 --> 00:01:07,260
+Speaker 1: It was too hot.
+
+29
+00:01:07,483 --> 00:01:07,919
+Speaker 0: Still cold.
+
+30
+00:01:08,542 --> 00:01:09,453
+Speaker 1: I ran a half-marathon.
+
+31
+00:01:09,473 --> 00:01:10,060
+Speaker 1: It was a good time.
+
+32
+00:01:10,540 --> 00:01:17,800
+Speaker 1: Then I wake up Sunday, and it's cold, and it's just raining constantly, and I walked over to the climbing gym in the rain.
+
+33
+00:01:17,920 --> 00:01:20,730
+Speaker 0: Which feels like a historic weather thing that was easier to use.
+
+34
+00:01:20,830 --> 00:01:22,275
+Speaker 0: Like, what was the weather today, last week?
+
+35
+00:01:24,300 --> 00:01:28,258
+Speaker 1: Oh, meanwhile, Dazzle in the chat here is just like, "It's been excellent biking weather in
+
+36
+00:01:28,338 --> 00:01:28,700
+Speaker 1: London.".
+
+37
+00:01:28,780 --> 00:01:29,222
+Speaker 1: Like, really?
+
+38
+00:01:29,303 --> 00:01:31,011
+Speaker 1: London is the one place that isn't like this?
+
+39
+00:01:31,051 --> 00:01:32,619
+Speaker 1: I feel like this is London weather right here.
+
+40
+00:01:33,200 --> 00:01:35,120
+Speaker 0: Let's just get a big fan and blow our shit over there.
+
+41
+00:01:35,220 --> 00:01:36,400
+Speaker 1: Back over to London, where it belongs.
+
+42
+00:01:37,520 --> 00:01:38,830
+Speaker 1: Who's got our sun is the problem?
+
+43
+00:01:38,850 --> 00:01:39,435
+Speaker 1: I guess London?
+
+44
+00:01:39,556 --> 00:01:40,100
+Speaker 1: Maybe Seattle?
+
+45
+00:01:41,620 --> 00:01:44,440
+Speaker 1: But, uh, it is fucking miserable outside today.
+
+46
+00:01:44,560 --> 00:01:47,160
+Speaker 0: It's been miserable for all of April, and now half of May.
+
+47
+00:01:47,402 --> 00:01:48,299
+Speaker 1: Saturday was fine, though.
+
+48
+00:01:49,000 --> 00:01:54,560
+Speaker 0: Why do I have to... Other years, I would start biking to work at, like, you know, early April, or even March.
+
+49
+00:01:54,820 --> 00:01:57,480
+Speaker 0: And meanwhile, this year, it's the middle of May, and I still can't bike to work.
+
+50
+00:01:57,480 --> 00:02:02,059
+Speaker 1: You know what they say, "April showers bring May showers, and it just keeps fucking raining forever, fuck
+
+51
+00:02:02,139 --> 00:02:02,259
+Speaker 1: you.".
+
+52
+00:02:02,502 --> 00:02:03,200
+Speaker 0: And then fucking June showers.
+
+53
+00:02:06,520 --> 00:02:06,901
+Speaker 1: Alright.
+
+54
+00:02:07,182 --> 00:02:15,520
+Speaker 1: So, there is actually a bunch of tech news, so I guess we'll get right into it before we talk about the WSL, which I've started to realize a lot of people do not know exists.
+
+55
+00:02:16,000 --> 00:02:16,128
+Speaker 0: Really?
+
+56
+00:02:16,684 --> 00:02:16,958
+Speaker 0: Yeah.
+
+57
+00:02:17,301 --> 00:02:17,603
+Speaker 0: Okay.
+
+58
+00:02:17,865 --> 00:02:19,556
+Speaker 0: Seems like Microsoft's tooting the horn.
+
+59
+00:02:19,576 --> 00:02:20,080
+Speaker 0: I don't know.
+
+60
+00:02:20,160 --> 00:02:26,180
+Speaker 1: They are, but I feel like a lot... I've encountered people who are shocked that they can just SSH from Windows now.
+
+61
+00:02:26,180 --> 00:02:26,720
+Speaker 0: Well, that's different.
+
+62
+00:02:27,221 --> 00:02:27,746
+Speaker 1: Well, yeah.
+
+63
+00:02:28,211 --> 00:02:29,039
+Speaker 1: Anyway, we'll get to that.
+
+64
+00:02:29,700 --> 00:02:30,238
+Speaker 0: So, you got any news?
+
+65
+00:02:30,620 --> 00:02:30,921
+Speaker 0: I do.
+
+66
+00:02:31,022 --> 00:02:35,399
+Speaker 0: So, today, le suprema corto of the United States...
+
+67
+00:02:35,540 --> 00:02:39,200
+Speaker 1: Which is already compromised with two corrupt justices.
+
+68
+00:02:40,041 --> 00:02:40,740
+Speaker 0: Uh, illegitimate.
+
+69
+00:02:41,040 --> 00:02:41,457
+Speaker 0: Illegitimate.
+
+70
+00:02:41,820 --> 00:02:42,219
+Speaker 0: Let's say that.
+
+71
+00:02:42,801 --> 00:02:44,151
+Speaker 1: Well, two of them are illegitimate.
+
+72
+00:02:44,312 --> 00:02:45,440
+Speaker 1: One of those two is corrupt.
+
+73
+00:02:46,220 --> 00:02:46,370
+Speaker 0: Anyway.
+
+74
+00:02:47,501 --> 00:02:57,840
+Speaker 0: Anyway, the most illegitimate and corrupt one decided to side with the good people, giving a 5-4 decision in favor of good, in my opinion.
+
+75
+00:02:58,140 --> 00:03:02,120
+Speaker 1: Kevin, who is probably a serial sexual abuser, allegedly.
+
+76
+00:03:02,760 --> 00:03:11,120
+Speaker 0: Anyway, way back, I think it was in 2011, someone decided to try a group of Apple phone users.
+
+77
+00:03:12,180 --> 00:03:13,253
+Speaker 0: What's their... Is it like Pepper?
+
+78
+00:03:13,273 --> 00:03:13,900
+Speaker 0: I think it's called.
+
+79
+00:03:14,060 --> 00:03:15,020
+Speaker 1: It's Apple versus Pepper.
+
+80
+00:03:15,281 --> 00:03:18,900
+Speaker 0: Right, so whoever Pepper is, I don't fucking know, decided to sue Apple.
+
+81
+00:03:19,020 --> 00:03:21,260
+Speaker 0: And their argument... I'm not a lawyer, by the way.
+
+82
+00:03:21,661 --> 00:03:23,079
+Speaker 0: Their argument was like, was this.
+
+83
+00:03:23,880 --> 00:03:32,180
+Speaker 0: You got this app store, Apple, and nobody can sell apps to an iPhone user legally without going through your app store.
+
+84
+00:03:32,240 --> 00:03:35,054
+Speaker 0: You got a monopoly on iPhone apps, right?
+
+85
+00:03:35,456 --> 00:03:36,160
+Speaker 0: iOS apps.
+
+86
+00:03:37,100 --> 00:03:46,492
+Speaker 0: And you're charging developers a 30% fee, which means that the prices for users are inflated artificially because developers are passing that 30% fee onto the user.
+
+87
+00:03:48,641 --> 00:04:03,280
+Speaker 0: And if there was competition, which there should be under antitrust law, then those prices of apps would be down and it would be better for users, so an Apple is the one who is causing this anti-competitive situation.
+
+88
+00:04:03,720 --> 00:04:11,660
+Speaker 0: Therefore, we're gonna sue Apple, and we want Apple to give all the users who bought apps their money back for those inflated prices.
+
+89
+00:04:11,861 --> 00:04:18,360
+Speaker 1: One could argue that Apple is not a monopoly except among people who choose to use Apple because there are way more Android phones than Apple phones.
+
+90
+00:04:19,784 --> 00:04:21,100
+Speaker 1: Android is a much bigger ecosystem.
+
+91
+00:04:21,440 --> 00:04:26,860
+Speaker 0: So they went to the Supreme Court not to decide if Apple is a monopoly or not.
+
+92
+00:04:26,920 --> 00:04:28,539
+Speaker 0: That decision is a long ways off.
+
+93
+00:04:29,421 --> 00:04:34,900
+Speaker 0: They went to Apple today to decide, are you even allowed to sue Apple, you users?
+
+94
+00:04:35,600 --> 00:04:38,060
+Speaker 0: Because Apple's argument was like, look, you're users.
+
+95
+00:04:38,441 --> 00:04:39,746
+Speaker 0: You can't sue us for this.
+
+96
+00:04:39,987 --> 00:04:43,519
+Speaker 0: Only developers could sue us for this, and they're not doing so right now.
+
+97
+00:04:44,441 --> 00:04:46,752
+Speaker 0: The developers are the ones who are getting charged a 30% fee, not the users.
+
+98
+00:04:48,840 --> 00:04:55,140
+Speaker 0: Therefore, if we have some sort of antitrust going on, they weren't even arguing that they weren't antitrust, at least not yet.
+
+99
+00:04:56,781 --> 00:05:00,699
+Speaker 0: They're arguing that only developers would have, I guess, legal standing to sue for this.
+
+100
+00:05:01,320 --> 00:05:04,119
+Speaker 0: And the Supreme Court said, nah, users can sue.
+
+101
+00:05:05,061 --> 00:05:27,240
+Speaker 0: Based on the two or three articles I read, the reference was back in the day to this case about bricks and some state was suing the brick maker for high prices and anti-competition, but there was some issue where the bricks were being sold through a bunch of contractors and then to the state, and the state is effectively the user in this case.
+
+102
+00:05:27,760 --> 00:05:31,032
+Speaker 0: In that case, the ruling was, no, the contractors can sue.
+
+103
+00:05:31,072 --> 00:05:32,758
+Speaker 0: You're buying, not the state.
+
+104
+00:05:34,221 --> 00:05:48,580
+Speaker 0: But here, the argument, at least in the side of the users that Shitty Justice wrote, was no one is arguing that the apps are being sold by Apple.
+
+105
+00:05:49,963 --> 00:05:53,400
+Speaker 0: It's not like the developer selling the app through Apple.
+
+106
+00:05:54,120 --> 00:05:56,880
+Speaker 0: The transaction is between Apple and the user directly.
+
+107
+00:05:58,023 --> 00:05:58,304
+Speaker 0: Right?
+
+108
+00:05:58,606 --> 00:06:01,180
+Speaker 0: You're buying the app from the Apple store.
+
+109
+00:06:02,124 --> 00:06:04,000
+Speaker 0: Apple servers, you're buying it from Apple.
+
+110
+00:06:04,420 --> 00:06:11,680
+Speaker 0: Developers are just making products that then Apple then sells and just gives like a commission to the developer.
+
+111
+00:06:12,700 --> 00:06:23,220
+Speaker 0: So anyway, so now they, Pepper, whoever Pepper is, whatever, I don't know, go Pepper go, is going to go and now try to finish suing Apple back in some other court somewhere.
+
+112
+00:06:23,622 --> 00:06:30,119
+Speaker 1: So it'll be interesting how this plays out because on one hand, I think, Apple face a lot of these large tech companies probably should be broken up.
+
+113
+00:06:31,560 --> 00:06:40,100
+Speaker 0: That's a much bigger issue than this even smaller aspect of the breaking up of holding Monopoly on your closed walled garden platform.
+
+114
+00:06:40,520 --> 00:06:46,219
+Speaker 1: Yep, because it's hard to say at what point a walled garden becomes a Monopoly when there are other walled gardens.
+
+115
+00:06:48,926 --> 00:06:50,580
+Speaker 1: Apple does not have Monopoly on phone apps.
+
+116
+00:06:50,881 --> 00:06:54,320
+Speaker 1: They have a Monopoly on their own private platform of phones.
+
+117
+00:06:56,503 --> 00:07:01,240
+Speaker 0: Just like in the Windows case, it was like, yeah, they didn't have Monopoly on operating systems.
+
+118
+00:07:01,640 --> 00:07:13,440
+Speaker 0: They got in trouble because they were using their Monopoly and operating systems to then push IE over the other browsers by including it with the operating systems.
+
+119
+00:07:13,560 --> 00:07:19,059
+Speaker 1: Of course, those lawsuits were all ridiculous because in the end they got to the point where Well, that was the Justice Department suing Microsoft.
+
+120
+00:07:19,581 --> 00:07:25,739
+Speaker 1: But they got ridiculous because the argument basically was computers shouldn't come with any way to download things by default.
+
+121
+00:07:27,322 --> 00:07:30,960
+Speaker 1: If it doesn't come with a web browser, how do you go download a web browser?
+
+122
+00:07:31,800 --> 00:07:32,980
+Speaker 1: The fundamental problem.
+
+123
+00:07:34,201 --> 00:07:43,260
+Speaker 1: But the fact that Kavanaugh was the one with the majority opinion is interesting because the other illegitimate justice is on the dissenting opinion.
+
+124
+00:07:43,300 --> 00:07:47,760
+Speaker 0: Yeah, all the other evil justices were saying that, no, you can't sue Apple.
+
+125
+00:07:48,460 --> 00:08:02,480
+Speaker 1: Now, what makes that extra interesting is that on one hand, Kavanaugh is the one with the most tenuous grasp on continuing to be a Supreme Court justice because it's not out of the realm that he could be impeached for the stuff that was discussed previously if we got our act together.
+
+126
+00:08:05,782 --> 00:08:17,860
+Speaker 0: If I could bring cases to the Supreme Court, my argument would be the president was elected illegitimately, therefore everything he did is illegitimate and every law and appointee and everything should just be undone.
+
+127
+00:08:18,403 --> 00:08:18,715
+Speaker 0: Undo.
+
+128
+00:08:20,121 --> 00:08:21,868
+Speaker 0: The problem is illegitimate.
+
+129
+00:08:21,888 --> 00:08:29,739
+Speaker 0: Supreme Court justices would have two of them who are themselves illegitimate would have the power to decide that, no, actually we aren't illegitimate.
+
+130
+00:08:30,300 --> 00:08:32,979
+Speaker 1: Well, no, because Congress can just remove them.
+
+131
+00:08:33,440 --> 00:08:39,120
+Speaker 0: Yes, but I'm saying I would have to argue to them that they are legitimate and they would have to say yes, we're illegitimate.
+
+132
+00:08:40,160 --> 00:08:49,417
+Speaker 1: Or, or, or we just add two more justices, which we don't need their consent to do, and then bring the case to them.
+
+133
+00:08:50,700 --> 00:08:52,170
+Speaker 0: Hello, new legitimate justices.
+
+134
+00:08:52,250 --> 00:08:53,760
+Speaker 0: Are your two friends there illegitimate?
+
+135
+00:08:54,300 --> 00:08:54,862
+Speaker 0: Why, yes,
+
+136
+00:08:55,425 --> 00:09:15,898
+Speaker 1: but while Gorsuch is probably just illegitimate, Kavanaugh is way, there's a lot of more, a lot more issues with him anyway, but the reason I bring that up is that the fact that he sided with the liberal part of the court, on this issue is not necessarily a good sign because generally conservatives
+
+137
+00:09:16,019 --> 00:09:16,540
+Speaker 0: are also.
+
+138
+00:09:16,580 --> 00:09:18,231
+Speaker 0: It's not a good sign about anything in the future.
+
+139
+00:09:18,251 --> 00:09:19,520
+Speaker 0: It's just good in this one case.
+
+140
+00:09:19,640 --> 00:09:20,345
+Speaker 0: It's like, Oh, we got one.
+
+141
+00:09:20,607 --> 00:09:20,809
+Speaker 1: Yep.
+
+142
+00:09:21,111 --> 00:09:22,300
+Speaker 0: But something went in our favor.
+
+143
+00:09:22,660 --> 00:09:32,199
+Speaker 1: Conservative politicians in the US actually kind of want these large tech companies to be broken up because the tech companies hold a lot of power over them if they choose to wield it.
+
+144
+00:09:32,440 --> 00:09:33,867
+Speaker 0: So do people on the far left.
+
+145
+00:09:34,430 --> 00:09:36,339
+Speaker 0: We all want the big tech companies to be broken up.
+
+146
+00:09:37,040 --> 00:09:42,306
+Speaker 0: Everyone's anti-corporate, which is why someone with an anti-corporate platform should run for office.
+
+147
+00:09:42,628 --> 00:09:51,291
+Speaker 1: Hence, remember, Geek Nights, we have formally announced we support Elizabeth Warren because she's the first person who said she would break up big tech companies and had a specific plan.
+
+148
+00:09:51,331 --> 00:09:52,859
+Speaker 0: I will break them up like this.
+
+149
+00:09:53,560 --> 00:09:53,821
+Speaker 1: Fuck it.
+
+150
+00:09:53,842 --> 00:09:54,304
+Speaker 1: Let's go.
+
+151
+00:09:55,712 --> 00:09:59,290
+Speaker 1: So in some other news, this is pretty new.
+
+152
+00:09:59,491 --> 00:10:01,180
+Speaker 1: Like this news was today.
+
+153
+00:10:01,960 --> 00:10:04,699
+Speaker 0: Amazon is trying a big tech company that should be broken up.
+
+154
+00:10:05,862 --> 00:10:06,365
+Speaker 1: So get this.
+
+155
+00:10:06,446 --> 00:10:07,431
+Speaker 1: Here's what Amazon is doing.
+
+156
+00:10:07,451 --> 00:10:09,140
+Speaker 1: I'm going to summarize this because it's kind of new.
+
+157
+00:10:09,701 --> 00:10:12,960
+Speaker 0: I saw the headline only because I was reading three Supreme Court articles.
+
+158
+00:10:13,300 --> 00:10:16,700
+Speaker 1: So basically, if you work for Amazon today.
+
+159
+00:10:17,481 --> 00:10:18,265
+Speaker 0: Which job?
+
+160
+00:10:18,808 --> 00:10:19,250
+Speaker 1: Any job.
+
+161
+00:10:19,512 --> 00:10:19,954
+Speaker 1: Really?
+
+162
+00:10:20,014 --> 00:10:21,100
+Speaker 0: Even if I'm like a developer there?
+
+163
+00:10:21,680 --> 00:10:23,268
+Speaker 1: Developer, warehouse worker, whatever.
+
+164
+00:10:23,288 --> 00:10:25,800
+Speaker 1: I don't think any developer is going to do this.
+
+165
+00:10:26,442 --> 00:10:27,326
+Speaker 1: Well, we'll see.
+
+166
+00:10:27,467 --> 00:10:29,177
+Speaker 1: It depends on the details because...
+
+167
+00:10:29,800 --> 00:10:30,949
+Speaker 0: Vice president of something, something?
+
+168
+00:10:31,251 --> 00:10:32,460
+Speaker 0: Jane Janitor?
+
+169
+00:10:33,301 --> 00:10:46,889
+Speaker 1: Then if you quit your job, Amazon will give you money to start a delivery company and will continue to pay your salary for some amount of time while you start this new company.
+
+170
+00:10:47,672 --> 00:10:51,433
+Speaker 1: But then your company has to deliver packages for Amazon.
+
+171
+00:10:51,453 --> 00:10:52,420
+Speaker 0: Alright, how many?
+
+172
+00:10:53,181 --> 00:10:53,524
+Speaker 1: I don't know.
+
+173
+00:10:53,544 --> 00:10:54,289
+Speaker 1: The details are vague.
+
+174
+00:10:54,349 --> 00:10:56,040
+Speaker 1: You just got to make a company and make it profitable.
+
+175
+00:10:56,700 --> 00:11:01,903
+Speaker 1: Like basically turn yourself into an independent contractor so Amazon doesn't have to pay you any benefits of any kind.
+
+176
+00:11:01,923 --> 00:11:02,928
+Speaker 1: Alright.
+
+177
+00:11:04,294 --> 00:11:10,745
+Speaker 1: What's really funny about this is Amazon will cover ten thousand dollars in startup costs.
+
+178
+00:11:11,047 --> 00:11:14,463
+Speaker 0: That is not enough to even buy a single delivery vehicle.
+
+179
+00:11:14,583 --> 00:11:18,000
+Speaker 1: That is zero dollars in the real world.
+
+180
+00:11:18,240 --> 00:11:22,865
+Speaker 0: To start a delivery company, even if I was going to do it using like bicycles right?
+
+181
+00:11:23,186 --> 00:11:26,484
+Speaker 0: I would need to hire someone to ride the bicycles.
+
+182
+00:11:26,504 --> 00:11:28,071
+Speaker 1: To start a tiny game company.
+
+183
+00:11:28,131 --> 00:11:33,093
+Speaker 0: I would need like... To hire someone to ride a bicycle for a year is going to cost me more.
+
+184
+00:11:33,414 --> 00:11:35,665
+Speaker 0: Just their health care will cost me ten thousand dollars.
+
+185
+00:11:35,705 --> 00:11:44,329
+Speaker 1: To start a tiny game company that was going to make one game, like one real game before we burnt out our investment, I'd need like four hundred grand minimum.
+
+186
+00:11:44,691 --> 00:11:44,872
+Speaker 1: Yeah.
+
+187
+00:11:44,892 --> 00:11:46,380
+Speaker 1: And I'm talking like tiny, tiny game.
+
+188
+00:11:46,480 --> 00:11:49,071
+Speaker 0: If the number was bigger this would be fine.
+
+189
+00:11:49,413 --> 00:11:49,654
+Speaker 1: Yep.
+
+190
+00:11:49,955 --> 00:11:57,574
+Speaker 1: Oh, but those who participate will be allowed to lease blue vans with the Amazon smile logo, I assume from Amazon.
+
+191
+00:11:57,594 --> 00:11:58,780
+Speaker 0: For how much?
+
+192
+00:11:59,741 --> 00:12:00,344
+Speaker 1: Doesn't say.
+
+193
+00:12:00,364 --> 00:12:02,154
+Speaker 0: So you're going to give me ten thousand dollars.
+
+194
+00:12:02,234 --> 00:12:02,998
+Speaker 1: And you're going to pay my...
+
+195
+00:12:03,018 --> 00:12:05,210
+Speaker 0: Then I just give it right back to you to lease a van.
+
+196
+00:12:05,431 --> 00:12:10,077
+Speaker 1: And you're going to get paid your salary for three more months, but I assume you're not getting benefits anymore.
+
+197
+00:12:10,097 --> 00:12:15,620
+Speaker 0: This is just an evil financial mechanism to avoid simply hiring employees to ride the van.
+
+198
+00:12:16,000 --> 00:12:16,161
+Speaker 0: Yep.
+
+199
+00:12:16,583 --> 00:12:16,885
+Speaker 1: There.
+
+200
+00:12:17,187 --> 00:12:19,137
+Speaker 1: This is, as far as I can tell, this is nothing.
+
+201
+00:12:19,157 --> 00:12:28,988
+Speaker 0: We don't want to hire an employee to ride the van, so we will try to convince somebody else to start a company whereby which they will have the employee and then we don't have to pay all these taxes and shit.
+
+202
+00:12:29,048 --> 00:12:32,727
+Speaker 0: And then they are the employers, they pay all the taxes and all these other bullshit.
+
+203
+00:12:33,411 --> 00:12:33,632
+Speaker 0: Right.
+
+204
+00:12:33,974 --> 00:12:34,235
+Speaker 1: Yep.
+
+205
+00:12:34,436 --> 00:12:35,703
+Speaker 1: This is an interesting note here.
+
+206
+00:12:35,723 --> 00:12:43,460
+Speaker 1: The expansion is part of the company, I'm quoting the article, plan to gain more control over its deliveries rather than rely on UPS and the post office.
+
+207
+00:12:43,761 --> 00:12:43,982
+Speaker 0: Right.
+
+208
+00:12:44,344 --> 00:12:50,155
+Speaker 0: So they're setting up scam shell companies, but instead of just setting them up yourself, get your employees to do it.
+
+209
+00:12:50,536 --> 00:12:50,758
+Speaker 1: Yep.
+
+210
+00:12:50,798 --> 00:12:51,260
+Speaker 1: Here's the line.
+
+211
+00:12:51,300 --> 00:12:57,492
+Speaker 1: It also gives Amazon a way to grow its delivery network without spending the money needed to buy vehicles or hire workers.
+
+212
+00:12:57,673 --> 00:12:58,939
+Speaker 0: Yes, that's the thing.
+
+213
+00:12:59,580 --> 00:12:59,822
+Speaker 1: Yep.
+
+214
+00:13:00,083 --> 00:13:02,297
+Speaker 1: The wage problem won't be Amazon's problem.
+
+215
+00:13:02,579 --> 00:13:02,760
+Speaker 0: Right.
+
+216
+00:13:03,260 --> 00:13:13,832
+Speaker 1: This is just bad news, and the crazy thing about it is there's this fundamental reason why I want to break up the big tech companies, and it's not just because they're so big and so powerful.
+
+217
+00:13:13,872 --> 00:13:18,514
+Speaker 1: That's just one, like, relatively adjacent aspect to the thing I'm actually mad about.
+
+218
+00:13:18,836 --> 00:13:22,708
+Speaker 1: These tech companies have more money than you can imagine just sitting in cash.
+
+219
+00:13:23,029 --> 00:13:24,737
+Speaker 1: They don't know what to do with this money.
+
+220
+00:13:25,139 --> 00:13:26,525
+Speaker 0: I know exactly what to do with that money.
+
+221
+00:13:26,546 --> 00:13:27,973
+Speaker 1: I mean, I know what I would do with this money.
+
+222
+00:13:28,013 --> 00:13:44,575
+Speaker 0: I think part of the problem is, A, they don't do the money, but B, because of lack of creativity, right, and B, they are with, like, they're all public companies, so they can't do anything with the money that would upset the shareholders of the board.
+
+223
+00:13:44,676 --> 00:13:47,310
+Speaker 1: Yeah, because they're actually holding to the shareholders.
+
+224
+00:13:47,471 --> 00:13:53,740
+Speaker 1: They can be sued by their own shareholders if they don't maximize the shareholders value over all other things.
+
+225
+00:13:53,760 --> 00:14:01,963
+Speaker 0: Right, so I'm sure, like, you know, if I was the CEO of, you know, if they kicked out Tim Cook and I was the CEO of Apple, I would have lots of things to do with that money, and as soon as I did one of those things...
+
+226
+00:14:02,044 --> 00:14:03,089
+Speaker 1: The board would be like, "You're fucking
+
+227
+00:14:03,110 --> 00:14:03,190
+Speaker 1: gone.".
+
+228
+00:14:03,190 --> 00:14:04,375
+Speaker 0: The board would just be like, "You're out.
+
+229
+00:14:04,917 --> 00:14:05,118
+Speaker 0: See
+
+230
+00:14:05,158 --> 00:14:05,460
+Speaker 0: ya.".
+
+231
+00:14:05,781 --> 00:14:06,082
+Speaker 0: Yep.
+
+232
+00:14:06,263 --> 00:14:07,769
+Speaker 0: And then someone else would do it, right?
+
+233
+00:14:08,672 --> 00:14:11,530
+Speaker 0: Because they vote based on just making shares worth more.
+
+234
+00:14:11,850 --> 00:14:21,561
+Speaker 1: But it shows that if you, like, a lot of tech companies like Uber will invest in technology that will then later let them get rid of these pesky workers.
+
+235
+00:14:21,581 --> 00:14:29,619
+Speaker 0: And this is why the first thing you must do with the money, even though it is not the creative thing that you wanted to do with the money, is buy back all the stock.
+
+236
+00:14:29,841 --> 00:14:29,941
+Speaker 1: Yep.
+
+237
+00:14:29,981 --> 00:14:32,174
+Speaker 0: They love the stock buyback.
+
+238
+00:14:32,194 --> 00:14:33,279
+Speaker 0: They're like, "Hey guys, we're gonna do stock
+
+239
+00:14:33,319 --> 00:14:33,681
+Speaker 0: buybacks.".
+
+240
+00:14:33,701 --> 00:14:35,249
+Speaker 0: Like, "Ooh, I share the worth so
+
+241
+00:14:35,269 --> 00:14:35,409
+Speaker 0: much.".
+
+242
+00:14:35,791 --> 00:14:36,897
+Speaker 0: "Yes, please do that.
+
+243
+00:14:37,278 --> 00:14:39,288
+Speaker 0: Now I have 51% and I don't listen to you
+
+244
+00:14:39,328 --> 00:14:39,610
+Speaker 0: anymore.".
+
+245
+00:14:39,710 --> 00:14:40,775
+Speaker 0: But look at this!
+
+246
+00:14:40,956 --> 00:14:53,559
+Speaker 1: You got a company like Uber that is trying to invest his money in self-driving cars while simultaneously having these not-employee employees driving the cars for them subsidized, and eventually they just won't need those employees anymore and they have a monopoly.
+
+247
+00:14:54,102 --> 00:14:57,981
+Speaker 1: Amazon's trying to even skip that step and not even pretend this is about technology.
+
+248
+00:14:58,262 --> 00:15:03,649
+Speaker 1: They're literally just, "Hey, we'll give you a pittance if you're willing to take all the risk of being a delivery company for
+
+249
+00:15:03,770 --> 00:15:03,810
+Speaker 1: us.".
+
+250
+00:15:05,250 --> 00:15:05,774
+Speaker 1: It's odd.
+
+251
+00:15:05,915 --> 00:15:09,499
+Speaker 1: If I were you, I would not jump on this.
+
+252
+00:15:09,539 --> 00:15:19,649
+Speaker 1: Unless you are planning to quit Amazon anyway, then I guess start a company, fail, and get paid for three months while you're also looking for another job.
+
+253
+00:15:20,972 --> 00:15:22,039
+Speaker 0: I wonder if you can get away with that.
+
+254
+00:15:22,441 --> 00:15:22,743
+Speaker 1: I don't know.
+
+255
+00:15:22,763 --> 00:15:25,881
+Speaker 0: Get an accountant to see if there's some way to get the 10,000.
+
+256
+00:15:25,881 --> 00:15:27,590
+Speaker 0: You gotta read the contract.
+
+257
+00:15:27,950 --> 00:15:29,598
+Speaker 1: The 10,000 is not the thing you care about.
+
+258
+00:15:29,719 --> 00:15:32,955
+Speaker 0: No, but you have to see the contract with Amazon to see if you can get away with it.
+
+259
+00:15:34,121 --> 00:15:38,825
+Speaker 1: This is just, it's really bad, and again, this is why we want to break up these tech companies.
+
+260
+00:15:39,468 --> 00:15:50,100
+Speaker 1: In another minor news before we get into the main bit, you may remember there's crazy people who try to live on those offshore platforms off the coast of the UK from World War II.
+
+261
+00:15:50,201 --> 00:15:51,990
+Speaker 0: Well, I mean, Sealand died a long time ago.
+
+262
+00:15:52,430 --> 00:15:53,094
+Speaker 0: Sealand is over.
+
+263
+00:15:53,114 --> 00:15:54,661
+Speaker 0: Sealand was a big deal when we were in college.
+
+264
+00:15:54,681 --> 00:15:55,566
+Speaker 0: We were like, "Ooh,
+
+265
+00:15:55,626 --> 00:15:56,269
+Speaker 0: Sealand!".
+
+266
+00:15:56,410 --> 00:15:58,262
+Speaker 1: That's where we can dock the barge!
+
+267
+00:15:58,283 --> 00:16:03,127
+Speaker 0: Well, that's where we can put the heads, like, server computer hosting there, and it's like, "Aha!
+
+268
+00:16:03,408 --> 00:16:08,553
+Speaker 0: We can host our sites on Sealand and host all our illegal pirated stuff, and they can't block
+
+269
+00:16:08,573 --> 00:16:08,653
+Speaker 0: us.".
+
+270
+00:16:08,935 --> 00:16:12,169
+Speaker 1: So, obviously, that was all dumb for a lot of reasons.
+
+271
+00:16:13,812 --> 00:16:15,263
+Speaker 0: Wasn't dumb for college kids.
+
+272
+00:16:15,444 --> 00:16:15,746
+Speaker 1: Yup.
+
+273
+00:16:16,089 --> 00:16:17,517
+Speaker 1: Well, because we didn't care that much.
+
+274
+00:16:17,537 --> 00:16:19,609
+Speaker 1: We just needed a place to park that barge.
+
+275
+00:16:21,234 --> 00:16:21,697
+Speaker 1: Anyway.
+
+276
+00:16:21,837 --> 00:16:23,104
+Speaker 1: I should link to that episode.
+
+277
+00:16:24,069 --> 00:16:25,455
+Speaker 1: That's from like 2005.
+
+278
+00:16:25,455 --> 00:16:36,891
+Speaker 1: So, this has apparently still been going on, but the Venn diagram between people who want to live on, like, 20 meter wide octagons in international waters.
+
+279
+00:16:36,912 --> 00:16:37,716
+Speaker 0: Where do they get food from?
+
+280
+00:16:38,460 --> 00:16:43,225
+Speaker 1: And people who really care about fake cryptocurrencies?
+
+281
+00:16:43,325 --> 00:16:44,370
+Speaker 0: Oh, that's like the same person.
+
+282
+00:16:44,570 --> 00:16:45,214
+Speaker 0: It's just a circle.
+
+283
+00:16:45,234 --> 00:16:46,421
+Speaker 0: There's a 100% overlap.
+
+284
+00:16:46,562 --> 00:16:47,930
+Speaker 1: That diagram is a circle.
+
+285
+00:16:48,170 --> 00:16:48,873
+Speaker 0: It's the same people.
+
+286
+00:16:49,235 --> 00:16:49,476
+Speaker 0: Yeah.
+
+287
+00:16:49,798 --> 00:16:52,793
+Speaker 1: So, there was apparently a company and a bunch of rich people.
+
+288
+00:16:53,597 --> 00:16:57,756
+Speaker 1: Peter Thiel, I guess, even like donated money to this thing.
+
+289
+00:16:57,776 --> 00:16:59,667
+Speaker 0: That's pretty much the middle of the circle.
+
+290
+00:16:59,707 --> 00:17:00,130
+Speaker 0: is that guy.
+
+291
+00:17:00,330 --> 00:17:00,471
+Speaker 0: Yup.
+
+292
+00:17:00,973 --> 00:17:05,497
+Speaker 1: So, he gave a million dollars to the Seasteading Institute, and they were trying to make it a thing.
+
+293
+00:17:05,517 --> 00:17:07,950
+Speaker 0: With a million dollars, he could open up an Amazon delivery company.
+
+294
+00:17:08,131 --> 00:17:17,578
+Speaker 1: So, basically, their idea was the same thing, but they wanted to use these octagon things floating 12 miles outside of Thailand.
+
+295
+00:17:18,101 --> 00:17:18,623
+Speaker 0: Okay.
+
+296
+00:17:18,643 --> 00:17:23,327
+Speaker 1: And they claim, yes, it is 12 nautical miles away from Thailand.
+
+297
+00:17:23,367 --> 00:17:24,935
+Speaker 1: It is technically international waters.
+
+298
+00:17:25,136 --> 00:17:26,522
+Speaker 1: We are a sovereign nation.
+
+299
+00:17:26,542 --> 00:17:31,029
+Speaker 1: Thailand said, and some rich people did this, and we're living on this thing.
+
+300
+00:17:31,711 --> 00:17:38,989
+Speaker 1: Thailand said, yeah, we have exclusive economic rights to a 200 mile radius, and we'll fucking kill you.
+
+301
+00:17:39,790 --> 00:17:49,139
+Speaker 1: Because they have threatened Thailand's national sovereignty by declaring their own sovereignty, and that is a crime punishable in Thailand by death.
+
+302
+00:17:49,421 --> 00:17:55,950
+Speaker 0: Yeah, I mean, Thailand has, Thailand has, you know, it's not the US Navy, but it's a boat with big guns on it.
+
+303
+00:17:56,050 --> 00:17:58,910
+Speaker 0: I wouldn't fuck with them unless you're the US Navy.
+
+304
+00:17:59,550 --> 00:18:00,957
+Speaker 0: Or the Chinese Navy or something.
+
+305
+00:18:01,038 --> 00:18:10,462
+Speaker 1: It's a lot like how crazy don't-tread-on-me malicious shitheads in the US will have, like, their stock of AR-15s and they'll be like, "Gumman's coming after me.
+
+306
+00:18:10,563 --> 00:18:11,668
+Speaker 1: I'll be able to stand my
+
+307
+00:18:11,709 --> 00:18:11,889
+Speaker 1: ground.".
+
+308
+00:18:12,191 --> 00:18:13,639
+Speaker 0: And then the FBI comes.
+
+309
+00:18:13,759 --> 00:18:16,957
+Speaker 1: Yeah, like, two Marines show up and you're done.
+
+310
+00:18:16,977 --> 00:18:19,230
+Speaker 1: One helicopter.
+
+311
+00:18:19,790 --> 00:18:21,721
+Speaker 0: So the Thai Navy, what, sent like a destroyer and shot them?
+
+312
+00:18:21,741 --> 00:18:26,506
+Speaker 1: So the Thai Navy went to arrest this couple, and they were- Well, they actually tried to arrest them.
+
+313
+00:18:26,546 --> 00:18:26,948
+Speaker 0: How nice.
+
+314
+00:18:27,049 --> 00:18:29,179
+Speaker 1: Well, we assume they were going to detain them.
+
+315
+00:18:29,199 --> 00:18:30,003
+Speaker 1: Maybe they were just going to blow it up.
+
+316
+00:18:30,023 --> 00:18:33,885
+Speaker 0: I thought they were just going to shoot the guns at the thing as a warning shot.
+
+317
+00:18:33,985 --> 00:18:43,791
+Speaker 1: I imagine the Navy was going to detain them, take all their stuff, and then either execute them per their own laws or scare them enough and then make them leave.
+
+318
+00:18:43,852 --> 00:18:44,515
+Speaker 1: Like, something like that.
+
+319
+00:18:44,535 --> 00:18:44,937
+Speaker 1: We don't know.
+
+320
+00:18:44,977 --> 00:18:47,430
+Speaker 0: Why don't they just go 200 miles away where it's not a problem?
+
+321
+00:18:47,690 --> 00:18:50,245
+Speaker 1: Because there aren't just octagons floating 200 miles away.
+
+322
+00:18:51,550 --> 00:18:53,058
+Speaker 0: Didn't they make this octagon?
+
+323
+00:18:53,359 --> 00:18:54,364
+Speaker 1: I think they were already there.
+
+324
+00:18:54,444 --> 00:18:55,510
+Speaker 1: Like, I don't know the full story.
+
+325
+00:18:55,710 --> 00:18:56,755
+Speaker 0: Oh, okay.
+
+326
+00:18:56,776 --> 00:19:01,459
+Speaker 1: Because it only made the news after the Thai government came in and said, "Yeah, that's not going to
+
+327
+00:19:01,560 --> 00:19:02,103
+Speaker 1: fly.".
+
+328
+00:19:02,685 --> 00:19:07,067
+Speaker 1: So the people who were living on it have fled and are hiding somewhere in Thailand.
+
+329
+00:19:07,389 --> 00:19:09,299
+Speaker 0: Oh, they fled the octagon and went to Thailand?
+
+330
+00:19:09,319 --> 00:19:10,203
+Speaker 1: Where else are they going to go?
+
+331
+00:19:10,344 --> 00:19:12,914
+Speaker 0: Wouldn't you just go to, like, somewhere else?
+
+332
+00:19:12,975 --> 00:19:14,725
+Speaker 0: Like, Cambodia's not far.
+
+333
+00:19:14,826 --> 00:19:17,278
+Speaker 1: So it's not clear where they are right now.
+
+334
+00:19:17,419 --> 00:19:20,956
+Speaker 0: I would go to non-Thai- If Thailand is out to kill you, go to non-Thailand.
+
+335
+00:19:21,076 --> 00:19:23,690
+Speaker 1: Yeah, but I don't think they had a boat they could get them anywhere else.
+
+336
+00:19:23,710 --> 00:19:28,234
+Speaker 0: At least another country at minimum would have to extradite you, and it would be a slight impediment.
+
+337
+00:19:28,274 --> 00:19:29,581
+Speaker 0: you would live slightly longer.
+
+338
+00:19:30,043 --> 00:19:35,409
+Speaker 1: So best I can tell, they're on the run, and- Just get in a boat and go somewhere else.
+
+339
+00:19:35,830 --> 00:19:36,614
+Speaker 1: Find a hexagon somewhere.
+
+340
+00:19:36,634 --> 00:19:41,401
+Speaker 1: The moral of the story is that people with too much- Go to a Malaysian hexagon.
+
+341
+00:19:41,743 --> 00:19:46,750
+Speaker 1: People with too much tech money should not have any amount of power over other people.
+
+342
+00:19:47,731 --> 00:19:50,846
+Speaker 1: That is the moral of the beginning of Geek Nights, and now it's time for-.
+
+343
+00:19:50,906 --> 00:19:53,445
+Speaker 0: Also, don't declare yourself sovereign without a military.
+
+344
+00:19:53,566 --> 00:19:53,768
+Speaker 0: Yeah.
+
+345
+00:19:55,850 --> 00:19:57,062
+Speaker 1: That's Pitoria.
+
+346
+00:19:57,223 --> 00:19:57,890
+Speaker 0: To back it up.
+
+347
+00:19:58,230 --> 00:20:00,195
+Speaker 1: That's season one family guy Pitoria.
+
+348
+00:20:06,549 --> 00:20:08,696
+Speaker 1: Things of the day.
+
+349
+00:20:08,978 --> 00:20:15,689
+Speaker 1: So, anyone who claims that they understand the broad strokes of how quantum mechanics works is fucking lying to you.
+
+350
+00:20:16,290 --> 00:20:20,233
+Speaker 0: Quantum mechanics is way more- I know, like, these general concepts, and I barely know them.
+
+351
+00:20:20,334 --> 00:20:22,304
+Speaker 1: Alright, Scott, what is a quark?
+
+352
+00:20:23,168 --> 00:20:26,103
+Speaker 0: It's a particle that's smaller than a proton or a neutron.
+
+353
+00:20:26,123 --> 00:20:28,655
+Speaker 0: You need, like, a whole bunch of them to make a proton or a neutron or whatever.
+
+354
+00:20:28,756 --> 00:20:29,439
+Speaker 1: How many do you need?
+
+355
+00:20:29,479 --> 00:20:30,223
+Speaker 1: Like, what's in them, though?
+
+356
+00:20:30,243 --> 00:20:31,810
+Speaker 0: They've got, like, different spins and shit.
+
+357
+00:20:31,870 --> 00:20:33,258
+Speaker 0: I don't fucking know how many you need.
+
+358
+00:20:33,278 --> 00:20:33,620
+Speaker 0: Alright.
+
+359
+00:20:33,861 --> 00:20:34,867
+Speaker 0: What's the- They matter, though.
+
+360
+00:20:34,887 --> 00:20:35,490
+Speaker 0: They're not in energy.
+
+361
+00:20:35,570 --> 00:20:36,536
+Speaker 0: I know that much.
+
+362
+00:20:38,185 --> 00:20:39,070
+Speaker 1: What is an electron?
+
+363
+00:20:41,634 --> 00:20:43,952
+Speaker 0: It's a different particle.
+
+364
+00:20:43,972 --> 00:20:46,747
+Speaker 0: It's not a quark, but it's not proton or neutron level.
+
+365
+00:20:46,787 --> 00:20:48,635
+Speaker 0: It's, you know, it's pretty fundamental.
+
+366
+00:20:49,640 --> 00:20:50,585
+Speaker 0: It's on, like, the quark level.
+
+367
+00:20:50,605 --> 00:20:52,254
+Speaker 1: Well, it's made of quarks.
+
+368
+00:20:53,319 --> 00:20:55,570
+Speaker 0: I thought electron was as small as electron goes.
+
+369
+00:20:56,153 --> 00:20:56,796
+Speaker 0: See?
+
+370
+00:20:56,816 --> 00:20:57,480
+Speaker 0: It shows what I know.
+
+371
+00:20:57,841 --> 00:21:06,485
+Speaker 1: Yeah, so I, when I was in high school, we actually had to take classes on quantum mechanics, so I have, like, an advanced high school knowledge, which means I don't fucking know anything.
+
+372
+00:21:06,505 --> 00:21:12,132
+Speaker 1: I also read hyperspace, so I felt like I knew something for a year, then I realized I didn't know anything.
+
+373
+00:21:12,735 --> 00:21:22,304
+Speaker 1: But what I remember from high school, and now there's a video that goes into a lot more detail about this, if you put- Basically, there's this idea called pilot wave theory.
+
+374
+00:21:22,324 --> 00:21:23,450
+Speaker 1: It's an old, old theory.
+
+375
+00:21:23,691 --> 00:21:24,476
+Speaker 0: The two slit thing?
+
+376
+00:21:25,240 --> 00:21:34,425
+Speaker 1: No, pilot wave theory is a way in quantum mechanics to explain the results of the slit, the two slit experiment.
+
+377
+00:21:34,445 --> 00:21:35,972
+Speaker 0: So I said the two slit thing.
+
+378
+00:21:36,314 --> 00:21:37,540
+Speaker 1: Well, yeah, but it's not just that.
+
+379
+00:21:37,600 --> 00:21:40,294
+Speaker 1: It also explains quantum tunneling and all sorts of nonsense.
+
+380
+00:21:40,314 --> 00:21:41,037
+Speaker 0: That's a word I know.
+
+381
+00:21:41,681 --> 00:21:51,993
+Speaker 1: The rough idea, I'm probably gonna get it pretty wrong, because this is my high school memory, is that the things we observe, like protons, electrons, like the particles, even photons like light.
+
+382
+00:21:52,354 --> 00:21:54,264
+Speaker 1: You know how light is both a wave and a particle?
+
+383
+00:21:54,806 --> 00:22:09,822
+Speaker 1: Well, this theory basically says that the photon itself is a particle, and there's a lot of particles that do things, and the particles travel on their own, and they follow these rules, but they travel via waves that precede them through spacetime.
+
+384
+00:22:10,184 --> 00:22:18,385
+Speaker 1: They're piloted by these waves that we can't detect, and if you can model the waves, then you can understand the fucked up behavior of the particles.
+
+385
+00:22:18,687 --> 00:22:34,370
+Speaker 1: This is why the individual photons interfere with each other, even though you literally shoot them one at a time, and at no point could they have interacted with each other, because they're basically following the same pilot wave, and the pilot wave interfered with itself.
+
+386
+00:22:35,492 --> 00:22:43,070
+Speaker 1: That is the best way I can explain that, and I'm sure anyone who knows more about quantum mechanics is already facepalming, but you can model this.
+
+387
+00:22:43,250 --> 00:22:44,355
+Speaker 0: So why is this thing of day?
+
+388
+00:22:44,657 --> 00:22:58,609
+Speaker 1: You can model that behavior and that fundamental theory about how quantum mechanics works very easily and with a shocking degree of accuracy by just putting some drops of oil on some water and vibrating that water.
+
+389
+00:22:59,612 --> 00:23:18,529
+Speaker 1: Like, the mechanics are pretty much the same, the experimental results are pretty much the same, like, this is one of the most elegant analogies for quantum mechanics and why electrons behave the way they do, and why photons behave the way they do, that you'll ever encounter, and I just found a YouTube video that explains it really well.
+
+390
+00:23:19,732 --> 00:23:20,254
+Speaker 1: It's really cool.
+
+391
+00:23:20,274 --> 00:23:21,440
+Speaker 1: Alright,
+
+392
+00:23:21,500 --> 00:23:37,761
+Speaker 0: anyway, so, in a lot of touristy places on Earth, I'm not sure which touristy place this started in, but I've seen it happen on bridges, especially, I've seen it happen at, like, the tops of mountains, where, like, you go hiking and there's like a fence around the observation deck, right?
+
+393
+00:23:38,324 --> 00:23:42,204
+Speaker 0: Pretty much anywhere, there's like a fence with, like, rungs or bars on it.
+
+394
+00:23:42,244 --> 00:23:43,370
+Speaker 0: Especially bridges.
+
+395
+00:23:43,511 --> 00:23:44,355
+Speaker 0: I said bridges already.
+
+396
+00:23:44,375 --> 00:23:47,972
+Speaker 1: Yeah, but, like, the middle of a bridge is, like, where people do this.
+
+397
+00:23:48,093 --> 00:23:49,802
+Speaker 0: It's things that you can fall off of, right?
+
+398
+00:23:49,842 --> 00:23:53,359
+Speaker 0: Bridges, observation decks, towers, things like that.
+
+399
+00:23:53,741 --> 00:24:12,151
+Speaker 0: Tourists, for some reason, I don't know where it started, have decided to get locks, like, cheap key locks or combination locks, inscribe something on the lock, like, you know, I heart you, or us forever, and then put that lock onto the fence or, you know, touristy place.
+
+400
+00:24:12,171 --> 00:24:23,227
+Speaker 1: The history of Love Padlocks dates back to at least 100 years to a melancholic Serbian tale of World War I, with an attribution to a particular bridge in the spy town of, I'm not going to try to pronounce that.
+
+401
+00:24:23,387 --> 00:24:24,392
+Speaker 0: Okay, that's good to know.
+
+402
+00:24:24,432 --> 00:24:35,610
+Speaker 0: Anyway, and people put these locks on the fences or bridges or whatever, and it's sort of like, you know, sort of like scratching your "I heart you" in the tree, where it's, like, a permanent thing.
+
+403
+00:24:35,931 --> 00:24:37,478
+Speaker 0: You think of it as a permanent thing, right?
+
+404
+00:24:37,498 --> 00:24:42,483
+Speaker 0: It's like, we will leave this permanent thing here as, like, a landmark to our... Like, you go back home.
+
+405
+00:24:42,523 --> 00:24:43,046
+Speaker 0: You know, to us.
+
+406
+00:24:43,187 --> 00:24:47,928
+Speaker 1: And you think, like, you look at the key, and you're like, "Yeah, that lock is still on that bridge in
+
+407
+00:24:47,988 --> 00:24:48,350
+Speaker 1: Paris.".
+
+408
+00:24:48,410 --> 00:24:54,866
+Speaker 0: It's there forever, you know, it's like a, you know, a token of our whatever, memory, you know, love, whatever.
+
+409
+00:24:54,886 --> 00:24:58,683
+Speaker 1: So, apparently, they were not common until the early 2000s, like...
+
+410
+00:24:58,703 --> 00:25:02,643
+Speaker 0: Yeah, because cheap locks were not available until then.
+
+411
+00:25:03,005 --> 00:25:03,728
+Speaker 1: Yes, they were.
+
+412
+00:25:03,748 --> 00:25:12,491
+Speaker 1: I would argue that they became popular starting in the early 2000s, because the internet made it, like, the idea spread very far and very fast somewhat.
+
+413
+00:25:12,531 --> 00:25:16,612
+Speaker 0: Anyway, the point is, these things are a plague, right?
+
+414
+00:25:16,793 --> 00:25:17,436
+Speaker 0: They ruin...
+
+415
+00:25:17,456 --> 00:25:23,407
+Speaker 1: Oh, someone wrote a book about it in 2006, and then a movie was made in 2007, then it really kicked off.
+
+416
+00:25:23,568 --> 00:25:27,227
+Speaker 0: Anyway, first of all, they cause lots of damage to the fences.
+
+417
+00:25:27,287 --> 00:25:35,289
+Speaker 0: They weigh so fucking much that there have actually been places where, like, the fences have, like, been damaged and fallen over, because the weight is too much.
+
+418
+00:25:35,991 --> 00:25:40,535
+Speaker 1: It got so bad in Algiers that the imam there, like, literally banned them.
+
+419
+00:25:40,555 --> 00:25:41,842
+Speaker 0: Yep, good move.
+
+420
+00:25:41,862 --> 00:25:51,690
+Speaker 0: Two, they damage, like, landmark, like, some of these bridges are like old, fancy historical bridges, not like, you know, boring-ass Queensborough Bridge like we have.
+
+421
+00:25:52,191 --> 00:25:53,919
+Speaker 1: I see locks on the Queensborough Bridge.
+
+422
+00:25:54,221 --> 00:25:55,146
+Speaker 0: They cut them off pretty quickly.
+
+423
+00:25:55,186 --> 00:25:55,950
+Speaker 1: Yeah, but they're there.
+
+424
+00:25:56,330 --> 00:25:58,463
+Speaker 0: I've seen, like, one or two, and then it's like,
+
+425
+00:25:58,523 --> 00:25:58,704
+Speaker 0: "Nope."
+
+426
+00:25:59,066 --> 00:26:01,177
+Speaker 0: Someone's job is to cut those off of our bridges.
+
+427
+00:26:01,197 --> 00:26:02,101
+Speaker 0: They are ahead of that.
+
+428
+00:26:02,121 --> 00:26:05,356
+Speaker 0: They don't let them pile up more than, like, a handful, right, and they're pretty rare.
+
+429
+00:26:05,577 --> 00:26:05,919
+Speaker 0: Anyway.
+
+430
+00:26:06,060 --> 00:26:06,422
+Speaker 0: For now.
+
+431
+00:26:06,522 --> 00:26:08,009
+Speaker 1: It seems like it's mostly a thing in Europe.
+
+432
+00:26:08,030 --> 00:26:22,701
+Speaker 0: Well, it's a thing where it's like when you see one, then other people get the idea to add more, but the thing is, even if you get that idea, there aren't locks for sale near the bridge, and apparently in a lot of touristy places, there are scammy people selling
+
+433
+00:26:22,762 --> 00:26:23,285
+Speaker 1: locks.
+
+434
+00:26:23,948 --> 00:26:24,270
+Speaker 0: Oh, yeah.
+
+435
+00:26:24,650 --> 00:26:25,495
+Speaker 0: And they sell the locks.
+
+436
+00:26:25,515 --> 00:26:28,390
+Speaker 1: Here's a love lock for the Brooklyn Bridge, and while you're at it, here's a pass.
+
+437
+00:26:28,951 --> 00:26:31,587
+Speaker 1: I will sell you at a discount for the Staten Island Ferry.
+
+438
+00:26:31,708 --> 00:26:32,010
+Speaker 0: Right.
+
+439
+00:26:32,611 --> 00:26:34,359
+Speaker 0: Staten Island Ferry is free, not New York people.
+
+440
+00:26:35,324 --> 00:26:35,646
+Speaker 0: Anybody.
+
+441
+00:26:35,666 --> 00:26:36,410
+Speaker 0: Just get on to it.
+
+442
+00:26:36,530 --> 00:26:43,246
+Speaker 1: If you bought a ticket to the Staten Island Ferry to the Statue of Liberty, there are, like, cops that have to keep going around arresting people for selling tickets to the ferry.
+
+443
+00:26:43,266 --> 00:26:45,609
+Speaker 1: You bought a piece of paper that means nothing from a hobo.
+
+444
+00:26:49,801 --> 00:26:56,574
+Speaker 0: Right, but anyway, people are going around near landmarks selling locks to tourists for, like, $20 or 20 euros.
+
+445
+00:26:56,956 --> 00:27:00,613
+Speaker 0: Those locks, like, 50-cent locks you could just buy in, like, a bundle, right?
+
+446
+00:27:00,694 --> 00:27:00,955
+Speaker 1: Yep.
+
+447
+00:27:01,357 --> 00:27:07,227
+Speaker 0: Anyway, so, in my thing of the day, this dude goes to Prague.
+
+448
+00:27:07,247 --> 00:27:07,810
+Speaker 0: He's in Prague.
+
+449
+00:27:07,930 --> 00:27:08,674
+Speaker 0: I guess he lives there.
+
+450
+00:27:08,694 --> 00:27:09,136
+Speaker 0: I don't know.
+
+451
+00:27:09,538 --> 00:27:13,196
+Speaker 0: And he goes to this area near a bridge with his tons of locks.
+
+452
+00:27:13,658 --> 00:27:16,070
+Speaker 0: Not as many as I've seen in other places, but still too many.
+
+453
+00:27:16,631 --> 00:27:17,898
+Speaker 0: And he starts cutting them off.
+
+454
+00:27:18,441 --> 00:27:21,921
+Speaker 0: And he rants about them, and he cuts them off, and, man, they get a haul.
+
+455
+00:27:22,243 --> 00:27:23,330
+Speaker 1: Yeah, this feels good.
+
+456
+00:27:23,550 --> 00:27:25,921
+Speaker 1: This is very satisfying to watch, because I hate those stupid locks.
+
+457
+00:27:25,941 --> 00:27:28,432
+Speaker 0: It's definitely one of those satisfying videos, like, ah, the fence is clean.
+
+458
+00:27:28,492 --> 00:27:32,190
+Speaker 0: now in the small portion they were able to clean because there's too many fucking locks.
+
+459
+00:27:32,210 --> 00:27:33,838
+Speaker 1: Oh, his YouTube comment is great, too, on the video.
+
+460
+00:27:34,079 --> 00:27:35,285
+Speaker 1: "Please don't take it the wrong way.
+
+461
+00:27:35,527 --> 00:27:40,693
+Speaker 1: We want you to come to Prague and have a nice time here, but please don't destroy our heritage sites by putting up some stupid
+
+462
+00:27:40,733 --> 00:27:41,055
+Speaker 1: locks.".
+
+463
+00:27:41,336 --> 00:27:41,758
+Speaker 0: That's right.
+
+464
+00:27:42,100 --> 00:27:42,723
+Speaker 1: Yeah.
+
+465
+00:27:42,984 --> 00:27:43,386
+Speaker 1: Fuck that.
+
+466
+00:27:43,547 --> 00:27:49,053
+Speaker 0: I like how no police in Prague, like, stopped the guy who was just there with angle grinders and...
+
+467
+00:27:49,194 --> 00:27:51,306
+Speaker 1: Dude, the cops are probably like, "Thank you,
+
+468
+00:27:51,467 --> 00:27:51,669
+Speaker 1: sir.".
+
+469
+00:27:51,950 --> 00:27:52,412
+Speaker 0: Right.
+
+470
+00:27:53,678 --> 00:27:57,737
+Speaker 1: So, in the meta moment, we have two of our recent panels just on YouTube.
+
+471
+00:27:58,079 --> 00:28:04,310
+Speaker 1: If you want to feel sad, the real harm of games, and if you want to feel glad, uh, what was the other one we put up?
+
+472
+00:28:04,410 --> 00:28:06,079
+Speaker 1: The 40 games you must... Rare game mechanics.
+
+473
+00:28:06,903 --> 00:28:08,994
+Speaker 1: And the 40 games you must play, and the 40 tabletop games.
+
+474
+00:28:09,235 --> 00:28:11,044
+Speaker 1: The moral is, go to our YouTube channel.
+
+475
+00:28:11,326 --> 00:28:11,748
+Speaker 1: There are a ton.
+
+476
+00:28:11,768 --> 00:28:12,854
+Speaker 0: There's a case of 40s.
+
+477
+00:28:13,115 --> 00:28:14,783
+Speaker 0: Yes, 40.
+
+478
+00:28:14,783 --> 00:28:18,801
+Speaker 1: I feel like I want to do 40 more games you should play.
+
+479
+00:28:18,841 --> 00:28:21,014
+Speaker 0: Don't ask where the case of 40s joke came from.
+
+480
+00:28:21,296 --> 00:28:23,550
+Speaker 1: That is best not remembered.
+
+481
+00:28:27,058 --> 00:28:28,112
+Speaker 1: I remember the whole fucking thing.
+
+482
+00:28:28,152 --> 00:28:35,046
+Speaker 1: Anyway, the Geek Nights Book Club book, if you did not notice, is the painfully written pages of pain.
+
+483
+00:28:35,126 --> 00:28:37,938
+Speaker 0: I am exactly 64% done with the pages of pain.
+
+484
+00:28:38,260 --> 00:28:38,562
+Speaker 1: I am.
+
+485
+00:28:38,562 --> 00:28:41,237
+Speaker 1: 58% done.
+
+486
+00:28:41,297 --> 00:28:41,558
+Speaker 1: Whoa.
+
+487
+00:28:41,659 --> 00:28:44,010
+Speaker 1: Because the weather is shitty, so I'm reading it on the subway.
+
+488
+00:28:44,230 --> 00:28:44,995
+Speaker 0: That's right.
+
+489
+00:28:45,015 --> 00:28:46,383
+Speaker 0: I just read a chapter on the way here.
+
+490
+00:28:46,443 --> 00:28:57,862
+Speaker 1: So, all I want to say, having gotten about halfway through, that part where the giant appears and he has to fight it, when I read this as a kid, I remembered that being very near the end of the book.
+
+491
+00:28:58,485 --> 00:29:01,902
+Speaker 1: And that appears to be at almost literally the halfway point of the book.
+
+492
+00:29:02,847 --> 00:29:06,129
+Speaker 1: And I know there's no giant glossary like in an R. Scott Bakker book.
+
+493
+00:29:07,050 --> 00:29:09,321
+Speaker 1: What the fuck happens when I remember in this book?
+
+494
+00:29:09,361 --> 00:29:11,090
+Speaker 0: Maybe the giant comes back again.
+
+495
+00:29:12,192 --> 00:29:12,956
+Speaker 1: I don't think so.
+
+496
+00:29:13,036 --> 00:29:14,645
+Speaker 1: Someone else big will come back later.
+
+497
+00:29:14,665 --> 00:29:16,555
+Speaker 1: I don't think you ran into the Tanari yet.
+
+498
+00:29:17,239 --> 00:29:17,742
+Speaker 0: I think I did.
+
+499
+00:29:18,204 --> 00:29:18,787
+Speaker 1: I think you might have.
+
+500
+00:29:19,572 --> 00:29:20,255
+Speaker 0: Pretty sure I did.
+
+501
+00:29:20,396 --> 00:29:20,677
+Speaker 1: Yeah.
+
+502
+00:29:20,878 --> 00:29:21,783
+Speaker 1: I think I know where you are.
+
+503
+00:29:21,803 --> 00:29:23,250
+Speaker 0: It's like the next chapter you're about to read.
+
+504
+00:29:23,450 --> 00:29:23,651
+Speaker 0: Yeah.
+
+505
+00:29:23,953 --> 00:29:24,234
+Speaker 1: I know.
+
+506
+00:29:24,315 --> 00:29:24,556
+Speaker 1: I know.
+
+507
+00:29:24,858 --> 00:29:25,542
+Speaker 1: I like that guy.
+
+508
+00:29:26,044 --> 00:29:26,768
+Speaker 0: Just randomly.
+
+509
+00:29:26,809 --> 00:29:28,517
+Speaker 0: It's like, by the way, there's a Tanari here.
+
+510
+00:29:28,818 --> 00:29:43,190
+Speaker 1: So, part of the problem with this book is that a lot of people, either people who read it, either read it as their introduction to Planescape as a setting, or they already read all the source material to Planescape and then they read this book.
+
+511
+00:29:44,752 --> 00:29:48,758
+Speaker 1: If you know a lot about the D&D world, this book reads very differently than if you don't.
+
+512
+00:29:49,723 --> 00:29:51,069
+Speaker 1: Do you know what a Tanari is?
+
+513
+00:29:51,310 --> 00:29:51,913
+Speaker 0: Some kind of demon.
+
+514
+00:29:52,094 --> 00:29:52,376
+Speaker 0: Yeah.
+
+515
+00:29:52,597 --> 00:29:53,341
+Speaker 1: Do you know which other?
+
+516
+00:29:53,622 --> 00:29:55,010
+Speaker 1: It's one of the two kinds of demons.
+
+517
+00:29:55,170 --> 00:29:55,915
+Speaker 1: They're at war with each other.
+
+518
+00:29:55,935 --> 00:29:56,438
+Speaker 1: Right.
+
+519
+00:29:56,478 --> 00:29:57,987
+Speaker 0: In the Monster Manual, there's two kinds.
+
+520
+00:29:58,068 --> 00:29:58,450
+Speaker 0: Yeah.
+
+521
+00:29:59,610 --> 00:30:03,110
+Speaker 1: Remember how often in the Free Port game it mattered a lot which one it was?
+
+522
+00:30:03,791 --> 00:30:04,072
+Speaker 1: No.
+
+523
+00:30:04,153 --> 00:30:04,796
+Speaker 0: I don't remember.
+
+524
+00:30:04,857 --> 00:30:05,742
+Speaker 0: I just remember pirates.
+
+525
+00:30:05,782 --> 00:30:10,084
+Speaker 1: That came out kind of, every now and then a demon would appear, and some of us would be like, "Oh,
+
+526
+00:30:10,184 --> 00:30:10,325
+Speaker 1: shit.".
+
+527
+00:30:10,345 --> 00:30:14,326
+Speaker 1: And there would be an Ask an Alex really detailed questions about it to figure out which one it was.
+
+528
+00:30:14,608 --> 00:30:17,567
+Speaker 1: So, we knew how to fight it, and Scott was just like, "Just a demon.
+
+529
+00:30:17,587 --> 00:30:17,989
+Speaker 1: Who cares?
+
+530
+00:30:18,872 --> 00:30:19,556
+Speaker 1: There's two kinds.
+
+531
+00:30:19,596 --> 00:30:19,858
+Speaker 1: Why does it
+
+532
+00:30:19,899 --> 00:30:20,201
+Speaker 1: matter?".
+
+533
+00:30:20,221 --> 00:30:21,207
+Speaker 0: Gotta use the cold iron.
+
+534
+00:30:21,389 --> 00:30:21,570
+Speaker 1: Yeah.
+
+535
+00:30:22,732 --> 00:30:23,354
+Speaker 0: I know that much.
+
+536
+00:30:24,399 --> 00:30:26,006
+Speaker 1: Otherwise, stay tuned for stuff.
+
+537
+00:30:26,187 --> 00:30:27,673
+Speaker 1: I'm doing pre-production for a bunch of things.
+
+538
+00:30:27,995 --> 00:30:37,120
+Speaker 1: I also started, I'm gonna complete that thing where I was reading out loud the entirety of the novelization of Castlevania II Simon's Quest by FX9.
+
+539
+00:30:37,683 --> 00:30:44,920
+Speaker 1: I'm almost done reading the whole book, and I'm gonna post that audiobook in the Patreon if you want to read some even more painful pages.
+
+540
+00:30:44,940 --> 00:30:46,810
+Speaker 0: I want to see you get sued by whoever made that book.
+
+541
+00:30:47,090 --> 00:30:47,874
+Speaker 1: That'd be really funny.
+
+542
+00:30:47,914 --> 00:30:50,004
+Speaker 0: Yeah, I guess you just take it down.
+
+543
+00:30:50,024 --> 00:30:50,325
+Speaker 0: So, get this.
+
+544
+00:30:50,426 --> 00:30:51,290
+Speaker 1: I Googled for the book.
+
+545
+00:30:52,112 --> 00:30:54,365
+Speaker 1: The whole text of the book is just on a webpage.
+
+546
+00:30:54,546 --> 00:30:55,833
+Speaker 0: I'm sure it is, but, you know.
+
+547
+00:30:56,114 --> 00:31:01,039
+Speaker 1: I'm actually reading from that webpage now because it's easier than reading from the physical book of which I have two copies.
+
+548
+00:31:02,105 --> 00:31:04,979
+Speaker 1: One from when I was a kid, and one that I borrowed from Scott Johnson.
+
+549
+00:31:05,280 --> 00:31:05,602
+Speaker 0: Okay.
+
+550
+00:31:06,908 --> 00:31:07,210
+Speaker 1: So, yeah.
+
+551
+00:31:07,290 --> 00:31:07,913
+Speaker 1: Let's get into it.
+
+552
+00:31:08,174 --> 00:31:08,596
+Speaker 1: Whizzle!
+
+553
+00:31:09,098 --> 00:31:35,870
+Speaker 0: So, there's this thing, Windows Subsystem for Linux, and this thing has been out for a year plus, but I figure we haven't done an episode on it specifically, though I'm sure we've brought it up in the past, and it is very soon going to get major upgrades that are really quite astonishing, and as someone who has used Linux and Windows mostly for 30 years, but Linux for 20 plus years.
+
+554
+00:31:36,251 --> 00:31:37,961
+Speaker 1: Scott was using Linux long before I was.
+
+555
+00:31:38,001 --> 00:31:38,785
+Speaker 1: I never actually installed...
+
+556
+00:31:38,806 --> 00:31:43,530
+Speaker 0: I think I first used a Linux computer in like 1997 or 8.
+
+557
+00:31:43,530 --> 00:31:56,575
+Speaker 1: In high school, Ken had Linux on a box, and he did stuff with it, and when I got to RIT, the first time I ever installed Linux was I had an old Pentium 200, and I installed Linux on it for the hell of it.
+
+558
+00:31:56,596 --> 00:32:11,952
+Speaker 1: I didn't have anything to do with it, so what I did then is I actually plugged a serial cable into it, and I plugged the other end of that serial cable into my computer, and then I would TTY into the Linux box from my computer with, like, terminal, and use it.
+
+559
+00:32:12,796 --> 00:32:13,721
+Speaker 0: Anyway, so...
+
+560
+00:32:14,022 --> 00:32:14,444
+Speaker 1: We old.
+
+561
+00:32:14,886 --> 00:32:24,739
+Speaker 0: Yeah, so back in the day, if you had a computer, and you wanted to run Linux, but you still needed Windows on that computer, maybe to play some games, you would do this thing called dual booting.
+
+562
+00:32:25,141 --> 00:32:26,270
+Speaker 1: Or, or Wine.
+
+563
+00:32:27,472 --> 00:32:29,302
+Speaker 0: So the dual booting thing, the way that worked...
+
+564
+00:32:29,423 --> 00:32:30,710
+Speaker 1: Wine didn't work for anyone.
+
+565
+00:32:31,331 --> 00:32:46,608
+Speaker 0: Is you would basically cut your hard drive into pieces, you know, logically speaking, into partitions, and in your master boot record, you would install a bootloader, like Grub, and when your computer turned on, it would be a menu, and you would choose Windows, or you would choose Linux, or you would choose something else.
+
+566
+00:32:46,628 --> 00:32:48,035
+Speaker 0: You could have as many as you wanted, right?
+
+567
+00:32:48,317 --> 00:32:59,432
+Speaker 0: And you would put different operating systems in different parts of your hard drive, and different file systems, and so it would be like having multiple... You'd need a lot of storage, which is hard to come by in the late 90s, but later on, it wasn't so hard to come by.
+
+568
+00:32:59,452 --> 00:33:01,904
+Speaker 1: Yeah, late 90s, if you had more than one hard drive, that was a big deal.
+
+569
+00:33:02,065 --> 00:33:05,882
+Speaker 0: Yeah, and you would just restart your computer to switch operating systems, right?
+
+570
+00:33:06,666 --> 00:33:14,810
+Speaker 0: Max actually had a thing where you could switch between Mac OS, not OS X, Mac OS and DOS, by pressing a special key combination.
+
+571
+00:33:15,250 --> 00:33:17,784
+Speaker 0: I should look up how exactly that fucking worked, because I don't remember.
+
+572
+00:33:17,804 --> 00:33:18,710
+Speaker 0: I just remember that it did work.
+
+573
+00:33:19,610 --> 00:33:23,150
+Speaker 1: It's not like in the old, old days, where you'd have DOS, and you'd install Windows.
+
+574
+00:33:23,530 --> 00:33:26,690
+Speaker 0: It probably suspended one OS, and turned the other... I don't know.
+
+575
+00:33:26,990 --> 00:33:28,276
+Speaker 0: I'm going to look that up after the show.
+
+576
+00:33:28,336 --> 00:33:30,385
+Speaker 0: Anyway, so you dual booted for a long time.
+
+577
+00:33:30,405 --> 00:33:32,515
+Speaker 0: There was Wine, that Rym mentioned.
+
+578
+00:33:32,655 --> 00:33:34,423
+Speaker 0: Wine stands for... It's one of those...
+
+579
+00:33:34,484 --> 00:33:35,950
+Speaker 1: Wine is not an emulator.
+
+580
+00:33:36,210 --> 00:33:37,518
+Speaker 0: It's one of those self-referential things, right?
+
+581
+00:33:37,538 --> 00:33:42,686
+Speaker 0: So an emulator is a piece of software that literally emulates a chip, right?
+
+582
+00:33:42,706 --> 00:33:45,078
+Speaker 0: You have a chip that has an assembly language.
+
+583
+00:33:45,419 --> 00:33:51,390
+Speaker 0: You write a piece of software that takes in that assembly language, and basically converts it to the assembly language of the chip you actually have.
+
+584
+00:33:51,791 --> 00:34:02,670
+Speaker 0: So you could have your much more powerful Pentium whatever pretend to be the chip of some other old Motorola Apple something, right?
+
+585
+00:34:03,452 --> 00:34:11,029
+Speaker 1: I actually am a Wine expert, because I actually supported an extensive Wine infrastructure at IBM.
+
+586
+00:34:11,610 --> 00:34:14,045
+Speaker 0: So what Wine did, basically, is you'd run it on Linux.
+
+587
+00:34:14,065 --> 00:34:38,067
+Speaker 0: You'd have a Linux computer running Linux, and you would have a Windows application say like Photoshop.exe, and you would type Wine Photoshop.exe and Wine would then take all of the Windows system calls that Photoshop.exe was trying to make, and convert them into Linux system calls, and get the Photoshop running on Linux.
+
+588
+00:34:38,610 --> 00:34:43,431
+Speaker 1: Now the way this worked in practice was you run it, and it fails.
+
+589
+00:34:43,753 --> 00:34:49,681
+Speaker 1: Then you figure out where it failed, and there'll be like one DLL is missing where the Wine DLL sucks.
+
+590
+00:34:49,722 --> 00:34:52,416
+Speaker 0: You had to mess with a bunch of configs and all sorts of garbage.
+
+591
+00:34:52,436 --> 00:34:53,341
+Speaker 1: No, you know what you really did?
+
+592
+00:34:53,400 --> 00:35:05,562
+Speaker 1: You went to a real Windows computer, you took all the DLLs, you copied them to somewhere on your Linux computer, then you fucked around with configs for like a year, and then your application would work slowly and shittily.
+
+593
+00:35:05,583 --> 00:35:07,854
+Speaker 0: There were a few applications that worked really well.
+
+594
+00:35:08,015 --> 00:35:14,306
+Speaker 0: I remember I had a job where we needed Visio, and we had the last version of Visio before Microsoft bought it.
+
+595
+00:35:14,809 --> 00:35:20,839
+Speaker 0: So it was by the original company that made Visio, and it ran in Wine beautifully.
+
+596
+00:35:20,960 --> 00:35:36,135
+Speaker 1: My first major job, like the two things I did first as a technologist, and my first real job when I was working at IBM, was I got a whole bunch of this garbage legacy Windows software, like crazy software.
+
+597
+00:35:36,155 --> 00:35:38,810
+Speaker 1: I'm not going to say any names of these, because they might still be around.
+
+598
+00:35:39,030 --> 00:35:39,713
+Speaker 1: The software is shitty.
+
+599
+00:35:40,477 --> 00:35:48,477
+Speaker 1: And I got it all to work in Wine so we could deploy Linux desktops that ran this Windows software all over the factory floor.
+
+600
+00:35:48,738 --> 00:36:03,433
+Speaker 0: Anyway, so to get down with it, so then as computers got more powerful, virtual machine technology became available to not just servers, but people in their homes, things like VirtualBox, VMware, all kinds of stuff, right, on OS X and Windows and Linux.
+
+601
+00:36:03,715 --> 00:36:08,699
+Speaker 0: Basically, what this is, is you have a piece of software that pretends to be a computer, right?
+
+602
+00:36:08,880 --> 00:36:13,382
+Speaker 0: You have a program that pretends to be a hard drive, a program that pretends to be a video card, right?
+
+603
+00:36:13,684 --> 00:36:20,579
+Speaker 0: And now you can just install boom, an operating system as a file in your file system, but it's pretending that it's a hard drive.
+
+604
+00:36:20,600 --> 00:36:20,801
+Speaker 0: Now,
+
+605
+00:36:21,162 --> 00:36:41,670
+Speaker 1: since I am not a developer, that basically solved most of my problems, because usually I needed to use Windows primarily, because I'm doing a bunch of Windows-y stuff in my real life, but then I'd want to do something in Linux for some reason, and I'd just spin up a machine, a virtual machine, and I'd tell that into it, or it has to say into it, and I'm good to go.
+
+606
+00:36:41,810 --> 00:36:47,959
+Speaker 0: Now the thing is, this is overkill for most uses, where people just need to run an application on a different OS.
+
+607
+00:36:48,280 --> 00:36:57,870
+Speaker 0: The only time you actually need to virtualize all that hardware is if you're actually doing work on that low level where you need to virtualize hardware.
+
+608
+00:36:58,310 --> 00:37:00,420
+Speaker 0: Most people just want to run the application.
+
+609
+00:37:00,762 --> 00:37:05,426
+Speaker 0: They don't need to virtualize the network card, right, or anything like that.
+
+610
+00:37:05,446 --> 00:37:07,359
+Speaker 0: They don't even want to have a virtual network at all.
+
+611
+00:37:07,379 --> 00:37:08,790
+Speaker 0: They just want to use the same network they've got.
+
+612
+00:37:09,351 --> 00:37:10,455
+Speaker 1: Now this is where that failed.
+
+613
+00:37:10,696 --> 00:37:12,804
+Speaker 1: We used to run Geek Nights.
+
+614
+00:37:13,005 --> 00:37:22,288
+Speaker 1: I had to use Linux to actually make Geek Nights, because I used some fancy software, Resound, and a bunch of scripting, and I had to make it work with this weird-ass sound.
+
+615
+00:37:22,710 --> 00:37:25,690
+Speaker 0: In those days, Adobe Audition was bad and cost a zillion dollars.
+
+616
+00:37:26,110 --> 00:37:27,175
+Speaker 0: It didn't even exist yet?
+
+617
+00:37:27,195 --> 00:37:39,371
+Speaker 1: Well, so it technically existed because it was cool at it, and Adobe bought that company, and back then, I eventually paid for whatever, Creative Cloud 4, CS4.
+
+618
+00:37:39,754 --> 00:37:40,277
+Speaker 0: I don't know.
+
+619
+00:37:40,398 --> 00:37:47,879
+Speaker 1: So I had to dual-boot to make Geek Nights, and that was the last time I ran Linux natively on a computer.
+
+620
+00:37:48,362 --> 00:38:04,360
+Speaker 0: So anyway, the point is that the reason I was only ever dual-booting and virtualizing Linux in the first place back in the day was because if I wanted to do any sort of software development work, Linux is actually better at that.
+
+621
+00:38:04,842 --> 00:38:09,103
+Speaker 0: Nothing a normal person wants to do with a computer is necessarily better on Linux.
+
+622
+00:38:09,144 --> 00:38:10,993
+Speaker 0: Maybe a handful of things, not really.
+
+623
+00:38:12,078 --> 00:38:17,927
+Speaker 0: The vast majority of things that a developer wants to do, though, are just better on a Unix/Linux operating system.
+
+624
+00:38:17,947 --> 00:38:43,497
+Speaker 0: This is why even though OS X is sort of a busted Unix with all these quirks, developers who are making, if you're not making a Windows app or a game or something like that where you're going to develop four Windows on Windows, the developer environment, all the tools for software development for making websites or pretty much anything are better on OS X and especially Linux or any kind of Unix OS.
+
+625
+00:38:43,578 --> 00:38:46,009
+Speaker 1: Yep, all my developers, they all work on OS X.
+
+626
+00:38:46,310 --> 00:38:54,714
+Speaker 0: I was dual-booting Linux all throughout college because I had to play Counter-Strike, so I dual-booted, but I was using Linux to do all my CS homework.
+
+627
+00:38:54,734 --> 00:38:55,780
+Speaker 0: You couldn't do it on Windows.
+
+628
+00:38:56,061 --> 00:39:01,590
+Speaker 1: But get this, look at this, playing Counter-Strike had to be on Windows because running that on Linux sucked.
+
+629
+00:39:01,970 --> 00:39:02,754
+Speaker 1: You even got it to work.
+
+630
+00:39:03,337 --> 00:39:08,101
+Speaker 1: Running one in a Counter-Strike server, we had to run that on Linux because running that on Windows sucked.
+
+631
+00:39:08,342 --> 00:39:08,804
+Speaker 0: Exactly.
+
+632
+00:39:08,865 --> 00:39:12,101
+Speaker 0: Any kind of server stuff, you're not using any kind of Windows for that.
+
+633
+00:39:12,121 --> 00:39:13,067
+Speaker 0: You're using some kind of Nix.
+
+634
+00:39:13,288 --> 00:39:14,432
+Speaker 0: Anyway, Star Nix.
+
+635
+00:39:14,955 --> 00:39:16,965
+Speaker 0: So, these were our options.
+
+636
+00:39:17,026 --> 00:39:28,222
+Speaker 0: Virtual machines, up until like two, three years ago, it was like just tell virtual machines on powerful computers was the way to go for convenience of running Windows natively, especially on a laptop.
+
+637
+00:39:28,242 --> 00:39:30,413
+Speaker 0: You don't have Linux messing up your laptop or anything.
+
+638
+00:39:30,433 --> 00:39:36,865
+Speaker 0: There are a lot of cases where people would run Linux directly on their laptop and it would mess them up, overheat or something, right?
+
+639
+00:39:36,885 --> 00:39:43,621
+Speaker 0: You get the proper Windows software running on the hardware directly, and then you just use a virtual machine to run the other software.
+
+640
+00:39:43,641 --> 00:39:44,165
+Speaker 0: you don't need to.
+
+641
+00:39:44,185 --> 00:39:51,560
+Speaker 0: Until Microsoft finally released on Windows 10 WSL 1, which is the Windows subsystem for Linux.
+
+642
+00:39:51,620 --> 00:39:55,037
+Speaker 0: And what this was is basically a lot like Wine.
+
+643
+00:39:55,720 --> 00:39:57,750
+Speaker 0: It's a lot like Wine, only backwards.
+
+644
+00:39:58,370 --> 00:39:59,215
+Speaker 0: Well, let's back up.
+
+645
+00:39:59,336 --> 00:40:02,412
+Speaker 1: The only reason Wine really sucked was that it was made It sucked.
+
+646
+00:40:02,674 --> 00:40:03,939
+Speaker 0: It wasn't a bad idea.
+
+647
+00:40:03,959 --> 00:40:04,442
+Speaker 0: It just sucked.
+
+648
+00:40:04,602 --> 00:40:07,738
+Speaker 1: It sucked because Microsoft actively opposed it.
+
+649
+00:40:08,100 --> 00:40:08,984
+Speaker 0: Well, that's also true.
+
+650
+00:40:09,085 --> 00:40:09,990
+Speaker 0: For a lot of reasons.
+
+651
+00:40:10,370 --> 00:40:10,511
+Speaker 0: Right.
+
+652
+00:40:10,531 --> 00:40:24,742
+Speaker 0: It's a lot easier, right, for the closed source developers of Windows who have access to all of Windows to then make something that runs all the software that is meant to run on the open source Linux kernel, right?
+
+653
+00:40:24,803 --> 00:40:31,698
+Speaker 0: For the open source Linux developers to make a Wine thing that would run all possible Windows software.
+
+654
+00:40:31,719 --> 00:40:39,941
+Speaker 1: Because a lot of Wine development was literally like pick some random-ass Windows DLL, figure out what the hell it does, and reverse engineer it enough to make it equivalent.
+
+655
+00:40:40,122 --> 00:40:40,303
+Speaker 0: Right.
+
+656
+00:40:40,323 --> 00:40:45,870
+Speaker 0: So the way that first WSL 1, which is still the WSL that's available right now, it works.
+
+657
+00:40:46,010 --> 00:40:47,277
+Speaker 0: It's basically a lot like Wine.
+
+658
+00:40:47,558 --> 00:40:52,665
+Speaker 0: You go to the Microsoft App Store on Windows, and you find a Linux distribution.
+
+659
+00:40:52,685 --> 00:40:53,349
+Speaker 0: They're all in there.
+
+660
+00:40:54,030 --> 00:41:07,960
+Speaker 0: Like Ubuntu, Debian, and you just click install, and then you open up your command, your PowerShell, your Windows even command prompt, and you type bash.exe, and bash.exe runs, and now you have Linux running.
+
+661
+00:41:07,980 --> 00:41:13,627
+Speaker 0: And if you want to get some GUI action you have to go and get your own separate X server, right?
+
+662
+00:41:13,647 --> 00:41:15,416
+Speaker 0: Because that's the way Linux GUIs work.
+
+663
+00:41:15,658 --> 00:41:22,612
+Speaker 0: So you can go get a vc xserv xming, or there's one that you can pay for, but it's supposedly okay, but you pay for it.
+
+664
+00:41:22,652 --> 00:41:24,159
+Speaker 0: It's not free like the two I just mentioned.
+
+665
+00:41:24,180 --> 00:41:25,003
+Speaker 0: There might be some others.
+
+666
+00:41:25,445 --> 00:41:26,289
+Speaker 0: You just run one.
+
+667
+00:41:26,792 --> 00:41:34,110
+Speaker 0: And then, now, if you execute some GUI apps in your little command prompt, they will show up in your X server that you're running.
+
+668
+00:41:34,190 --> 00:41:35,919
+Speaker 0: I don't think I have any... Because that's how Linux works.
+
+669
+00:41:35,939 --> 00:41:38,029
+Speaker 1: I don't think there's any GUI app I would ever need to run again.
+
+670
+00:41:38,530 --> 00:41:38,832
+Speaker 0: I don't know.
+
+671
+00:41:39,033 --> 00:41:39,816
+Speaker 1: But command line...
+
+672
+00:41:40,982 --> 00:41:49,103
+Speaker 0: So the way that I use WSL for my work is now I don't have to do any virtual machine bullshit, right?
+
+673
+00:41:49,123 --> 00:41:50,993
+Speaker 0: I run the X server.
+
+674
+00:41:51,817 --> 00:42:00,823
+Speaker 0: I have a little script I double click on a shortcut and a full screen Linux desktop environment runs in the second monitor.
+
+675
+00:42:01,004 --> 00:42:01,969
+Speaker 0: Just boom, there it is.
+
+676
+00:42:02,711 --> 00:42:12,903
+Speaker 0: Or, if I don't have two monitors, I turn that mode off and I just run Linux apps in separate little windows and they're just like there, right next to my Windows windows, all together in the same thing.
+
+677
+00:42:13,264 --> 00:42:15,294
+Speaker 0: You wouldn't even know which ones are which.
+
+678
+00:42:16,359 --> 00:42:17,083
+Speaker 0: And it works great.
+
+679
+00:42:17,665 --> 00:42:20,118
+Speaker 0: But this WSL 1 had a few problems, right?
+
+680
+00:42:20,178 --> 00:42:29,765
+Speaker 0: So the problems it had is, number one, really bad file system performance, like noticeable, versus accessing the file system directly.
+
+681
+00:42:29,805 --> 00:42:40,420
+Speaker 1: Which is interesting because that was one of the primary issues Wine had, and that was also one of the primary issues that you had dual booting, because dual boot, back then, it was very hard to read a Windows formatted...
+
+682
+00:42:40,440 --> 00:42:43,014
+Speaker 0: Well, I'm not talking about reading opposite file systems.
+
+683
+00:42:43,074 --> 00:42:43,878
+Speaker 0: I'm talking about just...
+
+684
+00:42:44,139 --> 00:42:44,943
+Speaker 1: I/O is slow?
+
+685
+00:42:45,144 --> 00:42:47,457
+Speaker 0: Yeah, just I/O is really bad in WSL 1.
+
+686
+00:42:47,457 --> 00:42:49,370
+Speaker 0: It's noticeably slow.
+
+687
+00:42:50,873 --> 00:42:57,410
+Speaker 0: The other problem is a lot of the system calls of Linux just don't work in WSL, like the main ones do, right?
+
+688
+00:42:57,710 --> 00:42:58,957
+Speaker 0: But there's a lot of them that don't.
+
+689
+00:42:58,997 --> 00:43:06,777
+Speaker 0: And you'll see, if you go to the WSL bug reports, there's lists and lists of people trying to do specific things, like run Wireshark, for example.
+
+690
+00:43:06,818 --> 00:43:07,280
+Speaker 0: It won't work.
+
+691
+00:43:08,465 --> 00:43:10,294
+Speaker 0: You can't run Wireshark in WSL 1.
+
+692
+00:43:10,294 --> 00:43:16,405
+Speaker 0: It will not happen, because the system calls it needs to access the network card that are not available in WSL 1.
+
+693
+00:43:16,405 --> 00:43:18,375
+Speaker 1: Wireshark is a native Windows app, so...
+
+694
+00:43:18,435 --> 00:43:21,610
+Speaker 0: Yeah, but people want to run the Linux one for whatever reason.
+
+695
+00:43:21,730 --> 00:43:22,615
+Speaker 1: Yeah, I don't know why.
+
+696
+00:43:22,675 --> 00:43:23,963
+Speaker 0: Or similar apps, also, right?
+
+697
+00:43:23,983 --> 00:43:24,587
+Speaker 0: Yeah, yeah, yeah.
+
+698
+00:43:24,687 --> 00:43:31,400
+Speaker 0: They want to run debugging apps, and certain debugging system calls, and they're not implemented in WSL 1, they won't work, right?
+
+699
+00:43:32,143 --> 00:43:49,714
+Speaker 0: You know, it has issues, but for the most part, if you want to run Linux apps, you don't want to dual boot and reboot your computer every time, and you don't need to virtualize it, because you're not doing anything that requires virtualization, WSL 1 is the way to go, it's really easy, it totally works, it's pretty great.
+
+700
+00:43:50,498 --> 00:43:52,990
+Speaker 0: But, there's two major problems.
+
+701
+00:43:53,250 --> 00:44:00,507
+Speaker 0: Problem number one, if you're not doing the GUI thing like I'm doing, where I'm running, I'm actually running, like, the gnome terminal, right?
+
+702
+00:44:00,668 --> 00:44:19,738
+Speaker 0: I'm running the Linux terminal emulator in WSL, in a GUI, so that I don't have to use Windows command prompt, cmd.exe, that thing's garbage, or PowerShell, which is much better, but it's not great, it's not even as good as Xterm, right?
+
+703
+00:44:19,758 --> 00:44:24,250
+Speaker 0: WSL is kind of meh, you have to use one of those two terminals, unless you do the trick that I'm using, right?
+
+704
+00:44:24,370 --> 00:44:26,964
+Speaker 0: Like, run Xterm, or run RXVT, or something else.
+
+705
+00:44:27,748 --> 00:44:39,003
+Speaker 0: Microsoft just announced, at their developer thing, they're making a new Windows terminal, and it appears to be the God terminal, like, they learned like, oh, that's what a real terminal's fucking like, alright.
+
+706
+00:44:39,827 --> 00:44:46,038
+Speaker 0: So, Windows itself, without having to, you know, do some shenanigans, will have a legit awesome terminal.
+
+707
+00:44:46,138 --> 00:44:55,283
+Speaker 0: Even on OSX, they have terminal, which is better than any Windows terminal, but OSX users, Mac users, all of them install iTerm or iTerm2, right?
+
+708
+00:44:56,088 --> 00:44:58,420
+Speaker 0: They don't use the garbage OSX terminal.
+
+709
+00:44:58,661 --> 00:45:01,732
+Speaker 0: But at least the garbage OSX terminal has tabs, right?
+
+710
+00:45:02,034 --> 00:45:06,982
+Speaker 0: But no, now Microsoft is making a real terminal that will be out at some point in the future-ish.
+
+711
+00:45:07,404 --> 00:45:16,430
+Speaker 1: So, does this, 'cause Linux on the desktop is already a ship that sailed and then sank, I feel like this is a nail in that submerged coffin.
+
+712
+00:45:16,630 --> 00:45:16,952
+Speaker 1: Probably.
+
+713
+00:45:17,113 --> 00:45:19,304
+Speaker 1: Like, why would you ever run Linux on your desktop?
+
+714
+00:45:19,344 --> 00:45:20,832
+Speaker 0: Maybe there's some good reason, I don't know.
+
+715
+00:45:21,214 --> 00:45:24,330
+Speaker 1: I mean, unless your desktop is actually just a server?
+
+716
+00:45:24,530 --> 00:45:27,444
+Speaker 0: There's just a lot less good reasons, but there are fewer reasons.
+
+717
+00:45:27,524 --> 00:45:34,741
+Speaker 1: I mean, if it's just a server, like, I'm not gonna even put Windows on a NAS box, I'm gonna run just Linux on it, but...
+
+718
+00:45:35,685 --> 00:45:37,515
+Speaker 0: There's some reasons, but not so many.
+
+719
+00:45:38,560 --> 00:45:41,452
+Speaker 0: But yeah, so the other big thing is WSL2.
+
+720
+00:45:42,076 --> 00:45:48,509
+Speaker 0: So, WSL2, I watched a whole, like, hour-long video where, like, the main developer of it, like, explained what's going on.
+
+721
+00:45:49,330 --> 00:45:59,986
+Speaker 0: It, basically, you won't notice many differences from WSL1 when you use it, but you do have to convert your WSL1 to WSL2 in order to make it happen, right?
+
+722
+00:46:00,489 --> 00:46:01,193
+Speaker 0: And what's actually?
+
+723
+00:46:01,454 --> 00:46:06,340
+Speaker 0: WSL2 actually is not doing the wine thing, it's actually virtualization.
+
+724
+00:46:06,983 --> 00:46:09,395
+Speaker 0: But it's, like, they call it, like, this lightweight VM.
+
+725
+00:46:09,456 --> 00:46:11,970
+Speaker 0: It's not, like, a real kind of VM, right?
+
+726
+00:46:11,970 --> 00:46:15,550
+Speaker 1: Well, this demo is already someone starting a Docker from the command line.
+
+727
+00:46:15,830 --> 00:46:25,938
+Speaker 0: Yes, because they have switched to doing this virtualization thing, this sort of lightweight virtualization, instead of doing the wine thing, every system call works.
+
+728
+00:46:26,541 --> 00:46:32,290
+Speaker 0: You can run every Linux app, including ridiculous shit like Docker, in WSL.
+
+729
+00:46:32,330 --> 00:46:33,275
+Speaker 1: Alright, 20% faster.
+
+730
+00:46:33,295 --> 00:46:33,456
+Speaker 1: Right.
+
+731
+00:46:33,596 --> 00:46:37,881
+Speaker 1: And full system call compatibility.
+
+732
+00:46:37,982 --> 00:46:38,223
+Speaker 1: Yep.
+
+733
+00:46:38,485 --> 00:47:00,954
+Speaker 0: So, basically, the only major difference you're going to notice between WSL1 and 2 is the file system is way better because you're just accessing the file system, whereas in WSL1, if you wanted to access the Windows file system from Linux, you had to mount using, like, this DriveFS thing, you would mount the Windows file system in, like, mount/c, right?
+
+734
+00:47:01,035 --> 00:47:10,020
+Speaker 0: And then you could access it from Windows from Linux, but there was no way to access Linux from Windows very safely, right, using WSL1.
+
+735
+00:47:10,602 --> 00:47:13,174
+Speaker 0: It was kind of okay, some things, but not really.
+
+736
+00:47:14,360 --> 00:47:15,646
+Speaker 0: Now, it's totally safe.
+
+737
+00:47:15,948 --> 00:47:25,356
+Speaker 0: They've used Plan 9 to basically create these automatic network mounts between WSL virtual machine and Windows.
+
+738
+00:47:25,376 --> 00:47:27,728
+Speaker 0: So, it's basically perfect.
+
+739
+00:47:27,808 --> 00:47:33,980
+Speaker 0: lightning fast, you know, file system access between the two worlds just directly, right?
+
+740
+00:47:34,000 --> 00:47:44,813
+Speaker 0: Yeah, so WSL2 is looking like, I mean, every system call, which means literally every Linux app just about, I'm sure someone will find one that doesn't work.
+
+741
+00:47:45,054 --> 00:47:45,778
+Speaker 1: I'm sure they will.
+
+742
+00:47:46,079 --> 00:47:46,662
+Speaker 1: Or will they?
+
+743
+00:47:46,944 --> 00:47:49,416
+Speaker 0: But it's basically everything's just going to run.
+
+744
+00:47:49,437 --> 00:47:51,869
+Speaker 0: So, basically, Windows now is Linux.
+
+745
+00:47:51,969 --> 00:47:55,688
+Speaker 0: Every Linux app ever will just run on Windows directly.
+
+746
+00:47:55,929 --> 00:48:03,710
+Speaker 1: I guess what will be interesting to see is, in the long run, does this cause a shift back to Windows for software developers?
+
+747
+00:48:04,150 --> 00:48:05,416
+Speaker 0: Yeah, I mean, I feel like, you know...
+
+748
+00:48:05,436 --> 00:48:09,758
+Speaker 1: Because a Windows laptop is, like, twice as powerful as the most powerful Mac.
+
+749
+00:48:10,160 --> 00:48:11,648
+Speaker 0: Yeah, this is what I don't get.
+
+750
+00:48:11,949 --> 00:48:15,205
+Speaker 0: I don't understand how I see so many developers out there.
+
+751
+00:48:15,386 --> 00:48:26,302
+Speaker 0: I see, you know, the open source guys at Linux laptops, but most people I see using Mac laptops, like, develop stuff, and are like, man, using that Homebrew and stuff, it's like, I guess it works, but it's really garbage-y.
+
+752
+00:48:26,784 --> 00:48:37,116
+Speaker 0: I've been preferring virtual machines on Windows to Mac for development for a long-ass time, and WSL only cemented it and made my life way better.
+
+753
+00:48:37,136 --> 00:48:47,367
+Speaker 0: I don't see why you would still want to develop... If you're not developing iOS apps, I still don't understand why you would use a Mac instead of using Windows plus WSL.
+
+754
+00:48:47,628 --> 00:48:48,573
+Speaker 1: And I suspect...
+
+755
+00:48:48,674 --> 00:48:49,719
+Speaker 0: Especially WSL2.
+
+756
+00:48:50,342 --> 00:48:57,337
+Speaker 1: I suspect after WSL2 is out, I think we will see people bit by bit going back to Windows.
+
+757
+00:48:57,357 --> 00:49:01,177
+Speaker 1: Or, at least, developers who start on Windows will stay on Windows.
+
+758
+00:49:01,197 --> 00:49:03,708
+Speaker 0: I think the better terminals is really going to make it more a thing.
+
+759
+00:49:04,550 --> 00:49:04,630
+Speaker 0: Yeah.
+
+760
+00:49:04,651 --> 00:49:07,226
+Speaker 0: Because setting up the X server is a bit much...
+
+761
+00:49:07,246 --> 00:49:10,607
+Speaker 1: Well, setting up the X server has been a pain in the ass for as long as I have known what that was.
+
+762
+00:49:10,748 --> 00:49:11,030
+Speaker 1: Yeah.
+
+763
+00:49:13,012 --> 00:49:20,815
+Speaker 0: I had to make a V script that executes a bat file that does a thing to... Anyway.
+
+764
+00:49:21,821 --> 00:49:29,617
+Speaker 0: The other major difference that you may or may not notice is that in WSL1, let's say I run Postgres.
+
+765
+00:49:29,677 --> 00:49:31,488
+Speaker 0: It's running on port whatever it runs on.
+
+766
+00:49:32,270 --> 00:49:36,310
+Speaker 0: That's just on... If I run a web server, it's running on port 80.
+
+767
+00:49:36,310 --> 00:49:37,235
+Speaker 0: Or port 8000.
+
+768
+00:49:37,235 --> 00:49:38,481
+Speaker 0: Maybe I'll put it on port 8000.
+
+769
+00:49:38,481 --> 00:49:41,842
+Speaker 0: I can just open up my Windows browser and go to localhost 8000.
+
+770
+00:49:41,842 --> 00:49:43,110
+Speaker 0: It's just running on the same network.
+
+771
+00:49:44,151 --> 00:49:45,156
+Speaker 0: It's not a separate thing.
+
+772
+00:49:45,176 --> 00:49:48,250
+Speaker 0: In WSL2, it is going to be a separate IP address.
+
+773
+00:49:49,512 --> 00:49:51,202
+Speaker 0: Because it's a virtual machine still.
+
+774
+00:49:51,524 --> 00:49:53,757
+Speaker 0: Even though it's this lightweight VM.
+
+775
+00:49:53,777 --> 00:49:59,930
+Speaker 0: So that is a slight annoyance because I really like just doing stuff like... I was doing like Netcat, right?
+
+776
+00:50:00,290 --> 00:50:01,777
+Speaker 0: From WSL1 to the same machine.
+
+777
+00:50:01,798 --> 00:50:05,657
+Speaker 0: But now it's going to be different IP addresses.
+
+778
+00:50:05,737 --> 00:50:06,641
+Speaker 0: It's going to be a little trickier.
+
+779
+00:50:06,903 --> 00:50:11,084
+Speaker 1: God, I remember at one point I actually set up an environment because I was running like four different VMs.
+
+780
+00:50:11,104 --> 00:50:13,556
+Speaker 0: But maybe I won't have to use Netcat if the file system is better.
+
+781
+00:50:13,958 --> 00:50:14,340
+Speaker 1: True.
+
+782
+00:50:14,360 --> 00:50:14,440
+Speaker 1: Yeah.
+
+783
+00:50:15,546 --> 00:50:16,370
+Speaker 1: I just remember having to.
+
+784
+00:50:16,470 --> 00:50:24,230
+Speaker 1: I'd actually set up my virtualized networks with all these hard coded IP addresses so the servers all ran in their own areas and I didn't have port conflicts.
+
+785
+00:50:24,930 --> 00:50:28,210
+Speaker 1: But that was mostly because I was doing weird enterprise-y Java software nonsense.
+
+786
+00:50:29,710 --> 00:50:39,790
+Speaker 0: So, if you are a software developer or if you have some reason to use Linux for whatever reason and you don't want to actually run Linux, run Windows.
+
+787
+00:50:40,450 --> 00:50:42,259
+Speaker 0: You can get WSL for free.
+
+788
+00:50:42,400 --> 00:50:43,445
+Speaker 0: You just install that shit.
+
+789
+00:50:43,847 --> 00:50:44,751
+Speaker 0: You go to the Windows store.
+
+790
+00:50:44,792 --> 00:50:46,440
+Speaker 0: You install whatever distro is available there.
+
+791
+00:50:46,460 --> 00:50:47,585
+Speaker 0: I hope your favorite distro is there.
+
+792
+00:50:47,605 --> 00:50:48,871
+Speaker 0: I mean, all the major ones are there.
+
+793
+00:50:48,932 --> 00:50:50,298
+Speaker 0: Ubuntu, Debian, whatever.
+
+794
+00:50:50,439 --> 00:50:51,665
+Speaker 1: What about my Gen 2?
+
+795
+00:50:51,665 --> 00:50:51,986
+Speaker 0: I don't know.
+
+796
+00:50:52,006 --> 00:50:52,549
+Speaker 0: I don't think so.
+
+797
+00:50:54,936 --> 00:50:55,548
+Speaker 0: And you're good to go.
+
+798
+00:50:56,550 --> 00:51:06,601
+Speaker 0: Another related change, I don't know if we discussed this at Geek Nights before, it's somewhat related but not really, is that Windows, you can now get the real open SSH for Windows.
+
+799
+00:51:06,642 --> 00:51:08,129
+Speaker 0: And that's one of the things where it's like.
+
+800
+00:51:09,192 --> 00:51:12,050
+Speaker 0: Windows came with Telnet and FTP and all these other things.
+
+801
+00:51:12,633 --> 00:51:15,509
+Speaker 0: But getting SSH on Windows, you always had to use PuTTY.
+
+802
+00:51:16,210 --> 00:51:18,343
+Speaker 0: You had to get an application to do SSH on Windows.
+
+803
+00:51:18,363 --> 00:51:19,228
+Speaker 1: We've talked about this before.
+
+804
+00:51:19,288 --> 00:51:23,890
+Speaker 1: PuTTY is a great application that has a website that looks like it is fake.
+
+805
+00:51:25,317 --> 00:51:25,458
+Speaker 1: Yes.
+
+806
+00:51:25,539 --> 00:51:28,577
+Speaker 1: But... GRX.GreenEnd.org.UK/Username/PuTTY.
+
+807
+00:51:32,611 --> 00:51:38,098
+Speaker 0: But, starting a while ago, many months, perhaps even like up to a year ago I don't know how long ago they did this.
+
+808
+00:51:38,782 --> 00:51:43,485
+Speaker 0: Microsoft made an official build of open SSH for Windows.
+
+809
+00:51:43,525 --> 00:51:44,450
+Speaker 0: This isn't WSL.
+
+810
+00:51:45,072 --> 00:51:51,424
+Speaker 0: This is, you're on Windows, you open the command prompt.exe and this open SSH, or just SSH.exe.
+
+811
+00:51:53,494 --> 00:51:54,319
+Speaker 0: it's a Windows app.
+
+812
+00:51:55,304 --> 00:51:57,677
+Speaker 0: You run SSH on Windows as a native app.
+
+813
+00:51:57,797 --> 00:51:58,521
+Speaker 1: It just works.
+
+814
+00:51:58,541 --> 00:52:00,030
+Speaker 0: You don't need PuTTY anymore.
+
+815
+00:52:00,931 --> 00:52:01,433
+Speaker 0: Right?
+
+816
+00:52:01,514 --> 00:52:07,185
+Speaker 0: And especially, PuTTY though, for as meh as it is it's still a better terminal than PowerShell or CMD.
+
+817
+00:52:07,809 --> 00:52:13,679
+Speaker 0: So once this Windows terminal comes out though, right, you open that and type SSH.exe.
+
+818
+00:52:14,021 --> 00:52:24,390
+Speaker 0: and now if you're just someone who needed you know, if you're just SSHing two Linux machines as opposed to needing to run anything locally, you won't even need to install WSL.
+
+819
+00:52:24,870 --> 00:52:33,035
+Speaker 0: You just get your Linux servers on Linode or OZ or wherever you're hosting your Linux servers, maybe under your desk, you get a Windows machine, just SSH into them.
+
+820
+00:52:33,316 --> 00:52:39,144
+Speaker 0: That's how I do development on my iPad, is I have an app you can get for the iPad called Blink, I think.
+
+821
+00:52:39,164 --> 00:52:44,874
+Speaker 0: It's just a SSH or mosh, which is like a mobile SSH, mosh it's pretty cool.
+
+822
+00:52:45,437 --> 00:52:48,894
+Speaker 0: And I just connect to a server and now I can do Linux development from my iPad.
+
+823
+00:52:48,914 --> 00:52:55,324
+Speaker 1: It just surprised me my whole adult life that there was no native SSH client in Windows.
+
+824
+00:52:55,425 --> 00:52:57,615
+Speaker 0: PuTTY has been around for how long?
+
+825
+00:52:57,635 --> 00:52:59,123
+Speaker 1: Oh, forever?
+
+826
+00:52:59,143 --> 00:53:03,430
+Speaker 0: And it took until 2019 to finally kill PuTTY.
+
+827
+00:53:04,073 --> 00:53:06,204
+Speaker 0: And PuTTY is currently- Microsoft finally done did it.
+
+828
+00:53:06,264 --> 00:53:07,470
+Speaker 1: You wanna know how stable PuTTY was?
+
+829
+00:53:07,590 --> 00:53:09,240
+Speaker 1: You know what the current version number of PuTTY is?
+
+830
+00:53:09,320 --> 00:53:09,542
+Speaker 1: Yeah.
+
+831
+00:53:09,542 --> 00:53:11,451
+Speaker 1: 0.71.
+
+832
+00:53:11,451 --> 00:53:12,435
+Speaker 0: Okay.
+
+833
+00:53:13,279 --> 00:53:17,480
+Speaker 0: Yeah, version numbering doesn't, you know, I'm not a fan of people's weird version number systems.
+
+834
+00:53:17,580 --> 00:53:17,842
+Speaker 0: Yeah.
+
+835
+00:53:18,083 --> 00:53:19,188
+Speaker 0: I'm now all about going.
+
+836
+00:53:19,429 --> 00:53:23,190
+Speaker 0: one two, three, four, give me these dots, you don't need dots.
+
+837
+00:53:24,210 --> 00:53:25,176
+Speaker 0: Alright, one, two, three.
+
+838
+00:53:25,196 --> 00:53:27,107
+Speaker 1: Come on, I need major.minor.patch.
+
+839
+00:53:27,127 --> 00:53:27,590
+Speaker 0: That's bullshit.
+
+840
+00:53:28,190 --> 00:53:28,734
+Speaker 0: You don't need that.
+
+841
+00:53:29,299 --> 00:53:29,763
+Speaker 0: One, two, three, four.
+
+842
+00:53:30,448 --> 00:53:30,630
+Speaker 1: Okay.
+
+843
+00:53:35,453 --> 00:53:37,723
+Speaker 1: This has been Geek Nights with Rim and Scott.
+
+844
+00:53:37,764 --> 00:53:42,730
+Speaker 1: Special thanks to DJ Pretzel for the opening music, Kat Lee for web design, and Brando K for the logos.
+
+845
+00:53:43,190 --> 00:53:48,176
+Speaker 0: Be sure to visit our website at frontrowcrew.com for show notes, discussion news, and more.
+
+846
+00:53:48,398 --> 00:53:51,072
+Speaker 1: Remember, Geek Nights is not one, but four different shows.
+
+847
+00:53:51,213 --> 00:53:55,857
+Speaker 1: SciTech Mondays, Gaming Tuesdays, Anime Comic Wednesdays, and Indiscriminate Thursdays.
+
+848
+00:53:56,179 --> 00:54:00,178
+Speaker 0: Geek Nights is distributed under a Creative Commons Attribution 3.0 license.
+
+849
+00:54:00,600 --> 00:54:03,675
+Speaker 0: Geek Nights is recorded live with no studio and no audience.
+
+850
+00:54:03,876 --> 00:54:06,770
+Speaker 0: But unlike those other late shows, it's actually recorded at night.
+
+851
+00:54:42,260 --> 00:54:43,044
+Speaker 1: [outro music].
+

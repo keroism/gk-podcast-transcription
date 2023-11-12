@@ -1,0 +1,3252 @@
+1
+00:00:08,620 --> 00:00:12,491
+Rym: It's Thursday August 6th 2015.
+
+2
+00:00:12,491 --> 00:00:15,037
+Rym: I'm Rym I'm Scott and this is GeekNights.
+
+3
+00:00:15,077 --> 00:00:19,020
+Rym: tonight on the lounge We have the GeekNights lightning round.
+
+4
+00:00:22,073 --> 00:00:23,967
+Rym: I should put some Creative Commons lightning sounds there.
+
+5
+00:00:25,772 --> 00:00:26,502
+Rym: Let's do this.
+
+6
+00:00:28,871 --> 00:00:33,649
+Rym: So I was sitting at work and I was doing a bunch of work like I was actually working.
+
+7
+00:00:33,810 --> 00:00:37,041
+Scott: whoa I was doing a little work lately too, but that was only a little.
+
+8
+00:00:37,482 --> 00:00:45,259
+Rym: so my one of my like software things like I have it running in a VM environment or whatever and Sounds Monday to me.
+
+9
+00:00:45,983 --> 00:00:47,492
+Rym: so customer performance things I was like.
+
+10
+00:00:47,613 --> 00:01:02,390
+Rym: oh whatever I need I wanted basically I wanted ammo to be able to When I talk to the developers about any changes that might need to be made whether or not the new versions of their code Performs better or worse than previous versions in some objective measures.
+
+11
+00:01:02,490 --> 00:01:03,273
+Rym: so I threw.
+
+12
+00:01:03,293 --> 00:01:10,256
+Rym: I just whipped up an MRTG and got it running like in my VM and I was actually working on that and I just finished it.
+
+13
+00:01:10,979 --> 00:01:14,156
+Rym: and then I looked at my queue of like more important work I could be doing.
+
+14
+00:01:14,176 --> 00:01:14,821
+Rym: that I didn't want to do.
+
+15
+00:01:14,841 --> 00:01:20,610
+Rym: and Then I looked down and I saw the windows updates into things saying hey you can do Windows 10 whatever you want.
+
+16
+00:01:20,690 --> 00:01:24,249
+Scott: I don't get that at work because the Active Directory is like yeah, no don't do anything.
+
+17
+00:01:24,811 --> 00:01:26,438
+Rym: So I look at it, and I'm like you know what.
+
+18
+00:01:27,141 --> 00:01:29,310
+Rym: that's a nice excuse to go get some coffee.
+
+19
+00:01:29,870 --> 00:01:31,883
+Scott: So it doesn't really take that long at all.
+
+20
+00:01:32,064 --> 00:01:39,954
+Rym: it took 10 minutes Yeah, like it was awesome, and then everything worked fine till I started up a VM and The VM.
+
+21
+00:01:39,994 --> 00:01:44,550
+Rym: I just did the thing on and of course it didn't start with all these fucked up errors.
+
+22
+00:01:44,610 --> 00:01:48,170
+Scott: Well, I mean sure virtual box has all these drivers you need like the network driver.
+
+23
+00:01:49,473 --> 00:01:51,530
+Scott: Yet in Windows you got a probably honest.
+
+24
+00:01:51,630 --> 00:01:54,962
+Scott: I would uninstall it and completely reinstall the newest newest version.
+
+25
+00:01:55,043 --> 00:02:02,470
+Scott: and if the new version changelog didn't say Windows 10 support it's probably gonna be in one or two versions, so yeah first thing I did was check for updates.
+
+26
+00:02:02,611 --> 00:02:04,057
+Rym: I was on the newest stable version.
+
+27
+00:02:04,117 --> 00:02:07,090
+Scott: all right did it say in the changelog like added Windows 10 support?
+
+28
+00:02:07,130 --> 00:02:08,133
+Rym: No, I was already on that version.
+
+29
+00:02:08,152 --> 00:02:13,330
+Rym: so that I Google and basically everyone's having this problem both with virtual box with VMware.
+
+30
+00:02:13,491 --> 00:02:17,142
+Rym: Basically all virtualization platforms had this problem.
+
+31
+00:02:17,162 --> 00:02:19,531
+Scott: They probably didn't update themselves to work with Windows 10.
+
+32
+00:02:19,531 --> 00:02:25,210
+Rym: Well the problem is so Specific if you have a bridge network adapter to a host.
+
+33
+00:02:26,032 --> 00:02:33,553
+Rym: The list of network devices with which to bridge to or through is just empty And you're fucked.
+
+34
+00:02:34,175 --> 00:02:36,663
+Scott: but host only and NAT still work.
+
+35
+00:02:36,784 --> 00:02:38,610
+Rym: everything else works, but you can't be bridged.
+
+36
+00:02:38,791 --> 00:02:41,072
+Scott: Oh, but I don't use a bridge, so I don't give a shit But I use bridged.
+
+37
+00:02:41,614 --> 00:02:47,969
+Rym: so I Google around and I find all these people like bitching about it and Microsoft and Oracle both being like We're working on it.
+
+38
+00:02:49,056 --> 00:02:54,244
+Rym: And then a lot of people linked to like here's my workaround And I scanned through like four or five of these were.
+
+39
+00:02:54,284 --> 00:02:54,867
+Scott: none of them work.
+
+40
+00:02:54,887 --> 00:02:55,470
+Scott: They're all bullshit.
+
+41
+00:02:55,631 --> 00:02:56,796
+Rym: Yeah, like I'm just looking at them.
+
+42
+00:02:56,816 --> 00:03:14,307
+Rym: I was like wow you don't even know how this stuff works, dude, so Then I resolved it by just going to the VMware or up VMware the virtual box page And I went to the unstable releases section And I saw that oh yes There is a version 5 because they're on like 4.0 whatever.
+
+43
+00:03:14,328 --> 00:03:20,110
+Rym: right now You can just download builds of version 5. the most recent build is stable, but not production ready.
+
+44
+00:03:20,513 --> 00:03:22,948
+Scott: so of course I just pulled it down and just your own machine who gives a shit?
+
+45
+00:03:22,968 --> 00:03:25,681
+Rym: and Totally fix the issue, and I'm good to go.
+
+46
+00:03:26,225 --> 00:03:28,857
+Rym: so Windows 10 is great And I'm gonna slowly upgrade all the rest of my computers.
+
+47
+00:03:29,600 --> 00:03:31,668
+Scott: Did you uncheck all the privacy boxes?
+
+48
+00:03:31,828 --> 00:03:32,190
+Scott: Yeah?
+
+49
+00:03:32,990 --> 00:03:39,530
+Scott: Though at the same time like I don't know where at first on my laptop It wasn't the greatest, but now it's like way better than Windows 7.
+
+50
+00:03:39,530 --> 00:03:42,750
+Rym: It looks like it has to index a bunch of stuff before the start menu thing works.
+
+51
+00:03:42,750 --> 00:03:43,774
+Scott: I think that's do.
+
+52
+00:03:43,835 --> 00:03:48,744
+Scott: that indexing process was slowing down because I don't have a lot of CPU in my My laptop.
+
+53
+00:03:48,987 --> 00:03:55,290
+Rym: oh yeah Cuz my computer at work as like 4 gigahertz like a lot of rare either in my laptop at home.
+
+54
+00:03:55,632 --> 00:03:58,510
+Rym: Yeah, it's pretty weak, but now your laptops like a generation.
+
+55
+00:03:58,650 --> 00:04:09,250
+Scott: What was really interesting is like I clean installed that motherfucker and somehow it got all the Lenovo Stuff that I'm excited about getting any of the bad Lenovo stuff.
+
+56
+00:04:09,370 --> 00:04:18,641
+Rym: I tried to install the bullshit Lenovo Wi-Fi thing and I tried to clean install on my Lenovo which is one version newer than yours, and it actually did not work.
+
+57
+00:04:19,142 --> 00:04:20,726
+Rym: really there were some drivers that like.
+
+58
+00:04:20,867 --> 00:04:23,741
+Rym: couldn't I gave up And use the factory reset disk?
+
+59
+00:04:24,385 --> 00:04:25,210
+Scott: oh mine just totally worked.
+
+60
+00:04:25,431 --> 00:04:28,845
+Rym: Yeah, so I'm kind of looking for an upgrade to Windows 10, and then doing a clean install.
+
+61
+00:04:28,885 --> 00:04:29,829
+Rym: cuz I'll bet it'll work.
+
+62
+00:04:30,891 --> 00:04:32,096
+Rym: But uh yeah, it's not Monday.
+
+63
+00:04:32,136 --> 00:04:35,430
+Scott: It's the lounge, so we're not doing news cuz we got a show topic.
+
+64
+00:04:35,490 --> 00:04:37,786
+Scott: That's might go long, so just go straight to things.
+
+65
+00:04:37,867 --> 00:04:46,179
+Rym: Oh today Did you say things of the day.
+
+66
+00:04:46,239 --> 00:04:46,943
+Scott: things of the day.
+
+67
+00:04:47,064 --> 00:04:48,130
+Rym: all right you got a thing of the day?
+
+68
+00:04:48,351 --> 00:04:50,281
+Scott: Yeah, so there's a YouTube channel number file.
+
+69
+00:04:50,321 --> 00:04:51,869
+Scott: I may have used it for things of the day before.
+
+70
+00:04:51,889 --> 00:04:56,450
+Scott: I know I've used it in the second only to the periodic videos.
+
+71
+00:04:57,451 --> 00:05:03,995
+Scott: In terms of getting some science and math education in your years after school Don't discount crash course.
+
+72
+00:05:04,075 --> 00:05:05,300
+Rym: They're pretty much rocking it.
+
+73
+00:05:05,360 --> 00:05:06,102
+Scott: I just don't watch that.
+
+74
+00:05:06,203 --> 00:05:07,286
+Scott: you should watch that also.
+
+75
+00:05:07,327 --> 00:05:08,954
+Scott: not math or science It's.
+
+76
+00:05:09,075 --> 00:05:14,770
+Rym: there's a lot of science Scott anyway What would you you just you knew that I was watching the history ones?
+
+77
+00:05:15,210 --> 00:05:18,781
+Rym: There's also ones that are all about like physiology and chemistry.
+
+78
+00:05:18,801 --> 00:05:20,306
+Scott: I already learned about chemistry.
+
+79
+00:05:20,326 --> 00:05:21,670
+Scott: I don't need to know about physiology.
+
+80
+00:05:22,513 --> 00:05:23,400
+Rym: Why don't you need to the one?
+
+81
+00:05:23,420 --> 00:05:24,710
+Rym: they just now was on blood vessels?
+
+82
+00:05:26,034 --> 00:05:29,093
+Rym: Real interesting I learned some stuff Also.
+
+83
+00:05:29,114 --> 00:05:31,850
+Rym: Phil Plait is doing one now with them on astronomy.
+
+84
+00:05:33,296 --> 00:05:34,270
+Scott: He doesn't have his own thing.
+
+85
+00:05:34,330 --> 00:05:35,781
+Scott: Why do you need to watch him on another thing?
+
+86
+00:05:35,822 --> 00:05:43,014
+Scott: well cuz this thing is pretty good It's like if it's like oh go listen to this other podcast to hear Scott talk about whatever It's like.
+
+87
+00:05:43,377 --> 00:05:44,524
+Scott: yeah, you can talk about.
+
+88
+00:05:44,544 --> 00:05:45,309
+Rym: they got another guy.
+
+89
+00:05:45,550 --> 00:05:52,510
+Rym: He's doing politics, but not like the politics that you always get pissed off about but like here's why Andrew Jackson happened.
+
+90
+00:05:52,951 --> 00:06:02,488
+Rym: Like here's how what the how the Constitution works in this area anyway, so on the numberphile channel they put up this video today About BMX biking which I used to do as a kid.
+
+91
+00:06:02,629 --> 00:06:11,509
+Scott: yeah And this video is really interesting because it is basically a very GeekNights kind of thing where he talks about This flaw in the game balance of BMX biking.
+
+92
+00:06:11,569 --> 00:06:16,309
+Scott: well We should talk about this in our panel of heads where if you're in lane eight it sucks ass You're gonna.
+
+93
+00:06:16,511 --> 00:06:19,708
+Scott: You know you have a hard time winning in lane eight unless you just way better than the other people.
+
+94
+00:06:19,788 --> 00:06:23,930
+Scott: so He's like how can we make this fair by only changing?
+
+95
+00:06:24,090 --> 00:06:30,345
+Scott: You know he didn't want to change all the rules of BMX biking which looking at them now because I never knew them before other Than get on a bike and race to the end.
+
+96
+00:06:31,831 --> 00:06:33,558
+Scott: Looking at the rules of BMX biking now.
+
+97
+00:06:33,599 --> 00:06:35,286
+Scott: They should probably change all of them because they're garbage.
+
+98
+00:06:35,406 --> 00:06:36,250
+Rym: so it's like race walking.
+
+99
+00:06:36,951 --> 00:06:39,700
+Scott: It's not that what bad not even nearly that bad making sure.
+
+100
+00:06:39,801 --> 00:06:40,503
+Scott: but just you know that.
+
+101
+00:06:40,543 --> 00:06:45,204
+Rym: you know I'm still getting occasional hate Messages about people are mad from that race walking thing we did.
+
+102
+00:06:45,385 --> 00:06:46,350
+Scott: I want some hate messages.
+
+103
+00:06:46,652 --> 00:06:49,330
+Rym: Well you gotta post the controversial stuff on your YouTube instead of mine anyway.
+
+104
+00:06:49,491 --> 00:06:58,210
+Scott: So but he comes up with the system for keep all the rules of BMX biking except Choosing which lane people go in to make it as fair as possible.
+
+105
+00:06:58,512 --> 00:07:00,770
+Scott: And it's pretty interesting how they do this with math.
+
+106
+00:07:01,532 --> 00:07:07,130
+Scott: And it's you know the kind of thing that more video game and board game developers need to be thinking about all the time.
+
+107
+00:07:07,190 --> 00:07:13,584
+Rym: So when I was a kid the guy at the track I cuz I remember asking like hey Isn't the outside lane worse?
+
+108
+00:07:13,605 --> 00:07:18,070
+Rym: and The guy said no because you turn both left and right it all evens out in the end.
+
+109
+00:07:18,673 --> 00:07:20,281
+Rym: And I didn't really think about his answer.
+
+110
+00:07:20,321 --> 00:07:21,969
+Rym: cuz he was an adult and I was a little kid.
+
+111
+00:07:23,010 --> 00:07:24,738
+Scott: That does make sense though when you think about it.
+
+112
+00:07:24,798 --> 00:07:27,208
+Scott: right he probably believed that he probably wasn't trying to scam you.
+
+113
+00:07:27,228 --> 00:07:29,138
+Rym: yeah But it's like that's the problem.
+
+114
+00:07:29,179 --> 00:07:31,110
+Rym: like he was like I haven't I have a confident answer.
+
+115
+00:07:31,190 --> 00:07:33,701
+Rym: I'm a little kid just like that's an adult who told me something I mean.
+
+116
+00:07:33,721 --> 00:07:37,303
+Scott: and if you're if you don't think about it hard It's like that makes sense.
+
+117
+00:07:37,605 --> 00:07:43,090
+Scott: yeah, right It's not like a on a an oval track and field track where obviously you're making four left turns.
+
+118
+00:07:43,552 --> 00:07:46,825
+Scott: Left side is way shorter right if you made two lefts and two rights.
+
+119
+00:07:46,885 --> 00:07:52,840
+Rym: It's like oh well Yeah Anyway, yeah, so I got a thing here.
+
+120
+00:07:52,880 --> 00:07:55,449
+Rym: I found this a while ago, and I just kind of forgot about it.
+
+121
+00:07:56,172 --> 00:08:01,794
+Rym: This is a slash shot article that links to a collection of articles and stuff About chess.
+
+122
+00:08:01,954 --> 00:08:07,129
+Rym: like the current state of the game of chess and damage s just die already.
+
+123
+00:08:07,149 --> 00:08:08,679
+Rym: well We haven't solved it yet.
+
+124
+00:08:08,760 --> 00:08:09,849
+Scott: Why won't you be replaced?
+
+125
+00:08:10,910 --> 00:08:15,054
+Rym: But well a lot of I would say it's replaced by go yeah great That's not I mean.
+
+126
+00:08:15,074 --> 00:08:15,957
+Scott: I guess if we're home.
+
+127
+00:08:16,197 --> 00:08:18,163
+Scott: We need to have a perfect information game.
+
+128
+00:08:18,263 --> 00:08:20,229
+Rym: It's replaced by battle balls.
+
+129
+00:08:21,211 --> 00:08:23,499
+Scott: Battle ball is okay, so Chaz.
+
+130
+00:08:23,619 --> 00:08:25,164
+Rym: so some things are happening.
+
+131
+00:08:25,184 --> 00:08:32,787
+Rym: This is basically a data-driven analysis of Like almost a million chess games going back to the 15th century.
+
+132
+00:08:32,827 --> 00:08:38,130
+Scott: looking at like What's changing in the game has like the moves someone made in a chess game in the 15th century.
+
+133
+00:08:38,230 --> 00:08:42,767
+Rym: Important chess games were a big deal and people recorded what happened in them even in 1400 something uh?
+
+134
+00:08:44,310 --> 00:08:50,810
+Scott: Yeah, actually I also learned a bunch of stuff like is that like on a stone tablet or some shit like Queens rook to whatever?
+
+135
+00:08:51,774 --> 00:09:01,670
+Rym: So remember back then they not only did they already know Iris the earth was round How big the earth was but like they'd figured out a lot of stuff anyway?
+
+136
+00:09:02,173 --> 00:09:04,670
+Rym: So this is a super fascinating set of articles.
+
+137
+00:09:04,790 --> 00:09:11,630
+Rym: But the things I want to point out the summary from this heading here chess games are statistically getting steadily longer.
+
+138
+00:09:12,412 --> 00:09:15,420
+Rym: So in 1970 from 1970 to today games increased from 37 move games to 42 move games.
+
+139
+00:09:19,671 --> 00:09:20,453
+Scott: That's a pretty.
+
+140
+00:09:20,533 --> 00:09:21,877
+Scott: I mean that doesn't sound like a big increase.
+
+141
+00:09:21,897 --> 00:09:25,990
+Scott: only five moves, but five out of 40 is a large percentage.
+
+142
+00:09:26,111 --> 00:09:28,864
+Rym: Yeah, they say 75 plies multiply multiply five, right?
+
+143
+00:09:31,232 --> 00:09:31,473
+Scott: Is that?
+
+144
+00:09:32,177 --> 00:09:34,750
+Scott: is it five moves per player or five moves total?
+
+145
+00:09:35,492 --> 00:09:36,415
+Rym: I don't know.
+
+146
+00:09:36,496 --> 00:09:43,079
+Scott: even if it's five moves total take that and multiply it by the time it takes a chess player to make their Moves right and that's like fucking.
+
+147
+00:09:43,159 --> 00:09:45,830
+Scott: it could be like five minutes, and we could be like a half hour extra there.
+
+148
+00:09:45,870 --> 00:09:51,541
+Rym: It's a long time you're adding and it's due to defensive play Becoming more and more common because of the changes in.
+
+149
+00:09:51,582 --> 00:09:53,269
+Rym: just like chess strategy over time.
+
+150
+00:09:54,211 --> 00:09:58,546
+Rym: First move advantage has always existed and still exists to a significant degree.
+
+151
+00:09:58,566 --> 00:10:01,093
+Rym: I'm white every time I'll be white every time.
+
+152
+00:10:01,173 --> 00:10:03,319
+Scott: No, I called it already too late.
+
+153
+00:10:03,359 --> 00:10:07,190
+Rym: Draws are getting more and more common at a very rapid pace.
+
+154
+00:10:07,712 --> 00:10:11,090
+Scott: Sure, humans probably if you're gonna lose you're playing defensively.
+
+155
+00:10:11,792 --> 00:10:14,290
+Scott: It's like I'll just force a draw if I'm like rather than lose.
+
+156
+00:10:14,772 --> 00:10:17,809
+Scott: Right if I see an opportunity to force a draw and I'm playing defensively I will.
+
+157
+00:10:18,770 --> 00:10:19,754
+Scott: Humans not like.
+
+158
+00:10:19,774 --> 00:10:22,204
+Scott: it's not like I have a chance to go in for the kill if I'm on defense.
+
+159
+00:10:22,284 --> 00:10:27,350
+Rym: humans arguably are Literally not contributing anything to modern chess strategy.
+
+160
+00:10:28,691 --> 00:10:34,733
+Rym: So humans can't be even like old a eyes anymore under any Circumstances.
+
+161
+00:10:34,753 --> 00:10:35,055
+Scott: Oh good, then.
+
+162
+00:10:35,075 --> 00:10:36,101
+Scott: I'll stop never.
+
+163
+00:10:36,363 --> 00:10:44,407
+Scott: so you know once in a blue moon I'll think I should install like one of those really hard chesses on my phone and just keep playing it on the subway I hope if it's a little master at site.
+
+164
+00:10:44,770 --> 00:10:48,489
+Scott: So that's why I'm never gonna do that and never gonna have that two-second thought ever again.
+
+165
+00:10:49,331 --> 00:11:01,365
+Rym: and I learned something weird actually just now about promotion that I didn't know because while we were we were talking about we're gonna do the show on like just before and Scott asked if you could promote something other than a queen like when the pawn gets to the end.
+
+166
+00:11:01,746 --> 00:11:03,839
+Rym: and my answer was I actually don't know.
+
+167
+00:11:03,859 --> 00:11:09,890
+Scott: and Apparently the answer is that since like many everyone who plays chess is gonna be like you guys are so dumb.
+
+168
+00:11:09,910 --> 00:11:10,674
+Scott: Why don't you notice?
+
+169
+00:11:10,815 --> 00:11:12,485
+Rym: Yeah, cuz we stopped playing chess in elementary school.
+
+170
+00:11:12,505 --> 00:11:13,450
+Scott: I don't give a shit about chess.
+
+171
+00:11:13,530 --> 00:11:22,245
+Rym: Yeah, like I used to play a lot of chess and then I found German board games So you are allowed to promote to a queen rook knight or Bishop.
+
+172
+00:11:22,506 --> 00:11:28,740
+Rym: not bad and apparently In an anal a recent analysis of three million something.
+
+173
+00:11:28,780 --> 00:11:34,330
+Scott: games many a grandmaster and master levels aren't promotions like pretty rare Though I mean most games don't even have a promotion.
+
+174
+00:11:34,330 --> 00:11:34,852
+Rym: Well, I was so.
+
+175
+00:11:34,933 --> 00:11:40,020
+Rym: apparently there was a famous game with Bobby Fischer where there were four queens out on the board and the game Was still undecided.
+
+176
+00:11:40,121 --> 00:11:40,949
+Scott: Yeah, I'm sure you know.
+
+177
+00:11:42,451 --> 00:11:48,630
+Rym: Percentage of chess games if they're even one promotions that I cannot learn just from looking at this page right here.
+
+178
+00:11:48,850 --> 00:11:53,730
+Rym: Okay, but what percentage of times in like all chess play that was tracked here?
+
+179
+00:11:53,730 --> 00:11:55,464
+Rym: Do you think people upgraded to a queen?
+
+180
+00:11:55,565 --> 00:11:56,089
+Scott: more than half?
+
+181
+00:11:57,071 --> 00:11:58,981
+Rym: It's ninety six ninety seven percent.
+
+182
+00:11:59,082 --> 00:12:00,369
+Scott: Okay way more than half.
+
+183
+00:12:01,451 --> 00:12:02,414
+Rym: See the it's.
+
+184
+00:12:02,574 --> 00:12:07,670
+Rym: appears that people only upgrade to a rook or a bishop if they're being a dick and they're winning it.
+
+185
+00:12:07,770 --> 00:12:11,630
+Scott: I mean a queen can do everything a rook or bishop can do and it's gonna be in the same position.
+
+186
+00:12:11,711 --> 00:12:12,739
+Scott: So why would you choose those?
+
+187
+00:12:12,819 --> 00:12:14,210
+Scott: a knight has the interesting?
+
+188
+00:12:14,350 --> 00:12:23,810
+Scott: Situation where if the king happens to be in a certain spot and you promote a pawn in a certain spot to a knight It might be able to create a checkmate where I would not.
+
+189
+00:12:24,011 --> 00:12:30,554
+Scott: yeah, choosing a rook or a bishop over a queen in the same position is I Mean just stupid.
+
+190
+00:12:30,594 --> 00:12:31,197
+Scott: There's no reason.
+
+191
+00:12:31,257 --> 00:12:35,073
+Scott: so my my suggestion was you're only limiting your possibilities.
+
+192
+00:12:35,133 --> 00:12:35,856
+Scott: shoot up.
+
+193
+00:12:35,956 --> 00:12:42,341
+Rym: promoting to a to a rook or a bishop is trolling is the same as Teabagging a dead body and counter-strike.
+
+194
+00:12:42,542 --> 00:12:45,936
+Scott: That's right, but you can still lose I mean, so here's a quote from the article.
+
+195
+00:12:46,016 --> 00:12:57,082
+Rym: a majority of under promotions in practical play are as Tim crab a put it silly jokes okay, and Then there's this whole section in the Wikipedia.
+
+196
+00:12:57,122 --> 00:12:58,406
+Rym: This is what my real thing in the day is.
+
+197
+00:12:58,708 --> 00:13:03,698
+Scott: that's just called Unusual situation like what I just described or even more unusual.
+
+198
+00:13:03,758 --> 00:13:07,749
+Rym: an unusual situation occurred in a 1993 game between Karpov and Kasparov.
+
+199
+00:13:08,491 --> 00:13:10,378
+Rym: Karpov was in serious time troubles.
+
+200
+00:13:10,398 --> 00:13:13,628
+Rym: He was running out of time with one minute left to make 16 moves.
+
+201
+00:13:14,775 --> 00:13:23,336
+Rym: Okay in his position He captured the rook on d1 and the pawn on seat with the pawn on c2 and said Queen Indicating that the pro to piece was a queen.
+
+202
+00:13:23,858 --> 00:13:26,466
+Rym: However, no Queen was immediately available.
+
+203
+00:13:26,827 --> 00:13:33,510
+Scott: Like there was no piece What you buy a set of chess pieces is two Queens in there a black one and a white one.
+
+204
+00:13:34,153 --> 00:13:37,209
+Rym: It took some time for the arbiter to come up with a black Queen.
+
+205
+00:13:37,792 --> 00:13:42,710
+Rym: Kasparov said that if he had been a tenant he would have promoted to a rook which was available.
+
+206
+00:13:43,270 --> 00:13:45,924
+Rym: Kasparov's clock was running while the arbiter was getting the Queen.
+
+207
+00:13:45,944 --> 00:13:46,970
+Scott: that's bullshit.
+
+208
+00:13:47,171 --> 00:13:49,098
+Rym: so he started Karpov's clock.
+
+209
+00:13:49,379 --> 00:13:57,469
+Rym: Karpov immediately played a move and Some bullshit went down and there's arguments to this day about this game.
+
+210
+00:13:58,290 --> 00:13:59,616
+Scott: Mmm, that's bullshit.
+
+211
+00:13:59,656 --> 00:14:02,790
+Scott: You shouldn't be have to have the timer running with so yeah to get a piece.
+
+212
+00:14:02,991 --> 00:14:07,103
+Rym: Even chess has cool data-driven stuff and drama.
+
+213
+00:14:07,625 --> 00:14:09,270
+Rym: That's my thing of the day chest, right?
+
+214
+00:14:09,410 --> 00:14:10,438
+Scott: Let's do a short meta moment.
+
+215
+00:14:10,478 --> 00:14:10,640
+Scott: book.
+
+216
+00:14:10,660 --> 00:14:11,970
+Scott: club book is the eye of the world.
+
+217
+00:14:12,030 --> 00:14:16,270
+Scott: It's a fantasy novel by Robert Jordan fancy novel a famous fantasy series.
+
+218
+00:14:16,350 --> 00:14:20,410
+Scott: I feel like I should read at least one of these books because I think that one kids have nerd cred.
+
+219
+00:14:20,490 --> 00:14:22,322
+Rym: I think the kid who stole the knife is gonna die.
+
+220
+00:14:22,442 --> 00:14:23,167
+Scott: Maybe who knows.
+
+221
+00:14:23,328 --> 00:14:25,894
+Scott: and then Pax is really soon.
+
+222
+00:14:25,954 --> 00:14:29,666
+Scott: the Pax the true convention is very late in August.
+
+223
+00:14:29,726 --> 00:14:30,970
+Scott: You have to go to that or else?
+
+224
+00:14:31,170 --> 00:14:32,114
+Scott: Well, you're nobody.
+
+225
+00:14:32,275 --> 00:14:40,375
+Rym: we're doing the far future of gaming on Sunday sports our games on Monday And I'm doing online story-driven games on Wednesday in Portland And nothing else matters.
+
+226
+00:14:40,435 --> 00:14:42,724
+Scott: find us or every place on the internet that you go.
+
+227
+00:14:42,845 --> 00:14:47,939
+Scott: we are there Facebook's Twitter's G pluses tumblers, but whatever it is.
+
+228
+00:14:47,999 --> 00:14:48,581
+Scott: We are there.
+
+229
+00:14:49,022 --> 00:14:49,744
+Scott: come and find us.
+
+230
+00:14:49,804 --> 00:14:51,168
+Scott: I mean you've already found this podcast.
+
+231
+00:14:51,469 --> 00:14:58,912
+Rym: so The lightning round Scott put together a list and then I supplemented it with my own list of searching conversations We've had.
+
+232
+00:14:59,012 --> 00:15:04,287
+Scott: we asked many people for show ideas, which you're steadily running out of especially Monday and Thursday, right?
+
+233
+00:15:05,049 --> 00:15:07,959
+Scott: And There are many reasons we reject people's ideas.
+
+234
+00:15:08,080 --> 00:15:11,150
+Scott: one common reason is that oh we don't actually know anything about that topic.
+
+235
+00:15:11,211 --> 00:15:12,106
+Scott: We'd have to research it.
+
+236
+00:15:12,390 --> 00:15:17,390
+Scott: The show would be us reading Wikipedia and while I admit many episodes of GeekNights are us reading Wikipedia.
+
+237
+00:15:17,872 --> 00:15:19,601
+Scott: Let us avoid those as much as possible.
+
+238
+00:15:19,621 --> 00:15:19,923
+Scott: Yeah.
+
+239
+00:15:20,043 --> 00:15:25,010
+Rym: Well, no, it's not as reading Wikipedia It's just repeating what we read on Wikipedia on our own in the past.
+
+240
+00:15:25,252 --> 00:15:27,747
+Rym: I'm not gonna read a new Wikipedia page for you tonight.
+
+241
+00:15:27,788 --> 00:15:38,342
+Scott: Sure Another common reason we reject episode ideas is because even though it's something we know about and can talk about We just don't have enough to say to fill 20-plus minutes of talking.
+
+242
+00:15:38,663 --> 00:15:40,930
+Scott: Yep, but there's still often fine ideas.
+
+243
+00:15:40,970 --> 00:15:43,830
+Scott: So we had the idea today to do a lightning round.
+
+244
+00:15:43,911 --> 00:15:58,850
+Scott: We went through the forum thread and all these other sources including our own brains for show ideas where we only had maybe like a minute of things to say and We made a list in Google Docs and we're gonna go down and do a whole bunch of show topics really fast each with a timer.
+
+245
+00:15:59,031 --> 00:16:01,481
+Scott: Even to force ourselves to remain short now.
+
+246
+00:16:01,581 --> 00:16:03,810
+Scott: even a minute though is actually surprisingly long.
+
+247
+00:16:03,850 --> 00:16:08,969
+Scott: We can say a lot about something in a minute, especially if you talk fast, so you have a little timer over there.
+
+248
+00:16:10,672 --> 00:16:11,113
+Rym: Ready go.
+
+249
+00:16:11,274 --> 00:16:12,318
+Scott: All right credit cards.
+
+250
+00:16:12,398 --> 00:16:14,446
+Scott: So credit card is only awesome.
+
+251
+00:16:14,606 --> 00:16:15,510
+Scott: Everyone should have one.
+
+252
+00:16:15,952 --> 00:16:17,359
+Scott: It lets you buy things online.
+
+253
+00:16:17,641 --> 00:16:19,410
+Scott: It can never fuck you unless you're a moron.
+
+254
+00:16:19,410 --> 00:16:21,980
+Scott: I don't think we need to spend more money than you have.
+
+255
+00:16:22,000 --> 00:16:26,881
+Rym: The problem is everyone they want to ask us about credit cards It's always because they fuck up credit cards.
+
+256
+00:16:27,042 --> 00:16:28,470
+Scott: Don't spend more money than you have.
+
+257
+00:16:28,530 --> 00:16:29,333
+Scott: That's all there is to it.
+
+258
+00:16:29,373 --> 00:16:33,550
+Scott: pay it off in full every single month and it will benefit you with rewards and convenience.
+
+259
+00:16:33,650 --> 00:16:34,997
+Rym: Now maybe but black dynamite.
+
+260
+00:16:35,238 --> 00:16:38,170
+Rym: I I'm poor and like I had to use it for an emergency That's fine.
+
+261
+00:16:38,210 --> 00:16:42,834
+Rym: If you could you had a money available for an emergency didn't have a credit card You couldn't have done.
+
+262
+00:16:42,854 --> 00:16:44,440
+Scott: don't use your stupid debit card.
+
+263
+00:16:44,581 --> 00:16:46,870
+Scott: Use the credit card get your Amazon points get whatever.
+
+264
+00:16:47,233 --> 00:16:49,529
+Scott: Just don't be a moron and spend more than you have.
+
+265
+00:16:49,670 --> 00:16:56,010
+Rym: Yeah, and if you need to spend more than you have because it's like medical expenses or whatever Well, just go bankrupt and then you won't have to pay it.
+
+266
+00:16:56,070 --> 00:16:59,650
+Scott: Anyway, like it's I don't understand people who are like, I don't want to get a credit card.
+
+267
+00:17:00,313 --> 00:17:03,246
+Rym: Not trust yourself, are you really that lack?
+
+268
+00:17:03,286 --> 00:17:04,009
+Rym: maybe you are.
+
+269
+00:17:04,771 --> 00:17:10,089
+Rym: Maybe you are your kids go into like a fugue state and buy a thousand wall scrolls and that's all we have to say about that.
+
+270
+00:17:14,180 --> 00:17:14,560
+Rym: Isis.
+
+271
+00:17:14,842 --> 00:17:20,300
+Rym: well, so we really should call it - because that is the derogatory term in the Middle East for these fuckers.
+
+272
+00:17:20,501 --> 00:17:29,695
+Scott: I mean, I've seen a lot of different things and I don't care enough to bother but yeah sure If that's if what you said is true, then yeah, call him - yeah, but I mean I I'm.
+
+273
+00:17:29,796 --> 00:17:36,932
+Rym: I follow this issue a lot But it's not really like Scott and I are not experts on Geopolitical like you don't say like.
+
+274
+00:17:37,394 --> 00:17:39,001
+Rym: I know a lot about weird stuff Like.
+
+275
+00:17:39,182 --> 00:17:43,999
+Rym: I know a lot about nuclear weapons and I know a reasonable amount about - and what's going on over there.
+
+276
+00:17:44,861 --> 00:17:50,180
+Rym: But you should probably just read a like a war blog or something of informed people.
+
+277
+00:17:50,220 --> 00:17:52,368
+Rym: My my opinion is not relevant.
+
+278
+00:17:52,388 --> 00:17:57,287
+Scott: I'm not that informed, but I know enough to know that these are bad people And there is nothing good about them.
+
+279
+00:17:57,387 --> 00:17:59,960
+Scott: So what is there to say other than yes, there are bad people on earth.
+
+280
+00:18:00,601 --> 00:18:11,798
+Rym: there are bad enough actually that it looks like al-qaeda is losing members to them and Even like extremist like Islamist terror groups are also kind of fighting against them because they're fucking up.
+
+281
+00:18:11,838 --> 00:18:12,660
+Rym: Everybody's jam.
+
+282
+00:18:14,301 --> 00:18:18,126
+Scott: All right, Planned Parenthood is the opposite of Daesh.
+
+283
+00:18:18,266 --> 00:18:19,608
+Scott: It's only a good thing.
+
+284
+00:18:19,728 --> 00:18:25,171
+Scott: Anyone who's against it is evil ignorant and Misinformed.
+
+285
+00:18:25,332 --> 00:18:26,093
+Scott: I don't even know.
+
+286
+00:18:26,173 --> 00:18:28,197
+Rym: the thing is yet that this was not a bit like.
+
+287
+00:18:28,217 --> 00:18:31,649
+Rym: this was a big issue during like Rovers Wait era and that kind of disappeared.
+
+288
+00:18:32,051 --> 00:18:44,580
+Scott: This is a political issue again now Really specifically because of the ruling on gay marriage and it's even it's even worse than people who are against like people were against like You know free or inexpensive health care or like everyone should die.
+
+289
+00:18:44,961 --> 00:18:49,600
+Scott: This is specifically like women should be fucked over specifically more so than others.
+
+290
+00:18:49,700 --> 00:18:51,952
+Rym: Well, the problem is that the I mean, it's you as America.
+
+291
+00:18:51,992 --> 00:18:55,354
+Rym: the Republican Party is actually everything The doctor should do.
+
+292
+00:18:55,434 --> 00:18:56,059
+Scott: no problem.
+
+293
+00:18:56,702 --> 00:18:58,290
+Scott: Why does it even have to be a separate thing?
+
+294
+00:18:58,370 --> 00:19:06,380
+Rym: because of misogyny and evil like people I know who go to Planned Parenthood in New York Like there's metal detectors because they're like terrorist threats against these people from the right wing.
+
+295
+00:19:06,420 --> 00:19:06,882
+Scott: What the fuck.
+
+296
+00:19:06,942 --> 00:19:10,876
+Rym: but it's an issue now because the Republicans need a wedge issue like gay marriage.
+
+297
+00:19:10,917 --> 00:19:13,305
+Rym: now that they lost gay marriage So they're doubling down on abortion.
+
+298
+00:19:13,686 --> 00:19:14,770
+Rym: That is why this came up.
+
+299
+00:19:14,850 --> 00:19:16,094
+Rym: I'm out of time.
+
+300
+00:19:16,235 --> 00:19:17,660
+Scott: All right shaving my heads.
+
+301
+00:19:17,901 --> 00:19:18,645
+Rym: Yeah, you shaved your head.
+
+302
+00:19:18,785 --> 00:19:20,293
+Scott: I shaved my head a long time ago.
+
+303
+00:19:20,313 --> 00:19:21,680
+Scott: The strategy is pretty simple.
+
+304
+00:19:21,680 --> 00:19:26,509
+Scott: You know when you go to the barber and he's got that clipper go You know, yeah just buy one of those.
+
+305
+00:19:26,569 --> 00:19:27,894
+Rym: I didn't just like tear it all out.
+
+306
+00:19:28,336 --> 00:19:28,737
+Scott: Yeah.
+
+307
+00:19:28,838 --> 00:19:43,184
+Scott: Yeah, no Buy one of those they're only like, you know There are a lot of money relatively speaking but considering how much money it cost to go to the barber I've saved money by now like so many moneys that I've saved by buying one be Pro top-level.
+
+308
+00:19:43,285 --> 00:19:45,131
+Rym: getting the initial shave wouldn't be my concern.
+
+309
+00:19:45,151 --> 00:19:47,960
+Rym: My concern would be continuing to shave my head without bleeding to death.
+
+310
+00:19:48,860 --> 00:19:49,784
+Scott: Yeah, don't use.
+
+311
+00:19:49,804 --> 00:19:52,557
+Scott: I mean some people use like the razor on their head with like little wheels on it.
+
+312
+00:19:52,597 --> 00:19:53,100
+Scott: I don't do that.
+
+313
+00:19:53,401 --> 00:19:54,266
+Rym: That's what Adam uses.
+
+314
+00:19:54,286 --> 00:19:55,250
+Rym: Yeah, it looks pretty good.
+
+315
+00:19:55,371 --> 00:19:55,733
+Rym: Actually.
+
+316
+00:19:55,753 --> 00:19:57,059
+Scott: Yeah, it's not worth it.
+
+317
+00:19:57,261 --> 00:20:00,139
+Rym: Yeah thing is I don't think I'll ever have to shave my head.
+
+318
+00:20:00,280 --> 00:20:03,794
+Rym: Maybe if I get old enough to where it's actually start losing my hair for real.
+
+319
+00:20:03,814 --> 00:20:08,171
+Rym: instead of just like my one venom spot I might just Steven Universe's dad it and go skull it.
+
+320
+00:20:08,834 --> 00:20:11,859
+Rym: Okay, do whatever you want or if I have money Maybe by then I'll be able to get a Trump.
+
+321
+00:20:12,681 --> 00:20:15,151
+Rym: Sure, I would I would do medical procedure to get my hair back.
+
+322
+00:20:15,452 --> 00:20:17,299
+Rym: I think that's something I was out of time.
+
+323
+00:20:18,002 --> 00:20:19,949
+Rym: Water bottles camelback or Nalgene.
+
+324
+00:20:20,250 --> 00:20:23,180
+Scott: Yeah, I actually have yeah, I guess it is camelback brand.
+
+325
+00:20:23,321 --> 00:20:25,208
+Scott: It is the camelback podium, right?
+
+326
+00:20:25,288 --> 00:20:26,051
+Rym: So that's the one.
+
+327
+00:20:26,131 --> 00:20:27,316
+Rym: I have two of those for biking.
+
+328
+00:20:27,496 --> 00:20:28,440
+Scott: It's got its insulated.
+
+329
+00:20:28,963 --> 00:20:32,746
+Scott: It has a twisty so it keeps the water inside of it Even if it bounces around.
+
+330
+00:20:32,786 --> 00:20:34,214
+Rym: and whatever it works like a squirt gun.
+
+331
+00:20:34,234 --> 00:20:37,980
+Scott: if you want it to share Don't get some crappy ones, right?
+
+332
+00:20:38,040 --> 00:20:45,426
+Scott: It's worth it to buy the better ones that have these better features because it's more comfortable to drink More sanitary the water's cold.
+
+333
+00:20:45,446 --> 00:20:46,631
+Scott: There are two situations.
+
+334
+00:20:46,872 --> 00:20:47,695
+Rym: situation one.
+
+335
+00:20:47,775 --> 00:20:49,180
+Rym: I'm traveling like on planes.
+
+336
+00:20:49,501 --> 00:20:54,842
+Rym: I will buy a shitty bottle of water at the airport and use that because I'm probably gonna lose at some point That's true.
+
+337
+00:20:55,103 --> 00:21:00,980
+Rym: So I only use my water bottle when I'm like sporting but seriously buy a really really good water bottle.
+
+338
+00:21:01,201 --> 00:21:02,348
+Rym: It's totally worth it.
+
+339
+00:21:02,368 --> 00:21:04,280
+Rym: Otherwise, please like drinking water.
+
+340
+00:21:04,380 --> 00:21:04,942
+Scott: What the hell.
+
+341
+00:21:05,343 --> 00:21:09,755
+Rym: and if you're biking water bottles are for like your baby commute get a camelback.
+
+342
+00:21:09,855 --> 00:21:11,921
+Rym: it is like night and day Mm-hmm.
+
+343
+00:21:12,483 --> 00:21:17,080
+Rym: In fact, actually I should bring my candleback camelback to the woods thing that you weren't gonna do that.
+
+344
+00:21:17,322 --> 00:21:18,718
+Rym: Yeah, I wasn't thinking about it till just now.
+
+345
+00:21:19,482 --> 00:21:21,207
+Scott: The diamond industry is evil.
+
+346
+00:21:21,267 --> 00:21:22,130
+Scott: Everyone knows this.
+
+347
+00:21:22,190 --> 00:21:23,835
+Scott: if you don't know this where have you been living?
+
+348
+00:21:23,955 --> 00:21:24,196
+Scott: under?
+
+349
+00:21:24,336 --> 00:21:25,500
+Scott: a shiny rock?
+
+350
+00:21:26,060 --> 00:21:29,354
+Rym: But how I it amazes me that there are people who don't know this.
+
+351
+00:21:29,374 --> 00:21:32,866
+Scott: so if you don't know The people who mine diamonds.
+
+352
+00:21:32,886 --> 00:21:37,319
+Scott: they're mining them in an evil fashion usually right with like slaves and child labor.
+
+353
+00:21:37,339 --> 00:21:40,687
+Rym: now granted Diamonds are common as fuck.
+
+354
+00:21:40,767 --> 00:21:41,770
+Scott: They're just like fistful.
+
+355
+00:21:41,790 --> 00:21:43,416
+Scott: They're diamonds all the fuck over the place.
+
+356
+00:21:43,436 --> 00:21:44,520
+Scott: There's so many of them.
+
+357
+00:21:44,901 --> 00:21:52,249
+Scott: They just pile them up in a vault and release them from the vault very slowly to make artificial Scarcity to jack the price up.
+
+358
+00:21:52,631 --> 00:21:54,760
+Scott: You should not pay a zillion dollars for a diamond.
+
+359
+00:21:54,880 --> 00:22:00,056
+Scott: Some other things are actually rare but still why would you pay for any shiny rock no matter how rare?
+
+360
+00:22:00,397 --> 00:22:01,260
+Scott: what is wrong with you?
+
+361
+00:22:01,980 --> 00:22:05,340
+Scott: Oh my god, you can get nice looking things even nicer looking than shiny rocks.
+
+362
+00:22:06,182 --> 00:22:09,954
+Rym: Less money going Etsy, even if you'd like, you know someone who cares because other people care.
+
+363
+00:22:10,335 --> 00:22:18,920
+Rym: costume jewelry is Indistinctible from real jewelry to the vast majority of humans like just get some cubics or coney or whatever.
+
+364
+00:22:20,803 --> 00:22:21,266
+Rym: This is so.
+
+365
+00:22:21,286 --> 00:22:23,400
+Rym: you both have your finger on the pulse of so much.
+
+366
+00:22:23,641 --> 00:22:27,032
+Rym: What about a show on the best skills and practices for being an informed nerd.
+
+367
+00:22:27,072 --> 00:22:29,220
+Scott: read internet non-stop when I'm at work.
+
+368
+00:22:29,561 --> 00:22:30,324
+Scott: I'm on the Internet's.
+
+369
+00:22:30,625 --> 00:22:37,228
+Scott: I don't work anywhere that doesn't allow unfiltered internet so I can read whatever I want while I'm at work And I don't have to spend too much time working.
+
+370
+00:22:37,248 --> 00:22:40,340
+Scott: I don't have a smartphone and I have computers at home.
+
+371
+00:22:40,581 --> 00:22:44,278
+Scott: I reload reddit and like RSS feeds and everything constantly.
+
+372
+00:22:44,339 --> 00:22:49,900
+Rym: Well more I'm a little reload reload real real read a small number of high quality aggregators.
+
+373
+00:22:50,233 --> 00:22:51,822
+Scott: Yeah I just read things Constantly.
+
+374
+00:22:52,184 --> 00:22:57,222
+Rym: if there's something happens I find out within like a minute in my team in my order of like how I find out about Things.
+
+375
+00:22:57,363 --> 00:22:58,349
+Rym: it's number one is Twitter.
+
+376
+00:22:58,429 --> 00:22:59,093
+Rym: cuz like Twitter.
+
+377
+00:22:59,314 --> 00:23:01,003
+Rym: Yeah, like shit goes down Immediately.
+
+378
+00:23:01,043 --> 00:23:01,846
+Rym: number two is FARC.
+
+379
+00:23:02,287 --> 00:23:06,282
+Rym: FARC is actually your best source of like for serious 9/11 style.
+
+380
+00:23:06,563 --> 00:23:07,186
+Rym: crazy news.
+
+381
+00:23:07,246 --> 00:23:09,333
+Rym: like FARC will have it before any area.
+
+382
+00:23:09,353 --> 00:23:10,076
+Scott: crazy news.
+
+383
+00:23:10,136 --> 00:23:11,772
+Scott: Yeah, go to FARC Yeah Yeah.
+
+384
+00:23:12,201 --> 00:23:21,009
+Scott: and then I read like slash shot a few edits unsubscribe from all the default subreddits and only subscribe to the ones that are relevant to You and don't use Google Reader because it's dead.
+
+385
+00:23:21,852 --> 00:23:24,400
+Scott: All right, so so let's talk about obesity.
+
+386
+00:23:24,962 --> 00:23:29,034
+Rym: So head oh, oh health at every size.
+
+387
+00:23:29,135 --> 00:23:30,820
+Rym: I've seen those motherfuckers, right?
+
+388
+00:23:31,080 --> 00:23:34,696
+Scott: So basically it's like yeah, you know, there's a lot of bullshit out there.
+
+389
+00:23:34,777 --> 00:23:38,452
+Scott: if someone's fat You shouldn't be like, hey, you're fat and be shaming them for it.
+
+390
+00:23:38,513 --> 00:23:40,180
+Scott: It's like maybe they're genetically fat.
+
+391
+00:23:40,605 --> 00:23:52,120
+Rym: That's totally fine even though increasingly I'm still not saying you should shame anybody but Pretty much every study that's come out in like many many years says that just reducing your food intake Correlates directly.
+
+392
+00:23:52,441 --> 00:23:57,980
+Scott: But I'm not gonna shame anyone because of the shape their body happens to be in or comment on it or say anything.
+
+393
+00:23:58,000 --> 00:23:59,349
+Scott: That's you know, that's their life.
+
+394
+00:23:59,450 --> 00:24:00,074
+Scott: It's their deal.
+
+395
+00:24:00,135 --> 00:24:00,799
+Scott: Whatever right?
+
+396
+00:24:01,000 --> 00:24:01,201
+Scott: It's like.
+
+397
+00:24:01,261 --> 00:24:01,483
+Scott: I don't.
+
+398
+00:24:01,523 --> 00:24:05,819
+Scott: I think people are dumb when they smoke but I'll go around telling people who smoke Hey stop smoking asshole.
+
+399
+00:24:07,223 --> 00:24:14,640
+Rym: I won't pretend honestly that being around really obese people makes me feel really uncomfortable because I can't imagine being that way.
+
+400
+00:24:15,642 --> 00:24:19,900
+Scott: It is unhealthy and if it's you you should take it seriously as a condition and deal with it.
+
+401
+00:24:20,382 --> 00:24:22,531
+Scott: If you're smoking you should quit eat less exercise more.
+
+402
+00:24:22,572 --> 00:24:28,875
+Scott: that covers the vast majority of up Your hopes dreams wishes for a sellers of guitar movie or TV show.
+
+403
+00:24:28,915 --> 00:24:29,820
+Scott: I hope it doesn't happen.
+
+404
+00:24:29,960 --> 00:24:30,824
+Scott: I don't have any.
+
+405
+00:24:30,844 --> 00:24:32,851
+Scott: I mean there was a battleship movie.
+
+406
+00:24:32,871 --> 00:24:33,594
+Scott: I didn't see that.
+
+407
+00:24:33,614 --> 00:24:34,317
+Scott: I don't want this.
+
+408
+00:24:34,337 --> 00:24:34,919
+Rym: I have one.
+
+409
+00:24:35,281 --> 00:24:36,130
+Rym: I hope it doesn't have.
+
+410
+00:24:36,352 --> 00:24:37,080
+Scott: yeah, that's my hope.
+
+411
+00:24:37,200 --> 00:24:38,907
+Scott: I hope dream and wish this doesn't happen.
+
+412
+00:24:39,008 --> 00:24:41,980
+Scott: a sellers movie would because then money could be spent on something better.
+
+413
+00:24:42,162 --> 00:24:43,500
+Rym: Wait, well, what if they do one of the spin-offs?
+
+414
+00:24:43,580 --> 00:24:44,846
+Rym: Like what if they did settlers of Canaan.
+
+415
+00:24:44,866 --> 00:24:46,212
+Rym: it would be like the birth of it if they did.
+
+416
+00:24:46,333 --> 00:24:47,016
+Scott: cities and nights.
+
+417
+00:24:47,036 --> 00:24:51,085
+Rym: Yeah Why Who even waited?
+
+418
+00:24:51,125 --> 00:24:52,290
+Scott: the suggestion come from?
+
+419
+00:24:52,410 --> 00:24:52,712
+Scott: I don't know.
+
+420
+00:24:52,772 --> 00:24:54,560
+Scott: we can just end this one early and go to the next one.
+
+421
+00:24:54,921 --> 00:24:56,346
+Scott: Has there ever been a show on?
+
+422
+00:24:56,567 --> 00:24:57,711
+Scott: go the game guy?
+
+423
+00:24:57,751 --> 00:24:58,694
+Rym: I didn't restart the timer.
+
+424
+00:24:58,714 --> 00:25:00,360
+Rym: We saw that we're sticking to this timer.
+
+425
+00:25:00,440 --> 00:25:01,044
+Rym: We're staying on this.
+
+426
+00:25:01,104 --> 00:25:04,080
+Scott: No, the timer is just like the maximum we don't spend on a topic.
+
+427
+00:25:04,080 --> 00:25:05,930
+Scott: It doesn't mean I'm not really talking about it for a whole.
+
+428
+00:25:05,950 --> 00:25:06,895
+Scott: I'm staying on settlers.
+
+429
+00:25:07,237 --> 00:25:12,218
+Rym: in general I don't like there to be movies about games because they're always bad.
+
+430
+00:25:13,380 --> 00:25:17,300
+Scott: Though actually and now that I'm older if I thought hard enough I could probably find one exception.
+
+431
+00:25:18,401 --> 00:25:25,199
+Rym: I'm kind of excited for the Forgotten Realms movies because I think they'll be better than Yeah, I feel like those go here we go.
+
+432
+00:25:26,420 --> 00:25:28,308
+Rym: Okay, has there ever been a show on?
+
+433
+00:25:28,389 --> 00:25:29,494
+Rym: go as any current?
+
+434
+00:25:29,514 --> 00:25:30,900
+Scott: Oh guy as in the game go.
+
+435
+00:25:31,021 --> 00:25:32,676
+Rym: Yeah, there have been several but we didn't make him.
+
+436
+00:25:34,765 --> 00:25:36,660
+Scott: I think we've talked about it quite enough on this show.
+
+437
+00:25:36,720 --> 00:25:38,940
+Scott: I mean, what else do we really need to say that we haven't said already?
+
+438
+00:25:39,201 --> 00:25:39,824
+Scott: I mean we could.
+
+439
+00:25:39,844 --> 00:25:45,467
+Scott: it's just chess only even more boring and more Hard and more serious.
+
+440
+00:25:45,668 --> 00:25:50,848
+Rym: we I learned go from the go club at RIT Which was like the second best club on campus.
+
+441
+00:25:50,868 --> 00:25:51,912
+Rym: Like those guys were great.
+
+442
+00:25:52,475 --> 00:25:53,720
+Rym: Like I really like the go club.
+
+443
+00:25:53,761 --> 00:25:54,339
+Rym: Oh, you're really well.
+
+444
+00:25:54,480 --> 00:25:59,399
+Rym: They're cool people and I did a lot of teaching games and like the tiny grids and I just got hosed every time.
+
+445
+00:25:59,479 --> 00:26:05,984
+Rym: it was Moderately fun, but I just lost my stomach for purely abstract games Like around.
+
+446
+00:26:06,024 --> 00:26:07,309
+Scott: even the fact that it's abstract.
+
+447
+00:26:07,369 --> 00:26:08,333
+Rym: It's just no that's it.
+
+448
+00:26:08,393 --> 00:26:17,460
+Rym: It's I do not enjoy Purely abstract like perfect But oh, she's short and I'm kind of an expert at it at this point.
+
+449
+00:26:18,023 --> 00:26:21,040
+Rym: Like I'm not gonna devote myself to a really abstract game.
+
+450
+00:26:21,180 --> 00:26:26,820
+Scott: I would rather play teeny or anything that takes too much time to get to a reasonable level of proficiency is not good.
+
+451
+00:26:26,880 --> 00:26:29,890
+Scott: Okay, the base is a question about the Boston Olympics.
+
+452
+00:26:29,911 --> 00:26:30,914
+Rym: Well, we know the answer now.
+
+453
+00:26:31,335 --> 00:26:32,118
+Rym: It's not happening.
+
+454
+00:26:32,198 --> 00:26:34,468
+Rym: Well good Yeah, I did not want it to happen there.
+
+455
+00:26:34,689 --> 00:26:37,100
+Scott: No, I mean the thing is I like the Olympic spirit.
+
+456
+00:26:37,261 --> 00:26:41,305
+Scott: I like a lot of the sport most of the sports that in the Olympics not all of them But most of them right.
+
+457
+00:26:41,366 --> 00:26:45,585
+Scott: I like to see who wins the Olympics especially like Olympic hockey Even though you know and stuff like that.
+
+458
+00:26:45,605 --> 00:26:50,640
+Scott: Yeah, but obviously the Olympic Committee is second only to FIFA in terms of corruption.
+
+459
+00:26:52,001 --> 00:26:57,880
+Scott: It's it seems to be getting less corrupt, but it's still way fucking cool Like it's gonna be in both of the Olympics coming up in Brazil.
+
+460
+00:26:58,087 --> 00:27:05,320
+Scott: Yeah The actual like, you know Execution of the Olympics and management of it and etcetera is evil and awful and you don't want it anywhere near you.
+
+461
+00:27:05,701 --> 00:27:12,782
+Scott: But I do want to watch the athletes compete and I'm all for the athletes Sponsors, I'm not.
+
+462
+00:27:12,823 --> 00:27:17,517
+Rym: why doesn't the UN make an international Olympic city somewhere and that's the Olympics forever.
+
+463
+00:27:18,079 --> 00:27:19,137
+Scott: Sure go That's the right way.
+
+464
+00:27:19,942 --> 00:27:31,110
+Rym: Seriously, though the city of Boston like they revoked their bid because the Olympics were so unpopular there that they decided not to go after Cabs specifically a little uber lift whatever thing.
+
+465
+00:27:31,593 --> 00:27:33,100
+Rym: Actually, I think we could do a whole show on this.
+
+466
+00:27:33,220 --> 00:27:34,965
+Scott: We might be able to self-driving.
+
+467
+00:27:35,005 --> 00:27:40,680
+Rym: cars are going to fuck up everything more than you can possibly imagine.
+
+468
+00:27:40,780 --> 00:27:43,833
+Scott: But basically specifically the whole uber lift uber evil.
+
+469
+00:27:44,235 --> 00:27:45,420
+Scott: uber is basically evil there.
+
+470
+00:27:45,624 --> 00:27:46,520
+Scott: It's a company the base.
+
+471
+00:27:46,540 --> 00:27:46,801
+Scott: He said.
+
+472
+00:27:46,821 --> 00:27:51,160
+Scott: let's ignore all the existing laws instead of a business and it's sort of what crunchyroll did like.
+
+473
+00:27:51,200 --> 00:27:58,400
+Scott: Let's ignore copyright instead of a business and then became legit after only uber is no interest in becoming legit And you might think actually I think they do.
+
+474
+00:27:58,641 --> 00:28:04,000
+Rym: I think uber's actual plan is to be a robot car cab service and not have any employees.
+
+475
+00:28:04,142 --> 00:28:05,160
+Scott: Maybe they could do that eventually.
+
+476
+00:28:06,404 --> 00:28:09,917
+Scott: You know, if you look at the text, there's a lot of regulations that go into cabs.
+
+477
+00:28:09,977 --> 00:28:10,840
+Scott: It's why they're way they are.
+
+478
+00:28:10,900 --> 00:28:13,120
+Scott: It's not just a scam and an evil monopoly.
+
+479
+00:28:13,541 --> 00:28:18,196
+Rym: I'd say those regulations are corrupt, but guys use a cab in a city other than New York.
+
+480
+00:28:18,517 --> 00:28:19,320
+Rym: Good guy, right?
+
+481
+00:28:19,460 --> 00:28:21,407
+Scott: You need those regulations there.
+
+482
+00:28:21,447 --> 00:28:22,491
+Scott: Otherwise, it's like handicapped.
+
+483
+00:28:22,511 --> 00:28:23,755
+Scott: People aren't getting picked up black.
+
+484
+00:28:23,795 --> 00:28:25,080
+Scott: People aren't getting picked up, right?
+
+485
+00:28:25,100 --> 00:28:26,688
+Scott: It's like an uber doesn't give a shit about any.
+
+486
+00:28:26,789 --> 00:28:29,000
+Scott: also who doesn't care for changes their price?
+
+487
+00:28:29,141 --> 00:28:31,574
+Rym: Oh, oh, I guess we got to do a whole show on that one.
+
+488
+00:28:31,595 --> 00:28:31,916
+Rym: Maybe.
+
+489
+00:28:31,977 --> 00:28:35,935
+Scott: All right Favorite ghost stories urban legends and our mythological creatures.
+
+490
+00:28:36,055 --> 00:28:40,323
+Scott: I don't really have favorite ghost big fan of Telling ghost stories.
+
+491
+00:28:40,364 --> 00:28:41,769
+Rym: No, I do not believe in ghosts.
+
+492
+00:28:42,532 --> 00:28:44,440
+Rym: I am not scared by ghost stories.
+
+493
+00:28:44,701 --> 00:28:48,179
+Rym: However, I tell a mean ghost story and I enjoy.
+
+494
+00:28:48,554 --> 00:28:51,463
+Rym: I Remember tell.
+
+495
+00:28:51,503 --> 00:28:52,728
+Rym: well, I tell long stories.
+
+496
+00:28:52,769 --> 00:28:54,074
+Scott: don't do it for me anymore.
+
+497
+00:28:54,174 --> 00:28:55,480
+Rym: I tell long-form ghost stores.
+
+498
+00:28:55,560 --> 00:28:58,028
+Rym: I'm also so I've been really into this guy.
+
+499
+00:28:58,188 --> 00:29:02,160
+Rym: Oh, it's not Robert Stack, but he mimics the style of Robert Stack.
+
+500
+00:29:02,241 --> 00:29:03,239
+Rym: I'll find a video and link to it.
+
+501
+00:29:03,641 --> 00:29:05,307
+Rym: But this guy does videos that are like.
+
+502
+00:29:05,649 --> 00:29:08,740
+Rym: let me tell you about this scary fucked up thing that happened a long time ago.
+
+503
+00:29:09,301 --> 00:29:09,743
+Rym: And I like.
+
+504
+00:29:09,883 --> 00:29:12,190
+Rym: I like creepy stories urban legends.
+
+505
+00:29:12,230 --> 00:29:12,732
+Scott: I don't care.
+
+506
+00:29:12,772 --> 00:29:15,620
+Rym: They're all still like the rabbit man of what's it or like, okay?
+
+507
+00:29:15,921 --> 00:29:18,132
+Scott: I mean, it's it's a nerdery that I just have no interest in.
+
+508
+00:29:18,152 --> 00:29:19,840
+Scott: and mythological creatures like dragons?
+
+509
+00:29:20,341 --> 00:29:26,018
+Scott: Well, yeah, I mean mythological creatures like fantasy novel or cool, but the kinds you're probably asked crypto zoology.
+
+510
+00:29:26,119 --> 00:29:27,324
+Scott: fuck that I don't give a shit.
+
+511
+00:29:27,425 --> 00:29:29,074
+Scott: None of those animals are real and I don't care.
+
+512
+00:29:29,215 --> 00:29:30,160
+Rym: Bigfoot is not.
+
+513
+00:29:31,425 --> 00:29:32,111
+Scott: Believe in aliens.
+
+514
+00:29:32,152 --> 00:29:32,879
+Scott: go fuck yourselves.
+
+515
+00:29:34,580 --> 00:29:38,619
+Rym: Gardening I actually really want a garden but I live in New York and I don't own the roof.
+
+516
+00:29:39,902 --> 00:29:42,919
+Scott: I could put plants in a pot on the roof and just afraid neighbors would eat them.
+
+517
+00:29:43,282 --> 00:29:44,349
+Scott: Gardening is real simple.
+
+518
+00:29:44,671 --> 00:29:48,172
+Scott: get a plant put it in the dirt Don't forget to water it and it should do well.
+
+519
+00:29:48,312 --> 00:29:49,740
+Scott: just make sure you put it in the right kind of dirt.
+
+520
+00:29:49,780 --> 00:29:50,680
+Rym: Well, it's more complex.
+
+521
+00:29:50,841 --> 00:29:56,017
+Rym: It doesn't know multiple things like rubs and things to make sure you got the right kind of dirt.
+
+522
+00:29:56,057 --> 00:29:57,020
+Scott: watch out for bugs.
+
+523
+00:29:57,040 --> 00:29:59,480
+Rym: Rabbits come and start eating like the flower tips.
+
+524
+00:29:59,580 --> 00:30:01,186
+Scott: Oh, you don't put things in a place.
+
+525
+00:30:01,246 --> 00:30:02,390
+Scott: rabbit can get them put.
+
+526
+00:30:02,450 --> 00:30:05,540
+Rym: our friends very have a crazy garden.
+
+527
+00:30:05,761 --> 00:30:07,104
+Rym: Yeah, like no garden.
+
+528
+00:30:07,185 --> 00:30:08,047
+Scott: It's way fun.
+
+529
+00:30:08,228 --> 00:30:11,778
+Scott: And if you got vegetables, they're way more delicious than you get at the grocery store.
+
+530
+00:30:11,979 --> 00:30:15,040
+Rym: frankly, though We just don't have time for gardening like we have time for it.
+
+531
+00:30:15,100 --> 00:30:17,716
+Rym: If I just had a place to put you know, you don't have time for real gardening.
+
+532
+00:30:17,736 --> 00:30:18,360
+Rym: It takes a lot of work.
+
+533
+00:30:18,460 --> 00:30:23,360
+Rym: There's a lot of stuff tomatoes and beak it and I've ever get just gonna grow like tomatoes zucchinis and stuff.
+
+534
+00:30:23,440 --> 00:30:26,332
+Rym: Yeah, you don't want anything big and real and awesome tomatoes for you.
+
+535
+00:30:26,513 --> 00:30:30,182
+Rym: I can grow like some leeks or some Garlic.
+
+536
+00:30:30,202 --> 00:30:31,851
+Scott: guys get on the list twice how it.
+
+537
+00:30:31,871 --> 00:30:32,897
+Rym: credit cards are on the list twice.
+
+538
+00:30:32,937 --> 00:30:33,360
+Rym: I guess they are.
+
+539
+00:30:33,400 --> 00:30:34,243
+Scott: Let's get that over it.
+
+540
+00:30:34,283 --> 00:30:35,647
+Scott: go to the next one yogurt.
+
+541
+00:30:35,969 --> 00:30:37,494
+Scott: So yogurt is delicious.
+
+542
+00:30:37,674 --> 00:30:39,380
+Rym: I don't actually like plain yogurt.
+
+543
+00:30:39,501 --> 00:30:40,612
+Rym: I've never really liked yogurt.
+
+544
+00:30:40,672 --> 00:30:41,460
+Rym: I like losses.
+
+545
+00:30:41,883 --> 00:30:42,809
+Scott: I mean, I usually don't.
+
+546
+00:30:42,849 --> 00:30:45,584
+Scott: you know plain yogurt is like edible But usually I always get.
+
+547
+00:30:45,725 --> 00:30:51,790
+Scott: when I was young I got yogurt with fruit on the bottom and nowadays I get Greek yogurt with fruit On the side, it's you all got to mix the fruit in.
+
+548
+00:30:51,830 --> 00:30:56,294
+Scott: it's got to be as real fruit as possible To really mix with the yogurt.
+
+549
+00:30:56,334 --> 00:30:57,802
+Scott: Well, yeah Delicious.
+
+550
+00:30:57,822 --> 00:31:01,353
+Rym: I just never really like yogurt that much except in things but frozen yogurt.
+
+551
+00:31:01,473 --> 00:31:02,336
+Rym: Fuck that nonsense.
+
+552
+00:31:02,356 --> 00:31:02,958
+Rym: That's bullshit.
+
+553
+00:31:02,978 --> 00:31:03,720
+Rym: Just get some custard.
+
+554
+00:31:03,881 --> 00:31:05,107
+Scott: I mean custard tastes great.
+
+555
+00:31:05,127 --> 00:31:06,132
+Scott: frozen yogurt.
+
+556
+00:31:06,152 --> 00:31:07,237
+Scott: yogurt still tastes good.
+
+557
+00:31:07,278 --> 00:31:10,051
+Scott: No, it does You think that?
+
+558
+00:31:10,292 --> 00:31:13,184
+Rym: have some frozen custard again And then taste one.
+
+559
+00:31:13,525 --> 00:31:17,577
+Rym: put even one amount of frozen yogurt on your tongue and your body will reject.
+
+560
+00:31:17,617 --> 00:31:18,560
+Scott: it still tastes good.
+
+561
+00:31:18,620 --> 00:31:22,636
+Scott: It doesn't taste as good as any of the other frozen delicious alternatives, but now Scott.
+
+562
+00:31:22,676 --> 00:31:23,580
+Rym: so I don't like yogurt.
+
+563
+00:31:23,661 --> 00:31:28,469
+Rym: But actually I really like Icelandic skyr the Siggy's yogurt.
+
+564
+00:31:28,569 --> 00:31:29,652
+Scott: Yeah, that's the one yogurt.
+
+565
+00:31:29,673 --> 00:31:32,160
+Scott: I tried to eat and it was too thick heavy and not good.
+
+566
+00:31:32,220 --> 00:31:34,229
+Rym: Yeah, it's like the badass power yogurt.
+
+567
+00:31:34,309 --> 00:31:35,634
+Scott: No, it's disgusting yogurt.
+
+568
+00:31:36,036 --> 00:31:36,960
+Rym: political polls.
+
+569
+00:31:37,161 --> 00:31:43,423
+Rym: So there's been a thing recently where and actually Nate Silver did a cool article on it Polling.
+
+570
+00:31:43,443 --> 00:31:45,956
+Scott: anything he says has to say about it is almost
+
+571
+00:31:46,257 --> 00:31:46,599
+Rym: certainly
+
+572
+00:31:46,639 --> 00:31:46,860
+Scott: correct
+
+573
+00:31:46,925 --> 00:31:59,883
+Rym: Yeah But basically like in recent elections people are like oh the polls are gonna skew like aren't polls being gonna be more inaccurate Because they can't reach young people who have cell phones that they're not allowed to call and don't have landlines and don't respond But young
+
+574
+00:31:59,923 --> 00:32:02,179
+Scott: people don't vote so that cancels out
+
+575
+00:32:02,643 --> 00:32:04,380
+Rym: Except young people are starting to vote more and more.
+
+576
+00:32:05,022 --> 00:32:12,260
+Rym: But the answer is now you can't even poll adults like no one responds to political polls anymore except crazy nut jobs.
+
+577
+00:32:12,601 --> 00:32:19,909
+Rym: So there's this in liar outlier situation where polling increasingly discards outliers But the outliers are actually the accurate ones.
+
+578
+00:32:20,130 --> 00:32:23,200
+Rym: the poll that's correct is the one that is the outlier that everyone ignores.
+
+579
+00:32:23,683 --> 00:32:33,960
+Rym: So polling is becoming increasingly unreliable and that's gonna really mess up the way American politics works because We can't imagine a politic that doesn't involve political polls, right?
+
+580
+00:32:34,080 --> 00:32:36,760
+Scott: Well, maybe the Congress people have to start looking at their actual mail.
+
+581
+00:32:37,680 --> 00:32:37,881
+Scott: Alright.
+
+582
+00:32:38,303 --> 00:32:38,865
+Scott: fixed protocol.
+
+583
+00:32:38,885 --> 00:32:39,307
+Scott: That's you.
+
+584
+00:32:39,327 --> 00:32:39,990
+Scott: That's me.
+
+585
+00:32:40,050 --> 00:32:43,163
+Scott: You want to do a show on this by some obscure thing No one cares about.
+
+586
+00:32:43,223 --> 00:32:47,880
+Rym: so if you want to make some money guys like for real learn the fixed protocol.
+
+587
+00:32:47,960 --> 00:32:50,952
+Scott: I mean, there's plenty of obscure technological specific things.
+
+588
+00:32:50,992 --> 00:32:51,915
+Scott: You could learn to make money.
+
+589
+00:32:51,935 --> 00:32:53,200
+Scott: You could learn kobalt and make money.
+
+590
+00:32:53,240 --> 00:32:56,358
+Rym: No, actually that's not nearly as viable as it used to be.
+
+591
+00:32:57,161 --> 00:33:07,415
+Rym: Be surprised if you can administer a Linux system if you know how to use said and awk and bash and like some pearl Or Python scripting and you learn like baby's.
+
+592
+00:33:07,475 --> 00:33:16,399
+Rym: first fixed protocol Companies like mine will hire you straight out of college and pay you like 80k like seriously It's just tag equals value.
+
+593
+00:33:16,460 --> 00:33:22,166
+Scott: It's why don't you hire someone with a CS degree who hasn't learned fixed protocol but can do all the other things and teach them The fixed protocol in like a week.
+
+594
+00:33:22,226 --> 00:33:36,894
+Rym: That's actually my strategy lately, but honestly Learn learning the fixed protocol is sort of like a nice test case for learning like the design of protocols in general Because you'll see some things it does and you'll learn a lot about other protocols like.
+
+595
+00:33:37,256 --> 00:33:38,260
+Rym: I guess we couldn't on a whole show.
+
+596
+00:33:38,662 --> 00:33:39,687
+Rym: Oh don't know could have.
+
+597
+00:33:39,888 --> 00:33:40,652
+Scott: I didn't have anything to say.
+
+598
+00:33:40,692 --> 00:33:42,280
+Scott: donuts are the deliciousness.
+
+599
+00:33:42,641 --> 00:33:46,880
+Scott: So I noticed I love apple fritter, which is sort of a donut sort of not I got to admit.
+
+600
+00:33:47,122 --> 00:33:49,075
+Scott: So I like donuts that have a cream filling.
+
+601
+00:33:49,257 --> 00:33:50,564
+Scott: I won't Donuts like.
+
+602
+00:33:50,625 --> 00:33:55,386
+Scott: I like donuts with a glaze like Dunkin Donuts or not donuts In an emergency.
+
+603
+00:33:55,406 --> 00:34:01,265
+Scott: if I was starving landing in an airport in a you know rural place Oh wait, and I need a don't.
+
+604
+00:34:01,366 --> 00:34:02,068
+Rym: I'll wait.
+
+605
+00:34:02,450 --> 00:34:05,040
+Scott: It's basically a way to infuse yourself with sugar early in the morning.
+
+606
+00:34:05,100 --> 00:34:05,725
+Scott: That's all I get.
+
+607
+00:34:05,826 --> 00:34:07,659
+Rym: but I you know, it's gonna be a real donut.
+
+608
+00:34:07,780 --> 00:34:15,311
+Rym: It's either got to be like a proper like cake donut like fried in oil or it's delicious Or it's got to be a cider.
+
+609
+00:34:15,331 --> 00:34:21,635
+Rym: donuts at the farm Yeah But got a roll in cinnamon well-made yeast donut not a Krispy Kreme like.
+
+610
+00:34:21,675 --> 00:34:25,172
+Rym: I'll never eat one of those things again For those days.
+
+611
+00:34:25,254 --> 00:34:30,494
+Scott: Yeah those days I mean, you know There's some donuts you used to infuse sugar and some you use as a delicious baked good.
+
+612
+00:34:30,554 --> 00:34:37,170
+Rym: regardless of figure intrusion except those Lard Lard is gonna do a whole show on donuts.
+
+613
+00:34:37,331 --> 00:34:38,074
+Scott: No, I think we're done.
+
+614
+00:34:38,094 --> 00:34:39,159
+Scott: I got a lot more to say.
+
+615
+00:34:39,301 --> 00:34:40,145
+Scott: I got nothing else to say.
+
+616
+00:34:40,206 --> 00:34:41,071
+Scott: kids bathroom toys.
+
+617
+00:34:41,252 --> 00:34:42,679
+Scott: I had a lot of awesome bathroom.
+
+618
+00:34:42,800 --> 00:34:50,317
+Rym: I had this thing that would hang over the side of the tub and it was like this three-story house thing With like a dock on the bottom.
+
+619
+00:34:50,841 --> 00:34:52,830
+Rym: So we're like hang over the edge of the tub and be like house.
+
+620
+00:34:52,850 --> 00:34:57,800
+Rym: you put like little people walking around in them and there's A little boat that would float that you could like dock to the little dock.
+
+621
+00:34:58,101 --> 00:35:03,060
+Rym: It was like a little house with a dock under it and that was like the best bathroom toy ever.
+
+622
+00:35:03,160 --> 00:35:06,209
+Scott: I had a book called I think was about wet wheelie.
+
+623
+00:35:07,212 --> 00:35:08,515
+Rym: I also had those books.
+
+624
+00:35:08,896 --> 00:35:16,889
+Scott: in the waterproof book There was a penguin and you could move him from page to page to do the different scenes in the bathtub Whatever and I had a little plastic toy.
+
+625
+00:35:16,909 --> 00:35:18,233
+Scott: That was a boat that would swim around.
+
+626
+00:35:18,254 --> 00:35:20,020
+Rym: I also had the Lego boat.
+
+627
+00:35:20,261 --> 00:35:20,905
+Scott: Yeah had that too.
+
+628
+00:35:20,925 --> 00:35:21,489
+Scott: I had a phone.
+
+629
+00:35:21,509 --> 00:35:22,395
+Rym: Well, which one did you have?
+
+630
+00:35:22,435 --> 00:35:23,923
+Rym: Cuz I had the place But it was white.
+
+631
+00:35:24,144 --> 00:35:27,137
+Scott: It was I think it was the same piece as the police boat, but was more like a.
+
+632
+00:35:27,699 --> 00:35:34,974
+Rym: oh See, I also had the big red freighter that you could buy the optional motor for but my parents could have had this had the Spot for the motor also, but I didn't have the motor.
+
+633
+00:35:35,054 --> 00:35:40,280
+Scott: Yeah These foam trains just sort of stuck to the wall in the tub and you could rearrange them into different orders.
+
+634
+00:35:40,641 --> 00:35:42,952
+Scott: Ah, all right Chinese American food.
+
+635
+00:35:43,735 --> 00:35:44,780
+Scott: I mean, we're in New York City.
+
+636
+00:35:44,860 --> 00:35:47,713
+Scott: We don't eat that as much anymore, even though there's a ton of it here.
+
+637
+00:35:47,794 --> 00:35:55,260
+Scott: It's actually hard to find good American version of Chinese food because most of the place is just like tasteless, you know, sesame chicken or general.
+
+638
+00:35:55,340 --> 00:36:03,530
+Scott: So I mean honestly, but I eat it once in a while still so it's interesting cuz I always forget But usually real Chinese food in America.
+
+639
+00:36:03,671 --> 00:36:12,074
+Rym: if you don't live in like New York or like a very small No, if you want anything delivered to your house pizza is literally the only option.
+
+640
+00:36:12,575 --> 00:36:18,060
+Rym: if you live in like a hip suburb Maybe you can also get Chinese American food delivered.
+
+641
+00:36:18,703 --> 00:36:23,124
+Rym: So because those are the only two things we could get delivered in Beacon and Rochester.
+
+642
+00:36:23,144 --> 00:36:25,420
+Scott: but the place in Beacon that was near us was really good.
+
+643
+00:36:25,561 --> 00:36:28,980
+Scott: I was really good actually is better than any of the places that are within walking distance of me now.
+
+644
+00:36:29,181 --> 00:36:31,611
+Rym: But now that I can get like Turkish food delivered.
+
+645
+00:36:31,912 --> 00:36:33,800
+Rym: I really don't order Chinese food anymore.
+
+646
+00:36:33,981 --> 00:36:36,700
+Scott: I'll get Chinese food like it just if I'm in the mood for it real hard.
+
+647
+00:36:36,720 --> 00:36:41,137
+Rym: But then I'll get that like jujube vegan Thai fusion instead usually jujube trees.
+
+648
+00:36:41,177 --> 00:36:45,294
+Scott: Yeah Mugging pickpocketing and other street crime.
+
+649
+00:36:45,314 --> 00:36:50,160
+Rym: if you get pickpocketed Moron like it's really easy to not keep your wallet in your front pocket, Jesus Christ.
+
+650
+00:36:50,340 --> 00:36:59,280
+Scott: Or if you have a back pocket and wear tight jeans or have a button have a bag that like closes and close it So someone have to like open it and go through a whole bunch of hassle to get in there.
+
+651
+00:36:59,360 --> 00:37:00,143
+Rym: Have you ever been mugged?
+
+652
+00:37:00,685 --> 00:37:02,712
+Rym: No, my mom got mugged like five or six times.
+
+653
+00:37:02,732 --> 00:37:03,494
+Rym: We lived in Detroit.
+
+654
+00:37:03,675 --> 00:37:04,457
+Scott: That makes sense.
+
+655
+00:37:04,478 --> 00:37:12,106
+Scott: Yeah If you get mugged if I if I got mugged, I assume I would probably just be like, alright, bro Have my money in credit cards.
+
+656
+00:37:12,146 --> 00:37:13,773
+Scott: moron do whatever the fuck you want.
+
+657
+00:37:13,833 --> 00:37:15,560
+Scott: It's really just cancel that shit.
+
+658
+00:37:15,620 --> 00:37:17,347
+Rym: It is real easy to not get mugged.
+
+659
+00:37:17,568 --> 00:37:20,580
+Rym: Just like have a little bit of situational awareness.
+
+660
+00:37:20,801 --> 00:37:23,920
+Scott: Like I'm in a dark alley all alone is a shady character.
+
+661
+00:37:24,261 --> 00:37:28,860
+Rym: Don't go down that alley or I'm walking down the street and there's a corner on a building.
+
+662
+00:37:28,960 --> 00:37:33,920
+Rym: Maybe walk a little bit away from the corner and go around it instead of walking right by the corner.
+
+663
+00:37:34,542 --> 00:37:36,871
+Scott: And I mean we're in New York City even at like 2 a.m.
+
+664
+00:37:36,911 --> 00:37:37,794
+Scott: Sometimes I'll go home.
+
+665
+00:37:37,814 --> 00:37:39,260
+Scott: There's people everywhere.
+
+666
+00:37:39,441 --> 00:37:42,254
+Scott: I bike around like neighborhoods that people think are bad neighborhoods.
+
+667
+00:37:42,817 --> 00:37:45,284
+Scott: No problem Because I'm a white.
+
+668
+00:37:45,464 --> 00:37:51,689
+Rym: the singularity yeah, it's gonna happen but not the capital s1 that Kurzweil and all them talk about.
+
+669
+00:37:51,730 --> 00:37:55,900
+Scott: yeah that guy I mean Kurzweil I guess he got famous somehow, but he's mostly a nut job.
+
+670
+00:37:55,980 --> 00:37:58,315
+Scott: He believes that like eating vitamins will make him live forever.
+
+671
+00:37:58,356 --> 00:37:59,000
+Scott: another nonsense.
+
+672
+00:37:59,161 --> 00:38:07,575
+Scott: So if you got to take anything he says with a whole bag of salt But the concept of this kind of thing like kind of is happening.
+
+673
+00:38:07,615 --> 00:38:09,320
+Scott: Yeah, I like the evangelical version better.
+
+674
+00:38:09,762 --> 00:38:11,371
+Rym: Yeah, we're not that quite there yet though.
+
+675
+00:38:11,391 --> 00:38:13,160
+Rym: We haven't just generated mom robots.
+
+676
+00:38:13,321 --> 00:38:13,904
+Scott: It's mostly.
+
+677
+00:38:13,944 --> 00:38:20,000
+Scott: it's a cool nerdy thing to talk about and it's I you know Even though I hope a lot of ghosts in the shell type things are within our lifetime.
+
+678
+00:38:20,141 --> 00:38:21,851
+Scott: I think this one is well beyond our lifetime.
+
+679
+00:38:22,112 --> 00:38:23,420
+Scott: read the last question by Asimov.
+
+680
+00:38:23,549 --> 00:38:32,620
+Rym: Yeah but a lot of the aspects of this are Happening like the zeitgeist of people on the internet is actually like becoming its own force independent of the people.
+
+681
+00:38:32,721 --> 00:38:34,782
+Scott: Yes, but it's not the singularity No, but it's.
+
+682
+00:38:35,204 --> 00:38:39,400
+Rym: it's the singularity in terms of what that word should actually mean as opposed to Kurzweilian nonsense, right?
+
+683
+00:38:39,621 --> 00:38:41,450
+Rym: So I feel like I do a whole show on this.
+
+684
+00:38:41,470 --> 00:38:43,279
+Scott: - no, I got nothing else to say a lot to say.
+
+685
+00:38:43,299 --> 00:38:45,489
+Scott: still Soldering.
+
+686
+00:38:46,142 --> 00:38:51,200
+Scott: When I was in I learned how to solder in summer camp from an Australian dude.
+
+687
+00:38:51,260 --> 00:38:53,349
+Scott: So that's why I say soldering right?
+
+688
+00:38:53,450 --> 00:38:54,153
+Rym: It sounds rush.
+
+689
+00:38:54,253 --> 00:38:57,693
+Scott: It sounds Irish Russian I don't know but Irish Russian.
+
+690
+00:38:57,914 --> 00:38:58,720
+Scott: he always said solder.
+
+691
+00:38:58,941 --> 00:39:02,740
+Scott: So I say soldering even though I know soldering is the correct Eunice pronunciation.
+
+692
+00:39:03,104 --> 00:39:12,813
+Scott: You take a hot iron Metal stick and you touch some metal bits and you melt them to make something stick to something else And at least once you accidentally jam that shit under your fingernail.
+
+693
+00:39:12,833 --> 00:39:13,897
+Scott: babies first welding.
+
+694
+00:39:14,098 --> 00:39:14,480
+Scott: It's fun.
+
+695
+00:39:14,661 --> 00:39:16,269
+Scott: It's way easier than you think it is.
+
+696
+00:39:16,350 --> 00:39:18,200
+Scott: You totally do it with some Arduino shit.
+
+697
+00:39:18,341 --> 00:39:19,931
+Rym: It does require some skill though.
+
+698
+00:39:19,951 --> 00:39:27,280
+Rym: And honestly when I was a kid I really wish I had one given up on having separate flux and just use the solder with the flux.
+
+699
+00:39:27,405 --> 00:39:28,865
+Scott: Yes use the solder with the flux in it.
+
+700
+00:39:28,885 --> 00:39:31,115
+Scott: get the high quality iron that has the adjustable temperature.
+
+701
+00:39:31,155 --> 00:39:34,480
+Rym: wait for the iron to heat all The way up and don't hold it on the circuit board too long.
+
+702
+00:39:34,801 --> 00:39:39,419
+Scott: Little and a little sponge you need to clean it off is essential, but I haven't soldered anything in like 20 years.
+
+703
+00:39:39,841 --> 00:39:42,940
+Scott: I have recently because I've you know, I bought some kits to put stuff together.
+
+704
+00:39:43,041 --> 00:39:44,840
+Scott: Go if you that's a hobby you want to do.
+
+705
+00:39:44,940 --> 00:39:48,840
+Scott: It's totally cheap and easy to get into kitchen technology fridges microwaves and other kitchen appliances.
+
+706
+00:39:48,880 --> 00:39:52,760
+Scott: Alright, the rule is you know you because if you just get hooked on cooking, right?
+
+707
+00:39:52,800 --> 00:39:54,213
+Scott: You're gonna buy a bunch of kitchen shit.
+
+708
+00:39:54,233 --> 00:39:54,960
+Scott: You don't need right?
+
+709
+00:39:55,180 --> 00:39:57,168
+Scott: So the rule is do something.
+
+710
+00:39:57,188 --> 00:40:00,020
+Scott: you can do everything in the kitchen with a knife because it's a pros do right?
+
+711
+00:40:00,080 --> 00:40:02,813
+Rym: Well and a stove right and a stove I think.
+
+712
+00:40:02,873 --> 00:40:07,500
+Rym: it says though fridges microwave Oh, that's the examples are all big appliances not little shit.
+
+713
+00:40:07,600 --> 00:40:16,079
+Scott: But I'm saying like if you find yourself say doing you know chopping a whole bunch like and you keep doing it day after day Then get the food processor
+
+714
+00:40:16,481 --> 00:40:17,485
+Rym: But in terms of applying you
+
+715
+00:40:17,525 --> 00:40:20,956
+Scott: find yourself smashing a ton of fucking garlic cuz you're like garlic in every meal.
+
+716
+00:40:21,197 --> 00:40:28,266
+Rym: then by the garlic Press don't be or just buy pre-smashed garlic at that point or that Microwaves not that essential like.
+
+717
+00:40:28,306 --> 00:40:33,365
+Rym: I don't really use our microwave Emily does but I don't because if you're gonna reheat shit Never use a microwave.
+
+718
+00:40:33,405 --> 00:40:34,791
+Rym: It's almost always the worst option.
+
+719
+00:40:34,851 --> 00:40:36,096
+Scott: I only use the microwave.
+
+720
+00:40:36,136 --> 00:40:37,040
+Scott: I don't even use for popcorn.
+
+721
+00:40:37,100 --> 00:40:37,783
+Scott: He's the air popper.
+
+722
+00:40:37,823 --> 00:40:40,673
+Rym: I use up fridges side-by-side is bullshit.
+
+723
+00:40:41,395 --> 00:40:43,945
+Rym: Never use a fridge side-by-side I don't really care.
+
+724
+00:40:44,187 --> 00:40:44,367
+Rym: I do.
+
+725
+00:40:44,428 --> 00:40:45,955
+Rym: I care a lot and in turn off shit.
+
+726
+00:40:46,980 --> 00:41:00,200
+Scott: Oh well Anger management so anger is like a legit feeling that you can have and there's some things that are worth getting angry over like if Someone's totally a dick to you or whatever, but I feel like feeling angry doesn't really accomplish anything.
+
+727
+00:41:00,260 --> 00:41:01,706
+Scott: It just makes you feel worse.
+
+728
+00:41:01,746 --> 00:41:13,200
+Scott: It makes the person who made you feel angry feel high and mighty and It really doesn't help you achieve any goal whatsoever unless your goal is to Get into a total rage and kick the shit out of somebody.
+
+729
+00:41:13,883 --> 00:41:17,960
+Scott: So you should try to avoid feeling angry regardless of anything that happens in the world.
+
+730
+00:41:18,040 --> 00:41:21,220
+Scott: And if you keep feeling angry a lot, you should try to do some anger management.
+
+731
+00:41:21,441 --> 00:41:22,768
+Rym: I mean the answer is it's never worth it.
+
+732
+00:41:22,989 --> 00:41:28,374
+Scott: I used to feel angry a lot in my youth And now I pretty much never feel legit angry anymore.
+
+733
+00:41:28,434 --> 00:41:29,780
+Rym: I just feel sad instead.
+
+734
+00:41:30,023 --> 00:41:31,540
+Rym: Yeah, but I see this every day though.
+
+735
+00:41:31,580 --> 00:41:44,020
+Rym: The real problem is people who can't control their anger and anger and lash out so like road rage people like they should never drive Again, pretty much or guys who like try to punch someone like on a bike like yeah, your bike should be taken away.
+
+736
+00:41:44,020 --> 00:41:45,023
+Rym: You should probably be in jail.
+
+737
+00:41:45,083 --> 00:41:46,929
+Scott: Yeah, you should get your shit together.
+
+738
+00:41:47,130 --> 00:41:48,052
+Scott: It's not it's not cool.
+
+739
+00:41:48,895 --> 00:41:51,604
+Rym: the 2016 Republican Mr.
+
+740
+00:41:51,644 --> 00:41:53,060
+Scott: Watching debates and I walked in the room.
+
+741
+00:41:53,082 --> 00:42:05,304
+Rym: Yeah so it's very interesting that the Republican Party is imploding so deeply right now and actually I'm missing the debate cuz it just started and Because you can't watch the debate legally online Unless you have cable.
+
+742
+00:42:05,906 --> 00:42:10,460
+Rym: that is really telling as to how old person the Republican Party is.
+
+743
+00:42:10,861 --> 00:42:15,360
+Rym: But I treat the primaries and the political season like every year.
+
+744
+00:42:15,521 --> 00:42:24,174
+Rym: I follow politics the way most people follow sports like I have my favorite teams Like I follow Ted Cruz and what he's doing like I'd follow the Seahawks.
+
+745
+00:42:24,214 --> 00:42:25,879
+Rym: who gives any shits I do.
+
+746
+00:42:25,959 --> 00:42:27,282
+Scott: It's fun No one cares.
+
+747
+00:42:27,302 --> 00:42:28,303
+Rym: It's like Eagle in real life.
+
+748
+00:42:28,704 --> 00:42:29,966
+Scott: So not Eagle in real life.
+
+749
+00:42:29,986 --> 00:42:32,630
+Scott: It is way more garbage than Eagle, but what's?
+
+750
+00:42:34,101 --> 00:42:36,691
+Scott: That's like saying that boxing is like Dragon Ball.
+
+751
+00:42:36,731 --> 00:42:37,213
+Scott: It's like no.
+
+752
+00:42:37,253 --> 00:42:39,000
+Scott: Dragon Ball is 10 million times more awesome.
+
+753
+00:42:39,100 --> 00:42:41,111
+Scott: The Republican primary is like Gundam.
+
+754
+00:42:41,131 --> 00:42:41,574
+Scott: It's like no.
+
+755
+00:42:41,634 --> 00:42:42,680
+Scott: Gundam is way more awesome.
+
+756
+00:42:42,700 --> 00:42:44,840
+Rym: You took like all my time just bitching about politics.
+
+757
+00:42:45,780 --> 00:42:48,794
+Rym: Politics politics are really interesting and I'm gonna watch the up.
+
+758
+00:42:49,236 --> 00:42:51,023
+Scott: guaranteed income Yes, you should.
+
+759
+00:42:51,064 --> 00:42:55,720
+Scott: probably everyone should have a set amount of money to make society more fair.
+
+760
+00:42:56,322 --> 00:43:01,620
+Scott: I mean imagine if you started a game of Monopoly and some people started with a million dollars and some people started with zero dollars.
+
+761
+00:43:01,905 --> 00:43:02,700
+Scott: That's bullshit.
+
+762
+00:43:03,001 --> 00:43:04,325
+Scott: The same thing should be true in life.
+
+763
+00:43:04,445 --> 00:43:09,140
+Scott: if you want things to be fair and just people should start with the same amount of money.
+
+764
+00:43:09,241 --> 00:43:17,300
+Scott: Obviously, it's okay for some people to be rich and some people are stupid Maybe deserve to be poor or if they make bad decisions, but no one should be poor due to bad luck.
+
+765
+00:43:17,721 --> 00:43:21,334
+Scott: We should give everyone some amount of money to start well, especially now.
+
+766
+00:43:21,374 --> 00:43:23,798
+Scott: the problem that there's you already have money Then you don't need it.
+
+767
+00:43:23,880 --> 00:43:25,509
+Rym: There is not enough work to do.
+
+768
+00:43:25,570 --> 00:43:27,340
+Rym: that doesn't require skills that are dead.
+
+769
+00:43:27,360 --> 00:43:27,742
+Scott: That's all.
+
+770
+00:43:27,762 --> 00:43:29,350
+Scott: that problem is only going to get worse.
+
+771
+00:43:29,430 --> 00:43:31,239
+Scott: There are more people than there is work to do.
+
+772
+00:43:31,360 --> 00:43:41,106
+Scott: Well, once again robot you need another way to just tribute the goods and food and things in our society Other than the system we have now Which is everyone needs a job to earn money.
+
+773
+00:43:41,166 --> 00:43:46,607
+Rym: robot cars will eliminate the single largest Employing industry in the United States.
+
+774
+00:43:46,728 --> 00:43:50,119
+Rym: like that ends the idea of employment as far as well.
+
+775
+00:43:51,064 --> 00:43:51,628
+Rym: The end.
+
+776
+00:43:51,950 --> 00:43:53,199
+Scott: socks get good ones.
+
+777
+00:43:53,721 --> 00:44:01,020
+Scott: They're really important to be comfortable and once they sort of wear out and don't feel amazing on your feet anymore Throw them out and buy a whole bunch of new ones.
+
+778
+00:44:01,140 --> 00:44:04,416
+Rym: What if I had to go back to my younger self?
+
+779
+00:44:04,456 --> 00:44:05,079
+Scott: socks are cheap.
+
+780
+00:44:05,119 --> 00:44:09,414
+Rym: yo And the rule the things I would tell me good ones are me are one.
+
+781
+00:44:09,675 --> 00:44:11,240
+Rym: just throw away all those old socks.
+
+782
+00:44:11,340 --> 00:44:12,244
+Rym: Don't worry about it.
+
+783
+00:44:12,264 --> 00:44:23,055
+Rym: - instead of having a hundred pairs of shitty socks so you don't have to do laundry as often in college buy like Five pair of smart wool and just wash them like regularly.
+
+784
+00:44:23,175 --> 00:44:24,480
+Rym: wash them in the sink if you have to.
+
+785
+00:44:25,881 --> 00:44:29,080
+Rym: Smart wool socks are the only socks worth wearing ever at this point.
+
+786
+00:44:29,221 --> 00:44:34,086
+Scott: Well, I mean if it's you know, if it's like hiking time, right if it's summer like summer Yeah, get thin smart wool.
+
+787
+00:44:34,227 --> 00:44:35,533
+Scott: Oh, they have tiny little smartwool.
+
+788
+00:44:35,553 --> 00:44:36,297
+Rym: Yeah, I'll show you them.
+
+789
+00:44:36,317 --> 00:44:36,840
+Rym: They're amazing.
+
+790
+00:44:37,541 --> 00:44:39,311
+Scott: The key is the thing is those are not cheap.
+
+791
+00:44:39,773 --> 00:44:41,040
+Rym: Yeah, they're like 20 bucks a pair.
+
+792
+00:44:41,080 --> 00:44:41,522
+Rym: But you know what?
+
+793
+00:44:41,543 --> 00:44:43,252
+Scott: Yes bag of socks are 20 bucks.
+
+794
+00:44:43,312 --> 00:44:44,840
+Rym: bag of shitty sweaty socks.
+
+795
+00:44:45,101 --> 00:44:46,407
+Scott: You can get some good socks 20 bucks.
+
+796
+00:44:46,447 --> 00:44:47,431
+Scott: It doesn't last as long.
+
+797
+00:44:47,592 --> 00:44:49,360
+Scott: Yeah, they're not good in all situations.
+
+798
+00:44:49,400 --> 00:44:50,665
+Rym: They're not gonna like situations.
+
+799
+00:44:50,685 --> 00:44:51,749
+Scott: They're good in sneaker outside.
+
+800
+00:44:51,829 --> 00:44:53,957
+Rym: All right, that was all the topics.
+
+801
+00:44:54,158 --> 00:44:54,439
+Scott: good.
+
+802
+00:44:54,459 --> 00:44:54,820
+Scott: We're done.
+
+803
+00:44:54,860 --> 00:44:57,720
+Scott: Wait now you don't have to send us any more crappy show ideas.
+
+804
+00:44:57,821 --> 00:44:59,634
+Rym: I feel like a few of those could have been a real show.
+
+805
+00:44:59,695 --> 00:45:00,319
+Scott: you the uber one.
+
+806
+00:45:06,272 --> 00:45:08,519
+Rym: This has been GeekNights with Rym and Scott.
+
+807
+00:45:08,559 --> 00:45:12,470
+Rym: special thanks to DJ pretzel for the opening music cat leave for web design and brand.
+
+808
+00:45:12,530 --> 00:45:15,900
+Scott: Okay for the logos be sure to visit our website at front row.
+
+809
+00:45:15,921 --> 00:45:18,950
+Scott: crew calm for show notes discussion news and more.
+
+810
+00:45:19,210 --> 00:45:26,610
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+811
+00:45:26,971 --> 00:45:30,146
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+812
+00:45:31,391 --> 00:45:36,166
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+813
+00:45:36,286 --> 00:45:37,570
+Scott: It's actually recorded at night.
+

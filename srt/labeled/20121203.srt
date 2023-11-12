@@ -1,0 +1,3756 @@
+1
+00:00:08,700 --> 00:00:10,323
+Rym: It's Monday, December 3rd, 2012.
+
+2
+00:00:10,323 --> 00:00:10,503
+Rym: I'm Rym.
+
+3
+00:00:10,523 --> 00:00:28,330
+Rym: I'm yawning And this is GeekNights tonight, we're talking about network sniffing and what programmers don't understand about networks and sniffing.
+
+4
+00:00:30,373 --> 00:00:31,407
+Scott: Let's do this.
+
+5
+00:00:32,795 --> 00:00:35,674
+Scott: So go to lunch today Doing your thing.
+
+6
+00:00:35,815 --> 00:00:37,881
+Scott: as happens in the city you walk down the street.
+
+7
+00:00:38,102 --> 00:00:41,875
+Rym: I went to Hale and Hardy had a really kind of mediocre Soup.
+
+8
+00:00:42,198 --> 00:00:49,476
+Rym: I had some overpriced Sushi that weren't too bad got a really really shit cookie because they have the shittest cookies And I really wanted a cookie.
+
+9
+00:00:49,556 --> 00:00:51,646
+Scott: as you get the cookie there cuz I really wanted to come.
+
+10
+00:00:51,666 --> 00:00:52,590
+Scott: which is the cookie there?
+
+11
+00:00:52,733 --> 00:00:53,104
+Rym: I don't know.
+
+12
+00:00:53,932 --> 00:00:54,916
+Scott: Sorry, like two dollars.
+
+13
+00:00:55,116 --> 00:00:58,930
+Rym: the problem is that I get back to the office and one of my co-workers is like a bra brownies.
+
+14
+00:01:01,414 --> 00:01:09,670
+Scott: So I'm walking to lunch and Fire engines going down the street, and I'm like okay the usual usual, and there's a you know the the fire SUV is behind it.
+
+15
+00:01:09,670 --> 00:01:10,517
+Scott: I'm like okay.
+
+16
+00:01:10,879 --> 00:01:11,403
+Scott: I go to lunch.
+
+17
+00:01:11,444 --> 00:01:12,210
+Scott: I come back from lunch.
+
+18
+00:01:12,934 --> 00:01:19,049
+Scott: I come back from lunch, and I see that on the intersection outside my office There is a great deal of fire and police.
+
+19
+00:01:19,352 --> 00:01:23,378
+Rym: Interesting because a few days ago And I tweeted about this the exact same thing happened to me.
+
+20
+00:01:23,619 --> 00:01:29,449
+Rym: there were fire engines blocking like City Hall and like they'd Evacuated the park and all the entrances were locked up.
+
+21
+00:01:29,993 --> 00:01:34,424
+Scott: Okay, so anyway something was going on in the street And I couldn't really see and I didn't give a shit that much.
+
+22
+00:01:34,444 --> 00:01:35,290
+Scott: so I went to the office.
+
+23
+00:01:35,633 --> 00:01:41,130
+Scott: I get to the office I look out the window I can kind of see but I can't really tell what's going on and I'm like okay something's going on there.
+
+24
+00:01:41,651 --> 00:01:46,204
+Scott: So I go back to work sitting down eating the lunch doing the work a couple hours later.
+
+25
+00:01:46,364 --> 00:01:47,247
+Scott: Get up stretch.
+
+26
+00:01:47,588 --> 00:01:48,250
+Scott: We got the window.
+
+27
+00:01:49,411 --> 00:01:55,599
+Scott: There's police all around there still and I'm like What could possibly have happened there?
+
+28
+00:01:55,619 --> 00:01:57,887
+Scott: that they're hanging out for hours.
+
+29
+00:01:57,907 --> 00:01:58,650
+Scott: you you know?
+
+30
+00:01:58,951 --> 00:02:01,464
+Scott: It's like I figured you know somebody got hurt.
+
+31
+00:02:01,505 --> 00:02:09,769
+Scott: Maybe somebody fell maybe some you know who know you know someone car accident something like that and They just you know clean it up in an hour and go away.
+
+32
+00:02:09,991 --> 00:02:14,690
+Rym: What's interesting is the same thing happened to me before and I basically did the same thing you did right?
+
+33
+00:02:14,830 --> 00:02:16,498
+Scott: So they're sitting there, and it's been hours.
+
+34
+00:02:16,920 --> 00:02:19,071
+Scott: You know it was like noon, and this is like at 3 30.
+
+35
+00:02:19,071 --> 00:02:21,110
+Scott: They're still out there, and it's mostly police.
+
+36
+00:02:21,230 --> 00:02:33,450
+Scott: They've got it roped off and I can see the subway station on that side is closed and nobody's going into the subway on this On my side of the street Which is not good because I need to go in there to get home without walking anywhere.
+
+37
+00:02:33,591 --> 00:02:39,958
+Scott: So I go to Google and usually when I google for like ultra local, New York news It's not that easy to find it.
+
+38
+00:02:39,998 --> 00:02:43,113
+Scott: like remember that time we were biking back from New Jersey And there's a fire.
+
+39
+00:02:43,655 --> 00:02:45,041
+Scott: I tried to google that fire the next day.
+
+40
+00:02:45,081 --> 00:02:46,045
+Scott: I couldn't find shit.
+
+41
+00:02:46,266 --> 00:02:55,550
+Rym: nah, man well the thing is what the point I was going to make is that I have a much a Pretty good success rate when weird shit happens in New York of finding out what it was.
+
+42
+00:02:55,590 --> 00:03:00,690
+Scott: But if it has to be big enough over a certain threshold that a news truck will show ah it just has to be in.
+
+43
+00:03:00,931 --> 00:03:02,717
+Rym: As far as I found this was in Manhattan.
+
+44
+00:03:02,878 --> 00:03:06,030
+Scott: the fire yeah, right, but it's like that fire that fire.
+
+45
+00:03:06,090 --> 00:03:07,859
+Rym: Yeah, I'm gonna wonder if I can find that fire now.
+
+46
+00:03:08,080 --> 00:03:16,790
+Scott: Good luck anyway, but anyway Yeah, it's like if the news breaks a certain threshold then it'll be really easy to find because it's fucking New York City.
+
+47
+00:03:16,910 --> 00:03:24,318
+Scott: But if it's like below, it's actually rather hard to find if no one reports on it, right I still think my idea for a website.
+
+48
+00:03:24,358 --> 00:03:25,000
+Rym: I just want to call it.
+
+49
+00:03:25,041 --> 00:03:25,844
+Rym: What the fuck was that?
+
+50
+00:03:26,306 --> 00:03:30,285
+Rym: calm yeah And all it is is you just log you know locations.
+
+51
+00:03:30,386 --> 00:03:33,259
+Scott: usually what I do is I try to search Twitter and Google News.
+
+52
+00:03:33,299 --> 00:03:36,212
+Scott: those are my go and then I go to the New York news Websites.
+
+53
+00:03:36,252 --> 00:03:40,710
+Scott: the real way to find stuff out like this is have a police radio, but I don't have one of those there.
+
+54
+00:03:40,811 --> 00:03:44,717
+Rym: I don't know how it is here, but in some places I've been there are weird laws like you can hold.
+
+55
+00:03:44,777 --> 00:03:49,170
+Rym: you can own a police scanner, but not have it in your car.
+
+56
+00:03:50,190 --> 00:03:56,300
+Scott: Interesting yeah, I wonder if it's legal to take a police scanner Take the audio output and stream it on the internet.
+
+57
+00:03:56,320 --> 00:03:59,052
+Scott: so some we just go to the website and listen to like New York police Scanner.
+
+58
+00:03:59,214 --> 00:04:01,030
+Rym: I'll bet it depends on state and city laws.
+
+59
+00:04:01,091 --> 00:04:09,381
+Rym: But I will say this when I was a kid We had a police scanner right and in the old days the way this worked is you get crystals for whatever Channels like in a CB radio you'd buy like right
+
+60
+00:04:09,421 --> 00:04:15,329
+Scott: because if you just buy a scanner They remove those channels as possibilities, and those are only good for like listening
+
+61
+00:04:16,891 --> 00:04:18,576
+Rym: Than that I'm talking like when I was a kid in the
+
+62
+00:04:18,897 --> 00:04:18,957
+Scott: 80s.
+
+63
+00:04:19,036 --> 00:04:22,407
+Rym: No you really couldn't get a variable antenna.
+
+64
+00:04:22,487 --> 00:04:28,410
+Rym: or like a variable radio you plug in a little crystal that would resonate and give you like the.
+
+65
+00:04:29,152 --> 00:04:34,790
+Rym: So you'd buy like a channel 13 crystal for your CB radio and your radio had like three slots.
+
+66
+00:04:34,810 --> 00:04:35,990
+Rym: So you could have up to three crystals.
+
+67
+00:04:36,528 --> 00:04:40,048
+Rym: I Remember one day for my birthday my dad got me a second crystals.
+
+68
+00:04:40,088 --> 00:04:42,800
+Rym: my brother And I could use two different channels on our CB radios.
+
+69
+00:04:43,443 --> 00:04:44,327
+Rym: that was the fucking.
+
+70
+00:04:44,367 --> 00:04:44,990
+Rym: that was awesome.
+
+71
+00:04:45,632 --> 00:04:50,130
+Rym: But so there were channels for our police scanner like we had crystals for all this stuff.
+
+72
+00:04:50,170 --> 00:04:52,449
+Rym: But there were some crystals that you weren't allowed to buy.
+
+73
+00:04:53,353 --> 00:04:55,602
+Rym: My dad was a fireman so we had all the crystals.
+
+74
+00:04:55,944 --> 00:04:57,530
+Scott: so we'd listen to all the crystals.
+
+75
+00:04:57,691 --> 00:04:59,366
+Rym: We left it on scanning all the time.
+
+76
+00:04:59,426 --> 00:05:04,910
+Rym: so at night There'd be like we just find out about crazy fires and go watch houses burn down anyway.
+
+77
+00:05:05,131 --> 00:05:12,299
+Scott: So I go to Google News, and I say 49th Street, and I immediately find So it was some fight on the subway platform.
+
+78
+00:05:12,339 --> 00:05:15,447
+Scott: dude pushed a dude on the tracks got hit and died.
+
+79
+00:05:15,688 --> 00:05:18,143
+Scott: not cool Not cool at all.
+
+80
+00:05:18,344 --> 00:05:19,049
+Scott: kind of weird.
+
+81
+00:05:19,973 --> 00:05:26,930
+Rym: It's like if I was gonna fight a dude Which I wouldn't do I point out already the kinds of people who get into a fight on the subway.
+
+82
+00:05:27,611 --> 00:05:28,537
+Rym: We're taking time bombs.
+
+83
+00:05:28,678 --> 00:05:30,650
+Scott: apparently it was like a 60 year old guy who got killed.
+
+84
+00:05:31,530 --> 00:05:39,554
+Rym: So the question is was he killed by another old man in an old idea, or was he killed by the stereotypical In quotes gang?
+
+85
+00:05:39,855 --> 00:05:45,904
+Scott: I didn't read the Google News that much more than men so you can go read it if you want more details Which I'm sure the police collected over those many hours.
+
+86
+00:05:45,944 --> 00:05:46,910
+Scott: They were all hanging out there.
+
+87
+00:05:46,950 --> 00:05:50,294
+Scott: There were a lot of top brass on that street corner And mine was.
+
+88
+00:05:50,375 --> 00:05:53,090
+Rym: so the thing I saw was much less interesting in the end.
+
+89
+00:05:53,171 --> 00:05:54,469
+Rym: You know I wonder what was going on.
+
+90
+00:05:54,570 --> 00:05:57,422
+Rym: I tried to like pull I was like I'm impressed.
+
+91
+00:05:57,442 --> 00:05:58,185
+Rym: could I get a statement?
+
+92
+00:05:58,205 --> 00:06:03,169
+Rym: and the cop was like Even if I knew not telling anyone.
+
+93
+00:06:04,153 --> 00:06:23,650
+Rym: So I gave up, and I went about my business and later on Twitter I learned that it was a AIDS activist had climbed a flagpole and hung a flag and Apparently that entails shutting down the entire park having every cop in the world there cordoning off everything And there's like 20 cops standing around watching one dude very slowly in a cherry picker like cut the flag down.
+
+94
+00:06:24,092 --> 00:06:26,944
+Scott: They couldn't send 19 of those cops to a bad neighborhood instead.
+
+95
+00:06:26,964 --> 00:06:31,020
+Rym: no and they had this like Terrorism rapid response unit there too.
+
+96
+00:06:31,081 --> 00:06:33,189
+Rym: that I learned about by googling because I saw there's.
+
+97
+00:06:33,209 --> 00:06:41,569
+Rym: no He didn't put a bomb on with the flag up on that because the dude who hung the flag was still there yelling About how he put the flag up.
+
+98
+00:06:42,791 --> 00:06:45,723
+Rym: I'm just I'm so unafraid of terrorists that it annoys.
+
+99
+00:06:45,903 --> 00:06:47,670
+Rym: it annoys and amazes me the reactions.
+
+100
+00:06:47,831 --> 00:06:50,059
+Rym: But then again, New York is much calmer than Boston.
+
+101
+00:06:50,762 --> 00:06:58,510
+Rym: I guess remember when they overreacted to that Little like LED light show that was all around the city anyway and all the threads on the internet.
+
+102
+00:06:58,771 --> 00:07:02,862
+Scott: You know I sort of joked like you know I should run to be.
+
+103
+00:07:03,123 --> 00:07:05,449
+Scott: you know mayor on the platform that I'll you know.
+
+104
+00:07:05,951 --> 00:07:07,236
+Scott: Make the police not suck.
+
+105
+00:07:07,396 --> 00:07:12,333
+Scott: because also you know in somewhat related, New York cop news There have been.
+
+106
+00:07:12,353 --> 00:07:14,040
+Scott: there have been like two or three good cops.
+
+107
+00:07:14,181 --> 00:07:16,430
+Scott: one of them has a website that doesn't look very well.
+
+108
+00:07:16,450 --> 00:07:18,439
+Rym: Here's a million websites of police scanners.
+
+109
+00:07:18,459 --> 00:07:20,609
+Rym: We can just listen to live from anywhere in the country nice.
+
+110
+00:07:21,491 --> 00:07:23,017
+Scott: But anyway the there was.
+
+111
+00:07:23,278 --> 00:07:27,756
+Scott: there have been a few cops in New York City who were like just exposing The hell out of the police.
+
+112
+00:07:27,796 --> 00:07:31,010
+Scott: he's like look I brought in an audio video recorder to the police meeting.
+
+113
+00:07:31,351 --> 00:07:35,910
+Scott: Here's the precinct chief guy saying talking about the quota that doesn't exist.
+
+114
+00:07:36,050 --> 00:07:41,010
+Scott: But he's saying you he says like straight up you guys go you gotta go arrest more dudes.
+
+115
+00:07:41,291 --> 00:07:43,322
+Rym: Well, I thought about this a lot like if I were.
+
+116
+00:07:43,342 --> 00:07:57,604
+Rym: you know New York City is complicated But like when we lived in Beacon upstate if I ran the police like enforcement division in that city I would basically fuzz not bother with Speeders anymore and kind of the basic stuff and I would just go after.
+
+117
+00:07:57,644 --> 00:08:05,152
+Rym: I would just have one dude whose sole job Was to pull people over don't turn their headlights on at night or in the rain, and I'd make the fine like $5,000.
+
+118
+00:08:05,152 --> 00:08:08,642
+Scott: yeah, I'd go after all this stuff that people don't you know.
+
+119
+00:08:08,702 --> 00:08:14,830
+Scott: think to go after that's actually worth going after and if you're In a small town you can go to bike thieves you go after all kinds of good stuff.
+
+120
+00:08:14,910 --> 00:08:18,985
+Rym: Also, I'd really go after littering because it'd be really it's low-hanging fruit there.
+
+121
+00:08:19,125 --> 00:08:26,270
+Scott: Yep, but yeah No, they go after watching a guy put a flag in a flagpole and all you know and then they do stuff like have quotas?
+
+122
+00:08:26,331 --> 00:08:27,321
+Scott: They're not supposed to have.
+
+123
+00:08:27,341 --> 00:08:31,525
+Scott: but yeah If I could write if I could get elected mayor somehow I could.
+
+124
+00:08:31,585 --> 00:08:34,886
+Scott: I would take that guy that Whistle-blowing cop who you know who?
+
+125
+00:08:36,289 --> 00:08:45,670
+Scott: You know who was like hey, there's a quota and published it and everything and I would say you're the commissioner now Boom you know in New York City and all the cops would freak the fuck out and maybe try to kill me.
+
+126
+00:08:45,730 --> 00:08:47,466
+Scott: But doesn't matter I'd implement.
+
+127
+00:08:48,151 --> 00:08:52,966
+Rym: I'd like the idea of every cop having to wear a GoPro or equivalent whenever they're on duty of course.
+
+128
+00:08:53,167 --> 00:08:55,756
+Scott: so you know some special Police can make all the shit public.
+
+129
+00:08:56,098 --> 00:08:57,162
+Scott: you know police meetings.
+
+130
+00:08:57,222 --> 00:08:58,085
+Scott: Yeah, it's fucking public.
+
+131
+00:08:58,166 --> 00:08:59,290
+Scott: might as well be town council meeting.
+
+132
+00:08:59,832 --> 00:09:00,132
+Rym: I would.
+
+133
+00:09:00,794 --> 00:09:05,990
+Rym: you do need to have the ability to meet privately like say you say the detectives are figuring out the serial killer case.
+
+134
+00:09:06,590 --> 00:09:07,356
+Rym: Okay, they don't.
+
+135
+00:09:07,396 --> 00:09:09,470
+Rym: you don't want the guy who committed the crimes now watching.
+
+136
+00:09:09,550 --> 00:09:13,650
+Scott: Well, I'm talking about the meeting where the police get together in the morning, and they're like all right guys.
+
+137
+00:09:13,690 --> 00:09:14,254
+Scott: This is what we're doing.
+
+138
+00:09:14,294 --> 00:09:15,260
+Rym: Yeah, but what if in that meeting.
+
+139
+00:09:15,280 --> 00:09:15,924
+Rym: They're like all right.
+
+140
+00:09:15,964 --> 00:09:16,870
+Rym: remember that serial killer?
+
+141
+00:09:16,890 --> 00:09:17,473
+Scott: They don't do that.
+
+142
+00:09:17,653 --> 00:09:18,517
+Scott: those meetings are pretty.
+
+143
+00:09:18,537 --> 00:09:19,682
+Scott: have you ever been to one of those meetings.
+
+144
+00:09:20,023 --> 00:09:22,574
+Rym: I actually have in Detroit So boring.
+
+145
+00:09:22,614 --> 00:09:24,001
+Scott: it's like all right guys listen up.
+
+146
+00:09:24,423 --> 00:09:26,050
+Scott: We got the quota that we're not supposed to have.
+
+147
+00:09:26,070 --> 00:09:27,669
+Scott: We're gonna use a different word to describe it.
+
+148
+00:09:27,790 --> 00:09:31,890
+Scott: But you guys are behind or ahead good job or bad job and look at this wall.
+
+149
+00:09:32,212 --> 00:09:33,601
+Scott: You know those are the people who are wanted.
+
+150
+00:09:33,661 --> 00:09:34,104
+Scott: you'll notice.
+
+151
+00:09:34,124 --> 00:09:35,090
+Scott: There's a new got in Detroit.
+
+152
+00:09:35,170 --> 00:09:38,224
+Rym: They had the wall of unsolved murders that have not been given up.
+
+153
+00:09:38,244 --> 00:09:39,470
+Scott: look at that new face on the wall.
+
+154
+00:09:39,570 --> 00:09:40,875
+Scott: Just remember it before you go out.
+
+155
+00:09:40,915 --> 00:09:43,124
+Scott: that guy hasn't paid child support in like six months.
+
+156
+00:09:43,164 --> 00:09:49,930
+Scott: if you see him bag him in and You know we're setting up a little checkpoint over on this street today because it's gonna be a drunken party.
+
+157
+00:09:49,970 --> 00:09:52,463
+Rym: Why can't it be more like a robo cop or Gotham Central?
+
+158
+00:09:52,704 --> 00:09:53,870
+Scott: It is not like that at all.
+
+159
+00:09:54,835 --> 00:09:59,297
+Scott: I see no reason why that meeting Could not be public.
+
+160
+00:09:59,919 --> 00:10:02,130
+Rym: so this is some old news.
+
+161
+00:10:02,512 --> 00:10:04,769
+Rym: That's old for from a number of angles.
+
+162
+00:10:05,071 --> 00:10:07,799
+Rym: But I realized it hasn't been talked about a lot in the technologies front.
+
+163
+00:10:07,839 --> 00:10:08,000
+Rym: now.
+
+164
+00:10:08,060 --> 00:10:11,170
+Rym: sadly slash shot linked to an article about it.
+
+165
+00:10:11,250 --> 00:10:13,360
+Rym: So I thought oh, this is a good opportunity to talk about it.
+
+166
+00:10:13,983 --> 00:10:24,298
+Rym: the article is so Poorly written and it beats around the bush so much it actually doesn't really explain what the problem is Until like 40 paragraphs in.
+
+167
+00:10:24,318 --> 00:10:27,449
+Scott: that must be a real clean bush nice and circular shaped.
+
+168
+00:10:28,752 --> 00:10:30,600
+Rym: You could beat around in a regular bush.
+
+169
+00:10:30,821 --> 00:10:32,910
+Rym: Just as easily as a nice and clean bush.
+
+170
+00:10:32,910 --> 00:10:35,488
+Scott: Well, that's beating off in the bush not beating around the bush.
+
+171
+00:10:37,271 --> 00:10:38,967
+Scott: You've never been to the bush.
+
+172
+00:10:42,910 --> 00:10:49,350
+Rym: So here's the deal on the highest highest level because I swear you don't care about the details under this.
+
+173
+00:10:49,953 --> 00:10:53,110
+Rym: Though part of the problem is that you don't care about the deals under details under this.
+
+174
+00:10:53,210 --> 00:10:56,608
+Rym: But part of the solution is that those details are so old they don't matter.
+
+175
+00:10:57,751 --> 00:11:04,833
+Rym: So people who live in rural areas are having calls to their landlines drops with a surprising Frequency.
+
+176
+00:11:04,853 --> 00:11:06,981
+Scott: we're talking as in so you live in the sticks.
+
+177
+00:11:07,001 --> 00:11:08,125
+Scott: someone tries to call you.
+
+178
+00:11:08,206 --> 00:11:09,149
+Scott: the phone doesn't ring.
+
+179
+00:11:09,250 --> 00:11:15,610
+Rym: now We're talking like early AT&T iPhone levels like greater than 20% of inbound calls.
+
+180
+00:11:15,670 --> 00:11:18,230
+Rym: Just never make it or get dropped within the first few seconds.
+
+181
+00:11:19,035 --> 00:11:29,310
+Scott: Now you might think oh duh ancient rural Infrastructure not really shitty phone lines and phone switches that are like a hundred years old and they don't work anymore.
+
+182
+00:11:29,310 --> 00:11:31,536
+Rym: You're probably picturing those one-way power lines.
+
+183
+00:11:31,576 --> 00:11:36,870
+Rym: They use in really podunk towns where it grounds out to the earth around the end by your house.
+
+184
+00:11:36,970 --> 00:11:38,017
+Scott: Yeah, and guess what?
+
+185
+00:11:38,158 --> 00:11:39,103
+Rym: That's not the problem.
+
+186
+00:11:39,124 --> 00:11:40,110
+Scott: Yeah, that shit fucking works.
+
+187
+00:11:40,330 --> 00:11:46,890
+Rym: Actually, those lines are actually higher quality than the lines in most cities and they're much better maintained.
+
+188
+00:11:47,211 --> 00:11:49,942
+Rym: Yeah, the problem is they don't have digital congestion.
+
+189
+00:11:49,962 --> 00:11:51,990
+Scott: They have a frickin separate wire for everybody.
+
+190
+00:11:52,253 --> 00:11:53,810
+Rym: So let's go back to the early days.
+
+191
+00:11:53,931 --> 00:11:58,169
+Rym: You know Ma Bell the old days of phone systems in the United States like the 80s.
+
+192
+00:11:59,250 --> 00:12:08,345
+Rym: So in that time there was this sort of analog system with some digital Components of routing calls around and it was actually really really really complex.
+
+193
+00:12:08,625 --> 00:12:20,659
+Rym: the technology around it was amazing Especially for the day especially considering how much of it was analog and mechanical And you had to be able to route a call from anywhere in the country to anywhere else in the country And it might have taken a while to connect.
+
+194
+00:12:20,679 --> 00:12:24,859
+Scott: like you call you wait you wait you wait and it rings But eventually it fucking worked all the time.
+
+195
+00:12:24,900 --> 00:12:26,528
+Rym: Do you remember Scott from the 80s?
+
+196
+00:12:27,850 --> 00:12:34,789
+Rym: How a lot like when they taught you remember all those classes and like elementary school Like here's how to do a letterhead when they teach you like how long to let the phone ring.
+
+197
+00:12:35,911 --> 00:12:37,458
+Scott: No one taught me how long to let the phone ring.
+
+198
+00:12:37,499 --> 00:12:39,749
+Scott: I just let the phone ring until I heard ringing.
+
+199
+00:12:40,610 --> 00:12:45,410
+Rym: Really really we were told six rings for a local call eight rings for a long distance.
+
+200
+00:12:45,430 --> 00:12:50,745
+Rym: No one ever taught me ten rings for an international call because no one had answering machines or voicemail.
+
+201
+00:12:50,785 --> 00:12:51,267
+Scott: That's true.
+
+202
+00:12:51,287 --> 00:12:54,850
+Rym: I Remember we got our first answering machine is a big fucking deal.
+
+203
+00:12:54,970 --> 00:12:59,490
+Scott: But I just you know you wait on the phone long enough some number of rings until you get tired of fucking waiting.
+
+204
+00:12:59,811 --> 00:13:03,770
+Rym: Yeah thing is you don't know a too long cuz that was in play cuz what if the person was screening their calls?
+
+205
+00:13:04,630 --> 00:13:05,895
+Scott: Yeah, anyway, don't do that.
+
+206
+00:13:06,016 --> 00:13:14,163
+Rym: So all that infrastructure had of course a ridiculous body of legislation around it and one of the things had to do with how to pay.
+
+207
+00:13:14,404 --> 00:13:18,696
+Rym: because there's the local loop then there's Like the more like the regional telco.
+
+208
+00:13:18,997 --> 00:13:23,910
+Rym: then there's the switching between like different like higher level regions and long-distance calls.
+
+209
+00:13:24,294 --> 00:13:25,810
+Rym: It used to be that it wasn't a long.
+
+210
+00:13:25,890 --> 00:13:29,910
+Rym: It was a long-distance call to call someone who lived like the next town over.
+
+211
+00:13:30,151 --> 00:13:33,020
+Scott: Yeah, basically, it's like, you know, we could dial.
+
+212
+00:13:33,080 --> 00:13:36,110
+Scott: you have a seven-digit phone number and to this day this still works, right?
+
+213
+00:13:36,130 --> 00:13:42,230
+Scott: You could just dial somebody's seven-digit phone numbers straight up as long as they're in the same area code, right?
+
+214
+00:13:42,491 --> 00:13:46,039
+Scott: But if they're in a different area code You had to dial the area code.
+
+215
+00:13:46,120 --> 00:13:48,030
+Scott: now the area code is missing part of the phone number.
+
+216
+00:13:48,050 --> 00:13:49,350
+Rym: But even then it wasn't always.
+
+217
+00:13:49,532 --> 00:13:52,577
+Rym: Sometimes you needed to dial the area code Even if they were in your area code.
+
+218
+00:13:52,638 --> 00:14:02,230
+Rym: if you were in a region where there'd been a recent split Like, you know Detroit was the three one three area code and then it filled up One which is the country code for us and then the number.
+
+219
+00:14:03,212 --> 00:14:12,259
+Rym: Funny thing is back then I one meant I am I'm making a call that I have to ask my parents to do first because right because it cost money Lots of money.
+
+220
+00:14:12,360 --> 00:14:18,970
+Scott: local calls are basically we're free You don't have to pay anything extra above your you know standard pay money to keep the phone on flat rate.
+
+221
+00:14:19,131 --> 00:14:22,466
+Rym: Actually, we paid a flat rate for our first phone line.
+
+222
+00:14:22,747 --> 00:14:27,390
+Rym: We paid for 450 local minutes on our secondary phone line.
+
+223
+00:14:27,470 --> 00:14:33,528
+Scott: I had a second phone line that we got way later only for a few years in the late 90s for internetting.
+
+224
+00:14:33,548 --> 00:14:39,730
+Rym: Yep Because after we had cable we kept that second phone line because that was basically like my own personal phone line.
+
+225
+00:14:39,810 --> 00:14:40,393
+Rym: It was awesome.
+
+226
+00:14:40,513 --> 00:14:44,390
+Scott: I had my own personal phone line also, but I you know, we use the phone on it.
+
+227
+00:14:44,550 --> 00:14:48,810
+Rym: We used it because there was no, you know voice chat in games back then.
+
+228
+00:14:49,171 --> 00:14:53,770
+Rym: So we would all like use that phone number into conference calls and then three-way calling with phones.
+
+229
+00:14:54,172 --> 00:14:56,909
+Scott: Do that if I had a regular modem on that line as well?
+
+230
+00:14:57,193 --> 00:14:58,130
+Rym: See we had a cable modem.
+
+231
+00:14:58,411 --> 00:15:06,714
+Rym: but then we play like a quick deathmatch and like I'd call person a They would use their like conference calling from their parents to call person B. We've usually this chain.
+
+232
+00:15:06,734 --> 00:15:11,070
+Rym: a bunch of people in there as voice chat while we played quick deathmatch should not do that.
+
+233
+00:15:11,190 --> 00:15:18,290
+Rym: Anyway, anyway, so for example rural local loops cost way more to build and maintain than the ones in cities.
+
+234
+00:15:18,952 --> 00:15:24,170
+Rym: So those local loops is regulations saying they got to charge more for terminated calls in those regions?
+
+235
+00:15:24,952 --> 00:15:30,850
+Rym: We live in a world where none of that matters or even is accessible or visible to the vast majority of people.
+
+236
+00:15:31,652 --> 00:15:34,923
+Rym: So as a result, the regulations haven't really changed much.
+
+237
+00:15:35,405 --> 00:15:36,890
+Scott: and right it was basically an incentive.
+
+238
+00:15:36,951 --> 00:15:45,689
+Scott: It was saying hey look phone company We want these people who live in the sticks to be able to have phone service because if you charge You know them the same amount you charge something lives in New York City.
+
+239
+00:15:46,212 --> 00:15:50,430
+Scott: It's not economically viable for you, which means you're not gonna build phone lines for the people in the sticks.
+
+240
+00:15:50,734 --> 00:15:52,010
+Scott: So even the six won't have phones.
+
+241
+00:15:52,131 --> 00:15:57,329
+Scott: So we're gonna allow you to charge more money to people living in you know for phone calls to the sticks.
+
+242
+00:15:57,892 --> 00:16:04,755
+Scott: So that you will want to build phone lines in the sticks and people in everyone in the whole country will have phones Including the sticks.
+
+243
+00:16:04,875 --> 00:16:13,745
+Scott: and thus that is why everyone in the country pretty much no matter where you live even the extreme sticks Extreme sticks you can get a phone line pretty easily.
+
+244
+00:16:14,146 --> 00:16:17,863
+Rym: So here's the problem Nowadays, I mean there's a million websites.
+
+245
+00:16:17,883 --> 00:16:18,990
+Rym: You can just buy phone numbers.
+
+246
+00:16:19,090 --> 00:16:22,079
+Rym: I have on my phone that basically that xkc said it best.
+
+247
+00:16:22,460 --> 00:16:30,854
+Rym: those first three digits in your phone number are are basically Random and your area code is basically just where you lived around 2004.
+
+248
+00:16:30,854 --> 00:16:31,547
+Scott: Yeah, pretty much.
+
+249
+00:16:32,091 --> 00:16:40,367
+Rym: So now the numbers don't really make sense like that anymore and you just dial one for everything if you dial one at all And all this just push you go to contacts you touch the person's name.
+
+250
+00:16:40,387 --> 00:16:50,947
+Rym: it basically Call routing will be routed via a least cost model Meaning you'll route to these like, you know a call will be routed to some discount carrier because it's cheaper.
+
+251
+00:16:51,349 --> 00:16:58,382
+Rym: that discount carrier then tries to route it as cheaply as possible to make a profit between what they get paid and what they have to pay to terminate the call.
+
+252
+00:16:58,402 --> 00:17:07,589
+Rym: and What they're doing is if they have to terminate the call somewhere where there is a statutory rate That's high and they would lose money on the call.
+
+253
+00:17:08,175 --> 00:17:11,035
+Rym: They just fucking drop it Even though that's totally illegal.
+
+254
+00:17:11,076 --> 00:17:16,876
+Rym: the FCC apparently is fined no one for this because it's so hard to prove They don't have any resources.
+
+255
+00:17:16,936 --> 00:17:20,310
+Rym: It's basically an unenforceable set of legislation and there's a loophole.
+
+256
+00:17:21,290 --> 00:17:23,157
+Rym: Rather than terminating the call, you know what I can do.
+
+257
+00:17:23,800 --> 00:17:26,290
+Rym: Just keep looping it forever and never actually let it terminate.
+
+258
+00:17:26,471 --> 00:17:27,156
+Rym: I didn't drop it.
+
+259
+00:17:27,257 --> 00:17:28,628
+Rym: I just wait for the other person to give up.
+
+260
+00:17:30,052 --> 00:17:33,950
+Scott: The other thing that's going on is you can read about this to get all the details.
+
+261
+00:17:34,071 --> 00:17:44,314
+Scott: But a lot of places like you know One nine hundred number places and call centers set up their phone centers in specific places in the country Overloading those places.
+
+262
+00:17:44,334 --> 00:17:57,470
+Scott: Yeah that have certain rates and then what happens is for there's a big fight about this because Google Voice basically blocks Entire section, you know entire sections of the country that have these like phone call places in them.
+
+263
+00:17:57,831 --> 00:18:01,589
+Scott: You know these one nine hundred numbers because they don't want it to pay to service that bullshit.
+
+264
+00:18:01,669 --> 00:18:02,833
+Scott: now Bullshit.
+
+265
+00:18:03,195 --> 00:18:05,249
+Scott: and there's a few people who live there get screwed by that.
+
+266
+00:18:05,611 --> 00:18:09,890
+Scott: But the real phone companies like AT&T say hey, what the fuck?
+
+267
+00:18:10,050 --> 00:18:14,210
+Scott: How come Google is allowed to not service that unprofitable bullshit area?
+
+268
+00:18:14,830 --> 00:18:24,590
+Scott: But we're not allowed to not service that because there's the regulation that makes us do it and Google isn't following that regulation with Google Voice and it's well Google Voice is not the same thing as the actual phone company.
+
+269
+00:18:24,972 --> 00:18:36,374
+Rym: Now couple this with the fact that for someone like me, I don't care Don't want those people to be on my phone network because they because the few people are caught up in the sort of like the Collateral damage.
+
+270
+00:18:36,856 --> 00:18:37,942
+Rym: I don't know any of those people.
+
+271
+00:18:38,002 --> 00:18:38,866
+Rym: I will never call them.
+
+272
+00:18:38,886 --> 00:18:39,610
+Rym: They'll never call me.
+
+273
+00:18:39,771 --> 00:18:43,030
+Scott: Yeah, and it's like if you're in the sticks, they already don't have cell phone service.
+
+274
+00:18:43,090 --> 00:18:51,930
+Scott: So they even though they you know, we still have this guarantee of wired service because this old regulation and old system, you know It's like well, there's no cell phone service.
+
+275
+00:18:51,971 --> 00:18:59,589
+Rym: So really there is effective Example of something I used to do in the early days of email like if I'd run an email server I could set up filters.
+
+276
+00:19:00,052 --> 00:19:06,819
+Rym: I'll basically block emails from any IP address in China Because that's where all the spam was coming from for a time.
+
+277
+00:19:06,939 --> 00:19:13,749
+Scott: then who in China is actually gonna email me or who has Hosted, you know hosted server in China that is sending legitimate emails to me?
+
+278
+00:19:13,990 --> 00:19:18,510
+Rym: Yep, nowadays that all comes from like hack people behind cable modems and whatever.
+
+279
+00:19:18,550 --> 00:19:28,737
+Rym: But anyway, so this is an interesting problem That is obsolete to young people who leave rural areas because I haven't had a landline Since the year 2000.
+
+280
+00:19:28,737 --> 00:19:30,864
+Rym: I will probably never have a landline again.
+
+281
+00:19:30,884 --> 00:19:38,589
+Rym: And sure there is a drawback I can't have my guaranteed phone service if the cell networks and power all go out like wire landlines do.
+
+282
+00:19:38,609 --> 00:19:40,433
+Rym: I Just don't care.
+
+283
+00:19:40,735 --> 00:19:41,861
+Rym: Don't care don't care at all.
+
+284
+00:19:42,083 --> 00:19:44,957
+Rym: We're good Got any news?
+
+285
+00:19:45,522 --> 00:19:50,269
+Scott: Oh new you want news News news news news news news news.
+
+286
+00:19:51,511 --> 00:19:53,560
+Scott: Okay, so I don't know if anyone realized this.
+
+287
+00:19:53,580 --> 00:19:59,441
+Scott: I'm sure everyone realized this but iTunes 11 just came out which is actually much delayed.
+
+288
+00:19:59,481 --> 00:20:05,796
+Scott: It was supposed to come out around the iPhone 5 time you know, they announced it along with the New iPad and everything.
+
+289
+00:20:05,857 --> 00:20:09,030
+Scott: recently, you know, I've had many and then I you know and everything like that.
+
+290
+00:20:10,333 --> 00:20:11,885
+Scott: It didn't appear but now it has appeared.
+
+291
+00:20:11,906 --> 00:20:15,319
+Scott: so First of all, it's actually a major change.
+
+292
+00:20:15,339 --> 00:20:17,087
+Scott: It's it's not iTunes 10 point something.
+
+293
+00:20:17,128 --> 00:20:17,751
+Scott: It's 11.
+
+294
+00:20:17,751 --> 00:20:18,596
+Scott: It's a whole new version.
+
+295
+00:20:18,616 --> 00:20:20,710
+Scott: The UI is significantly changed.
+
+296
+00:20:20,790 --> 00:20:21,674
+Scott: You can see what they did.
+
+297
+00:20:21,694 --> 00:20:25,810
+Scott: is they did sort of a clever thing where they updated it graphically, right?
+
+298
+00:20:26,191 --> 00:20:28,989
+Scott: But they also sort of gave it this new UI.
+
+299
+00:20:29,231 --> 00:20:29,833
+Scott: but they put it.
+
+300
+00:20:29,913 --> 00:20:35,133
+Scott: if you go to the menus you can change enough options to basically make it the same size and shape as The old one.
+
+301
+00:20:35,153 --> 00:20:37,123
+Scott: like there's no sidebar with all those choices in it.
+
+302
+00:20:37,164 --> 00:20:39,960
+Scott: But if you go to view sidebar Oh, look the sidebars back.
+
+303
+00:20:40,021 --> 00:20:41,349
+Scott: It looks like it used to right.
+
+304
+00:20:41,691 --> 00:20:53,530
+Scott: But if you don't do that has this top bar and actually I kind of like the top bar But it requires more clicks to do certain things You know, so it's sort of this weird balance like like it better less efficient.
+
+305
+00:20:54,772 --> 00:20:59,850
+Scott: But the major thing about iTunes 11 is a lot of people they be hitting on iTunes But wait, wait, wait, wait.
+
+306
+00:20:59,890 --> 00:21:09,082
+Rym: You're saying that people are flipping out because a UI of a general use Software product used by both technologists and non technologists changed.
+
+307
+00:21:09,443 --> 00:21:11,370
+Scott: Well, no, I'm saying that that's expected right?
+
+308
+00:21:11,490 --> 00:21:16,910
+Scott: What I'm saying is there are people who already hated iTunes period regardless of oh my god, it changed, right?
+
+309
+00:21:17,030 --> 00:21:18,556
+Scott: They just hate iTunes period I'll admit.
+
+310
+00:21:18,576 --> 00:21:21,026
+Rym: I haven't used iTunes in like six years.
+
+311
+00:21:21,066 --> 00:21:22,050
+Rym: I have no use for it.
+
+312
+00:21:22,070 --> 00:21:22,332
+Rym: I'm done.
+
+313
+00:21:22,372 --> 00:21:23,438
+Scott: I have an iDevice.
+
+314
+00:21:23,458 --> 00:21:30,760
+Scott: I don't have an iDevice needed and even if I did You mean even if you did you have you.
+
+315
+00:21:30,881 --> 00:21:32,650
+Scott: if you have an iDevice you got to use iTunes.
+
+316
+00:21:33,854 --> 00:21:34,850
+Scott: Unless you jailbreak us.
+
+317
+00:21:34,910 --> 00:21:38,343
+Rym: I pretty much only listen to music on Spotify and my own mp3 is.
+
+318
+00:21:38,424 --> 00:21:41,316
+Rym: I just drag out of my file system right now I got you know, I'm you got it.
+
+319
+00:21:41,336 --> 00:21:43,164
+Scott: You know, you want to buy some apps in the App Store.
+
+320
+00:21:43,184 --> 00:21:44,370
+Scott: That's iTunes.
+
+321
+00:21:44,571 --> 00:21:47,483
+Scott: Yeah, you want to sync that's iTunes podcast.
+
+322
+00:21:47,543 --> 00:21:49,250
+Rym: A lot of people have trouble with podcasts now.
+
+323
+00:21:49,492 --> 00:21:50,238
+Scott: I don't my.
+
+324
+00:21:50,278 --> 00:21:51,710
+Scott: it's always worked for me just fine.
+
+325
+00:21:52,131 --> 00:21:53,094
+Rym: But apparently what the?
+
+326
+00:21:53,535 --> 00:21:57,807
+Rym: the thing that changed is you can't do certain kinds of organizational task manual anymore.
+
+327
+00:21:58,268 --> 00:22:05,509
+Rym: and the podcast Stuff in iTunes 11 is tech is like aimed pegged by some values in the id3 tags.
+
+328
+00:22:06,712 --> 00:22:17,730
+Rym: So people who don't use like the RSS feeds and like manually download the mp3s From people who don't properly set up their id3s or do it through lights never been different.
+
+329
+00:22:17,810 --> 00:22:18,312
+Scott: That's never.
+
+330
+00:22:18,373 --> 00:22:21,565
+Scott: if you download something that's not through an RSS feed iTunes thinks it's music.
+
+331
+00:22:21,605 --> 00:22:22,750
+Scott: It doesn't know it's a fucking podcast.
+
+332
+00:22:22,931 --> 00:22:27,350
+Rym: So there apparently was a way in every instant earlier to click on it be like no, this is a podcast.
+
+333
+00:22:27,450 --> 00:22:31,707
+Scott: I've never seen that my entire life of using iTunes since the iPod mini was out.
+
+334
+00:22:31,747 --> 00:22:32,550
+Scott: That's never happened.
+
+335
+00:22:32,934 --> 00:22:34,090
+Scott: I'll ever see that my life.
+
+336
+00:22:34,250 --> 00:22:40,310
+Rym: I could select the files click on more info and click and change the setting to podcast as if I tunes 11.
+
+337
+00:22:40,310 --> 00:22:41,536
+Rym: This no longer is an option.
+
+338
+00:22:41,797 --> 00:22:43,345
+Scott: I've never seen that as an option ever.
+
+339
+00:22:43,927 --> 00:22:44,510
+Rym: It was an option.
+
+340
+00:22:44,530 --> 00:22:45,233
+Rym: Who's screenshots?
+
+341
+00:22:45,273 --> 00:22:46,579
+Scott: people are friggin crazy?
+
+342
+00:22:46,619 --> 00:22:47,564
+Scott: Stop fucking.
+
+343
+00:22:47,584 --> 00:22:49,010
+Scott: this is the thing about Apple stuff, right?
+
+344
+00:22:49,090 --> 00:22:50,280
+Scott: And I love it and hate it.
+
+345
+00:22:50,421 --> 00:22:56,364
+Rym: and everyone, you know If you're gonna use it go all-in don't like you were using Apple.
+
+346
+00:22:56,404 --> 00:23:00,970
+Scott: shit You have to just don't change fucking anything.
+
+347
+00:23:01,030 --> 00:23:04,069
+Scott: Just do it the way they want you to do it and don't fuck around with it.
+
+348
+00:23:04,190 --> 00:23:09,148
+Scott: Right everyone, you know, if you're an option changing customizing kind of person Apple ain't for you, right?
+
+349
+00:23:09,750 --> 00:23:10,654
+Scott: Don't be using Apple.
+
+350
+00:23:10,714 --> 00:23:16,919
+Scott: and for me, you know when it comes to phones and this really important thing I carry around all day as open-source II as I am.
+
+351
+00:23:16,939 --> 00:23:22,256
+Scott: it is a and as openness is a high priority and Freedom is a high priority.
+
+352
+00:23:22,296 --> 00:23:25,686
+Scott: The higher priority is this thing is really important.
+
+353
+00:23:25,747 --> 00:23:26,830
+Scott: it better fucking work.
+
+354
+00:23:27,031 --> 00:23:34,545
+Scott: So I don't fuck with it default everything right and when it comes to something else And maybe I don't care much about I don't care if it continues to work right.
+
+355
+00:23:34,585 --> 00:23:36,974
+Scott: if it breaks big deal It's not so important.
+
+356
+00:23:37,355 --> 00:23:38,618
+Scott: Yeah, let's fuck around with this.
+
+357
+00:23:38,638 --> 00:23:39,621
+Scott: That'll be fun times.
+
+358
+00:23:39,842 --> 00:23:42,650
+Scott: So I tunes pretty important my phone.
+
+359
+00:23:43,012 --> 00:23:43,818
+Scott: I don't fuck with it.
+
+360
+00:23:43,858 --> 00:23:45,550
+Scott: Just do it the way it's supposed to be used.
+
+361
+00:23:45,570 --> 00:23:47,808
+Scott: Don't go and looking for weird options cuz you know what?
+
+362
+00:23:48,370 --> 00:23:52,525
+Scott: Huh this I use this unsupported feature and then I complain when they took it away from me.
+
+363
+00:23:52,585 --> 00:23:56,535
+Scott: when I find weird hack no longer works Curses, it's like they didn't.
+
+364
+00:23:56,675 --> 00:23:57,438
+Scott: it was a weird hack.
+
+365
+00:23:57,659 --> 00:23:58,864
+Scott: It was not promised to work.
+
+366
+00:23:58,924 --> 00:24:00,550
+Scott: It wasn't a feature, right?
+
+367
+00:24:01,613 --> 00:24:03,450
+Scott: And they didn't promise to even keep their features.
+
+368
+00:24:03,470 --> 00:24:05,590
+Scott: So, of course, they didn't promise to keep their weird hacks.
+
+369
+00:24:06,071 --> 00:24:20,926
+Scott: The point is iTunes 11 regardless of its graphical updates, which I kind of okay with the windows version Which is the one I use is vastly improved because even You know the I never really had a big problem with it before.
+
+370
+00:24:20,946 --> 00:24:21,889
+Scott: it was crashy.
+
+371
+00:24:22,252 --> 00:24:36,229
+Scott: It would crash it flake out the I would have problems with it such as I would try to do like the music streaming through iTunes from my PC to my HD PC and it was like sometimes just stop and had to restart iTunes to make it work again stuff like that.
+
+372
+00:24:36,871 --> 00:24:40,099
+Scott: Now all that stuff just works perfectly every time.
+
+373
+00:24:40,119 --> 00:24:45,570
+Scott: it's way faster and it never crashes and it's so perfect and Life is very pleasant.
+
+374
+00:24:46,272 --> 00:24:57,328
+Scott: So if you're one of those iTunes Haiti people and you can get over, you know Whatever weird customization and organization OCD thing you have to do and just let iTunes do what it wants to do.
+
+375
+00:24:57,388 --> 00:24:59,194
+Scott: and you know Buy into it.
+
+376
+00:25:00,098 --> 00:25:02,486
+Scott: It is vastly improved with its no crashy.
+
+377
+00:25:02,547 --> 00:25:03,410
+Scott: No flakiness.
+
+378
+00:25:04,391 --> 00:25:05,253
+Scott: So there you go.
+
+379
+00:25:05,955 --> 00:25:07,900
+Rym: So last thing a very brief news.
+
+380
+00:25:07,960 --> 00:25:10,227
+Rym: Here's a guy on the internet s slash dot.
+
+381
+00:25:10,969 --> 00:25:14,959
+Rym: Oh Say to DVD drives that don't suck for CD ripping.
+
+382
+00:25:15,280 --> 00:25:21,759
+Rym: He needs a modern CD drive to rip his MP By the $20 one on Newegg.
+
+383
+00:25:22,080 --> 00:25:31,350
+Rym: Yeah, so basically what he's pointing out is that Modern like new say to CD ROMs are way way slower than old ones.
+
+384
+00:25:31,753 --> 00:25:33,710
+Rym: There's not as well made I believe as well.
+
+385
+00:25:33,770 --> 00:25:36,020
+Rym: They keep rereading and he and he goes on and on.
+
+386
+00:25:36,040 --> 00:25:38,230
+Rym: he proves it's a problem and I have his answer right here.
+
+387
+00:25:38,390 --> 00:25:41,221
+Rym: I believe it have ripped all your CDs to mp3 15 years ago.
+
+388
+00:25:41,241 --> 00:25:41,522
+Rym: I agree.
+
+389
+00:25:44,750 --> 00:25:50,730
+Rym: Optionally, it is faster to go to Pirate Bay than it is to rip a single CD depending on your internet connection.
+
+390
+00:25:50,790 --> 00:25:58,811
+Rym: Yes, I'd argue that almost all modern internet connections are faster than ripping a CD - All right.
+
+391
+00:25:58,831 --> 00:25:59,656
+Scott: What else is that's it?
+
+392
+00:25:59,736 --> 00:26:01,628
+Rym: I just found this the whole thing kind of funny.
+
+393
+00:26:02,050 --> 00:26:03,457
+Rym: I mean I have an optical drive.
+
+394
+00:26:03,538 --> 00:26:09,945
+Scott: Yeah, and you know what my 32 X whatever Sata CD, you know say to DVD rom, whatever.
+
+395
+00:26:09,965 --> 00:26:11,250
+Scott: Yeah, it might be kind of slow.
+
+396
+00:26:11,350 --> 00:26:17,890
+Scott: It's ripping a CD compared to maybe my Plex store 8 for 32 Which was you know, probably the best at it, right?
+
+397
+00:26:18,010 --> 00:26:23,089
+Scott: Cuz even though it's burning was not the great the 32 burning that written speed hasn't really increased lately.
+
+398
+00:26:24,651 --> 00:26:34,867
+Scott: And yet no one gives a shit about optical drives now, so they make them way cheap, but you know what it's still Crazy fast compared to my 4x CD rama the olden days.
+
+399
+00:26:34,947 --> 00:26:37,498
+Scott: It's like oh no It's five minutes instead of three minutes.
+
+400
+00:26:37,780 --> 00:26:43,530
+Rym: Well, I don't need optical drives anymore And I need I need to use an optical driver in my laptop for one thing.
+
+401
+00:26:43,550 --> 00:26:45,197
+Rym: So I'm gonna buy like a USB.
+
+402
+00:26:45,377 --> 00:26:52,490
+Scott: if you're ripping that many CDs to mp3 that the time matters That you care that much about it and you're not willing to just go to Pirate Bay and download it.
+
+403
+00:26:52,510 --> 00:26:54,176
+Rym: You really should have done it ten years ago.
+
+404
+00:26:54,277 --> 00:26:55,903
+Scott: Yes, but you could just buy.
+
+405
+00:26:55,923 --> 00:26:57,830
+Scott: and you're willing to buy optical drives.
+
+406
+00:26:58,313 --> 00:27:05,330
+Scott: just buy the really expensive one or Instead of the $20 one or buy one of those really tall things.
+
+407
+00:27:05,350 --> 00:27:10,065
+Scott: There's a whole bunch of CD drives and it meant for you know, mass burning and just use it for mass ripping.
+
+408
+00:27:11,390 --> 00:27:12,335
+Rym: I Also suspect though.
+
+409
+00:27:12,355 --> 00:27:18,810
+Rym: I didn't really read, you know all his stuff too deeply But he's trying to use flak and he might have some other IO bottle.
+
+410
+00:27:19,252 --> 00:27:20,437
+Scott: Well, it depends that.
+
+411
+00:27:20,518 --> 00:27:27,466
+Scott: I haven't looked at this guy's tests for speed it You know, he could be a dumbass and it could be his encoding that is slow and not his ripping.
+
+412
+00:27:27,727 --> 00:27:28,490
+Rym: that is possible.
+
+413
+00:27:28,731 --> 00:27:30,503
+Rym: But anyway, I just thought this was kind of funny.
+
+414
+00:27:30,744 --> 00:27:34,236
+Scott: so yeah, oh Man, the new floppy drives.
+
+415
+00:27:34,296 --> 00:27:35,179
+Scott: I just bought one.
+
+416
+00:27:35,239 --> 00:27:36,062
+Scott: It's so slow.
+
+417
+00:27:36,122 --> 00:27:38,510
+Scott: I can't save the data off all my floppies.
+
+418
+00:27:38,912 --> 00:27:39,457
+Rym: Oh my god.
+
+419
+00:27:39,477 --> 00:27:42,048
+Rym: I wonder if any of my floppies are still readable.
+
+420
+00:27:43,651 --> 00:27:45,867
+Rym: Cloppies were really susceptible to bit rot.
+
+421
+00:27:45,907 --> 00:27:47,472
+Scott: some Probably.
+
+422
+00:27:47,552 --> 00:27:48,755
+Scott: maybe some files be bad.
+
+423
+00:27:48,795 --> 00:27:49,638
+Scott: Maybe some will work.
+
+424
+00:27:49,798 --> 00:27:50,681
+Rym: I've got one somewhere.
+
+425
+00:27:50,701 --> 00:27:53,609
+Rym: that's got my old hack copy of stunts 40 racing.
+
+426
+00:27:54,110 --> 00:27:57,603
+Scott: I have a USB three and a half inch floppy drive cracked by killer fit.
+
+427
+00:27:57,904 --> 00:27:58,566
+Scott: I have a drive.
+
+428
+00:27:58,627 --> 00:28:08,114
+Rym: we can do it anyway, it's Things of the day.
+
+429
+00:28:08,154 --> 00:28:15,715
+Rym: if you've never seen an old Silly Symphony and I'll bet many young kids haven't check this out Silly Symphony Music land.
+
+430
+00:28:15,816 --> 00:28:28,551
+Rym: This is a wonderful little 9 minute and 12 second animated short from 1935 where the island of jazz and the island of symphonic music have a deathmatch to the death Mmm.
+
+431
+00:28:29,053 --> 00:28:33,169
+Rym: and the top comment asks if there is in fact a land of metal there should be.
+
+432
+00:28:33,811 --> 00:28:34,494
+Scott: Someone should remain.
+
+433
+00:28:34,514 --> 00:28:39,852
+Rym: someone's gotta add to animate metal and and just mash it up with this video Electronically.
+
+434
+00:28:40,113 --> 00:28:50,730
+Rym: what I find funny is the weird old sensibilities from 1935 that The guys flirts with the girl basically by chasing her around while she tries to get away from him.
+
+435
+00:28:51,033 --> 00:28:52,349
+Scott: Yeah, you see that.
+
+436
+00:28:52,491 --> 00:28:54,210
+Scott: Welcome to every Pepe Le Pew ever.
+
+437
+00:28:54,772 --> 00:29:01,614
+Rym: Also the fact that this is almost a hundred years old and it might as well have been made today other than the sensibilities is Kind of amazing.
+
+438
+00:29:01,674 --> 00:29:01,794
+Rym: Yeah.
+
+439
+00:29:02,055 --> 00:29:05,610
+Scott: Well, I mean the big thing to take away from this is something we already all should all know.
+
+440
+00:29:05,750 --> 00:29:11,065
+Scott: Right is like look our great-grandparents only like classical music and her grandparents like jazz music.
+
+441
+00:29:11,105 --> 00:29:12,810
+Scott: and they said that jazz music is the devil.
+
+442
+00:29:13,092 --> 00:29:16,390
+Scott: And then the grandparents told our parents that rock music is the devil.
+
+443
+00:29:17,451 --> 00:29:21,684
+Scott: Dub step is not not like our jazz music that rock music is the devil.
+
+444
+00:29:21,724 --> 00:29:27,403
+Scott: and then our pair some of the parents with the rock Music learned the lesson but some of the other ones were like that rap music is the devil.
+
+445
+00:29:27,464 --> 00:29:29,955
+Scott: and then now you've got that dub Step is the devil.
+
+446
+00:29:30,156 --> 00:29:30,982
+Scott: Come on people.
+
+447
+00:29:31,224 --> 00:29:32,110
+Rym: All right, can't figure it.
+
+448
+00:29:33,030 --> 00:29:35,722
+Rym: So everyone only lives through one cycle of it.
+
+449
+00:29:35,883 --> 00:29:36,385
+Scott: some people.
+
+450
+00:29:36,546 --> 00:29:38,736
+Scott: I've figured it out Some people have figured it out.
+
+451
+00:29:38,977 --> 00:29:51,325
+Scott: No matter how many children I have been zero or a billion I will never tell any punk kids that the dub step or the rap step or the 10 Whatever, whatever crazy bullshit music there is.
+
+452
+00:29:51,345 --> 00:29:57,323
+Scott: when I'm a 90 year Yeah, when I'm a 90 year old man, whatever the kids are listening to is gonna be awesome.
+
+453
+00:29:57,644 --> 00:30:01,736
+Rym: Oh My god, it's all over my pop filter.
+
+454
+00:30:01,896 --> 00:30:04,064
+Scott: So the my thing of the day.
+
+455
+00:30:04,084 --> 00:30:05,690
+Rym: I got dub step all over my pop.
+
+456
+00:30:05,751 --> 00:30:06,328
+Scott: That's great.
+
+457
+00:30:07,651 --> 00:30:11,310
+Scott: This guy named the whistler on YouTube.
+
+458
+00:30:12,581 --> 00:30:20,850
+Scott: He mashed up My favorite one of my favorite games ice hockey for the NES and he changed it into lockout hockey as is appropriate.
+
+459
+00:30:20,930 --> 00:30:23,405
+Rym: So wait, he mashed up ice hockey with ice hockey.
+
+460
+00:30:23,526 --> 00:30:24,169
+Scott: That is right.
+
+461
+00:30:26,013 --> 00:30:28,009
+Scott: So you should watch this here video.
+
+462
+00:30:28,812 --> 00:30:33,003
+Scott: It is a good video of funniness and ice hockey in the meta moment.
+
+463
+00:30:33,043 --> 00:30:35,670
+Rym: The book club book is the great Gatsby.
+
+464
+00:30:36,630 --> 00:30:38,519
+Rym: You probably have some time to read it.
+
+465
+00:30:38,599 --> 00:30:40,850
+Rym: I have a feeling we're not doing that show until early next year.
+
+466
+00:30:41,011 --> 00:30:42,279
+Scott: Yeah, next year not do.
+
+467
+00:30:42,299 --> 00:30:48,690
+Scott: probably after the mag MAGFest which is another thing to talk about in the meta moment is actually soon now.
+
+468
+00:30:48,810 --> 00:30:50,655
+Rym: Oh my god, mag fest is coming.
+
+469
+00:30:50,715 --> 00:30:52,059
+Rym: It is right after New Year's.
+
+470
+00:30:52,099 --> 00:30:54,505
+Scott: Mag best is near Washington DC.
+
+471
+00:30:54,826 --> 00:30:58,736
+Scott: It is four days 24/7 no nights off.
+
+472
+00:30:59,118 --> 00:31:02,210
+Scott: It is Thursday morn through Sunday night.
+
+473
+00:31:02,230 --> 00:31:09,029
+Rym: They have a physical arcade the size of a football field gaming gaming gaming gaming music concerts concerts concerts.
+
+474
+00:31:09,070 --> 00:31:19,864
+Rym: year We started a handful of panels at midnight and finished five in the morning and then passed out gaming gaming gaming drinking panels concerts not stopping for days.
+
+475
+00:31:21,673 --> 00:31:25,570
+Scott: Why are you not going to mag fest if you are listening to the show?
+
+476
+00:31:25,850 --> 00:31:27,957
+Rym: I like mag fest almost as much as packs.
+
+477
+00:31:28,279 --> 00:31:31,490
+Rym: They're different, but they both are crucial to my enjoyment.
+
+478
+00:31:31,550 --> 00:31:38,633
+Scott: They're like the two sides of what gaming cons might only regret not going to mag fest sooner because I didn't know about it sooner than I went to.
+
+479
+00:31:38,693 --> 00:31:42,347
+Scott: it is not going to pack sooner and not having the money to go to pack.
+
+480
+00:31:42,387 --> 00:31:48,510
+Rym: not going to pack sooner is literally One of two things in my entire life that I regret anyway.
+
+481
+00:31:50,411 --> 00:31:54,045
+Rym: Other meta moment we have an official counter-strike server counter-strike go.
+
+482
+00:31:54,085 --> 00:31:55,410
+Rym: I'm gonna add some new maps to it.
+
+483
+00:31:55,450 --> 00:31:56,580
+Rym: You kids should be playing on it.
+
+484
+00:31:56,661 --> 00:31:57,589
+Rym: It's pretty tight.
+
+485
+00:31:58,232 --> 00:32:17,612
+Scott: I'm about to send the newsletter again, and I think I'm gonna send it with this other thing That is not MailChimp But is made by the MailChimp people because it's way simpler and easier to do than MailChimp But it's run by the same people's and so, you know, don't freak out at the at the next newsletter looks different Whatever.
+
+486
+00:32:17,973 --> 00:32:23,389
+Rym: All right, and of course a PAX East a ways out but enforcer applications just went up.
+
+487
+00:32:23,811 --> 00:32:30,450
+Scott: So it since it's almost entirely sold out if not entirely sold out and you want to go Enforcing is a great choice.
+
+488
+00:32:30,570 --> 00:32:37,730
+Scott: In fact, I plan to do it for the first time ever so that my foot will go in doing the walking to match my mouth.
+
+489
+00:32:37,830 --> 00:32:38,774
+Scott: That has done the talking.
+
+490
+00:32:38,834 --> 00:32:40,761
+Rym: Yes, Scott and I promised long ago.
+
+491
+00:32:40,882 --> 00:32:44,636
+Rym: Someday we'll enforce so we're putting On shit talking.
+
+492
+00:32:44,737 --> 00:32:46,970
+Scott: Also, I've spent you know at the last PAX East.
+
+493
+00:32:47,091 --> 00:32:50,830
+Scott: I spent a lot of time doing stuff that yeah, you know, I could have enforced.
+
+494
+00:32:51,352 --> 00:32:53,922
+Rym: Yeah, I feel like I want to do everything.
+
+495
+00:32:53,962 --> 00:32:56,130
+Scott: I had a couple free hours at the last PAX East.
+
+496
+00:32:56,231 --> 00:33:02,116
+Rym: So if I enforce it's gonna be jam-packed this time I'm gonna see PAX East, well PAX, from every possible angle.
+
+497
+00:33:02,156 --> 00:33:15,152
+Scott: Also, I can get food in enforcer land instead of having to go to get food at the horrible food locations Near PAX East which is the you know, a great great idea All right.
+
+498
+00:33:15,232 --> 00:33:21,290
+Scott: So so yeah Rym had this show idea and I poo-pooed it, but I'm gonna let him do it anyway.
+
+499
+00:33:21,996 --> 00:33:28,990
+Scott: And so if you like this show Then we'll just let Rym pick Monday show ideas and do them even if I poo-poo them because apparently he's right about what you want.
+
+500
+00:33:29,713 --> 00:33:33,410
+Scott: But if you don't like the show you think it's boring or it doesn't get a lot of listens or whatever.
+
+501
+00:33:33,975 --> 00:33:35,690
+Scott: Then I was right and we're right to poop.
+
+502
+00:33:37,351 --> 00:33:38,775
+Rym: What should we have done this show on?
+
+503
+00:33:38,896 --> 00:33:43,570
+Scott: we should have just sat around watching the Giants games about to start in an hour and a half.
+
+504
+00:33:43,710 --> 00:33:44,012
+Rym: You know what?
+
+505
+00:33:44,032 --> 00:33:47,728
+Rym: I feel we should do if we don't have Monday topics just do the news thing of the day.
+
+506
+00:33:47,748 --> 00:33:50,215
+Rym: in the end It's still a show.
+
+507
+00:33:50,235 --> 00:34:01,100
+Rym: the news that our discussion of the news on GeekNights Mondays is relevant and that tech news is in fact 90% of what anyone cares about in the tech world.
+
+508
+00:34:01,501 --> 00:34:02,544
+Rym: other than how to.
+
+509
+00:34:02,605 --> 00:34:04,230
+Scott: why don't we just make to it anyway?
+
+510
+00:34:05,770 --> 00:34:11,918
+Scott: send in Monday Ideas to the forum or our email.
+
+511
+00:34:11,958 --> 00:34:16,190
+Scott: GeekNights at front recruit calm or Twitter or Facebook or Google+ or whatever you got.
+
+512
+00:34:16,311 --> 00:34:29,530
+Rym: so I've realized over the course of my Project management and design and IT over the years that I know a lot about networking and You know a lot about that networking thing most during you pay a lot of money to have a degree in it.
+
+513
+00:34:29,811 --> 00:34:36,570
+Rym: What's funny is despite being an expert at networking to the lowest level I can talk about how?
+
+514
+00:34:36,929 --> 00:34:44,246
+Rym: Bullshit is encoded on different types of Ethernet at the physical level of how you make a one and how you make a zero All the way up to switches and all that.
+
+515
+00:34:45,556 --> 00:34:47,149
+Rym: That was a big part of education RIT.
+
+516
+00:34:48,551 --> 00:34:51,726
+Rym: Never really done that as my job, but you didn't work at Verizon.
+
+517
+00:34:52,108 --> 00:34:55,783
+Scott: you worked It's you know the hospital and the other places even at the hospital.
+
+518
+00:34:55,884 --> 00:34:57,350
+Rym: I didn't really do it.
+
+519
+00:34:57,591 --> 00:34:59,441
+Rym: I just told other people what to do.
+
+520
+00:34:59,763 --> 00:35:00,407
+Rym: like it's funny.
+
+521
+00:35:00,447 --> 00:35:16,189
+Rym: at RIT I took a class where we had a mock house And we ran cables and learned about like how to deal with power cables versus ethernet cables and how to like architect all this stuff and differences and server closet placement and the architecture.
+
+522
+00:35:16,209 --> 00:35:18,837
+Rym: and Yeah, all that actual work.
+
+523
+00:35:18,877 --> 00:35:22,110
+Rym: That's really fun to do gets outsourced to people who get paid barely minimum wage.
+
+524
+00:35:22,391 --> 00:35:24,725
+Scott: Well, you have the degree you know how to do this.
+
+525
+00:35:24,987 --> 00:35:25,510
+Scott: grunt leave.
+
+526
+00:35:25,731 --> 00:35:29,150
+Scott: That's the fun stuff, and then you could go be a grunt labor.
+
+527
+00:35:29,230 --> 00:35:32,730
+Scott: You could not gone to college have been like a plumber and done all kinds of fun stuff.
+
+528
+00:35:33,051 --> 00:35:34,696
+Scott: It's only fun when it's made a lot of money.
+
+529
+00:35:34,877 --> 00:35:38,208
+Scott: Yeah, but you'd be working like crazy because everyone's got fucking fucked up.
+
+530
+00:35:38,248 --> 00:35:44,970
+Rym: toilets You know network cables through data centers at IBM and at that hospital, and I've dealt with all that stuff to a degree.
+
+531
+00:35:44,990 --> 00:35:47,230
+Rym: But I've never really done networking.
+
+532
+00:35:47,330 --> 00:35:51,444
+Rym: I've never set up a router or switch as part of my job.
+
+533
+00:35:51,725 --> 00:35:53,370
+Scott: most people have them set up already.
+
+534
+00:35:53,431 --> 00:36:04,009
+Scott: That's a big part of the problem Is by the time you learned how to set them up they had already set most of them up And they are not offed replaced, so I have a project going on at my with my work.
+
+535
+00:36:04,049 --> 00:36:10,920
+Rym: right now We're making a a network sniffer to read something called the fixed protocol Which is a favorite.
+
+536
+00:36:11,020 --> 00:36:12,370
+Rym: I thought it's a big part of my life.
+
+537
+00:36:12,470 --> 00:36:14,519
+Rym: I'm a member of the fixed protocol board.
+
+538
+00:36:14,659 --> 00:36:25,213
+Rym: You know like or they're like the company the the consortium W3 of fix the league the consortium that like makes the fixed protocol writes the specs for it and everything I Speak at these.
+
+539
+00:36:25,233 --> 00:36:26,519
+Rym: you know conventions about it.
+
+540
+00:36:26,801 --> 00:36:33,911
+Rym: I'm actually going to Istanbul probably Soonish to probably teach people there how to use it Mmm.
+
+541
+00:36:34,272 --> 00:36:36,059
+Rym: I feel like we should do a show on that sometime.
+
+542
+00:36:36,120 --> 00:36:37,184
+Scott: the thing nobody cares about.
+
+543
+00:36:37,364 --> 00:36:38,629
+Rym: yeah, you think no one cares about it.
+
+544
+00:36:39,550 --> 00:36:41,901
+Scott: What can I learn from the results of this show?
+
+545
+00:36:41,962 --> 00:36:43,127
+Scott: whether the poo poos are
+
+546
+00:36:45,031 --> 00:36:52,881
+Rym: I'll say this one if you know the fixed protocol and are also a programmer It's pretty easy to get a relatively high-paying job in the financial
+
+547
+00:36:52,921 --> 00:36:58,458
+Scott: program, or it's relatively easy to get a job period To live in New York or San Francisco if
+
+548
+00:36:58,498 --> 00:37:05,324
+Rym: you know the fixed protocol, but again you have to be willing to live in New York Maybe Chicago or you know Sao
+
+549
+00:37:05,344 --> 00:37:05,706
+Scott: Paulo.
+
+550
+00:37:05,726 --> 00:37:06,430
+Scott: They have commodity.
+
+551
+00:37:06,691 --> 00:37:11,869
+Rym: Yeah the CBOE the CBOE yep anyway anyway, so here's what we need.
+
+552
+00:37:12,573 --> 00:37:15,230
+Rym: We have a thing that'll read these fixed logs.
+
+553
+00:37:15,350 --> 00:37:17,519
+Rym: So you know the fixed protocol is kind of like middleware.
+
+554
+00:37:17,560 --> 00:37:19,126
+Rym: think of it that way like TibRV or whatever.
+
+555
+00:37:19,166 --> 00:37:21,119
+Rym: you're sending messages Back and forth.
+
+556
+00:37:21,179 --> 00:37:22,490
+Rym: It's like a point-to-point protocol.
+
+557
+00:37:22,731 --> 00:37:30,504
+Rym: It's like HTTP, but for stock trading and you have an engine on either end that Deals with the fixed bullshit, and then gives your application the data.
+
+558
+00:37:30,584 --> 00:37:32,090
+Rym: It needs like here's an order.
+
+559
+00:37:32,411 --> 00:37:39,077
+Scott: Yes, so the application is like the web browser and the engine is like Apache But for fix instead of for HTTP.
+
+560
+00:37:39,298 --> 00:37:44,650
+Rym: so in the financial world unlike for example in HTTP I trust my application.
+
+561
+00:37:44,916 --> 00:37:46,809
+Rym: I never Give one shit.
+
+562
+00:37:47,211 --> 00:37:52,370
+Rym: What went over the wire like what my get request looked like unless I'm troubleshooting like a problem with my own web server.
+
+563
+00:37:52,470 --> 00:37:55,824
+Scott: Well, I do if I'm a developer right, but you don't care if you're a user.
+
+564
+00:37:56,225 --> 00:38:01,403
+Rym: so in the financial world The users actually care too because they have an order management system an OMS.
+
+565
+00:38:01,423 --> 00:38:07,467
+Scott: the thing that the stock trader sits there Because you know because of my website visiting fucks up.
+
+566
+00:38:07,487 --> 00:38:08,050
+Scott: Oh big deal.
+
+567
+00:38:09,151 --> 00:38:11,682
+Rym: It's the Book of Mormon for an hour until we fix it well.
+
+568
+00:38:11,742 --> 00:38:12,968
+Scott: No that's serving fucks up.
+
+569
+00:38:12,988 --> 00:38:13,510
+Scott: That's a big deal.
+
+570
+00:38:13,530 --> 00:38:15,066
+Scott: I'm taking my website visiting mess up.
+
+571
+00:38:15,106 --> 00:38:15,430
+Scott: No one cares.
+
+572
+00:38:15,591 --> 00:38:17,629
+Rym: I can't buy tickets to Book of Mormon for an hour.
+
+573
+00:38:17,850 --> 00:38:22,243
+Scott: But stock trading messes up both people on both ends.
+
+574
+00:38:22,383 --> 00:38:26,368
+Scott: give a lot of fucks all the fucks If that shit doesn't work.
+
+575
+00:38:27,510 --> 00:38:33,546
+Scott: Sometimes more fucks than are necessary, but yeah, I'm just saying they give all the fucks if money has a problem.
+
+576
+00:38:33,586 --> 00:38:45,505
+Rym: I gave a somewhat controversial discussion on a panel in Mumbai a while ago where I said that a lot of the things that people talk about in terms of Like latency and these connections don't actually matter and a lot of people really liked it.
+
+577
+00:38:45,525 --> 00:38:46,709
+Rym: a lot of people really didn't like it.
+
+578
+00:38:47,633 --> 00:38:48,978
+Rym: Anyway, that's neither here nor there.
+
+579
+00:38:49,520 --> 00:38:53,557
+Rym: so the users of this stuff actually care What went over the wire?
+
+580
+00:38:53,637 --> 00:38:55,305
+Rym: because say my order management system?
+
+581
+00:38:55,406 --> 00:38:56,170
+Rym: I'm like yeah?
+
+582
+00:38:56,230 --> 00:38:59,304
+Rym: I want to send a new order and then I net like nothing happens.
+
+583
+00:38:59,364 --> 00:39:02,042
+Rym: my order like looks like it's open But I never get any executions.
+
+584
+00:39:02,062 --> 00:39:02,748
+Rym: I'm like what the fuck.
+
+585
+00:39:03,750 --> 00:39:16,483
+Rym: So it'd be really nice if I knew what happened because a lot of order management systems suck or something might go wrong Like my order might not actually get acknowledged or some like border fixed engine acknowledges it But then for whatever reason like downstream.
+
+586
+00:39:16,523 --> 00:39:17,870
+Rym: They don't actually do anything with it.
+
+587
+00:39:17,910 --> 00:39:26,034
+Rym: Yeah, shit like that happens, so I'd like to be able to see you know kind of in real time the actual individual fixed messages Which you know.
+
+588
+00:39:26,295 --> 00:39:30,890
+Rym: my life for many years working as a production engineer for like an algorithmic trading shop.
+
+589
+00:39:31,771 --> 00:39:37,089
+Rym: I would just you know grab and said and tail log files and tell traders what they needed to know.
+
+590
+00:39:37,934 --> 00:39:41,050
+Rym: But that's really expensive to hire someone like me to do something like that.
+
+591
+00:39:41,291 --> 00:39:44,170
+Scott: And it's also how much coverage can you get right that log files pride?
+
+592
+00:39:44,610 --> 00:39:46,478
+Scott: Gigantic how much did you miss?
+
+593
+00:39:46,739 --> 00:39:49,110
+Scott: you know you're grepping and setting looking for specific things?
+
+594
+00:39:49,270 --> 00:39:51,138
+Rym: I don't miss anything cuz I'm a fucking badass at this.
+
+595
+00:39:51,219 --> 00:39:53,770
+Scott: I'm just saying you know people looking for specific things.
+
+596
+00:39:53,810 --> 00:39:56,700
+Scott: You're not watching every single log line 24/7 right.
+
+597
+00:39:57,042 --> 00:39:59,390
+Rym: well that that's a whole separate discussion of monitoring.
+
+598
+00:39:59,551 --> 00:40:04,857
+Scott: So say I have well, that's what looking at log files is yeah, but any well But you want to automate that shit.
+
+599
+00:40:04,977 --> 00:40:07,850
+Rym: of course you want to have in the minimum you want to process.
+
+600
+00:40:08,011 --> 00:40:13,640
+Rym: That's like tailing the log with a regular expression looking for like a log for J Error and sending you an email.
+
+601
+00:40:14,083 --> 00:40:15,190
+Scott: that's a good idea like step.
+
+602
+00:40:15,230 --> 00:40:16,817
+Rym: That's like babies first, but anyway.
+
+603
+00:40:17,340 --> 00:40:25,453
+Rym: so the fixed protocol people who aren't Technologists like me are the ones who really need to see those messages like the traders themselves Mmm-hmm.
+
+604
+00:40:25,935 --> 00:40:28,003
+Rym: also the compliance people like you know.
+
+605
+00:40:28,043 --> 00:40:29,690
+Rym: they want to know if there's malfeasance.
+
+606
+00:40:29,771 --> 00:40:32,130
+Rym: They want to know what's going on on the wire.
+
+607
+00:40:32,311 --> 00:40:34,080
+Rym: You know they want to keep archives and records and all this.
+
+608
+00:40:34,543 --> 00:40:38,447
+Rym: so one way we do this We have a little agent that'll read these log files from.
+
+609
+00:40:38,528 --> 00:40:41,984
+Rym: you know The where the log files are written the law that engine logs.
+
+610
+00:40:42,426 --> 00:40:46,642
+Scott: I sent this message I got but then you're trusting the engine to write the logs that are correct.
+
+611
+00:40:46,662 --> 00:40:53,030
+Scott: the engine could if someone can write a devious engine That sends one thing over the network and log something different, so you're looking for malfeasance.
+
+612
+00:40:53,110 --> 00:40:56,801
+Scott: It actually it wasn't malfeasance, but it was.
+
+613
+00:40:56,881 --> 00:40:57,904
+Scott: but it doesn't say it was.
+
+614
+00:40:58,085 --> 00:41:03,239
+Rym: so that is one thing That is actually not much of a concern really okay, not at all.
+
+615
+00:41:03,861 --> 00:41:07,009
+Rym: and sometimes you just some engines don't actually write these log files.
+
+616
+00:41:07,773 --> 00:41:13,939
+Rym: Say performance say you're sending so many messages per Millisecond that you don't have enough disk.
+
+617
+00:41:14,119 --> 00:41:16,045
+Rym: I owe to write them all out to disk.
+
+618
+00:41:16,427 --> 00:41:17,490
+Scott: you just got to get more disk.
+
+619
+00:41:17,651 --> 00:41:20,403
+Rym: Yeah, but if you what if you hit your limitations?
+
+620
+00:41:20,543 --> 00:41:21,970
+Scott: Amazon actually sells disk.
+
+621
+00:41:22,010 --> 00:41:23,054
+Scott: I hope you get you.
+
+622
+00:41:23,094 --> 00:41:28,865
+Scott: type in the number of like IO ops per second you want And you pay more money the bigger the number is.
+
+623
+00:41:28,885 --> 00:41:33,650
+Rym: so anyway Let's say that you know even if I have the thing that's gonna read these fixed logs.
+
+624
+00:41:33,751 --> 00:41:36,409
+Rym: Let's assume that they're legit, and I don't have to worry about that stuff.
+
+625
+00:41:37,351 --> 00:41:39,340
+Rym: There's still the possibility of you know impact.
+
+626
+00:41:39,360 --> 00:41:42,648
+Rym: Let's say I'm running this thing on a you know a server That's doing real stock trading.
+
+627
+00:41:42,689 --> 00:41:49,430
+Rym: well That's one more process taking up however much RAM it takes up using CPU cycles Sending stuff out over a network to somewhere.
+
+628
+00:41:50,071 --> 00:41:53,570
+Rym: So maybe I want to get this stuff over the network too, so I go to some developers.
+
+629
+00:41:53,590 --> 00:41:55,498
+Rym: I'm like here's the spec make a network sniffer.
+
+630
+00:41:55,538 --> 00:41:57,346
+Rym: Just to read this stuff directly off the network.
+
+631
+00:41:57,486 --> 00:41:59,512
+Scott: well you basically take Wireshark.
+
+632
+00:41:59,652 --> 00:42:00,937
+Scott: you take you go to wireshark.
+
+633
+00:42:00,957 --> 00:42:03,587
+Scott: you find the code for putting the ethernet in promiscuous.
+
+634
+00:42:03,687 --> 00:42:05,255
+Rym: I was about to ask you How would you do this?
+
+635
+00:42:05,516 --> 00:42:07,146
+Rym: well as a programmer?
+
+636
+00:42:07,186 --> 00:42:07,930
+Rym: Here's your project?
+
+637
+00:42:08,010 --> 00:42:11,310
+Rym: I want you, and I give you some basic parameters like how this is gonna work.
+
+638
+00:42:11,671 --> 00:42:19,516
+Rym: I want you to be able to sniff an arbitrary network interface or multiples read data payloads.
+
+639
+00:42:19,536 --> 00:42:28,510
+Rym: you know the top level the payload of the TCP IP packet yeah and parse it Mm-hmm log it somewhere and send it on to a server to do more bullshit.
+
+640
+00:42:28,751 --> 00:42:29,738
+Scott: Well, there's two ways to do it.
+
+641
+00:42:29,878 --> 00:42:34,281
+Scott: one way is if I'm on the server That's doing the communicating is it's a Linux server.
+
+642
+00:42:34,582 --> 00:42:35,586
+Rym: You're not gonna be on the server.
+
+643
+00:42:35,606 --> 00:42:36,470
+Rym: That's doing the communicating.
+
+644
+00:42:37,110 --> 00:42:39,421
+Rym: Because otherwise, what's the fucking point?
+
+645
+00:42:39,481 --> 00:42:41,550
+Rym: the point of this is that it's not impacting.
+
+646
+00:42:41,731 --> 00:42:45,208
+Scott: I have it on some other device, okay, so I put on another device.
+
+647
+00:42:45,228 --> 00:42:53,857
+Rym: yep Assume you have Effectively unlimited resources like you have the most powerful like normal like to you server You're gonna share whatever.
+
+648
+00:42:54,240 --> 00:43:00,342
+Scott: I had to plug it in Very close to in fact exactly next to the server that I'm not allowed to be on.
+
+649
+00:43:00,703 --> 00:43:06,882
+Scott: right so close in fact that all the packets That are going to that computer also go to my computer because they're on the same hub.
+
+650
+00:43:07,123 --> 00:43:09,914
+Scott: or if it's such thing as hubs Well, then you have to.
+
+651
+00:43:10,054 --> 00:43:13,170
+Scott: you have to go and connect the switch so that the two ports are hubbed.
+
+652
+00:43:14,035 --> 00:43:14,538
+Scott: So it's a fit.
+
+653
+00:43:14,558 --> 00:43:15,905
+Rym: so although that's not how that works.
+
+654
+00:43:15,986 --> 00:43:16,650
+Scott: so the switch.
+
+655
+00:43:17,094 --> 00:43:18,166
+Scott: You know when you can.
+
+656
+00:43:18,206 --> 00:43:20,757
+Scott: yeah Cuz you normally what a switch does it fig?
+
+657
+00:43:20,857 --> 00:43:25,333
+Scott: once it figures out which port certain packets belong to it only sends them down that Port.
+
+658
+00:43:25,676 --> 00:43:30,982
+Scott: but you can tell the switch hey Anything that's going to port to send it to port one also.
+
+659
+00:43:31,042 --> 00:43:33,330
+Rym: That's not the same as making them like a hub.
+
+660
+00:43:33,951 --> 00:43:41,250
+Rym: Uh-huh, if they were like a hub then you the third party that's sniffing could theoretically send a message to that network segment.
+
+661
+00:43:42,211 --> 00:43:43,437
+Rym: But now that's not how we do this.
+
+662
+00:43:43,537 --> 00:43:43,818
+Rym: we do.
+
+663
+00:43:43,879 --> 00:43:46,290
+Rym: we do something called a port span, okay, so how is that?
+
+664
+00:43:46,971 --> 00:43:47,553
+Scott: How is that not?
+
+665
+00:43:47,594 --> 00:43:50,930
+Rym: so what that basically does is just sends a copy of everything that goes over?
+
+666
+00:43:51,830 --> 00:43:55,305
+Rym: One or more arbitrary ports to your report, but you can't talk back.
+
+667
+00:43:56,310 --> 00:43:57,575
+Scott: Oh So it's not exactly hub.
+
+668
+00:43:57,636 --> 00:43:58,439
+Scott: I can't say anything.
+
+669
+00:43:58,479 --> 00:43:59,082
+Scott: I just listen.
+
+670
+00:43:59,122 --> 00:44:00,810
+Scott: Oh, yeah, and the thing is only listening.
+
+671
+00:44:00,911 --> 00:44:02,723
+Rym: Yes, and saying stuff wouldn't help you anyway.
+
+672
+00:44:02,763 --> 00:44:03,649
+Scott: How about what I?
+
+673
+00:44:05,515 --> 00:44:06,450
+Scott: Don't know it wouldn't?
+
+674
+00:44:07,211 --> 00:44:08,522
+Rym: I'm trying to trap you here.
+
+675
+00:44:08,703 --> 00:44:14,130
+Scott: Yeah, there's no reason I need to talk, but if I'm gonna if I'm hubbed if we were on a hub which doesn't exist anymore
+
+676
+00:44:14,311 --> 00:44:14,713
+Rym: Yeah, but if
+
+677
+00:44:14,754 --> 00:44:18,981
+Scott: I got a hub from ten years ago plugged in and put two computers into it I could see everything the other computer does.
+
+678
+00:44:19,102 --> 00:44:20,230
+Scott: yes in both directions.
+
+679
+00:44:20,391 --> 00:44:25,090
+Scott: So it's that's all I need to do is see every packet that goes to and from the other computer in both directions.
+
+680
+00:44:25,270 --> 00:44:27,196
+Rym: Alright, so say there's you.
+
+681
+00:44:27,296 --> 00:44:32,090
+Rym: there might be an arbitrary number of different computers on the subnet.
+
+682
+00:44:32,130 --> 00:44:36,309
+Rym: You're listening to all sending fixed traffic, and you want to sniff all of them.
+
+683
+00:44:36,551 --> 00:44:37,499
+Scott: Well, I can I can.
+
+684
+00:44:37,519 --> 00:44:51,411
+Scott: the same interface well Oh, well I mean is is there enough traffic going over all of those other computers that it's going to completely flood My one Ethernet cable connection of one gigabit Capacity?
+
+685
+00:44:51,953 --> 00:44:57,070
+Scott: so I mean I can't monitor all of Google's HTTP traffic with one gigabit of bandwidth.
+
+686
+00:44:57,352 --> 00:45:00,390
+Rym: So let's assume for now that aside from a crazy peak you're fine.
+
+687
+00:45:00,551 --> 00:45:03,401
+Rym: You can reasonably assume that you will not sell even though.
+
+688
+00:45:03,421 --> 00:45:12,808
+Scott: so all those packets going to and from all those other computers Right are being copied to my to my computer right, and there's no bandwidth worry whatsoever.
+
+689
+00:45:12,828 --> 00:45:16,515
+Rym: Yep, none Okay, well yeah And no like median bandwidth.
+
+690
+00:45:16,656 --> 00:45:21,650
+Scott: now when those packets get copied are the packets being rewritten so that identical?
+
+691
+00:45:21,932 --> 00:45:23,728
+Scott: So they're not being readdressed to me.
+
+692
+00:45:24,111 --> 00:45:26,921
+Scott: They're still have the original addresses on them original everything.
+
+693
+00:45:26,961 --> 00:45:27,764
+Rym: so I do last.
+
+694
+00:45:27,784 --> 00:45:31,437
+Scott: so I do need to put my ethernet card in Promiscuous mode in order to capture them all right.
+
+695
+00:45:31,457 --> 00:45:32,682
+Rym: Do you know what promiscuous mode does?
+
+696
+00:45:32,822 --> 00:45:34,990
+Scott: it basically says hey ethernet card usually?
+
+697
+00:45:35,590 --> 00:45:37,821
+Scott: Anytime you see a connection with a MAC address.
+
+698
+00:45:37,841 --> 00:45:38,444
+Scott: That's not yours.
+
+699
+00:45:38,484 --> 00:45:39,690
+Scott: you throw that shit in the garbage.
+
+700
+00:45:39,790 --> 00:45:41,919
+Scott: Yep, do not throw that shit in the garbage.
+
+701
+00:45:42,039 --> 00:45:44,690
+Scott: any bits you see touching you at all.
+
+702
+00:45:45,470 --> 00:45:48,079
+Scott: Capture those bits and make them available to my software.
+
+703
+00:45:48,099 --> 00:45:50,507
+Rym: you want to know some interesting things in token ring networks.
+
+704
+00:45:50,687 --> 00:45:54,240
+Scott: if you go into Promiscuous mode I did not know token ring had it from excuse matter.
+
+705
+00:45:54,260 --> 00:45:55,585
+Scott: I thought that that was an ethernet thing.
+
+706
+00:45:55,927 --> 00:45:58,357
+Rym: so you'll basically Basically, no you'll be.
+
+707
+00:45:58,398 --> 00:46:00,688
+Scott: are there MAC addresses on token rings?
+
+708
+00:46:00,709 --> 00:46:00,749
+Scott: uh?
+
+709
+00:46:02,231 --> 00:46:03,415
+Rym: You want to show on token ring.
+
+710
+00:46:03,696 --> 00:46:04,639
+Rym: talk a lot about.
+
+711
+00:46:04,759 --> 00:46:08,290
+Scott: no one uses token ring anymore except old places that have cobalt.
+
+712
+00:46:08,410 --> 00:46:12,583
+Rym: You don't have switches or hubs you have MA use yeah multi access unit.
+
+713
+00:46:12,663 --> 00:46:21,390
+Rym: anyway if you go into promiscuous mode Basically the mile you're connected to could say no fuck you you can't you're not authorized.
+
+714
+00:46:21,410 --> 00:46:23,250
+Scott: well There are ways interesting ways.
+
+715
+00:46:23,310 --> 00:46:25,645
+Scott: I've heard of detecting people who go into promise.
+
+716
+00:46:25,665 --> 00:46:31,850
+Scott: there are indeed But we don't care of if anyone detects us in promiscuous because really this is our network we're allowed to be.
+
+717
+00:46:32,030 --> 00:46:33,998
+Rym: Yes, your network is in the straightest.
+
+718
+00:46:34,018 --> 00:46:34,680
+Rym: set up this parts.
+
+719
+00:46:34,720 --> 00:46:37,250
+Scott: This shit is on fucking purpose right okay?
+
+720
+00:46:37,550 --> 00:46:48,040
+Scott: So step three is I need to write a program similar to wireshark that looks at all those fucking packets hitting my ethernet port and Writes them all the fuck down all right in.
+
+721
+00:46:48,181 --> 00:46:50,510
+Scott: and do I have enough space to write all these fuckers down?
+
+722
+00:46:50,652 --> 00:46:59,326
+Scott: Let's say yes, okay I put in so much RAM and hard drive space that I can Write all these down or I can process them fat so fast as they come in.
+
+723
+00:46:59,346 --> 00:47:02,658
+Scott: I don't need to write them down I can write down my results, and I don't need to.
+
+724
+00:47:02,739 --> 00:47:05,470
+Scott: you know hold on to them, but so how do you differentiate between?
+
+725
+00:47:06,350 --> 00:47:08,161
+Rym: Say there's two different computers running.
+
+726
+00:47:08,201 --> 00:47:09,348
+Rym: You know whatever this fixed up.
+
+727
+00:47:09,368 --> 00:47:12,420
+Scott: well first I have to filter because remember this is raw network traffic.
+
+728
+00:47:12,480 --> 00:47:12,601
+Scott: right.
+
+729
+00:47:12,621 --> 00:47:15,090
+Scott: yes, this is we're not at the fixed protocol level yet.
+
+730
+00:47:15,130 --> 00:47:16,515
+Rym: Yeah, we're at me right.
+
+731
+00:47:16,776 --> 00:47:17,739
+Scott: so for example.
+
+732
+00:47:17,900 --> 00:47:20,730
+Scott: There's all these like fucking sins and acts in there and shit.
+
+733
+00:47:20,850 --> 00:47:25,326
+Scott: I just got to get rid of a lot of that garbage and only make some sort of TCP.
+
+734
+00:47:25,387 --> 00:47:26,310
+Scott: It's TCP IP right.
+
+735
+00:47:26,371 --> 00:47:26,936
+Scott: It's not UDP.
+
+736
+00:47:27,097 --> 00:47:27,783
+Rym: It's TCP IP.
+
+737
+00:47:27,803 --> 00:47:28,510
+Scott: okay, so I need to.
+
+738
+00:47:29,531 --> 00:47:32,630
+Rym: You're already thinking you can rely on your own guaranteed delivery.
+
+739
+00:47:33,850 --> 00:47:38,110
+Scott: No, I'm saying that I'm gonna look at the T. I'm only gonna get rid of any packet.
+
+740
+00:47:38,150 --> 00:47:39,476
+Scott: That's not a TCP IP packet.
+
+741
+00:47:39,617 --> 00:47:41,304
+Scott: all the IC MPs throw them out.
+
+742
+00:47:41,424 --> 00:47:42,690
+Scott: You know throw out all this garbage.
+
+743
+00:47:43,152 --> 00:47:44,297
+Scott: I gotta throw out anything.
+
+744
+00:47:44,317 --> 00:47:44,859
+Scott: I got.
+
+745
+00:47:44,979 --> 00:47:46,486
+Scott: I know what a fixed header looks like right.
+
+746
+00:47:46,506 --> 00:47:48,613
+Rym: oh Really it's like.
+
+747
+00:47:48,633 --> 00:47:49,217
+Rym: so equals fix.
+
+748
+00:47:51,170 --> 00:47:57,818
+Scott: I would create some sort of filters such that only the fixed packets would be seen by my Software and any other kind of packet.
+
+749
+00:47:57,918 --> 00:47:59,323
+Scott: sins and acts and all the garbage.
+
+750
+00:47:59,344 --> 00:48:01,050
+Scott: just forget that shit all right now.
+
+751
+00:48:01,400 --> 00:48:01,750
+Rym: Are you gonna?
+
+752
+00:48:01,870 --> 00:48:02,693
+Rym: Do you know how to use the?
+
+753
+00:48:03,114 --> 00:48:09,106
+Rym: because you have you'll have to abstract a little bit because TCP could theoretically send the same frame multiple times.
+
+754
+00:48:10,252 --> 00:48:16,247
+Rym: So computer a sends a tease of TCP packet with a fixed message sends five more packets with fixed messages.
+
+755
+00:48:16,768 --> 00:48:19,664
+Rym: the other end Basically says I didn't get any of those.
+
+756
+00:48:19,704 --> 00:48:20,329
+Rym: send them all again.
+
+757
+00:48:20,631 --> 00:48:23,830
+Scott: Yeah, so you see the same guy again, so I can you know I can remove duplicates.
+
+758
+00:48:23,978 --> 00:48:28,218
+Scott: Yeah I'm pretty sure ever be a case in the fixed protocol where there would be Intentional duplicate like it was.
+
+759
+00:48:28,499 --> 00:48:30,167
+Scott: it was sent and acknowledged and sent.
+
+760
+00:48:30,187 --> 00:48:30,468
+Scott: the same.
+
+761
+00:48:30,509 --> 00:48:35,189
+Rym: exact Acknowledgments within the protocol are separate from TCP IP.
+
+762
+00:48:35,691 --> 00:48:43,650
+Scott: Well that is very good because then I can easily determine whether it was an intentional Duplicate or a TCP IP duplicate and any TCP IP level duplicates.
+
+763
+00:48:43,992 --> 00:48:46,585
+Scott: I could just look and do like an MD a hash of the.
+
+764
+00:48:46,746 --> 00:48:49,994
+Scott: you know the packets Identical to one I've already got.
+
+765
+00:48:50,014 --> 00:48:51,218
+Rym: I'm pretty sure.
+
+766
+00:48:51,278 --> 00:48:58,823
+Rym: I'm pretty sure the Wireshark libraries and the pcap libraries can Abstract out the TCP and just give you the packets that actually made it.
+
+767
+00:48:59,004 --> 00:49:00,610
+Scott: they can indeed do those things.
+
+768
+00:49:00,710 --> 00:49:04,423
+Scott: I've never gone if I were to utilize their libraries and not write it myself.
+
+769
+00:49:04,583 --> 00:49:06,650
+Scott: there are many filtering features in Wireshark.
+
+770
+00:49:06,650 --> 00:49:07,132
+Scott: That's pretty much.
+
+771
+00:49:07,172 --> 00:49:07,934
+Scott: What the fuck it does.
+
+772
+00:49:08,095 --> 00:49:09,018
+Rym: all right, so do you know?
+
+773
+00:49:09,279 --> 00:49:09,981
+Rym: so what?
+
+774
+00:49:10,182 --> 00:49:11,245
+Rym: how would you differentiate?
+
+775
+00:49:11,305 --> 00:49:12,248
+Rym: like say there could be?
+
+776
+00:49:12,830 --> 00:49:15,640
+Rym: Multiple fix engines running on the same machine.
+
+777
+00:49:15,721 --> 00:49:18,049
+Rym: each one listens on a different port mmm.
+
+778
+00:49:18,471 --> 00:49:20,557
+Rym: So how do you differentiate all the different?
+
+779
+00:49:21,059 --> 00:49:24,630
+Rym: like say you want to differentiate the packets from one engine versus another engine?
+
+780
+00:49:24,770 --> 00:49:26,027
+Rym: Do you know the tuple that?
+
+781
+00:49:26,730 --> 00:49:28,758
+Rym: Defines the TCP IP connection.
+
+782
+00:49:28,978 --> 00:49:30,364
+Scott: I would look it up in the fucking book.
+
+783
+00:49:30,404 --> 00:49:32,050
+Scott: I could look at the packets themselves.
+
+784
+00:49:32,170 --> 00:49:32,672
+Rym: I'm just curious.
+
+785
+00:49:32,692 --> 00:49:33,154
+Rym: You know it.
+
+786
+00:49:33,576 --> 00:49:33,737
+Scott: No.
+
+787
+00:49:33,777 --> 00:49:34,238
+Scott: I don't know it.
+
+788
+00:49:34,259 --> 00:49:35,142
+Scott: I don't do that.
+
+789
+00:49:35,383 --> 00:49:37,190
+Scott: My job is googling things right.
+
+790
+00:49:37,512 --> 00:49:37,894
+Scott: I have again.
+
+791
+00:49:37,914 --> 00:49:40,950
+Scott: I would look at the pet if I had to and I couldn't Google that right.
+
+792
+00:49:41,292 --> 00:49:42,582
+Rym: Really, it's really simple.
+
+793
+00:49:42,622 --> 00:49:43,710
+Scott: I would just look at the packets.
+
+794
+00:49:43,830 --> 00:49:46,662
+Scott: I would have one engine send a packet the other engine send a packet.
+
+795
+00:49:46,943 --> 00:49:48,710
+Scott: go to my little program in Wireshark.
+
+796
+00:49:48,911 --> 00:49:51,762
+Scott: Look at the both of them, and I would be able to see with my eyeballs.
+
+797
+00:49:51,862 --> 00:49:53,207
+Scott: Oh, that's the fucking difference right there.
+
+798
+00:49:53,247 --> 00:50:05,054
+Rym: boom done Alright, so you realize it's actually just the the IPs on both ends Oh, and the ports on both ends okay, and then that was hard the protocol TCP or UDP.
+
+799
+00:50:05,274 --> 00:50:06,399
+Rym: so big deal.
+
+800
+00:50:06,479 --> 00:50:08,306
+Rym: yeah nice and easy all right.
+
+801
+00:50:08,647 --> 00:50:09,530
+Scott: so what I'm partly.
+
+802
+00:50:09,631 --> 00:50:11,321
+Rym: I'm just trying to figure out how much about networking.
+
+803
+00:50:11,361 --> 00:50:12,628
+Rym: You know this is selfish enough.
+
+804
+00:50:13,811 --> 00:50:14,735
+Scott: Yeah, to do whatever.
+
+805
+00:50:14,755 --> 00:50:16,582
+Scott: This isn't the right programs that do network.
+
+806
+00:50:16,662 --> 00:50:23,670
+Rym: all right, so this is working out, okay, so How would you deal with the situation of a slow subscriber?
+
+807
+00:50:23,770 --> 00:50:24,774
+Rym: So you're reading all these things.
+
+808
+00:50:24,814 --> 00:50:26,941
+Rym: just fine you want to send them off to some other server.
+
+809
+00:50:27,323 --> 00:50:30,434
+Rym: say that server slows the fuck down Way upstream.
+
+810
+00:50:30,494 --> 00:50:30,795
+Scott: Oh the guy.
+
+811
+00:50:30,815 --> 00:50:31,659
+Scott: I'm sending them down.
+
+812
+00:50:32,121 --> 00:50:33,285
+Scott: I just buffer that shit up.
+
+813
+00:50:33,506 --> 00:50:34,309
+Rym: all right, so what if?
+
+814
+00:50:35,470 --> 00:50:36,889
+Rym: He's down for the whole day.
+
+815
+00:50:36,930 --> 00:50:38,250
+Rym: You're gonna buffer it all in RAM forever.
+
+816
+00:50:38,250 --> 00:50:42,449
+Scott: And just what do you do when you hit when you who is this guy from another company or is it from my company?
+
+817
+00:50:42,469 --> 00:50:42,550
+Scott: say?
+
+818
+00:50:42,670 --> 00:50:43,214
+Rym: It's your company.
+
+819
+00:50:43,536 --> 00:50:44,624
+Scott: Oh, so it's my own company.
+
+820
+00:50:44,744 --> 00:50:45,469
+Rym: It's your own company.
+
+821
+00:50:46,231 --> 00:50:49,930
+Scott: I just write that shit in some hard drive somewhere all right, so you'd buffer to a file.
+
+822
+00:50:50,156 --> 00:50:54,864
+Rym: Yeah Would the same thread send the message upstream and write it to the file?
+
+823
+00:50:54,884 --> 00:50:56,028
+Rym: or would you do some sort of?
+
+824
+00:50:56,128 --> 00:50:56,670
+Scott: I would have some?
+
+825
+00:50:56,750 --> 00:50:59,863
+Scott: Sort of policy that we would decide on in a meeting probably of like.
+
+826
+00:51:00,104 --> 00:51:00,365
+Scott: you know.
+
+827
+00:51:00,405 --> 00:51:02,395
+Scott: hey if the thing is down What do we want to do?
+
+828
+00:51:02,435 --> 00:51:02,918
+Scott: do we want to?
+
+829
+00:51:03,179 --> 00:51:04,950
+Scott: how long do you want to retry for an hour?
+
+830
+00:51:05,110 --> 00:51:05,673
+Scott: Do you care?
+
+831
+00:51:05,733 --> 00:51:06,456
+Scott: how much do you care?
+
+832
+00:51:06,516 --> 00:51:09,650
+Scott: business guy who actually this matters to what it you know?
+
+833
+00:51:10,010 --> 00:51:11,250
+Scott: This is your thing right?
+
+834
+00:51:11,830 --> 00:51:13,075
+Scott: This is where your business matters.
+
+835
+00:51:13,115 --> 00:51:16,669
+Scott: if you need this to be automatically sent no matter what then I'll have a thing you know.
+
+836
+00:51:16,870 --> 00:51:27,390
+Scott: We'll come up with a schedule like hey Maybe we'll automatically resend after every hour or you know we'll start trying every five minutes And if it stops working will slow down to hourly will slow down to daily.
+
+837
+00:51:27,711 --> 00:51:30,766
+Scott: Do you really need me to keep the logs forever like if it's two days old.
+
+838
+00:51:30,786 --> 00:51:31,650
+Scott: do you even care anymore?
+
+839
+00:51:32,131 --> 00:51:34,129
+Scott: You know maybe I'll just throw them out when they're two days old.
+
+840
+00:51:34,371 --> 00:51:38,688
+Scott: You know we'll decide on something that makes sense for the business case of what to do.
+
+841
+00:51:38,889 --> 00:51:40,770
+Rym: all right So what I was getting out with all this?
+
+842
+00:51:40,810 --> 00:51:45,730
+Scott: Maybe we'll do a manual resend or you know if you ask you make a manual request for the log.
+
+843
+00:51:45,790 --> 00:51:46,734
+Scott: I'll email it to you.
+
+844
+00:51:46,894 --> 00:51:49,686
+Rym: so this kind of wraps up my whole ulterior motive here.
+
+845
+00:51:49,706 --> 00:52:14,515
+Rym: a Big problem with a lot of people who are young and coming just out of college and getting into industries Whatever they might be programmers everything the separation of duties is actually really important and Unless you're like a startup of one You've the fact the programmer Doesn't only makes arbitrary decisions on the things that matter to the programmer But notice how immediately.
+
+846
+00:52:14,535 --> 00:52:17,045
+Rym: what Scott's asking me are what are the constraints?
+
+847
+00:52:17,125 --> 00:52:18,049
+Rym: What does this need to do?
+
+848
+00:52:18,571 --> 00:52:20,370
+Rym: He's writing it to the business specification.
+
+849
+00:52:20,531 --> 00:52:21,394
+Rym: That's what matters.
+
+850
+00:52:21,575 --> 00:52:25,409
+Rym: in the end of course it man what the code is that most people I've met don't get that yet.
+
+851
+00:52:26,394 --> 00:52:26,857
+Scott: Well, I don't.
+
+852
+00:52:27,279 --> 00:52:29,330
+Rym: they don't think about things in these terms.
+
+853
+00:52:29,872 --> 00:52:33,807
+Scott: So I just I'm just gonna retry forever and then my computer runs out of memory.
+
+854
+00:52:33,827 --> 00:52:36,998
+Scott: yeah Great good job.
+
+855
+00:52:37,018 --> 00:52:39,350
+Rym: Do you know what would you do on a Linux system?
+
+856
+00:52:39,770 --> 00:52:46,537
+Rym: If you if you in var log messages and om was logged at some point it depends on what systems running I mean do I really care?
+
+857
+00:52:46,577 --> 00:52:49,910
+Scott: I mean if this om something or was already killed on the server, right, okay?
+
+858
+00:52:49,950 --> 00:52:53,520
+Rym: But it's let's say it's the kernel om handler not some individual applications.
+
+859
+00:52:53,620 --> 00:52:56,930
+Scott: om right so the kernel is killing some processes off.
+
+860
+00:52:57,090 --> 00:52:58,375
+Rym: Do you know how it does that?
+
+861
+00:52:58,796 --> 00:53:04,180
+Scott: yeah when it runs out of memory it looks at you know has some priority system usually kills Off the biggest fucker.
+
+862
+00:53:04,260 --> 00:53:05,770
+Rym: actually usually it's entirely random.
+
+863
+00:53:05,790 --> 00:53:08,238
+Rym: It kills a random PID and it keeps doing that.
+
+864
+00:53:08,378 --> 00:53:13,435
+Scott: I've only I've only ever seen the kernel om really go off with my SQL Eating up all the memory.
+
+865
+00:53:13,475 --> 00:53:21,624
+Scott: I've seen that and it always see and I haven't seen it lately not in a few years But it always killed off my SQL every time The biggest fucker.
+
+866
+00:53:22,571 --> 00:53:28,690
+Scott: So maybe it picks like a random bit in memory and sees who that bit belongs to and that's how it picks the biggest guy.
+
+867
+00:53:28,793 --> 00:53:29,147
+Scott: I don't know.
+
+868
+00:53:29,290 --> 00:53:34,252
+Rym: This is the side because the advice I usually give people is if you ever see an om written off our log messages just reboot Cuz.
+
+869
+00:53:34,273 --> 00:53:35,570
+Rym: there's yeah safe way to recover.
+
+870
+00:53:35,711 --> 00:53:39,330
+Scott: I would just reboot, but I mean maybe it's you know depending on the business use of that machine.
+
+871
+00:53:39,390 --> 00:53:42,349
+Scott: Maybe there is another process on the machine that is still not killed.
+
+872
+00:53:43,492 --> 00:53:44,959
+Scott: You care about it, and it killed.
+
+873
+00:53:44,999 --> 00:53:49,838
+Scott: maybe the thing that got killed with some runaway Crawl here that no one gives a shit about.
+
+874
+00:53:49,858 --> 00:53:56,274
+Rym: if you want to be a successful technologist in a real company paid Don't just think about.
+
+875
+00:53:56,354 --> 00:53:57,578
+Rym: you know your silo of.
+
+876
+00:53:57,779 --> 00:53:59,103
+Rym: I write the code that does this.
+
+877
+00:53:59,364 --> 00:53:59,806
+Rym: think about.
+
+878
+00:53:59,846 --> 00:54:02,618
+Rym: you know all the different pieces along the way and do the parts that make sense.
+
+879
+00:54:02,639 --> 00:54:09,210
+Rym: and that seems like simple advice, but People fresh out of college have never worked in these environments seem to have a lot of trouble with that.
+
+880
+00:54:09,351 --> 00:54:11,303
+Scott: Well the problem the trouble I have is the opposite.
+
+881
+00:54:11,363 --> 00:54:16,041
+Scott: right is like you know See these issues And I want to talk to these business people.
+
+882
+00:54:16,061 --> 00:54:18,394
+Scott: you go to the guy who does my job And he doesn't care.
+
+883
+00:54:18,415 --> 00:54:26,250
+Scott: these people don't care and they're all politics and bullshit And they don't actually care about improving their product, or you know one guy wants one thing one guy wants another thing.
+
+884
+00:54:26,250 --> 00:54:27,055
+Scott: They're contradictory.
+
+885
+00:54:27,075 --> 00:54:28,161
+Scott: they work for the same company.
+
+886
+00:54:28,201 --> 00:54:29,549
+Scott: They don't cooperate with each other.
+
+887
+00:54:30,252 --> 00:54:31,014
+Scott: The guy above.
+
+888
+00:54:31,095 --> 00:54:32,680
+Scott: both of those guys won't decide.
+
+889
+00:54:32,740 --> 00:54:34,987
+Scott: I'm not allowed to talk to them, or I don't even know who it is.
+
+890
+00:54:35,488 --> 00:54:39,990
+Scott: you know Everyone just passes the buck and is like why are you talking to me about this low-level bullshit?
+
+891
+00:54:40,131 --> 00:54:40,956
+Scott: Because they don't want to.
+
+892
+00:54:40,977 --> 00:54:58,533
+Scott: you know I guess they don't want to micromanage which is good But it's like hey listen you got three people working for you Who are all saying different things and basically fighting over the same resources and want to use them in different ways and they're all Technologically inconsistent and impossible, and it's impossible to appease all of them Physically.
+
+893
+00:54:59,034 --> 00:55:10,010
+Scott: you need to lay down the law and tell me which one of these people to listen to and also I have suggestions That would you know that you know conflict with all the priorities of these three people who only care about themselves.
+
+894
+00:55:10,632 --> 00:55:14,769
+Scott: And I got ideas that would actually help the customer who no one seems to give a fuck about but me.
+
+895
+00:55:16,851 --> 00:55:18,801
+Scott: Should we do what I say or what these people say?
+
+896
+00:55:18,901 --> 00:55:20,730
+Scott: come on and there's nothing going on.
+
+897
+00:55:20,790 --> 00:55:26,250
+Rym: It just amazes me how many companies just can't manage that and it seems to almost always come down to human drama.
+
+898
+00:55:26,731 --> 00:55:27,674
+Scott: It is human drama.
+
+899
+00:55:27,734 --> 00:55:29,961
+Rym: I love working for a relatively small companies.
+
+900
+00:55:30,002 --> 00:55:32,590
+Rym: now where if that stuff really doesn't happen?
+
+901
+00:55:33,272 --> 00:55:36,404
+Scott: My place was relatively small, but we got bought.
+
+902
+00:55:36,665 --> 00:55:37,830
+Scott: yeah seems to happen anywhere.
+
+903
+00:55:38,413 --> 00:55:41,049
+Rym: Every company I've worked for has been the smallest company I've ever worked for.
+
+904
+00:55:42,352 --> 00:55:42,855
+Scott: How about that?
+
+905
+00:55:43,217 --> 00:55:45,210
+Rym: I mean I started with the US federal government.
+
+906
+00:55:46,371 --> 00:55:49,624
+Scott: So then I went to IBM so you tested how much you know about networking.
+
+907
+00:55:49,644 --> 00:55:51,029
+Scott: do I know enough about networking?
+
+908
+00:55:51,049 --> 00:55:51,210
+Scott: yeah?
+
+909
+00:55:51,430 --> 00:55:52,774
+Rym: You know the thing is.
+
+910
+00:55:53,396 --> 00:55:55,382
+Rym: it's interesting that your first instinct is.
+
+911
+00:55:55,422 --> 00:56:00,263
+Rym: let me google that I've talked to a bunch of different programmers both Like in my company and other companies.
+
+912
+00:56:00,324 --> 00:56:02,680
+Rym: I've been asking just friends I know all these same questions.
+
+913
+00:56:02,741 --> 00:56:10,230
+Rym: just to kind of I'm trying It was an interesting simple question to see the extent to which different programmers know stuff, and here's my conclusion.
+
+914
+00:56:11,290 --> 00:56:15,412
+Rym: RIT computer scientists know more about networking than everyone else in the world I had.
+
+915
+00:56:15,853 --> 00:56:21,068
+Scott: I had like three networking class except for a certain subclass of old-timers.
+
+916
+00:56:21,088 --> 00:56:21,148
+Rym: who?
+
+917
+00:56:22,670 --> 00:56:25,149
+Scott: The guys who set up the router that you didn't get the setup because he set it up.
+
+918
+00:56:25,270 --> 00:56:39,712
+Rym: That guy more like the guys who were doing like the generation of coding before we had formalized coding disciplines Who basically had to know everything and they will also look it up if they don't know it like you will of course You know.
+
+919
+00:56:40,034 --> 00:56:40,860
+Scott: did you know about this?
+
+920
+00:56:41,142 --> 00:56:41,867
+Scott: the Unix command FC?
+
+921
+00:56:45,316 --> 00:56:45,358
+Rym: FC.
+
+922
+00:56:46,651 --> 00:56:47,413
+Rym: Actually, I don't.
+
+923
+00:56:47,775 --> 00:56:55,669
+Scott: I learned about it yesterday in fact from this book about 21st century coding in C Which also taught me how to use auto tools which I'll tell you about later.
+
+924
+00:56:56,251 --> 00:57:02,270
+Scott: But yeah, good luck finding the man page for FC because it has the least documentation of any command.
+
+925
+00:57:02,971 --> 00:57:06,622
+Rym: Man FC built-in runs in a built-in command.
+
+926
+00:57:06,682 --> 00:57:14,188
+Scott: This isn't even yeah, it is the least Documented command ever, but I'll tell you about it after the show and how crazy useful it is.
+
+927
+00:57:15,252 --> 00:57:16,603
+Rym: Wait I found it all right.
+
+928
+00:57:16,704 --> 00:57:22,770
+Scott: That's that's the page I found is the only page I could find documenting this fucker big bash dead daily.
+
+929
+00:57:23,051 --> 00:57:24,638
+Rym: I'm still doesn't tell me what it does.
+
+930
+00:57:24,698 --> 00:57:25,482
+Scott: I'll tell you what it does.
+
+931
+00:57:25,522 --> 00:57:26,064
+Scott: my shows over.
+
+932
+00:57:26,325 --> 00:57:27,289
+Rym: okay kids look it up.
+
+933
+00:57:33,334 --> 00:57:35,870
+Rym: This has been GeekNights with Rym and Scott.
+
+934
+00:57:35,930 --> 00:57:40,785
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+935
+00:57:40,986 --> 00:57:46,044
+Scott: be sure to visit our website At front row crew comm for show notes discussion news and more.
+
+936
+00:57:46,285 --> 00:57:53,670
+Rym: remember GeekNights is not one But four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+937
+00:57:54,031 --> 00:57:57,206
+Scott: GeekNights is distributed under a creative Commons attribution 3.0 license.
+
+938
+00:57:58,471 --> 00:58:03,226
+Scott: Heat nights is recorded live with no studio and no audience, but unlike those other late shows.
+
+939
+00:58:03,346 --> 00:58:04,650
+Scott: It's actually recorded at night.
+

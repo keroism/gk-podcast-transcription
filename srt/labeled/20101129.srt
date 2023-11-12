@@ -1,0 +1,4728 @@
+1
+00:00:08,860 --> 00:00:10,696
+Rym: It's Monday November 29th.
+
+2
+00:00:10,897 --> 00:00:11,198
+Rym: I'm Rym.
+
+3
+00:00:11,358 --> 00:00:15,650
+Rym: I'm Scott, and this is GeekNights tonight the technology of WikiLeaks.
+
+4
+00:00:20,192 --> 00:00:21,226
+Rym: Let's do this.
+
+5
+00:00:30,491 --> 00:00:31,694
+Rym: Yeah, the listeners want it.
+
+6
+00:00:31,794 --> 00:00:37,226
+Rym: clearly no one has exhibited any support whatsoever for not saying the date.
+
+7
+00:00:38,830 --> 00:00:52,168
+Scott: I Should have you know as my problem is I can never use the strategy of pretend I like it so that people switch back cuz they're picking it just cuz I don't like it Unless I start out lying from the get-go, which I never do because I am a non liar.
+
+8
+00:00:52,188 --> 00:00:53,573
+Scott: non liar That's right.
+
+9
+00:00:53,754 --> 00:00:55,320
+Scott: ever nope ever nope.
+
+10
+00:00:55,360 --> 00:00:56,003
+Rym: in your entire life.
+
+11
+00:00:56,023 --> 00:00:56,645
+Rym: You've never lied.
+
+12
+00:00:57,167 --> 00:01:00,696
+Scott: That's I have Since I have become a non liar.
+
+13
+00:01:00,757 --> 00:01:02,683
+Rym: I remember that that one argument.
+
+14
+00:01:02,723 --> 00:01:12,023
+Rym: We're having it was like two or three years in RIT and Someone pointed out that you had lied in recent memory, and then your response was I think yeah That was before the non lying time.
+
+15
+00:01:12,064 --> 00:01:15,036
+Scott: That's right I Became a non liar.
+
+16
+00:01:15,217 --> 00:01:21,910
+Rym: only you know I got kind of an aside from work And I obviously can't use the names of vendors because this is all BS.
+
+17
+00:01:22,050 --> 00:01:27,447
+Rym: But here's some examples of the BS that goes on when it comes to enterprise software.
+
+18
+00:01:27,467 --> 00:01:29,876
+Scott: Oh Yeah, how much does this cost?
+
+19
+00:01:30,097 --> 00:01:31,564
+Scott: well you have to call us?
+
+20
+00:01:31,825 --> 00:01:32,629
+Scott: Yeah, okay?
+
+21
+00:01:32,891 --> 00:01:37,628
+Scott: Let's talk about how much is gonna cost how much you have How much is your budget for this project?
+
+22
+00:01:37,668 --> 00:01:37,850
+Scott: well?
+
+23
+00:01:37,910 --> 00:01:46,666
+Rym: Then we'll decide how much it's gonna come aside from the fact that enterprise vendors seem to magically pull 50 to 80 percent Discounts out of their asses when you say you're not gonna buy their product.
+
+24
+00:01:47,048 --> 00:01:56,142
+Rym: Yeah There's another thing that I don't think a lot of people realize and I want to point this out because we have a lot of Tech people listening, and this is something that you need to cover your butt about.
+
+25
+00:01:56,644 --> 00:02:01,329
+Rym: so say you've got a product And you you need to buy a product that does this thing.
+
+26
+00:02:01,933 --> 00:02:04,387
+Scott: I don't have time to develop it which would be the right answer?
+
+27
+00:02:04,729 --> 00:02:07,238
+Rym: yep That's usually sadly the right answer.
+
+28
+00:02:07,258 --> 00:02:11,050
+Rym: so you need a thing and there's only and there's no open-source solution.
+
+29
+00:02:11,272 --> 00:02:12,643
+Scott: And even if there was it's.
+
+30
+00:02:12,864 --> 00:02:13,570
+Scott: it's flawed.
+
+31
+00:02:13,771 --> 00:02:18,610
+Scott: Or maybe you have to hire someone who would cost a lot of money to take care of an open-source solution flawed?
+
+32
+00:02:19,112 --> 00:02:23,066
+Scott: Yeah, it's not ticketing because it's some weird business thing you got to do.
+
+33
+00:02:23,126 --> 00:02:24,110
+Rym: that's not ticketing systems.
+
+34
+00:02:24,170 --> 00:02:34,449
+Rym: but I'll say this I was looking at ticketing systems again and Dear Lord are the open-source ticketing systems so desperately new painful?
+
+35
+00:02:34,469 --> 00:02:39,470
+Scott: well They're all meant to be you designed by small-time guys for small projects.
+
+36
+00:02:39,691 --> 00:02:40,194
+Rym: I'm not.
+
+37
+00:02:40,254 --> 00:02:45,156
+Rym: even some of them claim to be big and or they're all or they're all hippie And they're not bug trackers.
+
+38
+00:02:45,196 --> 00:02:56,263
+Rym: I learned not to look for bug trackers, but I found three Really kind of big looking ticketing systems that did a lot Command line only source distribution.
+
+39
+00:02:56,564 --> 00:02:58,090
+Rym: yep who's gonna use that?
+
+40
+00:02:59,271 --> 00:03:01,000
+Rym: So anyway, it's not a ticketing system.
+
+41
+00:03:01,020 --> 00:03:07,752
+Rym: It's something else that I need and now Hypothetically say there's only like three vendors who actually make this thing Cartel.
+
+42
+00:03:08,154 --> 00:03:13,050
+Rym: so you go to all three of them and get quotes and you make a requirements not requirements document.
+
+43
+00:03:13,130 --> 00:03:18,789
+Rym: You're like here's what I need and you give it to them and none of them are able to do what you want.
+
+44
+00:03:20,092 --> 00:03:22,350
+Scott: None of them can check off everything on the list yes.
+
+45
+00:03:22,450 --> 00:03:25,010
+Rym: So then you get a demo from all of them, which is the only way to try.
+
+46
+00:03:25,090 --> 00:03:26,963
+Scott: Did I have any plug-in architectures?
+
+47
+00:03:27,004 --> 00:03:27,910
+Scott: Maybe there's a plugin?
+
+48
+00:03:28,950 --> 00:03:30,615
+Scott: You know Microsoft does.
+
+49
+00:03:30,696 --> 00:03:32,060
+Rym: yes Microsoft does.
+
+50
+00:03:32,461 --> 00:03:33,585
+Scott: Microsoft doesn't make what you need.
+
+51
+00:03:33,725 --> 00:03:35,170
+Rym: now Microsoft doesn't make what we need.
+
+52
+00:03:36,410 --> 00:03:37,556
+Rym: So you go to these.
+
+53
+00:03:37,596 --> 00:03:48,070
+Rym: you go to multiple vendors and you get demos of all their software And you got to sign all the NDA is and whatever to actually try out their software Sign an NDA to try out something that is a product for sale, so I'm gonna go to Best Buy.
+
+54
+00:03:48,090 --> 00:03:52,707
+Scott: No You can't look at the TVs that you're going to buy until you promise never to tell anyone if these TVs look like.
+
+55
+00:03:52,828 --> 00:03:57,070
+Rym: so let's Say that of the three vendors none of them do what you want.
+
+56
+00:03:57,371 --> 00:04:04,150
+Rym: But one of them says all right dude look if you'll sign a contract with us We'll put in writing that will do all those things.
+
+57
+00:04:04,250 --> 00:04:09,010
+Rym: We'll work directly with you because obviously you know more about this product than you know a lot of our other customers.
+
+58
+00:04:09,231 --> 00:04:12,102
+Scott: Then I would say I would like to talk to some of your other customers.
+
+59
+00:04:12,664 --> 00:04:14,170
+Rym: Yeah, so say that say that works.
+
+60
+00:04:14,250 --> 00:04:21,390
+Rym: I mean say you've got a company that's kind of new on the market in this thing and They basically are willing to implement whatever you want.
+
+61
+00:04:21,410 --> 00:04:23,009
+Scott: Are they gonna go out of business tomorrow now?
+
+62
+00:04:23,532 --> 00:04:25,440
+Rym: And you have the option of walking away if they don't provide.
+
+63
+00:04:25,460 --> 00:04:32,883
+Rym: you don't have to pay until they've made the entire list complete and They will let you walk away if you're not satisfied at the end.
+
+64
+00:04:33,465 --> 00:04:35,150
+Scott: all right without giving them even one penny.
+
+65
+00:04:35,411 --> 00:04:43,730
+Rym: Yeah, all right because obviously they stand to gain more than you stand to gain And you know they're competing against the other two vendors that maybe have a more entrenched market share.
+
+66
+00:04:44,691 --> 00:04:56,449
+Rym: Don't be surprised if the other two vendors Threaten to sue you on the grounds that all the features in your requirements document that you gave them before this you saw their software in a demo.
+
+67
+00:04:57,314 --> 00:05:00,409
+Rym: They claim that you got the idea for all that from using their software.
+
+68
+00:05:01,231 --> 00:05:05,745
+Rym: Uh-huh my advice to you is simply this doesn't your requirements document have a date on it.
+
+69
+00:05:06,367 --> 00:05:13,150
+Rym: Oh, yeah, those are easily forged Yeah, so now obviously there's no trouble on my side.
+
+70
+00:05:13,290 --> 00:05:26,280
+Rym: I've handled this adroitly and there's no trouble, but for anyone who is new in the realm of negotiating with enterprise bullshit software Make sure you read contracts very very explicitly.
+
+71
+00:05:26,681 --> 00:05:31,014
+Rym: ignore threats of lawsuits unless they actually sue you Have a lawyer.
+
+72
+00:05:31,034 --> 00:05:34,225
+Rym: if you don't have a lawyer you really shouldn't be buying enterprise software in the first place.
+
+73
+00:05:34,245 --> 00:05:38,102
+Rym: I Mean you're not big enough to use enterprise software.
+
+74
+00:05:38,223 --> 00:05:47,947
+Scott: I would like to know however What variety of software this is so I can make an open-source solution Or make my own enterprise version, and then kick those other guys asses.
+
+75
+00:05:48,168 --> 00:05:53,350
+Scott: so obviously I'm not saying publicly because I have obviously never used or seen any of their programs.
+
+76
+00:05:53,470 --> 00:05:54,796
+Scott: So there's no way they could sue me.
+
+77
+00:05:54,936 --> 00:06:01,825
+Rym: there are so few vendors in this realm that It would be trivial to figure out what companies.
+
+78
+00:06:01,926 --> 00:06:02,408
+Rym: I'm talking.
+
+79
+00:06:02,428 --> 00:06:10,277
+Scott: I admit I've made a list of like vertical software markets where I know a lot of money could be made because the existing You know choices are so slim.
+
+80
+00:06:10,337 --> 00:06:15,940
+Scott: change management document management ticketing well I mean those are just ones that I'm talking about.
+
+81
+00:06:15,981 --> 00:06:31,310
+Scott: stuff like the one that I know the most about is You know every sporting Official or semi-official sporting event in the entire country possibly nay the world right from college on up Uses the exact same piece of software to track the statistics of every player in every game.
+
+82
+00:06:31,370 --> 00:06:35,930
+Scott: You know so someone's watching a college basketball game between schmuck team one and schmuck team two.
+
+83
+00:06:36,251 --> 00:06:42,527
+Scott: They're typing in so-and-so player number 34 scored two points at three minutes and five.
+
+84
+00:06:42,547 --> 00:06:42,908
+Scott: you know 54 seconds.
+
+85
+00:06:44,033 --> 00:06:46,750
+Scott: You know with an assist from so-and-so on the whatever team They.
+
+86
+00:06:47,091 --> 00:06:55,841
+Scott: all of this is tracked in this one piece of software that some guys wrote in their garage that have this archaic like you Know keyboard interface with there's like codes you got.
+
+87
+00:06:55,861 --> 00:06:57,990
+Scott: so you got to know like you know it for basketball.
+
+88
+00:06:58,231 --> 00:07:01,299
+Scott: Fp is this and QR is this other right?
+
+89
+00:07:01,420 --> 00:07:07,637
+Rym: It's a lot like medical transcription, which actually has the same problem You know.
+
+90
+00:07:07,698 --> 00:07:15,850
+Scott: but in other areas They're also very few competitors like Dennis office right software to actually interface with x-ray machines and store all the x-ray images.
+
+91
+00:07:15,950 --> 00:07:17,595
+Scott: Yep, not too many of the hose.
+
+92
+00:07:17,816 --> 00:07:20,624
+Rym: well in general anything related to health care has that problem.
+
+93
+00:07:20,784 --> 00:07:26,124
+Rym: also anything related to industrial maintenance Like maintenance scheduling or inventory management.
+
+94
+00:07:26,505 --> 00:07:27,630
+Rym: they all have the same problem.
+
+95
+00:07:27,931 --> 00:07:32,270
+Rym: But suffice it to say I cannot actually let on to what this software is.
+
+96
+00:07:32,350 --> 00:07:34,623
+Scott: I mean tell me I didn't mean to tell me now and tell me after.
+
+97
+00:07:34,663 --> 00:07:35,950
+Scott: so maybe probably not.
+
+98
+00:07:36,010 --> 00:07:43,930
+Rym: you're never gonna find out because I Think I've convinced a company to actually follow the requirements document that I wrote and build exactly what I want.
+
+99
+00:07:44,334 --> 00:07:45,003
+Scott: how about that?
+
+100
+00:07:45,388 --> 00:07:51,893
+Rym: and one of their competitors may or may not have threatened to cause trouble and They're obviously foolish.
+
+101
+00:07:52,014 --> 00:07:56,610
+Scott: this is actually this is a third situations like oh, I can't afford to develop it myself, right?
+
+102
+00:07:56,710 --> 00:08:08,081
+Scott: But if all the enterprise guys want to charge you an arm and a leg you can just hire Outsourced to a good Development team not just some schmucks in India, but you know a real development He's not that I'm sure there are real development teams in India.
+
+103
+00:08:08,101 --> 00:08:09,368
+Scott: I just haven't seen many of them.
+
+104
+00:08:10,412 --> 00:08:11,594
+Rym: Well, the trouble there.
+
+105
+00:08:11,614 --> 00:08:12,596
+Rym: It is pretty simple.
+
+106
+00:08:12,997 --> 00:08:21,164
+Rym: anytime you get a resume where someone is very specifically a Tomcat web sphere Java developer They probably only know that and nothing else.
+
+107
+00:08:21,204 --> 00:08:21,847
+Rym: and don't you know that?
+
+108
+00:08:21,868 --> 00:08:22,330
+Scott: that what I mean?
+
+109
+00:08:22,691 --> 00:08:27,690
+Scott: I'm not talking about hiring developers the way about outsourcing to a company that basically makes custom software.
+
+110
+00:08:28,315 --> 00:08:33,823
+Scott: You know you can hire a Group of developers that is already a team that already makes things together.
+
+111
+00:08:33,962 --> 00:08:35,830
+Scott: don't say here's their requirements.
+
+112
+00:08:36,010 --> 00:08:41,030
+Scott: I want you to make a piece of software that does this don't expect to ever be able to maintain that code?
+
+113
+00:08:41,533 --> 00:08:43,909
+Scott: No, but you can maintain the relationship with that company.
+
+114
+00:08:44,171 --> 00:08:45,499
+Scott: I asked a US company course.
+
+115
+00:08:45,520 --> 00:08:46,928
+Scott: then they and it might be in my.
+
+116
+00:08:46,948 --> 00:08:51,776
+Scott: you know It could cost a lot less than some ridiculous It easily.
+
+117
+00:08:51,816 --> 00:08:58,516
+Rym: could I actually do recommend that over developing yourself unless you have dedicated developers Because you're gonna keep on staff.
+
+118
+00:08:58,556 --> 00:09:03,913
+Rym: otherwise you're gonna get some guy who writes something in Perl that no one else knows how to deal With ever.
+
+119
+00:09:03,933 --> 00:09:11,670
+Rym: yep, but a problem you may run into when dealing with this sort of software Is that if you have a long-standing relationship?
+
+120
+00:09:11,850 --> 00:09:27,622
+Rym: This is not the case obviously in this situation with an enterprise vendor, and you try to walk away they will more often than you would expect try to use legal pressure or Effectively all but blackmail to force you to maintain a business relationship with them.
+
+121
+00:09:28,464 --> 00:09:30,369
+Rym: they will threaten to send the BSA after you.
+
+122
+00:09:30,851 --> 00:09:35,368
+Rym: Relationships like this go sour real quick the moment you say you're not gonna pay for something.
+
+123
+00:09:35,709 --> 00:09:42,309
+Rym: yep So one IT professional to another that I could do a whole show on this stuff, but this is like rims.
+
+124
+00:09:42,912 --> 00:09:44,022
+Rym: I enterprise IT.
+
+125
+00:09:44,082 --> 00:09:46,729
+Rym: tip of the day They're all fuck.
+
+126
+00:09:47,671 --> 00:09:48,877
+Rym: Everything sucks.
+
+127
+00:09:48,897 --> 00:09:50,567
+Rym: There's no I don't know what I can say.
+
+128
+00:09:50,587 --> 00:09:58,923
+Scott: yeah Anyway, so in the news right Microsoft who I just mentioned a few seconds ago They've actually you know sort of figured things out.
+
+129
+00:09:58,983 --> 00:10:00,208
+Scott: Maybe a little bit, right?
+
+130
+00:10:01,371 --> 00:10:04,219
+Scott: In terms of the old world of openness right.
+
+131
+00:10:04,279 --> 00:10:12,167
+Scott: so what happened was is when at first when everyone was trying to hack the Kinect Microsoft was like oh you fuckers don't even try that shit, but then like a week later.
+
+132
+00:10:12,187 --> 00:10:12,750
+Scott: They're like oh nevermind.
+
+133
+00:10:12,810 --> 00:10:13,699
+Scott: But then a week later.
+
+134
+00:10:13,719 --> 00:10:21,110
+Scott: They were like oh We thought you meant by hacking to connect that you were like trying to cheat or that you were trying to.
+
+135
+00:10:21,533 --> 00:10:23,550
+Scott: You know make your own connects.
+
+136
+00:10:23,731 --> 00:10:24,393
+Rym: Oh, I think they're.
+
+137
+00:10:24,554 --> 00:10:28,390
+Rym: one of the claims was reverse engineer the actual code in the in the Xbox.
+
+138
+00:10:28,532 --> 00:10:29,670
+Rym: Yeah, those the Kinect data.
+
+139
+00:10:29,690 --> 00:10:40,937
+Scott: We thought that you were gonna like make your own connect You know so that you could sell bootleg connects or that you were trying to you know cheat at Kinect games or some of that Kind of bullshit, but apparently you're not.
+
+140
+00:10:40,978 --> 00:10:44,069
+Scott: you just want to use Kinect with your computer or whatever and you know what.
+
+141
+00:10:44,089 --> 00:10:44,879
+Scott: we have No problem with that.
+
+142
+00:10:44,920 --> 00:10:45,589
+Scott: That's totally cool.
+
+143
+00:10:45,670 --> 00:10:50,730
+Rym: It's hard to tell if the reversal was due to bad publicity or due to a legitimate mistake.
+
+144
+00:10:50,931 --> 00:10:51,716
+Scott: Well it could have been.
+
+145
+00:10:51,837 --> 00:10:55,815
+Scott: I think what it was was Was actually you know.
+
+146
+00:10:55,875 --> 00:11:08,444
+Scott: first of all everyone knows that Microsoft is sort of a dysfunctional many parts not working in concert But not as bad as Sony kind of organization right, but I think basically what it was is you know There was a big news story because they put out a bounty.
+
+147
+00:11:08,846 --> 00:11:33,230
+Scott: so Microsoft You know the bureaucracy of it automatically reacted to a news story with its name in it right with the automatic legal You know worded reaction, but then it must have been that some sane person at Microsoft in a position of power actually looked at it and said Okay, so our automatic legal reaction was not entirely the correct reaction let us correct it.
+
+148
+00:11:33,611 --> 00:11:35,276
+Rym: And they did now think of this.
+
+149
+00:11:35,316 --> 00:11:35,717
+Rym: that is just.
+
+150
+00:11:35,757 --> 00:11:36,098
+Rym: this
+
+151
+00:11:36,339 --> 00:11:37,884
+Scott: is the outcomes razor explanation
+
+152
+00:11:38,205 --> 00:12:04,534
+Rym: that if that's true that Corporations in many ways and we already know this act like organisms that will have their own reactions to events independent of any individual human making a decision I Mean bureaucracies even without a corporation just a bureaucracy of any kind can do things that no Individual human at any point in the chain would actually want to do or be willing to do or even be ethically Charged to do.
+
+153
+00:12:04,594 --> 00:12:08,650
+Scott: and yet the corporation what it is is that the people who are doing it, right?
+
+154
+00:12:08,670 --> 00:12:16,030
+Scott: I mean they are doing it with intent right, but the thing is they're not actually Considering nor do they care right?
+
+155
+00:12:16,571 --> 00:12:17,394
+Scott: They're just there's.
+
+156
+00:12:17,434 --> 00:12:18,778
+Scott: their job is to sit here.
+
+157
+00:12:19,019 --> 00:12:24,456
+Scott: some guys job is to look at news stories about Microsoft and give the official response.
+
+158
+00:12:24,476 --> 00:12:32,038
+Rym: sometimes it's the paralysis of the crowd where one every person no person has authority to stop it Directly or to do the whole thing directly.
+
+159
+00:12:32,459 --> 00:12:40,185
+Rym: everyone does a tiny piece and then the actual decision-making Authority is deferred somewhere else and everyone makes tiny decisions where.
+
+160
+00:12:40,587 --> 00:12:43,170
+Rym: I may not agree with this But my job is just to pass the news story.
+
+161
+00:12:43,351 --> 00:12:45,867
+Rym: Oh, I mean, I may not agree with this, but my job is just to send the C&D.
+
+162
+00:12:46,432 --> 00:12:48,350
+Scott: It's like a customer service representative, right?
+
+163
+00:12:48,430 --> 00:12:53,210
+Scott: You call them and they you get the script and you really can't get them off script no matter how hard you try.
+
+164
+00:12:53,250 --> 00:12:55,087
+Scott: I've tried obscenities.
+
+165
+00:12:55,852 --> 00:12:57,302
+Scott: That doesn't get them off script, right?
+
+166
+00:12:57,322 --> 00:12:58,530
+Scott: They have a script for obscenities.
+
+167
+00:12:59,554 --> 00:13:01,984
+Scott: You know, it's it's everyone's everyone's.
+
+168
+00:13:02,145 --> 00:13:03,310
+Scott: guys boarded his job.
+
+169
+00:13:03,410 --> 00:13:04,657
+Scott: His job is PR guy.
+
+170
+00:13:04,717 --> 00:13:08,374
+Scott: respond to news stories about Microsoft with the official response And he just does it.
+
+171
+00:13:08,434 --> 00:13:11,325
+Scott: me doesn't really care what the response means or anything.
+
+172
+00:13:11,365 --> 00:13:12,670
+Scott: It's just like hey stop hacking our shit.
+
+173
+00:13:12,770 --> 00:13:13,696
+Scott: That's their official response.
+
+174
+00:13:13,716 --> 00:13:18,875
+Rym: I've already seen a lot of cool connect hacks Some guys playing Mario with it very poorly in addition though.
+
+175
+00:13:18,955 --> 00:13:20,497
+Scott: It's somewhat interestingly, right?
+
+176
+00:13:21,098 --> 00:13:27,880
+Scott: They've given a similar response to the You know jailbreaking of Windows Phone 7 hack.
+
+177
+00:13:28,602 --> 00:13:30,327
+Rym: Ah, I think I can tell you why they're.
+
+178
+00:13:30,407 --> 00:13:31,490
+Rym: they're not selling.
+
+179
+00:13:32,871 --> 00:13:34,215
+Rym: They're not selling for crap.
+
+180
+00:13:34,456 --> 00:13:35,940
+Rym: So Microsoft is probably thinking.
+
+181
+00:13:36,061 --> 00:13:37,385
+Rym: All right, we're fucked on this.
+
+182
+00:13:37,445 --> 00:13:39,070
+Rym: Anyway, what did Apple do?
+
+183
+00:13:39,650 --> 00:13:40,594
+Rym: What are people mad about that?
+
+184
+00:13:40,655 --> 00:13:42,001
+Rym: Apple does let's do the opposite.
+
+185
+00:13:42,101 --> 00:13:43,508
+Scott: Well, no, they didn't do the opposite.
+
+186
+00:13:43,548 --> 00:13:56,979
+Scott: what you know Basically, you know Apple's response is like do not jailbreak, you know They even tried to try to argue that it was illegal, you know, Microsoft is basically like look, you know You're just gonna ruin your phone.
+
+187
+00:13:56,999 --> 00:13:58,546
+Scott: You're gonna void your warranty.
+
+188
+00:13:58,566 --> 00:13:59,048
+Scott: Don't do that.
+
+189
+00:13:59,450 --> 00:14:02,909
+Scott: We can't stop you, but really we suggest you don't do that, but we can't stop you.
+
+190
+00:14:03,231 --> 00:14:06,846
+Scott: Right and maybe updates might break it, but we can't stop you.
+
+191
+00:14:06,886 --> 00:14:07,870
+Rym: Well, there's a big difference.
+
+192
+00:14:08,031 --> 00:14:10,341
+Scott: That's not the same as the.
+
+193
+00:14:10,562 --> 00:14:25,957
+Scott: the actually best response Which is here is the source code for Windows Phone 7. you are free to do anything with it that you wish except sell phones with this software on it without paying us right and Do whatever you want with your phones.
+
+194
+00:14:26,439 --> 00:14:28,087
+Rym: have a good day I'd even be happy with.
+
+195
+00:14:28,529 --> 00:14:28,730
+Rym: alright.
+
+196
+00:14:28,851 --> 00:14:31,249
+Rym: Well, here's some drivers to interface with it.
+
+197
+00:14:31,551 --> 00:14:35,209
+Rym: You're on your own if you want to do something with this phone, but we're not gonna stop you.
+
+198
+00:14:35,541 --> 00:14:45,910
+Scott: Yeah I mean because really they make their money with Windows Phone 7 because a company like say HTC Will make a phone and they'll want to put Windows Phone 7 on that phone.
+
+199
+00:14:46,413 --> 00:14:57,749
+Scott: And so if they make a hundred thousand of that phone They need to pay Microsoft a hundred thousand times Copies of Windows Phone 7 and that gets integrated into the price of the hardware, you know Sort of like when you buy a Dell that has Windows on it.
+
+200
+00:14:57,830 --> 00:15:02,570
+Scott: All right Dell actually buys the copy of Windows and then just gives it to you with the part of the price of the computer.
+
+201
+00:15:02,570 --> 00:15:04,437
+Scott: All right, so that's how they make their money.
+
+202
+00:15:04,497 --> 00:15:08,150
+Scott: So it doesn't really matter if Windows Phone 7 OS is open source.
+
+203
+00:15:08,810 --> 00:15:11,907
+Scott: right, but you know, they're never gonna do that because that's how they are.
+
+204
+00:15:12,028 --> 00:15:20,516
+Scott: but I Wouldn't matter because nobody could make and sell a phone with Windows Phone 7 on it and avoid You know their lawyers, right?
+
+205
+00:15:20,536 --> 00:15:24,030
+Scott: That would be sort of incredibly difficult except for Chinese phones, which are gonna do that shit.
+
+206
+00:15:24,191 --> 00:15:27,230
+Scott: Anyway, yep, so they wouldn't actually lose money.
+
+207
+00:15:27,751 --> 00:15:38,770
+Scott: You know either way because of the way that carriers and phone manufacturers work until that's busted up You know, there's actually no real business reason to keep shit closed source.
+
+208
+00:15:38,850 --> 00:15:42,687
+Scott: Except maybe you want to hide some secrets that oh shit our stuff course at the same time.
+
+209
+00:15:42,727 --> 00:15:50,747
+Rym: There's no active reason to support it or Advertise it because a small number of angry nerds are the only people who care.
+
+210
+00:15:50,767 --> 00:15:54,893
+Scott: no But what I'm saying is that you know, it's the same situation I said with Apple.
+
+211
+00:15:55,314 --> 00:15:59,848
+Scott: if you would just do it, even though there's no reason, you know kind of go.
+
+212
+00:15:59,968 --> 00:16:08,728
+Scott: either way It would actually give you this great boost of people who you know Cuz right now people are like, oh, let's hack it because every single thing that comes out We're gonna hack no matter how obscure useless.
+
+213
+00:16:08,890 --> 00:16:09,955
+Scott: All right, we're gonna.
+
+214
+00:16:10,115 --> 00:16:13,089
+Scott: we're gonna jailbreak every phone on the market no matter who it what it is.
+
+215
+00:16:13,531 --> 00:16:16,100
+Scott: But if they open source their phones suddenly people like wait a minute.
+
+216
+00:16:16,261 --> 00:16:18,650
+Scott: Well, I think and the people would flock to it.
+
+217
+00:16:19,131 --> 00:16:21,258
+Rym: Nick I think the effect would be very small.
+
+218
+00:16:21,278 --> 00:16:25,110
+Rym: I also think that at least Apple their fear probably unfounded.
+
+219
+00:16:25,631 --> 00:16:33,030
+Rym: Well his unfounded is I assume that if the phones are totally open people are gonna be much better writing exploits.
+
+220
+00:16:33,030 --> 00:16:34,749
+Rym: They're gonna have to worry more about security.
+
+221
+00:16:37,612 --> 00:16:40,844
+Rym: Hey grandma, I'll make your phone better and then grandma gets a virus.
+
+222
+00:16:41,025 --> 00:16:41,286
+Scott: Yeah.
+
+223
+00:16:41,306 --> 00:16:41,567
+Scott: Okay.
+
+224
+00:16:41,607 --> 00:16:46,442
+Scott: What has more At security holes that are closed more slowly?
+
+225
+00:16:46,583 --> 00:16:48,410
+Scott: ie acrobat which is closed.
+
+226
+00:16:49,552 --> 00:16:53,504
+Scott: Actually, this is a. I'm gonna give a tech alert to people right?
+
+227
+00:16:53,845 --> 00:17:03,790
+Scott: You may not realize this but Acrobat reader has a bunch of serious security holes in it And if you open up certain PDFs in it, it is possible that you take over your computer.
+
+228
+00:17:03,971 --> 00:17:05,516
+Scott: It's especially if it's a Windows computer.
+
+229
+00:17:05,536 --> 00:17:06,038
+Scott: now think of this.
+
+230
+00:17:06,078 --> 00:17:08,023
+Rym: PDFs are generally like people one.
+
+231
+00:17:08,064 --> 00:17:09,028
+Rym: It's a document.
+
+232
+00:17:09,147 --> 00:17:12,650
+Rym: Yeah granted There are a lot of macro virus while Trojans from back.
+
+233
+00:17:12,790 --> 00:17:15,869
+Scott: However, there is now a solution to this problem, right?
+
+234
+00:17:16,030 --> 00:17:26,243
+Scott: If you are the kind of person who doesn't want to use an alternative PDF reader because they suck right first of all The newest newest versions of Chrome have a PDF reader in them, right?
+
+235
+00:17:26,444 --> 00:17:28,089
+Scott: So I actually did not know that.
+
+236
+00:17:28,210 --> 00:17:30,721
+Scott: Yeah, so it's not the greatest yet.
+
+237
+00:17:30,781 --> 00:17:40,233
+Scott: It's not really and you know, and the thing is Acrobat reader sucks, but really all the alternative PDF readers that you can get for Windows at least right and a You're good.
+
+238
+00:17:40,253 --> 00:17:42,706
+Scott: You got preview right and on Linux you're good.
+
+239
+00:17:42,947 --> 00:17:43,309
+Scott: You're good.
+
+240
+00:17:44,233 --> 00:17:45,399
+Scott: So only on Windows you have an issue.
+
+241
+00:17:45,419 --> 00:17:50,870
+Scott: you can get the stupid Fox it reader, which is It works, but it's fully drag.
+
+242
+00:17:51,010 --> 00:17:51,111
+Scott: It's.
+
+243
+00:17:51,211 --> 00:17:55,870
+Scott: it's like, you know, it's not spyware or virus, but it technically costs money and you could pirate it.
+
+244
+00:17:55,950 --> 00:17:58,270
+Scott: But it's I don't you know, it's so shady.
+
+245
+00:17:58,290 --> 00:17:59,454
+Scott: I don't like that shit, right?
+
+246
+00:17:59,796 --> 00:18:03,570
+Scott: or you can get something like events, which is the one that's used in Ubuntu, right?
+
+247
+00:18:03,690 --> 00:18:10,769
+Scott: And it actually runs on Windows runs on Windows just fine But it's actually got some bugs and it crashes sometimes and it can't handle every PDF.
+
+248
+00:18:11,291 --> 00:18:14,804
+Scott: So you kind of want to use the Adobe Reader even though it's evil and full of security holes.
+
+249
+00:18:15,286 --> 00:18:19,070
+Scott: Adobe has released Adobe Reader X. you can get it now.
+
+250
+00:18:19,190 --> 00:18:26,994
+Scott: So uninstall Adobe Reader 9 completely and install Adobe Reader X and this will solve your security problems And you'll be alright.
+
+251
+00:18:27,617 --> 00:18:28,962
+Scott: I highly recommend this course.
+
+252
+00:18:29,143 --> 00:18:30,790
+Rym: exactly does it solve the security problems?
+
+253
+00:18:30,910 --> 00:18:31,773
+Rym: Can you just have its own?
+
+254
+00:18:31,873 --> 00:18:33,158
+Scott: no because it is.
+
+255
+00:18:33,419 --> 00:18:36,490
+Scott: the architecture of Adobe Reader X is one of isolation.
+
+256
+00:18:36,671 --> 00:18:40,950
+Scott: So the readers are certain it's sort of like a virtual PDF reader, right?
+
+257
+00:18:41,010 --> 00:18:42,797
+Scott: It's like there's a virtual machine for each PDF.
+
+258
+00:18:42,837 --> 00:18:43,540
+Scott: You're looking at.
+
+259
+00:18:43,620 --> 00:18:46,230
+Scott: Okay, just make sure it's easy sandboxing all the people.
+
+260
+00:18:46,411 --> 00:18:50,249
+Rym: There was an unstated assumption there that it was somehow better, but it wasn't actually said how.
+
+261
+00:18:50,349 --> 00:18:52,702
+Scott: yeah It's it sandboxes all the PDFs effectively.
+
+262
+00:18:52,722 --> 00:18:58,588
+Scott: I'm not gonna go into the details I mean, so you're the worst any evil PDF can do is ruin itself.
+
+263
+00:18:58,849 --> 00:19:00,701
+Rym: granted There's still the inherent flaws in Windows.
+
+264
+00:19:00,721 --> 00:19:02,733
+Rym: remember that old exploit Wasn't that old?
+
+265
+00:19:03,034 --> 00:19:05,864
+Rym: where that one archaic image format even forget what it was.
+
+266
+00:19:05,904 --> 00:19:15,830
+Scott: keep your window if you got Windows 7 and you update it all the time and You don't do anything stupid like run some exe from some shady place or look at a bad PDF, right?
+
+267
+00:19:16,270 --> 00:19:23,794
+Scott: Or you know take your computer with absolutely no firewall into a cyber cafe and then do everything on an unencrypted Connection.
+
+268
+00:19:24,297 --> 00:19:25,864
+Rym: you're gonna be alright actually if you do that.
+
+269
+00:19:25,924 --> 00:19:27,310
+Rym: It's not gonna hurt your computer.
+
+270
+00:19:27,330 --> 00:19:31,677
+Scott: It's hurt all your accounts, which is just as bad In fact, he's worse.
+
+271
+00:19:31,737 --> 00:19:34,450
+Scott: He's two more than if they hurt your accounts, then they can hurt your computer.
+
+272
+00:19:34,691 --> 00:19:36,038
+Scott: So you don't do that.
+
+273
+00:19:36,198 --> 00:19:36,319
+Scott: so
+
+274
+00:19:36,399 --> 00:19:51,603
+Rym: very briefly because I do want to talk a lot about WikiLeaks I want to talk about this interesting article pointing out something a lot of people have not thought about electric cars if everyone has one or even if you know a Small but vocal minority of people have them in one area about
+
+275
+00:19:51,643 --> 00:19:53,970
+Scott: completely electric cars that you need to plug into the wall
+
+276
+00:19:54,071 --> 00:19:59,750
+Rym: Yes, or the electric hybrids that can be charged Because they drop, you know a lot of power to charge.
+
+277
+00:19:59,810 --> 00:20:02,627
+Scott: Yeah, you need to plug them into the washing machine style power outlet.
+
+278
+00:20:02,929 --> 00:20:03,050
+Rym: now.
+
+279
+00:20:03,251 --> 00:20:16,010
+Rym: We used to have the problem at the turn of the century Well the turn of the last century where the wiring in houses sucked and couldn't handle stuff like, you know You'd have house fires because the tin wiring couldn't handle a fancy new electronic tin wire.
+
+280
+00:20:16,191 --> 00:20:18,102
+Rym: In fact, there were even like back in the day.
+
+281
+00:20:18,384 --> 00:20:24,749
+Rym: if you bought a toaster You plugged it into an Edison socket as in what you screw light bulbs into because there weren't wall outlets.
+
+282
+00:20:24,789 --> 00:20:26,838
+Rym: yet People only use stuff for lighting.
+
+283
+00:20:26,919 --> 00:20:28,547
+Rym: so that used to be the problem.
+
+284
+00:20:28,567 --> 00:20:29,190
+Rym: so we fixed that.
+
+285
+00:20:29,250 --> 00:20:34,025
+Rym: I mean my modern fancy apartment has holes Jerry on every goddamn wall.
+
+286
+00:20:34,066 --> 00:20:35,470
+Rym: There's like a hundred holes in this apartment.
+
+287
+00:20:35,510 --> 00:20:36,293
+Scott: I got plenty holes.
+
+288
+00:20:36,554 --> 00:20:37,939
+Rym: I have like nine circuits.
+
+289
+00:20:38,019 --> 00:20:39,223
+Scott: I got UPS's.
+
+290
+00:20:39,263 --> 00:20:50,520
+Rym: I got them loaded but the substations that provide power to individual groups of houses They cannot give that much power.
+
+291
+00:20:50,901 --> 00:20:55,456
+Rym: and if everyone in like a block in a subdivision is Powering up their Tesla overnight.
+
+292
+00:20:55,857 --> 00:20:58,024
+Rym: It'll probably overload that little substation.
+
+293
+00:20:58,084 --> 00:20:59,790
+Scott: Yeah, they're already telling people right?
+
+294
+00:21:00,070 --> 00:21:03,010
+Scott: Don't use your washing machine during the peak hours, right?
+
+295
+00:21:03,110 --> 00:21:10,006
+Scott: Cuz you know that'll uses too much electricity and you know if and everyone runs their air conditioner at the same time It sort of hurts the system.
+
+296
+00:21:10,047 --> 00:21:10,250
+Scott: It's like.
+
+297
+00:21:11,652 --> 00:21:18,150
+Scott: But the trouble that imagine if every night all night was ultra peak because everyone was charging car batteries.
+
+298
+00:21:18,801 --> 00:21:26,130
+Rym: You know The load is not the issue the overall load because we need more power during the day than tonight anyway.
+
+299
+00:21:26,551 --> 00:21:31,750
+Rym: So a lot of times excess either things are powered down or spun down or excess power is lost.
+
+300
+00:21:31,810 --> 00:21:36,544
+Scott: It's true the cars we most likely plugged in at night when nothing else is really on.
+
+301
+00:21:36,564 --> 00:21:36,705
+Rym: Yep.
+
+302
+00:21:36,745 --> 00:21:38,390
+Rym: So baseline load is not the issue.
+
+303
+00:21:38,490 --> 00:21:54,577
+Rym: it's actually the infrastructure between the baseline load and the high tension lines and that all of that and like Individual blocks of houses because our power infrastructure is laughably old and archaic and This is just better out west though, right?
+
+304
+00:21:54,657 --> 00:21:57,970
+Scott: Most of this electric stuff is happening out west before it happens out east.
+
+305
+00:21:58,473 --> 00:22:00,710
+Scott: So their electricity is much better than ours.
+
+306
+00:22:01,391 --> 00:22:03,710
+Rym: California was the only state that had rolling blackouts.
+
+307
+00:22:04,993 --> 00:22:06,870
+Scott: Well, it's California has other issues.
+
+308
+00:22:07,752 --> 00:22:08,896
+Rym: The real issue is just that.
+
+309
+00:22:09,137 --> 00:22:14,777
+Rym: as you know, everyone intelligent has been saying for the last 20 years American infrastructure is really old.
+
+310
+00:22:14,797 --> 00:22:25,710
+Rym: I mean there was a time when we would spend amounts of money that would seem ludicrous today Just building a bridge and now all our bridges are a hundred years old and the ones outside of major cities are starting to collapse.
+
+311
+00:22:25,730 --> 00:22:27,445
+Scott: Well, here's the major two reasons for that.
+
+312
+00:22:27,486 --> 00:22:34,010
+Scott: number one We built all this infrastructure a long time ago before anyone else built any infrastructure, right and we built it really well.
+
+313
+00:22:34,131 --> 00:22:37,549
+Scott: So it keeps working and we don't have a lot of money to replace it and the other.
+
+314
+00:22:38,612 --> 00:22:42,470
+Scott: The other problem is that we're very big so you built a lot of stuff everywhere.
+
+315
+00:22:42,550 --> 00:22:50,394
+Scott: We'd build something somewhere and then and we would choose to build something in a place that had nothing as opposed to choosing to update A place that already had something.
+
+316
+00:22:50,494 --> 00:23:01,343
+Rym: so I would actually I don't know if the bigness is nearly as useful as of a factor as People always bring it is because if you're a place like say Luxembourg you can just replace fucking everything.
+
+317
+00:23:01,424 --> 00:23:02,490
+Rym: No, but here's my point.
+
+318
+00:23:02,590 --> 00:23:13,167
+Rym: So the argument that you know broadband sucks in America because we can't wire Everybody because everyone's so spread out you could just wire a single major city really easily.
+
+319
+00:23:13,327 --> 00:23:16,166
+Scott: people don't want to do that I know but the thing is we could.
+
+320
+00:23:16,186 --> 00:23:17,955
+Rym: yeah We very easily could that.
+
+321
+00:23:17,975 --> 00:23:19,220
+Rym: the bigness of the u.s.
+
+322
+00:23:19,502 --> 00:23:21,590
+Rym: Is not an excuse for a failing infrastructure.
+
+323
+00:23:21,690 --> 00:23:27,010
+Rym: It's only an excuse for having outdated infrastructure in areas that aren't population centers.
+
+324
+00:23:27,371 --> 00:23:36,847
+Scott: I think one solution actually is if you look at you know infrastructure the only infrastructure We're actually doing a good job of updating is the evil cellular infrastructure.
+
+325
+00:23:36,867 --> 00:23:37,409
+Scott: They're getting the 4g.
+
+326
+00:23:37,770 --> 00:23:39,464
+Scott: They're rolling it out in the big cities, right?
+
+327
+00:23:39,806 --> 00:23:40,210
+Scott: It's coming.
+
+328
+00:23:41,291 --> 00:23:42,395
+Scott: The thing is right.
+
+329
+00:23:42,535 --> 00:23:46,930
+Scott: that also is because there's this evil corporate structure around it.
+
+330
+00:23:46,930 --> 00:23:47,756
+Scott: It's all private.
+
+331
+00:23:47,917 --> 00:23:54,932
+Scott: if we if you wanted new bridges You got to have a private bridge would probably work really well And you would get.
+
+332
+00:23:55,073 --> 00:24:01,033
+Scott: you would get a brand new bridge right the fuck away and there would be a $30 toll to go over Every time.
+
+333
+00:24:01,294 --> 00:24:07,730
+Rym: but at the same time I feel like it is a useful and valuable expenditure of taxpayer dollars to build infrastructure.
+
+334
+00:24:07,931 --> 00:24:11,430
+Scott: Yeah, I agree that we should spend taxpayer dollars on infrastructure.
+
+335
+00:24:11,530 --> 00:24:17,594
+Scott: That is a high priority, but there are not enough taxpayer dollars to pay for that and the other thing I think there would be.
+
+336
+00:24:17,714 --> 00:24:19,924
+Scott: what's what other thing are you not going to pay for?
+
+337
+00:24:20,064 --> 00:24:21,470
+Scott: or what tax are you going to raise?
+
+338
+00:24:21,710 --> 00:24:22,621
+Rym: I'll just raise the income tax.
+
+339
+00:24:23,005 --> 00:24:24,647
+Rym: All right I'm fine with that.
+
+340
+00:24:25,091 --> 00:24:34,850
+Rym: So now as someone who is in who is near the top of the tax brackets I am totally okay with paying 40 50 percent of my income if the trains fucking worked.
+
+341
+00:24:35,791 --> 00:24:40,705
+Scott: Now what what's gonna happen when you pay 40 50 percent income and the trains are no different that revolution.
+
+342
+00:24:40,805 --> 00:24:41,527
+Scott: They're just cleaner.
+
+343
+00:24:41,668 --> 00:24:45,097
+Scott: Yeah Yeah, you know I would be fine.
+
+344
+00:24:47,370 --> 00:24:53,661
+Scott: You know, it's like if if actually paying actually got if you actually got what you were gonna pay for it's like sure We pay for.
+
+345
+00:24:53,702 --> 00:24:55,855
+Rym: now at least in New York We get what we pay for.
+
+346
+00:24:55,875 --> 00:25:01,120
+Rym: if you look at our subway infrastructure versus how much it costs total It does not cost that much for what we get.
+
+347
+00:25:01,240 --> 00:25:05,397
+Scott: Yeah, because we're not getting it much We got a big service cut.
+
+348
+00:25:05,457 --> 00:25:07,385
+Scott: see anytime you W train.
+
+349
+00:25:07,485 --> 00:25:08,590
+Rym: I don't need that W train.
+
+350
+00:25:08,590 --> 00:25:10,777
+Rym: 7 7 hasn't been hurt.
+
+351
+00:25:10,817 --> 00:25:11,981
+Rym: In fact, seven is growing.
+
+352
+00:25:12,382 --> 00:25:12,562
+Rym: Uh-huh.
+
+353
+00:25:12,803 --> 00:25:13,947
+Rym: Seven is like the best train.
+
+354
+00:25:14,529 --> 00:25:16,235
+Rym: it is Never fucked me.
+
+355
+00:25:16,617 --> 00:25:19,550
+Rym: It always fucks Conrad because he lives one stop away not at the hub.
+
+356
+00:25:27,653 --> 00:25:30,341
+Rym: So Anyway things of the day.
+
+357
+00:25:30,361 --> 00:25:32,090
+Rym: what do you got for me Scott?
+
+358
+00:25:33,470 --> 00:25:40,050
+Scott: Okay, so the the 2010 the pirate party in Into Germany, I like the pirate party.
+
+359
+00:25:40,070 --> 00:25:48,196
+Scott: Yes They went to the airport for some protesting fun and they did the most fun kind of protest that there is in the world Which is the naked protest.
+
+360
+00:25:48,216 --> 00:25:49,100
+Scott: naked protest.
+
+361
+00:25:49,140 --> 00:25:50,225
+Rym: Wait all full Monty.
+
+362
+00:25:50,245 --> 00:25:51,430
+Scott: No, they had underwear.
+
+363
+00:25:51,591 --> 00:25:59,110
+Scott: Okay, because full Monty is actually illegal in a lot of places and yeah, but they're basically like hey This scanner is gonna you're gonna see our junk.
+
+364
+00:25:59,170 --> 00:26:01,182
+Scott: Well, let's just let everyone see our junk.
+
+365
+00:26:01,222 --> 00:26:02,490
+Scott: and they had some hot ladies with them.
+
+366
+00:26:02,630 --> 00:26:03,636
+Rym: We should do that in America.
+
+367
+00:26:03,656 --> 00:26:05,930
+Scott: You can go to the airport and get down to your underwear.
+
+368
+00:26:06,010 --> 00:26:06,412
+Scott: No one's gonna.
+
+369
+00:26:06,553 --> 00:26:07,919
+Rym: actually when is international?
+
+370
+00:26:07,940 --> 00:26:08,542
+Rym: no pants day?
+
+371
+00:26:08,562 --> 00:26:11,092
+Rym: because it should be coming up in like February I don't know.
+
+372
+00:26:11,273 --> 00:26:11,996
+Scott: I want to do that again.
+
+373
+00:26:12,217 --> 00:26:15,370
+Scott: But yeah you this is a you know pretty phony video.
+
+374
+00:26:16,391 --> 00:26:20,990
+Scott: I'm not now doing the Swedish instead of the German because pirate is from Sweden.
+
+375
+00:26:21,110 --> 00:26:21,813
+Scott: You know party.
+
+376
+00:26:21,934 --> 00:26:24,524
+Rym: I feel like two three four years ago doing GeekNights.
+
+377
+00:26:24,826 --> 00:26:27,736
+Rym: This is when I would have pointed out Hey, I'm not even wearing pants now, but you know what.
+
+378
+00:26:28,078 --> 00:26:28,519
+Rym: and Scott?
+
+379
+00:26:28,559 --> 00:26:31,470
+Scott: I'm actually wearing pants is indeed wearing pants.
+
+380
+00:26:32,033 --> 00:26:40,642
+Scott: However, I am wearing the pants What you know because I'm wearing, you know, you know who wears the pants me.
+
+381
+00:26:41,364 --> 00:26:42,688
+Rym: Yes you yes.
+
+382
+00:26:42,788 --> 00:26:47,614
+Scott: Yes You And the pants where?
+
+383
+00:26:47,875 --> 00:26:50,542
+Rym: so Conrad Wolfram love him or hate him?
+
+384
+00:26:50,904 --> 00:26:53,030
+Scott: wait Conrad Wolfram, that's his name.
+
+385
+00:26:53,090 --> 00:26:54,314
+Scott: I thought it was Steven Wolfram.
+
+386
+00:26:55,157 --> 00:26:57,645
+Rym: You might be thinking of a different Wolfram Wolfram alpha guy.
+
+387
+00:26:57,685 --> 00:27:02,308
+Rym: There is also a Steven Wolfram huh, he also did a TED talk.
+
+388
+00:27:02,328 --> 00:27:06,703
+Scott: I Think the Steven Wolfram is the wolfram alpha Wolfram.
+
+389
+00:27:07,084 --> 00:27:11,204
+Rym: Yes, Mathematica I'm talking about Conrad Wolfram.
+
+390
+00:27:11,244 --> 00:27:12,089
+Scott: I don't know who this is.
+
+391
+00:27:12,771 --> 00:27:13,293
+Rym: He is.
+
+392
+00:27:13,473 --> 00:27:20,230
+Rym: Conrad Wolfram runs the worldwide arm of Wolfram research the mathematical lab behind the cutting-edge knowledge engine Wolfram alpha.
+
+393
+00:27:21,463 --> 00:27:25,475
+Scott: then who is Steven Wolfram.
+
+394
+00:27:25,817 --> 00:27:33,980
+Scott: Steven Wolfram is the creator of Mathematica Which is the same people who did well from alpha.
+
+395
+00:27:34,040 --> 00:27:36,026
+Scott: yeah, so are these brothers?
+
+396
+00:27:36,046 --> 00:27:36,468
+Scott: I didn't know.
+
+397
+00:27:36,488 --> 00:27:37,170
+Scott: there were two of them.
+
+398
+00:27:37,531 --> 00:27:37,913
+Scott: I don't know.
+
+399
+00:27:38,636 --> 00:27:39,178
+Scott: I really don't know.
+
+400
+00:27:39,720 --> 00:27:42,130
+Scott: Oh Conrad is the younger brother of Steven.
+
+401
+00:27:42,170 --> 00:27:42,834
+Scott: There we go.
+
+402
+00:27:43,115 --> 00:27:44,241
+Scott: I thought it was one guy.
+
+403
+00:27:44,282 --> 00:27:45,367
+Scott: I only knew the one guy.
+
+404
+00:27:45,408 --> 00:27:46,854
+Scott: suddenly now I know there's two guys.
+
+405
+00:27:47,215 --> 00:27:50,810
+Rym: So he gave us head talk and I think you should all watch it.
+
+406
+00:27:50,870 --> 00:27:54,570
+Rym: It's my thing of the day, but I kind of had a sea change of my own personal opinion.
+
+407
+00:27:54,650 --> 00:28:05,853
+Rym: The gist of this talk is that we teach math in pro in school, you know kindergarten through 12th grade and even college in the order of complexity of Computation.
+
+408
+00:28:05,873 --> 00:28:14,764
+Rym: so we do calculus last because it is really goddamn hard to calculate Advanced calculus to sit down and actually compute it and be like, that's the inner girl.
+
+409
+00:28:15,206 --> 00:28:16,249
+Rym: multiply by one.
+
+410
+00:28:17,993 --> 00:28:21,430
+Scott: This math curriculum was created before the time of calculators.
+
+411
+00:28:21,510 --> 00:28:38,174
+Rym: Yes, so he argues that in a world with computers, we should still teach computation, but we should not teach mathematics and theory in the order of difficulty of computation But instead in the order of difficulty and usefulness of Application and theory.
+
+412
+00:28:38,956 --> 00:28:40,360
+Scott: I I sort of agree, right?
+
+413
+00:28:40,380 --> 00:28:43,990
+Scott: I just think that we need to take also into account, right?
+
+414
+00:28:44,150 --> 00:28:48,490
+Scott: It's like you should learn the math that is most practical in everyday life first.
+
+415
+00:28:48,691 --> 00:28:57,768
+Scott: And if math if there is a math that is not practical for use in everyday life It really just shouldn't be taught in public school and only in you know for your special field.
+
+416
+00:28:57,808 --> 00:29:04,569
+Scott: So yeah So if you're a physicist, you should learn the math that physicists need to know that normal people They're never gonna need to know in every day.
+
+417
+00:29:04,610 --> 00:29:07,618
+Rym: Well, he goes a little bit further and points out that you know Even at a young age.
+
+418
+00:29:07,800 --> 00:29:18,779
+Rym: if we forget, you know If we ignore the computation and let the computers do it you can teach very young children the high-level concepts of calculus and Those concepts are actually pretty damn useful.
+
+419
+00:29:18,859 --> 00:29:21,750
+Rym: and he shows this interesting idea and he used his daughter's example.
+
+420
+00:29:21,810 --> 00:29:33,247
+Rym: It worked pretty well, but you can use advanced maths and sit a kid down and be like, here are the tools here's a problem and point out that maths actually make it very easy to solve this problem.
+
+421
+00:29:33,689 --> 00:29:40,787
+Rym: and then Learning the computation beyond obviously arithmetic, which every kid should learn and everyone in the world should know very well.
+
+422
+00:29:40,807 --> 00:29:44,503
+Rym: I Think he makes a really good point and he can make it better than I can.
+
+423
+00:29:44,925 --> 00:29:58,249
+Rym: but toward the end He talks a little bit about programming and I only not only I not only agree with him But I want to go one step further because I used to argue that Technological literacy is tantamount to literacy in the modern world and I still agree with that.
+
+424
+00:29:58,953 --> 00:30:02,210
+Rym: But I'm not saying we should drop calculus from the curriculum.
+
+425
+00:30:02,230 --> 00:30:03,549
+Rym: I'm just using it as an example.
+
+426
+00:30:04,091 --> 00:30:10,210
+Rym: What we teach things like calculus and all these very specific things because they're considered core education in America.
+
+427
+00:30:11,213 --> 00:30:18,193
+Rym: I feel like we should drop some of those less directly practical things like maybe calculus from the Guaranteed.
+
+428
+00:30:18,373 --> 00:30:19,437
+Rym: everyone has to do this.
+
+429
+00:30:19,477 --> 00:30:19,999
+Rym: God damn it.
+
+430
+00:30:20,019 --> 00:30:30,370
+Rym: curriculum and I think programming not computer literacy I mean straight-up object-oriented programming should be one of the core fundamental things that everyone has to learn.
+
+431
+00:30:30,370 --> 00:30:31,728
+Scott: I'm gonna go a step further than that.
+
+432
+00:30:32,412 --> 00:30:42,144
+Scott: I think we should make the fifth subject be technology and everyone should learn everything from Transistors all the way up and on top of that we shouldn't drop a damn thing.
+
+433
+00:30:42,184 --> 00:30:44,190
+Scott: These kids are working too easy.
+
+434
+00:30:44,370 --> 00:30:46,577
+Scott: They're not learning enough in school year-round school.
+
+435
+00:30:46,738 --> 00:30:47,861
+Scott: You're learning more.
+
+436
+00:30:48,102 --> 00:30:50,690
+Scott: I argue and you know what teachers unions fuck you.
+
+437
+00:30:51,191 --> 00:30:57,090
+Rym: I argue against you around school for one reason and one reason alone every all the study stage is better for it every possible way.
+
+438
+00:30:57,331 --> 00:30:58,054
+Rym: Actually, they don't.
+
+439
+00:30:58,074 --> 00:31:01,249
+Scott: the kids are less happy actually because they don't get to have a summer.
+
+440
+00:31:01,731 --> 00:31:10,402
+Rym: Every study I've seen has actually been a comparison not just on your round school but between all the countries that have your round school and the ones that don't.
+
+441
+00:31:10,864 --> 00:31:15,097
+Rym: and the ones that have your round school have Fundamentally different educational systems.
+
+442
+00:31:15,317 --> 00:31:18,547
+Rym: Yeah, the system is probably much more the effects.
+
+443
+00:31:18,888 --> 00:31:19,450
+Scott: I gotta change.
+
+444
+00:31:19,791 --> 00:31:22,961
+Rym: I'm not talking about changing your own school is not the answer.
+
+445
+00:31:23,001 --> 00:31:25,670
+Rym: It doesn't actually seem to be the causative factor.
+
+446
+00:31:26,553 --> 00:31:29,122
+Scott: You still there's no reason that we had to cut out anything.
+
+447
+00:31:29,443 --> 00:31:31,350
+Scott: get your asses and gear kids.
+
+448
+00:31:31,471 --> 00:31:43,070
+Rym: the reason I say cut something out is because Think about this a lot of people's arguments against this idea stem along the lines that you know programming is hard Or I don't need it for my job, but you can say the same thing about high-level math.
+
+449
+00:31:44,081 --> 00:31:44,702
+Scott: The thing is.
+
+450
+00:31:44,762 --> 00:31:50,302
+Rym: but here's the thing we we say, you know, so how many people say yeah I sucked at math in high school.
+
+451
+00:31:50,363 --> 00:31:51,150
+Rym: I never learned trig.
+
+452
+00:31:51,270 --> 00:32:00,110
+Rym: You know math stupidity is kind of an accepted social thing and yet programming stupidity is not when Arguably, they're equally important.
+
+453
+00:32:00,577 --> 00:32:09,159
+Rym: I think it should be mandatory programming in school pretty much throughout school just like math and social studies and reading our and History and everything but simultaneously.
+
+454
+00:32:09,179 --> 00:32:11,550
+Rym: if you suck at it, that's no difference.
+
+455
+00:32:11,670 --> 00:32:17,712
+Rym: I mean some people suck at math some people suck at language and you know what as long as you can become a productive member Society.
+
+456
+00:32:18,053 --> 00:32:21,382
+Rym: yeah, you failed programming in first fourth eighth and twelfth grade.
+
+457
+00:32:21,402 --> 00:32:24,410
+Rym: a lot of people failed math in those grades, but we have to try.
+
+458
+00:32:25,436 --> 00:32:30,726
+Scott: I think that actually, you know, it's like There is some maths right like calculus.
+
+459
+00:32:30,746 --> 00:32:38,190
+Scott: Oh, that's a separate thing You're never you're never gonna use in your life if you're say, you know, I don't know like a watch repairman, right?
+
+460
+00:32:38,710 --> 00:32:49,550
+Scott: But even programming no matter what your job is right even janitor Programming you will use it if you know it and you won't use it if you don't know it.
+
+461
+00:32:49,590 --> 00:33:00,500
+Scott: But it can help every single job where there is a computer anywhere near you, right, you know well, one of the things Conrad argues is that math education and Programming education should be hand-in-hand.
+
+462
+00:33:00,781 --> 00:33:02,590
+Rym: They should in fact be the same curriculum.
+
+463
+00:33:03,671 --> 00:33:10,710
+Scott: I don't think so because programming at least modern useful programming for everyday people what they would actually help them with their job.
+
+464
+00:33:11,690 --> 00:33:17,110
+Scott: Here's an example much further away from the math theory sort of program of a computer.
+
+465
+00:33:17,170 --> 00:33:18,676
+Rym: So you're not you're not thinking about this.
+
+466
+00:33:18,696 --> 00:33:19,520
+Rym: So here's an example.
+
+467
+00:33:20,082 --> 00:33:22,050
+Rym: Here's here's a high-level math concept.
+
+468
+00:33:22,331 --> 00:33:29,450
+Rym: We teach the concept we show the applications of it and then in the cross curriculum in the programming classes You have to implement it to do something.
+
+469
+00:33:29,570 --> 00:33:34,630
+Scott: Yeah, that helps you learn the math by better by programming and it helps you learn some programming.
+
+470
+00:33:34,710 --> 00:33:42,163
+Scott: But that programming that you're learning is not going to actually Help you that much with everyday sort of programming.
+
+471
+00:33:42,224 --> 00:33:47,611
+Scott: right if you're really good at writing basic programs to solve math problems You're.
+
+472
+00:33:47,752 --> 00:33:52,470
+Scott: that is not going to help you write a website that integrates with Facebook.
+
+473
+00:33:54,490 --> 00:33:56,640
+Rym: It's actually not what he thinks is important.
+
+474
+00:33:56,740 --> 00:33:58,730
+Scott: I think that that's is what's important.
+
+475
+00:34:00,572 --> 00:34:08,136
+Rym: Recommend you watch this TED talk because he makes an interesting point that the high-level math and the high-level programming Actually could have more impact.
+
+476
+00:34:08,376 --> 00:34:26,650
+Rym: but we live in a society where it often doesn't where there are fields like biology basically everything but programming where high-level math and high-level programming could revolutionize those fields and Physics is one of the few fields where that's actually happening Yeah, and that we need to expand it that we need to kind of try to get everyone to learn
+
+477
+00:34:27,511 --> 00:34:29,857
+Scott: Thinking about scientists and academic people.
+
+478
+00:34:30,038 --> 00:34:34,909
+Scott: I'm talking about, you know, some guys sitting in his office who is a salesman.
+
+479
+00:34:35,514 --> 00:34:36,862
+Rym: We're not saying anything different.
+
+480
+00:34:36,882 --> 00:34:37,869
+Rym: look at the way we do math now.
+
+481
+00:34:38,291 --> 00:34:41,217
+Rym: Everyone learns basic arithmetic and you know.
+
+482
+00:34:41,277 --> 00:34:52,610
+Rym: people who aren't aren't dumb learn algebra and then people who aren't you know difficult don't have Difficulties with math usually learn trigonometry and the people who are going into science or who are really smart at math learn calculus.
+
+483
+00:34:52,891 --> 00:34:54,036
+Rym: programming would be the same way.
+
+484
+00:34:54,277 --> 00:35:01,530
+Rym: some people only get up to the Facebook website and The same people who would take calculus take calculus and advanced programming side-by-side.
+
+485
+00:35:02,611 --> 00:35:09,090
+Scott: I think that the the math programming of basically writing programs that do the same thing that calculators in Excel already do.
+
+486
+00:35:09,375 --> 00:35:11,229
+Rym: No Are you he actually a lot less?
+
+487
+00:35:11,510 --> 00:35:17,969
+Scott: Impactful on everyday life and will provide less helpfulness to normal people in their everyday jobs than actually learning how to program.
+
+488
+00:35:17,989 --> 00:35:18,999
+Scott: Scott You did real thing.
+
+489
+00:35:19,059 --> 00:35:21,095
+Scott: You didn't listen to anything I say is every day.
+
+490
+00:35:21,115 --> 00:35:22,460
+Rym: look at the way we currently do education.
+
+491
+00:35:22,480 --> 00:35:26,970
+Rym: the majority of people who go through high school don't actually ever Take calculus because it'll never be applicable to their lives.
+
+492
+00:35:27,030 --> 00:35:31,110
+Rym: They never get to that level, but that should still be the goal for anyone who can do it.
+
+493
+00:35:32,510 --> 00:35:38,136
+Rym: mmm Not everyone's gonna do the high level math and high level programming But that should be the course.
+
+494
+00:35:38,497 --> 00:35:42,330
+Rym: that is the equivalent of what the course to calculus is in current high schools.
+
+495
+00:35:42,713 --> 00:35:43,621
+Rym: Most people won't get there.
+
+496
+00:35:43,681 --> 00:35:44,367
+Rym: Most people don't get there.
+
+497
+00:35:44,408 --> 00:35:44,589
+Rym: now.
+
+498
+00:35:45,458 --> 00:35:53,479
+Scott: I think that people should You know figure out what they're gonna do with their lives and then learn what's appropriate to it and don't bother learning What's not appropriate unless they really like learning.
+
+499
+00:35:53,620 --> 00:35:55,970
+Rym: except most people don't figure out what they're gonna do with their lives.
+
+500
+00:35:56,211 --> 00:35:57,416
+Scott: Well, that's another problem.
+
+501
+00:35:57,436 --> 00:35:57,778
+Scott: We need to.
+
+502
+00:35:58,180 --> 00:36:01,297
+Rym: I just I don't know I kind of disagree with you But watch the TED talk.
+
+503
+00:36:01,317 --> 00:36:07,450
+Rym: we can talk about this as a separate show All right, but the main gist here is I no longer think that we should just teach technology.
+
+504
+00:36:07,510 --> 00:36:11,470
+Rym: I think programming should specifically be required curriculum for every single student.
+
+505
+00:36:11,591 --> 00:36:13,962
+Scott: I always thought you know, it should be part of technology.
+
+506
+00:36:14,023 --> 00:36:17,034
+Scott: is programming that is, you know I never thought differently.
+
+507
+00:36:17,215 --> 00:36:20,830
+Rym: very briefly the meta moment will be a magfest pax east all that stuff.
+
+508
+00:36:21,151 --> 00:36:23,539
+Rym: The book club book was World War Z by Max Brooks.
+
+509
+00:36:23,559 --> 00:36:24,622
+Rym: We're gonna review.
+
+510
+00:36:25,003 --> 00:36:25,987
+Rym: almost done almost done.
+
+511
+00:36:26,067 --> 00:36:26,970
+Rym: Stop breathing into the mic.
+
+512
+00:36:27,735 --> 00:36:28,904
+Rym: Yeah, that book sucked.
+
+513
+00:36:28,944 --> 00:36:29,306
+Rym: I'm sorry.
+
+514
+00:36:29,427 --> 00:36:32,118
+Scott: Okay Can you like lay off now?
+
+515
+00:36:32,138 --> 00:36:34,188
+Scott: I can't cuz I gotta get around you're not?
+
+516
+00:36:34,228 --> 00:36:36,600
+Scott: you're like Disturbing the legitimacy of the book club.
+
+517
+00:36:36,741 --> 00:36:42,623
+Rym: I went back and read like the last 30 pages again just to try to be like, well, maybe it wasn't so bad.
+
+518
+00:36:42,643 --> 00:36:48,473
+Rym: Uh-huh Anyway Book.
+
+519
+00:36:48,654 --> 00:36:50,704
+Rym: I think I might want to announce it right now cuz it's my pick.
+
+520
+00:36:50,804 --> 00:36:51,488
+Scott: Are you going early?
+
+521
+00:36:51,508 --> 00:36:54,178
+Rym: Yeah So I was suddenly inspired.
+
+522
+00:36:54,258 --> 00:36:55,001
+Scott: you can't hold back.
+
+523
+00:36:55,061 --> 00:36:56,728
+Scott: You can't wait until the appropriate time.
+
+524
+00:36:56,828 --> 00:37:01,490
+Rym: This is a book I read a long time ago when I was in high school.
+
+525
+00:37:01,650 --> 00:37:09,675
+Scott: This is gonna be terrible and I I can already say I'm really interested to see how it holds up now because I remember This is gonna be a terrible D&D book.
+
+526
+00:37:09,976 --> 00:37:10,437
+Rym: No, it's not.
+
+527
+00:37:10,738 --> 00:37:15,553
+Rym: I remember a lot of the concepts and a lot of it I actually applied.
+
+528
+00:37:15,674 --> 00:37:17,502
+Scott: Oh, it's gonna be a painful nonfiction book.
+
+529
+00:37:17,863 --> 00:37:18,265
+Rym: It's not.
+
+530
+00:37:18,445 --> 00:37:19,530
+Rym: well, it's not gonna be painful.
+
+531
+00:37:19,570 --> 00:37:22,660
+Rym: Oh, the next book club book is Michio Kaku's hyperspace.
+
+532
+00:37:22,800 --> 00:37:23,442
+Scott: Oh, what the hell?
+
+533
+00:37:23,884 --> 00:37:25,127
+Rym: Have you ever read hyperspace?
+
+534
+00:37:25,168 --> 00:37:25,268
+Rym: huge?
+
+535
+00:37:26,336 --> 00:37:32,046
+Scott: It's not that big You know, he teaches over at CUNY.
+
+536
+00:37:32,067 --> 00:37:34,809
+Rym: it's I know Kind of want to go see him someday.
+
+537
+00:37:36,994 --> 00:37:38,142
+Rym: Every now and then he does a lecture.
+
+538
+00:37:38,343 --> 00:37:38,987
+Rym: keep an eye out.
+
+539
+00:37:39,711 --> 00:37:43,146
+Rym: So Michio Kaku's hyperspace will be the next book club book.
+
+540
+00:37:43,166 --> 00:37:43,869
+Scott: What are you doing to me?
+
+541
+00:37:44,431 --> 00:37:46,443
+Scott: You can't pick anything fun fine.
+
+542
+00:37:46,483 --> 00:37:49,333
+Rym: Never mind Ulysses War and peace.
+
+543
+00:37:49,353 --> 00:37:51,099
+Scott: I'm gonna warm pieces actually better.
+
+544
+00:37:51,641 --> 00:37:51,962
+Rym: Really?
+
+545
+00:37:52,022 --> 00:37:53,487
+Rym: Have you read it better than Ulysses?
+
+546
+00:37:53,527 --> 00:37:54,349
+Scott: Have you read it?
+
+547
+00:37:54,692 --> 00:37:55,948
+Scott: I've examined both works.
+
+548
+00:37:56,534 --> 00:38:02,710
+Scott: I didn't flip through them Enough to know that I would brat if I had to choose between one of the two.
+
+549
+00:38:02,770 --> 00:38:04,235
+Rym: Fine, I'll pick the other.
+
+550
+00:38:04,276 --> 00:38:08,130
+Rym: my other candidate was one of those D&D books pages of pain by Troy Denning.
+
+551
+00:38:08,271 --> 00:38:11,006
+Scott: No, how about we pick something like Cat in the Hat?
+
+552
+00:38:11,368 --> 00:38:15,243
+Rym: All right Well, you know what you get the pick next and this is revenge.
+
+553
+00:38:15,263 --> 00:38:16,307
+Scott: Cat in the Hat comes back.
+
+554
+00:38:16,548 --> 00:38:16,930
+Scott: That's it.
+
+555
+00:38:17,070 --> 00:38:19,843
+Rym: It's revenge for goddamn zombie bullshit.
+
+556
+00:38:19,863 --> 00:38:21,209
+Scott: There's a monster at the end of this book.
+
+557
+00:38:22,595 --> 00:38:26,133
+Rym: That was a really good book Club monster.
+
+558
+00:38:26,153 --> 00:38:30,030
+Scott: then every book club should be double book club one really hard book and one really easy.
+
+559
+00:38:31,273 --> 00:38:31,979
+Rym: You know what'll happen?
+
+560
+00:38:32,242 --> 00:38:33,070
+Rym: It'll be like Apple Geeks.
+
+561
+00:38:33,110 --> 00:38:35,790
+Rym: They've got the main Apple Geeks and the Apple Geeks light the light.
+
+562
+00:38:35,790 --> 00:38:37,630
+Scott: But if like if they're really hard book is less hard.
+
+563
+00:38:37,670 --> 00:38:40,330
+Scott: So if it's like war and peace it war and peace has to go with c-spot run.
+
+564
+00:38:40,531 --> 00:38:43,786
+Scott: But if you if you bring it down if you bring like Locke Lamora, it's like.
+
+565
+00:38:43,806 --> 00:38:47,060
+Scott: well Locke Lamora We can go with instead of c-spot run.
+
+566
+00:38:47,100 --> 00:38:51,593
+Scott: It could be like, you know, super fudge I'm just.
+
+567
+00:38:51,634 --> 00:38:53,787
+Scott: you know, it's like you got to add them.
+
+568
+00:38:53,827 --> 00:38:55,556
+Scott: two books But add it together have to be.
+
+569
+00:38:55,597 --> 00:39:00,398
+Rym: I have this worry that what'll happen is in the forum We'll see a thousand posts about c-spot run.
+
+570
+00:39:01,362 --> 00:39:03,470
+Scott: I know you like c-spot run, but you know what?
+
+571
+00:39:03,690 --> 00:39:05,627
+Scott: I will give you a fucking Clifford cuz then I hate that shit.
+
+572
+00:39:06,571 --> 00:39:09,850
+Rym: So without further ado after you know, 40 minutes of dicking around.
+
+573
+00:39:09,850 --> 00:39:12,606
+Scott: Yeah, the show's a hot a long show, but you know what?
+
+574
+00:39:12,626 --> 00:39:13,350
+Scott: It was just a holiday.
+
+575
+00:39:13,430 --> 00:39:16,180
+Scott: So we'll give you the long show double episode.
+
+576
+00:39:16,200 --> 00:39:19,370
+Scott: Not really more like one and a half episodes 1.6.
+
+577
+00:39:19,370 --> 00:39:21,196
+Rym: I'm thinking that's what the rates looking like.
+
+578
+00:39:21,377 --> 00:39:25,290
+Rym: Well, so WikiLeaks now, we had this idea because WikiLeaks not wick early.
+
+579
+00:39:25,350 --> 00:39:27,610
+Rym: We can leaks wiki wiki wiki wiki.
+
+580
+00:39:28,491 --> 00:39:30,357
+Scott: Okay, it's not wick up Eda.
+
+581
+00:39:30,397 --> 00:39:31,360
+Scott: It's Wikipedia.
+
+582
+00:39:31,521 --> 00:39:33,948
+Rym: Uh, most people's what most people say Wikipedia.
+
+583
+00:39:34,048 --> 00:39:36,099
+Rym: They say it quick It's it's at best.
+
+584
+00:39:36,360 --> 00:39:37,869
+Rym: It's a schwa in there these days.
+
+585
+00:39:40,036 --> 00:39:42,784
+Rym: You know where wiki wiki came from right the wiki wiki bus.
+
+586
+00:39:42,804 --> 00:39:46,849
+Scott: yeah in Hawaii Hawaii Hawaii.
+
+587
+00:39:47,476 --> 00:39:47,706
+Scott: Okay.
+
+588
+00:39:49,031 --> 00:39:50,617
+Scott: So the wicker wicker bus I.
+
+589
+00:39:51,421 --> 00:40:03,116
+Rym: we wanted to do a show on WikiLeaks for a while But at the same time it really would have been a Thursday show, you know the social ramifications And whether or not we agree with it and all you know There's all this kind of we can.
+
+590
+00:40:03,136 --> 00:40:06,030
+Rym: you could do like weeks and hours and months of just discussion.
+
+591
+00:40:06,071 --> 00:40:06,577
+Rym: I'm you kidding.
+
+592
+00:40:06,759 --> 00:40:07,610
+Scott: We could do WikiLeaks.
+
+593
+00:40:08,032 --> 00:40:12,990
+Scott: I guess it really isn't fit into Tuesday or Wednesday, but Monday and Thursday shows we could like for them just with WikiLeaks.
+
+594
+00:40:13,211 --> 00:40:19,550
+Rym: Yep, but there's one aspect that a lot of people aren't really talking about and I think it actually warrants a lot.
+
+595
+00:40:19,893 --> 00:40:26,807
+Rym: It's just the technology behind WikiLeaks what it is how they do it how to defeat them how to make them in defeatable.
+
+596
+00:40:27,509 --> 00:40:30,440
+Scott: Yeah Well, I mean, it's not just WikiLeaks itself, right?
+
+597
+00:40:30,480 --> 00:40:33,350
+Scott: I mean, there's the WikiLeaks website.
+
+598
+00:40:34,270 --> 00:40:40,770
+Scott: There's you know, the people who are you know getting leaked right the government's third the embassies, right?
+
+599
+00:40:41,111 --> 00:40:47,822
+Scott: And then there's the third person which is the person who takes the information from the Governments leak and then leaks it to the WikiLeaks.
+
+600
+00:40:48,163 --> 00:40:49,670
+Scott: and all of these three areas.
+
+601
+00:40:49,991 --> 00:40:56,529
+Scott: there are a lot of technological issues to discuss especially in the realms of security and identity and networking.
+
+602
+00:40:57,871 --> 00:41:03,350
+Scott: So which which three area which area do you want to start and we can discuss what they did wrong and what they should do.
+
+603
+00:41:03,992 --> 00:41:21,765
+Rym: Let's start with WikiLeaks itself and because you know, they the organization It's interesting that there actually is a website and an actual direct, you know Here it is website because I note that it was DDoS for like a day and a half Prior to and during the release of all these cables.
+
+604
+00:41:22,067 --> 00:41:22,288
+Rym: Mm-hmm.
+
+605
+00:41:22,771 --> 00:41:27,430
+Rym: And there's no way you can tell me that that wasn't governments trying to hold back as much as possible.
+
+606
+00:41:27,570 --> 00:41:34,290
+Scott: Wasn't WikiLeaks originally like just with you know a wiki just like media wiki the same wiki software that Wikipedia uses?
+
+607
+00:41:34,611 --> 00:41:37,750
+Rym: Yeah, well, I don't want to get into all and now it's sort of like its own website.
+
+608
+00:41:38,051 --> 00:41:50,140
+Rym: But what's interesting is that any whoever decided that a DDoS of WikiLeaks was a good idea and I don't think it was just people clicking on the site trying to actually get it is the fact that The leaks are gonna be distributed by a torrent.
+
+609
+00:41:50,321 --> 00:41:52,190
+Rym: So how are you going to stop it?
+
+610
+00:41:52,610 --> 00:41:57,026
+Rym: I mean the one original tracker went down and within like five minutes.
+
+611
+00:41:57,066 --> 00:41:58,050
+Rym: There was another tracker.
+
+612
+00:41:58,110 --> 00:42:06,558
+Scott: Yeah, what I find the most interesting right is it's like, okay so even if you take down the WikiLeaks website you think that might help you because Normal people won't get the information.
+
+613
+00:42:06,578 --> 00:42:08,545
+Scott: only technologically advanced people get the.
+
+614
+00:42:08,726 --> 00:42:09,730
+Scott: you know get this files.
+
+615
+00:42:10,412 --> 00:42:15,870
+Scott: But the thing that really blows the holes, you know, the shitter is that all these newspapers are taking the data and reporting on it.
+
+616
+00:42:16,095 --> 00:42:20,165
+Scott: so Why what's the point of even taking WikiLeaks website down at all?
+
+617
+00:42:20,446 --> 00:42:21,129
+Scott: It's not helping you.
+
+618
+00:42:21,552 --> 00:42:31,210
+Rym: Actually, I was about to say that because of all places the Guardian Basically before I even had time to download the torrent highlighted all the interesting shit.
+
+619
+00:42:31,631 --> 00:42:37,610
+Scott: Yeah, and like this bulleted list and I'm sure you know as days go on people will grep and find more interesting shit.
+
+620
+00:42:37,670 --> 00:42:39,803
+Scott: That's probably you know of lesser impact here.
+
+621
+00:42:39,823 --> 00:42:40,950
+Rym: Let's do a really quick aside.
+
+622
+00:42:40,991 --> 00:42:42,349
+Rym: What's your favorite story from there?
+
+623
+00:42:42,910 --> 00:42:48,330
+Scott: My favorite story that I've seen because I've seen a bunch of my favorite one is still the guy on the horse who escaped.
+
+624
+00:42:48,672 --> 00:42:51,390
+Scott: Yeah, that's that's a. it's a pretty good, you know story.
+
+625
+00:42:51,410 --> 00:42:57,033
+Rym: It was just one of those neat things that historians would never have known about and yet now that'll probably be in some history books Somewhere.
+
+626
+00:42:57,374 --> 00:42:59,083
+Scott: I like just a lot, you know for me.
+
+627
+00:42:59,123 --> 00:43:03,928
+Scott: It's just sort of like the general thing of you know, all the you know.
+
+628
+00:43:04,910 --> 00:43:12,210
+Scott: Diplomatic relations between countries are like a bunch of friends who have really shitty drama and they're really just immature morons.
+
+629
+00:43:12,250 --> 00:43:15,430
+Scott: Yeah, and just in general just all that shit.
+
+630
+00:43:15,512 --> 00:43:24,413
+Rym: It's like come on You know fucking grow up do a said replace with anime related proper nouns and it's the bullshit drama between the RIT anime club And our wag.
+
+631
+00:43:24,433 --> 00:43:25,095
+Scott: Yeah, it's like.
+
+632
+00:43:25,196 --> 00:43:27,243
+Scott: it's like thou has insulted me.
+
+633
+00:43:27,263 --> 00:43:29,030
+Scott: It's like what the fuck is wrong with you.
+
+634
+00:43:29,110 --> 00:43:30,535
+Scott: You're a fucking country.
+
+635
+00:43:30,555 --> 00:43:32,181
+Scott: You're insulted by somebody.
+
+636
+00:43:32,201 --> 00:43:33,425
+Scott: you said something about me.
+
+637
+00:43:33,786 --> 00:43:34,790
+Scott: Oh, did you hear that shit?
+
+638
+00:43:35,290 --> 00:43:37,103
+Scott: Mmm, I do know how to get them to smack down.
+
+639
+00:43:37,123 --> 00:43:47,383
+Rym: That is not okay You know, it's I do like the the ad the direct You know kind of someone who thinks they're talking to someone in confidence like when an ambassador is like Yeah, the president of X country is such a douche.
+
+640
+00:43:47,684 --> 00:43:48,387
+Scott: Yeah, it's like.
+
+641
+00:43:48,407 --> 00:43:50,699
+Rym: that's the kind of thing I say to Scott after we go to a party.
+
+642
+00:43:50,800 --> 00:43:52,550
+Scott: It's like what the fuck is wrong with you.
+
+643
+00:43:52,732 --> 00:43:54,110
+Scott: Why are you so immature?
+
+644
+00:43:54,210 --> 00:44:02,327
+Scott: You're supposed to be the leaders and the people running the world at the high country level and you're just the same douches that everyone else is.
+
+645
+00:44:03,159 --> 00:44:03,789
+Scott: Why aren't you know?
+
+646
+00:44:03,970 --> 00:44:06,660
+Scott: It's like if just the FRC was in charge of every country.
+
+647
+00:44:06,721 --> 00:44:09,440
+Scott: everything would just be so much better because everyone just be like hey What's up?
+
+648
+00:44:10,631 --> 00:44:11,213
+Scott: What's going on?
+
+649
+00:44:11,734 --> 00:44:12,978
+Scott: Oh, yeah, you know you did that.
+
+650
+00:44:13,079 --> 00:44:17,916
+Scott: I know I don't like that but it's your country, but what's interesting I'm mature an adult.
+
+651
+00:44:17,936 --> 00:44:21,210
+Scott: I'm not gonna be a jerk is that WikiLeaks is relatively open.
+
+652
+00:44:21,391 --> 00:44:23,650
+Rym: I mean the location of their servers is known.
+
+653
+00:44:23,961 --> 00:44:32,316
+Rym: Yeah The the front the leader of the organization ostensibly is a known person a known person with Shadiness around them except at the same time.
+
+654
+00:44:32,396 --> 00:44:35,905
+Rym: It's interesting how like that's the best they could get on him.
+
+655
+00:44:35,945 --> 00:44:47,010
+Rym: the governments of the entire world Want nothing more than for this guy to disappear and yet not only is he not disappeared But the best they could get is a sexual harassment lawsuit in Sweden.
+
+656
+00:44:47,391 --> 00:44:51,843
+Rym: Yeah, that is the best the world government conspiracy can do.
+
+657
+00:44:51,883 --> 00:44:54,743
+Rym: and you people think there's a New World Order ready to take over any day.
+
+658
+00:44:58,384 --> 00:45:06,115
+Rym: But Technologically - there's just a website and bit torrent and bit torrent is not exactly the most Reliable and safe protocol.
+
+659
+00:45:06,155 --> 00:45:10,970
+Scott: I mean with bit torrent it would be really hard for them to stop everyone from sharing the torrent, right?
+
+660
+00:45:11,010 --> 00:45:12,476
+Scott: That's very very difficult.
+
+661
+00:45:12,597 --> 00:45:15,670
+Scott: What isn't so difficult though is just see who's on the torrent.
+
+662
+00:45:16,052 --> 00:45:17,441
+Rym: But here's the safety in the crowds.
+
+663
+00:45:17,683 --> 00:45:18,750
+Rym: It's fucking everybody.
+
+664
+00:45:18,991 --> 00:45:22,624
+Rym: Yeah, how many tens of thousands of leeches and seeds there were today?
+
+665
+00:45:22,644 --> 00:45:24,049
+Rym: Yeah, and all those torrents?
+
+666
+00:45:24,230 --> 00:45:27,762
+Rym: No, of course, so the government makes a database of everyone who stole the secrets.
+
+667
+00:45:27,942 --> 00:45:28,404
+Rym: Ah shit.
+
+668
+00:45:28,645 --> 00:45:30,170
+Rym: It's everyone who owns a computer.
+
+669
+00:45:31,631 --> 00:45:33,237
+Rym: Now what know what right?
+
+670
+00:45:33,397 --> 00:45:41,555
+Scott: also what the thing is right is you could use some sort of tour Proxies anonymizers so that you are not listed on the tour But you still get the torrent.
+
+671
+00:45:41,958 --> 00:45:51,970
+Scott: another thing you can do is there's a lot of places now They're actually selling Or renting out, you know hosted servers that you can get in four in weird places around the world.
+
+672
+00:45:52,090 --> 00:46:02,669
+Scott: Yeah that you can then torrent from and then download from those computers to your computer even though it's like you buy a Torrent machine that just sits out in some country somewhere doing your torrents for you and seeding and leeching and all that stuff.
+
+673
+00:46:02,709 --> 00:46:03,873
+Rym: even look At Amazon s3.
+
+674
+00:46:03,954 --> 00:46:07,970
+Rym: you can pick which legal jurisdiction you want your day to be in and you can encrypt it if you want.
+
+675
+00:46:08,251 --> 00:46:09,295
+Scott: Yeah, an Amazon.
+
+676
+00:46:09,355 --> 00:46:09,656
+Scott: actually.
+
+677
+00:46:09,676 --> 00:46:15,089
+Scott: some people were talking about getting some ec2 Amazon machines to use for torrenting You know and that totally works.
+
+678
+00:46:15,657 --> 00:46:16,489
+Scott: There's no reason you can't do that.
+
+679
+00:46:16,691 --> 00:46:28,564
+Rym: But this is what I find really interesting and I haven't quite formed my opinion yet on it But despite the pretty much open and slapdash nature of how this data gets out the world governments
+
+680
+00:46:29,007 --> 00:46:29,108
+Scott: are
+
+681
+00:46:29,631 --> 00:46:35,150
+Rym: Like desperately impotent to stop it like they are impotent to a degree that is laughable.
+
+682
+00:46:35,512 --> 00:46:36,376
+Scott: Here's how to stop it.
+
+683
+00:46:36,436 --> 00:46:37,501
+Scott: find out what country it's in.
+
+684
+00:46:37,923 --> 00:46:38,766
+Scott: go take the computers.
+
+685
+00:46:38,786 --> 00:46:39,570
+Rym: All right in Sweden.
+
+686
+00:46:39,671 --> 00:46:41,258
+Rym: What do we do now and fade Sweden?
+
+687
+00:46:41,359 --> 00:46:42,525
+Scott: No, you don't do it.
+
+688
+00:46:42,585 --> 00:46:43,510
+Scott: Sweden has to do it.
+
+689
+00:46:43,570 --> 00:46:46,289
+Rym: Yeah, but Sweden doesn't seem that interested in doing well in tough shit.
+
+690
+00:46:47,151 --> 00:46:48,256
+Scott: It's gotta go now.
+
+691
+00:46:48,276 --> 00:46:51,050
+Rym: The thing is that's not necessarily safety.
+
+692
+00:46:51,090 --> 00:46:58,252
+Rym: I mean part of the problem of WikiLeaks is that they cook a concerted effort could bring down the website and every public person Involved.
+
+693
+00:46:58,593 --> 00:47:07,707
+Rym: so I know there's the security file and all that other kind of stuff and I'm sure The real like the other people behind WikiLeaks are probably relatively anonymous.
+
+694
+00:47:07,727 --> 00:47:14,615
+Rym: I Assume have all sorts of disaster scenarios but if I were them I would actually do something pretty simple.
+
+695
+00:47:14,655 --> 00:47:29,300
+Rym: the next step of WikiLeaks now that is well known is to publish a series of public keys And and just publish them anonymously, you know Laptop in a car that connects to random Starbucks's and puts them in places for people to get later And get them all over the place.
+
+696
+00:47:29,400 --> 00:47:31,150
+Scott: Well, the thing is they had to publish these public keys.
+
+697
+00:47:31,230 --> 00:47:37,410
+Scott: We people have to know that these public keys are definitely Verifiably the WikiLeaks keys.
+
+698
+00:47:37,470 --> 00:47:41,430
+Scott: They're not just because I can just publish public key and say it's a WikiLeaks key and how will you know if it is here?
+
+699
+00:47:41,510 --> 00:47:49,295
+Rym: If it isn't yep, one way to do this would be to publish a sort of master key while WikiLeaks is still up and known Yeah on the WikiLeaks website.
+
+700
+00:47:49,436 --> 00:47:49,657
+Rym: Yeah.
+
+701
+00:47:49,777 --> 00:47:51,222
+Rym: Yeah, you know, I mean one seed.
+
+702
+00:47:51,242 --> 00:48:00,850
+Rym: you just need as long as there is some way for People involved in WikiLeaks to prove not who they are but to prove that they sign whatever document is now out there.
+
+703
+00:48:01,011 --> 00:48:04,010
+Scott: Yeah, they really just need one RSA public key.
+
+704
+00:48:04,070 --> 00:48:19,830
+Scott: That's like, you know, I could do a 4096 or whatever, right and then anything that WikiLeaks publishes sign it with that key right and then Anyone out there who got a document could verify that this is a valid, you know, this document came from WikiLeaks.
+
+705
+00:48:19,890 --> 00:48:25,728
+Scott: There would be zero absolutely zero mathematical doubt that this document was released by WikiLeaks and not by someone else.
+
+706
+00:48:25,748 --> 00:48:35,207
+Rym: and yet at the same Time while you've kind of it's interesting you've created an identity that is foolproof and yet you've created an identity That is not tied to an actual person.
+
+707
+00:48:35,469 --> 00:48:35,811
+Scott: Nope it's.
+
+708
+00:48:35,871 --> 00:48:36,714
+Scott: maybe you've got a number.
+
+709
+00:48:36,834 --> 00:48:42,281
+Rym: you might have a cabal of 13 people who each have the private key as long as none of them get compromised.
+
+710
+00:48:42,645 --> 00:48:45,938
+Rym: and Here's kind of a very specific technical thing.
+
+711
+00:48:46,260 --> 00:48:49,150
+Rym: true crypt is actually a great means of encrypting things.
+
+712
+00:48:49,591 --> 00:48:51,861
+Rym: Oh and the best part about well, that's just a call.
+
+713
+00:48:51,961 --> 00:48:54,190
+Scott: No that just is a product that encrypts your hard.
+
+714
+00:48:54,451 --> 00:48:59,250
+Rym: No, no, no, but specifically the fact that it automatically will at least easily does deniable encryption.
+
+715
+00:48:59,932 --> 00:49:08,530
+Rym: The problem with the deniable encryption is that it's mathematically breakable if the data changes a lot Like if you encrypt your whole hard drive, it's pretty obvious.
+
+716
+00:49:08,851 --> 00:49:15,510
+Rym: All right, you gave us a password that gave us an empty windows install where Firefox went to slash dot once four years ago.
+
+717
+00:49:15,690 --> 00:49:15,851
+Rym: Yeah.
+
+718
+00:49:16,373 --> 00:49:16,574
+Rym: Yeah.
+
+719
+00:49:16,956 --> 00:49:21,025
+Rym: In fact mathematically we can prove you've got another partition in there somewhere Mm-hmm.
+
+720
+00:49:21,310 --> 00:49:28,375
+Rym: So the way around this what true crypt is great at is taking your private key and putting it in there with 10 Passwords.
+
+721
+00:49:28,415 --> 00:49:30,069
+Rym: they give 10 different bullshit keys.
+
+722
+00:49:31,331 --> 00:49:35,002
+Rym: There's basically no way to actually force one of these keys out of someone.
+
+723
+00:49:35,664 --> 00:49:35,945
+Rym: Mm-hmm.
+
+724
+00:49:36,367 --> 00:49:47,218
+Rym: So well There there's still there more complicated issues around that but suffice it to say if you did something like that That would kind of be the next stage from WikiLeaks.
+
+725
+00:49:47,298 --> 00:49:52,730
+Rym: the sort of completely distributed, you know info dumps from Starbucks is to fortune.
+
+726
+00:49:53,232 --> 00:50:10,751
+Scott: Yeah, but you would you know, you would basically by using you know Public-private key, you know cryptography and encryption and such you would know Verifiably that you know Even though this is just some file on a weird bit torrent somewhere that it was definitely a WikiLeaks document confirmed 100%.
+
+727
+00:50:10,751 --> 00:50:16,070
+Rym: You can also go one step further and make the so-called like debt all bomb insurance file.
+
+728
+00:50:16,451 --> 00:50:19,000
+Rym: You know the file you've distributed everywhere that's encrypted.
+
+729
+00:50:19,020 --> 00:50:21,590
+Rym: that can only be decrypted with the original private key.
+
+730
+00:50:22,072 --> 00:50:33,976
+Rym: So if there's ever doubt like say five years go by and you've like Unleash the political scandal and like opened up the new world Illuminati whatever and there's doubt you can come forward and say I'm now gonna risk my life.
+
+731
+00:50:34,357 --> 00:50:35,120
+Rym: I'm the dude.
+
+732
+00:50:35,602 --> 00:50:37,468
+Rym: Here's the private key to prove.
+
+733
+00:50:37,508 --> 00:50:37,849
+Rym: It's me.
+
+734
+00:50:38,371 --> 00:50:40,457
+Rym: Oh, look, it unlocks the file over there.
+
+735
+00:50:40,477 --> 00:50:44,550
+Rym: that also proves it's me and backs up everything I released for the last 10 years.
+
+736
+00:50:45,512 --> 00:50:52,786
+Rym: So there are lots of ways to go about this and It's just interesting that we haven't even had to resort to that bit torrent.
+
+737
+00:50:52,887 --> 00:50:53,650
+Rym: Well, I mean Sweden.
+
+738
+00:50:54,578 --> 00:50:54,988
+Scott: It's like this.
+
+739
+00:50:55,050 --> 00:51:01,790
+Scott: It's like an old movie Situation where there's a conspiracy right one guy has a half of a thing and then another guy has the other half of the thing.
+
+740
+00:51:01,850 --> 00:51:03,917
+Scott: You know like Indiana Jones, I got the rod.
+
+741
+00:51:03,958 --> 00:51:04,821
+Scott: I got the pendant.
+
+742
+00:51:05,162 --> 00:51:05,965
+Scott: Oh, we put him together.
+
+743
+00:51:06,085 --> 00:51:12,010
+Scott: Oh shit, you know It's like we proved that it's the real deal because it goes together and the light shines on the right spot.
+
+744
+00:51:12,874 --> 00:51:21,570
+Scott: Anyway, okay, so that's WikiLeaks just needs to do a better job of Decentralizing, you know and being more verifying and anonymizing, right?
+
+745
+00:51:22,110 --> 00:51:25,505
+Scott: What about the people who don't want to get their shit stolen, right?
+
+746
+00:51:25,545 --> 00:51:26,530
+Scott: I read this.
+
+747
+00:51:26,590 --> 00:51:31,968
+Scott: Well, actually no, I read this great article that talked all about this like defense network.
+
+748
+00:51:32,048 --> 00:51:39,218
+Scott: It's called like S-trip something I forget what the actual acronym was And basically what the situation was.
+
+749
+00:51:39,238 --> 00:51:40,743
+Scott: they had this network right.
+
+750
+00:51:40,823 --> 00:51:45,447
+Scott: it was like just for you know diplomats to communicate with computers, right.
+
+751
+00:51:45,468 --> 00:51:50,390
+Scott: and What happened was is more and more people needed access to the system?
+
+752
+00:51:50,590 --> 00:52:03,169
+Scott: So it expanded trends of trust always fucks and expanded to like over a hundred and eighty embassies worldwide and then right on top of that they Like all these military people needed access to it.
+
+753
+00:52:03,330 --> 00:52:05,802
+Rym: It only takes one jackass and your train of trust
+
+754
+00:52:05,863 --> 00:52:37,826
+Scott: there was something like, you know millions of people who have secret, you know security clearance and had access to the system and Supposedly the system was supposed to have the following security measures everyone had is supposed to have a really hard password that I heard every hundred and fifty days and Anything that was ever plugged into a USB port on any machine logged into the system was supposed to be As requiring secret clearance and even people who are plugged in their iPods to such a machine We're supposed to have the iPods confiscated and you know that whole right.
+
+755
+00:52:37,987 --> 00:52:38,690
+Rym: that never works.
+
+756
+00:52:38,795 --> 00:52:39,592
+Scott: All right All that stuff.
+
+757
+00:52:40,054 --> 00:52:56,684
+Scott: and there was like an alarm that would go off on the system if there's anything compromised possibly on the machine, but then like Soldiers in Afghanistan were like complaining that the alarm just kept going off and was so annoying and all the security was just causing a Hassle, so they actually turned it off for a period of time.
+
+758
+00:52:56,765 --> 00:53:01,642
+Rym: Oh, so even then alright, I Assume they're using, you know DVI for their monitors.
+
+759
+00:53:01,682 --> 00:53:03,650
+Rym: Yeah, I just have a monitor screen scape.
+
+760
+00:53:03,770 --> 00:53:06,842
+Scott: I'll just turn I'll take a camera and take a picture of the screen.
+
+761
+00:53:06,882 --> 00:53:07,544
+Scott: Oh shit.
+
+762
+00:53:07,645 --> 00:53:32,290
+Scott: Oh shit the the major flaw here in this system right was simply that security real security if you actually want to keep a secret you on computers these days because basically the way computers work these days if you type something into a computer if Exists in digital format you've Effectively told the whole world right unless you surround it with some insane physical security.
+
+763
+00:53:32,410 --> 00:53:41,044
+Scott: like you have a computer in a vault and the computer has no network access and you type it into that computer and nothing leaves That room and you search everyone who goes in and out of the room.
+
+764
+00:53:41,064 --> 00:53:42,069
+Rym: I've got to watch out for tempest.
+
+765
+00:53:42,251 --> 00:53:43,429
+Scott: Yeah, something like that.
+
+766
+00:53:43,610 --> 00:53:45,297
+Scott: You can have security on a computer.
+
+767
+00:53:45,317 --> 00:53:49,172
+Scott: but any networked computer if you type the letter a you basically type the letter a to the Whole world.
+
+768
+00:53:49,896 --> 00:53:57,650
+Scott: what they really need to do is sadly To have any kind of network security you need to have a huge ass hassle.
+
+769
+00:53:58,152 --> 00:53:59,077
+Scott: It is a hassle.
+
+770
+00:53:59,198 --> 00:54:01,710
+Scott: Everyone has to have their own goddamn keys.
+
+771
+00:54:01,971 --> 00:54:04,279
+Scott: You've got to encrypt and decrypt everything.
+
+772
+00:54:04,580 --> 00:54:14,970
+Scott: every computer that's on this network has to be Physically locked down so nobody can even touch the USB port, you know You've got to have the computers the hard drives in them.
+
+773
+00:54:14,970 --> 00:54:18,870
+Scott: That's like, you know, nothing can be stored on those hard drives at any point in time.
+
+774
+00:54:18,931 --> 00:54:21,129
+Scott: They need to be basically like thin clients, you know.
+
+775
+00:54:21,351 --> 00:54:21,812
+Rym: so I'm gonna.
+
+776
+00:54:21,913 --> 00:54:30,210
+Rym: I'm gonna step back from that a little bit and and make a much more simple supposition if The security is gonna be a pain in the ass as it should be for actual real secrets.
+
+777
+00:54:30,351 --> 00:54:39,629
+Scott: I mean, I'm okay with the government saying because there is an amount of security risk You're willing to take in exchange for the benefits of being able to communicate with computer.
+
+778
+00:54:39,649 --> 00:54:47,750
+Rym: Yes Well, like I'm about to say we've got an agent, you know Actually, like monitoring the nuke situation like a deep agent who's been living in North Korea for 10 years.
+
+779
+00:54:48,513 --> 00:54:53,234
+Rym: That is pretty good secret information and it'd be pretty bad If that got out.
+
+780
+00:54:53,797 --> 00:54:56,789
+Rym: that information should not be available to anyone doesn't need to know it.
+
+781
+00:54:57,712 --> 00:55:01,200
+Rym: But we're way too liberal at least in the u.s.
+
+782
+00:55:01,441 --> 00:55:05,090
+Rym: With our security clearances and with what gets classified.
+
+783
+00:55:05,170 --> 00:55:05,713
+Rym: Oh, yeah.
+
+784
+00:55:05,733 --> 00:55:09,010
+Scott: Well, that's another problem is that we classify - I think that's the main problem.
+
+785
+00:55:09,070 --> 00:55:15,650
+Rym: We classify so much that as a result too many people need access and as a result the whole systems compromised.
+
+786
+00:55:15,831 --> 00:55:24,050
+Scott: Yeah, if we would only classify what really needed to be classified which you know could be nothing but you know Well, we're assuming that we do really need to class.
+
+787
+00:55:24,191 --> 00:55:24,432
+Scott: I'll make
+
+788
+00:55:24,472 --> 00:55:41,850
+Rym: a reasonable argument that I that I think it is reasonable for our government to classify imminent military actions Actual espionage that we are currently engaged in or that while we engaged in it in the past is Still active in some direct form where direct harm could result from it coming out.
+
+789
+00:55:42,050 --> 00:55:50,790
+Scott: Yeah, I would just hope that you know, ideally you wouldn't have any need or have espionage or military actions, but anyway regardless That's a libertarian world.
+
+790
+00:55:51,611 --> 00:56:03,210
+Scott: Beyond the point that you if the action if you only made stuff that needed to be confidential Confidential they would actually be so little that was confidential that like only a handful of people would actually need access.
+
+791
+00:56:03,310 --> 00:56:14,210
+Scott: it could be an incredibly small and tight system right like the red telephone system or whatever and Everything else is just like oh who cares, you know, you wouldn't really need that much security because it's just it's government information.
+
+792
+00:56:14,290 --> 00:56:16,256
+Scott: Let it be public like the law.
+
+793
+00:56:16,437 --> 00:56:28,470
+Rym: In fact, I would argue that by making more information like this public Information that might actually be damaging even if it isn't actually technically secret will be lost in the flood of data.
+
+794
+00:56:28,863 --> 00:56:30,112
+Scott: Yeah I mean right now.
+
+795
+00:56:30,132 --> 00:56:36,768
+Scott: basically that's like WikiLeaks makes these huge dumps and it's like the newspapers go in and Parse and find the tent that the juicy bits.
+
+796
+00:56:36,989 --> 00:56:41,044
+Scott: you didn't go and actually look at any of the actual, you know releases Did you?
+
+797
+00:56:41,064 --> 00:56:41,966
+Scott: yeah, I didn't.
+
+798
+00:56:42,107 --> 00:56:43,912
+Rym: it's basically it's so much hassle.
+
+799
+00:56:43,972 --> 00:56:48,351
+Rym: I'm gripping through for words like fuck Penis or douchebag.
+
+800
+00:56:48,451 --> 00:56:49,980
+Scott: Yeah, it's just such a hassle, right?
+
+801
+00:56:50,140 --> 00:56:54,640
+Scott: And you know it there might be juicy bits and then no one will ever find because it's just so much.
+
+802
+00:56:54,821 --> 00:56:55,889
+Rym: It's not that much data.
+
+803
+00:56:55,990 --> 00:56:57,199
+Scott: actually who's gonna read all of it?
+
+804
+00:56:58,042 --> 00:56:59,977
+Rym: I'm pretty sure there are a lot of people who are gonna read all of it.
+
+805
+00:57:00,581 --> 00:57:03,879
+Scott: But imagine if there was that much data every day every hour.
+
+806
+00:57:04,920 --> 00:57:11,040
+Scott: Because think about all right, basically these are phone lines between diplomats and they're just talking on the phone kind of all the time.
+
+807
+00:57:11,462 --> 00:57:23,760
+Scott: So this just data piling up constantly, you know If two if you have you you know, one person can pay attention to one phone conversation in real time There's at least five ten, maybe hundreds of conversations going on simultaneously.
+
+808
+00:57:23,961 --> 00:57:25,345
+Scott: And this is just diplomats.
+
+809
+00:57:25,706 --> 00:57:33,852
+Scott: add in military add in every government agency add in the DMV Talking to the capital of the state that you're in.
+
+810
+00:57:33,933 --> 00:57:35,780
+Scott: right there is so much.
+
+811
+00:57:36,081 --> 00:57:39,974
+Scott: You could not even come close to finding all the juicy bits everywhere.
+
+812
+00:57:39,994 --> 00:57:41,580
+Scott: It would it just wouldn't happen.
+
+813
+00:57:41,962 --> 00:57:44,240
+Scott: So let it be public and it won't really be public.
+
+814
+00:57:44,300 --> 00:57:48,059
+Scott: It'll just be a big old haystack with a few needles that poke out now and then.
+
+815
+00:57:48,963 --> 00:58:00,549
+Rym: It would also just be a general net benefit to society because I think a lot of the corruption and this is obviously more Thursday territory and waste that occurs in our government is Effectively classified for no good reason.
+
+816
+00:58:00,629 --> 00:58:04,908
+Rym: Yeah, like it there should be a fairly serious Disincentive to classifying things.
+
+817
+00:58:05,190 --> 00:58:09,493
+Rym: if the security is a giant pain in the ass Some senator is not gonna classify everything he does.
+
+818
+00:58:09,553 --> 00:58:10,799
+Rym: It'll be a giant pain in the ass.
+
+819
+00:58:11,241 --> 00:58:15,360
+Scott: Oh, that's all that says is a catch-22 right because too much is classified.
+
+820
+00:58:15,621 --> 00:58:15,982
+Scott: They know it.
+
+821
+00:58:16,022 --> 00:58:19,294
+Scott: they won't make it a pain in the ass right security wise.
+
+822
+00:58:19,314 --> 00:58:20,800
+Scott: so then everything leaks out.
+
+823
+00:58:21,002 --> 00:58:26,900
+Scott: But if they made it a pain in the ass Oh, we couldn't really classify that much because it'd be too much a pain in the ass.
+
+824
+00:58:26,920 --> 00:58:31,115
+Rym: You know and I do point out as far as I can tell nothing top secret is in this.
+
+825
+00:58:31,176 --> 00:58:31,858
+Rym: it was all secret.
+
+826
+00:58:31,918 --> 00:58:34,107
+Scott: and yes Secret is millions of people.
+
+827
+00:58:34,148 --> 00:58:34,750
+Scott: top secret.
+
+828
+00:58:34,790 --> 00:58:37,000
+Scott: I think is a lot less people doesn't Britain?
+
+829
+00:58:37,040 --> 00:58:41,320
+Rym: I don't know exactly how many Britain has like another level about top top above top secret.
+
+830
+00:58:41,401 --> 00:58:43,780
+Scott: I'm sure there is stuff that is ultra secret.
+
+831
+00:58:44,081 --> 00:58:46,047
+Rym: I'm sure there's stuff that the president doesn't know.
+
+832
+00:58:46,107 --> 00:58:51,865
+Scott: that's like relegated to pictures of the president's penis or his lack thereof Stuff like that.
+
+833
+00:58:51,925 --> 00:58:53,051
+Rym: I think the president would know.
+
+834
+00:58:53,373 --> 00:58:58,478
+Scott: well, I mean this stuff for example I know is like ultra secret is like when the president goes to stay somewhere, right?
+
+835
+00:58:59,140 --> 00:59:06,259
+Scott: They always have two or more possible places He might be sleeping right and which one he's actually sleeping in that night is like the ultra.
+
+836
+00:59:06,279 --> 00:59:06,901
+Rym: see now You know what?
+
+837
+00:59:07,142 --> 00:59:10,316
+Rym: I'm fine with that, but it shouldn't be secret more than a couple weeks.
+
+838
+00:59:10,597 --> 00:59:15,458
+Scott: The thing is No other leader in the world as anything remotely close to that kind of.
+
+839
+00:59:15,539 --> 00:59:16,964
+Scott: yeah But we are leader.
+
+840
+00:59:16,985 --> 00:59:20,819
+Scott: comes the Prime Minister's of most countries just drive to work on in their own cars.
+
+841
+00:59:22,542 --> 00:59:26,457
+Rym: I will agree that I think our president has slightly more to worry about than other.
+
+842
+00:59:26,497 --> 00:59:34,900
+Scott: Yes, I do Obviously, but I think that they go a little bit overboard and it also limits the freedoms of the president in a way that I Would not tolerate if I were the president.
+
+843
+00:59:35,343 --> 00:59:37,155
+Scott: Anyway, that's a totally know.
+
+844
+00:59:37,195 --> 00:59:41,636
+Rym: the president, you know There'd be video on the news of me like running away from the Secret Service.
+
+845
+00:59:41,656 --> 00:59:42,500
+Scott: You wouldn't get away.
+
+846
+00:59:42,520 --> 00:59:43,890
+Scott: They would get you so fast.
+
+847
+00:59:44,011 --> 00:59:44,837
+Rym: and then the awesome.
+
+848
+00:59:44,937 --> 00:59:47,210
+Rym: every day There's a video of me getting tackled by the city.
+
+849
+00:59:47,230 --> 00:59:48,516
+Scott: They would hate you so much.
+
+850
+00:59:48,556 --> 00:59:49,300
+Scott: You'd have a black guy.
+
+851
+00:59:49,320 --> 00:59:50,123
+Scott: You'd have to explain it.
+
+852
+00:59:50,465 --> 00:59:52,072
+Scott: Yeah punch me in the face.
+
+853
+00:59:52,132 --> 00:59:54,080
+Rym: Yeah, I'm just trying to get a burger.
+
+854
+00:59:56,303 --> 01:00:01,149
+Scott: You got to do the Bill Clinton method where you have a. you know They clear the route to go to the Mickey D's.
+
+855
+01:00:01,290 --> 01:00:03,016
+Scott: Anyway, you could have the chef make you one.
+
+856
+01:00:03,056 --> 01:00:03,759
+Scott: You don't need any.
+
+857
+01:00:03,920 --> 01:00:08,795
+Scott: so Well, we went to presidential security.
+
+858
+01:00:08,856 --> 01:00:18,451
+Scott: so yeah The thing is if you actually only classify a little bit of stuff and made it a pain in the ass Those few people who needed all those secrets would have the giant pain in the ass.
+
+859
+01:00:18,472 --> 01:00:28,300
+Scott: security of physical keys and maybe bio Scanning and you know frickin public-private ultra encryption and computers that are totally physically separate.
+
+860
+01:00:29,584 --> 01:00:32,214
+Rym: How they made perfect encryption back in World War.
+
+861
+01:00:32,234 --> 01:00:33,077
+Scott: two one time pad.
+
+862
+01:00:33,358 --> 01:00:38,936
+Rym: old ladies Spinning bingo things pulling out random letters and handwriting one time pads.
+
+863
+01:00:39,217 --> 01:00:40,160
+Rym: That's pretty damn random.
+
+864
+01:00:40,341 --> 01:00:41,749
+Scott: That's about as good as it gets.
+
+865
+01:00:41,789 --> 01:00:43,820
+Scott: Yeah, we could do it a little faster.
+
+866
+01:00:43,880 --> 01:00:46,011
+Scott: We could use ultra bingo instead of regular Bing.
+
+867
+01:00:46,031 --> 01:00:47,760
+Rym: We have way more old ladies now.
+
+868
+01:00:47,840 --> 01:00:52,778
+Scott: That's where five bingo balls come out at once and this is ten old ladies anyway.
+
+869
+01:00:53,861 --> 01:00:58,940
+Scott: So now you've got so we've told you how to secure the government information and how to be better at being WikiLeaks.
+
+870
+01:00:59,101 --> 01:01:03,340
+Scott: How do you what do you do if you're the guy trying to get the government information and give it to WikiLeaks?
+
+871
+01:01:03,760 --> 01:01:04,966
+Rym: Well, let's do two things there.
+
+872
+01:01:05,006 --> 01:01:13,720
+Rym: because because I don't want to talk about general personal security But I think our last two sides of this are that I want to release ultra secret information to be cool like WikiLeaks.
+
+873
+01:01:14,362 --> 01:01:19,300
+Rym: And then the side effect is if I'm that person, how do I protect my own personal evil stuff?
+
+874
+01:01:19,500 --> 01:01:21,291
+Scott: Well, yeah, you got a. how do you get the information?
+
+875
+01:01:21,331 --> 01:01:22,780
+Scott: and then how do you not go to jail forever?
+
+876
+01:01:22,960 --> 01:01:25,393
+Scott: Cuz let me tell you they're not really going after WikiLeaks.
+
+877
+01:01:25,413 --> 01:01:26,197
+Scott: so much right.
+
+878
+01:01:26,217 --> 01:01:26,780
+Scott: the authorities.
+
+879
+01:01:26,780 --> 01:01:30,800
+Scott: They're gonna try to find out there the people who leak these things to WikiLeaks.
+
+880
+01:01:30,900 --> 01:01:34,531
+Scott: I gotta get the hammer brought down on them so hard.
+
+881
+01:01:34,631 --> 01:01:36,878
+Scott: What is gonna be like Thor is gonna go.
+
+882
+01:01:37,018 --> 01:01:39,093
+Scott: Oh shit All right, what is the hammer come down?
+
+883
+01:01:39,113 --> 01:01:39,800
+Rym: What is funny?
+
+884
+01:01:40,681 --> 01:01:49,465
+Rym: Is that many of these cables were basically leaders of other Arab nations saying yeah just between you and me fucker on Just bomb the shit out of him.
+
+885
+01:01:49,485 --> 01:01:50,910
+Rym: Well, we care serious.
+
+886
+01:01:50,950 --> 01:01:51,251
+Rym: Yeah.
+
+887
+01:01:51,452 --> 01:01:53,720
+Scott: All right, you wanted to all right, so you do it big mouth.
+
+888
+01:01:53,881 --> 01:01:54,624
+Scott: That's what I would say.
+
+889
+01:01:54,785 --> 01:01:56,514
+Scott: Yeah, so but a lot.
+
+890
+01:01:56,534 --> 01:01:57,800
+Scott: Oh, you don't have the balls to do it.
+
+891
+01:01:57,820 --> 01:01:58,704
+Scott: That's what I thought a lot of.
+
+892
+01:01:58,744 --> 01:02:00,632
+Rym: it was basically the entire Arab world being.
+
+893
+01:02:00,994 --> 01:02:05,219
+Rym: yeah, we can't say this publicly But they're the biggest threat to the Middle East right now.
+
+894
+01:02:05,701 --> 01:02:11,780
+Rym: And Ahmadinejad came out today after you know, obviously he read all this and that's it's funny.
+
+895
+01:02:11,800 --> 01:02:19,074
+Rym: It's kind of like seeing a group of friends where someone just like played back the phone Conversation that no one else had heard and now everyone's pissed.
+
+896
+01:02:19,395 --> 01:02:20,480
+Scott: Anyway, so he came out.
+
+897
+01:02:20,560 --> 01:02:27,460
+Rym: He basically tried to say that the entire cable leak was orchestrated by the US government to discredit his regime.
+
+898
+01:02:28,042 --> 01:02:33,217
+Rym: Anyway, but if you want to do the leaking you basically one.
+
+899
+01:02:33,257 --> 01:02:34,120
+Rym: you should use true crypt.
+
+900
+01:02:34,181 --> 01:02:35,440
+Rym: You gotta have denial encryption.
+
+901
+01:02:35,901 --> 01:02:36,624
+Rym: You've got to be.
+
+902
+01:02:36,744 --> 01:02:43,145
+Scott: you've got to actually like if you care about this level one take advantage of the really shitty Security that we just described.
+
+903
+01:02:43,385 --> 01:02:51,960
+Scott: Yes, if their security is really high don't even bother because if the security is high enough It'll basically be impossible for you to actually do anything, right?
+
+904
+01:02:52,060 --> 01:02:54,414
+Scott: You know, you'll have your own key and then they'll know up.
+
+905
+01:02:54,555 --> 01:02:55,440
+Scott: That was the key that was used.
+
+906
+01:02:55,500 --> 01:02:58,120
+Scott: We know who did it and even if you didn't do it was your key.
+
+907
+01:02:58,301 --> 01:02:59,873
+Scott: So odds of you doing it a very high.
+
+908
+01:02:59,933 --> 01:03:00,840
+Scott: so you're going to you know.
+
+909
+01:03:00,900 --> 01:03:05,466
+Scott: But think you might think of number one Munch the data.
+
+910
+01:03:05,727 --> 01:03:11,794
+Rym: that's a technical term for say you thought you've got a photograph of like American soldiers committing a war crime or something like.
+
+911
+01:03:11,814 --> 01:03:12,840
+Rym: you've got the photograph.
+
+912
+01:03:13,261 --> 01:03:22,339
+Rym: Don't just put it on the internet because there's a not unreasonable chance that there's some sort of Saginographic key or watermark that might identify it back to you.
+
+913
+01:03:22,841 --> 01:03:25,608
+Rym: Especially don't put the actual file that you got.
+
+914
+01:03:25,929 --> 01:03:31,330
+Rym: what you here's is one to open it up in the gimp and save it as A couple of times.
+
+915
+01:03:31,793 --> 01:03:32,820
+Scott: that's not the best idea.
+
+916
+01:03:32,840 --> 01:03:36,355
+Rym: Here's what you really want to do take a picture of the monitor and then use that as the photo.
+
+917
+01:03:36,696 --> 01:03:37,460
+Scott: That's a good idea.
+
+918
+01:03:38,622 --> 01:03:40,940
+Scott: What a really the thing is they might even get the information out of that.
+
+919
+01:03:41,020 --> 01:03:45,556
+Scott: What you really want to do is you want to get some really good photo doctoring.
+
+920
+01:03:45,576 --> 01:03:46,540
+Scott: We're talking about a photo, right?
+
+921
+01:03:46,900 --> 01:03:51,780
+Scott: So let's say I got a photo of Rym shooting somebody right and oh my god, that shouldn't happen.
+
+922
+01:03:51,981 --> 01:03:54,598
+Scott: He's like just hosing civilians down babies, right?
+
+923
+01:03:55,582 --> 01:04:00,380
+Scott: Let me doc let me doctor this photo to get a picture from the other angle.
+
+924
+01:04:00,500 --> 01:04:05,279
+Scott: So now you don't even realize, you know, it's still a picture of right what it is.
+
+925
+01:04:05,904 --> 01:04:07,801
+Scott: But you don't even you know It's.
+
+926
+01:04:07,902 --> 01:04:12,400
+Scott: it's basically a completely doctored photo that looks like and they might come out and say all that photo was done.
+
+927
+01:04:12,420 --> 01:04:16,899
+Rym: I was about to say there's the danger and the more you manage something the more people might try to discredit it.
+
+928
+01:04:17,122 --> 01:04:17,919
+Scott: Yeah, that's true.
+
+929
+01:04:18,201 --> 01:04:22,340
+Rym: But that's why the insurance file and this is this is part two.
+
+930
+01:04:22,380 --> 01:04:23,059
+Rym: We'll get to that later.
+
+931
+01:04:23,381 --> 01:04:29,660
+Rym: If you take the original original and you put it out there encrypted and you've got the private key say you get arrested.
+
+932
+01:04:30,441 --> 01:04:33,232
+Rym: You can use that as straight-up blackmail.
+
+933
+01:04:33,814 --> 01:04:35,299
+Rym: Yep to possibly get out of it.
+
+934
+01:04:35,823 --> 01:04:37,339
+Scott: And the thing is right, you know.
+
+935
+01:04:37,601 --> 01:04:38,846
+Scott: even if you what are they gonna do?
+
+936
+01:04:39,087 --> 01:04:43,285
+Scott: even if they give you the death penalty and you go to death row you still get To mail a letter to somebody.
+
+937
+01:04:43,305 --> 01:04:46,880
+Scott: you just write that key down in the mail into the post office.
+
+938
+01:04:47,181 --> 01:04:50,477
+Rym: Obviously if they if the government was serious, they just wouldn't deliver that letter.
+
+939
+01:04:50,497 --> 01:04:51,120
+Rym: They just take it.
+
+940
+01:04:52,661 --> 01:04:54,772
+Scott: The point is you can still get it out somehow right.
+
+941
+01:04:54,792 --> 01:04:56,460
+Scott: you get last words that are then published.
+
+942
+01:04:56,520 --> 01:04:57,527
+Scott: What are your last words?
+
+943
+01:04:57,829 --> 01:04:59,519
+Scott: a Q are seven?
+
+944
+01:05:00,581 --> 01:05:01,830
+Rym: You know what they would do.
+
+945
+01:05:02,051 --> 01:05:02,978
+Rym: they'd manage that shit.
+
+946
+01:05:04,021 --> 01:05:06,834
+Scott: The thing is it would you know people it would work out.
+
+947
+01:05:06,875 --> 01:05:08,040
+Rym: You've got to be more clever about it.
+
+948
+01:05:08,040 --> 01:05:08,846
+Rym: Your mom's got to have it.
+
+949
+01:05:08,907 --> 01:05:13,487
+Rym: Maybe you wrote it on the wall Somewhere like you defeated it somewhere.
+
+950
+01:05:13,568 --> 01:05:14,391
+Rym: No one would ever look.
+
+951
+01:05:14,471 --> 01:05:16,680
+Scott: you got to do the Hannibal Lecter trick with the classified ads.
+
+952
+01:05:16,923 --> 01:05:17,878
+Rym: That's a good trick.
+
+953
+01:05:18,601 --> 01:05:21,011
+Rym: Actually, I would argue that that's what a lot of spam is that.
+
+954
+01:05:21,032 --> 01:05:31,374
+Rym: in fact if I was going to distribute You know text data or munge photographs in a way that I really Needed to be there in case I got offed spam guy a good idea.
+
+955
+01:05:31,454 --> 01:05:32,820
+Rym: Spam is how I would do it.
+
+956
+01:05:33,081 --> 01:05:41,943
+Scott: Yeah, I mean because the guy who sent the spam he just says I don't know I got this spam and I got some money from some bank account and I sent my spam and now everyone in the world Has this picture.
+
+957
+01:05:42,585 --> 01:05:56,061
+Rym: so say are not even just the picture staying in a graphic spam even Staganography in terms of distribution Especially because usually you're not alone like there's an image in the spam and then in the image is the is the private key and then Everyone.
+
+958
+01:05:56,101 --> 01:06:00,676
+Scott: you have the key to decrypt the actual photo of the horrible war crime.
+
+959
+01:06:01,037 --> 01:06:02,020
+Rym: like say you're a guy.
+
+960
+01:06:02,241 --> 01:06:03,267
+Scott: Someone would figure it out.
+
+961
+01:06:03,287 --> 01:06:04,655
+Scott: Look at the shit that nerds figure out.
+
+962
+01:06:04,695 --> 01:06:05,359
+Scott: They would figure it out.
+
+963
+01:06:05,480 --> 01:06:10,698
+Rym: Yep, I mean say you're a guy who gets this information and obviously you need to munge it.
+
+964
+01:06:10,798 --> 01:06:13,065
+Rym: I mean Say it's just a text file.
+
+965
+01:06:13,286 --> 01:06:18,120
+Rym: there might be purposefully misspelled words throughout secret documents that are different for every person who accesses them.
+
+966
+01:06:18,522 --> 01:06:20,109
+Rym: That's how I would protect documents.
+
+967
+01:06:20,491 --> 01:06:22,099
+Rym: So it'd be really trivial to figure out, you know?
+
+968
+01:06:22,400 --> 01:06:25,760
+Rym: Yeah, the word road was misspelled six times in this document.
+
+969
+01:06:25,820 --> 01:06:29,255
+Rym: The only person whose document was like that was Joe Bob who works in Alabama.
+
+970
+01:06:29,275 --> 01:06:30,360
+Rym: arrest his fucking ass.
+
+971
+01:06:30,420 --> 01:06:32,929
+Scott: Yeah, if anything has access logs, right?
+
+972
+01:06:32,989 --> 01:06:34,314
+Scott: For example, this WikiLeaks guy.
+
+973
+01:06:34,334 --> 01:06:40,411
+Scott: He dumped basically all these Embassy things, right If he just downloaded them all at once.
+
+974
+01:06:40,432 --> 01:06:44,739
+Scott: they can just look in the access logs and be like Oh, here's the only person who downloaded everything at once.
+
+975
+01:06:45,841 --> 01:06:51,726
+Scott: You want to download like one at a time here and there and it's got to make sense in terms of stuff that you would Be looking at here and there.
+
+976
+01:06:51,746 --> 01:06:54,296
+Scott: also you can't have any sort of usage pattern.
+
+977
+01:06:54,316 --> 01:06:55,260
+Scott: that is out of the ordinary.
+
+978
+01:06:55,320 --> 01:06:57,660
+Rym: You have to be careful not to reveal too much.
+
+979
+01:06:57,761 --> 01:07:02,675
+Rym: Like if you take a whole dump of something and put it out What you did not include is very telling.
+
+980
+01:07:02,715 --> 01:07:04,499
+Rym: as to what access yeah It's like, you know.
+
+981
+01:07:04,881 --> 01:07:08,415
+Scott: so if I dump everything all at once and then release it all at once we know who did it.
+
+982
+01:07:08,676 --> 01:07:13,432
+Scott: if I only look at Ten documents and the release has those ten documents and say huh who has access?
+
+983
+01:07:13,493 --> 01:07:15,760
+Scott: who looked at these ten documents and no other documents?
+
+984
+01:07:15,940 --> 01:07:21,955
+Scott: Oh that guy right your access pattern and your usage patterns cannot match up with the don't.
+
+985
+01:07:21,995 --> 01:07:24,020
+Rym: I just realized there's probably some schmuck somewhere.
+
+986
+01:07:24,381 --> 01:07:29,899
+Rym: Who was told by like an IT manager to take a like an archive and he downloaded everything like a week ago.
+
+987
+01:07:29,919 --> 01:07:39,120
+Scott: better Better yet someone else right does all the using and You know, it's all the access logs have their name on it, right?
+
+988
+01:07:39,200 --> 01:07:40,748
+Scott: So your friend looks at a document.
+
+989
+01:07:41,009 --> 01:07:43,120
+Scott: you you dump it and you get the document from him.
+
+990
+01:07:43,441 --> 01:07:44,746
+Scott: Someone else looks at a document.
+
+991
+01:07:44,766 --> 01:07:45,790
+Scott: get the document from them.
+
+992
+01:07:46,112 --> 01:07:47,417
+Scott: So I'm gonna else gets a document.
+
+993
+01:07:47,437 --> 01:07:48,240
+Scott: you get the document from them.
+
+994
+01:07:48,280 --> 01:07:51,229
+Scott: So now you're collecting documents all these different users of the system.
+
+995
+01:07:51,410 --> 01:07:54,800
+Rym: and I'll point out you want all these documents easily be an IT guy.
+
+996
+01:07:55,130 --> 01:07:59,174
+Scott: Yeah So you've collected a hundred documents from you know, 50 different people.
+
+997
+01:07:59,234 --> 01:08:00,900
+Scott: and then when they go and they say who does this dump?
+
+998
+01:08:01,061 --> 01:08:03,556
+Scott: You know who has an at usage pattern that matches this dump?
+
+999
+01:08:03,978 --> 01:08:04,240
+Scott: nobody.
+
+1000
+01:08:04,901 --> 01:08:06,910
+Scott: So now it's like well what the who the fuck did it?
+
+1001
+01:08:06,950 --> 01:08:07,774
+Scott: We have no way to tell.
+
+1002
+01:08:08,115 --> 01:08:08,838
+Rym: so you've got a munch.
+
+1003
+01:08:08,859 --> 01:08:09,441
+Rym: the data You know.
+
+1004
+01:08:09,461 --> 01:08:13,233
+Rym: do some seds throw some random stuff here and there just to throw it off.
+
+1005
+01:08:13,594 --> 01:08:16,424
+Rym: if you can do a statistical analysis Look for any anomalies.
+
+1006
+01:08:16,826 --> 01:08:16,987
+Rym: Mm-hmm.
+
+1007
+01:08:17,247 --> 01:08:20,160
+Rym: I mean, I don't really have any advice on specifically how to do that.
+
+1008
+01:08:21,022 --> 01:08:26,580
+Rym: I also don't want to aid in a very felons be a computer scientist or a math statistician.
+
+1009
+01:08:27,743 --> 01:08:32,256
+Scott: And then now you've got to get these Documents and you got to give them to the WikiLeaks.
+
+1010
+01:08:32,296 --> 01:08:34,466
+Scott: guys, you know They have a procedure for general.
+
+1011
+01:08:34,546 --> 01:08:42,493
+Rym: in general if you you've you've gotten some sort of document and you want to get it out To the public through an intermediary as opposed to directly.
+
+1012
+01:08:42,795 --> 01:08:44,200
+Scott: Yeah, that's why WikiLeaks exists.
+
+1013
+01:08:44,260 --> 01:08:45,629
+Scott: You don't want to put up your own thing.
+
+1014
+01:08:45,669 --> 01:08:49,102
+Rym: Staganography and strange Basically.
+
+1015
+01:08:49,563 --> 01:08:50,305
+Rym: here's an example.
+
+1016
+01:08:50,566 --> 01:08:57,167
+Rym: So I go to a Counter-Strike server and I spray the picture on the wall And someone looks at it.
+
+1017
+01:08:57,389 --> 01:09:00,140
+Rym: who the fuck is going to be monitoring that?
+
+1018
+01:09:00,859 --> 01:09:15,160
+Scott: You go into a Counter-Strike server spray the URL of some IP address of some machine that you set up and a Starbucks right You know on the wall and then people start visiting the web server that's hiding in the corner.
+
+1019
+01:09:15,200 --> 01:09:24,380
+Scott: You just you left the laptop under the couch in a Starbucks connected to the wireless Plugged into an outlet that's behind the couch and it's running this web server that's serving up all this shit.
+
+1020
+01:09:24,921 --> 01:09:29,134
+Scott: It'll take them a long time to go find that and by then people have downloaded everything from the laptop.
+
+1021
+01:09:29,354 --> 01:09:33,613
+Rym: now not that useful For direct or distribution to people.
+
+1022
+01:09:33,633 --> 01:09:35,582
+Rym: you don't know that well because you either have to set They're gonna.
+
+1023
+01:09:35,603 --> 01:09:38,300
+Scott: the thing is they're gonna check the security cameras in the Starbucks.
+
+1024
+01:09:38,399 --> 01:09:41,930
+Scott: So make sure that you're in with the Starbucks before or drive-by.
+
+1025
+01:09:41,991 --> 01:09:42,693
+Rym: do it outside.
+
+1026
+01:09:42,794 --> 01:09:44,779
+Rym: use a Pringles can from a car down the road.
+
+1027
+01:09:44,880 --> 01:09:49,979
+Scott: Yeah, make you got to do it somewhere where there is no security cameras because they'll see you setting up this computer.
+
+1028
+01:09:50,201 --> 01:09:54,863
+Scott: You know, you got to do it like in you know, but the back alley behind the Starbucks, you know And
+
+1029
+01:09:54,884 --> 01:10:00,556
+Rym: I played it late at night Car battery hooked up to a netbook or even just a netbook with dress battery
+
+1030
+01:10:00,596 --> 01:10:02,042
+Scott: dressed in all black Right
+
+1031
+01:10:02,163 --> 01:10:04,614
+Rym: with a with an Ubuntu live CD.
+
+1032
+01:10:04,775 --> 01:10:08,450
+Scott: Yes, just sitting there Transmitting the data that is something right.
+
+1033
+01:10:08,490 --> 01:10:15,536
+Scott: when law enforcement gets a computer Basically what they do is they examine the hard drive on you know, the bit level.
+
+1034
+01:10:15,556 --> 01:10:16,860
+Rym: Oh, I don't have a hard drive.
+
+1035
+01:10:17,364 --> 01:10:19,060
+Scott: Oh, there's no hard drive in this computer, right?
+
+1036
+01:10:19,100 --> 01:10:21,730
+Scott: They probably made a stupid move and turned it off.
+
+1037
+01:10:21,770 --> 01:10:23,496
+Scott: and now everything that was in RAM is gone.
+
+1038
+01:10:23,516 --> 01:10:24,520
+Scott: and what's left in the computer?
+
+1039
+01:10:24,580 --> 01:10:27,598
+Scott: A live CD that's got a blank OS with nothing on it.
+
+1040
+01:10:27,638 --> 01:10:27,960
+Scott: They lost.
+
+1041
+01:10:29,183 --> 01:10:35,070
+Rym: You know, I think we've talked about that specific idea before because that's like 101 how to distribute data.
+
+1042
+01:10:35,472 --> 01:10:36,800
+Rym: but a good plan.
+
+1043
+01:10:36,920 --> 01:10:41,795
+Rym: This is more for the people who are really serious about this paranoid types physical giving to someone.
+
+1044
+01:10:41,815 --> 01:10:47,190
+Rym: Oh No having Predefined codes among people you trust.
+
+1045
+01:10:47,451 --> 01:10:51,629
+Rym: I'll give you an example a very personal example And this is something I did with some friends.
+
+1046
+01:10:51,689 --> 01:10:53,135
+Rym: This isn't even FRC people.
+
+1047
+01:10:53,176 --> 01:10:55,810
+Rym: This is just some other people I know out in the wide world.
+
+1048
+01:10:55,850 --> 01:10:57,299
+Rym: I haven't talked to some of these people in years.
+
+1049
+01:10:58,221 --> 01:11:12,480
+Rym: there's a code word that we came up with and it was our oh shit code word and Basically it refers to a place a Time a color a whole bunch of different unrelated things and to know what it's referring to requires context.
+
+1050
+01:11:13,086 --> 01:11:17,208
+Rym: So if the shit hits the fan We know if we don't hear anything from anyone.
+
+1051
+01:11:17,589 --> 01:11:20,537
+Rym: meet at the place referred to by Daedalus at the time.
+
+1052
+01:11:20,597 --> 01:11:21,600
+Rym: referred to by Daedalus.
+
+1053
+01:11:22,223 --> 01:11:22,906
+Rym: That's my word.
+
+1054
+01:11:22,966 --> 01:11:25,800
+Rym: You'll that no one's gonna remember this and I don't plan to use this word.
+
+1055
+01:11:25,921 --> 01:11:28,619
+Rym: But mmm, so, you know have your Daedalus word.
+
+1056
+01:11:29,001 --> 01:11:37,255
+Rym: So say I tell Scott I'm being arrested and I yell the color Daedalus and Scott knows that's the color purple Which we also know refers to this diner.
+
+1057
+01:11:38,100 --> 01:11:42,759
+Rym: We ate at Otakon four years ago, and I probably left something in the bathroom there hidden.
+
+1058
+01:11:43,643 --> 01:11:47,840
+Rym: Yep, you know something like that a code and actually is hiding something in a bathroom.
+
+1059
+01:11:47,961 --> 01:11:49,110
+Scott: Is it really still gonna be there?
+
+1060
+01:11:49,130 --> 01:11:50,420
+Scott: All right, you got to do a better job than that.
+
+1061
+01:11:50,420 --> 01:11:56,538
+Rym: Well when I say in a bathroom, I mean like when I found those drugs in the wall behind the urinal At that rest stop.
+
+1062
+01:11:57,561 --> 01:11:59,148
+Rym: There are ways to hide things in places.
+
+1063
+01:11:59,209 --> 01:12:00,052
+Rym: No one will ever look.
+
+1064
+01:12:00,374 --> 01:12:01,740
+Scott: the thing is right is like.
+
+1065
+01:12:01,840 --> 01:12:11,980
+Scott: I've seen people hiding stuff like in telephone, you know booths in payphone thingies in New York City, and it's like Yeah, you know that's not really a very good.
+
+1066
+01:12:12,121 --> 01:12:14,212
+Rym: Well, it depends on what the long-term or short-term is.
+
+1067
+01:12:14,273 --> 01:12:21,720
+Rym: and usually when I say these codes So those are just examples the long-term codes are the ones that are contextual to where you use the code.
+
+1068
+01:12:22,102 --> 01:12:22,485
+Rym: Like say.
+
+1069
+01:12:22,525 --> 01:12:29,540
+Rym: you say, you know, I've got the data I'll give it to you a data list and your friends out there know what that means.
+
+1070
+01:12:29,942 --> 01:12:41,168
+Rym: Maybe they remember that that means log into this counter-strike server You know X hours after you make that statement and it'll be there in a specific form Mmm, and just have you.
+
+1071
+01:12:41,188 --> 01:12:43,920
+Scott: definitely that's the thing with a game like counter-strike, right?
+
+1072
+01:12:44,020 --> 01:12:54,060
+Scott: You're pretty good because you can run the server yourself in a safe place and not have any logs or anything And you can even connect to it in an encrypted way with SSH tunnels and those are probably better.
+
+1073
+01:12:54,441 --> 01:12:58,596
+Scott: Yeah, no MMOs are actually probably worse because there are logs on some server.
+
+1074
+01:12:58,616 --> 01:13:01,188
+Scott: You do not control though You know the blizzard server or whatever.
+
+1075
+01:13:01,469 --> 01:13:02,474
+Rym: Well, it depends on what.
+
+1076
+01:13:02,515 --> 01:13:13,668
+Scott: however, you know It's like if I have a counter-strike server Everyone can SSH to it perfectly secure and then through the SSH tunnel connect to the counter-strike server or IRC server That's running on localhost only on that server.
+
+1077
+01:13:14,130 --> 01:13:16,759
+Scott: Right and then that's it doesn't get better than that.
+
+1078
+01:13:17,342 --> 01:13:19,860
+Rym: Maybe you've got a hamachi out there just waiting for someone to connect.
+
+1079
+01:13:20,101 --> 01:13:20,783
+Scott: No, but he's gonna.
+
+1080
+01:13:20,803 --> 01:13:22,570
+Scott: you know, there's no way that they're gonna.
+
+1081
+01:13:22,610 --> 01:13:23,372
+Scott: they're just gonna see.
+
+1082
+01:13:23,653 --> 01:13:25,500
+Scott: someone's got a hosted machine at line node.
+
+1083
+01:13:25,560 --> 01:13:28,180
+Scott: It's running a website for some WordPress blog.
+
+1084
+01:13:28,541 --> 01:13:41,475
+Rym: I guess though the moral of all that because obviously we jumped around a whole bunch just now is Have a data list of some kind which I'm just gonna say means Way before you plan to engage in any sort of espionage or anything like this.
+
+1085
+01:13:41,776 --> 01:13:52,026
+Rym: You have to have already established An intelligence groundwork as in drop locations trusted friends codes between friends You have to lay the stuff down.
+
+1086
+01:13:52,106 --> 01:13:55,140
+Scott: even public-private keys don't work unless you share public keys with everybody.
+
+1087
+01:13:55,160 --> 01:14:03,735
+Rym: You've got to lay this stuff down years before you decide to do anything shady if you actually really care About the security and effectiveness of said shadiness.
+
+1088
+01:14:04,097 --> 01:14:08,900
+Rym: Mm-hmm Well, we're basically giving people the like the solid book for how to commit crimes.
+
+1089
+01:14:09,181 --> 01:14:11,655
+Scott: It's not how to commit crimes, but it could be used for that.
+
+1090
+01:14:11,816 --> 01:14:13,705
+Scott: It doesn't matter There's nothing wrong with that.
+
+1091
+01:14:14,066 --> 01:14:25,011
+Scott: Well, I guess I mean what's if it's criminal to tell people Hey people look use the publicly and freely available Open-source SSH technology to do whatever you want.
+
+1092
+01:14:25,412 --> 01:14:26,435
+Scott: It's like it's.
+
+1093
+01:14:26,535 --> 01:14:28,180
+Scott: I'm surprised the government is not an Italian.
+
+1094
+01:14:28,220 --> 01:14:33,337
+Rym: You know the fact government they did remember when the government tried to declare PGP.
+
+1095
+01:14:35,344 --> 01:14:37,130
+Scott: I'm not saying that I'm surprised they haven't made illegal.
+
+1096
+01:14:37,150 --> 01:14:38,957
+Scott: I'm surprised they aren't using it themselves.
+
+1097
+01:14:38,997 --> 01:14:39,720
+Scott: They're so than stupid.
+
+1098
+01:14:40,121 --> 01:14:46,383
+Rym: We already know why because there's too much classified information and as a result too many people need access and it's too much of a Pain in the ass.
+
+1099
+01:14:46,584 --> 01:14:48,816
+Rym: So the security is dumbed down to the lowest common senator.
+
+1100
+01:14:48,856 --> 01:14:51,893
+Rym: So to be secure That's my new term the LCS the lowest common senator.
+
+1101
+01:14:51,914 --> 01:14:56,794
+Scott: So TLDR To steal information find someone who's not being secure enough.
+
+1102
+01:14:56,915 --> 01:15:01,359
+Scott: and to be secure Go through the pain in the ass of all this stuff you have to do to make it.
+
+1103
+01:15:01,560 --> 01:15:12,045
+Rym: Yeah, I mean think it would be a real pain in the ass for me and Scott to now Establish a whole series of dataless words and drop points and procedures and plans.
+
+1104
+01:15:12,225 --> 01:15:17,889
+Rym: and if any of us gets arrested and X days go by do you know all these things that you've just got memorized?
+
+1105
+01:15:18,518 --> 01:15:23,157
+Rym: and It would take we'd have to set this up now if we wanted to do something the four years from now.
+
+1106
+01:15:23,418 --> 01:15:25,954
+Rym: Yeah Maybe we should set this stuff up now.
+
+1107
+01:15:26,336 --> 01:15:26,819
+Scott: It's all you.
+
+1108
+01:15:29,983 --> 01:15:32,058
+Scott: Because I'm not into it's not my department.
+
+1109
+01:15:32,701 --> 01:15:37,180
+Rym: I'll take a departure because I don't know if we'll be able to do a Thursday on WikiLeaks.
+
+1110
+01:15:37,381 --> 01:15:40,795
+Rym: We got other Thursdays coming up, but from a moral perspective.
+
+1111
+01:15:40,815 --> 01:15:55,684
+Rym: I would just like to say that I while I respect the fact that people may die as a result of WikiLeaks, I Am currently of the mind that an organization like WikiLeaks is very important to the well-being of the world because too much is too Secret right now.
+
+1112
+01:15:55,825 --> 01:15:56,006
+Scott: Yeah.
+
+1113
+01:15:56,066 --> 01:15:57,313
+Scott: I'm also basically my.
+
+1114
+01:15:57,434 --> 01:16:12,886
+Scott: my general feeling is If you are in a situation where just the availability of information is a serious threat to you then that means that you have security through obscurity and not actual security and That's the real problem.
+
+1115
+01:16:12,926 --> 01:16:17,180
+Rym: But at the same time for example say there is a top-secret document.
+
+1116
+01:16:17,281 --> 01:16:20,279
+Rym: Obviously there hasn't really been anything top-secret on WikiLeaks like this.
+
+1117
+01:16:20,521 --> 01:16:24,620
+Rym: Yeah, like, you know, we've got a real operative who's I'm just gonna make up something crazy.
+
+1118
+01:16:25,163 --> 01:16:27,960
+Rym: He's in the inner circle of the North Korean government.
+
+1119
+01:16:28,522 --> 01:16:39,400
+Rym: Basically when the time comes to invade he is there ready to basically shut down the command-and-control system To prevent the artillery from going off to Seoul and we're just waiting to activate him when the invasions happen.
+
+1120
+01:16:39,883 --> 01:16:42,740
+Rym: I'm okay with the government keeping that secret.
+
+1121
+01:16:43,761 --> 01:16:44,765
+Scott: Yeah, kinda.
+
+1122
+01:16:45,106 --> 01:16:45,929
+Rym: I'm a hundred percent.
+
+1123
+01:16:45,970 --> 01:16:46,612
+Rym: Okay with that.
+
+1124
+01:16:47,114 --> 01:16:52,471
+Scott: However, but I mean if we Just for my ideals you don't even need that guy.
+
+1125
+01:16:52,531 --> 01:16:54,176
+Rym: Yeah pragmatism we need that guy.
+
+1126
+01:16:54,296 --> 01:16:55,079
+Scott: Yeah pragmatism.
+
+1127
+01:16:55,099 --> 01:16:55,560
+Scott: We need that guy.
+
+1128
+01:16:56,220 --> 01:16:59,330
+Rym: I'm gonna argue why ideals don't work in this situation.
+
+1129
+01:16:59,370 --> 01:17:00,714
+Rym: We have to go with rationalism.
+
+1130
+01:17:00,774 --> 01:17:04,460
+Rym: and rationalism and pragmatism Is that what is the moral of trygun?
+
+1131
+01:17:04,840 --> 01:17:10,880
+Rym: Not that pacifism is a failed philosophy that you should try for anyway, but that one gigantic asshole can ruin everybody's day.
+
+1132
+01:17:11,301 --> 01:17:16,660
+Rym: Yeah, there are gigantic assholes and until we solve that we have to be pragmatic.
+
+1133
+01:17:16,882 --> 01:17:23,420
+Rym: I'm okay with keeping Espionage secret as long as the espionage is being used ostensibly for the betterment of the world.
+
+1134
+01:17:23,420 --> 01:17:25,809
+Scott: But if people weren't dicks, you wouldn't need to espionage them.
+
+1135
+01:17:26,030 --> 01:17:28,399
+Rym: Yeah, I know I agree, but people are dicks.
+
+1136
+01:17:29,142 --> 01:17:30,487
+Scott: Stop being dick, dude.
+
+1137
+01:17:30,668 --> 01:17:33,980
+Rym: I ran into a dick on the sidewalk on the way home from work.
+
+1138
+01:17:34,181 --> 01:17:36,789
+Rym: He was yelling at some guy who bumped into him like a dick.
+
+1139
+01:17:37,571 --> 01:17:38,755
+Rym: I mean, there's people like that.
+
+1140
+01:17:39,336 --> 01:17:40,500
+Scott: Those people are not good.
+
+1141
+01:17:40,600 --> 01:17:41,828
+Rym: yeah, I don't know what to do about that.
+
+1142
+01:17:41,868 --> 01:17:49,160
+Rym: that's a separate problem, but Considering that most of what WikiLeaks has released are things that I don't think should have been hidden.
+
+1143
+01:17:49,240 --> 01:18:04,171
+Rym: Anyway, like while the Iraq war stuff was harmful in a lot of ways and possibly did kill people I would argue that the that Hiding war crimes is a worse crime Almost than having the war crimes having been committed because that is willful.
+
+1144
+01:18:04,512 --> 01:18:07,500
+Rym: that is willful on a level that I just can't abide in.
+
+1145
+01:18:07,660 --> 01:18:09,682
+Scott: Yeah You know.
+
+1146
+01:18:09,783 --> 01:18:16,163
+Scott: yet they really examine each different piece of information that was leaked and make a judgment on each and every one Individually,
+
+1147
+01:18:16,203 --> 01:18:17,832
+Rym: I mean I'll say this say I
+
+1148
+01:18:17,993 --> 01:18:26,445
+Scott: and the thing that you know The fact is the vast majority of the state the text that was leaked is of no interest to anyone and so therefore You know, really?
+
+1149
+01:18:26,726 --> 01:18:27,369
+Scott: What's what's?
+
+1150
+01:18:27,389 --> 01:18:35,060
+Rym: the first two examples say I found on my own Evidence that the Democrats and the Republicans colluded together to control government some vast conspiracy.
+
+1151
+01:18:35,524 --> 01:18:49,540
+Rym: I would leak that like without even thinking say I found direct evidence that the United States was directly right now planning a Joint coalition invasion and pacification of North Korea followed by an occupation and I somehow had all the plans for it.
+
+1152
+01:18:50,124 --> 01:18:51,071
+Rym: I wouldn't leak that shit.
+
+1153
+01:18:52,119 --> 01:18:53,104
+Rym: I Just let it go.
+
+1154
+01:18:53,184 --> 01:18:54,531
+Rym: I'd let them do it first.
+
+1155
+01:18:54,973 --> 01:18:59,365
+Scott: now once it happened Within a real thing.
+
+1156
+01:18:59,686 --> 01:19:01,491
+Scott: what if you didn't want them to do it?
+
+1157
+01:19:01,792 --> 01:19:04,680
+Rym: Well, then I'd leak it also, right?
+
+1158
+01:19:05,080 --> 01:19:05,704
+Scott: Think about this.
+
+1159
+01:19:05,724 --> 01:19:08,260
+Scott: All right, theoretically at least right?
+
+1160
+01:19:08,500 --> 01:19:10,079
+Scott: They have this plan to do this thing.
+
+1161
+01:19:10,962 --> 01:19:17,133
+Scott: If the plan is a good really good plan Then the plan will work whether the other guy knows our plan or not.
+
+1162
+01:19:17,213 --> 01:19:25,748
+Rym: now because I think it's a really good plan to have A 20-year agent who is now like the head of the Korean military who when the invasion happens It's just like I'll launch all the artillery.
+
+1163
+01:19:25,929 --> 01:19:29,102
+Rym: you guys get in the bunker and then he's like, yeah, they're all down there Come on in.
+
+1164
+01:19:29,384 --> 01:19:30,750
+Scott: it's like, you know, it's a great plan.
+
+1165
+01:19:30,810 --> 01:19:33,040
+Scott: It depends if it's like straight really great plan.
+
+1166
+01:19:33,100 --> 01:19:33,582
+Scott: Here's the thing.
+
+1167
+01:19:33,823 --> 01:19:36,271
+Scott: Is it stratego or is it advanced wars?
+
+1168
+01:19:36,371 --> 01:19:36,712
+Scott: Right?
+
+1169
+01:19:36,833 --> 01:19:38,759
+Scott: Is there fog of war or is there not?
+
+1170
+01:19:39,100 --> 01:19:41,072
+Rym: So here's the thing in the real world fog of war.
+
+1171
+01:19:41,093 --> 01:19:45,309
+Rym: Yeah, kinda Yeah, I think we've gone on enough.
+
+1172
+01:19:45,631 --> 01:19:46,053
+Rym: I'm tired.
+
+1173
+01:19:46,093 --> 01:19:46,535
+Rym: I'm hungry.
+
+1174
+01:19:46,776 --> 01:19:47,520
+Scott: I'm also hungry.
+
+1175
+01:19:53,775 --> 01:19:56,310
+Rym: This has been GeekNights with Rym and Scott.
+
+1176
+01:19:56,370 --> 01:20:01,090
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+1177
+01:20:01,411 --> 01:20:06,430
+Scott: Be sure to visit our website at front row crew comm for show notes discussion news and more.
+
+1178
+01:20:06,710 --> 01:20:13,890
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+1179
+01:20:14,470 --> 01:20:17,646
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+1180
+01:20:18,891 --> 01:20:22,001
+Scott: GeekNights is recorded live with no studio and no audience.
+
+1181
+01:20:22,181 --> 01:20:23,646
+Scott: But unlike those other late shows.
+
+1182
+01:20:23,786 --> 01:20:25,070
+Scott: It's actually recorded at night.
+

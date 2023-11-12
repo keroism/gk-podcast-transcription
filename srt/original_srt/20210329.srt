@@ -1,0 +1,5456 @@
+﻿1
+00:00:08,460 --> 00:00:09,367
+Speaker 0: It's Monday, March 29th, 2021.
+
+2
+00:00:09,367 --> 00:00:09,548
+Speaker 0: I'm Rym.
+
+3
+00:00:12,740 --> 00:00:13,440
+Speaker 1: I'm Scott.
+
+4
+00:00:13,900 --> 00:00:15,024
+Speaker 0: And this is Geek Nights.
+
+5
+00:00:15,044 --> 00:00:20,200
+Speaker 0: Tonight we are talking about multi-factor authentication, but actually some of the details of that.
+
+6
+00:00:21,582 --> 00:00:22,618
+Speaker 1: Let's do this.
+
+7
+00:00:24,681 --> 00:00:29,880
+Speaker 1: Alright, so it's Passover, and I guess, you know, there's no SADER action going on.
+
+8
+00:00:31,021 --> 00:00:36,700
+Speaker 1: People were making pretty good Passover mashups between, like, the boat and the pandemic, right?
+
+9
+00:00:36,720 --> 00:00:41,739
+Speaker 1: Because, you know, the pandemic kind of started, you know, around Passover-ish last year, right?
+
+10
+00:00:42,200 --> 00:00:49,767
+Speaker 1: So, you know, there weren't too many combo jokes, but now it's, like, you know, someone had a really good tweet, like, "Yeah, wear a mask.
+
+11
+00:00:49,868 --> 00:00:50,916
+Speaker 1: Confuse the angel of
+
+12
+00:00:50,976 --> 00:00:51,218
+Speaker 1: death.".
+
+13
+00:00:55,244 --> 00:00:59,240
+Speaker 0: It's still weird to think it's been a year since we went into this whole lockdown.
+
+14
+00:01:00,040 --> 00:01:02,814
+Speaker 1: Yeah, so there's this thing called soup nuts.
+
+15
+00:01:02,834 --> 00:01:03,860
+Speaker 1: I don't know if you know about these.
+
+16
+00:01:04,060 --> 00:01:05,379
+Speaker 1: Do you ever eat the soup nut?
+
+17
+00:01:05,522 --> 00:01:06,218
+Speaker 0: I know about the soup nut.
+
+18
+00:01:07,080 --> 00:01:07,943
+Speaker 1: Yeah, okay, the soup nut.
+
+19
+00:01:07,963 --> 00:01:12,137
+Speaker 1: It's basically a Jewish kosher for Passover oyster cracker.
+
+20
+00:01:12,177 --> 00:01:14,004
+Speaker 1: that's way less salty, but it's like a poof.
+
+21
+00:01:14,124 --> 00:01:18,040
+Speaker 1: It's like a little ball, and it floats in the soup, and it absorbs the soup, and it tastes good.
+
+22
+00:01:18,380 --> 00:01:18,843
+Speaker 0: They're real good.
+
+23
+00:01:18,864 --> 00:01:21,059
+Speaker 0: In fact, we used to use them kind of quite a bit at RIT.
+
+24
+00:01:22,021 --> 00:01:23,306
+Speaker 1: Yeah, it's hard to get them.
+
+25
+00:01:23,809 --> 00:01:25,135
+Speaker 1: I was able to get some, though.
+
+26
+00:01:25,356 --> 00:01:26,240
+Speaker 1: My mom sent me some.
+
+27
+00:01:26,840 --> 00:01:36,159
+Speaker 1: So I had to make some soup to put them in, so I made some soup, and something disappointing happened is I think I put too much water, and we have way too much soup, and it tastes a little bit watery.
+
+28
+00:01:36,701 --> 00:01:37,690
+Speaker 0: Uh, just boil it down.
+
+29
+00:01:37,710 --> 00:01:38,639
+Speaker 0: Just let it simmer for a while.
+
+30
+00:01:39,220 --> 00:01:39,843
+Speaker 1: I'm gonna go.
+
+31
+00:01:39,883 --> 00:01:44,060
+Speaker 1: What I'm gonna do is not only am I gonna boil it again, I'm gonna add a couple of cubes.
+
+32
+00:01:45,221 --> 00:01:46,328
+Speaker 0: Ah, that's the prostrat.
+
+33
+00:01:46,449 --> 00:01:48,180
+Speaker 0: Then you'll just have way too much soup.
+
+34
+00:01:48,600 --> 00:01:53,920
+Speaker 1: So I have a giant tub of soup that I'm sure—and also I tried to add MSG to see if I could.
+
+35
+00:01:54,361 --> 00:01:57,055
+Speaker 1: It's not very Jewish, but I was seeing if it would help out.
+
+36
+00:01:58,382 --> 00:02:00,412
+Speaker 1: Um, I can't taste the difference.
+
+37
+00:02:00,513 --> 00:02:01,216
+Speaker 1: Yeah, at least not yet.
+
+38
+00:02:01,257 --> 00:02:01,880
+Speaker 1: Maybe it needs more.
+
+39
+00:02:02,722 --> 00:02:04,208
+Speaker 1: Anyway, we're going with the cubes.
+
+40
+00:02:04,248 --> 00:02:06,900
+Speaker 1: I'm probably gonna get some at the grocery, and then I'll heat it up again.
+
+41
+00:02:07,001 --> 00:02:10,102
+Speaker 1: I got a huge bucket of it, so if you want soup— Yeah, it's funny.
+
+42
+00:02:10,142 --> 00:02:14,147
+Speaker 0: I was talking to some co-workers recently about, like, the other day just about, "Oh, like, Passover's coming up,".
+
+43
+00:02:14,167 --> 00:02:18,295
+Speaker 0: and they were just having a conversation, and one of them's like, "Well, you know, Passover's gonna suck this year,".
+
+44
+00:02:18,315 --> 00:02:21,735
+Speaker 0: and then the one guy's like, "Yeah, at least I can Zoom my relatives, so we'll still, like, do a thing,".
+
+45
+00:02:21,755 --> 00:02:25,155
+Speaker 0: and then the first one's like, "Yeah, I can't actually start a Zoom during all
+
+46
+00:02:25,195 --> 00:02:25,396
+Speaker 0: that.".
+
+47
+00:02:28,741 --> 00:02:29,940
+Speaker 0: Anyway— I want some matzo ball soup.
+
+48
+00:02:31,160 --> 00:02:31,863
+Speaker 1: Well, come on and get some.
+
+49
+00:02:31,903 --> 00:02:36,966
+Speaker 1: I'll give you a, you know, a Chinese takeout container-sized— Oh, I got it.
+
+50
+00:02:37,007 --> 00:02:39,124
+Speaker 0: We still have, like, a giant— Add your own wontons.
+
+51
+00:02:39,164 --> 00:02:49,459
+Speaker 1: I'm sure wontons, even though those are super not kosher, would, you know, even—and there's pork inside—if you put them in the chicken soup, and it was not watery like the one I made, it would probably taste very good.
+
+52
+00:02:49,700 --> 00:02:52,680
+Speaker 0: That would be a pretty good—make a fusion restaurant around that concept.
+
+53
+00:02:53,424 --> 00:02:54,812
+Speaker 1: Also, I made matzo balls from the mix.
+
+54
+00:02:54,893 --> 00:02:56,160
+Speaker 1: Matzo balls from the mix are always good.
+
+55
+00:02:56,200 --> 00:02:58,000
+Speaker 1: You don't need to make matzo balls from scratch.
+
+56
+00:03:00,701 --> 00:03:05,599
+Speaker 1: Also, I made—the store was out of the regular matzo ball mix.
+
+57
+00:03:06,380 --> 00:03:12,258
+Speaker 1: I got to get the low-sodium matzo ball mix, but I just boiled the matzo balls in salt water so they worked out just fine.
+
+58
+00:03:13,445 --> 00:03:14,000
+Speaker 1: Doesn't matter.
+
+59
+00:03:15,080 --> 00:03:16,900
+Speaker 1: I guess other tiny open-y bit, right?
+
+60
+00:03:16,960 --> 00:03:20,239
+Speaker 1: My work, you know, has interns once in a while, right?
+
+61
+00:03:20,965 --> 00:03:22,499
+Speaker 1: I guess per semester or whatever.
+
+62
+00:03:23,460 --> 00:03:36,683
+Speaker 1: And there's someone who runs that program, and apparently what they were do— you know, they've had these sort of Q&A things where, you know, they'll schedule a little Q&A for the interns to come and, like, you know, someone from the company will say, "This is me.
+
+63
+00:03:36,964 --> 00:03:37,867
+Speaker 1: This is what I do.
+
+64
+00:03:38,188 --> 00:03:39,433
+Speaker 1: This is my career path.
+
+65
+00:03:39,915 --> 00:03:41,160
+Speaker 1: Ask me questions," right?
+
+66
+00:03:42,463 --> 00:03:44,700
+Speaker 1: And it was always the same people over and over.
+
+67
+00:03:45,201 --> 00:03:46,446
+Speaker 1: Like, they're open to the whole company.
+
+68
+00:03:46,486 --> 00:03:52,812
+Speaker 1: It's not just for interns, but it's— You know, it's beneficial.
+
+69
+00:03:52,832 --> 00:03:53,879
+Speaker 1: So, you know, I went a few times.
+
+70
+00:03:55,500 --> 00:03:56,768
+Speaker 1: They changed it recently.
+
+71
+00:03:56,788 --> 00:04:01,817
+Speaker 1: A few months ago, they're like, "We encourage all employees to
+
+72
+00:04:01,897 --> 00:04:02,259
+Speaker 1: participate.".
+
+73
+00:04:02,880 --> 00:04:06,440
+Speaker 1: They wanted anyone to do it, right, instead of the same people over and over again.
+
+74
+00:04:06,540 --> 00:04:10,038
+Speaker 1: So I'm like, "Well, you know, they're encouraging everyone to do
+
+75
+00:04:10,099 --> 00:04:10,139
+Speaker 1: it.".
+
+76
+00:04:10,582 --> 00:04:12,839
+Speaker 1: I don't think I've ever seen anyone from my team do it.
+
+77
+00:04:13,061 --> 00:04:22,170
+Speaker 1: It's kind of weird for someone on my team to do it because we're like a software engineering team and not—it's a music company, so I thought the interns, what do they care about software engineering?
+
+78
+00:04:22,210 --> 00:04:23,660
+Speaker 1: They care about music publishing, right?
+
+79
+00:04:23,740 --> 00:04:24,003
+Speaker 1: I don't know.
+
+80
+00:04:24,023 --> 00:04:25,639
+Speaker 1: But they encourage you.
+
+81
+00:04:25,720 --> 00:04:28,340
+Speaker 0: Well, I guess every job is a tech job, increasingly.
+
+82
+00:04:29,560 --> 00:04:30,852
+Speaker 1: That's basically what I said.
+
+83
+00:04:31,074 --> 00:04:31,679
+Speaker 1: I said that.
+
+84
+00:04:33,221 --> 00:04:36,420
+Speaker 1: But, yeah, they were like, you know, so I filled out the form, you know.
+
+85
+00:04:36,520 --> 00:04:38,320
+Speaker 1: I'm just like, "Whatever," and filled out this form, right?
+
+86
+00:04:38,380 --> 00:04:44,500
+Speaker 1: Plus, it'll let me do some—you know, mostly since we're working from home, I'm only seeing people from my team and not from any other team.
+
+87
+00:04:44,864 --> 00:04:46,239
+Speaker 0: I've been feeling that pretty hard.
+
+88
+00:04:46,760 --> 00:04:49,720
+Speaker 0: Like, I lose track of what's going on in other teams lately.
+
+89
+00:04:50,120 --> 00:04:53,659
+Speaker 1: So I said, "Oh, it'll be an opportunity to see other people from the other teams," right?
+
+90
+00:04:54,301 --> 00:04:56,760
+Speaker 1: So I signed up for it, and it snuck up.
+
+91
+00:04:57,140 --> 00:05:02,108
+Speaker 1: When I signed up, the person in charge actually responded and was like, "Okay, we'll get you in.
+
+92
+00:05:02,188 --> 00:05:02,994
+Speaker 1: How about March
+
+93
+00:05:03,135 --> 00:05:03,175
+Speaker 1: 29th?".
+
+94
+00:05:03,840 --> 00:05:05,991
+Speaker 1: And this was who knows when last year.
+
+95
+00:05:06,011 --> 00:05:07,278
+Speaker 1: I don't know when this was, right?
+
+96
+00:05:09,842 --> 00:05:12,959
+Speaker 1: And then yesterday, Google Calendar is like, "Yeah, guess
+
+97
+00:05:12,999 --> 00:05:13,140
+Speaker 1: what?".
+
+98
+00:05:13,241 --> 00:05:15,156
+Speaker 1: And I'm like, "What?
+
+99
+00:05:15,176 --> 00:05:15,397
+Speaker 1: Is that
+
+100
+00:05:15,438 --> 00:05:15,700
+Speaker 1: happening?".
+
+101
+00:05:15,720 --> 00:05:20,120
+Speaker 0: That is my one, during COVID, recurring nightmare of, "Wait, I'm out of PAX.
+
+102
+00:05:20,440 --> 00:05:21,787
+Speaker 0: Wait, what panels are we doing?
+
+103
+00:05:21,807 --> 00:05:23,013
+Speaker 0: Where's Scott?
+
+104
+00:05:23,133 --> 00:05:24,560
+Speaker 0: Oh, shit, we gotta make some slides.
+
+105
+00:05:24,800 --> 00:05:26,190
+Speaker 0: The panel starts in five minutes.
+
+106
+00:05:26,452 --> 00:05:27,640
+Speaker 0: Wait, what city are we in?
+
+107
+00:05:27,700 --> 00:05:28,850
+Speaker 0: How are we gonna get to PAX?
+
+108
+00:05:29,112 --> 00:05:30,060
+Speaker 0: Wait, where's my mask?
+
+109
+00:05:30,423 --> 00:05:31,138
+Speaker 0: Where's everybody's
+
+110
+00:05:31,178 --> 00:05:31,260
+Speaker 0: mask?".
+
+111
+00:05:32,882 --> 00:05:35,120
+Speaker 1: So interestingly enough, it did happen today.
+
+112
+00:05:37,981 --> 00:05:42,780
+Speaker 0: Hey, if I know one thing about you, you were very good at being able to present anything.
+
+113
+00:05:42,882 --> 00:05:43,799
+Speaker 0: On very short notice.
+
+114
+00:05:44,420 --> 00:05:47,020
+Speaker 1: I mean, I did the exact formula I just told you, right?
+
+115
+00:05:47,180 --> 00:05:51,400
+Speaker 1: This is me, this is my career path, you know, ask me questions, right?
+
+116
+00:05:52,580 --> 00:06:02,080
+Speaker 1: And somehow, even though the only people who came, which I thought it was gonna be low turnout, you know, but it was basically the person who runs it and two interns.
+
+117
+00:06:02,400 --> 00:06:02,944
+Speaker 1: I'm like,
+
+118
+00:06:03,105 --> 00:06:03,467
+Speaker 1: "Okay.".
+
+119
+00:06:03,487 --> 00:06:04,856
+Speaker 1: Or two other employees.
+
+120
+00:06:04,876 --> 00:06:08,560
+Speaker 0: I don't know if they were-- That is two more people than the smallest panel I ever gave at a con.
+
+121
+00:06:09,421 --> 00:06:10,367
+Speaker 1: Right, exactly.
+
+122
+00:06:10,427 --> 00:06:11,051
+Speaker 1: So I'm like,
+
+123
+00:06:11,071 --> 00:06:11,755
+Speaker 1: "Alright.".
+
+124
+00:06:12,600 --> 00:06:15,798
+Speaker 1: Well, the person running it was like, "Alright, let's just
+
+125
+00:06:15,819 --> 00:06:16,040
+Speaker 1: start.".
+
+126
+00:06:16,100 --> 00:06:16,382
+Speaker 1: And I'm like,
+
+127
+00:06:16,483 --> 00:06:16,846
+Speaker 1: "Okay.".
+
+128
+00:06:17,128 --> 00:06:19,869
+Speaker 1: I was gonna, you know, I was like, "Are you sure you guys wanna hear from
+
+129
+00:06:19,909 --> 00:06:20,070
+Speaker 1: me?".
+
+130
+00:06:20,211 --> 00:06:21,360
+Speaker 1: They wanted to, okay.
+
+131
+00:06:21,921 --> 00:06:23,849
+Speaker 1: And it actually went real well.
+
+132
+00:06:23,909 --> 00:06:26,340
+Speaker 1: Everyone seemed excited and asked like a million questions.
+
+133
+00:06:26,440 --> 00:06:27,530
+Speaker 1: I'm like, "Okay, all two
+
+134
+00:06:27,570 --> 00:06:27,913
+Speaker 1: people.".
+
+135
+00:06:28,740 --> 00:06:29,604
+Speaker 1: So I'm like, "I don't
+
+136
+00:06:29,644 --> 00:06:29,865
+Speaker 1: care.".
+
+137
+00:06:29,885 --> 00:06:32,878
+Speaker 1: I was like, "This is better than a hundred people who just, you know, sit
+
+138
+00:06:32,898 --> 00:06:33,059
+Speaker 1: there.".
+
+139
+00:06:33,400 --> 00:06:33,561
+Speaker 1: Right?
+
+140
+00:06:33,662 --> 00:06:36,180
+Speaker 1: It's, you know, two people who care.
+
+141
+00:06:36,281 --> 00:06:39,740
+Speaker 1: And I didn't even have to use any rules of question asking or anything.
+
+142
+00:06:39,860 --> 00:06:41,360
+Speaker 1: I guess that works when there's only two people.
+
+143
+00:06:41,560 --> 00:06:46,020
+Speaker 0: I guess if there's only two people, like what, one of them asks a terrible question and now they gotta deal with you talking to them.
+
+144
+00:06:46,040 --> 00:06:48,040
+Speaker 1: No, but even the person running it was asking questions.
+
+145
+00:06:48,080 --> 00:06:50,418
+Speaker 1: They asked questions, like I only talked for like 20 minutes.
+
+146
+00:06:50,800 --> 00:06:53,220
+Speaker 1: And they asked questions for like 40 minutes, right?
+
+147
+00:06:53,481 --> 00:06:55,554
+Speaker 1: So that was unexpected.
+
+148
+00:06:55,574 --> 00:06:56,339
+Speaker 1: But that was a thing.
+
+149
+00:06:56,602 --> 00:06:57,018
+Speaker 1: Sounds fun.
+
+150
+00:06:57,240 --> 00:06:59,136
+Speaker 1: That was, you know, the last hour of my day there, so.
+
+151
+00:07:01,201 --> 00:07:02,090
+Speaker 0: Yeah, I got nothing.
+
+152
+00:07:02,111 --> 00:07:03,020
+Speaker 0: I haven't been doing anything.
+
+153
+00:07:03,807 --> 00:07:04,110
+Speaker 1: No.
+
+154
+00:07:05,058 --> 00:07:05,280
+Speaker 1: News?
+
+155
+00:07:05,701 --> 00:07:07,680
+Speaker 0: So there is, of course, the biggest news.
+
+156
+00:07:08,360 --> 00:07:10,020
+Speaker 0: That ship is not stuck anymore.
+
+157
+00:07:11,240 --> 00:07:11,636
+Speaker 0: Like, for real.
+
+158
+00:07:13,443 --> 00:07:18,340
+Speaker 1: If it had remained stuck for longer, there would have been even greater, there were already consequences.
+
+159
+00:07:18,660 --> 00:07:20,099
+Speaker 1: There would have been even greater consequences.
+
+160
+00:07:20,440 --> 00:07:23,000
+Speaker 1: We have avoided even worse consequences.
+
+161
+00:07:23,385 --> 00:07:23,719
+Speaker 1: That's good.
+
+162
+00:07:24,641 --> 00:07:32,080
+Speaker 0: And the best thing I saw about this was a video of the people who worked, like, to actually unstick it.
+
+163
+00:07:32,120 --> 00:07:35,600
+Speaker 0: Like, the team on the boat that was responsible for, like, fixing this biz.
+
+164
+00:07:36,440 --> 00:07:40,840
+Speaker 0: They were, like, singing a song and celebrating as the ship got underway.
+
+165
+00:07:41,060 --> 00:07:47,480
+Speaker 0: Like, imagine if, like, when I do some work, like, I don't know, a feature appears in the screen somewhere that some capital markets person uses.
+
+166
+00:07:48,200 --> 00:07:52,596
+Speaker 0: But imagine if you can be like, "See that gigantic ship that's bigger than the original
+
+167
+00:07:52,636 --> 00:07:53,118
+Speaker 0: Enterprise?".
+
+168
+00:07:54,787 --> 00:07:57,100
+Speaker 0: I was part of the team that made it start moving again when it was not moving.
+
+169
+00:07:57,140 --> 00:08:00,460
+Speaker 1: That's why they, like, smash champagne on boats when they finish them, right?
+
+170
+00:08:00,845 --> 00:08:01,372
+Speaker 1: They're like,
+
+171
+00:08:01,412 --> 00:08:01,879
+Speaker 1: "Hooray!".
+
+172
+00:08:02,101 --> 00:08:06,640
+Speaker 0: Christening boats is a whole history that I know a little bit about.
+
+173
+00:08:06,660 --> 00:08:09,120
+Speaker 1: The point is, making a big-ass boat is a pain in the ass.
+
+174
+00:08:09,802 --> 00:08:12,978
+Speaker 1: So regardless of which ritual you want to do, right?
+
+175
+00:08:13,560 --> 00:08:14,294
+Speaker 1: You know a ritual of some kind.
+
+176
+00:08:16,961 --> 00:08:22,337
+Speaker 1: Finishing a giant boat and having it actually go on a voyage for reals is a big celebration.
+
+177
+00:08:22,377 --> 00:08:23,300
+Speaker 1: if you worked on that boat.
+
+178
+00:08:23,500 --> 00:08:28,240
+Speaker 0: I mean, last night we were playing a Hearts of Iron multiplayer, and I was trying to make the navies work.
+
+179
+00:08:28,440 --> 00:08:29,619
+Speaker 0: And, you know, it's a realistic game.
+
+180
+00:08:30,022 --> 00:08:32,857
+Speaker 0: So I'm like, "Yeah, alright, I'm Italy and I want to make one more
+
+181
+00:08:32,937 --> 00:08:33,159
+Speaker 0: boat.".
+
+182
+00:08:33,500 --> 00:08:37,280
+Speaker 0: So in two years, that boat is going to come out and be able to do something.
+
+183
+00:08:38,220 --> 00:08:38,299
+Speaker 1: Yup.
+
+184
+00:08:38,740 --> 00:08:41,100
+Speaker 0: And I got, like, four factories pointed at that thing.
+
+185
+00:08:41,940 --> 00:08:54,520
+Speaker 1: You know, what I was saying in the opening bit, to tie it in, there is, you know, an old-ass system from, who knows, from 90s-based, who knows, kind of garbage system that our entire company depends on, right?
+
+186
+00:08:54,540 --> 00:08:58,700
+Speaker 1: And we're slowly replacing it with software that we're making on our own, right?
+
+187
+00:08:59,510 --> 00:09:00,037
+Speaker 1: Like you do.
+
+188
+00:09:01,224 --> 00:09:02,779
+Speaker 0: Like most of my jobs have been.
+
+189
+00:09:03,802 --> 00:09:04,173
+Speaker 1: Oh, right.
+
+190
+00:09:05,801 --> 00:09:12,760
+Speaker 1: The day that we turn off that old system and can just delete that shit, that is going to be that kind of day, right?
+
+191
+00:09:13,120 --> 00:09:14,076
+Speaker 0: We had a day like that.
+
+192
+00:09:14,540 --> 00:09:20,240
+Speaker 1: That day is probably at least two or three years off, but if we stick at it, that day will come.
+
+193
+00:09:20,641 --> 00:09:20,721
+Speaker 1: I
+
+194
+00:09:20,741 --> 00:09:45,380
+Speaker 0: remember at IBM when we completed, because this dates me, I was part of the project, we've talked about this a lot, that migrated a big chunk of IBM's fabs from token rings to Ethernet, and when we completed it, there was a giant goddamn party, and everyone got plaques made out of the token ring cards that we had taken out of all these devices.
+
+195
+00:09:45,760 --> 00:09:46,940
+Speaker 1: Oh yeah, I see you had the one, I saw it.
+
+196
+00:09:47,100 --> 00:09:47,644
+Speaker 0: Yeah, you know where it is?
+
+197
+00:09:47,664 --> 00:09:48,973
+Speaker 0: It's on my desk at work right now.
+
+198
+00:09:49,114 --> 00:09:50,020
+Speaker 0: I haven't seen it in a while.
+
+199
+00:09:50,902 --> 00:10:03,139
+Speaker 0: Of course, I've had that sitting on my desk everywhere I've worked since IBM, because any time someone who's old enough sees it, they know exactly what it is instantly because of that D9 connector on the back.
+
+200
+00:10:05,541 --> 00:10:11,140
+Speaker 0: So it's kind of a cool person detector, because anyone who recognizes what it is, we definitely have some stories we can tell each other.
+
+201
+00:10:11,880 --> 00:10:12,739
+Speaker 1: Oh yeah, for sure.
+
+202
+00:10:14,121 --> 00:10:21,937
+Speaker 0: So, and some other equally big news, especially for us in New York, New York State, as of tomorrow, at 8 a.m.
+
+203
+00:10:22,037 --> 00:10:22,759
+Speaker 0: Eastern Time.
+
+204
+00:10:23,560 --> 00:10:27,680
+Speaker 1: So for most of you right now, because you're going to be listening to this the day after, right?
+
+205
+00:10:29,623 --> 00:10:35,939
+Speaker 0: Yeah, but if you're listening to this right now, there are nine people listening to this right now, live, starting tomorrow at 8 a.m.
+
+206
+00:10:35,999 --> 00:10:36,480
+Speaker 0: Eastern Time.
+
+207
+00:10:36,560 --> 00:10:41,996
+Speaker 0: New York State is opening up COVID vaccinations to any human being over the age of 30.
+
+208
+00:10:41,996 --> 00:10:43,159
+Speaker 0: No other qualifications.
+
+209
+00:10:43,199 --> 00:10:43,580
+Speaker 0: Go nuts.
+
+210
+00:10:43,681 --> 00:10:45,399
+Speaker 0: Just if you can get an appointment, do it.
+
+211
+00:10:46,181 --> 00:10:49,599
+Speaker 1: I'm going to try to get one and see when I can get one, but I'll keep trying.
+
+212
+00:10:49,860 --> 00:10:54,576
+Speaker 0: I checked all the sites I know to see if they would let me make an appointment for after that date in advance.
+
+213
+00:10:54,617 --> 00:10:55,560
+Speaker 0: None of them do, of course.
+
+214
+00:10:55,900 --> 00:10:58,240
+Speaker 1: No, you have to wait until then before you can make an appointment.
+
+215
+00:10:58,480 --> 00:11:02,818
+Speaker 0: Yep, the question I have is of all the places I can go, some of them I think are going to update at 8 a.m.
+
+216
+00:11:03,220 --> 00:11:07,740
+Speaker 1: Just like a seniors can't, you know, juniors can't register for classes until after the seniors do something.
+
+217
+00:11:07,780 --> 00:11:08,564
+Speaker 0: You know what's really funny?
+
+218
+00:11:08,624 --> 00:11:11,779
+Speaker 0: You talked about that when you were like, just wait, like, you know, do what we used to do at RIT.
+
+219
+00:11:12,420 --> 00:11:20,120
+Speaker 0: You remember that I never had to deal with that shit because I was technically two grades ahead of all of you, so I got to register before everyone in my actual grade.
+
+220
+00:11:20,760 --> 00:11:22,180
+Speaker 1: You were still registering with people who were...
+
+221
+00:11:22,481 --> 00:11:26,580
+Speaker 0: No, when I was a freshman, after my first quarter, I registered with the juniors because I had so many credits.
+
+222
+00:11:27,343 --> 00:11:30,080
+Speaker 1: Right, but those people were still fighting for classes.
+
+223
+00:11:30,100 --> 00:11:35,479
+Speaker 0: But they weren't fighting for the classes I had to take because I was still signing up for freshman classes, but that's how I got into all the cool stuff.
+
+224
+00:11:35,840 --> 00:11:41,220
+Speaker 1: Right, the classes may not have filled up, but the system was still under the pressure of all those people.
+
+225
+00:11:41,220 --> 00:11:41,562
+Speaker 0: That is true.
+
+226
+00:11:42,004 --> 00:11:43,010
+Speaker 0: I just had an advantage.
+
+227
+00:11:43,050 --> 00:11:44,819
+Speaker 0: It was less dire for me to get in.
+
+228
+00:11:45,260 --> 00:11:50,720
+Speaker 0: I only needed four terminals constantly trying to connect to that telnet service that let us register for classes.
+
+229
+00:11:51,543 --> 00:11:55,479
+Speaker 1: Meanwhile, for all that hassle, I never was unable to get the classes I needed.
+
+230
+00:11:56,501 --> 00:11:57,826
+Speaker 0: The stakes were pretty low for us.
+
+231
+00:11:57,846 --> 00:11:58,830
+Speaker 0: You know what my stakes were?
+
+232
+00:11:58,850 --> 00:12:01,018
+Speaker 0: I didn't want to have classes on Friday.
+
+233
+00:12:01,499 --> 00:12:01,640
+Speaker 0: Ever.
+
+234
+00:12:02,080 --> 00:12:03,023
+Speaker 0: That was a hard rule.
+
+235
+00:12:03,745 --> 00:12:08,480
+Speaker 0: Some classes, there was a bunch of Friday options, but there's only one Good Tuesday option.
+
+236
+00:12:09,281 --> 00:12:10,405
+Speaker 0: So, relatively low stakes.
+
+237
+00:12:11,027 --> 00:12:15,100
+Speaker 0: Or, I always wanted to get into cool classes like massage therapy, which were really hard to get into.
+
+238
+00:12:16,082 --> 00:12:16,959
+Speaker 1: I didn't want to get into that.
+
+239
+00:12:17,260 --> 00:12:18,107
+Speaker 0: That class was great.
+
+240
+00:12:18,208 --> 00:12:19,760
+Speaker 0: I took it three times.
+
+241
+00:12:20,881 --> 00:12:21,558
+Speaker 1: That's a lot of times.
+
+242
+00:12:21,801 --> 00:12:25,580
+Speaker 0: But I could never get into that whiskey class or that wine class as much as I tried.
+
+243
+00:12:26,640 --> 00:12:27,780
+Speaker 1: I didn't want those classes or anything.
+
+244
+00:12:27,960 --> 00:12:28,542
+Speaker 0: Yep, I did.
+
+245
+00:12:29,044 --> 00:12:32,760
+Speaker 0: But yeah, if you live in New York State, go try to get a vaccine.
+
+246
+00:12:32,900 --> 00:12:36,260
+Speaker 0: By the time you listen to this, you can probably just go sign up for one.
+
+247
+00:12:37,683 --> 00:12:42,961
+Speaker 0: And, the following week, they're opening up to anyone over the age of 16.
+
+248
+00:12:42,961 --> 00:12:45,860
+Speaker 1: So I just want to remind, while we're on the vaccine topic, right?
+
+249
+00:12:46,203 --> 00:12:47,093
+Speaker 0: I know what you're going to say.
+
+250
+00:12:47,114 --> 00:12:47,640
+Speaker 0: It's a good point.
+
+251
+00:12:48,262 --> 00:12:53,000
+Speaker 0: Just because you get the vaccine, don't just go apeshit and go back to your old business.
+
+252
+00:12:53,781 --> 00:12:57,720
+Speaker 0: There's a lot of things you can do more safely, but don't go around licking things.
+
+253
+00:12:57,920 --> 00:13:00,153
+Speaker 0: Don't immediately go into dense restaurants.
+
+254
+00:13:00,173 --> 00:13:01,259
+Speaker 0: Don't try to go to a convention.
+
+255
+00:13:02,240 --> 00:13:02,421
+Speaker 1: Right.
+
+256
+00:13:02,481 --> 00:13:07,680
+Speaker 1: If you look at the graph, it's going up right now at a scary rate, suddenly.
+
+257
+00:13:07,700 --> 00:13:14,459
+Speaker 0: I think the rate is going up almost exactly a couple weeks after fucking New York State opened up indoor dining again.
+
+258
+00:13:15,404 --> 00:13:18,440
+Speaker 1: It could be, but regardless, it's going up in a lot of places.
+
+259
+00:13:18,860 --> 00:13:25,816
+Speaker 1: So, we don't know if it's a variant situation, if it's an irresponsible... People are suddenly getting irresponsible because it's warm.
+
+260
+00:13:25,876 --> 00:13:26,340
+Speaker 1: We don't know.
+
+261
+00:13:26,821 --> 00:13:31,260
+Speaker 1: So, the point is, just because you're vaccinated, do not act irresponsibly.
+
+262
+00:13:31,360 --> 00:13:41,760
+Speaker 1: It is not some license to return to 2019 life immediately, just because you... Even if you had the vaccine a couple weeks ago, and it's fully... You had all doses and everything.
+
+263
+00:13:41,780 --> 00:13:44,245
+Speaker 1: You can't be going out with no mask.
+
+264
+00:13:44,386 --> 00:13:51,040
+Speaker 1: Even if it does protect you, they say it lowers transmission rates to other people.
+
+265
+00:13:51,180 --> 00:13:52,880
+Speaker 1: It doesn't eliminate, right?
+
+266
+00:13:53,320 --> 00:13:54,907
+Speaker 1: They talk about percent effectiveness.
+
+267
+00:13:55,088 --> 00:13:56,836
+Speaker 1: Even the best ones are not 100%, right?
+
+268
+00:13:57,941 --> 00:14:02,760
+Speaker 1: It's not time yet to just forget all about this nonsense.
+
+269
+00:14:03,000 --> 00:14:04,008
+Speaker 1: That time will still come.
+
+270
+00:14:04,028 --> 00:14:05,660
+Speaker 1: That time will come sooner.
+
+271
+00:14:06,422 --> 00:14:16,280
+Speaker 0: Once I get it, are things like, instead of my "never enter another building ever under any circumstances" policy, I might, if I need to, mask up and go into a bike shop.
+
+272
+00:14:17,200 --> 00:14:19,940
+Speaker 1: I have been entering the grocery store pretty much the whole time.
+
+273
+00:14:20,583 --> 00:14:23,120
+Speaker 0: We have not had to go to a grocery store at any point during this whole thing.
+
+274
+00:14:23,460 --> 00:14:24,007
+Speaker 0: Fresh Direct only.
+
+275
+00:14:24,027 --> 00:14:25,180
+Speaker 0: And other services.
+
+276
+00:14:25,180 --> 00:14:28,180
+Speaker 1: I may be a Fresh Direct, but I would go into other stores, you know.
+
+277
+00:14:28,962 --> 00:14:34,080
+Speaker 0: I went into a mostly empty CVS once to get some Gatorade, because I was desperate.
+
+278
+00:14:35,523 --> 00:14:38,519
+Speaker 0: Went into the vet once to take the rabbit there to get some stuff done.
+
+279
+00:14:40,341 --> 00:14:47,800
+Speaker 0: I went into a large empty room where they let one person in at a time to order food at a takeaway restaurant once.
+
+280
+00:14:50,449 --> 00:14:51,038
+Speaker 0: That might be it.
+
+281
+00:14:51,980 --> 00:14:54,500
+Speaker 1: Yeah, we went into, you know, very rarely, right?
+
+282
+00:14:54,600 --> 00:14:59,340
+Speaker 1: But it's like, you know, we go to the grocery store once in a, maybe, I don't know how many times, right?
+
+283
+00:14:59,601 --> 00:15:01,399
+Speaker 1: And then, I never did indoor dining.
+
+284
+00:15:02,162 --> 00:15:02,719
+Speaker 1: No, no, no.
+
+285
+00:15:02,760 --> 00:15:05,598
+Speaker 1: We went to the Japanese grocery a few times now and then.
+
+286
+00:15:06,360 --> 00:15:12,080
+Speaker 1: You know, there have been places where I think I got food to pick up, and I would go in, get the food, and walk out.
+
+287
+00:15:12,640 --> 00:15:12,801
+Speaker 1: Right?
+
+288
+00:15:12,982 --> 00:15:15,320
+Speaker 1: I've done that a few times, you know.
+
+289
+00:15:15,600 --> 00:15:17,980
+Speaker 0: Yep, but all the changes to my life are going to be slow.
+
+290
+00:15:18,100 --> 00:15:24,800
+Speaker 1: The point is, do not start immediately just going out, having a good time, whatever, right?
+
+291
+00:15:25,661 --> 00:15:29,614
+Speaker 1: When you see that graph go down, way down, like in the way low area, right?
+
+292
+00:15:31,844 --> 00:15:33,940
+Speaker 1: Then, yeah, I'm just going to return to normal life.
+
+293
+00:15:35,420 --> 00:15:38,420
+Speaker 0: Like, I wouldn't go to a Rangers game even if, like, next week.
+
+294
+00:15:38,960 --> 00:15:41,019
+Speaker 0: But I might go to one, like, later in the year.
+
+295
+00:15:41,904 --> 00:15:43,640
+Speaker 1: Next season, whenever that starts.
+
+296
+00:15:44,862 --> 00:15:44,996
+Speaker 1: Right.
+
+297
+00:15:45,760 --> 00:15:49,980
+Speaker 0: So, in some other news, this is news that is a callback.
+
+298
+00:15:50,140 --> 00:15:54,040
+Speaker 0: We've talked about this before, but it's come back badder than before.
+
+299
+00:15:54,481 --> 00:15:54,910
+Speaker 0: It's Mr.
+
+300
+00:15:54,951 --> 00:15:55,400
+Speaker 0: Toe Jam.
+
+301
+00:15:56,664 --> 00:15:56,787
+Speaker 1: Mr.
+
+302
+00:15:56,807 --> 00:15:57,114
+Speaker 1: Toe Jam.
+
+303
+00:15:58,002 --> 00:16:02,300
+Speaker 1: So, if you don't know, the infamous RMS, Richard Stallman, right?
+
+304
+00:16:03,100 --> 00:16:07,280
+Speaker 1: The so-called starter of the open source as a movement, right?
+
+305
+00:16:07,320 --> 00:16:16,520
+Speaker 1: Because there was open source free software before Stallman, but Stallman, his thing is that he made it, like, a political kind of thing, right?
+
+306
+00:16:16,600 --> 00:16:20,237
+Speaker 1: He's like, "No, software has to be open
+
+307
+00:16:20,277 --> 00:16:20,579
+Speaker 1: source.".
+
+308
+00:16:21,001 --> 00:16:27,720
+Speaker 0: And that is noteworthy, it's important, it was a noble cause, but that does not excuse the fact that, as a person, he's been a piece of shit.
+
+309
+00:16:28,462 --> 00:16:31,580
+Speaker 1: He's a disgusting person, in more ways than one.
+
+310
+00:16:31,780 --> 00:16:31,938
+Speaker 1: Yup.
+
+311
+00:16:33,223 --> 00:16:35,500
+Speaker 0: We don't need to dwell on all the ways he's disgusting.
+
+312
+00:16:35,920 --> 00:16:36,377
+Speaker 1: We do not.
+
+313
+00:16:36,780 --> 00:16:37,479
+Speaker 1: Go Google it.
+
+314
+00:16:38,083 --> 00:16:39,277
+Speaker 0: You'll see a terrifying video.
+
+315
+00:16:40,460 --> 00:16:43,779
+Speaker 1: Around a year and a half ago, you know, he was booted, right?
+
+316
+00:16:44,161 --> 00:16:49,640
+Speaker 1: Because he was too bad for anyone to carry on with.
+
+317
+00:16:50,643 --> 00:16:51,955
+Speaker 1: So, he just got the boot.
+
+318
+00:16:52,823 --> 00:16:53,830
+Speaker 1: And I thought that that was it.
+
+319
+00:16:55,320 --> 00:16:56,246
+Speaker 1: I was like, "Oh, you got the boot.
+
+320
+00:16:56,407 --> 00:16:57,031
+Speaker 1: We're good.
+
+321
+00:16:57,152 --> 00:16:57,494
+Speaker 1: We're good
+
+322
+00:16:57,514 --> 00:16:57,755
+Speaker 1: now.".
+
+323
+00:16:58,661 --> 00:17:00,859
+Speaker 1: We don't have to deal with that guy anymore, right?
+
+324
+00:17:01,260 --> 00:17:08,118
+Speaker 1: And I'm not asking this question facetiously, I'm honestly asking this question, because I haven't been able to find out the answer.
+
+325
+00:17:08,339 --> 00:17:08,474
+Speaker 1: Yup.
+
+326
+00:17:09,800 --> 00:17:14,960
+Speaker 1: How much of the free software did RMS actually write?
+
+327
+00:17:16,127 --> 00:17:16,559
+Speaker 1: Like, code.
+
+328
+00:17:16,781 --> 00:17:18,440
+Speaker 1: It could have been that it's possible.
+
+329
+00:17:18,599 --> 00:17:20,740
+Speaker 1: He could have actually wrote, like, most of it, right?
+
+330
+00:17:20,760 --> 00:17:23,339
+Speaker 1: And was responsible, but I don't know.
+
+331
+00:17:23,460 --> 00:17:24,118
+Speaker 1: Maybe he wasn't.
+
+332
+00:17:24,280 --> 00:17:29,740
+Speaker 1: Maybe he was just, you know, the sort of, you know, flag bearer, right?
+
+333
+00:17:29,760 --> 00:17:29,840
+Speaker 1: Yup.
+
+334
+00:17:29,941 --> 00:17:31,580
+Speaker 1: And didn't actually code that much.
+
+335
+00:17:31,660 --> 00:17:32,110
+Speaker 1: I'm not sure.
+
+336
+00:17:33,702 --> 00:17:42,280
+Speaker 1: But regardless, I want to know, because that's relevant to his value, evaluating his value to the movement, right?
+
+337
+00:17:42,861 --> 00:17:52,599
+Speaker 1: Anyway, the point is, is that the Free Software Foundation sort of showed their whole ass by bringing him back on.
+
+338
+00:17:52,780 --> 00:17:54,533
+Speaker 1: They're like, "Okay, he had a timeout.
+
+339
+00:17:54,553 --> 00:17:55,259
+Speaker 1: We're bringing him back
+
+340
+00:17:55,279 --> 00:17:55,319
+Speaker 1: on.".
+
+341
+00:17:55,860 --> 00:17:56,539
+Speaker 0: No, that doesn't work.
+
+342
+00:17:57,722 --> 00:18:02,100
+Speaker 0: You might have been able to get away with that in, like, the '80s and '90s, but, like, there's an internet and social media.
+
+343
+00:18:02,200 --> 00:18:04,560
+Speaker 0: We're all going to find out pretty much instantly.
+
+344
+00:18:04,900 --> 00:18:05,002
+Speaker 1: Right.
+
+345
+00:18:05,063 --> 00:18:06,140
+Speaker 1: Everyone found that instantly.
+
+346
+00:18:06,481 --> 00:18:14,600
+Speaker 1: And basically, the reaction, it was very good in that we can now see who's good and who's not good, right?
+
+347
+00:18:14,880 --> 00:18:14,960
+Speaker 0: Yup.
+
+348
+00:18:14,980 --> 00:18:21,780
+Speaker 0: It was denounced by the EFF, by the Tor project, by Mozilla, by the Crater of Rust, by the Ottomans.
+
+349
+00:18:23,180 --> 00:18:32,780
+Speaker 1: The biggest one is that the Free Software Foundation, which is just, like, this nonprofit thing, Red Hat, which is owned by IBM, is basically like, "All right, you're going to have him on?
+
+350
+00:18:32,900 --> 00:18:33,344
+Speaker 1: Guess what?
+
+351
+00:18:33,727 --> 00:18:35,120
+Speaker 1: No more money for you," right?
+
+352
+00:18:35,180 --> 00:18:37,171
+Speaker 1: It's like, that's a severe blow.
+
+353
+00:18:39,140 --> 00:18:41,299
+Speaker 0: What were they thinking?
+
+354
+00:18:43,183 --> 00:18:50,940
+Speaker 1: I only saw one link, so I'm not sure if this is true, but I think the chairman of the FSF board resigned.
+
+355
+00:18:51,240 --> 00:18:51,606
+Speaker 1: I'm not sure.
+
+356
+00:18:51,626 --> 00:18:52,480
+Speaker 1: You have to check on that.
+
+357
+00:18:52,640 --> 00:18:59,380
+Speaker 1: But regardless, the pressure is on for now, not only for Stahlmann to get the boot a second time.
+
+358
+00:18:59,420 --> 00:19:01,380
+Speaker 0: But whoever tried to make this happen and bring him back.
+
+359
+00:19:01,440 --> 00:19:08,920
+Speaker 1: But what the good people want is for the whole Free Software Foundation board to just get out.
+
+360
+00:19:09,040 --> 00:19:10,489
+Speaker 1: It's like, all of you get out.
+
+361
+00:19:10,570 --> 00:19:11,556
+Speaker 1: We'll get all new people.
+
+362
+00:19:11,576 --> 00:19:12,180
+Speaker 1: We don't need you.
+
+363
+00:19:12,840 --> 00:19:23,580
+Speaker 0: And it's worth pointing out, like, this is a change that I very much welcome in the tech industry, which has, as we've talked about many times and I'm sure you've encountered, a troubled history with social issues.
+
+364
+00:19:24,500 --> 00:19:24,956
+Speaker 1: You don't say.
+
+365
+00:19:25,480 --> 00:19:26,398
+Speaker 0: To put it very...
+
+366
+00:19:26,500 --> 00:19:27,717
+Speaker 1: The sexisms and the racisms.
+
+367
+00:19:28,524 --> 00:19:30,720
+Speaker 0: Sometimes it's sexism and racism combined.
+
+368
+00:19:31,661 --> 00:19:33,440
+Speaker 0: Also libertarian, just anyway.
+
+369
+00:19:34,361 --> 00:19:42,480
+Speaker 1: Well, there's a huge crossover between people who... It's strange, the crossover between people who believe in free software and also believe in libertarian nonsense.
+
+370
+00:19:43,493 --> 00:19:43,700
+Speaker 1: Freedom.
+
+371
+00:19:44,340 --> 00:19:46,780
+Speaker 0: But also, I think that's a self-fulfilling prophecy.
+
+372
+00:19:46,960 --> 00:20:01,520
+Speaker 0: I think a lot of the people who were driving the open source movement and were also white dudes who overlapped themselves with libertarians set a tone that then made it appear that the free software movement was mostly white libertarian dudes.
+
+373
+00:20:03,300 --> 00:20:04,120
+Speaker 0: Like, I think we're gonna...
+
+374
+00:20:04,581 --> 00:20:10,420
+Speaker 1: And if you look at the comments and discussions on these newses, on whatever site you go to, you'll see those people.
+
+375
+00:20:10,642 --> 00:20:10,909
+Speaker 1: They're there.
+
+376
+00:20:10,930 --> 00:20:11,320
+Speaker 1: They're still there.
+
+377
+00:20:11,780 --> 00:20:23,340
+Speaker 0: But what I appreciate is that the social media and, like, marketing people who are having to respond to this are not, like, equivocating or giving very, like, PR language.
+
+378
+00:20:23,722 --> 00:20:25,671
+Speaker 0: Red Hat's statement was perfect.
+
+379
+00:20:25,933 --> 00:20:27,340
+Speaker 0: I'm gonna quote it because it's short.
+
+380
+00:20:28,120 --> 00:20:32,860
+Speaker 0: Red Hat was appalled to learn that Stallman is rejoining the FSF board directors.
+
+381
+00:20:33,180 --> 00:20:39,380
+Speaker 0: As a result, we are immediately suspending all Red Hat funding of the FSF and any FSF hosted events, period.
+
+382
+00:20:39,520 --> 00:20:40,760
+Speaker 0: That is the entire statement.
+
+383
+00:20:41,700 --> 00:20:41,852
+Speaker 1: The end.
+
+384
+00:20:42,000 --> 00:20:45,140
+Speaker 0: That is how you denounce someone who deserves denouncing.
+
+385
+00:20:45,280 --> 00:20:46,025
+Speaker 0: Don't equivocate.
+
+386
+00:20:46,367 --> 00:20:48,420
+Speaker 0: Just do it and say why.
+
+387
+00:20:49,480 --> 00:20:49,565
+Speaker 1: Yeah.
+
+388
+00:20:50,524 --> 00:20:53,740
+Speaker 1: You know what would be really cool is if you add a little bit of role-playing to civilization.
+
+389
+00:20:53,920 --> 00:20:55,960
+Speaker 1: So when you denounce, you have to write your denouncement.
+
+390
+00:20:56,662 --> 00:21:00,220
+Speaker 0: I say, henceforth, in our online games, that's our rule.
+
+391
+00:21:00,260 --> 00:21:01,700
+Speaker 0: If you denounce someone, you gotta write a statement.
+
+392
+00:21:02,440 --> 00:21:16,300
+Speaker 1: What if we just take civilization, right, and we take every action you can do in a game of Civ, and then we remove all the numbers and mechanical winning/losing parts, and we just replace everything with a role-playing part instead.
+
+393
+00:21:16,480 --> 00:21:24,000
+Speaker 1: So when you build a unit, right, you don't care how strong the unit is or anything like that.
+
+394
+00:21:24,280 --> 00:21:26,760
+Speaker 0: But you're adding some narrative around that unit.
+
+395
+00:21:27,440 --> 00:21:32,300
+Speaker 1: All you do is you say, "Ah, I knight thee, sir," because you built a knight.
+
+396
+00:21:32,521 --> 00:21:33,936
+Speaker 1: You're saying, "Ah, I knight thee, sir,".
+
+397
+00:21:33,997 --> 00:21:34,300
+Speaker 1: whatever.
+
+398
+00:21:34,360 --> 00:21:35,780
+Speaker 1: You have to role-play building the knight.
+
+399
+00:21:36,620 --> 00:21:42,300
+Speaker 0: And now you've brought that knight with that name into the universe of the game that just grows and grows and grows.
+
+400
+00:21:42,521 --> 00:21:42,918
+Speaker 0: Exactly.
+
+401
+00:21:43,684 --> 00:21:46,900
+Speaker 1: Ah, we have finished the such-and-such, right?
+
+402
+00:21:47,723 --> 00:21:49,658
+Speaker 1: The great granaries, little brother.
+
+403
+00:21:53,222 --> 00:21:55,080
+Speaker 0: This is just getting deep in inside jokes.
+
+404
+00:21:55,260 --> 00:21:56,999
+Speaker 0: I'm going to talk about the boat Mormons next.
+
+405
+00:21:57,900 --> 00:21:57,990
+Speaker 1: Sure.
+
+406
+00:21:59,040 --> 00:22:03,900
+Speaker 1: But I just replace all actions with role-playing actions and remove all the mechanical winning/losing actions.
+
+407
+00:22:03,940 --> 00:22:04,965
+Speaker 0: Don't let us forget that.
+
+408
+00:22:05,005 --> 00:22:06,412
+Speaker 0: we just said this, because we're going to forget.
+
+409
+00:22:06,452 --> 00:22:08,180
+Speaker 0: we had this conversation, and this is an idea.
+
+410
+00:22:08,421 --> 00:22:09,379
+Speaker 1: This is never going to happen.
+
+411
+00:22:09,480 --> 00:22:10,143
+Speaker 0: No, no.
+
+412
+00:22:10,404 --> 00:22:13,518
+Speaker 0: I want to think about it long enough to want to do it and then not do it.
+
+413
+00:22:14,720 --> 00:22:15,410
+Speaker 0: I don't want to forget it now.
+
+414
+00:22:15,430 --> 00:22:16,019
+Speaker 0: I want to forget it.
+
+415
+00:22:16,260 --> 00:22:16,789
+Speaker 1: Mission accomplished.
+
+416
+00:22:16,809 --> 00:22:17,338
+Speaker 1: Let's move on.
+
+417
+00:22:20,322 --> 00:22:26,740
+Speaker 0: So in some other news, Amazon, as you know, is trying to prevent its workers from unionizing.
+
+418
+00:22:27,101 --> 00:22:27,956
+Speaker 0: We talked about that.
+
+419
+00:22:30,222 --> 00:22:30,694
+Speaker 0: What?
+
+420
+00:22:30,735 --> 00:22:30,858
+Speaker 0: Really?
+
+421
+00:22:34,280 --> 00:22:46,060
+Speaker 0: Also, Amazon's official news Twitter account has been getting weirdly aggressive about this lately in a way that is only making things worse for them, and it's kind of amazing to watch in real time.
+
+422
+00:22:46,980 --> 00:22:48,303
+Speaker 0: But the icing on the cake is.
+
+423
+00:22:48,364 --> 00:22:50,469
+Speaker 0: a while ago, I saw a bunch of stories.
+
+424
+00:22:50,509 --> 00:22:51,852
+Speaker 0: I can't find all the old stories.
+
+425
+00:22:51,912 --> 00:22:55,120
+Speaker 0: I'll just link to this one thing, but we'll talk about this more in the forum.
+
+426
+00:22:56,681 --> 00:23:04,900
+Speaker 0: There was a bunch of studies of a bunch of Twitter botnets people found that were all following each other and didn't really have normal people following them.
+
+427
+00:23:05,080 --> 00:23:13,500
+Speaker 0: There were these semi-closed networks of accounts that appeared to be auto-generated and all had AI-generated faces and profiles.
+
+428
+00:23:14,700 --> 00:23:17,220
+Speaker 1: See, I'm not -- I mean, they could be AI-generated faces.
+
+429
+00:23:17,240 --> 00:23:19,600
+Speaker 0: Why would this -- the photoshopping would take way too much effort.
+
+430
+00:23:19,700 --> 00:23:22,156
+Speaker 0: I found some libraries that'll make faces like this for you.
+
+431
+00:23:22,237 --> 00:23:22,760
+Speaker 0: Millions of them.
+
+432
+00:23:23,061 --> 00:23:23,502
+Speaker 1: It could be.
+
+433
+00:23:23,643 --> 00:23:24,024
+Speaker 1: It could be.
+
+434
+00:23:24,104 --> 00:23:25,348
+Speaker 1: It's believable both ways.
+
+435
+00:23:25,408 --> 00:23:28,036
+Speaker 1: The point is, they're clearly fake bot accounts.
+
+436
+00:23:28,076 --> 00:23:29,320
+Speaker 1: They're not real human beings.
+
+437
+00:23:29,320 --> 00:23:40,860
+Speaker 0: Well, there was a story a while ago about Amazon encouraging their workers to make "real" accounts and encouraging them and incentivizing them to say anti-union things in public.
+
+438
+00:23:41,882 --> 00:23:49,720
+Speaker 1: That could be true, and it could be -- not only could that be true, it could simultaneously also be cover for the botnet.
+
+439
+00:23:50,140 --> 00:23:58,560
+Speaker 1: You could have real employees do that and pretend that the botnet was employees that you paid, right?
+
+440
+00:23:59,062 --> 00:24:00,973
+Speaker 1: Or it could just be the cover story.
+
+441
+00:24:01,033 --> 00:24:02,120
+Speaker 1: It doesn't matter either way.
+
+442
+00:24:02,981 --> 00:24:09,740
+Speaker 1: Or, if you want to go real conspiracy theory, someone else who's not Amazon could be doing this to make Amazon look bad.
+
+443
+00:24:09,780 --> 00:24:11,380
+Speaker 1: What if that's an Apple-made botnet?
+
+444
+00:24:11,880 --> 00:24:15,780
+Speaker 0: Or someone else could be doing it so Amazon has plausible deniability.
+
+445
+00:24:16,941 --> 00:24:17,283
+Speaker 1: Right.
+
+446
+00:24:17,303 --> 00:24:19,960
+Speaker 1: The point is that none of those things matter, right?
+
+447
+00:24:20,220 --> 00:24:26,540
+Speaker 0: All that matters is that this is a fucking bot, and that face was either photoshopped or AI-generated, and it's pertaining to be --.
+
+448
+00:24:26,600 --> 00:24:33,980
+Speaker 1: What matters is that the botnet is real, and regardless of who's running it, for what reasons or how, Twitter has not deleted it.
+
+449
+00:24:35,280 --> 00:24:41,519
+Speaker 1: Twitter can just shut this down instantly, and they haven't, so the news is not necessarily "Amazon is
+
+450
+00:24:41,599 --> 00:24:41,780
+Speaker 1: evil.".
+
+451
+00:24:41,840 --> 00:24:42,403
+Speaker 1: That's not news.
+
+452
+00:24:42,443 --> 00:24:43,388
+Speaker 1: We knew that already.
+
+453
+00:24:43,649 --> 00:24:45,558
+Speaker 1: The news is that Twitter is weak.
+
+454
+00:24:47,300 --> 00:25:01,980
+Speaker 0: The other interesting news, and there'll be more on this later, is that one very easy way to detect these algorithmically-generated faces -- and I dug around more -- is that they'll make certain kinds of errors that aren't obvious unless you look closely.
+
+455
+00:25:02,702 --> 00:25:09,420
+Speaker 0: And the most common error is they will make someone's glasses look different.
+
+456
+00:25:09,620 --> 00:25:13,519
+Speaker 0: Like, the frame on one side of someone's face will be different from the frame on the other side of someone's face.
+
+457
+00:25:14,181 --> 00:25:18,380
+Speaker 0: Or an earring will not actually be attached in any reasonable way.
+
+458
+00:25:19,922 --> 00:25:24,220
+Speaker 0: Those are the two biggest indicators that this is an AI-generated fake face.
+
+459
+00:25:26,701 --> 00:25:33,080
+Speaker 0: The third one, less common, I think, I don't know, but the one I saw some researchers talking about is wrong number of teeth.
+
+460
+00:25:36,780 --> 00:25:40,040
+Speaker 1: I don't know the right number of teeth unless I count my own mouth and then add four.
+
+461
+00:25:40,560 --> 00:25:44,255
+Speaker 0: Yep, but there'll be an extra incisor on some of these.
+
+462
+00:25:44,436 --> 00:25:45,440
+Speaker 0: You'll see stuff like that happening.
+
+463
+00:25:45,440 --> 00:25:48,680
+Speaker 1: Do all people have the same number of teeth, assuming none are pulled out?
+
+464
+00:25:48,860 --> 00:25:50,920
+Speaker 0: Yes, assuming none are pulled out, or there's a problem.
+
+465
+00:25:52,060 --> 00:25:53,470
+Speaker 1: Okay, I just wasn't sure.
+
+466
+00:25:53,490 --> 00:25:54,840
+Speaker 1: Maybe some people out there have more teeth.
+
+467
+00:25:55,000 --> 00:26:01,620
+Speaker 0: Well, like, my mom's second husband had an extra tooth, but it was in the middle of the top of his mouth.
+
+468
+00:26:03,722 --> 00:26:04,304
+Speaker 0: It just grew there.
+
+469
+00:26:04,385 --> 00:26:06,836
+Speaker 0: A doctor found it, and he was like, "What the fuck is that?
+
+470
+00:26:06,876 --> 00:26:07,559
+Speaker 0: You've got an extra wisdom
+
+471
+00:26:07,580 --> 00:26:07,680
+Speaker 0: tooth!".
+
+472
+00:26:08,102 --> 00:26:11,720
+Speaker 1: You sure that isn't some, like, narwhal-type action?
+
+473
+00:26:12,423 --> 00:26:14,339
+Speaker 0: I mean, that might be how you get narwhals.
+
+474
+00:26:15,346 --> 00:26:15,620
+Speaker 1: Okay.
+
+475
+00:26:17,561 --> 00:26:20,220
+Speaker 0: So, uh, last... Oh, no, that was my last nose.
+
+476
+00:26:24,950 --> 00:26:27,650
+Speaker 0: But anyway, things of the day!
+
+477
+00:26:27,991 --> 00:26:33,370
+Speaker 0: So I found what was originally a tweet that had this amazing image, and I wanted to make that my thing of the day.
+
+478
+00:26:33,850 --> 00:26:38,020
+Speaker 0: But then I wondered, "Wait, this image is from some Japanese book or some Japanese researchers?
+
+479
+00:26:38,641 --> 00:26:39,202
+Speaker 0: What's the source?
+
+480
+00:26:39,222 --> 00:26:40,225
+Speaker 0: I want to link to, like, the book or
+
+481
+00:26:40,245 --> 00:26:40,606
+Speaker 0: something.".
+
+482
+00:26:42,811 --> 00:26:47,290
+Speaker 0: And when I poked around, it actually got a little bit fascinating, and then I found this page.
+
+483
+00:26:47,831 --> 00:26:52,610
+Speaker 0: And the page kind of documents, like, the provenance of this image.
+
+484
+00:26:53,411 --> 00:26:54,537
+Speaker 0: And it was fascinating.
+
+485
+00:26:54,597 --> 00:26:57,210
+Speaker 0: The image itself is my thing of the day, because that's amazing.
+
+486
+00:26:57,631 --> 00:27:06,250
+Speaker 0: It is this illustrated cross-section that was based on research of what Kowloon, the Walled City, was actually like.
+
+487
+00:27:06,730 --> 00:27:10,990
+Speaker 0: Because it doesn't exist anymore, and its interior was not well-documented.
+
+488
+00:27:11,410 --> 00:27:15,584
+Speaker 0: For reasons that, if you don't know what Kowloon is, go read the Wikipedia page about it.
+
+489
+00:27:15,644 --> 00:27:17,550
+Speaker 0: It's fucking nuts what this was.
+
+490
+00:27:17,570 --> 00:27:26,130
+Speaker 1: Yeah, there is no time to explain it here, but it is a very significant place in terms of, you know, like, the cyberpunk...
+
+491
+00:27:26,893 --> 00:27:29,484
+Speaker 0: You want to know where a lot of cyberpunk aesthetic comes from?
+
+492
+00:27:29,825 --> 00:27:30,930
+Speaker 0: Like, you want to know...
+
+493
+00:27:31,171 --> 00:27:33,930
+Speaker 1: And this was a real place that really existed.
+
+494
+00:27:34,110 --> 00:27:38,929
+Speaker 0: Yes, the shortest answer is, Hong Kong was occupied by Japan in World War II.
+
+495
+00:27:39,890 --> 00:27:49,270
+Speaker 0: There were a lot of debates around whether or not China owned, like, where was the border between China and Hong Kong during the era when Hong Kong was still a part of Britain.
+
+496
+00:27:49,691 --> 00:27:55,650
+Speaker 0: Complicated treaties basically meant that this one area, nobody owned it.
+
+497
+00:27:56,370 --> 00:28:00,429
+Speaker 0: And the agreement was, China officially owned it, but agreed not to fuck with it.
+
+498
+00:28:01,210 --> 00:28:06,850
+Speaker 0: Britain agreed that China owned it, but was actually responsible for it.
+
+499
+00:28:07,170 --> 00:28:11,248
+Speaker 0: But to avoid angering China, Britain said, "Look, we'll just leave it alone,
+
+500
+00:28:11,328 --> 00:28:11,469
+Speaker 0: too.".
+
+501
+00:28:12,051 --> 00:28:19,230
+Speaker 0: It was a lawless skyscraper, arcology city, filled with amazing nonsense, we will never know the full story of Kowloon.
+
+502
+00:28:19,630 --> 00:28:20,989
+Speaker 1: I'm sure also lots of horror.
+
+503
+00:28:21,350 --> 00:28:26,150
+Speaker 0: Oh, uh, the triads, like, used it as bases, international crime, human trafficking.
+
+504
+00:28:26,550 --> 00:28:32,330
+Speaker 0: There were very amazing things that happened in Kowloon, and also terrifying things that China and Britain should have stopped.
+
+505
+00:28:35,452 --> 00:28:40,350
+Speaker 0: But, this is a cross-section of kind of, like, what was going on in Kowloon.
+
+506
+00:28:40,530 --> 00:28:42,750
+Speaker 0: Like, what did this structure look like?
+
+507
+00:28:43,391 --> 00:28:48,710
+Speaker 0: Imagine a bunch of skyscrapers organically connected together, and between 10 and 50 thousand people living in it.
+
+508
+00:28:50,190 --> 00:28:55,369
+Speaker 1: Yeah, and it's like, you see pictures of the inside of it, and it's just like, you can see that, like, okay, there's one area.
+
+509
+00:28:55,810 --> 00:29:01,450
+Speaker 1: And then it's like, but how the areas connect doesn't really make sense, it's sort of like going into the Times Square AMC, but only worse.
+
+510
+00:29:03,552 --> 00:29:07,930
+Speaker 1: And then, to look at it from the outside, it looks like just a bunch of buildings, right?
+
+511
+00:29:08,170 --> 00:29:16,490
+Speaker 1: So, you know, it's like, how does, what's, you know, it's like, normally you can understand the layout of a building, it's usually laid out, you know, symmetrically in some way, right?
+
+512
+00:29:16,870 --> 00:29:23,310
+Speaker 1: But the layout of this thing made no sense, so the cross-section at least helps make sense out of it, right?
+
+513
+00:29:23,550 --> 00:29:24,598
+Speaker 1: Where are things?
+
+514
+00:29:24,638 --> 00:29:25,162
+Speaker 0: How do people get around?
+
+515
+00:29:26,851 --> 00:29:36,970
+Speaker 0: But it also talks about the person who has, was like, wait, I found this image hosted in a million million different places, but it was also, like, scanned shittily, so I wanted to go find the original image.
+
+516
+00:29:37,350 --> 00:29:52,310
+Speaker 0: And then they, like, found a bunch of interesting things about this image, and who was hosting it, and, like, a part of it was, like, replaced in the most common image that people were passing around, and there's just, like, this whole meta-story about where this image came from.
+
+517
+00:29:53,411 --> 00:30:06,030
+Speaker 1: I just feel like the biggest, I guess, allure of it, right, is that in the real world, for the most part, maze-like places don't really exist, short of, like, a corn maze.
+
+518
+00:30:06,070 --> 00:30:09,730
+Speaker 0: And for reasons you can imagine, if there's a fire in a maze, like, guess what happens?
+
+519
+00:30:10,130 --> 00:30:19,470
+Speaker 1: Right, yeah, mazes are super dangerous, and have all, they just offer lots and lots of opportunities for danger and bad things to happen, right?
+
+520
+00:30:19,590 --> 00:30:23,963
+Speaker 1: People can go to somewhere, and it's, like, no one can find them, right?
+
+521
+00:30:24,043 --> 00:30:26,250
+Speaker 1: It's not good for that kind of thing to exist.
+
+522
+00:30:26,871 --> 00:30:33,230
+Speaker 1: So, most buildings are laid out in ways, and most land is laid out in ways that, like, yeah, it's, you know, makes sense.
+
+523
+00:30:33,230 --> 00:30:39,103
+Speaker 0: But it's also a case study in humans left to their own devices having to use this space.
+
+524
+00:30:39,864 --> 00:30:40,606
+Speaker 0: What happens?
+
+525
+00:30:40,726 --> 00:30:42,370
+Speaker 0: What do they do to that space?
+
+526
+00:30:43,151 --> 00:30:52,328
+Speaker 1: Right, but in the same way, while the maze creates so much danger, the idea of it also creates a sense of, like, you know, magic and mystery, right?
+
+527
+00:30:52,348 --> 00:30:53,410
+Speaker 1: Like, labyrinth, right?
+
+528
+00:30:53,550 --> 00:30:54,490
+Speaker 0: It's part of our history.
+
+529
+00:30:55,210 --> 00:30:56,052
+Speaker 1: Right, exactly.
+
+530
+00:30:56,132 --> 00:31:03,124
+Speaker 1: So, I think that's why this place continues to have some sort of mystique to it.
+
+531
+00:31:03,565 --> 00:31:05,990
+Speaker 1: that is, you know, perhaps racist in many ways.
+
+532
+00:31:06,491 --> 00:31:09,258
+Speaker 0: Yeah, but there is a legit, real mystique.
+
+533
+00:31:09,298 --> 00:31:11,384
+Speaker 0: Like, I've spent a lot of time in Hong Kong.
+
+534
+00:31:12,005 --> 00:31:13,710
+Speaker 0: I've been to where, 'cause it's gone now.
+
+535
+00:31:14,650 --> 00:31:15,816
+Speaker 0: You know when it was destroyed?
+
+536
+00:31:16,500 --> 00:31:17,968
+Speaker 0: Way more recently than you might think.
+
+537
+00:31:18,008 --> 00:31:18,169
+Speaker 1: The '90s.
+
+538
+00:31:18,430 --> 00:31:18,754
+Speaker 1: Not too long ago.
+
+539
+00:31:18,774 --> 00:31:19,361
+Speaker 1: Yeah, very recently.
+
+540
+00:31:19,401 --> 00:31:20,190
+Speaker 1: Yeah, very recently.
+
+541
+00:31:20,270 --> 00:31:26,230
+Speaker 0: But there are parts of it that are still there, and there's also some museums and some monuments to it, and, like, one of the gates is there.
+
+542
+00:31:26,710 --> 00:31:33,090
+Speaker 0: But nowadays, it's a park, and its governance is still complicated, as Hong Kong is complicated, and that's a whole other thing.
+
+543
+00:31:33,090 --> 00:31:34,850
+Speaker 1: No, Hong Kong's even more complicated now anyway.
+
+544
+00:31:35,050 --> 00:31:43,169
+Speaker 0: Yeah, but you can go to where it is, and it's one of those things that I wish I had been able to go to Hong Kong before this was destroyed, just to see it.
+
+545
+00:31:44,111 --> 00:31:45,350
+Speaker 1: No, you wouldn't want to go in it, I don't think.
+
+546
+00:31:45,833 --> 00:31:48,726
+Speaker 0: Well, I mean, I would've wanted to, but... You wanted to?
+
+547
+00:31:49,473 --> 00:31:50,849
+Speaker 0: I also would've been in middle school.
+
+548
+00:31:52,978 --> 00:31:53,829
+Speaker 1: It would've been rather dangerous.
+
+549
+00:31:53,970 --> 00:31:54,772
+Speaker 0: And it would've been a terrible idea.
+
+550
+00:31:54,792 --> 00:32:01,550
+Speaker 0: I mean, I have, I'll admit, I have gone to and explored places I shouldn't have in my international travels many times.
+
+551
+00:32:01,550 --> 00:32:03,210
+Speaker 1: But were those places occupied?
+
+552
+00:32:03,971 --> 00:32:05,214
+Speaker 0: Yes!
+
+553
+00:32:05,795 --> 00:32:13,670
+Speaker 0: I actually got, was inside, I spent some time wandering around inside of the Indian equivalent of a favela when I was in Mumbai for half a day.
+
+554
+00:32:15,376 --> 00:32:18,010
+Speaker 1: But that's not quite in a walled, maze-like city, right?
+
+555
+00:32:19,812 --> 00:32:32,450
+Speaker 0: It was similar in that the buildings in it were not regulated and were just built on top of each other in a ridiculous, cacophony nightmare, and police would not go in there, and it was similar, but not quite to the scale of Kowloon.
+
+556
+00:32:33,291 --> 00:32:33,452
+Speaker 1: Yeah.
+
+557
+00:32:33,472 --> 00:32:34,978
+Speaker 0: I would still take that over Kowloon.
+
+558
+00:32:38,010 --> 00:32:43,450
+Speaker 0: I'm just saying I'm very unafraid of that kind of exploration, but it is risky depending on what you do.
+
+559
+00:32:44,113 --> 00:32:47,170
+Speaker 1: I think that I would also go to the place you described.
+
+560
+00:32:48,052 --> 00:32:48,798
+Speaker 0: I think you would've.
+
+561
+00:32:49,726 --> 00:32:50,210
+Speaker 0: I did too.
+
+562
+00:32:50,270 --> 00:32:56,030
+Speaker 1: But I would not go, mostly I would be going in search of food, but I'm sure those people are cooking something good.
+
+563
+00:32:56,390 --> 00:32:57,171
+Speaker 0: Ah, yes.
+
+564
+00:32:57,532 --> 00:32:58,754
+Speaker 0: Good fucking god.
+
+565
+00:32:58,834 --> 00:33:00,716
+Speaker 0: Actually, Manila was like that too.
+
+566
+00:33:00,836 --> 00:33:10,550
+Speaker 0: One day when I was there, and then we'll get to your main thing of the day, instead of taking a car a few miles to get to a place, I just walked along the highway just to see what the neighborhoods were like.
+
+567
+00:33:11,370 --> 00:33:18,910
+Speaker 0: The food I smelled and saw, just in the neighborhoods walking to my destination, those were some of the best smells I've ever experienced.
+
+568
+00:33:19,550 --> 00:33:23,145
+Speaker 1: Yeah, I don't feel like Kowloon was a culinary, you know.
+
+569
+00:33:23,165 --> 00:33:24,350
+Speaker 0: It might've been.
+
+570
+00:33:25,131 --> 00:33:33,889
+Speaker 0: It seems like there was a food scene in there that was mythological in Hong Kong among people who lived in Hong Kong at the time.
+
+571
+00:33:34,812 --> 00:33:35,158
+Speaker 1: Oh, okay.
+
+572
+00:33:35,199 --> 00:33:35,810
+Speaker 1: Maybe I'm okay.
+
+573
+00:33:35,870 --> 00:33:36,652
+Speaker 0: This is secondhand.
+
+574
+00:33:36,712 --> 00:33:38,195
+Speaker 0: I don't know a lot about Kowloon.
+
+575
+00:33:38,215 --> 00:33:44,390
+Speaker 0: Most of what I know is people in Hong Kong telling me about it over the years and just reading about it while I was there.
+
+576
+00:33:45,211 --> 00:33:45,712
+Speaker 1: Alright, so.
+
+577
+00:33:46,414 --> 00:33:47,157
+Speaker 1: My thing of the day.
+
+578
+00:33:47,197 --> 00:33:48,420
+Speaker 1: Some listener posted this.
+
+579
+00:33:48,521 --> 00:33:49,524
+Speaker 1: I'm sorry, listener.
+
+580
+00:33:49,544 --> 00:33:50,868
+Speaker 1: I forget which listener it was.
+
+581
+00:33:50,988 --> 00:33:51,670
+Speaker 1: It was the listener.
+
+582
+00:33:52,310 --> 00:33:53,512
+Speaker 1: You can take credit for it.
+
+583
+00:33:54,373 --> 00:34:04,890
+Speaker 1: And people, if you want to find out which listener it was and give them the credit they deserve for finding this on the internet, come to our Discord and our forums and all the stuff we'll talk about in a moment and find them.
+
+584
+00:34:05,371 --> 00:34:09,418
+Speaker 1: I'm sure they will point themselves out or you can just find their post of this.
+
+585
+00:34:09,839 --> 00:34:16,190
+Speaker 1: Regardless, this is a YouTube video and I'm going to spoil the whole YouTube video.
+
+586
+00:34:16,469 --> 00:34:17,292
+Speaker 1: But it doesn't matter.
+
+587
+00:34:17,312 --> 00:34:23,889
+Speaker 1: You should watch the YouTube video anyway because even though I'm going to spoil the secret of the information in the video, the presentation is excellent.
+
+588
+00:34:24,449 --> 00:34:24,591
+Speaker 0: It is.
+
+589
+00:34:24,650 --> 00:34:29,010
+Speaker 0: It's very similar to that video I did around the how a pulley works and how to use a snatch block.
+
+590
+00:34:29,810 --> 00:34:34,900
+Speaker 1: So the point is, let's say you get a tree, an avocado tree, and it's producing delicious avocados, right?
+
+591
+00:34:34,920 --> 00:34:36,141
+Speaker 1: Well, you open up an avocado.
+
+592
+00:34:36,282 --> 00:34:38,125
+Speaker 1: There's a big ass freaking seed in there, right?
+
+593
+00:34:38,166 --> 00:34:39,167
+Speaker 1: Right in the middle of the avocado.
+
+594
+00:34:39,187 --> 00:34:40,550
+Speaker 1: You always got to pick it out and throw it out.
+
+595
+00:34:41,150 --> 00:34:45,358
+Speaker 1: Well, what if you planted that avocado seed from the middle of the avocado and grew it?
+
+596
+00:34:45,918 --> 00:34:47,621
+Speaker 1: Wouldn't it create an avocado tree?
+
+597
+00:34:47,962 --> 00:34:50,226
+Speaker 1: Wouldn't that tree produce delicious avocados?
+
+598
+00:34:50,286 --> 00:34:52,190
+Speaker 1: Just like assuming you took care of it properly.
+
+599
+00:34:52,530 --> 00:34:55,333
+Speaker 0: I mean, it will grow an avocado tree, right?
+
+600
+00:34:55,774 --> 00:34:58,558
+Speaker 1: Wouldn't it produce those same delicious avocados that you just ate?
+
+601
+00:34:58,618 --> 00:35:00,300
+Speaker 1: And the answer is no, it won't.
+
+602
+00:35:00,800 --> 00:35:04,825
+Speaker 1: It will produce most likely in all likelihood, like 99% chance.
+
+603
+00:35:04,885 --> 00:35:08,670
+Speaker 1: it will produce disgusting avocados that you have no desire to eat whatsoever.
+
+604
+00:35:08,810 --> 00:35:09,912
+Speaker 1: Yep.
+
+605
+00:35:10,132 --> 00:35:11,233
+Speaker 0: Apples trees are the same way.
+
+606
+00:35:11,273 --> 00:35:13,116
+Speaker 0: I had no idea avocados were like this, too.
+
+607
+00:35:13,436 --> 00:35:13,957
+Speaker 1: Yeah, you take it.
+
+608
+00:35:14,037 --> 00:35:18,383
+Speaker 1: I take a Macintosh apple, you take the seeds out, you plant them, you get them to grow like Johnny Appleseed.
+
+609
+00:35:18,643 --> 00:35:20,165
+Speaker 1: The tree comes, apples come.
+
+610
+00:35:20,205 --> 00:35:20,766
+Speaker 1: And guess what?
+
+611
+00:35:21,166 --> 00:35:22,688
+Speaker 1: Those apples are going to taste like garbage.
+
+612
+00:35:22,728 --> 00:35:23,850
+Speaker 1: It'll be a crab apple tree.
+
+613
+00:35:25,970 --> 00:35:30,294
+Speaker 1: The crab apple tree is actually even worse odds than the avocado tree.
+
+614
+00:35:30,314 --> 00:35:31,655
+Speaker 1: The avocado tree has better odds.
+
+615
+00:35:32,855 --> 00:35:34,356
+Speaker 1: And it's really bad odds to begin with.
+
+616
+00:35:34,376 --> 00:35:38,700
+Speaker 1: So the reason for this is something so obvious, it's just not something you think about.
+
+617
+00:35:38,720 --> 00:35:42,462
+Speaker 1: It's that, hey, you know, the trees have sex.
+
+618
+00:35:42,823 --> 00:35:45,685
+Speaker 1: So the avocado seed, right?
+
+619
+00:35:45,965 --> 00:35:52,930
+Speaker 1: You know, the fruit that's on the tree, right, is based on the DNA of the mama tree, the one that's growing the fruit, right?
+
+620
+00:35:53,451 --> 00:36:00,139
+Speaker 1: But there's a daddy tree somewhere and the seed, even though the fruit always is made according to the mama tree, right?
+
+621
+00:36:00,680 --> 00:36:08,270
+Speaker 1: The seed is combined, the mommy DNA and the daddy tree DNA that got pollinated from some bee or something when the trees are flowering.
+
+622
+00:36:08,831 --> 00:36:13,937
+Speaker 1: So that seed is only half good avocado and half who knows what.
+
+623
+00:36:14,518 --> 00:36:22,087
+Speaker 1: And even if both of those avocado trees are delicious avocado trees, you think, oh, well, I'll just have the really good Haas avocado.
+
+624
+00:36:22,107 --> 00:36:23,069
+Speaker 1: And what's another variety?
+
+625
+00:36:23,149 --> 00:36:24,210
+Speaker 1: I don't know some other variety.
+
+626
+00:36:24,510 --> 00:36:26,702
+Speaker 0: Haas is the only one I know by name because that's the one I get.
+
+627
+00:36:26,722 --> 00:36:28,110
+Speaker 0: that's not my regular avocado.
+
+628
+00:36:29,011 --> 00:36:32,915
+Speaker 1: In this YouTube video, you can learn more varieties of avocado.
+
+629
+00:36:33,996 --> 00:36:36,398
+Speaker 1: And let's say two delicious trees get together.
+
+630
+00:36:36,778 --> 00:36:38,540
+Speaker 1: In the video, he's like, well, that's great.
+
+631
+00:36:38,620 --> 00:36:46,288
+Speaker 1: What if the, you know, caramel avocado tree and the winter green avocado tree get together?
+
+632
+00:36:46,308 --> 00:36:48,590
+Speaker 1: It's gonna taste like shit.
+
+633
+00:36:49,111 --> 00:36:58,908
+Speaker 1: So you need in order to grow an avocado tree that tastes good, you basically, you know, need to take a clipping from the mama tree and just clone the mama tree.
+
+634
+00:36:58,968 --> 00:37:00,050
+Speaker 1: That's how it's got to be done.
+
+635
+00:37:01,351 --> 00:37:02,052
+Speaker 1: And then you don't care.
+
+636
+00:37:02,092 --> 00:37:03,194
+Speaker 1: The seeds will all be garbage.
+
+637
+00:37:03,254 --> 00:37:09,183
+Speaker 1: But, you know, or you can play the avocado lottery and start planting seeds and wait years and years and years for them to grow.
+
+638
+00:37:09,263 --> 00:37:13,850
+Speaker 1: And if you find one that tastes good, you'll be rich because you'll be able to sell a new avocado.
+
+639
+00:37:14,870 --> 00:37:15,851
+Speaker 0: First YouTube comment.
+
+640
+00:37:15,911 --> 00:37:16,672
+Speaker 0: Most popular one.
+
+641
+00:37:16,692 --> 00:37:18,033
+Speaker 0: You just saved me 10 years.
+
+642
+00:37:19,154 --> 00:37:19,614
+Speaker 1: That's right.
+
+643
+00:37:19,634 --> 00:37:24,418
+Speaker 1: Because that's how long it takes avocado trees to grow.
+
+644
+00:37:24,458 --> 00:37:25,239
+Speaker 1: Terrific video.
+
+645
+00:37:25,299 --> 00:37:26,279
+Speaker 1: I learned about trees.
+
+646
+00:37:26,780 --> 00:37:29,602
+Speaker 0: I like how direct and simple the explanation is.
+
+647
+00:37:29,662 --> 00:37:31,424
+Speaker 0: Like this guy just does a really good job.
+
+648
+00:37:31,884 --> 00:37:32,785
+Speaker 1: Makes common sense.
+
+649
+00:37:33,365 --> 00:37:35,447
+Speaker 1: And there's other good videos on this channel as well.
+
+650
+00:37:35,907 --> 00:37:37,989
+Speaker 1: And of course, they're selling their products.
+
+651
+00:37:38,009 --> 00:37:39,310
+Speaker 1: They'll sell you trees.
+
+652
+00:37:39,350 --> 00:37:43,154
+Speaker 0: If you want to buy a graph to trees, we also sell 10 boxes of avocados.
+
+653
+00:37:44,054 --> 00:37:45,576
+Speaker 1: These guys, he sells, he sells anything.
+
+654
+00:37:45,616 --> 00:37:46,216
+Speaker 1: It's like you lazy.
+
+655
+00:37:46,236 --> 00:37:47,217
+Speaker 1: You just want the avocados.
+
+656
+00:37:47,257 --> 00:37:47,458
+Speaker 1: Fine.
+
+657
+00:37:47,498 --> 00:37:48,839
+Speaker 1: We'll sell them to you on a whole tree.
+
+658
+00:37:48,859 --> 00:37:49,820
+Speaker 1: We'll sell you the whole tree.
+
+659
+00:37:49,840 --> 00:37:51,501
+Speaker 1: You want a clipping because you got a bottom of it.
+
+660
+00:37:51,541 --> 00:37:54,624
+Speaker 1: You already planted a seed and you realize it's not going to work out.
+
+661
+00:37:54,965 --> 00:37:55,765
+Speaker 1: I'll sell you the clipping.
+
+662
+00:37:55,805 --> 00:37:56,826
+Speaker 1: You can graft onto it.
+
+663
+00:37:57,567 --> 00:37:59,048
+Speaker 1: He's like, they'll say any avocado.
+
+664
+00:37:59,849 --> 00:38:00,690
+Speaker 1: So any avocado.
+
+665
+00:38:01,471 --> 00:38:04,172
+Speaker 1: I just whacked my microphone.
+
+666
+00:38:04,673 --> 00:38:07,855
+Speaker 0: In the meantime, we're reading the tale of Genji for real.
+
+667
+00:38:07,875 --> 00:38:08,635
+Speaker 0: Read along with us.
+
+668
+00:38:08,696 --> 00:38:09,636
+Speaker 0: It's the first novel.
+
+669
+00:38:10,717 --> 00:38:12,818
+Speaker 1: The first novel ever in human history.
+
+670
+00:38:12,858 --> 00:38:13,139
+Speaker 1: Yeah.
+
+671
+00:38:13,379 --> 00:38:14,339
+Speaker 1: The tale of Genji.
+
+672
+00:38:14,500 --> 00:38:15,961
+Speaker 1: It's all about this one dude, Genji.
+
+673
+00:38:16,021 --> 00:38:16,801
+Speaker 1: And then I heard.
+
+674
+00:38:16,921 --> 00:38:18,102
+Speaker 0: He's not that great actually.
+
+675
+00:38:18,843 --> 00:38:20,864
+Speaker 1: Yeah, according to the spoilers that I've heard.
+
+676
+00:38:20,884 --> 00:38:22,445
+Speaker 1: because, you know, come on.
+
+677
+00:38:22,485 --> 00:38:23,766
+Speaker 1: Spoilers for the first novel.
+
+678
+00:38:23,866 --> 00:38:24,647
+Speaker 1: If there is any.
+
+679
+00:38:24,667 --> 00:38:28,449
+Speaker 0: I know one spoiler that I don't know if you know.
+
+680
+00:38:28,489 --> 00:38:29,610
+Speaker 0: I wonder if this is the spoiler.
+
+681
+00:38:29,910 --> 00:38:36,395
+Speaker 1: The spoiler that I know is that he actually dies sometime before the end and there are volumes, the last few volumes.
+
+682
+00:38:36,415 --> 00:38:36,835
+Speaker 1: You know what it is?
+
+683
+00:38:36,855 --> 00:38:37,635
+Speaker 1: It's the second part of Death Note.
+
+684
+00:38:37,655 --> 00:38:38,436
+Speaker 1: Genji is not there.
+
+685
+00:38:38,456 --> 00:38:40,377
+Speaker 1: Right, exactly.
+
+686
+00:38:40,697 --> 00:38:42,759
+Speaker 0: Yeah, no, I knew that from a long time ago.
+
+687
+00:38:42,779 --> 00:38:43,459
+Speaker 0: He just dies at some point.
+
+688
+00:38:43,519 --> 00:38:45,961
+Speaker 1: I knew that from the museum exhibit we went to about the book.
+
+689
+00:38:45,981 --> 00:38:47,562
+Speaker 1: that made me choose this as the book club.
+
+690
+00:38:47,622 --> 00:38:47,842
+Speaker 0: Yep.
+
+691
+00:38:48,242 --> 00:38:50,944
+Speaker 0: And there's like other characters come in and it just keeps trucking.
+
+692
+00:38:51,965 --> 00:38:53,226
+Speaker 1: Mm-hmm.
+
+693
+00:38:53,246 --> 00:38:59,330
+Speaker 0: So we'll see if it's a Death Note situation or a, I don't know, our Scott Bakker situation where the new characters are all over the place.
+
+694
+00:38:59,610 --> 00:39:00,030
+Speaker 0: Also good.
+
+695
+00:39:00,290 --> 00:39:00,491
+Speaker 1: Yeah.
+
+696
+00:39:00,971 --> 00:39:04,714
+Speaker 1: Other meta moments, like I said in the thing of the day area, right?
+
+697
+00:39:04,754 --> 00:39:06,615
+Speaker 1: You should come and find us on the Internet.
+
+698
+00:39:06,915 --> 00:39:10,217
+Speaker 1: Our Discord server is increasing in activity.
+
+699
+00:39:10,838 --> 00:39:13,460
+Speaker 1: We got a forum which is maintaining its level of activity.
+
+700
+00:39:14,340 --> 00:39:15,241
+Speaker 1: You can tweet at us.
+
+701
+00:39:15,361 --> 00:39:16,402
+Speaker 1: You can email us.
+
+702
+00:39:16,462 --> 00:39:16,802
+Speaker 1: You can.
+
+703
+00:39:17,182 --> 00:39:23,407
+Speaker 0: Every goddamn podcast we have ever made since 2005 is online, including the original forums.
+
+704
+00:39:23,447 --> 00:39:25,408
+Speaker 0: If you want to see our terrible takes from 2005.
+
+705
+00:39:25,408 --> 00:39:27,910
+Speaker 1: Oh, yeah, you can go to our old forum.
+
+706
+00:39:28,470 --> 00:39:29,831
+Speaker 0: That happened in that old forum.
+
+707
+00:39:29,871 --> 00:39:30,872
+Speaker 0: They're all online.
+
+708
+00:39:31,633 --> 00:39:32,433
+Speaker 1: We have not.
+
+709
+00:39:32,853 --> 00:39:37,176
+Speaker 1: We have continued to archive everything and preserve everything.
+
+710
+00:39:37,196 --> 00:39:39,898
+Speaker 1: I'm sure you can find something to cancel us over.
+
+711
+00:39:40,379 --> 00:39:40,979
+Speaker 1: Please do.
+
+712
+00:39:41,519 --> 00:39:42,160
+Speaker 1: I deserve it.
+
+713
+00:39:42,360 --> 00:39:43,040
+Speaker 1: Right.
+
+714
+00:39:43,140 --> 00:39:47,964
+Speaker 1: I will not say that I was I was right or make any excuse whatsoever.
+
+715
+00:39:48,044 --> 00:39:50,566
+Speaker 1: I will say, yes, that shitty geek nights canceled.
+
+716
+00:39:50,586 --> 00:39:50,926
+Speaker 1: Goodbye.
+
+717
+00:39:52,687 --> 00:39:53,468
+Speaker 1: So go right ahead.
+
+718
+00:39:54,048 --> 00:39:55,349
+Speaker 1: We definitely said some shitty thing.
+
+719
+00:39:55,369 --> 00:39:55,849
+Speaker 1: Go find it.
+
+720
+00:39:55,909 --> 00:39:56,530
+Speaker 1: I'm not even joking.
+
+721
+00:39:56,590 --> 00:39:56,990
+Speaker 1: All right.
+
+722
+00:39:57,090 --> 00:40:03,394
+Speaker 1: So free me from this podcast by finding something I said that was horrible and I admit was horrible.
+
+723
+00:40:03,795 --> 00:40:07,257
+Speaker 0: So we've done a show on the concept of single sign on.
+
+724
+00:40:08,418 --> 00:40:09,279
+Speaker 0: We've also done a show.
+
+725
+00:40:09,299 --> 00:40:16,944
+Speaker 0: We did a show on biometric, which is a kind of multi-factor authentication, but we mostly talked about use cases and like that technology in a vacuum.
+
+726
+00:40:17,564 --> 00:40:18,905
+Speaker 1: And we talked about passwords.
+
+727
+00:40:19,005 --> 00:40:23,749
+Speaker 0: Yeah, we've talked about passwords and we've definitely talked about multi-factor or two factor.
+
+728
+00:40:23,869 --> 00:40:24,870
+Speaker 0: But there can be more than two.
+
+729
+00:40:26,690 --> 00:40:30,873
+Speaker 0: Many times on the show, but we've never done a show to actually like explain it in detail.
+
+730
+00:40:31,053 --> 00:40:32,714
+Speaker 0: Like we never talked about it as the primary.
+
+731
+00:40:33,055 --> 00:40:34,015
+Speaker 1: And we're out of ideas.
+
+732
+00:40:34,556 --> 00:40:36,857
+Speaker 1: And it's so important it's worth harping on repeated.
+
+733
+00:40:36,917 --> 00:40:41,300
+Speaker 0: It is because you have to understand how multi-factor works, at least on a basic level.
+
+734
+00:40:41,981 --> 00:40:44,302
+Speaker 0: Or it's easy to fuck it up.
+
+735
+00:40:44,643 --> 00:40:47,465
+Speaker 0: It's easy to do things that aren't actually multi-factor.
+
+736
+00:40:47,545 --> 00:40:52,288
+Speaker 0: Like you can make a whole career knowing the details of how multi-factor works.
+
+737
+00:40:52,608 --> 00:40:55,010
+Speaker 0: You could literally get an engineering job for the rest of your life.
+
+738
+00:40:56,770 --> 00:40:57,051
+Speaker 1: All right.
+
+739
+00:40:57,091 --> 00:41:00,093
+Speaker 1: So you want to access a computer system, right?
+
+740
+00:41:00,114 --> 00:41:02,376
+Speaker 1: Well, we only want to give access to certain people.
+
+741
+00:41:02,736 --> 00:41:07,280
+Speaker 1: They need to prove to us right through a computer that they are the person who they say they are.
+
+742
+00:41:07,360 --> 00:41:08,601
+Speaker 1: Prove to me that you are rim.
+
+743
+00:41:08,661 --> 00:41:10,343
+Speaker 1: I can't see rim, so I don't know it's him.
+
+744
+00:41:10,403 --> 00:41:11,464
+Speaker 1: I'm not standing next to him.
+
+745
+00:41:11,904 --> 00:41:17,689
+Speaker 1: I just know that there is some computer out there that claims that rim is sitting at that computer right now.
+
+746
+00:41:17,729 --> 00:41:18,230
+Speaker 1: Well, prove it.
+
+747
+00:41:18,430 --> 00:41:22,153
+Speaker 1: Now, in the old days, you tell me something that only rim knows.
+
+748
+00:41:22,173 --> 00:41:23,954
+Speaker 0: Well, hey, in the old days, you didn't even have that.
+
+749
+00:41:24,014 --> 00:41:25,475
+Speaker 0: It was just someone.
+
+750
+00:41:25,535 --> 00:41:28,337
+Speaker 0: is someone has a terminal physically connected to this computer.
+
+751
+00:41:28,457 --> 00:41:29,217
+Speaker 0: It must be rim.
+
+752
+00:41:29,257 --> 00:41:30,418
+Speaker 0: Who else has the key to that room?
+
+753
+00:41:31,279 --> 00:41:31,719
+Speaker 1: Exactly.
+
+754
+00:41:31,779 --> 00:41:33,060
+Speaker 0: Don't forget there was a pre-era.
+
+755
+00:41:33,100 --> 00:41:39,024
+Speaker 0: But then the like a password really is just I know something that Scott is.
+
+756
+00:41:39,724 --> 00:41:42,686
+Speaker 0: Scott believes it is unlikely anyone else would know that thing.
+
+757
+00:41:43,167 --> 00:41:47,930
+Speaker 1: So we just you were standing next to you were standing next to me in the computer lab.
+
+758
+00:41:47,990 --> 00:41:51,673
+Speaker 1: You typed something in and I don't know what it is, but you do.
+
+759
+00:41:51,993 --> 00:41:53,234
+Speaker 1: No one else was in the room.
+
+760
+00:41:53,294 --> 00:41:54,294
+Speaker 1: No one else can know what it was.
+
+761
+00:41:54,315 --> 00:41:55,736
+Speaker 1: There were just dots on the screen.
+
+762
+00:41:55,776 --> 00:41:56,536
+Speaker 1: No one can see.
+
+763
+00:41:56,576 --> 00:42:00,439
+Speaker 0: you were typing what comes after fucking backyard, right?
+
+764
+00:42:00,739 --> 00:42:02,640
+Speaker 1: So if anyone else, right?
+
+765
+00:42:02,680 --> 00:42:09,505
+Speaker 1: If anyone else types that in right when asked, then the odds of that being rim are really high, right?
+
+766
+00:42:11,247 --> 00:42:14,269
+Speaker 1: However, that's not necessarily always good enough, right?
+
+767
+00:42:14,549 --> 00:42:16,150
+Speaker 1: Just tell me something only rim knows.
+
+768
+00:42:16,230 --> 00:42:19,252
+Speaker 1: Well, what if the thing only rim knows is the word cat?
+
+769
+00:42:19,412 --> 00:42:19,633
+Speaker 0: Yep.
+
+770
+00:42:20,733 --> 00:42:21,754
+Speaker 0: So I'll say this right now.
+
+771
+00:42:22,034 --> 00:42:28,279
+Speaker 0: When I'm making a password for something that is transient and it doesn't matter, I honestly I'll just say this publicly.
+
+772
+00:42:28,579 --> 00:42:31,822
+Speaker 0: I just use the lower one letter, the lowercase letter A. That's the password I use.
+
+773
+00:42:32,342 --> 00:42:32,523
+Speaker 1: Yeah.
+
+774
+00:42:32,563 --> 00:42:35,245
+Speaker 1: Like, for example, we'll play like a game of root online.
+
+775
+00:42:35,325 --> 00:42:36,245
+Speaker 1: It's like a private game.
+
+776
+00:42:36,446 --> 00:42:37,907
+Speaker 1: We'll just use letter A is the password.
+
+777
+00:42:38,007 --> 00:42:42,290
+Speaker 1: It's like if someone bust into a root, if you bust into a root game, come on and play.
+
+778
+00:42:42,410 --> 00:42:48,194
+Speaker 0: If someone packs into our root game because of this episode, sure, I'll play with you now because you went through that effort.
+
+779
+00:42:48,274 --> 00:42:50,335
+Speaker 0: That is way more effort than we might.
+
+780
+00:42:50,596 --> 00:42:52,016
+Speaker 1: We might need a fourth player.
+
+781
+00:42:52,177 --> 00:42:53,017
+Speaker 1: You might need you.
+
+782
+00:42:53,137 --> 00:42:57,400
+Speaker 1: So that, you know, but it's like, yeah, the letter A is going to be fine because who cares if someone breaks it?
+
+783
+00:42:57,420 --> 00:42:59,822
+Speaker 0: But if it's something real, like, say, my bank account.
+
+784
+00:43:00,102 --> 00:43:13,010
+Speaker 0: Well, if my if the thing I know is something that someone else can also know, there is no way for the bank to actually confirm if that is me or literally anyone else who can find that information.
+
+785
+00:43:13,691 --> 00:43:13,891
+Speaker 1: Right.
+
+786
+00:43:13,951 --> 00:43:16,052
+Speaker 1: So what we do is we do the something you have.
+
+787
+00:43:16,193 --> 00:43:16,373
+Speaker 1: Right.
+
+788
+00:43:16,393 --> 00:43:17,694
+Speaker 1: So something you have.
+
+789
+00:43:17,754 --> 00:43:20,976
+Speaker 1: It'll be like the keys to your house or your ATM card.
+
+790
+00:43:21,016 --> 00:43:21,176
+Speaker 1: Right.
+
+791
+00:43:21,216 --> 00:43:23,778
+Speaker 1: So you think about used to multi-factor authentication all the time.
+
+792
+00:43:23,818 --> 00:43:24,678
+Speaker 1: You go to the ATM.
+
+793
+00:43:25,099 --> 00:43:27,220
+Speaker 1: You have to push in your card or bring your phone.
+
+794
+00:43:27,500 --> 00:43:30,142
+Speaker 1: I bring my phone close to the ATM days with the NFC.
+
+795
+00:43:30,502 --> 00:43:32,183
+Speaker 1: But it's like you have to do something.
+
+796
+00:43:32,463 --> 00:43:34,765
+Speaker 1: Prove to the ATM that you have something.
+
+797
+00:43:34,885 --> 00:43:36,346
+Speaker 1: And then it asks you for the PIN number.
+
+798
+00:43:36,366 --> 00:43:38,487
+Speaker 1: It wants something, you know, something, you know, and have.
+
+799
+00:43:38,808 --> 00:43:45,172
+Speaker 1: And then it will spit out money because you better be the person who this money belongs to if we're going to spend money ahead of this machine.
+
+800
+00:43:45,472 --> 00:43:59,782
+Speaker 0: And for a long time, something you have was easy to do because computers are mostly used in serious places where they could, like, give you a special key card reader or a dongle or like they could give you a thing or like those RSA dongles that we'll talk about later.
+
+801
+00:44:00,002 --> 00:44:01,923
+Speaker 1: RSA dongles are big even in the 90s.
+
+802
+00:44:01,983 --> 00:44:02,263
+Speaker 1: Right.
+
+803
+00:44:02,283 --> 00:44:08,788
+Speaker 1: If you worked at a company, they would give you this little tiny keychain thing that had a little LCD readout like a like a Timex watch.
+
+804
+00:44:08,828 --> 00:44:10,629
+Speaker 0: This was so fancy for that era.
+
+805
+00:44:10,669 --> 00:44:11,109
+Speaker 0: Good lord.
+
+806
+00:44:11,209 --> 00:44:12,190
+Speaker 1: My dad, my dad had one.
+
+807
+00:44:12,210 --> 00:44:13,071
+Speaker 1: I had numbers on it.
+
+808
+00:44:13,371 --> 00:44:15,893
+Speaker 1: And the numbers would change every once in a while.
+
+809
+00:44:16,013 --> 00:44:18,895
+Speaker 0: Every six to ten seconds, I want to say something like that.
+
+810
+00:44:18,975 --> 00:44:22,677
+Speaker 1: So it's like you're logging into your work laptop at home or even at work.
+
+811
+00:44:22,957 --> 00:44:25,399
+Speaker 1: And it's like, hey, type in the numbers on the thing.
+
+812
+00:44:25,419 --> 00:44:31,784
+Speaker 1: And if you can't type in the right numbers on that thing that are changing all the time, you must not be you.
+
+813
+00:44:32,004 --> 00:44:32,224
+Speaker 1: Right.
+
+814
+00:44:32,284 --> 00:44:40,850
+Speaker 1: It's like for someone to know the password, the secret that only rim knows and be able to type in those numbers that are on a keychain that only rim has.
+
+815
+00:44:41,493 --> 00:44:43,950
+Speaker 1: What are the odds that that's not rim are really low?
+
+816
+00:44:44,250 --> 00:44:46,010
+Speaker 1: Yeah, it's very, very secure.
+
+817
+00:44:46,190 --> 00:44:47,790
+Speaker 0: But how does that actually work?
+
+818
+00:44:47,870 --> 00:44:56,710
+Speaker 0: Because there are older systems and there are still systems where the device you're accessing from can physically inspect the something you have like an ATM.
+
+819
+00:44:57,112 --> 00:45:00,470
+Speaker 0: It can physically interrogate your actual physical phone right there.
+
+820
+00:45:00,873 --> 00:45:02,790
+Speaker 0: Or if you shove a card into it, it checks.
+
+821
+00:45:03,074 --> 00:45:03,582
+Speaker 0: Is that a card?
+
+822
+00:45:04,416 --> 00:45:05,209
+Speaker 0: Is there a chip in it?
+
+823
+00:45:05,311 --> 00:45:06,289
+Speaker 0: Is the chip the right chip?
+
+824
+00:45:06,551 --> 00:45:08,210
+Speaker 0: Yes, that is the physical thing I expected.
+
+825
+00:45:08,310 --> 00:45:24,050
+Speaker 0: But when e-commerce and like the modern Internet came around, not all the attempts to get everyone to have like a fingerprint reader on their computer that was universal and standard or have a way to like put a credit card into a computer that never really came to pass.
+
+826
+00:45:24,971 --> 00:45:25,191
+Speaker 1: Yep.
+
+827
+00:45:25,331 --> 00:45:36,109
+Speaker 1: So we needed a new system to basically for people to have a thing right in, you know, in order to log in to be able to prove.
+
+828
+00:45:37,032 --> 00:45:41,150
+Speaker 0: Without connecting that thing to another thing that you have the thing.
+
+829
+00:45:41,910 --> 00:45:48,209
+Speaker 1: And that is because otherwise every single person's computer is going to and phone and everything is going to have to have like some of the new hardware on it.
+
+830
+00:45:48,731 --> 00:45:49,369
+Speaker 1: What a pain in the butt.
+
+831
+00:45:49,630 --> 00:45:49,750
+Speaker 0: Yep.
+
+832
+00:45:49,851 --> 00:45:56,610
+Speaker 0: And also that thing can't necessarily have a way to connect to anything on its own.
+
+833
+00:45:56,810 --> 00:46:02,670
+Speaker 0: Like if two factor authentication didn't work, if you didn't have cell signal, that fucking sucks and is not usable.
+
+834
+00:46:03,853 --> 00:46:06,989
+Speaker 0: It has to be able to work entirely independently of any other things.
+
+835
+00:46:07,870 --> 00:46:08,371
+Speaker 1: Right, exactly.
+
+836
+00:46:08,411 --> 00:46:18,450
+Speaker 1: So the system that we've come up with, you'll know it because you'll see it whenever you use Google Authenticator or Microsoft Authenticator or Battle.net Authenticator or Steam Guard or any of those.
+
+837
+00:46:18,890 --> 00:46:24,330
+Speaker 1: They're all look a little bit different in terms of the size of the codes, but they all work fundamentally the same way.
+
+838
+00:46:24,912 --> 00:46:27,890
+Speaker 1: It's basically a time based one time pad.
+
+839
+00:46:28,970 --> 00:46:34,230
+Speaker 0: There's a whole Wikipedia article you can read that will link to increasingly advanced algorithms for how this works.
+
+840
+00:46:35,070 --> 00:46:40,250
+Speaker 1: Yes, there are increasingly advanced algorithms are going to simplify it a great deal to the point at which it's probably wrong.
+
+841
+00:46:40,351 --> 00:46:42,770
+Speaker 1: But the fundamentals are good enough for your understanding.
+
+842
+00:46:42,890 --> 00:46:45,269
+Speaker 0: I'm glad you put that disclaimer out because I was going to otherwise.
+
+843
+00:46:46,250 --> 00:46:47,829
+Speaker 0: And you probably know the details better than I do.
+
+844
+00:46:48,210 --> 00:46:48,672
+Speaker 0: You have.
+
+845
+00:46:48,692 --> 00:46:48,933
+Speaker 1: Right.
+
+846
+00:46:49,014 --> 00:46:52,389
+Speaker 1: So what you do is the thing is some sort of secret key.
+
+847
+00:46:52,990 --> 00:46:53,413
+Speaker 1: Right.
+
+848
+00:46:53,434 --> 00:46:55,450
+Speaker 1: You know, we talked about public private keys in the past.
+
+849
+00:46:55,954 --> 00:46:57,909
+Speaker 1: So there's some secret key that you have.
+
+850
+00:46:59,130 --> 00:47:04,589
+Speaker 1: And what you do is you take that secret key and you take the time, the time of day.
+
+851
+00:47:05,030 --> 00:47:05,945
+Speaker 1: What time is it?
+
+852
+00:47:06,550 --> 00:47:06,692
+Speaker 1: Right.
+
+853
+00:47:07,178 --> 00:47:08,089
+Speaker 1: It's it's noon.
+
+854
+00:47:08,790 --> 00:47:17,330
+Speaker 1: And if you use that secret key at noon on March twenty ninth, twenty twenty one and you combine the two, it'll spit out a number.
+
+855
+00:47:18,012 --> 00:47:18,233
+Speaker 1: Right.
+
+856
+00:47:18,515 --> 00:47:21,029
+Speaker 1: If I try it again at noon tomorrow, it'll be a different number.
+
+857
+00:47:21,371 --> 00:47:21,472
+Speaker 1: Right.
+
+858
+00:47:21,492 --> 00:47:22,849
+Speaker 1: Time and date together combined.
+
+859
+00:47:23,031 --> 00:47:23,211
+Speaker 1: Right.
+
+860
+00:47:24,116 --> 00:47:27,230
+Speaker 1: And so basically you just keep combining your private key and the time.
+
+861
+00:47:27,812 --> 00:47:31,029
+Speaker 1: And whenever you do that, you'll be able to spit out this number.
+
+862
+00:47:31,492 --> 00:47:31,773
+Speaker 1: Yeah.
+
+863
+00:47:32,015 --> 00:47:34,650
+Speaker 0: So everyone who knows everyone and has the key.
+
+864
+00:47:34,850 --> 00:47:35,053
+Speaker 0: Everyone.
+
+865
+00:47:36,228 --> 00:47:36,410
+Speaker 1: Yeah.
+
+866
+00:47:36,591 --> 00:47:40,069
+Speaker 1: If you know what time everyone knows the time it is, but no one knows your secret key.
+
+867
+00:47:40,671 --> 00:47:40,932
+Speaker 1: Right.
+
+868
+00:47:41,353 --> 00:47:46,190
+Speaker 1: But if you combine the key and the time, you'll get the specific number.
+
+869
+00:47:47,152 --> 00:47:50,809
+Speaker 1: If you have the number, you can't figure out what the person's secret key is.
+
+870
+00:47:51,031 --> 00:47:52,470
+Speaker 1: You'll know that number.
+
+871
+00:47:52,870 --> 00:47:54,009
+Speaker 1: I stole that number from you.
+
+872
+00:47:54,190 --> 00:47:54,432
+Speaker 1: Great.
+
+873
+00:47:54,855 --> 00:47:57,130
+Speaker 1: But I can't generate more numbers.
+
+874
+00:47:57,370 --> 00:47:57,759
+Speaker 1: I won't.
+
+875
+00:47:57,820 --> 00:47:58,169
+Speaker 1: I knew it.
+
+876
+00:47:58,591 --> 00:48:00,910
+Speaker 1: I looked at Rover Rims up, you know, shoulder.
+
+877
+00:48:01,410 --> 00:48:01,512
+Speaker 1: Yeah.
+
+878
+00:48:01,533 --> 00:48:02,209
+Speaker 1: His Google off app.
+
+879
+00:48:02,330 --> 00:48:04,990
+Speaker 1: And I saw his number was one, two, three, four, five, six at noon.
+
+880
+00:48:05,591 --> 00:48:08,510
+Speaker 1: But later on, when I'm at home, I didn't steal Rims phone.
+
+881
+00:48:08,951 --> 00:48:09,133
+Speaker 0: Yep.
+
+882
+00:48:09,455 --> 00:48:11,270
+Speaker 1: I can't log into his phone even if I did.
+
+883
+00:48:11,571 --> 00:48:16,290
+Speaker 0: But thirty seconds later, a different number comes out of that calculation that Scott can't calculate.
+
+884
+00:48:16,670 --> 00:48:17,113
+Speaker 1: Exactly.
+
+885
+00:48:17,153 --> 00:48:20,070
+Speaker 1: So an hour when I get home, I try to log into Rims email.
+
+886
+00:48:20,474 --> 00:48:20,655
+Speaker 1: Right.
+
+887
+00:48:20,716 --> 00:48:22,190
+Speaker 1: Which I can actually do for other reasons.
+
+888
+00:48:23,710 --> 00:48:25,690
+Speaker 1: Regardless, I can't generate the number.
+
+889
+00:48:25,750 --> 00:48:27,210
+Speaker 1: That number is not the right number anymore.
+
+890
+00:48:27,612 --> 00:48:27,937
+Speaker 1: Right.
+
+891
+00:48:28,120 --> 00:48:28,689
+Speaker 1: I can't get in.
+
+892
+00:48:28,850 --> 00:48:34,690
+Speaker 1: I need to have that thing because the private key is in there and it won't spit out the private key itself.
+
+893
+00:48:35,430 --> 00:48:35,550
+Speaker 1: Right.
+
+894
+00:48:36,011 --> 00:48:43,730
+Speaker 1: So unless I can like have a camera on Rims phone while and see what it says while I'm logging in, which is really difficult.
+
+895
+00:48:45,053 --> 00:48:45,826
+Speaker 1: That's good enough.
+
+896
+00:48:45,948 --> 00:48:46,090
+Speaker 1: Right.
+
+897
+00:48:46,150 --> 00:48:49,490
+Speaker 1: And now the person on the other end, the server, how does the server know the number is right?
+
+898
+00:48:49,973 --> 00:48:52,889
+Speaker 1: The server has the other half of the public private key.
+
+899
+00:48:53,390 --> 00:48:53,491
+Speaker 0: Yep.
+
+900
+00:48:53,511 --> 00:48:57,270
+Speaker 0: The server can calculate those same numbers to know if the number you're sending is the right one.
+
+901
+00:48:57,430 --> 00:48:58,154
+Speaker 1: It doesn't count.
+
+902
+00:48:58,174 --> 00:49:00,730
+Speaker 1: The server doesn't calculate the same number.
+
+903
+00:49:01,390 --> 00:49:01,491
+Speaker 1: Right.
+
+904
+00:49:01,511 --> 00:49:04,250
+Speaker 1: I guess it could, because like when you get the QR code on the screen.
+
+905
+00:49:04,470 --> 00:49:05,574
+Speaker 0: I guess a simplified explanation would be.
+
+906
+00:49:05,855 --> 00:49:10,390
+Speaker 0: the computer also like knows what number to expect because it can calculate what number to expect.
+
+907
+00:49:10,690 --> 00:49:10,953
+Speaker 1: Right.
+
+908
+00:49:10,974 --> 00:49:12,270
+Speaker 1: I guess you could do it both ways.
+
+909
+00:49:12,370 --> 00:49:15,679
+Speaker 1: I'm not sure which way they do it, but usually it's like that QR code.
+
+910
+00:49:15,699 --> 00:49:20,437
+Speaker 1: when you're using these apps, you'll take a photo of a QR code to add the private key into your phone.
+
+911
+00:49:20,860 --> 00:49:22,309
+Speaker 1: That QR code is the private key.
+
+912
+00:49:22,670 --> 00:49:25,090
+Speaker 1: So if someone else can see that QR code, they've got you.
+
+913
+00:49:25,230 --> 00:49:26,109
+Speaker 1: You've got to make a new one.
+
+914
+00:49:26,473 --> 00:49:26,900
+Speaker 0: Yeah.
+
+915
+00:49:26,941 --> 00:49:27,389
+Speaker 0: Point of order.
+
+916
+00:49:27,550 --> 00:49:30,710
+Speaker 0: Don't like set up two factor like sitting in an airport.
+
+917
+00:49:31,692 --> 00:49:31,894
+Speaker 1: Yeah.
+
+918
+00:49:32,015 --> 00:49:33,490
+Speaker 1: Or when some of this camera's around.
+
+919
+00:49:33,570 --> 00:49:33,711
+Speaker 1: Right.
+
+920
+00:49:33,752 --> 00:49:35,910
+Speaker 1: You got to make sure that you're the only one who sees that QR code.
+
+921
+00:49:36,070 --> 00:49:38,830
+Speaker 1: Now, the server side generated that QR code.
+
+922
+00:49:39,211 --> 00:49:45,390
+Speaker 1: So I guess they could just store your private key and generate numbers and then match the numbers against each other.
+
+923
+00:49:45,891 --> 00:49:51,310
+Speaker 1: But then if someone accessed the server somehow, now they would have everyone's keys, which isn't great.
+
+924
+00:49:51,691 --> 00:49:57,350
+Speaker 1: What you would want to do on the server side is you would want to save the public private key.
+
+925
+00:49:57,590 --> 00:49:57,690
+Speaker 1: Right.
+
+926
+00:49:57,710 --> 00:50:03,710
+Speaker 1: You don't like a pair discard, you know, the other half that you the private part on the server side.
+
+927
+00:50:04,230 --> 00:50:14,010
+Speaker 1: And then you now on the server, you don't have the user's keys, but you can verify due to, you know, the way digital crypto signing work.
+
+928
+00:50:14,030 --> 00:50:16,247
+Speaker 0: There's an old episode where we talked about that.
+
+929
+00:50:17,011 --> 00:50:17,133
+Speaker 1: Yeah.
+
+930
+00:50:17,194 --> 00:50:18,229
+Speaker 1: You can verify that.
+
+931
+00:50:18,451 --> 00:50:18,873
+Speaker 1: Ah, yes.
+
+932
+00:50:19,335 --> 00:50:22,529
+Speaker 1: That whoever made that number definitely has that key.
+
+933
+00:50:22,891 --> 00:50:25,370
+Speaker 1: But I don't have the original key, but I can still tell.
+
+934
+00:50:25,471 --> 00:50:25,592
+Speaker 1: Right.
+
+935
+00:50:25,632 --> 00:50:27,149
+Speaker 1: The same way that there's like a key and a lock.
+
+936
+00:50:27,250 --> 00:50:29,090
+Speaker 1: You just only have the lock on your side.
+
+937
+00:50:29,612 --> 00:50:29,793
+Speaker 1: Right.
+
+938
+00:50:29,813 --> 00:50:32,750
+Speaker 1: And as long as no one impressions the lock, which you do because math.
+
+939
+00:50:33,131 --> 00:50:39,650
+Speaker 0: Now, the other part of this, that by itself would only be one factor because if someone stole the thing they're in.
+
+940
+00:50:40,652 --> 00:50:40,874
+Speaker 1: Yes.
+
+941
+00:50:40,914 --> 00:50:42,670
+Speaker 1: Someone steals your phone and it's unlocked.
+
+942
+00:50:42,811 --> 00:50:43,177
+Speaker 1: Guess what?
+
+943
+00:50:43,198 --> 00:50:43,889
+Speaker 1: They've got the numbers.
+
+944
+00:50:44,431 --> 00:50:48,276
+Speaker 0: So the reality is the two factors are everything we've described.
+
+945
+00:50:48,796 --> 00:50:59,470
+Speaker 0: and that thing, you know, the password, because the odds of someone being able to get both and exploit that access to both of them quickly enough are vanishingly low.
+
+946
+00:51:00,450 --> 00:51:00,550
+Speaker 1: Right.
+
+947
+00:51:00,571 --> 00:51:04,990
+Speaker 1: It's like the odds of someone stealing your key chain that has a thing on it, like a YubiKey.
+
+948
+00:51:05,271 --> 00:51:05,614
+Speaker 1: Right.
+
+949
+00:51:05,674 --> 00:51:07,590
+Speaker 1: It's like not that low, actually.
+
+950
+00:51:07,710 --> 00:51:08,254
+Speaker 1: That could happen.
+
+951
+00:51:08,355 --> 00:51:10,430
+Speaker 0: But it's useless if they don't also know my passwords.
+
+952
+00:51:10,430 --> 00:51:10,590
+Speaker 0: Right.
+
+953
+00:51:11,152 --> 00:51:18,470
+Speaker 1: Someone guessing your password, you know, assuming you're following the best password practices, hopefully low, but not impossible.
+
+954
+00:51:19,352 --> 00:51:22,650
+Speaker 1: You know, especially if there's like a password leak somewhere that happens a lot.
+
+955
+00:51:22,971 --> 00:51:24,289
+Speaker 0: Now, this is where it gets a little tricky.
+
+956
+00:51:24,750 --> 00:51:30,110
+Speaker 1: There's someone getting your password from a password leak and stealing your key chain and it being the same person.
+
+957
+00:51:30,271 --> 00:51:30,412
+Speaker 1: Yeah.
+
+958
+00:51:30,432 --> 00:51:32,110
+Speaker 1: It's like, come on, that ain't happening.
+
+959
+00:51:32,250 --> 00:51:32,717
+Speaker 1: You're safe.
+
+960
+00:51:32,920 --> 00:51:33,408
+Speaker 1: Pretty safe.
+
+961
+00:51:33,857 --> 00:51:34,163
+Speaker 0: Not 100 percent.
+
+962
+00:51:34,610 --> 00:51:44,830
+Speaker 0: But this is where it gets a little tricky because there are theoretically two fundamental ways to make it multi-factor, as in you have to have both the password, the thing you know, and the object, the key, the thing you have.
+
+963
+00:51:45,470 --> 00:51:52,150
+Speaker 0: One way would be to make the password also be a component of the algorithm that generates the number.
+
+964
+00:51:53,810 --> 00:52:03,610
+Speaker 0: Another way to do it, which is much more common, is the thing you're logging into checks that the password is valid like normal, then it checks to see if you have the token.
+
+965
+00:52:04,550 --> 00:52:11,750
+Speaker 0: But they're not actually like cryptographically tied to one another for a lot of reasons, because people change their key password frequently.
+
+966
+00:52:11,830 --> 00:52:17,310
+Speaker 0: A lot of people, you should change your passwords every now and then, but you don't want to change your private keys all the time.
+
+967
+00:52:17,431 --> 00:52:19,270
+Speaker 0: You don't change those unless they get compromised.
+
+968
+00:52:20,953 --> 00:52:26,410
+Speaker 1: Now, there are other algorithms and methods you can use besides just the simple time-based one, right?
+
+969
+00:52:26,550 --> 00:52:36,710
+Speaker 1: So, for example, the YubiKey I mentioned, the YubiKey, which we've talked about in the way past, is basically it actually can work with the TOTP system, but it can work with other systems.
+
+970
+00:52:36,750 --> 00:52:51,830
+Speaker 1: Basically, you plug it into a device or you put it near a device, either NFC or USB, and it has its own keys and it can spit out, right, by pretending to be a USB keyboard or just being an NFC device.
+
+971
+00:52:52,390 --> 00:52:57,430
+Speaker 1: It could just spit out the numbers directly into the computer or whatever, your phone or whatever you're trying to use.
+
+972
+00:52:57,430 --> 00:53:02,148
+Speaker 0: If I want to log into some things, I type in a password, I stick my USB key in, I hit the button, it logs me in.
+
+973
+00:53:03,131 --> 00:53:10,030
+Speaker 1: Yep, you know, sometimes it's like I log into something, I just hold my phone near my YubiKey and it's good to go.
+
+974
+00:53:10,430 --> 00:53:14,807
+Speaker 0: And you know, I work in my whole career, I've worked in like high security environments, so I've had like other stuff.
+
+975
+00:53:16,010 --> 00:53:23,010
+Speaker 0: One of the things I have now is a token that has biometric also in it, a third factor.
+
+976
+00:53:23,391 --> 00:53:32,770
+Speaker 0: But again, biometrics very rarely, as far as I'm aware, include any of the biometric data as part of generating that number or that hash or whatever it is it's generating.
+
+977
+00:53:33,350 --> 00:53:42,250
+Speaker 0: They are also just a gate, like the token won't display the code unless it sees a valid fingerprint, then the code is validated through this other mechanism.
+
+978
+00:53:42,450 --> 00:53:44,190
+Speaker 1: Like usually it just makes life a little bit harder.
+
+979
+00:53:44,570 --> 00:53:46,310
+Speaker 0: Yeah, it does make life a little bit harder.
+
+980
+00:53:46,751 --> 00:53:55,410
+Speaker 0: Some systems do things like show a QR code on the screen right when you're going to log in and you hold your phone up to it and scan that QR code.
+
+981
+00:53:55,950 --> 00:54:04,290
+Speaker 0: Your device then uses that QR code, the time, whatever other factors it needs to use to generate the key to then type back into the screen you're looking at.
+
+982
+00:54:06,052 --> 00:54:07,609
+Speaker 0: That's a relatively common one.
+
+983
+00:54:08,250 --> 00:54:14,050
+Speaker 1: So there are some slight weaknesses in the TOTP system, but not any that make it really insecure.
+
+984
+00:54:14,211 --> 00:54:16,530
+Speaker 1: They don't matter that much, but you should be aware of them.
+
+985
+00:54:16,690 --> 00:54:23,249
+Speaker 1: So for example, you know, you open up your phone and it gives you like 30 seconds or whatever to look at the number before you type it in.
+
+986
+00:54:23,790 --> 00:54:27,250
+Speaker 1: Sometimes you don't type it in fast enough and you have to type in the next number, it sucks.
+
+987
+00:54:27,730 --> 00:54:35,250
+Speaker 0: If someone gets too many of those numbers, every number they get theoretically decreases the time it would take to figure out your real key.
+
+988
+00:54:36,470 --> 00:54:37,729
+Speaker 1: Yeah, depending on stuff.
+
+989
+00:54:38,291 --> 00:54:39,549
+Speaker 1: We talked about news in the past.
+
+990
+00:54:39,790 --> 00:54:42,010
+Speaker 1: But by a tiny amount.
+
+991
+00:54:43,510 --> 00:54:51,870
+Speaker 1: The systems though, it's like they have to sort of be like, listen, you know, they could just generate different numbers every one second, every millisecond if you wanted to.
+
+992
+00:54:52,190 --> 00:54:54,450
+Speaker 1: But no, they give you like a 30 second window.
+
+993
+00:54:54,882 --> 00:54:55,050
+Speaker 1: Right.
+
+994
+00:54:55,110 --> 00:54:58,049
+Speaker 1: Just because humans need time to look at the number and type it in.
+
+995
+00:54:58,471 --> 00:55:03,710
+Speaker 1: And usually without saying so, they'll usually give you like a like a buffered zones.
+
+996
+00:55:03,851 --> 00:55:08,870
+Speaker 1: Like if you type it in and press enter at like the 31st or 32nd, you know, like you're a little bit late.
+
+997
+00:55:09,334 --> 00:55:10,189
+Speaker 1: It'll usually work.
+
+998
+00:55:10,451 --> 00:55:12,709
+Speaker 0: It's an old code, sir, but it checks out.
+
+999
+00:55:13,970 --> 00:55:28,530
+Speaker 1: There'll be a tiny window where like the the previous code and the next code will both work during this very brief time in between to account for people typing in codes too fast or too slow just because to make it nice for humans.
+
+1000
+00:55:28,811 --> 00:55:32,490
+Speaker 1: And it's not a significant vulnerability, really.
+
+1001
+00:55:32,851 --> 00:55:34,190
+Speaker 0: But it is what it opens you up.
+
+1002
+00:55:34,490 --> 00:55:35,450
+Speaker 1: You were really going to be strict.
+
+1003
+00:55:35,570 --> 00:55:36,328
+Speaker 1: You wouldn't have that.
+
+1004
+00:55:36,470 --> 00:55:42,241
+Speaker 0: That window, really, what it opens you up to are operational security attacks.
+
+1005
+00:55:42,541 --> 00:55:47,450
+Speaker 0: where someone will have a fake website, let's say you try to log into it thinking it's the real website.
+
+1006
+00:55:47,835 --> 00:55:49,110
+Speaker 0: You just gave them your password.
+
+1007
+00:55:49,314 --> 00:55:50,270
+Speaker 0: So you're fucked there.
+
+1008
+00:55:50,810 --> 00:56:02,950
+Speaker 0: But then they will try to log into the real site on your behalf and then they will reach out to you either in that same website to get you to type in the code from your two factor device.
+
+1009
+00:56:03,153 --> 00:56:03,445
+Speaker 0: Exactly.
+
+1010
+00:56:03,850 --> 00:56:04,390
+Speaker 0: Giving them everything.
+
+1011
+00:56:04,791 --> 00:56:11,662
+Speaker 1: If you accidentally go to goggle.com, right, you type in your username and password, it looks exactly like google.com.
+
+1012
+00:56:12,063 --> 00:56:16,470
+Speaker 1: and then a thing pops up and is like, type in your code, you type in your code from your phone.
+
+1013
+00:56:16,670 --> 00:56:18,229
+Speaker 1: It's like, well, they didn't get your private key.
+
+1014
+00:56:18,733 --> 00:56:20,670
+Speaker 1: They can't generate codes anymore.
+
+1015
+00:56:21,262 --> 00:56:21,430
+Speaker 1: Right.
+
+1016
+00:56:21,530 --> 00:56:23,233
+Speaker 1: But but they were.
+
+1017
+00:56:23,414 --> 00:56:31,230
+Speaker 1: if they act fast enough, right, with the code you just gave them because there's a 30 second window, they just logged in as you and they can now change.
+
+1018
+00:56:31,371 --> 00:56:34,170
+Speaker 1: They can try to change a password, maybe depending if it lets them.
+
+1019
+00:56:34,930 --> 00:56:44,150
+Speaker 0: The other times the other main operational attack on that specific that like that angle is along the lines of using the recovery mechanisms for if you lost your key.
+
+1020
+00:56:44,870 --> 00:56:47,770
+Speaker 1: Because again, so we have to talk about the recovery mechanism.
+
+1021
+00:56:47,990 --> 00:56:48,104
+Speaker 1: Right.
+
+1022
+00:56:48,150 --> 00:56:52,770
+Speaker 1: So basically it's like, what if I legitimately my phone explodes?
+
+1023
+00:56:53,160 --> 00:56:53,348
+Speaker 1: Right.
+
+1024
+00:56:53,491 --> 00:56:54,729
+Speaker 1: I was using the app on my phone.
+
+1025
+00:56:54,930 --> 00:56:56,329
+Speaker 1: All my private keys were in the phone.
+
+1026
+00:56:56,514 --> 00:56:57,049
+Speaker 1: I was smart.
+
+1027
+00:56:57,151 --> 00:56:59,089
+Speaker 1: I didn't put the private keys anywhere else.
+
+1028
+00:56:59,355 --> 00:56:59,669
+Speaker 1: Right.
+
+1029
+00:56:59,951 --> 00:57:05,450
+Speaker 1: Which would be unsafe because that means that someone else could like, you know, if I haven't been my phone, that's on my person.
+
+1030
+00:57:05,850 --> 00:57:09,770
+Speaker 0: If you get into my net, there's actually an encrypted file that has those keys on it.
+
+1031
+00:57:09,910 --> 00:57:11,370
+Speaker 0: And if you decrypt, that's not a bad place.
+
+1032
+00:57:11,531 --> 00:57:12,129
+Speaker 1: Yeah, that's fine.
+
+1033
+00:57:12,330 --> 00:57:12,430
+Speaker 1: Yeah.
+
+1034
+00:57:12,470 --> 00:57:17,059
+Speaker 0: The odds of if someone breaks into my house, like already, I'm way beyond.
+
+1035
+00:57:17,079 --> 00:57:22,230
+Speaker 1: the point is if you if you had like, you know, several phones that had it on there, it's like every phone.
+
+1036
+00:57:22,350 --> 00:57:25,029
+Speaker 1: It's like, you know, you wouldn't notice if your fifth phone was stolen.
+
+1037
+00:57:25,215 --> 00:57:25,470
+Speaker 1: Yeah.
+
+1038
+00:57:25,670 --> 00:57:28,710
+Speaker 1: That if you put the same codes in all of them, that could be a danger.
+
+1039
+00:57:28,879 --> 00:57:29,070
+Speaker 1: Right.
+
+1040
+00:57:29,070 --> 00:57:30,735
+Speaker 1: Because then they could just they don't even need to.
+
+1041
+00:57:30,755 --> 00:57:35,330
+Speaker 1: if they don't change your password or do anything, they could keep like logging in and reading your emails forever.
+
+1042
+00:57:36,250 --> 00:57:36,688
+Speaker 1: You wouldn't notice.
+
+1043
+00:57:37,030 --> 00:57:37,170
+Speaker 1: Yeah.
+
+1044
+00:57:37,571 --> 00:57:41,550
+Speaker 1: But you could let's say you have it on your one phone and your phone actually breaks.
+
+1045
+00:57:41,830 --> 00:57:43,410
+Speaker 1: That happened to me one time I was on my bike.
+
+1046
+00:57:43,490 --> 00:57:46,309
+Speaker 1: I fell on the phone broke because even those in my bag.
+
+1047
+00:57:47,095 --> 00:57:47,770
+Speaker 1: What do you do now?
+
+1048
+00:57:47,850 --> 00:57:50,667
+Speaker 1: You can't log in anything even though you're definitely you.
+
+1049
+00:57:51,411 --> 00:57:53,234
+Speaker 0: Now, most why just generate?
+
+1050
+00:57:53,374 --> 00:58:02,430
+Speaker 0: they let you generate like 10 or five keys that will always work no matter what time it is, but they'll only work for your account and they'll only work once each.
+
+1051
+00:58:03,204 --> 00:58:03,309
+Speaker 1: Yep.
+
+1052
+00:58:03,370 --> 00:58:05,109
+Speaker 1: So you get this piece of paper that you print out.
+
+1053
+00:58:05,331 --> 00:58:07,410
+Speaker 1: Usually I recommend printing an actual piece of paper.
+
+1054
+00:58:07,510 --> 00:58:17,430
+Speaker 1: It has all these codes on it and it's like, all right, well, if I somehow lose my phone, I have 20 chances or whatever to log into Google with one of these codes.
+
+1055
+00:58:17,612 --> 00:58:19,090
+Speaker 1: If I use a code, that's it.
+
+1056
+00:58:19,210 --> 00:58:19,989
+Speaker 1: That code is gone.
+
+1057
+00:58:20,660 --> 00:58:20,890
+Speaker 1: Right.
+
+1058
+00:58:21,071 --> 00:58:25,248
+Speaker 1: Which means I have to get a new phone and set it up within 20 logins.
+
+1059
+00:58:26,351 --> 00:58:30,530
+Speaker 0: One time I had a two factor thing fail me while I was in Turkey for an extended business trip.
+
+1060
+00:58:31,491 --> 00:58:37,030
+Speaker 0: So I basically used my codes one by one to get into a system over the course of a week.
+
+1061
+00:58:37,451 --> 00:58:38,550
+Speaker 0: And then I reset everything.
+
+1062
+00:58:38,610 --> 00:58:41,050
+Speaker 0: When I got back home and got a new phone, it works.
+
+1063
+00:58:41,331 --> 00:58:41,868
+Speaker 0: Yeah, it did work.
+
+1064
+00:58:41,990 --> 00:58:43,990
+Speaker 0: But I was like rationing those codes.
+
+1065
+00:58:44,050 --> 00:58:45,350
+Speaker 0: Like, do I really need to log in now?
+
+1066
+00:58:45,390 --> 00:58:48,509
+Speaker 0: Or can it wait till I get back to the hotel where I already trusted this device?
+
+1067
+00:58:49,259 --> 00:58:49,450
+Speaker 1: Yeah.
+
+1068
+00:58:49,590 --> 00:58:56,781
+Speaker 1: But yeah, the emergency backup codes are, you should definitely, if you haven't gotten the emergency backup codes for every single.
+
+1069
+00:58:56,981 --> 00:59:03,070
+Speaker 1: look at your app in your phone, your Google authenticator app, whatever authenticator app you have, you know, look at all the apps listed there.
+
+1070
+00:59:03,871 --> 00:59:07,050
+Speaker 1: Make sure you have backup codes for every single one of those.
+
+1071
+00:59:07,170 --> 00:59:13,430
+Speaker 1: Because if you don't write, for example, discord, I had a discord account way back in the day.
+
+1072
+00:59:14,011 --> 00:59:20,390
+Speaker 1: And I law, I not only lost the, uh, the thing in my phone, but I never had backup codes.
+
+1073
+00:59:20,770 --> 00:59:21,950
+Speaker 1: I can't log into that account.
+
+1074
+00:59:22,070 --> 00:59:25,670
+Speaker 1: I can only log into my newer second discord account.
+
+1075
+00:59:25,850 --> 00:59:29,470
+Speaker 1: And if the site is doing nothing important on that account, so it doesn't matter.
+
+1076
+00:59:29,590 --> 00:59:35,650
+Speaker 0: But, you know, if a site or service is doing like what I would consider good proper security, there is literally no way to get that account back.
+
+1077
+00:59:35,970 --> 00:59:41,510
+Speaker 1: There should, if it's properly done, there should be no backup mechanism beyond the backup codes.
+
+1078
+00:59:42,133 --> 00:59:44,490
+Speaker 0: And I'll turn one exception to that.
+
+1079
+00:59:44,590 --> 00:59:49,270
+Speaker 0: I would say is certain things where there is a like physical security component.
+
+1080
+00:59:49,450 --> 01:00:01,550
+Speaker 0: Like for example, a bank, I go to my bank physically with my passport and be like, I am actually rim and I need to reset the crypto on my account or be a con artist with disguises and a fake passport.
+
+1081
+01:00:01,850 --> 01:00:01,925
+Speaker 0: Yup.
+
+1082
+01:00:02,070 --> 01:00:05,829
+Speaker 0: But ideally the barrier to entry, cause there I have to prove that I'm me.
+
+1083
+01:00:06,311 --> 01:00:11,027
+Speaker 0: If someone is able to prove to a banks, uh, which this can happen, like some bank branch.
+
+1084
+01:00:12,950 --> 01:00:13,747
+Speaker 1: Cash me if you can.
+
+1085
+01:00:14,450 --> 01:00:14,546
+Speaker 0: Yup.
+
+1086
+01:00:14,631 --> 01:00:15,629
+Speaker 0: Like that could happen.
+
+1087
+01:00:15,970 --> 01:00:24,250
+Speaker 0: That's why this is a, there's always the battle between better security makes things a pain in the ass for normal people, but it's better security.
+
+1088
+01:00:24,470 --> 01:00:27,589
+Speaker 0: You have to figure out where that line should be for yourself and for your things.
+
+1089
+01:00:28,150 --> 01:00:33,770
+Speaker 1: More realistically, like I'm at work and somehow my phone explodes, but I need to log into my work shit.
+
+1090
+01:00:34,812 --> 01:00:36,930
+Speaker 1: So I go to the it guy at work.
+
+1091
+01:00:37,093 --> 01:00:37,809
+Speaker 1: He sees me.
+
+1092
+01:00:37,930 --> 01:00:38,769
+Speaker 1: He knows who I am.
+
+1093
+01:00:39,032 --> 01:00:39,650
+Speaker 1: Just like, okay.
+
+1094
+01:00:39,731 --> 01:00:41,628
+Speaker 1: He logs in as admin and fixes it.
+
+1095
+01:00:41,930 --> 01:00:42,265
+Speaker 1: The end.
+
+1096
+01:00:42,870 --> 01:00:48,530
+Speaker 0: I can do something similar at my job, but there were some secure systems where short of coming physically into an office.
+
+1097
+01:00:49,372 --> 01:00:51,789
+Speaker 0: Uh, when I worked at a broker, there was literally no way.
+
+1098
+01:00:52,351 --> 01:00:56,049
+Speaker 1: If you, if you lose, if you lose the backup codes, you should have to go to the office.
+
+1099
+01:00:56,231 --> 01:00:57,970
+Speaker 0: It went like you would have to physically go to the office.
+
+1100
+01:00:58,030 --> 01:01:02,370
+Speaker 0: And if you're on a business trip or you're going to be in a lot of trouble when you get back, you fucked it up.
+
+1101
+01:01:03,163 --> 01:01:03,290
+Speaker 1: Yeah.
+
+1102
+01:01:03,411 --> 01:01:05,230
+Speaker 1: But that's, I think that's the correct way to do it.
+
+1103
+01:01:05,390 --> 01:01:09,670
+Speaker 0: The backup mechanisms that are not that piece of paper are very common.
+
+1104
+01:01:10,051 --> 01:01:12,250
+Speaker 0: Oftentimes people will say, Oh yeah, give us your phone numbers.
+
+1105
+01:01:12,472 --> 01:01:13,330
+Speaker 0: So there's an SMS backup.
+
+1106
+01:01:13,913 --> 01:01:14,579
+Speaker 0: If there is any.
+
+1107
+01:01:16,290 --> 01:01:19,030
+Speaker 0: Automated way to get around the two factor.
+
+1108
+01:01:19,352 --> 01:01:20,770
+Speaker 0: You don't actually have to factor anymore.
+
+1109
+01:01:21,032 --> 01:01:23,230
+Speaker 0: And SMS is not two factor.
+
+1110
+01:01:23,370 --> 01:01:27,410
+Speaker 0: It is so trivial to exploit SMS two factor.
+
+1111
+01:01:27,530 --> 01:01:36,090
+Speaker 0: Like I, it, it, it, if, if SMS exists to be used in any capacity to log into something, that thing is completely insecure in my opinion.
+
+1112
+01:01:37,010 --> 01:01:42,310
+Speaker 0: So even my fucking bank will like SMS me a code and there's no way around that chase.
+
+1113
+01:01:42,530 --> 01:01:42,947
+Speaker 0: I'm talking to you.
+
+1114
+01:01:43,671 --> 01:01:44,770
+Speaker 1: We've talked about this before.
+
+1115
+01:01:44,870 --> 01:01:46,070
+Speaker 1: It bears repeating, right?
+
+1116
+01:01:46,370 --> 01:01:46,628
+Speaker 0: Also bam.
+
+1117
+01:01:47,787 --> 01:01:47,870
+Speaker 1: Yeah.
+
+1118
+01:01:48,190 --> 01:01:58,310
+Speaker 1: It is easy, trivially, scarily easy to convince cell phone providers to move a phone number from one SIM card to another.
+
+1119
+01:01:58,610 --> 01:02:06,550
+Speaker 1: So someone, you know, I have a Verizon, I have enabled like a pin number and I get higher security and extra locking on my account.
+
+1120
+01:02:07,250 --> 01:02:11,930
+Speaker 1: Theoretically, somebody would have a hard time getting my number transferred to their SIM card.
+
+1121
+01:02:12,753 --> 01:02:14,270
+Speaker 1: This is not enabled by default.
+
+1122
+01:02:14,818 --> 01:02:15,570
+Speaker 1: It's not good enough.
+
+1123
+01:02:15,711 --> 01:02:17,789
+Speaker 1: Even if it is enabled, you can get around it.
+
+1124
+01:02:17,991 --> 01:02:20,750
+Speaker 0: I read a lot about those kinds of exploits, right?
+
+1125
+01:02:21,571 --> 01:02:27,690
+Speaker 1: If someone's sweet talks, Verizon on the phone gets the right operator, they will just move your phone number to someone else's phone.
+
+1126
+01:02:28,031 --> 01:02:34,290
+Speaker 1: And now they get the text message with the secret number in it and they're not you, but, and if they have your password, guess what?
+
+1127
+01:02:34,350 --> 01:02:37,590
+Speaker 1: They're logging in as you now without even having to steal your phone or anything.
+
+1128
+01:02:37,690 --> 01:02:51,490
+Speaker 1: So if the backup to your action, if you have two factor authentication set up with TOTP and like the Google auth app or whatever, and there's a backup mechanism that's not the piece of paper with numbers on it, it's the backup mechanism is text messages.
+
+1129
+01:02:51,630 --> 01:02:52,024
+Speaker 1: Well, guess what?
+
+1130
+01:02:52,750 --> 01:02:53,493
+Speaker 1: You're that's all.
+
+1131
+01:02:53,534 --> 01:02:57,430
+Speaker 1: that might as well be your main mechanism because any attacker can just use that.
+
+1132
+01:02:57,770 --> 01:03:03,650
+Speaker 0: So for a lot of things, my backup mechanism mechanism is a second YubiKey that I have that is stored somewhere secure.
+
+1133
+01:03:04,452 --> 01:03:05,990
+Speaker 1: I have, I have two YubiKeys.
+
+1134
+01:03:06,713 --> 01:03:07,347
+Speaker 0: I also have two.
+
+1135
+01:03:08,190 --> 01:03:09,188
+Speaker 1: And I basically what I did.
+
+1136
+01:03:09,990 --> 01:03:14,110
+Speaker 1: So originally the problem was, is that, okay, I got a phone, right?
+
+1137
+01:03:14,250 --> 01:03:18,570
+Speaker 1: I put all the codes into the app that I buy and then I get a new phone.
+
+1138
+01:03:18,950 --> 01:03:21,510
+Speaker 1: There is usually no way to transfer.
+
+1139
+01:03:21,710 --> 01:03:24,470
+Speaker 1: I think they've added it over time to Google Authenticator.
+
+1140
+01:03:24,630 --> 01:03:26,283
+Speaker 0: Not that I use it anymore, but I'm not a fan.
+
+1141
+01:03:27,290 --> 01:03:32,030
+Speaker 1: I'm not a fan of that because it means somebody who accesses it can now transfer to their phone, right?
+
+1142
+01:03:32,491 --> 01:03:33,410
+Speaker 1: Theoretically, I guess.
+
+1143
+01:03:34,792 --> 01:03:36,330
+Speaker 1: So I don't like that what I want.
+
+1144
+01:03:36,470 --> 01:03:39,509
+Speaker 1: Those keys should not be transferable out of wherever they are.
+
+1145
+01:03:40,492 --> 01:03:40,833
+Speaker 1: Right.
+
+1146
+01:03:40,853 --> 01:03:45,570
+Speaker 1: So the problem was when you get a new phone, you have to redo everything.
+
+1147
+01:03:45,910 --> 01:03:48,710
+Speaker 0: So I'm going to tell you a secret, a hack that you can do.
+
+1148
+01:03:48,850 --> 01:03:49,231
+Speaker 0: That's easy.
+
+1149
+01:03:49,571 --> 01:03:56,766
+Speaker 0: If you have two phones, you can set up two factor use, even if the company you're setting it up with only supports one device.
+
+1150
+01:03:57,067 --> 01:03:58,750
+Speaker 0: and just take a picture of that QR code twice.
+
+1151
+01:03:59,473 --> 01:04:01,390
+Speaker 1: Yeah, take a picture of the QR code with each phone.
+
+1152
+01:04:01,450 --> 01:04:02,698
+Speaker 0: It'll totally work to.
+
+1153
+01:04:02,859 --> 01:04:04,390
+Speaker 1: now you've got two sets of keys.
+
+1154
+01:04:04,691 --> 01:04:04,932
+Speaker 1: Right.
+
+1155
+01:04:05,275 --> 01:04:07,650
+Speaker 1: Once you close that QR code out and you don't see it anymore.
+
+1156
+01:04:07,750 --> 01:04:08,011
+Speaker 1: That's it.
+
+1157
+01:04:08,051 --> 01:04:08,393
+Speaker 1: You're done.
+
+1158
+01:04:08,433 --> 01:04:12,110
+Speaker 1: You can't add you can't make more keys, but it's like making extra keys to your house.
+
+1159
+01:04:12,192 --> 01:04:12,314
+Speaker 1: Right.
+
+1160
+01:04:12,334 --> 01:04:13,049
+Speaker 1: In case you lose one.
+
+1161
+01:04:13,350 --> 01:04:15,550
+Speaker 1: So and Yubikey's right.
+
+1162
+01:04:15,690 --> 01:04:18,430
+Speaker 1: You can actually using a phone as like a go between.
+
+1163
+01:04:18,711 --> 01:04:20,109
+Speaker 1: So Yubikey added this.
+
+1164
+01:04:20,270 --> 01:04:22,590
+Speaker 1: I don't know when, but it works really well.
+
+1165
+01:04:22,670 --> 01:04:23,091
+Speaker 1: I tried it.
+
+1166
+01:04:23,833 --> 01:04:24,334
+Speaker 1: You what you.
+
+1167
+01:04:24,354 --> 01:04:31,290
+Speaker 1: the way it works is you take a picture of the QR code with your phone and then you wave your phone.
+
+1168
+01:04:31,390 --> 01:04:36,870
+Speaker 1: It near the Yubikey and it actually will put the private key into the Yubikey.
+
+1169
+01:04:37,130 --> 01:04:37,733
+Speaker 0: That's what I got.
+
+1170
+01:04:37,773 --> 01:04:40,969
+Speaker 0: So if so, I can use any phone to get my keys.
+
+1171
+01:04:41,810 --> 01:04:45,730
+Speaker 1: The Yubikey has enough storage space in it to hold a certain number of keys.
+
+1172
+01:04:45,830 --> 01:04:46,718
+Speaker 1: It can't hold infinity.
+
+1173
+01:04:46,981 --> 01:04:47,949
+Speaker 1: It's a tiny little guy.
+
+1174
+01:04:48,131 --> 01:04:48,313
+Speaker 1: Right.
+
+1175
+01:04:48,818 --> 01:04:49,910
+Speaker 1: But it can hold quite a few.
+
+1176
+01:04:50,050 --> 01:04:53,890
+Speaker 1: So all your most used, most important keys you can put into the Yubikey.
+
+1177
+01:04:54,130 --> 01:05:00,470
+Speaker 1: And if you get several Yubikeys, you can take a picture of the QR code and put it into several keys all at the start.
+
+1178
+01:05:00,814 --> 01:05:01,889
+Speaker 1: So you have backup Yubikeys.
+
+1179
+01:05:02,150 --> 01:05:09,010
+Speaker 1: And now that Yubikey, if someone gets your phone and they open the Yubikey app, they won't see any number.
+
+1180
+01:05:09,110 --> 01:05:10,608
+Speaker 0: It just says, please tap your Yubikey.
+
+1181
+01:05:11,210 --> 01:05:18,830
+Speaker 1: Yeah, you have to tap the Yubikey and then the phone will read the keys out of the Yubikey and generate one set of numbers.
+
+1182
+01:05:19,611 --> 01:05:24,950
+Speaker 1: And then once it's done with those numbers, the 30 seconds have passed, the numbers will be gone.
+
+1183
+01:05:25,150 --> 01:05:26,830
+Speaker 1: You have to tap the Yubikey again.
+
+1184
+01:05:26,950 --> 01:05:31,750
+Speaker 0: So like if Scott lost, like if Scott's phone blew up and we were at a PAX, I could hand him my phone.
+
+1185
+01:05:32,051 --> 01:05:34,289
+Speaker 0: He could swipe, just tap his Yubikey to it.
+
+1186
+01:05:34,592 --> 01:05:35,689
+Speaker 0: He could do whatever he needs to do.
+
+1187
+01:05:35,892 --> 01:05:36,910
+Speaker 0: And I don't get dick.
+
+1188
+01:05:37,131 --> 01:05:38,890
+Speaker 0: I don't get any way to exploit.
+
+1189
+01:05:38,990 --> 01:05:42,750
+Speaker 1: You can use, I can take my Yubikey and put it into my computer.
+
+1190
+01:05:43,032 --> 01:05:45,450
+Speaker 1: And there's an app on the computer that generates the numbers.
+
+1191
+01:05:45,570 --> 01:05:47,210
+Speaker 1: Now I don't need to have my phone near my computer.
+
+1192
+01:05:47,650 --> 01:05:48,330
+Speaker 1: That app is great.
+
+1193
+01:05:48,490 --> 01:05:52,530
+Speaker 1: I can just, I can just copy and paste from this little app that's running on my desktop.
+
+1194
+01:05:53,151 --> 01:06:03,190
+Speaker 1: And if there's any apps on my computer that happen to use the more secure non TOTP methods that Yubikey supports, I can just push the button on the Yubikey to activate those.
+
+1195
+01:06:04,592 --> 01:06:04,712
+Speaker 1: Right.
+
+1196
+01:06:04,913 --> 01:06:10,570
+Speaker 1: So it's really, you know, when I first got the Yubikey, because we got the first ones way back in the Beacon days.
+
+1197
+01:06:10,971 --> 01:06:11,903
+Speaker 0: Yeah, those were cool.
+
+1198
+01:06:13,530 --> 01:06:15,150
+Speaker 1: Those were just USB keyboards.
+
+1199
+01:06:15,412 --> 01:06:18,310
+Speaker 1: They only had one mode and not too many things supported them.
+
+1200
+01:06:18,430 --> 01:06:20,570
+Speaker 1: I was really only using them with like my WordPress blogs.
+
+1201
+01:06:21,051 --> 01:06:26,570
+Speaker 1: Which weren't high value targets, but WordPress is so insecure and it's so many vulnerabilities all the time.
+
+1202
+01:06:26,970 --> 01:06:31,150
+Speaker 1: I wanted to add that extra level on it just to save myself the hassle of it getting nailed.
+
+1203
+01:06:32,733 --> 01:06:35,270
+Speaker 1: But yeah, they became not very useful.
+
+1204
+01:06:35,410 --> 01:06:37,070
+Speaker 1: That original Yubikey isn't that useful.
+
+1205
+01:06:37,311 --> 01:06:39,090
+Speaker 1: And it once TOTP became a standard.
+
+1206
+01:06:39,572 --> 01:06:43,130
+Speaker 1: But now the new Yubikey support TOTP and a host of other things.
+
+1207
+01:06:43,470 --> 01:06:45,236
+Speaker 1: Yeah, I highly recommend them.
+
+1208
+01:06:46,420 --> 01:06:48,447
+Speaker 1: get to and put all, just do it once.
+
+1209
+01:06:49,310 --> 01:06:58,030
+Speaker 1: It'll take you a while, like maybe an hour or two, depending on the apps you have and sites you use, but just redo all your 2FA onto two Yubikeys.
+
+1210
+01:06:58,190 --> 01:07:07,650
+Speaker 1: Put one of them somewhere safe, put the other one on your keychain and like, you'll be so good and so happy when your phone, when you replace your phone, you won't have to do this ever again.
+
+1211
+01:07:08,010 --> 01:07:13,810
+Speaker 0: So Scott, what if someone copies my Yubikey and then tries to brute force?
+
+1212
+01:07:14,030 --> 01:07:15,229
+Speaker 1: How can they copy the Yubikey?
+
+1213
+01:07:16,656 --> 01:07:20,170
+Speaker 1: So the final Yubikey will not spit out the private keys.
+
+1214
+01:07:20,670 --> 01:07:21,454
+Speaker 0: So there is.
+
+1215
+01:07:21,555 --> 01:07:24,168
+Speaker 0: there is a sidechain attack on Yubikeys.
+
+1216
+01:07:25,032 --> 01:07:29,230
+Speaker 0: Oh, this is Bruce Schneier's blog has a really detailed breakdown of this.
+
+1217
+01:07:29,491 --> 01:07:30,987
+Speaker 0: This is from January of this year.
+
+1218
+01:07:31,952 --> 01:07:34,669
+Speaker 0: Oh, I was saving this one for this is a good news.
+
+1219
+01:07:35,591 --> 01:07:41,705
+Speaker 0: So it is demonstrably possible to exploit a vulnerability because remember that these.
+
+1220
+01:07:41,745 --> 01:07:43,670
+Speaker 0: Yubikey is like any security key like this.
+
+1221
+01:07:43,973 --> 01:07:45,390
+Speaker 0: It's not just a USB stick.
+
+1222
+01:07:45,711 --> 01:07:47,429
+Speaker 0: You can't just like read the data out of it.
+
+1223
+01:07:47,731 --> 01:07:51,269
+Speaker 0: These are chips that are designed to not let you fuck with them.
+
+1224
+01:07:52,471 --> 01:07:53,309
+Speaker 0: Like it is very Apple.
+
+1225
+01:07:53,510 --> 01:07:53,956
+Speaker 1: You're right.
+
+1226
+01:07:53,976 --> 01:07:54,950
+Speaker 1: Your iOS devices.
+
+1227
+01:07:55,150 --> 01:07:57,950
+Speaker 1: You know how Apple always brags about like their secure enclave?
+
+1228
+01:07:58,213 --> 01:07:58,517
+Speaker 1: Right.
+
+1229
+01:07:58,760 --> 01:07:59,570
+Speaker 1: Very similar.
+
+1230
+01:07:59,970 --> 01:08:00,092
+Speaker 1: Yeah.
+
+1231
+01:08:00,152 --> 01:08:01,510
+Speaker 1: Like very similar in concept.
+
+1232
+01:08:02,010 --> 01:08:07,170
+Speaker 0: So these chips, the reason they can only hold so many because you might be thinking, wait, these keys are just a QR code.
+
+1233
+01:08:07,210 --> 01:08:09,528
+Speaker 0: Why can you only fit like 20 of them on a Yubikey?
+
+1234
+01:08:09,811 --> 01:08:12,110
+Speaker 0: Because they're not stored in like a file system.
+
+1235
+01:08:12,493 --> 01:08:14,529
+Speaker 1: They're stored on a flash drive in there.
+
+1236
+01:08:14,751 --> 01:08:17,470
+Speaker 0: Yeah, they're stored in specialized hardware.
+
+1237
+01:08:18,109 --> 01:08:21,010
+Speaker 0: Then you could learning a lot about that hardware will give you a career.
+
+1238
+01:08:21,611 --> 01:08:28,470
+Speaker 0: However, here is the attack by observing the electromagnetic magnetic radiation in the chip.
+
+1239
+01:08:28,529 --> 01:08:40,270
+Speaker 0: If you get a hold of someone's Yubikey or any of these keys that use the A700X NXP chip, it takes about 10 hours of analysis and you've got the key effectively.
+
+1240
+01:08:40,712 --> 01:08:42,647
+Speaker 0: Twelve thousand dollars worth of equipment, 10 hours.
+
+1241
+01:08:43,569 --> 01:08:46,890
+Speaker 1: So if your key is missing for 10 hours, reset everything.
+
+1242
+01:08:47,229 --> 01:08:47,350
+Speaker 0: Yes.
+
+1243
+01:08:47,874 --> 01:08:50,810
+Speaker 0: So the interesting thing is you might think, how could that possibly happen?
+
+1244
+01:08:51,850 --> 01:08:54,770
+Speaker 0: What if you are a moderately high value target?
+
+1245
+01:08:54,870 --> 01:08:57,430
+Speaker 0: Like you're not going after a rim and Scott, you're not trying to get geek nights.
+
+1246
+01:08:57,590 --> 01:09:04,250
+Speaker 0: You're trying to get like someone a little bit higher up in the chain and that person who works at a bank, just some guy who works at a bank.
+
+1247
+01:09:04,350 --> 01:09:09,439
+Speaker 0: And let's say that person like me has the Yubikey on the key chain, but that person's rich and has a car.
+
+1248
+01:09:10,040 --> 01:09:15,990
+Speaker 0: that's fancy and they drive that car to a restaurant or hotel and hand their keys to a valet.
+
+1249
+01:09:17,951 --> 01:09:31,250
+Speaker 1: If that valet is set up to just take that, if that valet took those keys for maybe, I don't know, they're at a convention all weekend and the cars in the garage, all these keys, they do this analysis, they replace the keys.
+
+1250
+01:09:32,493 --> 01:09:34,470
+Speaker 0: There is a vulnerability there.
+
+1251
+01:09:35,149 --> 01:09:42,029
+Speaker 0: I don't think you need to worry about that vulnerability, but you need to understand that these kinds of things exist.
+
+1252
+01:09:42,210 --> 01:09:48,470
+Speaker 0: We did a show ancient times about like just levels of paranoia, like how paranoid should you be about your security?
+
+1253
+01:09:48,911 --> 01:10:00,810
+Speaker 0: I'm not saying you need to worry about this attack, but you should make sure that if you have a key of any kind, don't let it leave your like the spaces.
+
+1254
+01:10:00,951 --> 01:10:03,028
+Speaker 0: You control for long periods of time.
+
+1255
+01:10:04,170 --> 01:10:09,010
+Speaker 1: Yeah, I mean, a valet could just, you know, cars now have those more advanced little chips in the car keys.
+
+1256
+01:10:09,430 --> 01:10:14,090
+Speaker 0: Yeah, but they could take your, like, if I'd leave my car there, they could just copy the key and come back later and steal my car.
+
+1257
+01:10:14,290 --> 01:10:16,770
+Speaker 1: To copy just a physical key takes no time at all.
+
+1258
+01:10:17,090 --> 01:10:20,290
+Speaker 1: I mean, I would not be, there's definitely got to be somewhere in history where...
+
+1259
+01:10:20,350 --> 01:10:21,170
+Speaker 0: So it's even more moot.
+
+1260
+01:10:21,410 --> 01:10:27,950
+Speaker 0: I learned something fascinating about New York City garages, like any of them, because you leave your keys with them, right?
+
+1261
+01:10:27,990 --> 01:10:29,150
+Speaker 0: Because they move the cars around a lot.
+
+1262
+01:10:29,190 --> 01:10:31,110
+Speaker 0: Like they don't just leave your car in a spot.
+
+1263
+01:10:31,410 --> 01:10:37,550
+Speaker 0: If you don't come to get your car for a few days, they like bury it in this like mechanical monstrosity behind 20 other cars.
+
+1264
+01:10:38,331 --> 01:10:38,630
+Speaker 1: That's right.
+
+1265
+01:10:39,190 --> 01:10:55,250
+Speaker 0: So if you go to pretty much any garage in New York that has monthly or like weekly or annual parking, and you know how that garage references a specific car, and you ask for that car, and you sound plausible, they will likely just go get that car and hand you the keys and walk away.
+
+1266
+01:10:57,631 --> 01:11:03,309
+Speaker 0: I noticed that because I, for now, have a car parked in a garage, and I saw how that security works.
+
+1267
+01:11:05,150 --> 01:11:11,549
+Speaker 1: So if you just know a car, like, ah, yes, and I guess if they're super friendly with the person or they know the car...
+
+1268
+01:11:11,910 --> 01:11:15,269
+Speaker 0: So you go pick up the car at a weird time, like you gotta wait for them to face out.
+
+1269
+01:11:15,450 --> 01:11:18,249
+Speaker 1: You monitor the garage, you wait for there to be a new employee.
+
+1270
+01:11:18,792 --> 01:11:22,590
+Speaker 0: Or, yeah, like if it's like you're going after a target, fine.
+
+1271
+01:11:22,830 --> 01:11:33,249
+Speaker 0: Like if it's a white banker dude, just look close enough to white banker dude and go up and be very like, yeah, I'm here for the, uh, pick up my Lambo.
+
+1272
+01:11:34,990 --> 01:11:35,807
+Speaker 0: Come on, come on.
+
+1273
+01:11:36,090 --> 01:11:36,509
+Speaker 0: I'm in a hurry.
+
+1274
+01:11:37,551 --> 01:11:38,244
+Speaker 0: Come on.
+
+1275
+01:11:39,271 --> 01:11:47,230
+Speaker 0: But, uh, like this article really just highlights that security, like in the end, if someone gets physical access to a thing.
+
+1276
+01:11:47,715 --> 01:11:48,889
+Speaker 0: It's only a matter of time.
+
+1277
+01:11:50,010 --> 01:11:52,990
+Speaker 0: Physical security is the final type of security.
+
+1278
+01:11:54,050 --> 01:11:54,845
+Speaker 1: Observed security.
+
+1279
+01:11:56,490 --> 01:12:09,190
+Speaker 1: If you do attempt to steal a car in this manner, uh, make sure you steal a car belonging to someone who is somewhat your height and length so that you, if you adjust the seat after you pick the car up, that won't look good.
+
+1280
+01:12:09,670 --> 01:12:10,506
+Speaker 0: Yep, yep.
+
+1281
+01:12:10,970 --> 01:12:15,370
+Speaker 0: Granted, uh, the other way is find a car that a lot of people are sharing.
+
+1282
+01:12:16,011 --> 01:12:18,710
+Speaker 1: That'll be a Sherlock's home, like mystery novel thing.
+
+1283
+01:12:19,212 --> 01:12:21,450
+Speaker 1: He adjusted the seat when he picked the car up.
+
+1284
+01:12:21,651 --> 01:12:22,169
+Speaker 1: That's how we knew.
+
+1285
+01:12:22,330 --> 01:12:31,370
+Speaker 0: But people call these concepts two different, like a bunch of different things, but the idea of the truest security in the universe is observed or observable security.
+
+1286
+01:12:32,050 --> 01:12:38,209
+Speaker 0: Like some, like someone's a good example of this would be there is someone who sits outside your, your house.
+
+1287
+01:12:39,551 --> 01:12:43,970
+Speaker 0: And if someone comes up, they watch that person to see if they put the key in and open the door.
+
+1288
+01:12:44,070 --> 01:12:46,950
+Speaker 0: So if someone tries to pick the lock, they can be like, nope, and shoo them away.
+
+1289
+01:12:47,550 --> 01:12:58,610
+Speaker 0: But at the same time, if someone who doesn't look like they should have the key to your house, because they have like the list of all the people you've authorized to go in the house, even if they have the right key, that person can investigate further.
+
+1290
+01:12:59,692 --> 01:13:00,770
+Speaker 0: There's still a weak link there.
+
+1291
+01:13:00,790 --> 01:13:01,850
+Speaker 0: You have to trust that person.
+
+1292
+01:13:01,990 --> 01:13:06,230
+Speaker 0: That's why a lot of like, look at the, look at the factors involved in launching a nuclear missile.
+
+1293
+01:13:07,171 --> 01:13:12,049
+Speaker 0: In the very end, two people have to do it together while being observed by other people.
+
+1294
+01:13:14,031 --> 01:13:19,970
+Speaker 0: Most of this is not relevant to you in your day to day life, but if you want to have a career in security, you've got to at least think about these things.
+
+1295
+01:13:20,510 --> 01:13:34,050
+Speaker 0: So I recommend you read this article because it talks in detail about how you exploit chips like this because the algorithms to generate these keys are like elliptical curve, digital signal algorithms that are actually pretty simple.
+
+1296
+01:13:34,773 --> 01:13:36,410
+Speaker 0: And the math is pretty straightforward.
+
+1297
+01:13:37,190 --> 01:13:39,769
+Speaker 0: Like it's an inch, like you can read about this stuff and understand it.
+
+1298
+01:13:40,877 --> 01:13:41,490
+Speaker 0: Pretty quickly.
+
+1299
+01:13:43,030 --> 01:13:43,331
+Speaker 1: Yeah, just so.
+
+1300
+01:13:43,371 --> 01:13:47,810
+Speaker 1: the final thing is that, you know, I harp on this a lot and that's why I'm going to bring it up yet again.
+
+1301
+01:13:47,890 --> 01:13:49,610
+Speaker 0: I mean, we talk about this topic a lot.
+
+1302
+01:13:49,910 --> 01:13:51,290
+Speaker 1: You see lots of news stories.
+
+1303
+01:13:51,690 --> 01:13:54,570
+Speaker 1: So and so's Instagram was hacked, right?
+
+1304
+01:13:54,711 --> 01:13:56,390
+Speaker 1: All that kind of nonsense, right?
+
+1305
+01:13:56,891 --> 01:13:58,650
+Speaker 1: How does that actually happen?
+
+1306
+01:13:59,411 --> 01:14:01,650
+Speaker 1: It happened 90 plus percent of the time.
+
+1307
+01:14:01,790 --> 01:14:04,530
+Speaker 1: No, there isn't some magical way to hack into Instagram.
+
+1308
+01:14:04,711 --> 01:14:09,630
+Speaker 1: Otherwise I would be taking over celebrity accounts constantly and posting all kinds of stuff, right?
+
+1309
+01:14:09,992 --> 01:14:11,230
+Speaker 1: That's not happening, right?
+
+1310
+01:14:11,650 --> 01:14:13,450
+Speaker 1: You can't just hack someone's Instagram account.
+
+1311
+01:14:13,550 --> 01:14:14,590
+Speaker 1: That would be a huge fiasco.
+
+1312
+01:14:14,750 --> 01:14:17,550
+Speaker 1: And the same applies for Twitter accounts, Facebook accounts, everything, right?
+
+1313
+01:14:17,810 --> 01:14:19,610
+Speaker 1: There is no magical way.
+
+1314
+01:14:19,751 --> 01:14:21,001
+Speaker 1: Just hack into someone's account.
+
+1315
+01:14:21,022 --> 01:14:21,949
+Speaker 1: when someone's account is hacked.
+
+1316
+01:14:22,551 --> 01:14:27,830
+Speaker 1: It's because most likely they told someone their password, figured out their password.
+
+1317
+01:14:28,370 --> 01:14:34,530
+Speaker 1: Someone tried to do account recovery and like, guest their pet's name or something.
+
+1318
+01:14:35,432 --> 01:14:36,529
+Speaker 0: This is the side.
+
+1319
+01:14:36,930 --> 01:14:50,329
+Speaker 0: All those Twitter memes like, hey, all those Twitter memes that are like your hacker name is the street you grew up on, the first bacon model of a car you owned and your brother's middle name.
+
+1320
+01:14:50,552 --> 01:14:50,988
+Speaker 0: Like, guess what?
+
+1321
+01:14:51,330 --> 01:14:51,687
+Speaker 0: Guess what?
+
+1322
+01:14:51,791 --> 01:14:52,550
+Speaker 0: That's farming.
+
+1323
+01:14:54,530 --> 01:14:57,270
+Speaker 0: Those questions are all the same goddamn questions everywhere.
+
+1324
+01:14:57,590 --> 01:15:00,509
+Speaker 1: Someone getting phished, clicking on something they shouldn't have clicked on.
+
+1325
+01:15:00,730 --> 01:15:06,870
+Speaker 0: Sometimes spear phishing, like someone is personally targeted with a researched attack, usually a high value target.
+
+1326
+01:15:07,710 --> 01:15:08,349
+Speaker 1: Yep, exactly.
+
+1327
+01:15:08,790 --> 01:15:12,150
+Speaker 1: So no one's getting hacked.
+
+1328
+01:15:13,133 --> 01:15:18,169
+Speaker 1: There isn't something you can download where, like, you type in the name of an account you want to log into and it's like, tada.
+
+1329
+01:15:19,133 --> 01:15:20,210
+Speaker 1: There's one nuance to that.
+
+1330
+01:15:20,930 --> 01:15:30,250
+Speaker 0: People who are getting hacked, like a primary hack where they were hacked the way we're talking, usually that is like a state sponsored type of attack.
+
+1331
+01:15:30,633 --> 01:15:32,230
+Speaker 0: That is a different ball game.
+
+1332
+01:15:32,952 --> 01:15:38,348
+Speaker 0: Like the US government, if the CIA is after your ass, there's probably a lot of ways they can hack you.
+
+1333
+01:15:38,852 --> 01:15:41,030
+Speaker 0: But they're not breaking encryption.
+
+1334
+01:15:41,670 --> 01:15:43,290
+Speaker 0: They're doing operational attacks.
+
+1335
+01:15:43,470 --> 01:15:46,050
+Speaker 0: They're doing things like key loggers to get your password.
+
+1336
+01:15:46,531 --> 01:15:52,090
+Speaker 1: It's like the Twitter kid who got in trouble and he was making, he basically made friends with someone who's on the inside.
+
+1337
+01:15:52,230 --> 01:15:53,510
+Speaker 1: It was an inside job, right?
+
+1338
+01:15:53,830 --> 01:15:58,810
+Speaker 0: But I would argue most hacks are a combination of inside job and poor operational security.
+
+1339
+01:15:59,214 --> 01:15:59,901
+Speaker 0: Like 99% of all hacks.
+
+1340
+01:16:01,690 --> 01:16:04,590
+Speaker 1: So I don't think we can never go down this topic again.
+
+1341
+01:16:04,710 --> 01:16:12,010
+Speaker 1: We've beaten down all the authentication related bushes until there is a new major development in this area.
+
+1342
+01:16:12,731 --> 01:16:15,870
+Speaker 1: We have done our final episode on it of many episodes.
+
+1343
+01:16:17,410 --> 01:16:24,568
+Speaker 1: You should do everything we just said and give us Monday show ideas so we don't have to retread ground like this.
+
+1344
+01:16:24,930 --> 01:16:25,002
+Speaker 0: Yep.
+
+1345
+01:16:25,250 --> 01:16:27,050
+Speaker 0: Because otherwise, you know what's coming.
+
+1346
+01:16:27,730 --> 01:16:28,509
+Speaker 0: It's almost time.
+
+1347
+01:16:28,992 --> 01:16:30,710
+Speaker 0: For the, for the tech news roundup.
+
+1348
+01:16:31,071 --> 01:16:31,450
+Speaker 0: It's right there.
+
+1349
+01:16:31,690 --> 01:16:32,204
+Speaker 0: I can feel it.
+
+1350
+01:16:32,850 --> 01:16:33,409
+Speaker 1: I'm going to stop.
+
+1351
+01:16:33,854 --> 01:16:34,189
+Speaker 0: That's all.
+
+1352
+01:16:37,992 --> 01:16:40,110
+Speaker 0: This has been Geek Nights with Rim and Scott.
+
+1353
+01:16:40,330 --> 01:16:45,229
+Speaker 0: Special thanks to DJ Pretzel for the opening music, Kat Lee for web design, and Brando K for the logos.
+
+1354
+01:16:45,650 --> 01:16:50,650
+Speaker 1: Be sure to visit our website at frontrowcrew.com for show notes, discussion news, and more.
+
+1355
+01:16:51,010 --> 01:16:53,590
+Speaker 0: Remember, Geek Nights is not one, but four different shows.
+
+1356
+01:16:53,850 --> 01:16:58,350
+Speaker 0: SciTech Mondays, Gaming Tuesdays, Anime Comic Wednesdays, and Indiscriminate Thursdays.
+
+1357
+01:16:58,691 --> 01:17:01,866
+Speaker 1: Geek Nights is distributed under a Creative Commons Attribution 3.0 license.
+
+1358
+01:17:03,190 --> 01:17:06,190
+Speaker 1: Geek Nights is recorded live with no studio and no audience.
+
+1359
+01:17:06,390 --> 01:17:09,290
+Speaker 1: But unlike those other late shows, it's actually recorded at night.
+
+1360
+01:17:10,192 --> 01:17:17,750
+Speaker 0: And the Patreon patrons for this episode of Geek Nights are Alan Joyce, Hygma Nickle, Link Iggi, Dread Lily, Tenebrae, Chris Reimer, Clinton Walt, and Grant Finch.
+
+1361
+01:17:17,810 --> 01:17:18,589
+Speaker 0: Just like a dude guy.
+
+1362
+01:17:19,290 --> 01:17:23,010
+Speaker 0: Now go through the last year or so podcast and make Rim sing Ren from New Zealand.
+
+1363
+01:17:23,110 --> 01:17:34,308
+Speaker 0: Review Mad Bull, 34 Cowards, Ryan Perrin, Sam Erickson, Shervin Von Horl, Taylor Braun, you hold the key to my heart and a whole bunch of people who do not want me to say their names.
+
+1364
+01:17:34,910 --> 01:17:37,948
+Speaker 0: And now, because I'm really hungry, I'm gonna cut this short, I leave you with...
+

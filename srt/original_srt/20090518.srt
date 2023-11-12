@@ -1,0 +1,2916 @@
+﻿1
+00:00:09,260 --> 00:00:11,186
+Speaker 0: It's Monday, May 18th.
+
+2
+00:00:11,347 --> 00:00:11,869
+Speaker 0: I'm Rem.
+
+3
+00:00:11,950 --> 00:00:12,452
+Speaker 1: I'm Scott.
+
+4
+00:00:12,552 --> 00:00:13,697
+Speaker 0: And this is Geek Nights.
+
+5
+00:00:13,757 --> 00:00:16,021
+Speaker 0: Tonight, a little bit about computer forensics.
+
+6
+00:00:25,872 --> 00:00:26,953
+Speaker 1: Let's do this.
+
+7
+00:00:30,977 --> 00:00:38,120
+Speaker 0: You know, I really hate to always have my kind of opening to the show be, "Yes, I was on the train and something crazy happened,".
+
+8
+00:00:38,200 --> 00:00:43,625
+Speaker 0: but when you commute, you know, to New York City and back every day, shit happens like almost every day.
+
+9
+00:00:43,645 --> 00:00:43,725
+Speaker 0: Well,
+
+10
+00:00:43,745 --> 00:00:55,882
+Speaker 1: I think what it is is that you have the routine of the train, so anything that's sort of, you know, and a train has a lot of people on it and it's sort of like, you know, a train is like, for a lot of people, a train is a rare thing, right?
+
+11
+00:00:56,283 --> 00:01:10,320
+Speaker 1: So to have this thing that involves a whole lot of people and is actually sort of, you know, rare, at least for people in the United States, you know, in most places, when something happens with it that's non-routine, it's sort of, you know, it makes for a story.
+
+12
+00:01:10,560 --> 00:01:14,196
+Speaker 0: Well, plus just the commute is always in stark contrast to the rest of my day.
+
+13
+00:01:14,257 --> 00:01:19,160
+Speaker 0: I mean, once I'm in New York, the threshold above which I notice something is far higher.
+
+14
+00:01:19,420 --> 00:01:19,983
+Speaker 1: That's true.
+
+15
+00:01:20,003 --> 00:01:27,656
+Speaker 1: On a quiet train ride, you're going to notice anything that goes out of the ordinary, but in the city, everything is out of the ordinary.
+
+16
+00:01:27,676 --> 00:01:28,740
+Speaker 1: You don't notice anything.
+
+17
+00:01:28,960 --> 00:01:33,024
+Speaker 0: I mean, in the city, crazy guy yelling, "Hibbit, hobbit, hibbit, hobbit, hibbit," waving a knife, whatever.
+
+18
+00:01:33,588 --> 00:01:35,260
+Speaker 0: On the train, I'm watching out.
+
+19
+00:01:35,800 --> 00:01:36,323
+Speaker 1: Exactly.
+
+20
+00:01:36,343 --> 00:01:38,675
+Speaker 1: Exactly.
+
+21
+00:01:38,897 --> 00:01:39,520
+Speaker 1: It's so right.
+
+22
+00:01:40,080 --> 00:01:45,927
+Speaker 0: So I'm on the way home and the trains are all messed up because they're doing this track work like north of us, like toward Poughkeepsie.
+
+23
+00:01:46,509 --> 00:01:54,097
+Speaker 0: So the train before mine, the local slow train, like the 445, it doesn't go all the way to Poughkeepsie anymore.
+
+24
+00:01:54,117 --> 00:01:56,427
+Speaker 0: It stops in Beacon, but no one pays attention to this fact.
+
+25
+00:01:56,809 --> 00:02:03,378
+Speaker 0: So I take the 509, which is like the express Beacon only train, and, you know, the train's pulling up and they go too far.
+
+26
+00:02:03,398 --> 00:02:04,743
+Speaker 0: They're very slowly backing up.
+
+27
+00:02:05,405 --> 00:02:13,193
+Speaker 0: And I see on the platform about 100, maybe 200 people waiting to get on the train going the rest of the way to Poughkeepsie.
+
+28
+00:02:13,515 --> 00:02:18,600
+Speaker 0: The train that is full of hundreds and hundreds and hundreds of people, the majority of which are getting off at Beacon.
+
+29
+00:02:19,280 --> 00:02:20,046
+Speaker 0: No.
+
+30
+00:02:20,288 --> 00:02:21,719
+Speaker 0: And none of these, like they're all standing.
+
+31
+00:02:22,760 --> 00:02:32,082
+Speaker 0: The best part, they're all standing there and there's this kind of chubby woman and she's kind of like standing right in front of the door that I'm in front of waiting it off the train.
+
+32
+00:02:32,785 --> 00:02:36,902
+Speaker 0: And this guy next to her kind of leans in and he basically says to her just loud enough.
+
+33
+00:02:36,922 --> 00:02:37,665
+Speaker 0: I can hear through the door.
+
+34
+00:02:37,685 --> 00:02:40,981
+Speaker 0: I might want to get out of the way of that door.
+
+35
+00:02:43,888 --> 00:02:44,469
+Speaker 1: That's true.
+
+36
+00:02:44,870 --> 00:02:45,733
+Speaker 0: But I realized something.
+
+37
+00:02:45,793 --> 00:02:51,700
+Speaker 0: I never take the car over to the freeway and I always go right and go all the way around like for Beacon because I'm not going anywhere.
+
+38
+00:02:53,201 --> 00:02:59,223
+Speaker 0: I think that more people take the train from Beacon who don't live in Beacon than who do live in Beacon.
+
+39
+00:02:59,485 --> 00:03:01,676
+Speaker 0: It's probably just based on the number of cars.
+
+40
+00:03:01,717 --> 00:03:03,945
+Speaker 0: But more importantly, I've never done this before.
+
+41
+00:03:04,447 --> 00:03:09,946
+Speaker 0: There were three accidents between the train station and the exit or the entrance ramp to the freeway.
+
+42
+00:03:10,909 --> 00:03:11,893
+Speaker 1: Three.
+
+43
+00:03:12,334 --> 00:03:14,863
+Speaker 0: I have a feeling that is not that uncommon for there to be at least two.
+
+44
+00:03:14,883 --> 00:03:18,495
+Speaker 0: There was almost a fourth.
+
+45
+00:03:18,735 --> 00:03:20,140
+Speaker 0: I finally get past all these accidents.
+
+46
+00:03:20,700 --> 00:03:25,277
+Speaker 0: I stop at a red light to turn right and this teenage girl almost hits my car.
+
+47
+00:03:25,939 --> 00:03:26,661
+Speaker 0: She just didn't stop.
+
+48
+00:03:26,882 --> 00:03:27,604
+Speaker 0: And she screeches.
+
+49
+00:03:27,624 --> 00:03:29,409
+Speaker 0: She rolled out of the windows just yelling at me.
+
+50
+00:03:29,429 --> 00:03:29,649
+Speaker 0: Whatever.
+
+51
+00:03:35,202 --> 00:03:37,151
+Speaker 1: The train had a slight problem for me today.
+
+52
+00:03:37,492 --> 00:03:42,032
+Speaker 1: You know, the trains have doors on the ends of the cars, but some of the cars have a door in the middle.
+
+53
+00:03:42,776 --> 00:03:47,068
+Speaker 0: Basically, unless you're on the good train has like the two doors.
+
+54
+00:03:47,249 --> 00:03:50,136
+Speaker 1: But anyway, the what's it called?
+
+55
+00:03:50,577 --> 00:03:54,192
+Speaker 1: So I get on the train in Grand Central and it sort of doesn't leave.
+
+56
+00:03:54,212 --> 00:03:56,726
+Speaker 1: And I hear like the doors opening and closing a whole bunch.
+
+57
+00:03:56,827 --> 00:03:57,854
+Speaker 1: And it should have left already.
+
+58
+00:03:57,914 --> 00:03:59,622
+Speaker 0: But it's a guy stuck in the door now.
+
+59
+00:04:00,505 --> 00:04:05,319
+Speaker 1: Basically, eventually the conductor's like, we have a problem with the doors.
+
+60
+00:04:05,419 --> 00:04:09,049
+Speaker 1: That is not been remedy.
+
+61
+00:04:09,150 --> 00:04:10,593
+Speaker 1: And the train starts moving.
+
+62
+00:04:10,634 --> 00:04:14,424
+Speaker 1: And then he's like, as a result, the middle doors will not open.
+
+63
+00:04:14,464 --> 00:04:16,349
+Speaker 1: You have to use the endo hers.
+
+64
+00:04:18,053 --> 00:04:22,535
+Speaker 0: I got to say, I like the conductors because whenever something goes wrong, they always take it in stride.
+
+65
+00:04:22,556 --> 00:04:26,552
+Speaker 1: Yeah, because, well, you know, the conducting is like a totally laid back job.
+
+66
+00:04:26,613 --> 00:04:29,022
+Speaker 1: as long as no one tries to piss you off.
+
+67
+00:04:29,585 --> 00:04:33,522
+Speaker 1: And as long and you know what, if someone does try to piss you off, it's like, what do you care?
+
+68
+00:04:33,542 --> 00:04:34,508
+Speaker 1: What are you going to do?
+
+69
+00:04:34,588 --> 00:04:37,402
+Speaker 1: If you touch me, you go to jail for like seven years.
+
+70
+00:04:37,422 --> 00:04:38,265
+Speaker 1: All right.
+
+71
+00:04:38,345 --> 00:04:40,351
+Speaker 1: So I don't give a shit about your craziness.
+
+72
+00:04:41,114 --> 00:04:42,157
+Speaker 1: I'm totally protected.
+
+73
+00:04:42,177 --> 00:04:43,723
+Speaker 1: What are you going to do?
+
+74
+00:04:44,085 --> 00:04:49,473
+Speaker 0: I got to admit, I always kind of enjoy the confrontations I periodically see between the conductors and belligerent passengers.
+
+75
+00:04:49,533 --> 00:04:58,991
+Speaker 1: I just, you know, that law is a little bit extreme, but on the other hand, it's sort of, it allows conductors to have the attitude necessary to do their job properly.
+
+76
+00:04:59,513 --> 00:05:05,080
+Speaker 1: You know, it's like, if you know, right, if you're just a normal dude and you have the same protections as a normal dude, right?
+
+77
+00:05:05,842 --> 00:05:14,260
+Speaker 1: If you had to do the job of a conductor and deal with, you know, people, there might be some situations where like, maybe you would cave to some, you know, angry people or whatever.
+
+78
+00:05:15,041 --> 00:05:21,745
+Speaker 1: But instead, because you know that like touching you is this horrendous felony, that'll put you in jail for seven years.
+
+79
+00:05:22,468 --> 00:05:22,729
+Speaker 1: Right.
+
+80
+00:05:22,890 --> 00:05:24,577
+Speaker 1: You know, you'll get in people's face.
+
+81
+00:05:24,637 --> 00:05:30,000
+Speaker 1: No one's, you know, no one's going to get, you know, it's very much similar to, there's this old video.
+
+82
+00:05:30,080 --> 00:05:31,649
+Speaker 0: I'm sure you can find it on the internet somewhere.
+
+83
+00:05:31,669 --> 00:05:36,895
+Speaker 0: It was one of those, you know, cop pulls up, there's the camera in the cop car, filming him, giving someone a ticket.
+
+84
+00:05:36,915 --> 00:05:42,003
+Speaker 0: And he gives the guy the ticket and the guy's just like yelling and screaming and tearing up the ticket and freaking out.
+
+85
+00:05:42,385 --> 00:05:49,539
+Speaker 0: And after the guy stops talking, the cops just like, if you don't pick up what you just threw on the ground, I'm going to give you another ticket for littering.
+
+86
+00:05:49,943 --> 00:05:50,995
+Speaker 0: And then they are fucking loses it.
+
+87
+00:05:51,560 --> 00:05:51,761
+Speaker 1: Yup.
+
+88
+00:05:54,368 --> 00:05:54,588
+Speaker 1: Yeah.
+
+89
+00:05:54,749 --> 00:05:57,978
+Speaker 1: So that's why conductors are always like, oh, you're not going to pay.
+
+90
+00:05:58,319 --> 00:06:00,468
+Speaker 1: Like once I saw this like military dude.
+
+91
+00:06:00,508 --> 00:06:00,789
+Speaker 1: Right.
+
+92
+00:06:01,151 --> 00:06:01,552
+Speaker 1: And he was.
+
+93
+00:06:01,753 --> 00:06:02,737
+Speaker 1: he was in the military.
+
+94
+00:06:02,757 --> 00:06:06,995
+Speaker 1: He was actually, you know, in for reals, not like some guy who was a military fan boy.
+
+95
+00:06:07,055 --> 00:06:07,276
+Speaker 1: Right.
+
+96
+00:06:07,839 --> 00:06:11,007
+Speaker 1: And he looked like some sort of grizzled old commander type.
+
+97
+00:06:11,108 --> 00:06:11,388
+Speaker 1: Right.
+
+98
+00:06:12,511 --> 00:06:18,176
+Speaker 1: And he he was basically thought that because he's in the military, you should get a free train ride.
+
+99
+00:06:18,217 --> 00:06:21,189
+Speaker 1: At least that's what I, you know, figured out what was going on.
+
+100
+00:06:21,209 --> 00:06:22,835
+Speaker 1: And he refused to pay.
+
+101
+00:06:22,855 --> 00:06:25,266
+Speaker 1: And the conductor didn't take his shit at all.
+
+102
+00:06:25,627 --> 00:06:33,043
+Speaker 1: And like the police, you know, like he got off the train and the conductor had already called the police to get him for not paying for the train ticket, which is what they do.
+
+103
+00:06:33,063 --> 00:06:36,535
+Speaker 0: But I think I think we need Apollo.
+
+104
+00:06:36,997 --> 00:06:39,125
+Speaker 0: I am now going to pull the Jack Thompson policy.
+
+105
+00:06:39,486 --> 00:06:40,590
+Speaker 0: I'm talking about the commute.
+
+106
+00:06:41,112 --> 00:06:44,545
+Speaker 0: I can't talk about the commute unless the next story tops.
+
+107
+00:06:44,606 --> 00:06:45,630
+Speaker 0: the last one told.
+
+108
+00:06:45,650 --> 00:06:46,292
+Speaker 0: All right.
+
+109
+00:06:46,593 --> 00:06:46,934
+Speaker 0: That way.
+
+110
+00:06:47,155 --> 00:06:53,226
+Speaker 1: So at the top, all the previous ones that were at that top, the one we just did because there's there are a few zingers out there that will never top.
+
+111
+00:06:53,627 --> 00:06:54,852
+Speaker 1: All right.
+
+112
+00:06:54,932 --> 00:06:55,414
+Speaker 1: That's OK.
+
+113
+00:06:55,776 --> 00:06:56,920
+Speaker 0: Plus, there's a ton of tech news.
+
+114
+00:06:57,100 --> 00:06:57,584
+Speaker 0: So what do you get?
+
+115
+00:06:57,604 --> 00:06:58,491
+Speaker 1: There's a there's a big time.
+
+116
+00:06:58,532 --> 00:06:58,713
+Speaker 1: All right.
+
+117
+00:06:58,733 --> 00:06:59,399
+Speaker 1: So check this out.
+
+118
+00:06:59,439 --> 00:06:59,580
+Speaker 1: Right.
+
+119
+00:07:00,340 --> 00:07:04,816
+Speaker 1: We always talk about how, you know, people don't have balls.
+
+120
+00:07:04,916 --> 00:07:05,097
+Speaker 1: Right.
+
+121
+00:07:05,137 --> 00:07:10,637
+Speaker 1: There was, you know, there'll be some situation and there'll be some ballsy option.
+
+122
+00:07:10,697 --> 00:07:10,958
+Speaker 1: Right.
+
+123
+00:07:10,978 --> 00:07:12,845
+Speaker 1: But no one will ever take that ballsy option.
+
+124
+00:07:13,708 --> 00:07:15,213
+Speaker 1: Pirate Bay took the ballsy up.
+
+125
+00:07:15,274 --> 00:07:15,514
+Speaker 0: Yep.
+
+126
+00:07:15,595 --> 00:07:15,735
+Speaker 0: Yep.
+
+127
+00:07:16,237 --> 00:07:19,107
+Speaker 0: The last emperor of Rome took the ballsy option.
+
+128
+00:07:19,127 --> 00:07:20,111
+Speaker 1: That was too long ago.
+
+129
+00:07:20,131 --> 00:07:21,516
+Speaker 1: That doesn't count.
+
+130
+00:07:21,998 --> 00:07:23,421
+Speaker 0: Still ballsy, perhaps.
+
+131
+00:07:24,003 --> 00:07:24,243
+Speaker 1: Right.
+
+132
+00:07:24,625 --> 00:07:28,215
+Speaker 1: But today there were two in the news right now.
+
+133
+00:07:28,295 --> 00:07:30,602
+Speaker 1: There are two people with balls.
+
+134
+00:07:30,702 --> 00:07:30,943
+Speaker 1: Right.
+
+135
+00:07:31,545 --> 00:07:34,535
+Speaker 1: And the guy I want to talk about is this Harvard lawyer.
+
+136
+00:07:34,755 --> 00:07:35,056
+Speaker 1: Right.
+
+137
+00:07:35,578 --> 00:07:44,790
+Speaker 1: And basically he's going to go into court and defend this guy who was, you know, this guy was illegally sharing, you know, copyrighted music.
+
+138
+00:07:45,030 --> 00:07:46,917
+Speaker 1: They're not even arguing that he wasn't.
+
+139
+00:07:46,958 --> 00:07:47,299
+Speaker 1: He did.
+
+140
+00:07:47,319 --> 00:07:47,881
+Speaker 1: He did it.
+
+141
+00:07:48,022 --> 00:07:49,689
+Speaker 1: He downloaded music or uploaded.
+
+142
+00:07:49,729 --> 00:07:50,091
+Speaker 1: I don't know.
+
+143
+00:07:50,593 --> 00:07:51,477
+Speaker 1: He did it right.
+
+144
+00:07:51,678 --> 00:07:53,945
+Speaker 1: And it was music that is copyrighted.
+
+145
+00:07:54,708 --> 00:08:03,773
+Speaker 1: This lawyer is going to go in and he's going to try to argue that noncommercial peer to peer music sharing is fair use.
+
+146
+00:08:04,355 --> 00:08:08,175
+Speaker 1: Now, even Lawrence Lessig is like, you're totally wrong and that's that's not going to work.
+
+147
+00:08:08,235 --> 00:08:08,658
+Speaker 1: And you know what?
+
+148
+00:08:08,698 --> 00:08:09,903
+Speaker 1: I don't think it's going to work either.
+
+149
+00:08:10,866 --> 00:08:13,315
+Speaker 1: But morally, I think that's the right argument.
+
+150
+00:08:13,796 --> 00:08:18,312
+Speaker 1: And I respect his gigantic testicles because they are so vague.
+
+151
+00:08:18,332 --> 00:08:21,563
+Speaker 0: You know, perhaps we should do a Thursday show on balls.
+
+152
+00:08:23,367 --> 00:08:25,111
+Speaker 0: The beverage baby moxie.
+
+153
+00:08:26,073 --> 00:08:26,935
+Speaker 0: Also the beverage.
+
+154
+00:08:26,955 --> 00:08:29,200
+Speaker 1: I've never drunk in the beverage.
+
+155
+00:08:29,561 --> 00:08:30,625
+Speaker 1: It comes in a blue bottle, right?
+
+156
+00:08:31,127 --> 00:08:31,688
+Speaker 0: Balls does.
+
+157
+00:08:31,729 --> 00:08:32,030
+Speaker 0: Yeah.
+
+158
+00:08:32,390 --> 00:08:34,919
+Speaker 0: Moxie comes in basically a car battery.
+
+159
+00:08:35,960 --> 00:08:36,602
+Speaker 0: Drink moxie.
+
+160
+00:08:36,623 --> 00:08:38,188
+Speaker 0: That stuff is not good.
+
+161
+00:08:38,871 --> 00:08:42,167
+Speaker 1: You're going to get some hate mail for that from some Moxie fans somewhere.
+
+162
+00:08:42,288 --> 00:08:42,630
+Speaker 1: You know what?
+
+163
+00:08:42,669 --> 00:08:44,340
+Speaker 0: If there's a Moxie fan, more power to you.
+
+164
+00:08:44,380 --> 00:08:45,083
+Speaker 0: You're welcome to it.
+
+165
+00:08:45,284 --> 00:08:45,545
+Speaker 0: Yeah.
+
+166
+00:08:45,806 --> 00:08:46,108
+Speaker 0: Good guy.
+
+167
+00:08:46,128 --> 00:08:47,674
+Speaker 0: I mean, I like weird soda.
+
+168
+00:08:47,715 --> 00:08:51,655
+Speaker 0: I mean, right here on my desk, I've got that Red Bull Cola, which is bad ass, by the way.
+
+169
+00:08:51,836 --> 00:08:52,358
+Speaker 1: I tasted that.
+
+170
+00:08:52,379 --> 00:08:53,102
+Speaker 1: It tastes like shit.
+
+171
+00:08:53,363 --> 00:08:54,306
+Speaker 0: Tastes like Cola.
+
+172
+00:08:54,527 --> 00:08:55,631
+Speaker 0: You just don't like Cola.
+
+173
+00:08:55,792 --> 00:08:56,454
+Speaker 0: It's disgusting.
+
+174
+00:08:57,036 --> 00:08:57,317
+Speaker 1: Anyway.
+
+175
+00:08:57,759 --> 00:09:06,675
+Speaker 1: No, but I mean, this is pretty interesting because, you know, I mean, for example, right, there was the case, um, what was the one that we lost in the Supreme court?
+
+176
+00:09:07,357 --> 00:09:13,458
+Speaker 0: All the ones that have mattered for a long time now, that big one was like E EMI verse or BG.
+
+177
+00:09:13,558 --> 00:09:17,375
+Speaker 1: I forget it already, but anyway, they, they try, they went into argue, right.
+
+178
+00:09:17,435 --> 00:09:21,050
+Speaker 1: And they, uh, against, you know, the, uh, the copyright extensions.
+
+179
+00:09:21,391 --> 00:09:21,672
+Speaker 1: Right.
+
+180
+00:09:22,214 --> 00:09:28,136
+Speaker 1: And basically what their argument was, was that, Hey, look, Congress has continually kept making more extensions.
+
+181
+00:09:28,517 --> 00:09:33,620
+Speaker 1: Therefore it's effectively an infinite extension when it's supposed to be limited according to the constitution.
+
+182
+00:09:33,940 --> 00:09:34,522
+Speaker 1: Right.
+
+183
+00:09:34,542 --> 00:09:36,067
+Speaker 1: And I think that was the wrong argument.
+
+184
+00:09:36,549 --> 00:09:44,050
+Speaker 1: No one ever makes the argument of, you know, for the benefit of, you know, the, the arts and sciences.
+
+185
+00:09:44,070 --> 00:09:53,798
+Speaker 1: and clearly arts and sciences are more benefited by free access to art and information than by restricting it.
+
+186
+00:09:54,119 --> 00:09:58,462
+Speaker 1: And no one makes that argument because no one has any balls, but this guy is going to make that argument.
+
+187
+00:09:58,502 --> 00:10:00,511
+Speaker 0: So I wonder why no one makes that argument.
+
+188
+00:10:00,551 --> 00:10:09,851
+Speaker 0: because of all the, you know, argument back and forth about copyright and intellectual property and everything, that is one of the few things that is in the constitution right there.
+
+189
+00:10:10,072 --> 00:10:12,460
+Speaker 1: I am not a lawyer, but my guess, right.
+
+190
+00:10:12,581 --> 00:10:20,274
+Speaker 1: Is that, you know, what did I, we look, you know, us non-lawyers, we look at the constitution, we see that line that says for the benefit of the arts, right.
+
+191
+00:10:20,776 --> 00:10:23,588
+Speaker 1: And we look at that and it's just, the meaning is obvious to us.
+
+192
+00:10:23,629 --> 00:10:30,016
+Speaker 1: You know, if the, if a cop, if a copyright law clearly does not benefit, then it should be unconstitutional.
+
+193
+00:10:30,036 --> 00:10:30,880
+Speaker 1: That's the way we see it.
+
+194
+00:10:30,940 --> 00:10:36,483
+Speaker 1: But the thing is the actual meaning of that is not the meaning of the words that are in the constitution.
+
+195
+00:10:36,523 --> 00:10:50,259
+Speaker 1: The meaning of that phrase is actually, you know, something that has been determined by many, many court cases that we have never studied, but you see lawyers had actually means probably that that line has no weight in court whatsoever.
+
+196
+00:10:50,279 --> 00:10:51,887
+Speaker 0: No, but here, here's the thing with that line.
+
+197
+00:10:52,269 --> 00:10:56,688
+Speaker 0: All the constitution really means is whatever gets interpreted by when it's challenged.
+
+198
+00:10:57,089 --> 00:11:04,843
+Speaker 0: So if that, if the argument were made and it made it the Supreme court, they're the ones who can look at that line and decide what it means.
+
+199
+00:11:05,426 --> 00:11:05,747
+Speaker 1: Yeah.
+
+200
+00:11:05,807 --> 00:11:10,189
+Speaker 1: But the thing is they, they never go against what has already been decided.
+
+201
+00:11:10,209 --> 00:11:10,994
+Speaker 1: It's like Jews, right?
+
+202
+00:11:11,014 --> 00:11:17,222
+Speaker 1: The, you know, the rabbis, the really Hasidic ones, basically what they do is, you know, they have to decide a lot of things.
+
+203
+00:11:17,242 --> 00:11:24,875
+Speaker 1: They're always interpreting the, you know, the Bible and other, you know, sacred texts and things to determine, you know, what rules should be followed.
+
+204
+00:11:24,915 --> 00:11:30,498
+Speaker 1: For example, a rabbi, I remember once decided, uh, that it was okay to play backgammon on Shabbos.
+
+205
+00:11:30,719 --> 00:11:30,860
+Speaker 1: Right.
+
+206
+00:11:30,880 --> 00:11:32,605
+Speaker 1: And that was like, they had to figure that out.
+
+207
+00:11:32,686 --> 00:11:32,926
+Speaker 1: Right.
+
+208
+00:11:33,568 --> 00:11:36,678
+Speaker 1: But the, the rule was right.
+
+209
+00:11:36,759 --> 00:11:44,240
+Speaker 1: Is that no rabbi could ever, you know, nothing that a previous rabbi said could ever be wrong.
+
+210
+00:11:44,601 --> 00:11:44,882
+Speaker 1: Right.
+
+211
+00:11:45,204 --> 00:11:49,440
+Speaker 1: So you could only really decide things that hadn't already been decided in the past.
+
+212
+00:11:49,560 --> 00:11:59,507
+Speaker 1: And while judges do overturn things that have been in the past, they tend not to, they tend to, one, you're forgetting two important factors.
+
+213
+00:12:00,049 --> 00:12:03,460
+Speaker 0: One, it only takes one court to, to rule differently.
+
+214
+00:12:03,922 --> 00:12:08,004
+Speaker 0: And then suddenly there's all the debate and then people like it has to be decided the higher court, Supreme court, whatever.
+
+215
+00:12:08,065 --> 00:12:16,788
+Speaker 0: Two, there's my court, my favorite court, the ninth cert district circuit court, basically where all the crazy judges are, all the awesome judges are right.
+
+216
+00:12:16,828 --> 00:12:17,029
+Speaker 1: Yeah.
+
+217
+00:12:17,050 --> 00:12:26,723
+Speaker 1: The thing is, if you look, I've been looking at what the Supreme court's been doing recently, cause you know, they've been doing stuff recently and pretty much every single one of their decisions has been a total cop out there.
+
+218
+00:12:26,743 --> 00:12:30,998
+Speaker 1: Basically every freaking case that's come up to them like this year, right.
+
+219
+00:12:31,359 --> 00:12:35,173
+Speaker 1: Has been some case of the big opportunity to make a big decision on something.
+
+220
+00:12:35,233 --> 00:12:35,494
+Speaker 1: Right.
+
+221
+00:12:36,478 --> 00:12:56,258
+Speaker 1: But really they don't actually, they seem to avoid the big issue that everyone is looking at and they, you know, they just judge as if it was like normal court and they judge that specific case, you know, according to some law and that it's totally, they're totally copping out and not, you know, doing any decisions or making, changing anything.
+
+222
+00:12:56,479 --> 00:13:00,376
+Speaker 0: See, I think part of it depends on how material the core issue actually is.
+
+223
+00:13:00,457 --> 00:13:01,602
+Speaker 0: to the issue that came up for one.
+
+224
+00:13:01,883 --> 00:13:02,043
+Speaker 0: Yeah.
+
+225
+00:13:02,124 --> 00:13:09,955
+Speaker 0: And, and, and two, they, for a lot of these issues, especially with copyright and technology, I would bet internally the court isn't sure yet.
+
+226
+00:13:10,416 --> 00:13:15,583
+Speaker 0: And they just like, they don't, they're not, they don't have enough to go on yet to actually, I mean, look, for example, right.
+
+227
+00:13:15,623 --> 00:13:18,837
+Speaker 1: They recently judged about like the FCC censorship thing, right.
+
+228
+00:13:19,479 --> 00:13:25,363
+Speaker 1: But their judgment had, you know, didn't, didn't decide yes or no, whether the FCC is allowed to censor things.
+
+229
+00:13:25,424 --> 00:13:45,655
+Speaker 1: It simply decided, you know, the case at hand with that one, you know, the person who I forget what the actual case was, but all I did was decide that specific case and say, yes, so-and-so is, you know, not allowed to do this or whatever, but they didn't actually decide anything about the FCC and censorship, which is what everyone, you know, they had the opportunity to say yes or no on that.
+
+230
+00:13:45,696 --> 00:13:53,707
+Speaker 1: They didn't, they didn't, you know, they totally copped out and they kept copying out and I expect copying out to continue for a long time for that.
+
+231
+00:13:53,928 --> 00:13:57,182
+Speaker 0: Luckily, at least one other person had balls in recent memory.
+
+232
+00:13:57,202 --> 00:14:02,204
+Speaker 0: Uh, yeah, I'm sure you all remember that kerfluffle and I've decided to use that word more often.
+
+233
+00:14:02,224 --> 00:14:02,807
+Speaker 0: I kind of like it.
+
+234
+00:14:03,049 --> 00:14:14,893
+Speaker 1: Well, as long as you, if you, every time you use kerfluffle, you have to subtract using suffice it to say, well, suffice it to say there was a kerfluffle about Craigslist and erotic services.
+
+235
+00:14:15,013 --> 00:14:18,165
+Speaker 0: And it was that I didn't realize this guy's name.
+
+236
+00:14:18,386 --> 00:14:29,520
+Speaker 0: Like I just kind of, you know, I knew this article and I knew this news and all this stuff that was going on, but I finally looked at the guy's name, the South Carolina attorney general who went after Craigslist for having all these erotic ads.
+
+237
+00:14:30,361 --> 00:14:33,011
+Speaker 0: His name is Henry McMaster.
+
+238
+00:14:33,031 --> 00:14:34,235
+Speaker 1: That's pretty good name.
+
+239
+00:14:34,275 --> 00:14:36,543
+Speaker 0: That is right up there with max power in my opinion.
+
+240
+00:14:36,843 --> 00:14:40,934
+Speaker 0: Now, if only he could be like max Mcpower, Henry Mcmax power.
+
+241
+00:14:40,954 --> 00:14:56,266
+Speaker 0: Anyway, but Craigslist, you know, there's this whole thing where Craigslist has these erotic ads online and they talk about how, yes, this is for the selling of child slaves and prostitution and all this horrible stuff.
+
+242
+00:14:56,306 --> 00:15:01,911
+Speaker 1: And actually, you know, his, you know, something interesting about Craigslist and the, uh, the erotic services, right.
+
+243
+00:15:02,373 --> 00:15:10,323
+Speaker 1: Is that, you know, as you know, bad as prostitution is, and as I'm sure there was bad, there was probably a lot of bad stuff in there.
+
+244
+00:15:10,343 --> 00:15:25,233
+Speaker 1: The thing is legitimate and you know, I guess the responsible, you know, sex workers using Craigslist, they love that because it's so much safer and better for them than walking around the street with some pimps and whatnot.
+
+245
+00:15:25,675 --> 00:15:31,661
+Speaker 1: You know, like some like lady can live in a house, you know, and just, you know, how you're assuming it's a lady.
+
+246
+00:15:31,962 --> 00:15:32,123
+Speaker 0: Well,
+
+247
+00:15:32,243 --> 00:15:50,514
+Speaker 1: our guy, it doesn't matter, you know, and they can be, you know, a safe and responsible sex worker if you believe there is such a thing and it's, you know, so by taking Craigslist away, you're sort of, you know, those people now have to go back out to the pimps and the who knows what, but not
+
+248
+00:15:50,554 --> 00:16:05,183
+Speaker 0: even that, that's, you know, that's the fundamental kind of interesting discussion that society and there's debate on both sides, but the gist of the issue is that this guy, McMaxPower, was going after Craigslist and someone had balls.
+
+249
+00:16:05,244 --> 00:16:06,648
+Speaker 0: In fact, Craig had balls.
+
+250
+00:16:06,708 --> 00:16:12,687
+Speaker 0: By Craig, I mean, Jim Buckmaster, another good name.
+
+251
+00:16:12,707 --> 00:16:16,940
+Speaker 0: He basically lit into this guy and said everything that needed to be said.
+
+252
+00:16:17,241 --> 00:16:19,673
+Speaker 0: He points out every possible thing.
+
+253
+00:16:19,713 --> 00:16:20,618
+Speaker 0: that's wrong with the argument.
+
+254
+00:16:20,638 --> 00:16:31,362
+Speaker 0: You know, in the forums, sometimes you'll see like someone says something kind of dumb and someone else like quotes every single sentence in their quote, in their post, and just refutes it one by one.
+
+255
+00:16:31,382 --> 00:16:33,068
+Speaker 0: This is one of those.
+
+256
+00:16:33,409 --> 00:16:46,948
+Speaker 0: He points out like there's so much more sex ads and everything in the yellow pages than there are in Craigslist and Craigslist is a lot more tame and there were only like 40 ads that were even adult at all to begin with in Craigslist in that area and all this stuff.
+
+257
+00:16:46,968 --> 00:16:54,452
+Speaker 0: He basically just proves that General Henry McMaxPower, what's his name, is an idiot.
+
+258
+00:16:54,873 --> 00:16:55,094
+Speaker 1: Yeah.
+
+259
+00:16:55,114 --> 00:17:00,455
+Speaker 1: Well, really what it is, is when it comes to the Internet or just about anything that people don't understand, right.
+
+260
+00:17:01,018 --> 00:17:04,012
+Speaker 1: The news or whatever brings their attention to something.
+
+261
+00:17:04,031 --> 00:17:05,499
+Speaker 1: It brings their attention to Craigslist.
+
+262
+00:17:05,519 --> 00:17:06,864
+Speaker 1: They hear about one thing.
+
+263
+00:17:07,346 --> 00:17:07,646
+Speaker 1: Right.
+
+264
+00:17:08,128 --> 00:17:13,592
+Speaker 1: But because they don't really know about anything, they're these, you know, they're ignorant and they're just.
+
+265
+00:17:13,652 --> 00:17:16,164
+Speaker 1: their attention has been brought to one small area.
+
+266
+00:17:16,867 --> 00:17:18,053
+Speaker 1: They don't see the big picture.
+
+267
+00:17:18,093 --> 00:17:19,881
+Speaker 1: They don't really know what they're talking about.
+
+268
+00:17:19,901 --> 00:17:22,692
+Speaker 1: They have no point of reference or comparison or context.
+
+269
+00:17:23,074 --> 00:17:28,835
+Speaker 1: So whenever idiots, you know, it's very easy to pun them if you do have the context.
+
+270
+00:17:29,136 --> 00:17:32,069
+Speaker 1: And this is a case of that actually happening for awesome.
+
+271
+00:17:32,270 --> 00:17:34,299
+Speaker 0: But he just he got all the evidence together.
+
+272
+00:17:34,359 --> 00:17:35,023
+Speaker 0: This is beautiful.
+
+273
+00:17:35,063 --> 00:17:35,988
+Speaker 0: I mean, you should read this.
+
+274
+00:17:36,048 --> 00:17:37,013
+Speaker 0: This is beautiful.
+
+275
+00:17:37,315 --> 00:17:38,260
+Speaker 0: He points out a quote.
+
+276
+00:17:38,740 --> 00:17:51,213
+Speaker 0: Many prominent companies, including AT&T, Microsoft, Village Voice Media, not to mention major newspapers and other upstanding South Carolina businesses, feature more adult services ads than does Craigslist, some of which are very graphic in nature.
+
+277
+00:17:51,776 --> 00:17:53,422
+Speaker 0: for a small sampling look.
+
+278
+00:17:53,502 --> 00:17:55,107
+Speaker 0: And then he has like 11 links.
+
+279
+00:17:55,688 --> 00:17:56,130
+Speaker 1: Yep.
+
+280
+00:17:56,932 --> 00:18:04,504
+Speaker 1: The thing is, he's lucky that McMaster's knows that a click on a link to get put in because most people would be they wouldn't understand this retort even.
+
+281
+00:18:04,645 --> 00:18:10,663
+Speaker 0: I am surprised that Mac Max power was able to respond to this in any capacity.
+
+282
+00:18:10,723 --> 00:18:12,552
+Speaker 1: He respond with the appropriate apology.
+
+283
+00:18:12,572 --> 00:18:13,878
+Speaker 0: I believe he did.
+
+284
+00:18:13,918 --> 00:18:14,662
+Speaker 0: I didn't really follow up.
+
+285
+00:18:14,682 --> 00:18:15,707
+Speaker 1: I think that's that's what I heard.
+
+286
+00:18:16,049 --> 00:18:16,310
+Speaker 0: Yeah.
+
+287
+00:18:16,652 --> 00:18:26,986
+Speaker 0: I mostly just read the article from Buckmaster.
+
+288
+00:18:27,006 --> 00:18:28,807
+Speaker 0: But anyway, things of the day.
+
+289
+00:18:28,827 --> 00:18:29,608
+Speaker 1: So check this out.
+
+290
+00:18:29,648 --> 00:18:29,888
+Speaker 1: Right.
+
+291
+00:18:31,089 --> 00:18:32,693
+Speaker 1: You ever play Top Gun for us?
+
+292
+00:18:33,716 --> 00:18:34,217
+Speaker 0: Perhaps.
+
+293
+00:18:34,940 --> 00:18:36,445
+Speaker 1: You know, you could land on the aircraft.
+
+294
+00:18:36,465 --> 00:18:37,990
+Speaker 1: Karen, it's really hard now.
+
+295
+00:18:38,471 --> 00:18:40,859
+Speaker 0: No, because you couldn't land on it.
+
+296
+00:18:40,879 --> 00:18:43,428
+Speaker 0: That was that the game just ended there.
+
+297
+00:18:43,448 --> 00:18:44,090
+Speaker 0: All right.
+
+298
+00:18:44,230 --> 00:18:47,002
+Speaker 1: Now, here's something that people don't often think about.
+
+299
+00:18:47,083 --> 00:18:47,324
+Speaker 1: Right.
+
+300
+00:18:47,444 --> 00:18:54,941
+Speaker 1: Is that, you know, you have planes that land an aircraft carrier and how it works generally is, you know, the jet comes down, you know, it slows down a whole bunch.
+
+301
+00:18:55,343 --> 00:19:10,755
+Speaker 1: It comes down onto the deck and they have cables on the deck and there's a little, you know, wire in the back of the air, the jet that grabs onto the cables and the cable, you know, they basically pull the thing to a stop because there's not actually, you know, a long enough runway for it to slow down all the way on its own.
+
+302
+00:19:10,816 --> 00:19:15,436
+Speaker 1: So if it misses the cables, it has to sort of bounce off the deck and take off again.
+
+303
+00:19:15,637 --> 00:19:15,858
+Speaker 1: Right.
+
+304
+00:19:16,320 --> 00:19:18,350
+Speaker 1: And that's how landing on an aircraft carrier works.
+
+305
+00:19:18,491 --> 00:19:20,037
+Speaker 1: And it's not easy.
+
+306
+00:19:20,057 --> 00:19:23,933
+Speaker 1: or you're in a jet that even though it's really advanced, it goes really fast.
+
+307
+00:19:24,574 --> 00:19:29,790
+Speaker 1: And the aircraft carrier runway isn't exactly long and it's not exactly wide.
+
+308
+00:19:29,890 --> 00:19:34,508
+Speaker 1: It's much, much easier to land on, say, you know, a real airport or a highway.
+
+309
+00:19:34,609 --> 00:19:34,850
+Speaker 1: All right.
+
+310
+00:19:35,611 --> 00:19:50,838
+Speaker 1: Now imagine if right people don't, you know, you don't think about this, but the aircraft carrier while big is in the water and while it's not going to sink on its own, it's, you know, when the water moves, it moves.
+
+311
+00:19:51,641 --> 00:19:54,030
+Speaker 1: So take all the difficulty of landing on a runway.
+
+312
+00:19:54,671 --> 00:19:57,421
+Speaker 1: Now add onto that the difficulty of the boat moving.
+
+313
+00:19:58,285 --> 00:20:01,439
+Speaker 1: Now, add onto that the difficulty of the boat moving a lot.
+
+314
+00:20:01,519 --> 00:20:02,786
+Speaker 0: There is a simple solution though.
+
+315
+00:20:02,806 --> 00:20:04,052
+Speaker 0: I mean, it's actually really easy to do.
+
+316
+00:20:04,092 --> 00:20:05,175
+Speaker 0: Just put on your power glove.
+
+317
+00:20:05,536 --> 00:20:06,259
+Speaker 0: It's so bad.
+
+318
+00:20:06,279 --> 00:20:08,024
+Speaker 0: Right now.
+
+319
+00:20:08,486 --> 00:20:10,593
+Speaker 1: So in this, this is a two part video.
+
+320
+00:20:10,633 --> 00:20:12,079
+Speaker 1: Each part is 10 minutes long.
+
+321
+00:20:12,219 --> 00:20:13,705
+Speaker 1: I think it's from PBS, right?
+
+322
+00:20:14,187 --> 00:20:20,128
+Speaker 1: And it's these guys in the military are practicing landing on a pitching deck.
+
+323
+00:20:20,188 --> 00:20:26,810
+Speaker 1: And basically when you land on a pitching deck, right, the runway is going, you know, forward and backwards.
+
+324
+00:20:26,930 --> 00:20:36,613
+Speaker 1: So one second you're looking like, you know, the boat is like angling up like, like, and then the next second, like you're looking at the back of the ship and the runway is way above you.
+
+325
+00:20:36,633 --> 00:20:37,476
+Speaker 1: And you're like, Oh fuck.
+
+326
+00:20:38,179 --> 00:20:38,420
+Speaker 1: Right.
+
+327
+00:20:39,223 --> 00:20:42,015
+Speaker 1: And the guy talks about, he was coming in for a landing, right?
+
+328
+00:20:42,176 --> 00:20:44,787
+Speaker 1: And they told him, stay where you are, stay where you are.
+
+329
+00:20:44,868 --> 00:20:45,350
+Speaker 1: Don't move.
+
+330
+00:20:45,591 --> 00:20:47,120
+Speaker 1: And he's looking at the back of the boat.
+
+331
+00:20:47,160 --> 00:20:49,030
+Speaker 1: Like he's going to crash into it and die.
+
+332
+00:20:49,811 --> 00:20:54,533
+Speaker 1: And then basically, Oh, the back of the boat just comes straight down and the runway is right in front of him.
+
+333
+00:20:54,553 --> 00:20:55,196
+Speaker 1: And he's like, Oh shit.
+
+334
+00:20:56,703 --> 00:21:02,922
+Speaker 1: And then in the second part of the video, the second part, 10 minutes long, they do the same thing at night.
+
+335
+00:21:04,225 --> 00:21:06,692
+Speaker 0: So, uh, that's like level two.
+
+336
+00:21:07,395 --> 00:21:07,615
+Speaker 1: Yeah.
+
+337
+00:21:07,676 --> 00:21:09,222
+Speaker 1: You can, you can watch this.
+
+338
+00:21:09,422 --> 00:21:11,894
+Speaker 0: Uh, and the thing that really is not going to save you there.
+
+339
+00:21:11,914 --> 00:21:12,739
+Speaker 0: You need the new force.
+
+340
+00:21:12,759 --> 00:21:14,169
+Speaker 1: The thing that's really awesome, right?
+
+341
+00:21:14,229 --> 00:21:16,158
+Speaker 1: Is these guys they're busy practicing, right?
+
+342
+00:21:16,278 --> 00:21:20,417
+Speaker 1: And you know, they stay at, they keep failing so many times, right?
+
+343
+00:21:20,477 --> 00:21:24,135
+Speaker 1: Every time you fail, you just have to sort of keep going and go back up into the air again.
+
+344
+00:21:25,018 --> 00:21:26,785
+Speaker 1: Every time you fail, right?
+
+345
+00:21:26,885 --> 00:21:29,257
+Speaker 1: If you fail too often, you start running out of fuel jets.
+
+346
+00:21:29,317 --> 00:21:31,148
+Speaker 1: Don't you know, have fuel that lasts that long.
+
+347
+00:21:31,168 --> 00:21:32,092
+Speaker 0: There's an easy solution.
+
+348
+00:21:32,112 --> 00:21:34,220
+Speaker 0: You send up a fuel tanker refueling.
+
+349
+00:21:34,240 --> 00:21:40,283
+Speaker 1: They send up a fuel tanker plane to refill the jets, but now that fuel tanker has to land.
+
+350
+00:21:40,343 --> 00:21:43,757
+Speaker 0: Well, clearly you send another fuel tanker up for the first fuel tanker.
+
+351
+00:21:43,838 --> 00:21:48,577
+Speaker 1: Every plane on the deck is up in the air and you know, you're starting to hold in your bucket.
+
+352
+00:21:48,597 --> 00:21:51,047
+Speaker 1: They're all running out of fuel, right?
+
+353
+00:21:51,369 --> 00:21:54,236
+Speaker 1: And uh, you got to land them all.
+
+354
+00:21:56,823 --> 00:21:58,567
+Speaker 1: So yeah, you should, you should watch this.
+
+355
+00:21:58,868 --> 00:22:03,105
+Speaker 0: So speaking of awesome, this is a photo that I think everyone should look at.
+
+356
+00:22:03,125 --> 00:22:10,813
+Speaker 0: I think it's very appropriate for a Monday night geek nights, but a person by the name of Terry legal took a picture of the space shuttle.
+
+357
+00:22:10,913 --> 00:22:11,415
+Speaker 0: No big deal.
+
+358
+00:22:11,515 --> 00:22:24,037
+Speaker 0: I took a picture of the space shuttle in space from the earth telescope with a, with a five inch telescope and just a Canon digital camera while it was passing in front of the digital SLR.
+
+359
+00:22:24,057 --> 00:22:29,753
+Speaker 1: Uh, yes, yes, not a point and shoot cell camera actually.
+
+360
+00:22:30,436 --> 00:22:33,769
+Speaker 0: It was an iPhone with one of those like strap on lenses with a Velcro.
+
+361
+00:22:35,491 --> 00:22:45,403
+Speaker 0: But no, this is a picture of the space shuttle passing in front of the sun taken by someone with a little five inch refracting telescope and a Canon digital camera.
+
+362
+00:22:45,966 --> 00:22:57,392
+Speaker 0: And not only is the picture amazing and kind of awe inspiring, but you look at it and you zoom in and the bottom right corner, you see the silhouette of a spaceship that we sent into space in front of the sun.
+
+363
+00:22:58,154 --> 00:22:58,835
+Speaker 1: Damn.
+
+364
+00:23:00,379 --> 00:23:06,096
+Speaker 0: Nevermind the fact that we got into space in 1969 and kind of haven't done that much up there since then.
+
+365
+00:23:06,157 --> 00:23:07,683
+Speaker 0: But what are you going to do?
+
+366
+00:23:08,968 --> 00:23:15,197
+Speaker 1: Yeah, I think the best thing we've done more recently is for the little robots on Mars that are still sort of go and put, put, put.
+
+367
+00:23:15,639 --> 00:23:15,800
+Speaker 0: Yeah.
+
+368
+00:23:15,881 --> 00:23:16,644
+Speaker 0: You know, finding water.
+
+369
+00:23:16,664 --> 00:23:17,729
+Speaker 0: People forgot about Mars.
+
+370
+00:23:17,769 --> 00:23:19,094
+Speaker 0: Notice how Mars is not in the news.
+
+371
+00:23:19,214 --> 00:23:20,358
+Speaker 1: It's like you found a water.
+
+372
+00:23:20,399 --> 00:23:21,081
+Speaker 1: Holy shit.
+
+373
+00:23:21,583 --> 00:23:21,904
+Speaker 1: Yeah.
+
+374
+00:23:22,325 --> 00:23:22,546
+Speaker 1: Yeah.
+
+375
+00:23:23,409 --> 00:23:24,394
+Speaker 1: We sort of knew it was there.
+
+376
+00:23:24,434 --> 00:23:25,440
+Speaker 1: I think that was a problem.
+
+377
+00:23:25,500 --> 00:23:25,681
+Speaker 1: Yeah.
+
+378
+00:23:25,782 --> 00:23:26,586
+Speaker 1: Is that we sort of knew.
+
+379
+00:23:26,647 --> 00:23:32,553
+Speaker 0: It's like, you know, you were talking about how men, I love it when people do the ballsy thing, but no one ever does.
+
+380
+00:23:33,015 --> 00:23:35,505
+Speaker 0: Finding water on Mars was one of those men.
+
+381
+00:23:35,826 --> 00:23:38,058
+Speaker 0: Science never finds out the cool thing you were hoping.
+
+382
+00:23:38,078 --> 00:23:40,150
+Speaker 0: You always found out the lame expected boring answer.
+
+383
+00:23:40,310 --> 00:23:48,980
+Speaker 1: Well, I think that's a problem is that our science has actually gotten too good and that we sort of predict things very well, not perfectly, but very well.
+
+384
+00:23:49,481 --> 00:23:56,605
+Speaker 1: So we don't have a lot of serendipitous discoveries that are, you know, uh, comprehensible to the public.
+
+385
+00:23:56,645 --> 00:24:04,576
+Speaker 1: Like there might be serendipitous discoveries like with incredibly, incredibly specific things that only the people in that lab really understand.
+
+386
+00:24:04,756 --> 00:24:08,773
+Speaker 0: I threw the particle a and a particle B and two muons and a strange quark appeared.
+
+387
+00:24:09,355 --> 00:24:10,118
+Speaker 0: How about that?
+
+388
+00:24:10,439 --> 00:24:10,760
+Speaker 1: Yeah.
+
+389
+00:24:10,781 --> 00:24:11,584
+Speaker 0: What a coincidence.
+
+390
+00:24:11,825 --> 00:24:12,086
+Speaker 1: Right.
+
+391
+00:24:12,126 --> 00:24:17,642
+Speaker 1: You know, but there's not a lot of big serendipity really anymore.
+
+392
+00:24:17,742 --> 00:24:19,326
+Speaker 0: So what about synchronicity?
+
+393
+00:24:20,008 --> 00:24:20,690
+Speaker 1: It's not real.
+
+394
+00:24:21,271 --> 00:24:26,411
+Speaker 0: This is the seriously a pretty cool picture and I have half a mind to order a giant print of it.
+
+395
+00:24:26,431 --> 00:24:28,158
+Speaker 1: Did they have that option?
+
+396
+00:24:28,640 --> 00:24:29,282
+Speaker 0: Let me find out.
+
+397
+00:24:29,985 --> 00:24:30,727
+Speaker 0: I don't see the sun.
+
+398
+00:24:30,747 --> 00:24:32,574
+Speaker 1: That would go good in a high school wall.
+
+399
+00:24:32,634 --> 00:24:36,026
+Speaker 1: Not at a, not at a, you know, adult wall.
+
+400
+00:24:36,046 --> 00:24:38,454
+Speaker 0: I'm thinking about buying that a house.
+
+401
+00:24:38,555 --> 00:24:39,819
+Speaker 0: So put in the basement.
+
+402
+00:24:40,160 --> 00:24:40,441
+Speaker 0: Yeah.
+
+403
+00:24:40,862 --> 00:24:41,043
+Speaker 1: Yeah.
+
+404
+00:24:41,785 --> 00:24:42,568
+Speaker 0: I don't want to put it in.
+
+405
+00:24:42,668 --> 00:24:45,183
+Speaker 0: I don't see that option here, but the original is big enough.
+
+406
+00:24:45,283 --> 00:24:46,712
+Speaker 0: I can just download it and print it myself.
+
+407
+00:24:47,274 --> 00:24:47,575
+Speaker 1: Maybe.
+
+408
+00:24:47,596 --> 00:24:48,078
+Speaker 1: Yeah.
+
+409
+00:24:48,218 --> 00:24:49,504
+Speaker 1: You need some good printing though.
+
+410
+00:24:49,865 --> 00:24:51,914
+Speaker 0: I'll send it to the people we print our geek night stuff with.
+
+411
+00:24:53,861 --> 00:24:55,105
+Speaker 0: So what are we talking about tonight?
+
+412
+00:24:55,607 --> 00:24:55,928
+Speaker 1: I don't know.
+
+413
+00:24:55,948 --> 00:24:59,100
+Speaker 1: The topic we came up with sort of vague, but basically right.
+
+414
+00:24:59,140 --> 00:25:01,850
+Speaker 1: There's computer forensics, right?
+
+415
+00:25:01,930 --> 00:25:06,930
+Speaker 1: Which is basically someone commits a crime or does something else with the computer.
+
+416
+00:25:07,271 --> 00:25:14,635
+Speaker 1: And then you come in afterwards or perhaps even during and investigate and try to prove what was done and by whom.
+
+417
+00:25:14,895 --> 00:25:25,867
+Speaker 1: And we sort of wanted to explore the idea that it's rarely difficult, if not next to impossible or impossible to really do anything.
+
+418
+00:25:25,887 --> 00:25:26,208
+Speaker 1: Now
+
+419
+00:25:26,228 --> 00:25:44,730
+Speaker 0: the other side of this, and also what really kind of precipitated this discussion was that whole thing with the, it's the source code to the breathalyzers and how people were fighting to, if someone's going to be convicted based on evidence created by a digital device, then the code that the digital device uses should be open source or at least subject to review by the court.
+
+420
+00:25:45,492 --> 00:25:46,577
+Speaker 0: And that finally happened.
+
+421
+00:25:46,677 --> 00:25:52,400
+Speaker 0: And you know, the people are able to look at the code and what they discovered was that it was some of the shittiest code ever.
+
+422
+00:25:53,404 --> 00:25:54,588
+Speaker 1: Like not a surprise yet.
+
+423
+00:25:55,371 --> 00:26:10,249
+Speaker 1: Of course, you know, because the main thing about the breathalyzer company needs a little bit of software for this breathalyzer, basically read the input from this one piece of hardware, do some math on this CPU and then display some numbers on a little LCD screen.
+
+424
+00:26:10,349 --> 00:26:13,984
+Speaker 0: As far as I can tell, it used made up numbers as constants for calibration.
+
+425
+00:26:14,004 --> 00:26:18,989
+Speaker 0: And like if you did three readings, it would give you like the average of the first two readings.
+
+426
+00:26:19,049 --> 00:26:27,218
+Speaker 0: But on the third reading, it would average the first average and the third rating and just really bad math and bad statistics.
+
+427
+00:26:27,418 --> 00:26:34,079
+Speaker 0: And it brought up a lot of questions ranging from do we trust this sort of evidence at all?
+
+428
+00:26:34,160 --> 00:26:40,843
+Speaker 0: to how do you explain to a judge or even expect a judge to understand whether or not the code and the breathalyzer is legitimate.
+
+429
+00:26:42,548 --> 00:26:52,861
+Speaker 0: And frankly, I don't think our judicial system is in any way prepared or capable with dealing to deal with or in dealing with technology at this point.
+
+430
+00:26:53,323 --> 00:26:53,444
+Speaker 1: Yeah.
+
+431
+00:26:53,484 --> 00:26:55,431
+Speaker 1: I mean, you know, back in the day, right.
+
+432
+00:26:55,532 --> 00:27:02,655
+Speaker 1: You know, any sort of before computers or anything, you know, before like high tech, high science crimes.
+
+433
+00:27:02,816 --> 00:27:03,097
+Speaker 1: Right.
+
+434
+00:27:03,639 --> 00:27:07,834
+Speaker 1: Like you could comprehend, you know, any normal person could comprehend.
+
+435
+00:27:08,236 --> 00:27:08,397
+Speaker 1: Right.
+
+436
+00:27:08,517 --> 00:27:23,994
+Speaker 1: Even if you needed like an expert witness, the things the expert was going to explain to you were things people understood, you know, bullets, guns, money, of course, if you go far enough back dealing, well, someone was murdered here and there's only one out of towner.
+
+437
+00:27:24,275 --> 00:27:25,981
+Speaker 0: So clearly, right.
+
+438
+00:27:26,001 --> 00:27:35,105
+Speaker 1: You know, I mean, you know, things, you know, there were still always, you know, science that people didn't understand and it, you know, you know, could have gotten involved into crimes.
+
+439
+00:27:35,125 --> 00:27:42,762
+Speaker 1: You know, I mean, when they had wax cylinders and someone was pirating them and then they went to court, you know, or radio, lots of courts, things involving radio.
+
+440
+00:27:42,782 --> 00:27:45,754
+Speaker 1: You know, I'm sure the judges back then didn't understand radio that well.
+
+441
+00:27:45,774 --> 00:27:57,981
+Speaker 0: I think the issue now is that it used to be like when it came to the forensic technology itself, even if what you were examining was difficult to understand, the methodology itself was at least fairly simple.
+
+442
+00:27:58,002 --> 00:28:01,659
+Speaker 0: You know, a guy looks at it, takes a picture of it, compares two pictures.
+
+443
+00:28:01,880 --> 00:28:06,625
+Speaker 0: They can show the two pictures and point out, see, this part is the same as this part, like with fingerprints and that sort of thing.
+
+444
+00:28:07,289 --> 00:28:13,374
+Speaker 0: Never mind the fact that fingerprints are terrible and unreliable, but I digress with things like the breathalyzer.
+
+445
+00:28:13,394 --> 00:28:18,353
+Speaker 0: It's not obvious to anyone, but an expert what's even wrong with the software.
+
+446
+00:28:18,654 --> 00:28:22,851
+Speaker 0: And also the software is not in any way really material to the case at hand.
+
+447
+00:28:23,252 --> 00:28:30,415
+Speaker 0: It's just the software to take the input from the forensic device and translate it into something people can understand.
+
+448
+00:28:30,435 --> 00:28:39,590
+Speaker 0: If even that portion of every piece of evidence gathering has to be subject to the scrutiny, how are the courts going to possibly deal with that?
+
+449
+00:28:40,550 --> 00:28:55,028
+Speaker 1: Yeah, I mean, really, you just need judges that are like, you know, like specialized at computers, like you would need to get computer science, you know, people with also law degrees, you know, to like decide all these cases because no one else would be equipped.
+
+450
+00:28:55,048 --> 00:29:12,766
+Speaker 1: You know, I mean, you know, the judges are obviously making decisions, but are they really equipped to meet out justice in a way that is morally acceptable, you know, to decide the fates of, you know, people and companies and citizens, you know, is that really right?
+
+451
+00:29:13,789 --> 00:29:17,725
+Speaker 1: You know, I mean, you basically, if they don't understand it, how can you say it's right?
+
+452
+00:29:18,268 --> 00:29:29,815
+Speaker 0: And even that aside, let's say that we get, we have all these forensic devices, the interesting good side effect of this might be that we've got a proof of concept of the fact that many eyes solve problems quickly.
+
+453
+00:29:30,197 --> 00:29:43,504
+Speaker 0: The fact that it was so trivial to point out all the horrendous flaws with the software, just by opening it up to review, hopefully we can use this as a push or maybe a legal precedent that all forensic software has to be open.
+
+454
+00:29:44,868 --> 00:29:45,390
+Speaker 1: That's okay.
+
+455
+00:29:45,510 --> 00:29:46,694
+Speaker 1: The problem is right.
+
+456
+00:29:46,714 --> 00:29:58,795
+Speaker 1: There's a point at which, you know, if someone is even moderately intelligent, that no amount of forensic software can do anything, you can always right with, with the real world, right?
+
+457
+00:29:58,916 --> 00:30:08,407
+Speaker 1: It's not always, I mean, you can get away with crimes, but it's not always trivial with computers, with even the slightest amount of effort.
+
+458
+00:30:08,828 --> 00:30:14,727
+Speaker 1: It is trivial to eliminate all reasonable doubt, even in the most heinous of situations.
+
+459
+00:30:15,048 --> 00:30:17,218
+Speaker 0: Well, let's see, here's a good example.
+
+460
+00:30:17,238 --> 00:30:19,933
+Speaker 0: I'm just thinking of, you know, kind of a, how could we actually go about this?
+
+461
+00:30:19,973 --> 00:30:23,210
+Speaker 1: This is like, imagine like to put like, here's, here's the analogy, right?
+
+462
+00:30:23,270 --> 00:30:23,993
+Speaker 1: To the real world.
+
+463
+00:30:24,735 --> 00:30:28,148
+Speaker 1: Let's say you were going to commit computer murder, right?
+
+464
+00:30:28,589 --> 00:30:33,190
+Speaker 0: You know, you basically go mirroring a computer or murdering someone via a computer, basically, right?
+
+465
+00:30:33,290 --> 00:30:33,893
+Speaker 1: Imagine it.
+
+466
+00:30:33,933 --> 00:30:36,505
+Speaker 0: I mean, is this like I'm typing slash kill in an IRC channel?
+
+467
+00:30:36,605 --> 00:30:42,414
+Speaker 1: Imagine if somebody could go out into the street and commit mass murder, just like hose a bunch of people down with a machine gun.
+
+468
+00:30:42,856 --> 00:30:48,706
+Speaker 1: And then with a snap of their fingers, all the evidence immediately disappears and is just this incredible mountain of reasonable doubt.
+
+469
+00:30:48,746 --> 00:30:50,614
+Speaker 1: That's what it's like with computers.
+
+470
+00:30:50,654 --> 00:31:00,051
+Speaker 1: You can hack and hack and hack and do steal and credit card and all the evil things that you can do with a computer, you know, raise people's hard drives and take, right.
+
+471
+00:31:00,513 --> 00:31:06,382
+Speaker 1: And then with a click, you know, if you're just any amount of intelligence, there'll be absolutely no evidence and no reasonable doubt whatsoever.
+
+472
+00:31:06,864 --> 00:31:23,093
+Speaker 1: And no amount of forensics or even the, you know, smart people like us or smart people, even smarter than us, no one will ever be able to get anything on you, even though it'll be obvious to them that you did it, they'll have no way to actually prove it or have any amount of evidence to demonstrate it.
+
+473
+00:31:23,294 --> 00:31:35,358
+Speaker 0: Well, like the example I wanted to bring up with, say, I wanted to, I don't know, pull the Craigslist, you know, bait and switch, ruin someone's house scam, you know, that simple thing where, you know, you post a Craigslist ad saying, hey, come to my house and take all my stuff.
+
+474
+00:31:35,458 --> 00:31:37,085
+Speaker 0: I'm moving out, you know, something crazy.
+
+475
+00:31:37,105 --> 00:31:47,285
+Speaker 0: And of course, you're basically just instigating a mob of idiots who are overly credulous to go and destroy someone else's house, which in and of itself is difficult to track.
+
+476
+00:31:47,848 --> 00:32:06,263
+Speaker 0: Now, if you, if you really wanted to get away with this, I mean, think, all right, I buy what, like a net book or like on eBay with some shady account and travelers checks or a shady PayPal account, or maybe even just in cash at like a swap meet, I buy like an old net book or an old laptop, take it to like a Starbucks in the winter.
+
+477
+00:32:06,604 --> 00:32:10,860
+Speaker 0: I'm wearing a mask, make the post from there, and then just throw away the laptop.
+
+478
+00:32:12,385 --> 00:32:13,068
+Speaker 0: What are you going to do?
+
+479
+00:32:13,710 --> 00:32:15,318
+Speaker 1: You don't even need to go that far, right?
+
+480
+00:32:15,419 --> 00:32:22,544
+Speaker 0: All you do, but I'm talking about, look, like if you really want to get away with something, it's the old ha seven proxy.
+
+481
+00:32:22,584 --> 00:32:24,931
+Speaker 0: It's even easier than that.
+
+482
+00:32:24,971 --> 00:32:33,021
+Speaker 1: You just use Tor and then you post a Craigslist and you know, you go get some like hotmail account, just disposable or whatever.
+
+483
+00:32:33,081 --> 00:32:34,326
+Speaker 1: And that's, that's it.
+
+484
+00:32:34,608 --> 00:32:41,576
+Speaker 0: Or, I mean, think about all the possibility of taking old net books or laptops, putting some, putting a Ram disc in or having no hard drive at all.
+
+485
+00:32:41,877 --> 00:32:45,088
+Speaker 0: Just a lot like a Linux live CD that's booted.
+
+486
+00:32:45,410 --> 00:32:49,226
+Speaker 0: You boot it, you run your software, the zoo, whatever evil you want it to do.
+
+487
+00:32:49,588 --> 00:32:53,386
+Speaker 0: And it's hooked up to like a free wireless at a Starbucks or just like some house.
+
+488
+00:32:53,426 --> 00:32:55,779
+Speaker 0: Like you'd, you put the battery, it's not even plugged in anything.
+
+489
+00:32:55,819 --> 00:33:01,525
+Speaker 0: You just got wireless and a battery and you put like 10 of those IBM, keep your laptop going for more hours.
+
+490
+00:33:01,566 --> 00:33:03,835
+Speaker 0: Batteries on it is taken in a box to hide it in the bushes.
+
+491
+00:33:04,738 --> 00:33:08,754
+Speaker 0: It can be online doing your evil for days and days and days and days and days.
+
+492
+00:33:09,176 --> 00:33:14,879
+Speaker 0: And if someone finds it, they just find a box with a laptop that's running in it or possibly dead by now.
+
+493
+00:33:15,301 --> 00:33:17,792
+Speaker 0: A bunch of batteries, no fingerprints of any kind.
+
+494
+00:33:18,194 --> 00:33:21,208
+Speaker 0: And if they find it while it's still running, what are they going to do?
+
+495
+00:33:21,228 --> 00:33:24,384
+Speaker 0: Are they going to realize that if they turn it off or reboot it, everything's gone?
+
+496
+00:33:24,404 --> 00:33:25,127
+Speaker 0: Yeah.
+
+497
+00:33:25,188 --> 00:33:26,433
+Speaker 1: Everything's in Ram, right?
+
+498
+00:33:26,453 --> 00:33:27,116
+Speaker 1: So you turn it off.
+
+499
+00:33:27,718 --> 00:33:33,200
+Speaker 1: You just all the audio information you may have been able to get out of it, you know, see what program is running.
+
+500
+00:33:33,220 --> 00:33:34,847
+Speaker 1: It's gone.
+
+501
+00:33:35,048 --> 00:33:36,193
+Speaker 1: So now you don't even know.
+
+502
+00:33:36,274 --> 00:33:38,867
+Speaker 1: No one even knows that computer was doing anything evil, right?
+
+503
+00:33:38,888 --> 00:33:39,711
+Speaker 0: Have a mercury switch.
+
+504
+00:33:40,153 --> 00:33:41,157
+Speaker 0: If it moves, turn it off.
+
+505
+00:33:41,800 --> 00:33:42,342
+Speaker 1: Yeah, you could do that.
+
+506
+00:33:42,704 --> 00:33:42,945
+Speaker 0: Great.
+
+507
+00:33:43,085 --> 00:33:43,547
+Speaker 0: Not done.
+
+508
+00:33:43,688 --> 00:33:46,059
+Speaker 1: And see, and the kind of these kinds of ideas, right?
+
+509
+00:33:46,099 --> 00:33:47,988
+Speaker 1: Which eliminate all the evidence, right?
+
+510
+00:33:48,108 --> 00:33:48,832
+Speaker 1: Are sort of crazy.
+
+511
+00:33:48,852 --> 00:33:51,102
+Speaker 1: You don't even need to go anywhere near that far.
+
+512
+00:33:51,263 --> 00:33:51,524
+Speaker 1: Right?
+
+513
+00:33:51,564 --> 00:33:56,909
+Speaker 1: I mean, most people just, you know, put a virus out there, get an army of zombie computers and that's it.
+
+514
+00:33:57,130 --> 00:33:58,618
+Speaker 1: And what can you do about it?
+
+515
+00:33:58,638 --> 00:34:10,072
+Speaker 1: As long as you don't try to like, you know, have some sort of centralized server where the zombies get updates from or anything, you know, I mean, you just had to control them from some, you know, spot where no one can, you know, get you.
+
+516
+00:34:10,132 --> 00:34:10,916
+Speaker 1: And that's, that's it.
+
+517
+00:34:11,257 --> 00:34:13,507
+Speaker 0: But at the same time, there are a lot of see.
+
+518
+00:34:14,009 --> 00:34:30,379
+Speaker 0: what it really comes down to is that in order to actually get people or, you know, dig up what information there would be, because luckily computers do make a lot of evidence, but they're not the kind of evidence that a judge or a lawyer or anyone who's not technical is going to understand right away or even realize exists.
+
+519
+00:34:30,940 --> 00:34:40,178
+Speaker 0: And it's kind of the same way that recently they have caught a lot of these big stock or money laundering scams is that you have to do statistical analysis of interlink data.
+
+520
+00:34:41,282 --> 00:34:50,882
+Speaker 0: Like the example people always put up is that say I'm downloading, uploading music or doing whatever shady thing I'm doing from, I dunno, my wireless access point or someone else's wireless access point.
+
+521
+00:34:51,725 --> 00:34:53,172
+Speaker 0: And the access point is open.
+
+522
+00:34:53,592 --> 00:35:02,006
+Speaker 0: So there is definitely by default, this clear, reasonable doubt that you can't prove that I was using the access point to do this as opposed to someone else.
+
+523
+00:35:02,126 --> 00:35:02,347
+Speaker 1: Yep.
+
+524
+00:35:03,010 --> 00:35:10,967
+Speaker 0: But if I, if you know, I'm the judge and I know what's going on, I get a warrant, you may not be able to prove that, but there's enough interlink data.
+
+525
+00:35:10,987 --> 00:35:21,142
+Speaker 0: You know, I'm talking like TCP sequence numbers or rights to a file system or rates of rights to the file system or, you know, files have all these different creation dates.
+
+526
+00:35:21,162 --> 00:35:35,838
+Speaker 0: And even though theoretically each individual creation date or modified date or SELinux or all these things could be modified or altered by a hacker, just like how a hacker could, you know, bust into the server, change the log, showing that they weren't even there and then leave.
+
+527
+00:35:36,702 --> 00:35:49,336
+Speaker 0: At the same time, falsifying data like that is effectively impossible unless you can generate truly random numbers on the fly and make those random numbers consistent across the board in multiple sources, many of which you don't have access to.
+
+528
+00:35:50,422 --> 00:35:51,005
+Speaker 0: I mean, what was that?
+
+529
+00:35:51,045 --> 00:35:58,293
+Speaker 0: There was an article on slash shot about analyzing the first digits of numbers and prime numbers and you can, there are certain correlations.
+
+530
+00:35:58,354 --> 00:36:00,866
+Speaker 0: The thing is real data will have certain correlations.
+
+531
+00:36:00,907 --> 00:36:08,515
+Speaker 0: that if you're making up numbers to match other data, those correlations won't exist and you can statistically say that data was manipulated.
+
+532
+00:36:09,057 --> 00:36:22,001
+Speaker 1: The thing is with that, right, is, you know, while it is true that if you want to be, you know, mathematically 100%, you know, no evidence that you do have to go and do the kinds of things that you're talking about.
+
+533
+00:36:22,041 --> 00:36:28,309
+Speaker 1: But even if you just manipulated the dates, like just by hand using like touch, that's enough to get away with it.
+
+534
+00:36:28,349 --> 00:36:28,811
+Speaker 1: No one can.
+
+535
+00:36:29,072 --> 00:36:41,262
+Speaker 0: Well, it depends on what's going on, but I'm saying is that there are ways to get, there is the possibility of computer forensics that I as a professional would say will hold up in court, are reliable, you know, the work.
+
+536
+00:36:41,362 --> 00:36:41,603
+Speaker 1: Oh yeah.
+
+537
+00:36:41,703 --> 00:36:45,459
+Speaker 1: It would hold up assuming that the other person was not smart.
+
+538
+00:36:45,941 --> 00:36:46,965
+Speaker 1: You know, not necessarily.
+
+539
+00:36:46,985 --> 00:36:49,358
+Speaker 1: So what are you going to do when someone encrypts their whole drive?
+
+540
+00:36:49,398 --> 00:36:50,142
+Speaker 1: What are you gonna do?
+
+541
+00:36:50,323 --> 00:36:58,760
+Speaker 0: Well, see if someone actually encrypted their drive, we have the separate legal problem of do, can we or can we not compel someone to reveal their encryption key?
+
+542
+00:36:59,423 --> 00:37:02,377
+Speaker 1: And even if they did reveal the encryption key, how would you know that was the real one?
+
+543
+00:37:02,397 --> 00:37:08,228
+Speaker 0: Uh, well you see with deniable encryption, you know, it's all well and good in theory, but all right, what is this?
+
+544
+00:37:08,248 --> 00:37:09,496
+Speaker 0: This is like my personal computer.
+
+545
+00:37:09,516 --> 00:37:09,737
+Speaker 0: So what?
+
+546
+00:37:09,777 --> 00:37:11,568
+Speaker 0: So say I'm going after your browsing habits.
+
+547
+00:37:11,589 --> 00:37:11,790
+Speaker 0: So what?
+
+548
+00:37:11,850 --> 00:37:12,733
+Speaker 0: You've encrypted your drive.
+
+549
+00:37:13,275 --> 00:37:14,139
+Speaker 1: Yeah, the whole thing.
+
+550
+00:37:14,600 --> 00:37:14,942
+Speaker 0: All right.
+
+551
+00:37:15,002 --> 00:37:31,361
+Speaker 0: So if I decrypted the odds of you having an extensive file system and browsing history that is up to date and passes muster in a statistical analysis and yet at the same time is completely fake as opposed to the real actual one that you've encrypted and hidden somewhere.
+
+552
+00:37:31,683 --> 00:37:36,841
+Speaker 1: The odds are low, but it's possible, possible member.
+
+553
+00:37:36,861 --> 00:37:39,951
+Speaker 0: You don't have to prove in court beyond a shadow of a doubt.
+
+554
+00:37:39,991 --> 00:37:44,067
+Speaker 0: You only have to prove beyond a reasonable doubt and statistical analysis.
+
+555
+00:37:44,469 --> 00:37:45,692
+Speaker 0: You know, that's how statistic works.
+
+556
+00:37:45,733 --> 00:38:01,339
+Speaker 0: You can say things like we are 95% sure that the true value of X is between Y and Z. So I, there are forensic techniques in it and CS, especially in it that can get around reasonable doubt.
+
+557
+00:38:01,841 --> 00:38:07,382
+Speaker 0: The problem is I don't think our legal system is capable of even addressing or even eat.
+
+558
+00:38:07,402 --> 00:38:10,354
+Speaker 0: I don't think they can even get close to that sort of analysis.
+
+559
+00:38:10,374 --> 00:38:17,887
+Speaker 1: Basically, all they've got right now is, you know, they've got, there's a bunch of tools that are basically approved for use by, you know, computer cops.
+
+560
+00:38:18,309 --> 00:38:20,804
+Speaker 1: And one of them, for example, I think it's called in case.
+
+561
+00:38:20,824 --> 00:38:22,332
+Speaker 1: I don't know if that's the actual name of it.
+
+562
+00:38:22,372 --> 00:38:22,854
+Speaker 1: I forget.
+
+563
+00:38:22,935 --> 00:38:26,550
+Speaker 1: But all this thing does is they basically take a hard drive.
+
+564
+00:38:26,570 --> 00:38:28,077
+Speaker 1: They take the hard drive out of your computer.
+
+565
+00:38:28,339 --> 00:38:30,027
+Speaker 1: They put an evidence bag right now.
+
+566
+00:38:30,268 --> 00:38:33,827
+Speaker 0: If I was running my Linux live CD with nothing on the hard drive, they're already fucked.
+
+567
+00:38:33,948 --> 00:38:38,025
+Speaker 1: Of course, they take the hard drive back to their, you know, lab, right?
+
+568
+00:38:38,085 --> 00:38:39,190
+Speaker 1: They copy the hard drive.
+
+569
+00:38:39,270 --> 00:38:42,365
+Speaker 1: That way the original one goes in the evidence locker untouched.
+
+570
+00:38:42,425 --> 00:38:48,736
+Speaker 1: That way they can prove that, you know, the one that they're using to do the tests on wasn't changed from what the, you know, the original one was.
+
+571
+00:38:48,817 --> 00:38:48,997
+Speaker 1: Right.
+
+572
+00:38:49,560 --> 00:38:50,766
+Speaker 1: So they copy your hard drive.
+
+573
+00:38:51,048 --> 00:38:52,935
+Speaker 1: They keep the original unchanged.
+
+574
+00:38:52,976 --> 00:38:54,281
+Speaker 1: So they, you know, evidence, right.
+
+575
+00:38:54,903 --> 00:39:05,524
+Speaker 1: Then they run this software on the copied one and what it does is it examines the file system on the low, low level and, you know, looks for deleted files and all that sort of stuff.
+
+576
+00:39:05,545 --> 00:39:18,753
+Speaker 1: And then they just examine files, you know, looking for child porn, looking for, you know, emails of your, you know, conspiracy or, you know, any, Oh, all the sort of normal everyday kind of stuff that you would, you know, use to get someone.
+
+577
+00:39:19,857 --> 00:39:25,113
+Speaker 1: The thing is, right, if you use like ZFS, you'll probably get out, get away with it.
+
+578
+00:39:25,194 --> 00:39:25,495
+Speaker 1: Right.
+
+579
+00:39:25,615 --> 00:39:30,814
+Speaker 1: I mean, I doubt that their software can handle all the weird file systems that are out there.
+
+580
+00:39:30,834 --> 00:39:38,906
+Speaker 0: But at the same time, all the issues like this are from technological standpoint at least are easily surmounted by just good methodology.
+
+581
+00:39:39,127 --> 00:39:39,368
+Speaker 0: Yeah.
+
+582
+00:39:39,448 --> 00:39:41,300
+Speaker 1: The thing is they don't have, they don't even have that.
+
+583
+00:39:41,462 --> 00:40:02,259
+Speaker 0: But what I'm saying is that they could, and then, you know, a lot of technology people on slash dot and everything will, will make statements like there's no way ever, or because the information is digital and can be created, modified, altered, you know, I like the prosecution could just change the data and there'd be no actual way to prove a hundred percent that the data wasn't manipulated even with good methodology because it's digital.
+
+584
+00:40:02,279 --> 00:40:02,541
+Speaker 0: That's true.
+
+585
+00:40:02,561 --> 00:40:03,850
+Speaker 1: There's no way to prove a hundred percent.
+
+586
+00:40:04,090 --> 00:40:08,228
+Speaker 1: Well, yeah, but, but in 99% of cases, that's the dude's hard drive, right?
+
+587
+00:40:08,268 --> 00:40:09,252
+Speaker 1: He didn't encrypt for shit.
+
+588
+00:40:09,292 --> 00:40:09,976
+Speaker 1: He was a moron.
+
+589
+00:40:09,996 --> 00:40:10,639
+Speaker 1: That's what it is.
+
+590
+00:40:10,739 --> 00:40:20,689
+Speaker 0: No, but basically right now, smart people can get away with any technology crime they want as long as they're smart, but there are methodologies that could easily get people and make this entire thing a moot point.
+
+591
+00:40:20,709 --> 00:40:36,183
+Speaker 0: I mean, really, there's so much interlinked pieces of data in hard drives and software that you can really reliably statistically prove whether or not the hard drive that someone gave you that is decrypted is the one they actually use or not.
+
+592
+00:40:36,745 --> 00:40:47,592
+Speaker 0: And while you can have theoretically deniable encryption, the majority of people will not be capable of maintaining the deniably encrypted partition in such a manner that it is actually one hundred percent denied.
+
+593
+00:40:47,712 --> 00:40:50,144
+Speaker 1: Yeah, but what are you going to do about stuff that's coming up?
+
+594
+00:40:50,386 --> 00:40:53,721
+Speaker 1: Like the next version of Firefox is private browsing mode, right?
+
+595
+00:40:53,741 --> 00:41:00,873
+Speaker 1: We're basically browse, but it doesn't write any browser history or anything to any drive anywhere at any time when you're in private mode.
+
+596
+00:41:01,315 --> 00:41:03,044
+Speaker 1: So I just put the browser in private mode.
+
+597
+00:41:03,064 --> 00:41:07,022
+Speaker 1: I do all this stuff and it looks like I've never used this computer, right?
+
+598
+00:41:07,062 --> 00:41:09,533
+Speaker 1: Because my browsing history is like a hundred years old.
+
+599
+00:41:10,015 --> 00:41:11,823
+Speaker 1: All it has is get Firefox.com.
+
+600
+00:41:11,843 --> 00:41:13,894
+Speaker 0: See, at that point, you have to go for the interlinked data.
+
+601
+00:41:13,914 --> 00:41:17,897
+Speaker 0: You have to go for if they saved any files on the disk, which they might have, depending what they're doing.
+
+602
+00:41:18,138 --> 00:41:19,464
+Speaker 1: Yeah, there's no cash, right?
+
+603
+00:41:19,705 --> 00:41:23,322
+Speaker 1: We can get into this sort of stuff where there's basically no data on my drive.
+
+604
+00:41:23,362 --> 00:41:24,568
+Speaker 1: Everything is in this cloud.
+
+605
+00:41:24,588 --> 00:41:28,503
+Speaker 0: Forensics can still get things like that, for example.
+
+606
+00:41:28,804 --> 00:41:29,105
+Speaker 0: All right.
+
+607
+00:41:29,687 --> 00:41:30,892
+Speaker 0: By default, you've got all the data set up.
+
+608
+00:41:31,194 --> 00:41:35,096
+Speaker 0: But what if you don't have a lot of RAM and stuff gets swapped and then it's left in the swap file?
+
+609
+00:41:35,116 --> 00:41:36,021
+Speaker 0: That's possible.
+
+610
+00:41:36,142 --> 00:41:36,966
+Speaker 0: Things like that can happen.
+
+611
+00:41:37,006 --> 00:41:38,574
+Speaker 0: Plus you have to go for the other data.
+
+612
+00:41:38,594 --> 00:41:42,050
+Speaker 0: You have to go for the access times, connections to other places.
+
+613
+00:41:42,710 --> 00:41:45,545
+Speaker 0: Maybe get a wiretap in the old school way and watch the browser.
+
+614
+00:41:45,565 --> 00:41:48,118
+Speaker 1: You need to warrant and get the wiretap beforehand.
+
+615
+00:41:48,178 --> 00:41:49,847
+Speaker 1: But you know, a lot of the forensics, right?
+
+616
+00:41:49,867 --> 00:41:59,350
+Speaker 1: Forensics is usually, you know, after the fact, not the, you know, the other stuff is more like the, well, at least in computers, it's also while you're doing it, maintain a verifiable trail.
+
+617
+00:41:59,470 --> 00:42:10,721
+Speaker 0: I mean, you have to make, if the file access times and all these things, all the things in the file system and all the metadata and all the checksums and everything don't match up at every step of the way, you basically lose all your evidence.
+
+618
+00:42:10,882 --> 00:42:19,563
+Speaker 1: I'm just saying there's a difference between these sort of, you know, there's a, there's a suspect and you're staking them out and tapping his wire and waiting to get him.
+
+619
+00:42:19,864 --> 00:42:23,622
+Speaker 1: There's a difference between that police activity and the police activity of.
+
+620
+00:42:23,863 --> 00:42:24,847
+Speaker 1: we've arrested someone.
+
+621
+00:42:24,867 --> 00:42:27,499
+Speaker 1: We're investigating the scene, the scene of the crime collecting evidence.
+
+622
+00:42:27,680 --> 00:42:32,640
+Speaker 0: But even if you have the, what the discipline it takes to have, I guess I would call it deniable.
+
+623
+00:42:32,680 --> 00:42:41,860
+Speaker 0: computing as a whole is even if we have technology that does most of it for you, it's still so difficult and so annoying to do that people just won't do it.
+
+624
+00:42:41,920 --> 00:42:42,945
+Speaker 1: No people aren't going to do it.
+
+625
+00:42:43,006 --> 00:42:54,794
+Speaker 1: That's why all this, that's why the police are being able to get away with their crappy forensics that they use now because 99% of the time no one encrypts or does anything to protect themselves in any way whatsoever.
+
+626
+00:42:54,834 --> 00:42:56,885
+Speaker 1: And their stuff works just fine on those people.
+
+627
+00:42:57,307 --> 00:42:58,433
+Speaker 1: It works great on those people.
+
+628
+00:42:58,473 --> 00:42:59,941
+Speaker 1: That's why they find all this child porn.
+
+629
+00:42:59,981 --> 00:43:07,321
+Speaker 0: because child porn guys don't know what, you know, like how many times did they catch someone like a, like a husband murdered his wife or a vice murder with antifreeze?
+
+630
+00:43:07,602 --> 00:43:12,824
+Speaker 0: and they go to the house and they just find in the Firefox history like Googling for antifreeze poisoning.
+
+631
+00:43:12,944 --> 00:43:13,266
+Speaker 0: Yeah.
+
+632
+00:43:13,286 --> 00:43:13,507
+Speaker 1: Right.
+
+633
+00:43:13,768 --> 00:43:20,278
+Speaker 1: I mean there was so far of all the stories I've heard of like, you know, people getting like stopped at the border or caught for this or that.
+
+634
+00:43:20,599 --> 00:43:27,810
+Speaker 1: only one guy who was probably a child pornographer had his drive encrypted and wouldn't give up the password one out of all this time.
+
+635
+00:43:27,990 --> 00:43:34,616
+Speaker 1: Only one person, you know, was a child pornographer and was also smart enough to use encryption that they couldn't do anything about.
+
+636
+00:43:35,319 --> 00:43:41,772
+Speaker 1: So, you know, that's why the cops haven't stepped up their game, but what's going to happen when all the child pornographers are that smart?
+
+637
+00:43:41,812 --> 00:43:43,965
+Speaker 0: It's going to be, will they ever be though their child porn?
+
+638
+00:43:44,085 --> 00:43:47,967
+Speaker 1: I know this, but it's, it would be really bad news cause there's nothing stopping them from doing it.
+
+639
+00:43:48,449 --> 00:44:11,830
+Speaker 0: Well, it's more, even if the technology steps up, I feel like the judicial system itself is not going to keep up, but even if the forensics gets up and we've got, you know, expert witnesses and awesome people setting this stuff up, we're going to get to the point to where the evidence that would be presented in court on any level in order to be actually viable or evidence that I would accept as a professional, there's no way a judge could understand it.
+
+640
+00:44:12,250 --> 00:44:15,988
+Speaker 0: Judges are, I think becoming even more and more at the mercy of expert witness.
+
+641
+00:44:16,009 --> 00:44:17,273
+Speaker 1: and here's something else, right?
+
+642
+00:44:17,594 --> 00:44:23,372
+Speaker 1: Is, um, the amount of expertise required to collect this evidence, right?
+
+643
+00:44:23,512 --> 00:44:25,598
+Speaker 1: Would just be so much larger.
+
+644
+00:44:25,959 --> 00:44:32,825
+Speaker 1: You basically wouldn't be able to collect any evidence unless you paid a bajillion dollars to have basically geniuses collected.
+
+645
+00:44:33,146 --> 00:44:40,881
+Speaker 0: Well, see, if you make good methodology, then all you can get some fairly low paid unskilled people to enact the methodology provided you made good enough tools.
+
+646
+00:44:41,022 --> 00:44:43,877
+Speaker 1: That's true, but those tools are going to be very expensive tools.
+
+647
+00:44:43,938 --> 00:44:45,930
+Speaker 0: The expensive part is not going to be getting the data.
+
+648
+00:44:46,090 --> 00:44:59,270
+Speaker 0: I think the expensive part is going to be explaining the data to people in court and I guess the only way to go about it is to, if a certain specific methodology is used enough, then it'll be accepted in court and you won't have to prove that it works again.
+
+649
+00:44:59,650 --> 00:45:00,153
+Speaker 1: No, you won't.
+
+650
+00:45:00,253 --> 00:45:11,260
+Speaker 0: But you know, the, the point is, I think the problem with that, cause that seems to be how a lot of stuff works now, but going forward, the methodology is going to change between or during court cases.
+
+651
+00:45:11,741 --> 00:45:12,623
+Speaker 1: Yeah, that's true.
+
+652
+00:45:13,887 --> 00:45:22,506
+Speaker 1: You know, things move fast, so it's not going to be like, you know, the same, you know, fingerprinting, you know, techniques, you know, they don't really, you know, how much they change, right?
+
+653
+00:45:22,526 --> 00:45:28,998
+Speaker 0: I guess I kind of want to do, I want to talk to a show about the details of this, like how to actually get data off a computer or something like that.
+
+654
+00:45:29,480 --> 00:45:33,977
+Speaker 1: Hope it's not encrypted, you know, don't edit it when you copy it.
+
+655
+00:45:34,097 --> 00:45:35,323
+Speaker 0: What was the guy in slashdot?
+
+656
+00:45:35,343 --> 00:45:36,749
+Speaker 1: The file system read only.
+
+657
+00:45:36,769 --> 00:45:39,726
+Speaker 0: He said something like, what's the fastest way to break someone's encryption?
+
+658
+00:45:40,088 --> 00:45:42,378
+Speaker 0: And the answer was a crowbar, some duct tape.
+
+659
+00:45:42,901 --> 00:45:44,066
+Speaker 1: Yeah, that's pretty much it.
+
+660
+00:45:44,086 --> 00:45:49,211
+Speaker 1: You just, you know, if you, but if you can't Jack Bauer, if you can't get the person to cooperate, that's, that's it.
+
+661
+00:45:49,793 --> 00:45:50,235
+Speaker 1: Game over.
+
+662
+00:45:50,436 --> 00:45:52,767
+Speaker 0: We still need to answer the question once and for all.
+
+663
+00:45:52,847 --> 00:45:56,669
+Speaker 0: If you have to cooperate when it comes to passwords, I think it, I think it's the fifth amendment.
+
+664
+00:45:56,690 --> 00:45:59,561
+Speaker 1: You don't, if it's in your mind, you don't have to say anything.
+
+665
+00:45:59,922 --> 00:46:11,651
+Speaker 0: Yeah, but, but it's always bothered me a little bit that you can automatically, no matter what, always get out of having to reveal anything just by saying you forgot because there's no way yet to prove that you forgot.
+
+666
+00:46:11,932 --> 00:46:12,695
+Speaker 1: That's true too.
+
+667
+00:46:12,876 --> 00:46:20,543
+Speaker 0: And also the interesting thing, I think with brain scans and MRI, I think in the future we will be able to either.
+
+668
+00:46:20,663 --> 00:46:23,293
+Speaker 0: like I could foresee there was a Superman way back.
+
+669
+00:46:23,554 --> 00:46:27,169
+Speaker 0: You watched on Nick at night when I was a kid and they had a psychic donkey.
+
+670
+00:46:28,511 --> 00:46:29,194
+Speaker 0: Follow me on this.
+
+671
+00:46:29,817 --> 00:46:30,862
+Speaker 1: Which Superman was this?
+
+672
+00:46:30,922 --> 00:46:31,585
+Speaker 0: Just follow me.
+
+673
+00:46:31,605 --> 00:46:33,774
+Speaker 0: It was the old black and white live action Superman.
+
+674
+00:46:34,457 --> 00:46:35,964
+Speaker 1: I never heard of that anyway.
+
+675
+00:46:36,205 --> 00:46:37,410
+Speaker 0: Okay, so just bear with me on this.
+
+676
+00:46:37,811 --> 00:46:40,060
+Speaker 0: So they had this psychic donkey that could read people's minds.
+
+677
+00:46:40,843 --> 00:46:49,923
+Speaker 0: So they decided to rob a bank and they robbed the bank and they got the bank teller and they tie him up to a chair and he's like, I'm not going to give you the combination to the safe.
+
+678
+00:46:50,647 --> 00:46:52,558
+Speaker 0: And the guys are like, don't worry, we got this.
+
+679
+00:46:52,578 --> 00:46:58,689
+Speaker 0: They bring the psychic donkey in and they look at guy and they say, think about the combination to the safe and he can't not think about it.
+
+680
+00:46:58,970 --> 00:46:59,553
+Speaker 1: Of course not.
+
+681
+00:46:59,573 --> 00:47:02,406
+Speaker 0: I mean, you know, rim riding the sex machine, there it goes.
+
+682
+00:47:02,909 --> 00:47:03,711
+Speaker 0: You can't stop that.
+
+683
+00:47:03,771 --> 00:47:04,734
+Speaker 0: You can't unsee that.
+
+684
+00:47:06,077 --> 00:47:09,264
+Speaker 0: You can't unsee what has been seen.
+
+685
+00:47:10,206 --> 00:47:12,151
+Speaker 1: So it's you've seen it.
+
+686
+00:47:12,251 --> 00:47:14,158
+Speaker 1: You can't unsee it.
+
+687
+00:47:14,238 --> 00:47:23,614
+Speaker 0: But what do we do when we get to the point to where we can scan someone's brain and tell them, you know, think about your password and then we can just see their password in their brain.
+
+688
+00:47:24,257 --> 00:47:24,719
+Speaker 1: What do you do?
+
+689
+00:47:24,739 --> 00:47:25,181
+Speaker 1: I don't know.
+
+690
+00:47:25,221 --> 00:47:27,270
+Speaker 1: Is that is is that OK?
+
+691
+00:47:27,310 --> 00:47:28,093
+Speaker 1: We can allow that.
+
+692
+00:47:28,193 --> 00:47:29,821
+Speaker 1: I don't think the Constitution has anything.
+
+693
+00:47:29,841 --> 00:47:30,805
+Speaker 1: You know, is that a?
+
+694
+00:47:30,845 --> 00:47:34,340
+Speaker 1: is that a search and seek a warrant for that?
+
+695
+00:47:34,360 --> 00:47:35,264
+Speaker 1: Is it OK?
+
+696
+00:47:35,505 --> 00:47:36,790
+Speaker 0: I think you need a warrant for that.
+
+697
+00:47:36,850 --> 00:47:38,837
+Speaker 1: Is it OK even with a warrant to do that?
+
+698
+00:47:39,259 --> 00:47:45,725
+Speaker 0: My my shooting from the hip opinion is that one, you need up one fucking Warren, but two, it should be OK.
+
+699
+00:47:45,845 --> 00:47:46,066
+Speaker 0: Right.
+
+700
+00:47:46,107 --> 00:47:48,359
+Speaker 1: But then doesn't that completely eliminate the Fifth Amendment?
+
+701
+00:47:48,379 --> 00:47:56,100
+Speaker 1: Because even if you won't, you know, even if you're a few, you have the right to remain silent while they're sort of forcing you to non be silent because you can't stop at the same time.
+
+702
+00:47:56,220 --> 00:47:57,687
+Speaker 0: It's just extant information.
+
+703
+00:47:57,707 --> 00:47:58,811
+Speaker 0: It is.
+
+704
+00:47:58,872 --> 00:48:01,122
+Speaker 0: It's not like I mean, it's not like it is true.
+
+705
+00:48:01,222 --> 00:48:02,367
+Speaker 0: You don't have to tell them.
+
+706
+00:48:02,689 --> 00:48:03,774
+Speaker 0: I know they're good.
+
+707
+00:48:04,055 --> 00:48:04,919
+Speaker 0: It's there anyway.
+
+708
+00:48:04,979 --> 00:48:05,361
+Speaker 0: It's just there.
+
+709
+00:48:05,541 --> 00:48:08,734
+Speaker 0: It's like if I wrote I'm guilty on my forehead, then I signed it.
+
+710
+00:48:09,236 --> 00:48:09,497
+Speaker 1: Yep.
+
+711
+00:48:10,159 --> 00:48:12,306
+Speaker 1: And it's it's it's it's tough.
+
+712
+00:48:12,628 --> 00:48:12,949
+Speaker 0: Of course.
+
+713
+00:48:12,989 --> 00:48:15,999
+Speaker 0: Then we get into a lot of Oshii or Shiro territory.
+
+714
+00:48:16,501 --> 00:48:17,685
+Speaker 1: It's the kind of territory.
+
+715
+00:48:17,725 --> 00:48:21,772
+Speaker 1: this inevitably leads, which makes me think maybe we should end this episode.
+
+716
+00:48:28,378 --> 00:48:30,542
+Speaker 0: This has been Geek Nights with Rim and Scott.
+
+717
+00:48:30,642 --> 00:48:33,152
+Speaker 0: Special thanks to DJ Pretzel for the opening music.
+
+718
+00:48:33,835 --> 00:48:45,172
+Speaker 1: Be sure to visit our website at www.frontroadcrew.com where you'll find show notes, links, our awesome forum, a link to our Frapper map and links to all the RSS feeds.
+
+719
+00:48:45,613 --> 00:48:51,314
+Speaker 0: We say feeds plural because Geek Nights airs four nights a week covering four different brands of geekery.
+
+720
+00:48:51,816 --> 00:48:53,443
+Speaker 0: Mondays are science and technology.
+
+721
+00:48:53,483 --> 00:48:56,134
+Speaker 0: Tuesdays we have video games, board games and RPGs.
+
+722
+00:48:56,496 --> 00:49:01,900
+Speaker 0: Wednesdays are anime, manga, comic nights and Thursdays are the catchalls for various rants and tomfoolery.
+
+723
+00:49:02,420 --> 00:49:10,499
+Speaker 1: You can send us feedback by email to geeknights@frontroadcrew.com or you can send audio feedback via Odeo.
+
+724
+00:49:10,800 --> 00:49:14,077
+Speaker 1: Just click the link that says send me an Odeo on the right side of our website.
+
+725
+00:49:14,358 --> 00:49:19,503
+Speaker 0: If you like what you hear, you can catch the last one hundred episodes in iTunes or in your favorite podcatcher.
+
+726
+00:49:19,703 --> 00:49:22,836
+Speaker 0: For the complete archives, visit the website, which has everything.
+
+727
+00:49:22,856 --> 00:49:28,314
+Speaker 1: Geek Nights is distributed under a creative commons attribution non-commercial share alike 2.5 license.
+
+728
+00:49:28,375 --> 00:49:35,986
+Speaker 1: This means you can do whatever you want with it as long as you give us credit, don't make money and share it in kind.
+
+729
+00:49:36,006 --> 00:49:43,780
+Speaker 1: Geek Nights is recorded live with no studio and no audience, but unlike those other late shows, it's actually recorded at night.
+

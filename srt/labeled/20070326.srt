@@ -1,0 +1,3044 @@
+1
+00:00:09,580 --> 00:00:11,698
+Rym: It's Monday March 26th.
+
+2
+00:00:11,858 --> 00:00:13,122
+Rym: I'm Rym.
+
+3
+00:00:13,443 --> 00:00:15,549
+Rym: I'm Scott, and this is GeekNights.
+
+4
+00:00:15,809 --> 00:00:19,170
+Rym: tonight We talk in layman's terms a bit about encryption.
+
+5
+00:00:21,392 --> 00:00:22,407
+Scott: Let's do this.
+
+6
+00:00:24,512 --> 00:00:35,589
+Rym: So all the grocery stores near our house kind of suck well relative to all the places We've lived before in our lives this area mostly It's just that they're not open 24 by 7 which is this alien concept to me.
+
+7
+00:00:36,252 --> 00:00:39,521
+Scott: That and they also are far away from our house.
+
+8
+00:00:39,722 --> 00:00:43,674
+Scott: like usually a grocery store should be able to get to with like Less than five minutes.
+
+9
+00:00:44,156 --> 00:00:44,356
+Rym: No.
+
+10
+00:00:44,396 --> 00:00:47,446
+Scott: They're all kind of like more almost ten minutes away.
+
+11
+00:00:47,466 --> 00:00:48,570
+Scott: It's kind of annoying.
+
+12
+00:00:48,971 --> 00:00:53,370
+Rym: Well, you realize it took us about 10 or 15 minutes to get to the Wegmans from our house in colony.
+
+13
+00:00:53,892 --> 00:00:55,318
+Scott: Well, I took the secret back way.
+
+14
+00:00:55,338 --> 00:00:56,221
+Scott: It took a lot less time.
+
+15
+00:00:56,302 --> 00:00:57,507
+Rym: It still took 10 minutes.
+
+16
+00:00:58,009 --> 00:01:03,206
+Scott: Yeah Anyway, the other thing is a lot of the grocery stores don't have all the products.
+
+17
+00:01:03,286 --> 00:01:04,188
+Scott: I want it's like.
+
+18
+00:01:04,971 --> 00:01:07,440
+Rym: You have very specific picky taste in certain things.
+
+19
+00:01:07,460 --> 00:01:10,410
+Rym: you want this specific kind of bread and the specific kind of tomato sauce.
+
+20
+00:01:10,551 --> 00:01:11,274
+Scott: What's wrong with that?
+
+21
+00:01:11,334 --> 00:01:12,982
+Scott: I mean like you want specific.
+
+22
+00:01:13,042 --> 00:01:14,710
+Scott: I want coca-cola regular.
+
+23
+00:01:14,750 --> 00:01:16,510
+Scott: I mean, it's a specific product.
+
+24
+00:01:16,691 --> 00:01:22,570
+Rym: You know and I wonder some of the things you're picky about if in a double-blind you could tell I could tell I don't know.
+
+25
+00:01:23,590 --> 00:01:29,290
+Scott: Anyway, it's like I want this brand of bread, and I want you know this branded tomato sauce and they don't have it there.
+
+26
+00:01:29,351 --> 00:01:30,110
+Scott: It's kind of annoying.
+
+27
+00:01:30,552 --> 00:01:34,170
+Scott: But we have to go there because there isn't a better grocery store.
+
+28
+00:01:34,531 --> 00:01:38,770
+Scott: Well there are but they're not close enough for it to be worth it to go to a different store.
+
+29
+00:01:38,911 --> 00:01:41,690
+Rym: But we'll skip all that because you guys don't care about our grocery problems.
+
+30
+00:01:42,192 --> 00:01:50,660
+Rym: But we were in the grocery store today dealing with the fact that we played D&D over the weekend and the Visigoths Devoured every piece of food in our house.
+
+31
+00:01:50,901 --> 00:01:53,210
+Scott: Yes, so we were in this grocery store.
+
+32
+00:01:53,793 --> 00:01:56,390
+Scott: It's a shop right and they slightly redeemed themselves.
+
+33
+00:01:57,432 --> 00:01:59,480
+Scott: We're walking down the aisle, and what do I see?
+
+34
+00:01:59,601 --> 00:02:02,908
+Scott: something that cannot possibly escape my eye Koalas March.
+
+35
+00:02:03,732 --> 00:02:10,437
+Rym: Now for those of you who are uninitiated into the cult of the koala in Japan There's a little candy.
+
+36
+00:02:10,979 --> 00:02:11,844
+Rym: It's not really a candy.
+
+37
+00:02:12,045 --> 00:02:13,070
+Scott: It's sort of a snack.
+
+38
+00:02:13,531 --> 00:02:17,487
+Rym: It's basically the to put it in no uncertain terms the
+
+39
+00:02:17,707 --> 00:02:18,250
+Scott: cheapest
+
+40
+00:02:18,871 --> 00:02:30,716
+Rym: Cookie matter known to man puffs into a hollow thing and inside of that is the cheapest Chocolate the world has ever seen kind of puff Injected in there with the machine
+
+41
+00:02:31,017 --> 00:02:34,468
+Scott: and then they draw a picture of a koala on the outside of the cookie.
+
+42
+00:02:34,990 --> 00:02:37,503
+Rym: now There are many many different koalas that they can draw.
+
+43
+00:02:37,583 --> 00:02:42,884
+Rym: in fact at Katsu Kan We found the graph chart of every single koala that exists, and let's see
+
+44
+00:02:42,904 --> 00:02:52,547
+Scott: we got the koala with the boombox the koala With the triangle the koala with the marmalade I guess the koala with the guitar the koala driving a car the koala playing the drum.
+
+45
+00:02:52,648 --> 00:02:53,290
+Scott: you get the idea.
+
+46
+00:02:53,794 --> 00:02:55,830
+Scott: There's a whole bunch of koalas, and they all do different things.
+
+47
+00:02:56,594 --> 00:02:58,343
+Rym: One is a Japanese construction koala.
+
+48
+00:02:58,604 --> 00:02:59,187
+Scott: Oh, it's a good one.
+
+49
+00:02:59,549 --> 00:03:02,399
+Scott: well There are three different flavors of koala.
+
+50
+00:03:02,459 --> 00:03:05,309
+Rym: well know that there are two flavors ass not ass.
+
+51
+00:03:05,369 --> 00:03:11,419
+Scott: yes Well, we've had the regular old koala Which is a vanilla cookie with chocolate inside.
+
+52
+00:03:11,479 --> 00:03:12,563
+Scott: that is a good koala.
+
+53
+00:03:12,603 --> 00:03:13,887
+Scott: the not ass koala.
+
+54
+00:03:14,188 --> 00:03:16,054
+Rym: now good It's for some.
+
+55
+00:03:16,094 --> 00:03:29,862
+Rym: it's weird how the bad bad bad that all this is you know the cheapest components the absolute cheapest Manufacturing thing the stickiest stick and yet somehow it comes together into this delicious snack That has been a very big part of our lives from the moment.
+
+56
+00:03:29,882 --> 00:03:31,629
+Rym: We first ate one when we were at RIT.
+
+57
+00:03:32,291 --> 00:03:37,285
+Scott: Yep, well, there's also these strawberry koala which is ass the strawberry queasy.
+
+58
+00:03:37,787 --> 00:03:38,990
+Rym: I like the normal koala.
+
+59
+00:03:39,090 --> 00:03:41,522
+Rym: So when I knew that there was a strawberry koala we saw one.
+
+60
+00:03:41,562 --> 00:03:42,225
+Rym: we bought a box.
+
+61
+00:03:42,245 --> 00:03:45,910
+Rym: cuz I like strawberry How could they do this wrong?
+
+62
+00:03:46,450 --> 00:03:47,716
+Rym: I mean how could this possible?
+
+63
+00:03:48,118 --> 00:03:52,490
+Rym: it tasted not so much like strawberry But like some sort of cleaning fluid.
+
+64
+00:03:52,996 --> 00:03:59,374
+Scott: It's really bad anyway And it wasn't a bad batch either because I tried him again somewhere else with a different batch And it was still bad.
+
+65
+00:03:59,394 --> 00:04:00,378
+Rym: it tastes like chemicals.
+
+66
+00:04:00,539 --> 00:04:01,985
+Scott: it tastes bad anyway.
+
+67
+00:04:02,527 --> 00:04:05,329
+Scott: at the store We basically bought every box.
+
+68
+00:04:05,551 --> 00:04:10,589
+Scott: They were selling them for a dollar per box and a box is pretty much as one serving of koalas.
+
+69
+00:04:11,131 --> 00:04:26,867
+Scott: we bought every box of playing koalas they had for a dollar each and They they saw the third flavor was available in addition to the strawberry which we bought none of the white chocolate cream koala Which is a chocolate cookie with white chocolate inside.
+
+70
+00:04:27,229 --> 00:04:30,130
+Scott: now I have never had this koala and I have them right here.
+
+71
+00:04:30,230 --> 00:04:36,046
+Scott: We bought one package of white chocolate cream koala, and I'm gonna eat one right now now.
+
+72
+00:04:36,648 --> 00:04:37,390
+Rym: I wouldn't buy it.
+
+73
+00:04:37,571 --> 00:04:40,041
+Rym: I mean we saw the normal koalas And it was pretty much.
+
+74
+00:04:40,061 --> 00:04:43,649
+Rym: Scott goes oh craps And he grabs as many as he can grab in one fistful.
+
+75
+00:04:44,113 --> 00:04:45,744
+Rym: And I look and I see that there are three remaining.
+
+76
+00:04:45,784 --> 00:04:46,610
+Rym: so I grabbed all of them.
+
+77
+00:04:46,650 --> 00:04:49,250
+Rym: We basically clean the place out of koalas immediately.
+
+78
+00:04:49,873 --> 00:04:59,389
+Rym: They're probably gonna be like huh we got these koala things and someone bought them all Because they must have gotten him right away, but I'm leery of this non normal koala.
+
+79
+00:04:59,770 --> 00:05:05,850
+Scott: Well judging from the smell and the look I'm going 50/50 on what it is gonna be good or bad.
+
+80
+00:05:06,171 --> 00:05:07,820
+Rym: So it's supposed to be white chocolate in there.
+
+81
+00:05:07,840 --> 00:05:09,690
+Rym: I wonder if it's actually white chocolate.
+
+82
+00:05:09,710 --> 00:05:11,159
+Scott: I'll read the ingredients after I eat it.
+
+83
+00:05:11,179 --> 00:05:15,370
+Scott: you ready all right It's okay.
+
+84
+00:05:15,530 --> 00:05:25,059
+Scott: I mean it's not poisonous, and it seems like it's got this hint that there's a good flavor somewhere But it never actually reaches that good flavor.
+
+85
+00:05:25,120 --> 00:05:28,090
+Scott: It's just the preamble like there's a good flavor coming.
+
+86
+00:05:28,351 --> 00:05:29,455
+Scott: There's a good flavor coming.
+
+87
+00:05:29,696 --> 00:05:32,726
+Scott: It never comes and then there's kind of an aftertaste.
+
+88
+00:05:33,329 --> 00:05:35,850
+Scott: so Stick to the normal koalas people.
+
+89
+00:05:36,335 --> 00:05:40,785
+Rym: I guess I was correct in my assessment And I'm glad that I did not waste the $1 that you have now wasted.
+
+90
+00:05:40,806 --> 00:05:41,187
+Scott: you want one?
+
+91
+00:05:41,509 --> 00:05:42,636
+Scott: no It's all right.
+
+92
+00:05:42,857 --> 00:05:44,970
+Rym: I'll try it eventually, but I don't want one now all right.
+
+93
+00:05:46,030 --> 00:05:51,090
+Rym: So so Scott's gonna stop eating koala, so we don't hear smack smack smack gargle all the time.
+
+94
+00:05:51,831 --> 00:05:53,922
+Scott: Yeah, only one just to see what it was like.
+
+95
+00:05:54,243 --> 00:05:58,767
+Rym: granted while Scott was doing that I basically ate an entire little box of koalas in that span.
+
+96
+00:05:58,787 --> 00:06:01,177
+Scott: well I think every box has hold on.
+
+97
+00:06:01,218 --> 00:06:06,205
+Scott: it says on here every box of koalas is 14 cookies Which is two servings all right?
+
+98
+00:06:06,386 --> 00:06:06,769
+Scott: That's cool?
+
+99
+00:06:07,550 --> 00:06:11,021
+Scott: Oh, let's see white chocolate cream is the number one ingredient huh?
+
+100
+00:06:11,041 --> 00:06:13,309
+Scott: It's partially hydrogenated palm and soy.
+
+101
+00:06:13,589 --> 00:06:16,322
+Scott: wow There's two and a half grams of trans fat in this koala.
+
+102
+00:06:16,784 --> 00:06:21,036
+Rym: ah ah ah I just ate a bunch of trans fat.
+
+103
+00:06:21,056 --> 00:06:21,798
+Rym: That's not cool.
+
+104
+00:06:21,818 --> 00:06:24,807
+Scott: There's five grams of trans fat in this entire koala package.
+
+105
+00:06:25,188 --> 00:06:25,610
+Rym: That's a lot.
+
+106
+00:06:27,993 --> 00:06:30,370
+Scott: Huh, maybe I have to go sparingly on the koala.
+
+107
+00:06:30,430 --> 00:06:32,461
+Rym: We finally learned about this trans fat business.
+
+108
+00:06:32,621 --> 00:06:34,310
+Rym: and now that knowledge.
+
+109
+00:06:34,732 --> 00:06:35,656
+Rym: It's like Cthulhu.
+
+110
+00:06:36,078 --> 00:06:44,570
+Rym: there was something that we enjoyed and just now We came upon some dark hideous knowledge about that thing and now we look at it in a whole new light sigh.
+
+111
+00:06:45,071 --> 00:06:54,619
+Rym: Anyway, I don't have a segue here, but in the news you might have remembered a while ago that the guy who does riser FS his name is riser.
+
+112
+00:06:54,700 --> 00:07:03,781
+Rym: if you couldn't get Hans riser well He was arrested for The possible murder of his wife his estranged wife.
+
+113
+00:07:04,162 --> 00:07:13,070
+Scott: you could read all the facts of the case on the internets or on Wikipedia and I gotta say it looks like he probably did it.
+
+114
+00:07:13,351 --> 00:07:15,625
+Rym: I mean this can't say for sure, but this isn't news.
+
+115
+00:07:15,645 --> 00:07:17,576
+Rym: this happened a long time ago I believe we talked about it.
+
+116
+00:07:17,878 --> 00:07:19,730
+Rym: the open-source community was kind of a buzz.
+
+117
+00:07:19,834 --> 00:07:28,699
+Rym: I mean It's kind of weird for me to see a high-profile tech guy who I the name I have only ever associated with tech when I hear riser.
+
+118
+00:07:28,740 --> 00:07:30,705
+Rym: I think riser FS the file system.
+
+119
+00:07:30,766 --> 00:07:32,110
+Rym: I use on my Gentoo box.
+
+120
+00:07:32,391 --> 00:07:33,515
+Scott: Yeah, I mean this guy.
+
+121
+00:07:33,535 --> 00:07:34,719
+Scott: he's a programmer.
+
+122
+00:07:34,920 --> 00:07:36,545
+Scott: He made a really good file system.
+
+123
+00:07:36,565 --> 00:07:37,870
+Scott: We did an episode in file systems.
+
+124
+00:07:37,910 --> 00:07:41,555
+Scott: you can go listen to that and It's it's really awesome.
+
+125
+00:07:41,615 --> 00:07:46,070
+Scott: and the only thing we ever thought about this guy was he must be a smart guy who makes file systems.
+
+126
+00:07:46,532 --> 00:07:50,350
+Scott: That's not the kind of guy you think would murder his wife, and it just it's weird to hear him.
+
+127
+00:07:50,450 --> 00:07:51,616
+Rym: I mean when it first saw the news.
+
+128
+00:07:51,656 --> 00:07:54,710
+Rym: I thought wow some guy named riser murdered his wife.
+
+129
+00:07:55,092 --> 00:07:56,460
+Rym: That's pretty funny too bad.
+
+130
+00:07:56,500 --> 00:07:57,808
+Rym: It's not the guy who does my file system.
+
+131
+00:07:58,793 --> 00:08:05,825
+Rym: Shit, it is the guy cuz if he actually goes to jail riser FS There's some dubious states as to what's gonna happen to it.
+
+132
+00:08:05,845 --> 00:08:06,890
+Scott: I mean it's kind of weird.
+
+133
+00:08:06,950 --> 00:08:11,289
+Scott: It's like you look at all the different groups of people you know in terms of what you know.
+
+134
+00:08:11,550 --> 00:08:19,019
+Scott: The general groups of people you know you know yeah, you know yeah, you know yeah, you know Yeah, you look at like athletes athletes.
+
+135
+00:08:19,340 --> 00:08:21,026
+Scott: some athletes are criminals some aren't.
+
+136
+00:08:21,467 --> 00:08:23,978
+Rym: oh jay simpson Oj politicians.
+
+137
+00:08:24,038 --> 00:08:26,409
+Scott: some politicians are criminals some are all of them.
+
+138
+00:08:27,330 --> 00:08:27,972
+Scott: Businessmen.
+
+139
+00:08:28,012 --> 00:08:29,797
+Scott: some of them are criminals some aren't you know.
+
+140
+00:08:30,198 --> 00:08:34,570
+Scott: it seems like the percentages are pretty average relative to the general population.
+
+141
+00:08:34,991 --> 00:08:39,789
+Scott: When it comes to scientists and technology people you don't see too many criminals.
+
+142
+00:08:40,051 --> 00:08:44,249
+Rym: I believe you were discounting the very wide evil scientist demographic.
+
+143
+00:08:44,269 --> 00:08:47,398
+Scott: ah Yes, the evil scientist demographic.
+
+144
+00:08:47,740 --> 00:08:56,054
+Rym: I mean they're the ones who secretly made aids in the 1970s to kill minorities Or not.
+
+145
+00:08:56,576 --> 00:09:04,841
+Rym: but anyway the actual news here is that he pleaded not guilty and All the people analyzing the case he fled not guilty.
+
+146
+00:09:05,002 --> 00:09:05,744
+Rym: regardless.
+
+147
+00:09:06,286 --> 00:09:13,510
+Rym: the people around the case Aren't sure what to make of this because it's very odd apparently for a defendant to waive their right.
+
+148
+00:09:13,871 --> 00:09:23,050
+Rym: Well, basically you get a right to have a trial within 60 days in that state and yet He's waving his right or he's not waving his right, so he'll have the trial almost immediately.
+
+149
+00:09:23,432 --> 00:09:26,610
+Rym: So the prosecution is scrambling to get all their stuff together, huh?
+
+150
+00:09:26,810 --> 00:09:27,773
+Rym: Usually they want to.
+
+151
+00:09:27,934 --> 00:09:32,449
+Rym: they basically wait and let all the evidence be gathered and then have the trial and this guy's gun.
+
+152
+00:09:32,489 --> 00:09:33,740
+Rym: and yeah Let's just get this over with.
+
+153
+00:09:33,781 --> 00:09:34,326
+Rym: I didn't do it.
+
+154
+00:09:34,831 --> 00:09:38,608
+Scott: Maybe he there's some evidence that they haven't got and he doesn't think they'll get it in the 60 days.
+
+155
+00:09:39,130 --> 00:09:42,046
+Rym: Well, they haven't found his wife's body yet.
+
+156
+00:09:42,810 --> 00:09:45,309
+Scott: Ah It's a smart move being a murderer.
+
+157
+00:09:46,852 --> 00:09:48,500
+Scott: If he did it it's a smart move.
+
+158
+00:09:48,540 --> 00:09:50,670
+Rym: that's all I could say, you know what if he didn't do it?
+
+159
+00:09:50,670 --> 00:09:57,735
+Rym: It's a smart move to probably maybe I think all things told it probably makes it more likely that he'll get off Regardless of whether he did.
+
+160
+00:09:57,795 --> 00:09:58,398
+Scott: Yeah, there's a reason.
+
+161
+00:09:58,418 --> 00:10:01,071
+Scott: you have a right to a speedy trial, you know I would.
+
+162
+00:10:01,292 --> 00:10:05,450
+Scott: if I had needed a trial for me, I would definitely make it as speedy as possible.
+
+163
+00:10:05,450 --> 00:10:13,537
+Scott: I'm not gonna be waving any rights unless there was a reason to like I really didn't do it and They're gonna collect an evidence that proves I did.
+
+164
+00:10:13,698 --> 00:10:17,570
+Rym: I can foresee a situation Scott where you would very readily waive your rights.
+
+165
+00:10:18,751 --> 00:10:24,590
+Rym: For example suppose that we amended the Constitution and you know how to write to sodomy, you know what I'm saying?
+
+166
+00:10:26,010 --> 00:10:27,876
+Rym: Are you saying that you wouldn't waive that?
+
+167
+00:10:27,916 --> 00:10:28,137
+Rym: right?
+
+168
+00:10:28,618 --> 00:10:32,349
+Scott: the one rave the rights I've got already for real at ABC standing there.
+
+169
+00:10:32,570 --> 00:10:35,662
+Scott: All right, what's with you in the stupid ahead of easy?
+
+170
+00:10:36,144 --> 00:10:37,790
+Scott: He has a funny head anyway.
+
+171
+00:10:39,038 --> 00:10:41,377
+Scott: So Apple that Apple TV thing.
+
+172
+00:10:41,398 --> 00:10:43,969
+Scott: remember when they came out with the iPhone and talked about the Apple TV.
+
+173
+00:10:44,753 --> 00:10:46,219
+Scott: You can get the Apple TV now.
+
+174
+00:10:46,742 --> 00:10:48,570
+Rym: I'm not even sure what Apple TV is.
+
+175
+00:10:48,590 --> 00:10:49,818
+Scott: That's all I'm gonna tell you right now.
+
+176
+00:10:50,381 --> 00:10:51,609
+Scott: Apple TV is a little box.
+
+177
+00:10:52,051 --> 00:10:53,496
+Scott: It's like a Mac Mini only flat.
+
+178
+00:10:53,797 --> 00:10:59,202
+Scott: and you plug it into your TV and you plug it into the electricity and the holes in The wall, you know the holes the holes.
+
+179
+00:10:59,262 --> 00:11:00,510
+Rym: Yeah the holes Jerry, right?
+
+180
+00:11:00,890 --> 00:11:04,730
+Scott: And you also plug it into your audio with an optical cable or an RCA or whatever you've got.
+
+181
+00:11:04,770 --> 00:11:05,935
+Rym: Do I plug it into the Internet?
+
+182
+00:11:06,578 --> 00:11:15,110
+Scott: it plugs in to the Internet's with the wireless is But not really the Internet's so much as the other max nearby on the same network.
+
+183
+00:11:15,792 --> 00:11:20,250
+Scott: And what you do is you it has a hard drive and you send things to it.
+
+184
+00:11:20,370 --> 00:11:22,600
+Scott: You sync with it kind of like you sync with an iPod.
+
+185
+00:11:22,660 --> 00:11:25,010
+Scott: It's actually pretty slick the way you sync with it, right?
+
+186
+00:11:25,491 --> 00:11:27,138
+Scott: So you go on iTunes.
+
+187
+00:11:27,158 --> 00:11:29,869
+Scott: you buy some videos you sync with your Apple TV.
+
+188
+00:11:30,552 --> 00:11:33,023
+Scott: You get some m4a and peg for videos.
+
+189
+00:11:33,043 --> 00:11:34,810
+Scott: they got to be in like the right format.
+
+190
+00:11:35,173 --> 00:11:36,603
+Rym: Oh, well that pretty much makes it useless.
+
+191
+00:11:36,865 --> 00:11:48,149
+Scott: welcome to the Internet Yes And you sync it and you you put stuff on there and then using these slick interface of the Apple TV You can watch them in possibly HD on your TV.
+
+192
+00:11:48,832 --> 00:11:51,964
+Scott: Which is the advantage over just plugging a computer into your TV?
+
+193
+00:11:52,004 --> 00:11:59,230
+Scott: because the compute most computers Can't output HD to your television without special stuff and the Apple TV does it with a slick interface?
+
+194
+00:11:59,351 --> 00:12:01,148
+Scott: That looks pretty nice, so that's it.
+
+195
+00:12:01,858 --> 00:12:02,590
+Scott: That's pretty much.
+
+196
+00:12:02,670 --> 00:12:04,195
+Scott: I mean it has 802 11 ends.
+
+197
+00:12:04,235 --> 00:12:07,386
+Scott: you can transfer stuff to it real fast if you have an 802.11 n thing.
+
+198
+00:12:08,690 --> 00:12:14,648
+Scott: I mean if you're having Apple TV you better be an Apple person with an HD TV and such and such.
+
+199
+00:12:16,391 --> 00:12:32,066
+Scott: However there's been a lot of hack soaring of it going on of course and people have gotten it to play xvids And they've gotten it to do all this stuff, but at the same time people are saying hey Here's how to use front row to turn your Mac into an Apple TV, so yeah, it's like.
+
+200
+00:12:32,086 --> 00:12:33,591
+Scott: I Don't know.
+
+201
+00:12:33,812 --> 00:12:41,710
+Scott: I think that this device has uses, but the number of people who would actually Get a benefit from it is very small.
+
+202
+00:12:42,551 --> 00:12:53,090
+Scott: like you have to be a specific kind of person like you better be a Mac user who buys a lot of videos on iTunes and has an HD TV and your computer is nowhere near TV
+
+203
+00:12:53,732 --> 00:12:55,718
+Rym: And you have a bunch of Macs or at least one Mac
+
+204
+00:12:55,898 --> 00:13:02,369
+Scott: and that yeah if your primary computers are all max then in That situation this would be a good thing for you to buy possibly.
+
+205
+00:13:02,389 --> 00:13:04,130
+Rym: well How much is this thing supposed to cost anyway?
+
+206
+00:13:04,812 --> 00:13:06,370
+Scott: It's a good question and actually look that up.
+
+207
+00:13:06,410 --> 00:13:10,630
+Rym: Let's go to Apple because I'd wonder if it cost anywhere near the cost of a Mac mini.
+
+208
+00:13:11,193 --> 00:13:12,178
+Scott: I just get a Mac mini.
+
+209
+00:13:12,198 --> 00:13:13,726
+Scott: well the Mac mini can't output HD.
+
+210
+00:13:13,746 --> 00:13:14,229
+Scott: That's oh no.
+
+211
+00:13:15,572 --> 00:13:16,886
+Scott: That's why I said if you have an HD TV.
+
+212
+00:13:17,551 --> 00:13:27,549
+Rym: But even now currently while there is HD content on the internet the vast majority of the content that I guess Normal geeks watch on the oh is not HD.
+
+213
+00:13:27,951 --> 00:13:31,950
+Rym: It is in fact YouTube quality or possibly anime fan sub quality.
+
+214
+00:13:32,592 --> 00:13:35,802
+Scott: Well the Apple TV comes with the Apple TV.
+
+215
+00:13:36,323 --> 00:13:38,009
+Scott: It has a 40 gigabyte hard drive.
+
+216
+00:13:38,089 --> 00:13:41,226
+Scott: That's it Yep, it doesn't need that much because it only stores what you're.
+
+217
+00:13:41,246 --> 00:13:50,769
+Scott: you know you're gonna watch And you store most of this stuff on your Mac, and then you send it over watch it And then you don't you know sort of like your iPod It doesn't need a really big hard drive because you store the music on your PC.
+
+218
+00:13:50,970 --> 00:13:52,115
+Scott: Do you sync what you're gonna listen to?
+
+219
+00:13:52,658 --> 00:13:53,542
+Scott: it's $300 which is like okay?
+
+220
+00:13:55,490 --> 00:13:59,550
+Scott: I guess I mean for an HD video card probably cost $300.
+
+221
+00:13:59,550 --> 00:14:04,389
+Rym: Yeah, that's about half the cost of the lowest end Mac mini, so I can see a market for it at least.
+
+222
+00:14:04,569 --> 00:14:06,570
+Scott: yeah It only because the price is low enough.
+
+223
+00:14:06,650 --> 00:14:06,771
+Scott: It's.
+
+224
+00:14:06,831 --> 00:14:15,565
+Scott: that's the only reason anyone should even consider buying it and only if your HD Buying videos and iTunes and big-time Mac using other than that.
+
+225
+00:14:15,947 --> 00:14:19,009
+Scott: I think this is a pretty very niche product.
+
+226
+00:14:26,685 --> 00:14:39,344
+Rym: Things of the day now this thing of the day I got here this video is very important because if you're out there You need to be aware that the chicken police are ready to stop any fights You might get involved in.
+
+227
+00:14:39,785 --> 00:14:41,571
+Scott: hey you there with that drumstick stop.
+
+228
+00:14:41,611 --> 00:14:44,259
+Rym: You're under arrest particularly if you're a rabbit.
+
+229
+00:14:45,901 --> 00:14:52,614
+Rym: Emily told us about this and she knew where it was on YouTube when she pointed us at it And she wouldn't say anything other than that.
+
+230
+00:14:52,755 --> 00:14:53,580
+Rym: It's chicken police.
+
+231
+00:14:54,363 --> 00:14:58,000
+Rym: So we watched it and sure enough it is in fact chicken police.
+
+232
+00:14:58,744 --> 00:15:01,240
+Scott: It's a video of two rabbits and Emily is rabbit crazy.
+
+233
+00:15:01,401 --> 00:15:04,599
+Scott: So that's why she knows any if it's on the internet and this rabbit she knows about it.
+
+234
+00:15:04,800 --> 00:15:08,374
+Rym: Yeah, I mean when I'm bored at work or whenever I'm bored on the internet.
+
+235
+00:15:08,414 --> 00:15:09,840
+Rym: I'll just search for videos of puppies.
+
+236
+00:15:10,165 --> 00:15:15,932
+Rym: She's the same way except For videos of rabbits anyway, so this video has two rabbits, and they're fighting.
+
+237
+00:15:15,992 --> 00:15:19,280
+Scott: they're fighting like our bitey bitey grabby grabby scratchy scratchy.
+
+238
+00:15:19,380 --> 00:15:35,780
+Rym: You know that jump around rabbit fight and suddenly these do hear this noise and these two chickens run over and each one of them takes one rabbit and basically acts exactly like a Bouncer at a club or a cop breaking up a fight and they separate the two rabbits pull them apart and just stand there staring at.
+
+239
+00:15:36,701 --> 00:15:37,746
+Scott: It's a funny animal video.
+
+240
+00:15:37,826 --> 00:15:41,040
+Rym: one of the rabbits like moves to go back to fighting and the chicken goes nuts.
+
+241
+00:15:41,120 --> 00:15:42,348
+Rym: I like you stay right there.
+
+242
+00:15:42,650 --> 00:15:44,280
+Rym: Yeah, don't breathe don't move.
+
+243
+00:15:44,541 --> 00:15:54,659
+Scott: It's not quite as good as the video or the monkey bothering the Tigers But it's better than that video that recent video series of like the dog and the cat getting along now.
+
+244
+00:15:55,100 --> 00:15:58,120
+Rym: What makes this video is that after the chickens stand there for a while?
+
+245
+00:15:58,240 --> 00:16:01,100
+Rym: They stare down the rabbits and the rabbits seem to agree to stop fighting.
+
+246
+00:16:01,522 --> 00:16:04,980
+Rym: The chickens decide that their job is done, and they both just walk away.
+
+247
+00:16:05,362 --> 00:16:09,282
+Scott: Yeah, but like as they walk away right before they're like yeah, yeah That's right.
+
+248
+00:16:09,824 --> 00:16:10,928
+Rym: like they they do that they.
+
+249
+00:16:11,209 --> 00:16:14,060
+Rym: they give this look like we'll be back if you two cause trouble.
+
+250
+00:16:15,064 --> 00:16:18,400
+Scott: I really don't know what those animals are thinking, but it's it's pretty funny.
+
+251
+00:16:18,842 --> 00:16:21,760
+Rym: I'll bet those chickens just didn't want those rabbits making noise.
+
+252
+00:16:24,143 --> 00:16:24,364
+Scott: All right.
+
+253
+00:16:24,745 --> 00:16:26,271
+Scott: so Rym I got a question for you.
+
+254
+00:16:26,492 --> 00:16:28,260
+Scott: all right, how do you prove?
+
+255
+00:16:29,120 --> 00:16:31,110
+Scott: Photography to a blind man.
+
+256
+00:16:31,512 --> 00:16:31,653
+Rym: Well.
+
+257
+00:16:31,673 --> 00:16:32,960
+Rym: That's an interesting question.
+
+258
+00:16:33,121 --> 00:16:38,137
+Rym: I'll let you describe the answer because this is your thing of the day even though We already had this conversation a little while ago.
+
+259
+00:16:38,298 --> 00:16:49,240
+Scott: Yes Well, I read this on an awesome blog that I never read before called skeptico critical thinking for an irrational world And it's a short blog post, but it is very interesting.
+
+260
+00:16:49,880 --> 00:17:07,540
+Scott: Basically this guy being a skeptic like us Was arguing with a psychic or a acclaimed psychic or someone who believed in psychics and that person said to this guy How do you prove photography to a blind man and obviously he was getting at was how do you prove?
+
+261
+00:17:07,980 --> 00:17:10,252
+Scott: Psychic miss to a non psychic person?
+
+262
+00:17:10,311 --> 00:17:14,288
+Scott: if you can't see the psychic miss How can I possibly prove to you that it's there?
+
+263
+00:17:14,690 --> 00:17:25,579
+Rym: now while this is a very very well You know I wouldn't call it a stupid analogy in retrospect because it's a very good analogy If you look at it from a smart point of view because it proves that this guy's wrong.
+
+264
+00:17:25,921 --> 00:17:39,365
+Rym: Yes, but at the same time I give this guy credit for whoever he stole this idea from because it's not of all the arguments That people make for psychic powers or for the evils of evidence-based science or whatever craziness They're talking about.
+
+265
+00:17:39,807 --> 00:17:43,426
+Rym: that's probably the most well reasoned Argument I've ever heard.
+
+266
+00:17:43,587 --> 00:17:50,797
+Rym: it'll take a smart smart person to come back against this argument Luckily at least to come back on the top of their feet out of the blue.
+
+267
+00:17:50,817 --> 00:17:54,770
+Scott: yes Well this guy of course is a very smart person.
+
+268
+00:17:54,830 --> 00:17:57,940
+Scott: he says of course you can prove photography to a blind man.
+
+269
+00:17:58,161 --> 00:17:58,843
+Scott: It's very simple.
+
+270
+00:17:59,384 --> 00:18:08,160
+Scott: you put him in a room you give him a camera a Polaroid probably and you say all right blind man Make sure that no one's in the room lock all the doors etcetera etcetera.
+
+271
+00:18:08,661 --> 00:18:09,966
+Scott: You know doesn't have any windows.
+
+272
+00:18:10,548 --> 00:18:13,400
+Scott: then take a picture of yourself holding up some number of fingers.
+
+273
+00:18:13,962 --> 00:18:17,577
+Scott: Then show that picture to people who can see that you've never met before.
+
+274
+00:18:18,018 --> 00:18:25,959
+Scott: ask them How many fingers you're holding up in that picture, and if they tell you how many fingers you're holding up then that probably worked.
+
+275
+00:18:25,979 --> 00:18:28,658
+Scott: and Photography is real you know.
+
+276
+00:18:29,342 --> 00:18:32,392
+Scott: Do it a whole bunch of times because they might have just guessed correctly.
+
+277
+00:18:32,753 --> 00:18:44,020
+Scott: and if they keep saying the right number of fingers you can bet that that machine probably took a picture of you and Put it on to that piece of paper that you're showing to people and thus you would know the photography works.
+
+278
+00:18:44,521 --> 00:18:47,670
+Scott: Then he goes on to say some fun stuff making fun of psychics.
+
+279
+00:18:48,212 --> 00:19:03,600
+Scott: if you did this a thousand times and the sighted person Got the correct number of fingers say 225 times out of a thousand Where pure chance would be 200 times where the blind man believed that this anomaly was proof of photography.
+
+280
+00:19:05,941 --> 00:19:07,105
+Scott: Yes, just funny cuz.
+
+281
+00:19:07,125 --> 00:19:10,977
+Scott: psychics are like yeah, we get it right a better percentage of the time.
+
+282
+00:19:10,997 --> 00:19:14,589
+Rym: yeah Yeah, it's perfect though.
+
+283
+00:19:14,629 --> 00:19:15,152
+Rym: What can I say?
+
+284
+00:19:15,193 --> 00:19:15,937
+Rym: that guy was smart?
+
+285
+00:19:16,239 --> 00:19:16,420
+Scott: Yeah?
+
+286
+00:19:17,242 --> 00:19:18,829
+Rym: It's not that hard to own a psychic.
+
+287
+00:19:19,312 --> 00:19:20,940
+Rym: It's not in a rational argument.
+
+288
+00:19:21,710 --> 00:19:25,540
+Scott: Yeah What if a scientific body spent 25?
+
+289
+00:19:25,540 --> 00:19:35,619
+Scott: Years researching whether sighted people could guess how many fingers blind people are holding up in front of a camera But concluded that there is ultimately very little if any data that supports the hypothesis that they can.
+
+290
+00:19:37,341 --> 00:19:40,513
+Scott: What if a conjurer offered a million dollars for any sighted person?
+
+291
+00:19:40,533 --> 00:19:43,815
+Scott: you can successfully perform the five-finger test But no one was able to do it.
+
+292
+00:19:46,881 --> 00:19:51,559
+Scott: Yeah, wouldn't the blind man say to all this why can't you just tell me how many fingers I'm holding up?
+
+293
+00:19:53,942 --> 00:20:05,800
+Rym: All right, yeah, so anyway over the weekend So we were playing D&D in two separate conversations Scott and I ended up explaining Encryption and bits of cryptography to numbers of our friends.
+
+294
+00:20:06,422 --> 00:20:12,820
+Scott: Yeah, Pete explained to me because there was an article about those man sheep or huge on the chimera sheep thing.
+
+295
+00:20:13,041 --> 00:20:14,787
+Rym: Yeah, I almost used that as my news.
+
+296
+00:20:15,148 --> 00:20:17,577
+Scott: Yeah, but I I wanted him he's biology.
+
+297
+00:20:17,617 --> 00:20:21,770
+Scott: so I got him to Decrypt the story for me.
+
+298
+00:20:22,192 --> 00:20:29,898
+Rym: That's a pretty heady claim that Pete is Biology that he encompasses all that biology is no, but he's biologist.
+
+299
+00:20:29,998 --> 00:20:32,547
+Rym: in a way He is biologist.
+
+300
+00:20:33,451 --> 00:20:35,940
+Rym: I think you're missing some indefinite articles there anyway.
+
+301
+00:20:37,581 --> 00:20:41,580
+Scott: So and then I don't know how the conversation got to it, but it got to the encryption.
+
+302
+00:20:41,781 --> 00:20:48,260
+Scott: So I explained to him how the private public key encryption works and I said hey We should do a show on that action.
+
+303
+00:20:48,441 --> 00:20:50,671
+Rym: Yeah, I think the way this actually went down was.
+
+304
+00:20:50,691 --> 00:20:52,660
+Rym: I overheard the tail end of your conversation.
+
+305
+00:20:52,820 --> 00:20:55,267
+Rym: I said did you just explain encryption to Pete?
+
+306
+00:20:55,548 --> 00:20:58,256
+Rym: and you said yes, and he just explained sheep to me.
+
+307
+00:20:58,276 --> 00:20:59,660
+Scott: That's what I said.
+
+308
+00:21:00,822 --> 00:21:07,800
+Rym: So yeah, like all the recent shows we've done about technology We're gonna go about this in a very broad layman's terms.
+
+309
+00:21:08,102 --> 00:21:11,100
+Rym: You don't need to know a lot of math or science or computing.
+
+310
+00:21:11,461 --> 00:21:15,034
+Rym: We're just gonna go over the basics explain a lot of things very shallowly.
+
+311
+00:21:15,074 --> 00:21:16,520
+Rym: We're going for bread here not depth.
+
+312
+00:21:16,781 --> 00:21:16,962
+Scott: Yep.
+
+313
+00:21:16,983 --> 00:21:17,647
+Scott: All right.
+
+314
+00:21:17,667 --> 00:21:19,560
+Scott: So Rym what's encryption?
+
+315
+00:21:20,260 --> 00:21:30,980
+Rym: Well, you see back in Roman times say I'm Julius Caesar and I got my army and I'm gonna go invade Gaul and I'm gonna go blow up and destroy this one town in Gaul.
+
+316
+00:21:31,442 --> 00:21:34,680
+Rym: But I need to get a bunch of army people here and make all my plans.
+
+317
+00:21:34,801 --> 00:21:36,459
+Rym: So I got to send letters back to Rome.
+
+318
+00:21:37,142 --> 00:21:48,073
+Rym: now what if while I send the letters back my dude gets ambushed and someone reads the letters that say OMG, I'm totally attacking the Gaulish capital lol zores.
+
+319
+00:21:48,574 --> 00:21:50,700
+Scott: Oh, what if the messenger dude is totally a spy?
+
+320
+00:21:51,261 --> 00:21:54,754
+Rym: Yeah, or what if the messenger dude isn't a spy, but he's just dumb?
+
+321
+00:21:55,075 --> 00:22:03,360
+Rym: and then he tells his wife at night Yeah, we're invading Gaul and his wife tells her friend and she tells her lover and then it gets back to the guy in Gaul There's like, oh really?
+
+322
+00:22:04,541 --> 00:22:05,426
+Scott: It's not so good.
+
+323
+00:22:05,727 --> 00:22:10,746
+Rym: Well thus enter the Caesars cipher basically at its barest level.
+
+324
+00:22:11,027 --> 00:22:27,379
+Rym: all encryption is is a way to either verify or obscure the contents of some sort form of information and you were transporting between two people or even just on yourself so that no one else can read it or Pretend it's theirs depending on how you go about it.
+
+325
+00:22:27,440 --> 00:22:32,500
+Scott: Yes, there are many times when you have some information and you don't want to share the information with the whole world.
+
+326
+00:22:32,580 --> 00:22:35,878
+Scott: You only want to share the information with one other person or a few other people.
+
+327
+00:22:35,959 --> 00:22:38,800
+Scott: now Of course You could just get in the same room as the person.
+
+328
+00:22:39,222 --> 00:22:50,579
+Scott: Make sure no one else can hear you and talk or you can sit in a room Write on a piece of paper with no one else looking and then when you're done throw it in the fire And you know that that information will just be between you two people.
+
+329
+00:22:51,061 --> 00:22:58,520
+Scott: However, sometimes you're far away or sometimes you don't want to do it in the same room or sometimes you're tired of writing.
+
+330
+00:22:59,142 --> 00:23:06,419
+Scott: You got to be a hundred percent safe or close to a hundred percent safe and then you need encryptions now.
+
+331
+00:23:07,080 --> 00:23:11,460
+Rym: Classical old-style encryption worked on generally very simple principles.
+
+332
+00:23:11,540 --> 00:23:14,413
+Rym: These are probably the codes that you played with when you were a kid.
+
+333
+00:23:14,774 --> 00:23:21,500
+Rym: you take your little note Like oh my god, Susie has cooties and then say you add one to every letter.
+
+334
+00:23:21,580 --> 00:23:26,276
+Rym: So a becomes B and X becomes Y and now you've got a bunch of guys.
+
+335
+00:23:26,316 --> 00:23:27,600
+Scott: He becomes a yes.
+
+336
+00:23:28,282 --> 00:23:35,145
+Rym: And then now anyone who wants to read your message because it looks like gibberish has to know that the key is Subtract one from every letter.
+
+337
+00:23:35,427 --> 00:23:36,972
+Rym: So the B is turned back into A's.
+
+338
+00:23:37,515 --> 00:23:38,920
+Rym: you see you've got two kinds of text here.
+
+339
+00:23:38,980 --> 00:23:41,800
+Rym: Now you've got the plain text and the cipher text.
+
+340
+00:23:42,142 --> 00:23:45,419
+Rym: These are two important terms that you really should understand before we can talk about this.
+
+341
+00:23:46,061 --> 00:23:56,900
+Rym: Very simply the plain text is your message the thing you wrote the note the in the message Whatever it is The cipher text is what you get when you apply some form of encryption to the plain text.
+
+342
+00:23:57,442 --> 00:24:07,656
+Rym: So you'll turn your plain text into a cipher text and then hopefully the person you give it to Has the key or the way to turn the cipher text black into back into plain text yet.
+
+343
+00:24:07,716 --> 00:24:08,980
+Rym: No one else has this ability.
+
+344
+00:24:09,341 --> 00:24:17,380
+Scott: Yes, well if you do something so simple as adding one to every letter while someone looking at it You know with their naked eyeball might go what the hell shit.
+
+345
+00:24:17,521 --> 00:24:18,691
+Scott: I don't understand what this says.
+
+346
+00:24:18,772 --> 00:24:20,179
+Scott: crap and You know.
+
+347
+00:24:20,240 --> 00:24:28,767
+Scott: But if they actually think about it for a minute or play with it, they can figure it out because it's not strong encryption It's weak ass encryption.
+
+348
+00:24:28,827 --> 00:24:29,711
+Scott: Yeah for weekend.
+
+349
+00:24:29,791 --> 00:24:31,920
+Rym: I mean to give you a few ideas of how this could be broken.
+
+350
+00:24:32,301 --> 00:24:37,875
+Rym: There aren't that many combinations of adding or subtracting a number from the alphabet across the front.
+
+351
+00:24:37,895 --> 00:24:40,741
+Rym: In fact, there's really only 25.
+
+352
+00:24:40,741 --> 00:24:42,207
+Scott: Yeah, it's not too hard now.
+
+353
+00:24:42,248 --> 00:24:48,293
+Rym: granted you could be clever and say oh well skip to risk it But it doesn't matter because you could still brute-force it pretty trivially.
+
+354
+00:24:48,474 --> 00:25:11,439
+Rym: Yeah, just by trying all the combinations I mean think if you've got 25 possible combinations and you try them all 24 of them are gibberish and the 25th one is we attack at dawn The odds that the attack at dawn one is not right or the odds that there'll be more than one actual intelligible Series of text in there are pretty low
+
+355
+00:25:12,341 --> 00:25:13,769
+Scott: Pretty much zero,
+
+356
+00:25:13,950 --> 00:25:17,366
+Rym: but there's a lot of other ways you could break this Statistical analysis.
+
+357
+00:25:17,406 --> 00:25:20,940
+Rym: Let's say you know that the English language the letter E is the most used letter.
+
+358
+00:25:21,364 --> 00:25:23,944
+Rym: So say someone sends a really long Encrypted thing like this.
+
+359
+00:25:24,325 --> 00:25:28,220
+Rym: you look at it and you notice that the letter T occurs more often than any other letter.
+
+360
+00:25:28,801 --> 00:25:35,260
+Rym: So then you figure out that T turns into an E. you figure out what transformation that was and now you're much closer to figure it.
+
+361
+00:25:36,462 --> 00:25:37,246
+Scott: Yeah, you can go.
+
+362
+00:25:37,326 --> 00:25:40,440
+Scott: you know those puzzle books they sell in the store that if I cross words.
+
+363
+00:25:40,520 --> 00:25:43,160
+Scott: But they also have logic puzzles and all kinds of other weird things.
+
+364
+00:25:43,601 --> 00:25:49,860
+Scott: They have cryptograms in there and order of the stick actually did a cryptogram for a while with one of the characters.
+
+365
+00:25:50,021 --> 00:25:57,454
+Scott: you couldn't see what she was saying without figuring it out and They're pretty easy to solve the hue a human sitting there for about 10 minutes.
+
+366
+00:25:57,494 --> 00:25:59,040
+Scott: Who's not an idiot can figure it out.
+
+367
+00:25:59,482 --> 00:26:00,728
+Scott: It's not very good at all.
+
+368
+00:26:01,069 --> 00:26:01,270
+Rym: Yep.
+
+369
+00:26:01,592 --> 00:26:03,219
+Rym: So then things kind of moved along to.
+
+370
+00:26:04,002 --> 00:26:21,360
+Rym: Well, obviously aside from that you could also do substitutions where instead of just having you know Plus one minus one an algorithm you have a code table like a is actually B C is actually F and you make this whole list where you correspond each letter to some other letter where there's no numerical system to it.
+
+371
+00:26:21,360 --> 00:26:23,147
+Rym: There's just a lookup table for it.
+
+372
+00:26:23,589 --> 00:26:23,749
+Scott: Yep.
+
+373
+00:26:24,051 --> 00:26:25,717
+Rym: That's obviously just as easily broken.
+
+374
+00:26:26,239 --> 00:26:28,450
+Scott: now There are other types of things you can use.
+
+375
+00:26:28,470 --> 00:26:30,320
+Scott: we've been talking about here is ciphers.
+
+376
+00:26:30,541 --> 00:26:32,678
+Scott: You can also use a code now in.
+
+377
+00:26:33,741 --> 00:26:37,152
+Scott: You know normal people talk just layman's terms in the everyday.
+
+378
+00:26:37,172 --> 00:26:39,420
+Scott: a code in a cipher are the same damn thing.
+
+379
+00:26:39,480 --> 00:26:41,973
+Rym: Yeah code cipher encryption secret code, whatever.
+
+380
+00:26:42,013 --> 00:26:43,280
+Rym: They're all just the same.
+
+381
+00:26:43,481 --> 00:26:47,518
+Scott: However, a cipher and a code technically speaking are very different things.
+
+382
+00:26:47,780 --> 00:26:50,820
+Rym: now There's a lot of ways we could explain it and a lot of really geeky analogies.
+
+383
+00:26:50,840 --> 00:27:00,175
+Rym: Yes, but a code is like Rym the hawk flies at midnight Echo echo dolphin the base has landed on the moon.
+
+384
+00:27:00,536 --> 00:27:01,640
+Rym: I'm watching anime.
+
+385
+00:27:02,144 --> 00:27:03,233
+Rym: bravo Victor.
+
+386
+00:27:03,254 --> 00:27:04,804
+Rym: and And such.
+
+387
+00:27:05,247 --> 00:27:06,493
+Scott: yes see in the code.
+
+388
+00:27:06,835 --> 00:27:12,380
+Scott: You haven't really Encrypted like the specific bits of the information, you know separately.
+
+389
+00:27:12,862 --> 00:27:17,120
+Scott: You've just changed the meaning of what you're saying into something else.
+
+390
+00:27:17,200 --> 00:27:21,912
+Scott: So this means that a whole block of stuff means a different block of stuff.
+
+391
+00:27:21,952 --> 00:27:26,939
+Scott: So, you know flies at midnight means Attack at noon.
+
+392
+00:27:28,724 --> 00:27:30,980
+Rym: These sorts of codes unlike ciphers.
+
+393
+00:27:31,382 --> 00:27:35,400
+Rym: Well not like ciphers, but in terms of how they can be broken are broken to much the same manner.
+
+394
+00:27:35,684 --> 00:27:36,960
+Rym: You can look at statistical things.
+
+395
+00:27:37,422 --> 00:27:41,620
+Rym: You might correlate me saying the cock vote launches at midnight.
+
+396
+00:27:42,062 --> 00:27:47,998
+Rym: Suppose I say that every time we do a show you could figure out The cock vote at midnight means they put a show up.
+
+397
+00:27:48,480 --> 00:27:54,737
+Rym: Yep, now a more secure one would be a one-time use code like one if I land two.
+
+398
+00:27:54,797 --> 00:27:59,480
+Rym: if by sea sure You could figure out what it meant post-hoc after the fact.
+
+399
+00:27:59,822 --> 00:28:03,340
+Rym: But when it was used it was used and no one could figure it out right away.
+
+400
+00:28:03,561 --> 00:28:06,211
+Scott: As long as you don't use it again, you're okay.
+
+401
+00:28:06,291 --> 00:28:09,222
+Rym: Now remember that that concept is very critical later Mm-hmm.
+
+402
+00:28:09,783 --> 00:28:13,495
+Rym: now beyond all that they kind of moved on to more technological solutions.
+
+403
+00:28:13,555 --> 00:28:16,379
+Rym: where I remember in World War two You might have heard about enigma.
+
+404
+00:28:16,942 --> 00:28:20,558
+Rym: But there was this whole idea where you could encrypt instead of having one way.
+
+405
+00:28:21,040 --> 00:28:25,820
+Rym: You know add four to every letter subtract three from every letter switch them around in a spent way.
+
+406
+00:28:26,362 --> 00:28:31,520
+Rym: What if the number of letters you went in any given direction changed with every letter?
+
+407
+00:28:32,100 --> 00:28:33,787
+Rym: So the first letter you add three to it.
+
+408
+00:28:34,008 --> 00:28:39,359
+Rym: the second letter you subtract three the third letter you add for the second letter you Add five the fourth letter you don't change.
+
+409
+00:28:39,861 --> 00:28:49,679
+Scott: Now that's you know, it's not impossible to figure that out because what we did but it is pretty damn hard Yep, and basically the more complicated you make it the harder it is.
+
+410
+00:28:50,270 --> 00:28:58,946
+Rym: Of course It was mostly hard because we didn't have computers back then and in fact some of the first computers in the world were designed Specifically to break this kind of encryption.
+
+411
+00:28:59,387 --> 00:29:03,580
+Scott: In fact the things that made this encryption like people didn't do this encryption by hand.
+
+412
+00:29:03,620 --> 00:29:10,986
+Scott: They had these mechanical enigma machines that were like typewriters and you would type and the encrypted text We come out in on the paper.
+
+413
+00:29:11,267 --> 00:29:11,428
+Rym: Yep.
+
+414
+00:29:11,468 --> 00:29:14,420
+Rym: Now basically this was just a security through obscurity.
+
+415
+00:29:14,942 --> 00:29:15,183
+Rym: The what.
+
+416
+00:29:15,223 --> 00:29:17,150
+Rym: it doesn't matter what the machine actually was.
+
+417
+00:29:17,170 --> 00:29:21,424
+Rym: to someone like me or like the Allies in World War two We're trying to break this code.
+
+418
+00:29:21,945 --> 00:29:26,900
+Rym: It didn't matter if it was an enigma machine or a bunch of slaves pulling cards through loops.
+
+419
+00:29:27,605 --> 00:29:29,800
+Rym: I'm not sure what I meant by cards through transistors.
+
+420
+00:29:29,800 --> 00:29:32,309
+Rym: Yes Because it all comes down to.
+
+421
+00:29:32,349 --> 00:29:40,549
+Rym: you have a black box which in Technically or geek speak is a device where you don't know what's in it But you know the inputs and you know the outputs.
+
+422
+00:29:40,890 --> 00:29:56,420
+Rym: or maybe you only know the outputs, but the fact remains It's a black box and while you don't know how it works inside There are ways to figure out what the end result of the transformations inside it are and you can come up with a working model Where it might not be the same thing.
+
+423
+00:29:56,641 --> 00:29:59,373
+Rym: I might decode it and make this totally different machine.
+
+424
+00:29:59,775 --> 00:30:06,780
+Rym: that if the end Works in the same way and that yeah, I put the same input into my machine or the enigma the same output comes out.
+
+425
+00:30:06,820 --> 00:30:15,179
+Scott: Yeah, if you have a let's say you have a box and it has three buttons and three light bulbs you push You know and you can push any combination of buttons and see what light bulbs turn on.
+
+426
+00:30:15,802 --> 00:30:23,154
+Scott: Now, of course if you open up the box and you see the wiring inside You know exactly what light bulbs are gonna light up when you push which buttons.
+
+427
+00:30:23,194 --> 00:30:24,580
+Scott: it's obvious you see it right there.
+
+428
+00:30:25,082 --> 00:30:32,039
+Scott: But if the box is locked and there's no way to see what's inside You just keep pushing buttons and see what lights light up and so you figure the whole thing out.
+
+429
+00:30:33,002 --> 00:30:44,460
+Rym: Now everything we've talked about thus far old style encryption is mostly useless and is not used by anyone serious anymore because there are so many ways to break it that it's just it doesn't matter.
+
+430
+00:30:44,480 --> 00:30:50,520
+Rym: you Can increase the complexity to increase the amount of time it takes to break it, but it's generally a linear relationship.
+
+431
+00:30:50,922 --> 00:30:58,072
+Rym: You can't make it so complex that a computer couldn't figure it out without making the code Complex that it would take longer for you to encode it.
+
+432
+00:30:58,354 --> 00:30:59,740
+Rym: then it would be for you to use it.
+
+433
+00:30:59,880 --> 00:31:03,260
+Scott: Yeah, a lot of the problems is that you know people have computers.
+
+434
+00:31:03,601 --> 00:31:16,500
+Scott: So if a code is simple enough that someone can figure it out, you know It's got to be really complex to make it Impossible for a computer to figure it out or at least impossible for a computer to figure it out in a reasonable amount of time.
+
+435
+00:31:16,560 --> 00:31:23,944
+Scott: I mean if a computer could figure it out in say 500 years, it's effectively Impossible to figure it out.
+
+436
+00:31:23,984 --> 00:31:28,760
+Scott: It doesn't really matter even that it's technically feasible for them to get the right answer.
+
+437
+00:31:29,101 --> 00:31:39,720
+Rym: yeah, the thing is though not to get into the details, but information theory and Modern analysis of these kinds of codes basically proves that it is impossible to make these codes secure.
+
+438
+00:31:39,841 --> 00:31:42,660
+Rym: There is no amount of complexity that will make them usefully secure.
+
+439
+00:31:43,134 --> 00:31:54,199
+Rym: Yep now Scott is gonna talk a bit about the modern way of Encrypting things which to boil it down very very broadly involves math.
+
+440
+00:31:55,047 --> 00:31:56,399
+Scott: Yes, there is much math.
+
+441
+00:31:56,620 --> 00:31:58,185
+Scott: That is the things computers do is?
+
+442
+00:31:58,225 --> 00:32:02,840
+Scott: they do math and this you need to use this math to encrypt things in a good way.
+
+443
+00:32:03,088 --> 00:32:07,892
+Scott: Yes Well, the first thing you can do is you can use a symmetric key.
+
+444
+00:32:08,454 --> 00:32:10,660
+Scott: now a symmetric key isn't that popular?
+
+445
+00:32:10,800 --> 00:32:11,843
+Scott: But it does have its uses.
+
+446
+00:32:12,224 --> 00:32:15,374
+Scott: a symmetric key basically is where I have a key.
+
+447
+00:32:15,695 --> 00:32:17,140
+Scott: the key is some number.
+
+448
+00:32:17,461 --> 00:32:27,538
+Scott: it's a number and there's some algorithm which takes that number and Applies it to some data and turns that data into the ciphertext, which is all encrypted.
+
+449
+00:32:28,000 --> 00:32:28,080
+Rym: now.
+
+450
+00:32:28,140 --> 00:32:30,353
+Rym: See we've been talking about encrypting letters.
+
+451
+00:32:30,776 --> 00:32:36,240
+Rym: in modern computers We basically just increase encrypt bit streams or bytes or ones and zeros, but the principles are the same.
+
+452
+00:32:36,260 --> 00:32:39,613
+Scott: Yeah, we turn one set of we take a number which is a set of which is a big.
+
+453
+00:32:39,814 --> 00:32:41,340
+Scott: what stream of ones and zeros?
+
+454
+00:32:41,701 --> 00:32:43,348
+Scott: We take enough a bunch of stuff.
+
+455
+00:32:43,368 --> 00:32:46,300
+Scott: That's a bunch of ones and zeros apply one to the other.
+
+456
+00:32:46,561 --> 00:32:51,100
+Scott: We get another set of ones and zeros and then we can reverse it using the same key.
+
+457
+00:32:51,741 --> 00:32:59,692
+Scott: So one key does the encrypting and the decrypting and all I have to do is if it's a complicated enough key That it can encrypt.
+
+458
+00:32:59,793 --> 00:33:12,635
+Scott: really well I give that key to anyone else who I want to be able to encrypt and decrypt data with and now anyone who doesn't have that key Can encrypt and decrypt the text and no one else can really understand what we're doing.
+
+459
+00:33:12,695 --> 00:33:14,060
+Scott: as long as it's complicated enough.
+
+460
+00:33:14,482 --> 00:33:16,993
+Scott: You know, it's like a hundred and twenty eight bit symmetric key.
+
+461
+00:33:17,496 --> 00:33:20,668
+Scott: It's gonna take people Basically forever before it.
+
+462
+00:33:20,688 --> 00:33:22,900
+Scott: they'll be dead by the time they figure out what we said.
+
+463
+00:33:23,343 --> 00:33:25,639
+Scott: I'll be dead by the time they figure out what we said.
+
+464
+00:33:25,941 --> 00:33:46,510
+Rym: Yep, and with these sorts of keys unlike the other ones where oh if you make it more complex It's still not much more difficult to break with this sort of encryption as you add bits and you make it more complex The relationship between how complex you make it and how long it will take even in optimal cases to brute-force break it Increases at such a rate that it's effectively unbreakable.
+
+465
+00:33:46,811 --> 00:33:55,466
+Scott: Yeah, even if you had supercomputers working day and night I mean sure you might be able to break one person when you were an old man Maybe if you got lucky.
+
+466
+00:33:56,008 --> 00:34:03,699
+Scott: guess what if there are hundreds of thousands of people using this encryption Give up now, you know can't make computers fast enough now.
+
+467
+00:34:03,759 --> 00:34:05,439
+Rym: granted Here's a nice interesting bit.
+
+468
+00:34:05,801 --> 00:34:17,929
+Rym: The reason these are so secure has to do with the fact that the math behind them and the math they use to set this Up is the kind of math that is very Expensive for computers to deal with.
+
+469
+00:34:18,190 --> 00:34:20,219
+Rym: it's not math that can be on quickly or simply.
+
+470
+00:34:20,320 --> 00:34:23,891
+Scott: Yeah, like a lot of it involves using very large prime numbers.
+
+471
+00:34:23,951 --> 00:34:26,699
+Scott: Well, it's easy to just pick a large prime number.
+
+472
+00:34:27,101 --> 00:34:27,684
+Scott: Oh, there's one.
+
+473
+00:34:28,206 --> 00:34:31,560
+Scott: but imagine if you had to figure out big prime numbers.
+
+474
+00:34:31,620 --> 00:34:34,110
+Scott: It could be any giant prime number huge.
+
+475
+00:34:34,632 --> 00:34:36,100
+Scott: You have to go through all of them.
+
+476
+00:34:36,199 --> 00:34:40,038
+Scott: It's hard enough for a computer to figure out the next prime number.
+
+477
+00:34:40,380 --> 00:34:42,867
+Scott: now You're basically guessing and they're real big.
+
+478
+00:34:42,928 --> 00:34:45,596
+Scott: So there's like millions upon millions of choices.
+
+479
+00:34:45,636 --> 00:34:46,779
+Scott: It's like oh fuck me.
+
+480
+00:34:47,585 --> 00:34:49,239
+Scott: Yeah, it's it really sucks.
+
+481
+00:34:49,420 --> 00:34:59,940
+Rym: It basically comes down to the fact that as far as we've been able to figure out by information theory physics Computing and the world there is no easy way to do the math that we're looking at here.
+
+482
+00:35:00,241 --> 00:35:04,493
+Rym: So even if computers get faster and faster even computers get a thousand times faster.
+
+483
+00:35:04,914 --> 00:35:07,040
+Rym: It's still very difficult to break these codes.
+
+484
+00:35:07,241 --> 00:35:19,520
+Rym: Yep, all right now the interesting part here just a real quick Is that it's possible because there were old kinds of codes that people thought were very secure and then new kinds of math were figured Out that basically made them useless.
+
+485
+00:35:20,482 --> 00:35:27,300
+Rym: It is possible that someone could figure out a way to use modern computers to break these sorts of problems quicker.
+
+486
+00:35:27,421 --> 00:35:28,668
+Rym: However, this is very unlikely.
+
+487
+00:35:28,890 --> 00:35:30,500
+Scott: Yeah, you'd have to invent a new math.
+
+488
+00:35:30,600 --> 00:35:36,760
+Scott: Basically, the interesting thing assumes there is a new math and I think we figured out most of the math in theory.
+
+489
+00:35:37,620 --> 00:35:40,833
+Rym: Quantum computers could do this sort of thing trivially.
+
+490
+00:35:40,893 --> 00:35:42,480
+Rym: This has not been shown in practice yet.
+
+491
+00:35:42,520 --> 00:35:53,500
+Rym: But there's a lot of theory that if you made a certain kind of quantum computer it could do these factorizations and these maths Effectively immediately and break this sort of code so trivially that the code effectively doesn't exist.
+
+492
+00:35:53,580 --> 00:36:00,570
+Rym: But that is beyond anything that is going to happen in the next many years And that's why people keep talking about quantum encryption.
+
+493
+00:36:00,590 --> 00:36:08,480
+Scott: because theoretically a quantum encryption You know in the same kind of theory that says a quantum computer can break modern encryption immediately.
+
+494
+00:36:09,002 --> 00:36:16,947
+Scott: the same kind of theories say that if you used a quantum computer to encrypt something it would be Absolutely a hundred percent unbreakable ever.
+
+495
+00:36:17,348 --> 00:36:17,548
+Rym: Yes.
+
+496
+00:36:17,629 --> 00:36:18,591
+Rym: None of this has been proven.
+
+497
+00:36:18,631 --> 00:36:19,754
+Rym: It's also very complex.
+
+498
+00:36:20,195 --> 00:36:21,860
+Scott: I barely don't understand it at all.
+
+499
+00:36:22,101 --> 00:36:22,844
+Rym: I understand it.
+
+500
+00:36:23,045 --> 00:36:23,989
+Rym: on about the level.
+
+501
+00:36:24,030 --> 00:36:24,753
+Rym: I just explained.
+
+502
+00:36:24,773 --> 00:36:26,119
+Scott: Yeah, I understand what I just said.
+
+503
+00:36:27,361 --> 00:36:27,602
+Scott: All right.
+
+504
+00:36:27,642 --> 00:36:29,730
+Scott: Now I just talked about a symmetric key.
+
+505
+00:36:29,951 --> 00:36:30,613
+Scott: I have a key.
+
+506
+00:36:30,814 --> 00:36:34,627
+Scott: the key is used to encrypt and decrypt And I give the key to anyone else.
+
+507
+00:36:34,708 --> 00:36:37,280
+Scott: I want to be able to read or write messages in the code.
+
+508
+00:36:37,461 --> 00:36:42,160
+Rym: Now pros of this message very this idea very simple very easy to do very secure.
+
+509
+00:36:42,663 --> 00:36:45,040
+Scott: The problem is I have to give the key to people.
+
+510
+00:36:45,261 --> 00:36:48,160
+Scott: I mean, you know if I write the key, how am I gonna give this key to Rym?
+
+511
+00:36:48,420 --> 00:36:50,740
+Scott: All right, maybe I'll write it down in a piece of paper and give it to him.
+
+512
+00:36:50,780 --> 00:36:52,108
+Rym: All right That's a pain in the ass cuz.
+
+513
+00:36:52,148 --> 00:36:55,789
+Rym: now you have to physically meet me Which would give up all sorts of information.
+
+514
+00:36:55,809 --> 00:37:01,539
+Rym: if people are actually trying to read like learn stuff about us There's the chance that I might fuck it up when I'm trying to type it back in.
+
+515
+00:37:02,102 --> 00:37:05,400
+Scott: Yep, maybe I'll give it to him and a file on a thumb drive.
+
+516
+00:37:05,561 --> 00:37:07,207
+Scott: Well, what if someone gets the thumb drive?
+
+517
+00:37:07,267 --> 00:37:10,580
+Rym: or what if someone has your computer while you're giving it to me?
+
+518
+00:37:11,060 --> 00:37:13,572
+Rym: And looks in your RAM or looks in something and finds it.
+
+519
+00:37:13,853 --> 00:37:15,340
+Scott: Yeah, it's really troublesome.
+
+520
+00:37:15,762 --> 00:37:19,340
+Scott: What if you know Rym is on the other side of the world and I want to send him a secret message.
+
+521
+00:37:19,420 --> 00:37:30,521
+Scott: Well, if I send him the key over the internet someone might see it while it's on its way over to Rym And if they see that then it doesn't matter how big that key was Cuz.
+
+522
+00:37:30,541 --> 00:37:35,820
+Scott: now all the encrypted stuff I'm gonna send next is gonna be able to be decrypted by them easily.
+
+523
+00:37:35,920 --> 00:37:38,972
+Rym: Now the awesome answer to that is well, why don't you just encrypt the key?
+
+524
+00:37:39,454 --> 00:37:41,000
+Rym: And I think you see why that doesn't work.
+
+525
+00:37:41,200 --> 00:37:43,769
+Scott: They'll just get the key to the key and such.
+
+526
+00:37:43,889 --> 00:37:47,080
+Scott: It doesn't you know, it doesn't make it more secure and gifting it more times.
+
+527
+00:37:47,461 --> 00:37:56,171
+Rym: Yes, in fact just remember that in general with modern encryption if you have encrypted something if you encrypt it again It does not increase the difficulty of decrypting it.
+
+528
+00:37:56,212 --> 00:38:01,420
+Scott: for reasons of math, and I'm not gonna bother explaining It's like a zipping a zip file doesn't make it any smaller.
+
+529
+00:38:01,520 --> 00:38:04,350
+Rym: In fact, it can make it bigger or less secure in some situations.
+
+530
+00:38:04,471 --> 00:38:04,652
+Scott: Yes.
+
+531
+00:38:05,173 --> 00:38:06,960
+Scott: Now, what do we do about this problem?
+
+532
+00:38:07,560 --> 00:38:09,185
+Scott: There is a solution.
+
+533
+00:38:09,567 --> 00:38:11,573
+Rym: It's a very widely used solution.
+
+534
+00:38:11,673 --> 00:38:13,238
+Scott: In fact, you probably use it all the time.
+
+535
+00:38:13,258 --> 00:38:18,374
+Scott: It is called Asymmetric key encryption instead of having one key.
+
+536
+00:38:18,956 --> 00:38:20,019
+Scott: We have two keys.
+
+537
+00:38:20,822 --> 00:38:25,855
+Scott: One key is the public key and one key is the private key.
+
+538
+00:38:25,875 --> 00:38:30,047
+Scott: now as the names imply The public key is public.
+
+539
+00:38:30,188 --> 00:38:31,834
+Scott: anyone in the world can look at this key.
+
+540
+00:38:31,894 --> 00:38:34,422
+Scott: have the key all you want do whatever you want I don't give a shit.
+
+541
+00:38:34,784 --> 00:38:35,807
+Scott: and the private key?
+
+542
+00:38:36,108 --> 00:38:39,300
+Scott: you keep that close to your chest and you don't let anyone see it ever.
+
+543
+00:38:40,400 --> 00:38:42,880
+Scott: Now how do you is this work with the two keys?
+
+544
+00:38:43,160 --> 00:38:46,914
+Scott: I mean if one person can see this key that is all around the whole world.
+
+545
+00:38:47,295 --> 00:38:48,580
+Scott: doesn't that kind of ruin everything?
+
+546
+00:38:48,922 --> 00:39:04,720
+Rym: No, the answer in a word Well not in a word but in a short explanation is irreversible math where you have some sort of math thing Whereby you can take one set of data and create or derive another set of data But yet you can't use the end result and go back.
+
+547
+00:39:04,981 --> 00:39:08,313
+Rym: You can't look at the data I've made and figure out the data.
+
+548
+00:39:08,374 --> 00:39:09,518
+Rym: It came from right?
+
+549
+00:39:09,699 --> 00:39:10,020
+Scott: Look at this.
+
+550
+00:39:10,060 --> 00:39:13,719
+Scott: Let's say you know modulus, you know remainder right three divided by two.
+
+551
+00:39:14,221 --> 00:39:15,204
+Scott: The remainder is one.
+
+552
+00:39:15,305 --> 00:39:17,593
+Scott: the modulus of three mod two is one.
+
+553
+00:39:17,613 --> 00:39:23,456
+Scott: Yes, if I give you the number one You have no idea if I did three mod two a hundred mod.
+
+554
+00:39:23,497 --> 00:39:25,645
+Scott: Ninety-nine Ninety-nine mod.
+
+555
+00:39:25,685 --> 00:39:27,673
+Scott: Eighty-eight two mod one.
+
+556
+00:39:27,693 --> 00:39:31,458
+Scott: I guess not two mod one, but I Got one wrong.
+
+557
+00:39:31,982 --> 00:39:36,840
+Scott: But you see the point is that you and you do some math on a number and the resulting number.
+
+558
+00:39:37,143 --> 00:39:38,680
+Scott: There's no way to go backwards.
+
+559
+00:39:39,061 --> 00:39:40,346
+Scott: There's only one direction.
+
+560
+00:39:40,406 --> 00:39:44,180
+Scott: the numbers go in one way and you can never go back to get the original number again.
+
+561
+00:39:44,601 --> 00:39:53,840
+Rym: So on one hand you're now free to give this new number to anyone you want and at the end at the other hand This number is still derived from your more important private number.
+
+562
+00:39:54,181 --> 00:39:58,937
+Scott: Yes, if they had the private number, which is a very large complicated prime number, you'd be fucked.
+
+563
+00:39:59,339 --> 00:40:04,295
+Scott: instead They have this other number and that number is related to your number.
+
+564
+00:40:04,716 --> 00:40:05,680
+Scott: So the keys match.
+
+565
+00:40:06,121 --> 00:40:10,800
+Scott: However, there is no way for them to figure out your private number from the public number now.
+
+566
+00:40:11,301 --> 00:40:12,725
+Scott: Here's why this is useful.
+
+567
+00:40:13,206 --> 00:40:19,165
+Scott: the public number the number that everyone in the world knows can only be used to Encrypt.
+
+568
+00:40:19,788 --> 00:40:25,039
+Scott: so if Rym wants to send me a message Encrypted I have a private key in a public key.
+
+569
+00:40:25,642 --> 00:40:35,560
+Rym: I give Rym my public key as because anyone in the world can see that number You can email it to me in plain text Blind carbon copying the world and shouting it out as he runs down the street.
+
+570
+00:40:35,640 --> 00:40:36,323
+Rym: It doesn't matter.
+
+571
+00:40:36,484 --> 00:40:36,906
+Scott: all they.
+
+572
+00:40:37,066 --> 00:40:40,280
+Scott: all that allows people to do is to send me encrypted messages.
+
+573
+00:40:40,440 --> 00:40:41,946
+Scott: It has no other useful function.
+
+574
+00:40:42,347 --> 00:40:45,277
+Scott: So Rym uses that public key and encrypts a message.
+
+575
+00:40:45,839 --> 00:40:48,527
+Scott: now Rym can't even decrypt that message.
+
+576
+00:40:48,868 --> 00:40:59,058
+Scott: He has to give it to me and I have the private key Which is the only way in the world without lots and lots of computers in a hundred years to decrypt that message.
+
+577
+00:40:59,579 --> 00:41:06,643
+Scott: So Obviously the only problem with this public private key business is of course if the math is wrong someone's gonna bust you open.
+
+578
+00:41:06,964 --> 00:41:11,155
+Scott: but the math has been tested quite a bit and It's pretty hard to break.
+
+579
+00:41:11,519 --> 00:41:14,650
+Rym: now The only real drawback of the asymmetric keys is that math wise.
+
+580
+00:41:14,711 --> 00:41:24,342
+Rym: according to professors who know a lot more about math than we do They're not as secure per bit or per length of key as symmetric ciphers due to math We don't understand.
+
+581
+00:41:24,382 --> 00:41:30,440
+Rym: it basically comes down to a smaller symmetric key is as secure as a larger asymmetric key.
+
+582
+00:41:30,901 --> 00:41:41,687
+Scott: Yes, that's why when you do like an SSL you'll do like 128 bit SSL encryption But when you do like a PGP RSA public private key thing you'll do like a 4096 bit encryption.
+
+583
+00:41:43,314 --> 00:41:48,194
+Rym: Yep The thing is computers are fast enough to where you don't lose much by using larger keys.
+
+584
+00:41:48,235 --> 00:41:50,321
+Rym: the performance differences in most cases are Negligible.
+
+585
+00:41:50,341 --> 00:42:00,600
+Scott: Yes, if you have the keys and you're just encrypting and decrypting things and not trying to break someone else's code It might take a minute, but it really doesn't take long at all.
+
+586
+00:42:00,700 --> 00:42:07,320
+Scott: Especially if you have a modern computer like if you have a core duo It's gonna be like boot encrypted boot decrypted no problems.
+
+587
+00:42:07,447 --> 00:42:14,160
+Rym: Yeah It's also the fact that it comes down to basically asymmetric keys are so much more useful than any other kind of encryption out there.
+
+588
+00:42:14,244 --> 00:42:21,605
+Rym: Yes That there's no reason to unless you're a crazy paranoid nut to try to use anything else or to use some sort of Gigantic monster key.
+
+589
+00:42:21,745 --> 00:42:22,006
+Scott: Yes.
+
+590
+00:42:22,407 --> 00:42:32,120
+Scott: Now the problem of course with this public private key business is it only goes one way I have the private key which can decrypt and the whole world has the public key which can encrypt.
+
+591
+00:42:32,341 --> 00:42:37,320
+Rym: So if you want to talk to people you have to have the public key of every person you want to talk to right?
+
+592
+00:42:37,502 --> 00:42:38,860
+Scott: So it got to go both ways.
+
+593
+00:42:39,000 --> 00:42:46,460
+Scott: So with if I have a private key and everyone else is public key everyone can send me messages But I can't send anyone else any messages.
+
+594
+00:42:47,042 --> 00:42:51,317
+Scott: So other people have to have their own private keys and they have to give me their public keys.
+
+595
+00:42:51,638 --> 00:42:52,220
+Scott: and we're actually.
+
+596
+00:42:52,541 --> 00:42:56,619
+Scott: When I send stuff to Rym it's encrypted differently than when he sends stuff to me.
+
+597
+00:42:57,341 --> 00:43:03,163
+Scott: It's encrypted for his public and private key pair when I send it to him and for my public and private key pair when he Sends to me.
+
+598
+00:43:03,646 --> 00:43:03,806
+Rym: Yep.
+
+599
+00:43:04,208 --> 00:43:08,660
+Rym: Now we've talked a lot about all these methods of encryption And we always point out that they can all be broken.
+
+600
+00:43:09,162 --> 00:43:14,060
+Rym: So I'm sure the question that is not only some of your minds is well, why is that even a distinction?
+
+601
+00:43:14,240 --> 00:43:16,713
+Rym: I mean, is it possible to make an unbreakable encryption?
+
+602
+00:43:16,773 --> 00:43:20,914
+Rym: and the answer is not only yes But yes that has been known for a very very long time.
+
+603
+00:43:21,357 --> 00:43:23,265
+Scott: It's actually Stupidly easy.
+
+604
+00:43:23,305 --> 00:43:25,279
+Scott: I can do it with a pen and a paper right now.
+
+605
+00:43:25,540 --> 00:43:35,465
+Rym: Yes, it turns out that the most secure and when I say most secure, I mean has been proven mathematically in information theory that it is 100% secure.
+
+606
+00:43:35,826 --> 00:43:37,170
+Rym: as long as you do it, right?
+
+607
+00:43:37,291 --> 00:43:39,940
+Scott: Yeah a quantum computer might not even be able to bust it open.
+
+608
+00:43:40,141 --> 00:43:45,180
+Rym: Yes, it's called a one-time pad and we're gonna talk about it mostly because it's very interesting.
+
+609
+00:43:45,562 --> 00:43:49,999
+Scott: Now what you do with a one-time pad is you take a pad and you just write down numbers on it.
+
+610
+00:43:51,503 --> 00:43:53,960
+Rym: That probably wouldn't work, you know, you need random numbers.
+
+611
+00:43:54,040 --> 00:43:59,075
+Rym: Basically, all you need to use a one-time pad is some source of randomness.
+
+612
+00:43:59,336 --> 00:44:00,700
+Rym: It has to be actual randomness.
+
+613
+00:44:00,741 --> 00:44:01,999
+Rym: So rolling dice is fine.
+
+614
+00:44:02,422 --> 00:44:05,000
+Rym: Flipping a deck of cards and drawing random cards is fine.
+
+615
+00:44:05,421 --> 00:44:07,707
+Rym: Flipping bingo chips and pulling them out is fine.
+
+616
+00:44:07,807 --> 00:44:13,119
+Rym: any way of getting actual random numbers flipping a coin a million times work Just as well.
+
+617
+00:44:13,247 --> 00:44:18,676
+Scott: Yep If they're not actually random then there will in the long run be some sort of pattern.
+
+618
+00:44:19,097 --> 00:44:24,030
+Scott: and if there's some sort of pattern Then someone can find that pattern eventually and figure it out.
+
+619
+00:44:24,211 --> 00:44:27,942
+Rym: now to you have to generate a sheet or something Some.
+
+620
+00:44:27,962 --> 00:44:31,700
+Rym: I mean it could be a CD a flash drive anything that has the stream of random data.
+
+621
+00:44:31,963 --> 00:44:40,089
+Rym: You have to have two copies of it One that you keep and one that you give to the person you're going to be exchanging data with and you can't let anyone Else get this or else.
+
+622
+00:44:40,130 --> 00:44:40,755
+Scott: It's game over.
+
+623
+00:44:40,997 --> 00:44:43,325
+Rym: Yes Now the final bits are that one.
+
+624
+00:44:43,566 --> 00:44:56,439
+Rym: you cannot let anyone know your plain text either because then they could theoretically Retroactively mess with you which however while that is a concern if you follow the final bit of information That's irrelevant.
+
+625
+00:44:56,901 --> 00:45:09,739
+Rym: The final bit of information is if you ever use any part of your random data any segment of it any page any whatever You can never ever ever ever use that again ever and furthermore you must destroy it.
+
+626
+00:45:10,161 --> 00:45:14,659
+Scott: Yep, so you've got this pad of pages and each page is a bunch of random data on it.
+
+627
+00:45:14,981 --> 00:45:16,840
+Scott: Now you've got a message in English.
+
+628
+00:45:17,261 --> 00:45:26,787
+Scott: You take the first letter of that message and you combine it somehow with the first number on the paper to create the new letter or the encrypted letter.
+
+629
+00:45:26,807 --> 00:45:28,976
+Rym: in the old days they do a mod 26 of.
+
+630
+00:45:30,641 --> 00:45:34,260
+Rym: They make sure the numbers were mod 26, and then they just add them to the letter.
+
+631
+00:45:34,440 --> 00:45:41,377
+Scott: yep, then you take the second letter and you take the second number from the piece of paper and You put down the encrypted letter.
+
+632
+00:45:41,397 --> 00:45:45,696
+Rym: now You might say this sounds a lot like those old classical ciphers that Rimm and Scott said were broken.
+
+633
+00:45:46,077 --> 00:45:54,447
+Rym: the difference is There is no deterministic way to find any relation between what was done to one letter And what was done to any other letter?
+
+634
+00:45:54,548 --> 00:45:57,160
+Scott: you're not doing the same thing to every single letter.
+
+635
+00:45:57,321 --> 00:46:01,477
+Scott: You're doing a different thing to each and every letter and who knows what that thing is?
+
+636
+00:46:01,879 --> 00:46:04,892
+Scott: you know I mean someone looks at it there might be mostly s's.
+
+637
+00:46:05,233 --> 00:46:10,218
+Scott: well if they turn those all into ease They're not right because you did something different to each and every letter.
+
+638
+00:46:10,238 --> 00:46:17,598
+Rym: yep There is no possible statistical analysis because there is no way to Differentiate the data from the random noise that it was added to.
+
+639
+00:46:18,040 --> 00:46:21,713
+Rym: Furthermore say you brute-force it because it's only letters.
+
+640
+00:46:21,954 --> 00:46:23,840
+Rym: you could make every possible combination.
+
+641
+00:46:24,181 --> 00:46:29,859
+Rym: So like we said before wouldn't one of the combinations be we attack at dawn and all the others are gibberish?
+
+642
+00:46:30,361 --> 00:46:35,420
+Rym: No, because the possible combinations include every single possible combination of letters.
+
+643
+00:46:35,721 --> 00:46:41,018
+Rym: So we attack at dawn we attack at dusk we attack at pens Rym.
+
+644
+00:46:41,038 --> 00:46:42,483
+Scott: doesn't know what the hell He's talking about.
+
+645
+00:46:42,663 --> 00:46:45,874
+Rym: blibbity blobbity blibbity blah a string of cockboats.
+
+646
+00:46:46,155 --> 00:46:47,720
+Rym: They're all equally possible.
+
+647
+00:46:48,101 --> 00:46:56,100
+Rym: So there is no way on earth at all with any form of anything To decrypt a one-time pad if it was made proper.
+
+648
+00:46:56,120 --> 00:47:03,572
+Scott: Yep Use every number on the pad once and only once and then as soon as you finish a page in the pad you tear it Off and you disintegrate it.
+
+649
+00:47:03,977 --> 00:47:11,947
+Scott: now The only way to figure out what the message was is the other person with the same exact pad Gets the message and he has the numbers.
+
+650
+00:47:12,408 --> 00:47:12,830
+Rym: the
+
+651
+00:47:12,950 --> 00:47:13,592
+Scott: only way
+
+652
+00:47:13,792 --> 00:47:27,621
+Rym: and the only reason one-time pads aren't used a lot These days is with computers especially is that They are difficult to use properly Partly because people don't understand them or people think it's stupid to have to throw away the pages or people don't do it Right.
+
+653
+00:47:27,862 --> 00:47:28,825
+Rym: people reuse them.
+
+654
+00:47:29,065 --> 00:47:30,610
+Rym: people don't generate random data.
+
+655
+00:47:31,252 --> 00:47:33,660
+Rym: There's a lot of human problems that cause this to face.
+
+656
+00:47:33,841 --> 00:47:43,325
+Scott: this is why we use the public and the private keys mostly because the one-time pad while absolutely secure in all ways is Cumbersome.
+
+657
+00:47:43,507 --> 00:47:58,840
+Rym: Yes now granted it was used a lot during the Cold War a lot of our spies a lot of Russia's spies use one-time pads a lot because Unlike modern encryption with computers one-time pads can be done trivially with a pad of paper.
+
+658
+00:47:59,382 --> 00:48:00,726
+Rym: You don't need any technology.
+
+659
+00:48:00,746 --> 00:48:02,391
+Rym: You don't need any special knowledge.
+
+660
+00:48:02,853 --> 00:48:05,000
+Rym: All you need to be able to do is add numbers to letters.
+
+661
+00:48:05,322 --> 00:48:07,399
+Scott: Yep, it's pretty simple right there.
+
+662
+00:48:08,144 --> 00:48:23,060
+Rym: And also despite the fact that it's perfect Unless you fuck it up a lot of data suggests that even when people fucked it up and reused pads The rate of actually truly decrypting the data was still very very low on the order of one to two percent.
+
+663
+00:48:23,180 --> 00:48:29,965
+Scott: Yeah, all these rules that were telling you about burning the piece of paper and never using the same thing twice You know if you got.
+
+664
+00:48:30,005 --> 00:48:36,488
+Scott: if you follow all those things, that's what you need to do to get a hundred percent guaranteed Encryption where no one could ever figure it out.
+
+665
+00:48:36,608 --> 00:48:42,801
+Scott: Yeah, even if you don't do all those things perfectly Let's say you screw up a little bit here and there, you know You.
+
+666
+00:48:43,022 --> 00:48:44,428
+Scott: you forget to burn the paper.
+
+667
+00:48:44,448 --> 00:48:51,780
+Scott: you use the same thing twice once it's still Close to impossible to figure it out if you do it close to correct.
+
+668
+00:48:51,928 --> 00:49:03,280
+Rym: Yep The big difference is just that with computer encryption by making it more complex or doing things better The chance of it not being decrypted goes up from 98 to 99 percent which is a big difference.
+
+669
+00:49:03,320 --> 00:49:05,868
+Scott: that's like a difference of an extra million years of computing.
+
+670
+00:49:06,169 --> 00:49:14,978
+Rym: but the difference between any non 100% and 100% is effectively infinite because now the time to decrypt is forever.
+
+671
+00:49:15,379 --> 00:49:20,084
+Scott: Yep They will never figure it out even with a quantum computer Increase.
+
+672
+00:49:20,265 --> 00:49:30,479
+Rym: one problem with modern encryption is that if you encrypt something now There's no way people will decode it now but a thousand years from now it may be trivial to decrypt it with a one-time pad.
+
+673
+00:49:30,499 --> 00:49:40,471
+Rym: a Billion years could go by and gods themselves would they exist could not decrypt your message unless they read your mind Yeah, or they could view go back into the past.
+
+674
+00:49:40,712 --> 00:49:43,825
+Scott: Oh crap, right the messy time travel fucks it up It does.
+
+675
+00:49:43,865 --> 00:49:45,316
+Scott: time travel fucks up a lot of things.
+
+676
+00:49:45,356 --> 00:49:47,225
+Rym: Yeah, good thing There's no time travel or like.
+
+677
+00:49:47,265 --> 00:50:05,280
+Scott: if there was some way to deterministically figure out based on the current, you know like I guess if you could look at the current Configuration of all the matter and energy in the universe and from that figure out any previous Configuration of matter and energy in the universe at any time then all encryption would be useless.
+
+678
+00:50:05,421 --> 00:50:09,816
+Rym: Now what you've just proposed is a very eloquent way of saying obtaining omniscience.
+
+679
+00:50:10,519 --> 00:50:14,740
+Rym: Yes Hence, yes now encryption has a lot of other uses.
+
+680
+00:50:14,800 --> 00:50:33,610
+Rym: we're not gonna go in a lot of detail here, but one thing you can do and There's a lot of the reasons This is important is you can use things like PGP which is a very common way of encrypting things To not only protect data make sure no one else can read it but to be able to prove Mathematically that you're the one who made that data
+
+681
+00:50:34,132 --> 00:50:36,240
+Scott: and that that data has not changed?
+
+682
+00:50:36,582 --> 00:50:39,379
+Rym: Yes, preventing something called a man-in-the-middle attack.
+
+683
+00:50:39,861 --> 00:50:58,379
+Scott: Well, basically what you do is let's say I have a document and I want to send this document to some people on the internet and I both want to prove that I was the person who wrote this document and You know because someone else out there might take the document Change the words around and then send it out and pretend that I said it.
+
+684
+00:50:58,901 --> 00:51:04,780
+Scott: I want to prove that you know the copy of the document that you have in your hands is the one that I have written.
+
+685
+00:51:05,683 --> 00:51:06,469
+Scott: So what do we do?
+
+686
+00:51:06,953 --> 00:51:07,639
+Scott: we take the key?
+
+687
+00:51:08,061 --> 00:51:14,804
+Scott: You know the similar key to the ones you're talking about before we apply it to the document and we don't Encrypt the document.
+
+688
+00:51:14,885 --> 00:51:18,600
+Scott: all the text is left alone, but we put a signature at the bottom.
+
+689
+00:51:18,946 --> 00:51:27,314
+Scott: It's just a. you know it's stream of random stuff at the bottom and that stream of random stuff is a combination of my key and The data that's on the page.
+
+690
+00:51:27,859 --> 00:51:30,680
+Scott: now I'll say I use my private key to generate this signature.
+
+691
+00:51:31,242 --> 00:51:42,820
+Scott: You can use your public key to verify that Yes That signature is put there by the person with the private key and it was on this data above.
+
+692
+00:51:43,507 --> 00:51:44,820
+Scott: It goes in the backwards way.
+
+693
+00:51:45,241 --> 00:51:54,340
+Rym: I find it interesting that a lot of people in the world right now and a lot of politicians People really don't trust electronic signatures, and I don't trust a computer.
+
+694
+00:51:54,440 --> 00:51:57,489
+Rym: I don't trust signing things by typing a password or clicking or whatever.
+
+695
+00:51:57,931 --> 00:52:14,528
+Rym: and yet the way we trust is to Take up some sort of implement and scribble something on a piece of paper Despite the fact that with an electronic signature you can mathematically verify that it's 99.9% That the person in question actually signed it.
+
+696
+00:52:14,789 --> 00:52:20,890
+Rym: yet as much as people like to believe it's true It's actually false that handwriting analysis works.
+
+697
+00:52:21,031 --> 00:52:22,374
+Scott: handwriting is crap.
+
+698
+00:52:22,475 --> 00:52:24,260
+Rym: handwriting analysis is not a sign.
+
+699
+00:52:24,340 --> 00:52:30,640
+Scott: It's worse than like, you know doing every letter plus one handwriting analysis is pretty much total garbage.
+
+700
+00:52:31,322 --> 00:52:32,989
+Scott: Yeah, so check it out.
+
+701
+00:52:33,049 --> 00:52:34,997
+Scott: You know, let's say I write a write a note.
+
+702
+00:52:35,037 --> 00:52:40,360
+Scott: The note is hello I take my private key and I sign that note and at the bottom is a signature.
+
+703
+00:52:40,440 --> 00:52:42,976
+Scott: That's a bunch of it looks like a weird key Rym.
+
+704
+00:52:43,016 --> 00:52:45,640
+Scott: gets the note It says hello, and there's a signature at the bottom.
+
+705
+00:52:46,101 --> 00:52:51,339
+Scott: He takes my public key and he checks it and it says yes Scott wrote this note.
+
+706
+00:52:51,700 --> 00:52:55,992
+Scott: Scott is the person and it says yes, the note is hello.
+
+707
+00:52:56,333 --> 00:52:58,700
+Scott: That is the note that Scott wrote and has not been changed.
+
+708
+00:52:58,901 --> 00:52:59,122
+Scott: Yep.
+
+709
+00:52:59,825 --> 00:53:03,420
+Rym: Now this is very important for a lot of reasons and you can even use this on your own.
+
+710
+00:53:03,440 --> 00:53:06,320
+Rym: Let's say there's a good example of how you could use this in your daily life.
+
+711
+00:53:06,581 --> 00:53:10,520
+Rym: Let's say you're an artist and you draw awesome pictures and you put them on the internet.
+
+712
+00:53:10,955 --> 00:53:16,105
+Rym: well how about every time you make a picture and it's done you Encrypt it and sign it.
+
+713
+00:53:16,426 --> 00:53:19,454
+Rym: because remember signing it also proves when it was signed.
+
+714
+00:53:19,935 --> 00:53:21,680
+Rym: time is built into this thing.
+
+715
+00:53:22,262 --> 00:53:27,200
+Rym: So now let's say some moron steals your art and says oh I drew this you can't prove it.
+
+716
+00:53:27,420 --> 00:53:29,969
+Rym: Look, I've got the picture too and you could argue.
+
+717
+00:53:29,989 --> 00:53:31,354
+Rym: Yeah, you got it from my website, whatever.
+
+718
+00:53:31,394 --> 00:53:39,178
+Rym: but there's no way to prove that Except if you've got this signed encrypted copy of the original and the date that it was made.
+
+719
+00:53:39,198 --> 00:53:45,538
+Rym: it is now Mathematically proven that you created this work of art at least as of the date you signed it.
+
+720
+00:53:45,558 --> 00:53:50,316
+Scott: now You want to hear a real-world use of this sort of signing that goes on every day.
+
+721
+00:53:50,717 --> 00:54:00,979
+Scott: It's pretty cool Alright, so if you are a person Let's say you make a piece of software and you distribute it on the internet an exe file and people download it from your website And use it, right?
+
+722
+00:54:01,560 --> 00:54:10,338
+Scott: Well, how do they know that someone didn't hack into your server replace that exe file with some virus and now they're downloading a virus.
+
+723
+00:54:10,982 --> 00:54:11,744
+Scott: How do they know?
+
+724
+00:54:11,945 --> 00:54:17,804
+Scott: let's say someone else downloads your exe and puts it up on their website and says yeah I'm mirroring his file.
+
+725
+00:54:18,084 --> 00:54:23,340
+Scott: Well, how do you know that the file they're mirroring or pretending to mirror isn't actually a virus?
+
+726
+00:54:23,862 --> 00:54:27,080
+Scott: How do they know that it's the software that you made originally?
+
+727
+00:54:27,642 --> 00:54:43,120
+Scott: Well, you have a signature or some sort of checksum or hash or some sort of thing in this manner of the signing Something that concisely shows at least that the data hasn't changed or that it is 99% likely that the data hasn't changed.
+
+728
+00:54:43,200 --> 00:54:53,280
+Rym: I mean there are chances that you could find something that satisfies the key Some sort like maybe you could change one letter and you found such a way to where if you changed it the keys still work.
+
+729
+00:54:53,320 --> 00:54:55,180
+Scott: That's just as hard as breaking the encryption.
+
+730
+00:54:55,261 --> 00:54:58,362
+Rym: Yes, the odds of that are Astronomical.
+
+731
+00:54:58,402 --> 00:55:03,478
+Rym: in fact when one is discovered it's a huge deal and it's usually all over the internet.
+
+732
+00:55:03,679 --> 00:55:08,966
+Scott: Yes So if you haven't noticed if you're not a Linux user Linux sort of has these.
+
+733
+00:55:09,387 --> 00:55:13,120
+Scott: most distributions have certain sort of centralized repository of software.
+
+734
+00:55:13,220 --> 00:55:19,445
+Scott: You get all your software from one big server in the sky and they're really worried about someone Compromising this server.
+
+735
+00:55:19,485 --> 00:55:28,173
+Scott: because well if you were to put a virus in place of one of the programs on the server You would infect every user of that Linux distribution pretty quickly.
+
+736
+00:55:28,675 --> 00:55:39,650
+Scott: So they sign absolutely every piece of software on that repository and your computer checks the signatures whether you know it or not of every piece of software.
+
+737
+00:55:39,670 --> 00:55:45,756
+Scott: and if they don't match up Your computer complains and it won't install the software and it says I don't trust that software.
+
+738
+00:55:45,796 --> 00:55:46,840
+Scott: It's not signed properly.
+
+739
+00:55:47,202 --> 00:55:50,340
+Scott: I can't be sure that that's from the trustworthy people who make the software.
+
+740
+00:55:50,802 --> 00:55:53,112
+Scott: I can't be sure that that's the software that they made.
+
+741
+00:55:53,454 --> 00:55:54,820
+Scott: I can't be sure it wasn't changed.
+
+742
+00:55:55,241 --> 00:56:00,056
+Scott: I'm not doing shit, and it's really helpful on that note.
+
+743
+00:56:00,137 --> 00:56:01,220
+Rym: I hope that was informative.
+
+744
+00:56:01,642 --> 00:56:05,459
+Rym: I plan to eat some more trans fat koalas play some Wesnoth and go to bed.
+
+745
+00:56:05,923 --> 00:56:07,859
+Scott: I'm gonna beat hotel dusk and go to bed.
+
+746
+00:56:14,223 --> 00:56:16,832
+Rym: This has been GeekNights with Rym and Scott.
+
+747
+00:56:16,852 --> 00:56:18,980
+Rym: Special thanks to DJ pretzel for the opening music.
+
+748
+00:56:19,686 --> 00:56:31,026
+Scott: Be sure to visit our website at www.frontroadcrew.com where you'll find show notes links our awesome forum a link to our frapper map and Links to all the RSS feeds.
+
+749
+00:56:31,467 --> 00:56:37,164
+Rym: we say feeds plural because GeekNights airs four nights a week covering four different Brands of geekery.
+
+750
+00:56:37,665 --> 00:56:39,833
+Rym: Mondays are science and technology Tuesdays.
+
+751
+00:56:39,873 --> 00:56:41,900
+Rym: We have video games board games and RPGs.
+
+752
+00:56:42,341 --> 00:56:47,760
+Rym: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+753
+00:56:48,201 --> 00:56:56,240
+Scott: You can send us feedback by email to GeekNights at front row crew calm Or you can send audio feedback via audio.
+
+754
+00:56:56,621 --> 00:56:59,935
+Scott: Just click the link that says send me an audio on the right side of our website.
+
+755
+00:57:00,216 --> 00:57:01,099
+Rym: if you like what you hear.
+
+756
+00:57:01,119 --> 00:57:05,351
+Rym: you Can catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+757
+00:57:05,591 --> 00:57:08,700
+Rym: for the complete archives visit the website which has everything.
+
+758
+00:57:09,261 --> 00:57:14,177
+Scott: GeekNights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+759
+00:57:15,761 --> 00:57:21,819
+Scott: This means you can do whatever you want with it as long as you give us credit don't make money and share it in kind.
+
+760
+00:57:22,622 --> 00:57:28,056
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+761
+00:57:28,337 --> 00:57:29,660
+Scott: It's actually recorded at night.
+

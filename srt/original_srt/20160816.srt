@@ -1,0 +1,3100 @@
+﻿1
+00:00:08,620 --> 00:00:11,589
+Speaker 1: It's Tuesday, August 16th, 2016.
+
+2
+00:00:11,589 --> 00:00:15,360
+Speaker 1: I'm Rim, he's Scott, and this is Geek Nights.
+
+3
+00:00:15,500 --> 00:00:20,360
+Speaker 1: Tonight, we're talking about that post-mortem of the Warbits game that was pretty good on iOS.
+
+4
+00:00:21,600 --> 00:00:22,618
+Speaker 0: Let's do this.
+
+5
+00:00:26,660 --> 00:00:31,420
+Speaker 1: So I know some of you, not a lot of you, it's kind of a niche thing, because I haven't been doing a lot of livestreaming lately, I've just been busy.
+
+6
+00:00:33,141 --> 00:00:42,979
+Speaker 1: And while I could livestream Overwatch, it is a slightly negative performance issue, because my computer is not great at playing Overwatch, it's the minimum, I guess.
+
+7
+00:00:44,101 --> 00:00:48,300
+Speaker 1: So I'm not going to risk it, because Overwatch is serious business, and yeah.
+
+8
+00:00:48,660 --> 00:01:02,858
+Speaker 1: So I have been putting up those five videos, and one thing I've noticed that's kind of funny, is when I upload more shorter videos, half of you complain like, "Ah, the videos are all short, like I don't want to watch this five minute
+
+9
+00:01:02,878 --> 00:01:03,140
+Speaker 1: video.".
+
+10
+00:01:03,160 --> 00:01:05,119
+Speaker 0: Those are punk kids who can play JRPGs.
+
+11
+00:01:05,340 --> 00:01:13,657
+Speaker 1: And if I upload one that's like a compilation of like 50 turns in a row that's like 45 minutes long, the other half of you are like, "Ah, I can't watch this long ass fucking
+
+12
+00:01:13,677 --> 00:01:14,040
+Speaker 1: video.".
+
+13
+00:01:14,120 --> 00:01:14,738
+Speaker 0: Those are adults.
+
+14
+00:01:15,721 --> 00:01:26,080
+Speaker 1: Ah, and then the use cases are split between, now here's the problem, some of you are trying to watch these videos of me and Scott playing Civ 5 duels against each other, to learn about Civ 5, that ain't going to happen.
+
+15
+00:01:26,200 --> 00:01:27,459
+Speaker 0: You're not learning about Civ 5 from me.
+
+16
+00:01:27,900 --> 00:01:33,777
+Speaker 1: Yeah, and you're not even learning from me, because half the last video is me saying, "Well, I guess Scott's not going to defend that
+
+17
+00:01:33,817 --> 00:01:34,180
+Speaker 1: caravan.".
+
+18
+00:01:34,841 --> 00:01:36,399
+Speaker 1: Wow, Scott really doesn't have another city?
+
+19
+00:01:36,600 --> 00:01:37,820
+Speaker 0: I was trying to defend the caravan.
+
+20
+00:01:40,162 --> 00:01:46,180
+Speaker 1: The next video actually, though, is the end of that game, then we start a brand new game, and that video is mostly Scott explaining why he lost.
+
+21
+00:01:46,480 --> 00:01:52,200
+Speaker 0: You know, if you can make a 50 minute video, you could just make 10 five minute videos.
+
+22
+00:01:52,420 --> 00:01:53,613
+Speaker 1: Aha, but 50% of you complain.
+
+23
+00:01:54,700 --> 00:02:00,559
+Speaker 0: Upload them all at once, and if someone wants a long one, they can just watch them all back to back, and if someone wants a short one, they can watch them one at a time.
+
+24
+00:02:00,860 --> 00:02:01,579
+Speaker 1: Yeah, so we'll see.
+
+25
+00:02:01,661 --> 00:02:03,479
+Speaker 1: The thing is, here's the real story, guys.
+
+26
+00:02:03,900 --> 00:02:07,719
+Speaker 1: The duels of me and Scott is a series that I just kind of called Rim vs.
+
+27
+00:02:07,739 --> 00:02:14,919
+Speaker 1: Scott, and I assume we'll eventually just start playing other games and just putting them all in that long, giant playlist of games where we fight against each other.
+
+28
+00:02:16,502 --> 00:02:44,820
+Speaker 1: The actual Civ 5 video I'm making, I can't even start publishing yet, because the game's still going, but that giant GMR game we started a long time ago, I just got Gatling guns, and shit's getting lit in that game, but I'm not posting any videos from it until the game's over, because I don't want any spying or knowledge of things I might have done along the way, but that's definitely going to be an episodic, like, what's going on in the world today with entirely peaceful and prosperous Portugal.
+
+29
+00:02:46,745 --> 00:02:47,478
+Speaker 1: So, yeah, what's up?
+
+30
+00:02:48,941 --> 00:02:54,540
+Speaker 0: Alright, so, I don't have any news, gaming-wise, but I did play this game that Rim's not going to play.
+
+31
+00:02:55,002 --> 00:02:55,691
+Speaker 1: I'm not going to play it?
+
+32
+00:02:55,731 --> 00:02:56,319
+Speaker 1: Should I play it?
+
+33
+00:02:56,842 --> 00:03:00,918
+Speaker 0: I mean, I would recommend it, but, you know, it'll last you maybe a day or two.
+
+34
+00:03:01,540 --> 00:03:03,880
+Speaker 0: So, I'm going to do some Geek Bite, which you haven't done in a while.
+
+35
+00:03:04,020 --> 00:03:04,104
+Speaker 0: Yeah.
+
+36
+00:03:05,121 --> 00:03:07,180
+Speaker 0: So, this game, you may have heard of it, it's called Dub Wars.
+
+37
+00:03:07,340 --> 00:03:14,340
+Speaker 0: I discovered it because, you know, the Penny Arcade guys do these, like, 15 minutes things on their YouTube channel.
+
+38
+00:03:14,440 --> 00:03:15,420
+Speaker 1: Like the first 15?
+
+39
+00:03:15,420 --> 00:03:23,360
+Speaker 0: Yeah, they play a game for 15 minutes exactly, that they've never played before, and you just watch them play it for the first 15 minutes, and then they stop.
+
+40
+00:03:24,163 --> 00:03:24,780
+Speaker 1: It's a good format.
+
+41
+00:03:25,564 --> 00:03:34,980
+Speaker 0: Yeah, so, this game is called Dub Wars, and what it is is a twin-stick shooter, like Robotron or Geometry Wars, or, I mean, you get the idea.
+
+42
+00:03:36,620 --> 00:03:48,258
+Speaker 0: But unlike every other twin-stick shooter that you've ever played, there is one key difference, and that is the left stick moves, the right stick aims, there is no button to control the shootin'.
+
+43
+00:03:49,282 --> 00:03:52,072
+Speaker 0: You cannot shoot by pressing any other button.
+
+44
+00:03:52,173 --> 00:03:54,060
+Speaker 0: All you got is two analog sticks, and that's it.
+
+45
+00:03:54,322 --> 00:03:56,500
+Speaker 1: Huh, it's like dive kick, but it's move shoot.
+
+46
+00:03:57,180 --> 00:03:57,778
+Speaker 0: Well, it's move aim.
+
+47
+00:03:58,221 --> 00:03:58,263
+Speaker 0: Ah.
+
+48
+00:03:59,000 --> 00:04:02,030
+Speaker 0: The shooting is uncontrolled by you.
+
+49
+00:04:02,050 --> 00:04:05,080
+Speaker 0: The shooting occurs along with the music.
+
+50
+00:04:05,240 --> 00:04:07,127
+Speaker 0: So, it's really a game about music.
+
+51
+00:04:07,227 --> 00:04:18,240
+Speaker 0: Each level in the game is a different song, and a different background, and a different enemy pattern, and when the level is loading, the screen is, like, promoting the artist who made that song.
+
+52
+00:04:18,339 --> 00:04:30,538
+Speaker 0: It, like, gives you the sound cloud links, and shows you a picture of them, and tells you where they're from, and what kind of musical stylings they have, and it's really almost an advertisement for these, like, twelve EDM artists, but they're all great.
+
+53
+00:04:32,681 --> 00:04:37,060
+Speaker 0: And then their song starts playing, and the level lasts as long as the song is.
+
+54
+00:04:37,120 --> 00:04:39,820
+Speaker 0: So, if it's a three-minute song, it's a three-minute level.
+
+55
+00:04:39,940 --> 00:04:41,618
+Speaker 1: You know you're in trouble when Meatloaf starts up.
+
+56
+00:04:42,220 --> 00:04:48,177
+Speaker 0: Well, you gotta survive for three minutes, and if you survive for three minutes, you beat the level, and if you don't, you don't.
+
+57
+00:04:48,681 --> 00:04:57,680
+Speaker 0: And then, you know, you can collect little bits to get currency to upgrade, so that level becomes easier, and then you can play harder difficulty levels, and try to get the high score on all the different levels.
+
+58
+00:04:57,820 --> 00:04:59,639
+Speaker 1: I want this kind of game, but just multiplayer versus.
+
+59
+00:05:00,160 --> 00:05:11,740
+Speaker 0: Right, but the thing about this game that is so great, is that because the music controls the shooting, it's like you learn something about EDM, and music in general, just by playing.
+
+60
+00:05:12,200 --> 00:05:13,379
+Speaker 1: Ahh, I can see that.
+
+61
+00:05:14,704 --> 00:05:22,900
+Speaker 0: You hear new parts of the song, because you see your ship shooting these little things, and that makes you hear a part of the song you didn't hear before.
+
+62
+00:05:24,140 --> 00:05:27,140
+Speaker 0: It's like a forced synesthesia, if you don't have synesthesia.
+
+63
+00:05:27,320 --> 00:05:33,159
+Speaker 1: There were songs I'd heard that I knew were in DDR, but just because back in the day, I couldn't get DDR games, I'd never danced them before.
+
+64
+00:05:33,660 --> 00:05:44,620
+Speaker 1: And then I remember when I finally danced those songs in DDR, the song sounded so completely different to my brain, because I was paying attention to different stuff, that I went and listened to it again to see if it was my brain or the game.
+
+65
+00:05:44,900 --> 00:05:49,100
+Speaker 0: Right, but this isn't a rhythm game, you don't have to press buttons according to the rhythm, you just move and shoot however you want.
+
+66
+00:05:49,200 --> 00:05:50,500
+Speaker 1: Your brain's got to think in the rhythm.
+
+67
+00:05:50,520 --> 00:06:06,759
+Speaker 0: You move and aim however you want, but you know that here comes the drop, and when the drop comes, the laser, it's like big laser, big laser, lots of lasers all over the place, like a disco, and then there'll be a part of the song where it's just like, be quiet yo, and you're not shooting shit.
+
+68
+00:06:09,425 --> 00:06:14,539
+Speaker 0: And then the bass starts to come back in, and these little buzzes come out the side of your shit, but that's it.
+
+69
+00:06:14,880 --> 00:06:16,520
+Speaker 1: Alright, I'm playing it, I'm down with this.
+
+70
+00:06:17,340 --> 00:06:29,319
+Speaker 0: And then you're like, oh please, you're dodging, there's homing missiles coming at you, you're just dodging and dodging, hoping that the music will come, waiting for the music to come back, like please please please be a big drop so I can destroy all, you know.
+
+71
+00:06:29,600 --> 00:06:38,960
+Speaker 0: And then once you learn the song, then you know the patterns, and you can sort of pre-aim, like I know this weapon is coming, and you pre-aim where it's gonna come out, right?
+
+72
+00:06:40,000 --> 00:06:44,320
+Speaker 0: So, if you like feeling the beat, this is a great way to feel the beat.
+
+73
+00:06:44,860 --> 00:06:47,240
+Speaker 1: Just like Super Hexagon or Shapes and Beats?
+
+74
+00:06:48,301 --> 00:06:52,820
+Speaker 0: But those are games where you have to react to, it's a little closer to Shapes and Beats.
+
+75
+00:06:52,980 --> 00:06:54,079
+Speaker 0: It's ten bucks on Steam.
+
+76
+00:06:54,760 --> 00:06:57,079
+Speaker 1: 'Cause Super Hexagon, the music doesn't really...
+
+77
+00:06:57,140 --> 00:07:00,640
+Speaker 0: To buy the album of these twelve songs would probably cost you ten bucks, right?
+
+78
+00:07:01,263 --> 00:07:02,719
+Speaker 0: So, not the worst deal.
+
+79
+00:07:02,981 --> 00:07:04,287
+Speaker 1: I'll play this game, this sounds good.
+
+80
+00:07:04,669 --> 00:07:06,699
+Speaker 1: I think your assessment of how long I'll play it...
+
+81
+00:07:06,860 --> 00:07:10,880
+Speaker 0: You beat a lot of levels in two days, you know, unless you're obsessed with getting the high score.
+
+82
+00:07:11,984 --> 00:07:12,898
+Speaker 0: The controls are a little...
+
+83
+00:07:13,040 --> 00:07:14,920
+Speaker 1: The thing is, I'm more and more a fan of that format game.
+
+84
+00:07:15,621 --> 00:07:28,459
+Speaker 1: The kinds of games that I like to play nowadays are either the game that ends up being a competitive multiplayer game, or the game that is a succinct experience that doesn't take a ton of time to fully realize.
+
+85
+00:07:29,602 --> 00:07:34,600
+Speaker 0: I mean, the controls on it aren't perfect, they're a little slippery, it's not like the tightest thing, right?
+
+86
+00:07:34,700 --> 00:07:41,900
+Speaker 0: But it makes you feel the beat, you explore some music, you discover some music, it's a good time.
+
+87
+00:07:42,481 --> 00:07:47,100
+Speaker 0: If you don't like a twin stick shooter and you don't like EDM, you're not gonna like this game.
+
+88
+00:07:48,600 --> 00:07:54,200
+Speaker 0: But if you like those things, then this is worth your ten bucks and your few hours to unlock all the levels and beat them all.
+
+89
+00:07:54,380 --> 00:08:00,222
+Speaker 1: So it's getting real close to Rimbai's new computer season, like that bell is ringing, the USB 2...
+
+90
+00:08:00,222 --> 00:08:02,300
+Speaker 0: I'm actually looking to buy an HDVC because...
+
+91
+00:08:03,140 --> 00:08:04,420
+Speaker 1: I am too, but not yet.
+
+92
+00:08:04,961 --> 00:08:10,540
+Speaker 0: We were trying to play some local co-op games the other day, and my HDVC could not handle some of them.
+
+93
+00:08:10,680 --> 00:08:11,184
+Speaker 1: What do you got in there?
+
+94
+00:08:11,204 --> 00:08:13,520
+Speaker 1: Because I got a 460 GT or whatever.
+
+95
+00:08:13,601 --> 00:08:14,030
+Speaker 0: I got an i3.
+
+96
+00:08:14,961 --> 00:08:15,351
+Speaker 1: Yeah, I got an i3.
+
+97
+00:08:15,940 --> 00:08:19,760
+Speaker 0: And the GPU is a low profile, old ass ATI card.
+
+98
+00:08:20,503 --> 00:08:22,008
+Speaker 1: Oh, I got a 460 at least.
+
+99
+00:08:22,069 --> 00:08:25,020
+Speaker 1: It's low profile and it sucks, but it mostly works.
+
+100
+00:08:25,540 --> 00:08:30,200
+Speaker 0: I'm gonna examine, I measured, my furniture has six inches of vertical space.
+
+101
+00:08:31,120 --> 00:08:38,820
+Speaker 0: So I'm gonna go at PAX and all the mini PCs, especially like Zotac, they're like the kings of tiny PCs, right?
+
+102
+00:08:39,179 --> 00:08:41,899
+Speaker 0: But there's other companies that always have tiny PCs at PAX.
+
+103
+00:08:42,722 --> 00:08:49,200
+Speaker 0: And I'm gonna bring out my little, you know, ruler, and I'm gonna see if I can find a little tiny PC.
+
+104
+00:08:49,580 --> 00:08:53,840
+Speaker 0: All it needs is like a decent video card, like even 800 series is good enough, right?
+
+105
+00:08:54,420 --> 00:09:02,380
+Speaker 0: And an HDMI output, and an optical audio output, and a bunch of USB ports, and good enough hardware inside of it.
+
+106
+00:09:02,980 --> 00:09:07,203
+Speaker 0: And one SSD, doesn't really matter what size, big enough, 128.
+
+107
+00:09:07,203 --> 00:09:12,160
+Speaker 0: And if it's less than six inches tall, and it's cheap enough, and it's quiet, then it's a winner.
+
+108
+00:09:12,801 --> 00:09:13,951
+Speaker 0: I'm sure I can find that.
+
+109
+00:09:14,011 --> 00:09:14,899
+Speaker 0: I'm sure that exists.
+
+110
+00:09:15,320 --> 00:09:17,679
+Speaker 1: I'll probably, I'll either build another HDPC.
+
+111
+00:09:18,501 --> 00:09:20,940
+Speaker 0: Even a full size video card isn't six inches tall, right?
+
+112
+00:09:21,020 --> 00:09:22,939
+Speaker 0: And then you add another inch or two for the case.
+
+113
+00:09:23,600 --> 00:09:26,558
+Speaker 0: Maybe you take the feet off the case to put it flat on the, you know, whatever.
+
+114
+00:09:26,578 --> 00:09:26,900
+Speaker 0: I don't know.
+
+115
+00:09:27,100 --> 00:09:32,880
+Speaker 1: See, the problem is, I gotta build a new real PC, because I'm really getting to the end of this thing from 2009.
+
+116
+00:09:32,880 --> 00:09:36,900
+Speaker 1: But it works 100% fine, other than just being ancient and slow.
+
+117
+00:09:38,424 --> 00:09:39,396
+Speaker 1: So it would be...
+
+118
+00:09:39,721 --> 00:09:40,240
+Speaker 0: Give it to somebody.
+
+119
+00:09:40,580 --> 00:09:45,600
+Speaker 1: Or it would be a bitch in HDPC, except I gotta put it in the living room, and this is mid tower.
+
+120
+00:09:47,480 --> 00:09:49,260
+Speaker 0: You can't get the parts out and put it in a better case?
+
+121
+00:09:49,921 --> 00:09:50,263
+Speaker 1: Maybe.
+
+122
+00:09:50,283 --> 00:09:51,510
+Speaker 1: So that's what I'm actually looking at.
+
+123
+00:09:51,591 --> 00:09:53,180
+Speaker 1: I'm looking at the HDPC cases.
+
+124
+00:09:54,261 --> 00:09:58,100
+Speaker 1: I cannot take the innards of this and put it in my existing HDPC case.
+
+125
+00:09:58,382 --> 00:09:59,819
+Speaker 0: No, that's a low profile case.
+
+126
+00:10:00,223 --> 00:10:02,140
+Speaker 1: Only because of the video card.
+
+127
+00:10:02,540 --> 00:10:02,636
+Speaker 1: Yeah.
+
+128
+00:10:02,802 --> 00:10:03,780
+Speaker 1: Everything else would fit fine.
+
+129
+00:10:03,964 --> 00:10:04,220
+Speaker 0: Exactly.
+
+130
+00:10:04,420 --> 00:10:06,171
+Speaker 1: So I gotta get a slightly bigger case.
+
+131
+00:10:06,372 --> 00:10:07,600
+Speaker 1: I'm sort of doing my research there.
+
+132
+00:10:07,800 --> 00:10:12,100
+Speaker 1: But I can hold out a year, I think, so I'll let you get your HDPC on at PAX.
+
+133
+00:10:12,620 --> 00:10:20,180
+Speaker 1: I don't get my main PC on, but it is definitely the time, like now-ish, to buy a new gaming computer if yours is old.
+
+134
+00:10:20,340 --> 00:10:22,820
+Speaker 0: Yes, because the Nvidia 1080 just came out.
+
+135
+00:10:23,160 --> 00:10:27,420
+Speaker 1: And we've hit this like super fucking long plateau of performance.
+
+136
+00:10:27,641 --> 00:10:31,379
+Speaker 0: If you get an Nvidia 1080 video card, it might cost a lot of money right now.
+
+137
+00:10:32,040 --> 00:10:36,360
+Speaker 0: But I mean, if you wait six months, it'll still be the top of the line card and still be great.
+
+138
+00:10:36,700 --> 00:10:39,315
+Speaker 0: Even a 1070 is great, and it doesn't cost a lot of money right now.
+
+139
+00:10:39,355 --> 00:10:40,100
+Speaker 0: It's average price.
+
+140
+00:10:40,761 --> 00:10:45,600
+Speaker 0: That will last you five to six years, maybe even seven, eight years if you get one of those.
+
+141
+00:10:45,660 --> 00:10:54,181
+Speaker 1: I mean, in the old days, in the old wisdom, up until the 1080 came out, you would say when the 1080 comes out, buy a super cheap like 970.
+
+142
+00:10:54,181 --> 00:11:00,054
+Speaker 0: But the 1080s, or the 10 series in general, are just- There's so much, like the difference between a 980 and an 880 isn't really that big.
+
+143
+00:11:01,400 --> 00:11:03,771
+Speaker 0: The difference between a 1080 and a 980 is like a mile.
+
+144
+00:11:03,992 --> 00:11:05,580
+Speaker 0: It's like so much faster.
+
+145
+00:11:05,660 --> 00:11:10,239
+Speaker 1: It's like when Intel CPUs went from like the Core 2 Duo to yeah, get an i7.
+
+146
+00:11:10,941 --> 00:11:16,700
+Speaker 0: It's like Nvidia has these like Titan video cards, which are like the ridiculous ones with four GPUs and they're insane.
+
+147
+00:11:16,920 --> 00:11:22,040
+Speaker 0: For the really rich dumbasses or people who actually are doing CUDA type heavy processing work.
+
+148
+00:11:22,060 --> 00:11:23,613
+Speaker 1: Of course, at that point, you might get a special card.
+
+149
+00:11:24,700 --> 00:11:26,459
+Speaker 0: No, I'm just saying they have these Titan cards, right?
+
+150
+00:11:27,020 --> 00:11:37,860
+Speaker 0: The first Titan card that was based on the 900 series is slower significantly than the single GPU 1080 card that you would buy for your gaming computer.
+
+151
+00:11:38,200 --> 00:11:41,668
+Speaker 0: And there's a new Titan card that has four 1080s.
+
+152
+00:11:41,708 --> 00:11:42,891
+Speaker 0: that's just like, "Fuck you.
+
+153
+00:11:42,911 --> 00:11:46,098
+Speaker 0: I have a thousand, two thousand dollars.
+
+154
+00:11:46,118 --> 00:11:46,619
+Speaker 0: I don't give a
+
+155
+00:11:46,659 --> 00:11:46,880
+Speaker 0: fuck.".
+
+156
+00:11:47,220 --> 00:11:56,080
+Speaker 1: Now, even if you don't trust us, because a normal person, like even us who are super into tech, I only build a new computer every like four or so years.
+
+157
+00:11:56,180 --> 00:11:58,894
+Speaker 0: I'm probably not building a new desktop computer until I can get 1180s or 1280s.
+
+158
+00:12:00,180 --> 00:12:04,960
+Speaker 1: Yeah, especially because your desktop computer is way faster and newer than mine.
+
+159
+00:12:05,240 --> 00:12:07,120
+Speaker 0: It actually is starting to have a few issues, but it's fine.
+
+160
+00:12:07,260 --> 00:12:09,002
+Speaker 1: Do you have SATA 6 or SATA 3?
+
+161
+00:12:09,002 --> 00:12:11,442
+Speaker 0: I don't even know, but I got- I got SATA 3.
+
+162
+00:12:11,442 --> 00:12:12,058
+Speaker 0: I don't even know.
+
+163
+00:12:12,221 --> 00:12:14,100
+Speaker 1: Yeah, I got issued my computer's old.
+
+164
+00:12:14,781 --> 00:12:19,320
+Speaker 1: But the news here is that Nvidia is kind of doubly doubling down.
+
+165
+00:12:19,681 --> 00:12:22,276
+Speaker 1: They did this with some of the 980s, but they're really doing it with the 1080s.
+
+166
+00:12:23,141 --> 00:12:26,180
+Speaker 1: There's going to be no more M version of these laptops.
+
+167
+00:12:27,020 --> 00:12:29,156
+Speaker 0: So instead of having a mobile- Yeah, well, you mean the M GPUs.
+
+168
+00:12:29,720 --> 00:12:36,740
+Speaker 1: Yeah, instead of having a mobile like shit-tier version you can stick in a laptop, they're just putting the same chips in laptops now.
+
+169
+00:12:37,400 --> 00:12:39,951
+Speaker 1: You can get a GTX 1080 in your laptop.
+
+170
+00:12:40,353 --> 00:12:46,360
+Speaker 0: that's- An M version, but they're just not calling it M anymore, they're just calling it 1080.
+
+171
+00:12:46,360 --> 00:12:47,900
+Speaker 0: I think it's actually a different chip.
+
+172
+00:12:48,360 --> 00:12:56,540
+Speaker 1: So let's see, the mobile 1080 is based on the same 16nm Pascal architecture as the GP104 in its desktop counterpart.
+
+173
+00:12:57,180 --> 00:13:04,879
+Speaker 1: Same 2560 CUDA cores, same memory interface, same RAM- But it's still slightly different in some way.
+
+174
+00:13:05,982 --> 00:13:11,500
+Speaker 0: It's still a mobile version, they're just not calling it M. So it looks like it's just- There has to be some kind of difference.
+
+175
+00:13:11,882 --> 00:13:15,640
+Speaker 1: To fit in the laptop and has some heat issue, like it has some heat differences.
+
+176
+00:13:16,660 --> 00:13:24,514
+Speaker 1: Although here it is, the concession to mobility comes in, I'm quoting an article, in the form of a drop in the base clock, which runs at 1556 instead of 1607 on the desktop.
+
+177
+00:13:27,861 --> 00:13:31,780
+Speaker 1: But you can overclock them in the laptop if you're a moron, so I guess there's that.
+
+178
+00:13:32,661 --> 00:13:36,520
+Speaker 1: It's pretty much the same, like in every regard.
+
+179
+00:13:37,181 --> 00:13:40,238
+Speaker 1: Though, I'm looking at some screenshots here, and there is one rub.
+
+180
+00:13:41,340 --> 00:13:42,550
+Speaker 1: Let me find another good screenshot of it.
+
+181
+00:13:42,852 --> 00:13:45,060
+Speaker 1: Someone took a picture of the power brick- It's a gigantic laptop?
+
+182
+00:13:45,560 --> 00:13:47,052
+Speaker 1: Oh yeah, it's a gigantic laptop.
+
+183
+00:13:47,072 --> 00:13:48,040
+Speaker 1: It's not a real laptop.
+
+184
+00:13:48,160 --> 00:13:50,860
+Speaker 1: I don't even call these laptops anymore because no one puts this motherfucker on their lap.
+
+185
+00:13:50,880 --> 00:13:54,540
+Speaker 0: It's a desktop with attached monitor that you can put in your bag.
+
+186
+00:13:54,680 --> 00:13:57,660
+Speaker 1: I would call these, henceforth, portable computers.
+
+187
+00:13:59,540 --> 00:14:02,379
+Speaker 0: But, someone posted a picture- Yeah, you don't put this on your lap.
+
+188
+00:14:02,922 --> 00:14:06,820
+Speaker 1: Of the power brick that you plug into the back of one of these things?
+
+189
+00:14:07,320 --> 00:14:09,320
+Speaker 0: I guess you're not running on battery for more than five minutes, right?
+
+190
+00:14:09,420 --> 00:14:12,720
+Speaker 1: It looks like it's almost as big as the PSU in my desktop.
+
+191
+00:14:13,561 --> 00:14:14,419
+Speaker 1: Like, it is gigantic.
+
+192
+00:14:14,800 --> 00:14:15,880
+Speaker 0: See, that's how they're cheating, right?
+
+193
+00:14:15,940 --> 00:14:20,837
+Speaker 0: It's like if you had to put that power supply in the device, it would be desktop, right?
+
+194
+00:14:21,800 --> 00:14:28,240
+Speaker 1: Well, even my laptop, like all laptops, I've got my 95 watt and my 65 watt power bricks for the outside.
+
+195
+00:14:28,280 --> 00:14:32,740
+Speaker 1: And if I use the 65 watt one, my laptop doesn't perform as well if I'm playing a crazy game.
+
+196
+00:14:33,160 --> 00:14:37,820
+Speaker 1: That happens now, and I've just got the i7 Intel integrated video nonsense.
+
+197
+00:14:38,980 --> 00:14:48,900
+Speaker 1: So, the moral is, if you're one of those people who goes to conventions or LAN parties or whatever, and brings a gaming laptop, this is basically your lucky day.
+
+198
+00:14:49,603 --> 00:14:51,158
+Speaker 1: This is good news for you.
+
+199
+00:14:52,041 --> 00:14:57,180
+Speaker 1: And if you're a regular PC gamer, it's still good news because the 1080 is basically, this is the time.
+
+200
+00:14:57,502 --> 00:14:59,960
+Speaker 1: Unless you already have a 980, it's time to buy a new video card.
+
+201
+00:15:06,090 --> 00:15:08,690
+Speaker 1: But anyway, things of the day.
+
+202
+00:15:09,150 --> 00:15:15,809
+Speaker 1: So, this was going to be my thing of the day, but Scott also saw it, and I'm going to defer to him because I have an unrelated thing of the day I can use.
+
+203
+00:15:16,770 --> 00:15:17,949
+Speaker 1: So, you want to share your thing of the day?
+
+204
+00:15:18,070 --> 00:15:23,230
+Speaker 0: Yeah, on my way home, I checked my feeds and I see this video, and it looks like a very New York video.
+
+205
+00:15:23,370 --> 00:15:27,650
+Speaker 0: It occurs on a subway, and I'm about to get on a subway, so I appropriately watch this video.
+
+206
+00:15:28,312 --> 00:15:32,850
+Speaker 0: And in this video, there's a dude sitting on a train, and he's an older dude.
+
+207
+00:15:33,190 --> 00:15:36,249
+Speaker 0: But despite being older, he's doing something that a high school kid would do.
+
+208
+00:15:36,810 --> 00:15:43,230
+Speaker 0: He's got his backpack on his lap, and behind his backpack, he's got his hand in his pants on his junk.
+
+209
+00:15:43,370 --> 00:15:44,235
+Speaker 1: Whacking it, whacking it.
+
+210
+00:15:44,578 --> 00:15:46,429
+Speaker 1: He's whacking it, jacking it, jacking it.
+
+211
+00:15:48,231 --> 00:15:54,449
+Speaker 1: The YouTube video's title is, and I'm just quoting, "Pervert gets busted rubbing his dick on a New York City
+
+212
+00:15:54,489 --> 00:15:54,750
+Speaker 1: train.".
+
+213
+00:15:55,030 --> 00:15:57,057
+Speaker 0: Right, so this happens a lot, right?
+
+214
+00:15:57,077 --> 00:16:03,220
+Speaker 0: I saw a dude once sitting on a stoop on the west side, and he wasn't even trying to hide it.
+
+215
+00:16:03,361 --> 00:16:05,270
+Speaker 0: It's like, he just had it out.
+
+216
+00:16:05,850 --> 00:16:07,164
+Speaker 1: Like, if you follow the Gothamist...
+
+217
+00:16:07,851 --> 00:16:14,930
+Speaker 0: He was reclining, he was spread, he was sort of sitting at an angle with his back on the stoop railing, and his legs covering the staircase.
+
+218
+00:16:15,051 --> 00:16:16,617
+Speaker 1: This is not necessarily a New York thing.
+
+219
+00:16:16,657 --> 00:16:19,670
+Speaker 1: This happens everywhere in America where there's subways.
+
+220
+00:16:20,671 --> 00:16:29,669
+Speaker 1: That's just something that, you got enough people, like enough population density, there's a certain percentage of Americans for whom whacking it in public is just a thing.
+
+221
+00:16:30,791 --> 00:16:38,389
+Speaker 0: So, the lady recording this video who uploaded it to YouTube, hero that she is, let him have it.
+
+222
+00:16:39,499 --> 00:16:39,949
+Speaker 1: This video.
+
+223
+00:16:40,270 --> 00:16:46,490
+Speaker 0: Let him have it in a glorious way, and all the comments are pretty much this woman for mayor, this woman for police commissioner.
+
+224
+00:16:46,490 --> 00:16:47,345
+Speaker 1: Yeah, well you know what I want?
+
+225
+00:16:47,650 --> 00:16:49,550
+Speaker 0: I'm not calling the police, I'm calling this woman.
+
+226
+00:16:50,231 --> 00:16:53,983
+Speaker 1: I want an app that will summon this woman to me instead of the police.
+
+227
+00:16:54,544 --> 00:16:56,350
+Speaker 1: Holy shit, this woman is amazing.
+
+228
+00:16:56,910 --> 00:17:06,630
+Speaker 1: And I think what's even more amazing about this video is the kid trying to avoid consequences, and trying to even pretend it's not him.
+
+229
+00:17:06,650 --> 00:17:07,569
+Speaker 0: It's not a kid, it's like a dude.
+
+230
+00:17:08,210 --> 00:17:10,069
+Speaker 1: Yeah, everyone who causes trouble is a kid in my eyes.
+
+231
+00:17:10,710 --> 00:17:11,865
+Speaker 1: He looks like he's in his, what, 20s?
+
+232
+00:17:12,371 --> 00:17:13,463
+Speaker 0: No, he's like a middle-aged dude.
+
+233
+00:17:13,483 --> 00:17:14,089
+Speaker 0: What are you talking about?
+
+234
+00:17:14,310 --> 00:17:14,807
+Speaker 1: What, that kid?
+
+235
+00:17:15,535 --> 00:17:16,148
+Speaker 0: Who are you looking at?
+
+236
+00:17:16,315 --> 00:17:16,669
+Speaker 0: That kid.
+
+237
+00:17:17,092 --> 00:17:17,688
+Speaker 0: That's not a kid.
+
+238
+00:17:18,210 --> 00:17:19,030
+Speaker 1: That's a kid, that's like 20s.
+
+239
+00:17:19,030 --> 00:17:20,209
+Speaker 0: Go towards the end of the video.
+
+240
+00:17:20,710 --> 00:17:23,729
+Speaker 1: He's like in his- That kid is in his mid to late 20s.
+
+241
+00:17:24,230 --> 00:17:25,089
+Speaker 0: That's an older gentleman.
+
+242
+00:17:25,329 --> 00:17:26,589
+Speaker 1: That is not an older gentleman.
+
+243
+00:17:26,690 --> 00:17:27,185
+Speaker 0: Yes it is.
+
+244
+00:17:29,457 --> 00:17:29,750
+Speaker 1: That?
+
+245
+00:17:30,177 --> 00:17:30,428
+Speaker 0: Yes.
+
+246
+00:17:30,711 --> 00:17:31,790
+Speaker 1: That is not an older gentleman.
+
+247
+00:17:33,480 --> 00:17:33,710
+Speaker 0: Anyway.
+
+248
+00:17:33,910 --> 00:17:36,945
+Speaker 1: I would guess that that person is in their mid to late 20s.
+
+249
+00:17:38,412 --> 00:17:40,327
+Speaker 1: Now that I'm looking closer, I would say maybe early 30s.
+
+250
+00:17:41,155 --> 00:17:41,490
+Speaker 0: Anyway.
+
+251
+00:17:41,730 --> 00:17:42,228
+Speaker 0: That's a kid.
+
+252
+00:17:42,630 --> 00:17:44,850
+Speaker 0: Regardless of the age of this person.
+
+253
+00:17:45,456 --> 00:17:46,689
+Speaker 1: This person is not older than me.
+
+254
+00:17:46,851 --> 00:17:47,788
+Speaker 0: In this fuzzy YouTube video.
+
+255
+00:17:51,637 --> 00:17:52,190
+Speaker 1: It's very rare.
+
+256
+00:17:52,390 --> 00:18:03,430
+Speaker 1: New Yorkers have this very powerful instinct of ignore everything, never respond to anything ever, but occasionally one of us will do something like this and when it happens it's just so glorious.
+
+257
+00:18:03,450 --> 00:18:14,010
+Speaker 0: The only thing that sucks about this video is everyone watching it, all the New Yorkers watching this video are just waiting for the rest of the train to applaud and they don't, so all the other New Yorkers on that train fail.
+
+258
+00:18:14,031 --> 00:18:14,114
+Speaker 0: Yeah.
+
+259
+00:18:14,692 --> 00:18:14,781
+Speaker 1: Dude.
+
+260
+00:18:15,310 --> 00:18:17,310
+Speaker 1: Standing ovation high five is the minimum.
+
+261
+00:18:18,050 --> 00:18:21,730
+Speaker 0: When this lady was halfway through, if I was on that train, I would have been like, "Yeah lady.
+
+262
+00:18:21,890 --> 00:18:22,529
+Speaker 0: You let him have it.
+
+263
+00:18:22,990 --> 00:18:23,074
+Speaker 0: Woo.".
+
+264
+00:18:26,751 --> 00:18:33,001
+Speaker 1: There's a game that I learned about because a YouTube video is recommended to me and it was a horrible live streamer.
+
+265
+00:18:33,021 --> 00:18:33,848
+Speaker 1: and I was like, "What the fuck is
+
+266
+00:18:33,888 --> 00:18:34,090
+Speaker 1: this?".
+
+267
+00:18:34,211 --> 00:18:36,269
+Speaker 1: And I turned it off and it was bad.
+
+268
+00:18:36,790 --> 00:18:42,430
+Speaker 1: But then I kept seeing the game that the live stream was about all over YouTube.
+
+269
+00:18:42,991 --> 00:18:44,749
+Speaker 1: I don't know if it's because I clicked on that one or not.
+
+270
+00:18:45,190 --> 00:18:52,730
+Speaker 1: So finally I decided, all right, the internet's decided I got to see this thing, so I watched some more videos and I found a not annoying streamer and I watched a couple of his videos.
+
+271
+00:18:53,370 --> 00:18:59,390
+Speaker 1: This game, which is not out yet, it looks like it just got on Steam Greenlight or whatever, is called Totally Accurate Battle Simulator.
+
+272
+00:18:59,630 --> 00:19:02,690
+Speaker 0: I'm imagining it is not a totally accurate battle simulator.
+
+273
+00:19:03,031 --> 00:19:09,650
+Speaker 0: I imagine it is a inaccurate battle simulator and it is titled Totally Accurate Battle Simulator because it is sarcastic and funny.
+
+274
+00:19:09,650 --> 00:19:12,730
+Speaker 1: Your assessment of the title of this game is totally accurate.
+
+275
+00:19:13,530 --> 00:19:18,930
+Speaker 1: So you got red dudes and blue dudes with googly eyes and you got a grid on each side.
+
+276
+00:19:19,011 --> 00:19:20,129
+Speaker 0: Everything's bad with googly eyes.
+
+277
+00:19:20,350 --> 00:19:26,670
+Speaker 1: And you can put dudes ranging from peasants to hwacha or catapult or musket or swordsman.
+
+278
+00:19:27,990 --> 00:19:28,031
+Speaker 1: F-16?
+
+279
+00:19:29,150 --> 00:19:29,397
+Speaker 1: Not yet.
+
+280
+00:19:29,994 --> 00:19:30,290
+Speaker 1: Not yet.
+
+281
+00:19:30,390 --> 00:19:33,310
+Speaker 1: Musket I think is the most advanced weapon than hwacha.
+
+282
+00:19:33,990 --> 00:19:34,086
+Speaker 0: Nuke?
+
+283
+00:19:34,351 --> 00:19:34,689
+Speaker 1: And cannon.
+
+284
+00:19:36,492 --> 00:19:36,890
+Speaker 0: Heron sphere?
+
+285
+00:19:36,970 --> 00:19:40,369
+Speaker 1: So you make your formations on either side and you hit go.
+
+286
+00:19:40,550 --> 00:19:40,970
+Speaker 0: Heron sphere?
+
+287
+00:19:41,791 --> 00:19:43,108
+Speaker 1: There's a head on a pole behind you.
+
+288
+00:19:43,790 --> 00:19:44,148
+Speaker 0: Head on a pole?
+
+289
+00:19:46,250 --> 00:19:46,480
+Speaker 1: Wizard?
+
+290
+00:19:47,530 --> 00:19:52,270
+Speaker 1: The two armies just have an AI fight and so far that is it.
+
+291
+00:19:52,370 --> 00:20:02,130
+Speaker 1: The game is in pre-alpha and the people behind this game, it looks like I didn't realize until I started poking around a little more before the show, it's the same people who did Cluster Truck.
+
+292
+00:20:02,430 --> 00:20:05,284
+Speaker 0: I never heard of that, but that's a really obvious name.
+
+293
+00:20:05,305 --> 00:20:06,350
+Speaker 0: I'm surprised no one else took.
+
+294
+00:20:08,111 --> 00:20:12,046
+Speaker 1: So this game is like super super super alpha, like basically.
+
+295
+00:20:12,066 --> 00:20:13,470
+Speaker 1: it seems like only YouTube live streamers.
+
+296
+00:20:13,490 --> 00:20:15,430
+Speaker 0: Looks pretty good and not crashy for super alpha.
+
+297
+00:20:15,970 --> 00:20:18,009
+Speaker 1: Like it, the game as it is.
+
+298
+00:20:18,070 --> 00:20:19,890
+Speaker 0: If I were them I would just do the Minecraft model.
+
+299
+00:20:19,990 --> 00:20:23,490
+Speaker 0: Put it out now, call it beta and then it keeps just getting better over time.
+
+300
+00:20:23,570 --> 00:20:27,050
+Speaker 1: I think they could sell this game now for like ten bucks and make enough money.
+
+301
+00:20:27,210 --> 00:20:27,810
+Speaker 0: That's what Minecraft does.
+
+302
+00:20:28,030 --> 00:20:33,610
+Speaker 0: But you just put it out, you charge ten bucks, it gives you a game for life and then you just keep updating it forever and get more players all the time.
+
+303
+00:20:33,831 --> 00:20:39,828
+Speaker 1: Yeah, but it actually looks really fun and I watched a bunch of these YouTube videos and I just picked one of them.
+
+304
+00:20:40,131 --> 00:20:42,110
+Speaker 1: Just watch it, you'll see what the deal is with this game.
+
+305
+00:20:42,510 --> 00:20:44,709
+Speaker 1: I'm kind of into it, like more so than I thought I would be.
+
+306
+00:20:45,090 --> 00:20:47,330
+Speaker 0: I think it would be fun for like a week or two, but that's about it.
+
+307
+00:20:47,490 --> 00:20:48,467
+Speaker 1: I think, well the thing is...
+
+308
+00:20:48,630 --> 00:20:50,810
+Speaker 0: They'd have to keep updating it to keep it really fresh.
+
+309
+00:20:50,990 --> 00:20:54,429
+Speaker 1: It's because this is alpha, because I know one of the things they're working on is campaigns.
+
+310
+00:20:55,090 --> 00:21:01,014
+Speaker 1: Where like, yeah so imagine there's an enemy formation and you've got a limited amount of funds, like.
+
+311
+00:21:01,296 --> 00:21:03,589
+Speaker 1: can you beat that army with just peasants and poachers?
+
+312
+00:21:04,830 --> 00:21:05,790
+Speaker 1: Like that kind of nonsense.
+
+313
+00:21:06,572 --> 00:21:09,190
+Speaker 1: I can imagine multiplayer being good, like me versus Scott.
+
+314
+00:21:09,450 --> 00:21:14,990
+Speaker 0: Yeah, you secretly set up a formation, they secretly set up a formation, the formations are revealed and then you fight.
+
+315
+00:21:15,291 --> 00:21:17,200
+Speaker 0: Or there's some sort of scouting.
+
+316
+00:21:17,240 --> 00:21:19,729
+Speaker 0: that happens, you get limited information, then you make your formation.
+
+317
+00:21:20,851 --> 00:21:25,549
+Speaker 0: You make part of your formation, you scout, and then you make the rest of your formation and then you fight.
+
+318
+00:21:26,070 --> 00:21:29,370
+Speaker 1: But I think you could have just as much fun playing this game, like Scott said.
+
+319
+00:21:29,370 --> 00:21:32,436
+Speaker 1: Like it's the kind of game you'd bust out occasionally when you have friends over, like a Jackbox game.
+
+320
+00:21:33,750 --> 00:21:34,076
+Speaker 1: Like, "Hey
+
+321
+00:21:34,198 --> 00:21:34,626
+Speaker 1: everybody!".
+
+322
+00:21:34,890 --> 00:21:39,078
+Speaker 1: And you put this on the HTPC and it occupies half the people at your party for like four hours.
+
+323
+00:21:39,290 --> 00:21:49,670
+Speaker 0: Another thing is this model really lends itself to multiplayer with more than two players without politics, because you could have a bunch of people all make formations in the same battlefield.
+
+324
+00:21:50,330 --> 00:21:56,729
+Speaker 0: But then you can't like... Me, Rim, and everyone else can't be like, "Everyone aim at Scott Johnson," because the guys are just gonna go where they're gonna go.
+
+325
+00:21:56,790 --> 00:21:58,984
+Speaker 1: Yeah, if it wasn't clear, you have no control over the game.
+
+326
+00:21:59,064 --> 00:21:59,910
+Speaker 1: once you hit start.
+
+327
+00:22:00,110 --> 00:22:02,590
+Speaker 1: The battle is your AI dudes by the other AI dudes.
+
+328
+00:22:03,070 --> 00:22:05,650
+Speaker 0: Sadly, we wouldn't be able to team up on Rim, no matter how much we should.
+
+329
+00:22:06,610 --> 00:22:13,570
+Speaker 0: But likewise, people wouldn't stupidly not attack Rim because their guys would just attack Rim, you know, in the same proportion that they attacked every other guy.
+
+330
+00:22:14,370 --> 00:22:17,930
+Speaker 1: So, in the moment, the book club book that's coming up is Rebecca.
+
+331
+00:22:18,930 --> 00:22:19,246
+Speaker 1: Rebecca.
+
+332
+00:22:21,853 --> 00:22:29,170
+Speaker 1: So, I realized, as a total aside, that I wasn't sure if I'd seen Rebecca or not, because my mom, when I was really young, made us watch.
+
+333
+00:22:29,170 --> 00:22:30,769
+Speaker 0: Was there a pillow on fire at the end?
+
+334
+00:22:31,271 --> 00:22:32,050
+Speaker 1: So, here's the problem.
+
+335
+00:22:32,330 --> 00:22:38,369
+Speaker 1: There's another movie that is not good that I conflated it with in my brain, because I also saw it as a little kid.
+
+336
+00:22:39,210 --> 00:22:43,409
+Speaker 1: And I can't extricate the two from each other, but this other movie is really bad.
+
+337
+00:22:43,590 --> 00:22:44,990
+Speaker 0: Did it end with a pillow on fire?
+
+338
+00:22:45,291 --> 00:22:46,669
+Speaker 1: No, it ends with the house burning down.
+
+339
+00:22:47,257 --> 00:22:47,749
+Speaker 0: Oh, okay.
+
+340
+00:22:48,754 --> 00:22:53,210
+Speaker 1: The bad movie that I remember from when I was a young child is called Picture Mommy Dead.
+
+341
+00:22:53,850 --> 00:22:54,928
+Speaker 1: And I found it on YouTube.
+
+342
+00:22:56,971 --> 00:22:57,118
+Speaker 0: Okay.
+
+343
+00:22:58,697 --> 00:22:59,289
+Speaker 0: I never heard of that.
+
+344
+00:22:59,550 --> 00:23:00,910
+Speaker 1: So, then I watched some clips from Rebecca.
+
+345
+00:23:01,350 --> 00:23:05,730
+Speaker 1: I'm pretty sure I saw it as well as a young child, but never as an adult.
+
+346
+00:23:06,673 --> 00:23:08,670
+Speaker 1: Or even as a sentient human being at this point.
+
+347
+00:23:09,350 --> 00:23:13,509
+Speaker 1: So, I'm going to read the book from the book club before I watch the super famous movie.
+
+348
+00:23:14,138 --> 00:23:14,589
+Speaker 0: Good luck with that.
+
+349
+00:23:14,670 --> 00:23:16,109
+Speaker 1: It'll be interesting to see what the experience is.
+
+350
+00:23:16,392 --> 00:23:18,830
+Speaker 1: The previous book club book was Oryx and Crake by Margaret Atwood.
+
+351
+00:23:19,678 --> 00:23:20,149
+Speaker 1: We did the show.
+
+352
+00:23:20,310 --> 00:23:20,522
+Speaker 1: It's up.
+
+353
+00:23:22,171 --> 00:23:29,842
+Speaker 1: Our lecture from PAX East 2016, Atari Game Design, is finally on YouTube, fully realized in glorious 4K.
+
+354
+00:23:31,450 --> 00:23:37,990
+Speaker 1: And this was actually a pretty difficult one to edit together, because we were playing Atari games live on stage.
+
+355
+00:23:38,652 --> 00:23:40,489
+Speaker 1: And we'd recorded this panel a couple of times.
+
+356
+00:23:41,091 --> 00:23:47,549
+Speaker 1: And this was the only recording of it I had that had all the components required to make a good video, for various reasons.
+
+357
+00:23:49,090 --> 00:23:49,909
+Speaker 1: So, that's it.
+
+358
+00:23:50,190 --> 00:23:51,578
+Speaker 1: This is actually one of my favorite panels.
+
+359
+00:23:51,599 --> 00:23:53,430
+Speaker 1: we do, because it can be different every time.
+
+360
+00:23:53,930 --> 00:23:57,850
+Speaker 1: It's not literally just the same thing, because we can just pick five different Atari games and we're good to go.
+
+361
+00:23:59,110 --> 00:24:02,785
+Speaker 1: Otherwise, at PAX West, coming up, Saturday, September 3rd, 5
+
+362
+00:24:02,785 --> 00:24:03,025
+Speaker 1: p.m.,
+
+363
+00:24:03,046 --> 00:24:05,610
+Speaker 1: Chicken Theater, we're going to be doing The Grind.
+
+364
+00:24:06,930 --> 00:24:09,770
+Speaker 1: Saturday panel means we won't be tired for it, like full energy.
+
+365
+00:24:10,271 --> 00:24:12,390
+Speaker 1: We're going to go to dinner, like, right after we do the panel.
+
+366
+00:24:12,430 --> 00:24:13,228
+Speaker 1: It's going to be good times.
+
+367
+00:24:14,312 --> 00:24:16,570
+Speaker 1: We're putting together our game list for what we're bringing to PAX Prime.
+
+368
+00:24:16,951 --> 00:24:18,448
+Speaker 1: I think this is going to be a real good PAX.
+
+369
+00:24:19,351 --> 00:24:20,569
+Speaker 1: Like, I'm really feeling this PAX.
+
+370
+00:24:20,730 --> 00:24:25,686
+Speaker 1: In fact, I think I'm feeling it a little too soon, because we've got a couple weeks before we get to fly out to PAX.
+
+371
+00:24:27,110 --> 00:24:30,369
+Speaker 1: Like, I'm excited now at the level I should be.
+
+372
+00:24:30,951 --> 00:24:32,609
+Speaker 0: I thought PAX was sooner than it was.
+
+373
+00:24:32,850 --> 00:24:36,610
+Speaker 0: So, my PAX, you know, my Pax-o-meter turned on too early.
+
+374
+00:24:36,670 --> 00:24:38,890
+Speaker 1: You turn the dial all the way up, but you can't turn it back down.
+
+375
+00:24:39,150 --> 00:24:39,669
+Speaker 0: Of course not.
+
+376
+00:24:40,633 --> 00:24:42,750
+Speaker 0: Only a PAX can turn the PAX dial down.
+
+377
+00:24:43,012 --> 00:24:45,030
+Speaker 1: I think I'm looking forward to all the games we're bringing.
+
+378
+00:24:45,530 --> 00:24:47,990
+Speaker 1: I just want to play Quartermaster General again with that expansion.
+
+379
+00:24:48,151 --> 00:24:48,530
+Speaker 0: That's a good one.
+
+380
+00:24:48,750 --> 00:24:50,169
+Speaker 1: Like, I'm feeling that real hard.
+
+381
+00:24:52,271 --> 00:24:54,949
+Speaker 1: Otherwise, Patreon, t-shirts, all that stuff.
+
+382
+00:24:55,954 --> 00:24:56,489
+Speaker 0: Not that stuff.
+
+383
+00:24:56,730 --> 00:24:57,650
+Speaker 1: That stuff's real important.
+
+384
+00:24:58,010 --> 00:24:59,289
+Speaker 0: More important stuff I made.
+
+385
+00:24:59,750 --> 00:25:00,770
+Speaker 0: I'm just going for quantity.
+
+386
+00:25:00,930 --> 00:25:01,205
+Speaker 0: Oh, yeah.
+
+387
+00:25:01,491 --> 00:25:02,830
+Speaker 0: I just made a bunch of YouTube videos.
+
+388
+00:25:03,031 --> 00:25:03,910
+Speaker 0: I'm going to make more YouTube videos.
+
+389
+00:25:04,030 --> 00:25:05,130
+Speaker 0: I'm just making crap YouTube videos.
+
+390
+00:25:05,211 --> 00:25:05,868
+Speaker 0: I don't even care now.
+
+391
+00:25:06,050 --> 00:25:07,370
+Speaker 1: What do you think I'm doing with the Civ 5?
+
+392
+00:25:07,370 --> 00:25:07,949
+Speaker 1: I'm just like, video.
+
+393
+00:25:09,135 --> 00:25:09,910
+Speaker 0: I'm going for quantity.
+
+394
+00:25:10,031 --> 00:25:15,049
+Speaker 0: So if you go to my YouTube channel, not Rym's YouTube channel, there's going to be more videos there than before.
+
+395
+00:25:15,854 --> 00:25:16,649
+Speaker 0: Just squirting them out.
+
+396
+00:25:17,131 --> 00:25:19,851
+Speaker 1: I'm actually recording a lot of Civ 5.
+
+397
+00:25:19,851 --> 00:25:21,309
+Speaker 0: About all sorts of random shit too.
+
+398
+00:25:21,530 --> 00:25:23,890
+Speaker 0: Shit that's not on Geek Nights because Rym won't talk about it.
+
+399
+00:25:24,552 --> 00:25:28,350
+Speaker 1: That's what Rym's Rants, like the Patreon show I do, is all the things that you won't talk about on Geek Nights.
+
+400
+00:25:28,472 --> 00:25:29,007
+Speaker 0: My show's free.
+
+401
+00:25:29,850 --> 00:25:31,990
+Speaker 1: My show costs less.
+
+402
+00:25:32,110 --> 00:25:33,108
+Speaker 1: You could pay a penny a month.
+
+403
+00:25:33,351 --> 00:25:34,389
+Speaker 0: I'm more entertaining than you.
+
+404
+00:25:34,490 --> 00:25:35,350
+Speaker 1: Just one penny.
+
+405
+00:25:35,510 --> 00:25:36,189
+Speaker 0: And smarter than you.
+
+406
+00:25:36,390 --> 00:25:37,250
+Speaker 1: Just one penny.
+
+407
+00:25:37,573 --> 00:25:38,590
+Speaker 0: So, my show's better.
+
+408
+00:25:41,451 --> 00:25:45,050
+Speaker 1: So there was a game on iOS, or I guess like, not iOS.
+
+409
+00:25:45,290 --> 00:25:45,989
+Speaker 1: Yeah, I guess it was iOS.
+
+410
+00:25:46,130 --> 00:25:46,489
+Speaker 1: Yes, on iOS.
+
+411
+00:25:46,531 --> 00:25:47,128
+Speaker 1: Only iOS.
+
+412
+00:25:47,719 --> 00:25:47,910
+Speaker 1: Yes.
+
+413
+00:25:48,030 --> 00:25:48,610
+Speaker 1: Which is important.
+
+414
+00:25:49,090 --> 00:25:49,589
+Speaker 1: Called War Bits.
+
+415
+00:25:50,130 --> 00:25:51,490
+Speaker 1: And Scott was trying to convince me to play it.
+
+416
+00:25:51,550 --> 00:25:56,210
+Speaker 1: The only reason I hadn't played it yet is that I don't own any iDevices of any kind.
+
+417
+00:25:56,470 --> 00:26:03,990
+Speaker 0: So if you don't know, War Bits is basically an Advance Wars clone and the people who made it said as much, and even if they didn't say as much, it's obvious to everyone in the world.
+
+418
+00:26:04,297 --> 00:26:04,428
+Speaker 0: Yup.
+
+419
+00:26:04,450 --> 00:26:07,130
+Speaker 0: It's an Advance Wars clone and it's a pretty good Advance Wars clone.
+
+420
+00:26:07,210 --> 00:26:15,550
+Speaker 0: It adds a few things, changes a few things, the graphics obviously are way different, but they're still really professional and good looking and the interface is pretty decent.
+
+421
+00:26:15,971 --> 00:26:17,109
+Speaker 0: It only has a few tiny flaws.
+
+422
+00:26:17,770 --> 00:26:31,290
+Speaker 0: So if you really want to get your Advance Wars on and not use your tiny old, you know, DS or GBA, and instead use your giant iPad or your iPhone or play with people online and stuff like that, get War Bits for four bucks.
+
+423
+00:26:31,771 --> 00:26:38,290
+Speaker 1: And the game is unlike, say, similar attempts at things that people try to do, War Bits is fully realized.
+
+424
+00:26:38,490 --> 00:26:40,670
+Speaker 1: Like even, you know, atypical of, like, indie games.
+
+425
+00:26:40,790 --> 00:26:42,630
+Speaker 1: A lot of indie games, like, remember Multiway?
+
+426
+00:26:42,630 --> 00:26:46,249
+Speaker 0: Yeah, this isn't like us saying, "Man, we should clone Advance
+
+427
+00:26:46,269 --> 00:26:46,350
+Speaker 0: Wars."
+
+428
+00:26:46,451 --> 00:26:48,370
+Speaker 0: Like, no, they successfully cloned Advance Wars.
+
+429
+00:26:48,490 --> 00:26:48,916
+Speaker 0: Here it is.
+
+430
+00:26:49,017 --> 00:26:49,989
+Speaker 0: You can play it right now.
+
+431
+00:26:50,270 --> 00:26:51,970
+Speaker 1: Yes, but that is not the news.
+
+432
+00:26:52,352 --> 00:26:53,410
+Speaker 1: That's not what we're talking about today.
+
+433
+00:26:53,510 --> 00:27:02,986
+Speaker 1: What we're talking about is that the people who made War Bits, which it turns out was just two people, posted a post-mortem titled, as far as I can tell, "War Bits was a Dumb
+
+434
+00:27:03,107 --> 00:27:03,428
+Speaker 1: Idea."
+
+435
+00:27:04,796 --> 00:27:06,330
+Speaker 1: And Scott sent this to me because he saw it first.
+
+436
+00:27:06,931 --> 00:27:08,125
+Speaker 1: And I read it, and Scott read it.
+
+437
+00:27:08,971 --> 00:27:12,970
+Speaker 1: And it's actually a real interesting story of how War Bits got made.
+
+438
+00:27:13,951 --> 00:27:16,710
+Speaker 1: And I have a lot of thoughts on this article.
+
+439
+00:27:17,130 --> 00:27:21,290
+Speaker 1: So I guess I want to preface all of this by saying that, one, we don't know either of these two people.
+
+440
+00:27:21,411 --> 00:27:22,749
+Speaker 0: I don't have as many thoughts as Rym is.
+
+441
+00:27:22,911 --> 00:27:23,328
+Speaker 1: I have a lot.
+
+442
+00:27:23,790 --> 00:27:45,089
+Speaker 1: But all the shit we're about to talk is based solely on having read this article, Scott having played the game a lot more than me, me having played the game a couple of times on someone else's iPad, and us just generally talking shit about how to make games, because while we talk a lot about games, and we've designed or have designed a lot of games, we have not really published any games.
+
+443
+00:27:45,390 --> 00:27:47,609
+Speaker 1: So this is like maximum shit-talking here.
+
+444
+00:27:49,292 --> 00:27:54,438
+Speaker 1: I think Luke Crane was the one who said that the worst thing you can ever say to him in the world is, "You know what you should have done?
+
+445
+00:27:54,458 --> 00:27:55,747
+Speaker 1: You know what you should
+
+446
+00:27:55,787 --> 00:27:55,968
+Speaker 1: do.".
+
+447
+00:27:56,230 --> 00:28:00,250
+Speaker 0: Oh, side note, speaking of Luke Crane, he was at Gen Con, like he does.
+
+448
+00:28:00,370 --> 00:28:00,668
+Speaker 0: Oh, yeah.
+
+449
+00:28:00,972 --> 00:28:03,210
+Speaker 0: And those Team Covenant guys, they interviewed him.
+
+450
+00:28:03,370 --> 00:28:20,825
+Speaker 0: So on the Team Covenant YouTube channel, there's a 20-minute interview with Luke Crane, and the guy opens up the video, he opens up the interview, basically just following his train of thought, and his first question is, "Luke, why is there a Burning Wheel codex for sale here at Gen Con, and I'm a Kickstarter backer and I haven't received it
+
+451
+00:28:20,865 --> 00:28:21,006
+Speaker 0: yet?".
+
+452
+00:28:21,611 --> 00:28:23,205
+Speaker 0: And Luke is like, "Hey, Luke is way
+
+453
+00:28:23,226 --> 00:28:23,448
+Speaker 0: mad.".
+
+454
+00:28:26,131 --> 00:28:27,163
+Speaker 0: He's like, "Don't you work at
+
+455
+00:28:27,204 --> 00:28:27,629
+Speaker 0: Kickstarter?".
+
+456
+00:28:27,894 --> 00:28:28,506
+Speaker 0: He's like, "So
+
+457
+00:28:28,526 --> 00:28:28,649
+Speaker 0: mad.".
+
+458
+00:28:29,451 --> 00:28:30,697
+Speaker 0: So it's really great.
+
+459
+00:28:31,119 --> 00:28:39,190
+Speaker 0: Even if you don't care about the rest of the things Luke has to say, he's pretty much just promoting his stuff, like Inheritance, which he said he's going to work on in September.
+
+460
+00:28:39,370 --> 00:28:40,710
+Speaker 1: Guys, Inheritance is so fucking good.
+
+461
+00:28:40,730 --> 00:28:42,689
+Speaker 0: He said he's going to work on it in September in this video.
+
+462
+00:28:43,090 --> 00:28:44,240
+Speaker 1: It is so good.
+
+463
+00:28:44,260 --> 00:28:45,550
+Speaker 0: There's a forum thread about it right now.
+
+464
+00:28:45,610 --> 00:28:49,030
+Speaker 0: Watch to see him get mad at Wooly from Team Covenant.
+
+465
+00:28:49,852 --> 00:28:51,103
+Speaker 1: I haven't watched the interview yet.
+
+466
+00:28:51,244 --> 00:28:51,829
+Speaker 1: I haven't watched it.
+
+467
+00:28:53,270 --> 00:28:58,008
+Speaker 1: So the story behind this article, and you can read it, is that Warbits was made by two people.
+
+468
+00:28:59,251 --> 00:29:00,770
+Speaker 0: Two people who never met in person.
+
+469
+00:29:01,190 --> 00:29:02,785
+Speaker 1: Riley and Joe made the game.
+
+470
+00:29:02,846 --> 00:29:03,330
+Speaker 0: One lived in Texas.
+
+471
+00:29:03,652 --> 00:29:06,010
+Speaker 0: If you were a person out there, let me just say this right now.
+
+472
+00:29:06,171 --> 00:29:08,950
+Speaker 0: I don't know how people do this, like never met in person, work together thing.
+
+473
+00:29:09,492 --> 00:29:20,249
+Speaker 0: If you're a person somewhere who doesn't know how to code, but you want to make arts and do the front end designy part of a game, or anything pretty much, videos or whatever.
+
+474
+00:29:20,570 --> 00:29:21,050
+Speaker 0: Call us.
+
+475
+00:29:21,370 --> 00:29:22,049
+Speaker 0: I can code.
+
+476
+00:29:22,874 --> 00:29:25,930
+Speaker 0: Even if we've never met, apparently we can make a Warbits, right?
+
+477
+00:29:27,113 --> 00:29:29,150
+Speaker 0: But you have to be a person who's actually going to do shit.
+
+478
+00:29:30,072 --> 00:29:34,169
+Speaker 0: Any time in my life when I've ever tried to work with someone, it's always people I've met.
+
+479
+00:29:35,252 --> 00:29:39,337
+Speaker 0: They just stop replying to email, or don't answer questions, and the thing falls apart.
+
+480
+00:29:41,171 --> 00:29:46,210
+Speaker 1: Usually that's because we're not working on something that has a timeline, or necessarily structure.
+
+481
+00:29:46,210 --> 00:29:49,470
+Speaker 0: No, there are things that have timelines, and I've worked on them with people.
+
+482
+00:29:49,591 --> 00:29:55,570
+Speaker 0: And it's like I ask them a question, I literally cannot continue working until they answer my question, and they don't answer, and then the thing fails.
+
+483
+00:29:55,670 --> 00:30:09,010
+Speaker 0: So if you are a reliable person who will dedicate yourself to a thing, and continue working on it, and communicate consistently, and not stop, then let me know, and we can make a thing along these lines, or other lines.
+
+484
+00:30:09,531 --> 00:30:14,630
+Speaker 1: In fact, I would make... It's funny, because what these two people did is something that I kind of always wanted to do.
+
+485
+00:30:14,910 --> 00:30:16,020
+Speaker 0: For four years, they didn't stop.
+
+486
+00:30:16,060 --> 00:30:17,009
+Speaker 0: Look how good they are, right?
+
+487
+00:30:17,130 --> 00:30:18,698
+Speaker 0: When they started, they had nothing.
+
+488
+00:30:18,718 --> 00:30:19,824
+Speaker 0: They didn't know how to program.
+
+489
+00:30:21,571 --> 00:30:22,960
+Speaker 1: Yeah, that is where this gets crazy.
+
+490
+00:30:23,020 --> 00:30:24,610
+Speaker 1: That is the main reason I want to talk about this.
+
+491
+00:30:24,610 --> 00:30:25,418
+Speaker 0: I know how to program already.
+
+492
+00:30:25,439 --> 00:30:26,550
+Speaker 0: I've been programming since kindergarten.
+
+493
+00:30:27,090 --> 00:30:42,830
+Speaker 1: They were basically just fans of Advance Wars, who wanted to make Advance Wars exist again, and they started from scratch, having, as far as I can tell, no game design experience, no game design knowledge, no real serious programming experience.
+
+494
+00:30:44,071 --> 00:30:46,010
+Speaker 0: They just stuck with it for four years.
+
+495
+00:30:46,171 --> 00:30:52,230
+Speaker 1: Remember way back when we interviewed the creator of Dwarf Fortress, and we realized that, oh, he literally learned how to code to make this game.
+
+496
+00:30:53,071 --> 00:30:57,310
+Speaker 1: It's the same situation, so it took them... And it's also... This is a very inspirational story.
+
+497
+00:30:57,710 --> 00:31:07,330
+Speaker 1: It took them four years to make this game, but that was four years of working real full-time jobs, and just working on this game as a hobby.
+
+498
+00:31:07,870 --> 00:31:10,870
+Speaker 0: Well, obviously, they worked on it as much as we work on this podcast, right?
+
+499
+00:31:11,550 --> 00:31:15,167
+Speaker 0: They weren't doing much else after work, whatever.
+
+500
+00:31:15,207 --> 00:31:15,850
+Speaker 0: This was their thing.
+
+501
+00:31:15,970 --> 00:31:20,630
+Speaker 1: Yeah, imagine if we put all the effort we put into the last 11 years of Geek Nights into anything else.
+
+502
+00:31:21,152 --> 00:31:22,069
+Speaker 0: We'd be... We have more money.
+
+503
+00:31:22,372 --> 00:31:22,440
+Speaker 1: Yup.
+
+504
+00:31:22,810 --> 00:31:24,649
+Speaker 0: We should have put it into something that was monetizable.
+
+505
+00:31:25,030 --> 00:31:25,850
+Speaker 1: So, here's the other amazing thing.
+
+506
+00:31:25,950 --> 00:31:26,489
+Speaker 0: I've been to iOS, I have.
+
+507
+00:31:26,770 --> 00:31:33,310
+Speaker 1: They posted their budget and their costs, because, obviously, the only thing that doesn't include is the fact that they had full-time jobs.
+
+508
+00:31:33,510 --> 00:31:35,743
+Speaker 0: Well, if you're making an iOS game, you have to have Macs.
+
+509
+00:31:35,864 --> 00:31:36,628
+Speaker 0: You can't use Macs.
+
+510
+00:31:37,770 --> 00:31:42,430
+Speaker 1: They're total expenses, including an Apple developer license.
+
+511
+00:31:43,070 --> 00:31:43,870
+Speaker 0: Oh, you need that too, yeah.
+
+512
+00:31:44,011 --> 00:31:46,570
+Speaker 0: And a MacBook Pro, because they needed a Mac.
+
+513
+00:31:46,570 --> 00:31:48,450
+Speaker 0: Wouldn't they need two MacBook Pros for two people?
+
+514
+00:31:48,752 --> 00:31:49,601
+Speaker 1: They only listed one here.
+
+515
+00:31:50,470 --> 00:31:52,570
+Speaker 0: Maybe one guy did all the programming and one guy did the art.
+
+516
+00:31:52,810 --> 00:31:53,690
+Speaker 1: That seems like that's how it went down.
+
+517
+00:31:53,930 --> 00:31:56,890
+Speaker 0: And the art guy could just use Creative Cloud on a Windows PC.
+
+518
+00:31:57,091 --> 00:31:58,625
+Speaker 1: We're talking under 15 grand.
+
+519
+00:31:59,750 --> 00:32:00,169
+Speaker 0: Yeah, that's cheap.
+
+520
+00:32:00,610 --> 00:32:05,050
+Speaker 1: And that includes 11 grand worth of hiring freelancers to do the parts that they weren't going to do.
+
+521
+00:32:05,590 --> 00:32:10,010
+Speaker 1: And six grand of that was a backend that they then didn't use.
+
+522
+00:32:10,940 --> 00:32:11,249
+Speaker 0: Oh, wow.
+
+523
+00:32:11,491 --> 00:32:14,630
+Speaker 1: Yeah, so think about what this means.
+
+524
+00:32:14,630 --> 00:32:17,470
+Speaker 0: That's got to be so sad, spending six grand on something you don't use.
+
+525
+00:32:17,770 --> 00:32:18,930
+Speaker 0: You know what you can get for six grand?
+
+526
+00:32:20,294 --> 00:32:20,699
+Speaker 1: You know what?
+
+527
+00:32:20,719 --> 00:32:21,569
+Speaker 1: You know what you can get for...
+
+528
+00:32:21,630 --> 00:32:23,949
+Speaker 0: We could buy so many cameras and shit.
+
+529
+00:32:24,231 --> 00:32:25,269
+Speaker 1: You know what you can get for 12 grand?
+
+530
+00:32:25,390 --> 00:32:26,130
+Speaker 0: We could buy cars.
+
+531
+00:32:26,390 --> 00:32:31,230
+Speaker 1: For 12 grand, you can get the entire non-salary budget of a game this high quality.
+
+532
+00:32:31,270 --> 00:32:34,390
+Speaker 0: You might be able to get every Steam game for six grand.
+
+533
+00:32:34,813 --> 00:32:36,809
+Speaker 1: I could finance this game with my credit card.
+
+534
+00:32:37,152 --> 00:32:37,647
+Speaker 0: Yeah, maybe.
+
+535
+00:32:37,790 --> 00:32:40,156
+Speaker 0: So, think of this.
+
+536
+00:32:40,317 --> 00:32:45,490
+Speaker 1: Even if we included their salaries, let's assume they made, for real, New York-style money.
+
+537
+00:32:45,752 --> 00:32:46,610
+Speaker 0: So, two people.
+
+538
+00:32:46,610 --> 00:32:48,130
+Speaker 0: 150 grand a year.
+
+539
+00:32:48,330 --> 00:32:49,649
+Speaker 0: Two people, four years.
+
+540
+00:32:49,770 --> 00:32:51,207
+Speaker 0: So, 300 grand a year times four.
+
+541
+00:32:51,490 --> 00:32:52,210
+Speaker 0: A million dollars.
+
+542
+00:32:52,430 --> 00:32:55,990
+Speaker 1: So, a million dollars for a game like this is not out of the realm.
+
+543
+00:32:56,711 --> 00:33:02,270
+Speaker 1: But the thing is, if they were already programmers and already had some game design knowledge...
+
+544
+00:33:02,290 --> 00:33:04,669
+Speaker 0: Yeah, it definitely cost more than a million dollars to make Advance Wars, right?
+
+545
+00:33:04,750 --> 00:33:06,627
+Speaker 0: Because they originally thought, "Oh, this is a six-month
+
+546
+00:33:06,668 --> 00:33:06,869
+Speaker 0: game."
+
+547
+00:33:07,030 --> 00:33:09,440
+Speaker 0: At any of the Advance Wars games, like the DS1?
+
+548
+00:33:09,460 --> 00:33:10,284
+Speaker 0: What's the last one?
+
+549
+00:33:12,636 --> 00:33:13,170
+Speaker 1: Days of Ruin.
+
+550
+00:33:13,410 --> 00:33:15,150
+Speaker 0: Days of Ruin cost way more than a million dollars to make, right?
+
+551
+00:33:15,150 --> 00:33:18,590
+Speaker 1: Partly because they had a huge team, because those campaigns are, like, real well-designed.
+
+552
+00:33:18,910 --> 00:33:19,490
+Speaker 0: Yeah, definitely.
+
+553
+00:33:19,630 --> 00:33:22,070
+Speaker 1: But they originally thought this game would only take six months.
+
+554
+00:33:22,410 --> 00:33:25,445
+Speaker 1: And, honestly, I think that's close to accurate.
+
+555
+00:33:25,505 --> 00:33:26,470
+Speaker 1: if they were working full-time.
+
+556
+00:33:26,711 --> 00:33:29,610
+Speaker 0: If they had started with skills, it would have taken six months.
+
+557
+00:33:29,750 --> 00:33:30,849
+Speaker 1: I'm just saying, I'm going to be real blunt.
+
+558
+00:33:31,534 --> 00:33:32,150
+Speaker 0: For a full-time.
+
+559
+00:33:32,230 --> 00:33:35,426
+Speaker 1: If that were me and Scott working full-time, I think six months is a reasonable time.
+
+560
+00:33:36,791 --> 00:33:44,210
+Speaker 1: But, to qualify that, I think it would really be six months of game design and then three to six months of programming.
+
+561
+00:33:45,170 --> 00:33:53,730
+Speaker 1: Because they basically made a really, really awesome thing while simultaneously making all the amateur mistakes you'd expect along the way of people who just don't know how to do this.
+
+562
+00:33:54,511 --> 00:33:56,689
+Speaker 1: So it's a real interesting story to kind of see how it played out.
+
+563
+00:33:57,672 --> 00:34:02,230
+Speaker 1: It seems like the game only sold a whole bunch because they got lucky and it appeared at the top of the Apple nonsense.
+
+564
+00:34:03,073 --> 00:34:04,370
+Speaker 1: Like, at a very opportune time.
+
+565
+00:34:04,550 --> 00:34:12,830
+Speaker 0: Well, because if you make a game, really, how professional it looks goes a long way towards how well it's promoted in the App Store.
+
+566
+00:34:13,270 --> 00:34:16,210
+Speaker 0: So this game looks like fucking professional.
+
+567
+00:34:16,992 --> 00:34:22,989
+Speaker 0: It looks like a top-tier 2D game should look in the year 2016.
+
+568
+00:34:22,989 --> 00:34:28,850
+Speaker 0: And the user interface, while it has some slight flaws, it lets you play Advance Wars really nicely and comfortably.
+
+569
+00:34:29,331 --> 00:34:30,943
+Speaker 0: And you don't really get mad at it or anything.
+
+570
+00:34:31,386 --> 00:34:31,929
+Speaker 0: It's super good.
+
+571
+00:34:32,091 --> 00:34:32,351
+Speaker 0: Yeah.
+
+572
+00:34:33,054 --> 00:34:37,389
+Speaker 1: But I guess they were sort of building the game as design.
+
+573
+00:34:37,911 --> 00:34:40,587
+Speaker 1: And I feel like this happens a lot where people think, "Oh, I'm going to make a video
+
+574
+00:34:40,607 --> 00:34:40,808
+Speaker 1: game."
+
+575
+00:34:41,291 --> 00:34:45,650
+Speaker 1: And they basically start writing code almost right away and start looking at frameworks and things right away.
+
+576
+00:34:45,650 --> 00:34:47,208
+Speaker 0: Well, you can make prototypes right away.
+
+577
+00:34:47,731 --> 00:35:02,490
+Speaker 1: Yeah, but unless you start with, like, sit down with some paper and think about your game mechanics and flesh that out pretty far before you're writing code, I feel like this is a common problem among people who have a good idea for a game but don't have a lot of experience.
+
+578
+00:35:03,931 --> 00:35:12,330
+Speaker 1: I mean, if I was making a game like this, three to six months of literally pen and paper game design, and that's literally all you're doing for those three to six months.
+
+579
+00:35:12,570 --> 00:35:13,857
+Speaker 0: Well, you know, it depends.
+
+580
+00:35:14,199 --> 00:35:23,590
+Speaker 0: If you know, for example, you're going to make a platformer, you can either get a platforming engine and then code up just the basic stuff, and then you do all your tweaking once you've got code.
+
+581
+00:35:23,710 --> 00:35:37,090
+Speaker 1: I would not be coding that stuff even for a platformer until I had already sketched out in pretty big detail, like, ten examples of, like, the kinds of levels I want and the kinds of mechanics I need in the game to make those levels be the kind of game that I want.
+
+582
+00:35:38,191 --> 00:35:38,733
+Speaker 0: You could just do it.
+
+583
+00:35:38,954 --> 00:35:39,456
+Speaker 0: It doesn't matter.
+
+584
+00:35:39,476 --> 00:35:40,159
+Speaker 0: You can do it after.
+
+585
+00:35:40,279 --> 00:35:43,150
+Speaker 0: You can just get the plan and then you can see if those mechanics work, right?
+
+586
+00:35:43,170 --> 00:35:48,488
+Speaker 0: You make a tiny little level that has the mechanic you're thinking of and you test that one mechanic and see, "Does this actually
+
+587
+00:35:48,529 --> 00:35:48,769
+Speaker 0: work?".
+
+588
+00:35:48,950 --> 00:35:50,910
+Speaker 1: But I guess I would want a very clear vision.
+
+589
+00:35:50,910 --> 00:35:55,250
+Speaker 0: You're going to make these grand plans and then we actually get to code and be like, "Ah, half my grand plans I've got to throw
+
+590
+00:35:55,270 --> 00:35:55,330
+Speaker 0: out.".
+
+591
+00:35:55,330 --> 00:35:59,302
+Speaker 1: Not grand plans, just a very clear vision of, like, "Here's an example of a perfect level in this game.
+
+592
+00:35:59,342 --> 00:36:00,665
+Speaker 1: What do I need to do to achieve that?
+
+593
+00:36:01,027 --> 00:36:01,608
+Speaker 1: And will that
+
+594
+00:36:01,668 --> 00:36:01,889
+Speaker 1: work?".
+
+595
+00:36:02,311 --> 00:36:03,549
+Speaker 0: You've got to do one thing at a time.
+
+596
+00:36:05,150 --> 00:36:13,750
+Speaker 1: So, but if I was going to make this game, like, for real, I think the real differences are, one, already not a code and, like, all that stuff.
+
+597
+00:36:13,790 --> 00:36:16,638
+Speaker 1: But that aside, I wouldn't have made it for iOS.
+
+598
+00:36:17,420 --> 00:36:22,301
+Speaker 1: I feel like the Venn diagram... Uh, a little bit.
+
+599
+00:36:22,624 --> 00:36:23,048
+Speaker 1: But I'm saying...
+
+600
+00:36:23,350 --> 00:36:24,222
+Speaker 0: That's pretty much it.
+
+601
+00:36:24,303 --> 00:36:24,790
+Speaker 0: No, 100% sour grape.
+
+602
+00:36:25,112 --> 00:36:26,549
+Speaker 1: I think the Venn diagram...
+
+603
+00:36:26,630 --> 00:36:29,170
+Speaker 0: Like all these sour grapes, it's grape season, but your grapes are sour.
+
+604
+00:36:29,370 --> 00:36:32,023
+Speaker 1: I just, because you're the one who was like, "Why is this game on Steam?
+
+605
+00:36:32,143 --> 00:36:33,449
+Speaker 1: I want to play it on a desktop.
+
+606
+00:36:33,490 --> 00:36:33,590
+Speaker 1: Jesus.".
+
+607
+00:36:33,590 --> 00:36:37,330
+Speaker 0: Well, it would be nice to play on desktop too, but yeah, I'm playing on my iPad.
+
+608
+00:36:37,350 --> 00:36:48,010
+Speaker 1: I just feel like the Venn diagram of people who really want a spiritual successor to Advance Wars and people who use Android and Steam overlaps pretty heavily.
+
+609
+00:36:48,732 --> 00:36:51,620
+Speaker 0: It does, but Advance Wars is traditionally a portable game.
+
+610
+00:36:51,680 --> 00:36:54,448
+Speaker 0: It's not a sit down in your room game.
+
+611
+00:36:55,410 --> 00:36:57,929
+Speaker 0: That is true, however... It should be on portable devices.
+
+612
+00:36:58,510 --> 00:37:09,890
+Speaker 1: That is true, but if I had to choose, because remember, the demographic you're going after if you make a game like this is either this blue ocean of try to get people who have never encountered a game like Advance Wars before.
+
+613
+00:37:10,530 --> 00:37:15,490
+Speaker 1: There's another angle of go after Fire Emblem type people, like Final Fantasy Tactics type people.
+
+614
+00:37:15,590 --> 00:37:16,649
+Speaker 0: Those are not Advance Wars people.
+
+615
+00:37:16,911 --> 00:37:21,270
+Speaker 1: Yeah, but you could go after them and bring them into this kind of game, but you have to have a very different aesthetic.
+
+616
+00:37:21,510 --> 00:37:27,290
+Speaker 0: I think the Nintendo audience that played Advance Wars overlaps more with Apple than with Android.
+
+617
+00:37:27,390 --> 00:37:33,510
+Speaker 1: I don't think so, because I think the audience of people who played Advance Wars on Nintendo didn't overlap with people who played a lot of other things on Nintendo.
+
+618
+00:37:35,591 --> 00:37:36,124
+Speaker 0: I don't know.
+
+619
+00:37:36,871 --> 00:37:48,707
+Speaker 1: I know I'm just a completely anecdotal BS example, but I think I played more Advance Wars on all my portable Nintendo consoles since the Game Boy Advance onward than any other games combined.
+
+620
+00:37:51,270 --> 00:37:53,030
+Speaker 0: Let's hope they make Advance Wars for the NX, right?
+
+621
+00:37:53,551 --> 00:37:57,050
+Speaker 1: If they make Advance Wars for the NX and it's a new one, I'll literally buy an NX the day it comes out.
+
+622
+00:37:57,131 --> 00:37:58,889
+Speaker 0: I think I'm buying NX the day it comes out no matter what.
+
+623
+00:37:59,091 --> 00:38:00,190
+Speaker 1: Oh good, then I can borrow yours.
+
+624
+00:38:00,376 --> 00:38:00,526
+Speaker 1: No.
+
+625
+00:38:00,931 --> 00:38:01,868
+Speaker 1: I'll come over and play it then.
+
+626
+00:38:02,911 --> 00:38:05,950
+Speaker 0: I think it's going to be portable, from what I hear.
+
+627
+00:38:06,311 --> 00:38:15,170
+Speaker 1: In terms of this kind of game, like Advance Wars as a game, the mode that most people play is single player campaign, you know, by yourself, commuting or conventions or whatever.
+
+628
+00:38:15,610 --> 00:38:17,990
+Speaker 1: Multiplayer didn't happen that often because you had to be physically in person.
+
+629
+00:38:19,030 --> 00:38:30,290
+Speaker 1: Online multiplayer, particularly Take Your Turn by Mail style multiplayer, I think would be huge in a game that has that level of tactical involvement of a game like Advance Wars.
+
+630
+00:38:30,310 --> 00:38:35,370
+Speaker 0: The thing is that the Take Your Turn by Mail multiplayer makes sense when you have a big Advance Wars.
+
+631
+00:38:35,490 --> 00:38:37,430
+Speaker 0: For a little one, it'd be really frustrating.
+
+632
+00:38:38,110 --> 00:38:39,762
+Speaker 0: It's like you've got five infantry, really?
+
+633
+00:38:39,802 --> 00:38:40,930
+Speaker 0: I've got to sit here and wait all day?
+
+634
+00:38:41,350 --> 00:38:46,630
+Speaker 1: Ah, but in Advance Wars, actually the small maps break down and get super degenerate and kind of bullshitty.
+
+635
+00:38:46,710 --> 00:38:54,850
+Speaker 1: And the only maps that are actually good for a long, serious skill game, like once you get good at the game, are the giant maps that take a couple hundred turns to resolve.
+
+636
+00:38:55,191 --> 00:38:59,404
+Speaker 0: Yeah, I'm just saying, most people play the small maps, right?
+
+637
+00:38:59,445 --> 00:39:01,090
+Speaker 0: They don't have the attention span for the big map.
+
+638
+00:39:01,410 --> 00:39:03,270
+Speaker 1: But that's it, the real strength of the Advance Wars.
+
+639
+00:39:03,390 --> 00:39:09,650
+Speaker 0: The other problem with the big map is the big map, with the small map, the game ends when someone has won, right?
+
+640
+00:39:09,730 --> 00:39:11,566
+Speaker 0: So you win, and then you win.
+
+641
+00:39:11,647 --> 00:39:12,010
+Speaker 0: It's over.
+
+642
+00:39:12,411 --> 00:39:18,450
+Speaker 0: The big map, you get to a point where you've won, but you can't actually capture my HQ or destroy all my units for like another week.
+
+643
+00:39:18,910 --> 00:39:19,354
+Speaker 0: Fuck, uh.
+
+644
+00:39:20,361 --> 00:39:20,603
+Speaker 0: Right?
+
+645
+00:39:20,744 --> 00:39:21,610
+Speaker 0: It's that kind of situation.
+
+646
+00:39:21,630 --> 00:39:28,190
+Speaker 1: Yep, but because multiplayer was pretty rare in the old Advance Wars day, like it was rare people could actually play Advance Wars multiplayer with each other.
+
+647
+00:39:29,110 --> 00:39:39,690
+Speaker 1: So the fact that the campaign, like the single player, was so strong and so tight is, I think, what resulted in the majority of the fandom for the Advance Wars series.
+
+648
+00:39:40,810 --> 00:39:44,970
+Speaker 1: And I think part of that was that it wasn't just that the game was slick and polished and had good mechanics and everything.
+
+649
+00:39:45,591 --> 00:39:59,470
+Speaker 1: It was that it edged more into the stuff that people care about in games like Fire Emblem, where you have these strong iconic character designs and this sort of like very overarching dumb anime plot narrative that people seem to get really into.
+
+650
+00:39:59,610 --> 00:40:02,000
+Speaker 0: I do think that's one thing that War Bits is lacking, right?
+
+651
+00:40:02,020 --> 00:40:04,470
+Speaker 0: It doesn't have the characters that Advance Wars has, right?
+
+652
+00:40:04,490 --> 00:40:06,761
+Speaker 0: You wouldn't cosplay as anything in War Bits.
+
+653
+00:40:06,841 --> 00:40:08,810
+Speaker 0: No one would recognize you if you did or care.
+
+654
+00:40:09,010 --> 00:40:12,258
+Speaker 0: It's pretty much just like red versus blue, generic dudes.
+
+655
+00:40:12,278 --> 00:40:13,560
+Speaker 0: They're like the same dudes.
+
+656
+00:40:13,661 --> 00:40:17,208
+Speaker 0: You're not specializing in anything, right?
+
+657
+00:40:19,811 --> 00:40:25,430
+Speaker 0: So it doesn't have that sort of style and you don't get attached to it the way you would get attached to Advance Wars.
+
+658
+00:40:26,172 --> 00:40:26,252
+Speaker 1: True.
+
+659
+00:40:26,272 --> 00:40:29,670
+Speaker 1: I think the other issue is if your iOS exclusive doesn't have character.
+
+660
+00:40:30,791 --> 00:40:35,450
+Speaker 1: It's very hard for people to find your game who are not in that Venn diagram of care about Advance Wars.
+
+661
+00:40:35,891 --> 00:40:42,346
+Speaker 1: Because selling any kind of game on iOS or even Android is basically this like crap shoot of.
+
+662
+00:40:42,386 --> 00:40:44,090
+Speaker 1: does your game get featured at the right time?
+
+663
+00:40:44,570 --> 00:40:46,859
+Speaker 1: Does a certain kind of media outlet link to you?
+
+664
+00:40:47,361 --> 00:40:49,450
+Speaker 1: It's very hard to actually sell games.
+
+665
+00:40:49,890 --> 00:40:51,394
+Speaker 0: Well, that's the key, right?
+
+666
+00:40:52,296 --> 00:40:57,670
+Speaker 0: When you put a game in the app store, because the discovery in all the app stores is so garbage, even on Steam, right?
+
+667
+00:40:58,091 --> 00:41:05,890
+Speaker 0: You have to basically put in lots of effort to do press releases and get someone to write something about you.
+
+668
+00:41:06,330 --> 00:41:08,990
+Speaker 0: Like you gotta be at every PAX, like in the dealer's room.
+
+669
+00:41:09,170 --> 00:41:09,872
+Speaker 0: You have to push.
+
+670
+00:41:10,033 --> 00:41:15,150
+Speaker 0: And they pushed War Bits a reasonable, they didn't push it super hard like some games, but they pushed it a reasonable amount.
+
+671
+00:41:15,170 --> 00:41:22,950
+Speaker 1: Well look, if their budget was twelve, thirteen-ish grand, I mean, a game like that, I would put a marketing budget at at least six figures.
+
+672
+00:41:23,672 --> 00:41:31,030
+Speaker 0: Right, and the other thing is that if you look around, there are some games that aren't that great that push super, super hard.
+
+673
+00:41:31,170 --> 00:41:33,728
+Speaker 0: There are those games we see every PAX, like say Brawlhalla.
+
+674
+00:41:34,831 --> 00:41:37,350
+Speaker 1: Oh my god, Brawlhalla does not look like a good game.
+
+675
+00:41:37,390 --> 00:41:39,076
+Speaker 0: And it's like there's such a push behind it.
+
+676
+00:41:39,176 --> 00:41:41,043
+Speaker 0: And when you push that hard, it works.
+
+677
+00:41:41,063 --> 00:41:42,869
+Speaker 0: There are people who play it and are into it, right?
+
+678
+00:41:43,430 --> 00:41:47,126
+Speaker 0: But if the game doesn't hold, you can only get so far by pushing.
+
+679
+00:41:48,250 --> 00:41:54,990
+Speaker 0: But meanwhile, there's games that are amazing and it doesn't, you know, it takes a lot less pushing to get a good game to go.
+
+680
+00:41:55,350 --> 00:41:58,940
+Speaker 0: Merit still matters more than how you push, but you still gotta push.
+
+681
+00:41:59,000 --> 00:42:02,450
+Speaker 0: Even if you got a rock that's ready to roll down the hill, it's a big ass rock.
+
+682
+00:42:02,890 --> 00:42:05,670
+Speaker 0: You still gotta like sort of slam into it to get it rolling, right?
+
+683
+00:42:05,850 --> 00:42:15,430
+Speaker 1: Yup, but for some perspective, like to buy a significant, like buy like Google ads, like significant pushes like that and exhibiting it like a bunch of like major game cons.
+
+684
+00:42:16,092 --> 00:42:18,027
+Speaker 1: You could afford that for like less than 20 grand.
+
+685
+00:42:18,810 --> 00:42:22,170
+Speaker 0: You could afford that with the six grand that they wasted on something they didn't use.
+
+686
+00:42:22,410 --> 00:42:28,370
+Speaker 1: Yup, but that was partly because they started coding and doing the game design at the same time and they were sort of just muddling through the project.
+
+687
+00:42:28,811 --> 00:42:32,630
+Speaker 0: Well, they didn't have to do much design a lot because they're just copying advanced work.
+
+688
+00:42:32,771 --> 00:42:36,050
+Speaker 1: Ah, no, because they talk a lot about how it got way more complex than they expected.
+
+689
+00:42:36,498 --> 00:42:36,729
+Speaker 1: They did.
+
+690
+00:42:36,990 --> 00:42:39,570
+Speaker 1: It sounds like the mechanics were too complex to talk about that.
+
+691
+00:42:40,370 --> 00:42:48,670
+Speaker 1: I suspect, and I don't know because we don't know them, that you get into the situation where like there are people who are fans of a thing, like fans of an anime like Eva.
+
+692
+00:42:49,191 --> 00:42:55,930
+Speaker 1: But they might not necessarily have the film knowledge to understand like specific things that were done in that show that made them like it.
+
+693
+00:42:56,550 --> 00:42:58,022
+Speaker 1: Like the people who liked original Dota.
+
+694
+00:42:59,291 --> 00:43:03,910
+Speaker 0: Like without the, you know, without the source code of Advance Wars, there isn't like a deconstruction.
+
+695
+00:43:04,050 --> 00:43:07,370
+Speaker 0: So it's like you don't necessarily know like the exact math that's used.
+
+696
+00:43:07,390 --> 00:43:09,249
+Speaker 1: Actually because of game facts, you kind of do.
+
+697
+00:43:10,374 --> 00:43:11,703
+Speaker 0: Sometimes you do, sometimes you don't.
+
+698
+00:43:11,723 --> 00:43:12,790
+Speaker 0: Like Pokemon people know.
+
+699
+00:43:13,232 --> 00:43:14,821
+Speaker 0: They knew about EVs when there was like.
+
+700
+00:43:14,861 --> 00:43:16,290
+Speaker 0: how did you even figure that out, right?
+
+701
+00:43:16,750 --> 00:43:23,850
+Speaker 0: But, you know, for other games like people still, I don't think people still know how the breeding works in the stupid horse game on the 3DS.
+
+702
+00:43:25,131 --> 00:43:29,930
+Speaker 1: Yeah, but I do know, like I know the old Advance Wars, like the formulas are pretty well known or at least close enough.
+
+703
+00:43:30,510 --> 00:43:38,550
+Speaker 1: But I feel like some fundamental game design knowledge, you could have deconstructed and then reconstructed the Advance Wars rules pretty quick.
+
+704
+00:43:38,710 --> 00:43:40,490
+Speaker 1: And I suspect that they did a lot more trial and error.
+
+705
+00:43:40,590 --> 00:43:42,450
+Speaker 0: The other thing is that they change some things.
+
+706
+00:43:42,770 --> 00:43:48,210
+Speaker 0: And the thing, Advance Wars is so finely tuned that changing even one thing means you have to change a lot of other things.
+
+707
+00:43:48,230 --> 00:43:51,970
+Speaker 0: So for example, they added a ranged infantry unit, which actually I like a lot.
+
+708
+00:43:52,574 --> 00:43:53,279
+Speaker 0: It's a great unit.
+
+709
+00:43:53,339 --> 00:43:54,668
+Speaker 0: It's a great thing to have in the game.
+
+710
+00:43:55,091 --> 00:43:58,886
+Speaker 0: It lets you sort of have artillery, but it's extra vulnerable.
+
+711
+00:43:58,946 --> 00:43:59,850
+Speaker 0: It's not that strong.
+
+712
+00:44:00,291 --> 00:44:01,174
+Speaker 0: But it's a good way to like.
+
+713
+00:44:01,234 --> 00:44:05,810
+Speaker 0: if someone's coming at you with infantries, you can sort of shoot at them without having to lose, you know, your unit.
+
+714
+00:44:06,474 --> 00:44:07,850
+Speaker 0: And it, you know, it can also capture.
+
+715
+00:44:07,970 --> 00:44:14,570
+Speaker 0: It's like you can send this artillery out there over a mountain and capture something, but also shoot from the top of the mountain to rain death upon infantry.
+
+716
+00:44:14,570 --> 00:44:17,450
+Speaker 0: You know, it's like it's a good, balanced, decent unit.
+
+717
+00:44:17,870 --> 00:44:25,190
+Speaker 0: But adding that, if you just toss that into the existing Advance Wars without changing anything else, it's not going to work.
+
+718
+00:44:26,130 --> 00:44:39,230
+Speaker 1: Because it's very telling that from what I can gather from actual Advance Wars, a huge chunk of the larger than you expect team that made that game was just working on tuning the campaign and tuning like the actual game mechanics to make everything balance.
+
+719
+00:44:39,751 --> 00:44:40,742
+Speaker 0: Yeah, map making.
+
+720
+00:44:40,763 --> 00:44:41,390
+Speaker 0: It's tough.
+
+721
+00:44:41,691 --> 00:44:41,971
+Speaker 1: Yeah.
+
+722
+00:44:42,753 --> 00:44:49,910
+Speaker 1: And that's also why I think the actually the multiplayer experience, as much as I love playing Advance Wars with humans, I think it does kind of break down if everyone is really good.
+
+723
+00:44:50,170 --> 00:44:57,190
+Speaker 1: And these games really just are best to be thought of as like long campaign puzzling kind of games because otherwise against humans.
+
+724
+00:44:58,051 --> 00:44:58,493
+Speaker 1: Well, you watch.
+
+725
+00:44:58,533 --> 00:45:02,410
+Speaker 1: I made a YouTube video a while ago where I played both sides of an Advance Wars fight.
+
+726
+00:45:02,972 --> 00:45:06,109
+Speaker 1: And let me tell you, shit goes on forever, even on a tiny map.
+
+727
+00:45:07,850 --> 00:45:19,429
+Speaker 1: But I guess like for real props to these guys, because they made a for real legit game in their spare time for not counting their salaries and the hours they spent like under 15 grand.
+
+728
+00:45:21,271 --> 00:45:24,123
+Speaker 1: And they sold like they made over 100 grand on the game.
+
+729
+00:45:24,143 --> 00:45:25,750
+Speaker 0: That's pretty good.
+
+730
+00:45:26,010 --> 00:45:26,170
+Speaker 0: Yeah.
+
+731
+00:45:26,311 --> 00:45:32,570
+Speaker 0: That's I mean, when you hear that number, you're like, whoa, they got like 95, you know, they got tens of thousands of dollars in profits.
+
+732
+00:45:32,630 --> 00:45:33,132
+Speaker 0: That's great.
+
+733
+00:45:33,172 --> 00:45:35,759
+Speaker 0: But you got to remember four years of work.
+
+734
+00:45:36,341 --> 00:45:39,630
+Speaker 0: It's like twenty five K a year divided by two people.
+
+735
+00:45:39,850 --> 00:45:40,672
+Speaker 0: Twelve K a year.
+
+736
+00:45:40,732 --> 00:45:41,715
+Speaker 0: That is poverty.
+
+737
+00:45:42,035 --> 00:45:47,048
+Speaker 1: So I guess the real moral is if there's a game that you want to get made, good thing.
+
+738
+00:45:47,068 --> 00:45:48,050
+Speaker 0: they didn't quit their day jobs.
+
+739
+00:45:48,190 --> 00:45:48,491
+Speaker 0: Yes.
+
+740
+00:45:49,475 --> 00:45:51,966
+Speaker 1: Make it as a hobby or be rich and just say right.
+
+741
+00:45:51,986 --> 00:45:52,809
+Speaker 0: But at the same time.
+
+742
+00:45:52,869 --> 00:45:53,010
+Speaker 0: Right.
+
+743
+00:45:53,070 --> 00:45:56,297
+Speaker 0: So if you didn't quit your day job, you have the amount of money that you have.
+
+744
+00:45:56,678 --> 00:46:02,510
+Speaker 0: And then, you know, suddenly imagine if both of us just got like 30 K like instantly like an instant infusion.
+
+745
+00:46:02,610 --> 00:46:05,797
+Speaker 0: It's like, oh, on top of my day job, it's like it's crazy good.
+
+746
+00:46:06,278 --> 00:46:06,519
+Speaker 1: Yeah.
+
+747
+00:46:07,140 --> 00:46:11,510
+Speaker 0: I can go and buy like a car like a Mercedes and not even give a shit because I just, you know,
+
+748
+00:46:11,970 --> 00:46:23,450
+Speaker 1: I feel like at this point, start a little company, hire these guys, give have like a senior developer to actually work with them and like sort of, you know, make sure everything's done with modern best practices, whatever.
+
+749
+00:46:24,052 --> 00:46:26,519
+Speaker 1: And maybe like a game design on your credit card.
+
+750
+00:46:26,900 --> 00:46:30,150
+Speaker 1: And then I couldn't pay their salaries.
+
+751
+00:46:32,971 --> 00:46:45,770
+Speaker 1: But you could you could probably take these this team and this game and remake it for a wider release, like on steam and everything and do pretty well for yourself because this niche is still like barely address.
+
+752
+00:46:46,010 --> 00:46:46,090
+Speaker 0: Yeah.
+
+753
+00:46:46,110 --> 00:46:52,870
+Speaker 0: I mean, that's something you could do is actually is these guys could just hire use that money they just got and hire someone to just port their game.
+
+754
+00:46:53,571 --> 00:46:55,154
+Speaker 0: As like a reinvestment of the profits.
+
+755
+00:46:55,775 --> 00:47:03,550
+Speaker 0: If you just hire someone to directly port the game to steam and Android and you would make back the money you paid the porter to do the recoding.
+
+756
+00:47:03,830 --> 00:47:14,270
+Speaker 1: I don't know if Android I might just go with steam probably because actually when I when I set up an emulator to make those advanced wars videos a while ago, I forgot how fun advanced wars was.
+
+757
+00:47:14,491 --> 00:47:19,408
+Speaker 1: And I just started playing advanced wars on my desktop for a while and it was way more pleasant than playing it on my 3DS.
+
+758
+00:47:26,350 --> 00:47:28,516
+Speaker 1: This has been Geek Nights with Rim and Scott.
+
+759
+00:47:28,556 --> 00:47:33,570
+Speaker 1: Special thanks to DJ Pretzel for the opening music, Kat Lee for web design and Brando K for the logos.
+
+760
+00:47:33,930 --> 00:47:38,970
+Speaker 0: Be sure to visit our website at frontrowcrew.com for show notes, discussion news and more.
+
+761
+00:47:39,310 --> 00:47:41,897
+Speaker 1: Remember, Geek Nights is not one, but four different shows.
+
+762
+00:47:42,037 --> 00:47:46,610
+Speaker 1: Sci-Tech Mondays, Gaming Tuesdays, Anime Comic Wednesdays and Indiscriminate Thursdays.
+
+763
+00:47:46,971 --> 00:47:50,146
+Speaker 0: Geek Nights is distributed under a Creative Commons Attribution 3.0 license.
+
+764
+00:47:51,490 --> 00:47:54,500
+Speaker 0: Geek Nights is recorded live with no studio and no audience.
+
+765
+00:47:54,700 --> 00:47:57,590
+Speaker 0: But unlike those other late shows, it's actually recorded at night.
+
+766
+00:48:10,320 --> 00:48:52,480
+Speaker 1: The Patrons for this episode of Geek Nights in order of the amount of money they give us on a continuing basis are... Michelle Garcia, Brian Fisher, Sailor Vista, Dan Eckroyd, Gets It Together, Iggy Kid, Matthew Smith, Don Schleich, Jar Tovish, and Joe Shiro, Joe Star, Tyler Eller, Sean Yeager, Sam Cordery, Clinton Walton, Wren from New Zealand, Ryan Perrin, Drew Openlander, Rarilaval, Brian Cedroni, Rochelle Montanona, Finn, Eric Solverad, Rochelle Montar... Chris Smith, Chris Knox, Daniel Redmond, Sean Klein, Chris Reimer, and Thomas Hahn.
+
+767
+00:48:53,041 --> 00:48:56,588
+Speaker 1: As you see, got a new Rim's Rent, got a new Atari video out.
+
+768
+00:48:57,009 --> 00:49:02,640
+Speaker 1: I'm slowly catching up on my backlog and pumping out content as fast as my tiny legs can carry me.
+
+769
+00:49:03,440 --> 00:49:08,720
+Speaker 1: Stay tuned for even more content both on the Patreon and just on Geek Nights and our collective YouTube channels in general.
+
+770
+00:49:09,400 --> 00:49:11,592
+Speaker 1: Don't forget I'm doing an AMA on running conventions.
+
+771
+00:49:11,612 --> 00:49:13,160
+Speaker 1: I already got a few really good questions.
+
+772
+00:49:13,901 --> 00:49:24,620
+Speaker 1: If you're a $5 and up Becker and you want to join the patrons only Civ 5 game that we're going to play, submit your request to join real soon.
+
+773
+00:49:25,140 --> 00:49:35,060
+Speaker 1: In a few days I'm going to open up the remaining slots to the regular old plebeian patrons who give us less than $5 but more than at least one penny.
+
+774
+00:49:35,840 --> 00:49:38,320
+Speaker 1: And now I leave you with something great.
+
+775
+00:49:43,220 --> 00:49:43,480
+Speaker 0: [MUSIC].
+

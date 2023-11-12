@@ -1,0 +1,2544 @@
+﻿1
+00:00:09,580 --> 00:00:12,447
+Speaker 1: It's Monday June 5th, and this is geek nights.
+
+2
+00:00:12,729 --> 00:00:17,589
+Speaker 1: tonight We begin our long-running series on how computers work from the very bottom to the very top.
+
+3
+00:00:18,530 --> 00:00:21,681
+Speaker 1: Let's do this well as is par for the course.
+
+4
+00:00:21,802 --> 00:00:23,508
+Speaker 1: We had another crazy weekend.
+
+5
+00:00:23,528 --> 00:00:23,588
+Speaker 1: yay.
+
+6
+00:00:25,732 --> 00:00:29,430
+Speaker 1: We went to a Philly wizard world which we'll have our full coverage of on Wednesday.
+
+7
+00:00:29,551 --> 00:00:32,262
+Speaker 0: I think it's actually called wizard world Philly whatever.
+
+8
+00:00:32,283 --> 00:00:33,670
+Speaker 1: it was a frickin comic-con.
+
+9
+00:00:33,971 --> 00:00:36,962
+Speaker 1: That's what it was and I got my thoughts on that.
+
+10
+00:00:37,163 --> 00:00:38,849
+Speaker 0: we also went to the beach.
+
+11
+00:00:39,593 --> 00:00:43,630
+Speaker 1: Oh, yeah, Jersey Shore where our friend Scott Johnson has his crazy awesome new beach house.
+
+12
+00:00:44,053 --> 00:00:45,462
+Speaker 0: Do you like to sit on the beach?
+
+13
+00:00:45,825 --> 00:00:45,966
+Speaker 1: Well?
+
+14
+00:00:46,047 --> 00:00:46,328
+Speaker 1: I do.
+
+15
+00:00:47,097 --> 00:00:47,827
+Speaker 0: Do you like to?
+
+16
+00:00:50,191 --> 00:00:59,227
+Speaker 1: Other euphemism for bitch yeah, yeah It was a good time because ever since go Joe you know moved away from our IT We don't see him as often as we like to.
+
+17
+00:00:59,267 --> 00:01:03,929
+Speaker 0: so Yeah way down in that Philadelphia, and we're up here in that, New York.
+
+18
+00:01:04,239 --> 00:01:05,155
+Speaker 0: Yeah It's not.
+
+19
+00:01:05,477 --> 00:01:07,209
+Speaker 0: it should be easier to get between the two.
+
+20
+00:01:07,751 --> 00:01:16,464
+Speaker 0: But we live just so slightly upstate in New York that it's hard for us to get to i-95 Which is pretty much the only road from New York to Philadelphia.
+
+21
+00:01:16,484 --> 00:01:18,050
+Speaker 0: my dad's got it smart.
+
+22
+00:01:18,110 --> 00:01:20,583
+Speaker 0: He goes to Philadelphia all the time with the airplanes.
+
+23
+00:01:20,604 --> 00:01:24,801
+Speaker 1: Oh, yeah, yep I guess we'll just have to make him come out and visit us.
+
+24
+00:01:25,725 --> 00:01:26,710
+Speaker 0: I think that's what we'll have to do.
+
+25
+00:01:26,871 --> 00:01:35,499
+Speaker 0: Yeah, it's of course you know He has that house on the beach Which we can't make the house on the beach visit us.
+
+26
+00:01:35,840 --> 00:01:42,401
+Speaker 0: Yeah, if we found a way to teleport the bitch here I'd do it in a second, but we can't though actually what?
+
+27
+00:01:42,441 --> 00:01:44,369
+Speaker 1: the only reason I brought up the Jersey Shore is that we?
+
+28
+00:01:45,292 --> 00:01:47,209
+Speaker 1: Had a moment of geekery.
+
+29
+00:01:48,212 --> 00:01:49,636
+Speaker 0: Now the three moments of geek.
+
+30
+00:01:49,716 --> 00:01:57,062
+Speaker 1: well one particular moment myself Scott and Scott are walking down the boardwalk and suddenly We all stop.
+
+31
+00:01:57,364 --> 00:01:58,030
+Speaker 0: oh you can tell that one.
+
+32
+00:01:58,030 --> 00:01:59,057
+Speaker 1: That's yeah that one like.
+
+33
+00:01:59,077 --> 00:02:02,666
+Speaker 1: we all stop and we all turn to the left And we all look at each other like you hear that.
+
+34
+00:02:02,848 --> 00:02:05,061
+Speaker 1: yeah I hear that and we start looking around.
+
+35
+00:02:05,081 --> 00:02:11,939
+Speaker 0: we don't even say like we didn't even say anything But we all we all knew and we just stopped Kind of turned and started walking into this.
+
+36
+00:02:12,360 --> 00:02:22,248
+Speaker 0: now on the shore in Jersey and Wildwood on the boardwalk There's all these stores that sell shit like direct the dreckest of dreck the the schlockiest of crap.
+
+37
+00:02:22,268 --> 00:02:36,189
+Speaker 0: We're talking Cheap ass t-shirts with stupid sayings on them and girly Cheap bathing suits, and you know towels that say stuff like Beach inspector or bikini inspector ha ha ha.
+
+38
+00:02:36,932 --> 00:02:40,082
+Speaker 0: You know stupid shit like that plastic shovels for a dollar.
+
+39
+00:02:40,524 --> 00:02:40,725
+Speaker 1: Yep.
+
+40
+00:02:40,925 --> 00:02:42,190
+Speaker 0: This is just one of those stores.
+
+41
+00:02:42,572 --> 00:02:43,822
+Speaker 0: It's selling mostly girly shit.
+
+42
+00:02:44,044 --> 00:02:51,868
+Speaker 1: now that we wall We all walk in and then we hear it again And we confirm it and we know now that over the radio is playing Ayumi Hamasaki.
+
+43
+00:02:52,189 --> 00:02:55,818
+Speaker 0: now That is the last thing you're going to hear in a place.
+
+44
+00:02:55,918 --> 00:02:59,094
+Speaker 0: That is pretty much McDonald's and MTV.
+
+45
+00:02:59,134 --> 00:02:59,616
+Speaker 0: well it doesn't.
+
+46
+00:02:59,636 --> 00:03:08,131
+Speaker 0: there are no chains and not a lot of chains in Wildwood is very few but Everything there is pop culture Crap.
+
+47
+00:03:08,513 --> 00:03:10,800
+Speaker 0: there's nothing that is nerdy or whatever.
+
+48
+00:03:11,161 --> 00:03:13,689
+Speaker 1: now bear in mind that this was also a very girly store.
+
+49
+00:03:13,709 --> 00:03:22,462
+Speaker 1: in fact There was a gaggle of shore girls kind of hanging around inside of it in a big group Mm-hmm and the store guy looks at us and everyone looks at us.
+
+50
+00:03:22,482 --> 00:03:25,333
+Speaker 1: because we walk into the store with our ears caught kind of Looking around.
+
+51
+00:03:25,774 --> 00:03:26,698
+Speaker 1: we find an employee.
+
+52
+00:03:26,738 --> 00:03:27,882
+Speaker 1: We walk over to him.
+
+53
+00:03:27,922 --> 00:03:29,669
+Speaker 1: We kind of surround him, and he's like uh.
+
+54
+00:03:31,311 --> 00:03:34,543
+Speaker 1: And then we ask so who's the Ayumi Hamasaki fan?
+
+55
+00:03:34,944 --> 00:03:35,245
+Speaker 0: Yep?
+
+56
+00:03:35,647 --> 00:03:36,149
+Speaker 1: He's like what?
+
+57
+00:03:37,590 --> 00:03:50,230
+Speaker 0: Apparently most people who work on the boardwalk in fact a lot of the people who work in the United States in the summer At summer camps amusement parks boardwalks etcetera are from Europe and other parts around the world.
+
+58
+00:03:50,431 --> 00:03:54,129
+Speaker 1: Yeah, so anyone complaining about you know Mexican immigrants stealing your jobs.
+
+59
+00:03:55,372 --> 00:03:58,910
+Speaker 0: Well, they're only really stealing these jobs from high school and college kids in the u.s.
+
+60
+00:03:58,970 --> 00:04:01,199
+Speaker 0: Who want to work minimum wage all day long.
+
+61
+00:04:01,319 --> 00:04:05,117
+Speaker 0: and the thing is you know they come over here to work at a summer camp Or something.
+
+62
+00:04:05,540 --> 00:04:09,683
+Speaker 0: they get room and board You know somewhere for real cheap.
+
+63
+00:04:09,803 --> 00:04:20,490
+Speaker 0: they get paid minimum wage They get a visa so you know and they get to work here the whole summer at some crap-ass job and in return They get like a week or two of actual vacation in the u.s.
+
+64
+00:04:20,529 --> 00:04:21,878
+Speaker 0: Where they go around and see stuff.
+
+65
+00:04:21,978 --> 00:04:23,710
+Speaker 0: or maybe on the weekends they go and see stuff.
+
+66
+00:04:23,870 --> 00:04:26,300
+Speaker 1: I actually wouldn't mind doing something like that over in Europe.
+
+67
+00:04:26,582 --> 00:04:28,590
+Speaker 0: You see it's a lot harder for us to do it elsewhere.
+
+68
+00:04:28,752 --> 00:04:30,835
+Speaker 0: Yeah, there's like a whole big Program.
+
+69
+00:04:30,876 --> 00:04:36,842
+Speaker 0: it's very easy for them to come here and do it But for us to do it elsewhere is not as easy, but it's not so hard.
+
+70
+00:04:37,063 --> 00:04:40,334
+Speaker 1: this guy was obviously very into you know Techno.
+
+71
+00:04:40,394 --> 00:04:52,450
+Speaker 0: he was definitely a European dude And he just you know had a friend who downloaded some cool music on the internet some sort of techno euro mix compilation Which we're pretty sure was the a yumi euro mix compilation.
+
+72
+00:04:52,533 --> 00:04:55,824
+Speaker 0: Yes There are CDs called I a dash euro.
+
+73
+00:04:55,945 --> 00:04:56,608
+Speaker 0: why you are?
+
+74
+00:04:56,728 --> 00:04:57,050
+Speaker 0: Oh mix.
+
+75
+00:04:57,593 --> 00:04:59,305
+Speaker 0: And I think there's like at least four of these things.
+
+76
+00:04:59,405 --> 00:05:07,704
+Speaker 0: they take a yumi Hamasaki songs and euro be ties them and they make a big mega mix CD And there's like a whole bunch of these things they put out and they're good.
+
+77
+00:05:07,724 --> 00:05:08,730
+Speaker 1: I mean I'm a huge fan of you.
+
+78
+00:05:08,971 --> 00:05:10,035
+Speaker 0: I have a few of them there.
+
+79
+00:05:10,095 --> 00:05:13,510
+Speaker 1: despite the fact that she is like the idol do like crazy.
+
+80
+00:05:13,791 --> 00:05:15,619
+Speaker 0: Oh, I'm the Madonna of Japan.
+
+81
+00:05:15,679 --> 00:05:18,250
+Speaker 0: yeah, she doesn't suck, but you know what I'm convinced.
+
+82
+00:05:18,592 --> 00:05:20,747
+Speaker 0: If I knew what the lyrics meant I would think they were stupid.
+
+83
+00:05:20,827 --> 00:05:24,470
+Speaker 1: honestly You know what I do know what the lyrics mean to a couple of the songs.
+
+84
+00:05:24,651 --> 00:05:30,889
+Speaker 1: I liked him a lot, and I looked it up a while ago, and at least the songs I looked at were actually good songs of their own merit.
+
+85
+00:05:32,570 --> 00:05:37,119
+Speaker 0: Yeah, but you know Whatever Forget that I haven't looked at.
+
+86
+00:05:37,159 --> 00:05:38,366
+Speaker 0: the point is is that there was.
+
+87
+00:05:38,427 --> 00:05:44,949
+Speaker 0: there was a yumi Hamasaki on in a place that it shouldn't be and I guess or it was unexpected for it to be should be everywhere.
+
+88
+00:05:44,989 --> 00:05:50,569
+Speaker 1: our geek Dar is so highly tuned that we immediately picked up on it and sought it out.
+
+89
+00:05:51,051 --> 00:05:56,830
+Speaker 0: Well when a place is so devoid of geekery then some anything geeky at all.
+
+90
+00:05:56,850 --> 00:06:02,947
+Speaker 0: I mean like if a pixelated Mario Like if a McDonald's Mario toy was sitting in the sand.
+
+91
+00:06:03,008 --> 00:06:03,390
+Speaker 0: we'd be like.
+
+92
+00:06:05,623 --> 00:06:13,749
+Speaker 0: But When there's a strong geekery at a convention then only the awesome You know geekery is really stand out and grant we gravitate towards them.
+
+93
+00:06:15,291 --> 00:06:17,360
+Speaker 1: Other than that we played some arcade games as usual.
+
+94
+00:06:17,461 --> 00:06:20,511
+Speaker 1: I learned that I still have my DDR skills quite Strongly.
+
+95
+00:06:20,932 --> 00:06:22,978
+Speaker 0: yeah, my DDR skills are fading slightly.
+
+96
+00:06:22,999 --> 00:06:23,861
+Speaker 0: I got to start playing that.
+
+97
+00:06:23,881 --> 00:06:26,790
+Speaker 0: yes you do or but they're not fading too much.
+
+98
+00:06:26,890 --> 00:06:35,008
+Speaker 0: I can still do pretty much any medium normal songs, and I could still do some crepe maniac songs But not the really hard ones just the normal ones.
+
+99
+00:06:35,089 --> 00:06:45,109
+Speaker 0: yeah We showed up some punk kids who have grown up in the current generation for God to play air hockey Yeah, and you didn't want to play the hockey with the sticks on the whatever because I was in line for DDR.
+
+100
+00:06:45,731 --> 00:06:51,810
+Speaker 0: Yeah, like the hockey and we did the only new good game that was at the shore because there are other new good arcade games.
+
+101
+00:06:51,810 --> 00:06:57,405
+Speaker 0: They just didn't have them was House of the Dead 4 where you get an Uzi and it can also.
+
+102
+00:06:57,585 --> 00:07:01,670
+Speaker 0: you can also throw grenades And you can shake the Uzi to get zombies off of you.
+
+103
+00:07:01,831 --> 00:07:02,476
+Speaker 1: It looks pretty good.
+
+104
+00:07:02,919 --> 00:07:12,752
+Speaker 0: Yeah, it's definitely More fun than the you know original house of the dead where you just had the stupid pistol that was weak and had no feedback Or anything.
+
+105
+00:07:13,355 --> 00:07:14,458
+Speaker 0: the shotgun one was good.
+
+106
+00:07:14,478 --> 00:07:15,181
+Speaker 0: That was number three.
+
+107
+00:07:15,221 --> 00:07:17,348
+Speaker 0: I think but this one is definitely fun.
+
+108
+00:07:18,131 --> 00:07:19,559
+Speaker 0: I'll probably beat it when we go down there again.
+
+109
+00:07:19,579 --> 00:07:21,410
+Speaker 0: They're also some good pinballs.
+
+110
+00:07:23,092 --> 00:07:26,729
+Speaker 1: So in actual news the Pirate Bay, it's back.
+
+111
+00:07:27,211 --> 00:07:32,870
+Speaker 1: Yep, it took him what a few days to get themselves back on their feet despite the volley from the Hollywood.
+
+112
+00:07:33,051 --> 00:07:37,410
+Speaker 0: I think they're back up with a server in Russia Ukraine Holland and somewhere else.
+
+113
+00:07:37,470 --> 00:07:38,514
+Speaker 0: I don't know now.
+
+114
+00:07:38,635 --> 00:07:46,809
+Speaker 1: normally what's happened in the past is whenever a site like this was taken down a New site would spring up somewhere else, and it was always kind of this whack-a-mole game for the MPAA.
+
+115
+00:07:47,851 --> 00:07:48,955
+Speaker 1: This one didn't work that way.
+
+116
+00:07:48,995 --> 00:07:51,282
+Speaker 1: the MPAA hit this mole and the same.
+
+117
+00:07:51,343 --> 00:07:52,025
+Speaker 1: it just sat there.
+
+118
+00:07:52,105 --> 00:07:54,538
+Speaker 0: the mole didn't move and as soon As they picked up the mallet.
+
+119
+00:07:54,598 --> 00:07:55,707
+Speaker 0: it popped her right back up.
+
+120
+00:07:56,853 --> 00:07:58,860
+Speaker 1: I consider this a victory for the free world.
+
+121
+00:07:59,422 --> 00:08:01,249
+Speaker 0: We're going to kick some ass.
+
+122
+00:08:01,269 --> 00:08:04,646
+Speaker 0: Yeah Finally somebody says we will not take your sheet.
+
+123
+00:08:04,989 --> 00:08:07,907
+Speaker 0: of course They say they will not take your heat because they are from the Sweden.
+
+124
+00:08:08,269 --> 00:08:16,516
+Speaker 1: now I would submit that anyone out there who hasn't been to the Pirate's Bay before go there And even if you've been there is often Go there and look at it.
+
+125
+00:08:16,556 --> 00:08:21,701
+Speaker 1: because they changed their site graphic a little bit to commemorate the fact that once again They kicked Hollywood's ass.
+
+126
+00:08:21,923 --> 00:08:32,188
+Speaker 0: yeah right now They're having some problems of the database which is bound to happen when you move a site like that to four countries from one and From a giant data center to who knows what?
+
+127
+00:08:33,070 --> 00:08:35,078
+Speaker 0: But I'm sure it'll be back up real soon.
+
+128
+00:08:35,219 --> 00:08:37,188
+Speaker 0: Yeah, that's that's a technical problem.
+
+129
+00:08:37,207 --> 00:08:37,549
+Speaker 0: who cares?
+
+130
+00:08:38,871 --> 00:08:41,058
+Speaker 0: Alright, so I got a news.
+
+131
+00:08:41,119 --> 00:08:42,965
+Speaker 0: It's a little bit complicated, so I gotta explain it.
+
+132
+00:08:43,226 --> 00:08:44,250
+Speaker 1: Yeah explain away.
+
+133
+00:08:44,370 --> 00:08:45,775
+Speaker 0: There's a company called the Vonage.
+
+134
+00:08:45,835 --> 00:08:47,401
+Speaker 0: you may or may not know of this company.
+
+135
+00:08:47,622 --> 00:08:49,026
+Speaker 0: They sell vo IP.
+
+136
+00:08:49,689 --> 00:08:53,761
+Speaker 0: now You might be like hey skype is vo IP and it's free.
+
+137
+00:08:54,223 --> 00:09:01,869
+Speaker 0: well now you see the problem with this company Basically if you're the kind of person who set up sets up an asterisk server.
+
+138
+00:09:02,714 --> 00:09:04,605
+Speaker 0: You can pay Vonage for minutes.
+
+139
+00:09:05,309 --> 00:09:08,459
+Speaker 0: now There are also a bunch of other companies that will sell you minutes.
+
+140
+00:09:08,540 --> 00:09:09,402
+Speaker 0: vo IP minutes.
+
+141
+00:09:09,824 --> 00:09:11,649
+Speaker 0: lots of them shit tons of them.
+
+142
+00:09:12,131 --> 00:09:17,490
+Speaker 0: Vonage isn't the only one but Vonage is probably the biggest one the one that people know that the trusted name.
+
+143
+00:09:17,952 --> 00:09:22,970
+Speaker 0: All the most of the other ones are these companies you never heard of Even though they're still legitimate.
+
+144
+00:09:24,116 --> 00:09:26,219
+Speaker 0: so Vonage you could also.
+
+145
+00:09:26,239 --> 00:09:28,430
+Speaker 0: you know we have optimum online.
+
+146
+00:09:28,651 --> 00:09:33,625
+Speaker 0: we can also got some on cable and optimum voice where our cable company will sell us vo IP.
+
+147
+00:09:34,246 --> 00:09:34,928
+Speaker 0: if you want.
+
+148
+00:09:34,988 --> 00:09:45,250
+Speaker 0: you can pay Vonage and get a little vo IP phones and plug them into your you know internet router and Talk on the phone and it'll give you a phone number and everything.
+
+149
+00:09:46,652 --> 00:09:52,035
+Speaker 0: So this company Vonage had an IPO Initial public offering.
+
+150
+00:09:52,196 --> 00:09:53,660
+Speaker 0: yes, that means we are going.
+
+151
+00:09:53,681 --> 00:10:00,846
+Speaker 0: we are not on the stock market, but now we are And it's the IPO is where you give everyone a chance to buy your stock.
+
+152
+00:10:00,907 --> 00:10:02,475
+Speaker 0: at the beginning you say This is the beginning.
+
+153
+00:10:02,818 --> 00:10:04,290
+Speaker 1: yep companies all do it different ways.
+
+154
+00:10:04,330 --> 00:10:16,989
+Speaker 0: I mean Google made a lot of press for doing it in a kind of funny special way yep Which had mixed results, but the point is Vonage had nor a relatively normal IPO except for one little catch.
+
+155
+00:10:17,961 --> 00:10:25,149
+Speaker 0: they said To their customers that they were going to give the customers of Vonage a chance to get in on the IPO.
+
+156
+00:10:26,611 --> 00:10:27,736
+Speaker 0: Okay, that's cool.
+
+157
+00:10:27,977 --> 00:10:33,377
+Speaker 0: That's like if Google came to all the Gmail users and said hey We're gonna let you into the IPO first.
+
+158
+00:10:33,437 --> 00:10:44,016
+Speaker 0: now the way they did this is they said hey customers of Vonage No matter what you guys can buy Vonage shares at $17 a share.
+
+159
+00:10:46,071 --> 00:10:58,127
+Speaker 0: So even if the stock the IPO makes the stock start jumping up crazily if you want to and you fill out this form You know for being a Vonage customer you could buy as many shares you want $70 a share.
+
+160
+00:10:59,212 --> 00:11:03,417
+Speaker 0: I don't know if as many shares as you want, but you know it's a certain number of shares You could buy $17 a share.
+
+161
+00:11:06,555 --> 00:11:07,508
+Speaker 0: Now here's what happened.
+
+162
+00:11:08,453 --> 00:11:13,890
+Speaker 0: The the assumption by the Vonage customers was oh, this is a great deal because the stock will jump right away.
+
+163
+00:11:14,051 --> 00:11:19,067
+Speaker 0: I'll only pay 17 bucks, and then I'll sell it and I'll make money and it'll help out Vonage.
+
+164
+00:11:19,087 --> 00:11:19,810
+Speaker 0: You know how about me.
+
+165
+00:11:19,911 --> 00:11:20,500
+Speaker 0: It's a great deal.
+
+166
+00:11:22,410 --> 00:11:24,230
+Speaker 0: Vonage's stock didn't go up.
+
+167
+00:11:25,273 --> 00:11:26,441
+Speaker 0: It went down to $12 a share.
+
+168
+00:11:28,430 --> 00:11:31,256
+Speaker 0: Yeah So the customers.
+
+169
+00:11:31,918 --> 00:11:32,500
+Speaker 0: what happened?
+
+170
+00:11:32,540 --> 00:11:39,230
+Speaker 0: because they agreed to buy X shares at $17 a share ended up just losing money.
+
+171
+00:11:41,212 --> 00:11:44,345
+Speaker 0: And they had they even though they they still have to pay the $17 a share.
+
+172
+00:11:45,490 --> 00:11:48,610
+Speaker 0: They can't pay the $12 a share that they should pay.
+
+173
+00:11:49,555 --> 00:11:52,049
+Speaker 0: They had to pay the 17 because that's what they agreed to.
+
+174
+00:11:53,371 --> 00:12:03,397
+Speaker 0: So they went to the SEC the Security Exchange Commission and said yeah, and the SEC is like uh-huh We're gonna do something about this.
+
+175
+00:12:03,457 --> 00:12:07,810
+Speaker 1: yeah, so Vonage might be in some deep doodoo deep doodoos.
+
+176
+00:12:11,031 --> 00:12:16,277
+Speaker 0: So I think this is the the official end of IPOs being stupid.
+
+177
+00:12:16,438 --> 00:12:18,930
+Speaker 0: crazy profitable stocks go up crazily thing.
+
+178
+00:12:19,262 --> 00:12:32,510
+Speaker 1: Yeah Because it seems like it's the perception among business people these days not like high up business people that people who are running a small business or a company that IPOing is a way to make a whole bunch of money with absolutely no consequences.
+
+179
+00:12:34,040 --> 00:12:36,016
+Speaker 1: yeah, that Seems to be the way they treat IPOs.
+
+180
+00:12:36,036 --> 00:12:36,518
+Speaker 1: nowadays.
+
+181
+00:12:36,538 --> 00:12:48,105
+Speaker 0: at least the high-tech IPOs seem to be where they start the stock price real low and then everyone buys it because it's a crazy high-tech company and it goes way up.
+
+182
+00:12:49,229 --> 00:12:56,190
+Speaker 0: and The thing is is Vonage isn't profitable and had no plan to be profitable and people didn't go up.
+
+183
+00:12:56,371 --> 00:12:57,516
+Speaker 0: This is telling everyone.
+
+184
+00:12:57,797 --> 00:13:02,081
+Speaker 0: We don't care how high-tech or fancy you are if you're not gonna be profitable You're not gonna get invested in.
+
+185
+00:13:02,324 --> 00:13:03,070
+Speaker 1: that's a good change.
+
+186
+00:13:03,150 --> 00:13:15,667
+Speaker 1: I mean for any of you who actually remember the dot-com bust a big part of that was that people who didn't understand Technology would hear about a high-tech company and just pump money into it assuming that high-tech always means good.
+
+187
+00:13:15,687 --> 00:13:20,516
+Speaker 1: I Guess now people are actually looking at what a company does You know.
+
+188
+00:13:20,536 --> 00:13:21,503
+Speaker 1: do they do anything?
+
+189
+00:13:21,523 --> 00:13:26,804
+Speaker 1: there were a lot of companies Not only did not make money, but they didn't do anything.
+
+190
+00:13:27,065 --> 00:13:33,207
+Speaker 1: there were companies that I shit You not did nothing never made a product never did anything, but advertise themselves.
+
+191
+00:13:33,227 --> 00:13:33,930
+Speaker 0: Oh infinium left.
+
+192
+00:13:35,710 --> 00:13:37,576
+Speaker 1: What are you talking about?
+
+193
+00:13:37,596 --> 00:13:40,665
+Speaker 1: I'm gonna buy a phantom console, oh, okay, yeah, you know what.
+
+194
+00:13:40,705 --> 00:13:45,436
+Speaker 1: when it comes out, I'll buy it, okay Well, it's gonna come out tomorrow.
+
+195
+00:13:45,476 --> 00:13:47,203
+Speaker 0: I'm gonna laugh as rim shells out like $800 for this.
+
+196
+00:13:47,243 --> 00:13:47,464
+Speaker 0: nothing.
+
+197
+00:13:47,484 --> 00:13:50,014
+Speaker 1: now You know what I'll do at that point.
+
+198
+00:13:50,536 --> 00:13:52,283
+Speaker 1: break my word not buy it.
+
+199
+00:13:52,323 --> 00:13:53,066
+Speaker 0: you only get three.
+
+200
+00:13:53,106 --> 00:13:54,090
+Speaker 0: you're gonna waste one on that.
+
+201
+00:13:54,352 --> 00:13:54,755
+Speaker 0: We'll see.
+
+202
+00:13:54,836 --> 00:13:56,209
+Speaker 1: I don't think I'm gonna have to waste one.
+
+203
+00:13:57,390 --> 00:13:58,373
+Speaker 0: All right, all right.
+
+204
+00:13:58,694 --> 00:13:58,855
+Speaker 1: Well.
+
+205
+00:13:58,875 --> 00:14:00,400
+Speaker 1: I didn't say exactly when I'd buy it.
+
+206
+00:14:00,641 --> 00:14:01,103
+Speaker 1: I could buy it.
+
+207
+00:14:01,143 --> 00:14:02,367
+Speaker 1: You know when my deathbed.
+
+208
+00:14:02,949 --> 00:14:05,850
+Speaker 1: It's true Yeah, it's true got to be tricky with that sort of thing.
+
+209
+00:14:06,010 --> 00:14:07,759
+Speaker 0: But what if there aren't any left when you'd like?
+
+210
+00:14:07,799 --> 00:14:08,743
+Speaker 0: what if they're all destroyed?
+
+211
+00:14:09,185 --> 00:14:10,210
+Speaker 1: as long as I tried to buy one?
+
+212
+00:14:10,310 --> 00:14:10,801
+Speaker 1: That's good enough.
+
+213
+00:14:11,911 --> 00:14:16,290
+Speaker 1: That doesn't count if you gives you if you view word to someone that you'll try to you'll do something you fail to do.
+
+214
+00:14:16,412 --> 00:14:17,368
+Speaker 1: But you try your best.
+
+215
+00:14:18,193 --> 00:14:22,288
+Speaker 0: I'm gonna try my best to buy this car that a Ferrari.
+
+216
+00:14:22,308 --> 00:14:23,635
+Speaker 0: right now I can't afford one.
+
+217
+00:14:23,655 --> 00:14:23,897
+Speaker 0: the end.
+
+218
+00:14:24,400 --> 00:14:26,009
+Speaker 0: I tried my best at least you tried.
+
+219
+00:14:35,804 --> 00:14:49,579
+Speaker 1: So things of the day in keeping with my List of old old old school things of the day old incredibly old School partly because we haven't found anything particularly new and exciting on the internet recently.
+
+220
+00:14:51,222 --> 00:15:00,559
+Speaker 1: This is something we discovered at RIT quite some time ago, and it was very popular and very cool and It actually got a lot of people into Daft Punk who otherwise had never heard of them.
+
+221
+00:15:01,622 --> 00:15:03,712
+Speaker 0: If you don't know Daft Punk is too awesome.
+
+222
+00:15:03,853 --> 00:15:05,140
+Speaker 0: They're two French guys.
+
+223
+00:15:05,220 --> 00:15:06,159
+Speaker 0: You know what who wear?
+
+224
+00:15:06,560 --> 00:15:08,291
+Speaker 0: Masks, so you don't know what they look like.
+
+225
+00:15:08,372 --> 00:15:10,202
+Speaker 0: so you if you saw them on the street You wouldn't know.
+
+226
+00:15:10,222 --> 00:15:16,760
+Speaker 1: and they make awesome tech knows if you've never heard of Daft Punk And this is the first time you ever heard anything.
+
+227
+00:15:17,221 --> 00:15:22,817
+Speaker 1: I want you to go out whether you like anime or not and buy this DVD called interstellar 5 5 5.
+
+228
+00:15:22,817 --> 00:15:31,860
+Speaker 0: the animation is by Leiji Matsumoto the guy who makes Galaxy Express and all that stuff And it's basically this giant music video of Daft Punk.
+
+229
+00:15:32,161 --> 00:15:38,300
+Speaker 1: It just imagine an entire album and then someone made a movie that is perfectly synced to the album entirely and there's no talking.
+
+230
+00:15:38,860 --> 00:15:41,040
+Speaker 1: It's really really cool.
+
+231
+00:15:41,281 --> 00:15:42,548
+Speaker 1: And it don't.
+
+232
+00:15:42,809 --> 00:15:47,835
+Speaker 1: if you were one of those people who I don't like anime Forget that it's anime think of it as something cool and watch it.
+
+233
+00:15:48,117 --> 00:15:48,740
+Speaker 0: It's real.
+
+234
+00:15:48,821 --> 00:15:52,640
+Speaker 0: I think Daft Punk's actual music videos for that album.
+
+235
+00:15:53,041 --> 00:15:58,160
+Speaker 0: What they did is they just cut up this movie and took the piece out that had the song and said that was the mute.
+
+236
+00:15:58,200 --> 00:16:06,887
+Speaker 1: You know that was a music video But this is a little flash that someone made and is very simple like very simple But for some reason it works really well with the song.
+
+237
+00:16:07,508 --> 00:16:13,592
+Speaker 1: more than ever hour after our work is never over down down down And it's to what?
+
+238
+00:16:13,652 --> 00:16:18,459
+Speaker 1: River City Ransom Nark Barbie and a boy in his blob.
+
+239
+00:16:19,903 --> 00:16:21,877
+Speaker 1: Yeah, I love the little dance the boy does.
+
+240
+00:16:21,897 --> 00:16:28,484
+Speaker 0: yep All right, so my thing of the day is Sega Fantasy 6.
+
+241
+00:16:28,484 --> 00:16:39,460
+Speaker 1: Now I'll warn you Scott's thing if you're not a if you're not a video game fan of the older school persuasion as in you know about You know NES and future consoles.
+
+242
+00:16:40,661 --> 00:16:41,784
+Speaker 1: You're not gonna find this funny.
+
+243
+00:16:42,166 --> 00:16:46,980
+Speaker 0: if you've never played Final Fantasy 6 and beaten it you won't understand a lot of the joke.
+
+244
+00:16:48,021 --> 00:17:04,339
+Speaker 0: But basically this thing they took the ending of Final Fantasy 6 and they replaced all the characters With sprites of video game consoles every console you can imagine There's a Jeep all the consoles that were out at the time when they made.
+
+245
+00:17:04,358 --> 00:17:07,018
+Speaker 0: well yeah, you're not gonna see any wheeze or anything.
+
+246
+00:17:07,038 --> 00:17:22,817
+Speaker 0: and And The plot is awesome because it matches the history of the consoles as well as matching the Character the the characters in Final Fantasy 6 and the plot of Final Fantasy 6.
+
+247
+00:17:22,817 --> 00:17:28,019
+Speaker 1: and it's high Larius unless you're not old school, and then it's just dumb.
+
+248
+00:17:29,045 --> 00:17:29,628
+Speaker 0: It's sort of.
+
+249
+00:17:29,688 --> 00:17:31,800
+Speaker 0: it's like reading penny arcade if you understand it.
+
+250
+00:17:31,860 --> 00:17:35,976
+Speaker 0: It's great if your grandma, and you're not old grandma hardcore, and you're just normal grandma.
+
+251
+00:17:36,056 --> 00:17:36,598
+Speaker 0: You won't get it.
+
+252
+00:17:37,683 --> 00:17:38,849
+Speaker 0: Think it's offensive and stupid.
+
+253
+00:17:39,171 --> 00:17:43,498
+Speaker 1: at least penny arcade always as the gaming joke But there's always the puerile joke there along with it.
+
+254
+00:17:44,262 --> 00:17:48,338
+Speaker 0: I also want to point out how the bad guy in Sega Fantasy 6 is BSP.
+
+255
+00:17:50,480 --> 00:17:51,393
+Speaker 0: That's all I gotta say.
+
+256
+00:17:53,500 --> 00:17:56,100
+Speaker 1: Alright, so we've been talking a long time on it.
+
+257
+00:17:56,120 --> 00:18:08,800
+Speaker 1: We wanted to do a series like a long series on how computers work Yep, and we've delayed it for many a moon for various reasons ranging from being tired to having news to talk about.
+
+258
+00:18:10,744 --> 00:18:11,960
+Speaker 0: So this series?
+
+259
+00:18:12,644 --> 00:18:16,183
+Speaker 0: I don't know if we're gonna do it every Monday until it's done but probably not.
+
+260
+00:18:16,283 --> 00:18:25,675
+Speaker 0: we're gonna do it a whole lot of Mondays from here on out and You might make a separate feed for it in case someone wants to listen to just this or something like that.
+
+261
+00:18:25,735 --> 00:18:33,378
+Speaker 0: who knows not right now But we're going to tell you Basically I said basically three times today.
+
+262
+00:18:36,848 --> 00:18:43,478
+Speaker 0: We are going to give you our Let's see like zillions of dollars in RIT education for free.
+
+263
+00:18:44,542 --> 00:18:55,699
+Speaker 1: Yep, we're going to start with the basic basic basics of computers and what they are and how they work to the very top - here is how like this operating system does this.
+
+264
+00:18:57,060 --> 00:19:06,519
+Speaker 0: Theoretically if you listen to our podcast and all of these episodes You will know just as much about how a computer works as we do.
+
+265
+00:19:07,141 --> 00:19:12,460
+Speaker 1: Granted that will take you a long time because we are going to do this over a long period of time.
+
+266
+00:19:12,700 --> 00:19:21,804
+Speaker 0: also, we are going to use many simplifications abstractions and analogies so that even the dumbest person can Understand as long as all.
+
+267
+00:19:22,566 --> 00:19:26,396
+Speaker 0: even a dumb person not the dumbest person probably won't understand no matter what.
+
+268
+00:19:26,496 --> 00:19:29,244
+Speaker 1: but dumbest person hasn't figured out how to download geek nights.
+
+269
+00:19:29,485 --> 00:19:35,705
+Speaker 0: the dumbest person it probably has some sort of horrible learning disorder and Won't be able to learn anyway.
+
+270
+00:19:35,886 --> 00:19:38,876
+Speaker 1: either that or is in the White House where you really can't get a good internet connection.
+
+271
+00:19:38,896 --> 00:19:41,824
+Speaker 1: Yeah Yeah had to.
+
+272
+00:19:42,024 --> 00:19:43,531
+Speaker 1: I had to throw some sort of dig in there.
+
+273
+00:19:43,591 --> 00:19:44,957
+Speaker 0: or learning disorder in the white hat.
+
+274
+00:19:45,258 --> 00:19:45,439
+Speaker 1: yeah.
+
+275
+00:19:46,990 --> 00:19:56,896
+Speaker 0: so If you at any time have a question about anything we say or You're smarter than us and you want to correct us on something stupid.
+
+276
+00:19:56,936 --> 00:20:01,339
+Speaker 0: We said You got to use the email and the forums and we'll clear that up.
+
+277
+00:20:01,560 --> 00:20:05,693
+Speaker 1: Yeah, either email us send us a you know an email an audio email.
+
+278
+00:20:05,753 --> 00:20:07,378
+Speaker 1: call that number we used to pin.
+
+279
+00:20:07,438 --> 00:20:08,000
+Speaker 1: do something.
+
+280
+00:20:08,221 --> 00:20:11,780
+Speaker 0: Yeah, geek nights at G at front row crew calm now.
+
+281
+00:20:11,881 --> 00:20:17,000
+Speaker 1: We love audio feedback But it seems like a lot of you are for whatever reason afraid of sending us audio of your voice.
+
+282
+00:20:17,584 --> 00:20:19,760
+Speaker 1: So if you want to ask a question.
+
+283
+00:20:19,820 --> 00:20:22,958
+Speaker 1: But you don't want to record something just email us and we'll read it on the air and do it.
+
+284
+00:20:23,380 --> 00:20:29,680
+Speaker 1: Yep, and if we don't answer your question or we ignore it that just means we're waiting until we do the show on that specifically.
+
+285
+00:20:30,521 --> 00:20:32,327
+Speaker 0: Or you said something incredibly stupid.
+
+286
+00:20:32,388 --> 00:20:33,993
+Speaker 1: No, you said something incredibly stupid.
+
+287
+00:20:34,033 --> 00:20:35,880
+Speaker 1: We'll be all about all on about that.
+
+288
+00:20:36,141 --> 00:20:37,407
+Speaker 0: We still haven't received a hate mail.
+
+289
+00:20:37,749 --> 00:20:38,653
+Speaker 1: never I'm waiting.
+
+290
+00:20:38,934 --> 00:20:43,633
+Speaker 1: the closest thing to a hate mail We've gotten is like is male and foreign languages where I wasn't sure what it said.
+
+291
+00:20:43,935 --> 00:20:44,296
+Speaker 0: spam.
+
+292
+00:20:44,677 --> 00:20:45,360
+Speaker 1: Yeah, it was spam.
+
+293
+00:20:45,461 --> 00:20:47,352
+Speaker 1: It was Hispanic spam for some Hispanic album.
+
+294
+00:20:47,614 --> 00:20:48,600
+Speaker 0: You had to know what the hell that was.
+
+295
+00:20:48,620 --> 00:20:49,304
+Speaker 1: Yeah, they were trying.
+
+296
+00:20:49,345 --> 00:20:50,573
+Speaker 1: I think they're trying to get us to shell it.
+
+297
+00:20:50,915 --> 00:20:51,418
+Speaker 0: forget that.
+
+298
+00:20:51,438 --> 00:20:58,840
+Speaker 0: I Don't know why they if they were trying to get us to show something why why do they think we speak Spanish?
+
+299
+00:20:59,020 --> 00:20:59,845
+Speaker 0: I don't get.
+
+300
+00:21:00,126 --> 00:21:07,500
+Speaker 1: well, I do find it interesting and I say this a lot How many of our listeners are overseas and in foreign countries other than the United States?
+
+301
+00:21:07,800 --> 00:21:08,984
+Speaker 0: Yeah, but they understand English.
+
+302
+00:21:09,024 --> 00:21:11,131
+Speaker 0: if you don't understand the English language, you can't listen to us.
+
+303
+00:21:11,834 --> 00:21:15,899
+Speaker 1: Maybe they just assume well for bilingual Maybe they're trying to learn English.
+
+304
+00:21:16,962 --> 00:21:19,570
+Speaker 0: I can actually kind of read a Spanish newspaper kinda.
+
+305
+00:21:19,691 --> 00:21:22,460
+Speaker 1: Yeah, I can surely almost the same in French.
+
+306
+00:21:22,793 --> 00:21:23,266
+Speaker 0: Yep Like.
+
+307
+00:21:23,347 --> 00:21:23,959
+Speaker 1: I can read.
+
+308
+00:21:24,502 --> 00:21:24,662
+Speaker 1: Like.
+
+309
+00:21:24,682 --> 00:21:29,739
+Speaker 1: I remember I looked up some yamakaze site and I could kind of follow along and I could figure out the gist of it.
+
+310
+00:21:30,463 --> 00:21:32,859
+Speaker 1: But if someone's speaking French to me, it's like whoa there.
+
+311
+00:21:33,642 --> 00:21:36,971
+Speaker 0: Alright, so let's start talking about how a computer works.
+
+312
+00:21:37,051 --> 00:21:40,220
+Speaker 0: But first you must talk about what a computer is.
+
+313
+00:21:41,621 --> 00:21:43,728
+Speaker 1: So then what is a computer?
+
+314
+00:21:43,788 --> 00:21:44,049
+Speaker 1: I mean?
+
+315
+00:21:44,531 --> 00:21:49,467
+Speaker 1: on a fundamental level it doesn't do very much It just does a lot of very little.
+
+316
+00:21:49,888 --> 00:21:50,510
+Speaker 1: very quickly.
+
+317
+00:21:50,530 --> 00:21:54,242
+Speaker 0: a computer needs three things.
+
+318
+00:21:54,603 --> 00:21:56,628
+Speaker 0: number one the input.
+
+319
+00:21:57,149 --> 00:21:59,615
+Speaker 0: it input can be almost anything in could.
+
+320
+00:21:59,695 --> 00:22:15,860
+Speaker 0: input could be a keyboard or a mouse or a touchscreen or a voice or a photo sensor or a Or a retina scan or a photocell or a fingerprint scan or a scanner.
+
+321
+00:22:17,224 --> 00:22:23,293
+Speaker 0: it could be anything that takes information and Gathers it and sends it down a wire.
+
+322
+00:22:23,494 --> 00:22:24,118
+Speaker 0: That's input.
+
+323
+00:22:25,541 --> 00:22:27,688
+Speaker 0: Step two the processing.
+
+324
+00:22:28,511 --> 00:22:29,514
+Speaker 1: it is deterministic.
+
+325
+00:22:29,714 --> 00:22:31,400
+Speaker 1: computers aren't magic things.
+
+326
+00:22:31,781 --> 00:22:33,506
+Speaker 1: They they are deterministic.
+
+327
+00:22:33,606 --> 00:22:45,519
+Speaker 0: and when if an input comes in you can predict the output with the same computer with the same Program is given the same input It will do the same thing every time unless the computer is broken.
+
+328
+00:22:46,322 --> 00:22:57,000
+Speaker 0: so the processing takes the input and based on the computer because you know different computers do different things will Do some processing on the input it will do something.
+
+329
+00:22:57,703 --> 00:23:05,407
+Speaker 0: so maybe it's a calculator and it will take the inputs of what buttons you pushed and Process those inputs to create.
+
+330
+00:23:05,467 --> 00:23:23,330
+Speaker 0: the third thing the output which could be the monitor the speakers the The electric zapper that gives you a shock for being stupid the force feedback and the steering wheel the who knows You know the little LCD screen on the calculator is the output,
+
+331
+00:23:24,213 --> 00:23:25,979
+Speaker 1: but that that's all a computer does.
+
+332
+00:23:26,842 --> 00:23:27,644
+Speaker 1: They did they?
+
+333
+00:23:27,664 --> 00:23:33,900
+Speaker 1: just they take input they process it in some deterministic reliable predictable way, and then they output something.
+
+334
+00:23:34,523 --> 00:23:37,940
+Speaker 0: Yep, that's the simplest computer in the universe his.
+
+335
+00:23:38,964 --> 00:23:40,598
+Speaker 0: Well, here's the thing you have to do.
+
+336
+00:23:40,820 --> 00:23:42,931
+Speaker 0: There's a line between.
+
+337
+00:23:43,012 --> 00:23:44,560
+Speaker 0: a computer doesn't have to be electronic.
+
+338
+00:23:44,941 --> 00:23:46,364
+Speaker 0: You can have a mechanical computer.
+
+339
+00:23:46,525 --> 00:23:51,416
+Speaker 0: any device which takes input process it and makes output is a computer.
+
+340
+00:23:51,797 --> 00:23:57,627
+Speaker 1: and there were in fact prototypical and small Mechanical computers a lot.
+
+341
+00:23:57,647 --> 00:24:14,820
+Speaker 0: first computers are mechanical Pascal and damage made mechanical wooden slash Whatever adding machines and you can go Go on to Wikipedia and read about Blaise Pascal, and I don't know Babbage's of the name, but yeah Babbage There probably isn't another Babbage to read about now these computers.
+
+342
+00:24:14,941 --> 00:24:22,959
+Speaker 1: I mean, I'm actually reading a sci-fi about that right now, but computers that are mechanical are no different than the computers that electrical other than the way they function.
+
+343
+00:24:22,979 --> 00:24:31,520
+Speaker 1: and It's really only a matter of the fact that Mechanical computers were very large very slow and very unreliable and expensive.
+
+344
+00:24:31,761 --> 00:24:41,705
+Speaker 0: Yep in the really in the future what the scientists are working on it's sort of like a cold fusion where it might not work but they're trying anyway is Quantum computers that aren't even electronic.
+
+345
+00:24:41,785 --> 00:24:42,567
+Speaker 0: They're quantum.
+
+346
+00:24:42,868 --> 00:24:45,294
+Speaker 0: so the processing is all done by quantum physics.
+
+347
+00:24:45,635 --> 00:24:46,377
+Speaker 0: crazy bullshit.
+
+348
+00:24:46,738 --> 00:24:48,604
+Speaker 0: the problem with that Not bullshit, but crazy.
+
+349
+00:24:48,684 --> 00:24:50,150
+Speaker 1: it's a problem with those computers.
+
+350
+00:24:50,250 --> 00:24:52,840
+Speaker 1: Is that we don't actually understand quantum physics?
+
+351
+00:24:53,041 --> 00:24:54,267
+Speaker 0: No, we don't know what does?
+
+352
+00:24:54,347 --> 00:24:55,553
+Speaker 1: we know a lot about it.
+
+353
+00:24:55,714 --> 00:24:57,000
+Speaker 1: We can predict quantum physics.
+
+354
+00:24:57,281 --> 00:25:01,940
+Speaker 1: We know that if we do X Y happens, and it happens reliable, but we don't know the in-between.
+
+355
+00:25:02,101 --> 00:25:05,800
+Speaker 1: Yeah, and we don't know why and every now and then it doesn't work.
+
+356
+00:25:05,860 --> 00:25:06,785
+Speaker 1: That's the problem.
+
+357
+00:25:06,966 --> 00:25:09,620
+Speaker 0: when you make a computer you need to know the whole in-between.
+
+358
+00:25:09,801 --> 00:25:11,590
+Speaker 0: Because that's the thing about computers.
+
+359
+00:25:11,852 --> 00:25:13,340
+Speaker 1: because really I can't stress this enough.
+
+360
+00:25:13,421 --> 00:25:16,120
+Speaker 1: I know I've said it a bunch of times, but computers are deterministic.
+
+361
+00:25:16,742 --> 00:25:19,088
+Speaker 1: They are exact for any given input.
+
+362
+00:25:19,129 --> 00:25:21,676
+Speaker 1: the output will always always be the same.
+
+363
+00:25:21,856 --> 00:25:32,756
+Speaker 0: if I have a functioning calculator That is correctly programmed, and I press 1 plus 1 equals It'll say 2. if I do it again It'll say 2 no matter how many times they do it as long as the calculator isn't broken.
+
+364
+00:25:33,077 --> 00:25:37,523
+Speaker 1: It'll say - yeah I was about to say unless it's a penny one That's right.
+
+365
+00:25:37,825 --> 00:25:38,347
+Speaker 1: That's the story.
+
+366
+00:25:38,387 --> 00:25:40,315
+Speaker 0: We can tell when we get as long as it isn't broken.
+
+367
+00:25:40,657 --> 00:25:53,400
+Speaker 0: It'll say - Okay so When people ask you how a computer works The common answer is zeros and ones zeros and ones.
+
+368
+00:25:54,422 --> 00:26:00,392
+Speaker 0: Now who out there thinks they're little zeros and little ones floating around inside a computer?
+
+369
+00:26:00,774 --> 00:26:02,020
+Speaker 0: anybody anybody?
+
+370
+00:26:03,202 --> 00:26:07,708
+Speaker 0: Okay, well obviously you might be smart enough to have said no You know what.
+
+371
+00:26:07,728 --> 00:26:09,438
+Speaker 1: if anyone answered us right now?
+
+372
+00:26:11,346 --> 00:26:15,044
+Speaker 0: Yeah, if anyone said yes Go home.
+
+373
+00:26:15,586 --> 00:26:18,920
+Speaker 1: if anyone said no go home because you just answered a one-way broadcast.
+
+374
+00:26:21,541 --> 00:26:25,712
+Speaker 0: Seriously there are not little zeros and ones floating around inside your computer.
+
+375
+00:26:25,952 --> 00:26:31,720
+Speaker 1: in fact not only that but the whole idea of a Zero and one is is just a an abstraction.
+
+376
+00:26:32,262 --> 00:26:33,244
+Speaker 1: Yep, it's an ideal.
+
+377
+00:26:33,325 --> 00:26:36,253
+Speaker 1: It's something that doesn't actually exist does not really exist.
+
+378
+00:26:36,273 --> 00:26:37,076
+Speaker 0: It's just an idea.
+
+379
+00:26:37,176 --> 00:26:38,079
+Speaker 0: They're arbitrary.
+
+380
+00:26:38,159 --> 00:26:40,252
+Speaker 0: yep What is in the computer.
+
+381
+00:26:40,956 --> 00:26:43,675
+Speaker 0: well electricity dumbass.
+
+382
+00:26:45,203 --> 00:26:45,791
+Speaker 0: What's in there?
+
+383
+00:26:45,832 --> 00:26:46,399
+Speaker 0: electricity?
+
+384
+00:26:47,901 --> 00:26:49,668
+Speaker 1: Whole bunch of silicon and all that stuff.
+
+385
+00:26:50,009 --> 00:26:52,720
+Speaker 0: That's just ways for the electricity to move around.
+
+386
+00:26:53,142 --> 00:26:56,039
+Speaker 1: There's a couple every now and then there's some computers have mechanical things in them.
+
+387
+00:26:56,502 --> 00:26:56,985
+Speaker 0: That's true.
+
+388
+00:26:57,025 --> 00:26:59,480
+Speaker 0: a hard drive has like a motor to spin the disk.
+
+389
+00:26:59,480 --> 00:27:05,480
+Speaker 0: Yeah, old old old computers had relay some parts of the computer magnetic which is kind of electricity.
+
+390
+00:27:07,882 --> 00:27:09,070
+Speaker 1: I'm gonna let that one slide.
+
+391
+00:27:09,110 --> 00:27:09,936
+Speaker 0: Yeah, I'm just being silly.
+
+392
+00:27:10,057 --> 00:27:14,364
+Speaker 1: okay Okay now Where do we should?
+
+393
+00:27:14,384 --> 00:27:16,594
+Speaker 1: we probably go a little bit to ones and zeros?
+
+394
+00:27:16,694 --> 00:27:17,960
+Speaker 1: Why do we use ones and zeros?
+
+395
+00:27:18,100 --> 00:27:19,204
+Speaker 1: Why are one and zero special?
+
+396
+00:27:19,505 --> 00:27:23,700
+Speaker 1: yep because that is the simplest logic that exists.
+
+397
+00:27:24,342 --> 00:27:28,195
+Speaker 1: There is either true or false one or zero yes, or no.
+
+398
+00:27:28,255 --> 00:27:29,680
+Speaker 1: those all mean the same two things.
+
+399
+00:27:30,022 --> 00:27:32,919
+Speaker 1: It is a perfect dichotomy between yes and no with no middle ground.
+
+400
+00:27:33,422 --> 00:27:38,020
+Speaker 0: Yep, now there are computers that have zero one and two zero one two and three.
+
+401
+00:27:38,462 --> 00:27:41,640
+Speaker 0: But we're not gonna teach you about those computers because they're crazy and no one uses them.
+
+402
+00:27:41,901 --> 00:27:43,328
+Speaker 0: Yeah, some people use them.
+
+403
+00:27:43,368 --> 00:27:45,720
+Speaker 1: actually the Russians did a lot of research in that regard.
+
+404
+00:27:45,961 --> 00:27:50,860
+Speaker 1: I used to know a lot about it because I was really curious about it until I learned that it's mostly complicated and difficult.
+
+405
+00:27:51,601 --> 00:27:56,443
+Speaker 0: Okay, now we're gonna be talking mostly about your computer not computers You're never going to use.
+
+406
+00:27:56,644 --> 00:28:00,779
+Speaker 1: your computer is basically sitting there millions and millions of time per second going yes.
+
+407
+00:28:00,859 --> 00:28:03,113
+Speaker 1: No yes Yes, no yes, no yes, no no no yes, no yes, no.
+
+408
+00:28:03,717 --> 00:28:11,116
+Speaker 0: in fact There are like millions of yeses and noes and a big mix all at once and then all at once again and all at once again.
+
+409
+00:28:11,942 --> 00:28:13,999
+Speaker 0: Now what is the zero and the one?
+
+410
+00:28:14,540 --> 00:28:15,586
+Speaker 0: What's the different?
+
+411
+00:28:15,646 --> 00:28:18,019
+Speaker 0: how do you get from the electricity to the zero and a one?
+
+412
+00:28:18,059 --> 00:28:18,200
+Speaker 0: well?
+
+413
+00:28:18,740 --> 00:28:23,233
+Speaker 1: That's entirely arbitrary based on whatever you wanted to do as an engineer making a computer.
+
+414
+00:28:23,453 --> 00:28:27,427
+Speaker 0: That's correct, but in terms of normal computing Let's say I have a wire.
+
+415
+00:28:27,447 --> 00:28:28,713
+Speaker 0: It's just a wire.
+
+416
+00:28:28,733 --> 00:28:33,200
+Speaker 0: It's just sitting there at Zero no electricity on the wire.
+
+417
+00:28:34,500 --> 00:28:38,420
+Speaker 0: Now you get some battery going on and there's some electricity on the wire.
+
+418
+00:28:38,984 --> 00:28:40,859
+Speaker 0: That's a one coming out the end of that wire.
+
+419
+00:28:41,661 --> 00:28:43,469
+Speaker 1: Now at this point you have to decide.
+
+420
+00:28:43,751 --> 00:28:45,820
+Speaker 1: What's the line between zero and one?
+
+421
+00:28:46,200 --> 00:28:48,490
+Speaker 1: I mean what if there's a little bit of static electricity going down?
+
+422
+00:28:48,510 --> 00:28:49,334
+Speaker 1: does that count as a one?
+
+423
+00:28:49,354 --> 00:28:51,705
+Speaker 1: because it's either one or zero At any given time?
+
+424
+00:28:52,046 --> 00:28:54,760
+Speaker 0: yeah, what if there's like a little bit of electricity on the wire?
+
+425
+00:28:54,821 --> 00:28:57,020
+Speaker 0: What if there's too much electricity on the wire whoa?
+
+426
+00:28:58,140 --> 00:29:05,680
+Speaker 1: So a nice real simple way because this is basically how most logic works Is that they'll set a voltage like say three volts or nine volts?
+
+427
+00:29:05,940 --> 00:29:06,583
+Speaker 0: I think it's five.
+
+428
+00:29:06,603 --> 00:29:06,864
+Speaker 0: is the?
+
+429
+00:29:06,964 --> 00:29:09,113
+Speaker 0: is the basically what people go on these days.
+
+430
+00:29:09,254 --> 00:29:16,669
+Speaker 1: Yeah, though networking and telephony Yeah, but they'll say like if the voltage is three or greater Then it is a one.
+
+431
+00:29:17,474 --> 00:29:22,687
+Speaker 1: if the voltage well We're not going to talk about polarity if it's three if it's greater than three It's a one if it's less than three.
+
+432
+00:29:22,707 --> 00:29:28,580
+Speaker 0: It's a zero yep, and sometimes There'll be a buffer zone in the middle and sometimes there'll be all kinds of other crazy stuff.
+
+433
+00:29:28,640 --> 00:29:35,749
+Speaker 0: But all you have to know is that you have a wire and if there's electricity coming down the wire at certain voltage It's one and if there's no electricity.
+
+434
+00:29:35,950 --> 00:29:36,532
+Speaker 0: That's a zero.
+
+435
+00:29:37,075 --> 00:29:40,969
+Speaker 1: and the electricity I mean It's an analog wave going down the wire.
+
+436
+00:29:41,330 --> 00:29:50,448
+Speaker 1: so it can be all over the place and these thresholds To convert that into ones and zeros and they can be done perfectly Mm-hmm because it's all logic.
+
+437
+00:29:50,468 --> 00:29:55,047
+Speaker 1: at that point you say once you say I'm going to define This as a one that's a one.
+
+438
+00:29:55,067 --> 00:29:57,837
+Speaker 1: that is a mathematical one because you defined it.
+
+439
+00:29:58,399 --> 00:30:01,693
+Speaker 0: yep I think most computers today work on five volts.
+
+440
+00:30:01,854 --> 00:30:04,546
+Speaker 0: tell someone tell me if I'm wrong It's five volts.
+
+441
+00:30:04,828 --> 00:30:07,179
+Speaker 0: You know is is one and zero volts is zero.
+
+442
+00:30:07,702 --> 00:30:14,229
+Speaker 0: Yeah, well negative five because we are not going to give you a lesson on Physics and electronics and all that business.
+
+443
+00:30:14,250 --> 00:30:19,298
+Speaker 1: well actually I will but only when I talk about networking Because I because I actually know a lot about that.
+
+444
+00:30:20,223 --> 00:30:22,934
+Speaker 0: Yeah, but this is how a computer works not how you know.
+
+445
+00:30:22,954 --> 00:30:23,195
+Speaker 0: we're not.
+
+446
+00:30:23,215 --> 00:30:29,119
+Speaker 0: we're gonna talk about transistors We're not gonna talk about resistors and capacitors and diodes and all that business.
+
+447
+00:30:30,340 --> 00:30:34,258
+Speaker 0: Okay, so now you have a wire with a one coming out of it.
+
+448
+00:30:35,262 --> 00:30:36,848
+Speaker 0: How do you make this compute?
+
+449
+00:30:37,129 --> 00:30:40,260
+Speaker 0: well the magic of the transistor?
+
+450
+00:30:41,600 --> 00:30:47,520
+Speaker 1: That that well even before the transistor we had vacuum tubes and before that we had digital logic.
+
+451
+00:30:48,282 --> 00:30:52,494
+Speaker 0: Yep now the vacuum tube and the transistor perform the same function.
+
+452
+00:30:52,755 --> 00:30:58,551
+Speaker 0: the transistor is just Much much smaller and much much more efficient than the vacuum tube.
+
+453
+00:30:58,591 --> 00:31:03,927
+Speaker 0: the vacuum tube is big real big and real dangerous Now real real.
+
+454
+00:31:04,007 --> 00:31:12,137
+Speaker 1: simply all the transistor does is let you Look, it'll a signal will come in and as a result the output will change.
+
+455
+00:31:12,519 --> 00:31:14,289
+Speaker 1: yep That's in the simplest terms.
+
+456
+00:31:14,309 --> 00:31:15,658
+Speaker 1: That's what a transistor does for you.
+
+457
+00:31:16,603 --> 00:31:18,108
+Speaker 1: So say the picture has.
+
+458
+00:31:18,289 --> 00:31:31,683
+Speaker 1: you've three prongs coming out a little thingy and You've got a circuit that's connected to two of those and then another wire connected to the third one And then when you put a signal to the third wire it lets something go through the other two Mm-hmm.
+
+459
+00:31:32,389 --> 00:31:37,328
+Speaker 0: so here's an example That probably should make sense with an analogy and all that.
+
+460
+00:31:38,089 --> 00:31:43,960
+Speaker 0: all right you have a light bulb you have a battery and You have a transistor.
+
+461
+00:31:45,105 --> 00:31:53,319
+Speaker 0: You have two batteries two batteries a light bulb Transistor fanatical devotion to the Pope fanatical devotion to the Pope and some wires.
+
+462
+00:31:54,981 --> 00:31:58,492
+Speaker 0: There's a wire from one battery to input prong.
+
+463
+00:31:58,512 --> 00:32:03,037
+Speaker 0: one is a wire from the output prong.
+
+464
+00:32:04,224 --> 00:32:05,792
+Speaker 1: I don't know how well this is gonna work without a picture.
+
+465
+00:32:06,013 --> 00:32:07,480
+Speaker 0: Yeah, we really need a picture.
+
+466
+00:32:07,781 --> 00:32:08,363
+Speaker 1: Maybe we should choose.
+
+467
+00:32:08,663 --> 00:32:10,168
+Speaker 1: you're not gonna do a video cast on this?
+
+468
+00:32:10,228 --> 00:32:12,889
+Speaker 0: no we're not Okay.
+
+469
+00:32:13,130 --> 00:32:25,489
+Speaker 0: So there's electricity going in one prong and electricity coming from that prong goes through the transistor and out the third prong To the light bulb and then you make a circuit all the way around so that the light bulb actually lights up.
+
+470
+00:32:26,752 --> 00:32:29,300
+Speaker 0: The middle prong is the control prong.
+
+471
+00:32:29,923 --> 00:32:39,331
+Speaker 0: so if the middle prong is off The light bulb goes off because it doesn't the transistor won't let the electricity go through the transistor to from the battery to the light Bulb.
+
+472
+00:32:40,134 --> 00:32:48,729
+Speaker 0: if you turn the middle prong on the control prong on Then it allows the electricity to go through to the light bulb and light bulb turns on.
+
+473
+00:32:49,613 --> 00:32:54,275
+Speaker 0: So this is zero on the control prong No light bulb zero.
+
+474
+00:32:55,159 --> 00:32:55,540
+Speaker 0: a one.
+
+475
+00:32:55,580 --> 00:32:58,373
+Speaker 0: on the control prong up light bulb goes on It's a one.
+
+476
+00:32:58,998 --> 00:33:11,850
+Speaker 1: now all your computer is is billions and billions and billions of those all turning lights on and off on and off on and off all over the place and those Lights turn on other lights the turn on other lights in this cascading chain that collapses into an answer for every given input.
+
+477
+00:33:12,163 --> 00:33:17,984
+Speaker 0: Yep Now imagine this you have a room with a light bulb and there's one switch on the wall.
+
+478
+00:33:18,585 --> 00:33:20,169
+Speaker 0: off is zero on is one.
+
+479
+00:33:21,395 --> 00:33:31,850
+Speaker 0: Now let's say you have two Switches and you have two light bulbs.
+
+480
+00:33:33,277 --> 00:33:35,273
+Speaker 0: Zero one Zero one.
+
+481
+00:33:35,293 --> 00:33:36,016
+Speaker 0: Yeah.
+
+482
+00:33:36,197 --> 00:33:48,970
+Speaker 1: Yeah now at this point if you didn't pay attention in high school math And you don't know about non 10 base numbers Real briefly base 10 the numbers we use you know one two three four five six seven eight nine ten eleven.
+
+483
+00:33:49,336 --> 00:33:50,232
+Speaker 1: That's base 10.
+
+484
+00:33:50,232 --> 00:33:51,471
+Speaker 1: It's in sets of 10.
+
+485
+00:33:51,471 --> 00:33:58,310
+Speaker 1: That's the numbering system humans use for a variety of reasons because there are 10 digits in base 10 and because we have 10 fingers.
+
+486
+00:33:58,631 --> 00:34:04,237
+Speaker 1: You know, yep, there's a lot of reasons why humans ended up using base 10 and there were some cultures that used other bases Mm-hmm.
+
+487
+00:34:04,479 --> 00:34:05,390
+Speaker 1: They mostly disappeared.
+
+488
+00:34:06,072 --> 00:34:17,324
+Speaker 0: there is also base 8 which is octal in which the only digits you have at your disposal are 0 1 2 3 4 5 6 7 and The one you'll see most often in computing is hex hexadecimal base 16.
+
+489
+00:34:17,324 --> 00:34:23,833
+Speaker 0: You have 0 1 2 3 5 6 7 8 9 ABCDEF at your disposal 16 digits.
+
+490
+00:34:24,054 --> 00:34:27,909
+Speaker 1: now the only reason hex is used is really an octal isn't used so much anymore.
+
+491
+00:34:28,251 --> 00:34:32,909
+Speaker 1: But hex is a convenient way of just of writing binary.
+
+492
+00:34:33,850 --> 00:34:38,402
+Speaker 0: Binary is base 2. you have two digits 0 and 1.
+
+493
+00:34:38,402 --> 00:34:56,449
+Speaker 1: so counting in binary goes 0 1 10 11 100 101 110 111 a thousand and That's the same as counting 1 2 3 4 5 6 7 8 9. now obviously you need a lot of Bits a lot of digits to write a large number in binary.
+
+494
+00:34:56,469 --> 00:34:59,070
+Speaker 0: This is all just different ways of writing numbers.
+
+495
+00:34:59,271 --> 00:35:09,466
+Speaker 0: You know if you want to write the number 16 you write 1 6. if you want to write the number 16 and hexadecimal you write F. It's the same F. Just is 16.
+
+496
+00:35:09,466 --> 00:35:10,650
+Speaker 0: It's a different way of writing a number.
+
+497
+00:35:11,271 --> 00:35:11,893
+Speaker 0: That's all it is.
+
+498
+00:35:12,335 --> 00:35:16,908
+Speaker 0: So writing 7 or in binary is what.
+
+499
+00:35:16,988 --> 00:35:17,289
+Speaker 0: let's see.
+
+500
+00:35:18,791 --> 00:35:19,233
+Speaker 0: See how it.
+
+501
+00:35:19,253 --> 00:35:23,889
+Speaker 0: see why you need hex because I already have to think it's 0 1 1 1. there you go.
+
+502
+00:35:24,391 --> 00:35:29,565
+Speaker 1: Because now just I have a little chart cuz way way back and I was a freshman at RIT.
+
+503
+00:35:30,027 --> 00:35:39,377
+Speaker 1: the hex to binary chart yeah, like my first computer class at RIT like the first ever when I learned about a computer from anyone who actually knew what they Were talking about.
+
+504
+00:35:39,478 --> 00:35:40,589
+Speaker 1: and we learned all about.
+
+505
+00:35:41,172 --> 00:35:44,649
+Speaker 1: You know binary logic and all that which was really simple and I knew some of it already.
+
+506
+00:35:45,311 --> 00:35:54,888
+Speaker 1: But my first programming project was we had to write all these number base converters and logic converters and all these things in Visual basic, but we weren't allowed to use any of the functions.
+
+507
+00:35:55,070 --> 00:35:57,188
+Speaker 1: So we had to do it all manually by hand.
+
+508
+00:35:57,711 --> 00:36:01,147
+Speaker 1: So I made a little chart of binary hexadecimal octal and suck it on my monitor.
+
+509
+00:36:01,348 --> 00:36:01,830
+Speaker 0: That's good one.
+
+510
+00:36:02,011 --> 00:36:05,089
+Speaker 1: It's still stuck there to this day because I'd never bothered it to get rid of it.
+
+511
+00:36:05,270 --> 00:36:10,950
+Speaker 0: Now the reason we use hex because it's so easy is because four binary digits is a hex digit.
+
+512
+00:36:11,491 --> 00:36:12,093
+Speaker 0: Think about it.
+
+513
+00:36:12,414 --> 00:36:15,481
+Speaker 0: four binary digits that means four zeros and ones.
+
+514
+00:36:15,662 --> 00:36:20,416
+Speaker 0: so that's every number from zero zero zero zero to One one one one.
+
+515
+00:36:20,838 --> 00:36:24,632
+Speaker 0: Well one one one one is 16.
+
+516
+00:36:24,632 --> 00:36:27,239
+Speaker 1: That means on one one one one is 15 sky 15.
+
+517
+00:36:27,239 --> 00:36:28,583
+Speaker 0: That doesn't matter.
+
+518
+00:36:28,803 --> 00:36:29,846
+Speaker 0: It's the 16th digit.
+
+519
+00:36:30,367 --> 00:36:31,330
+Speaker 0: The zero is in there.
+
+520
+00:36:31,470 --> 00:36:32,515
+Speaker 0: Yeah, zero zero zero zero.
+
+521
+00:36:32,555 --> 00:36:35,790
+Speaker 1: Yeah, here's another nice aside for all of you non computer types.
+
+522
+00:36:36,131 --> 00:36:40,310
+Speaker 1: You might notice that a lot of because that's why I didn't correct Scott earlier when you said F is 16.
+
+523
+00:36:40,310 --> 00:36:51,213
+Speaker 1: Yeah, a lot of computer people especially computer programmers more so than IT people when they tell you a number relating computers They might always be one-off from you Because do.
+
+524
+00:36:52,156 --> 00:36:55,366
+Speaker 1: for various reasons a lot of computer people start counting with zero.
+
+525
+00:36:55,466 --> 00:36:56,750
+Speaker 0: You always start counting with zero.
+
+526
+00:36:57,292 --> 00:37:01,127
+Speaker 1: Yeah, but normal people don't do that in the real world in their normal life.
+
+527
+00:37:01,388 --> 00:37:01,790
+Speaker 0: No, they don't.
+
+528
+00:37:01,850 --> 00:37:02,896
+Speaker 0: I was trying to make it stupid.
+
+529
+00:37:02,936 --> 00:37:03,459
+Speaker 0: But yeah.
+
+530
+00:37:03,600 --> 00:37:05,490
+Speaker 0: Yeah, I guess we'll make it a little less stupid.
+
+531
+00:37:05,550 --> 00:37:12,110
+Speaker 1: I was just be wary of that because The more you deal with computers, especially if you start writing code, that's where it'll really appear.
+
+532
+00:37:12,652 --> 00:37:14,802
+Speaker 1: Just remember that zero is the first number.
+
+533
+00:37:15,304 --> 00:37:15,525
+Speaker 0: Yep.
+
+534
+00:37:15,585 --> 00:37:21,123
+Speaker 1: Zero is one But it's not one because it means zero but it's also just a number.
+
+535
+00:37:21,143 --> 00:37:23,450
+Speaker 0: Yeah, it's the first number is zero.
+
+536
+00:37:24,232 --> 00:37:26,941
+Speaker 0: So one one one one is 15.
+
+537
+00:37:26,941 --> 00:37:28,848
+Speaker 0: F is 15 zero zero zero.
+
+538
+00:37:28,868 --> 00:37:31,068
+Speaker 0: zero is zero Zero is zero.
+
+539
+00:37:31,953 --> 00:37:51,230
+Speaker 0: So you with four binary digits four zeros and ones you can do Every single hex digit zero through F. So if you take any binary number or just a series of zeros and ones break it up into groups of four You can easily convert it into hex and vice versa.
+
+540
+00:37:51,793 --> 00:38:00,630
+Speaker 0: That's why computer programmers and people always write things in hex Because to write it in binary would be incredibly long and writing in hex is four times shorter.
+
+541
+00:38:01,755 --> 00:38:05,381
+Speaker 1: Now you might be wondering at this point All right, so I have my light bulb switch and that works.
+
+542
+00:38:05,421 --> 00:38:06,667
+Speaker 1: now my two light bulb switches.
+
+543
+00:38:06,708 --> 00:38:07,150
+Speaker 1: that works.
+
+544
+00:38:08,031 --> 00:38:09,214
+Speaker 0: How do I have your numbers?
+
+545
+00:38:09,575 --> 00:38:11,220
+Speaker 1: How do I do things with that?
+
+546
+00:38:11,300 --> 00:38:14,410
+Speaker 1: Because I mean the switches it's just binary numbers.
+
+547
+00:38:15,038 --> 00:38:21,329
+Speaker 1: So say, you know Say you want to add two binary numbers or subtract two or do something to the binary numbers to get some answer out.
+
+548
+00:38:22,611 --> 00:38:28,370
+Speaker 1: It seems like it'd be really complicated to make a different combination of switches for every possible input.
+
+549
+00:38:29,118 --> 00:38:41,287
+Speaker 1: No, you don't have to yep The fact that turns out that there is a very small set of logical operators in binary That together can be used to make any logical situation you can describe in binary.
+
+550
+00:38:41,307 --> 00:38:44,809
+Speaker 1: Mm-hmm I don't know if we're gonna talk about them in great detail tonight.
+
+551
+00:38:45,532 --> 00:38:47,278
+Speaker 1: probably not but very briefly.
+
+552
+00:38:47,298 --> 00:39:08,110
+Speaker 1: and if you want to get ahead of us and Nand or X or not You can also combine them to be like not X or or Nor and if you keep combining them you get very complex circuits that can do things like addition and subtraction and primary factorization.
+
+553
+00:39:09,611 --> 00:39:12,185
+Speaker 0: Yep now for the.
+
+554
+00:39:13,151 --> 00:39:14,318
+Speaker 0: We're gonna finish it off right here.
+
+555
+00:39:14,922 --> 00:39:16,090
+Speaker 1: I think we should wrap it up a little bit.
+
+556
+00:39:16,190 --> 00:39:21,474
+Speaker 1: I don't want to go too long the first time because I'd really like to get some feedback from all our listeners on is They understood it.
+
+557
+00:39:21,695 --> 00:39:22,339
+Speaker 1: Yeah, is the pace?
+
+558
+00:39:22,399 --> 00:39:23,304
+Speaker 1: Okay, should we speed up?
+
+559
+00:39:23,345 --> 00:39:24,169
+Speaker 1: Should we slow down?
+
+560
+00:39:24,572 --> 00:39:25,860
+Speaker 1: Is that too much for one day?
+
+561
+00:39:25,880 --> 00:39:31,269
+Speaker 0: All right, so here's the final example I want you to put in your minds and then I'm gonna have a mini trivia question.
+
+562
+00:39:31,651 --> 00:39:34,526
+Speaker 1: Oh a trivia question just a little mini one to kind of keep people interested.
+
+563
+00:39:34,768 --> 00:39:35,009
+Speaker 0: Okay?
+
+564
+00:39:36,210 --> 00:39:37,876
+Speaker 0: Imagine this in your minds.
+
+565
+00:39:38,257 --> 00:39:40,705
+Speaker 0: There are four light bulbs doo-doo.
+
+566
+00:39:41,026 --> 00:39:42,350
+Speaker 0: No forget the four light bulbs.
+
+567
+00:39:42,410 --> 00:39:58,158
+Speaker 0: there's a calculator screen right and the calculator screen has four wires going into it, right and What the calculator screen will do is if all ones come into it on Each of the four wires.
+
+568
+00:39:58,339 --> 00:40:03,044
+Speaker 0: if there's electricity in all four wires then the letter F will appear on the calculator screen.
+
+569
+00:40:03,245 --> 00:40:04,028
+Speaker 0: you see where I'm going.
+
+570
+00:40:04,049 --> 00:40:09,608
+Speaker 0: and If there's no electricity in none of the wires, then the number zero will go there.
+
+571
+00:40:10,532 --> 00:40:13,442
+Speaker 0: Now the four wires aren't just going to four switches.
+
+572
+00:40:13,523 --> 00:40:15,450
+Speaker 0: You can make any number you want appear.
+
+573
+00:40:16,295 --> 00:40:25,368
+Speaker 0: they're going into two separate sets of switches and You see you set one set of switches to be one number and the other set of switches to be another number.
+
+574
+00:40:25,890 --> 00:40:38,083
+Speaker 0: and then there's a bunch of those ands and nans and stuff in between that we talked about and It adds the first number you put together And the second number you put together and the result shows up on the screen.
+
+575
+00:40:38,544 --> 00:40:40,290
+Speaker 1: now note that there's only four wires.
+
+576
+00:40:40,952 --> 00:40:43,600
+Speaker 1: Then you're limited to F. It's the highest number you can reach.
+
+577
+00:40:43,921 --> 00:40:48,463
+Speaker 1: Yeah, if you try to add seven and a No, not gonna work.
+
+578
+00:40:48,767 --> 00:40:53,849
+Speaker 1: and Depending on how I mean if you just have the circuit there It'll work and it'll give you an answer.
+
+579
+00:40:54,291 --> 00:40:58,458
+Speaker 1: but it'll give you the wrong answer because it's like imagine if you were doing a an addition.
+
+580
+00:40:58,518 --> 00:41:05,930
+Speaker 1: right you're adding a bunch of numbers together and Say you only have eight spaces on your little piece of paper for the answer, but the answer uses nine digits.
+
+581
+00:41:06,492 --> 00:41:09,142
+Speaker 1: You just chop off the one on the end and now your answer is totally wrong.
+
+582
+00:41:09,182 --> 00:41:11,030
+Speaker 0: Yeah, the idea is you don't put more input.
+
+583
+00:41:12,031 --> 00:41:17,808
+Speaker 0: You don't give the per the user enough input to overflow yeah and on a hardware level you make you just.
+
+584
+00:41:17,868 --> 00:41:19,936
+Speaker 1: you know You know that all right.
+
+585
+00:41:20,036 --> 00:41:23,570
+Speaker 1: I have X wires, so I can't ever do anything that needs more than X wires.
+
+586
+00:41:24,591 --> 00:41:24,732
+Speaker 1: Mm-hmm.
+
+587
+00:41:24,993 --> 00:41:29,710
+Speaker 1: of course you can do fancy things like well say I have two sets of X wires or four sets X wires.
+
+588
+00:41:30,031 --> 00:41:31,196
+Speaker 1: I'll use two of those sets now.
+
+589
+00:41:31,236 --> 00:41:34,490
+Speaker 1: I can store twice as much, but now I'm using two of my sets.
+
+590
+00:41:34,651 --> 00:41:35,797
+Speaker 0: Yeah, so it would probably be.
+
+591
+00:41:35,817 --> 00:41:51,870
+Speaker 0: there are four wires going into the display But there are three wires on the left and three wires on the right, so if you turn them all on it would be Seven and seven which is 14. if you turn them if you turn one side off it would be seven.
+
+592
+00:41:54,042 --> 00:41:56,800
+Speaker 1: So I hope this is enlighten any people a little bit.
+
+593
+00:41:56,861 --> 00:42:00,652
+Speaker 1: We really want to get a lot of feedback And we'll try to fine-tune this series as we go on.
+
+594
+00:42:00,713 --> 00:42:02,160
+Speaker 1: since this is the inaugural episode.
+
+595
+00:42:02,682 --> 00:42:05,654
+Speaker 0: Yeah, next time we'll probably talk about the actual gates.
+
+596
+00:42:06,035 --> 00:42:11,960
+Speaker 0: Yeah digital logic and Then we'll probably make a big jump over a bunch of really complicated stuff.
+
+597
+00:42:12,001 --> 00:42:20,731
+Speaker 0: That's in between But we'll try to abstract it so you can make the connection all the way up to where the assembly Programming is which is what you got to jump to.
+
+598
+00:42:21,073 --> 00:42:28,738
+Speaker 1: plus we can always go back once We've gone over larger broader ideas and fill in very specific details, especially if people are curious about them.
+
+599
+00:42:29,099 --> 00:42:38,620
+Speaker 1: yep Yep now my trivia, and this is I think every time we do this I'll have a trivia that's basically going to be answered in the next episode regardless of whether any you figure it out.
+
+600
+00:42:38,883 --> 00:42:40,059
+Speaker 0: Are you gonna give a prize?
+
+601
+00:42:40,620 --> 00:42:41,186
+Speaker 1: No, no prize.
+
+602
+00:42:41,247 --> 00:42:42,360
+Speaker 1: This is just for your own.
+
+603
+00:42:42,561 --> 00:42:46,505
+Speaker 1: This is the kind of thing where if you go out and find the answer You'll be ahead of the game.
+
+604
+00:42:46,546 --> 00:42:48,374
+Speaker 1: You'll have a better idea of what we're talking about.
+
+605
+00:42:48,414 --> 00:42:52,814
+Speaker 1: on the next one okay now I mentioned all those gates you know and or X or NAND and not.
+
+606
+00:42:53,437 --> 00:42:54,080
+Speaker 0: oh, this is a good one.
+
+607
+00:42:54,401 --> 00:42:55,083
+Speaker 0: Why are we gonna ask?
+
+608
+00:42:55,284 --> 00:42:57,412
+Speaker 1: I think you do know what I'm gonna ask now.
+
+609
+00:42:58,134 --> 00:43:01,485
+Speaker 1: each one of them can be made With or without a transistor.
+
+610
+00:43:01,546 --> 00:43:06,140
+Speaker 1: you can make all of those gates with just wires and switches.
+
+611
+00:43:07,004 --> 00:43:08,530
+Speaker 1: You can also make them with transistors.
+
+612
+00:43:09,113 --> 00:43:25,860
+Speaker 1: now of all of them one of them is electrically the simplest to make and the most versatile and It is the one that you can with this logical operator make by combinations of certain numbers of this operator any other one of the operators.
+
+613
+00:43:26,981 --> 00:43:33,661
+Speaker 1: Now most chips that people buy especially hobbyist known RadioShack you buy like a little IC chip that you stick in a board and fiddle With.
+
+614
+00:43:33,681 --> 00:43:37,836
+Speaker 0: yeah, it's one of those black rectangles all little bits coming out of it on the sides.
+
+615
+00:43:37,896 --> 00:43:38,699
+Speaker 0: It looks like a little bug.
+
+616
+00:43:39,621 --> 00:43:41,426
+Speaker 0: Those actually have a shit ton of gates in them.
+
+617
+00:43:41,607 --> 00:43:41,787
+Speaker 0: yep
+
+618
+00:43:42,248 --> 00:43:58,880
+Speaker 1: now the thing is most of those chips only include one gate and in fact most simple chips out in the world are comprised entirely of one and only one kind of gate and They combine that one kind of gate to make all the different gates because it's easier electronically to do that.
+
+619
+00:43:59,582 --> 00:44:02,970
+Speaker 1: So my question is what is that universal gate that everyone uses?
+
+620
+00:44:03,071 --> 00:44:03,632
+Speaker 1: which one?
+
+621
+00:44:04,374 --> 00:44:06,359
+Speaker 1: and NAND not X or or?
+
+622
+00:44:07,501 --> 00:44:15,337
+Speaker 0: Yep, they're or or Only the simplest electronics that are out there use you know all the different kinds of gates.
+
+623
+00:44:15,538 --> 00:44:24,687
+Speaker 0: all the complex electronics in the world use One gate only one gate because you have so many gates at that point It's more efficient now.
+
+624
+00:44:24,748 --> 00:44:24,868
+Speaker 1: now.
+
+625
+00:44:24,949 --> 00:44:30,370
+Speaker 1: We may be wrong about some of the crazy new processors Because people do some interesting things with electricity nowadays.
+
+626
+00:44:30,510 --> 00:44:31,072
+Speaker 0: Yeah, they do.
+
+627
+00:44:31,273 --> 00:44:33,118
+Speaker 1: these are things you don't need to care about mm-hmm.
+
+628
+00:44:34,292 --> 00:44:58,148
+Speaker 1: but anyway That is my question and really give us some feedback on this because we'll try to go in whatever direction you guys want and cater To whatever you want to learn Mm-hmm and maybe our ideal sue us for giving it away for free Haha, and that was geek nights with rim and Scott special.
+
+629
+00:44:58,188 --> 00:45:00,210
+Speaker 1: Thanks to DJ pretzel for our opening theme.
+
+630
+00:45:00,673 --> 00:45:05,097
+Speaker 0: Be sure to visit our website at www.frontrowcrew.com.
+
+631
+00:45:05,739 --> 00:45:08,207
+Speaker 0: if you like our podcast you'll love our forums.
+
+632
+00:45:08,287 --> 00:45:08,989
+Speaker 0: make sure you visit them.
+
+633
+00:45:09,572 --> 00:45:15,659
+Speaker 0: You can send your email feedback to geek nights at gmail.com And if you want you can leave us a voicemail at 206-333-1537.
+
+634
+00:45:20,393 --> 00:45:23,130
+Speaker 1: Geek nights airs every weeknight Monday through Thursday.
+
+635
+00:45:23,812 --> 00:45:29,306
+Speaker 0: Geek nights is recorded with absolutely no studio and no audience, but unlike those other talk shows.
+
+636
+00:45:29,687 --> 00:45:30,930
+Speaker 0: It's actually recorded at night.
+

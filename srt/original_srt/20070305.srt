@@ -1,0 +1,2624 @@
+﻿1
+00:00:09,420 --> 00:00:09,560
+Speaker 1: 
+
+2
+00:00:09,772 --> 00:00:11,338
+Speaker 0: It's Monday March 5th.
+
+3
+00:00:11,779 --> 00:00:12,281
+Speaker 1: I'm rim.
+
+4
+00:00:12,602 --> 00:00:14,588
+Speaker 0: I'm Scott, and this is geek nice.
+
+5
+00:00:14,849 --> 00:00:19,090
+Speaker 0: tonight We're gonna talk a bit about network address translation aka nets.
+
+6
+00:00:20,152 --> 00:00:21,187
+Speaker 1: Let's do this.
+
+7
+00:00:22,173 --> 00:00:23,880
+Speaker 1: So rim at your work.
+
+8
+00:00:24,322 --> 00:00:26,310
+Speaker 1: How many people use delicious?
+
+9
+00:00:26,811 --> 00:00:29,741
+Speaker 0: I don't think a single person at my company even knows what delicious is.
+
+10
+00:00:29,781 --> 00:00:33,234
+Speaker 0: to be perfectly honest my coworker used delicious Not bad.
+
+11
+00:00:33,274 --> 00:00:36,726
+Speaker 1: He made little delicious friends today actually even at IBM.
+
+12
+00:00:36,767 --> 00:00:37,690
+Speaker 0: No one really knew about it.
+
+13
+00:00:37,971 --> 00:00:41,261
+Speaker 0: I showed people delicious and usually the response was either.
+
+14
+00:00:41,783 --> 00:00:47,017
+Speaker 0: Why would I do that when I have bookmarks or That's a weird URL or huh?
+
+15
+00:00:47,078 --> 00:00:48,081
+Speaker 1: I didn't even say anything.
+
+16
+00:00:48,161 --> 00:00:50,670
+Speaker 1: my coworker was just like yes something delicious something something.
+
+17
+00:00:51,293 --> 00:00:52,761
+Speaker 0: Actually two or three days ago.
+
+18
+00:00:52,781 --> 00:00:55,835
+Speaker 0: I was at work like Friday was Friday Might have been Thursday doesn't matter.
+
+19
+00:00:56,498 --> 00:00:59,750
+Speaker 0: and I said like my coworker was asking me about some Excel crap.
+
+20
+00:01:00,132 --> 00:01:06,063
+Speaker 0: so I just said oh, I delicious something about that a while ago and He didn't know how to respond to that.
+
+21
+00:01:06,083 --> 00:01:07,852
+Speaker 1: I Delicious.
+
+22
+00:01:08,474 --> 00:01:10,681
+Speaker 1: it's like I googled something something they could.
+
+23
+00:01:10,702 --> 00:01:13,210
+Speaker 1: I think they understand googled, but they don't understand delicious.
+
+24
+00:01:13,694 --> 00:01:24,930
+Speaker 0: Yeah, but lately more and more at my job But I love conversations with people and if I try to say The word like I use words that I use in my normal daily life that you know my real life outside of work.
+
+25
+00:01:25,495 --> 00:01:30,849
+Speaker 0: those words end Conversations at my job like people just don't understand them.
+
+26
+00:01:32,513 --> 00:01:33,778
+Speaker 1: On another note at work.
+
+27
+00:01:33,818 --> 00:01:34,942
+Speaker 1: I've got this computer.
+
+28
+00:01:35,123 --> 00:01:36,790
+Speaker 1: I don't know if I said that I say this last week.
+
+29
+00:01:37,051 --> 00:01:38,539
+Speaker 1: No, cuz I didn't work yet last week.
+
+30
+00:01:38,780 --> 00:01:44,010
+Speaker 1: Yeah, I'm at my new job now It is a new job, and I have a computer at this new job.
+
+31
+00:01:44,580 --> 00:01:47,178
+Speaker 1: It's Adele But it has a core to duo.
+
+32
+00:01:47,339 --> 00:01:51,314
+Speaker 1: and I will say this core to duo is the fastest computer I have ever used.
+
+33
+00:01:51,455 --> 00:01:53,201
+Speaker 0: didn't you start work Thursday last week.
+
+34
+00:01:53,221 --> 00:01:59,130
+Speaker 1: That's what I said, and we did a show Thursday night Yeah, but it wasn't like a Monday show so I didn't talk a lot about technology.
+
+35
+00:02:01,053 --> 00:02:11,249
+Speaker 1: Anyway, this is so fast this computer, but the problem is it's got an Intel video card Which is fine because Intel video cards are open source, and they're drivers for them.
+
+36
+00:02:11,712 --> 00:02:20,102
+Speaker 1: but the driver for this one is in kernel 2 6 18 and I'm using Ubuntu edgy, which is kernel 2 6 17.
+
+37
+00:02:20,102 --> 00:02:21,266
+Speaker 0: so just use our feisty.
+
+38
+00:02:21,788 --> 00:02:23,098
+Speaker 1: Yeah, right That's what I'm gonna do.
+
+39
+00:02:23,199 --> 00:02:24,190
+Speaker 1: my can work computer.
+
+40
+00:02:24,270 --> 00:02:27,665
+Speaker 1: I'm gonna have it crashing left and right with unstable ass in development.
+
+41
+00:02:27,685 --> 00:02:28,308
+Speaker 1: feisty fawn.
+
+42
+00:02:28,348 --> 00:02:28,850
+Speaker 1: That's a good idea.
+
+43
+00:02:28,870 --> 00:02:31,603
+Speaker 0: How unstable is feisty by now pretty unstable?
+
+44
+00:02:31,744 --> 00:02:32,347
+Speaker 0: How do you know?
+
+45
+00:02:32,729 --> 00:02:32,990
+Speaker 1: all right?
+
+46
+00:02:33,111 --> 00:02:35,749
+Speaker 1: You use it for your daily life and see what happens.
+
+47
+00:02:35,971 --> 00:02:37,301
+Speaker 0: I don't have any computer to put it on.
+
+48
+00:02:37,361 --> 00:02:38,349
+Speaker 1: you can use that one right there.
+
+49
+00:02:38,791 --> 00:02:39,814
+Speaker 0: What my computer?
+
+50
+00:02:39,874 --> 00:02:42,383
+Speaker 1: no the one that has edgy on it right in front of you.
+
+51
+00:02:42,403 --> 00:02:43,406
+Speaker 0: now cuz I need that one.
+
+52
+00:02:43,426 --> 00:02:48,829
+Speaker 1: ah I need my work computer more than you need that computer.
+
+53
+00:02:48,849 --> 00:02:51,122
+Speaker 0: now I think I need this one more than you need your work computer.
+
+54
+00:02:51,142 --> 00:02:52,530
+Speaker 1: Yeah, that's not true, but anyway.
+
+55
+00:02:53,451 --> 00:02:55,441
+Speaker 1: So an Nvidia video card is the answer.
+
+56
+00:02:55,521 --> 00:03:01,288
+Speaker 1: so to make the long story short We got the Nvidia video card cuz my work was smart, and they just bought it on Newegg.
+
+57
+00:03:01,549 --> 00:03:02,292
+Speaker 1: well It's a smart work.
+
+58
+00:03:02,352 --> 00:03:06,065
+Speaker 0: I'm at they got my work didn't know that Newegg existed.
+
+59
+00:03:06,125 --> 00:03:11,545
+Speaker 0: like they needed computer parts And I said why don't you just go on Newegg, and they said what I said.
+
+60
+00:03:11,626 --> 00:03:12,690
+Speaker 0: Newegg what?
+
+61
+00:03:13,650 --> 00:03:14,974
+Speaker 0: New egg?
+
+62
+00:03:15,094 --> 00:03:17,241
+Speaker 0: calm so it's an online store.
+
+63
+00:03:17,401 --> 00:03:18,846
+Speaker 0: Yeah, what was that URL?
+
+64
+00:03:18,886 --> 00:03:20,049
+Speaker 0: again Newegg?
+
+65
+00:03:21,091 --> 00:03:22,285
+Speaker 0: You mean like a new egg?
+
+66
+00:03:23,531 --> 00:03:27,770
+Speaker 1: Yes, everyone knows Newegg doesn't pay us money to advertise for them.
+
+67
+00:03:27,870 --> 00:03:32,549
+Speaker 1: We pay them money to give us the computer parts that we use to tell you about them.
+
+68
+00:03:32,569 --> 00:03:42,818
+Speaker 0: well I used to use egghead, and then I use And then I used Newegg and TC computers and now I just use Newegg.
+
+69
+00:03:43,400 --> 00:03:50,570
+Speaker 1: if you want to get rims money and Exchange for parts of computers make sure your store has the word egg in the name.
+
+70
+00:03:50,650 --> 00:03:56,359
+Speaker 0: Well, I did just eat an egg the last egg in the house in fact right I fried it in bacon grease any must know.
+
+71
+00:03:56,640 --> 00:04:00,175
+Speaker 1: in the course of installing this Nvidia video card I learned about a few things.
+
+72
+00:04:00,235 --> 00:04:03,085
+Speaker 1: I learned what a PCI Express 16 slot looks like.
+
+73
+00:04:03,246 --> 00:04:03,667
+Speaker 0: it's little.
+
+74
+00:04:03,928 --> 00:04:04,490
+Speaker 1: It's real little.
+
+75
+00:04:04,590 --> 00:04:06,977
+Speaker 1: I learned what low-profile card means.
+
+76
+00:04:07,057 --> 00:04:10,286
+Speaker 1: they're little yep, and I opened up a Dell for the.
+
+77
+00:04:10,687 --> 00:04:19,241
+Speaker 1: I was opening up this Dell Which is really thin and quiet, and I expected that when I opened it There'd be a mess inside and be a horrible nightmare of a case to deal with.
+
+78
+00:04:19,422 --> 00:04:29,810
+Speaker 1: you know like old Dells or gateways or any Open up like a Packard Bell computer from like 1997 that's a freaking hell frickin god damn.
+
+79
+00:04:30,252 --> 00:04:33,267
+Speaker 1: You might as well just throw the computer out because it's less painful than opening it.
+
+80
+00:04:33,649 --> 00:04:43,008
+Speaker 0: yeah We actually did throw away a Hewlett Packard Bell that we had because while it was functional We needed to add RAM to it, and we couldn't get to the RAM right.
+
+81
+00:04:43,169 --> 00:04:47,276
+Speaker 0: so then I wanted to take the RAM out and salvage it and I couldn't get to it And it wasn't worth it.
+
+82
+00:04:47,297 --> 00:04:56,306
+Speaker 1: because the cases on those things are Disastrous and I think that actually the modern HPS I look at them, and I'm pretty sure they're also disastrous, but I'm not a hundred percent sure.
+
+83
+00:04:56,708 --> 00:04:59,897
+Speaker 1: but this Dell I opened it up, and it was very nice.
+
+84
+00:04:59,978 --> 00:05:08,065
+Speaker 1: It was quiet, and there was easy access to everything and Everything was arranged nicely and it was pretty good.
+
+85
+00:05:08,085 --> 00:05:17,250
+Speaker 1: I was huh it Beat expectations that actually depending on the price you know and what I can get I mean that computer was fast enough.
+
+86
+00:05:17,832 --> 00:05:23,530
+Speaker 0: Well I always whenever I make a computer a lot of people have a prejudice against pre-built machines And I don't have any innate prejudice.
+
+87
+00:05:23,731 --> 00:05:29,822
+Speaker 0: I just I always get whatever is the best deal for the you know the money of whatever I want to buy Performance power all that stuff.
+
+88
+00:05:29,862 --> 00:05:30,870
+Speaker 1: yeah, I'm the same way.
+
+89
+00:05:30,930 --> 00:05:35,630
+Speaker 0: I always compare the Dell or the Gateway or whatever to whatever I can build on my own.
+
+90
+00:05:35,731 --> 00:05:44,122
+Speaker 0: And it's just every time I built a computer Whatever I built on my own was four times faster and half the money, but now yeah I've always done the same exact thing.
+
+91
+00:05:44,142 --> 00:05:46,073
+Speaker 1: you know if I buy a computer I say all right.
+
+92
+00:05:46,134 --> 00:05:47,238
+Speaker 1: How much did I buy it pay?
+
+93
+00:05:47,359 --> 00:05:48,885
+Speaker 1: how much would it cost me to get this computer?
+
+94
+00:05:48,885 --> 00:05:49,006
+Speaker 1: 1500, okay?
+
+95
+00:05:50,511 --> 00:05:53,171
+Speaker 1: Let's see the Dell what Dell is selling for 1500.
+
+96
+00:05:53,171 --> 00:05:58,992
+Speaker 1: Let's see what HP is selling for 1500 and it's always slower than what I've just bought for 1500.
+
+97
+00:05:58,992 --> 00:06:01,802
+Speaker 1: You know even if I click customize and get exactly what I want.
+
+98
+00:06:01,922 --> 00:06:02,063
+Speaker 1: so
+
+99
+00:06:02,083 --> 00:06:15,869
+Speaker 0: what I might do because I've considered this before In the Pentium three days and was almost worth it like it was on the edge of being worth it buy the pre-made computer that comes with a really nice monitor and the nice video card and all that stuff and Then take all those parts out.
+
+100
+00:06:16,331 --> 00:06:18,019
+Speaker 0: Scrap whatever motherboard they give you.
+
+101
+00:06:18,059 --> 00:06:20,610
+Speaker 0: buy a real a bit motherboard then put the computer back together.
+
+102
+00:06:20,811 --> 00:06:25,166
+Speaker 1: Yeah, see actually the nice thing about this computer was that everything was arranged.
+
+103
+00:06:25,266 --> 00:06:26,330
+Speaker 1: It was like a weird motherboard.
+
+104
+00:06:26,371 --> 00:06:28,749
+Speaker 1: I had no idea what the hell motherboard It was some Dell thing.
+
+105
+00:06:29,392 --> 00:06:38,669
+Speaker 1: But it worked and everything was arranged in this nice fashion that allowed it to be quiet and small and yeah And there wasn't a lot of room to expand though.
+
+106
+00:06:39,193 --> 00:06:42,110
+Speaker 1: So there was no way you were gonna fit more than like one more hard drive in there.
+
+107
+00:06:42,752 --> 00:06:43,355
+Speaker 0: Yeah, that's though.
+
+108
+00:06:43,395 --> 00:06:44,279
+Speaker 0: I mean the computer.
+
+109
+00:06:44,319 --> 00:06:46,287
+Speaker 0: I got now the old you know year 2000 beast.
+
+110
+00:06:47,596 --> 00:06:53,376
+Speaker 0: I got the biggest tower I could get because I expected over the course of my life to fill this thing with drives And I pretty much have.
+
+111
+00:06:53,396 --> 00:06:56,330
+Speaker 0: there's four hard drives in there, and I've got room for like seven more.
+
+112
+00:06:56,471 --> 00:07:00,515
+Speaker 1: Yeah, I think that is the one thing that would actually keep me from Considering buying.
+
+113
+00:07:00,595 --> 00:07:03,950
+Speaker 1: one of these things is that there's not a lot of room to expand.
+
+114
+00:07:04,231 --> 00:07:08,608
+Speaker 0: But then again if we have a SAN we don't need any expansion where we don't need more hard drives.
+
+115
+00:07:08,728 --> 00:07:09,693
+Speaker 0: It's true It's true.
+
+116
+00:07:09,774 --> 00:07:10,941
+Speaker 1: I mean a NAS not a SAN.
+
+117
+00:07:10,961 --> 00:07:11,887
+Speaker 1: we can't afford a SAN.
+
+118
+00:07:12,109 --> 00:07:13,915
+Speaker 0: yeah I'm just thinking there's a SAN.
+
+119
+00:07:13,935 --> 00:07:22,133
+Speaker 1: I like how SAN and NAS are both storage computer things, but they're it's exact reverse acronym We need.
+
+120
+00:07:22,153 --> 00:07:26,610
+Speaker 0: we need like a two exabyte SAN with fiber connections in this house sounds good.
+
+121
+00:07:27,232 --> 00:07:38,165
+Speaker 1: The last thing I got to say is that that laptop that I ordered on February like 12th like the middle of last month Finally shipped today although they haven't taken my money yet some.
+
+122
+00:07:38,566 --> 00:07:40,212
+Speaker 1: maybe it's gonna be free I don't know.
+
+123
+00:07:40,834 --> 00:07:42,159
+Speaker 0: Maybe they didn't actually ship it.
+
+124
+00:07:42,520 --> 00:07:48,990
+Speaker 1: it says shipped on the website and yesterday it said Expected ship date today, so I'll believe that website.
+
+125
+00:07:49,933 --> 00:07:52,842
+Speaker 1: So yeah if anyone's considering buying a laptop.
+
+126
+00:07:53,565 --> 00:08:00,470
+Speaker 1: I if you want it soon I recommend you do not order it from the manufacturer's website, especially if the manufacturer is Fujitsu.
+
+127
+00:08:01,232 --> 00:08:04,140
+Speaker 1: I will comment on the quality of their laptops probably next week.
+
+128
+00:08:05,002 --> 00:08:10,139
+Speaker 0: So in the news everyone's favorite company is Finally doing something smart.
+
+129
+00:08:10,681 --> 00:08:21,315
+Speaker 0: I believe you all know d-bolt the much-maligned Voting machine company even though while they're now known to pretty much everyone as the company that makes the broken voting machines That's actually a very small part of their business.
+
+130
+00:08:21,676 --> 00:08:25,066
+Speaker 1: Yeah, d-bolt mostly makes like lock boxes and ATM.
+
+131
+00:08:25,226 --> 00:08:35,030
+Speaker 1: Yeah, they make physical security like safes and You know, they make metal boxes that people can't get into who aren't supposed to and they're okay at it.
+
+132
+00:08:35,311 --> 00:08:40,610
+Speaker 0: Well, the thing is no one knew who they were until these voting machines started coming around and there were all the problems.
+
+133
+00:08:41,232 --> 00:08:44,510
+Speaker 1: Like I you know, I saw their logo on a lot of boxes.
+
+134
+00:08:44,631 --> 00:08:49,910
+Speaker 0: No, I never thought about them consciously But most people didn't know like know who they were what they did or didn't care.
+
+135
+00:08:49,910 --> 00:08:52,562
+Speaker 0: It's like you see an elevator and you see Otis stamped in the bottom.
+
+136
+00:08:52,602 --> 00:08:54,390
+Speaker 0: No one actually knows anything about that.
+
+137
+00:08:54,550 --> 00:08:55,676
+Speaker 1: Yeah, it's exactly the same.
+
+138
+00:08:56,259 --> 00:08:58,270
+Speaker 0: and then they suddenly became into the in the news.
+
+139
+00:08:58,370 --> 00:09:03,836
+Speaker 0: They were in the spotlight and it was nothing but bad press ever Constant bad press granted.
+
+140
+00:09:04,057 --> 00:09:17,103
+Speaker 0: It was entirely their fault for making shitty voting machines, but nonetheless since voting machines are actually a very small part of their business a very Barely profitable part and a very maligned part.
+
+141
+00:09:17,444 --> 00:09:24,789
+Speaker 0: They're considering just dropping it all together Discontinuing all their voting machines getting out of that business being done with it the end sounds good to me.
+
+142
+00:09:25,372 --> 00:09:30,230
+Speaker 0: Yeah, maybe now there'll be an opening for a company that's competent to make voting machines.
+
+143
+00:09:30,531 --> 00:09:43,850
+Speaker 1: Well, see here's the thing that I'm worried about right my favorite voting machine And I don't know what parts of the country have them but around I mean they have them in Beacon, New York And they have them in Trumbull Connecticut and I'm pretty sure they had them in Rochester, New York.
+
+144
+00:09:43,911 --> 00:09:47,419
+Speaker 1: So I'm pretty sure they're in Norton a Northeast US kind of machine.
+
+145
+00:09:47,439 --> 00:09:56,036
+Speaker 1: and it's this machine you walk into You pull a lever and this curtain behind you closes you flick a bunch of switches that have little X's and you pull the Lever back the other way.
+
+146
+00:09:56,056 --> 00:10:00,937
+Speaker 1: I don't know the name of the machine, but I know That the machine is pretty reliable.
+
+147
+00:10:00,957 --> 00:10:03,786
+Speaker 1: It counts about as accurately as can be expected.
+
+148
+00:10:03,806 --> 00:10:16,930
+Speaker 1: It's Secure, you know and you can't vote twice or anything like that and they don't make them anymore and the company that made them is Gone, however in this case, I don't feel bad because d-bold people shouldn't be using those machines anyway.
+
+149
+00:10:16,970 --> 00:10:17,632
+Speaker 1: No, they shouldn't.
+
+150
+00:10:17,673 --> 00:10:18,415
+Speaker 1: but here's the thing.
+
+151
+00:10:18,676 --> 00:10:22,550
+Speaker 1: We got two companies making voting machines going away.
+
+152
+00:10:23,172 --> 00:10:26,823
+Speaker 1: Maybe there's just no money in making voting machines at all.
+
+153
+00:10:26,863 --> 00:10:28,367
+Speaker 0: Yeah think think about it.
+
+154
+00:10:28,528 --> 00:10:29,230
+Speaker 0: Who's your customer?
+
+155
+00:10:29,490 --> 00:10:32,290
+Speaker 0: You've got one customer and that is well the government.
+
+156
+00:10:32,310 --> 00:10:34,909
+Speaker 1: What if you can sell voting machines to all of the voting?
+
+157
+00:10:35,550 --> 00:10:42,090
+Speaker 1: Countries and all of the other things that people vote for things that aren't necessarily federal elections or state elections?
+
+158
+00:10:42,170 --> 00:10:48,390
+Speaker 1: You know people vote for like sports stuff like who's gonna go to the Hall of Fame and they don't use voting machines for that.
+
+159
+00:10:48,450 --> 00:10:49,842
+Speaker 0: That's just crazy and stupid.
+
+160
+00:10:49,862 --> 00:10:50,468
+Speaker 1: Maybe they could
+
+161
+00:10:51,213 --> 00:10:51,877
+Speaker 0: How I
+
+162
+00:10:51,897 --> 00:10:56,770
+Speaker 1: don't know but if I was selling voting machines I would try to get them to so I can make some goddamn money
+
+163
+00:10:57,251 --> 00:11:02,969
+Speaker 0: Now because voting machines are very expensive to make and and well you'd assume there's a lot of accountability even though there actually isn't.
+
+164
+00:11:03,330 --> 00:11:10,410
+Speaker 0: the problem is that your only real customer even if you did sell one-offs like that is local governments and the federal government and state governments.
+
+165
+00:11:10,671 --> 00:11:14,242
+Speaker 0: Yep, and none of them want to spend money ever.
+
+166
+00:11:14,603 --> 00:11:15,064
+Speaker 0: so they're not.
+
+167
+00:11:15,125 --> 00:11:16,108
+Speaker 0: they're going to bid low.
+
+168
+00:11:17,051 --> 00:11:18,054
+Speaker 0: Their their pride is not.
+
+169
+00:11:18,095 --> 00:11:23,877
+Speaker 0: even if you don't have a product that's so cheap that they can't afford to not buy it They'll just keep using the broken machine.
+
+170
+00:11:23,897 --> 00:11:24,580
+Speaker 0: They've already got.
+
+171
+00:11:25,082 --> 00:11:32,850
+Speaker 1: yeah, it just worries me that you know It would be nice to have good voting machines that were everywhere that were always the same and always worked.
+
+172
+00:11:32,950 --> 00:11:39,270
+Speaker 1: Well and the company that made them actually still maintain them and made more of them in case something happened.
+
+173
+00:11:39,551 --> 00:11:47,590
+Speaker 0: Well, the thing is Devo was making money supposedly on voting machines Just not enough money for them to care especially considering the bad press they were getting.
+
+174
+00:11:47,851 --> 00:11:48,292
+Speaker 1: Yeah, so
+
+175
+00:11:48,934 --> 00:12:05,790
+Speaker 0: a company could make voting machines and be profitable, which would be great, but it couldn't be continually increasingly profitable which means no venture capitalists to go anywhere near it and Anyone who has the business sense to start a company like that has the understanding that they can make more money in any other industry.
+
+176
+00:12:05,971 --> 00:12:08,364
+Speaker 0: Yeah, so no one smart is going to make voting machine.
+
+177
+00:12:08,404 --> 00:12:10,758
+Speaker 1: Yeah, here's the other problem I just realized just now.
+
+178
+00:12:11,180 --> 00:12:20,756
+Speaker 1: if you make good voting machines Those voting machines will last a long time and not break often and thus once you've sold them to everyone You got nothing left to do.
+
+179
+00:12:20,937 --> 00:12:24,250
+Speaker 0: That's why you always sell them with the service contract and you make them proprietary.
+
+180
+00:12:24,972 --> 00:12:27,200
+Speaker 0: Oh, but then you're doing part of what d-bolt did.
+
+181
+00:12:27,401 --> 00:12:27,702
+Speaker 1: Yep.
+
+182
+00:12:27,883 --> 00:12:28,264
+Speaker 0: Huh?
+
+183
+00:12:28,706 --> 00:12:29,950
+Speaker 0: You know, there's just no easy answer.
+
+184
+00:12:29,990 --> 00:12:46,726
+Speaker 0: I mean the easy answer in a perfect world is that government should make voting machines and just pay for them for like have a standard voting machines need to meet X standard and then Have money and say that no matter what every government election will have these voting machines.
+
+185
+00:12:46,766 --> 00:12:48,190
+Speaker 0: That way there is no chance of problem.
+
+186
+00:12:48,771 --> 00:12:56,030
+Speaker 0: However, there is no way I'd think in our current government that that could be done efficiently and without massive grafts.
+
+187
+00:12:56,150 --> 00:12:57,418
+Speaker 1: It's not it's just not gonna happen.
+
+188
+00:12:57,438 --> 00:13:08,640
+Speaker 0: However much we wanted to even if it wasn't graft I just think it would be in some way there would be so much loss either by corruption or incompetence or just Inefficiency, so I found this great news.
+
+189
+00:13:08,821 --> 00:13:15,583
+Speaker 1: That is not only I don't know bad But also relevant to the topics you have been discussing in recent weeks.
+
+190
+00:13:15,944 --> 00:13:16,927
+Speaker 0: What topics would those be?
+
+191
+00:13:16,947 --> 00:13:22,009
+Speaker 1: Well, I guess intranets and networking in some way, uh All right.
+
+192
+00:13:22,070 --> 00:13:34,229
+Speaker 1: Well for those you don't know an intranet website is a website that you can only view when you're on the same Intranet like if you work for a company and you have your internal corporate website that you can only get to from work.
+
+193
+00:13:34,734 --> 00:13:36,090
+Speaker 1: Yep, that's what we're talking about.
+
+194
+00:13:36,571 --> 00:13:41,726
+Speaker 1: So Best Buy like most other companies of course has intranet websites.
+
+195
+00:13:41,806 --> 00:13:49,329
+Speaker 1: if you are at a Best Buy office or in a Best Buy store using a computer on the Best Buy internal network, you can visit this site.
+
+196
+00:13:49,349 --> 00:14:01,990
+Speaker 1: and the problem is Best Buy also has a real website and they have somehow decided who knows why that the URL for the Best Buy website is Best Buy calm.
+
+197
+00:14:02,491 --> 00:14:11,356
+Speaker 1: However, if you are on the Best Buy network the URL for the internal Best Buy website is also Best Buy calm.
+
+198
+00:14:12,019 --> 00:14:21,890
+Speaker 1: All right, that shouldn't be a problem except Best Buy Advertises prices on their real website and a lot of people go to the Best Buy calm at home.
+
+199
+00:14:22,273 --> 00:14:24,009
+Speaker 1: They see prices for products.
+
+200
+00:14:24,471 --> 00:14:29,910
+Speaker 1: They then go to the actual Best Buy store and they say I saw this price on the website.
+
+201
+00:14:30,251 --> 00:14:32,179
+Speaker 1: How come this is not the price in the store.
+
+202
+00:14:32,580 --> 00:14:40,228
+Speaker 1: the person in the Best Buy store takes a computer which is on the Best Buy Network you see where we're going with this and goes to Best Buy.
+
+203
+00:14:40,288 --> 00:14:51,970
+Speaker 1: calm and The price there is not the same one that the person saw on their computer at home and thus their choice is to either buy The product at the higher price or go home empty-handed.
+
+204
+00:14:52,810 --> 00:14:55,098
+Speaker 1: Thievery, it's basically thievery now.
+
+205
+00:14:55,539 --> 00:14:56,522
+Speaker 1: Is it intentional?
+
+206
+00:14:57,205 --> 00:14:57,987
+Speaker 1: It's a tough call.
+
+207
+00:14:58,007 --> 00:14:59,736
+Speaker 1: whether it's intentional I'm gonna go with.
+
+208
+00:14:59,796 --> 00:15:01,346
+Speaker 0: yes, that's my opinion.
+
+209
+00:15:01,386 --> 00:15:06,424
+Speaker 1: my hunch My guess is I'm saying 60% likely that it is intentional.
+
+210
+00:15:06,465 --> 00:15:09,357
+Speaker 1: However, I do not think it is like Intentional as in.
+
+211
+00:15:09,478 --> 00:15:11,289
+Speaker 1: everyone knows that this is going on.
+
+212
+00:15:11,611 --> 00:15:19,958
+Speaker 1: The employees aren't smart enough to realize that they're going to the secret intranet website, you know to Trick the customers or anything.
+
+213
+00:15:19,979 --> 00:15:21,806
+Speaker 0: Well, if they were they wouldn't be working at Best Buy.
+
+214
+00:15:21,987 --> 00:15:24,114
+Speaker 1: That's for sure You know.
+
+215
+00:15:24,134 --> 00:15:35,349
+Speaker 1: and and if it is intentional, it's probably just a few people at Best Buy saying hey we can totally do this and make the internal website Best Buy calm.
+
+216
+00:15:35,369 --> 00:15:41,987
+Speaker 1: and You know whenever this low prices on the real website We'll just put low ones on the internet site and go ha ha ha.
+
+217
+00:15:42,470 --> 00:15:46,690
+Speaker 0: See I'd have to see a rundown of which prices were different and buy in what direction they were different.
+
+218
+00:15:47,192 --> 00:15:58,890
+Speaker 0: But I can't I mean unless the only way I could see this happening if say the internal one in the external one Generate static pages and pull from their price database at different intervals in which case this could happen legitimately.
+
+219
+00:15:59,291 --> 00:16:03,386
+Speaker 0: However, most likely they just dynamically generate the content.
+
+220
+00:16:03,868 --> 00:16:05,816
+Speaker 0: I mean, I don't know I haven't really looked at Best Buy's website.
+
+221
+00:16:05,836 --> 00:16:09,349
+Speaker 0: If that's the case, I can't see any way this could happen except malfeasance.
+
+222
+00:16:10,433 --> 00:16:16,688
+Speaker 1: The other thing is maybe the internal website, you know There's people who work for Best Buy that manage the content on the websites and stuff like that.
+
+223
+00:16:17,250 --> 00:16:26,648
+Speaker 1: Maybe they purposefully make the internal website different from the external one because the internal one is being visited by Best Buy Employees and whatever and as different customers.
+
+224
+00:16:26,789 --> 00:16:32,870
+Speaker 0: Oh, yeah But the price database the database information holding prices and products should be the same between both.
+
+225
+00:16:33,171 --> 00:16:36,750
+Speaker 0: There's no reason for it not to be unless you expect to rip people off with it.
+
+226
+00:16:37,011 --> 00:16:42,148
+Speaker 1: Well, usually it's like special sales and maybe they have special internal sales and special external sales.
+
+227
+00:16:42,168 --> 00:16:42,810
+Speaker 1: Who knows what they do?
+
+228
+00:16:42,991 --> 00:16:43,714
+Speaker 1: I have no idea.
+
+229
+00:16:44,136 --> 00:16:46,750
+Speaker 1: But yeah, it's a pretty good chance that there's something sketchy.
+
+230
+00:16:47,110 --> 00:16:51,546
+Speaker 0: If they were doing that, why would they make it look exactly like the outside website?
+
+231
+00:16:52,309 --> 00:16:52,650
+Speaker 0: I don't know.
+
+232
+00:16:53,152 --> 00:16:56,209
+Speaker 0: I just I see no legitimate cause for this.
+
+233
+00:16:56,892 --> 00:17:03,775
+Speaker 1: Oh, I like I said, I think there's a 60% chance is intentional by someone at Best Buy and 40% chance.
+
+234
+00:17:03,815 --> 00:17:04,478
+Speaker 1: They're just stupid.
+
+235
+00:17:04,740 --> 00:17:07,307
+Speaker 0: I'm going with an 80% chance of malfeasance All right.
+
+236
+00:17:07,790 --> 00:17:18,657
+Speaker 1: Anyway, the Best Buy basically said that they're going to train their employees on how to get to the real Best Buy .com instead of the intranet Best Buy.com.
+
+237
+00:17:18,678 --> 00:17:20,262
+Speaker 1: Wow, this doesn't happen.
+
+238
+00:17:20,703 --> 00:17:23,210
+Speaker 0: That seems like not the right solution.
+
+239
+00:17:24,250 --> 00:17:31,370
+Speaker 1: Yeah Why don't they just make the same what but make the intranet website a different URL so no one would visit it by accident?
+
+240
+00:17:31,541 --> 00:17:42,540
+Speaker 0: Yeah in fact It seems like the training would just make managers aware of the fact that if they don't want to honor a sale all they Have to do is go to the Best Buy.com internal, huh Gee, I don't know.
+
+241
+00:17:42,561 --> 00:17:43,830
+Speaker 0: I don't Best Buy.
+
+242
+00:17:43,890 --> 00:17:44,713
+Speaker 0: I mean, they're not.
+
+243
+00:17:45,014 --> 00:17:52,524
+Speaker 0: I'm not gonna claim that Best Buy is some evil company because they're not really any worse than most other companies But I just generally dislike many of the practices of Best Buy.
+
+244
+00:17:52,544 --> 00:17:53,890
+Speaker 1: Yeah, Best Buy is pretty sketchy.
+
+245
+00:17:54,110 --> 00:17:58,108
+Speaker 0: I mean mostly the fact that their employees well, probably not their fault.
+
+246
+00:17:58,128 --> 00:17:58,670
+Speaker 0: They're probably forced.
+
+247
+00:17:58,771 --> 00:17:59,968
+Speaker 0: Well, I know they're forced to do it.
+
+248
+00:18:00,572 --> 00:18:04,310
+Speaker 0: They really push those bullshit monster cables on you when you can buy.
+
+249
+00:18:04,631 --> 00:18:08,350
+Speaker 1: The employees at Best Buy are normal people, you know.
+
+250
+00:18:08,430 --> 00:18:11,383
+Speaker 1: They believe that shit just as much as the people they're selling it to.
+
+251
+00:18:11,423 --> 00:18:14,909
+Speaker 1: they're not experts on what they're selling It's it's just all.
+
+252
+00:18:15,552 --> 00:18:21,190
+Speaker 1: Someone who actually understood that technology would have to be you know, a scammer at heart to actually sell it.
+
+253
+00:18:21,250 --> 00:18:24,008
+Speaker 0: Yeah, but the company itself understands and they are scamming.
+
+254
+00:18:24,570 --> 00:18:35,700
+Speaker 1: I think that there are people at monster cables who believe that monster cables are bad things of the day.
+
+255
+00:18:36,940 --> 00:18:45,855
+Speaker 1: Okay, my thing today is something very old that I finally found again after trying a lot Basically Teenage Mutant Ninja Turtles.
+
+256
+00:18:46,338 --> 00:18:54,160
+Speaker 1: No So, um, uh at my work my co-worker is an Emacs user.
+
+257
+00:18:56,063 --> 00:19:00,420
+Speaker 0: If you don't know what that is, don't worry, yes, I'm a VI man.
+
+258
+00:19:01,381 --> 00:19:03,108
+Speaker 0: So I'm also a VI man, though.
+
+259
+00:19:03,128 --> 00:19:05,840
+Speaker 0: I'm also ashamedly a nano pico man.
+
+260
+00:19:06,901 --> 00:19:10,776
+Speaker 1: Yeah, I used to be a nano pico man, but then I sort of don't use those any.
+
+261
+00:19:10,856 --> 00:19:11,820
+Speaker 0: it depends on what I'm doing.
+
+262
+00:19:12,161 --> 00:19:16,179
+Speaker 1: Yeah, hey VI pretty much does it for me no matter what's going on at these days.
+
+263
+00:19:16,741 --> 00:19:23,660
+Speaker 1: Anyway, so, you know, we had a little funny, you know, we're not like vicious girl you're stupid-ass using Emacs or anything.
+
+264
+00:19:23,761 --> 00:19:26,219
+Speaker 1: But you know, we're like he he he Emacs VI he.
+
+265
+00:19:27,122 --> 00:19:33,840
+Speaker 1: So I finally found the old comic that it's a one panel comic that is drawn poorly.
+
+266
+00:19:34,362 --> 00:19:39,200
+Speaker 1: But if you know about Emacs and VI it is hilarious and classic.
+
+267
+00:19:39,381 --> 00:19:42,031
+Speaker 0: Yeah, you found that one when we were like sophomores at RIT.
+
+268
+00:19:42,051 --> 00:19:48,030
+Speaker 1: Yeah, it was probably drawn in like 1978 or some shit like that.
+
+269
+00:19:48,311 --> 00:19:50,620
+Speaker 1: I don't know when they made Emacs, but VI is pretty old.
+
+270
+00:19:50,740 --> 00:19:52,606
+Speaker 1: But yeah, it's a good comic.
+
+271
+00:19:52,866 --> 00:20:04,589
+Speaker 1: if you know about VI and Emacs and you can just replace VI and Emacs with whatever you could replace it with like Wii and PS3 or Anything like that and it'll be still be funny.
+
+272
+00:20:05,292 --> 00:20:07,320
+Speaker 0: So I had a thing of the day.
+
+273
+00:20:07,340 --> 00:20:08,399
+Speaker 0: It was gonna be a throwaway.
+
+274
+00:20:08,721 --> 00:20:16,100
+Speaker 0: So I'll just get it out of the way what it is and then I'll take you down this magical journey that led me to a world I could never imagine.
+
+275
+00:20:16,662 --> 00:20:19,070
+Speaker 0: You see Digg often has pseudoscience.
+
+276
+00:20:19,130 --> 00:20:21,940
+Speaker 1: Sadly this real world that you could never imagine is the real world.
+
+277
+00:20:22,522 --> 00:20:29,188
+Speaker 0: Digg has a lot of pseudoscience bullshit that gets dug up and then gets buried by the berry brigade Which I of which I am a proud member.
+
+278
+00:20:29,590 --> 00:20:31,840
+Speaker 0: and over the weekend, you know, Emily and Alex were over.
+
+279
+00:20:31,900 --> 00:20:41,512
+Speaker 0: I don't know why I said Adam Adam definitely was not over and we're watching videos on Digg and there's this video last night about The conspiracy of science.
+
+280
+00:20:41,974 --> 00:20:45,949
+Speaker 1: the expanding earth Scientists are keeping a secret from you.
+
+281
+00:20:45,969 --> 00:20:57,845
+Speaker 1: They know the real history of the earth and They're telling you some other history of the earth They want you to believe but they know the truth and they're keeping it from you for evil reasons which there aren't any of.
+
+282
+00:20:57,905 --> 00:21:03,703
+Speaker 0: so Scott had buried this without even looking at it because it's obvious what it is some crazy conspiracy not Whatever no big deal.
+
+283
+00:21:04,406 --> 00:21:06,533
+Speaker 0: I decided hey, let's watch this.
+
+284
+00:21:07,135 --> 00:21:17,906
+Speaker 0: and I watched the video and It's this animation that some nut job made of the earth and he makes the earth shrink and all the while He's talking in this crazy kind of.
+
+285
+00:21:18,247 --> 00:21:21,256
+Speaker 0: you know that voice that those conspiracy nuts always have.
+
+286
+00:21:21,717 --> 00:21:25,187
+Speaker 1: there is a kind of Conspiracy of silence among certain scientists.
+
+287
+00:21:25,448 --> 00:21:35,680
+Speaker 1: they know but are not telling you that the upper tectonic plates of earth Also join in the Pacific not partially they join totally.
+
+288
+00:21:36,102 --> 00:21:43,052
+Speaker 1: You are asked to believe that the continents swim or drift about willy-nilly Bumping and crashing as if they were on a grease skillet.
+
+289
+00:21:43,895 --> 00:21:45,100
+Speaker 0: This is not true.
+
+290
+00:21:46,262 --> 00:21:50,040
+Speaker 1: The simple truth is apparently too upsetting to too many apple carts.
+
+291
+00:21:51,824 --> 00:21:55,364
+Speaker 0: So he basically through this video Proports the theory.
+
+292
+00:21:55,665 --> 00:22:08,467
+Speaker 0: Well, I guess the supposition the claim it's barely even a hypothesis if that that the earth Doesn't have these moving plates or Pangea or you know any of that stuff that we have, you know dreams and dreams dreams evidence for.
+
+293
+00:22:08,507 --> 00:22:21,473
+Speaker 0: but no the earth used to be in fact a lot smaller and That's why all the planet all the continents used to be touching each other not because you know They shifted around but because the earth used to be tiny and it's been growing ever since.
+
+294
+00:22:22,395 --> 00:22:29,199
+Speaker 1: and I don't know I didn't watch it long enough to find out his explanation as to where the water came from.
+
+295
+00:22:29,986 --> 00:22:32,838
+Speaker 1: but Where did the water come from?
+
+296
+00:22:33,460 --> 00:22:40,719
+Speaker 0: I mean the video just shows the oceans kind of shrinking and everything shrinking and all the this bad Animation of all the plates and all the continents kind of coming together.
+
+297
+00:22:41,121 --> 00:22:42,966
+Speaker 0: Meanwhile, he's talking his crazy nut job.
+
+298
+00:22:43,026 --> 00:22:44,851
+Speaker 0: And this is one of those typical.
+
+299
+00:22:45,353 --> 00:22:46,797
+Speaker 0: It's reminiscent of time cube.
+
+300
+00:22:47,900 --> 00:22:49,706
+Speaker 1: Ah Yes, the time cube.
+
+301
+00:22:50,047 --> 00:22:51,231
+Speaker 1: It's pretty much the same shit.
+
+302
+00:22:51,271 --> 00:22:54,100
+Speaker 1: some guy makes up some science, you know.
+
+303
+00:22:54,140 --> 00:23:00,040
+Speaker 1: He just finds something that makes a lot of sense to him doesn't follow the scientific method, you know.
+
+304
+00:23:00,120 --> 00:23:16,080
+Speaker 1: He just says hey, I thought of an idea and that idea makes a whole lot of sense to me You know because of coincidences even though I have no actual evidence for it And there's a lot of contradictory evidence that says it's wrong But I'm gonna continue believing it anyway.
+
+305
+00:23:16,541 --> 00:23:20,452
+Speaker 1: And because these scientists don't agree they must all be keeping it a secret.
+
+306
+00:23:20,814 --> 00:23:23,060
+Speaker 1: or they're crazy or evil or something.
+
+307
+00:23:23,181 --> 00:23:24,231
+Speaker 0: Now what I love is this guy.
+
+308
+00:23:24,372 --> 00:23:36,379
+Speaker 0: actually there's this big Conspiracy to hide the truth that it would knock over too many apple carts if people knew the real History of the earth but yet his idea even if it were true wouldn't really change much.
+
+309
+00:23:37,182 --> 00:23:38,726
+Speaker 1: What apple carts is you're knocking over?
+
+310
+00:23:38,786 --> 00:23:43,359
+Speaker 0: what industry I ask you our faithful listeners what industry what?
+
+311
+00:23:44,280 --> 00:23:50,820
+Speaker 0: Industrial complex has a vested interest in hiding the fact that the earth used to be tiny and is growing.
+
+312
+00:23:51,825 --> 00:23:52,078
+Speaker 1: Nobody.
+
+313
+00:23:53,344 --> 00:23:54,800
+Speaker 0: And where did the water come from now?
+
+314
+00:23:55,541 --> 00:23:56,587
+Speaker 0: That was my thing at the day.
+
+315
+00:23:56,608 --> 00:24:00,690
+Speaker 1: in fact if the earth were growing they'll be fantastic Because we wouldn't run out of room now.
+
+316
+00:24:00,730 --> 00:24:03,000
+Speaker 0: We'd have issues with gravity and bumping into things.
+
+317
+00:24:04,102 --> 00:24:07,419
+Speaker 1: We in which case it well well, but what can we do about it?
+
+318
+00:24:07,740 --> 00:24:11,337
+Speaker 0: Well, we could just keep digging holes and making the earth smaller and shooting it out into space.
+
+319
+00:24:11,699 --> 00:24:11,980
+Speaker 1: I guess
+
+320
+00:24:14,225 --> 00:24:37,428
+Speaker 0: When I was a kid actually when I was a little kid And I was learning about space cuz you know every kid wanted to be an astronaut dinosaur Mm-hmm, so I Realized that whenever they went up into space they brought air with them and pee and all that stuff with them And they left stuff out there, and I thought wait a minute astronauts are gonna destroy the earth because they keep taking our air and letting it out in space and Eventually they're gonna take all the air up there.
+
+321
+00:24:37,448 --> 00:24:38,754
+Speaker 0: How are we gonna get it back?
+
+322
+00:24:39,558 --> 00:24:40,060
+Speaker 0: and as a kid?
+
+323
+00:24:40,240 --> 00:24:42,978
+Speaker 0: This was a dire problem as far as I could tell.
+
+324
+00:24:45,462 --> 00:24:57,380
+Speaker 0: But anyway I Would have been done right then after making my little joke telling me You know my childhood fears, and then we would have gone on to talk about network address translation.
+
+325
+00:24:57,521 --> 00:24:58,747
+Speaker 0: But I couldn't.
+
+326
+00:24:58,868 --> 00:25:01,079
+Speaker 0: I mean Scott buried this and I didn't want to dig it.
+
+327
+00:25:01,461 --> 00:25:10,319
+Speaker 0: So I had to search through the buried articles on dig to find it to link to it for my thing at the day And I was doing that before the show being proactive And I watched it again for funny and to get the audio out of it.
+
+328
+00:25:10,721 --> 00:25:23,920
+Speaker 0: And I noticed that in the related articles now the related videos There were like 10 more videos by the same guy with all sorts of crazy conspiracy theories all involving plate tectonics.
+
+329
+00:25:24,381 --> 00:25:27,430
+Speaker 1: Surprisingly enough alright, so the guy's name was what.
+
+330
+00:25:27,852 --> 00:25:30,560
+Speaker 0: so Neil Adams has made all these videos, and they're all crazy.
+
+331
+00:25:31,065 --> 00:25:32,360
+Speaker 0: So I just googled Wikipedia.
+
+332
+00:25:32,481 --> 00:25:37,244
+Speaker 0: You know see look up Neil Adams see if someone wrote an article about this nut job So they'll have something to say on the show.
+
+333
+00:25:37,685 --> 00:25:44,603
+Speaker 0: and the first link is to Neil Adams the semi famous Marvel Drawing dude.
+
+334
+00:25:44,643 --> 00:25:50,040
+Speaker 1: he drew comics for Marvel, and I've never read a Neil Adams comic, but I said yeah, that's right.
+
+335
+00:25:50,321 --> 00:25:54,320
+Speaker 1: I have heard people talk about a guy who makes comics called Neil Adams.
+
+336
+00:25:54,561 --> 00:25:55,365
+Speaker 0: So I think all right.
+
+337
+00:25:55,486 --> 00:25:58,020
+Speaker 0: obviously this guy just shares a name with a nut job.
+
+338
+00:25:58,100 --> 00:26:07,539
+Speaker 0: So I keep searching and when he keeps searching I said wait It might be the same dude, and I think you know what the odds of that are pretty low, so I look around I don't see much else on the internet.
+
+339
+00:26:08,182 --> 00:26:13,300
+Speaker 0: And then I find Neil Adams comm and I see comic stuff and 3d animation stuff.
+
+340
+00:26:13,661 --> 00:26:17,251
+Speaker 0: And I also see crazy conspiracies theory stuff at the bottom.
+
+341
+00:26:17,271 --> 00:26:28,206
+Speaker 0: so I go back to the Wikipedia and down under trivia It says Adams has a very has very publicly promoted a theory Credited to Samuel Warren Carvey.
+
+342
+00:26:28,547 --> 00:26:34,080
+Speaker 0: carry that the earth is hollow and along with every other celestial body is growing.
+
+343
+00:26:34,602 --> 00:26:44,260
+Speaker 0: He has spoken at length on this through articles animations on his official site www.neiladams.com and participated in an article about the subject in Wired magazine.
+
+344
+00:26:44,923 --> 00:26:50,379
+Speaker 1: Well, I can tell you this I have never read a Neil Adams comic to my knowledge So I cannot comment on their quality.
+
+345
+00:26:50,921 --> 00:26:53,990
+Speaker 1: But the earth is most certainly not hollow.
+
+346
+00:26:54,090 --> 00:26:57,400
+Speaker 1: if you dig you will be burned by lava.
+
+347
+00:26:58,002 --> 00:26:59,849
+Speaker 0: Well you might find gold or oil or pirates.
+
+348
+00:27:00,251 --> 00:27:08,420
+Speaker 1: also if the earth was hollow It wouldn't have enough gravity to hold us here, and we would fly off into space.
+
+349
+00:27:09,202 --> 00:27:19,120
+Speaker 0: Now just the fact that I found this nutjob and it turns out that he's a semi-famous comic artist Who's also a nutjob and he's very open about this?
+
+350
+00:27:19,240 --> 00:27:22,720
+Speaker 0: He's made all these videos on the internet, so he's at least somewhat technically confident.
+
+351
+00:27:23,322 --> 00:27:24,887
+Speaker 0: How can someone like this be?
+
+352
+00:27:25,208 --> 00:27:28,640
+Speaker 0: how can you be smart enough to draw comics and make computer?
+
+353
+00:27:28,700 --> 00:27:33,837
+Speaker 0: Animations and yet not smart enough to realize that the idea that the earth is hollow is ludicrous.
+
+354
+00:27:34,358 --> 00:27:39,049
+Speaker 1: ludicrous Because you I don't know this guy's like.
+
+355
+00:27:39,591 --> 00:27:42,261
+Speaker 0: I'm gonna say it straight up Neil Adams for whatever I mean.
+
+356
+00:27:42,301 --> 00:27:43,587
+Speaker 0: he won some awards.
+
+357
+00:27:43,627 --> 00:27:46,840
+Speaker 0: he won the Shazam Awards and the alley Awards and all this stuff.
+
+358
+00:27:46,900 --> 00:27:48,727
+Speaker 0: But he's a crazy nutjob.
+
+359
+00:27:48,807 --> 00:27:49,650
+Speaker 1: He's a kook.
+
+360
+00:27:49,871 --> 00:27:50,653
+Speaker 0: He's an idiot.
+
+361
+00:27:50,694 --> 00:27:51,436
+Speaker 0: He's a crank.
+
+362
+00:27:51,496 --> 00:27:52,480
+Speaker 0: He's a crackpot.
+
+363
+00:27:52,862 --> 00:27:55,454
+Speaker 0: He's a kook and I find this hilarious.
+
+364
+00:27:55,835 --> 00:27:56,800
+Speaker 1: It is quite hilarious.
+
+365
+00:27:57,202 --> 00:28:00,656
+Speaker 0: So anyway, we're going to talk about network address translation.
+
+366
+00:28:01,098 --> 00:28:04,213
+Speaker 0: now again We're gonna talk about this in layman's terms like we've been doing lately.
+
+367
+00:28:04,635 --> 00:28:18,020
+Speaker 0: if you're not familiar with Networking or ports or IP addresses or any of that stuff check out the previous two Monday night episodes where we have talked about IP addresses and ports and all that stuff in layman easy to understand terms
+
+368
+00:28:18,722 --> 00:28:24,280
+Speaker 1: Alright, so before I want to talk about what network translation is I want to talk about the problem it solves.
+
+369
+00:28:24,941 --> 00:28:28,871
+Speaker 1: Do you remember and when we were talking about IP addresses how you know?
+
+370
+00:28:29,071 --> 00:28:35,224
+Speaker 1: IP addresses are between zero dot zero dot zero dot zero and 255 dot 255 to 255.
+
+371
+00:28:35,224 --> 00:28:38,480
+Speaker 1: So how many total possible IP addresses are there?
+
+372
+00:28:39,261 --> 00:28:42,590
+Speaker 1: Let's 255 times 255 times 255 times 255 possible.
+
+373
+00:28:43,834 --> 00:28:45,880
+Speaker 0: I think the point is that there is a finite number.
+
+374
+00:28:46,292 --> 00:28:58,555
+Speaker 0: Yes There are not that many possible IP addresses and also that alone if that's not bad enough a lot of the address is in there Can't be used because they're reserved or they're special or they're part of something else.
+
+375
+00:28:58,615 --> 00:28:59,900
+Speaker 0: So it makes the pool even smaller.
+
+376
+00:29:00,061 --> 00:29:15,360
+Speaker 1: yes, so there are not enough IP addresses and people are thinking about making technologies in the future where your toaster will have an IP address and your refrigerator will have an IP address and if we do That there aren't going to be enough of them for every device that needs one.
+
+377
+00:29:15,922 --> 00:29:27,147
+Speaker 1: so one solution to this problem is to replace the whole IP system with a Different IP system a more different IP Called IP v6.
+
+378
+00:29:27,548 --> 00:29:35,571
+Speaker 0: now IP v6 is interesting because it would give more IP addresses per square meter of the earth's surface than we could probably ever use.
+
+379
+00:29:35,651 --> 00:29:42,800
+Speaker 0: it is in many ways or at least looked at by many experts To be the end-all of many of the problems that IP faces currently.
+
+380
+00:29:43,163 --> 00:29:46,827
+Speaker 0: However, it is one It didn't really exist back in the day.
+
+381
+00:29:47,328 --> 00:29:51,160
+Speaker 0: and two it is not being adopted in any reasonable rate.
+
+382
+00:29:51,603 --> 00:29:53,656
+Speaker 0: Well, yeah, but it also has problems.
+
+383
+00:29:53,757 --> 00:29:59,020
+Speaker 1: not yes The thing is IP v6 would be great, but we're not implementing it in any real world.
+
+384
+00:29:59,381 --> 00:30:07,283
+Speaker 1: You know super situations across the planet because it would basically mean we have to take everything apart and put everything back together again which no one wants to do.
+
+385
+00:30:07,765 --> 00:30:16,220
+Speaker 1: and also we don't really need to go to IP v6 because while We have more devices on the internets than we have IP addresses.
+
+386
+00:30:16,722 --> 00:30:18,491
+Speaker 1: We have a solution to this problem.
+
+387
+00:30:18,913 --> 00:30:20,118
+Speaker 1: the solution is net.
+
+388
+00:30:21,122 --> 00:30:28,260
+Speaker 0: You see back when the IP crunches people call it was starting to really get into full swing and there was a lot of talk About are we gonna run out of IP addresses?
+
+389
+00:30:28,880 --> 00:30:32,395
+Speaker 0: the US has all the IP addresses and it's hard for anyone else to get on the internet.
+
+390
+00:30:32,435 --> 00:30:37,780
+Speaker 0: and there was a big deal and People realize that you could actually deal with this problem in an interesting way.
+
+391
+00:30:38,640 --> 00:30:46,967
+Speaker 0: Let's say you made a box a special box where you plug in your network on one end of it and you plug in the outside World on the other end of it.
+
+392
+00:30:47,187 --> 00:30:50,360
+Speaker 0: So it's a little box between your network and the internet as a whole.
+
+393
+00:30:51,262 --> 00:30:55,996
+Speaker 0: Now, let's say I have a hundred or a thousand computers, but I only have.
+
+394
+00:30:56,738 --> 00:31:00,511
+Speaker 0: I have a hundred computers But I only have one IP address without that box.
+
+395
+00:31:00,973 --> 00:31:02,178
+Speaker 0: I can only have one of my computers.
+
+396
+00:31:02,198 --> 00:31:02,740
+Speaker 0: go online.
+
+397
+00:31:03,082 --> 00:31:04,087
+Speaker 0: It's got an IP address.
+
+398
+00:31:04,469 --> 00:31:06,600
+Speaker 0: all my other computers can't do anything online.
+
+399
+00:31:06,660 --> 00:31:09,174
+Speaker 0: They can't have an IP address because there aren't any.
+
+400
+00:31:09,577 --> 00:31:10,140
+Speaker 1: that sucks.
+
+401
+00:31:10,160 --> 00:31:11,739
+Speaker 1: What are you gonna do about that?
+
+402
+00:31:12,000 --> 00:31:21,840
+Speaker 0: well I could run net and what net would do is allow any one of my computers to borrow and use that one external IP Address whenever I needed to get outside.
+
+403
+00:31:22,241 --> 00:31:27,700
+Speaker 0: So my IP address is ten dot ten dot ten dot ten and I have all my computers inside.
+
+404
+00:31:28,041 --> 00:31:32,660
+Speaker 0: So computer number one can borrow ten dot ten dot ten dot ten whenever he needs to go outside.
+
+405
+00:31:32,983 --> 00:31:40,480
+Speaker 0: So as far as the outside world is concerned He is ten dot ten dot ten dot ten and when he's done then some other computer on the network can get outside.
+
+406
+00:31:40,807 --> 00:31:41,420
+Speaker 1: Wait a second.
+
+407
+00:31:41,522 --> 00:31:50,720
+Speaker 1: But if you do that What if I have five people who all want to read dig at the same time or five people want a bit torrent all at The same time or five people want to play counter-strike all at the same time.
+
+408
+00:31:51,001 --> 00:31:53,839
+Speaker 1: They can't all have ten dot ten dot ten dot ten at the same time.
+
+409
+00:31:54,161 --> 00:32:00,620
+Speaker 0: Well, that's fine because when this technology was used early on there weren't that many uses for the internet for most people.
+
+410
+00:32:00,740 --> 00:32:05,643
+Speaker 0: I mean you'd have a business and you have your corporate intranet and you'd have all your computers In that network.
+
+411
+00:32:06,085 --> 00:32:10,722
+Speaker 0: very few of your computers needed to get to the outside world ever so.
+
+412
+00:32:10,742 --> 00:32:19,548
+Speaker 0: you had an internal private network and you'd use the net for the critical machines that had to get outside or for whatever Communications or a lot of times.
+
+413
+00:32:19,588 --> 00:32:27,339
+Speaker 0: if you had two different networks that happen to have the same IP address Scheme you could translate between the two and connect these two internal networks without problems.
+
+414
+00:32:28,560 --> 00:32:30,326
+Speaker 0: Obviously, this is not the solution.
+
+415
+00:32:30,406 --> 00:32:37,172
+Speaker 0: for you know, having a whole bunch of computers share a single IP address Yeah, I got this company with 10,000 people.
+
+416
+00:32:37,212 --> 00:32:38,337
+Speaker 1: We got one IP address.
+
+417
+00:32:38,417 --> 00:32:40,805
+Speaker 1: Whoo It's gonna be fun.
+
+418
+00:32:41,367 --> 00:32:50,638
+Speaker 0: So along those lines we have port address translation, which very simply Allows a whole bunch of computers to share one or more IP addresses and get outside.
+
+419
+00:32:50,658 --> 00:32:53,032
+Speaker 0: yet You don't need more IP addresses.
+
+420
+00:32:53,052 --> 00:32:54,180
+Speaker 0: They can do it all simultaneously.
+
+421
+00:32:54,642 --> 00:32:58,856
+Speaker 0: So all ten of my computers can get outside using that one IP address.
+
+422
+00:32:58,916 --> 00:33:00,120
+Speaker 0: ten dot ten dot ten dot ten.
+
+423
+00:33:00,762 --> 00:33:05,040
+Speaker 0: Using the magic of mathematics and the Internet, what are those magics?
+
+424
+00:33:05,560 --> 00:33:08,329
+Speaker 1: Let us demystify the magic tricks now.
+
+425
+00:33:08,771 --> 00:33:11,480
+Speaker 0: You actually are very likely using that right now.
+
+426
+00:33:11,560 --> 00:33:20,900
+Speaker 0: Well, you know technically you're using pat port address translation, but colloquially on the internet It is all referred to as Nat so I'm gonna call it Nat for simplicity.
+
+427
+00:33:21,161 --> 00:33:33,579
+Speaker 1: Yep, if you have a link sis or a netgear router of some sort, you know Like you plug your cable modem which has the I real IP address Into say your router or whatever and then you plug a bunch of computers on the other side of it.
+
+428
+00:33:33,920 --> 00:33:36,068
+Speaker 1: Guess what that router is doing the net.
+
+429
+00:33:36,489 --> 00:33:39,560
+Speaker 0: Well, the cable modem usually doesn't actually have the IP address.
+
+430
+00:33:39,641 --> 00:33:40,879
+Speaker 0: It's usually just a dumb device.
+
+431
+00:33:41,040 --> 00:33:45,802
+Speaker 0: Well, yeah, but you know because if you have one computer you plug it into the cable modem and your computer gets that one IP address.
+
+432
+00:33:45,822 --> 00:33:46,022
+Speaker 1: Yeah.
+
+433
+00:33:46,042 --> 00:33:46,223
+Speaker 1: Yeah.
+
+434
+00:33:46,243 --> 00:33:48,892
+Speaker 1: Yeah, but your router gets the IP address from the yeah
+
+435
+00:33:49,835 --> 00:34:00,520
+Speaker 0: as opposed to yeah any yeah Yeah, so back in the old days if you had more than one computer in your house you had to buy multiple IP addresses one For each computer you had and it totally sucked.
+
+436
+00:34:00,621 --> 00:34:02,800
+Speaker 0: They were like five bucks a month on top of what you were paying.
+
+437
+00:34:03,422 --> 00:34:10,849
+Speaker 0: so then these links as routers started coming out and what you could do is buy a router and A lot of people consider this cheating the cable company.
+
+438
+00:34:10,869 --> 00:34:18,800
+Speaker 0: and back in the day a lot of cable modems and a lot of service Providers actually had rules prohibiting you from using net because they want you to buy IP addresses from them.
+
+439
+00:34:19,201 --> 00:34:26,312
+Speaker 1: Yeah, I didn't have actually realized until just now like how far Networking like home networking technology has come.
+
+440
+00:34:26,492 --> 00:34:30,206
+Speaker 0: Yeah when I get a day when I had a cable modem You couldn't buy switches.
+
+441
+00:34:30,507 --> 00:34:32,696
+Speaker 0: you just there weren't consumer switches and you were.
+
+442
+00:34:32,716 --> 00:34:33,800
+Speaker 0: there were consumer routers.
+
+443
+00:34:34,101 --> 00:34:37,492
+Speaker 0: You could buy 10 base hubs that were half duplex and cost 80 bucks.
+
+444
+00:34:38,074 --> 00:34:40,181
+Speaker 1: Yeah nowadays a hub is like $2.
+
+445
+00:34:40,181 --> 00:34:42,760
+Speaker 1: No one even uses hubs really anymore barely anyway.
+
+446
+00:34:43,141 --> 00:34:46,280
+Speaker 1: It's like you can get a switch and you can get a router and they're all stupidly cheap.
+
+447
+00:34:46,701 --> 00:34:48,306
+Speaker 1: You get a router cheaper now.
+
+448
+00:34:48,706 --> 00:34:52,920
+Speaker 1: that's faster than computers were when we were trying to use hubs.
+
+449
+00:34:53,920 --> 00:34:56,170
+Speaker 0: So most likely you're using a router that has net.
+
+450
+00:34:56,230 --> 00:35:00,626
+Speaker 0: that's the way you can have your multiple lock computers connect to the internet But you only have one external IP.
+
+451
+00:35:01,269 --> 00:35:11,699
+Speaker 0: now the way this works and this is kind of important because a lot of people wonder about Port forwarding or why their bit torrent is always slow and all those things and this hopefully illuminate some of that.
+
+452
+00:35:12,742 --> 00:35:17,860
+Speaker 0: You see you've got one IP address on the outside and we talked about ports last time so you know how ports work.
+
+453
+00:35:18,562 --> 00:35:29,930
+Speaker 0: Say I want to connect to a server out there on a telnet to a server somewhere from my computer behind a net so I tell that to the server and My computer has an internal IP address.
+
+454
+00:35:30,272 --> 00:35:35,357
+Speaker 0: Usually your router will have a DHCP So you'll get a 10 dot whatever IP address.
+
+455
+00:35:35,377 --> 00:35:42,017
+Speaker 0: your computers 10 dot 10 dot 10 dot 10 and you connect to the outside IP address that the server you're connecting to.
+
+456
+00:35:42,057 --> 00:35:50,791
+Speaker 0: that has a real IP address like 129 dot 21 dot 21 dot 1. so you connect to it and Your computer goes through the net.
+
+457
+00:35:50,991 --> 00:35:52,317
+Speaker 0: so you connect to the computer.
+
+458
+00:35:52,338 --> 00:36:03,060
+Speaker 0: on the outside The net is transparent but along the way the net takes your IP address 10 dot 10 dot 10 dot 10 Replaces it with its own and sends the message forwards.
+
+459
+00:36:03,120 --> 00:36:10,280
+Speaker 0: It's on all the packets to the computer you're connecting to as though it were you and as though you had that IP address.
+
+460
+00:36:10,862 --> 00:36:22,997
+Speaker 1: So instead of you talking to a computer on the internet you talk to your router and your router which has a real IP address Talks to the computer out on the internet for you And then whatever that computer says back your router gives back to you.
+
+461
+00:36:23,499 --> 00:36:25,888
+Speaker 0: now How could this work if you have more than one computer connecting?
+
+462
+00:36:26,049 --> 00:36:31,310
+Speaker 0: because now I connect out and the thing tries to talk to Me it talks back to my net router.
+
+463
+00:36:31,591 --> 00:36:33,339
+Speaker 0: the router then forwards those packets to me.
+
+464
+00:36:33,822 --> 00:36:37,380
+Speaker 0: How would the router know to forward stuff to me or to my other computer?
+
+465
+00:36:37,940 --> 00:36:41,960
+Speaker 0: How would the other computer out on the outside world know who it was talking to?
+
+466
+00:36:42,400 --> 00:36:45,314
+Speaker 0: What if two people behind a net were both connecting to the same server?
+
+467
+00:36:45,635 --> 00:36:46,499
+Speaker 0: How would it deal with that?
+
+468
+00:36:47,480 --> 00:36:48,599
+Speaker 0: So it does all this with ports.
+
+469
+00:36:49,183 --> 00:36:51,655
+Speaker 0: So I connect through the net to the outside the net.
+
+470
+00:36:51,835 --> 00:36:56,500
+Speaker 0: the outside computer Thinks that I'm coming from my external IP address the net IP address.
+
+471
+00:36:56,942 --> 00:37:14,969
+Speaker 0: But when my computer number one connects through the net it'll talk to Port 23 on the outside external computer from a random high port number say 12,001. and then when computer number two from my inside connects It'll connect to the net will make it.
+
+472
+00:37:15,010 --> 00:37:24,920
+Speaker 0: so it looks like it's connecting to the outside computer from the same IP address But from port 12,002 and it remembers which port Corresponds to which computer on the inside.
+
+473
+00:37:25,341 --> 00:37:35,860
+Speaker 0: So when the server talks back to 12,001 it knows to send those packets to the first computer and when it talks back to 12,002 the net knows to send those packets to the second computer.
+
+474
+00:37:35,940 --> 00:37:36,141
+Speaker 0: Yep,
+
+475
+00:37:36,382 --> 00:37:52,080
+Speaker 1: so as far as the computer out on the internet is concerned it thinks that it's having two Conversations with your router which has a real IP address, you know It thinks it's doing telnet with your router on this port and also telnet with your router on another port.
+
+476
+00:37:52,462 --> 00:38:11,615
+Speaker 1: It's telnetting with your router two times on two ports But your router knows that the telnet on that port is for computer A and the telnet on the other port is for computer B. so two conversations with one router to the outside world is really two Conversations with two computers hiding behind the router.
+
+477
+00:38:12,278 --> 00:38:12,700
+Speaker 1: It's magic.
+
+478
+00:38:13,402 --> 00:38:16,634
+Speaker 0: So now it does this for every single connection that you make.
+
+479
+00:38:16,895 --> 00:38:20,300
+Speaker 0: so if you open your web browser Then it makes another one for all your web connections.
+
+480
+00:38:20,622 --> 00:38:28,195
+Speaker 0: If you know whatever you're doing every application you try to run and connect to the outside It opens up another port for that and it maps that port to your computer.
+
+481
+00:38:28,597 --> 00:38:29,359
+Speaker 0: So you think all right.
+
+482
+00:38:29,681 --> 00:38:40,880
+Speaker 0: Theoretically, I mean if you'll remember to the last episode you have 65,000 535 ports, so Theoretically you could have that many connections shared among one IP address.
+
+483
+00:38:41,321 --> 00:38:46,640
+Speaker 0: The number is actually much much smaller than that just due to the fact that your Linksys router is not actually very powerful.
+
+484
+00:38:46,741 --> 00:38:55,960
+Speaker 1: It can probably only handle a couple thousand at most Yep, so what happens if we had a thousand computers, and we had everyone opened up a web browser and an instant messenger.
+
+485
+00:38:56,321 --> 00:39:01,278
+Speaker 1: That's like 2,000 or right there at least and the router can't really handle that.
+
+486
+00:39:01,680 --> 00:39:03,527
+Speaker 1: now Let's say for even forget.
+
+487
+00:39:03,547 --> 00:39:05,777
+Speaker 1: Let's say the router had a supercomputer in it right.
+
+488
+00:39:05,797 --> 00:39:06,600
+Speaker 1: It was a super router.
+
+489
+00:39:07,022 --> 00:39:10,716
+Speaker 1: What if we had 70,000 computers, and they all open the web browser?
+
+490
+00:39:11,057 --> 00:39:11,619
+Speaker 1: What do you do?
+
+491
+00:39:12,200 --> 00:39:19,024
+Speaker 0: Well it just fails and almost no consumer level equipment gives you the power or the capacity to Deal with that problem.
+
+492
+00:39:19,546 --> 00:39:20,912
+Speaker 0: Oh, it's not something you have to worry about.
+
+493
+00:39:21,032 --> 00:39:21,614
+Speaker 0: that sucks.
+
+494
+00:39:21,956 --> 00:39:24,103
+Speaker 0: Yeah, luckily there's.
+
+495
+00:39:24,264 --> 00:39:31,465
+Speaker 0: I can't think of anyone even us who would ever have a home network that would outstrip a Consumer level Linksys net.
+
+496
+00:39:31,625 --> 00:39:40,069
+Speaker 1: I guess if you had some spywares that kept opening up ports to spam servers all over the world then it Might probably wouldn't happen now.
+
+497
+00:39:40,230 --> 00:39:41,897
+Speaker 1: No just wouldn't happen now.
+
+498
+00:39:41,917 --> 00:39:42,660
+Speaker 0: That's pretty much it.
+
+499
+00:39:42,780 --> 00:39:44,997
+Speaker 0: That's how net works on a basic basic level.
+
+500
+00:39:45,319 --> 00:39:49,354
+Speaker 0: now There are a lot of ramifications of this number one we can touch on briefly.
+
+501
+00:39:49,695 --> 00:39:51,783
+Speaker 0: think about it every time I go out.
+
+502
+00:39:52,244 --> 00:39:53,849
+Speaker 0: it maps whatever port you know.
+
+503
+00:39:53,889 --> 00:39:59,140
+Speaker 0: it maps the ports to figure out that any traffic coming back from whatever I went out on will go to my computer.
+
+504
+00:40:00,282 --> 00:40:03,079
+Speaker 0: What if something from the outside wants to connect to me?
+
+505
+00:40:03,640 --> 00:40:07,080
+Speaker 0: What if I've got a FTP server on my internal network?
+
+506
+00:40:07,140 --> 00:40:09,196
+Speaker 0: And I want someone on the outside to be able to connect to me.
+
+507
+00:40:09,559 --> 00:40:16,620
+Speaker 0: well They try to connect to the router on port the FTP port and the router says I'm not running an FTP server.
+
+508
+00:40:16,700 --> 00:40:17,524
+Speaker 0: Go fuck yourself.
+
+509
+00:40:17,925 --> 00:40:21,480
+Speaker 1: Yep, because remember the real IP address is your router.
+
+510
+00:40:21,701 --> 00:40:29,187
+Speaker 1: That's the real IP address on the internet, so if someone tries to connect to that from the outside to your router They're connecting to a router.
+
+511
+00:40:29,608 --> 00:40:31,135
+Speaker 1: that router doesn't know shit.
+
+512
+00:40:31,376 --> 00:40:32,099
+Speaker 1: It's not a compute.
+
+513
+00:40:32,139 --> 00:40:37,760
+Speaker 1: well I guess it is technically a computer But it doesn't have any Services running on any ports waiting for connections.
+
+514
+00:40:38,243 --> 00:40:41,060
+Speaker 1: So if you try to connect to that router from the outside world it goes.
+
+515
+00:40:41,461 --> 00:40:44,571
+Speaker 1: I don't know what the hell you want, and this is a good thing.
+
+516
+00:40:44,872 --> 00:40:47,660
+Speaker 1: Yeah as it gets you a lot of security.
+
+517
+00:40:48,242 --> 00:40:55,843
+Speaker 0: yeah, if you are a little more technically adept you can install a program like ethereal or whatever they call it now and Sniff wireshark.
+
+518
+00:40:56,164 --> 00:41:01,220
+Speaker 0: yeah, and try to look at the stuff that's going on from your cable modem or from your DSL.
+
+519
+00:41:01,480 --> 00:41:18,100
+Speaker 0: Yeah, just plug your computer directly into your cable modem, and then run ethereal or wireshark or you'll see thousands upon thousands upon thousands of worms attacks spams Garbage gibberish just can't this constant sea of never-ending bullshit?
+
+520
+00:41:18,675 --> 00:41:23,960
+Speaker 1: Yep So imagine if your computer instead of your router had the real IP address itself.
+
+521
+00:41:24,702 --> 00:41:34,840
+Speaker 1: All of that stuff would be hitting against your computer and your computer would have to have some sort of firewall or other Security measures installed so that it would have to say no no no go away.
+
+522
+00:41:34,987 --> 00:41:35,156
+Speaker 1: No.
+
+523
+00:41:35,481 --> 00:41:42,103
+Speaker 0: I mean you know all those windows worms that came about especially in the 90s where worm would go around connecting to like windows shares And messing things up.
+
+524
+00:41:42,605 --> 00:41:49,500
+Speaker 1: all those things would do is they would say if you see a computer try to connect to it on this Port and then give it this information.
+
+525
+00:41:50,004 --> 00:41:51,879
+Speaker 0: So they'll try to connect to your computer on that port.
+
+526
+00:41:52,301 --> 00:41:55,957
+Speaker 0: But your computer is actually the router and the routers not listening on that port.
+
+527
+00:41:55,997 --> 00:41:58,528
+Speaker 0: so it doesn't care What comes in on that part doesn't even look at it.
+
+528
+00:41:58,749 --> 00:42:00,940
+Speaker 1: so nothing will come into your network?
+
+529
+00:42:01,480 --> 00:42:08,589
+Speaker 1: Unsolicited and all your computers behind the NAT router will be safe Unless you do something stupid like you know.
+
+530
+00:42:08,649 --> 00:42:11,098
+Speaker 1: download an outlook attachment or something like that.
+
+531
+00:42:11,661 --> 00:42:25,177
+Speaker 1: Yes, as far as worms that are trying to attack you from the outside Go they can't get past the router unless you let them so it keeps the outside world out Which is good from a security standpoint, but it's bad for a lot of things.
+
+532
+00:42:25,558 --> 00:42:26,964
+Speaker 0: for example Bit torrent.
+
+533
+00:42:27,385 --> 00:42:31,640
+Speaker 0: you have to not go into details about bit torrent because we could do a show on this more specifically.
+
+534
+00:42:32,382 --> 00:42:33,188
+Speaker 0: Actually, let's be a good idea.
+
+535
+00:42:33,208 --> 00:42:38,355
+Speaker 0: We do a separate show on Specific applications and what you should do to your router to make them work better.
+
+536
+00:42:38,375 --> 00:42:41,127
+Speaker 1: Yeah, I don't know There's a lot mostly just port numbers.
+
+537
+00:42:41,408 --> 00:42:43,938
+Speaker 0: Yeah, but even then that's we could do a forum thread at least.
+
+538
+00:42:44,139 --> 00:42:51,640
+Speaker 0: yeah Because remember steam you got to do weird stuff to make steam work Only if you have more than one person playing games in the same house.
+
+539
+00:42:51,740 --> 00:42:57,160
+Speaker 0: Yes, which is often the case with geeks it is because very few people have multiple IP addresses, it's true.
+
+540
+00:42:58,681 --> 00:43:02,660
+Speaker 0: So this is good from a security standpoint because it keeps all the outside out.
+
+541
+00:43:02,760 --> 00:43:10,347
+Speaker 0: Nothing can get in unless your router is compromised bad firmware or a loophole or a security problem or whatever Which is kind of rare.
+
+542
+00:43:10,831 --> 00:43:11,919
+Speaker 1: that's almost never gonna happen.
+
+543
+00:43:12,442 --> 00:43:14,774
+Speaker 0: Oh, well, you staff and way back in the day wait bad not today.
+
+544
+00:43:14,794 --> 00:43:16,020
+Speaker 1: You're like not likely.
+
+545
+00:43:16,201 --> 00:43:24,240
+Speaker 0: Yeah, not likely at all not something you have to worry about Or two if you open up a hole to let stuff in now what if you want stuff to come in?
+
+546
+00:43:24,481 --> 00:43:26,711
+Speaker 0: I mean I said before my little FTP server.
+
+547
+00:43:26,992 --> 00:43:28,600
+Speaker 0: No one on the outside can connect to it.
+
+548
+00:43:28,922 --> 00:43:30,699
+Speaker 0: What if I want people to be able to connect to it?
+
+549
+00:43:31,300 --> 00:43:35,680
+Speaker 0: How can I open it up so that stuff I want to get through can get through automatically?
+
+550
+00:43:36,102 --> 00:43:38,132
+Speaker 0: But yet all that cruft doesn't get through.
+
+551
+00:43:38,152 --> 00:43:39,660
+Speaker 1: Well, here's the answer.
+
+552
+00:43:39,740 --> 00:43:42,850
+Speaker 1: The answer is something you may have heard of called port forwarding.
+
+553
+00:43:43,131 --> 00:43:44,435
+Speaker 0: now port forwarding is.
+
+554
+00:43:44,796 --> 00:43:52,636
+Speaker 0: I mean, it's not a misnomer But it might be misleading It's port forwarding in that it tells the router the net how to forward ports.
+
+555
+00:43:52,997 --> 00:43:53,940
+Speaker 0: Normally is dynamic.
+
+556
+00:43:54,321 --> 00:44:10,760
+Speaker 0: So whenever I open a new connection the router assigns up an arbitrary port number to whatever I'm doing and it remembers that until whatever I'm doing is done a Static one a port forward is where you on your own very specifically define a port say port
+
+557
+00:44:12,521 --> 00:44:15,471
+Speaker 1: Yep, you go to the router and you say hey router and the router goes.
+
+558
+00:44:15,511 --> 00:44:15,732
+Speaker 1: what.
+
+559
+00:44:15,852 --> 00:44:24,858
+Speaker 1: and you say router if anyone tries to connect To you on port 443 you send whatever they're telling you over to computer number one.
+
+560
+00:44:24,979 --> 00:44:27,039
+Speaker 1: You hear me Alright, that's what you're gonna do now.
+
+561
+00:44:27,441 --> 00:44:39,018
+Speaker 1: So now normally if someone tried to connect on port 443 because anyone trying to connect to a NAT router the router goes What are you trying to connect to me from the wrong side for get away, but now it says oh wait you wanted 443, right?
+
+562
+00:44:39,821 --> 00:44:42,478
+Speaker 1: I'm gonna send that shit over to computer number a. that's what I'm gonna do.
+
+563
+00:44:43,121 --> 00:45:06,240
+Speaker 1: so if you had an FTP server on computer number a and you tell the router if it sees any traffic on port FTP and Send it over to computer number a now people can connect to your router on the FTP port and it would be just like Connecting to your computer on the FTP port because the router just sends all that stuff to the computer.
+
+564
+00:45:07,600 --> 00:45:16,516
+Speaker 0: Now FTP right wasn't the best example because a lot of people out there in the world even professionals In fact a part of my job at IBM was fixing this.
+
+565
+00:45:16,536 --> 00:45:20,209
+Speaker 0: for people often There are two kinds of FTP passive and active.
+
+566
+00:45:20,490 --> 00:45:21,293
+Speaker 0: not gonna get into it.
+
+567
+00:45:21,353 --> 00:45:22,336
+Speaker 0: It's kind of complicated.
+
+568
+00:45:22,678 --> 00:45:30,160
+Speaker 0: suffice to say FTP as a protocol requires a little bit more fiddling than just opening a port forward in some situations.
+
+569
+00:45:30,562 --> 00:45:30,883
+Speaker 1: All right.
+
+570
+00:45:30,903 --> 00:45:32,088
+Speaker 1: So let's say you have a web server.
+
+571
+00:45:32,108 --> 00:45:34,900
+Speaker 1: There we go port 80 on port 80 on your computer.
+
+572
+00:45:35,301 --> 00:45:40,580
+Speaker 1: No one on the outside world can visit port 80 on your computer because it's hiding behind the router.
+
+573
+00:45:41,041 --> 00:45:49,108
+Speaker 1: So you tell the router hey router if anyone's looking for port 80 you tell them to see me and you tell it which computer It want you want it to go to.
+
+574
+00:45:49,309 --> 00:46:05,605
+Speaker 1: so now if anyone connects to the router on port 80 The router goes to the web server and sends all the port 80 traffic that away and then the web pages go out and everything's happy As long as you don't have more than one computer that you want to be on port 80. because well you can't Only one computer per port.
+
+575
+00:46:05,645 --> 00:46:05,986
+Speaker 1: That's it.
+
+576
+00:46:06,347 --> 00:46:08,113
+Speaker 1: Unless you do two nets.
+
+577
+00:46:08,856 --> 00:46:10,040
+Speaker 0: Oh, no, you can't do two nets.
+
+578
+00:46:10,343 --> 00:46:11,857
+Speaker 1: I think you can actually can't you?
+
+579
+00:46:12,079 --> 00:46:14,047
+Speaker 0: well You can have any on a real router.
+
+580
+00:46:14,087 --> 00:46:18,826
+Speaker 0: you can have any number of IP addresses shared among your netting and you can do All sorts of fancy things.
+
+581
+00:46:19,228 --> 00:46:21,839
+Speaker 0: links is without special firmware hacks not so much.
+
+582
+00:46:22,101 --> 00:46:24,470
+Speaker 1: Well, couldn't you plug a links is into a links.
+
+583
+00:46:24,550 --> 00:46:27,040
+Speaker 0: is that would not do what you think it would do?
+
+584
+00:46:27,321 --> 00:46:29,128
+Speaker 0: No, that is a terrible idea.
+
+585
+00:46:29,228 --> 00:46:30,212
+Speaker 1: I figured it would work.
+
+586
+00:46:30,252 --> 00:46:30,835
+Speaker 1: Wouldn't it work?
+
+587
+00:46:31,136 --> 00:46:32,079
+Speaker 0: How what would it do?
+
+588
+00:46:32,743 --> 00:46:35,380
+Speaker 1: Well, you just you'd have to make sure that they were different IPs.
+
+589
+00:46:35,480 --> 00:46:36,142
+Speaker 1: I guess right?
+
+590
+00:46:36,523 --> 00:46:41,960
+Speaker 0: how would your external IP address have more than one port 80 if you'd had an added net?
+
+591
+00:46:42,705 --> 00:46:43,470
+Speaker 1: That is true.
+
+592
+00:46:43,491 --> 00:46:49,128
+Speaker 1: Yes That is true, yes, but it would.
+
+593
+00:46:49,208 --> 00:46:51,534
+Speaker 1: it would make an added net which is useless.
+
+594
+00:46:51,655 --> 00:46:53,380
+Speaker 1: it is useless, but it would work.
+
+595
+00:46:53,841 --> 00:46:59,180
+Speaker 0: Yeah, but anyway that is one of the issues one that you can't have more than one thing on a given port.
+
+596
+00:46:59,521 --> 00:47:05,400
+Speaker 0: That's why steam causes problems because by default steam always wants to connect back to your computer on the same port.
+
+597
+00:47:05,762 --> 00:47:11,890
+Speaker 0: So if you have three people in your house all trying to play steam at the same time Opening one port forward for that port.
+
+598
+00:47:12,071 --> 00:47:14,540
+Speaker 0: All right, which of my three computers do I point it at?
+
+599
+00:47:14,600 --> 00:47:16,199
+Speaker 0: Because the other two people can't play on steam?
+
+600
+00:47:16,794 --> 00:47:32,412
+Speaker 1: Yep You need to do is you need to change the ports so that one person uses one port and one person uses another port and One person uses another port and you need to tell steam which ports to connect on so that it doesn't screw around Because if you all try to use the same port then it doesn't work at all.
+
+601
+00:47:32,653 --> 00:47:45,289
+Speaker 0: now granted that in many ways is a failing Of steam and Scott and I have argued a lot about this But I think that steam in many ways dealing with ports and networking was designed very poorly But we're not gonna get into that.
+
+602
+00:47:46,032 --> 00:47:48,000
+Speaker 0: This does present a security problem.
+
+603
+00:47:48,060 --> 00:48:00,132
+Speaker 0: However, when you open a port for forwarding because you have now circumvented the net for that one thing So say you open up port 443 and you point it at your your 443 computer that runs 443 stop.
+
+604
+00:48:00,714 --> 00:48:02,080
+Speaker 0: anything on the internet can hit that.
+
+605
+00:48:02,622 --> 00:48:07,180
+Speaker 0: So you have basically exposed your computer to the outside world in one little hole.
+
+606
+00:48:07,702 --> 00:48:14,447
+Speaker 0: So if there's an exploit that would have used port 443 to break in and it hits your router It'll hit that computers though.
+
+607
+00:48:14,467 --> 00:48:15,432
+Speaker 0: The router wasn't even there.
+
+608
+00:48:15,914 --> 00:48:17,160
+Speaker 1: Yeah, it's like you could open it.
+
+609
+00:48:17,180 --> 00:48:25,860
+Speaker 1: You can poke a hole in the router on one port, you know And basically make a little hose that goes from that hole into one computer on your network on that port.
+
+610
+00:48:26,302 --> 00:48:34,420
+Speaker 1: And but now that protection that the router was giving you by keeping the bad stuff out Well any bad stuff that falls into that hole is gonna go straight through.
+
+611
+00:48:34,881 --> 00:48:37,931
+Speaker 1: So you got to be real careful when you port forward and when you don't.
+
+612
+00:48:38,272 --> 00:48:46,540
+Speaker 1: I highly recommend that if you are port forwarding Because you need to do something like that open up the port when you're using it and close it when you're not using it.
+
+613
+00:48:46,961 --> 00:48:48,608
+Speaker 0: That's really a giant pain in the ass.
+
+614
+00:48:48,649 --> 00:48:51,160
+Speaker 1: in most it is a pain in the ass, but it's still a good idea.
+
+615
+00:48:51,521 --> 00:48:55,312
+Speaker 0: Yeah more likely you're gonna open up the ports for things like bit torrent or steam.
+
+616
+00:48:55,694 --> 00:48:57,700
+Speaker 0: Yeah bit torrent is probably the number one.
+
+617
+00:48:58,062 --> 00:48:58,848
+Speaker 0: I'm not gonna get into it.
+
+618
+00:48:58,888 --> 00:48:59,653
+Speaker 0: You can just google around.
+
+619
+00:48:59,673 --> 00:49:00,540
+Speaker 0: There's a million guides.
+
+620
+00:49:00,821 --> 00:49:02,469
+Speaker 0: It'll tell you exactly what ports to use.
+
+621
+00:49:02,871 --> 00:49:13,240
+Speaker 0: or if you're using something like a serious you can tell bit torrent to use a Specific port for all incoming traffic and then tell your router to forward that one port to your computer and it can be arbitrary.
+
+622
+00:49:13,401 --> 00:49:16,600
+Speaker 0: So you pick a different one for every computer that'll use bit torrent and everyone's happy.
+
+623
+00:49:17,061 --> 00:49:33,719
+Speaker 0: there's really not much more we can talk about unless we go into the details of specific applications or if you wanted me to Talk at length about how exactly NAT works and how it Forwards these ports around and how it defines which ports to use and the different kinds of NAT and the business cases and the things That no one cares about.
+
+624
+00:49:34,202 --> 00:49:41,180
+Speaker 1: Mostly they don't care about them because unless you become a networking guy You don't need to know them to have your home network working with NAT.
+
+625
+00:49:41,502 --> 00:49:43,820
+Speaker 1: You only need to know what we've told you already.
+
+626
+00:49:44,443 --> 00:49:50,039
+Speaker 1: It makes it so that you can have one real IP address on the real internet But have many computers in your house.
+
+627
+00:49:50,702 --> 00:49:59,900
+Speaker 1: It makes it so that you're you can keep all the bad worms out and you can poke holes in it So that people can still connect to things that you might be hosting inside your house.
+
+628
+00:50:00,201 --> 00:50:10,820
+Speaker 0: it also had the added benefit of making sure we didn't run out of IP addresses because Thousands and thousands and thousands of computers all around the world don't have real external IP addresses.
+
+629
+00:50:11,161 --> 00:50:23,120
+Speaker 1: They share IP addresses and that way we still have enough IP addresses at least for now to go around and we don't need to Take the entire internet apart and rebuild it with ipv6 quite so soon because that's not gonna be fun.
+
+630
+00:50:23,884 --> 00:50:26,620
+Speaker 0: Yeah, well it is real fun for me because I love that stuff.
+
+631
+00:50:26,961 --> 00:50:29,712
+Speaker 0: I did a project tonight, but it's not gonna be fun for the internets.
+
+632
+00:50:30,194 --> 00:50:30,595
+Speaker 0: No, it's not.
+
+633
+00:50:30,655 --> 00:50:31,840
+Speaker 1: It's like going to the doctor.
+
+634
+00:50:31,981 --> 00:50:33,899
+Speaker 1: It's good for you, but it's gonna hurt.
+
+635
+00:50:34,301 --> 00:50:39,820
+Speaker 0: Well plus as much as I like ipv6 is definitely not the perfect solution and it's not a perfect solution.
+
+636
+00:50:39,860 --> 00:50:45,014
+Speaker 0: But there's no such thing as a perfect solution other than perfect AI and a semantic web and all that.
+
+637
+00:50:45,155 --> 00:50:45,375
+Speaker 0: Yep.
+
+638
+00:50:45,676 --> 00:50:51,438
+Speaker 1: However, ipv6 Technic technologically speaking is cool is superior to ipv4.
+
+639
+00:50:58,123 --> 00:51:00,712
+Speaker 0: This has been geek nights with rim and Scott special.
+
+640
+00:51:00,732 --> 00:51:02,860
+Speaker 0: Thanks to DJ pretzel for the opening music.
+
+641
+00:51:03,563 --> 00:51:14,840
+Speaker 1: Be sure to visit our website at www.frontroadcrew.com Where you'll find show notes links our awesome forum a link to our crapper map and links to all the RSS feeds.
+
+642
+00:51:15,341 --> 00:51:21,000
+Speaker 0: We say feeds plural because geek nights airs four nights a week covering four different brands of geekery.
+
+643
+00:51:21,542 --> 00:51:23,711
+Speaker 0: Mondays are science and technology Tuesdays.
+
+644
+00:51:23,751 --> 00:51:25,800
+Speaker 0: We have video games board games and RPGs.
+
+645
+00:51:26,221 --> 00:51:31,640
+Speaker 0: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+646
+00:51:32,081 --> 00:51:40,204
+Speaker 1: You can send us feedback by email to geek nights at front row crew comm or you can send audio feedback Via audio.
+
+647
+00:51:40,505 --> 00:51:43,740
+Speaker 1: just click the link that says send me an audio on the right side of our website.
+
+648
+00:51:44,083 --> 00:51:44,991
+Speaker 0: If you like what you hear.
+
+649
+00:51:45,072 --> 00:51:49,230
+Speaker 0: you can catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+650
+00:51:49,450 --> 00:51:52,560
+Speaker 0: for the complete archives visit the website which has everything.
+
+651
+00:51:53,141 --> 00:51:58,057
+Speaker 1: Geek nights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+652
+00:51:59,641 --> 00:52:01,467
+Speaker 1: This means you can do whatever you want with it.
+
+653
+00:52:01,788 --> 00:52:05,699
+Speaker 1: As long as you give us credit don't make money and share it in kind.
+
+654
+00:52:06,502 --> 00:52:10,011
+Speaker 1: Geek nights is recorded live with no studio and no audience.
+
+655
+00:52:10,412 --> 00:52:11,936
+Speaker 1: But unlike those other late shows.
+
+656
+00:52:12,216 --> 00:52:13,560
+Speaker 1: It's actually recorded at night.
+

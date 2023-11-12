@@ -1,0 +1,3360 @@
+1
+00:00:09,020 --> 00:00:10,767
+Scott: It's Tuesday, June 5th.
+
+2
+00:00:11,470 --> 00:00:12,072
+Scott: I'm Scott.
+
+3
+00:00:12,313 --> 00:00:15,782
+Scott: I'm Rym, and this is GeekNights Tonight.
+
+4
+00:00:16,204 --> 00:00:17,148
+Scott: we're finally doing it.
+
+5
+00:00:17,731 --> 00:00:19,779
+Scott: We're showing you all our pokemons.
+
+6
+00:00:23,253 --> 00:00:24,247
+Scott: Let's do this.
+
+7
+00:00:27,052 --> 00:00:34,408
+Rym: So we know a lot of you went to listen to GeekNights in the wee hours of this morning and ended up hearing some techno instead.
+
+8
+00:00:35,276 --> 00:00:36,909
+Scott: Well, that's what happens with.
+
+9
+00:00:37,816 --> 00:00:48,005
+Scott: Well, I guess it's primarily WordPress's fault, but it's also A lack of a feature in feedburner that many people would like that they do not have.
+
+10
+00:00:48,066 --> 00:00:49,812
+Scott: but I could understand why they don't have It.
+
+11
+00:00:50,378 --> 00:01:01,166
+Scott: but yeah, basically Rym's thing of the day was a couple of mp3s and he linked Directly to those mp3s instead of linking to a web page that then linked to the mp3s.
+
+12
+00:01:01,387 --> 00:01:03,999
+Rym: now part of the reason I did That was because I was lazy.
+
+13
+00:01:04,160 --> 00:01:05,930
+Rym: I had him ready to go in my delicious.
+
+14
+00:01:06,411 --> 00:01:10,383
+Rym: It was late and due to an unrelated issue where Rezone works now.
+
+15
+00:01:10,424 --> 00:01:11,647
+Rym: We got Jacko and everything's great.
+
+16
+00:01:11,728 --> 00:01:18,838
+Rym: But uh, little problem now with audacity in feisty and I can't use it currently.
+
+17
+00:01:18,858 --> 00:01:23,217
+Rym: So I had to edit the show kind of Sloppily last night and it was late.
+
+18
+00:01:23,258 --> 00:01:24,582
+Rym: So I was like that fuck it link link.
+
+19
+00:01:25,084 --> 00:01:26,770
+Rym: I saw the feed appear and I went to bed.
+
+20
+00:01:26,895 --> 00:01:38,765
+Scott: Yep but basically WordPress will look and if you link to an mp3 or a video or any other sort of media file in your blog post WordPress will try to see if that media file is out there and it checks it.
+
+21
+00:01:39,226 --> 00:01:45,609
+Scott: and if it's out there Then it will add a link to it in the enclosures in the feed and feed burna will preserve those enclosures.
+
+22
+00:01:45,669 --> 00:01:49,058
+Scott: thus That's how we get the podcast feed to work.
+
+23
+00:01:49,099 --> 00:01:53,330
+Scott: We put a link to the mp3 of the yik nights episode in the blog post.
+
+24
+00:01:53,390 --> 00:01:54,455
+Scott: That's the word GeekNights.
+
+25
+00:01:54,495 --> 00:01:58,250
+Scott: A lot of people don't realize the word GeekNights is a link that links to the episode.
+
+26
+00:01:58,433 --> 00:01:58,962
+Rym: Yeah, you know what?
+
+27
+00:01:59,105 --> 00:01:59,390
+Rym: You know what?
+
+28
+00:02:00,814 --> 00:02:03,615
+Rym: There's also a link on Mp3 download.
+
+29
+00:02:03,675 --> 00:02:07,030
+Rym: we still get people asking how to download old episodes.
+
+30
+00:02:07,291 --> 00:02:12,610
+Scott: Some of the old episodes don't have the mp3 download link and people don't realize they can click on the word GeekNights.
+
+31
+00:02:12,911 --> 00:02:13,734
+Rym: Well, they could also.
+
+32
+00:02:13,754 --> 00:02:21,950
+Rym: I would assume if they're going through the archives you could figure out at some point even I mean It's a small number of episodes that don't have that link and I'll fix them whenever I get around to it.
+
+33
+00:02:22,231 --> 00:02:25,530
+Scott: I'm gonna probably have to redo a whole bunch of the database when I update the website.
+
+34
+00:02:25,651 --> 00:02:29,650
+Rym: Anyway, consider that a small test of your problem-solving skills.
+
+35
+00:02:30,272 --> 00:02:38,406
+Rym: Let's see so far and you're listening every episode of this podcast ever has had a very consistent Filename convention based on the date.
+
+36
+00:02:38,426 --> 00:02:39,110
+Rym: It was published.
+
+37
+00:02:39,150 --> 00:02:43,490
+Scott: I wonder if I can guess the URL of the episode by looking at the title.
+
+38
+00:02:44,032 --> 00:02:49,852
+Rym: We uploaded last year before we went to Otakon in the week of awesome a week and a half's worth of shows Before we
+
+39
+00:02:49,912 --> 00:02:50,173
+Scott: left
+
+40
+00:02:50,534 --> 00:02:54,366
+Rym: and then we set WordPress up to automatically post him every night while we were gone
+
+41
+00:02:54,667 --> 00:03:01,980
+Scott: and nobody Downloaded the episodes before they were available Even though it was obvious what the file names were
+
+42
+00:03:02,341 --> 00:03:03,705
+Rym: and we it was obvious.
+
+43
+00:03:03,725 --> 00:03:05,830
+Rym: We were out of town and yeah Yeah.
+
+44
+00:03:06,118 --> 00:03:07,112
+Scott: so anyway we had.
+
+45
+00:03:07,132 --> 00:03:15,130
+Scott: we linked to three mp3s in the blog post thus making three enclosures and That kind of screwed things up for some people depending on their feed readers.
+
+46
+00:03:15,150 --> 00:03:17,770
+Rym: Yeah, iTunes did some people down to know what to do at all.
+
+47
+00:03:17,810 --> 00:03:21,429
+Scott: Yeah, some people downloaded rims thing of the day instead of the episode.
+
+48
+00:03:21,831 --> 00:03:27,329
+Rym: So if you heard of some pretty nice techno, well, uh, you can listen to the actual show.
+
+49
+00:03:27,349 --> 00:03:28,755
+Rym: now It's up and working.
+
+50
+00:03:28,936 --> 00:03:31,629
+Scott: Yes, and if you're having trouble just go to the front row crew.
+
+51
+00:03:31,669 --> 00:03:34,504
+Rym: calm Yeah, I'd listen to that show if I were you though.
+
+52
+00:03:34,545 --> 00:03:35,430
+Rym: the techno is pretty good.
+
+53
+00:03:35,691 --> 00:03:37,219
+Rym: You might want to hear what that techno was.
+
+54
+00:03:37,421 --> 00:03:39,110
+Scott: Yeah, it's a good you listen to the thing of the day, too.
+
+55
+00:03:39,191 --> 00:03:39,942
+Scott: Don't skip on that.
+
+56
+00:03:40,145 --> 00:03:57,030
+Rym: Yeah All right, so this isn't really new news but I'd forgotten about this entirely and then there was some article on dig about it and Suddenly a flood of all these I wouldn't say bad but definitely tainted memories came to light in my brain.
+
+57
+00:03:57,794 --> 00:04:08,210
+Rym: You see in 2002 a company Nominally called phantom Entertainment announced that they were going to make something called the phantom gaming console.
+
+58
+00:04:08,290 --> 00:04:17,490
+Scott: Yeah, well the idea of the phantom gaming console was an idea that sounds good on paper But if you know anything about technology you realize is basically stupid and impossible.
+
+59
+00:04:17,570 --> 00:04:20,260
+Scott: The idea was you would get PC games.
+
+60
+00:04:20,440 --> 00:04:24,895
+Scott: just buy any old PC game by half-life 2 by Quake 3 by whatever.
+
+61
+00:04:25,316 --> 00:04:30,250
+Scott: put it in the phantom game console and it will install and play just five.
+
+62
+00:04:30,531 --> 00:04:32,142
+Rym: Remember there was no steam back then.
+
+63
+00:04:32,162 --> 00:04:32,705
+Rym: Yep.
+
+64
+00:04:32,786 --> 00:04:33,410
+Scott: There was no nothing.
+
+65
+00:04:33,531 --> 00:04:41,930
+Scott: it was so that was a pretty good idea in 2002 when a lot of people had out because Basically the one of the big problems of PC gaming is that it's hard.
+
+66
+00:04:42,010 --> 00:04:45,766
+Scott: You got to set up a PC and you got to set up a gamer PC.
+
+67
+00:04:45,806 --> 00:04:46,629
+Scott: Not just normal PC.
+
+68
+00:04:46,810 --> 00:04:48,502
+Scott: You got to install the games.
+
+69
+00:04:48,744 --> 00:04:51,001
+Scott: You got a tweak You got to do all sorts of shit.
+
+70
+00:04:51,323 --> 00:04:56,828
+Scott: the phantom game console The idea was good can remove all that and PC game be as easy as console gaming.
+
+71
+00:04:56,868 --> 00:05:06,108
+Rym: and hooray So, yeah, the idea the base idea was good, but then all the smart people in the world asked this company So, uh, how are you gonna do this?
+
+72
+00:05:07,311 --> 00:05:11,450
+Rym: And they didn't really say much because it's not really possible.
+
+73
+00:05:12,011 --> 00:05:30,750
+Rym: and the years went by and the years went by and they kept running out of money and then either selling more stock or Paying off their debt with stock in their phantom company Or getting more investors or venture capitalists to give them money in return for style.
+
+74
+00:05:30,970 --> 00:05:34,018
+Scott: No, I people gave them money because people didn't know.
+
+75
+00:05:34,038 --> 00:05:38,610
+Rym: no one knew except well everyone on the internet every gamer.
+
+76
+00:05:38,991 --> 00:05:39,333
+Rym: You know what?
+
+77
+00:05:39,594 --> 00:05:43,107
+Rym: I start to think because this is multiple penny arcade comics about this.
+
+78
+00:05:43,147 --> 00:05:43,890
+Scott: How could you not know?
+
+79
+00:05:44,390 --> 00:05:46,884
+Rym: Oh, I didn't penny arcade guys talk to this dude.
+
+80
+00:05:47,387 --> 00:05:47,970
+Scott: I don't remember.
+
+81
+00:05:48,231 --> 00:05:56,950
+Rym: I remember some instance where they talked to him where he Basically made light of the fact that they were making fun of him and tried to act like he didn't care.
+
+82
+00:05:57,411 --> 00:06:01,966
+Rym: I don't think he does care because I do point out that it was called the Phantom console.
+
+83
+00:06:03,030 --> 00:06:06,583
+Rym: I Am of the mind that this was a calculated grift.
+
+84
+00:06:06,603 --> 00:06:09,475
+Scott: Yeah from the beginning I don't know.
+
+85
+00:06:09,776 --> 00:06:12,890
+Scott: In fact, I would think it's worth coincidental irony.
+
+86
+00:06:13,252 --> 00:06:26,756
+Rym: I would put forth the idea that not only is this a grift but it was such a Cocksure grip that it's basically like a panhandler coming up to you and saying I'm gonna swindle you out of five bucks and still succeeding
+
+87
+00:06:27,039 --> 00:06:31,917
+Scott: and then buy alcohol As much alcohol as I can get.
+
+88
+00:06:32,258 --> 00:06:36,289
+Rym: hey at least that one homeless guy showed us the alcohol he bought and offered us some.
+
+89
+00:06:36,509 --> 00:06:41,010
+Rym: yeah The Phantom console saga didn't end there.
+
+90
+00:06:41,150 --> 00:06:47,979
+Scott: No, the company actually changed their plans and came out with what I consider Something I might actually buy.
+
+91
+00:06:47,999 --> 00:06:50,669
+Rym: Yeah, they they had this idea suddenly.
+
+92
+00:06:50,689 --> 00:07:02,290
+Rym: now My best guess is that they only came up with this idea in order to get some press releases and some coverage at e3 In order to trick more venture capitalists into dumping money into their phantom business.
+
+93
+00:07:02,591 --> 00:07:03,856
+Scott: This is also a good idea.
+
+94
+00:07:03,916 --> 00:07:15,010
+Scott: Basically if you're gonna have a PC game console in the living room You're gonna need a keyboard in the living room And as we all know keyboards in the living room kind of suck because you don't you're not sitting at a desk.
+
+95
+00:07:15,591 --> 00:07:21,950
+Scott: So they came up with this sort of invention and it's a keyboard that sort of folds and goes on your lap.
+
+96
+00:07:22,151 --> 00:07:25,384
+Scott: It's like a lap keyboard a keyboard designed for the lap.
+
+97
+00:07:25,785 --> 00:07:29,200
+Scott: and well, I see it I see many pictures of it and I've never tried it.
+
+98
+00:07:29,842 --> 00:07:31,590
+Scott: There's probably only like two of them in existence.
+
+99
+00:07:32,254 --> 00:07:41,490
+Rym: Well, if you wonder how many are in existence I point out that you can just go to the Phantom store and order one and I dare any of you to try and order.
+
+100
+00:07:41,811 --> 00:07:45,423
+Scott: I did try to order one and it was quite humorous experience.
+
+101
+00:07:45,544 --> 00:07:46,848
+Rym: Yes, I expected.
+
+102
+00:07:46,868 --> 00:07:48,956
+Rym: well It was I didn't get what I expected.
+
+103
+00:07:48,996 --> 00:07:50,280
+Rym: what I got made me laugh a little.
+
+104
+00:07:50,581 --> 00:07:57,407
+Scott: Yes, but yet I mean a Keyboard that is comfortable in living room is a good product that I'm willing to pay for.
+
+105
+00:07:57,427 --> 00:07:58,532
+Scott: cuz right now I have that.
+
+106
+00:07:58,693 --> 00:07:59,355
+Scott: that's a problem.
+
+107
+00:07:59,436 --> 00:08:00,058
+Scott: I need saw.
+
+108
+00:08:00,098 --> 00:08:01,805
+Rym: it would be great with that video rocker.
+
+109
+00:08:01,926 --> 00:08:06,866
+Scott: Yeah, but The Phantom people are just providing a phantom.
+
+110
+00:08:07,187 --> 00:08:11,463
+Rym: Oh my god I'm looking at the Wikipedia here and I didn't realize this.
+
+111
+00:08:11,523 --> 00:08:17,261
+Rym: but here are according to Wikipedia The specs of the Phantom console as of May 2004.
+
+112
+00:08:17,261 --> 00:08:18,223
+Rym: All right.
+
+113
+00:08:18,604 --> 00:08:22,934
+Rym: All right an AMD Athlon XP 2500.
+
+114
+00:08:22,934 --> 00:08:25,626
+Scott: that's what I have in my computer the same exact chip.
+
+115
+00:08:25,887 --> 00:08:26,409
+Rym: What the hell?
+
+116
+00:08:27,091 --> 00:08:29,873
+Rym: GeForce FX 5700?
+
+117
+00:08:29,873 --> 00:08:32,022
+Scott: I have a 5900 in my computer.
+
+118
+00:08:32,423 --> 00:08:32,604
+Rym: All right.
+
+119
+00:08:32,664 --> 00:08:36,796
+Rym: Now here's the fun part 256 megabytes of RAM.
+
+120
+00:08:36,977 --> 00:08:37,961
+Scott: I've got twice as much.
+
+121
+00:08:38,322 --> 00:08:41,692
+Rym: I've got a lot more than twice You've got.
+
+122
+00:08:41,732 --> 00:08:42,053
+Scott: let's see.
+
+123
+00:08:42,354 --> 00:08:43,839
+Scott: Let's see the eight times as much.
+
+124
+00:08:43,938 --> 00:08:44,220
+Scott: Yeah.
+
+125
+00:08:44,300 --> 00:08:46,086
+Rym: Yeah, and I almost bought four gigs.
+
+126
+00:08:46,588 --> 00:08:47,190
+Scott: That's too much.
+
+127
+00:08:47,375 --> 00:08:49,156
+Rym: Yeah I think three is as much as I can.
+
+128
+00:08:49,176 --> 00:08:54,298
+Scott: when you do four gigs you start needs doing funny stuff to the kernel and you Need to start doing 64-bit action.
+
+129
+00:08:54,619 --> 00:08:58,743
+Rym: Yeah, if I ever run out of if I ever need more RAM I'm just gonna put another 500 or gig in there.
+
+130
+00:08:59,630 --> 00:09:08,013
+Scott: I am considering buying two gigs of RAM for my computer and an 80 gigabyte quote content cache Uh-huh.
+
+131
+00:09:08,053 --> 00:09:09,699
+Scott: So I guess that's a hard drive.
+
+132
+00:09:09,739 --> 00:09:12,047
+Rym: Yeah, I guess that is a flash drive or something.
+
+133
+00:09:12,047 --> 00:09:12,348
+Rym: 80 gigs.
+
+134
+00:09:13,272 --> 00:09:14,459
+Rym: Yeah, I guess that could be enough.
+
+135
+00:09:14,599 --> 00:09:21,910
+Scott: I don't know really but yeah Phantom game console never gonna come out like Duke Nukem forever might actually come out one day.
+
+136
+00:09:21,970 --> 00:09:34,204
+Scott: Yeah along with some lasers - yes and the length of time that it is taken for the Phantom to come out is not really funny or meaningful because Duke Nukem forever and Team Fortress 2 have been coming for like at least five years.
+
+137
+00:09:34,224 --> 00:09:34,565
+Scott: to me
+
+138
+00:09:34,625 --> 00:09:54,760
+Rym: the Phantom's funny because Outside of the internet where everyone already knew it was never gonna happen in the real world where people with real money You know push that money around and have go to big fancy business meetings no one realized what was going on and people poured money into this thing and Industry people actually thought this was gonna come out.
+
+139
+00:09:55,161 --> 00:09:56,165
+Scott: Yeah, they sure did.
+
+140
+00:09:56,506 --> 00:09:58,976
+Rym: I mean investors Invested in this
+
+141
+00:09:59,258 --> 00:10:00,709
+Scott: because people if you're
+
+142
+00:10:01,470 --> 00:10:02,514
+Rym: Invested in the end game
+
+143
+00:10:02,534 --> 00:10:05,526
+Scott: go to these like presentations or people show off their stuff
+
+144
+00:10:05,626 --> 00:10:06,490
+Rym: or the Gizmondo
+
+145
+00:10:07,352 --> 00:10:15,540
+Scott: and they try to convince you to invest in them and it's a guy trying to sell to a room full of investors and You basically the product doesn't exist yet.
+
+146
+00:10:15,600 --> 00:10:17,930
+Scott: because until you invest the product will not exist.
+
+147
+00:10:18,472 --> 00:10:29,250
+Scott: So you kind of have to go solely on what the people are selling you and if you're a good enough Salesman, you can get people to buy into frickin You know infinite energy devices and shit.
+
+148
+00:10:29,551 --> 00:10:36,390
+Scott: I mean one guy made a lot of money trying to sell people this magic black box that made DSL ten times faster.
+
+149
+00:10:36,551 --> 00:10:38,184
+Scott: Yeah, whatever happened to that guy.
+
+150
+00:10:38,205 --> 00:10:43,631
+Scott: Yeah And a lot of these people should end up in jail, but they don't Whatever.
+
+151
+00:10:44,133 --> 00:10:46,119
+Scott: Yeah, Phantom game console never gonna happen.
+
+152
+00:10:46,701 --> 00:10:48,046
+Rym: I just I was reminded of it.
+
+153
+00:10:48,206 --> 00:10:52,070
+Rym: I'd forgotten it existed Yeah, and I remember when the lap board appeared.
+
+154
+00:10:52,476 --> 00:10:58,790
+Rym: I was very cynical But I don't think it was Scott but someone in our group said something along the lines of why are you so down on that?
+
+155
+00:10:59,130 --> 00:11:00,277
+Rym: Look, they've got a picture of it.
+
+156
+00:11:00,558 --> 00:11:02,530
+Rym: It's actually gonna come out and it's really cool.
+
+157
+00:11:02,630 --> 00:11:03,554
+Rym: So I'm gonna buy one.
+
+158
+00:11:03,774 --> 00:11:07,327
+Rym: Yeah, and I guess I forgot to check up, but I don't know.
+
+159
+00:11:07,588 --> 00:11:08,150
+Rym: I don't know either.
+
+160
+00:11:08,150 --> 00:11:10,129
+Scott: I don't know if I would have said something that positive.
+
+161
+00:11:10,891 --> 00:11:13,624
+Rym: Yeah, but I I totally forgot to check up.
+
+162
+00:11:13,644 --> 00:11:17,641
+Rym: but if that ever came out So whoever it was who said they were gonna buy one.
+
+163
+00:11:18,203 --> 00:11:18,906
+Rym: I'm still waiting.
+
+164
+00:11:19,207 --> 00:11:24,390
+Scott: Yeah I do kind of want some sort of lap board, you know, we could just make one.
+
+165
+00:11:24,812 --> 00:11:33,575
+Scott: Yeah, we probably could let some metal and a keyboard We should make like a little tiny like thing that like a table that sits over the video rocker Like.
+
+166
+00:11:33,918 --> 00:11:35,490
+Rym: actually, you know what I do that works really well.
+
+167
+00:11:35,570 --> 00:11:39,344
+Rym: I just put a big fluffy pillow in my lap and I put whatever I'm working on on the pillow.
+
+168
+00:11:39,364 --> 00:11:41,151
+Rym: Yeah, it's alright works Great.
+
+169
+00:11:41,171 --> 00:11:41,834
+Scott: It's okay.
+
+170
+00:11:42,015 --> 00:11:43,742
+Rym: It's not like the keyboards gonna overheat.
+
+171
+00:11:44,124 --> 00:11:45,650
+Scott: Alright, so I got some news.
+
+172
+00:11:45,811 --> 00:11:47,420
+Scott: My news is three.
+
+173
+00:11:47,521 --> 00:11:49,029
+Scott: pac-man news is your own.
+
+174
+00:11:49,951 --> 00:11:59,622
+Rym: Wow, imagine going back to people when pac-man came out and telling them that in the year 2007 there would be three semi-simultaneous pac-man bits of news.
+
+175
+00:11:59,943 --> 00:12:00,103
+Scott: Yeah.
+
+176
+00:12:00,584 --> 00:12:04,076
+Scott: Well, here's all the pac-man news is actually I'm not sure if it's.
+
+177
+00:12:04,217 --> 00:12:12,110
+Scott: if I'm it might be the Like the anniversary of pac-man, but I'm not sure way to have your research.
+
+178
+00:12:12,291 --> 00:12:14,985
+Rym: I got all the other news captain Scott of the US anyway anyway.
+
+179
+00:12:16,791 --> 00:12:27,367
+Scott: First of all, they had a pac-man tournament in the city today right in New York City and Billy Mitchell is the first guy ever to get a perfect score on pac-man.
+
+180
+00:12:27,387 --> 00:12:38,034
+Scott: in 1999 He beat pac-man so perfectly that the score rolled over and the game froze up and it was over and he is considered the pac-man King today.
+
+181
+00:12:38,054 --> 00:12:43,655
+Scott: he came in to play some pac-man of course because it's a pac-man tournament that this big He's got to play.
+
+182
+00:12:44,138 --> 00:12:47,837
+Scott: but he said him I quote I told you I was gonna get whipped.
+
+183
+00:12:48,219 --> 00:12:49,323
+Scott: Mitchell said with a laugh.
+
+184
+00:12:49,403 --> 00:12:57,827
+Scott: in a phone interview Tuesday afternoon They sprung a surprise on us by releasing a brand new version of pac-man the first new version in 26 years.
+
+185
+00:12:59,191 --> 00:13:01,939
+Rym: Huh that tells me that while this kid was really good.
+
+186
+00:13:02,320 --> 00:13:05,691
+Rym: He had obviously memorized patterns in the original pac-man I see.
+
+187
+00:13:05,751 --> 00:13:11,470
+Rym: Oh, yeah could not much like the people who can perfect double awesome some DDR song.
+
+188
+00:13:11,510 --> 00:13:15,450
+Rym: They played a million times but give them something on trick that they've never seen before and they fail.
+
+189
+00:13:15,490 --> 00:13:33,940
+Scott: Yeah, so Carlos Romero a 27 year old gamer from Mexico won the the pac-man tournament good for him and they gave him a pac-man themed Xbox 360 designed an autograph by Toru Iwatani the guy who invented pac-man in 1980, so it's the 27th anniversary of pac-man.
+
+190
+00:13:33,960 --> 00:13:34,384
+Scott: All right.
+
+191
+00:13:34,404 --> 00:13:47,489
+Scott: Yeah, and They also today that the reason they were doing this is because they've released a new game for the Xbox 360 on the live arcade called pac-man champion world championship edition or championship edition or something like that.
+
+192
+00:13:47,931 --> 00:13:57,890
+Scott: It's basically pac-man with like widescreen mode and HD and new maps and smarter ghosts I assume and a worldwide leaderboard.
+
+193
+00:13:57,990 --> 00:14:03,810
+Scott: So if you play this pac-man you're playing for the high score of everyone at Xbox Live.
+
+194
+00:14:04,613 --> 00:14:07,764
+Rym: I gotta say the Xbox is looking more and more attractive every day.
+
+195
+00:14:07,864 --> 00:14:09,570
+Scott: Yeah, it's it's it's not bad.
+
+196
+00:14:09,671 --> 00:14:21,640
+Scott: The only reason I don't have an Xbox honestly, the reason I would have bought one months ago is because I already have every minute of every day filled up with entertainment and The DS and the Wii.
+
+197
+00:14:21,720 --> 00:14:24,794
+Scott: anytime I want to play video games There's always some.
+
+198
+00:14:24,875 --> 00:14:27,543
+Scott: there's enough DS and Wii to keep me sated.
+
+199
+00:14:27,944 --> 00:14:37,046
+Scott: if there was even a minute during the day Where I wanted video game and there wasn't video game available I would get either a new PC or a 360 so fast.
+
+200
+00:14:37,367 --> 00:14:38,130
+Rym: See I got a problem.
+
+201
+00:14:38,330 --> 00:14:39,452
+Rym: I was in the same boat.
+
+202
+00:14:39,993 --> 00:14:40,193
+Rym: Now.
+
+203
+00:14:40,274 --> 00:14:51,770
+Rym: I have a gaming PC again a wicked gaming PC and I keep rebooting into Windows by accident and then accidentally clicking on steam and then accidentally playing counter-strike for three hours.
+
+204
+00:14:51,971 --> 00:14:58,591
+Scott: I can't really blame you because you know, you just had a general gaming trout and also you never played half-life 2.
+
+205
+00:14:58,591 --> 00:15:00,264
+Rym: So but I still haven't played half-life 2.
+
+206
+00:15:00,264 --> 00:15:01,933
+Rym: I'm you will I'm.
+
+207
+00:15:02,234 --> 00:15:06,990
+Rym: counter-strike alone would probably keep me going for another couple years even with the ads.
+
+208
+00:15:07,612 --> 00:15:08,093
+Rym: You know what?
+
+209
+00:15:08,675 --> 00:15:09,899
+Rym: I just avoid those maps.
+
+210
+00:15:10,260 --> 00:15:10,561
+Scott: I know.
+
+211
+00:15:10,581 --> 00:15:13,470
+Rym: All right, but the most popular maps in the game.
+
+212
+00:15:13,530 --> 00:15:18,452
+Scott: So there was a pac-man tournament and they released a new awesome pac-man for the 360.
+
+213
+00:15:18,452 --> 00:15:19,836
+Rym: So what could be your third news?
+
+214
+00:15:19,896 --> 00:15:21,622
+Rym: What else could have happened in the pac-man world?
+
+215
+00:15:21,722 --> 00:15:24,010
+Scott: the guy who made pac-man toru?
+
+216
+00:15:24,270 --> 00:15:30,731
+Scott: Iwatani right who designed and autographed that special Xbox 360 and invented pac-man in 1980.
+
+217
+00:15:30,731 --> 00:15:31,394
+Scott: He retired.
+
+218
+00:15:32,017 --> 00:15:33,443
+Rym: Oh, I'm glad you didn't say died.
+
+219
+00:15:33,583 --> 00:15:34,547
+Scott: No, that's it.
+
+220
+00:15:34,608 --> 00:15:35,150
+Scott: He retired.
+
+221
+00:15:35,413 --> 00:15:40,060
+Scott: He made this one last pac-man After his whole career and now he's done.
+
+222
+00:15:40,080 --> 00:15:42,870
+Rym: I think that means this is going to be the definitive pac-man.
+
+223
+00:15:43,030 --> 00:15:44,093
+Scott: I think I'm.
+
+224
+00:15:44,314 --> 00:15:53,458
+Scott: I'm here by stating pac-man championship edition for the Xbox 360 is the definitive pac-man I will say because I mean the original pac-man.
+
+225
+00:15:53,519 --> 00:16:01,642
+Scott: sure you could say this the definitive pac-man or miss pac-man is the definitive but Those games are not perfect and you can just master them and it's sort of like.
+
+226
+00:16:01,983 --> 00:16:07,353
+Scott: it's not really a measure of pac-maning skill In the way that you know Ikaruga is.
+
+227
+00:16:07,453 --> 00:16:15,370
+Scott: a is a test of your memorizing skill rather than your space shooter skill And I think this is the game that tests your pac-man skill.
+
+228
+00:16:15,912 --> 00:16:24,500
+Scott: so this is why I call it the definitive pac-man for the for purposes of playing to see who's better and That is a whole lot of news about pac-man.
+
+229
+00:16:24,761 --> 00:16:24,942
+Scott: Yep.
+
+230
+00:16:25,223 --> 00:16:28,495
+Rym: I will say though that I always Generally preferred miss pac-man.
+
+231
+00:16:28,515 --> 00:16:31,242
+Scott: Yeah, I just kind of like.
+
+232
+00:16:31,262 --> 00:16:36,969
+Scott: I didn't really like pac-man that much when I was younger But now I really like that actually like the ghosts a lot.
+
+233
+00:16:37,471 --> 00:16:42,310
+Rym: Well, I think my issue was just that most arcades I went to had a miss pac-man machine, but not a pac-man machine.
+
+234
+00:16:42,571 --> 00:16:45,730
+Scott: Yes, anything is I would go to arcades that never play pac-man in the arcade.
+
+235
+00:16:45,911 --> 00:16:46,214
+Scott: I would.
+
+236
+00:16:46,254 --> 00:16:47,202
+Scott: that was like a waste.
+
+237
+00:16:47,222 --> 00:16:50,590
+Rym: see cuz I Didn't realize the treasure trove where I live.
+
+238
+00:16:50,590 --> 00:16:56,210
+Rym: I've read Gallagher when I was a kid the one arcade in the area which was in the mall in what was you what?
+
+239
+00:16:56,390 --> 00:16:57,975
+Rym: Used to be a water slide.
+
+240
+00:16:58,276 --> 00:17:02,530
+Rym: They had turned that whole water park that was inside the mall into an arcade.
+
+241
+00:17:02,610 --> 00:17:06,489
+Rym: So it was a kind of a cool layout with arcade games like all in these balconies all over the place.
+
+242
+00:17:07,652 --> 00:17:21,230
+Rym: And uh, they had like the new game section and then up in the balconies They had the old game section and those old games were awesome And they were also all on sale all the time and the prices weren't that bad.
+
+243
+00:17:21,290 --> 00:17:23,608
+Rym: But my parents would never buy one and I didn't have any money.
+
+244
+00:17:23,871 --> 00:17:26,925
+Rym: Yeah now I would buy all of them for the prices.
+
+245
+00:17:26,965 --> 00:17:27,750
+Rym: They were up for back.
+
+246
+00:17:27,829 --> 00:17:30,566
+Scott: Yeah, nowadays like I would I really want to buy that.
+
+247
+00:17:32,232 --> 00:17:32,494
+Scott: What is?
+
+248
+00:17:32,554 --> 00:17:34,965
+Scott: it's like the half Galaga half miss pac-man machine.
+
+249
+00:17:34,985 --> 00:17:41,030
+Scott: Yeah, right It's like perfect, but the machines like over 10th that I could buy a car instead of that machine.
+
+250
+00:17:41,130 --> 00:17:42,558
+Scott: Oh, yeah, at least for a new one.
+
+251
+00:17:42,839 --> 00:17:44,166
+Rym: I mean, I want a DDR machine.
+
+252
+00:17:44,227 --> 00:17:44,850
+Rym: really badly.
+
+253
+00:17:44,970 --> 00:17:50,169
+Scott: They also have that like centipede missile command like millipede machine or whatever it is.
+
+254
+00:17:50,612 --> 00:17:53,410
+Scott: It's a really good machine too, but that's also a shit ton of money.
+
+255
+00:17:53,651 --> 00:17:59,950
+Rym: Actually, if I could have any one arcade machine DDR wall DDR would very easily be at the top of that list.
+
+256
+00:18:00,070 --> 00:18:01,013
+Rym: I think it's number two.
+
+257
+00:18:01,173 --> 00:18:03,198
+Scott: You can get police 9-1-1 ramparts.
+
+258
+00:18:03,759 --> 00:18:04,220
+Scott: That's a good one.
+
+259
+00:18:04,321 --> 00:18:06,927
+Scott: Rampart arcade machine and not initial D.
+
+260
+00:18:06,947 --> 00:18:09,309
+Rym: Ah That that's out there.
+
+261
+00:18:09,430 --> 00:18:12,601
+Rym: But initial D would eventually get old because I'd master it see.
+
+262
+00:18:12,621 --> 00:18:19,390
+Scott: what I would like to own is some sort of machine I would I wouldn't do I wouldn't go with any one time crisis game.
+
+263
+00:18:19,832 --> 00:18:31,157
+Scott: But if there was some machine because the time crisis always had the same gun If there was some sort of all time crisis machine that had every existing time crisis and could upgrade to newer time Crises I would go with that.
+
+264
+00:18:31,177 --> 00:18:33,668
+Rym: so you can kind of do that in DDR kind of.
+
+265
+00:18:33,989 --> 00:18:36,830
+Rym: I mean There's some old forth mix machines that have made their way.
+
+266
+00:18:36,830 --> 00:18:40,146
+Scott: I mean, I want to like turn the machine on and it'll say what time crisis.
+
+267
+00:18:40,226 --> 00:18:41,975
+Scott: one, two, three four And I shoot the game.
+
+268
+00:18:41,995 --> 00:18:42,639
+Scott: I want to play.
+
+269
+00:18:43,041 --> 00:18:44,630
+Scott: that's what I want, huh?
+
+270
+00:18:44,870 --> 00:18:48,209
+Rym: You know, I don't think there's a market for that because people just use their video games.
+
+271
+00:18:48,410 --> 00:18:50,732
+Scott: I know I know their consoles their computers.
+
+272
+00:18:51,172 --> 00:19:00,020
+Rym: Yep things of the day.
+
+273
+00:19:01,023 --> 00:19:14,532
+Rym: So if the Internet as a collective whole in the year, I don't know 2001 had a flag if it were a nation in the United Nations What would the Internet's flag from 2001 be?
+
+274
+00:19:14,612 --> 00:19:16,520
+Scott: Scott the Internet's flag?
+
+275
+00:19:20,322 --> 00:19:20,744
+Scott: goatse?
+
+276
+00:19:20,784 --> 00:19:23,155
+Rym: maybe I don't think it could be anything but goatse.
+
+277
+00:19:23,235 --> 00:19:27,899
+Rym: I think goatse Impitimized everything that was the internet back then.
+
+278
+00:19:28,602 --> 00:19:35,050
+Rym: I mean we could have ever done a show on goatse like the history and What we really do a whole show.
+
+279
+00:19:35,291 --> 00:19:36,216
+Rym: I think we could.
+
+280
+00:19:36,236 --> 00:19:37,080
+Scott: that's a bit much.
+
+281
+00:19:37,260 --> 00:19:43,239
+Rym: Well, if we you know goatse as an idea as opposed to specifically how that guy did that which I don't want to get in.
+
+282
+00:19:45,961 --> 00:20:05,920
+Rym: No, well goatse is very much at least an icon of the last generation of the Internet and It's kind of lived on to this day as the symbol that is understood by people who are around during that day And most people on the internet who are hip have at some point run into this horrible horrible horrible thing
+
+283
+00:20:06,241 --> 00:20:08,650
+Scott: Yep, or tub girl or any of its associates.
+
+284
+00:20:08,710 --> 00:20:11,440
+Rym: Yeah, but I mean goatse was like the real one everything else.
+
+285
+00:20:11,460 --> 00:20:18,715
+Rym: There's a lot of sick things on the internet, but goatee was the one that kind of Transcended just being a sick thing and became a cultural icon.
+
+286
+00:20:18,796 --> 00:20:33,100
+Rym: It's legendary and One of the greatest pastimes and hobbies of people from our generation of the Internet is to trick people Who do not know about goatse into either seeing it or more importantly?
+
+287
+00:20:33,740 --> 00:20:36,974
+Rym: unwittingly showing it to others on mainstream media.
+
+288
+00:20:37,376 --> 00:20:45,972
+Scott: my favorite was when that guy had a flicker gallery where he took pictures of People as the people were seeing go see for the first time in their lives.
+
+289
+00:20:45,992 --> 00:20:54,240
+Rym: the best one was he got Ron Jeremy Yeah, and the first picture is Ron Jeremy looking at it real close with this quizzical look of what is that?
+
+290
+00:20:54,740 --> 00:20:59,815
+Rym: And the second was a look of utter horror and disgust from Ron Jeremy people.
+
+291
+00:20:59,896 --> 00:21:05,333
+Rym: yes Actually from what I hear Ron Jeremy is a pretty funny cool guy and he seems alright.
+
+292
+00:21:05,754 --> 00:21:07,280
+Rym: Yeah, I mean for for what it's worth.
+
+293
+00:21:07,724 --> 00:21:14,480
+Rym: Yeah, but anyway You can't just show goatse because if you see goatse even what if you don't realize what it is right away.
+
+294
+00:21:14,881 --> 00:21:22,767
+Rym: You know that it's something horrible, and it's obvious you can't trick CNN into showing just straight-up goatse on TV.
+
+295
+00:21:22,807 --> 00:21:25,060
+Scott: Yeah, okay, CNN check out this picture.
+
+296
+00:21:26,002 --> 00:21:26,987
+Scott: Yeah, what about it?
+
+297
+00:21:27,107 --> 00:21:28,112
+Scott: It was disgusting.
+
+298
+00:21:28,575 --> 00:21:29,459
+Scott: Can you show it on TV?
+
+299
+00:21:30,421 --> 00:21:37,100
+Rym: No, so the hobby here the game is that you make arts or things that?
+
+300
+00:21:37,440 --> 00:21:43,485
+Rym: To someone who is aware of goatse they will look at it and think wow That looks a lot like goatse.
+
+301
+00:21:43,645 --> 00:21:50,088
+Scott: usually it involves a circle with a hand on either side of the circle And that's how you can tell it when it's a goatse.
+
+302
+00:21:50,329 --> 00:22:04,579
+Scott: and a lot of times it started out where people were noticing unintentional goat sees out in the wild like they would see a sign for like a Bagel shop, and it looked like goatse the way it was drawn, and then you go oMG a goatse.
+
+303
+00:22:05,342 --> 00:22:15,029
+Rym: So now this has kind of become an internet sport and my thing of the day is a video That was broadcast Worldwide I believe worldwide or at least in London.
+
+304
+00:22:15,671 --> 00:22:21,088
+Rym: the BBC showed a thing about the Olympics 2012 and the logo for it.
+
+305
+00:22:21,128 --> 00:22:24,820
+Rym: now people don't like the logo and a lot of people had submitted alternate logos.
+
+306
+00:22:25,483 --> 00:22:33,373
+Rym: now they showed a couple of these alternate logos and one of them is Very very clearly goatse.
+
+307
+00:22:33,674 --> 00:22:42,680
+Rym: there is no way Anyone hip to the internet who knows what goatse is could deny that this was intended to be an homage to goatse.
+
+308
+00:22:43,622 --> 00:22:45,365
+Scott: and it is indeed an homage to goatse.
+
+309
+00:22:45,906 --> 00:22:53,435
+Rym: so this was broadcast on TV and What I'd like to point out is that notice that the mainstream media had no idea.
+
+310
+00:22:53,897 --> 00:23:02,705
+Rym: the internet basically It has this level of culture where our icons are completely Unknown to the mainstream media.
+
+311
+00:23:03,106 --> 00:23:06,675
+Rym: that reporter and all those people involved in that network didn't know.
+
+312
+00:23:06,895 --> 00:23:08,178
+Rym: they probably still don't know.
+
+313
+00:23:08,439 --> 00:23:10,680
+Rym: the wool Was pulled completely over their eyes.
+
+314
+00:23:11,082 --> 00:23:20,916
+Scott: It's sort of like if you go to a foreign country right and you go up to someone you just say Fuck you your mother's a whore, and then the guy says in whatever language their native languages.
+
+315
+00:23:20,936 --> 00:23:22,360
+Scott: It's like your translator friend.
+
+316
+00:23:22,661 --> 00:23:23,283
+Scott: What did he say?
+
+317
+00:23:23,303 --> 00:23:25,169
+Scott: and he said he loves your mother?
+
+318
+00:23:25,309 --> 00:23:26,252
+Scott: She's a wonderful woman.
+
+319
+00:23:26,272 --> 00:23:28,720
+Scott: You know and he goes oh, that's wonderful.
+
+320
+00:23:29,142 --> 00:23:31,130
+Rym: Yeah, it's kind of like a Masonic handshake.
+
+321
+00:23:31,190 --> 00:23:33,400
+Rym: It's a secret code that only internet people know.
+
+322
+00:23:34,162 --> 00:23:43,733
+Scott: So this icon thing is like a secret code is usually like it's the thing That's weird about this is usually a secret code is with an insular group of people.
+
+323
+00:23:43,774 --> 00:23:52,920
+Scott: you don't tell anyone the secret But here we're able to keep the secret by sharing the information freely, and it's a secret.
+
+324
+00:23:53,326 --> 00:23:54,199
+Rym: Yeah, think of this.
+
+325
+00:23:54,702 --> 00:23:58,420
+Rym: It's like you have a secret handshake, and you're cool with anyone who knows the secret handshake.
+
+326
+00:23:58,902 --> 00:24:02,600
+Rym: But you made a website that explains exactly how to do the secret handshake.
+
+327
+00:24:02,941 --> 00:24:07,736
+Rym: Thus the only people who do not know the secret handshake are people who are not hip to the internet at all.
+
+328
+00:24:07,757 --> 00:24:13,085
+Rym: a lot of people yeah, but What I know happened is none.
+
+329
+00:24:13,105 --> 00:24:17,600
+Rym: no one involved knew what that was except think about how it works at a television station.
+
+330
+00:24:18,042 --> 00:24:33,880
+Rym: I'm sure that this got delegated down and delegated down and Eventually there was some interns somewhere with a pile of like Alternate Olympic logos that were submitted somewhere and some reporter way up said yeah kid Pick three of these to show on the show pick the good ones.
+
+331
+00:24:34,241 --> 00:24:45,202
+Rym: So the kids going through and probably doing what we would do if we were interns trying to pick the best ones Yeah, try to be on that one's cool, and then he saw this one, and he couldn't help but think this is goatse.
+
+332
+00:24:46,109 --> 00:24:52,632
+Rym: and then he couldn't help but think No one here could fault me because it's not actually goatse.
+
+333
+00:24:53,013 --> 00:24:54,075
+Rym: they wouldn't even know.
+
+334
+00:24:54,095 --> 00:24:55,900
+Rym: I can make this appear on TV.
+
+335
+00:24:56,100 --> 00:24:58,347
+Rym: I can put goatse on TV.
+
+336
+00:24:58,828 --> 00:24:59,530
+Rym: It's up to me.
+
+337
+00:24:59,550 --> 00:25:02,820
+Rym: I am now a hero, and you know what it's up to us.
+
+338
+00:25:07,228 --> 00:25:10,379
+Rym: Okay Press a press a. what do you got?
+
+339
+00:25:11,861 --> 00:25:14,630
+Scott: So you know we're big fans at the tower defense games.
+
+340
+00:25:14,891 --> 00:25:16,597
+Scott: I don't know why but I guess we are.
+
+341
+00:25:16,918 --> 00:25:24,120
+Rym: I'm a big fan Of the idea of tower defense games, and I'm a big fan of any tower defense game before I play it one complete time.
+
+342
+00:25:24,523 --> 00:25:32,280
+Scott: Yeah, well here's a tower defense game That's worth playing one complete time and has some great ideas, but it's very poorly executed.
+
+343
+00:25:32,400 --> 00:25:43,970
+Scott: It is called onslaught and the cool things about this tower defense game are that you can sort of put towers near each other and They sort of team up like putting two lasers next to each other.
+
+344
+00:25:44,431 --> 00:25:51,681
+Scott: one laser will shoot into the other one and the other One will shoot the laser at the bad guy thus increasing the damage of the laser 25%.
+
+345
+00:25:51,681 --> 00:26:00,240
+Rym: see now this is really different from a lot of other tower defense games where like desktop tower defense Which is probably now pretty much the iconic tower defense.
+
+346
+00:26:00,572 --> 00:26:00,740
+Scott: Yeah
+
+347
+00:26:01,161 --> 00:26:15,003
+Rym: There were a lot of implicit combos where the game doesn't explicitly do anything to make a combo or say there's a combo or treat Things differently because of how you've got it set up, but it just so happened that if you set up typhoon towers Yeah,
+
+348
+00:26:15,264 --> 00:26:22,202
+Scott: I'll use towers that make the bad guys walk slow right next to the towers with really short range and high Damage.
+
+349
+00:26:22,483 --> 00:26:25,432
+Rym: now that's a really important part of a tower defense game.
+
+350
+00:26:25,472 --> 00:26:30,048
+Rym: games that don't have some form of implicit combo Tend to be really crappy.
+
+351
+00:26:30,510 --> 00:26:32,658
+Rym: Yep, because that's like a basic part of these games.
+
+352
+00:26:32,718 --> 00:26:42,551
+Rym: now This game which I haven't even played yet only Scott's play it has explicit combos where the game Actually actively and openly does things differently.
+
+353
+00:26:42,611 --> 00:26:43,334
+Rym: if you combo
+
+354
+00:26:43,454 --> 00:27:03,329
+Scott: it actually has a chart and it's like hey you know put like three of these towers one of these and one of these all close enough to each other and all you know increase the Upgrade the damage on all of them high enough and it will actually occasionally perform this other attack Like put landmines out on the map and crazy stuff like that.
+
+355
+00:27:03,950 --> 00:27:09,351
+Scott: and you can also upgrade the damage range and fire rate of the towers Individually like you don't.
+
+356
+00:27:09,432 --> 00:27:14,698
+Scott: it's not just upgrade the tower it's I just want to upgrade the damage on this and upgrade the damage only and you can do that.
+
+357
+00:27:14,718 --> 00:27:16,262
+Scott: and the.
+
+358
+00:27:16,302 --> 00:27:19,513
+Scott: the way the game works on paper is actually pretty good.
+
+359
+00:27:19,553 --> 00:27:23,663
+Scott: the problem with this tower defense game is The numbers.
+
+360
+00:27:23,724 --> 00:27:27,455
+Scott: they didn't really balance this game very well for like a hundred levels.
+
+361
+00:27:27,536 --> 00:27:28,900
+Scott: The game is stupidly easy.
+
+362
+00:27:29,000 --> 00:27:29,783
+Scott: You can't lose.
+
+363
+00:27:29,823 --> 00:27:37,299
+Scott: you can build one tower and upgrade it and do nothing else and beat like a hundred levels and The tower will just kill all the guys.
+
+364
+00:27:37,942 --> 00:27:40,792
+Scott: then the game gets exponentially difficult and you lose.
+
+365
+00:27:41,334 --> 00:27:52,740
+Scott: and it's sort of annoying because Like in order to tell whether you're actually making a good strategy of towers or not You have to play this game a hell of a lot and it's pretty annoying and bad.
+
+366
+00:27:52,860 --> 00:27:58,216
+Scott: But it does bring some new ideas into the tower defense genre and is worth checking out.
+
+367
+00:27:58,256 --> 00:28:03,466
+Scott: if you're a tower defense fan I just don't think it's worth playing Habitually like some others are.
+
+368
+00:28:04,148 --> 00:28:08,000
+Rym: no not out right so we can't put it off any longer.
+
+369
+00:28:08,482 --> 00:28:09,928
+Rym: It's about time to talk about it.
+
+370
+00:28:10,712 --> 00:28:11,596
+Rym: my pokemons.
+
+371
+00:28:11,636 --> 00:28:12,419
+Rym: Let me show you them.
+
+372
+00:28:12,981 --> 00:28:16,052
+Scott: Let me show you the pokemons that I have see.
+
+373
+00:28:16,453 --> 00:28:18,440
+Rym: I heard that you like mudkips.
+
+374
+00:28:19,163 --> 00:28:19,445
+Scott: I do.
+
+375
+00:28:19,485 --> 00:28:21,152
+Scott: we all actually know I don't like mudkips.
+
+376
+00:28:21,193 --> 00:28:22,700
+Rym: I think my tips are awesome.
+
+377
+00:28:23,283 --> 00:28:25,232
+Rym: I really do once I saw what they actually looked like.
+
+378
+00:28:25,292 --> 00:28:25,855
+Rym: I really like them.
+
+379
+00:28:25,996 --> 00:28:26,619
+Scott: I'm not a fan.
+
+380
+00:28:28,804 --> 00:28:30,358
+Rym: So these Pokemon games.
+
+381
+00:28:31,461 --> 00:28:32,244
+Rym: Before we get started.
+
+382
+00:28:32,304 --> 00:28:35,857
+Rym: I just want to point out that unlike Scott and probably most of you out there.
+
+383
+00:28:35,877 --> 00:28:42,476
+Rym: I Had never ever until now played any Pokemon game ever.
+
+384
+00:28:42,496 --> 00:28:44,000
+Scott: You didn't play Pokemon Puzzle League.
+
+385
+00:28:44,301 --> 00:28:45,684
+Rym: No, except once.
+
+386
+00:28:46,566 --> 00:28:51,719
+Rym: once I played one game of the Pokemon card game and I hated it.
+
+387
+00:28:52,281 --> 00:28:59,324
+Scott: Oh, yeah, I played the Pokemon card game with my brother and like the first set but it only lasts Until RIT.
+
+388
+00:28:59,686 --> 00:29:02,715
+Rym: Oh, wow, like I was a sophomore and I played Pokemon with someone.
+
+389
+00:29:03,036 --> 00:29:05,805
+Scott: Oh, okay Yeah, I played it when it was.
+
+390
+00:29:06,508 --> 00:29:08,634
+Scott: there was only one Pokemon game out now.
+
+391
+00:29:08,855 --> 00:29:10,280
+Rym: I still knew about Pokemon.
+
+392
+00:29:10,420 --> 00:29:11,586
+Scott: How could you not know about?
+
+393
+00:29:11,606 --> 00:29:14,460
+Rym: because I actually watched the TV show pretty regularly.
+
+394
+00:29:14,560 --> 00:29:17,334
+Scott: In fact, I actually I never watched the TV show and I didn't like it.
+
+395
+00:29:17,796 --> 00:29:19,177
+Rym: I don't like the TV show I don't like it.
+
+396
+00:29:19,280 --> 00:29:23,480
+Rym: In fact, I used to cuz back in high school when I wanted to watch my anime.
+
+397
+00:29:23,861 --> 00:29:31,396
+Rym: I had a VCR that was set up to record Pokemon and Gundam wing and Sailor Moon and Dragon Ball Z, even though I didn't actually watch it.
+
+398
+00:29:31,638 --> 00:29:34,168
+Scott: No Yeah, and I like my Pokemon.
+
+399
+00:29:34,349 --> 00:29:35,814
+Scott: I didn't like Pokemon the TV show.
+
+400
+00:29:36,115 --> 00:29:37,440
+Rym: So I knew all about Pokemon.
+
+401
+00:29:37,560 --> 00:29:43,380
+Rym: I knew Pikachu was I knew all the Pokemon culture whatever but I had never actually played a Pokemon game.
+
+402
+00:29:43,962 --> 00:29:49,080
+Scott: Well, the thing about Pokemon is there are a lot of games with the word Pokemon on them or the Pokemon characters in them.
+
+403
+00:29:49,120 --> 00:30:01,540
+Scott: You know, there's Pokemon Ranger, Pokemon Snap, Pokemon Dash, Pokemon Trozei, Pokemon Whatever, but all of those games are just games that happen to have Pokemon in them.
+
+404
+00:30:01,540 --> 00:30:03,305
+Scott: They're not actually Pokemon games.
+
+405
+00:30:03,786 --> 00:30:08,460
+Scott: The only games that are Pokemon games are Pokemon Red, Blue, Yellow.
+
+406
+00:30:08,702 --> 00:30:13,753
+Scott: Let's see if I can do all the colors Ruby, Sapphire, I'm not doing it in order.
+
+407
+00:30:14,035 --> 00:30:20,443
+Scott: Gold, Silver, Diamond, Pearl, Crystal, Emerald, Whatever.
+
+408
+00:30:20,463 --> 00:30:26,460
+Scott: Yeah, the ones that have a color or a gem or something are the all the Pokemon games.
+
+409
+00:30:26,520 --> 00:30:27,062
+Scott: And you know what?
+
+410
+00:30:27,424 --> 00:30:31,220
+Scott: There's really only four because like Red and Blue are the same game.
+
+411
+00:30:31,582 --> 00:30:41,468
+Scott: they just have different the slightly different Pokemon in them and Leaf Green and Fire Red are the same as Red and Blue and Yellow and so there's really only four Generations of Pokemon games.
+
+412
+00:30:41,830 --> 00:30:52,491
+Scott: So if you played four you've played them all Which is pretty amazing because when I was a young in the olden days I played Red and I played Silver and now I'm playing Diamond.
+
+413
+00:30:52,973 --> 00:30:54,980
+Scott: I really only missed one Pokemon game.
+
+414
+00:30:55,060 --> 00:30:57,067
+Scott: I thought I missed two or three, but I missed one.
+
+415
+00:30:57,087 --> 00:31:02,147
+Rym: I mean, I got Fire Red when Scott bought Em- or Leaf Green.
+
+416
+00:31:02,349 --> 00:31:06,153
+Rym: Yeah, just because all right I got to play this old one so I can play the new one and understand it.
+
+417
+00:31:06,193 --> 00:31:08,283
+Scott: Plus the old Pokemon is so much better than new Pokemon.
+
+418
+00:31:08,745 --> 00:31:11,134
+Rym: I got to say for what little Pokemon I've played.
+
+419
+00:31:11,255 --> 00:31:12,118
+Rym: I agree heartily.
+
+420
+00:31:12,138 --> 00:31:20,486
+Rym: Yeah I have so much love for Bulbasaur and I really feel nothing for Fire Monkey or Turtle with the Stick.
+
+421
+00:31:20,969 --> 00:31:26,031
+Scott: It's all about like Dragonite and It's all about Pidgeot all the way.
+
+422
+00:31:26,172 --> 00:31:26,795
+Scott: Pidgeot sucks.
+
+423
+00:31:26,976 --> 00:31:29,244
+Rym: Gengar Six Geodudes.
+
+424
+00:31:29,544 --> 00:31:30,226
+Rym: I can't lose.
+
+425
+00:31:30,266 --> 00:31:31,590
+Scott: Six Geodudes can't lose.
+
+426
+00:31:32,231 --> 00:31:35,480
+Rym: Oh, yeah, so so we got two perspectives here.
+
+427
+00:31:35,882 --> 00:31:40,160
+Rym: I had never played a Pokemon game and I suddenly blitzed it and Scott knew all the Pokemon games.
+
+428
+00:31:40,220 --> 00:31:41,002
+Rym: He knew what to expect.
+
+429
+00:31:41,724 --> 00:31:43,248
+Scott: So what's a Pokemon game like?
+
+430
+00:31:43,910 --> 00:31:46,638
+Scott: It's sort of like the rea- it's Earthbound.
+
+431
+00:31:46,658 --> 00:31:47,540
+Scott: You ever play Earthbound?
+
+432
+00:31:47,740 --> 00:31:48,082
+Scott: It's an art.
+
+433
+00:31:48,122 --> 00:31:49,730
+Scott: It's a fun RPG.
+
+434
+00:31:49,750 --> 00:31:50,996
+Rym: A light RPG.
+
+435
+00:31:51,056 --> 00:31:51,820
+Rym: Yeah, it's very light.
+
+436
+00:31:52,623 --> 00:31:57,420
+Scott: It's not like some heavy Final Fantasy with lots of customizing and magic and all that stuff.
+
+437
+00:31:57,520 --> 00:31:57,641
+Scott: It's.
+
+438
+00:31:57,721 --> 00:31:58,022
+Scott: it's just.
+
+439
+00:31:58,324 --> 00:32:00,051
+Scott: you know fight the monster it dies.
+
+440
+00:32:00,131 --> 00:32:01,457
+Scott: walk around talk to people.
+
+441
+00:32:01,497 --> 00:32:02,120
+Scott: happy times.
+
+442
+00:32:02,601 --> 00:32:05,409
+Scott: You know you can heal for free in any town pretty much.
+
+443
+00:32:05,489 --> 00:32:09,660
+Rym: Now, there's nominally a plot, but there's really not a plot.
+
+444
+00:32:09,982 --> 00:32:10,987
+Scott: Well, there is a plot.
+
+445
+00:32:11,007 --> 00:32:12,675
+Scott: you read the Pokemon adventures manga.
+
+446
+00:32:12,695 --> 00:32:17,779
+Rym: Oh, yeah I know there's a plot but playing the game the plot doesn't matter at all.
+
+447
+00:32:18,060 --> 00:32:23,581
+Scott: Well, the plot is sort of absorbed by osmosis instead of getting up all in your face, you know except
+
+448
+00:32:24,343 --> 00:32:36,980
+Rym: I'm gonna if I look at the game from an adult perspective or from my perspective as just a Gamer who picked these games up without any of the cache of Pokemon or any of the cultural stuff just as a pure game.
+
+449
+00:32:37,702 --> 00:32:39,267
+Rym: The dialogue is garbage.
+
+450
+00:32:39,488 --> 00:32:40,652
+Rym: The story is trite.
+
+451
+00:32:40,833 --> 00:32:48,900
+Rym: The characters are boring the game Outside of the gameplay, but the game itself is really boring and tedious and terrible.
+
+452
+00:32:49,860 --> 00:32:53,151
+Rym: Yeah, it's not perfect by talking to people is a chore.
+
+453
+00:32:53,171 --> 00:32:55,197
+Rym: I never want to read anything.
+
+454
+00:32:55,237 --> 00:33:00,949
+Scott: a character says Oh, I like to read what the people say because it's usually cute and funny But that not because there's any meaning to it.
+
+455
+00:33:00,969 --> 00:33:03,760
+Rym: I just for me it got old really quick.
+
+456
+00:33:04,122 --> 00:33:11,659
+Rym: I guess it wouldn't have been nearly as old if I played the game a long time ago Plus the fact that I was playing fire red and the new one at the same time.
+
+457
+00:33:12,403 --> 00:33:19,065
+Rym: they're basically the same game and people say the same kind of things and I Play as I played through one.
+
+458
+00:33:19,105 --> 00:33:22,560
+Rym: I stopped reading text in the other one because they're gonna say the same kind of thing.
+
+459
+00:33:23,162 --> 00:33:24,205
+Rym: I'm professor whatever.
+
+460
+00:33:24,526 --> 00:33:25,530
+Rym: Here's your pokedex.
+
+461
+00:33:25,891 --> 00:33:28,360
+Rym: go out and catch whatever the rotata is in this game.
+
+462
+00:33:29,202 --> 00:33:29,945
+Scott: Yeah, that is.
+
+463
+00:33:30,065 --> 00:33:34,940
+Scott: one thing is all the Pokemon generations are basically the same as the other Pokemon generations.
+
+464
+00:33:35,401 --> 00:33:49,440
+Scott: I mean you're not really getting a different game when you you know other than the upgrades to the interface the different map the New areas the larger amount of Pokemon the different endgame content the changes to the battle system.
+
+465
+00:33:50,082 --> 00:33:52,509
+Scott: It's the same game especially the one-player game.
+
+466
+00:33:52,951 --> 00:34:01,199
+Scott: start out with a few Pokemon catch a bunch more Train them beat all the gym leaders beat the elite for do the post game content the end.
+
+467
+00:34:01,560 --> 00:34:06,741
+Rym: See now I don't want to dwell too much on exactly how the games work because you probably all know and if you don't I Don't.
+
+468
+00:34:06,761 --> 00:34:09,800
+Rym: I think commentary is more interesting than just hearing us talk about how the games work.
+
+469
+00:34:10,000 --> 00:34:18,199
+Rym: Yeah, suffice to say all Pokemon games actually are is a light version of earthbound plus cock fighting for 11 year olds.
+
+470
+00:34:19,000 --> 00:34:20,143
+Scott: That's exactly right.
+
+471
+00:34:20,364 --> 00:34:24,500
+Rym: granted the cock fighting alone is the only reason I'm still playing Pokemon.
+
+472
+00:34:25,543 --> 00:34:26,659
+Scott: Yeah, I mean Pokemon.
+
+473
+00:34:26,920 --> 00:34:31,920
+Scott: It's sort of like if you play it when you barely played it when you're just new to playing it.
+
+474
+00:34:32,281 --> 00:34:35,900
+Scott: It's really fun and exciting just to walk around and like OMG a new Pokemon.
+
+475
+00:34:36,000 --> 00:34:38,668
+Rym: Look at it was cuz think I'd never played a Pokemon game before.
+
+476
+00:34:39,050 --> 00:34:43,063
+Rym: so I started up fire red and I've got my little Pokemon.
+
+477
+00:34:43,105 --> 00:34:46,179
+Rym: I'm going around and I have a ball and I catch a new Pokemon.
+
+478
+00:34:46,340 --> 00:34:49,090
+Rym: I've got two Pokemon and then like a minute later.
+
+479
+00:34:49,130 --> 00:34:50,755
+Rym: I see I see a bunch of Pokemon whatever.
+
+480
+00:34:51,096 --> 00:34:56,620
+Rym: then I see a new Pokemon I never seen before and I get excited because I want to catch that Pokemon and find out about it.
+
+481
+00:34:56,743 --> 00:34:57,240
+Scott: That's right.
+
+482
+00:34:57,641 --> 00:35:06,112
+Rym: But then halfway through the game I realized that that was the game and if there weren't a multiplayer component I probably just put the game down as soon kind of like MMOs.
+
+483
+00:35:06,393 --> 00:35:07,317
+Rym: I loved MMOs.
+
+484
+00:35:07,417 --> 00:35:08,100
+Rym: I was into him.
+
+485
+00:35:08,100 --> 00:35:08,882
+Rym: They were awesome.
+
+486
+00:35:09,364 --> 00:35:27,610
+Rym: And then one day because really my departure from the MMO world happened in the course of pretty much one day Yeah, I realized wait a minute I see what they did there and I just logged out and never logged back in and Pokemon would have been the same way except Pokemon has Compelling endgame content and social cachet.
+
+487
+00:35:28,091 --> 00:35:41,336
+Scott: Yeah, the thing with Pokemon is that it really is When you play it get right down to it after the fun earthbound RPG Which is the main reason I play Pokemon because I really like earthbound style RPGs.
+
+488
+00:35:41,557 --> 00:35:55,497
+Scott: when that's over All you've got left is a grind of selecting Pokemon teaching them the moves you want Collecting items to power them up and leveling up the Pokemon so that you can beat other people in the multiplayer
+
+489
+00:35:55,637 --> 00:36:06,133
+Rym: and sadly to make Good Pokemon You really do actually have to do research and look online and because doing it by trial and error or just by playing the game Through you're gonna make crap Pokemon.
+
+490
+00:36:06,294 --> 00:36:16,127
+Rym: You're gonna make bad decisions You're gonna waste one use items and it's just you really have to play the game from the start in the semi-conservative way Never using the special things until the end.
+
+491
+00:36:16,528 --> 00:36:21,320
+Rym: never putting special moves on a Pokemon until the end when you're absolutely sure you want it.
+
+492
+00:36:21,761 --> 00:36:25,660
+Rym: Never wasting your HMS on Pokemon that could do better with other moves.
+
+493
+00:36:26,121 --> 00:36:36,978
+Scott: Yeah, it's sort of like, you know, the thing is if you're just like some kid just playing Pokemon for fun you know, you're gonna end up using all those things and you're gonna beat the game and have a lot of fun.
+
+494
+00:36:37,038 --> 00:36:41,980
+Scott: but Too many people out there in the world play Pokemon too seriously.
+
+495
+00:36:42,080 --> 00:36:45,856
+Scott: That's raising the bar and forcing everyone else to also play Pokemon.
+
+496
+00:36:45,896 --> 00:36:53,918
+Rym: Very serious granted The Pokemon is probably the most talked about thing in our forums despite the numerous flame wars about politics and religion.
+
+497
+00:36:54,119 --> 00:37:05,486
+Rym: Yeah, and There's one point when someone mentioned something I didn't know anything about about EV training and I looked up what EV training was and I realized that I am never going to Master.
+
+498
+00:37:05,606 --> 00:37:09,805
+Rym: no because even if I Suspended all logic.
+
+499
+00:37:10,126 --> 00:37:15,700
+Rym: I still could not bring myself to subject myself to that.
+
+500
+00:37:16,563 --> 00:37:16,985
+Scott: It's just.
+
+501
+00:37:17,446 --> 00:37:18,792
+Scott: there's no way it's gonna happen.
+
+502
+00:37:18,832 --> 00:37:19,635
+Scott: You can forget about it.
+
+503
+00:37:19,655 --> 00:37:20,920
+Scott: There's stuff that's in the game.
+
+504
+00:37:20,980 --> 00:37:23,428
+Scott: That's obvious and into my face that I'm not dealing with.
+
+505
+00:37:23,850 --> 00:37:25,596
+Scott: Yeah, I'm gonna deal with that kind of crap.
+
+506
+00:37:25,616 --> 00:37:35,558
+Rym: Well my real problem I'm just gonna get right to it when I make a Pokemon team to play against other people not to beat the game But to actually play against other people which is the only reason to really play Pokemon.
+
+507
+00:37:35,679 --> 00:37:38,385
+Rym: Yeah I mean after you've beaten one Pokemon game They're all the same.
+
+508
+00:37:38,789 --> 00:37:47,556
+Rym: you play a Pokemon game So you can do all the fun things with your friends in the Pokemon world and I got to admit it is fun to talk About Pokemon occasionally in moderation.
+
+509
+00:37:48,039 --> 00:37:54,260
+Rym: Yep So I do all this stuff that it's not that fun grinding to make my Pokemon team so that I can play against other people.
+
+510
+00:37:54,941 --> 00:37:58,930
+Rym: Now when I'm playing against other people I want to win because I want to win any game.
+
+511
+00:37:58,970 --> 00:38:02,120
+Rym: if I don't want to win a game and it's a winnable game Then why am I playing?
+
+512
+00:38:02,820 --> 00:38:08,360
+Rym: But I care a lot more about how cool my Pokemon look than I do about how effective they are.
+
+513
+00:38:08,621 --> 00:38:12,300
+Scott: I also care a lot more about how my Pokemon look than how effective they are.
+
+514
+00:38:12,661 --> 00:38:21,359
+Scott: Like if I cared about getting effective Pokemon getting a Pokemon team together would be no trouble because I can just go on the Internet To like the ultimate Pokedex.
+
+515
+00:38:21,600 --> 00:38:31,520
+Scott: Oh, there's a bunch of websites that have like perfect Pokedexes pick out like the six most powerful awesome Pokemon that work together perfectly on A team with as few weaknesses as possible and make that team.
+
+516
+00:38:31,580 --> 00:38:34,149
+Scott: The problem is that team has Pokemon that I don't like.
+
+517
+00:38:34,670 --> 00:38:37,660
+Rym: Yeah, a lot of Pokemon are ugly or stupid-looking or bidoofs.
+
+518
+00:38:38,662 --> 00:38:40,393
+Scott: Yeah, it's like who wants those Pokemon.
+
+519
+00:38:40,433 --> 00:38:41,319
+Scott: Why are they even in there?
+
+520
+00:38:42,040 --> 00:38:43,847
+Rym: I mean I could see playing with Snorlax.
+
+521
+00:38:43,907 --> 00:38:44,028
+Rym: cuz.
+
+522
+00:38:44,048 --> 00:38:46,497
+Rym: Snorlax is awesome or Borlax if you prefer.
+
+523
+00:38:46,577 --> 00:38:47,180
+Scott: He's pretty cool.
+
+524
+00:38:47,320 --> 00:38:48,163
+Scott: Yeah, good Pokemon.
+
+525
+00:38:48,183 --> 00:38:49,206
+Rym: get old 10 Pokemon.
+
+526
+00:38:49,326 --> 00:38:52,897
+Rym: Yep, but I don't care how cool your gold that is.
+
+527
+00:38:52,937 --> 00:38:53,780
+Rym: He looks stupid.
+
+528
+00:38:54,001 --> 00:38:56,935
+Scott: I know gold that is like a Pokemon that I would normally like.
+
+529
+00:38:56,955 --> 00:38:57,055
+Scott: cuz.
+
+530
+00:38:57,095 --> 00:39:01,112
+Scott: I really like Zubat Ignore what he turns into go bat and he's really ugly.
+
+531
+00:39:01,132 --> 00:39:02,257
+Rym: He ignore what he looks like.
+
+532
+00:39:02,277 --> 00:39:03,100
+Rym: his powers are great.
+
+533
+00:39:03,140 --> 00:39:04,286
+Rym: He's actually a pretty good Pokemon.
+
+534
+00:39:04,306 --> 00:39:06,617
+Rym: He's okay Pokemon compared to some other Pokemon.
+
+535
+00:39:06,637 --> 00:39:07,240
+Rym: He's pretty great.
+
+536
+00:39:07,320 --> 00:39:10,934
+Scott: He's definitely not the worst Pokemon, but he just looks stupid does look stupid.
+
+537
+00:39:10,994 --> 00:39:11,817
+Rym: He's let's bear to.
+
+538
+00:39:11,857 --> 00:39:14,948
+Scott: the original Golbat was really ugly.
+
+539
+00:39:15,169 --> 00:39:16,394
+Rym: as cool as Spiritomb is.
+
+540
+00:39:16,415 --> 00:39:18,244
+Rym: I don't really like the way Spiritomb Oh, you suck.
+
+541
+00:39:18,284 --> 00:39:20,214
+Scott: Spiritomb like is my new favorite Pokemon.
+
+542
+00:39:20,516 --> 00:39:25,375
+Rym: in terms of looks I'm all about the thing that the little shinks evolves into the Luxray or whatever.
+
+543
+00:39:25,395 --> 00:39:26,580
+Scott: That's okay Pokemon.
+
+544
+00:39:26,721 --> 00:39:29,113
+Scott: It's not something I would keep around forever, but it's not bad.
+
+545
+00:39:29,194 --> 00:39:30,360
+Rym: I really like my Snorlax.
+
+546
+00:39:31,364 --> 00:39:35,920
+Rym: I should just leave a Bulbasaur unevolved because Bulbasaur is probably the cutest Pokemon ever to exist.
+
+547
+00:39:36,000 --> 00:39:36,924
+Rym: I love Bulbasaur.
+
+548
+00:39:37,064 --> 00:39:39,172
+Scott: The cutest Pokemon is like this this one.
+
+549
+00:39:39,212 --> 00:39:40,015
+Scott: It's like coral.
+
+550
+00:39:40,537 --> 00:39:41,360
+Scott: I forget what its name is.
+
+551
+00:39:41,480 --> 00:39:42,704
+Rym: What about the smiling manor?
+
+552
+00:39:42,764 --> 00:39:43,206
+Rym: a thing?
+
+553
+00:39:43,747 --> 00:39:49,446
+Scott: That's an okay, but it turns into sort of this big ugly manor a or the the Honeycomb, whatever.
+
+554
+00:39:49,466 --> 00:39:50,976
+Scott: Oh the freaking.
+
+555
+00:39:50,996 --> 00:40:00,130
+Scott: yeah The new Pokemon I forget but it's like a little flying honeycomb and it evolves like this big Queen bee thing that sucks And it's all about the little cute honeycomb.
+
+556
+00:40:00,291 --> 00:40:00,532
+Rym: Yep.
+
+557
+00:40:00,773 --> 00:40:05,232
+Rym: So and the worst thing is too I tend to like certain kinds of moves in Pokemon.
+
+558
+00:40:05,273 --> 00:40:13,452
+Rym: I like psychic ghosts dark moves Yeah, so anytime I make a Pokemon team I look at it I realized that it's all psychic dark ghost Pokemon.
+
+559
+00:40:13,472 --> 00:40:26,880
+Scott: I probably get its ass kicked and it gets its ass kicked Yep, because you can't concentrate at any one type of move and it's sort of annoying because I really only like the dark Pokemon And I don't really like the other Pokemon so much.
+
+560
+00:40:27,121 --> 00:40:30,780
+Rym: Yeah, the other thing that bothers me about the games is I want to join Team Rocket.
+
+561
+00:40:30,800 --> 00:40:34,460
+Rym: I would join Team Rocket immediately if the game gave me the option at any point.
+
+562
+00:40:34,822 --> 00:40:37,379
+Rym: I just joined Team Rocket, even if it screwed me in the end.
+
+563
+00:40:38,185 --> 00:40:38,890
+Scott: But they don't let you.
+
+564
+00:40:38,990 --> 00:40:40,259
+Rym: I know that bothers me.
+
+565
+00:40:40,500 --> 00:40:45,240
+Rym: They could have some of that Star Wars game thing where you can follow the bad side and get a different ending.
+
+566
+00:40:45,672 --> 00:40:45,838
+Rym: Yep.
+
+567
+00:40:46,822 --> 00:40:52,678
+Scott: So the thing about Pokemon is that it's so close to being an MMO and being some sort of unplayable game.
+
+568
+00:40:52,839 --> 00:40:57,009
+Scott: after you beat The single-player earthbound it's pretty much almost an MMO.
+
+569
+00:40:57,049 --> 00:40:57,651
+Scott: what's left?
+
+570
+00:40:58,011 --> 00:41:03,375
+Scott: Yeah, but there's this tiny bit of strategy That holds it together.
+
+571
+00:41:03,436 --> 00:41:12,440
+Scott: somehow I can't really like explain it in great detail But the multiplayer of Pokemon there isn't much to it because it does sort of come down.
+
+572
+00:41:12,861 --> 00:41:14,025
+Scott: Rock-paper-scissors of.
+
+573
+00:41:14,366 --> 00:41:16,392
+Scott: you chose the fire and I chose the water.
+
+574
+00:41:16,412 --> 00:41:19,020
+Scott: so I win and it does sort of come down to.
+
+575
+00:41:19,562 --> 00:41:22,396
+Scott: You know, I put this one out first and you put that one out first.
+
+576
+00:41:22,437 --> 00:41:23,019
+Scott: So I win.
+
+577
+00:41:23,363 --> 00:41:24,939
+Rym: Yeah, it's more drafting than anything.
+
+578
+00:41:25,120 --> 00:41:31,500
+Scott: Yes, but there actually is something to you know, cuz everyone has access to all the same Pokemon.
+
+579
+00:41:31,600 --> 00:41:32,967
+Scott: It's not like Magic the Gathering.
+
+580
+00:41:32,987 --> 00:41:35,620
+Scott: We're spending more money or you know gets you better Pokemon.
+
+581
+00:41:35,741 --> 00:41:35,821
+Scott: if
+
+582
+00:41:35,901 --> 00:41:51,259
+Rym: anything it's like how I wish Magic the Gathering was where Because there was a time when magic was actually kind of dying and not doing well and everyone thought it was just gonna end Around the fallen empires days, which is when I quit playing magic my hope and I didn't happen.
+
+583
+00:41:51,279 --> 00:41:58,178
+Rym: sadly I thought that oh if it fails maybe they'll just print a bunch of cards and sell all of them and you can just buy whatever cards you want.
+
+584
+00:41:58,660 --> 00:42:08,965
+Rym: and Then it would have been a drafting strategy game instead of a collecting game because it was clearly broken in that if you have the best magic cards, you'll always win and That never happened.
+
+585
+00:42:09,045 --> 00:42:09,869
+Rym: so so much for that.
+
+586
+00:42:09,909 --> 00:42:11,776
+Rym: Pokemon is the closest thing to that I can get.
+
+587
+00:42:12,138 --> 00:42:19,040
+Scott: yeah Pokemon You can choose it ever Pokemon you want and it's more about the choosing and the choosing what moves the Pokemon have.
+
+588
+00:42:19,482 --> 00:42:26,588
+Scott: Then the actual maneuvering although there is something to the maneuvering as well But it's mostly the choosing and maneuvering isn't so much.
+
+589
+00:42:26,729 --> 00:42:27,851
+Rym: Oh you did something awesome.
+
+590
+00:42:27,892 --> 00:42:29,536
+Rym: It's more don't fuck up.
+
+591
+00:42:29,877 --> 00:42:32,068
+Rym: Yeah, don't fuck up Don't fuck up.
+
+592
+00:42:32,270 --> 00:42:32,532
+Rym: Yep,
+
+593
+00:42:33,178 --> 00:42:49,675
+Scott: and It's actually the multiplayer is slightly strategic and tactical and meaningful and it's not a complete waste of time and simply oh You know because if it was a complete waste you could basically just say well You've been playing longer than I have your Pokemon are higher level than mine.
+
+594
+00:42:49,816 --> 00:42:50,840
+Scott: are you win?
+
+595
+00:42:51,060 --> 00:42:51,562
+Scott: Why even play?
+
+596
+00:42:51,943 --> 00:42:53,548
+Scott: is that you could actually beat someone?
+
+597
+00:42:53,568 --> 00:42:55,374
+Scott: because it evens out all your levels.
+
+598
+00:42:55,494 --> 00:42:58,979
+Scott: even though there's slight differences in stats It still evens you out enough.
+
+599
+00:42:59,442 --> 00:43:03,740
+Scott: You know where you can you can do damage and if you have the right moves and you use them in a you know?
+
+600
+00:43:03,800 --> 00:43:06,879
+Scott: a clever way you can beat just about anybody.
+
+601
+00:43:06,899 --> 00:43:13,665
+Rym: I Think the best part about Pokemon is just the fact that there's a lot of culture around Pokemon And there's a lot of.
+
+602
+00:43:14,087 --> 00:43:15,815
+Rym: I mean, there's all the mudkip jokes and all that.
+
+603
+00:43:15,835 --> 00:43:33,950
+Rym: but aside from that I'm under no illusion that when I go to cons this season Much like in previous convention seasons when I'd see a crowd of kids playing Mario Kart And I just walk over open my DS and join in or if I held up my DS and yelled Bomberman eight people would just walk over.
+
+604
+00:43:33,970 --> 00:43:43,933
+Rym: I imagine there's going to be quite a bit of Pokemon battling at Otakon and ConnectiCon Underground and you're just gonna see people everywhere.
+
+605
+00:43:44,134 --> 00:43:44,938
+Scott: just all it's gonna.
+
+606
+00:43:45,119 --> 00:43:53,526
+Scott: actually DS's will probably have all sorts of problems because there'll be too many people trying to use them and causing lots of Interference and signal degradation.
+
+607
+00:43:53,786 --> 00:43:57,058
+Scott: Yeah as often happens outside the Nintendo store waiting in line.
+
+608
+00:43:57,299 --> 00:44:04,451
+Rym: Yep So now there's these new Pokemon games which is part of the reason we got into this for the DS Diamond and the pearl.
+
+609
+00:44:04,632 --> 00:44:13,976
+Rym: they actually add Quite a bit to the game having played about two-thirds the way through fire red and having played about a little over halfway Through the DS one more than halfway now.
+
+610
+00:44:13,997 --> 00:44:19,260
+Scott: Yep I think the number one thing that the new Pokemon is added is the fact that it's wireless.
+
+611
+00:44:19,380 --> 00:44:27,959
+Scott: I remember back in the day you'd sit there with two game boys and this cable between them and you'd huddle up next to each Cable sucks and the cable was really short.
+
+612
+00:44:28,261 --> 00:44:30,110
+Scott: It was really slow too and you're using.
+
+613
+00:44:30,130 --> 00:44:37,060
+Scott: you're playing black and white Pokemon again Someone else's black and white Pokemon and if that cable slipped a little it was game over.
+
+614
+00:44:37,462 --> 00:44:40,280
+Rym: There was only one game ever that used that cable.
+
+615
+00:44:40,340 --> 00:44:44,420
+Rym: Well, and that was hunt for the red October the best game boy game ever.
+
+616
+00:44:44,821 --> 00:44:48,312
+Rym: I don't know about that, but at least multiplayer game boy game ever maybe.
+
+617
+00:44:48,673 --> 00:44:52,985
+Scott: but you play this Pokemon and battle someone over.
+
+618
+00:44:53,025 --> 00:45:02,129
+Scott: this really slow connection huddled right next to them and it was generally unpleasant and it seemed like the Point of Pokemon was to make Pokemon and battle people.
+
+619
+00:45:02,190 --> 00:45:05,540
+Scott: but you really couldn't do it very easily at all.
+
+620
+00:45:05,621 --> 00:45:06,999
+Scott: I only did it a few times.
+
+621
+00:45:07,181 --> 00:45:18,160
+Rym: In fact, really that's to me the primary revolution of the DS wasn't the touchscreen But the local wireless because multiplayer gaming on the DS Exploded because it no longer sucked.
+
+622
+00:45:18,644 --> 00:45:33,700
+Rym: I loved advanced wars on the GBA but I rarely ever played advanced wars multiplayer because you either had to sit in the tiny huddle and it just sucked and then someone Would move or dislodge the cord in the game over after an hour or you played the stupid hot seat with the wireless.
+
+623
+00:45:33,861 --> 00:45:34,466
+Rym: It's just heaven.
+
+624
+00:45:34,547 --> 00:45:35,172
+Rym: It just works.
+
+625
+00:45:35,636 --> 00:45:42,780
+Scott: Yep The second thing about the diamond and pearl that's pretty cool is they do a lot of things to streamline the game.
+
+626
+00:45:42,820 --> 00:45:49,067
+Scott: They don't streamline it enough in my opinion, but like they give you the running shoes right away You can move around quickly.
+
+627
+00:45:49,147 --> 00:45:52,880
+Rym: They also give you the bicycle really early and they made it really fast.
+
+628
+00:45:53,102 --> 00:46:05,792
+Scott: yep, and it's not hard like you get all this stuff that you need to make moving around the game and doing whatever you want really convenient really early on and So you're not spending a whole like in the early Pokemon.
+
+629
+00:46:05,812 --> 00:46:15,253
+Scott: you pretty much had to walk around The entire game and then when you got to the end now, you can finally fly anywhere you want and this one It's like are you can fly anywhere you want.
+
+630
+00:46:15,273 --> 00:46:21,014
+Rym: we give up And they added a lot of endgame content and a lot of just stuff you can do.
+
+631
+00:46:21,054 --> 00:46:28,980
+Rym: you can farm the berries and Bake the poffins and feed them to your Pokemon to enter the contest to win the ribbons to stick on the other Pokemon.
+
+632
+00:46:29,060 --> 00:46:33,820
+Scott: Yeah, it's like there's a whole lot of extra stuff to do when you don't want to train your Pokemon.
+
+633
+00:46:34,382 --> 00:46:37,350
+Scott: But honestly, I don't like any of that stuff.
+
+634
+00:46:37,390 --> 00:46:40,820
+Scott: like the contests are just stupid and I paid no attention to them whatsoever.
+
+635
+00:46:40,981 --> 00:46:42,065
+Scott: I completely ignored them.
+
+636
+00:46:42,105 --> 00:46:45,880
+Scott: and there was a whole bunch of other stuff like putting labels on your pokeballs.
+
+637
+00:46:46,221 --> 00:46:47,244
+Scott: I completely ignored that.
+
+638
+00:46:47,264 --> 00:46:48,147
+Scott: that's a waste of time.
+
+639
+00:46:48,608 --> 00:46:49,451
+Scott: It's not fun either.
+
+640
+00:46:49,792 --> 00:46:55,411
+Rym: Yeah, they also added a lot of Interesting stuff with the wireless and with the Wi-Fi.
+
+641
+00:46:55,431 --> 00:47:01,832
+Rym: well, I mean you can trade with people on the internet Which is pretty interesting actually because Japanese people give you.
+
+642
+00:47:01,852 --> 00:47:02,193
+Scott: amazing.
+
+643
+00:47:02,353 --> 00:47:05,685
+Rym: Japanese people for whatever reason Highly value.
+
+644
+00:47:05,765 --> 00:47:06,909
+Rym: English name Pokemon.
+
+645
+00:47:07,190 --> 00:47:08,174
+Rym: It'll give you high level.
+
+646
+00:47:08,234 --> 00:47:09,579
+Scott: That's what we think is going on.
+
+647
+00:47:10,041 --> 00:47:12,828
+Scott: It could just be the Japanese people cheat and they'll.
+
+648
+00:47:12,989 --> 00:47:13,570
+Scott: they want the it.
+
+649
+00:47:13,590 --> 00:47:17,200
+Scott: they'll trade you some cheating Pokemon for your English Pokemon.
+
+650
+00:47:17,400 --> 00:47:20,028
+Rym: Yeah, like the people in Diablo back in the day.
+
+651
+00:47:20,048 --> 00:47:24,420
+Rym: Yeah, I'll trade you like a billion gold for one dagger.
+
+652
+00:47:26,450 --> 00:47:29,631
+Rym: Yep But let's get to the more fun part.
+
+653
+00:47:29,711 --> 00:47:30,960
+Rym: What's wrong with Pokemon?
+
+654
+00:47:32,521 --> 00:47:34,510
+Scott: first of all the problem with Pokemon is
+
+655
+00:47:35,751 --> 00:47:36,273
+Rym: While
+
+656
+00:47:36,434 --> 00:47:51,149
+Scott: you don't have to level up your Pokemon very high in order to You know get them to be a level at which they are useful to still have to grind you still have to grind and the grinding is boring and there's no way to do it efficiently.
+
+657
+00:47:51,169 --> 00:47:54,800
+Scott: and You know some poke like it's very tedious.
+
+658
+00:47:54,960 --> 00:48:09,770
+Scott: after a while like early when you're actually playing the game like going through the earthbound style game is kind of fun because you're running into new Pokemon and You know, you're trying to catch him most of the time and you're fighting against like these trainers who have interesting Pokemon company.
+
+659
+00:48:09,951 --> 00:48:10,455
+Rym: Are you kidding?
+
+660
+00:48:10,475 --> 00:48:16,142
+Scott: It's always a hiker with six geodudes Usually but you know, the trainers in the gyms are interesting.
+
+661
+00:48:16,282 --> 00:48:26,404
+Scott: Yeah, I collect Magikarp splash tag But you know late when you get to the end of the game, it's pretty much like yeah There's one place you can go the Pokemon.
+
+662
+00:48:26,424 --> 00:48:27,229
+Scott: They're high level.
+
+663
+00:48:27,571 --> 00:48:29,420
+Scott: You basically have to fight fight fight fight fight.
+
+664
+00:48:29,721 --> 00:48:30,806
+Scott: go back to the Poke Center.
+
+665
+00:48:30,846 --> 00:48:31,670
+Scott: fight fight fight fight.
+
+666
+00:48:31,710 --> 00:48:34,029
+Scott: Go back to the books that are same Pokemon over and over again.
+
+667
+00:48:34,652 --> 00:48:41,425
+Scott: And it all you might as well just sit there holding down a for a few hours Which is what you press a press a and what the hell's the point?
+
+668
+00:48:41,485 --> 00:48:42,450
+Rym: This is the worst thing.
+
+669
+00:48:42,510 --> 00:48:51,212
+Rym: This is how you know that this is one of those instances where game developers recognize a problem and solve the wrong Problem.
+
+670
+00:48:51,574 --> 00:48:52,095
+Rym: problem.
+
+671
+00:48:52,476 --> 00:48:55,406
+Rym: The game is a grind when you want to level up after you beat the game.
+
+672
+00:48:55,827 --> 00:48:56,710
+Rym: You got to hit a lot.
+
+673
+00:48:57,053 --> 00:49:06,129
+Rym: Solution well They made it so you can hit a by hitting L. that way you can play Pokemon One-handed and go about the rest of your life while you hit a and walk around.
+
+674
+00:49:06,812 --> 00:49:08,678
+Scott: What a great solution that was.
+
+675
+00:49:08,698 --> 00:49:10,885
+Scott: how about if I beat the game?
+
+676
+00:49:10,965 --> 00:49:15,225
+Scott: because I beat the game Let me make any Pokemon any level I want.
+
+677
+00:49:15,265 --> 00:49:16,210
+Scott: what the fuck does it matter?
+
+678
+00:49:16,470 --> 00:49:18,945
+Rym: That's what I said, even if you have to catch him and the rare stuff.
+
+679
+00:49:18,986 --> 00:49:19,650
+Rym: I'm fine with that.
+
+680
+00:49:19,710 --> 00:49:29,579
+Rym: Yeah I'm fine with collecting the poke But there should be a guy who you can talk to after you beat the game who will just level a Pokemon up With whatever Eevee whatever to whatever level you want.
+
+681
+00:49:30,040 --> 00:49:33,130
+Scott: Yeah, I mean if I why should multiplayer?
+
+682
+00:49:33,583 --> 00:49:43,290
+Scott: You know Even when you're evening out the levels if some guy has a level 100 Pokemon and I have a little 50 Pokemon and we bring His Pokemon down to level 50 in order to battle.
+
+683
+00:49:43,731 --> 00:49:47,004
+Scott: His is still a little better because of the stats and the way it does thing.
+
+684
+00:49:47,024 --> 00:49:49,516
+Rym: plus he probably has that like the one move They leveled up for.
+
+685
+00:49:49,536 --> 00:49:51,590
+Scott: yeah, he probably has some powerful move.
+
+686
+00:49:51,650 --> 00:49:55,905
+Scott: He learned a level 80 so that's really still sort of unfair.
+
+687
+00:49:55,945 --> 00:49:59,958
+Scott: and because he played longer He's gonna beat me regardless of my strategy.
+
+688
+00:50:00,500 --> 00:50:01,724
+Scott: Just when I beat the game.
+
+689
+00:50:01,965 --> 00:50:03,690
+Scott: Let me put any move on any Pokemon.
+
+690
+00:50:03,851 --> 00:50:05,078
+Scott: It doesn't matter anymore.
+
+691
+00:50:05,099 --> 00:50:06,990
+Rym: Yeah, well any move that's relevant.
+
+692
+00:50:07,090 --> 00:50:10,427
+Rym: I mean you still gotta have the limitations on what moves Pokemon can learn.
+
+693
+00:50:10,567 --> 00:50:16,034
+Scott: Yes, of course You don't want me to teach, you know for fire moves to my water Pokemon Awesome Pokemon.
+
+694
+00:50:16,054 --> 00:50:24,430
+Scott: that would be an awesome Pokemon, but if you want to see a fire type ice type Pokemon Yeah, that'd be pretty cool also, but yeah, just let me know it'd be pretty lukewarm.
+
+695
+00:50:26,755 --> 00:50:27,904
+Scott: Let me do whatever I want.
+
+696
+00:50:27,964 --> 00:50:28,690
+Scott: it doesn't matter.
+
+697
+00:50:29,112 --> 00:50:32,010
+Scott: Why should it be a contest of who sat there holding a all day?
+
+698
+00:50:32,092 --> 00:50:34,350
+Scott: Cuz yeah I don't have the patience for it at that point.
+
+699
+00:50:34,973 --> 00:50:38,934
+Rym: If it gets to the point where there's a way to cheat to just make Pokemon whatever level I want I'd probably do it.
+
+700
+00:50:39,116 --> 00:50:40,385
+Scott: I would also do it in a second.
+
+701
+00:50:40,768 --> 00:50:52,469
+Scott: Yes basically, I beat the game and there's an island after the game with the end game content and I'm basically just not doing it because I have to Level up so much and I just I'm sick of it.
+
+702
+00:50:52,770 --> 00:50:59,650
+Rym: Alright, so my primary complaint with Pokemon is that everything just takes too long to react to my action.
+
+703
+00:50:59,650 --> 00:51:02,435
+Scott: Yes, this is my number one complaint when I'm in battle.
+
+704
+00:51:02,475 --> 00:51:03,237
+Rym: Alright, let's see.
+
+705
+00:51:03,517 --> 00:51:11,630
+Rym: So it says ah Battle and then throw my pokeball out and then the other trainer appears and he throws his pokeball out and I can't skip this.
+
+706
+00:51:11,690 --> 00:51:15,613
+Rym: It already takes like five seconds and then it's like alright What move do I want?
+
+707
+00:51:15,653 --> 00:51:19,930
+Rym: a big splash attack and then it just takes several seconds for it.
+
+708
+00:51:19,970 --> 00:51:23,630
+Scott: It's like there's like a one second delay before it even starts the splash attack.
+
+709
+00:51:24,092 --> 00:51:27,990
+Scott: Even if you turn the animation off it still makes the other Pokemon blink.
+
+710
+00:51:28,273 --> 00:51:29,489
+Scott: That's like two more seconds.
+
+711
+00:51:29,952 --> 00:51:40,790
+Scott: Then it like text shows up and even if I set the text speed to fast The text is still too slow and it takes a whole two seconds for it to display the text of splash attack hit
+
+712
+00:51:41,031 --> 00:51:41,996
+Rym: In fact, and then
+
+713
+00:51:42,016 --> 00:51:44,810
+Scott: I have to wait for their damage meter to go down from all the day.
+
+714
+00:51:44,850 --> 00:51:46,293
+Rym: I started playing fire right again.
+
+715
+00:51:46,874 --> 00:51:48,297
+Rym: It's faster than the new one.
+
+716
+00:51:48,317 --> 00:51:49,660
+Rym: Yeah fairly significantly.
+
+717
+00:51:50,813 --> 00:51:53,150
+Rym: So I've started playing that more because it's more enjoyable.
+
+718
+00:51:53,331 --> 00:51:54,938
+Scott: Yeah, the Pokemon should go.
+
+719
+00:51:54,958 --> 00:51:57,910
+Scott: the battle should go as fast as I can push the button.
+
+720
+00:51:58,091 --> 00:52:04,189
+Scott: I should choose an attack and then let's say I go and I push a splash attack and splash deck does 10 damage.
+
+721
+00:52:04,490 --> 00:52:12,130
+Scott: as Soon as I push a the exact instant I push a on splash attack the damage should already be removed from the other guy.
+
+722
+00:52:12,391 --> 00:52:13,936
+Scott: There should be no animation whatsoever.
+
+723
+00:52:14,157 --> 00:52:15,200
+Scott: There should be no text.
+
+724
+00:52:15,481 --> 00:52:23,810
+Scott: if he was paralyzed make the paralyzed icon appear No text and then immediately the menu should reappear and be responsive to my button presses.
+
+725
+00:52:23,850 --> 00:52:25,943
+Rym: No, I like that to be an option because I know people like.
+
+726
+00:52:25,984 --> 00:52:26,668
+Rym: yeah, that's fine.
+
+727
+00:52:27,231 --> 00:52:37,169
+Scott: I like to turn the animation on when I'm like at the boss battle a gym leader or there's a Pokemon that might have really Fancy attacks that I haven't looked at before because looking at new attacks is fun.
+
+728
+00:52:37,651 --> 00:52:41,864
+Scott: but even when I'm you know, even if I'm not grinding forget the grinding.
+
+729
+00:52:42,005 --> 00:53:10,704
+Scott: if I'm actually playing through the game and I'm beating a bunch of trainers in an area that all have similar Pokemon the only thing that's keeping me from getting ahead in the game is the amount of time the fucking battles take and Even if I'm powerful enough to just beat all the battles instantly I have to sit there for like 20 minutes waiting for all this goddamn text even if I set the game on the fastest least animation mode possible and It's really just wasting my time and pissing me off.
+
+730
+00:53:11,347 --> 00:53:13,156
+Rym: and three I'm just gonna.
+
+731
+00:53:13,196 --> 00:53:14,422
+Rym: I'm not even gonna explain this.
+
+732
+00:53:14,724 --> 00:53:15,850
+Rym: you should know what I'm talking about.
+
+733
+00:53:16,411 --> 00:53:18,563
+Rym: Faint is not spelled that way.
+
+734
+00:53:18,643 --> 00:53:19,769
+Rym: you assholes.
+
+735
+00:53:21,012 --> 00:53:23,479
+Scott: Yeah, Rym is pretty pissed off about that alone.
+
+736
+00:53:23,699 --> 00:53:30,030
+Rym: Like when I like I saw that attack and I kept thinking all right Maybe it's a play on words because it makes you faint.
+
+737
+00:53:31,271 --> 00:53:39,026
+Rym: And then I read the description of it and then I just turned the game off and discussed and then I realized that I Hadn't saved my game and that made me more disgusted.
+
+738
+00:53:39,207 --> 00:53:52,670
+Scott: Yeah It's an attack a certain Pokemon can learn called faint and it basically, you know faint fe I NT where you kind of You know, like you act like you're gonna go one way you go another way, but they spell it faint with an a.
+
+739
+00:53:52,991 --> 00:53:54,275
+Rym: That's not how you spell that.
+
+740
+00:53:54,356 --> 00:53:58,450
+Scott: faint with an a is like I pass out because the blood rushed out of my head.
+
+741
+00:53:58,991 --> 00:54:00,677
+Scott: That does not mean the same thing.
+
+742
+00:54:00,717 --> 00:54:03,807
+Scott: So why would you call fe I NT fe I NT there?
+
+743
+00:54:03,827 --> 00:54:04,770
+Rym: because they're stupid.
+
+744
+00:54:06,092 --> 00:54:08,469
+Scott: There's one nice ever localized the game fucked up.
+
+745
+00:54:08,731 --> 00:54:12,570
+Rym: But at the same time I think that's in all the Pokemon games that have that attack it is.
+
+746
+00:54:12,650 --> 00:54:18,518
+Scott: I think they messed it up in the first one with a bad localization and they've just Continued the mistake rather than admitting it.
+
+747
+00:54:18,959 --> 00:54:27,530
+Rym: but at least the people who localized diamond pearl There are a lot of things characters say that at least in the early game.
+
+748
+00:54:27,570 --> 00:54:33,030
+Rym: I stopped reading text long ago that made me believe that those people are some form of internet geek.
+
+749
+00:54:33,090 --> 00:54:34,620
+Scott: I think they might be the Phoenix Wright people.
+
+750
+00:54:34,640 --> 00:54:35,103
+Scott: I'm not sure.
+
+751
+00:54:35,123 --> 00:54:36,210
+Scott: I guess there's gonna look it up.
+
+752
+00:54:36,451 --> 00:54:41,475
+Rym: There are a lot of things people say that are not direct references But they're.
+
+753
+00:54:41,656 --> 00:54:44,630
+Rym: they use words that aren't often used by people who aren't internet.
+
+754
+00:54:44,652 --> 00:54:44,763
+Rym: Yeah
+
+755
+00:54:44,911 --> 00:54:52,531
+Scott: Like I talked to someone in the just an NPC Standing in town and I talked to them in Pokemon and they were like, oh no is my something something Yep,
+
+756
+00:54:52,611 --> 00:54:58,030
+Rym: and I beat one trainer out like some hiker with six geodudes and he said oh snap after I beat him.
+
+757
+00:54:58,330 --> 00:55:00,596
+Scott: Yep, that's pretty cool right there.
+
+758
+00:55:00,616 --> 00:55:02,181
+Rym: There's no way that was random chance.
+
+759
+00:55:02,241 --> 00:55:05,770
+Rym: No, no one actually says oh snap except our people.
+
+760
+00:55:06,292 --> 00:55:13,582
+Scott: It's pretty cool that we take the Pokemon into our internet culture and the Pokemon Reciprocates by taking our internet culture and putting it in their Pokemon.
+
+761
+00:55:13,642 --> 00:55:15,650
+Rym: Phoenix, right somewhat did the same thing.
+
+762
+00:55:15,831 --> 00:55:17,378
+Scott: Yeah, Phoenix, right is cool.
+
+763
+00:55:17,941 --> 00:55:19,790
+Scott: Yeah, so is Pokemon for the same reason.
+
+764
+00:55:20,311 --> 00:55:22,839
+Rym: Yeah, because other than those gripes I don't have much else.
+
+765
+00:55:23,220 --> 00:55:24,965
+Scott: yeah, I mean Pokemon.
+
+766
+00:55:25,086 --> 00:55:29,250
+Scott: if you've never played a Pokemon game You know You might think it's for kids and it is kind of for kids.
+
+767
+00:55:29,310 --> 00:55:34,950
+Scott: It's a game that is designed in such a way that kids can play it with great ease and derive much enjoyment from it.
+
+768
+00:55:35,331 --> 00:55:39,289
+Scott: But it is sort of all ages like anyone who gets into it can get into it.
+
+769
+00:55:39,610 --> 00:55:43,824
+Scott: You know don't think it's all cutesy wootsie kids crap because some of it is.
+
+770
+00:55:43,884 --> 00:55:48,202
+Scott: but anyone can enjoy Pokemon Even if you're like an old man, you can enjoy Pokemon.
+
+771
+00:55:48,242 --> 00:55:49,770
+Rym: It's basically just cock fighting.
+
+772
+00:55:50,192 --> 00:55:59,305
+Scott: Yeah, I mean it's earthbound plus cock fighting and if you like either one of those two There's and Pokemon is so much in it that there's something you will like.
+
+773
+00:55:59,445 --> 00:56:02,720
+Scott: even if you don't like the cock fighting You just completely ignore levels.
+
+774
+00:56:03,062 --> 00:56:04,510
+Scott: you completely ignore beating the game.
+
+775
+00:56:04,991 --> 00:56:09,364
+Scott: You can just like dress up your Pokemon and that's like a whole game in and of itself.
+
+776
+00:56:09,424 --> 00:56:11,430
+Scott: the contests the thing that I completely ignore.
+
+777
+00:56:11,891 --> 00:56:17,510
+Rym: I played in a few and won him and the DDR part was particularly annoying because I played it on the train.
+
+778
+00:56:18,167 --> 00:56:20,274
+Rym: Ah Yeah, it's like.
+
+779
+00:56:20,294 --> 00:56:25,250
+Scott: yeah, that's one thing people have to realize when you make a stylist game for the DS.
+
+780
+00:56:25,850 --> 00:56:35,510
+Scott: Basically if it requires any precision stylist movement It's impossible to play it in a car or a train unless there's absolutely no vibration whatsoever.
+
+781
+00:56:35,650 --> 00:56:36,734
+Scott: And there's always vibration.
+
+782
+00:56:37,155 --> 00:56:39,122
+Scott: like I could not play trauma center on the train.
+
+783
+00:56:39,162 --> 00:56:39,724
+Scott: It's impossible.
+
+784
+00:56:39,965 --> 00:56:41,570
+Rym: Well, you could you just kept killing people.
+
+785
+00:56:41,771 --> 00:56:44,741
+Scott: Yeah, it's just it's absolutely impossible to play it properly on the train.
+
+786
+00:56:45,082 --> 00:56:46,427
+Scott: That's why I like trauma center.
+
+787
+00:56:46,467 --> 00:56:47,170
+Scott: We a lot better.
+
+788
+00:56:47,574 --> 00:56:49,029
+Scott: Yeah, also it was easier.
+
+789
+00:56:50,370 --> 00:56:51,396
+Scott: Yeah, Pokemon.
+
+790
+00:56:51,858 --> 00:56:52,964
+Scott: So I like them.
+
+791
+00:56:53,567 --> 00:56:56,259
+Rym: right now I'm heading my team up with that.
+
+792
+00:56:56,339 --> 00:57:00,696
+Rym: I got a bronzer and I evolved him and leveled him way up And so now he's the big Chinese Bell.
+
+793
+00:57:01,077 --> 00:57:04,530
+Rym: Yep, and I think he's gonna be like my headline Pokemon from now on.
+
+794
+00:57:04,992 --> 00:57:05,997
+Scott: Yeah, I like.
+
+795
+00:57:06,037 --> 00:57:09,556
+Scott: I was excited about that Pokemon and I like it on paper But I just don't.
+
+796
+00:57:09,777 --> 00:57:11,064
+Scott: I don't like how it turns into the Bell.
+
+797
+00:57:11,084 --> 00:57:14,220
+Scott: I like the Bell a lot But I like the dish better than the Bell.
+
+798
+00:57:14,260 --> 00:57:15,024
+Rym: I like the dish too.
+
+799
+00:57:15,064 --> 00:57:16,310
+Rym: I might use that one instead.
+
+800
+00:57:16,991 --> 00:57:18,840
+Scott: Places in the game right is catch the Bell.
+
+801
+00:57:18,861 --> 00:57:20,630
+Scott: I don't need to bother leveling up the bronzer.
+
+802
+00:57:21,212 --> 00:57:23,402
+Rym: Oh, I live them up cuz I was using him the whole time.
+
+803
+00:57:23,563 --> 00:57:24,547
+Scott: Yeah, I didn't use him.
+
+804
+00:57:24,587 --> 00:57:25,190
+Scott: I used other book.
+
+805
+00:57:25,310 --> 00:57:25,591
+Rym: He's my.
+
+806
+00:57:25,611 --> 00:57:26,936
+Rym: he's one of my primary Pokemon.
+
+807
+00:57:27,297 --> 00:57:31,230
+Rym: Yeah, and once I get the pal part baldassar is gonna be bringing up the rear.
+
+808
+00:57:31,591 --> 00:57:34,339
+Rym: He's actually a Venusaur but I named him baldassar.
+
+809
+00:57:34,379 --> 00:57:37,949
+Rym: Yeah much like how my Pidgeot or whatever is named Pidgey.
+
+810
+00:57:38,210 --> 00:57:43,830
+Scott: Yep, like I got sort of you know washed out on Pokemon lately and I'm doing other stuff instead.
+
+811
+00:57:43,910 --> 00:57:46,670
+Scott: But I feel it's gonna come back in like a few weeks.
+
+812
+00:57:46,710 --> 00:57:56,409
+Scott: I'm gonna be all excited about Pokemon again, and I'll go back and I'll finally beat the leaf green And then I'll start dragging all the Pokemon into the diamond and pearl and making another move on it.
+
+813
+00:57:56,771 --> 00:58:01,770
+Scott: It's really all I have to do now is construct my final team of six and then I'll then I'll be alright.
+
+814
+00:58:02,225 --> 00:58:08,093
+Rym: Yeah I might have to make a couple of teams just because you can have the dual battles and I might want to have the backup Team.
+
+815
+00:58:08,295 --> 00:58:10,169
+Scott: if there's a dual battle, I'll just go with it.
+
+816
+00:58:10,371 --> 00:58:13,312
+Scott: You know as long as you've got some flying Pokemon and dual battles All right.
+
+817
+00:58:13,914 --> 00:58:15,680
+Rym: Yeah flying Pokemon earthquake.
+
+818
+00:58:16,122 --> 00:58:18,069
+Rym: Yeah, that's obviously that's what you do.
+
+819
+00:58:18,250 --> 00:58:20,864
+Rym: It's a classic move, of course, you've got all flying Pokemon.
+
+820
+00:58:20,884 --> 00:58:21,829
+Rym: that doesn't work against you.
+
+821
+00:58:25,411 --> 00:58:31,510
+Rym: Yeah, Pokemon is not the greatest game in the world, but I can't pretend that I have not enjoyed my time thus far.
+
+822
+00:58:31,972 --> 00:58:34,546
+Scott: Yeah, and also, you know DS there hasn't been.
+
+823
+00:58:34,566 --> 00:58:39,584
+Scott: you know Pokemon is pretty much all you're gonna get in the DS for a few months here.
+
+824
+00:58:39,644 --> 00:58:41,590
+Rym: Well until the explosion happens.
+
+825
+00:58:41,730 --> 00:58:41,991
+Rym: Yes,
+
+826
+00:58:42,433 --> 00:58:58,077
+Scott: so and Pokemon is definitely a game that while it might not be this great amazing game I mean the RPG is earthbound style But it's not as good as earthbound and the cock fighting is like one step above MMO making it tolerable But it's still pretty low down there.
+
+827
+00:58:58,338 --> 00:59:01,570
+Rym: In fact, I'd say that Pokemon leveling is at the line.
+
+828
+00:59:02,011 --> 00:59:02,894
+Rym: It is the bear.
+
+829
+00:59:02,974 --> 00:59:06,505
+Rym: It's the closest thing to a grind that I will accept.
+
+830
+00:59:06,626 --> 00:59:11,381
+Rym: Yeah, and even that is grudging Yep, but regardless for $30.
+
+831
+00:59:11,381 --> 00:59:19,973
+Scott: this game Pokemon Diamond Pearl, whatever Provides so many hours of entertaining gameplay Even if you take out the grinding.
+
+832
+00:59:19,993 --> 00:59:31,129
+Rym: that is totally worth it and that was GeekNights with Rym and Scott.
+
+833
+00:59:31,350 --> 00:59:33,760
+Rym: special Thanks to DJ pretzel for our opening theme.
+
+834
+00:59:34,162 --> 00:59:38,577
+Scott: Be sure to visit our website at www.frontrowcrew.com.
+
+835
+00:59:39,219 --> 00:59:41,687
+Scott: if you like our podcasts, you'll love our forums.
+
+836
+00:59:41,767 --> 00:59:42,490
+Scott: Make sure you visit them.
+
+837
+00:59:43,051 --> 00:59:53,873
+Scott: You can send your email feedback to GeekNights at gmail.com and if you want you can leave us a voicemail at 206.
+
+838
+00:59:53,873 --> 00:59:56,610
+Rym: GeekNights airs every weeknight Monday through Thursday.
+
+839
+00:59:57,272 --> 01:00:02,786
+Scott: GeekNights is recorded with absolutely no studio and no audience, but unlike those other talk shows.
+
+840
+01:00:03,167 --> 01:00:04,410
+Scott: It's actually recorded at night.
+

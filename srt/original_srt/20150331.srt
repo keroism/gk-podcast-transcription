@@ -1,0 +1,2812 @@
+﻿1
+00:00:08,700 --> 00:00:11,959
+Speaker 1: It's Tuesday March 31st 2015.
+
+2
+00:00:11,959 --> 00:00:15,489
+Speaker 1: I'm rim I'm Scott, and this is geek nights.
+
+3
+00:00:15,549 --> 00:00:19,921
+Speaker 1: tonight We're talking about the xcom board game.
+
+4
+00:00:19,981 --> 00:00:25,589
+Speaker 1: now that we've played it more than once protect humanity from poorly written rules.
+
+5
+00:00:27,592 --> 00:00:28,628
+Speaker 0: Let's do this.
+
+6
+00:00:30,132 --> 00:00:33,430
+Speaker 1: I'm actually kind of glad that con seasons over for a while.
+
+7
+00:00:33,490 --> 00:00:37,287
+Speaker 0: I'm actually not over for a while the convention this weekend, and it's the last one.
+
+8
+00:00:37,328 --> 00:00:37,830
+Speaker 0: That's right.
+
+9
+00:00:38,051 --> 00:00:38,413
+Speaker 1: I've been.
+
+10
+00:00:38,434 --> 00:00:39,239
+Speaker 1: that is good.
+
+11
+00:00:39,460 --> 00:00:41,070
+Speaker 1: I've been living out of hotels.
+
+12
+00:00:41,792 --> 00:00:43,780
+Speaker 1: I am because outside of geek nights.
+
+13
+00:00:44,282 --> 00:00:48,515
+Speaker 1: I've been going to a bunch of other conventions All over the world.
+
+14
+00:00:48,535 --> 00:00:53,939
+Speaker 1: I've been to London like three times once you go to some conventions there I did and I heard a lot of it.
+
+15
+00:00:54,140 --> 00:00:55,466
+Speaker 1: They weren't that nerdy though.
+
+16
+00:00:55,486 --> 00:00:57,378
+Speaker 1: in a couple weeks I'm going to Mumbai.
+
+17
+00:00:57,843 --> 00:00:59,594
+Speaker 1: great there I'm on a panel.
+
+18
+00:00:59,634 --> 00:01:03,608
+Speaker 1: both of the panels about like FPGA and NTP and PTP and FPGAs.
+
+19
+00:01:03,889 --> 00:01:06,300
+Speaker 1: oh yeah That's a big deal in my industry.
+
+20
+00:01:06,341 --> 00:01:12,423
+Speaker 1: you want you want to talk about FPGAs Using FPGAs and no we're not because they're stupid wastes of money.
+
+21
+00:01:12,543 --> 00:01:14,990
+Speaker 0: That's but it's like who's even programming them.
+
+22
+00:01:15,913 --> 00:01:17,237
+Speaker 1: You want to learn about that shit?
+
+23
+00:01:17,257 --> 00:01:18,341
+Speaker 1: We can talk all day.
+
+24
+00:01:18,361 --> 00:01:19,364
+Speaker 0: That's a Monday show.
+
+25
+00:01:19,384 --> 00:01:20,789
+Speaker 0: we ever done a Monday show on FPGA?
+
+26
+00:01:21,130 --> 00:01:22,254
+Speaker 1: Oh, and I feel like we should do.
+
+27
+00:01:22,375 --> 00:01:24,061
+Speaker 0: you know what FPGA stands for.
+
+28
+00:01:24,081 --> 00:01:25,767
+Speaker 0: I feel programmable gate.
+
+29
+00:01:26,851 --> 00:01:28,297
+Speaker 1: I forget the array.
+
+30
+00:01:28,317 --> 00:01:31,650
+Speaker 0: yeah array field programmable gate array.
+
+31
+00:01:31,871 --> 00:01:38,287
+Speaker 0: Yeah, I actually I didn't think that anyone outside of like Electronics you know like testing.
+
+32
+00:01:38,328 --> 00:01:44,842
+Speaker 1: so Scott You know my job like we like one of the things we sell is like fix engines like middleware for like financial You write it in Java.
+
+33
+00:01:45,266 --> 00:01:50,527
+Speaker 0: Yeah How does that have to do with an FPGA that is as far away from FPGAs as possible?
+
+34
+00:01:50,547 --> 00:01:50,587
+Speaker 0: so?
+
+35
+00:01:51,910 --> 00:01:52,993
+Speaker 1: Basically what you would do?
+
+36
+00:01:53,054 --> 00:01:58,210
+Speaker 0: we don't offer this because it's literally worth someone selling like a JVM in an FPGA.
+
+37
+00:01:58,330 --> 00:02:00,889
+Speaker 1: No, no, no, so you realize not everyone writes this stuff in Java.
+
+38
+00:02:01,371 --> 00:02:13,668
+Speaker 1: So there there's another company that claims to have one of these things that we do, but they've implemented it in FPGA to get below the 20 micro second like latency round-trip time.
+
+39
+00:02:13,728 --> 00:02:14,350
+Speaker 0: That's ridiculous.
+
+40
+00:02:14,751 --> 00:02:21,248
+Speaker 1: Yeah, they can get it down to like 14 and they're perfectly controlled situations under incredible expense and time.
+
+41
+00:02:21,629 --> 00:02:25,845
+Speaker 0: so I mean But I mean let's talk about it on the Monday show
+
+42
+00:02:25,865 --> 00:02:33,012
+Speaker 1: the Monday show, but yeah Scott I'm on this panel and I'm basically going to say my opinion on FPGAs because I don't think they're worthwhile And
+
+43
+00:02:33,072 --> 00:02:35,500
+Speaker 0: how much you have to pay someone to program them.
+
+44
+00:02:35,861 --> 00:02:43,190
+Speaker 1: so basically hire like two or three people who are at least as good As you and let them spend a year, and you'll have something that will garbage.
+
+45
+00:02:43,230 --> 00:02:47,807
+Speaker 1: no It'll work perfectly, but the thing it's supposed to do is itself obsolete.
+
+46
+00:02:48,188 --> 00:02:53,387
+Speaker 1: Yeah Yeah, we do do stuff with like solar flare like network cards like Morse or like CUDA cores like.
+
+47
+00:02:53,407 --> 00:02:53,949
+Speaker 1: that's another thing.
+
+48
+00:02:53,970 --> 00:02:54,773
+Speaker 0: well Yeah, why not?
+
+49
+00:02:54,813 --> 00:02:55,777
+Speaker 0: That's we got a normal.
+
+50
+00:02:56,159 --> 00:02:57,525
+Speaker 1: We got a Monday show topic.
+
+51
+00:02:57,906 --> 00:03:04,910
+Speaker 1: Yeah, finally So yeah, I'm on a panel about that shit, and I'm also giving a lecture, and I can't believe they're letting me do this.
+
+52
+00:03:05,391 --> 00:03:28,447
+Speaker 1: It's called and don't forgive me for the long title, but this is just how those conventions are How the video game industry has left the financials in the dust technologically Again panel title whatever, but basically for an hour I'm gonna talk about like how video games are programmed way better than everything in the financial world, but they're not.
+
+53
+00:03:28,568 --> 00:03:29,230
+Speaker 1: yeah, they are.
+
+54
+00:03:30,413 --> 00:03:31,281
+Speaker 1: Yeah, they are.
+
+55
+00:03:32,372 --> 00:03:34,530
+Speaker 0: But I mean video games are programmed awfully.
+
+56
+00:03:35,611 --> 00:03:38,203
+Speaker 1: Yeah, Scott you wanna you want to swap tell you what.
+
+57
+00:03:38,243 --> 00:03:39,750
+Speaker 1: I'll sit at your desk for a day.
+
+58
+00:03:40,191 --> 00:03:41,215
+Speaker 1: You sit at mine.
+
+59
+00:03:41,656 --> 00:03:44,266
+Speaker 1: You can see the inside of my world, and I'll see the.
+
+60
+00:03:44,326 --> 00:03:50,530
+Speaker 0: I don't make video games Yeah, so you're telling me like the code that you guys are making is worse than dwarf fortress.
+
+61
+00:03:50,871 --> 00:04:00,875
+Speaker 1: I'm saying the technology environment that the majority of the world's like markets exist within is Scarily out of date.
+
+62
+00:04:00,956 --> 00:04:01,839
+Speaker 0: Oh, it's like old bus.
+
+63
+00:04:01,899 --> 00:04:09,466
+Speaker 0: Yeah, you're using old like busted jolly architected And I just I'm using like the latest Ubuntu new versions open source stuff.
+
+64
+00:04:09,726 --> 00:04:13,370
+Speaker 1: Yeah like right now There's a trend and you're using CentOS whatever.
+
+65
+00:04:13,732 --> 00:04:17,834
+Speaker 1: I bumped into some people out in the industry who were like oh, man We're gonna get in on this.
+
+66
+00:04:17,894 --> 00:04:19,884
+Speaker 1: like no SQL bandwagon.
+
+67
+00:04:20,084 --> 00:04:21,310
+Speaker 1: no, that's the bleeding edge.
+
+68
+00:04:21,350 --> 00:04:24,249
+Speaker 1: And we're like well one that was the bleeding edge a long time ago.
+
+69
+00:04:24,309 --> 00:04:27,660
+Speaker 0: now It's like the don't use that just use Postgres.
+
+70
+00:04:27,720 --> 00:04:28,502
+Speaker 0: Postgres is king.
+
+71
+00:04:28,522 --> 00:04:30,809
+Speaker 1: there are cases if you don't need relation it anyway.
+
+72
+00:04:31,290 --> 00:04:32,034
+Speaker 0: Most grass does.
+
+73
+00:04:32,054 --> 00:04:36,010
+Speaker 0: the non-relational stuff now - it's yeah, they do it pretty much just crushed everybody.
+
+74
+00:04:36,194 --> 00:04:42,002
+Speaker 0: Yeah, anyway I just don't use it because my skills easier And I don't need to crush everybody with database because I don't do data.
+
+75
+00:04:42,063 --> 00:04:48,664
+Speaker 1: really I think we're I think we're scaring people away from The Tuesday, okay, so yeah, but I was I think I can over the weekend.
+
+76
+00:04:48,684 --> 00:04:50,429
+Speaker 0: You know you're bringing up the animes mr.
+
+77
+00:04:50,710 --> 00:04:53,102
+Speaker 1: Tuesday, it was just not an anime con.
+
+78
+00:04:53,504 --> 00:04:53,866
+Speaker 0: Okay.
+
+79
+00:04:54,147 --> 00:04:54,670
+Speaker 1: It's never been.
+
+80
+00:04:55,051 --> 00:05:00,170
+Speaker 0: It's only has it really Japanese name and was formed from the the corpses of two anime con.
+
+81
+00:05:00,270 --> 00:05:05,810
+Speaker 1: No, it was formed actually from the corpses of some sci-fi cons that had anime and gaming.
+
+82
+00:05:06,353 --> 00:05:09,129
+Speaker 1: Apparently so it was never ever.
+
+83
+00:05:09,451 --> 00:05:10,656
+Speaker 0: One of those cons that was.
+
+84
+00:05:10,736 --> 00:05:11,961
+Speaker 0: it was formed from the corpse of.
+
+85
+00:05:12,021 --> 00:05:14,210
+Speaker 0: was a con run by an anime society?
+
+86
+00:05:14,451 --> 00:05:17,200
+Speaker 1: Yes, but it was pretty much always a multi-genre con.
+
+87
+00:05:17,220 --> 00:05:18,886
+Speaker 1: It's basically like baby kinetic on sure.
+
+88
+00:05:18,906 --> 00:05:23,830
+Speaker 1: so yeah There's a lot of gaming going on and what was interesting is that the people in the gaming area?
+
+89
+00:05:24,350 --> 00:05:37,990
+Speaker 1: During the day we're more our age and the people everywhere else were like 14 and under panel went super well and all that stuff, but played some games at this con and They were games that we've already talked about a little bit on gig nights.
+
+90
+00:05:38,030 --> 00:05:40,843
+Speaker 1: But now I've played them enough to actually give a for real review.
+
+91
+00:05:40,864 --> 00:05:43,412
+Speaker 1: Okay, Navigator is Legit.
+
+92
+00:05:43,452 --> 00:05:45,920
+Speaker 0: you played Navigator played Navigator or Rondold.
+
+93
+00:05:46,201 --> 00:05:47,365
+Speaker 1: we played Rondell's.
+
+94
+00:05:47,526 --> 00:05:48,750
+Speaker 1: I rondeled my Navigator.
+
+95
+00:05:49,053 --> 00:05:50,650
+Speaker 0: Did you run through your never go to Japan?
+
+96
+00:05:51,551 --> 00:05:53,986
+Speaker 1: Actually the game ended before we got to Nagasaki.
+
+97
+00:05:54,006 --> 00:05:54,710
+Speaker 1: It was crazy.
+
+98
+00:05:54,979 --> 00:05:55,249
+Speaker 0: Okay.
+
+99
+00:05:55,791 --> 00:06:07,750
+Speaker 1: So now that I've played Navigator no in the fucking deal with three other people who are pro at Navigator The game is very similar to Hans the Teutonica.
+
+100
+00:06:08,471 --> 00:06:13,590
+Speaker 1: Okay, because the game it's not like Puerto Rico where you like build your machine and go through the world.
+
+101
+00:06:13,932 --> 00:06:15,439
+Speaker 1: This is a game of every turn.
+
+102
+00:06:15,480 --> 00:06:17,932
+Speaker 1: you're reacting to everybody else Mm-hmm.
+
+103
+00:06:18,454 --> 00:06:21,970
+Speaker 0: so he moved his boat forward which means he passed over those things.
+
+104
+00:06:22,010 --> 00:06:23,877
+Speaker 0: I better go grab or let's see.
+
+105
+00:06:24,178 --> 00:06:33,770
+Speaker 1: Chris is like he's giving it like he might take the next prestige I need like the next privilege But it'll take him at least two turns unless he burns some ships to get around that rondell.
+
+106
+00:06:33,890 --> 00:06:34,473
+Speaker 0: That's the thing.
+
+107
+00:06:34,493 --> 00:06:35,498
+Speaker 0: is that's the rondell?
+
+108
+00:06:35,538 --> 00:06:42,810
+Speaker 0: is it really makes it because you'll be sitting there and you're like all right I can take that thing right there real easy and that leaves that open.
+
+109
+00:06:43,593 --> 00:06:47,230
+Speaker 0: Oh, but the person who goes after me their rondell is open.
+
+110
+00:06:47,330 --> 00:06:49,177
+Speaker 0: They can just go and take that easily.
+
+111
+00:06:49,658 --> 00:06:57,950
+Speaker 0: if I'll take the thing and even though that'll leave the other thing open Their rondell is nowhere near what they need to go get it and I'll be able to get that too.
+
+112
+00:06:58,150 --> 00:06:59,574
+Speaker 0: Cuz my rondell will be in position.
+
+113
+00:06:59,674 --> 00:07:00,757
+Speaker 1: It was real close.
+
+114
+00:07:01,018 --> 00:07:08,719
+Speaker 1: a player basically gave the game to Chris by giving him one like ridiculous trader Like turn one merchant turn because they shifted the market.
+
+115
+00:07:09,060 --> 00:07:12,610
+Speaker 0: basically they shifted the market today sell goods or produce too many.
+
+116
+00:07:12,791 --> 00:07:22,113
+Speaker 1: They shifted the market to what was literally the most ridiculous possible outcome for one young Chris Reimer Mm-hmm.
+
+117
+00:07:22,354 --> 00:07:25,226
+Speaker 1: He made so much money that turn that that was the moment.
+
+118
+00:07:25,266 --> 00:07:26,009
+Speaker 1: He won the game.
+
+119
+00:07:26,472 --> 00:07:31,904
+Speaker 0: Yeah, if you're gonna shift the market you have to make sure no one's in rondell position But you're always in rondell position for market.
+
+120
+00:07:32,004 --> 00:07:32,890
+Speaker 0: There's two of them on there.
+
+121
+00:07:32,930 --> 00:07:37,501
+Speaker 1: Yeah, but I played the strategy of basically I won like one set.
+
+122
+00:07:38,002 --> 00:07:41,615
+Speaker 1: I went around the rondell as slow as Possible.
+
+123
+00:07:41,635 --> 00:07:43,391
+Speaker 0: you went up one one one one one I did.
+
+124
+00:07:43,431 --> 00:07:47,609
+Speaker 1: I did a couple of twos but I went super fucking slow to do like have this perfect combo.
+
+125
+00:07:47,629 --> 00:08:00,013
+Speaker 1: and I didn't do that until I had the navigator Denying everyone else the navigator as long as possible and then suddenly using it and surging as big as possible double Navigator.
+
+126
+00:08:00,315 --> 00:08:02,123
+Speaker 1: and by doing this I held out.
+
+127
+00:08:02,163 --> 00:08:05,917
+Speaker 1: so I was right in front of privilege Right when the next era started like.
+
+128
+00:08:05,957 --> 00:08:09,910
+Speaker 1: it was a beauty to behold but in the end I lost because of that one merchant turn.
+
+129
+00:08:10,892 --> 00:08:13,062
+Speaker 1: But yeah, navador is a great game rondell's.
+
+130
+00:08:13,182 --> 00:08:14,830
+Speaker 0: It's probably the hottest rondell game right now.
+
+131
+00:08:15,071 --> 00:08:20,130
+Speaker 1: I definitely think I cannot name a better rondell game that I have played enough to make that judgment.
+
+132
+00:08:20,250 --> 00:08:22,721
+Speaker 0: Yeah, I've only played or let Bora once or twice now.
+
+133
+00:08:22,922 --> 00:08:24,528
+Speaker 0: I've only played antique II once.
+
+134
+00:08:24,609 --> 00:08:28,060
+Speaker 0: yeah I would not miss the same guy who made antique II who loves rondell's.
+
+135
+00:08:28,723 --> 00:08:29,646
+Speaker 1: Ah, yeah, Matt Gertz.
+
+136
+00:08:29,967 --> 00:08:30,890
+Speaker 0: I'd maybe click on that.
+
+137
+00:08:30,950 --> 00:08:31,554
+Speaker 1: It's Matt Gertz.
+
+138
+00:08:31,715 --> 00:08:39,008
+Speaker 0: I've been pretty sure he did antique a yes and TK That's also an TK - you might as well consider navigator to be the newest bestest proper.
+
+139
+00:08:39,028 --> 00:08:47,250
+Speaker 1: Yeah So if you already own hundreds of tonica, don't bother buying navigator unless you can get it for less than a hundred bucks.
+
+140
+00:08:48,210 --> 00:09:00,010
+Speaker 1: but Navigator it's like it'll scratch that Hanza style itch But it'll scratch that sort of like Puerto Rico itch a little bit because of the market and kind of the way things go.
+
+141
+00:09:00,130 --> 00:09:02,157
+Speaker 0: Well, let's let's get rondell's going.
+
+142
+00:09:02,217 --> 00:09:07,400
+Speaker 1: Yeah, so the other game I played enough to finally judge is red seven Which we also talked about before.
+
+143
+00:09:07,541 --> 00:09:08,650
+Speaker 0: Yeah, we played that at PAX East.
+
+144
+00:09:09,751 --> 00:09:11,117
+Speaker 1: It's fun, but I'm done with it.
+
+145
+00:09:11,137 --> 00:09:14,550
+Speaker 0: It didn't seem like a game with tons of replay value.
+
+146
+00:09:14,610 --> 00:09:16,016
+Speaker 0: It just seemed like a really clever.
+
+147
+00:09:16,096 --> 00:09:19,609
+Speaker 1: It is the same level of replay value as no, thanks.
+
+148
+00:09:20,453 --> 00:09:21,530
+Speaker 0: No, thanks has a lot of replay.
+
+149
+00:09:21,610 --> 00:09:26,549
+Speaker 1: Exactly totally fun to bust out like play a couple games of it and then play a real game.
+
+150
+00:09:28,427 --> 00:09:38,581
+Speaker 1: but I find increasingly that I Have very few decisions I can make like there's only one decision that determines the outcome of the game and the rest of it is Just card counting or luck.
+
+151
+00:09:38,702 --> 00:09:39,909
+Speaker 1: and it's like there is no.
+
+152
+00:09:40,554 --> 00:09:42,709
+Speaker 0: I mean even when I played I knew it was all luck.
+
+153
+00:09:42,951 --> 00:09:47,310
+Speaker 0: But the fun of the game is not in you like whether you win or lose is pretty much.
+
+154
+00:09:47,370 --> 00:09:51,329
+Speaker 0: Do you have the cards to win or lose but you it's on your turn?
+
+155
+00:09:52,190 --> 00:09:57,530
+Speaker 0: Figuring out is there even a way that I cannot lose this turn exactly?
+
+156
+00:09:57,711 --> 00:10:03,010
+Speaker 0: So it's a. it's basically a puzzle game and it's just you know, if who gets to solve the most puzzles?
+
+157
+00:10:03,010 --> 00:10:18,466
+Speaker 1: I don't know this and no thanks both have this like they're very similar in the sense that the Decisions you're making and the puzzles you're solving turn by turn are fun And the game is so quick both to teach and to play.
+
+158
+00:10:18,486 --> 00:10:28,170
+Speaker 1: you don't really give a shit Yeah that you have a great time and then you're done and you played a few more times and then you move on to a bigger Game, so it's a great game to play but it's not a great game.
+
+159
+00:10:29,132 --> 00:10:34,130
+Speaker 1: That's the way I would say that Yeah, so I don't think I'll buy it because I already own no thanks.
+
+160
+00:10:34,591 --> 00:10:40,870
+Speaker 1: But and almost everyone else we know bought red seven and owns it so we pretty much don't have to rely on ourselves having it.
+
+161
+00:10:41,051 --> 00:10:42,469
+Speaker 1: You know, wait, wait, what?
+
+162
+00:10:42,970 --> 00:10:44,276
+Speaker 1: Alright board game geek.
+
+163
+00:10:44,497 --> 00:10:45,983
+Speaker 1: primary name red seven.
+
+164
+00:10:46,144 --> 00:10:47,469
+Speaker 1: alternate name red.
+
+165
+00:10:48,510 --> 00:10:50,797
+Speaker 1: Okay, who is calling this game red?
+
+166
+00:10:50,817 --> 00:10:51,819
+Speaker 0: I don't know.
+
+167
+00:10:52,461 --> 00:10:52,802
+Speaker 1: Okay.
+
+168
+00:10:53,023 --> 00:10:53,805
+Speaker 0: Let's play some red.
+
+169
+00:10:54,025 --> 00:10:54,266
+Speaker 0: Yeah.
+
+170
+00:10:54,908 --> 00:10:57,840
+Speaker 1: Yeah Okay, so what are you out for me?
+
+171
+00:10:58,062 --> 00:10:58,970
+Speaker 0: I don't really have news.
+
+172
+00:10:59,131 --> 00:11:03,237
+Speaker 0: I just want to just said before the show you had news I mean has something to say in the news section of the show.
+
+173
+00:11:03,257 --> 00:11:05,023
+Speaker 0: Alright, there's a little warn people.
+
+174
+00:11:05,163 --> 00:11:11,444
+Speaker 0: We are recording this show on Tuesday night, it's about oh wait fuck tomorrow's the Internet's ruined.
+
+175
+00:11:11,464 --> 00:11:20,800
+Speaker 0: tomorrow is internet ruined day Which just means probably today for most of you or perhaps even yesterday for people on the other side of the world Depending on when you listen to this.
+
+176
+00:11:20,820 --> 00:11:22,790
+Speaker 0: Yeah, the internet is probably ruined.
+
+177
+00:11:23,930 --> 00:11:32,900
+Speaker 0: We've thought many times in the past before it was you know Sauce, you know cemented in his internet is ruined day that we would ruin this show as well on that day.
+
+178
+00:11:33,100 --> 00:11:38,280
+Speaker 1: Well, we have pulled off some actual for real pranks on April Fool's Days in the past.
+
+179
+00:11:38,462 --> 00:11:39,900
+Speaker 0: Anyway, we're not doing any of that shit.
+
+180
+00:11:40,080 --> 00:11:48,305
+Speaker 1: Remember that one one year way back where we we uploaded an episode where it sounded like we kept talking in the room And we like kept recordings.
+
+181
+00:11:48,345 --> 00:11:59,239
+Speaker 1: you hear us like talking quietly and then the like fader like the closing credits would end and then you Kept hearing us talk for a while and we basically acted like Several of the people in the forum who post a lot.
+
+182
+00:11:59,601 --> 00:12:00,023
+Speaker 1: We're all.
+
+183
+00:12:00,063 --> 00:12:04,040
+Speaker 1: we're all like fake accounts run by us to drum up our like forum presence.
+
+184
+00:12:04,160 --> 00:12:06,088
+Speaker 1: We made this whole like giant thing.
+
+185
+00:12:06,530 --> 00:12:09,200
+Speaker 1: That's a fucking prank and no one noticed how people noticed.
+
+186
+00:12:09,240 --> 00:12:10,006
+Speaker 1: I'll find the thread.
+
+187
+00:12:10,208 --> 00:12:10,773
+Speaker 0: We got it.
+
+188
+00:12:10,793 --> 00:12:11,640
+Speaker 1: We got several people.
+
+189
+00:12:12,801 --> 00:12:14,028
+Speaker 1: Anyway, I was back in like 2006 anyway.
+
+190
+00:12:18,822 --> 00:12:20,172
+Speaker 0: Yeah, the Internet's can be ruined today.
+
+191
+00:12:20,212 --> 00:12:21,240
+Speaker 0: so listen to this podcast.
+
+192
+00:12:21,521 --> 00:12:25,300
+Speaker 0: Maybe hopefully you do this on your morning commute and it's auto downloaded in iTunes.
+
+193
+00:12:25,942 --> 00:12:30,500
+Speaker 0: And when you get to work, you can remember not to look at the internet and not to fall for anyone's bullshit.
+
+194
+00:12:31,243 --> 00:12:35,880
+Speaker 0: I only give respect to actual pranks and axe people actually being fooled.
+
+195
+00:12:36,503 --> 00:12:39,899
+Speaker 0: You know posting obvious fake thing is not fooling anyone.
+
+196
+00:12:40,401 --> 00:12:43,335
+Speaker 1: Well, there's Scott for something means not for some people.
+
+197
+00:12:43,596 --> 00:12:46,931
+Speaker 1: for some people Figuring out whether or not you're pranking them is.
+
+198
+00:12:46,951 --> 00:12:55,100
+Speaker 0: I want to be the guy sure but If you actually fool someone legit, it's a real fools.
+
+199
+00:12:55,602 --> 00:12:58,332
+Speaker 0: Let me know because I want to give my respect where it's due.
+
+200
+00:12:58,654 --> 00:13:00,119
+Speaker 0: everyone else go fuck yourself.
+
+201
+00:13:00,421 --> 00:13:01,668
+Speaker 0: Yeah, I had a fire.
+
+202
+00:13:01,688 --> 00:13:06,068
+Speaker 1: I will make the fire or You can just stick a fish on someone's butt.
+
+203
+00:13:06,088 --> 00:13:07,012
+Speaker 1: That's also acceptable.
+
+204
+00:13:07,092 --> 00:13:08,176
+Speaker 0: That is not a prank.
+
+205
+00:13:08,236 --> 00:13:09,340
+Speaker 0: That is just harassment.
+
+206
+00:13:09,581 --> 00:13:12,035
+Speaker 1: No, that that's a they long-standing April Fool's thing.
+
+207
+00:13:12,055 --> 00:13:14,265
+Speaker 1: a prank It's not a prank.
+
+208
+00:13:14,285 --> 00:13:15,349
+Speaker 1: I didn't say it was a prank.
+
+209
+00:13:15,389 --> 00:13:16,774
+Speaker 0: to elevate it to prank.
+
+210
+00:13:17,055 --> 00:13:23,063
+Speaker 0: You would have to like You know somehow trick the person into Falling.
+
+211
+00:13:23,244 --> 00:13:24,991
+Speaker 0: I can't figure out a way to do the fish up the butt.
+
+212
+00:13:25,232 --> 00:13:29,546
+Speaker 1: But for example, I didn't say up the butt Anyway, it's up you putting Scott.
+
+213
+00:13:29,566 --> 00:13:34,300
+Speaker 1: you make it like a construction paper outline of a fish and you tape it to someone's butt Jesus.
+
+214
+00:13:34,621 --> 00:13:36,087
+Speaker 0: Yeah, that's not a prank.
+
+215
+00:13:36,771 --> 00:13:37,815
+Speaker 1: I didn't say it was a price.
+
+216
+00:13:37,855 --> 00:13:38,157
+Speaker 0: That's not.
+
+217
+00:13:38,217 --> 00:13:40,719
+Speaker 0: I mean, it's not a name I guess make me a prank but it's not an April Fool's.
+
+218
+00:13:44,322 --> 00:13:49,185
+Speaker 0: Anyway anyway, for example, here's the example right someone what you know The old bucket on top of the door trick.
+
+219
+00:13:49,365 --> 00:13:50,108
+Speaker 1: that's not a prank.
+
+220
+00:13:50,409 --> 00:13:53,318
+Speaker 0: I'm just saying assuming you do that all you're doing.
+
+221
+00:13:53,338 --> 00:13:54,000
+Speaker 0: I'm Scott.
+
+222
+00:13:55,301 --> 00:13:56,083
+Speaker 1: The April fish.
+
+223
+00:13:56,765 --> 00:13:57,768
+Speaker 1: I'm reading Wikipedia.
+
+224
+00:13:58,109 --> 00:14:01,679
+Speaker 1: in Italy France Belgium and Belgium speaking areas of Switzerland.
+
+225
+00:14:01,699 --> 00:14:05,119
+Speaker 1: in Canada April 1st tradition is known as the April fish.
+
+226
+00:14:06,021 --> 00:14:09,191
+Speaker 1: This includes attempting to attach a paper fish to the victim's back.
+
+227
+00:14:09,773 --> 00:14:11,760
+Speaker 1: I always knew it as the but without being noticed.
+
+228
+00:14:11,981 --> 00:14:12,664
+Speaker 1: That's all they do.
+
+229
+00:14:12,945 --> 00:14:14,934
+Speaker 1: Okay, maybe we should do that.
+
+230
+00:14:15,014 --> 00:14:15,858
+Speaker 1: Let's move on to that.
+
+231
+00:14:15,878 --> 00:14:16,320
+Speaker 0: That's cute.
+
+232
+00:14:16,501 --> 00:14:19,237
+Speaker 1: That's just get a little fish on someone's butt and hope it stays there all day.
+
+233
+00:14:19,257 --> 00:14:19,699
+Speaker 1: Like that's it.
+
+234
+00:14:20,225 --> 00:14:21,320
+Speaker 1: It's like a modern Baron.
+
+235
+00:14:21,421 --> 00:14:27,499
+Speaker 0: But if you if someone walks in the door and the water falls on them That's just hurting someone either with the bucket or with the water.
+
+236
+00:14:27,841 --> 00:14:41,240
+Speaker 0: Well pranks pranks are by definition hurting someone a little bit, but let's say let's say that you You know tamper with somebody's sink and they go to wash their hands and they get sprayed with water.
+
+237
+00:14:41,901 --> 00:14:46,840
+Speaker 0: Right, it's like well they triggered the you know, or you gave them a reason to wash their hands.
+
+238
+00:14:46,920 --> 00:14:50,880
+Speaker 1: So you're using the Rick roll rule of they have to ask for it, right?
+
+239
+00:14:50,940 --> 00:14:54,931
+Speaker 0: It's like you have to somehow fool them or trick them into doing the thing.
+
+240
+00:14:54,951 --> 00:14:58,080
+Speaker 0: and then it's like like for example the gum.
+
+241
+00:14:58,582 --> 00:14:59,626
+Speaker 0: Hey, would you like some gum?
+
+242
+00:14:59,646 --> 00:15:01,755
+Speaker 0: and they take the gum stick and it snaps them on the finger.
+
+243
+00:15:02,278 --> 00:15:02,780
+Speaker 0: That's a fool.
+
+244
+00:15:03,001 --> 00:15:04,146
+Speaker 1: See, I I don't know.
+
+245
+00:15:04,247 --> 00:15:04,608
+Speaker 1: I disagree.
+
+246
+00:15:04,689 --> 00:15:06,155
+Speaker 1: I think more of my not a good one.
+
+247
+00:15:06,175 --> 00:15:08,748
+Speaker 0: I'm not saying it's a good one I'm saying the best any cows.
+
+248
+00:15:09,049 --> 00:15:13,028
+Speaker 1: We're just convincing someone of something That was not true.
+
+249
+00:15:13,048 --> 00:15:14,575
+Speaker 1: That was like the.
+
+250
+00:15:14,856 --> 00:15:15,600
+Speaker 1: it's kind of like a path.
+
+251
+00:15:15,620 --> 00:15:16,102
+Speaker 1: It's like the.
+
+252
+00:15:16,182 --> 00:15:20,360
+Speaker 1: more outrageous the thing is if you pull it off and get them to believe it.
+
+253
+00:15:20,922 --> 00:15:24,820
+Speaker 0: The payout is so much great, but you got them to believe that you were giving them gum.
+
+254
+00:15:24,940 --> 00:15:28,957
+Speaker 0: It's still that counts as at least as a fool, even though it's garbage.
+
+255
+00:15:28,997 --> 00:15:31,798
+Speaker 1: Yeah That's like going for one victory point.
+
+256
+00:15:32,000 --> 00:15:32,599
+Speaker 0: That's what I'm saying.
+
+257
+00:15:32,660 --> 00:15:35,775
+Speaker 0: But at least it's a victory point and not a negative point that should go in the fire.
+
+258
+00:15:36,017 --> 00:15:37,441
+Speaker 1: true true true That's what I'm saying.
+
+259
+00:15:38,181 --> 00:15:39,923
+Speaker 1: So, uh, yeah, I'm not gonna do any pranks tomorrow.
+
+260
+00:15:40,143 --> 00:15:49,128
+Speaker 1: No, no, but anyway things of the day.
+
+261
+00:15:49,732 --> 00:15:55,791
+Speaker 1: So I I'm not gonna ever do this again because I linked to one of these guys videos before but I have to link to This one.
+
+262
+00:15:56,152 --> 00:15:57,195
+Speaker 1: this is the last one.
+
+263
+00:15:57,255 --> 00:16:00,584
+Speaker 1: but read to pray those guys who watch other people's.
+
+264
+00:16:00,644 --> 00:16:02,930
+Speaker 1: let's plays and comment on them.
+
+265
+00:16:03,471 --> 00:16:05,839
+Speaker 1: You know Cartman bra style long before that existed.
+
+266
+00:16:06,721 --> 00:16:08,848
+Speaker 1: This video is titled Mario dies.
+
+267
+00:16:08,888 --> 00:16:13,239
+Speaker 1: at the end All I will say is that it's that there's a moment.
+
+268
+00:16:13,681 --> 00:16:16,450
+Speaker 1: there's a moment when you're gonna be thinking something you're gonna be thinking.
+
+269
+00:16:16,590 --> 00:16:24,615
+Speaker 1: Please pick four, please pick four and at that moment the person who is describing this video to you will be saying what you are Thinking.
+
+270
+00:16:25,000 --> 00:16:25,750
+Speaker 1: this shit's hilarious.
+
+271
+00:16:26,631 --> 00:16:27,353
+Speaker 1: That's all I got to say.
+
+272
+00:16:27,373 --> 00:16:28,015
+Speaker 1: You just watch it.
+
+273
+00:16:28,055 --> 00:16:28,798
+Speaker 1: It's really short.
+
+274
+00:16:29,219 --> 00:16:30,603
+Speaker 0: Okay short is good.
+
+275
+00:16:31,025 --> 00:16:31,606
+Speaker 1: You've seen this.
+
+276
+00:16:31,968 --> 00:16:32,188
+Speaker 1: Yeah.
+
+277
+00:16:32,389 --> 00:16:36,430
+Speaker 1: Yeah Yeah, it's very reminiscent of that art exhibit you guys wanted to do, right?
+
+278
+00:16:36,490 --> 00:16:44,670
+Speaker 0: So we're gonna do some metamoment soon, but you know this weekend is gonna be a Jewish holiday of Passover.
+
+279
+00:16:44,891 --> 00:16:48,408
+Speaker 0: Yeah, it is the awesomest holiday because Ten Commandments is awesome.
+
+280
+00:16:48,428 --> 00:16:54,859
+Speaker 0: movie Moses Moses You'll Brenner cooler than anyone listening to the show.
+
+281
+00:16:54,879 --> 00:16:55,701
+Speaker 1: How do you know?
+
+282
+00:16:55,721 --> 00:16:56,383
+Speaker 1: He's not listening.
+
+283
+00:16:56,905 --> 00:16:57,346
+Speaker 0: He's dead.
+
+284
+00:16:57,446 --> 00:16:59,856
+Speaker 1: Yeah, that's how I know I might be ghosts.
+
+285
+00:17:00,399 --> 00:17:02,389
+Speaker 0: the ghost of you'll Brenner can haunt me any day.
+
+286
+00:17:04,017 --> 00:17:08,122
+Speaker 0: Come on down King and I let's do it.
+
+287
+00:17:08,142 --> 00:17:08,464
+Speaker 0: All right.
+
+288
+00:17:12,631 --> 00:17:13,634
+Speaker 1: So are you going with this?
+
+289
+00:17:13,854 --> 00:17:17,685
+Speaker 0: that's awesome anyway, yes also by the way, he died from smoking a lot.
+
+290
+00:17:17,704 --> 00:17:18,287
+Speaker 0: don't smoke.
+
+291
+00:17:18,647 --> 00:17:21,977
+Speaker 0: Yeah Otherwise, he'd probably like an old man today.
+
+292
+00:17:22,078 --> 00:17:23,906
+Speaker 1: Hey, so that's so much.
+
+293
+00:17:23,945 --> 00:17:28,377
+Speaker 0: But anyway, yeah Passovers this weekend.
+
+294
+00:17:28,498 --> 00:17:38,310
+Speaker 0: So here's a Passover related thing of the day They made a nice little Rube Goldberg machine Which is you know, usually like whatevs is 10 million Rube Goldberg machines on YouTube and most of them are more impressive than this one.
+
+295
+00:17:38,855 --> 00:17:45,650
+Speaker 0: but this one is thematic Passover thematic and that gives it the extra bonus points that moment.
+
+296
+00:17:45,831 --> 00:17:50,310
+Speaker 0: I could probably accept two more thematic Rube Goldberg machines before it's been played out.
+
+297
+00:17:50,611 --> 00:17:51,714
+Speaker 1: Yeah, I think that's true.
+
+298
+00:17:51,894 --> 00:17:57,950
+Speaker 0: and Passover great theme for a Rube Goldberg because no one's ever done that one before it's a typical.
+
+299
+00:17:58,030 --> 00:17:59,957
+Speaker 1: There's a lot of things you can I guarantee.
+
+300
+00:17:59,997 --> 00:18:04,392
+Speaker 0: this is probably the only Passover themed Rude Goldberg machine to exist in the history Of humanity.
+
+301
+00:18:04,834 --> 00:18:06,038
+Speaker 0: I'm willing to bet money on that.
+
+302
+00:18:06,219 --> 00:18:08,809
+Speaker 1: The best moment in this thing is let my people go.
+
+303
+00:18:10,532 --> 00:18:11,516
+Speaker 0: I really like the.
+
+304
+00:18:11,797 --> 00:18:14,769
+Speaker 0: the frogs and the other bugs are funny and the burning bush.
+
+305
+00:18:15,552 --> 00:18:18,441
+Speaker 1: No, there are a bunch of Passover Rube Goldberg machines.
+
+306
+00:18:18,462 --> 00:18:19,364
+Speaker 0: Are you kidding me?
+
+307
+00:18:19,625 --> 00:18:20,287
+Speaker 1: Oh my god.
+
+308
+00:18:20,348 --> 00:18:21,070
+Speaker 0: What the fuck?
+
+309
+00:18:21,310 --> 00:18:23,825
+Speaker 1: Oh, wait, wait, a lot of these are just that same video ripped off.
+
+310
+00:18:23,906 --> 00:18:24,107
+Speaker 1: Okay.
+
+311
+00:18:24,187 --> 00:18:26,339
+Speaker 1: Wait a minute I'll have to do a little more research.
+
+312
+00:18:26,580 --> 00:18:27,767
+Speaker 1: Okay, here's that.
+
+313
+00:18:27,787 --> 00:18:32,819
+Speaker 1: here's one more 195 views Passover Rube Goldberg machine.
+
+314
+00:18:32,859 --> 00:18:34,665
+Speaker 1: way to go made by Daniel Lipkin.
+
+315
+00:18:35,328 --> 00:18:36,030
+Speaker 0: way to go Daniel.
+
+316
+00:18:36,090 --> 00:18:37,415
+Speaker 1: It doesn't however look themed.
+
+317
+00:18:37,475 --> 00:18:38,038
+Speaker 1: I'm watching it.
+
+318
+00:18:38,198 --> 00:18:39,383
+Speaker 0: I don't see any theme.
+
+319
+00:18:39,523 --> 00:18:40,527
+Speaker 0: I think it's just Passover.
+
+320
+00:18:40,547 --> 00:18:41,270
+Speaker 0: So he just made it.
+
+321
+00:18:41,370 --> 00:18:42,915
+Speaker 0: He's a little Jew kid.
+
+322
+00:18:42,935 --> 00:18:44,339
+Speaker 0: So he's home from school.
+
+323
+00:18:44,640 --> 00:18:45,262
+Speaker 0: I had those.
+
+324
+00:18:45,382 --> 00:18:46,566
+Speaker 0: I had those marble works.
+
+325
+00:18:46,626 --> 00:18:47,890
+Speaker 0: Yeah, I had marble works.
+
+326
+00:18:48,472 --> 00:18:49,256
+Speaker 1: Marble works was a good.
+
+327
+00:18:49,276 --> 00:18:49,638
+Speaker 1: Oh, nope.
+
+328
+00:18:49,799 --> 00:18:49,960
+Speaker 1: Nope.
+
+329
+00:18:50,040 --> 00:18:50,402
+Speaker 1: There it is.
+
+330
+00:18:50,422 --> 00:18:51,949
+Speaker 1: I triggered an image.
+
+331
+00:18:53,152 --> 00:18:55,602
+Speaker 0: The end he had a tablet and oh wait, there's more.
+
+332
+00:18:55,622 --> 00:18:56,225
+Speaker 1: oh it's not.
+
+333
+00:18:56,285 --> 00:18:57,209
+Speaker 1: Oh this thing's long.
+
+334
+00:18:59,131 --> 00:19:04,930
+Speaker 0: Yeah, it triggers a Passover thing on a laptop or a tablet at the end, all right, all right kid.
+
+335
+00:19:05,351 --> 00:19:06,516
+Speaker 0: He's excited about that.
+
+336
+00:19:06,576 --> 00:19:09,729
+Speaker 1: I'm the second person in the world to like this video.
+
+337
+00:19:11,211 --> 00:19:13,398
+Speaker 0: How could you not like that uploaded in 2011?
+
+338
+00:19:13,398 --> 00:19:14,381
+Speaker 1: All right kid.
+
+339
+00:19:14,401 --> 00:19:14,923
+Speaker 1: You deserve this.
+
+340
+00:19:14,983 --> 00:19:15,705
+Speaker 0: That kid is now.
+
+341
+00:19:15,725 --> 00:19:17,130
+Speaker 0: Oh my god Scott.
+
+342
+00:19:17,535 --> 00:19:18,083
+Speaker 1: He record.
+
+343
+00:19:18,266 --> 00:19:22,721
+Speaker 1: Okay Okay So this kid Daniel Lipkin here here.
+
+344
+00:19:22,761 --> 00:19:25,270
+Speaker 1: They're they're cool things about his comment here.
+
+345
+00:19:25,731 --> 00:19:29,443
+Speaker 1: The video says and I quote recorded on April 20th 2011 using a flip video camera.
+
+346
+00:19:31,931 --> 00:19:33,737
+Speaker 1: Sure, remember the flip video camera.
+
+347
+00:19:33,918 --> 00:19:35,263
+Speaker 1: Yeah by Alex and Avi.
+
+348
+00:19:35,283 --> 00:19:42,956
+Speaker 1: Okay, Avi Don't go to London Him in the meta moment Scott.
+
+349
+00:19:43,097 --> 00:19:44,260
+Speaker 1: I'm gonna show you something.
+
+350
+00:19:44,942 --> 00:19:46,487
+Speaker 1: This is the badge.
+
+351
+00:19:46,527 --> 00:19:47,510
+Speaker 1: They gave me a design icon.
+
+352
+00:19:48,232 --> 00:19:51,263
+Speaker 1: Okay, this is the ribbon that was attached to it.
+
+353
+00:19:51,283 --> 00:19:53,229
+Speaker 0: I'm glad I didn't receive one of those.
+
+354
+00:19:54,352 --> 00:19:57,510
+Speaker 1: All the other ribbons were normally configured small ribbons.
+
+355
+00:19:57,550 --> 00:19:59,377
+Speaker 0: Was that a prank by Scott Johnson?
+
+356
+00:19:59,457 --> 00:20:02,930
+Speaker 1: the panelist ribbons for all panelists were this?
+
+357
+00:20:03,510 --> 00:20:06,459
+Speaker 1: Gigantic my first place at the county fair ribbon.
+
+358
+00:20:06,499 --> 00:20:07,783
+Speaker 0: Was that a Scott Johnson prank?
+
+359
+00:20:08,625 --> 00:20:10,190
+Speaker 1: I think that's just how they roll.
+
+360
+00:20:10,591 --> 00:20:25,070
+Speaker 1: okay, I I was trying to get more of them to make some sort of like ribbon tail and just So, yeah cosplay we're going to be this weekend Friday and Saturday only we're not even going into the con on Sunday.
+
+361
+00:20:26,454 --> 00:20:34,297
+Speaker 1: Boston is as we would but Boston is the city of cowards and I don't like being metal detector and having my stuff All search just to go into an anime con.
+
+362
+00:20:34,317 --> 00:20:34,538
+Speaker 1: Mm-hmm.
+
+363
+00:20:34,940 --> 00:20:37,490
+Speaker 1: So on Friday, we're doing judge anime by its cover.
+
+364
+00:20:37,931 --> 00:20:41,082
+Speaker 1: We originally said we'd do spring but we're doing summer instead.
+
+365
+00:20:41,102 --> 00:20:43,550
+Speaker 0: summer had better shows and also we did summer last year.
+
+366
+00:20:43,590 --> 00:20:44,553
+Speaker 0: So let's do summer this year.
+
+367
+00:20:44,573 --> 00:20:46,540
+Speaker 1: Yeah, we'll make every year at least summer after this.
+
+368
+00:20:46,661 --> 00:20:51,430
+Speaker 1: Yeah, and then it'll at around midnight We're doing short form anime.
+
+369
+00:20:52,651 --> 00:20:54,296
+Speaker 1: It's been a long time since we've done that panel.
+
+370
+00:20:54,336 --> 00:20:55,540
+Speaker 1: So as thank icon I did it.
+
+371
+00:20:56,330 --> 00:20:59,542
+Speaker 1: Ippatsu Kiki Musume is a fucking gold mine.
+
+372
+00:20:59,682 --> 00:21:00,465
+Speaker 0: Yes amazing.
+
+373
+00:21:00,947 --> 00:21:06,086
+Speaker 1: No one Literally, no one in the room and the room was full had ever seen it.
+
+374
+00:21:06,347 --> 00:21:07,190
+Speaker 0: Yeah or heard of it.
+
+375
+00:21:07,310 --> 00:21:10,485
+Speaker 1: They even like friends of ours had never heard of it.
+
+376
+00:21:10,546 --> 00:21:11,390
+Speaker 1: It's been too long.
+
+377
+00:21:11,531 --> 00:21:13,400
+Speaker 0: It's been that has one that has been too long.
+
+378
+00:21:13,421 --> 00:21:15,170
+Speaker 0: We should probably find some different episodes of it.
+
+379
+00:21:15,210 --> 00:21:16,410
+Speaker 0: I think I have quite a few of mine.
+
+380
+00:21:16,430 --> 00:21:17,761
+Speaker 1: You know what drive I'm gonna be.
+
+381
+00:21:17,801 --> 00:21:18,789
+Speaker 1: I've watched a lot of it.
+
+382
+00:21:18,991 --> 00:21:19,955
+Speaker 0: The first one is the best.
+
+383
+00:21:19,975 --> 00:21:21,281
+Speaker 1: the first one is literally the best.
+
+384
+00:21:21,302 --> 00:21:23,070
+Speaker 0: steps where she's all she can't move her body.
+
+385
+00:21:24,272 --> 00:21:24,935
+Speaker 0: And the sauna.
+
+386
+00:21:24,955 --> 00:21:25,819
+Speaker 0: she can't open the door.
+
+387
+00:21:25,879 --> 00:21:28,129
+Speaker 1: Let's check her body water content now.
+
+388
+00:21:28,692 --> 00:21:34,076
+Speaker 0: Oh, I think in the later ones like she's trying to boil crabs and like she's upset too Just to put her hand in the boiling water.
+
+389
+00:21:34,417 --> 00:21:37,750
+Speaker 1: She falls into the boiling water and then the crabs start attacking her.
+
+390
+00:21:39,591 --> 00:21:44,186
+Speaker 1: On Saturday night, we're doing the narrator's are really the best analyzing anime utana.
+
+391
+00:21:44,266 --> 00:21:51,919
+Speaker 1: All right, that's all you yeah, and we're doing foreign anime openers, which is Rearranged and better than we've ever done it before.
+
+392
+00:21:51,939 --> 00:21:52,963
+Speaker 0: such an easy panel.
+
+393
+00:21:53,264 --> 00:22:02,199
+Speaker 0: Yep, and then Sunday morning We're just getting the fuck home eating breakfast secret breakfast secret breakfast rain to New York secret breakfast two days So you can come to the train to New York panel.
+
+394
+00:22:02,259 --> 00:22:03,243
+Speaker 0: I highly recommend it.
+
+395
+00:22:03,585 --> 00:22:05,232
+Speaker 0: the best panel ahead of me From 11 a.m.
+
+396
+00:22:05,252 --> 00:22:05,434
+Speaker 1: To 2 p.m.
+
+397
+00:22:08,091 --> 00:22:14,289
+Speaker 1: Ish if you come on the Acela back to New York, we will entertain you for like five minutes and then just take a nap.
+
+398
+00:22:16,192 --> 00:22:18,323
+Speaker 0: We can play some advanced wars with rim your.
+
+399
+00:22:18,343 --> 00:22:19,569
+Speaker 1: do you want to play advanced wars with me?
+
+400
+00:22:19,970 --> 00:22:22,006
+Speaker 0: No, but that's the person who gets on the train can?
+
+401
+00:22:22,187 --> 00:22:22,550
+Speaker 1: they won't?
+
+402
+00:22:26,096 --> 00:22:27,430
+Speaker 0: They're willing to buy an Acela ticket.
+
+403
+00:22:30,537 --> 00:22:36,495
+Speaker 1: So, yeah, we played the xcom tabletop game for real And we live-streamed it.
+
+404
+00:22:36,817 --> 00:22:37,077
+Speaker 0: Yep.
+
+405
+00:22:37,198 --> 00:22:40,409
+Speaker 0: So this game if you don't know xcom, I hope you know what xcom is.
+
+406
+00:22:40,852 --> 00:22:43,170
+Speaker 0: I hope you know anyway, so there's an xcom board game.
+
+407
+00:22:43,431 --> 00:22:48,690
+Speaker 1: It's a co-op game with four players based on the recent reboot of the xcom video game.
+
+408
+00:22:48,710 --> 00:22:53,037
+Speaker 0: Yes, you fight against the aliens you're all on a team sort of like pandemic.
+
+409
+00:22:53,198 --> 00:23:06,564
+Speaker 0: only it's real time and we played a demo of it at PAX Prime and we now have the real deal and we played that and live-streamed it and It hasn't really changed that much since the version we played at PAX Prime.
+
+410
+00:23:06,744 --> 00:23:08,590
+Speaker 1: However, it was fun.
+
+411
+00:23:08,670 --> 00:23:09,153
+Speaker 1: Like don't worry.
+
+412
+00:23:09,193 --> 00:23:09,676
+Speaker 1: We're gonna talk.
+
+413
+00:23:09,697 --> 00:23:11,870
+Speaker 1: we say a lot of negative things, but in the end it is fun.
+
+414
+00:23:11,991 --> 00:23:26,217
+Speaker 1: We're going to play it a bunch more yeah, but a Lot of negatives that were not apparent when someone who is an expert at the game from fantasy flight runs it for you became Strikingly apparent in actual play.
+
+415
+00:23:26,378 --> 00:23:26,579
+Speaker 1: Mm-hmm.
+
+416
+00:23:26,900 --> 00:23:29,830
+Speaker 1: The games got some pretty serious issues.
+
+417
+00:23:30,171 --> 00:23:35,490
+Speaker 0: Yeah, so the fundamental idea of the game is you're all four people you're running xcom.
+
+418
+00:23:36,013 --> 00:23:37,381
+Speaker 1: Wait, each one of us is four people.
+
+419
+00:23:37,744 --> 00:23:46,279
+Speaker 0: Yes, okay you're running xcom defending the earth against aliens because that's what xcom do and Each person has a unique job.
+
+420
+00:23:46,319 --> 00:23:48,349
+Speaker 0: This is the first thing that makes it better than pandemic.
+
+421
+00:23:49,052 --> 00:23:49,796
+Speaker 0: Unique jobs.
+
+422
+00:23:49,897 --> 00:23:52,350
+Speaker 0: each person is responsible for one thing and one thing only.
+
+423
+00:23:53,032 --> 00:23:59,689
+Speaker 0: usually two or three responsibilities per person and Thus, you know, you can't really be doing everyone's job.
+
+424
+00:24:00,272 --> 00:24:01,559
+Speaker 0: I mean you can play two player.
+
+425
+00:24:01,579 --> 00:24:02,704
+Speaker 0: where you do two jobs each.
+
+426
+00:24:02,724 --> 00:24:03,910
+Speaker 0: you can do three player, right?
+
+427
+00:24:04,150 --> 00:24:09,130
+Speaker 1: Yeah, but and in baby Like in baby mode you can talk a lot more words.
+
+428
+00:24:09,130 --> 00:24:15,990
+Speaker 1: You're playing for real like if I'm the military guy and I spend time talking to the science officer.
+
+429
+00:24:16,494 --> 00:24:18,630
+Speaker 1: That time matters a lot, right?
+
+430
+00:24:18,731 --> 00:24:24,404
+Speaker 0: So in there are other, you know The real time factor is the other thing that separates it from pandemic and pandemic.
+
+431
+00:24:24,424 --> 00:24:32,472
+Speaker 0: you can sit around for 20 minutes Discussing the best possible move and thus really it's only a one-player game and not a co-op game Xcom.
+
+432
+00:24:32,833 --> 00:24:39,289
+Speaker 0: even if you wanted to share all the information and even if you discussed everything You don't have time to and you don't even it.
+
+433
+00:24:39,370 --> 00:24:50,366
+Speaker 0: You don't have the brainpower within that time to figure out what the best thing everyone should do is and you don't even know all The information yet because the real timeness doesn't come from like an mp3 the way space alert does.
+
+434
+00:24:50,807 --> 00:24:51,710
+Speaker 0: it comes from an app?
+
+435
+00:24:52,211 --> 00:24:54,989
+Speaker 0: So you have to finish doing one thing before you go to the next thing.
+
+436
+00:24:55,331 --> 00:24:57,978
+Speaker 0: So it's like decide where to put your interceptors.
+
+437
+00:24:58,118 --> 00:25:05,761
+Speaker 0: Okay, then it's like oh by the way, here's where the UFOs are fuck Yep, they went somewhere where we didn't go.
+
+438
+00:25:05,781 --> 00:25:06,905
+Speaker 1: Hey, can I move a guy?
+
+439
+00:25:06,985 --> 00:25:08,270
+Speaker 1: No, you tap that science already.
+
+440
+00:25:08,270 --> 00:25:10,329
+Speaker 0: Well, I got a times up times up.
+
+441
+00:25:10,952 --> 00:25:11,794
+Speaker 1: So what's real?
+
+442
+00:25:11,855 --> 00:25:16,470
+Speaker 1: basically what's really interesting about this is that in the end the game comes down to two phases.
+
+443
+00:25:16,931 --> 00:25:20,964
+Speaker 1: There's the push your luck phase the press your luck phase and the resource allocation phase.
+
+444
+00:25:21,425 --> 00:25:22,970
+Speaker 1: only the latter is real-time.
+
+445
+00:25:23,090 --> 00:25:28,450
+Speaker 0: Yes, so you do real-time resource allocating and then you resolve slowly and carefully.
+
+446
+00:25:28,671 --> 00:25:35,550
+Speaker 1: So the parts of the game that would be really fiddly like should I attack with these troops or these troops in this?
+
+447
+00:25:35,930 --> 00:25:36,875
+Speaker 1: Particular encounter.
+
+448
+00:25:37,377 --> 00:25:39,830
+Speaker 1: there's no time limit on that because that wouldn't have been fun.
+
+449
+00:25:39,930 --> 00:25:41,617
+Speaker 1: You'd be like to have a time limit on that.
+
+450
+00:25:42,059 --> 00:25:43,867
+Speaker 1: the fiddly stuff doesn't have time limits.
+
+451
+00:25:44,208 --> 00:25:49,430
+Speaker 1: the like Broad strokes the where are we focusing has an extreme time limit?
+
+452
+00:25:49,931 --> 00:25:55,590
+Speaker 1: It's a game where you have to have three friends and you all have to trust each other to not be stupid.
+
+453
+00:25:56,272 --> 00:25:57,477
+Speaker 0: Four friends if you can't yourself.
+
+454
+00:25:57,838 --> 00:25:59,184
+Speaker 1: Well, are you your own friend?
+
+455
+00:25:59,425 --> 00:25:59,746
+Speaker 0: I don't know.
+
+456
+00:26:00,368 --> 00:26:02,298
+Speaker 1: in this game A lot of times you're your own worst enemy.
+
+457
+00:26:02,479 --> 00:26:02,761
+Speaker 1: Yes.
+
+458
+00:26:03,063 --> 00:26:03,545
+Speaker 0: Yes indeed.
+
+459
+00:26:04,048 --> 00:26:07,430
+Speaker 0: So Is the problems with the game, right?
+
+460
+00:26:07,630 --> 00:26:13,350
+Speaker 0: So problem number one is that you have these cards that give you abilities and as the science gets research you get more cards.
+
+461
+00:26:14,631 --> 00:26:18,023
+Speaker 1: Wait Scott, this card says use during an encounter.
+
+462
+00:26:18,063 --> 00:26:20,049
+Speaker 1: Does that mean any encounter or just a?
+
+463
+00:26:21,171 --> 00:26:25,910
+Speaker 1: Every science card had like some level of ambiguity that required us to pause the game and look it up.
+
+464
+00:26:26,051 --> 00:26:26,192
+Speaker 1: It's
+
+465
+00:26:26,253 --> 00:26:43,989
+Speaker 0: very clear that some cards Are only used during the time phase because they have a picture of a clock on them and some are only used during the resolution Phase because they have two cubes on them, but what's not clear is Exactly the wording on them is not specific enough that you don't know if you can always do it.
+
+466
+00:26:44,551 --> 00:26:59,670
+Speaker 0: Also another problem with them is that it's because the ones that you use during the time phase Because you're under time pressure It's very easy to forget that they exist and to remember all of them that are yeah You say that because you're the reason we died.
+
+467
+00:27:00,294 --> 00:27:07,990
+Speaker 0: also, there are Other players who can only really pay attention to their own biz because it's so fast.
+
+468
+00:27:08,812 --> 00:27:13,650
+Speaker 0: They might have cards to use during the time phase that would be best used on you.
+
+469
+00:27:13,851 --> 00:27:17,309
+Speaker 0: Just likewise you might have cards for the time phase best used on them.
+
+470
+00:27:17,812 --> 00:27:20,909
+Speaker 0: So you actually to get the most efficient use out of them?
+
+471
+00:27:21,351 --> 00:27:28,329
+Speaker 0: You would actually have to pay attention to the other person's timed action and say I'm using this time thing to help you Oh my god during the time phase.
+
+472
+00:27:28,833 --> 00:27:41,288
+Speaker 0: But how can you even pay attention to that while you're too busy Thinking about your own shit and then to also remember a card ability you have and also remember to use it on someone else Because you paid attention to what they're doing during the time phase?
+
+473
+00:27:41,328 --> 00:27:48,750
+Speaker 1: result Is that the concept is great because you feel it said you feel like you're in the situation room and Evangelion or XCOM.
+
+474
+00:27:48,911 --> 00:27:50,057
+Speaker 1: Yes, your dad will.
+
+475
+00:27:50,137 --> 00:27:52,309
+Speaker 1: XCOM and Evangelion are basically the same thing.
+
+476
+00:27:53,193 --> 00:27:55,805
+Speaker 1: Sort of yeah, so you're down there.
+
+477
+00:27:55,966 --> 00:27:59,058
+Speaker 0: Don't make babies XCOM yeah.
+
+478
+00:27:59,098 --> 00:27:59,863
+Speaker 1: Yeah, you can.
+
+479
+00:27:59,883 --> 00:28:00,889
+Speaker 1: technically you can.
+
+480
+00:28:03,259 --> 00:28:07,350
+Speaker 0: For now Room of golf isn't closed or whatever.
+
+481
+00:28:07,370 --> 00:28:11,903
+Speaker 1: Yeah The problem the only problems with the game the only problems come down to fantasy.
+
+482
+00:28:11,943 --> 00:28:14,671
+Speaker 1: flight wrote the words on the cards and they're bad At that.
+
+483
+00:28:14,691 --> 00:28:16,737
+Speaker 0: they're bad at that netrunner and every other game also
+
+484
+00:28:17,158 --> 00:28:31,309
+Speaker 1: and the instructions only exist within the app making it actually Really hard to look up rules on the fly and making it extremely likely that anyone you ever play this game with Only one person will have ever read the rules.
+
+485
+00:28:31,892 --> 00:28:32,896
+Speaker 0: Yeah, so the rule.
+
+486
+00:28:32,957 --> 00:28:36,050
+Speaker 0: in the in the box there are rules, but it's just a quick start sheet.
+
+487
+00:28:36,554 --> 00:28:43,890
+Speaker 0: All the actual rules are in the app Which means if you want to do a rules look up you have to like pause go into some options menu.
+
+488
+00:28:44,031 --> 00:28:47,144
+Speaker 0: It's very difficult to peruse the rules in there.
+
+489
+00:28:47,726 --> 00:28:48,610
+Speaker 0: It's just really bad.
+
+490
+00:28:48,650 --> 00:28:51,770
+Speaker 0: They should have been less cheap because fantasy fights also very cheap.
+
+491
+00:28:52,171 --> 00:29:03,219
+Speaker 0: And in addition to putting the rules in the app also printed the full rules out Even though one good thing about putting the rules in the app is that as the app if you have rules updates You can do app updates.
+
+492
+00:29:03,279 --> 00:29:04,249
+Speaker 0: Yes, which is cool.
+
+493
+00:29:04,692 --> 00:29:13,509
+Speaker 0: So I'm all in favor of putting the rules in the app to begin with But that can't be the only place the rules are in the very least some cheat sheets or something, right?
+
+494
+00:29:13,529 --> 00:29:17,610
+Speaker 0: I mean People are gonna have an iPad or tablet to play this game.
+
+495
+00:29:17,630 --> 00:29:21,910
+Speaker 0: You can always just use a laptop with the web browser or you could use your iPhone.
+
+496
+00:29:22,151 --> 00:29:26,752
+Speaker 0: Yeah, you can use any pretty much any electronic device as access to the app They made.
+
+497
+00:29:26,772 --> 00:29:30,548
+Speaker 0: it is, you know cross-platform as possible with the web version.
+
+498
+00:29:30,609 --> 00:29:38,319
+Speaker 0: even so you could go to the rules on the web actually if you wanted to but People are just gonna be there with the one tablet.
+
+499
+00:29:38,821 --> 00:29:40,307
+Speaker 0: They're not gonna have four tablets.
+
+500
+00:29:40,748 --> 00:29:41,070
+Speaker 0: Okay?
+
+501
+00:29:42,212 --> 00:29:43,709
+Speaker 0: You should have printed out a rule book in there.
+
+502
+00:29:43,992 --> 00:29:58,530
+Speaker 1: Yeah, so as a result The only way to experience this game in its fullest is to play it and but fail at it and have to keep pausing and Looking shit up like three or four times until you like get the game and remember all the sort of errata.
+
+503
+00:29:58,712 --> 00:30:00,850
+Speaker 0: Right, but all four people get the game.
+
+504
+00:30:00,870 --> 00:30:03,607
+Speaker 0: Yes, as soon as you switch out a player well fuck all.
+
+505
+00:30:03,627 --> 00:30:04,110
+Speaker 0: we got it.
+
+506
+00:30:04,170 --> 00:30:14,170
+Speaker 0: You know, you need four people who have been through it who are ex-com hardened veterans elites Yep, and know the deal and then you can start to get the most out of this game.
+
+507
+00:30:14,290 --> 00:30:21,367
+Speaker 0: so people know what cards are to the point at which they can just say the name of the card like I use X and People know what that is.
+
+508
+00:30:21,771 --> 00:30:33,309
+Speaker 0: then you can start to actually be good enough to save the world from aliens because the even on easy mode the app is Ruthless, so only buy this game if you have a group of four people.
+
+509
+00:30:34,113 --> 00:30:42,608
+Speaker 1: you really want the full set who is willing to play this game repeatedly and Actually get good at it Yep or at least competent at it.
+
+510
+00:30:43,071 --> 00:30:51,549
+Speaker 1: once you get to that level you can play this with other people who are competent at conventions or you can be the guy who Runs the game for other people and teaches it to them.
+
+511
+00:30:52,071 --> 00:31:01,349
+Speaker 1: But seriously the game is not a game until everyone knows the rules and you figured out all the like kind of poorly written details of the cards.
+
+512
+00:31:02,711 --> 00:31:05,841
+Speaker 1: So once you get past that the game is really fun.
+
+513
+00:31:06,102 --> 00:31:21,806
+Speaker 0: Yeah, it's you know, it's what pandemics I mean, it's not the great co-op like Hanabi is but it definitely beats all those other garbage co-ops like pandemic and shadows over Camelot and it has this interesting like the kinds of decisions you're making the brain feel of them.
+
+514
+00:31:21,886 --> 00:31:25,115
+Speaker 1: the way the pressure is is Actually very realistic.
+
+515
+00:31:25,416 --> 00:31:40,670
+Speaker 0: Yeah, and it's not like it's sort of weird in that they found a way To you look at a game like space alert where it's also real-time decision-making But you're basically programming on your turn in space alert, which is kind of a lot to do in real time.
+
+516
+00:31:40,836 --> 00:31:53,552
+Speaker 0: Yeah And it's sort of tricky annoying tricky like it's like I'm making real Game decisions like as difficult as game decisions I would make in any other euro game, but I'm time pressured and that's just sort of frustrating here.
+
+517
+00:31:53,913 --> 00:31:57,282
+Speaker 0: the time pressure combined with actually what is easy decisions.
+
+518
+00:31:57,642 --> 00:32:03,790
+Speaker 0: if you had all the time in the world to decide on things in Xcom especially during the time it would be so baby game.
+
+519
+00:32:04,312 --> 00:32:09,350
+Speaker 0: It would be like oh obviously put the interceptors there because we can move one later if we have to.
+
+520
+00:32:10,431 --> 00:32:12,064
+Speaker 0: That's where we get the most use out of them.
+
+521
+00:32:12,326 --> 00:32:20,289
+Speaker 1: Imagine World War two as a war if you zoomed out and had all the time in the world to think about it.
+
+522
+00:32:20,611 --> 00:32:24,668
+Speaker 1: Yeah, when you're making your decisions of where to send the armies and what day is d-day.
+
+523
+00:32:24,849 --> 00:32:29,370
+Speaker 0: Yep But it's like the decisions you make in Xcom are like just you have you know.
+
+524
+00:32:29,511 --> 00:32:30,257
+Speaker 0: How much money do you have?
+
+525
+00:32:30,298 --> 00:32:31,710
+Speaker 0: we can put about four interceptors?
+
+526
+00:32:31,790 --> 00:32:32,336
+Speaker 0: Where do you put them?
+
+527
+00:32:32,518 --> 00:32:33,710
+Speaker 0: the place with the most UFOs?
+
+528
+00:32:34,230 --> 00:32:39,609
+Speaker 0: Really simple decision that gets really intense when you've all got about six seconds to make it.
+
+529
+00:32:39,810 --> 00:32:40,612
+Speaker 1: Yep, you'll have.
+
+530
+00:32:40,632 --> 00:32:42,357
+Speaker 1: you'll have conversations like calm.
+
+531
+00:32:42,517 --> 00:32:44,562
+Speaker 1: how much money can I spend on interceptors?
+
+532
+00:32:44,622 --> 00:32:52,672
+Speaker 1: and you've already spent five seconds saying that Yeah So the it's a real-world problem-solving like emergent Strategy.
+
+533
+00:32:52,712 --> 00:33:00,749
+Speaker 1: if you have to be able to very quickly figure out is the information that I have worth telling anyone because the time matters?
+
+534
+00:33:02,131 --> 00:33:04,882
+Speaker 1: Is it worth it to ask for permission or to do a thing?
+
+535
+00:33:05,263 --> 00:33:06,930
+Speaker 1: Do I even want to interact with people?
+
+536
+00:33:07,831 --> 00:33:13,830
+Speaker 1: It's you have to make these like really real decisions really quickly based on possibly limited information.
+
+537
+00:33:14,492 --> 00:33:16,038
+Speaker 0: The other thing is that there's certain things on.
+
+538
+00:33:16,058 --> 00:33:21,688
+Speaker 0: basically there's a lot of different areas of the board where things are happening Quite like shadows over Camelot.
+
+539
+00:33:21,950 --> 00:33:25,750
+Speaker 0: All right You got the UFOs coming down that you have to get rid of or else they cause panic.
+
+540
+00:33:26,211 --> 00:33:33,304
+Speaker 0: You've got the base that's under attack that you have to defend or else your base will be destroyed and you need to beat those Missions right and there's missions.
+
+541
+00:33:33,364 --> 00:33:35,949
+Speaker 0: the mission Doesn't actually pressure you.
+
+542
+00:33:36,411 --> 00:33:41,330
+Speaker 0: You know the way that the base being destroyed or the UFOs can end your game when you have to push back against them.
+
+543
+00:33:41,733 --> 00:33:42,923
+Speaker 0: The mission like you can do.
+
+544
+00:33:42,943 --> 00:33:44,486
+Speaker 0: the mission or not It's up to you.
+
+545
+00:33:44,971 --> 00:33:52,810
+Speaker 0: But if you want to have any chance of actually defending the base or your reducing panic in the continents When you beat a mission you get the rewards.
+
+546
+00:33:53,131 --> 00:33:58,730
+Speaker 0: You need those rewards or you will not have enough stuff to protect the world elsewhere.
+
+547
+00:33:59,352 --> 00:34:06,550
+Speaker 0: So the mission does pressure you once you realize that that is true and it's very very difficult to do all these things at once.
+
+548
+00:34:06,891 --> 00:34:10,330
+Speaker 1: What's also very interesting is that the players are fully autonomous.
+
+549
+00:34:10,931 --> 00:34:13,542
+Speaker 1: So I could just deploy all my interceptors.
+
+550
+00:34:13,623 --> 00:34:15,449
+Speaker 1: I could just be BAM and send them all out there.
+
+551
+00:34:15,571 --> 00:34:19,310
+Speaker 0: I can do whatever and then at the end of the turn it's like how much money did we spend too much?
+
+552
+00:34:19,350 --> 00:34:20,212
+Speaker 0: Well, we're fucked.
+
+553
+00:34:20,233 --> 00:34:23,121
+Speaker 1: yeah, yep, so it the game.
+
+554
+00:34:23,482 --> 00:34:26,530
+Speaker 1: the players all interact with each other in different ways.
+
+555
+00:34:26,590 --> 00:34:30,270
+Speaker 1: So like the calm I feel like I'm gonna specialize in like one or two roles.
+
+556
+00:34:30,351 --> 00:34:33,170
+Speaker 1: I think everyone's gonna specialize in like a couple of roles.
+
+557
+00:34:33,190 --> 00:34:40,065
+Speaker 0: It might be boring to always do one role But it's still good to like play one or two of them a whole bunch to get good at them.
+
+558
+00:34:40,085 --> 00:34:52,737
+Speaker 0: because like the science person They need to learn all those cards because if like the first few times they play They're gonna spend a lot of time reading the cards and that's gonna hose you if you get to the point where you've memorized Most of the cards that's gonna save you so
+
+559
+00:34:52,777 --> 00:34:53,039
+Speaker 1: much
+
+560
+00:34:53,099 --> 00:34:57,552
+Speaker 0: time and improve the decision-making on the science side Tremendously.
+
+561
+00:34:57,653 --> 00:35:10,930
+Speaker 1: science has probably one of the hardest roles in the sense that you have to synthesize Quickly the entire state of the game to figure out what technology you're looking at from your choices Will help now and is necessary.
+
+562
+00:35:11,070 --> 00:35:17,030
+Speaker 1: Yeah, it's like this you have to figure out how much like how much you should take from everybody else to make that happen.
+
+563
+00:35:17,070 --> 00:35:17,252
+Speaker 1: Right.
+
+564
+00:35:17,575 --> 00:35:21,196
+Speaker 1: This one will work and Come give me three dollars.
+
+565
+00:35:21,657 --> 00:35:29,110
+Speaker 1: Yeah, like we only have four dollars left to spend and like the base is under attack, dude Yeah, but it's like the decision you make is so simple.
+
+566
+00:35:29,190 --> 00:35:33,690
+Speaker 0: It's like pick a card and choose zero one two or three scientists to work on it.
+
+567
+00:35:33,790 --> 00:35:37,642
+Speaker 0: So if you had even a minute to think about that, it would be brain-dead.
+
+568
+00:35:37,682 --> 00:35:40,110
+Speaker 0: simple, but you have about five to ten seconds.
+
+569
+00:35:40,712 --> 00:35:43,600
+Speaker 0: So and you just drew the cards and you're still reading them.
+
+570
+00:35:43,881 --> 00:35:45,426
+Speaker 1: So, you know what I kind of want.
+
+571
+00:35:45,787 --> 00:35:46,670
+Speaker 1: I've been thinking about this.
+
+572
+00:35:47,371 --> 00:35:57,168
+Speaker 1: Imagine using this idea for similar other kinds of games like imagine a game where you're all either Gundam pilots or on the bridge of a Gundam.
+
+573
+00:35:57,308 --> 00:36:02,023
+Speaker 0: sure Yeah, any sort of real-time battle situation involving multiple people.
+
+574
+00:36:02,484 --> 00:36:04,390
+Speaker 0: you could you know have the same basic.
+
+575
+00:36:04,550 --> 00:36:07,341
+Speaker 0: You know structure and the app would totally help you out.
+
+576
+00:36:07,461 --> 00:36:08,585
+Speaker 0: Also exactly.
+
+577
+00:36:08,605 --> 00:36:10,817
+Speaker 0: It's like alright, I'm in the Gundam That's my job.
+
+578
+00:36:11,139 --> 00:36:16,674
+Speaker 0: You're firing the guns you're in another Gundam and The fire ones.
+
+579
+00:36:16,755 --> 00:36:19,589
+Speaker 1: one person's firing the low and greens and one person's moving the ship.
+
+580
+00:36:19,891 --> 00:36:23,710
+Speaker 1: Yeah, one person's actually directing all the Gundam pilots, but doesn't do anything else.
+
+581
+00:36:23,810 --> 00:36:28,063
+Speaker 0: But so the app is like, you know char just shot at your whatever.
+
+582
+00:36:28,163 --> 00:36:30,049
+Speaker 0: Oh my god move left and do this.
+
+583
+00:36:30,069 --> 00:36:31,835
+Speaker 0: Okay Yeah, now this happened.
+
+584
+00:36:31,855 --> 00:36:32,638
+Speaker 0: Oh my god do this.
+
+585
+00:36:33,080 --> 00:36:33,963
+Speaker 0: You have five seconds.
+
+586
+00:36:34,063 --> 00:36:35,629
+Speaker 0: Otherwise another bad thing will happen to you.
+
+587
+00:36:36,571 --> 00:36:46,084
+Speaker 1: It's interesting to me that you know in all the time people have been trying to make games like this Xcom actually did do it first like it has flaws, but the flaws are just purely implementation.
+
+588
+00:36:46,124 --> 00:36:48,050
+Speaker 1: The concept is so rock-solid.
+
+589
+00:36:48,222 --> 00:36:49,314
+Speaker 0: Yeah I mean you look at thing.
+
+590
+00:36:49,354 --> 00:36:55,986
+Speaker 0: people are like dying to get things going like Artemis bridge simulator and It's like that's a big setup with a bunch of computers.
+
+591
+00:36:56,067 --> 00:36:58,940
+Speaker 1: Yeah Software they had it at Zenk icon actually.
+
+592
+00:36:59,080 --> 00:37:00,005
+Speaker 0: Yeah, they have it a lot of places.
+
+593
+00:37:00,025 --> 00:37:01,110
+Speaker 1: Yeah, we're trying to get it at Connecticut.
+
+594
+00:37:01,352 --> 00:37:01,877
+Speaker 0: Sure, why not?
+
+595
+00:37:02,443 --> 00:37:03,190
+Speaker 0: It's really popular.
+
+596
+00:37:03,471 --> 00:37:10,070
+Speaker 0: But it's like you can get basically the same experience with this Xcom game for way less money and effort.
+
+597
+00:37:10,431 --> 00:37:14,730
+Speaker 0: Yes one tablet and four people and practice.
+
+598
+00:37:15,453 --> 00:37:24,347
+Speaker 1: So watch out for I hope this pushes co-op tabletop games In a vastly different trajectory from where they've been up to this point.
+
+599
+00:37:24,367 --> 00:37:30,230
+Speaker 0: Mm-hmm I just sort of wish there was like an app only mode, you know, it's like the tabletop part.
+
+600
+00:37:30,290 --> 00:37:32,290
+Speaker 0: I mean, it's like nice to play a tabletop game.
+
+601
+00:37:32,330 --> 00:37:36,409
+Speaker 0: But seriously, you could have just made this like a four tablet or four 3ds game.
+
+602
+00:37:36,791 --> 00:37:38,787
+Speaker 0: You know, it's four people sit there with the tablets and do it.
+
+603
+00:37:39,110 --> 00:37:39,916
+Speaker 0: But why is this?
+
+604
+00:37:39,936 --> 00:37:41,790
+Speaker 1: could not if you're gonna have resolution in the screen?
+
+605
+00:37:41,850 --> 00:37:46,949
+Speaker 0: It's like, you know, it's sort of clever and forward-thinking to combine the app with the tabletop part.
+
+606
+00:37:47,591 --> 00:37:51,822
+Speaker 0: But really it's like if you have software you don't need the tabletop part.
+
+607
+00:37:51,862 --> 00:37:53,788
+Speaker 0: We could just go full software.
+
+608
+00:37:53,808 --> 00:38:00,813
+Speaker 1: Yeah, well Part of it is that unless you had a very large tablet It is.
+
+609
+00:38:00,893 --> 00:38:02,258
+Speaker 0: it is quite a large interface.
+
+610
+00:38:02,298 --> 00:38:02,700
+Speaker 0: that's true.
+
+611
+00:38:02,841 --> 00:38:05,150
+Speaker 1: big board all that stuff.
+
+612
+00:38:05,611 --> 00:38:08,841
+Speaker 1: There's a very non trivial UX problem there.
+
+613
+00:38:09,061 --> 00:38:12,070
+Speaker 1: Yeah, that's somewhat true because there's kind of like member an eclipse.
+
+614
+00:38:12,151 --> 00:38:30,765
+Speaker 1: We talked about how the idea that Eclipse and a big game of Eclipse Because you have to do so much in so many decisions and so much like fiddly stuff You'll often pay attention to the things that are near you and you won't pay attention to the colonies like oh Yeah, Pete and chair like having a war out there But I don't have time to pay attention to that.
+
+615
+00:38:30,785 --> 00:38:31,148
+Speaker 1: Mm-hmm.
+
+616
+00:38:31,450 --> 00:38:36,990
+Speaker 1: So the physicality does add something that would be difficult to do currently with current tablet technology.
+
+617
+00:38:37,070 --> 00:38:41,149
+Speaker 0: It wouldn't be difficult if you had say everyone has a tablet and the something on the TV.
+
+618
+00:38:41,431 --> 00:38:44,090
+Speaker 0: But again, that's might as well be Artemis bridge simulator exactly.
+
+619
+00:38:44,110 --> 00:38:50,832
+Speaker 1: Yeah This is a game because it's the because of the way it's set up that you can feasibly check out from a tabletop Library.
+
+620
+00:38:50,872 --> 00:38:54,670
+Speaker 1: at a convention someone whips out their iPhone or iPad and then you just play.
+
+621
+00:38:54,791 --> 00:38:56,057
+Speaker 0: Yeah, any literally any.
+
+622
+00:38:56,097 --> 00:39:01,362
+Speaker 0: you could just use a laptop with internet and go to the website You don't even need and I you know iPad is best.
+
+623
+00:39:01,443 --> 00:39:03,090
+Speaker 0: I guess probably the big iPad is best.
+
+624
+00:39:03,110 --> 00:39:04,054
+Speaker 0: I was using iPad mini.
+
+625
+00:39:04,074 --> 00:39:08,430
+Speaker 0: Yeah, but any device will get it done and the app part is free.
+
+626
+00:39:08,510 --> 00:39:11,823
+Speaker 0: It's just the you know, so you actually if you don't want to buy this game.
+
+627
+00:39:12,264 --> 00:39:19,935
+Speaker 0: You can just go get the free app straight from the Apple Store the Google Play Store or whatever and read the full rules in the app and to do the tutorial in the app.
+
+628
+00:39:20,848 --> 00:39:26,073
+Speaker 0: and You know just get the board game, which is just the pieces pretty much in a box, you know There's nothing else in there.
+
+629
+00:39:26,274 --> 00:39:29,806
+Speaker 0: Yeah, and then you know decide after checking out the app if you.
+
+630
+00:39:29,866 --> 00:39:30,910
+Speaker 0: so that's actually pretty cool.
+
+631
+00:39:30,950 --> 00:39:34,865
+Speaker 0: It's almost like there's a demo of the board game in a way for free.
+
+632
+00:39:34,885 --> 00:39:36,351
+Speaker 1: Yeah, this is this game It's.
+
+633
+00:39:36,411 --> 00:39:40,083
+Speaker 1: it's shocking how much new ground this game is breaking into.
+
+634
+00:39:40,163 --> 00:39:42,070
+Speaker 0: Yeah, having an xcom theme doesn't hurt either.
+
+635
+00:39:42,210 --> 00:39:44,777
+Speaker 1: So it doesn't xcom also, it's just.
+
+636
+00:39:44,857 --> 00:39:45,298
+Speaker 1: I'm very.
+
+637
+00:39:45,318 --> 00:39:51,485
+Speaker 1: I can't express you how happy I am that there is a game property Of course, I guess based on another game.
+
+638
+00:39:51,526 --> 00:39:56,519
+Speaker 0: in this case Yes, like a tabletop game A licensed game that isn't garbage.
+
+639
+00:39:56,559 --> 00:39:56,880
+Speaker 0: Yes.
+
+640
+00:39:57,362 --> 00:39:59,310
+Speaker 1: I mean we all remember the Adventure Time games.
+
+641
+00:39:59,310 --> 00:40:01,600
+Speaker 0: Well, they have Star Wars games that are good Fantasy Flight.
+
+642
+00:40:01,700 --> 00:40:04,130
+Speaker 0: Yeah, I think Fantasy Flight people don't realize this, right?
+
+643
+00:40:04,250 --> 00:40:08,870
+Speaker 0: Okay, so licensed games are usually most of the time not good, right?
+
+644
+00:40:09,250 --> 00:40:33,834
+Speaker 0: But Fantasy Flight games the thing that they do because they're not perfect in by any means but the one thing that they do is they make licensed games and And Not the way Cryptozoic does it where we'll take any license like people who want games made out of their properties are Lining up at Fantasy Flight to say please make a game with our you know, you know intellectual property.
+
+645
+00:40:33,855 --> 00:40:38,594
+Speaker 0: and Fantasy Flight most of the time says no They pretty much.
+
+646
+00:40:38,734 --> 00:40:43,970
+Speaker 0: that's why they're doing things like fucking Star Wars like the biggest IP you could possibly have.
+
+647
+00:40:44,252 --> 00:40:44,998
+Speaker 1: You know, it's interesting.
+
+648
+00:40:45,018 --> 00:40:46,509
+Speaker 0: They're not doing all these others, right?
+
+649
+00:40:46,831 --> 00:40:47,294
+Speaker 0: It's interesting.
+
+650
+00:40:47,314 --> 00:40:50,450
+Speaker 1: you say that because you know my other job like I'm a product manager, right?
+
+651
+00:40:50,670 --> 00:41:03,890
+Speaker 1: Like I'm going all the other like London Conventions things and what I've noticed over the years like doing this kind of work Is that the people who say yes quickly and to most things are the worst at doing those things.
+
+652
+00:41:03,950 --> 00:41:09,881
+Speaker 0: It's like the people who bid really low on every government contract Exactly, like the fact like I've got I've made.
+
+653
+00:41:10,001 --> 00:41:12,409
+Speaker 1: I've gotten more deals by telling people no than telling people.
+
+654
+00:41:12,449 --> 00:41:16,342
+Speaker 1: Yes Mm-hmm, and that seems to be true in every industry.
+
+655
+00:41:16,362 --> 00:41:18,590
+Speaker 1: Yeah, except government contracts, right?
+
+656
+00:41:18,730 --> 00:41:20,578
+Speaker 0: So Fantasy Flight says no, but they end up doing.
+
+657
+00:41:20,598 --> 00:41:21,582
+Speaker 0: they do Star Wars.
+
+658
+00:41:21,743 --> 00:41:22,767
+Speaker 0: They do Warhammer, right?
+
+659
+00:41:23,610 --> 00:41:24,553
+Speaker 1: We were real close.
+
+660
+00:41:24,594 --> 00:41:29,190
+Speaker 1: Scott Johnson was holding the Star Wars capital ships game like a starter set for it.
+
+661
+00:41:29,250 --> 00:41:32,866
+Speaker 0: My friend Chris who played X come with has it and he's like, what are you doing Monday?
+
+662
+00:41:32,987 --> 00:41:41,596
+Speaker 0: And I'm like Busy, he's like we do Tuesday busy Wednesday busy Thursday packing for Friday, and he's like, I hate you Why he wants to play it.
+
+663
+00:41:41,777 --> 00:41:42,459
+Speaker 1: I want to play it.
+
+664
+00:41:42,479 --> 00:41:43,443
+Speaker 0: All right.
+
+665
+00:41:43,463 --> 00:41:44,367
+Speaker 0: Well, it's a two people game.
+
+666
+00:41:44,628 --> 00:41:47,097
+Speaker 1: Yeah, I know I'm thinking about buying it.
+
+667
+00:41:47,278 --> 00:41:48,763
+Speaker 0: Well, I mean, it's just a core set.
+
+668
+00:41:48,823 --> 00:41:50,690
+Speaker 0: now that would be like buying netrunner at the start.
+
+669
+00:41:50,730 --> 00:41:55,090
+Speaker 1: Yeah, but this I might play because ship capital ships with momentum.
+
+670
+00:41:55,828 --> 00:42:02,698
+Speaker 0: I Problem is is that even though there will be people in New York to play it with not that many not as many as regular Xcom or net run it doesn't had this note.
+
+671
+00:42:02,719 --> 00:42:05,250
+Speaker 0: You're not gonna find a lot of places with tables to play it on.
+
+672
+00:42:05,692 --> 00:42:08,829
+Speaker 1: Yeah, well you realize that's the same reason why I didn't buy pitch car?
+
+673
+00:42:10,872 --> 00:42:14,732
+Speaker 1: Actually, no, the only reason I didn't buy pitch cars because you get the full set is $300.
+
+674
+00:42:14,732 --> 00:42:15,214
+Speaker 0: Yeah rim.
+
+675
+00:42:15,575 --> 00:42:18,465
+Speaker 0: Let's just buy a house in this like a cabin in the sticks.
+
+676
+00:42:18,666 --> 00:42:20,412
+Speaker 0: Yep, and Use it.
+
+677
+00:42:20,814 --> 00:42:23,664
+Speaker 0: use it for our partying and keep all the large games there.
+
+678
+00:42:23,785 --> 00:42:25,210
+Speaker 1: Yeah, what was Scott?
+
+679
+00:42:25,530 --> 00:42:26,436
+Speaker 1: Remember the banana stand?
+
+680
+00:42:26,476 --> 00:42:26,920
+Speaker 1: fuck that.
+
+681
+00:42:26,980 --> 00:42:28,007
+Speaker 1: here's what we do Kevin.
+
+682
+00:42:28,047 --> 00:42:29,736
+Speaker 0: in the sticks We get everyone.
+
+683
+00:42:29,797 --> 00:42:31,907
+Speaker 1: we know who is in our exact situation.
+
+684
+00:42:31,948 --> 00:42:36,490
+Speaker 1: in New York We all collectively buy a cabin like in the fucking Poconos somewhere.
+
+685
+00:42:36,711 --> 00:42:39,498
+Speaker 1: Yeah, and it is just a board game Mecca.
+
+686
+00:42:39,939 --> 00:42:43,850
+Speaker 1: sure that's actually probably cheaper than getting a storage unit in Manhattan.
+
+687
+00:42:44,253 --> 00:42:46,230
+Speaker 0: Yeah, well, there's issues like tax insurance.
+
+688
+00:42:47,631 --> 00:42:49,559
+Speaker 1: Now those are Scott being electricity.
+
+689
+00:42:49,640 --> 00:42:52,130
+Speaker 1: I've looked into those things making sure it doesn't fall apart.
+
+690
+00:42:52,372 --> 00:42:54,089
+Speaker 0: We show up as squirrels living in there.
+
+691
+00:42:55,710 --> 00:43:00,910
+Speaker 1: uh, I Think those things are all manageable because remember why I was just in Lancaster for Zenk icon.
+
+692
+00:43:01,532 --> 00:43:08,530
+Speaker 1: You forget how cheap everything is if you get even like 60 miles in any direction from where we are now way cheap.
+
+693
+00:43:09,193 --> 00:43:17,245
+Speaker 1: I mean, I went to that farmers market and I bought what felt like a Ridiculous amount of high quality food and I had spent less than $20 on that.
+
+694
+00:43:17,265 --> 00:43:27,184
+Speaker 1: Yep I got a beer and I handed the guy a 20 and he gave me a 10 back in my change Along with a five and a quarter.
+
+695
+00:43:27,305 --> 00:43:27,667
+Speaker 1: Whoa.
+
+696
+00:43:28,008 --> 00:43:35,789
+Speaker 1: Yeah Yeah hahaha All right, see you guys at Anime Boston, please come play games with us.
+
+697
+00:43:41,694 --> 00:43:44,230
+Speaker 1: This has been geek nights with rim and Scott special.
+
+698
+00:43:44,290 --> 00:43:49,050
+Speaker 1: Thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+699
+00:43:49,351 --> 00:43:51,318
+Speaker 0: Be sure to visit our website at front row.
+
+700
+00:43:51,358 --> 00:43:54,350
+Speaker 0: crew calm for show notes discussion news and more.
+
+701
+00:43:54,630 --> 00:44:02,030
+Speaker 1: Remember geek nights is not one but four different shows sci-tech Monday's gaming Tuesdays and make comic Wednesdays and indiscriminate Thursdays.
+
+702
+00:44:02,411 --> 00:44:06,421
+Speaker 0: Geek nights is distributed under a Creative Commons attribution 3.0 license.
+
+703
+00:44:06,842 --> 00:44:12,990
+Speaker 0: geek nights is recorded live with no studio and no audience But unlike those other late shows it's actually recorded at night.
+

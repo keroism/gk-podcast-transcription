@@ -1,0 +1,3804 @@
+1
+00:00:08,140 --> 00:00:10,116
+Rym: It's Monday, September 28th, 2020.
+
+2
+00:00:10,116 --> 00:00:10,498
+Rym: I'm Rym.
+
+3
+00:00:10,538 --> 00:00:13,185
+Rym: I'm Scott and this is GeekNights.
+
+4
+00:00:13,225 --> 00:00:20,568
+Rym: tonight We were talking about source code leaks and why they aren't always a big deal, but sometimes they are.
+
+5
+00:00:21,553 --> 00:00:22,587
+Scott: Let's do this.
+
+6
+00:00:24,172 --> 00:00:36,510
+Rym: So I've had a problem for Not a while, but just recently like over the last couple months That was very like infuriating to troubleshoot and it's a very domain specific problem.
+
+7
+00:00:36,872 --> 00:00:39,550
+Rym: The problem was I would get ready to record GeekNights.
+
+8
+00:00:40,152 --> 00:00:45,107
+Rym: You know like we do with this kovat error remote setup and I turn on all my stuff.
+
+9
+00:00:45,167 --> 00:00:53,190
+Rym: I got all my templates I got audition open I got OBS open and I joined the discord channel to be able to talk to Scott and so Scott could send me his video.
+
+10
+00:00:54,136 --> 00:01:00,121
+Rym: And I sound like a robot in discord But only in discord when Scott hears me.
+
+11
+00:01:00,241 --> 00:01:03,470
+Rym: if I preview myself in discord, it sounds fine.
+
+12
+00:01:04,953 --> 00:01:06,665
+Rym: Mmm, it's like this really weird problem.
+
+13
+00:01:07,128 --> 00:01:21,603
+Rym: now Being an audio engineer and knowing a lot about audio hardware The one thing I do know the way I am able to engage with this problem at all because you google for robot sound Most people will think it's a bandwidth issue or a.
+
+14
+00:01:22,104 --> 00:01:32,748
+Scott: so many people are Describe their audio problems differently and so many people are having different problems And it's like you can tell that what the problem they have is not the problem you have.
+
+15
+00:01:32,768 --> 00:01:40,289
+Rym: Yep Like when someone somebody who's not in an audio engineer describes a problem to me I can be like it's this or I can just listen to it be like it's this.
+
+16
+00:01:40,731 --> 00:01:49,161
+Rym: But if someone describes it to me and they're not an audio engineer if they say robot sound 99% of the time They just don't have enough bandwidth or their CPU.
+
+17
+00:01:49,181 --> 00:01:51,410
+Scott: We should have actually recorded some noise.
+
+18
+00:01:51,671 --> 00:01:57,430
+Scott: I could actually intentionally record some with the actual robot sound and it's basically a specific kind of robot.
+
+19
+00:01:57,651 --> 00:01:59,925
+Rym: It's like stuttery like but a bit a bit a bit a bit.
+
+20
+00:01:59,985 --> 00:02:03,734
+Rym: Uh like you sound like The whole time it's.
+
+21
+00:02:04,156 --> 00:02:08,250
+Scott: it sort of gets increases though as like you're it's like if I don't talk you won't hear it.
+
+22
+00:02:08,289 --> 00:02:11,707
+Scott: But as soon as I talk and or talk louder or more you'll hear it more.
+
+23
+00:02:11,727 --> 00:02:14,997
+Scott: Yeah It's like it's a kind of distortion almost like a.
+
+24
+00:02:15,278 --> 00:02:19,770
+Rym: yeah, so distortion is how I would describe it to an audio engineer.
+
+25
+00:02:20,792 --> 00:02:27,250
+Rym: But anyway, so I know this is a sample rate mismatch and I have fancy professional hardware using ASIO.
+
+26
+00:02:27,892 --> 00:02:31,503
+Rym: So I suspect that what's happening is some bullshit.
+
+27
+00:02:31,583 --> 00:02:49,582
+Rym: application running on my computer is Telling the hardware to use the wrong sample rate compared to what the rest of my software told it or Some software I have is stupid and is assuming that the audio hardware is using one sample rate But the audio hardware is actually set to a different sample rate.
+
+28
+00:02:49,883 --> 00:02:53,374
+Rym: That is usually the cause of that Specific kind of distortion.
+
+29
+00:02:53,876 --> 00:02:59,390
+Scott: however, your microphone is sending an audio at 48 kilohertz sample rate, right?
+
+30
+00:02:59,590 --> 00:03:02,830
+Scott: And you know the device your sound card is set at that sample rate.
+
+31
+00:03:02,970 --> 00:03:08,212
+Scott: Yeah, and audition is using that sample ray and you know all your applications like, okay We know.
+
+32
+00:03:08,232 --> 00:03:11,589
+Scott: to read data from this audio buffer, right?
+
+33
+00:03:11,589 --> 00:03:14,539
+Scott: 48,000 times per second.
+
+34
+00:03:14,559 --> 00:03:15,082
+Scott: Okay.
+
+35
+00:03:15,283 --> 00:03:24,102
+Scott: Yeah, if something reads from that 44,100 times a second It's gonna be all messed up because it's out of sync with all the other ones.
+
+36
+00:03:24,243 --> 00:03:27,213
+Scott: and that's the specific kind of noise you hear when that happens.
+
+37
+00:03:27,454 --> 00:03:36,690
+Rym: and the magic part was my local recording and audition is fine because Audition is the thing that is controlling my sound device through the ASIO direct drivers.
+
+38
+00:03:37,171 --> 00:03:41,826
+Rym: So it's some fuckery and some poorly written applications somewhere and I can't figure it out.
+
+39
+00:03:42,167 --> 00:03:43,130
+Rym: So I need to test it.
+
+40
+00:03:43,170 --> 00:03:57,069
+Rym: I just didn't test it because I didn't have time Like I had a plan to try to replicate the problem reliably and do like the technologist process of elimination to figure out What is causing this problem figure out what software is being stupid and then figure out how to fix it.
+
+41
+00:03:57,711 --> 00:04:00,222
+Rym: But I could not replicate it reliably and I hadn't tested.
+
+42
+00:04:00,683 --> 00:04:21,858
+Rym: just before we recorded this show I was changing an unrelated setting for an unrelated thing and I noticed something I Noticed that the sample rate that my pre-sonus universal control Which is the device driver that gives my software direct access to my audio hardware Said that the sample rate was 44.1 kilohertz.
+
+43
+00:04:22,200 --> 00:04:22,862
+Rym: and motherfucker.
+
+44
+00:04:22,902 --> 00:04:23,825
+Rym: I'm looking at it right now.
+
+45
+00:04:23,885 --> 00:04:24,306
+Rym: It's back to 44.1.
+
+46
+00:04:24,306 --> 00:04:24,547
+Rym: God damn it.
+
+47
+00:04:27,252 --> 00:04:28,334
+Rym: But anyway, it's.
+
+48
+00:04:28,555 --> 00:04:30,982
+Rym: I also saw that I could not change it.
+
+49
+00:04:31,242 --> 00:04:39,685
+Rym: So the software was the driver was saying that Some software has instructed it to set the device to 44.1 kilohertz.
+
+50
+00:04:43,133 --> 00:04:48,514
+Rym: So I go in all my software and I'm trying to troubleshoot this and I Close everything.
+
+51
+00:04:48,875 --> 00:04:49,897
+Rym: I set it back to 48.
+
+52
+00:04:49,897 --> 00:04:57,090
+Rym: It stays at 48 and then one by one I open software until eventually.
+
+53
+00:04:58,498 --> 00:04:58,969
+Rym: OBS.
+
+54
+00:05:00,055 --> 00:05:11,810
+Rym: As soon as I open OBS the video the video I'm usually used to this in the discussion of video card drivers The audio driver goes oh shit and switches in the UI to 44 and I'm like, you're the culprit OBS.
+
+55
+00:05:12,172 --> 00:05:17,431
+Rym: It's like going to OBS settings and OBS says 48.
+
+56
+00:05:17,431 --> 00:05:22,955
+Rym: OBS says it's using 48 of setting 48 and it's not even fucking using ASIO It's using MME.
+
+57
+00:05:23,196 --> 00:05:26,107
+Rym: So it shouldn't even be able to set that sample rate.
+
+58
+00:05:26,328 --> 00:05:26,850
+Rym: What the fuck?
+
+59
+00:05:27,853 --> 00:05:31,626
+Rym: So then I close that OBS and I set it back to 44.
+
+60
+00:05:31,626 --> 00:05:32,308
+Rym: I open the OBS.
+
+61
+00:05:32,368 --> 00:05:32,950
+Rym: it goes to 48.
+
+62
+00:05:32,950 --> 00:05:33,852
+Rym: I'm finding the problem.
+
+63
+00:05:34,574 --> 00:05:35,617
+Rym: then I open discord.
+
+64
+00:05:36,018 --> 00:05:39,613
+Rym: It goes back to 48.
+
+65
+00:05:39,613 --> 00:05:43,269
+Rym: So I found something online while I was talking to Scott getting ready to set up the show.
+
+66
+00:05:44,772 --> 00:05:45,615
+Rym: It's a reddit post.
+
+67
+00:05:45,937 --> 00:05:48,949
+Rym: Why does opening discord change the audio sample rate?
+
+68
+00:05:50,230 --> 00:05:52,575
+Rym: Discord requires 48k for reasons.
+
+69
+00:05:52,695 --> 00:05:54,820
+Rym: I do not care to inspect at this time.
+
+70
+00:05:57,211 --> 00:05:58,880
+Rym: I suspect that is discord.
+
+71
+00:05:58,981 --> 00:06:00,650
+Rym: I don't know why discord is that way.
+
+72
+00:06:00,690 --> 00:06:04,001
+Rym: I don't even know if it is that way but that appears to be the answer.
+
+73
+00:06:04,041 --> 00:06:06,208
+Rym: Someone said discord only supports 48k.
+
+74
+00:06:08,551 --> 00:06:09,595
+Scott: I think I've had it working in 44.
+
+75
+00:06:09,595 --> 00:06:16,076
+Rym: I have to through MME Because MME abstracts a lot of this stuff.
+
+76
+00:06:16,558 --> 00:06:21,109
+Rym: This is all the kind of problem that only happens when you were using direct driver access.
+
+77
+00:06:22,471 --> 00:06:38,570
+Scott: Anyway, so anyway the problem I had was that disk, you know, I was having the same problem whenever I open disk OBS robot noise right and I thought it was a sample rate mismatch Because OBS only lets you set one sampling rate globally for all of its things.
+
+78
+00:06:38,570 --> 00:06:42,530
+Rym: Yeah, which can't mix in my head set to 48 even though that wasn't working but separate.
+
+79
+00:06:42,753 --> 00:06:50,009
+Scott: I had it set to 48. so then I went and I tried to set everything in the whole computer to 44 and OBS still was making robot noise.
+
+80
+00:06:50,411 --> 00:06:55,228
+Scott: Then I said everything in the whole computer to 48 every single thing and OBS still made robot noise.
+
+81
+00:06:55,268 --> 00:06:56,592
+Scott: when I turned it on I'm like what the hell.
+
+82
+00:06:57,113 --> 00:07:03,610
+Scott: and I found out there's actually a second setting where you can increase the buffer size on the ASIO device.
+
+83
+00:07:04,831 --> 00:07:10,996
+Scott: So I raised it from 16 bits and I kept raising it step by step because I'd you want it You don't want to set it too high.
+
+84
+00:07:11,016 --> 00:07:12,765
+Scott: It's like well, why not set a huge buffer?
+
+85
+00:07:12,805 --> 00:07:13,910
+Scott: It's only a few bits, right?
+
+86
+00:07:13,930 --> 00:07:16,570
+Scott: It's because a larger buffer means more latency.
+
+87
+00:07:16,670 --> 00:07:29,922
+Scott: Yep, and the whole point of ASIO and fancy audio devices is to have as little latency as possible exactly, so I increased it one step at a time and every step I increased it the Robot noise decreased eventually, I think at 160.
+
+88
+00:07:29,922 --> 00:07:32,030
+Scott: It was like an occasional pop.
+
+89
+00:07:32,374 --> 00:07:34,514
+Scott: It was like sounded normal But occasionally just like.
+
+90
+00:07:34,755 --> 00:07:35,679
+Rym: see that was the phrase.
+
+91
+00:07:35,719 --> 00:07:41,085
+Rym: when you say pop that kind of distortion Will be like intermittent popping like it's a different.
+
+92
+00:07:41,286 --> 00:07:48,830
+Scott: Yeah sounds different But anyway, so I just put it up at 192 and that seemed to be enough bits to avoid the robot noise.
+
+93
+00:07:48,911 --> 00:07:49,779
+Scott: So I think I'm good.
+
+94
+00:07:49,880 --> 00:07:50,547
+Scott: Everything's working.
+
+95
+00:07:50,749 --> 00:07:58,170
+Rym: Yep so so I Figured out just before the show the specific problem that was going on and I'll link you all to some of these sources.
+
+96
+00:07:58,554 --> 00:08:10,584
+Rym: Because if you're interested Windows if you have a Windows computer, it uses MME which is like this generic super abstracted Windows API and Subsystem for audio and it kind of just works.
+
+97
+00:08:10,645 --> 00:08:11,730
+Rym: but it's also super shitty.
+
+98
+00:08:12,890 --> 00:08:23,502
+Rym: And ASIO is the thing that the Chad hardware uses to do like real direct access and all the other things are usually just a mistake like WAS API.
+
+99
+00:08:23,804 --> 00:08:30,990
+Rym: basically is What if you had an ASIO like version of MME that crashed your computer all the time and sucked?
+
+100
+00:08:32,235 --> 00:08:32,990
+Rym: and caused problems?
+
+101
+00:08:33,772 --> 00:08:44,650
+Rym: but these are the kinds of things you need to know if you're using expensive fancy audio hardware and you're trying to figure out why You have two different microphones and you can't only record from one or the other at the same time.
+
+102
+00:08:45,032 --> 00:08:52,926
+Rym: This is the stuff you just have to learn about audio engineering But the final bug in the end is something so specific and annoying.
+
+103
+00:08:53,267 --> 00:09:02,101
+Rym: the problem was before at the beginning of COVID Scott and I set up a pipeline where Scott will stream to me with OBS.
+
+104
+00:09:02,903 --> 00:09:04,870
+Rym: I will stream to me with OBS.
+
+105
+00:09:05,473 --> 00:09:15,366
+Rym: I'm running a server that takes those two streams Merges them together with stuff and sends them to an OBS that goes out to YouTube.
+
+106
+00:09:16,770 --> 00:09:19,279
+Rym: I Needed to run multiple OBS's on the same computer.
+
+107
+00:09:19,400 --> 00:09:21,849
+Rym: I have enough power and hardware to make that happen.
+
+108
+00:09:22,411 --> 00:09:33,143
+Rym: However, I had to set up a special OBS where my OBS's are all running in a local mode where they store all their settings locally in a subdirectory and don't store stuff in the Windows registry.
+
+109
+00:09:33,484 --> 00:09:36,235
+Rym: the bug appears to be Portable OBS's.
+
+110
+00:09:37,038 --> 00:09:40,370
+Scott: if I change the sample rate, I don't think it stores them in the registry.
+
+111
+00:09:40,410 --> 00:09:43,601
+Scott: I think it stores them in like your personal app data folder or something.
+
+112
+00:09:43,621 --> 00:09:46,110
+Rym: Yeah, I didn't actually look at the details of that.
+
+113
+00:09:46,311 --> 00:09:51,290
+Rym: All I know is that if you run OBS in portable mode, it will store everything for that OBS.
+
+114
+00:09:51,410 --> 00:09:55,570
+Scott: Yeah, the portal the portable OBS is designed to be put on like a USB stick.
+
+115
+00:09:55,751 --> 00:10:00,899
+Scott: Yeah, that way you could theoretically if you're like a streaming, you know Think about a streaming gamer type person.
+
+116
+00:10:00,939 --> 00:10:04,996
+Scott: right you go on a trip to a convention You bring a USB stick with you.
+
+117
+00:10:05,036 --> 00:10:06,562
+Scott: You sit down at a streaming station.
+
+118
+00:10:06,782 --> 00:10:08,790
+Scott: You stick the stick in there you turn it on.
+
+119
+00:10:09,191 --> 00:10:13,450
+Scott: Boom, it's your OBS with your sources and your scenes and everything already set up, right?
+
+120
+00:10:13,610 --> 00:10:14,268
+Scott: So you're good to go.
+
+121
+00:10:14,410 --> 00:10:19,670
+Rym: You also use it if you want to have like because OBS has a lot of annoyingly universal settings.
+
+122
+00:10:20,174 --> 00:10:21,889
+Rym: So you might have two different portable ones.
+
+123
+00:10:22,191 --> 00:10:27,169
+Rym: Like I have a very different OBS setup if I'm streaming a video game versus if Scott is streaming stuff to me.
+
+124
+00:10:28,078 --> 00:10:51,730
+Rym: yeah, so It appears that if I don't run the portable OBS with administrative privileges Whatever setting I tell it to use for audio will just like not get applied and it'll force everything to 44 one no matter what I've set and I can replicate this Reliably with a portable OBS not running in administrator mode.
+
+125
+00:10:52,212 --> 00:10:57,310
+Rym: That's the kind of fucking bug you get with that kind of open source software that you cannot Google for the answer to.
+
+126
+00:10:58,411 --> 00:11:00,076
+Scott: Maybe OBS is the problem.
+
+127
+00:11:00,316 --> 00:11:03,967
+Scott: Yep, of course OBS was a lot of things and OBS is really.
+
+128
+00:11:03,987 --> 00:11:04,328
+Scott: it's just.
+
+129
+00:11:04,348 --> 00:11:10,270
+Scott: I'm mad at them All the time because their software is bad, but it's still better than most of the other streaming software.
+
+130
+00:11:11,331 --> 00:11:14,221
+Scott: Yeah, well, you know twitch is making an official one.
+
+131
+00:11:14,241 --> 00:11:16,750
+Scott: Yeah, so that's a thing, right?
+
+132
+00:11:17,471 --> 00:11:20,341
+Rym: Anyway, yeah the moral of that is I don't know.
+
+133
+00:11:20,381 --> 00:11:26,196
+Rym: learn how to troubleshoot and gain the expert knowledge You need to troubleshoot the areas that you are doing Non-standard things in.
+
+134
+00:11:26,356 --> 00:11:32,119
+Scott: but you look at you look for OBS problems on the internet and you find way old Posts that do not have good information in them.
+
+135
+00:11:32,300 --> 00:11:38,760
+Rym: Yep wrong answers like Googling for OBS problems is literally just wrong answers only.
+
+136
+00:11:39,001 --> 00:11:42,110
+Scott: and even if you're Google just for like what does this setting and OBS do?
+
+137
+00:11:42,231 --> 00:11:44,068
+Scott: You can't even get a straight answer from anything.
+
+138
+00:11:44,310 --> 00:11:50,330
+Rym: There are two different delays that do radically different things and I still am not clear on which one is which.
+
+139
+00:11:50,693 --> 00:11:54,316
+Scott: Despite having read OBS source code, I guess We should.
+
+140
+00:11:54,457 --> 00:11:57,450
+Scott: we should read the OBS source code, even though it's probably horrible.
+
+141
+00:11:58,255 --> 00:12:00,950
+Scott: Write good OBS documentation selling.
+
+142
+00:12:02,892 --> 00:12:04,477
+Rym: There are entire companies that do that.
+
+143
+00:12:04,558 --> 00:12:05,862
+Rym: for remember Magento.
+
+144
+00:12:05,882 --> 00:12:19,939
+Rym: there was a company that would sell me lessons on how to set up Magento come including Documentation that was accurate as opposed to the Magento documentation (laughter) Shop.Fur Elise.com.
+
+145
+00:12:19,959 --> 00:12:21,570
+Rym: there's a reason why I never set that shit up.
+
+146
+00:12:21,630 --> 00:12:25,160
+Scott: So the last GeekNights Monday episode was so long ago.
+
+147
+00:12:25,180 --> 00:12:28,550
+Scott: It was the day before the Apple whatever, right?
+
+148
+00:12:29,792 --> 00:12:31,208
+Scott: So we got tons of news.
+
+149
+00:12:32,932 --> 00:12:34,060
+Scott: There's so much tech news.
+
+150
+00:12:34,141 --> 00:12:35,310
+Scott: Let's try to go through it quickly.
+
+151
+00:12:35,350 --> 00:12:36,356
+Scott: All right, really starting.
+
+152
+00:12:36,516 --> 00:12:38,125
+Scott: start as quick as one with the Apple thing.
+
+153
+00:12:38,165 --> 00:12:39,090
+Rym: Oh, you want to the other thing first?
+
+154
+00:12:39,190 --> 00:12:40,630
+Scott: All right, cuz it's so alright.
+
+155
+00:12:40,690 --> 00:12:51,870
+Scott: So it was Apple watches and iPads right and the thing that stood out to me the most about that was obviously iPhones are delayed but iPhones have been delayed in the past, right?
+
+156
+00:12:52,010 --> 00:12:52,572
+Scott: It's like they.
+
+157
+00:12:52,653 --> 00:12:53,215
+Scott: you know, they're.
+
+158
+00:12:53,416 --> 00:12:56,610
+Scott: they've always announced iPod in September for back to school.
+
+159
+00:12:56,871 --> 00:12:59,907
+Scott: They replaced that with iPhone when they replaced iPods with iPhones.
+
+160
+00:12:59,927 --> 00:13:05,010
+Scott: Yep And then it's been even in years where they had problems, right?
+
+161
+00:13:05,750 --> 00:13:21,496
+Scott: Like where they ran out of rose gold or whatever or they didn't have enough glass for the screens or something Right, there were times where the iPhone itself was delayed But they still always had that announcement at the September Apple event right from the new iPhone every year like clockwork for them.
+
+162
+00:13:21,516 --> 00:13:29,963
+Scott: to not announce iPhone means that delays For the new iPhone are much more severe than we have been led to believe.
+
+163
+00:13:30,084 --> 00:13:37,610
+Scott: obviously delays because the world life Right, but this is Apple the largest most powerful company on the whole world.
+
+164
+00:13:38,492 --> 00:13:42,150
+Scott: And they still couldn't do it to the point at which they didn't even announce the new iPhone.
+
+165
+00:13:42,951 --> 00:13:45,010
+Scott: Right, that's that's a big deal, right?
+
+166
+00:13:45,150 --> 00:13:48,083
+Scott: So it's like people said that's what it was only gonna be watches and iPads.
+
+167
+00:13:48,143 --> 00:13:51,826
+Scott: and I said that may be true But if it is true, that's a huge deal.
+
+168
+00:13:51,907 --> 00:13:52,230
+Scott: and it is.
+
+169
+00:13:53,331 --> 00:13:55,840
+Scott: And as far as what they did announce, right?
+
+170
+00:13:55,900 --> 00:13:56,563
+Scott: It's like okay.
+
+171
+00:13:57,326 --> 00:14:01,921
+Scott: Most of that stuff was Stuff that we already stuff.
+
+172
+00:14:01,941 --> 00:14:02,666
+Scott: we already learned.
+
+173
+00:14:02,686 --> 00:14:03,330
+Rym: you need an eyewash.
+
+174
+00:14:04,431 --> 00:14:19,370
+Scott: Yeah, we already learned when we were learning about you know, the new version of iOS, right but The advertisement, you know because Apple always has the you know videos they show right there commercials to convince you to buy their product.
+
+175
+00:14:19,410 --> 00:14:23,525
+Scott: Yep, and the sales pitch is almost always it's magical.
+
+176
+00:14:23,585 --> 00:14:24,850
+Scott: It'll change your life.
+
+177
+00:14:25,091 --> 00:14:26,335
+Scott: Here's happy people.
+
+178
+00:14:26,375 --> 00:14:31,210
+Scott: Look how the Apple devices are improving their life experience, you know.
+
+179
+00:14:32,457 --> 00:14:44,670
+Scott: Just turn it on a wedding or a vacation or some other life thing and or everyday life chillin at home and look how the Apple Device and software makes everything magical and amazing and beautiful, right?
+
+180
+00:14:45,070 --> 00:14:47,037
+Scott: That's Apple's marketing slogan.
+
+181
+00:14:47,459 --> 00:14:53,197
+Scott: the marketing pitch for the new Apple watch was Not even joking at all.
+
+182
+00:14:53,478 --> 00:14:56,890
+Scott: Not no sarcasm is get an Apple watch or die.
+
+183
+00:14:57,351 --> 00:15:01,421
+Rym: Yep, because they added blood oxygen sensing right thing.
+
+184
+00:15:01,462 --> 00:15:03,868
+Scott: So the Apple watch it already has heart rate monitoring.
+
+185
+00:15:04,028 --> 00:15:06,437
+Scott: it has Sort of an EKG thing.
+
+186
+00:15:06,538 --> 00:15:09,510
+Scott: It's an EKG and now it's can monitor your blood oxygen level.
+
+187
+00:15:09,812 --> 00:15:11,930
+Scott: They had people come on who weren't lying.
+
+188
+00:15:12,312 --> 00:15:16,450
+Scott: They were like, hey my Apple watch told me my heart rate was elevated and I wasn't exercising.
+
+189
+00:15:16,891 --> 00:15:19,059
+Scott: So I went and I went to the hospital.
+
+190
+00:15:19,139 --> 00:15:20,925
+Scott: They told me I was going into cardiac arrest.
+
+191
+00:15:20,945 --> 00:15:21,989
+Scott: The Apple watch saved my life.
+
+192
+00:15:22,430 --> 00:15:25,483
+Scott: Yeah, and then they're like, hey, we got these new cheap Apple watches.
+
+193
+00:15:25,905 --> 00:15:30,269
+Scott: strap them on your kids And you'll be able to track them and know what happens to them.
+
+194
+00:15:30,631 --> 00:15:34,324
+Scott: Right, if get an Apple watch for your kids so they could die be kidnapped.
+
+195
+00:15:34,465 --> 00:15:40,956
+Scott: It was like a fear-based campaign rather than a Hope and magic based campaign.
+
+196
+00:15:40,996 --> 00:15:47,090
+Rym: That's what's interesting because that is such a market departure from basically all Apple marketing up to this point.
+
+197
+00:15:47,873 --> 00:15:52,088
+Scott: Yeah, I don't know if Steve Jobs could have noticed or approved of that.
+
+198
+00:15:52,269 --> 00:15:53,935
+Scott: Yeah I was not a.
+
+199
+00:15:54,257 --> 00:15:55,763
+Rym: now the technology is cool.
+
+200
+00:15:56,064 --> 00:15:57,390
+Rym: But of course there are caviar.
+
+201
+00:15:57,672 --> 00:15:59,281
+Scott: There's nothing wrong with the technology.
+
+202
+00:15:59,301 --> 00:16:00,870
+Scott: I mean, I'm wearing an Apple watch right now.
+
+203
+00:16:00,998 --> 00:16:02,374
+Rym: Yeah But also the health technology like.
+
+204
+00:16:02,394 --> 00:16:04,822
+Rym: on one hand this is collecting very personal sensitive data.
+
+205
+00:16:05,243 --> 00:16:09,070
+Rym: on the other hand that type of data Tends to be very heavily regulated.
+
+206
+00:16:09,150 --> 00:16:13,010
+Scott: Like there's a reason why Apple is much better and the privacy game than everyone else, right?
+
+207
+00:16:13,070 --> 00:16:16,988
+Rym: But if there's been Apple seems to be working and other companies doing this to.
+
+208
+00:16:17,636 --> 00:16:37,383
+Rym: Increasingly people are trying to actually get permission to do actual health stuff in technology because usually it is not legal or allowed to do health stuff or make health claims or even track health data with Software or hardware without FDA approval or other special things.
+
+209
+00:16:37,664 --> 00:16:39,790
+Rym: I'm being vague here because I do not want to get into the legal.
+
+210
+00:16:40,792 --> 00:16:47,732
+Scott: Every time Apple does something like that, right and they always say oh you were partnering with such such hospitals such and such People.
+
+211
+00:16:47,752 --> 00:16:48,678
+Scott: they don't do that on their own.
+
+212
+00:16:48,698 --> 00:16:50,809
+Scott: They always partnering with someone on all their health stuff.
+
+213
+00:16:51,121 --> 00:16:55,218
+Rym: Yeah because HIPAA and Related things are really really hard to deal with.
+
+214
+00:16:55,359 --> 00:16:57,947
+Scott: it always asks you permission if right and it does.
+
+215
+00:16:57,987 --> 00:16:58,508
+Scott: they don't share.
+
+216
+00:16:58,529 --> 00:16:59,893
+Scott: they don't sell Your data with anyone.
+
+217
+00:16:59,913 --> 00:17:04,549
+Scott: they just use it to improve the product and I actually believe them on that and that alone.
+
+218
+00:17:07,092 --> 00:17:08,037
+Scott: But yeah, they have.
+
+219
+00:17:08,077 --> 00:17:13,650
+Scott: there are many criticisms to go at them But that is you know, you're paying them a fortune for the product.
+
+220
+00:17:13,750 --> 00:17:13,952
+Scott: Why?
+
+221
+00:17:14,031 --> 00:17:14,555
+Scott: because you're not.
+
+222
+00:17:14,756 --> 00:17:17,030
+Scott: they're not advertising or stealing your data, right?
+
+223
+00:17:17,290 --> 00:17:21,323
+Rym: they're not lying about that like a fundamental rule of all technology if you pay for it.
+
+224
+00:17:21,364 --> 00:17:24,258
+Scott: if they were right if they were they Would be people.
+
+225
+00:17:24,398 --> 00:17:25,670
+Scott: technologists would know about it.
+
+226
+00:17:25,730 --> 00:17:28,078
+Scott: If they're all the eyes are on Apple.
+
+227
+00:17:28,439 --> 00:17:33,359
+Rym: if they if they're lying about that right now granted other companies Just steal your data and throw it around all the time.
+
+228
+00:17:33,379 --> 00:17:35,330
+Rym: They tell you they're doing it and most people don't care.
+
+229
+00:17:35,711 --> 00:17:38,321
+Rym: But yep, they're not hiding the fact that they're doing it.
+
+230
+00:17:38,903 --> 00:17:40,770
+Scott: Nope if but they're having you shit for free.
+
+231
+00:17:40,971 --> 00:17:43,411
+Rym: Yeah, the fact that Apple instead of charging you $1,000.
+
+232
+00:17:43,411 --> 00:17:52,821
+Rym: But as soon as Apple says they're private then people very much care that that is not a lie Yep, especially when they paid so much money to be private.
+
+233
+00:17:53,362 --> 00:18:01,650
+Rym: So in some other really really brief news You might have seen last time we talked we said we're pretty sure Firefox send is never coming back.
+
+234
+00:18:02,653 --> 00:18:08,490
+Rym: They announced like right after we did that show that Firefox send is in fact never coming back.
+
+235
+00:18:08,791 --> 00:18:12,550
+Rym: They basically said what we said, this is why we can't have nice things.
+
+236
+00:18:13,491 --> 00:18:16,420
+Scott: Yeah, Mozilla is having all kinds of internal drama lately.
+
+237
+00:18:16,440 --> 00:18:19,890
+Scott: Yeah, you know Firefox is still the thing.
+
+238
+00:18:19,991 --> 00:18:21,319
+Scott: I still use it, but we'll see.
+
+239
+00:18:21,983 --> 00:18:22,970
+Scott: we'll see what happens to them.
+
+240
+00:18:23,171 --> 00:18:23,592
+Scott: We need that.
+
+241
+00:18:23,873 --> 00:18:29,759
+Scott: it says it's weird because as much as their drama gives you reasons to be anti Mozilla It's like we kind of need them.
+
+242
+00:18:30,001 --> 00:18:31,570
+Rym: We need a chrome alternative.
+
+243
+00:18:32,531 --> 00:18:43,826
+Scott: I'm sure even if they died right like the Mozilla Corp died completely like a hundred percent dead that the Browser that Firefox would carry on as in just an open source project with a foundation.
+
+244
+00:18:43,887 --> 00:18:45,010
+Scott: So I'm not too concerned.
+
+245
+00:18:45,352 --> 00:18:48,850
+Scott: I think it might actually do better as an open source project with a foundation.
+
+246
+00:18:50,032 --> 00:18:51,115
+Scott: And it's like people.
+
+247
+00:18:51,175 --> 00:18:54,606
+Scott: I still think it's funny that my Firefox is the alternative to Chrome.
+
+248
+00:18:54,887 --> 00:19:00,022
+Scott: Yeah, and Most of Firefox corpse money as far as I can tell comes from Google.
+
+249
+00:19:00,082 --> 00:19:05,027
+Scott: paying them to keep Google is the default search in Firefox every year.
+
+250
+00:19:05,931 --> 00:19:10,030
+Scott: So that's all I got to say about that, yep, so the video cards.
+
+251
+00:19:10,351 --> 00:19:13,363
+Rym: I would like to get a 3080 and you can't get them.
+
+252
+00:19:13,784 --> 00:19:14,547
+Rym: You just can't get them.
+
+253
+00:19:14,728 --> 00:19:15,270
+Scott: I don't need one.
+
+254
+00:19:15,351 --> 00:19:16,924
+Scott: I'll wait for like a 5080 or a 6080 or something.
+
+255
+00:19:17,670 --> 00:19:26,489
+Rym: Yeah, the only the sole reason I want one is that I do have specific things I cannot do today that I could do with one.
+
+256
+00:19:26,971 --> 00:19:35,305
+Rym: But also it's not just that that alone is not a reason to want a 3080 right now Because you can get like a 1080 and do a lot of things.
+
+257
+00:19:35,867 --> 00:19:38,680
+Scott: but I also Have a 70 still killing it.
+
+258
+00:19:38,740 --> 00:19:41,656
+Scott: I was playing doom eternal full frames Yeah, but whatever.
+
+259
+00:19:41,776 --> 00:19:46,404
+Rym: well my 1080 so I can do V. I can do like VR up to like the most.
+
+260
+00:19:46,424 --> 00:19:52,530
+Rym: you can drive a rift with But I could not drive like an index to its maximum like higher end index.
+
+261
+00:19:52,791 --> 00:19:55,019
+Scott: The index is a better resolution.
+
+262
+00:19:55,240 --> 00:19:59,297
+Rym: The index is like the best Consumer money can get.
+
+263
+00:19:59,378 --> 00:20:08,974
+Rym: like if you want something that's better than the X you're getting an installation Like that's where we are right now and the 3080 can fully drive it like you can get the maximum Experience.
+
+264
+00:20:09,296 --> 00:20:11,309
+Rym: and I'm really like invested in VR right now.
+
+265
+00:20:11,731 --> 00:20:12,274
+Rym: There's a read.
+
+266
+00:20:12,294 --> 00:20:15,530
+Rym: there are reasons why I want that but that is not enough by itself.
+
+267
+00:20:16,173 --> 00:20:20,130
+Scott: The other reason I want a lot of money even if you do get one is that it's got to be worth.
+
+268
+00:20:20,712 --> 00:20:24,283
+Rym: I do need to replace my HDPC because it's starting to die.
+
+269
+00:20:24,424 --> 00:20:30,743
+Rym: It's so old like it's failing me And it has a GT 450 M in it right now.
+
+270
+00:20:33,491 --> 00:20:35,317
+Scott: So mine has a. mine is like a 1050.
+
+271
+00:20:35,317 --> 00:20:36,562
+Scott: It's probably gonna last forever.
+
+272
+00:20:36,682 --> 00:20:42,971
+Rym: Yeah, a GT 450 is like Multiple order of orders of magnitude slower than a 1050.
+
+273
+00:20:42,971 --> 00:20:43,754
+Scott: Also, it's like a lope.
+
+274
+00:20:43,814 --> 00:20:44,818
+Scott: It's like a low profile.
+
+275
+00:20:44,878 --> 00:20:46,745
+Rym: Yeah, yeah, this this is an old.
+
+276
+00:20:46,765 --> 00:20:47,508
+Rym: there's like an i3 in there.
+
+277
+00:20:47,990 --> 00:20:49,195
+Scott: No, no, it's not my.
+
+278
+00:20:49,396 --> 00:20:52,068
+Scott: my HDPC case lets you put the video card in sideways.
+
+279
+00:20:52,108 --> 00:20:52,470
+Scott: That's right.
+
+280
+00:20:52,892 --> 00:20:54,237
+Rym: My HDPC case does not.
+
+281
+00:20:54,277 --> 00:20:54,980
+Rym: that's how old it is.
+
+282
+00:20:55,000 --> 00:20:55,442
+Rym: It's tiny.
+
+283
+00:20:55,542 --> 00:20:56,567
+Scott: I thought it's the same case.
+
+284
+00:20:57,048 --> 00:20:58,715
+Rym: the no It's like this VCR looking thing.
+
+285
+00:20:59,539 --> 00:21:00,141
+Scott: Yeah, so is mine.
+
+286
+00:21:00,242 --> 00:21:00,603
+Rym: It takes us.
+
+287
+00:21:00,704 --> 00:21:02,270
+Rym: It doesn't let me put something in sideways.
+
+288
+00:21:03,051 --> 00:21:04,275
+Scott: No, my video card goes inside.
+
+289
+00:21:04,335 --> 00:21:07,928
+Rym: Yeah, my video card is in straight on and it's a half length video card.
+
+290
+00:21:08,449 --> 00:21:09,759
+Scott: Okay It's the low profile.
+
+291
+00:21:09,779 --> 00:21:09,860
+Scott: Okay.
+
+292
+00:21:09,880 --> 00:21:19,730
+Rym: Yep, so I do need to build another HDPC and I want to be able to do tethered VR There and I want to be able to offload rendering to it.
+
+293
+00:21:20,032 --> 00:21:22,170
+Rym: So I don't want to buy a video card for this thing.
+
+294
+00:21:22,250 --> 00:21:31,864
+Rym: So buying a 3080 means I can take my 1080 put it in that thing and actually save some money and be good for a Long long time, but I can't get a 3080 by the time I can get.
+
+295
+00:21:32,085 --> 00:21:37,649
+Rym: by the time I can get a 3080 I worry that 4080s will be on the horizon and I might as well just wait.
+
+296
+00:21:38,871 --> 00:21:41,382
+Scott: No, but you're gonna get one of those so you won't be able to get that either.
+
+297
+00:21:41,663 --> 00:21:42,245
+Rym: Yeah.
+
+298
+00:21:42,285 --> 00:21:54,257
+Rym: Well, I don't know Exactly what's causing these shortages because this feels like the worst shortage is the Nvidia misunderestimated demand And then they didn't put a day.
+
+299
+00:21:54,337 --> 00:21:57,430
+Scott: So they started selling them before they had built up a large enough supply.
+
+300
+00:21:57,470 --> 00:21:58,313
+Rym: Well, I think there were.
+
+301
+00:21:58,413 --> 00:22:00,802
+Rym: previous shortages were caused more by like.
+
+302
+00:22:00,822 --> 00:22:01,845
+Rym: there was a time when it was.
+
+303
+00:22:01,866 --> 00:22:03,968
+Rym: people are doing the stupid coins mining coins.
+
+304
+00:22:04,515 --> 00:22:04,919
+Rym: We're not really.
+
+305
+00:22:04,939 --> 00:22:05,969
+Rym: that's not a problem anymore.
+
+306
+00:22:06,425 --> 00:22:16,389
+Rym: No But I think the 3080 is just such a leap forward compared to the 20 series that it's like the time for people who have an older video card.
+
+307
+00:22:16,429 --> 00:22:27,845
+Rym: like We always say when you're upgrading certain computer components like a video card if you're gonna upgrade during a cycle Get in as soon as possible to get the maximum value because things don't get cheaper over time.
+
+308
+00:22:27,966 --> 00:22:32,228
+Scott: you buy a 3080 six months from Now it's gonna cost the same and you're gonna have six months less.
+
+309
+00:22:32,872 --> 00:22:35,970
+Rym: Yeah of it and there won't be something better for a while yet.
+
+310
+00:22:36,151 --> 00:22:40,690
+Rym: So like the 3080 like literally I saw the 20s come out and it wasn't enough.
+
+311
+00:22:40,871 --> 00:22:44,621
+Rym: The 2080 did not do enough for me compared to the 1080.
+
+312
+00:22:44,621 --> 00:22:45,364
+Scott: I did not like.
+
+313
+00:22:45,544 --> 00:22:46,006
+Scott: I did not like.
+
+314
+00:22:46,046 --> 00:22:50,015
+Scott: the Nvidia went from 1080. right.
+
+315
+00:22:50,739 --> 00:22:55,335
+Scott: then they instead of going to 1180 they went to 12.
+
+316
+00:22:55,335 --> 00:22:55,615
+Scott: Yeah.
+
+317
+00:22:55,956 --> 00:22:56,297
+Rym: Yeah.
+
+318
+00:22:56,417 --> 00:22:58,382
+Scott: I'm also annoying 30.
+
+319
+00:22:58,382 --> 00:23:02,430
+Scott: So when they get to 90 what the fuck are they gonna do 180?
+
+320
+00:23:02,430 --> 00:23:02,976
+Rym: But I at least do.
+
+321
+00:23:03,036 --> 00:23:04,188
+Scott: and then are they gonna go?
+
+322
+00:23:04,188 --> 00:23:09,110
+Scott: 283. how they gonna start going up by a hundreds and then by a thousands a thousand eighty.
+
+323
+00:23:09,431 --> 00:23:27,613
+Rym: Yeah, look at all the trouble people are having figuring out what Xbox or PlayStation to buy again should have gone After 1080, it should have been 11 80 12 80 30 14 because they have been very consistent with what 50 60 70 80 90 means in the last two digits like that is Well known.
+
+324
+00:23:27,634 --> 00:23:29,641
+Rym: the 50 is the low end or the mobile.
+
+325
+00:23:29,661 --> 00:23:31,910
+Rym: the 60 is like the normal budget one.
+
+326
+00:23:31,970 --> 00:23:34,119
+Rym: The 70 is for gamers the 80 is for pros.
+
+327
+00:23:34,139 --> 00:23:37,010
+Rym: Yeah, the 90 is a little bit faster for twice as much money.
+
+328
+00:23:38,010 --> 00:23:40,670
+Scott: Yeah, so let's talk about the fiasco that's going on.
+
+329
+00:23:40,690 --> 00:23:40,928
+Rym: Oh, yeah.
+
+330
+00:23:41,010 --> 00:23:42,635
+Rym: So even when people can get these chips
+
+331
+00:23:42,755 --> 00:23:53,051
+Scott: or so people got the the the board and some people were reporting that it was like You know, they have things happen such as like crash to desktop like you're playing a game and the game just disappears That's
+
+332
+00:23:53,091 --> 00:23:53,955
+Rym: no bueno
+
+333
+00:23:54,698 --> 00:23:55,140
+Scott: or weird.
+
+334
+00:23:55,220 --> 00:24:03,310
+Scott: artifacts appear on the screen like, you know That show that there's like rendering errors in the math that the GPU is doing now the kind of video artifact you would see.
+
+335
+00:24:03,391 --> 00:24:09,190
+Scott: So if you paid a lot of money and fought You know tooth and nail to get one of these and you were having that kind of problem.
+
+336
+00:24:09,994 --> 00:24:11,220
+Scott: You're upset about that, right?
+
+337
+00:24:11,762 --> 00:24:22,330
+Scott: So it was discovered That on the back of the GPU are the six capacitor banks basically and it on the reference board.
+
+338
+00:24:22,551 --> 00:24:26,465
+Scott: So the one that Nvidia designed the founders edition is what right?
+
+339
+00:24:26,546 --> 00:24:28,433
+Rym: the founders call it Right.
+
+340
+00:24:28,493 --> 00:24:33,170
+Scott: So basically Nvidia makes a video card to go because Nvidia only makes money really selling the chips.
+
+341
+00:24:33,631 --> 00:24:33,751
+Scott: Right.
+
+342
+00:24:33,852 --> 00:24:35,276
+Scott: other people make boards, right?
+
+343
+00:24:35,798 --> 00:24:39,409
+Scott: You could buy a board with a chip from Nvidia if you want to but people don't.
+
+344
+00:24:39,610 --> 00:24:41,401
+Rym: yeah You don't want to with the key exception.
+
+345
+00:24:41,441 --> 00:24:42,287
+Rym: I'll get to in a bit.
+
+346
+00:24:43,051 --> 00:24:48,766
+Scott: Yeah, people buy gigabyte EVGA aces, you know MSI you buy your video card from someone else.
+
+347
+00:24:48,786 --> 00:24:50,250
+Scott: They buy chips from Nvidia, right?
+
+348
+00:24:50,250 --> 00:24:51,045
+Scott: That's how it's always worked.
+
+349
+00:24:51,892 --> 00:25:00,406
+Scott: so on the if you look at the Nvidia made board the reference board that Nvidia makes an Example to show the other companies how to make one right.
+
+350
+00:25:00,486 --> 00:25:06,509
+Scott: to start with You can see these six capacitor banks and on the Nvidia board, right?
+
+351
+00:25:08,030 --> 00:25:08,953
+Scott: Was it one or two?
+
+352
+00:25:08,973 --> 00:25:17,344
+Scott: at least one of these capacitor banks is not just a single capacitor but is like a set of like a whole bunch of little guys.
+
+353
+00:25:17,806 --> 00:25:21,988
+Scott: those little guys are Better and more expensive than the one big one.
+
+354
+00:25:23,531 --> 00:25:32,286
+Scott: So you could if you wanted to just like all six of the banks filled with the fancy expensive ones But that would just be a pin in the ass and cost a lot of money.
+
+355
+00:25:32,326 --> 00:25:35,550
+Scott: Yeah Or you could do six cheap ones, right?
+
+356
+00:25:36,630 --> 00:25:38,415
+Scott: Because it's the same capacitance.
+
+357
+00:25:38,997 --> 00:25:39,819
+Scott: The thing is what are?
+
+358
+00:25:39,920 --> 00:25:42,507
+Scott: what is the point of capacitors usually in a computer?
+
+359
+00:25:42,648 --> 00:25:43,390
+Rym: our regulation?
+
+360
+00:25:44,450 --> 00:25:44,891
+Scott: Exactly.
+
+361
+00:25:44,911 --> 00:25:55,450
+Scott: You're smoothing out the the the electrical signal because there's all sorts of electrical noise just in the world Right and you got this electrical signal coming in at a very high clock frequency.
+
+362
+00:25:55,592 --> 00:26:01,804
+Scott: So you can if you look at you know The oscilloscope you see like a line and it's going up and down five volts zero volts.
+
+363
+00:26:01,864 --> 00:26:26,307
+Scott: five volts zero volts five zero up and Down and it's if it's a megahertz of like or gigahertz of very high speed that line is moving very quickly Right through your computer circuits and if any noise interferes with that Electrical signal there might be a one where there should have been a zero or maybe a zero where there should have been a one Right a capacitor right or a whole bunch of them really good ones.
+
+364
+00:26:26,327 --> 00:26:31,180
+Scott: a raid Appropriately so can help eliminate noise from that signal.
+
+365
+00:26:31,261 --> 00:26:34,709
+Scott: make sure that the five volts is five volts for a one and there's.
+
+366
+00:26:34,749 --> 00:26:44,570
+Scott: you know The zero volts is zero for a zero right and that you know any noise that was in there earlier Doesn't make it through to the the actual transistors where the the signal matters.
+
+367
+00:26:45,852 --> 00:27:00,368
+Scott: So if you put in these shitty capacitors and the clock frequency gets high enough Where the sensitivity to small amounts of noise would be increased right if it's running slowly Right at a lower because these all these GPUs and CPUs these days is.
+
+368
+00:27:00,408 --> 00:27:05,687
+Scott: but also When they detect a high load and they say well, it's not I'm not too hot yet.
+
+369
+00:27:05,727 --> 00:27:06,430
+Scott: What's the temperature?
+
+370
+00:27:06,692 --> 00:27:12,680
+Scott: all right, the temperature is not too high and The CPU is not messing up and everything's looking good.
+
+371
+00:27:12,740 --> 00:27:14,847
+Scott: I can go faster and it's it's looking.
+
+372
+00:27:14,947 --> 00:27:15,790
+Scott: it's like oh, we're too hot.
+
+373
+00:27:15,830 --> 00:27:16,940
+Scott: All right, we can't go any faster.
+
+374
+00:27:16,960 --> 00:27:17,929
+Scott: It's too hot now, right?
+
+375
+00:27:18,853 --> 00:27:20,097
+Scott: We have enough electricity right.
+
+376
+00:27:20,138 --> 00:27:23,650
+Scott: is the power and coming from the power supply powerful enough to go faster?
+
+377
+00:27:23,771 --> 00:27:24,032
+Scott: It is.
+
+378
+00:27:24,556 --> 00:27:25,340
+Scott: it's not too hot yet.
+
+379
+00:27:25,381 --> 00:27:26,528
+Scott: Let's go faster, right?
+
+380
+00:27:27,611 --> 00:27:34,050
+Scott: And they go faster and they go faster and especially these cards made by not Nvidia have sorts of overclocking features, right?
+
+381
+00:27:34,170 --> 00:27:38,970
+Scott: They're trying to go faster on purpose to make you buy an EVGA instead of an MSI.
+
+382
+00:27:39,992 --> 00:27:48,926
+Scott: So those boards they're going faster and faster and faster you go The more a small amount of error in the signal is likely to cause problems.
+
+383
+00:27:49,046 --> 00:27:50,370
+Scott: right stability decreases.
+
+384
+00:27:50,390 --> 00:27:51,172
+Scott: All right.
+
+385
+00:27:51,272 --> 00:27:54,861
+Scott: noise in a more sensitive system matters more.
+
+386
+00:27:55,403 --> 00:28:03,445
+Scott: and if you put in the shitty capacitors the cheapo ones Then a zero becomes a one and you got problems and then your game could crash or who knows what.
+
+387
+00:28:03,826 --> 00:28:05,050
+Scott: and that's exactly what happened.
+
+388
+00:28:06,011 --> 00:28:06,754
+Scott: There's a video.
+
+389
+00:28:06,834 --> 00:28:08,861
+Scott: We'll probably link to it where they broke.
+
+390
+00:28:08,921 --> 00:28:10,908
+Scott: They opened up a whole bunch of video cards.
+
+391
+00:28:10,948 --> 00:28:12,036
+Scott: They made a 3080 graveyard.
+
+392
+00:28:14,212 --> 00:28:28,950
+Scott: Add a video cards and they showed you which ones had the the reference design Which ones actually put an even more expensive capacitors than they had to good on you Yeah, and which ones put in six shitty capacitors?
+
+393
+00:28:29,090 --> 00:28:34,509
+Scott: well, not shitty but cheaper than the reference design and neglected to use any of the expensive ones.
+
+394
+00:28:34,529 --> 00:28:55,122
+Scott: and there seems to be looking at reports a very strong correlation between reports of crashing and other problems with the ones That have the cheaper components on them and in the tests run by various Gaming, you know hardware outlets that do that sort of thing.
+
+395
+00:28:55,544 --> 00:28:57,430
+Scott: They have also agreed with this data.
+
+396
+00:28:57,570 --> 00:29:09,633
+Scott: So if you're going to buy a 3080 you need to do your research on whether that card you are buying Which you know make sure that it's one of the ones that is made with the more which we haven't Had
+
+397
+00:29:09,673 --> 00:29:11,821
+Rym: to do for a while when I bought my 1080.
+
+398
+00:29:11,821 --> 00:29:14,290
+Rym: I didn't care if EVGA or someone else made it.
+
+399
+00:29:14,691 --> 00:29:16,958
+Rym: I just bought whichever one because they were all pretty.
+
+400
+00:29:16,978 --> 00:29:20,590
+Scott: you're not even using the EVGA driver or whatever using a video driver.
+
+401
+00:29:20,590 --> 00:29:21,314
+Scott: Yeah, what do you care?
+
+402
+00:29:21,334 --> 00:29:24,290
+Scott: right who makes the card, but now we care again.
+
+403
+00:29:25,012 --> 00:29:28,523
+Scott: Yeah, I mean, I only cared like how many display ports does it have?
+
+404
+00:29:28,604 --> 00:29:29,647
+Scott: what cooler does it have?
+
+405
+00:29:29,687 --> 00:29:30,650
+Scott: that sort of thing, right?
+
+406
+00:29:31,092 --> 00:29:32,209
+Scott: I didn't care about who made it.
+
+407
+00:29:32,290 --> 00:29:45,890
+Scott: But yeah, I think also what you're gonna see is that the next round of cards they get delivered or you know Maybe one or two shipments from now They're all gonna realize that that's a problem and they're all gonna shift to the more expensive design
+
+408
+00:29:46,172 --> 00:29:48,003
+Rym: Yeah, and they're gonna make a big deal about it, too.
+
+409
+00:29:48,486 --> 00:29:49,150
+Scott: Yeah, right.
+
+410
+00:29:49,190 --> 00:29:52,649
+Scott: So basically if you buy one right away, you're just gonna make sure you get a good one.
+
+411
+00:29:53,092 --> 00:30:02,254
+Scott: But if you buy one months years from now, whatever you'll be All right, you'll all of at least even as long as you buy a new one and not like an old model that someone's reselling Or something.
+
+412
+00:30:02,556 --> 00:30:19,990
+Rym: it is interesting though that this is the one time The one time I actually wanted the founders edition because usually the founders editions I'll link to a thing that explains this from the 1080 era Tend to have like shitty heatsinks and cooling or they're loud or like they're not really intended for normal people to use.
+
+413
+00:30:20,772 --> 00:30:27,157
+Scott: Yeah, it's meant to be a reference design for the actual video card Manufacturers to copy from.
+
+414
+00:30:27,277 --> 00:30:29,971
+Scott: but it's also the benefit of it is that it's stable Right.
+
+415
+00:30:30,032 --> 00:30:33,330
+Scott: Nvidia tested the hell out of it and they're the ones who made the chip.
+
+416
+00:30:33,791 --> 00:30:37,645
+Scott: So it's like yeah, it might not be that great from a customer's perspective.
+
+417
+00:30:37,685 --> 00:30:41,760
+Scott: It won't have overclocking features It won't have the most video RAM.
+
+418
+00:30:41,860 --> 00:30:43,004
+Scott: It won't have the best cooler.
+
+419
+00:30:43,406 --> 00:30:50,710
+Scott: It won't look the nicest It won't have fancy lights or anything right, but it's gonna work Stably, it's gonna be rock-solid.
+
+420
+00:30:51,071 --> 00:31:04,359
+Rym: Right because this time through the most testing the founders edition looks like it actually has a more novel and innovative cooling system Than all the other party Book cards do like Nvidia.
+
+421
+00:31:04,379 --> 00:31:05,463
+Scott: seen Nvidia looks like.
+
+422
+00:31:05,523 --> 00:31:06,024
+Scott: I've seen it.
+
+423
+00:31:06,125 --> 00:31:07,590
+Scott: Nvidia did try a little harder this time.
+
+424
+00:31:07,730 --> 00:31:13,395
+Rym: Yeah, like it's the first time I actually wanted the founders edition and then when this cap thing happened I really want the founders edition.
+
+425
+00:31:13,716 --> 00:31:17,287
+Rym: Guess what is literally impossible to get the founders edition.
+
+426
+00:31:17,729 --> 00:31:19,880
+Scott: Yeah So it is kind of it does?
+
+427
+00:31:19,900 --> 00:31:20,624
+Scott: it does look.
+
+428
+00:31:20,685 --> 00:31:26,808
+Scott: in my opinion at least I'm the kind of person who doesn't like, you know, lots of LED colors and and Plastic.
+
+429
+00:31:27,870 --> 00:31:32,784
+Scott: Yeah, the founders edition looks like a classy normal computer component.
+
+430
+00:31:32,884 --> 00:31:35,010
+Scott: it's like yeah, that's what computers look like.
+
+431
+00:31:35,551 --> 00:31:43,204
+Scott: It's not like some outrageous things some teenager would buy while they're for the computer that they use while they're in their Race car chair or whatever.
+
+432
+00:31:43,527 --> 00:31:45,534
+Scott: Yep No I would everyone else is selling.
+
+433
+00:31:45,795 --> 00:31:51,939
+Rym: one thing I will say is people who are trying to get these things now like people are complaining That scalpers are the problem.
+
+434
+00:31:51,959 --> 00:31:57,350
+Rym: There are a lot of scalpers but Scalping only happens when there is lower supply than demand.
+
+435
+00:31:57,751 --> 00:32:00,662
+Rym: So that is the scalpers are not causing this problem.
+
+436
+00:32:00,703 --> 00:32:01,907
+Scott: talk about this every time.
+
+437
+00:32:01,967 --> 00:32:02,550
+Scott: the scalping.
+
+438
+00:32:03,152 --> 00:32:09,320
+Rym: I just gotta remind you can I see some of you some people I know who listen to the show Complaining about the scalpers.
+
+439
+00:32:09,380 --> 00:32:10,589
+Rym: They are not causing this.
+
+440
+00:32:10,931 --> 00:32:28,450
+Rym: However, it's interesting that they're selling these cards for about the price of a 30 90 And the 30 90s just came out and I thought well if I can't get a 30 80 Usually the 90 is like not worth the money pay twice as much for like 10% more performance.
+
+441
+00:32:28,973 --> 00:32:32,070
+Rym: But if I can only get a scalp 38, I might as well as to get a 30 90.
+
+442
+00:32:32,070 --> 00:32:34,643
+Rym: Nope, people you can't get the 30 90s either.
+
+443
+00:32:34,683 --> 00:32:35,828
+Rym: They made even less of those.
+
+444
+00:32:36,716 --> 00:32:37,849
+Scott: Yeah, cuz who wants this?
+
+445
+00:32:38,732 --> 00:32:41,721
+Rym: Well gamer nerds want them and gamer nerds made the same calculus.
+
+446
+00:32:41,801 --> 00:32:49,645
+Rym: I made if a scalp 30 80 cost 1500 bucks Why don't I just buy a 30 90 for 1500 bucks MSRP?
+
+447
+00:32:49,886 --> 00:32:51,090
+Scott: I just buy nothing.
+
+448
+00:32:51,851 --> 00:32:54,363
+Scott: Buy it via, you know, a 1070 that I have.
+
+449
+00:32:54,383 --> 00:32:55,730
+Scott: that's perfectly fine and wait it out.
+
+450
+00:32:55,850 --> 00:32:59,484
+Rym: Yep, the tricky the hard part is brand new old video cards.
+
+451
+00:32:59,544 --> 00:33:01,150
+Rym: Don't get cheaper when new ones come out.
+
+452
+00:33:01,210 --> 00:33:02,604
+Rym: That's one of the things that you can't.
+
+453
+00:33:02,644 --> 00:33:03,028
+Scott: you got it.
+
+454
+00:33:03,391 --> 00:33:07,069
+Scott: You got to get a used one that someone else is dumping because they successfully got.
+
+455
+00:33:07,209 --> 00:33:10,750
+Rym: yup Our friend chase got to 1080 titanium's for not that much money.
+
+456
+00:33:11,651 --> 00:33:12,854
+Rym: Yep, just SLI.
+
+457
+00:33:12,914 --> 00:33:14,820
+Rym: Um, that won't be as fast as the 38 of it.
+
+458
+00:33:14,860 --> 00:33:15,282
+Rym: You know what?
+
+459
+00:33:15,643 --> 00:33:16,265
+Rym: That is great.
+
+460
+00:33:16,445 --> 00:33:19,178
+Rym: I'm crazy fucking fast That's fine.
+
+461
+00:33:19,258 --> 00:33:25,310
+Rym: You're gonna be good with that for a long time Unless you're trying to drive an index at full steam, but not many people have that use case.
+
+462
+00:33:26,212 --> 00:33:27,800
+Scott: All right, is that enough news?
+
+463
+00:33:28,162 --> 00:33:28,966
+Rym: unless you want to talk about?
+
+464
+00:33:29,046 --> 00:33:29,730
+Rym: if this then that?
+
+465
+00:33:30,911 --> 00:33:31,433
+Scott: Just quickly.
+
+466
+00:33:31,473 --> 00:33:32,176
+Scott: So there's a website.
+
+467
+00:33:32,236 --> 00:33:37,763
+Scott: I've been using for a very long time probably since beacon days Called ifttt.com.
+
+468
+00:33:37,783 --> 00:33:38,930
+Scott: you may have heard of this website.
+
+469
+00:33:39,552 --> 00:33:44,207
+Scott: If this then that and what the website does is basically they on their end on their servers.
+
+470
+00:33:44,267 --> 00:33:57,529
+Scott: They have implemented Libraries to interface with the API's of most web applications as well as many other things and They allow you to then create rules on your own.
+
+471
+00:33:58,473 --> 00:34:00,439
+Scott: You know you off that you get using OAuth.
+
+472
+00:34:00,580 --> 00:34:19,790
+Scott: you give them authentication to the various services like there So their servers can for example tweet on my Twitter account or you know, read from my reddit account or whatever And then you can create rules if this then that to connect services together in ways That would be difficult for someone who doesn't know how to write software.
+
+473
+00:34:19,929 --> 00:34:25,661
+Scott: So for example, you can create a rule like if I like a YouTube video tweet about it.
+
+474
+00:34:26,368 --> 00:34:30,156
+Scott: if I like something on Facebook tweet it.
+
+475
+00:34:31,043 --> 00:34:34,659
+Scott: if I If someone tweets at me text me.
+
+476
+00:34:35,281 --> 00:34:40,817
+Scott: if somebody you know emails me Tweet the text of their email to the whole world.
+
+477
+00:34:40,837 --> 00:34:55,290
+Rym: you can if the weather is cold on Tuesday text Rym It's you know, if you're if like if you're not like enterprise people or business people This is no code integration One of the biggest things people want to do with computers.
+
+478
+00:34:55,571 --> 00:35:05,870
+Rym: The reason why computers can't do what people want is that they want to integrate things They do with other things they do and for reasons that is actually really really hard.
+
+479
+00:35:05,910 --> 00:35:06,998
+Rym: That's what developers do.
+
+480
+00:35:07,079 --> 00:35:07,804
+Rym: most coders.
+
+481
+00:35:08,247 --> 00:35:12,390
+Rym: all the code They're writing just takes two things and makes them work with each other.
+
+482
+00:35:12,470 --> 00:35:16,507
+Rym: That is like 90% of all code that anyone writes in the world pretty much.
+
+483
+00:35:16,527 --> 00:35:19,710
+Scott: Yeah So anyway, so this is a great service.
+
+484
+00:35:19,770 --> 00:35:23,732
+Scott: I've been using it for a long time and most of what I use it for is Backups.
+
+485
+00:35:23,812 --> 00:35:29,269
+Scott: what I do is I say if I if I like a tweet as pin board, which is basically delicious, right?
+
+486
+00:35:30,611 --> 00:35:33,633
+Scott: so I Remembers my business Right.
+
+487
+00:35:33,673 --> 00:35:37,030
+Scott: So I say well, I think pin board finally bought the remains of delicious.
+
+488
+00:35:37,170 --> 00:35:39,538
+Scott: So I have it set up to where it's like.
+
+489
+00:35:39,558 --> 00:35:41,263
+Scott: if I like a tweet pin board.
+
+490
+00:35:41,524 --> 00:35:44,112
+Scott: if I like a YouTube video Pinboard.
+
+491
+00:35:44,152 --> 00:35:50,750
+Scott: if I upvote something on reddit pin board everything goes to pin board and then on pin board I back up pin board.
+
+492
+00:35:50,870 --> 00:35:57,142
+Scott: So and I basically saved in some sense most of my web activity all Aggregated in one spot.
+
+493
+00:35:57,384 --> 00:35:57,888
+Scott: It's really great.
+
+494
+00:35:59,551 --> 00:36:02,881
+Scott: So I had about seven rules different ifttt rules to do this.
+
+495
+00:36:03,543 --> 00:36:06,030
+Scott: ifttt was basic was free free service.
+
+496
+00:36:06,451 --> 00:36:07,154
+Scott: You could pay.
+
+497
+00:36:07,234 --> 00:36:08,558
+Scott: I don't know what you got for paying.
+
+498
+00:36:08,598 --> 00:36:10,866
+Rym: That's actually why early on I didn't trust it.
+
+499
+00:36:10,886 --> 00:36:14,179
+Rym: I Did not trust it to be secure in the early days.
+
+500
+00:36:14,299 --> 00:36:14,841
+Scott: Well, I didn't.
+
+501
+00:36:14,942 --> 00:36:16,790
+Scott: I didn't use it in the early days.
+
+502
+00:36:16,850 --> 00:36:17,879
+Scott: I didn't use it for much.
+
+503
+00:36:18,080 --> 00:36:22,430
+Rym: but oh, yeah, I use it for things I didn't care about but I wouldn't use it for like anything sensitive, right?
+
+504
+00:36:22,610 --> 00:36:22,912
+Scott: I own.
+
+505
+00:36:22,932 --> 00:36:26,790
+Scott: this is literally the only thing I use it for is backup to pin board feature, right?
+
+506
+00:36:26,810 --> 00:36:27,767
+Scott: I don't do anything else with it.
+
+507
+00:36:30,010 --> 00:36:34,148
+Scott: So they they're changing their mind about a few days from now maybe a week.
+
+508
+00:36:34,168 --> 00:36:35,500
+Scott: for now I don't know the exact date.
+
+509
+00:36:35,520 --> 00:36:36,430
+Scott: You can look it up yourself.
+
+510
+00:36:37,052 --> 00:36:45,266
+Scott: They are going to a different model where you have to pay if you have more than three rules three rule limit And then you got to pay and I was like, alright, you know what?
+
+511
+00:36:45,306 --> 00:36:46,070
+Scott: This is a great service.
+
+512
+00:36:46,130 --> 00:36:51,070
+Scott: I've been using it for a long time, you know, it does this one simple thing for me and that's it.
+
+513
+00:36:51,170 --> 00:36:52,514
+Scott: I'm not using it like crazy.
+
+514
+00:36:53,076 --> 00:36:55,323
+Scott: So I will pay you.
+
+515
+00:36:55,564 --> 00:36:56,788
+Scott: I'd be willing to pay like what.
+
+516
+00:36:56,848 --> 00:36:57,450
+Scott: ten bucks a year?
+
+517
+00:36:57,991 --> 00:36:59,014
+Scott: Right something like that.
+
+518
+00:36:59,154 --> 00:37:04,328
+Scott: twelve bucks a year fifteen maybe right, you know dollar a month for such a small small thing.
+
+519
+00:37:04,528 --> 00:37:07,972
+Scott: Yeah They're charging They're.
+
+520
+00:37:07,992 --> 00:37:20,577
+Scott: the price that they're they're asking for is like, you know, almost like ten dollars a month, but because I'm like an existing user Right, I Can name my own price.
+
+521
+00:37:20,657 --> 00:37:22,305
+Scott: is their site back up yet or is it still?
+
+522
+00:37:22,325 --> 00:37:23,250
+Rym: their site is still down?
+
+523
+00:37:23,250 --> 00:37:25,481
+Scott: 502 her side is besides been down.
+
+524
+00:37:25,501 --> 00:37:26,949
+Scott: They're having problems right now.
+
+525
+00:37:29,793 --> 00:37:38,310
+Scott: But yeah the They allowed me to set my own price and they'd said they would lock that price in forever because I'll make an existing person.
+
+526
+00:37:38,851 --> 00:37:41,057
+Scott: but the minimum was still two bucks a month.
+
+527
+00:37:41,158 --> 00:37:45,028
+Scott: and I'm like, that's like slightly more than I'm willing to go for.
+
+528
+00:37:45,048 --> 00:37:59,925
+Scott: so What I did is I cut myself down to only three rules and I wrote software to replace all the remaining rules For does and now I'm gonna pay them nothing instead of $24 a year.
+
+529
+00:37:59,966 --> 00:38:04,956
+Scott: So That's a thing IFT TT.
+
+530
+00:38:04,996 --> 00:38:06,321
+Scott: We'll see how they do.
+
+531
+00:38:06,542 --> 00:38:08,450
+Scott: Are they gonna get anyone to pay for it?
+
+532
+00:38:08,730 --> 00:38:17,353
+Rym: So I am actually more inclined to use them if I am paying them and they are having a more professional operation That's true.
+
+533
+00:38:17,794 --> 00:38:25,110
+Scott: And you are gonna get more because part of their their thing is that when you use them, you know You don't have a lot of flexibility, right?
+
+534
+00:38:25,470 --> 00:38:40,609
+Scott: so like the rules that I replaced with my own code are actually much more powerful because I was able to fully customize the integration between the API's Your your integration options are much more limited when you use IFT TT because your interface is more limited, right?
+
+535
+00:38:41,010 --> 00:38:47,415
+Scott: Yeah, but supposedly if you pay it'll be more powerful, I guess in some ambiguous way.
+
+536
+00:38:47,435 --> 00:38:59,049
+Rym: now what's interesting is outside of if this than that like this is like the the lowest Consumer friendly option in this space for generic like web stuff that normal people do.
+
+537
+00:38:59,672 --> 00:39:02,000
+Scott: This is one of the fast growing sectors of the economy.
+
+538
+00:39:02,020 --> 00:39:12,978
+Rym: is no code integration for enterprises for companies for small shops for people like this is a Weirdly big and growing space.
+
+539
+00:39:13,259 --> 00:39:15,570
+Scott: Yeah, they basically have no competition, right?
+
+540
+00:39:15,670 --> 00:39:19,485
+Rym: Well, they do but they don't have competition at the consumer level.
+
+541
+00:39:20,067 --> 00:39:20,830
+Scott: right consumer level.
+
+542
+00:39:20,870 --> 00:39:29,985
+Scott: But they don't have any direct competition except the only direct competition They have are other services that compete with specific rules.
+
+543
+00:39:30,105 --> 00:39:35,822
+Scott: For example, maybe somebody out there is using IFT TT to as like.
+
+544
+00:39:35,862 --> 00:39:41,389
+Scott: they're a social media person at their job or something or Personally for their own project for their podcast, right?
+
+545
+00:39:42,311 --> 00:39:52,666
+Scott: And they're using IFT TT rules to like, you know organize their various social media accounts to be like All right, when I tweet post it on Facebook post on Instagram post it on whatever.
+
+546
+00:39:52,686 --> 00:39:54,737
+Rym: Yeah, we just use code Like.
+
+547
+00:39:55,422 --> 00:39:56,610
+Scott: you could just use code to do that.
+
+548
+00:39:56,650 --> 00:40:04,813
+Scott: But there are other programs out there that are like social media managing programs that do that specifically Right.
+
+549
+00:40:05,135 --> 00:40:07,310
+Scott: So I have TT could do a lot more than that.
+
+550
+00:40:07,410 --> 00:40:11,310
+Scott: You could use it to you know, turn on your toaster when you get a text, right?
+
+551
+00:40:13,272 --> 00:40:18,210
+Scott: But if you're only doing one kind of rule, right maybe you're using it for backups.
+
+552
+00:40:18,351 --> 00:40:21,326
+Scott: well now I have TT's competing with a backup tool, right.
+
+553
+00:40:21,708 --> 00:40:30,641
+Scott: so If you're only using IFT for one thing there may be a better tool But if you're using it for the wide variety of powers, it has.
+
+554
+00:40:30,722 --> 00:40:33,530
+Scott: yep as soon as you're doing it doesn't have many competitors.
+
+555
+00:40:33,590 --> 00:40:43,024
+Rym: If you're stepping across like domains like you're stepping across types of things to do It's really inventing new and creative things to do that.
+
+556
+00:40:43,064 --> 00:40:43,807
+Scott: No one has thought of.
+
+557
+00:40:44,088 --> 00:40:46,376
+Rym: Yeah Auto-flushing toilet based.
+
+558
+00:40:46,557 --> 00:40:48,544
+Rym: Ah, I can think of some fun ones.
+
+559
+00:40:48,825 --> 00:40:52,550
+Rym: But anyway, yeah if you If this than that is actually pretty cool.
+
+560
+00:40:52,731 --> 00:40:56,473
+Rym: I'm really curious to see where they go when they're actually gonna charge money for it Like I'm gonna look into.
+
+561
+00:40:56,674 --> 00:41:04,330
+Scott: I'm curious to see if they'll stay if they'll get people to pay because obviously if they don't get people To pay they're gonna be in trouble more than their website being down for a few hours.
+
+562
+00:41:04,370 --> 00:41:17,570
+Rym: Yeah because the danger is are they going this route because they want to like make money professionalize the service etc, or Are they going this route because they are not making money and this is a last-ditch effort to survive?
+
+563
+00:41:18,133 --> 00:41:19,057
+Scott: I think it's the second one.
+
+564
+00:41:19,077 --> 00:41:25,464
+Scott: I think they need money to pay the bills because if it's the second one Moving a workflow here is really dangerous.
+
+565
+00:41:25,866 --> 00:41:32,969
+Rym: if they go away Yep, because then you have nothing and now you have to pay someone like Scott to write you code.
+
+566
+00:41:33,651 --> 00:41:37,304
+Rym: Or learn to write code yourself or find it or start a company that's gonna make.
+
+567
+00:41:37,384 --> 00:41:40,355
+Rym: if this then that too and probably run Into the same problems they had.
+
+568
+00:41:41,198 --> 00:41:43,387
+Scott: it only took me a couple hours to replace those rules.
+
+569
+00:41:43,427 --> 00:41:53,870
+Rym: So yeah Well, anyway, it's time for things of the day.
+
+570
+00:41:54,372 --> 00:41:57,703
+Rym: So this was posted like in our forum and I saw it around like.
+
+571
+00:41:58,044 --> 00:41:58,647
+Rym: it's pretty cool.
+
+572
+00:41:58,687 --> 00:42:02,250
+Rym: But content warning It's got some flashing and it plays noise and it does some nonsense.
+
+573
+00:42:02,798 --> 00:42:10,130
+Rym: But okay It's this website that is basically like Lane from the wire like the anime Lane serial experiments Lane.
+
+574
+00:42:10,692 --> 00:42:11,836
+Rym: It's like this I am.
+
+575
+00:42:11,896 --> 00:42:13,662
+Scott: if you don't remember that anime you're young.
+
+576
+00:42:14,244 --> 00:42:14,445
+Rym: Yep.
+
+577
+00:42:14,907 --> 00:42:15,750
+Rym: That's a good way to put it.
+
+578
+00:42:16,274 --> 00:42:25,050
+Rym: It's like this weird cool Glitchy website that is like wired sound for wired people and it's like playing music from a lane.
+
+579
+00:42:25,532 --> 00:42:30,070
+Rym: But if you click on it, it says you are invisible and if you tell it you want to go visible.
+
+580
+00:42:30,816 --> 00:42:36,561
+Rym: it's just a series of Fascinating like art experiments in a web browser.
+
+581
+00:42:36,581 --> 00:42:40,190
+Rym: It's hard to describe like just go check this thing out.
+
+582
+00:42:40,310 --> 00:42:46,636
+Rym: It's beautiful and weird but do not check it out if you have photosensitive epilepsy Mm-hmm.
+
+583
+00:42:47,625 --> 00:42:47,907
+Rym: All right.
+
+584
+00:42:48,089 --> 00:42:52,639
+Scott: Yeah My thing of the day is actually kind of old.
+
+585
+00:42:52,719 --> 00:42:53,703
+Scott: it's not a thing of the day.
+
+586
+00:42:53,764 --> 00:42:55,190
+Scott: really it's a thing of a few months ago.
+
+587
+00:42:55,331 --> 00:42:57,366
+Scott: I just forgot to use it as thing of the day back then.
+
+588
+00:42:57,427 --> 00:42:59,915
+Scott: I'm sorry But anyway, what this is?
+
+589
+00:43:00,096 --> 00:43:01,863
+Scott: apparently the per this.
+
+590
+00:43:01,984 --> 00:43:03,490
+Scott: this seems a hundred percent legit.
+
+591
+00:43:03,591 --> 00:43:08,274
+Scott: I have no reason to doubt it based on the information You know on Windows.
+
+592
+00:43:08,675 --> 00:43:13,190
+Scott: Microsoft Windows is like a. you know, there's a lot of Windows applications, right?
+
+593
+00:43:13,210 --> 00:43:16,764
+Scott: They come with Windows right that are sort of legendary even if you don't use them.
+
+594
+00:43:16,904 --> 00:43:18,049
+Scott: MS Paint, right?
+
+595
+00:43:19,410 --> 00:43:20,293
+Scott: Microsoft what's the?
+
+596
+00:43:20,334 --> 00:43:20,856
+Scott: what's the thing?
+
+597
+00:43:20,876 --> 00:43:24,590
+Scott: that's not notepad, but it's also not Microsoft Word WordPad, right?
+
+598
+00:43:26,011 --> 00:43:27,318
+Scott: You know solitaire.
+
+599
+00:43:27,338 --> 00:43:31,604
+Scott: There's a lot of Microsoft Windows applications and somebody made those.
+
+600
+00:43:33,052 --> 00:43:33,314
+Scott: It's like.
+
+601
+00:43:33,496 --> 00:43:35,743
+Scott: it's like, you know, you don't think about it But it's like.
+
+602
+00:43:35,764 --> 00:43:42,630
+Scott: yes Someone's job was actually to make those things that every single person in the world uses pretty much sure has used at some point.
+
+603
+00:43:43,312 --> 00:43:44,329
+Scott: Someone wrote that software.
+
+604
+00:43:46,232 --> 00:43:51,250
+Scott: You could go to you know Apple and you could work on iPad iPhone notes, that could be your job, right?
+
+605
+00:43:51,790 --> 00:44:02,330
+Scott: So here on reddit is a post from the person who among other things wrote Mostly on their own the Windows task manager, right?
+
+606
+00:44:02,430 --> 00:44:19,227
+Scott: You press ctrl delete you click on task manager and it pops up and this person wrote that software That is that thing and they shared some amazing and excellent information that is relevant to Everyone who uses Microsoft Windows because if you use Microsoft Windows you use has been
+
+607
+00:44:19,428 --> 00:44:19,528
+Rym: yep
+
+608
+00:44:20,091 --> 00:44:22,043
+Scott: You use the software that this person created.
+
+609
+00:44:22,063 --> 00:44:23,150
+Scott: It's kind of amazing.
+
+610
+00:44:24,192 --> 00:44:24,694
+Rym: Like reading.
+
+611
+00:44:24,715 --> 00:44:27,025
+Scott: I wish I could write a software that that many people used.
+
+612
+00:44:27,206 --> 00:44:42,250
+Rym: that would be something Like if test manager ever hangs or crashes do this thing old task manager will Have to respond and start making sense with a secret code within a certain amount of time or it'll launch another one.
+
+613
+00:44:42,331 --> 00:44:42,512
+Rym: Like.
+
+614
+00:44:43,057 --> 00:44:44,448
+Rym: I want to know more about the secret code.
+
+615
+00:44:44,488 --> 00:44:45,011
+Rym: now What did he?
+
+616
+00:44:45,071 --> 00:44:45,212
+Rym: what?
+
+617
+00:44:45,292 --> 00:44:51,310
+Rym: what's coded in there for a new task manager to not like run into an old task manager?
+
+618
+00:44:52,070 --> 00:44:56,065
+Scott: Yeah, also, you know, the task manager was written for like Windows NT.
+
+619
+00:44:56,086 --> 00:45:04,870
+Rym: Yeah, right So it's from the the late 90s, basically He said this is all based on XP as I left long ago, but it's still the same core app.
+
+620
+00:45:05,791 --> 00:45:11,634
+Scott: Yeah, it's like the task manager that you run today has obviously been patched heavily since then But it's it's.
+
+621
+00:45:11,876 --> 00:45:18,510
+Scott: if you go back in that history of the code repository It's that original one from Windows NT is still the one that's in Windows 10.
+
+622
+00:45:18,510 --> 00:45:21,449
+Scott: It's just been patched and modified and edited over many years.
+
+623
+00:45:22,230 --> 00:45:23,119
+Scott: So, there you go.
+
+624
+00:45:23,624 --> 00:45:26,439
+Rym: Mm-hmm All right in the meta moment.
+
+625
+00:45:26,800 --> 00:45:27,764
+Rym: I'm still stuck inside.
+
+626
+00:45:27,824 --> 00:45:33,764
+Rym: We're gonna be live to tape Real soon like next weekend on Saturday at magwest.
+
+627
+00:45:33,885 --> 00:45:35,069
+Rym: It's technically our soon.
+
+628
+00:45:35,109 --> 00:45:37,420
+Rym: Wow That's why the deadline was quick.
+
+629
+00:45:37,461 --> 00:45:42,079
+Rym: We had to record that panel Edit it get it uploaded like pretty quick.
+
+630
+00:45:42,200 --> 00:45:44,767
+Rym: And I think I got it uploaded the morning of the deadline.
+
+631
+00:45:45,068 --> 00:45:47,074
+Rym: So so speedy Yeah, enjoy it.
+
+632
+00:45:47,435 --> 00:45:48,638
+Rym: It's gonna be on Saturday.
+
+633
+00:45:48,658 --> 00:45:49,541
+Scott: We're on the schedule.
+
+634
+00:45:49,782 --> 00:45:50,384
+Scott: Yep, Saturday.
+
+635
+00:45:50,404 --> 00:45:59,400
+Rym: It's - we basically took an hour-long panel Condensed it to go as fast as possible and just talk about the purest Nuggets of playing dirty to win games.
+
+636
+00:45:59,761 --> 00:46:00,845
+Rym: So 60 minutes to 25 minutes.
+
+637
+00:46:02,431 --> 00:46:05,260
+Rym: It's 24 minutes and 56 seconds long.
+
+638
+00:46:05,621 --> 00:46:09,193
+Rym: this panel that we recorded play dirty to win 7 p.m.
+
+639
+00:46:09,233 --> 00:46:10,357
+Rym: Pacific time 5 p.m.
+
+640
+00:46:10,438 --> 00:46:13,890
+Rym: Eastern time Saturday, October 3rd in the main theater.
+
+641
+00:46:14,151 --> 00:46:15,815
+Scott: You said you said it's 7 p.m.
+
+642
+00:46:16,176 --> 00:46:16,617
+Scott: Pacific.
+
+643
+00:46:16,778 --> 00:46:16,938
+Rym: Yep.
+
+644
+00:46:17,761 --> 00:46:19,124
+Scott: So shouldn't it be 10 p.m.
+
+645
+00:46:19,706 --> 00:46:20,087
+Scott: Eastern?
+
+646
+00:46:21,029 --> 00:46:22,844
+Rym: Oh, yeah I got a typo in this thing.
+
+647
+00:46:22,905 --> 00:46:25,858
+Rym: I copy pasted Okay 7 p.m.
+
+648
+00:46:25,878 --> 00:46:27,550
+Rym: Pacific is the official time.
+
+649
+00:46:28,391 --> 00:46:33,190
+Scott: Alright, so it's 10 o'clock New York time on Saturday the third job in the main theater.
+
+650
+00:46:34,111 --> 00:46:35,176
+Scott: Whatever that counts as me.
+
+651
+00:46:35,216 --> 00:46:36,943
+Scott: Is it like twitch TV slash mag west?
+
+652
+00:46:37,004 --> 00:46:37,164
+Scott: Yep.
+
+653
+00:46:37,245 --> 00:46:39,367
+Rym: It's in the main mag fest twitch.
+
+654
+00:46:40,400 --> 00:46:43,760
+Scott: Okay So yeah, I guess we'll hang out in that twitch there.
+
+655
+00:46:43,800 --> 00:46:44,443
+Scott: Maybe I don't know.
+
+656
+00:46:44,624 --> 00:46:48,201
+Rym: Yeah, and then beyond that We don't have any more cons coming up yet.
+
+657
+00:46:48,301 --> 00:46:51,018
+Rym: So we're gonna start working on some other projects We've been talking about.
+
+658
+00:46:51,079 --> 00:46:56,110
+Rym: so just keep watching Mine and Scott's youtubes and hang out in our discord and you'll see what happens.
+
+659
+00:46:56,150 --> 00:46:58,865
+Rym: We're not gonna talk about any of these other things until we do it.
+
+660
+00:46:59,629 --> 00:47:11,943
+Scott: Yep I do want to let people know though that you know Essen the board the World biggest board game convention also just known as spiel Which we've planned to go to didn't go to right whatever.
+
+661
+00:47:12,285 --> 00:47:17,863
+Scott: It's usually an S in Germany is Obviously not being held in person this year.
+
+662
+00:47:17,884 --> 00:47:21,117
+Scott: Yeah But they're having a spiel online.
+
+663
+00:47:21,679 --> 00:47:24,848
+Scott: It's going online just like all the other conventions, but it's a hundred percent free.
+
+664
+00:47:24,868 --> 00:47:26,657
+Scott: So Check that out.
+
+665
+00:47:26,717 --> 00:47:27,545
+Scott: It's gonna be in October.
+
+666
+00:47:27,807 --> 00:47:30,830
+Scott: Yeah We're not gonna appear there I guess but it's a thing.
+
+667
+00:47:31,251 --> 00:47:35,747
+Rym: I mean, we're not gonna appear there unless we have a game to Hawker of some kind pretty much.
+
+668
+00:47:35,787 --> 00:47:39,569
+Rym: It's for game Hawkers Yeah, and we have a lot of half-finished games.
+
+669
+00:47:40,591 --> 00:47:41,560
+Scott: That's the only kind of game.
+
+670
+00:47:41,620 --> 00:47:42,710
+Scott: I think I know how to make it's a half.
+
+671
+00:47:44,472 --> 00:47:48,170
+Rym: If only you could just take two half-finished games, then that turns into a whole game, but that is not true.
+
+672
+00:47:48,893 --> 00:47:49,650
+Scott: That would be so great.
+
+673
+00:47:50,552 --> 00:47:52,886
+Rym: You actually just have 60% of a game.
+
+674
+00:47:52,927 --> 00:47:57,220
+Rym: if you do that All right, let's just get right into it.
+
+675
+00:47:57,241 --> 00:47:58,910
+Rym: because we've gone on for a while.
+
+676
+00:47:58,970 --> 00:48:02,549
+Rym: There was a lot of news, but I wasn't allowed to do a tech news roundup because it's not time for that.
+
+677
+00:48:03,352 --> 00:48:03,715
+Scott: That's right.
+
+678
+00:48:04,259 --> 00:48:05,650
+Rym: So source code leaks.
+
+679
+00:48:05,710 --> 00:48:10,190
+Rym: We talked about a specific one of these a while ago when there was like our source.
+
+680
+00:48:10,652 --> 00:48:12,561
+Rym: Yeah, there was also a source engine one.
+
+681
+00:48:12,823 --> 00:48:13,225
+Rym: There's a bit.
+
+682
+00:48:13,245 --> 00:48:13,828
+Scott: these have happened.
+
+683
+00:48:13,868 --> 00:48:14,290
+Scott: That's true.
+
+684
+00:48:14,571 --> 00:48:14,772
+Scott: Yeah,
+
+685
+00:48:15,053 --> 00:48:34,570
+Rym: these have happened off and on but a part that we kind of glossed over was the sort of the generic ramifications of source code leaks like why do source code leaks matter and what Actually happens when source code gets leaked generically not like a specific instance of some game engine or something
+
+686
+00:48:35,443 --> 00:48:35,586
+Scott: Right.
+
+687
+00:48:35,626 --> 00:48:42,353
+Scott: Okay So the first of all you had to you can't gloss over the fact that a source code leak can only happen when you're closed To begin with.
+
+688
+00:48:42,835 --> 00:48:46,286
+Rym: yep open source, like I can go to get and just get your source code.
+
+689
+00:48:46,346 --> 00:48:47,430
+Scott: I can look at it exactly.
+
+690
+00:48:47,530 --> 00:48:55,546
+Scott: so a source code leak is when a company usually a company because it's very rare for Individual person to have a closed source to application.
+
+691
+00:48:55,566 --> 00:49:05,461
+Scott: but it could happen Is you know, you have a whole team or a whole huge company working on a project Most of the developers you work on a project Almost all the time.
+
+692
+00:49:05,521 --> 00:49:12,206
+Scott: unless it's very high security You have access to all the source code, even if you're not working on all the source code.
+
+693
+00:49:12,307 --> 00:49:19,970
+Scott: if you come and work at my company It's like I have access to tons of source code of parts and programs that I don't work on at all, right?
+
+694
+00:49:20,390 --> 00:49:25,410
+Scott: Yeah, if you work at Google, I've been told that at Google they have all their code in one repository.
+
+695
+00:49:25,852 --> 00:49:30,950
+Scott: They must have some sort of controls that keep people out of certain parts of that repository.
+
+696
+00:49:31,151 --> 00:49:40,821
+Rym: I mean I work in regulated markets where like some source code like source code is very very granularly Like broken up based on who should have access.
+
+697
+00:49:41,042 --> 00:49:43,050
+Rym: Sarbanes-Oxley starts to become a factor.
+
+698
+00:49:43,791 --> 00:49:50,177
+Scott: Yes, but I'm sure though even if you did work at Google even though let's say my first day on the job at Google and I'm working on Google Maps.
+
+699
+00:49:50,237 --> 00:49:52,410
+Scott: Let's say right they hire me for the Maps team.
+
+700
+00:49:53,154 --> 00:49:55,487
+Scott: I probably have access to all the Maps code.
+
+701
+00:49:55,568 --> 00:49:56,795
+Scott: even parts I'm not working on.
+
+702
+00:49:57,177 --> 00:49:59,270
+Scott: but you know, maybe I'm working on the restaurant review part.
+
+703
+00:49:59,411 --> 00:50:06,209
+Scott: I probably have access to the directions part And I you know, probably won't have access to like, you know the search engine algorithm.
+
+704
+00:50:06,471 --> 00:50:09,263
+Scott: Yeah, I don't know what's going on at Google, but I will.
+
+705
+00:50:09,323 --> 00:50:10,247
+Scott: you'll have access to code.
+
+706
+00:50:10,267 --> 00:50:10,870
+Scott: You're not working on.
+
+707
+00:50:10,910 --> 00:50:13,856
+Scott: That's just how it is Even at a Google type place.
+
+708
+00:50:14,418 --> 00:50:16,285
+Scott: So you have a big company.
+
+709
+00:50:16,385 --> 00:50:18,372
+Scott: The source code is secret You're not.
+
+710
+00:50:18,573 --> 00:50:19,957
+Scott: it's not shared outside the company.
+
+711
+00:50:19,997 --> 00:50:23,790
+Scott: the company compiles their code and delivers only that to the world.
+
+712
+00:50:24,532 --> 00:50:26,980
+Scott: And that's all the world sees are compiled binaries.
+
+713
+00:50:27,020 --> 00:50:27,342
+Scott: you have.
+
+714
+00:50:27,643 --> 00:50:29,489
+Scott: everyone has access to the assembly code.
+
+715
+00:50:29,649 --> 00:50:31,586
+Scott: Yep but good luck with that.
+
+716
+00:50:31,828 --> 00:50:36,649
+Rym: and All we'll say is decompiling is not the magic that non coders think it is.
+
+717
+00:50:37,311 --> 00:50:38,736
+Scott: Filing does not compile.
+
+718
+00:50:39,038 --> 00:50:42,229
+Scott: they can reverse engineer, but it's a pain in the ass.
+
+719
+00:50:43,158 --> 00:50:51,229
+Scott: It's a big pain in the ass Yeah for reasons that are way beyond the scope of the show, but I want to learn about how an application how it works, right?
+
+720
+00:50:52,250 --> 00:50:53,999
+Scott: Decompiling it is gonna be a pain.
+
+721
+00:50:54,019 --> 00:51:04,990
+Scott: and also these days, you know in the 2020s a lot of the source code you want is Web applications and that code is not delivered to you, right?
+
+722
+00:51:05,110 --> 00:51:06,175
+Scott: You make a Google search.
+
+723
+00:51:06,576 --> 00:51:08,625
+Scott: you send your search query to Google.
+
+724
+00:51:08,665 --> 00:51:09,790
+Scott: They send you back answers.
+
+725
+00:51:10,212 --> 00:51:14,550
+Scott: You don't even have the assembly code of the Google search engine to decompile in the first place.
+
+726
+00:51:14,630 --> 00:51:16,759
+Rym: Yeah, you have a black box of data in data out.
+
+727
+00:51:17,482 --> 00:51:18,928
+Scott: Yeah, you don't access that.
+
+728
+00:51:18,968 --> 00:51:37,110
+Scott: so Accessing that source code is incredibly valuable to a know how it works without and not you know If it's even if you have access to the assembly Knowing how it works without having to go through a whole pain-in-the-ass process of decompiling and reading assembly code and figuring it out.
+
+729
+00:51:38,611 --> 00:51:44,749
+Scott: So it's extremely valuable to get this source code if this if it's a valuable worthwhile program that people use.
+
+730
+00:51:46,173 --> 00:51:50,597
+Scott: So it usually happens because Someone who works for you leaks it.
+
+731
+00:51:50,858 --> 00:51:51,119
+Rym: Yep.
+
+732
+00:51:51,259 --> 00:52:03,614
+Rym: It's almost common way ninety percent of the time when source code gets leaked It's an inside job almost all the time and the rare cases where it isn't Well, we'll get to that later.
+
+733
+00:52:03,655 --> 00:52:06,123
+Scott: how it gets out it's not a rare case is where it isn't.
+
+734
+00:52:06,264 --> 00:52:11,009
+Scott: are you usually sometimes I see Like old source code get leaked after a very long time.
+
+735
+00:52:11,592 --> 00:52:19,986
+Scott: That's because maybe somebody who had the code work there at some point Stopped working there had a copy and then leaked it.
+
+736
+00:52:20,107 --> 00:52:22,194
+Rym: way later Yep, got disgruntled.
+
+737
+00:52:22,214 --> 00:52:33,552
+Rym: a lot of reasons why someone bought a laptop that wasn't erased, you know stuff like that Laptop not erased or hard drive not erased used to be a primary source of that stuff Yep.
+
+738
+00:52:34,094 --> 00:52:36,662
+Scott: Now you got to turn your computer in when you you leave a job.
+
+739
+00:52:36,742 --> 00:52:39,030
+Rym: Yep, but what do you think?
+
+740
+00:52:39,652 --> 00:52:45,150
+Rym: Why why do we even care like what are you gonna do if you have source code like the thing most people assume is?
+
+741
+00:52:45,370 --> 00:52:53,906
+Rym: Oh if the source code of something gets leaked then that thing is easily hacked Which is probably the biggest myth of source code leaks.
+
+742
+00:52:54,307 --> 00:53:03,196
+Rym: because yep We have the source code to like TLS security type stuff and encryption and yet you can't break the encryption Despite knowing the source code.
+
+743
+00:53:03,356 --> 00:53:03,497
+Scott: Yeah.
+
+744
+00:53:03,818 --> 00:53:04,019
+Scott: Yep.
+
+745
+00:53:04,059 --> 00:53:09,216
+Scott: This comes down to people misunderstanding the term Security by obscurity, right?
+
+746
+00:53:09,316 --> 00:53:14,530
+Scott: So people think that like moving SSH to a different port is security by obscurity?
+
+747
+00:53:14,711 --> 00:53:15,173
+Scott: No, it's not.
+
+748
+00:53:15,293 --> 00:53:16,639
+Scott: That's not security by obscurity.
+
+749
+00:53:16,659 --> 00:53:17,522
+Scott: That's just hiding.
+
+750
+00:53:17,723 --> 00:53:19,410
+Scott: Yeah hiding is good security.
+
+751
+00:53:19,550 --> 00:53:31,165
+Scott: actually, we use hiding as a security a lot of times for example when a Important VIP individual is riding through town and black limos that are armored.
+
+752
+00:53:31,506 --> 00:53:32,629
+Scott: They have a decoy limo.
+
+753
+00:53:33,392 --> 00:53:34,658
+Scott: That's good security.
+
+754
+00:53:34,999 --> 00:53:37,190
+Scott: Yeah, you don't know which limo to blow up, right?
+
+755
+00:53:38,430 --> 00:53:39,035
+Scott: That's hiding.
+
+756
+00:53:39,116 --> 00:53:39,781
+Scott: That's right.
+
+757
+00:53:40,063 --> 00:53:50,246
+Scott: security by obscurity refers to somebody being able to Breaks your security mechanism simply by knowing how it works.
+
+758
+00:53:50,307 --> 00:53:51,210
+Rym: It's so nice and point.
+
+759
+00:53:51,230 --> 00:53:51,492
+Rym: You know what.
+
+760
+00:53:51,512 --> 00:53:53,689
+Rym: the best example of this is any lock?
+
+761
+00:53:54,830 --> 00:53:56,939
+Scott: Pretty much any physical almost physical locks.
+
+762
+00:53:57,341 --> 00:53:59,550
+Rym: Yeah, arguably all physical locks.
+
+763
+00:53:59,730 --> 00:54:03,684
+Scott: But arguably if you watch lock-picking lawyer, there are some he can't pick.
+
+764
+00:54:03,724 --> 00:54:09,943
+Scott: He usually just doesn't show him on his channel - yeah Yeah, but basically even lock-picking lawyer says there's no lock.
+
+765
+00:54:09,963 --> 00:54:10,584
+Scott: He can't pick.
+
+766
+00:54:10,605 --> 00:54:11,307
+Scott: there are just locks.
+
+767
+00:54:11,327 --> 00:54:25,336
+Rym: He can't pick yet Yeah but basically with a lock like if the only the thing that opens the lock is the key and the key is a Standard like how keys work for this lock system and then the code Embedded in the key.
+
+768
+00:54:25,838 --> 00:54:35,830
+Rym: as a result both the lock and the key Have to basically know their own code and thus you can access that code or learn that code somewhere.
+
+769
+00:54:36,152 --> 00:54:38,829
+Rym: Like if I learn the code for a lock I can make a key for that lock.
+
+770
+00:54:39,211 --> 00:54:40,455
+Rym: There's nothing you can do to stop me.
+
+771
+00:54:41,198 --> 00:54:44,790
+Scott: But also if you just know how a particular lock works, right?
+
+772
+00:54:45,050 --> 00:54:48,121
+Scott: You don't need the key just by knowing how it works.
+
+773
+00:54:48,181 --> 00:54:57,796
+Scott: You can manipulate the bits inside of it You know with the correct tools to get it to open right and figure out what the key was You don't necessarily need to have the key.
+
+774
+00:54:58,037 --> 00:55:02,996
+Rym: Yeah and code like a lot of security like encryption What it's really doing.
+
+775
+00:55:03,037 --> 00:55:04,443
+Rym: we've done a show on encryption a long time ago.
+
+776
+00:55:04,463 --> 00:55:07,211
+Rym: We're not gonna dwell on this but Doesn't?
+
+777
+00:55:07,292 --> 00:55:19,588
+Rym: you could use the math to feel like if you know how the encryption works, you could do something to decrypt it except for the fact that the amount of work that we're taking is Disproportional and impossible in a reasonable time frame, right?
+
+778
+00:55:20,090 --> 00:55:24,690
+Scott: So for example, if I have a secret code, right and it's like aha, you don't know my secret code, right?
+
+779
+00:55:24,872 --> 00:55:26,264
+Scott: Your secret code is rot 13, right?
+
+780
+00:55:27,250 --> 00:55:35,079
+Scott: Yeah, it's like as soon as you know how rot 13 works, you don't need to know that 13 was the code They might have done rot 12.
+
+781
+00:55:35,079 --> 00:55:35,742
+Scott: It doesn't matter.
+
+782
+00:55:35,903 --> 00:55:43,470
+Scott: as soon as you understand rot If you don't know it's let's say rot one is to take every letter of the alphabet and increase it by one.
+
+783
+00:55:43,731 --> 00:55:47,050
+Scott: No, the word ass would become the word BTT, right?
+
+784
+00:55:47,150 --> 00:55:50,008
+Scott: Cuz a B comes after a and T comes after s. that would be rot.
+
+785
+00:55:50,108 --> 00:55:53,582
+Scott: one Going came out around the alphabet.
+
+786
+00:55:53,823 --> 00:56:01,237
+Rym: rot 13 came out of usenet culture primarily as a way to mask spoilers because rot 13 It doesn't you don't need to worry about.
+
+787
+00:56:01,257 --> 00:56:04,250
+Rym: is this coded or in code like coded or decoded tags?
+
+788
+00:56:04,590 --> 00:56:09,570
+Rym: Yeah, all you need to know is that looks like rot 13. just rot 13 and again and it'll be readable.
+
+789
+00:56:09,831 --> 00:56:13,207
+Rym: So you could post a spoiler in an all text bulletin board in like the 80s.
+
+790
+00:56:14,131 --> 00:56:18,170
+Scott: The point is if you know what rot 13 is you understand how it works now, you can break it, right?
+
+791
+00:56:18,270 --> 00:56:25,199
+Scott: They're they're right, but if you know how public-private key encryption works You can just watch a YouTube video that explains how it works.
+
+792
+00:56:25,781 --> 00:56:27,709
+Scott: that won't help you break into someone's SSH.
+
+793
+00:56:28,672 --> 00:56:29,494
+Scott: Yep, you can know.
+
+794
+00:56:30,036 --> 00:56:31,079
+Scott: I taught you how it works.
+
+795
+00:56:31,600 --> 00:56:32,763
+Scott: Look you can't break in.
+
+796
+00:56:32,944 --> 00:56:35,090
+Scott: you absolutely must have the key, right?
+
+797
+00:56:35,170 --> 00:56:37,899
+Scott: That's the difference between security by obscurity and not so.
+
+798
+00:56:38,682 --> 00:56:52,030
+Scott: if you are using security by obscurity Right where someone knowing how it works Allows them to break in it's not actually secure then having the source code means you're fucked because now they know how it works.
+
+799
+00:56:52,090 --> 00:56:55,824
+Rym: You know keeping that a secret, but the other area is actually secure.
+
+800
+00:56:55,945 --> 00:56:58,492
+Rym: Yeah, if there's a vulnerability Right.
+
+801
+00:56:58,572 --> 00:57:03,570
+Scott: Well, if you're actually secure, you're not just obscurity then having the source code doesn't help them at all.
+
+802
+00:57:03,590 --> 00:57:06,582
+Scott: They're like, oh look, it's an implementation of a Diffie Hellman key exchange.
+
+803
+00:57:06,944 --> 00:57:07,787
+Scott: Yeah, that doesn't help.
+
+804
+00:57:07,808 --> 00:57:10,480
+Scott: great They did it properly and I can't break in.
+
+805
+00:57:10,600 --> 00:57:11,404
+Rym: but that's where now.
+
+806
+00:57:11,444 --> 00:57:16,084
+Rym: you're not attacking the lock You're not attacking Diffie Hellman that you're not attacking that because that's rock solid.
+
+807
+00:57:16,164 --> 00:57:17,470
+Rym: obviously you're attacking.
+
+808
+00:57:18,072 --> 00:57:19,576
+Rym: Did they use it wrong?
+
+809
+00:57:19,877 --> 00:57:21,441
+Rym: Did they implement it wrong?
+
+810
+00:57:21,762 --> 00:57:23,587
+Rym: Is there a library they're using that?
+
+811
+00:57:23,607 --> 00:57:24,830
+Rym: lets me bypass it.
+
+812
+00:57:25,172 --> 00:57:28,149
+Rym: That's the kind of stuff you can figure out from source code.
+
+813
+00:57:29,154 --> 00:57:30,881
+Rym: You can figure that out without source code.
+
+814
+00:57:30,962 --> 00:57:32,770
+Rym: most hacking does not involve source code.
+
+815
+00:57:33,111 --> 00:57:36,540
+Rym: You figure it out by hacking at the system, but the source code.
+
+816
+00:57:36,821 --> 00:57:44,919
+Rym: you might more quickly find one of those vulnerabilities Mm-hmm However, or it's basically just allows you.
+
+817
+00:57:44,979 --> 00:57:46,423
+Scott: it just makes life easier.
+
+818
+00:57:46,483 --> 00:57:48,750
+Scott: It doesn't make doesn't really change the game.
+
+819
+00:57:48,871 --> 00:57:50,000
+Scott: It just makes it easier.
+
+820
+00:57:50,061 --> 00:57:53,378
+Scott: so it can be like All those security vulnerabilities.
+
+821
+00:57:53,459 --> 00:57:56,229
+Scott: people find vulnerabilities and stuff all the time without source code.
+
+822
+00:57:57,371 --> 00:58:00,970
+Scott: They're sort of come as people are working at them slowly over time.
+
+823
+00:58:01,171 --> 00:58:04,627
+Scott: If your source code leaks then they'll be just a pile of vulnerabilities all at once.
+
+824
+00:58:04,647 --> 00:58:05,190
+Scott: you have to fix.
+
+825
+00:58:05,270 --> 00:58:07,190
+Scott: Yeah, because people will find them all very quickly.
+
+826
+00:58:07,310 --> 00:58:10,485
+Rym: In fact, they might find ones that you know about and already have a plan to fix.
+
+827
+00:58:10,505 --> 00:58:11,470
+Rym: You just haven't fixed them yet.
+
+828
+00:58:12,331 --> 00:58:13,655
+Scott: Yep, that's that's a thing.
+
+829
+00:58:14,096 --> 00:58:15,861
+Rym: but look at other things like.
+
+830
+00:58:16,082 --> 00:58:20,917
+Rym: the other aspect people talk about with source code leaks is oh Well, if I have the source code I can make the thing.
+
+831
+00:58:21,298 --> 00:58:36,310
+Rym: and that's where it gets a little complicated because just having the windows source code Without having some knowledge in context of the development environment It might be difficult for you to just quote-unquote compile it and have windows working.
+
+832
+00:58:37,232 --> 00:58:39,141
+Scott: Now, I mean, it's it depends.
+
+833
+00:58:39,221 --> 00:58:45,226
+Scott: it might be difficult for a normal person But I think as long as the source code is complete a lot of source code leaks are partially.
+
+834
+00:58:45,287 --> 00:58:57,526
+Scott: Yeah Yeah, they're missing lots of pieces or they're only like they don't bring the entire source code repository They're just bringing like one particular build and that build might be a failing build with problems.
+
+835
+00:58:57,566 --> 00:59:03,730
+Rym: Yeah, we're like, oh, yeah This is Windows except half of this stuff is just references to libraries in other parts of the code.
+
+836
+00:59:03,790 --> 00:59:04,894
+Rym: I don't have the source for.
+
+837
+00:59:05,175 --> 00:59:09,148
+Scott: here's a leak of you know, Windows NT except it was halfway through development.
+
+838
+00:59:09,189 --> 00:59:10,956
+Scott: at this point It's not the final version.
+
+839
+00:59:10,976 --> 00:59:17,330
+Scott: Yeah, you know, it's like it's not perfect enough It's not complete enough that it's really giving you the whole picture.
+
+840
+00:59:17,450 --> 00:59:23,149
+Scott: So, you know a per someone who really works hard at it who has the skills is gonna be able to get value from it.
+
+841
+00:59:23,711 --> 00:59:29,350
+Scott: But you know, even if it's a perfect leak, they'll get even more value, but there's still not a complete picture.
+
+842
+00:59:29,450 --> 00:59:35,840
+Scott: But yeah, if you do have the source code and it's legit and you get it to run now You can start doing fun stuff, right?
+
+843
+00:59:35,920 --> 00:59:37,590
+Scott: You can make your own windows.
+
+844
+00:59:38,172 --> 00:59:47,069
+Rym: You can make a fan windows mods that you couldn't make without the sort of make a windows that looks and acts like windows 100% except it logs keys and sends them to you.
+
+845
+00:59:47,774 --> 00:59:49,550
+Scott: You could find Easter eggs that were so hidden.
+
+846
+00:59:49,630 --> 00:59:54,409
+Scott: No one would have guessed them in a zillion years, but because you have the source code you can now find them instantly.
+
+847
+00:59:55,411 --> 00:59:57,599
+Rym: But what yeah often can't do that easily.
+
+848
+00:59:57,699 --> 00:59:58,803
+Rym: like games are a good example.
+
+849
+00:59:58,823 --> 01:00:10,269
+Rym: if a game source code gets leaked even with all the assets and environments There's not much you can do with that too Like you can't just take that and make another different game that easily because a lot of that code a lot of right.
+
+850
+01:00:10,891 --> 01:00:16,751
+Scott: It's still a lot of work to make a game, but you could let's say you had the source code - What's a game?
+
+851
+01:00:16,772 --> 01:00:18,159
+Scott: but that doesn't have open source code?
+
+852
+01:00:18,300 --> 01:00:19,245
+Rym: Oh slay the spire.
+
+853
+01:00:19,286 --> 01:00:19,990
+Rym: There's an example.
+
+854
+01:00:21,051 --> 01:00:32,014
+Scott: Yeah, you can make us I mean but slay the spire allows like modding kind of true true what's like a super closed source game That we care about and have an interesting Right.
+
+855
+01:00:32,154 --> 01:00:34,363
+Scott: It can't be a cookie cutter genre game either right?
+
+856
+01:00:34,383 --> 01:00:36,050
+Scott: It's like, okay, you got the source code to an FPS.
+
+857
+01:00:36,231 --> 01:00:38,250
+Scott: It's like nothing was stopping you from making it FPS.
+
+858
+01:00:38,571 --> 01:00:43,427
+Rym: Yeah, the work you'd have to do to make the FPS is like the work you have to do any amount.
+
+859
+01:00:43,507 --> 01:00:46,053
+Scott: Yeah, right I guess.
+
+860
+01:00:46,616 --> 01:00:48,524
+Scott: what's a game with valuable source code?
+
+861
+01:00:48,564 --> 01:00:50,030
+Scott: League of Legends, maybe right?
+
+862
+01:00:50,131 --> 01:00:52,830
+Scott: You get the source code the League of Legends you run your own, you know What.
+
+863
+01:00:52,871 --> 01:01:01,153
+Rym: some examples are some of these sub components of games like highly proprietary very good netcode Sure.
+
+864
+01:01:01,173 --> 01:01:03,783
+Scott: Yeah, that's the kind of thing or like real.
+
+865
+01:01:04,024 --> 01:01:05,410
+Scott: There's not a lot of secrets to that.
+
+866
+01:01:05,490 --> 01:01:07,609
+Scott: It's just hard no matter even if they tell you how it works.
+
+867
+01:01:08,731 --> 01:01:20,435
+Rym: It's more like you might be able to see a clever implementation of something but to understand it enough to use it You're probably gonna have to learn so much that you spent the same amount of time You would have spent just building something
+
+868
+01:01:20,977 --> 01:01:24,590
+Scott: and even if you got it you suddenly now you need the hardware to run it on.
+
+869
+01:01:24,690 --> 01:01:27,789
+Scott: Right, so running, you know a local like application That's fine.
+
+870
+01:01:28,211 --> 01:01:34,089
+Scott: If you got the source code to Google and wanted to run your own Google you don't have the computers to do that.
+
+871
+01:01:34,551 --> 01:01:38,084
+Scott: You just wouldn't yeah, you wouldn't be able to run that on your own computer.
+
+872
+01:01:38,104 --> 01:01:39,690
+Scott: Okay, it's just not gonna work.
+
+873
+01:01:41,272 --> 01:01:46,773
+Scott: You know you need like this huge Google, you know enterprise cloud deal to run the Google Like.
+
+874
+01:01:46,874 --> 01:01:49,150
+Rym: oh I got the source code to a stock exchange.
+
+875
+01:01:49,672 --> 01:01:51,317
+Rym: Yeah, that's like regulated code.
+
+876
+01:01:51,357 --> 01:01:53,444
+Rym: Like yeah, the government's got that too there.
+
+877
+01:01:53,484 --> 01:01:54,989
+Rym: You know exactly how it works.
+
+878
+01:01:55,069 --> 01:01:57,355
+Scott: like Yeah, there's no secrets.
+
+879
+01:01:57,395 --> 01:01:58,459
+Scott: They had to publicize how.
+
+880
+01:01:58,720 --> 01:01:59,523
+Rym: yeah that by law.
+
+881
+01:01:59,543 --> 01:02:00,608
+Rym: they have to tell you how it works.
+
+882
+01:02:00,829 --> 01:02:03,090
+Rym: casino Is that the software in a slot machine?
+
+883
+01:02:03,990 --> 01:02:06,409
+Rym: They'll tell you exactly how it works and what the odds are.
+
+884
+01:02:07,530 --> 01:02:08,546
+Scott: Yeah, you know.
+
+885
+01:02:10,433 --> 01:02:18,952
+Scott: Yeah, getting source code is not necessarily that valuable But you still want to protect against it if you are closed source for a good real like.
+
+886
+01:02:19,032 --> 01:02:30,410
+Rym: one of the example that causes the most trouble in the open source world specifically is Drivers for hardware that are not well supported on Linux like video card drivers.
+
+887
+01:02:31,092 --> 01:02:40,209
+Rym: Yep, that's when you need like a weird Linux distro with like oh everything's open source And then I go somewhere else to get the closed source binary to make my video card work.
+
+888
+01:02:40,852 --> 01:02:52,748
+Scott: Yep, and this gets you into like the final area of source code leaks and that's intellectual property problems, so Obviously the company that lost their intellectual property that was their trade secret or whatever.
+
+889
+01:02:52,788 --> 01:02:54,033
+Scott: They're upset Right.
+
+890
+01:02:54,093 --> 01:02:56,403
+Scott: So because now they're thinking they didn't want is leaked out.
+
+891
+01:02:56,443 --> 01:02:57,347
+Scott: whatever who screw them.
+
+892
+01:02:57,367 --> 01:03:03,349
+Scott: Yep But now the problem is Not so much for them.
+
+893
+01:03:03,651 --> 01:03:09,190
+Scott: It's actually that you want to look at the source code to learn and to do fun things.
+
+894
+01:03:09,532 --> 01:03:11,630
+Scott: Right make your own mod of Windows or whatever.
+
+895
+01:03:12,212 --> 01:03:17,306
+Scott: But looking at that source code now legally taints you as a developer.
+
+896
+01:03:17,326 --> 01:03:18,409
+Rym: I used to work at IBM.
+
+897
+01:03:18,650 --> 01:03:22,430
+Rym: Do you know much I had to sign to prove that I had never worked on Java?
+
+898
+01:03:23,571 --> 01:03:25,758
+Scott: Right, exactly so.
+
+899
+01:03:25,920 --> 01:03:31,964
+Scott: for example SQL SQLite, you know SQLite that's an open source program.
+
+900
+01:03:32,686 --> 01:03:33,048
+Scott: Well, it's an.
+
+901
+01:03:33,128 --> 01:03:39,340
+Scott: it's an but they do not take Developer contributions right.
+
+902
+01:03:39,601 --> 01:03:56,607
+Scott: if you want to commit code to SQLite Right, like you have a patch for them Like you have to become an approved developer to prove to them that they trust you and you're not someone who has seen Proprietary like code like you didn't work at Oracle or something that cannot.
+
+903
+01:03:56,647 --> 01:04:04,930
+Scott: that's gonna taint SQLite, you know and get them sued because they're including code that is somehow belongs to some other company.
+
+904
+01:04:05,030 --> 01:04:15,283
+Scott: Right, if you looked at like the mario 64 source code leak and then you go work for a different game company Right, and then something in your game is looking like mario 64 like you're.
+
+905
+01:04:15,464 --> 01:04:17,470
+Scott: hey, why is that character jumping so well?
+
+906
+01:04:17,914 --> 01:04:19,449
+Scott: What much better than all other games?
+
+907
+01:04:19,950 --> 01:04:22,670
+Scott: Endo games right that jump is just such a good jump.
+
+908
+01:04:22,750 --> 01:04:27,611
+Scott: What whoever did that must have must have played, you know must know the code of mario 64.
+
+909
+01:04:27,611 --> 01:04:34,390
+Rym: You just made mario 64 and by play and analysis reverse engineered the exact jump timing.
+
+910
+01:04:34,792 --> 01:04:35,395
+Rym: That's cool.
+
+911
+01:04:35,656 --> 01:04:36,440
+Rym: But as soon as you?
+
+912
+01:04:36,641 --> 01:04:37,465
+Scott: really it is really hard to do.
+
+913
+01:04:38,671 --> 01:04:50,370
+Rym: But as soon as you saw that source code, even if you figure this out on your own It's hard to prove that you didn't use that proprietary knowledge you had To make your implementation, right?
+
+914
+01:04:50,430 --> 01:04:58,282
+Scott: So whether you're working at a company or for yourself or for an open source project You could taint the open source project or your company's work.
+
+915
+01:04:58,322 --> 01:05:00,109
+Scott: If it's your own personal code, you're running at home.
+
+916
+01:05:00,149 --> 01:05:00,510
+Scott: Who cares?
+
+917
+01:05:00,590 --> 01:05:04,926
+Rym: Yeah, if you're not a software developer, you'll never have a job being a software developer.
+
+918
+01:05:04,967 --> 01:05:18,955
+Scott: Maybe you don't care either Right, but it could open up the open source projects you work on or the non open source projects You work on at your job to legal liability if you have seen Proprietary leaked code.
+
+919
+01:05:19,437 --> 01:05:23,208
+Scott: so you might want to stay away from it or at least stay away from code.
+
+920
+01:05:23,528 --> 01:05:24,030
+Scott: leaked code.
+
+921
+01:05:24,351 --> 01:05:28,730
+Scott: That is in any way similar to code you are writing for something else, right?
+
+922
+01:05:28,750 --> 01:05:32,004
+Scott: So if you're working in operating systems, don't look at a Windows leak.
+
+923
+01:05:32,385 --> 01:05:39,408
+Scott: if you're working on games Don't look at a mario64 leak, but if you're working in operating systems, you're probably okay to mess around with a mario64 leak.
+
+924
+01:05:40,591 --> 01:05:41,816
+Scott: You know, just don't go then man.
+
+925
+01:05:42,177 --> 01:05:48,649
+Rym: The taskbar jumps at this perfect height like Exact exactly.
+
+926
+01:05:50,372 --> 01:05:51,097
+Rym: I think we're done.
+
+927
+01:05:51,117 --> 01:05:52,063
+Rym: We've gone on over an hour.
+
+928
+01:05:52,425 --> 01:05:53,190
+Scott: we have and yeah.
+
+929
+01:05:53,230 --> 01:05:58,785
+Scott: But if you are a company or you are an open source project You got to watch the people coming in to make sure they haven't.
+
+930
+01:05:59,167 --> 01:06:07,760
+Rym: Yeah, right Hey check out my performance optimization code for your database and that turns out to be code They literally copy pasted out of Oracle.
+
+931
+01:06:08,362 --> 01:06:09,628
+Rym: You're in deep shit now, too.
+
+932
+01:06:10,654 --> 01:06:12,345
+Scott: Yeah, don't don't accept that patch.
+
+933
+01:06:12,728 --> 01:06:18,380
+Rym: Yeah This has been GeekNights with Rym and Scott.
+
+934
+01:06:18,420 --> 01:06:23,180
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+935
+01:06:23,481 --> 01:06:28,500
+Scott: Be sure to visit our website at frontrowcrew.com for show notes discussion news and more.
+
+936
+01:06:28,780 --> 01:06:36,180
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+937
+01:06:36,541 --> 01:06:39,716
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+938
+01:06:40,961 --> 01:06:44,070
+Scott: GeekNights is recorded live with no studio and no audience.
+
+939
+01:06:44,251 --> 01:06:45,735
+Scott: But unlike those other late shows.
+
+940
+01:06:45,856 --> 01:06:53,020
+Rym: It's actually recorded at night And the patreon patrons for this episode of GeekNights are Alan Joyce, I mean Nicole Marty green.
+
+941
+01:06:53,040 --> 01:06:54,369
+Rym: You're just like a dude guy Graham Finch.
+
+942
+01:06:54,671 --> 01:06:55,779
+Rym: You'll the key to my heart.
+
+943
+01:06:56,282 --> 01:07:08,999
+Rym: There was a dude looked like cop standing there with my name out Clinton Walton J Banch from New Zealand Ryan parent Nicholas Brando Chris mint give dread Lily Turner by Chris Reimer Finn Sherman von Harel and a whole bunch of people who do not want me to say their names.
+
+944
+01:07:11,001 --> 01:07:12,327
+Rym: Scott has new audio equipment.
+
+945
+01:07:12,347 --> 01:07:15,280
+Rym: So I got a futz with the pipeline yet again because his levels are different.
+
+946
+01:07:15,360 --> 01:07:16,283
+Rym: So stay tuned on that.
+
+947
+01:07:16,725 --> 01:07:22,704
+Rym: at least convinced him to not send me audio that was muxed through his camera Which adds its own compression.
+
+948
+01:07:23,125 --> 01:07:25,030
+Rym: He's learning audio engineering bit by bit.
+
+949
+01:07:25,431 --> 01:07:29,480
+Rym: But anyway for right now, I'll leave you with something upcoming.
+
+950
+01:07:52,945 --> 01:08:02,222
+Rym: My mouth is dry My mouth is numb My mouth My mouth set on overdrive.
+
+951
+01:08:11,512 --> 01:08:22,298
+Scott: My mouth is laughing in my face a Crooked spine Crooked mouth.
+

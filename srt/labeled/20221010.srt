@@ -1,0 +1,4364 @@
+1
+00:00:06,940 --> 00:00:09,410
+Rym: It's Monday, October 10th, 2022.
+
+2
+00:00:09,410 --> 00:00:09,971
+Rym: I'm Rym.
+
+3
+00:00:13,447 --> 00:00:13,756
+Scott: I'm Scott.
+
+4
+00:00:14,301 --> 00:00:16,840
+Rym: And this is a Spooky GeekNights because it's October.
+
+5
+00:00:17,440 --> 00:00:20,420
+Rym: Tonight, we are talking about web scraping.
+
+6
+00:00:21,840 --> 00:00:22,796
+Scott: Let's do this.
+
+7
+00:00:24,400 --> 00:00:31,100
+Rym: So yeah, I ended up just circumstance between work and that bike trip that Emily and I planned.
+
+8
+00:00:31,401 --> 00:00:40,900
+Rym: I basically took a month off of my normal life and I'm just now back from that honestly significant and extremely enjoyable pseudo-sabbatical.
+
+9
+00:00:42,162 --> 00:00:45,780
+Rym: That's the longest I've taken off of normal life stuff in a long, long time.
+
+10
+00:00:47,482 --> 00:00:51,980
+Scott: My job is still pretty new, but I don't work on Fridays so there's no complaints to be had.
+
+11
+00:00:53,000 --> 00:00:54,325
+Scott: But, you know, I stayed here.
+
+12
+00:00:54,546 --> 00:00:58,560
+Scott: I lived a life that had a lot of free time thanks to not podcasting.
+
+13
+00:00:59,402 --> 00:01:03,020
+Scott: And I did work on the GeekNights website a significant amount.
+
+14
+00:01:05,440 --> 00:01:07,080
+Scott: Not done, but we're moving.
+
+15
+00:01:07,680 --> 00:01:11,387
+Rym: I lived a life of significant free time partly because... So I'll talk about this later.
+
+16
+00:01:11,487 --> 00:01:13,240
+Rym: Emily and I are going to do a special episode.
+
+17
+00:01:13,660 --> 00:01:18,980
+Rym: We're going to talk about the entire 481 mile bike trip we did across New York State.
+
+18
+00:01:19,520 --> 00:01:22,030
+Rym: But the TL;DR version is, it's fucking awesome.
+
+19
+00:01:22,291 --> 00:01:24,038
+Rym: It's not as hard as people think it is.
+
+20
+00:01:25,801 --> 00:01:32,119
+Rym: I highly recommend doing something like that at some point in your life if you enjoy cycling and are capable of this.
+
+21
+00:01:33,020 --> 00:01:39,400
+Scott: I've said it many times, but you know car culture, people just driving everywhere their whole life and not walking much and definitely not biking much.
+
+22
+00:01:39,680 --> 00:01:44,540
+Scott: You know, people have this idea of cycling as like a difficult athletic activity.
+
+23
+00:01:44,700 --> 00:01:47,914
+Rym: No, it was just every day, just all day, wee, seeing stuff.
+
+24
+00:01:47,954 --> 00:01:49,300
+Scott: I never thought I saw the whole state.
+
+25
+00:01:51,041 --> 00:01:57,540
+Scott: It's like if you're not racing a bike, you can go really far, much faster than you realize.
+
+26
+00:01:58,384 --> 00:01:59,820
+Rym: You think we were huffing and puffing?
+
+27
+00:02:00,584 --> 00:02:01,780
+Scott: It's really efficient.
+
+28
+00:02:02,341 --> 00:02:03,367
+Rym: I like to huff and puff.
+
+29
+00:02:03,468 --> 00:02:05,420
+Rym: That's where Scott and I disagree on enjoying biking.
+
+30
+00:02:05,520 --> 00:02:08,990
+Rym: However, I don't huff and puff for 70 miles.
+
+31
+00:02:09,030 --> 00:02:09,933
+Rym: I'm going to 70 miles.
+
+32
+00:02:09,973 --> 00:02:12,220
+Rym: I'm going like 10 miles an hour, just chill times.
+
+33
+00:02:14,182 --> 00:02:22,200
+Scott: You can get on a bicycle, no matter what kind of body you have, if your body is capable of bicycling, you can get to 10 miles an hour.
+
+34
+00:02:22,700 --> 00:02:27,680
+Rym: And if your legs don't work for that purpose, there are hand crank bikes, the bikes that are actually super efficient.
+
+35
+00:02:28,620 --> 00:02:31,950
+Scott: Some bicycle type machine can work for your body, most likely.
+
+36
+00:02:36,642 --> 00:02:43,335
+Scott: You can go 10 miles an hour, most likely, and at 10 miles an hour, you can go 60 miles in 6 hours.
+
+37
+00:02:47,381 --> 00:02:48,968
+Scott: And that's pretty damn far.
+
+38
+00:02:49,028 --> 00:02:49,510
+Scott: You can get places.
+
+39
+00:02:54,060 --> 00:03:04,019
+Rym: So then I went to London right after that, so literally we finished the bike trip, took an Amtrak sleeper car home because that one line on Amtrak, you can take bikes on it now for 20 bucks.
+
+40
+00:03:04,821 --> 00:03:09,460
+Rym: You don't have to take the bike apart, you just bring it to the baggage area, they put it on the train, they take it off.
+
+41
+00:03:09,860 --> 00:03:11,386
+Rym: It was easy, it was great.
+
+42
+00:03:12,249 --> 00:03:13,895
+Rym: Not every Amtrak train has that.
+
+43
+00:03:14,176 --> 00:03:15,120
+Rym: You have to do a lot of research.
+
+44
+00:03:15,120 --> 00:03:19,799
+Scott: A lot of people have had some hassles, so maybe I guess just that line is handling it nicely.
+
+45
+00:03:20,120 --> 00:03:26,800
+Rym: So if you look at the Amtrak website, there's like 5 different ways a train could handle bikes that are all crazy different.
+
+46
+00:03:26,800 --> 00:03:27,958
+Scott: Based on what equipment is, yeah.
+
+47
+00:03:28,901 --> 00:03:40,220
+Rym: And you have to look up your specific train number, and then look up the day you're going, and then you can figure out which of the 5 ways might be applicable, and then you probably still have to call someone to make sure.
+
+48
+00:03:40,941 --> 00:03:46,859
+Scott: You can't search for the train based on that, like you can't say "I want the nice bike train, show me only trains that have
+
+49
+00:03:46,879 --> 00:03:47,000
+Scott: that.".
+
+50
+00:03:47,080 --> 00:03:56,860
+Rym: You can search for trains that allow bikes, however, most of those are, yeah, you can bring a bike if you turn the handlebars sideways and take the pedals off and put it in a bike box.
+
+51
+00:03:57,690 --> 00:03:57,899
+Rym: Yeah.
+
+52
+00:03:58,661 --> 00:04:03,020
+Rym: Which sucks, because for those of you who aren't bike people, that's really easy to do on a cheap bike.
+
+53
+00:04:03,380 --> 00:04:09,159
+Rym: But if you have a carbon fiber fork, even if you know bikes, I do not recommend doing that without a professional doing it for you.
+
+54
+00:04:10,140 --> 00:04:10,182
+Scott: Eh.
+
+55
+00:04:11,742 --> 00:04:15,160
+Rym: Do you have the appropriate tools to get the torque exactly right?
+
+56
+00:04:16,325 --> 00:04:17,259
+Scott: To take the pedals off?
+
+57
+00:04:17,440 --> 00:04:21,560
+Rym: No, no, to twist your handlebars 90 degrees from the fork.
+
+58
+00:04:23,992 --> 00:04:26,049
+Scott: Oh, I mean, you could just take your handlebars off.
+
+59
+00:04:27,831 --> 00:04:29,638
+Rym: Uh, no, I guess you could.
+
+60
+00:04:29,698 --> 00:04:33,070
+Rym: The Amtrak site requires you to turn the fork sideways into a thing.
+
+61
+00:04:33,431 --> 00:04:35,569
+Rym: They have a bunch of diagrams and even videos that'll help you.
+
+62
+00:04:36,330 --> 00:04:40,210
+Scott: Alright, well I haven't seen it, but, you know, taking your handlebars on and off is pretty easy.
+
+63
+00:04:40,410 --> 00:04:49,310
+Scott: The only issue is if you really want to rotate the front wheel to be perpendicular to the frame, you could take the front wheel off.
+
+64
+00:04:49,770 --> 00:04:51,246
+Scott: It's like that's easy to do also, right?
+
+65
+00:04:51,991 --> 00:04:57,950
+Rym: The other thing is bike boxes are weirdly expensive and they're pretty much one-time use.
+
+66
+00:04:58,730 --> 00:05:02,502
+Scott: Yeah, professional cycling people don't do that.
+
+67
+00:05:02,542 --> 00:05:05,050
+Scott: They get on a plane and they get to the other end and then there's more bikes.
+
+68
+00:05:06,151 --> 00:05:09,430
+Rym: Even bike touring people, because we met a ton of people on the trip who did long bike touring.
+
+69
+00:05:09,790 --> 00:05:13,510
+Rym: We met the Scottish couple who were biking the same route we were doing in the opposite direction.
+
+70
+00:05:14,770 --> 00:05:16,829
+Rym: And we were like, "Oh yeah, so what'd you do with the
+
+71
+00:05:16,849 --> 00:05:16,970
+Rym: bikes?".
+
+72
+00:05:16,970 --> 00:05:23,470
+Rym: And we were just like, "Oh, we just bought bikes, we came here, we picked them up at a bike shop in Buffalo, and we're going to give them away to a charity when we get to the end.
+
+73
+00:05:23,752 --> 00:05:25,003
+Rym: That was cheaper than shipping our
+
+74
+00:05:25,023 --> 00:05:25,285
+Rym: bikes.".
+
+75
+00:05:25,954 --> 00:05:26,650
+Scott: Yeah, of course.
+
+76
+00:05:27,010 --> 00:05:27,150
+Rym: Yeah.
+
+77
+00:05:27,873 --> 00:05:32,750
+Rym: So then I went to London for a big work thing, and then I went to Frankfurt where all my engineers were.
+
+78
+00:05:32,810 --> 00:05:37,750
+Rym: And I gotta say, I'll talk about the trip later, maybe I'll do a special on the Patriot or something.
+
+79
+00:05:38,351 --> 00:05:43,970
+Rym: It was great, but I always had this impression that Frankfurt is a boring city.
+
+80
+00:05:44,070 --> 00:05:53,626
+Rym: Because everyone I know who travels broadly, who has spent a lot of time in Germany, has been telling me my entire adult life, "Frankfurt's the boring city.
+
+81
+00:05:53,667 --> 00:05:54,688
+Rym: Why do you go to Frankfurt?
+
+82
+00:05:54,708 --> 00:05:55,329
+Rym: Blah, blah, blah, blah,
+
+83
+00:05:55,349 --> 00:05:55,610
+Rym: blah.".
+
+84
+00:05:55,791 --> 00:05:57,350
+Rym: They always tell me some other city's great.
+
+85
+00:05:57,852 --> 00:06:01,210
+Rym: And I believed them, partly because I had only been to Frankfurt once.
+
+86
+00:06:01,391 --> 00:06:04,510
+Rym: And that one time I was there, it was kind of just boring.
+
+87
+00:06:04,670 --> 00:06:06,530
+Rym: Like Cleveland-y, but like nice Cleveland.
+
+88
+00:06:06,650 --> 00:06:09,710
+Rym: Like if Cleveland were nice, but it was still Cleveland.
+
+89
+00:06:10,632 --> 00:06:18,350
+Rym: So having spent a weekend there, between work, where I had nothing to do but just go explore, I now have a hypothesis.
+
+90
+00:06:19,292 --> 00:06:20,590
+Rym: Frankfurt is not boring.
+
+91
+00:06:21,230 --> 00:06:33,130
+Rym: The people who say Frankfurt is boring are themselves either boring or unimaginative, or expect the kinds of entertainment from a city that people like me and Scott do not seek out.
+
+92
+00:06:33,651 --> 00:06:36,430
+Rym: And in fact, I think Scott would also very much enjoy Frankfurt.
+
+93
+00:06:38,512 --> 00:06:44,349
+Rym: So yeah, full disclosure though, that might be colored by the fact that I was staying in a five-star hotel the entire time.
+
+94
+00:06:45,270 --> 00:06:49,930
+Scott: I mean, you can stay at a five-star hotel in a, you know, a trash fire and be okay.
+
+95
+00:06:50,270 --> 00:06:50,381
+Rym: True.
+
+96
+00:06:50,870 --> 00:06:52,981
+Rym: Shall I warm those crack pipe?
+
+97
+00:06:53,101 --> 00:06:54,710
+Rym: It was very much that kind of hotel.
+
+98
+00:06:55,854 --> 00:06:57,049
+Rym: But it was a real good trip.
+
+99
+00:06:57,371 --> 00:06:58,196
+Rym: And we're back.
+
+100
+00:06:58,357 --> 00:07:00,650
+Rym: I don't foresee any major disruptions to gig nights.
+
+101
+00:07:00,971 --> 00:07:03,390
+Rym: We will have regularly scheduled disruptions now.
+
+102
+00:07:03,450 --> 00:07:06,770
+Scott: I mean, I foresee several major US holidays in the near future.
+
+103
+00:07:07,030 --> 00:07:13,250
+Rym: Well, I mean, we'll get the regularly scheduled disruptions like the November, December time, the important hockey game time.
+
+104
+00:07:14,194 --> 00:07:15,410
+Scott: Yeah, all that shit's coming down.
+
+105
+00:07:15,651 --> 00:07:17,750
+Scott: All right, so I got a normal old opening bit.
+
+106
+00:07:18,010 --> 00:07:20,310
+Scott: So on Friday night, just a few days ago, right?
+
+107
+00:07:20,830 --> 00:07:24,129
+Scott: I'm in my apartment doing my Friday night biz, you know, I didn't work all day.
+
+108
+00:07:25,351 --> 00:07:31,050
+Scott: And I hear noises outside, like you do when you live in the city and there's a street right out your window.
+
+109
+00:07:31,251 --> 00:07:34,710
+Scott: Occasionally you hear noises outside because there's a street there.
+
+110
+00:07:34,851 --> 00:07:36,309
+Scott: It could be anything going on out there.
+
+111
+00:07:36,371 --> 00:07:36,582
+Scott: Right.
+
+112
+00:07:37,230 --> 00:07:43,950
+Scott: Even when my previous apartment where the street that my apartment faced was like basically an alley, like not a busy street.
+
+113
+00:07:44,874 --> 00:07:45,869
+Scott: Things happened out there.
+
+114
+00:07:46,150 --> 00:07:52,690
+Rym: Well, I mean, living at the base of a bridge next to a subway station and the approach to a major non-toll bridge.
+
+115
+00:07:53,472 --> 00:07:55,070
+Rym: Yeah, shit happens outside our apartment.
+
+116
+00:07:55,650 --> 00:07:56,830
+Scott: Things happen outside the window.
+
+117
+00:07:57,173 --> 00:07:57,649
+Scott: It's a thing.
+
+118
+00:07:57,770 --> 00:08:02,010
+Scott: So whenever I hear noises outside the window that sound out of the ordinary.
+
+119
+00:08:02,459 --> 00:08:02,630
+Scott: Right.
+
+120
+00:08:03,091 --> 00:08:04,088
+Scott: I will go and take a look.
+
+121
+00:08:04,390 --> 00:08:09,810
+Scott: Mostly not because I'm going to call the cops on someone unless there's something, you know, really heinous.
+
+122
+00:08:11,935 --> 00:08:13,710
+Scott: But in case there is an emergency.
+
+123
+00:08:13,710 --> 00:08:13,902
+Scott: Right.
+
+124
+00:08:14,030 --> 00:08:21,570
+Scott: It's like there could be noises outside because of a fire or somebody passing out in the street or a new weird thing is happening.
+
+125
+00:08:21,751 --> 00:08:23,850
+Rym: And now you recognize if you hear that sound again.
+
+126
+00:08:23,954 --> 00:08:24,147
+Rym: All right.
+
+127
+00:08:24,210 --> 00:08:24,909
+Rym: It's that weird thing.
+
+128
+00:08:25,032 --> 00:08:25,789
+Rym: Now I know about it.
+
+129
+00:08:25,891 --> 00:08:27,089
+Rym: I don't need to go look a second time.
+
+130
+00:08:27,291 --> 00:08:29,645
+Scott: I need to call a different emergency service.
+
+131
+00:08:29,685 --> 00:08:30,349
+Scott: that's not police.
+
+132
+00:08:30,670 --> 00:08:31,407
+Rym: Maybe call the news.
+
+133
+00:08:31,670 --> 00:08:33,150
+Rym: Maybe you start videoing it like.
+
+134
+00:08:33,813 --> 00:08:33,904
+Scott: Yeah.
+
+135
+00:08:33,950 --> 00:08:35,110
+Scott: Who knows what's going on out there?
+
+136
+00:08:35,211 --> 00:08:36,610
+Scott: Usually, you know, whatever.
+
+137
+00:08:36,750 --> 00:08:38,028
+Scott: So I go out and I see.
+
+138
+00:08:38,655 --> 00:08:38,929
+Scott: Right.
+
+139
+00:08:39,530 --> 00:08:44,310
+Scott: A car that is a parked in quotation marks.
+
+140
+00:08:44,478 --> 00:08:44,710
+Scott: Right.
+
+141
+00:08:44,851 --> 00:08:47,670
+Scott: It's supposed to be parallel parking, but this car is like diagonal.
+
+142
+00:08:48,770 --> 00:08:51,330
+Scott: Forty five degrees aiming at the sidewalk.
+
+143
+00:08:51,738 --> 00:08:51,949
+Scott: Right.
+
+144
+00:08:53,151 --> 00:08:57,269
+Scott: And the driver's side door is open, completely open.
+
+145
+00:08:57,950 --> 00:09:01,410
+Rym: Oh, that someone jumped out of a car that they just stopped really quickly.
+
+146
+00:09:02,118 --> 00:09:02,487
+Rym: Hold on.
+
+147
+00:09:03,690 --> 00:09:07,230
+Scott: And someone is moving about this car.
+
+148
+00:09:07,330 --> 00:09:07,807
+Scott: Right.
+
+149
+00:09:07,990 --> 00:09:11,970
+Scott: I think they have a bag and there is some amount of yelling that was indecipherable.
+
+150
+00:09:12,872 --> 00:09:15,130
+Rym: Now this reeks of Uber drive gone wrong.
+
+151
+00:09:16,339 --> 00:09:16,706
+Scott: I don't know.
+
+152
+00:09:17,232 --> 00:09:17,948
+Rym: I'm just speculating.
+
+153
+00:09:18,310 --> 00:09:18,710
+Rym: I'm the comment.
+
+154
+00:09:19,451 --> 00:09:22,110
+Scott: I can't tell what this is, what kind of individual this was.
+
+155
+00:09:22,330 --> 00:09:28,410
+Scott: Other than that, it was a person who was yelling and clearly an altercation ish manner.
+
+156
+00:09:28,532 --> 00:09:29,628
+Scott: But I didn't see any other people.
+
+157
+00:09:30,331 --> 00:09:31,133
+Scott: Ah, they were.
+
+158
+00:09:31,374 --> 00:09:31,675
+Scott: they were.
+
+159
+00:09:32,579 --> 00:09:35,730
+Scott: they were in and out of the car, I guess the side of the car.
+
+160
+00:09:35,751 --> 00:09:36,121
+Rym: I don't know.
+
+161
+00:09:36,971 --> 00:09:38,695
+Scott: But they then went.
+
+162
+00:09:38,916 --> 00:09:39,277
+Scott: they went.
+
+163
+00:09:39,477 --> 00:09:43,528
+Scott: they walked away from the car in a direction down the street.
+
+164
+00:09:44,720 --> 00:09:44,950
+Scott: Right.
+
+165
+00:09:45,150 --> 00:09:45,870
+Scott: Yelling something.
+
+166
+00:09:46,454 --> 00:09:47,550
+Scott: Then there was no more yelling.
+
+167
+00:09:47,753 --> 00:09:48,709
+Scott: There was no more person.
+
+168
+00:09:48,770 --> 00:09:49,248
+Scott: Right.
+
+169
+00:09:49,790 --> 00:09:55,666
+Scott: There was just this car sitting there parked diagonally when it should have been parked parallely.
+
+170
+00:09:56,080 --> 00:09:56,309
+Scott: Right.
+
+171
+00:09:57,072 --> 00:10:00,850
+Scott: Ah, with the driver's side door wide open, just sitting there off.
+
+172
+00:10:01,444 --> 00:10:01,630
+Scott: Right.
+
+173
+00:10:01,890 --> 00:10:02,888
+Scott: Just a car sitting there.
+
+174
+00:10:03,571 --> 00:10:12,028
+Scott: And I saw delivery people, cyclists, walkers, all kinds of people going past the car, not even being curious as to why the door was open.
+
+175
+00:10:13,753 --> 00:10:14,950
+Rym: I'm slightly curious.
+
+176
+00:10:15,370 --> 00:10:17,690
+Rym: I might have looked in as I walk.
+
+177
+00:10:17,732 --> 00:10:17,820
+Rym: Yeah.
+
+178
+00:10:18,192 --> 00:10:18,930
+Scott: That's what I would have done.
+
+179
+00:10:19,030 --> 00:10:21,890
+Scott: Looked in, make sure there isn't like an unconscious person in the car.
+
+180
+00:10:22,311 --> 00:10:22,869
+Scott: Who knows what.
+
+181
+00:10:23,555 --> 00:10:23,684
+Scott: Yeah.
+
+182
+00:10:25,058 --> 00:10:25,929
+Scott: I didn't go down there.
+
+183
+00:10:27,054 --> 00:10:27,349
+Scott: I waited.
+
+184
+00:10:28,172 --> 00:10:32,330
+Rym: How much would it take to go downstairs for something we see outside our windows?
+
+185
+00:10:32,550 --> 00:10:36,530
+Scott: If I saw like a hand, like of a struggling person coming out the door.
+
+186
+00:10:37,752 --> 00:10:41,310
+Rym: Or like a series of clowns started emerging from the car.
+
+187
+00:10:41,370 --> 00:10:42,788
+Rym: Like I would go down and see what's going on.
+
+188
+00:10:43,530 --> 00:10:43,641
+Scott: Right.
+
+189
+00:10:43,870 --> 00:10:44,509
+Scott: Something like that.
+
+190
+00:10:44,710 --> 00:10:47,030
+Rym: It had to be at least like four clowns before I bothered, though.
+
+191
+00:10:47,110 --> 00:10:51,650
+Scott: The car was sitting there a while, just abandoned effectively with the door open.
+
+192
+00:10:52,890 --> 00:10:55,090
+Scott: The next day, I didn't I didn't check on it again.
+
+193
+00:10:55,271 --> 00:10:57,549
+Scott: I just waited like five minutes and I was like, well, OK.
+
+194
+00:10:58,150 --> 00:11:01,647
+Rym: And then I see the pro move anonymous account post to Reddit free car.
+
+195
+00:11:02,571 --> 00:11:08,629
+Scott: I had the next day walking down the street and I noticed the car is still there with the door closed.
+
+196
+00:11:09,350 --> 00:11:13,769
+Scott: Someone at some point in the night Friday night had closed the door of the car.
+
+197
+00:11:14,074 --> 00:11:14,370
+Rym: All right.
+
+198
+00:11:14,530 --> 00:11:15,590
+Rym: Good Samaritan, probably.
+
+199
+00:11:16,560 --> 00:11:20,710
+Scott: The car is still here Monday night.
+
+200
+00:11:21,410 --> 00:11:24,650
+Scott: The car is still parked diagonally in that spot.
+
+201
+00:11:24,890 --> 00:11:29,468
+Rym: You got to put a webcam at this thing and make a Reddit post countdown to whatever's up with this car.
+
+202
+00:11:29,970 --> 00:11:34,770
+Scott: This car is going to amass some tickets parked in a very much well today.
+
+203
+00:11:34,971 --> 00:11:35,629
+Scott: See, they were lucky.
+
+204
+00:11:35,810 --> 00:11:38,329
+Scott: Today was, you know, indigenous people's day.
+
+205
+00:11:38,831 --> 00:11:42,090
+Scott: So they did not have an open school today.
+
+206
+00:11:42,150 --> 00:11:45,883
+Scott: It's because the one time I had a parking like right in front of the entrance to the high school.
+
+207
+00:11:45,924 --> 00:11:46,028
+Scott: Yeah.
+
+208
+00:11:46,110 --> 00:11:50,330
+Rym: If you don't live in New York, like I don't think you understand the parking ticket situation in this city.
+
+209
+00:11:50,731 --> 00:11:55,610
+Rym: If you park a car illegally and like blink, there will be a ticket on that car.
+
+210
+00:11:55,810 --> 00:12:01,470
+Scott: As soon as school starts, that car will be parked illegally and will amass tickets.
+
+211
+00:12:01,713 --> 00:12:02,849
+Scott: And it's not going to move.
+
+212
+00:12:03,512 --> 00:12:06,510
+Scott: I'm certain it isn't an abandoned vehicle for some reason.
+
+213
+00:12:06,590 --> 00:12:09,268
+Scott: It has license plates that I didn't look up.
+
+214
+00:12:11,191 --> 00:12:12,038
+Scott: But when?
+
+215
+00:12:12,219 --> 00:12:13,610
+Scott: how many tickets will it amass?
+
+216
+00:12:13,790 --> 00:12:17,609
+Rym: How quickly before it is to see a webcam and a betting pool is the way to go with this.
+
+217
+00:12:19,131 --> 00:12:21,227
+Scott: It's it's just a very interesting situation.
+
+218
+00:12:22,370 --> 00:12:23,710
+Scott: Like, how did the car get there?
+
+219
+00:12:23,750 --> 00:12:24,297
+Scott: Whose is it?
+
+220
+00:12:24,358 --> 00:12:25,350
+Scott: Why did they abandon it?
+
+221
+00:12:25,430 --> 00:12:25,916
+Scott: How did they?
+
+222
+00:12:26,158 --> 00:12:27,048
+Scott: how did this come to be?
+
+223
+00:12:27,611 --> 00:12:28,889
+Scott: What was the altercation about?
+
+224
+00:12:29,391 --> 00:12:30,750
+Rym: See, forget true crime.
+
+225
+00:12:31,331 --> 00:12:39,169
+Rym: I want a genre of investigative reporters figuring out the really low key mundane shit that happens around in cities like New York.
+
+226
+00:12:39,453 --> 00:12:40,810
+Scott: You know, it's a mystery, right?
+
+227
+00:12:41,470 --> 00:12:42,210
+Scott: Mysteries are interesting.
+
+228
+00:12:42,730 --> 00:12:45,149
+Rym: I mean, there's a reason all those teenagers are driving around.
+
+229
+00:12:45,430 --> 00:12:51,290
+Scott: It doesn't have to be a mystery about who murdered someone or who stole a painting or who did some international spy crime.
+
+230
+00:12:51,411 --> 00:12:55,230
+Scott: It could be a mystery of a normal everyday thing that might not even be a crime.
+
+231
+00:12:55,930 --> 00:12:57,790
+Scott: Well, then the parking violation is a crime.
+
+232
+00:12:58,090 --> 00:13:02,430
+Rym: I mean, those teenagers drive around in that mystery mobile looking for nonsense.
+
+233
+00:13:02,871 --> 00:13:05,050
+Rym: Every kid has the mysteries of the neighborhood.
+
+234
+00:13:05,151 --> 00:13:06,608
+Rym: Like, what's up with that one weird house?
+
+235
+00:13:07,590 --> 00:13:07,686
+Scott: Yeah.
+
+236
+00:13:08,831 --> 00:13:10,509
+Rym: So there is a ton of news.
+
+237
+00:13:11,535 --> 00:13:12,650
+Rym: Not going to talk about everything.
+
+238
+00:13:12,810 --> 00:13:16,389
+Rym: It's not time for a tech news roundup just yet.
+
+239
+00:13:17,130 --> 00:13:18,729
+Rym: But edging into an opening bit.
+
+240
+00:13:19,130 --> 00:13:26,487
+Rym: So while I was away, you know, right before I went off, Verizon started upgrading the network to support IPv6.
+
+241
+00:13:29,332 --> 00:13:32,690
+Scott: First of all, first of all, they didn't announce that they were doing this, right?
+
+242
+00:13:33,011 --> 00:13:34,235
+Rym: There was.
+
+243
+00:13:34,255 --> 00:13:38,330
+Rym: So there were press releases that were not picked up by anyone because no one gives a shit.
+
+244
+00:13:39,150 --> 00:13:39,250
+Scott: Right.
+
+245
+00:13:39,291 --> 00:13:43,630
+Scott: But basically, I knew because I checked my router that IPv6 was not working.
+
+246
+00:13:44,351 --> 00:13:51,010
+Scott: And what happened, I saw a message on the community discussion board, the local geographic community neighborhood discussion board.
+
+247
+00:13:51,170 --> 00:13:53,230
+Scott: Like, hey, was Fios out last night?
+
+248
+00:13:53,310 --> 00:14:00,070
+Scott: And everyone's like, yes, everybody knows that everyone in the whole neighborhood agreed that Fios was out last night while I was asleep.
+
+249
+00:14:00,190 --> 00:14:06,750
+Scott: Not out of last night, but the night when we had the discussion, my five, one person in the comment thread says yes.
+
+250
+00:14:06,952 --> 00:14:08,710
+Scott: And now IPv6 is enabled.
+
+251
+00:14:08,850 --> 00:14:13,610
+Scott: And I checked my router and sure enough, IPv6 was now enabled for real.
+
+252
+00:14:13,750 --> 00:14:18,150
+Scott: Not like in the olden days where you could do a weird thing to get a bridge or something like this.
+
+253
+00:14:19,274 --> 00:14:21,669
+Rym: I had an account on the six bone that dates me.
+
+254
+00:14:22,531 --> 00:14:22,712
+Scott: Right.
+
+255
+00:14:22,752 --> 00:14:28,490
+Scott: We now have for real IPv6 in our neighborhood with our Internet service provider.
+
+256
+00:14:28,671 --> 00:14:33,150
+Rym: So they did not upgrade our neighborhood at that time because our files was fine.
+
+257
+00:14:35,812 --> 00:14:37,948
+Scott: So they updated yours and mine at the same time.
+
+258
+00:14:38,731 --> 00:14:42,849
+Rym: Because we did not experience the problem that I experienced at that time.
+
+259
+00:14:43,791 --> 00:14:45,260
+Scott: The time that you experienced.
+
+260
+00:14:45,280 --> 00:14:46,930
+Scott: the problem is the time that we got upgraded.
+
+261
+00:14:47,991 --> 00:14:51,090
+Rym: No, we didn't experience the problem until while I was in Frankfurt.
+
+262
+00:14:51,993 --> 00:14:53,069
+Scott: That's when that happened, yes.
+
+263
+00:14:53,150 --> 00:14:53,767
+Rym: What date was it?
+
+264
+00:14:54,711 --> 00:14:55,429
+Scott: I'll have to look it up.
+
+265
+00:14:55,490 --> 00:15:00,130
+Rym: Because I want to say I was in London when that happened and our Internet was probably was still fine.
+
+266
+00:15:00,873 --> 00:15:01,908
+Scott: Let me let me look it up.
+
+267
+00:15:02,415 --> 00:15:03,130
+Rym: I'm just curious.
+
+268
+00:15:03,790 --> 00:15:06,730
+Scott: It could have been that, like, you know, your router didn't restart or something.
+
+269
+00:15:06,830 --> 00:15:09,887
+Rym: Yeah, it could have been like it doesn't get enabled until they push it out to the router.
+
+270
+00:15:09,948 --> 00:15:10,310
+Rym: Who knows?
+
+271
+00:15:14,060 --> 00:15:17,491
+Rym: Regardless, so 14 days ago, 14 days ago, I was still in London.
+
+272
+00:15:21,663 --> 00:15:22,980
+Scott: OK, well, that's the day that it happened.
+
+273
+00:15:23,121 --> 00:15:23,402
+Rym: All right.
+
+274
+00:15:23,462 --> 00:15:28,560
+Rym: So about a week later, the Internet in our house gets just shitty.
+
+275
+00:15:29,342 --> 00:15:32,280
+Rym: So I come home from the trip and the Internet still shitty.
+
+276
+00:15:32,422 --> 00:15:33,819
+Rym: So start to investigate a little bit.
+
+277
+00:15:34,182 --> 00:15:37,200
+Rym: And what I find download working fine.
+
+278
+00:15:37,381 --> 00:15:41,480
+Rym: I can download at one hundred, two hundred megabits per second from anywhere.
+
+279
+00:15:41,963 --> 00:15:43,656
+Rym: I tested all over the network.
+
+280
+00:15:43,696 --> 00:15:44,200
+Rym: Everything's fine.
+
+281
+00:15:44,701 --> 00:15:45,163
+Rym: Upload.
+
+282
+00:15:45,806 --> 00:15:47,494
+Rym: I was getting maybe 50K up.
+
+283
+00:15:49,794 --> 00:15:49,919
+Scott: Yep.
+
+284
+00:15:50,301 --> 00:15:54,277
+Scott: So, yeah, the problems that Rym experienced, I experienced 14 days ago.
+
+285
+00:15:55,320 --> 00:15:55,401
+Scott: Yep.
+
+286
+00:15:56,044 --> 00:15:57,471
+Rym: So I do a little investigating.
+
+287
+00:15:58,215 --> 00:15:59,159
+Rym: I know network stuff.
+
+288
+00:15:59,900 --> 00:16:01,419
+Scott: Even though I already posted the answer.
+
+289
+00:16:02,080 --> 00:16:02,221
+Rym: Yep.
+
+290
+00:16:02,463 --> 00:16:04,980
+Rym: But I did not read that because I had been in Germany.
+
+291
+00:16:05,644 --> 00:16:07,039
+Rym: I was barely paying attention to stuff.
+
+292
+00:16:07,463 --> 00:16:08,999
+Rym: So I poke around a little bit.
+
+293
+00:16:09,642 --> 00:16:13,639
+Rym: I do a test from the actual Verizon box and there's no problems there.
+
+294
+00:16:14,761 --> 00:16:17,800
+Rym: Then I do a test with one of my wireless devices and it's fine.
+
+295
+00:16:18,020 --> 00:16:18,840
+Scott: No problems there either.
+
+296
+00:16:18,921 --> 00:16:19,204
+Scott: Nope.
+
+297
+00:16:19,487 --> 00:16:20,418
+Scott: That'll be working fine.
+
+298
+00:16:20,459 --> 00:16:20,540
+Scott: Yep.
+
+299
+00:16:20,981 --> 00:16:26,500
+Rym: So then I do some packet captures, of course, just to see, like, is there anything going on my own network?
+
+300
+00:16:26,560 --> 00:16:31,800
+Rym: Before I open it, take it with Verizon, look at my own network, make sure that I'm not having a problem.
+
+301
+00:16:32,081 --> 00:16:38,060
+Rym: And what I suspected was that there is a switch that every wired device in our apartment is plugged into.
+
+302
+00:16:38,622 --> 00:16:41,340
+Rym: That is very, very, very old and cheap.
+
+303
+00:16:43,201 --> 00:16:45,459
+Rym: I suspected that maybe something went on with it.
+
+304
+00:16:46,264 --> 00:16:47,429
+Scott: I can see why you would think that.
+
+305
+00:16:47,952 --> 00:16:48,716
+Scott: The common factor.
+
+306
+00:16:50,240 --> 00:16:56,580
+Rym: And that switch was very hot, but I didn't remember if it had always been hot because I had not touched it physically in years.
+
+307
+00:16:57,860 --> 00:17:02,940
+Rym: So I unplug my computer from that switch and I plug it directly into the Verizon router.
+
+308
+00:17:03,361 --> 00:17:04,148
+Rym: Same problem.
+
+309
+00:17:04,330 --> 00:17:05,138
+Rym: That eliminates that.
+
+310
+00:17:05,640 --> 00:17:08,973
+Rym: And I do a packet capture and I see, like, 95% packet loss.
+
+311
+00:17:11,702 --> 00:17:19,540
+Rym: And I also see that the checksums on all the packets going in one direction are fucked up.
+
+312
+00:17:19,980 --> 00:17:23,079
+Rym: And there's this extra, like, there's this blobs of nonsense.
+
+313
+00:17:23,420 --> 00:17:29,960
+Rym: Emily described them as, what, data dingleberries hanging out after the checksums on these TCP packets.
+
+314
+00:17:30,842 --> 00:17:32,528
+Rym: And then I put two and two together.
+
+315
+00:17:33,150 --> 00:17:35,700
+Rym: Scott reminded me about the IPv6 thing.
+
+316
+00:17:36,280 --> 00:17:38,072
+Rym: Sure enough, I see IPv6 is enabled.
+
+317
+00:17:38,414 --> 00:17:39,340
+Rym: I see this is happening.
+
+318
+00:17:39,641 --> 00:17:41,872
+Rym: I disable IPv6 in my network as a quick test.
+
+319
+00:17:42,415 --> 00:17:43,400
+Rym: All problems disappear.
+
+320
+00:17:43,920 --> 00:17:45,124
+Rym: That is the exact problem.
+
+321
+00:17:45,144 --> 00:18:07,080
+Rym: And the problem is a bug in Intel gigabit ethernet controllers, coupled with technically correct but not advisable behavior in the ONTs, which are like the optical connectors that Fios and networks like it use to connect your internal non-fiber network to their fiber network.
+
+322
+00:18:09,043 --> 00:18:18,980
+Rym: Not bad, because it's not incorrect, but weird and inadvisable behavior of the ONTs triggered a bug in these specific network cards.
+
+323
+00:18:19,841 --> 00:18:20,666
+Scott: Well, not specific.
+
+324
+00:18:20,786 --> 00:18:23,380
+Scott: It's actually extremely widespread.
+
+325
+00:18:23,620 --> 00:18:25,900
+Rym: Well, because it's Intel and nobody buys network cards anymore.
+
+326
+00:18:26,360 --> 00:18:26,521
+Scott: Right.
+
+327
+00:18:26,601 --> 00:18:40,380
+Scott: A very, very, very large number of Intel network cards, wired ethernet network cards, especially the kinds that you'll see on like, you know, desktop motherboards like, you know, aces, whatever motherboard you have, you nerd.
+
+328
+00:18:40,560 --> 00:18:41,903
+Scott: You have a computer, right?
+
+329
+00:18:42,946 --> 00:18:48,240
+Scott: Almost all of those cards up until a few years ago have a bug in the hardware.
+
+330
+00:18:48,441 --> 00:18:52,234
+Scott: It cannot be fixed by a firmware update or a driver or anything like that.
+
+331
+00:18:52,275 --> 00:18:53,178
+Scott: There's no fix for it.
+
+332
+00:18:54,700 --> 00:19:02,840
+Scott: Where if there are IPv6 packets that have data after the checksum, which is technically acceptable, I guess.
+
+333
+00:19:03,861 --> 00:19:09,600
+Rym: I did not read the RFC, but this is one of those situations where RFCs will use language like must and must not.
+
+334
+00:19:10,142 --> 00:19:12,978
+Rym: But then they'll say things like should and should not.
+
+335
+00:19:13,541 --> 00:19:16,580
+Scott: I don't know what the actual thing is, but it's not any legal thing, right?
+
+336
+00:19:16,720 --> 00:19:21,820
+Scott: Because Intel actually changed their more recent network cards to not be broken, right?
+
+337
+00:19:21,880 --> 00:19:23,245
+Scott: So they're definitely the wrong.
+
+338
+00:19:23,265 --> 00:19:27,040
+Scott: They were, you know, but basically all these Intel network cards are wrong.
+
+339
+00:19:27,481 --> 00:19:37,300
+Scott: And you have to go into your device manager in Windows and disable this one feature, the TCP checksum offload feature.
+
+340
+00:19:37,380 --> 00:19:51,560
+Scott: And if you disable that, what will end up happening is instead of your network cards hardware, right, checking the checksums on all the TCP packets to verify that the packets are correct, your CPU will do the work instead.
+
+341
+00:19:51,660 --> 00:19:55,680
+Scott: Which it's such a light load for a modern computer, you will not notice.
+
+342
+00:19:56,041 --> 00:20:02,220
+Scott: It would be nice if you were able to keep the feature on just because technically you have this hardware that could do it.
+
+343
+00:20:02,762 --> 00:20:04,330
+Scott: Why should the CPU do extra work?
+
+344
+00:20:04,390 --> 00:20:06,220
+Scott: But turning it off, you'll never notice.
+
+345
+00:20:06,641 --> 00:20:11,940
+Scott: And it fixes the problem because Windows TCP stack will handle it properly.
+
+346
+00:20:12,200 --> 00:20:15,820
+Rym: It could theoretically cause a likely negligible performance.
+
+347
+00:20:16,723 --> 00:20:17,500
+Scott: You will never notice.
+
+348
+00:20:17,961 --> 00:20:26,260
+Scott: The other thing is you could just buy another network card that doesn't have a broken chip in it and use that and not use the one on your motherboard.
+
+349
+00:20:27,701 --> 00:20:35,660
+Rym: And you will only experience this if you connect to an internet service provider that uses fiber like Fios does, but they're not the only one.
+
+350
+00:20:36,200 --> 00:20:38,306
+Rym: And they use a particular kind of ONT.
+
+351
+00:20:38,587 --> 00:20:48,940
+Rym: And I got a note, multiple providers, I haven't seen anything about Verizon, but like Alcatel and some other providers are currently upgrading their ONTs to not do this behavior anymore.
+
+352
+00:20:50,822 --> 00:20:51,363
+Rym: OK.
+
+353
+00:20:52,425 --> 00:20:58,580
+Scott: But yeah, Verizon, it's like Verizon just upgraded to IPv6, right, without notifying the customers.
+
+354
+00:20:59,461 --> 00:21:00,727
+Rym: And imagine if you're not technical.
+
+355
+00:21:01,109 --> 00:21:03,198
+Rym: Your internet just fucking stopped working.
+
+356
+00:21:04,320 --> 00:21:07,040
+Scott: Well, if you're not technical, do you really have a wired ethernet at this point?
+
+357
+00:21:07,320 --> 00:21:11,100
+Scott: But if you're not, a lot of people might have like a gaming PC out there on Fios.
+
+358
+00:21:11,723 --> 00:21:13,069
+Scott: They got it plugged in with ethernet.
+
+359
+00:21:13,310 --> 00:21:14,957
+Scott: Suddenly, like YouTube just doesn't work.
+
+360
+00:21:15,319 --> 00:21:15,520
+Scott: Right.
+
+361
+00:21:15,620 --> 00:21:16,665
+Scott: And they're like, what the fuck is like?
+
+362
+00:21:16,825 --> 00:21:19,979
+Scott: only websites that are using IPv6 are going to start fucking up.
+
+363
+00:21:20,722 --> 00:21:23,180
+Scott: Yeah, because they're only doing this on the IPv6 packets.
+
+364
+00:21:23,981 --> 00:21:27,336
+Scott: So and that's like old IPv4 website dot com.
+
+365
+00:21:27,376 --> 00:21:28,300
+Scott: It's going to work even funnier.
+
+366
+00:21:28,800 --> 00:21:31,471
+Rym: So the Ookala speed test uses IPv6.
+
+367
+00:21:31,511 --> 00:21:32,535
+Rym: So we had the problem.
+
+368
+00:21:32,595 --> 00:21:33,760
+Rym: None of the other speed test dudes.
+
+369
+00:21:33,840 --> 00:21:34,965
+Rym: They all showed no problems.
+
+370
+00:21:35,729 --> 00:21:35,910
+Scott: Yep.
+
+371
+00:21:36,292 --> 00:21:38,140
+Rym: That's why I went straight to the packet capture.
+
+372
+00:21:38,481 --> 00:21:45,800
+Rym: So my advice to you as a nerd to make this lesson completely useless, unless you work in interesting industries.
+
+373
+00:21:46,160 --> 00:21:48,379
+Rym: Number one, if there's ever a weird problem.
+
+374
+00:21:49,881 --> 00:21:56,200
+Rym: Look for the parts of the specification that are shoulds and should nots as opposed to musts and must nots.
+
+375
+00:21:56,720 --> 00:21:58,380
+Rym: Therein lie all weird problems.
+
+376
+00:21:59,240 --> 00:22:10,260
+Scott: Part of the reason the website is taking so long is because I'm a person who will obey all the should and should nots of everything, even if it's completely useless and will never be relevant for the actual functionality.
+
+377
+00:22:10,300 --> 00:22:11,886
+Rym: This applies to everything.
+
+378
+00:22:12,167 --> 00:22:15,960
+Rym: My day job, the fixed protocol, you know, all that nonsense in capital markets.
+
+379
+00:22:16,320 --> 00:22:16,761
+Rym: Guess what?
+
+380
+00:22:17,042 --> 00:22:23,220
+Rym: You know, one of the most common causes of a problem there is when someone sends a message encoded in the fixed protocol.
+
+381
+00:22:23,601 --> 00:22:28,020
+Rym: That is technically correct, but kind of weird and nobody does it that way.
+
+382
+00:22:28,880 --> 00:22:29,040
+Scott: Yep.
+
+383
+00:22:30,560 --> 00:22:34,600
+Rym: If some of you internalize that lesson, you can make six figures working in capital markets within a week.
+
+384
+00:22:35,415 --> 00:22:35,640
+Scott: Maybe.
+
+385
+00:22:37,301 --> 00:22:40,040
+Rym: So in some other news, goes through some really quick news.
+
+386
+00:22:40,380 --> 00:22:46,300
+Rym: So a Dutch court, this will not help usians too much, not yet anyway.
+
+387
+00:22:46,882 --> 00:22:51,920
+Rym: They have made a very specific ruling that is kind of important because the US does not have these protections.
+
+388
+00:22:52,441 --> 00:23:05,779
+Rym: A company in Florida basically tried to fire an employee of theirs who works in the Netherlands because they required him to turn on his webcam all day while he was at work in case they wanted to monitor him.
+
+389
+00:23:07,062 --> 00:23:08,800
+Rym: While he was working from home, working remotely.
+
+390
+00:23:09,460 --> 00:23:10,647
+Rym: He said, "That's
+
+391
+00:23:10,727 --> 00:23:11,170
+Rym: creepy."
+
+392
+00:23:11,693 --> 00:23:12,940
+Rym: And he turned off his webcam.
+
+393
+00:23:13,400 --> 00:23:17,340
+Rym: They fired him, citing that he refused to work and was insubordinate.
+
+394
+00:23:17,761 --> 00:23:21,477
+Rym: And the Dutch courts ruled, "Nope, that is an unreasonable request.
+
+395
+00:23:21,718 --> 00:23:21,939
+Rym: Fuck
+
+396
+00:23:21,979 --> 00:23:22,120
+Rym: you.".
+
+397
+00:23:22,281 --> 00:23:24,040
+Rym: And they made the company reinstate him and pay a fine.
+
+398
+00:23:25,441 --> 00:23:25,722
+Scott: Okay.
+
+399
+00:23:26,865 --> 00:23:31,940
+Scott: Or I guess the alternative is the company could have ceased operations in the Dutch lands.
+
+400
+00:23:32,100 --> 00:23:34,439
+Rym: Yeah, I don't know all the details of exactly that.
+
+401
+00:23:35,442 --> 00:23:39,556
+Rym: I do not know how those types of jurisdictional matters work out in the end.
+
+402
+00:23:39,576 --> 00:23:40,500
+Rym: I am not a lawyer.
+
+403
+00:23:41,621 --> 00:23:46,240
+Scott: I'm pretty sure that if you just got the USBC thing going on, right?
+
+404
+00:23:46,701 --> 00:23:53,120
+Scott: If Apple just didn't sell any iPhones or any Apple products in Europe then the EU couldn't force them to do USBC.
+
+405
+00:23:53,582 --> 00:23:54,587
+Scott: It's pretty clear, right?
+
+406
+00:23:54,607 --> 00:23:57,120
+Scott: So if this company only hires people...
+
+407
+00:23:58,441 --> 00:24:10,238
+Rym: If you're in Europe and you go to a lot of low tier websites, they won't load and they'll basically tell you, "Oh, Europe is evil and GDPR and we can't comply with it so you can't access this website from
+
+408
+00:24:10,318 --> 00:24:10,539
+Rym: Europe.".
+
+409
+00:24:11,000 --> 00:24:16,556
+Rym: Even though the reality is more, "Yeah, we're trying to spy on you and Europe actually made laws against
+
+410
+00:24:16,616 --> 00:24:16,797
+Rym: this.".
+
+411
+00:24:19,922 --> 00:24:24,420
+Rym: But this is actually something... I have not encountered this, but I saw this article.
+
+412
+00:24:25,440 --> 00:24:35,560
+Scott: People only get away with abusing employees like this when they're doing jobs that are considered but incorrectly considered.
+
+413
+00:24:35,981 --> 00:24:37,657
+Scott: No skill, low skill, menial jobs.
+
+414
+00:24:37,980 --> 00:24:44,320
+Rym: But even in technology, a lot of help desk work, a lot of people who serve as customer tickets, this kind of stuff is happening.
+
+415
+00:24:44,340 --> 00:24:46,520
+Rym: A lot of teachers get these kinds of requirements.
+
+416
+00:24:47,761 --> 00:24:53,020
+Rym: Remote workers in low tier industries or industries that are trying to prevent people from working from home.
+
+417
+00:24:53,560 --> 00:24:58,980
+Rym: Students in high schools who are doing remote classes are being forced to do this kind of thing when they take tests.
+
+418
+00:24:59,820 --> 00:25:03,920
+Rym: It's like they'll get in trouble if they look away from the monitor for too long taking a test.
+
+419
+00:25:04,580 --> 00:25:09,380
+Rym: It is evil and egregious and it's only going to get worse until we pass some laws.
+
+420
+00:25:09,761 --> 00:25:13,631
+Rym: So keep an eye on this space and if you live and work in the U.S.
+
+421
+00:25:13,992 --> 00:25:24,280
+Rym: and a company does this, maybe talk to a lawyer, but you're probably screwed and you will probably lose because I don't think you would have the resources to fight the companies that are doing this kind of evil nonsense.
+
+422
+00:25:25,181 --> 00:25:25,880
+Scott: Unless you've got a union.
+
+423
+00:25:26,581 --> 00:25:29,440
+Rym: Yeah, that's where I was going with this.
+
+424
+00:25:29,760 --> 00:25:35,220
+Rym: The only way to fight worker exploitation in a country like America is to form and join a union.
+
+425
+00:25:37,225 --> 00:25:39,320
+Scott: Alright, so kind of biggish news.
+
+426
+00:25:39,640 --> 00:25:44,120
+Scott: Nvidia announced the 4090, which will cost like a fortune, small, you know, whatever.
+
+427
+00:25:45,080 --> 00:25:58,740
+Rym: I guess I could almost thank the shitty crypto people who made it too hard to buy a 3080 when I wanted a 3080 because they made me wait so long that now I can just skip it and go straight to the 4080.
+
+428
+00:25:58,740 --> 00:26:00,309
+Scott: Alright, so I mean what is there to say about the 4090?
+
+429
+00:26:00,309 --> 00:26:02,180
+Scott: I mean it's pretty much what you expected.
+
+430
+00:26:02,361 --> 00:26:03,779
+Scott: It's enormous, right?
+
+431
+00:26:04,042 --> 00:26:05,839
+Rym: It's what, like three slots wide?
+
+432
+00:26:06,720 --> 00:26:09,719
+Scott: Yeah, it's going to be really hot and use a lot of electricity, right?
+
+433
+00:26:10,140 --> 00:26:12,600
+Scott: You know, Nvidia is basically the opposite of Apple.
+
+434
+00:26:12,740 --> 00:26:20,580
+Scott: Apple's like, look, we're going to make the CPU as fast as we can, but also we're going to concentrate on energy efficiency, right?
+
+435
+00:26:21,200 --> 00:26:27,180
+Scott: Intel's like, we want to do that, but we're not as good at it because we're having, you know, issues, right?
+
+436
+00:26:27,481 --> 00:26:29,739
+Scott: We're a little dysfunctional for the past several years, right?
+
+437
+00:26:31,003 --> 00:26:41,460
+Scott: And Nvidia's like, fuck that shit, we'll just use as much electricity and generate as much heat as we can and compensate with cooling and we'll make the fastest thing, you know, known to anyone.
+
+438
+00:26:43,182 --> 00:26:46,019
+Scott: And Nvidia thing ends up being the fastest.
+
+439
+00:26:47,583 --> 00:26:50,401
+Scott: Like a drag car is the fastest, but... Also
+
+440
+00:26:50,441 --> 00:27:02,140
+Rym: because there really aren't other credible video cards and while a few of you, including some people we know, are already butt AMD, I got to point out that every single fucking time we play online games,
+
+441
+00:27:03,222 --> 00:27:03,362
+Scott: the
+
+442
+00:27:03,483 --> 00:27:10,200
+Rym: two people who have AMD video cards have problems, have crashes, have issues that nobody else runs into.
+
+443
+00:27:11,162 --> 00:27:13,338
+Rym: That has been the story my entire life and it is still true.
+
+444
+00:27:15,121 --> 00:27:17,953
+Scott: So anyway, what is up with the 4090?
+
+445
+00:27:17,953 --> 00:27:19,560
+Scott: It's like, why would you get one, right?
+
+446
+00:27:19,560 --> 00:27:32,760
+Scott: Well, I guess if you really are a person who is playing, you know, competitive, real time, high resolution, fancy 3D top of the line games, Even then, a 3070 can play those games.
+
+447
+00:27:32,840 --> 00:27:35,307
+Scott: It's like a 4090 would be like overkill.
+
+448
+00:27:35,367 --> 00:27:39,740
+Scott: Maybe you just, you really want to prepare for the next game and not have to buy another video card for a long time.
+
+449
+00:27:39,800 --> 00:27:48,616
+Rym: Even if you are doing non-consumer, like professional high spec VR, like research nonsense, a 3080 Ti is enough.
+
+450
+00:27:51,480 --> 00:27:51,681
+Scott: Yup.
+
+451
+00:27:52,823 --> 00:27:59,338
+Scott: I guess if you're making those kinds of games or you're doing some other 3D graphics work, right?
+
+452
+00:27:59,539 --> 00:27:59,959
+Scott: I don't know.
+
+453
+00:28:01,083 --> 00:28:02,612
+Scott: You know, you're a researcher or something.
+
+454
+00:28:02,632 --> 00:28:03,639
+Scott: I don't know.
+
+455
+00:28:03,880 --> 00:28:12,640
+Rym: The use cases I can see for a 4090 right now are if you're doing AI research, this is actually something you can use to power AI pretty directly.
+
+456
+00:28:13,843 --> 00:28:15,499
+Rym: That's one of the most common uses of these things.
+
+457
+00:28:17,041 --> 00:28:25,860
+Rym: This would be useful if you were doing high spec VR and wanted to live stream it and you didn't need an external computer to do it.
+
+458
+00:28:26,000 --> 00:28:27,244
+Rym: Like, I guess that's one use case.
+
+459
+00:28:27,785 --> 00:28:32,900
+Rym: Or if you are making and rendering extremely advanced VFX, you could use this.
+
+460
+00:28:35,481 --> 00:28:44,839
+Scott: So one interesting thing that they did is they have this sort of like RTX real time ray tracing.
+
+461
+00:28:44,879 --> 00:28:45,520
+Scott: they've been pushing.
+
+462
+00:28:47,161 --> 00:28:51,187
+Scott: And on the one hand, it's sort of a chicken and egg scenario.
+
+463
+00:28:51,708 --> 00:28:54,533
+Scott: It's like, who the hell has a ray tracing card?
+
+464
+00:28:59,303 --> 00:28:59,545
+Scott: Right.
+
+465
+00:28:59,706 --> 00:29:01,199
+Scott: Almost only really wealthy people.
+
+466
+00:29:01,500 --> 00:29:10,860
+Scott: So if you're a game developer, why the fuck would you spend the time to add that feature to your game just to get a few sales from people who have these cards?
+
+467
+00:29:11,000 --> 00:29:11,281
+Rym: Counterpoint.
+
+468
+00:29:11,401 --> 00:29:12,604
+Rym: Remember GLQuake?
+
+469
+00:29:12,825 --> 00:29:18,960
+Rym: When GLQuake was announced, there were like 12 people in America who could play GLQuake on a computer.
+
+470
+00:29:19,980 --> 00:29:20,076
+Scott: Sure.
+
+471
+00:29:21,260 --> 00:29:23,338
+Rym: They made it anyway to push the industry forward.
+
+472
+00:29:24,182 --> 00:29:25,766
+Scott: Still, it's a little bit of chicken and egg, right?
+
+473
+00:29:25,807 --> 00:29:30,440
+Scott: Are you going to develop a game that requires RTX or has RTX mode?
+
+474
+00:29:30,740 --> 00:29:37,659
+Scott: And how much effort is it going to take to add that mode versus how many extra sales will that get you?
+
+475
+00:29:38,980 --> 00:29:44,880
+Scott: So Nvidia is selling this technology and gamers are like, OK, that would be really cool to get RTX.
+
+476
+00:29:45,181 --> 00:29:46,149
+Scott: But what uses that?
+
+477
+00:29:46,209 --> 00:29:46,512
+Scott: Nothing.
+
+478
+00:29:46,552 --> 00:29:47,419
+Scott: So why would I buy it?
+
+479
+00:29:48,241 --> 00:29:58,160
+Scott: So what Nvidia has done is they sort of included a couple technologies to try to break that chicken and egg cycle, which is, I think, pretty clever from a business standpoint.
+
+480
+00:29:59,021 --> 00:30:08,640
+Scott: So the first technology that they've added is basically it should be theoretically possible.
+
+481
+00:30:08,740 --> 00:30:21,020
+Scott: And the example they gave us, of course, a Skyrim mod for somebody to make mods of existing games such that they now use real time ray tracing.
+
+482
+00:30:21,280 --> 00:30:24,200
+Scott: So you could, I think someone or they made one as a demo.
+
+483
+00:30:24,380 --> 00:30:24,561
+Scott: Right.
+
+484
+00:30:24,581 --> 00:30:26,506
+Scott: It's like, ah, get your Skyrim.
+
+485
+00:30:26,907 --> 00:30:31,580
+Scott: And if you've got this card, you can play in an even fancier graphics mode.
+
+486
+00:30:31,901 --> 00:30:32,122
+Scott: Right.
+
+487
+00:30:32,162 --> 00:30:33,045
+Scott: That no one else can do.
+
+488
+00:30:33,908 --> 00:30:37,059
+Scott: Even though it's an existing game and the developer of the game didn't have to do anything.
+
+489
+00:30:40,621 --> 00:30:41,706
+Scott: I'm just getting over a non.
+
+490
+00:30:41,987 --> 00:30:45,020
+Scott: we got a non covid sinus cold going on around this week here.
+
+491
+00:30:45,660 --> 00:30:46,724
+Rym: Ah, that's always the worst.
+
+492
+00:30:47,266 --> 00:30:47,467
+Scott: Yep.
+
+493
+00:30:48,029 --> 00:30:48,511
+Scott: We tested.
+
+494
+00:30:48,531 --> 00:30:50,700
+Scott: We're sure it's not the it's not the sea anyway.
+
+495
+00:30:51,661 --> 00:30:58,940
+Scott: The other thing they added was this feature where, OK, you've got these ray tracing cores in there.
+
+496
+00:30:59,140 --> 00:30:59,421
+Scott: Right.
+
+497
+00:30:59,863 --> 00:31:00,906
+Scott: But you're not ray tracing.
+
+498
+00:31:00,946 --> 00:31:02,612
+Scott: You're playing some old ass game.
+
+499
+00:31:02,672 --> 00:31:05,040
+Rym: The example on their website is Portal and they have a screenshot.
+
+500
+00:31:06,000 --> 00:31:06,120
+Scott: Right.
+
+501
+00:31:06,140 --> 00:31:12,218
+Scott: So you're playing Portal and, you know, Portal is only going to go like it's only rendering 60 FPS.
+
+502
+00:31:13,561 --> 00:31:16,047
+Scott: It's like, you know, it's like, come on.
+
+503
+00:31:16,448 --> 00:31:21,760
+Scott: But what you could do, for example, is, OK, you know, I got Portal.
+
+504
+00:31:21,961 --> 00:31:23,830
+Scott: It's running at 60 FPS or whatever.
+
+505
+00:31:23,951 --> 00:31:25,860
+Scott: But I've got such a ridiculous video card.
+
+506
+00:31:25,960 --> 00:31:28,428
+Scott: Portal is an old game and I've got a monitor.
+
+507
+00:31:28,508 --> 00:31:32,500
+Scott: My monitor goes to 144 hertz because I got a ridiculous, fancy monitor.
+
+508
+00:31:32,701 --> 00:31:32,961
+Scott: Right.
+
+509
+00:31:33,663 --> 00:31:39,880
+Scott: Well, what you can do is you can tell the video card, hey, I know you got those ray tracing cores you're not using.
+
+510
+00:31:40,601 --> 00:31:45,100
+Scott: Why don't you use them and some machine learning stuff that you're so good at you GPU.
+
+511
+00:31:45,761 --> 00:31:46,001
+Scott: Right.
+
+512
+00:31:46,442 --> 00:31:53,620
+Scott: And you're so fast at it that even though the game in the frame buffer is rendering, you know, 60 frames a second.
+
+513
+00:31:53,720 --> 00:31:53,921
+Scott: Right.
+
+514
+00:31:53,941 --> 00:32:00,678
+Scott: So here comes a frame and then one sixtieth of a second later, another frames coming in the A.I.
+
+515
+00:32:00,698 --> 00:32:01,560
+Scott: in quotes.
+
+516
+00:32:01,841 --> 00:32:02,181
+Scott: Right.
+
+517
+00:32:02,742 --> 00:32:24,071
+Scott: With using those RTX cores that are otherwise dormant can look at the previous frames and basically interpolate and guess and generate a frame to go in between the current frame and the next frame and show it to you fast enough before the next frame actually is going to be displayed.
+
+518
+00:32:24,091 --> 00:32:25,480
+Scott: a sixtieth of a second later.
+
+519
+00:32:26,340 --> 00:32:26,440
+Scott: Right.
+
+520
+00:32:27,082 --> 00:32:35,200
+Scott: And thus you'll get those frames won't be like actual game frames because like the game input wouldn't be processed on those frames.
+
+521
+00:32:36,081 --> 00:32:42,820
+Scott: But it would be adding like an extra draw, you know, method, you know, run an extra draw loop only.
+
+522
+00:32:43,020 --> 00:32:43,321
+Scott: Yeah.
+
+523
+00:32:43,361 --> 00:32:43,621
+Scott: Right.
+
+524
+00:32:43,902 --> 00:32:44,583
+Scott: To the game.
+
+525
+00:32:44,984 --> 00:32:58,380
+Scott: So basically the effect of this would be that the motion of the game would be like unnaturally smooth compared to what it would normally be because you're just inventing new frames.
+
+526
+00:32:59,000 --> 00:32:59,262
+Scott: Right.
+
+527
+00:32:59,744 --> 00:33:02,738
+Scott: Visually to go in between the ones that are already there.
+
+528
+00:33:03,400 --> 00:33:11,960
+Rym: Because on one hand, it does theoretically alter the game from what the developers intended into.
+
+529
+00:33:12,080 --> 00:33:13,243
+Rym: You know, you're seeing something different.
+
+530
+00:33:13,303 --> 00:33:17,192
+Rym: But at the same time, these are mostly micro differences.
+
+531
+00:33:18,294 --> 00:33:20,680
+Scott: that kind of just a cool demo.
+
+532
+00:33:20,841 --> 00:33:22,949
+Scott: But like, does anyone actually fucking need that?
+
+533
+00:33:23,070 --> 00:33:25,440
+Scott: It's you just do that to show off your money, basically.
+
+534
+00:33:25,580 --> 00:33:25,801
+Scott: Right.
+
+535
+00:33:25,881 --> 00:33:34,499
+Rym: But it's hard, though, because I remember when I first got a real 4K monitor and that was right around when auto chess was popular.
+
+536
+00:33:35,001 --> 00:33:36,365
+Rym: Like I got a good 4K monitor.
+
+537
+00:33:36,806 --> 00:33:37,869
+Rym: I got everything working.
+
+538
+00:33:38,250 --> 00:33:41,560
+Rym: I play auto chess and it just looked better.
+
+539
+00:33:41,801 --> 00:33:43,406
+Rym: But I couldn't articulate why.
+
+540
+00:33:43,426 --> 00:33:45,594
+Rym: And I wasn't sure if it was, you know, my bias.
+
+541
+00:33:45,634 --> 00:33:47,360
+Rym: Like, well, of course, you know, I think it looks better.
+
+542
+00:33:47,681 --> 00:33:54,687
+Rym: I bought this fancy monitor and then Scott came over to your GeekNights and you literally said the words, why the fuck do your fonts look so good?
+
+543
+00:33:54,727 --> 00:33:55,069
+Rym: What did you?
+
+544
+00:33:55,109 --> 00:33:58,460
+Rym: what did you do anyway?
+
+545
+00:33:59,020 --> 00:34:05,640
+Scott: But the point is, this is a. regardless of how useful these features are, they are a from a business standpoint.
+
+546
+00:34:06,041 --> 00:34:06,281
+Scott: Right.
+
+547
+00:34:06,382 --> 00:34:08,507
+Scott: A clever way to break out of that chicken egg.
+
+548
+00:34:08,888 --> 00:34:20,020
+Scott: And video can sell this to people as saying, yes, if you buy this card, there are things you can do to make games you're already playing look either better and or smoother.
+
+549
+00:34:20,722 --> 00:34:29,139
+Scott: Even if game developers do not support any of these features in their development cycle and thus maybe they can get some sales.
+
+550
+00:34:29,679 --> 00:34:35,699
+Scott: And if they get some sales, then game developers would hopefully make games with RTX mode in them.
+
+551
+00:34:36,101 --> 00:34:37,487
+Scott: And then they would take off.
+
+552
+00:34:37,607 --> 00:34:37,808
+Scott: Right.
+
+553
+00:34:37,848 --> 00:34:40,460
+Scott: And I don't think this AMD have the RTX mode.
+
+554
+00:34:40,801 --> 00:34:41,263
+Scott: Right.
+
+555
+00:34:41,303 --> 00:34:42,447
+Scott: Is that what their end game?
+
+556
+00:34:42,547 --> 00:34:43,570
+Rym: I don't think so.
+
+557
+00:34:43,670 --> 00:34:46,420
+Rym: Never mind, like video encoding, all the other stuff gamers care about.
+
+558
+00:34:46,500 --> 00:34:52,820
+Rym: Like if you're streaming yourself, NVENC just works and these cards are crazy fast at it.
+
+559
+00:34:53,280 --> 00:34:57,480
+Rym: OBS just now implemented some basic support for one of AMD's equivalents.
+
+560
+00:34:58,581 --> 00:35:05,820
+Scott: So there is a googled for AMD ray tracing and they do seem to have Radeon Pro technologies.
+
+561
+00:35:05,940 --> 00:35:06,983
+Scott: OK, I guess.
+
+562
+00:35:07,365 --> 00:35:07,625
+Scott: Yeah.
+
+563
+00:35:08,107 --> 00:35:09,270
+Scott: AMD RTX.
+
+564
+00:35:09,531 --> 00:35:10,333
+Scott: It's like do they?
+
+565
+00:35:11,156 --> 00:35:12,500
+Scott: they have RX, but not our.
+
+566
+00:35:13,441 --> 00:35:14,464
+Scott: I don't know enough about it.
+
+567
+00:35:14,805 --> 00:35:20,280
+Scott: Someone in the chat, the listener will know if AMD has an RTX competitor.
+
+568
+00:35:20,500 --> 00:35:21,362
+Rym: I mean, the listener.
+
+569
+00:35:21,523 --> 00:35:23,267
+Scott: I haven't heard of them having one.
+
+570
+00:35:23,548 --> 00:35:30,126
+Scott: So my guess is that if Nvidia can get this to lift off, they can put AMD away.
+
+571
+00:35:30,427 --> 00:35:30,628
+Scott: Right.
+
+572
+00:35:30,668 --> 00:35:34,200
+Scott: By saying the games support this now only on Nvidia cards.
+
+573
+00:35:34,882 --> 00:35:39,517
+Scott: Even if an AMD card gets faster, you know, it's like you need that real time ray tracing.
+
+574
+00:35:39,557 --> 00:35:40,420
+Scott: and we have at the end.
+
+575
+00:35:40,780 --> 00:35:48,940
+Rym: I feel like the listener is either on a Mac right now or has some sort of Nvidia GPU in their Intel CPU.
+
+576
+00:35:49,881 --> 00:35:50,041
+Scott: Yeah.
+
+577
+00:35:50,061 --> 00:35:56,920
+Scott: I mean, I'm seriously considering more and more every day, especially like the story we just talked about with the Intel network cards.
+
+578
+00:35:57,060 --> 00:35:57,341
+Scott: Right.
+
+579
+00:35:57,361 --> 00:36:05,320
+Scott: It's like I might just get some Mac Studio, even though I still don't like Mac OS, because the CPU is the best CPU.
+
+580
+00:36:06,082 --> 00:36:10,180
+Scott: And the 99 percent of what I do is not GPU based work personally.
+
+581
+00:36:10,920 --> 00:36:11,021
+Scott: Right.
+
+582
+00:36:11,041 --> 00:36:14,358
+Scott: Other people I know do a lot of GPU based work, but I don't like it.
+
+583
+00:36:15,481 --> 00:36:17,166
+Scott: It's like it's the.
+
+584
+00:36:17,307 --> 00:36:21,340
+Scott: it's just that CPU, the M2, the M3, whatever is going to be out.
+
+585
+00:36:21,500 --> 00:36:21,721
+Scott: Right.
+
+586
+00:36:21,802 --> 00:36:25,360
+Scott: Well, is the best unless Intel comes out again with something better again.
+
+587
+00:36:25,861 --> 00:36:26,965
+Scott: That's the best CPU.
+
+588
+00:36:27,406 --> 00:36:31,480
+Rym: Oh, they show stats for Premiere and After Effects and all that stuff.
+
+589
+00:36:32,022 --> 00:36:35,759
+Rym: And even the 3080 kicks the shit out of an M2.
+
+590
+00:36:37,921 --> 00:36:44,660
+Scott: Well, yeah, you know, but it's like the CPU is what 90 percent of my work is based on that.
+
+591
+00:36:45,041 --> 00:36:45,302
+Scott: Right.
+
+592
+00:36:45,863 --> 00:36:47,749
+Scott: Then I could get one of those.
+
+593
+00:36:47,769 --> 00:36:51,420
+Scott: And then what I could do is I could get an Nvidia card.
+
+594
+00:36:51,881 --> 00:36:52,121
+Scott: Right.
+
+595
+00:36:52,522 --> 00:36:58,800
+Scott: And stick it in a little tiny box in the corner with no just, you know, in the corner over there.
+
+596
+00:36:59,281 --> 00:37:05,720
+Scott: And if I would need to play a game, I can just use steam link or something like that, remote desktop or some, you know, I have to.
+
+597
+00:37:06,280 --> 00:37:13,220
+Scott: If I really have to KVM and just any gaming stuff, which is the only thing I ever really use a GPU for over there.
+
+598
+00:37:14,022 --> 00:37:16,229
+Scott: And then use the Mac Studio for everything else.
+
+599
+00:37:16,310 --> 00:37:18,698
+Scott: I might go that route in a in a year or so.
+
+600
+00:37:18,738 --> 00:37:19,420
+Scott: We'll see what happens.
+
+601
+00:37:19,700 --> 00:37:29,760
+Rym: So I think because I am I'm at a point where I can't upgrade to Windows 11 because I am still running a sixth generation Intel CPU and I'm not even CPU bound.
+
+602
+00:37:29,960 --> 00:37:33,814
+Rym: I would not upgrade my computer except in twenty twenty five.
+
+603
+00:37:33,875 --> 00:37:35,180
+Rym: I'm going to run out of Windows updates.
+
+604
+00:37:37,505 --> 00:37:39,900
+Scott: So and that's only it's still three years is plenty of time.
+
+605
+00:37:40,100 --> 00:37:40,883
+Rym: Yeah.
+
+606
+00:37:40,903 --> 00:37:44,980
+Rym: So but I was going to upgrade my GPU because I'm running it.
+
+607
+00:37:45,140 --> 00:37:48,497
+Rym: I am I'm GPU bound with my 1080 on a lot of things I want to do.
+
+608
+00:37:49,780 --> 00:37:52,209
+Scott: Seventy still does everything I want to do.
+
+609
+00:37:52,349 --> 00:37:52,991
+Rym: My 1080 does not.
+
+610
+00:37:53,714 --> 00:37:56,521
+Rym: And I could get the 3080.
+
+611
+00:37:56,521 --> 00:37:57,385
+Rym: I did double check.
+
+612
+00:37:57,445 --> 00:38:01,520
+Rym: I would have to get a bigger power supply, which makes that less of a good value proposition.
+
+613
+00:38:02,022 --> 00:38:06,879
+Rym: And even worse, there is no way to run a 4080 in this computer like it would not happen.
+
+614
+00:38:07,780 --> 00:38:08,783
+Scott: Where would it fit?
+
+615
+00:38:08,903 --> 00:38:15,380
+Rym: I actually have room for it just barely because I got rid of all my firewire stuff that was in there.
+
+616
+00:38:15,420 --> 00:38:16,564
+Rym: That's how old this computer is.
+
+617
+00:38:17,888 --> 00:38:21,360
+Rym: But it would take up basically the entirety of the case to put that video card in there.
+
+618
+00:38:22,121 --> 00:38:25,559
+Rym: And I don't have enough surface area to cool it properly if I do that.
+
+619
+00:38:26,441 --> 00:38:37,460
+Scott: The only thing about the Mac route is that, you know, you unlike a desktop PC, which you can fill with hard drives, you know, the Mac comes with the storage it comes with and they overcharge you for it.
+
+620
+00:38:37,820 --> 00:38:45,860
+Scott: So if I did that, I would have to basically reload my NAS with all new drives that are much larger because that would end up having to do a lot of work suddenly.
+
+621
+00:38:46,160 --> 00:38:46,441
+Scott: Right.
+
+622
+00:38:47,184 --> 00:38:48,268
+Scott: So I'm waiting.
+
+623
+00:38:48,328 --> 00:38:51,920
+Scott: I've been monitoring the prices of NAS drives because mine's almost full anyway.
+
+624
+00:38:53,521 --> 00:38:56,090
+Rym: It's been a while since we did a Geeknight, so we've been talking for a while.
+
+625
+00:38:56,150 --> 00:39:05,103
+Rym: So rather than doing the rest of our news, I think we should go right into... Things of the Day!
+
+626
+00:39:05,404 --> 00:39:09,232
+Rym: So randomly, the algorithm, I never watch this channel.
+
+627
+00:39:09,252 --> 00:39:14,985
+Rym: I like Legos, well Lego bricks, but I am not like... I live in a New York apartment.
+
+628
+00:39:15,266 --> 00:39:16,874
+Rym: I'm not going to go down that road again.
+
+629
+00:39:16,894 --> 00:39:18,040
+Rym: I know where that road leads.
+
+630
+00:39:18,562 --> 00:39:22,619
+Scott: There's one Lego set I really want and I still haven't bought it because I know where to put it.
+
+631
+00:39:22,860 --> 00:39:30,560
+Rym: So my favorite Lego set ever, of all time in my entire life, was the original castle Lego stuff.
+
+632
+00:39:31,500 --> 00:39:32,252
+Scott: Oh, you mean the whole set?
+
+633
+00:39:32,272 --> 00:39:32,719
+Scott: Yeah, me too.
+
+634
+00:39:32,900 --> 00:39:37,420
+Rym: Like the Crusader guys with the triangle looking helmets and the horses and the castles.
+
+635
+00:39:38,361 --> 00:39:40,499
+Scott: They recently came out with a new castle too.
+
+636
+00:39:40,680 --> 00:39:40,941
+Scott: Yeah.
+
+637
+00:39:41,282 --> 00:39:47,739
+Rym: So I saw this video, the algorithm recommended to me, and it was titled, "The Most Disturbing Lego Set
+
+638
+00:39:47,920 --> 00:39:48,080
+Rym: Ever.".
+
+639
+00:39:48,702 --> 00:39:50,968
+Rym: And I'm thinking, all right, what's this?
+
+640
+00:39:51,008 --> 00:39:52,432
+Rym: Some creepypasta thing?
+
+641
+00:39:52,553 --> 00:39:53,134
+Rym: Like what?
+
+642
+00:39:53,154 --> 00:39:53,937
+Rym: Some backstory?
+
+643
+00:39:53,957 --> 00:39:54,057
+Rym: Like.
+
+644
+00:39:54,097 --> 00:39:54,980
+Rym: I'm curious what this will be.
+
+645
+00:39:55,421 --> 00:40:00,932
+Rym: But then the rest of the title, the subtitle is, "From the Lego Castle 1981 set, one specific
+
+646
+00:40:00,992 --> 00:40:01,233
+Rym: subset.".
+
+647
+00:40:04,701 --> 00:40:09,320
+Rym: One of those little sets you could buy, the ones that your parents would buy for you when they wouldn't buy you like the giant thing.
+
+648
+00:40:10,262 --> 00:40:12,080
+Scott: You mean every single time I went to Toys R Us?
+
+649
+00:40:12,200 --> 00:40:14,317
+Rym: Yup, we'd get one of those instead of an NES game.
+
+650
+00:40:15,440 --> 00:40:15,506
+Rym: Yup.
+
+651
+00:40:17,380 --> 00:40:22,992
+Rym: Knight's Procession, specifically, which I remembered and we had.
+
+652
+00:40:23,353 --> 00:40:24,475
+Rym: It was a tiny little set.
+
+653
+00:40:24,856 --> 00:40:26,560
+Rym: It was like six Lego knight guys.
+
+654
+00:40:26,580 --> 00:40:27,188
+Scott: I have this one.
+
+655
+00:40:27,472 --> 00:40:28,019
+Scott: Let's see.
+
+656
+00:40:28,280 --> 00:40:34,020
+Rym: It was six little knight guys with two different kinds of helmets with the original shields and little swords and axes.
+
+657
+00:40:34,881 --> 00:40:38,420
+Rym: And a little pull cart with wheels with just some stuff in the cart.
+
+658
+00:40:40,006 --> 00:40:41,079
+Scott: I did not have this one.
+
+659
+00:40:41,420 --> 00:40:42,596
+Rym: I absolutely had this one.
+
+660
+00:40:44,401 --> 00:40:50,817
+Rym: So this video about this tiny Lego set that has like less than, it has 39 pieces.
+
+661
+00:40:50,877 --> 00:40:52,200
+Rym: This is not a big Lego set.
+
+662
+00:40:52,762 --> 00:40:54,814
+Rym: "The Most Disturbing Lego Set
+
+663
+00:40:54,915 --> 00:40:55,076
+Rym: Ever.".
+
+664
+00:40:55,740 --> 00:41:00,539
+Rym: I'm looking at this picture and I cannot imagine what they think is disturbing about it.
+
+665
+00:41:01,881 --> 00:41:10,529
+Rym: So I watched this video and in nine minutes and sixteen seconds this person has made a fairly credible argument that this is a very
+
+666
+00:41:10,909 --> 00:41:11,950
+Scott: oddly specific
+
+667
+00:41:12,251 --> 00:41:22,060
+Rym: and uncharacteristic reference by whoever designed the set at Lego to a specific incident during one of the crusades outside the walls of Jerusalem.
+
+668
+00:41:23,060 --> 00:41:24,969
+Rym: And I'm not saying this person is right.
+
+669
+00:41:25,311 --> 00:41:27,360
+Rym: I suspect this person is very wrong.
+
+670
+00:41:28,220 --> 00:41:33,500
+Rym: But it's quite a journey to watch this video and I recommend you enjoy it.
+
+671
+00:41:36,224 --> 00:41:37,094
+Rym: So that's what I got.
+
+672
+00:41:37,114 --> 00:41:37,600
+Rym: What do you got?
+
+673
+00:41:41,042 --> 00:41:44,755
+Scott: So I'm the kind of person where, you know, am I good at that?
+
+674
+00:41:44,795 --> 00:41:45,478
+Scott: many things?
+
+675
+00:41:45,979 --> 00:41:46,080
+Scott: No.
+
+676
+00:41:46,440 --> 00:41:47,624
+Scott: Do I know that many things?
+
+677
+00:41:48,125 --> 00:41:52,980
+Scott: No, I just read the internet a lot and then I repeat what I read on the internet and I sound like I know things.
+
+678
+00:41:53,240 --> 00:41:53,461
+Scott: Right.
+
+679
+00:41:54,243 --> 00:42:01,220
+Scott: But one thing I try to do in life in general is to learn and use correct techniques.
+
+680
+00:42:01,540 --> 00:42:01,761
+Scott: Right.
+
+681
+00:42:01,841 --> 00:42:13,400
+Scott: Even if you're not good at a thing, if you use the correct technique, even if you are not practiced at it, you'll usually just get better results and an easier life overall.
+
+682
+00:42:13,601 --> 00:42:15,125
+Rym: Like mini golf between the two of us.
+
+683
+00:42:15,346 --> 00:42:19,098
+Rym: How many times have we taught some random person we know like how to use a putter?
+
+684
+00:42:20,360 --> 00:42:20,461
+Scott: Yep.
+
+685
+00:42:20,763 --> 00:42:21,809
+Rym: It's a fairly straightforward.
+
+686
+00:42:21,829 --> 00:42:23,177
+Rym: There's a very specific way to do it.
+
+687
+00:42:24,340 --> 00:42:24,481
+Scott: Yeah.
+
+688
+00:42:24,501 --> 00:42:26,669
+Scott: It's like if I'm in the kitchen, can I go chop, chop, chop, chop, chop?
+
+689
+00:42:26,750 --> 00:42:29,320
+Scott: No, but I hold the knife the way the chef holds the knife.
+
+690
+00:42:29,480 --> 00:42:29,562
+Scott: Yeah.
+
+691
+00:42:29,644 --> 00:42:30,320
+Rym: I just go slower.
+
+692
+00:42:31,220 --> 00:42:31,441
+Scott: Yeah.
+
+693
+00:42:31,601 --> 00:42:32,261
+Scott: It's like, yeah.
+
+694
+00:42:32,281 --> 00:42:36,465
+Scott: So, you know, and I think what in our just in our general society.
+
+695
+00:42:36,485 --> 00:42:37,146
+Scott: Right.
+
+696
+00:42:37,546 --> 00:42:52,700
+Scott: There are a lot of things for which the correct technique is not like widely known or widely taught, no matter how simple it is or even if it or it's not taught well in a way that people can understand.
+
+697
+00:42:52,840 --> 00:42:59,780
+Rym: That's the part having watched your thing of the day that I think is going on here, because I actually went and grabbed something, tried what's in the video.
+
+698
+00:43:00,302 --> 00:43:03,760
+Rym: And yeah, I was always doing it that way, but I never thought about it that way.
+
+699
+00:43:04,780 --> 00:43:04,921
+Scott: Right.
+
+700
+00:43:05,021 --> 00:43:09,780
+Scott: But it's like, you know, or people just don't care about using the correct technique or not coachable.
+
+701
+00:43:10,901 --> 00:43:13,428
+Scott: But I remember very specifically.
+
+702
+00:43:13,448 --> 00:43:13,728
+Scott: Right.
+
+703
+00:43:13,809 --> 00:43:18,340
+Scott: It's like when I was actually when I was so old, I was already a counselor at a summer camp.
+
+704
+00:43:18,460 --> 00:43:21,688
+Scott: I think I was already like in between freshman and sophomore years at RIT.
+
+705
+00:43:21,728 --> 00:43:21,848
+Scott: Right.
+
+706
+00:43:21,868 --> 00:43:23,692
+Scott: It was already two thousand something one.
+
+707
+00:43:23,892 --> 00:43:24,153
+Scott: Right.
+
+708
+00:43:24,313 --> 00:43:24,895
+Scott: Two thousand.
+
+709
+00:43:24,975 --> 00:43:25,556
+Scott: Two thousand.
+
+710
+00:43:25,957 --> 00:43:26,097
+Scott: Yeah.
+
+711
+00:43:26,138 --> 00:43:27,180
+Scott: Two thousand one summer.
+
+712
+00:43:28,100 --> 00:43:33,873
+Scott: And someone finally taught me like the technique to throw a baseball correctly.
+
+713
+00:43:34,173 --> 00:43:34,554
+Scott: Right.
+
+714
+00:43:34,654 --> 00:43:35,777
+Scott: I was in little league and shit.
+
+715
+00:43:35,817 --> 00:43:37,260
+Scott: No one ever taught me that correctly.
+
+716
+00:43:37,420 --> 00:43:40,367
+Scott: Or at least I was in a way that I understood and remembered.
+
+717
+00:43:40,387 --> 00:43:40,888
+Scott: Right.
+
+718
+00:43:41,930 --> 00:43:46,560
+Scott: And as soon as I followed that technique and I threw the ball and I hit the other guy's glove, it was like pow.
+
+719
+00:43:46,780 --> 00:43:48,543
+Scott: And I was like, I'm not strong.
+
+720
+00:43:48,563 --> 00:43:50,747
+Scott: I wasn't strong then and I'm not strong now.
+
+721
+00:43:51,127 --> 00:43:51,368
+Rym: Yeah.
+
+722
+00:43:51,408 --> 00:43:51,588
+Rym: Right.
+
+723
+00:43:51,848 --> 00:43:52,930
+Rym: Skiing is a lot like that.
+
+724
+00:43:53,171 --> 00:43:54,172
+Rym: You do skiing wrong.
+
+725
+00:43:54,212 --> 00:43:57,598
+Rym: It's like, yeah, but when you feel it, suddenly you're just like a thousand times better.
+
+726
+00:43:57,838 --> 00:43:58,960
+Rym: The whole world feels different.
+
+727
+00:43:59,580 --> 00:44:01,165
+Scott: So I came across this YouTube video.
+
+728
+00:44:01,186 --> 00:44:02,289
+Scott: It's like 48 seconds.
+
+729
+00:44:02,329 --> 00:44:03,092
+Scott: It's really short.
+
+730
+00:44:03,473 --> 00:44:05,520
+Scott: I think it is a YouTube short specifically, maybe.
+
+731
+00:44:05,820 --> 00:44:11,380
+Rym: I got to say, though, watching this, I think I would be better at swinging a bat, even though I would think I was already doing this.
+
+732
+00:44:11,721 --> 00:44:12,543
+Scott: Like this is all you need.
+
+733
+00:44:12,563 --> 00:44:14,088
+Scott: It's like, why are you hiring a hitting coach?
+
+734
+00:44:14,188 --> 00:44:17,999
+Scott: This guy is a hitting coach for professional baseball, presumably.
+
+735
+00:44:18,019 --> 00:44:18,400
+Scott: Right.
+
+736
+00:44:18,540 --> 00:44:21,426
+Scott: Like that's it seems like it's this person's job or part of their job.
+
+737
+00:44:21,927 --> 00:44:28,240
+Scott: And in that short amount of time, he demonstrates the correct technique for swinging a baseball bat.
+
+738
+00:44:28,641 --> 00:44:31,290
+Scott: And it's like, why did they fucking tell me that shit and T-ball?
+
+739
+00:44:31,310 --> 00:44:33,959
+Scott: I could have smacked the ball right out of the park if I knew that.
+
+740
+00:44:33,999 --> 00:44:34,180
+Scott: Right.
+
+741
+00:44:34,240 --> 00:44:45,640
+Scott: It's like, um, so yeah, if you are, uh, ever planning to swing a baseball bat for the legitimate purpose or illegitimate purpose.
+
+742
+00:44:46,120 --> 00:44:53,060
+Rym: I would say no, because if you're swinging a baseball bat for an illegitimate purpose, my advice to you is to hold it backwards.
+
+743
+00:44:53,581 --> 00:44:55,226
+Rym: That sounds crazy and stupid.
+
+744
+00:44:55,567 --> 00:44:59,999
+Rym: You will be way more effective at causing the harm you intend to harm that way.
+
+745
+00:45:00,860 --> 00:45:04,317
+Scott: Anyway, you could still swing in the way in the video to get the most oomph.
+
+746
+00:45:06,281 --> 00:45:09,048
+Rym: Also, I feel like you're better off doing a lot more jabbing and poking.
+
+747
+00:45:09,128 --> 00:45:13,340
+Scott: But anyway, the point is, watch this.
+
+748
+00:45:13,681 --> 00:45:19,459
+Scott: You'll spend one minute and the rest of your life, you will now know the correct technique for this in case you ever have to do it.
+
+749
+00:45:19,901 --> 00:45:22,429
+Scott: Um, and you'll be like, wow, it'll be so great.
+
+750
+00:45:22,750 --> 00:45:23,152
+Rym: Oh my God.
+
+751
+00:45:23,172 --> 00:45:25,620
+Rym: Cause like the pivot around the immobile foot.
+
+752
+00:45:25,720 --> 00:45:28,048
+Rym: Like I remember being like taught that by my dad.
+
+753
+00:45:28,369 --> 00:45:31,158
+Rym: But the thing with the hands, I did not realize.
+
+754
+00:45:31,178 --> 00:45:31,900
+Rym: that's what happens.
+
+755
+00:45:32,040 --> 00:45:35,649
+Rym: Like I never, I never in my life heard it described that way.
+
+756
+00:45:36,030 --> 00:45:38,035
+Rym: And that was it.
+
+757
+00:45:38,035 --> 00:45:38,395
+Rym: 42 seconds.
+
+758
+00:45:39,458 --> 00:45:39,658
+Scott: Yep.
+
+759
+00:45:39,959 --> 00:45:40,320
+Rym: So good.
+
+760
+00:45:41,787 --> 00:45:42,480
+Rym: In the meta moment.
+
+761
+00:45:43,060 --> 00:45:43,862
+Rym: GeekNights is back.
+
+762
+00:45:44,403 --> 00:45:49,533
+Rym: The last panel that we did was actually me and Emily at PAX West 2022.
+
+763
+00:45:49,533 --> 00:45:50,275
+Rym: Losing.
+
+764
+00:45:50,375 --> 00:45:51,678
+Rym: It is online on YouTube.
+
+765
+00:45:51,698 --> 00:45:52,399
+Rym: You can just watch it.
+
+766
+00:45:53,540 --> 00:45:55,527
+Rym: Uh, GeekNights will be at PAX Unplugged.
+
+767
+00:45:55,627 --> 00:45:59,780
+Rym: Maybe me and Scott, maybe just me doing one or more panels and workshops.
+
+768
+00:45:59,981 --> 00:46:02,849
+Rym: But I don't think we'll be hanging around too much outside of that.
+
+769
+00:46:02,970 --> 00:46:06,300
+Scott: Also, as of today, you said you were going to go there and come back in the same day.
+
+770
+00:46:06,801 --> 00:46:07,022
+Rym: Yep.
+
+771
+00:46:07,644 --> 00:46:08,265
+Rym: Very likely.
+
+772
+00:46:08,366 --> 00:46:11,354
+Rym: Maybe I'll spend one night and head back the following day.
+
+773
+00:46:11,595 --> 00:46:13,400
+Rym: TBD on the schedule of the panels and everything.
+
+774
+00:46:13,800 --> 00:46:16,424
+Rym: I will warn you, all the hotels are sold out.
+
+775
+00:46:16,684 --> 00:46:16,965
+Rym: So.
+
+776
+00:46:17,806 --> 00:46:18,047
+Scott: Yeah.
+
+777
+00:46:18,087 --> 00:46:26,620
+Scott: I mean, I'm not, I'm either, I'm only, the only chance of me going with the sold out hotel situation is, you know, someplace else to stay.
+
+778
+00:46:26,760 --> 00:46:30,172
+Scott: Like a friend's house who lives nearby or not staying.
+
+779
+00:46:30,273 --> 00:46:32,039
+Rym: And we will probably just bring the car.
+
+780
+00:46:35,420 --> 00:46:37,325
+Rym: It is a real easy trip.
+
+781
+00:46:37,506 --> 00:46:42,560
+Rym: And also I got to tell you, cause I know you have, I have presented at a few PAXes without you during the quarantine.
+
+782
+00:46:43,640 --> 00:46:52,280
+Rym: It is hard to describe how much life it gives me to be on stage at a PAX with people giving a talk instead of doing the podcast.
+
+783
+00:46:52,660 --> 00:46:55,226
+Rym: Like I didn't forget how much I loved it.
+
+784
+00:46:55,327 --> 00:46:57,292
+Rym: I underestimated how much I missed.
+
+785
+00:46:57,352 --> 00:46:58,675
+Rym: it is how I would describe it.
+
+786
+00:46:59,036 --> 00:47:00,139
+Rym: There's a certain energy there.
+
+787
+00:47:00,159 --> 00:47:00,560
+Rym: So we'll see.
+
+788
+00:47:01,401 --> 00:47:02,143
+Scott: We'll see what happens.
+
+789
+00:47:02,243 --> 00:47:02,424
+Scott: Yep.
+
+790
+00:47:02,705 --> 00:47:03,989
+Rym: I will also be a Zenkai Con.
+
+791
+00:47:04,029 --> 00:47:05,212
+Rym: I even booked the hotel room.
+
+792
+00:47:05,272 --> 00:47:07,800
+Rym: I'll do a whole bunch of solo versions of our panels.
+
+793
+00:47:08,420 --> 00:47:10,690
+Rym: Scott won't come to Zenkai Con even in non-COVID times.
+
+794
+00:47:10,710 --> 00:47:12,277
+Scott: No, I wouldn't come there without a pandemic.
+
+795
+00:47:12,317 --> 00:47:12,980
+Scott: I'm definitely not going to.
+
+796
+00:47:13,000 --> 00:47:13,682
+Rym: I don't know why.
+
+797
+00:47:13,842 --> 00:47:19,939
+Rym: Most of Zenkai Con is me, Chris, Anthony, and Scojo playing tabletop board games sometimes with Matt Morgan.
+
+798
+00:47:20,119 --> 00:47:20,320
+Rym: So.
+
+799
+00:47:20,760 --> 00:47:21,121
+Scott: I'm good.
+
+800
+00:47:21,141 --> 00:47:22,685
+Rym: I don't know.
+
+801
+00:47:22,725 --> 00:47:26,996
+Rym: It's basically just, it's a fantastic con that we just don't even go into except for the panels.
+
+802
+00:47:27,438 --> 00:47:28,280
+Rym: But I digress.
+
+803
+00:47:28,520 --> 00:47:29,998
+Scott: Why don't we just do that at my apartment then?
+
+804
+00:47:30,901 --> 00:47:31,622
+Rym: We could do that too.
+
+805
+00:47:32,444 --> 00:47:33,746
+Rym: The Gignies Book Club book.
+
+806
+00:47:34,527 --> 00:47:39,374
+Rym: Binti, which I will also, as Scott had pointed out, Binti is very short.
+
+807
+00:47:40,096 --> 00:47:42,940
+Rym: It's actually a trilogy of three also very short books.
+
+808
+00:47:43,700 --> 00:47:44,362
+Rym: I read all three.
+
+809
+00:47:44,382 --> 00:47:45,665
+Rym: Scott read all three.
+
+810
+00:47:45,705 --> 00:47:47,290
+Scott: They take like an hour each.
+
+811
+00:47:47,310 --> 00:47:48,433
+Rym: We'll talk about all three.
+
+812
+00:47:48,453 --> 00:47:50,277
+Rym: It's fantastic.
+
+813
+00:47:50,358 --> 00:47:51,300
+Rym: It is Space College.
+
+814
+00:47:52,022 --> 00:47:59,540
+Rym: And basically, if you don't know what it's about, it's going to set itself up like, all right, cool person's going to Space College.
+
+815
+00:48:00,061 --> 00:48:01,926
+Rym: They're probably experiencing racism.
+
+816
+00:48:01,966 --> 00:48:03,129
+Rym: Let's see where this is going.
+
+817
+00:48:03,690 --> 00:48:07,260
+Rym: And then the jellyfish show up out of nowhere and it goes way off the rails.
+
+818
+00:48:07,621 --> 00:48:10,527
+Rym: But it still stays true to that original starting story.
+
+819
+00:48:10,547 --> 00:48:15,138
+Rym: I would love to see this animated in some fashion.
+
+820
+00:48:15,178 --> 00:48:16,000
+Rym: I think it would be great.
+
+821
+00:48:16,723 --> 00:48:20,540
+Scott: It would be a good animated one, yeah, especially with all the wild characters and such.
+
+822
+00:48:22,081 --> 00:48:22,924
+Scott: All right.
+
+823
+00:48:23,225 --> 00:48:25,010
+Rym: Otherwise, Scott's working on the website.
+
+824
+00:48:25,150 --> 00:48:26,113
+Rym: Pay attention to our stuff.
+
+825
+00:48:27,035 --> 00:48:28,700
+Rym: We'll be mostly doing content like normal.
+
+826
+00:48:29,220 --> 00:48:34,937
+Rym: Whenever the new Advanced Wars that was delayed because of the war actually comes out, I am going to be live streaming it.
+
+827
+00:48:34,977 --> 00:48:35,820
+Rym: So stay tuned for that.
+
+828
+00:48:36,564 --> 00:48:37,900
+Rym: And let's talk about web scraping.
+
+829
+00:48:39,081 --> 00:48:39,442
+Scott: Yeah.
+
+830
+00:48:39,563 --> 00:48:45,540
+Scott: So when you have a website, right, especially a dynamic website, even if it's just a blog.
+
+831
+00:48:45,821 --> 00:48:45,981
+Scott: Right.
+
+832
+00:48:46,001 --> 00:48:54,320
+Scott: But it could also be something like, I don't know, a sports stats website or news website or any kind of information providing website.
+
+833
+00:48:54,960 --> 00:48:56,344
+Scott: IMDB, Wikipedia.
+
+834
+00:48:56,564 --> 00:48:56,785
+Scott: Right.
+
+835
+00:48:57,246 --> 00:49:02,760
+Scott: All these websites are backed up by databases, Postgres databases, MySQL databases, Oracle databases.
+
+836
+00:49:03,101 --> 00:49:03,282
+Scott: Right.
+
+837
+00:49:03,322 --> 00:49:07,820
+Scott: But you can't just go in and given people access directly to the database.
+
+838
+00:49:08,542 --> 00:49:11,660
+Rym: So a lot of people do by accident, but that's a whole other conversation.
+
+839
+00:49:12,041 --> 00:49:15,579
+Scott: It's really bad for a lot of reasons that we can't really discuss right now.
+
+840
+00:49:15,659 --> 00:49:15,780
+Scott: Right.
+
+841
+00:49:15,860 --> 00:49:23,880
+Scott: It would actually be really nice if you had a way to do it securely, safely and a way that protects your resources and whatnot.
+
+842
+00:49:24,240 --> 00:49:25,263
+Rym: But so what I'll say?
+
+843
+00:49:25,303 --> 00:49:31,779
+Rym: not to decide that is the kind of thing that I provide as a service and I'm a product manager for my day job.
+
+844
+00:49:32,483 --> 00:49:32,866
+Scott: But it's not.
+
+845
+00:49:32,906 --> 00:49:34,255
+Scott: you're not making that available.
+
+846
+00:49:34,275 --> 00:49:34,960
+Scott: It's like the public.
+
+847
+00:49:35,180 --> 00:49:36,579
+Rym: No, that is not available to the public.
+
+848
+00:49:37,341 --> 00:49:37,541
+Scott: Right.
+
+849
+00:49:37,822 --> 00:49:39,786
+Scott: Plenty of people provide private database access.
+
+850
+00:49:39,826 --> 00:49:41,550
+Scott: I'm talking about public database access.
+
+851
+00:49:41,590 --> 00:49:45,820
+Scott: Like anyone can just go connect to database, select star from.
+
+852
+00:49:45,961 --> 00:49:46,203
+Scott: Right.
+
+853
+00:49:46,263 --> 00:49:46,545
+Scott: It's like.
+
+854
+00:49:46,586 --> 00:49:48,400
+Scott: no one does that on purpose.
+
+855
+00:49:49,661 --> 00:49:55,720
+Scott: So what ends up happening is the only way to access the information that is in the database is via the website.
+
+856
+00:49:56,020 --> 00:49:56,382
+Rym: Wait a minute.
+
+857
+00:49:56,402 --> 00:49:57,147
+Rym: I said a great idea.
+
+858
+00:49:57,167 --> 00:49:58,253
+Rym: I don't have to interrupt you.
+
+859
+00:49:58,514 --> 00:49:59,440
+Rym: We should make this website.
+
+860
+00:49:59,580 --> 00:50:01,726
+Rym: It would fail and collapse instantly.
+
+861
+00:50:02,167 --> 00:50:03,852
+Rym: Let's make Wikibase.
+
+862
+00:50:04,153 --> 00:50:06,138
+Rym: It's just a public database.
+
+863
+00:50:06,198 --> 00:50:06,780
+Rym: Everybody go nuts.
+
+864
+00:50:08,221 --> 00:50:08,711
+Scott: OK, go ahead.
+
+865
+00:50:08,813 --> 00:50:09,180
+Scott: Here's SQL.
+
+866
+00:50:10,162 --> 00:50:14,160
+Scott: So you have a database and then the database is not accessible to the Internet.
+
+867
+00:50:14,561 --> 00:50:14,762
+Scott: Right.
+
+868
+00:50:14,923 --> 00:50:18,100
+Scott: And then you have a Web server and the Web server can access the database.
+
+869
+00:50:18,602 --> 00:50:22,438
+Scott: But the Web server only has so many SQL queries that it will willingly run.
+
+870
+00:50:23,323 --> 00:50:23,505
+Scott: Right.
+
+871
+00:50:23,545 --> 00:50:25,120
+Scott: That are written in the code of the website.
+
+872
+00:50:25,681 --> 00:50:27,605
+Scott: And then people visit the website.
+
+873
+00:50:27,866 --> 00:50:34,300
+Scott: The website runs the SQL queries, gets data from the database and then shows it to you in HTML form.
+
+874
+00:50:34,800 --> 00:50:35,759
+Rym: Which to back up a little bit.
+
+875
+00:50:36,041 --> 00:50:37,131
+Scott: Or JSON.
+
+876
+00:50:37,273 --> 00:50:38,060
+Scott: JSON structure.
+
+877
+00:50:38,640 --> 00:50:55,120
+Rym: HTML and markup languages like it are just a standardized way to take effectively raw information from a source and mark it up in a way that can then be processed by an interpreter and displayed to a human or provided to some other service.
+
+878
+00:50:55,562 --> 00:50:56,687
+Rym: In a standardized way.
+
+879
+00:50:57,189 --> 00:50:59,540
+Rym: So the raw data comes to your Web browser.
+
+880
+00:50:59,640 --> 00:51:13,220
+Rym: Your Web browser parses this markdown of that data and presents a visualization that if you recall how the Internet was designed, how it was envisioned, the reason it exists and how it should be used and maintained.
+
+881
+00:51:14,362 --> 00:51:18,439
+Rym: You can render that information however you see fit on your end.
+
+882
+00:51:19,381 --> 00:51:41,320
+Scott: So the reality is that people who aren't technologically sophisticated are sort of forced by lack of know how, lack of ability, lack of resources to engage with the data in the database on the terms of the person who owns and runs the database.
+
+883
+00:51:41,480 --> 00:51:46,060
+Scott: The service operator sets the terms and the people just sort of have to go along with it.
+
+884
+00:51:46,140 --> 00:51:52,980
+Scott: If you want to go to a normal person wants to see like the scores of every Mets game.
+
+885
+00:51:53,642 --> 00:51:53,924
+Scott: Right.
+
+886
+00:51:54,146 --> 00:51:55,819
+Scott: Until they got hosed last night.
+
+887
+00:51:56,960 --> 00:51:57,778
+Scott: The whole season.
+
+888
+00:51:58,931 --> 00:51:59,140
+Scott: Right.
+
+889
+00:51:59,580 --> 00:52:00,943
+Scott: They would have to go to like.
+
+890
+00:52:01,083 --> 00:52:09,840
+Scott: they would have to open up the Web browser, go to a game and they'd probably do something like fucking copy and paste and they go to the next game and copy and paste or something like that.
+
+891
+00:52:10,210 --> 00:52:10,440
+Scott: Right.
+
+892
+00:52:10,921 --> 00:52:17,620
+Scott: But if you're technologically sophisticated, there is not much that stops you from writing a computer program.
+
+893
+00:52:17,820 --> 00:52:22,280
+Scott: Now, of course, you can't hit the database directly, which would be the most efficient way of getting the data.
+
+894
+00:52:22,340 --> 00:52:24,517
+Scott: It would take a fraction of a second to get all of it.
+
+895
+00:52:25,741 --> 00:52:40,180
+Scott: But you can have the computer just visit all the Web pages really quickly, save all the Web pages and then process all those Web pages and parse the data out of them right into what is now your database.
+
+896
+00:52:40,584 --> 00:52:41,457
+Scott: And now you're good to go.
+
+897
+00:52:41,747 --> 00:52:41,960
+Scott: Right.
+
+898
+00:52:42,361 --> 00:52:57,400
+Scott: And that's called Web scraping because you're basically going to Web pages and scraping the data off of them right into your own database to get access to a large amount of information that is being made freely available.
+
+899
+00:52:58,081 --> 00:53:05,159
+Scott: But the people making it freely available weren't making it like in bulk freely available, but it kind of were and they kind of weren't.
+
+900
+00:53:05,500 --> 00:53:19,074
+Rym: Now, this is where things get spicy, because on one hand, the Internet, the World Wide Web was envisioned to be a completely open and mutual sharing of information, meaning I provide information, but other people have access to that.
+
+901
+00:53:19,094 --> 00:53:24,760
+Rym: information is kind of like I have taken this data and I've put it out on the street and anyone is allowed to partake.
+
+902
+00:53:26,540 --> 00:53:38,200
+Scott: So legally, as of April this year, there was actually a case in an appeals court and they have affirmed that Web scraping publicly accessible data is legal.
+
+903
+00:53:38,561 --> 00:53:42,840
+Scott: Now, that's just the scraping part of it, though, right?
+
+904
+00:53:42,960 --> 00:53:52,920
+Scott: If I was to say scrape Rym website, right, which is full of Rym's copyrighted information or whatever, and I put it, I scrape it and put in a database.
+
+905
+00:53:53,643 --> 00:53:54,720
+Scott: OK, nothing illegal.
+
+906
+00:53:55,262 --> 00:53:58,219
+Scott: But if I then go and make Scott clone of Rym's Web site.
+
+907
+00:53:58,723 --> 00:54:00,460
+Scott: Well, now that's not right.
+
+908
+00:54:00,700 --> 00:54:07,094
+Scott: It's like copying someone's Web site might not be legal, but now collecting the data on its own might be.
+
+909
+00:54:07,314 --> 00:54:09,860
+Rym: the crime is not getting the data or scraping.
+
+910
+00:54:10,000 --> 00:54:12,640
+Rym: The crime is now you're republishing it and violating copyright.
+
+911
+00:54:13,200 --> 00:54:13,866
+Rym: Effectively.
+
+912
+00:54:13,886 --> 00:54:14,007
+Scott: Yeah.
+
+913
+00:54:14,048 --> 00:54:15,339
+Scott: Or who knows what it could be?
+
+914
+00:54:15,802 --> 00:54:18,460
+Scott: Some other thing you're now this gets extra spicy.
+
+915
+00:54:19,101 --> 00:54:24,600
+Rym: What if Rym website has information that is objective?
+
+916
+00:54:25,225 --> 00:54:25,508
+Rym: I have.
+
+917
+00:54:25,791 --> 00:54:26,580
+Rym: I have equations.
+
+918
+00:54:27,061 --> 00:54:28,706
+Rym: I have weather information like.
+
+919
+00:54:28,786 --> 00:54:33,640
+Rym: I have objective, universally agreed upon and generic information on my Web site.
+
+920
+00:54:34,741 --> 00:54:35,798
+Rym: Scott could scrape that for me.
+
+921
+00:54:36,142 --> 00:54:38,320
+Rym: He might scrape it from someone else who could.
+
+922
+00:54:38,520 --> 00:54:40,780
+Rym: There's no way to prove where Scott got that information.
+
+923
+00:54:41,183 --> 00:54:43,319
+Rym: And if Scott there can be well, we'll get to that.
+
+924
+00:54:43,961 --> 00:54:54,240
+Rym: If Scott publishes that information, you generally can't have copyright on individual well-known proven facts with a big asterisk that there's a lot of complicated edge cases.
+
+925
+00:54:56,120 --> 00:55:03,960
+Scott: But let's say in my data, copyright would be like I scrape Rym's Web site of all his short stories and I publish a Kindle book.
+
+926
+00:55:04,041 --> 00:55:05,478
+Scott: That would be a copyright violation.
+
+927
+00:55:06,561 --> 00:55:14,560
+Rym: So what if I aggregate data from a bunch of other Web sites and make a new data set that provides novel insights without republishing that data itself?
+
+928
+00:55:15,920 --> 00:55:18,060
+Rym: Now, it's again, it's not a question of Web scraping.
+
+929
+00:55:18,522 --> 00:55:22,140
+Rym: That is the question of data aggregation, data attribution, et cetera.
+
+930
+00:55:22,600 --> 00:55:28,960
+Rym: Web scraping itself should be noncontroversial and should absolutely be 100 percent legal forever.
+
+931
+00:55:29,802 --> 00:55:37,320
+Rym: But most of the fights around it are around what people do with that information after the fact, not the scraping itself.
+
+932
+00:55:38,200 --> 00:55:38,702
+Scott: Exactly.
+
+933
+00:55:38,742 --> 00:55:44,580
+Scott: Now, one thing that happens is sometimes people will set up their Web servers to be anti scraping.
+
+934
+00:55:44,760 --> 00:55:44,961
+Scott: Right.
+
+935
+00:55:45,302 --> 00:55:52,600
+Scott: They'll do things like blocking user agents that don't match the user agents of normal Web browsers, which you can get around pretty easily.
+
+936
+00:55:53,141 --> 00:55:58,680
+Scott: They'll do things like rate limiting, like someone has hit our Web site and requested a shit ton of pages really quickly.
+
+937
+00:55:59,222 --> 00:56:00,871
+Scott: Let's block their IP address now.
+
+938
+00:56:00,931 --> 00:56:02,740
+Scott: They're hitting they're visiting us too much.
+
+939
+00:56:02,841 --> 00:56:04,209
+Scott: That's clearly not a human being.
+
+940
+00:56:04,370 --> 00:56:05,780
+Rym: Now, they're within their rights to do that.
+
+941
+00:56:05,960 --> 00:56:11,420
+Rym: But simultaneously, I'm within my rights to spin up a thousand Amazon businesses with different IPs to scrape that data.
+
+942
+00:56:12,201 --> 00:56:14,414
+Scott: Yeah, I mean, you know, and there's a lot of things going on, right?
+
+943
+00:56:14,454 --> 00:56:15,580
+Scott: I mean, what is Google?
+
+944
+00:56:16,040 --> 00:56:18,184
+Scott: Google's entire business is Web scraping.
+
+945
+00:56:18,224 --> 00:56:31,960
+Scott: The Google bot goes around scraping the entire Web and then you Google search something and they search their database, which is a copy of most of the Web that they've scraped with the Google bot.
+
+946
+00:56:33,221 --> 00:56:40,940
+Scott: And then they show you results without actually sending you to anyone's Web site, just showing you data they've scraped from other people's Web sites.
+
+947
+00:56:41,781 --> 00:56:42,002
+Scott: Yeah.
+
+948
+00:56:42,042 --> 00:56:46,019
+Scott: And this is what all the fight is about things like Google News and Australia and all this stuff.
+
+949
+00:56:46,039 --> 00:56:46,220
+Scott: Right.
+
+950
+00:56:46,300 --> 00:56:49,152
+Rym: It's like, you know, and this is getting like.
+
+951
+00:56:49,272 --> 00:56:51,120
+Rym: capitalism is partly the problem here.
+
+952
+00:56:51,460 --> 00:56:54,260
+Rym: The true intent of the Internet is is up for debate here.
+
+953
+00:56:54,581 --> 00:56:55,483
+Rym: There's a lot going on.
+
+954
+00:56:55,523 --> 00:57:11,220
+Rym: But a big part of this is a lot of Web scraping is used for commercial purposes and data aggregation, but also a lot of Web scraping is used to bridge the non-technical and the technical or to bridge the inept technical with the technical.
+
+955
+00:57:11,440 --> 00:57:11,962
+Rym: Case in point.
+
+956
+00:57:12,002 --> 00:57:12,906
+Rym: Imagine a restaurant.
+
+957
+00:57:13,528 --> 00:57:14,673
+Rym: Restaurant has a Web site.
+
+958
+00:57:15,094 --> 00:57:16,500
+Rym: The Web site posts its hours.
+
+959
+00:57:18,521 --> 00:57:26,119
+Rym: Good luck finding that Web site because that Web site was made by someone's nephew in nineteen ninety nine and hasn't changed in 20 years.
+
+960
+00:57:27,020 --> 00:57:28,669
+Rym: But you want to find out when this restaurant is open.
+
+961
+00:57:29,172 --> 00:57:30,740
+Rym: You don't want to call this restaurant.
+
+962
+00:57:31,161 --> 00:57:36,140
+Rym: You want to go to some map service or type the name of the restaurant and just see what the hours are.
+
+963
+00:57:36,581 --> 00:57:40,820
+Rym: And you don't necessarily want to have to go to 10 different restaurants Web sites to figure out when things are open or not.
+
+964
+00:57:41,181 --> 00:57:44,511
+Rym: So that kind of data aggregation is just a quality of life thing.
+
+965
+00:57:45,213 --> 00:57:47,720
+Scott: Most restaurants did the person who runs that restaurant.
+
+966
+00:57:47,980 --> 00:57:49,323
+Scott: They have a shitty Web site.
+
+967
+00:57:49,384 --> 00:57:56,100
+Scott: But did that person go to Yelp, to Grubhub, to Seamless, to Google Maps, to Apple Maps and type in their hours?
+
+968
+00:57:56,521 --> 00:58:00,012
+Scott: Did they go and update their hours to match their real hours?
+
+969
+00:58:00,413 --> 00:58:02,640
+Scott: It's like, no, that person is not doing any of those things.
+
+970
+00:58:02,740 --> 00:58:03,562
+Scott: They're running the restaurant.
+
+971
+00:58:03,582 --> 00:58:09,720
+Scott: They're ordering food, cooking food, managing employees, cleaning, hoping the health inspector doesn't come.
+
+972
+00:58:10,543 --> 00:58:11,065
+Scott: That's what they're.
+
+973
+00:58:11,085 --> 00:58:11,928
+Scott: that's what they're up to.
+
+974
+00:58:12,048 --> 00:58:12,289
+Scott: Right.
+
+975
+00:58:12,329 --> 00:58:14,979
+Scott: Dealing with customers that are annoying, et cetera.
+
+976
+00:58:15,640 --> 00:58:25,080
+Scott: So but as long as the information is somewhere out there in a really shitty, hard to find place, all those other services that people actually use.
+
+977
+00:58:25,581 --> 00:58:25,881
+Scott: Right.
+
+978
+00:58:26,202 --> 00:58:33,540
+Scott: Can scrape it, put it into a database that's, you know, more easily searched, more technologically up to date.
+
+979
+00:58:34,061 --> 00:58:37,106
+Scott: And then when you ask Siri, hey, when's the restaurant open?
+
+980
+00:58:37,146 --> 00:58:45,100
+Scott: Siri says, ah, it's open at seven, because somewhere along the line, they scrape that shit from somewhere and put it in some database.
+
+981
+00:58:45,621 --> 00:58:58,900
+Rym: Now, this is a topic for another show, but a logical extension of this that caused a big brouhaha, and I actually just used it today, which made things extra funny, is you can apply Web scraping to humans.
+
+982
+00:58:59,381 --> 00:59:04,710
+Rym: Imagine a hotel, a bed and breakfast that doesn't even have a Web site.
+
+983
+00:59:05,631 --> 00:59:08,096
+Rym: They just have a phone number and you can call.
+
+984
+00:59:08,376 --> 00:59:10,640
+Rym: or maybe they have a Web site that says they exist.
+
+985
+00:59:11,001 --> 00:59:12,665
+Rym: And on that Web site is a phone number.
+
+986
+00:59:13,026 --> 00:59:18,420
+Rym: But to reserve a room, you can't go to like any of the Web sites that help you reserve hotel rooms.
+
+987
+00:59:18,480 --> 00:59:19,844
+Rym: You can't even go to their Web site.
+
+988
+00:59:20,085 --> 00:59:25,160
+Rym: You have to call them and talk to a human because they have not used modern technology.
+
+989
+00:59:25,800 --> 00:59:30,769
+Rym: Now, there's two ways to approach that for me, an impatient nerd who wants to book a hotel room.
+
+990
+00:59:31,611 --> 00:59:36,840
+Rym: My previous answer for most of my life would be if you don't have a Web site, I will not engage in commerce with you.
+
+991
+00:59:37,464 --> 00:59:38,420
+Scott: Or you could just fucking call them.
+
+992
+00:59:38,420 --> 00:59:39,739
+Rym: I don't have Web sites that don't exist.
+
+993
+00:59:40,640 --> 00:59:41,585
+Scott: You just call them.
+
+994
+00:59:41,685 --> 00:59:43,937
+Scott: Engage with them on their own terms.
+
+995
+00:59:43,977 --> 00:59:44,560
+Scott: What's the problem?
+
+996
+00:59:45,021 --> 00:59:46,684
+Rym: So here's my actual use case.
+
+997
+00:59:46,844 --> 00:59:50,190
+Rym: Usually I'm just going somewhere like a small town to ski or on that bike trip.
+
+998
+00:59:50,730 --> 00:59:52,353
+Rym: I see there's like 10 hotels in town.
+
+999
+00:59:52,914 --> 00:59:54,477
+Rym: I just want to see which of them have rooms.
+
+1000
+00:59:54,657 --> 00:59:55,018
+Rym: Pick one.
+
+1001
+00:59:55,058 --> 00:59:56,200
+Rym: Don't really care which one I stay in.
+
+1002
+00:59:56,601 --> 01:00:01,520
+Rym: If three of them have online booking and I can click and it just works, I'm not going to call the rest of them to figure out their opening.
+
+1003
+01:00:01,600 --> 01:00:02,407
+Scott: Of course.
+
+1004
+01:00:02,508 --> 01:00:02,770
+Scott: Yes.
+
+1005
+01:00:02,911 --> 01:00:03,153
+Scott: Yes.
+
+1006
+01:00:03,193 --> 01:00:04,000
+Scott: That makes perfect sense.
+
+1007
+01:00:04,801 --> 01:00:11,970
+Rym: So I see a hotel that looks like it has rooms, but you can't actually book rooms on their site.
+
+1008
+01:00:12,511 --> 01:00:19,480
+Rym: So I clicked on the Google assistant and it had a robot call the hotel and talk to a human.
+
+1009
+01:00:20,182 --> 01:00:24,780
+Rym: And it eventually reserved the room for me at this hotel.
+
+1010
+01:00:25,320 --> 01:00:29,080
+Scott: And what if the human was like, well, the human clearly knows it's a robot that's calling.
+
+1011
+01:00:29,521 --> 01:00:36,334
+Rym: Only because Google agreed based on complaints when they first launched this thing that it would say it was a robot.
+
+1012
+01:00:36,374 --> 01:00:39,240
+Rym: A lot of people were really mad that it might not say it's a robot.
+
+1013
+01:00:39,981 --> 01:00:40,141
+Scott: Right.
+
+1014
+01:00:40,162 --> 01:00:45,257
+Scott: But what if the person heard, you know, realized that you could tell it's a robot if you're intelligent.
+
+1015
+01:00:45,318 --> 01:00:45,478
+Scott: Right.
+
+1016
+01:00:45,518 --> 01:00:46,020
+Scott: It's not hard.
+
+1017
+01:00:46,682 --> 01:00:47,768
+Rym: I've been called by this person.
+
+1018
+01:00:47,848 --> 01:00:49,799
+Scott: It's like a Google bot reservation hang up.
+
+1019
+01:00:50,942 --> 01:00:59,659
+Rym: I mean, they could have, but in that case now, once again, they have walled themselves off from how most modern people will engage with things like renting a hotel room.
+
+1020
+01:01:00,801 --> 01:01:09,960
+Scott: But the point is, is that, you know, that isn't a web scraping technology, but it is something that's only possible because of web scraping.
+
+1021
+01:01:10,321 --> 01:01:12,888
+Scott: Get scraping that phone number from somewhere.
+
+1022
+01:01:13,008 --> 01:01:13,410
+Scott: Yeah.
+
+1023
+01:01:13,630 --> 01:01:17,200
+Scott: And any information, the metadata around the phone number as well.
+
+1024
+01:01:17,340 --> 01:01:20,048
+Scott: That is the phone number of a BNB in this place.
+
+1025
+01:01:20,469 --> 01:01:24,140
+Scott: You know, here's some photos of it that we scraped and collected together, et cetera.
+
+1026
+01:01:24,340 --> 01:01:24,520
+Rym: Yeah.
+
+1027
+01:01:24,581 --> 01:01:25,984
+Rym: It gets into the whole scale thing.
+
+1028
+01:01:26,004 --> 01:01:28,611
+Rym: Remember, people freaked out about scraping the real world.
+
+1029
+01:01:28,912 --> 01:01:31,880
+Rym: Google Maps started having photos of the streets and street view.
+
+1030
+01:01:32,261 --> 01:01:37,110
+Rym: And suddenly there was the debate of it's not illegal to take a picture of a random place for a public street.
+
+1031
+01:01:37,551 --> 01:01:41,740
+Rym: But what if you take a picture of every place from every street?
+
+1032
+01:01:42,440 --> 01:01:46,407
+Scott: Suddenly you start using image recognition to read all the signs and all the businesses.
+
+1033
+01:01:46,567 --> 01:01:47,168
+Scott: Yeah.
+
+1034
+01:01:47,529 --> 01:01:54,080
+Rym: You could scrape if a restaurant is open from the picture of their restaurant and the sign at the door potentially.
+
+1035
+01:01:54,843 --> 01:01:55,064
+Scott: Yep.
+
+1036
+01:01:55,606 --> 01:01:57,594
+Scott: If the resolution was high enough, you sure could.
+
+1037
+01:01:57,875 --> 01:01:59,020
+Scott: And the picture was recent enough.
+
+1038
+01:02:00,020 --> 01:02:15,000
+Rym: But I'm generally of the mind with web scraping that the Internet very much websites that are publicly available have to generally be treated the same way that we treat things that are visible from public streets in the real world.
+
+1039
+01:02:15,583 --> 01:02:18,138
+Rym: And I can't see any strong argument against that.
+
+1040
+01:02:19,000 --> 01:02:19,141
+Rym: Nope.
+
+1041
+01:02:19,621 --> 01:02:26,995
+Scott: So if you want to do some web scraping, right, let's say, you know, there's some data you want to collect and there's no public source of that data.
+
+1042
+01:02:27,015 --> 01:02:30,020
+Scott: that's in a database form, like a spreadsheet or something.
+
+1043
+01:02:30,220 --> 01:02:36,974
+Scott: You have to, you know, you know, a CSV file, but you know that there's a website that has the information.
+
+1044
+01:02:37,014 --> 01:02:40,020
+Scott: It would just take you a long time to copy and paste all those web pages.
+
+1045
+01:02:40,060 --> 01:02:40,741
+Scott: Right.
+
+1046
+01:02:41,402 --> 01:02:42,784
+Scott: You can make a web scraper.
+
+1047
+01:02:42,864 --> 01:02:47,752
+Scott: And this generally requires computer programming, but not very difficult computer programming.
+
+1048
+01:02:48,213 --> 01:02:53,060
+Scott: And there's a lot of tools that already exist to solve a lot of the problems you're going to come across.
+
+1049
+01:02:53,180 --> 01:02:55,224
+Scott: Like, how do I visit a Web page?
+
+1050
+01:02:55,264 --> 01:02:57,067
+Scott: So many Web pages very quickly.
+
+1051
+01:02:57,087 --> 01:03:05,000
+Scott: How do I crawl and visit one Web page, find all the URLs on that Web page, visit them and then visit those URLs recursively.
+
+1052
+01:03:05,621 --> 01:03:06,222
+Scott: How do I do that?
+
+1053
+01:03:06,603 --> 01:03:09,890
+Scott: How do I want to get the HTML back from the Web site?
+
+1054
+01:03:10,170 --> 01:03:14,840
+Scott: How do I pick out the pieces of data that I'm interested in and organize them into a spreadsheet?
+
+1055
+01:03:15,241 --> 01:03:16,484
+Scott: How do I do this in mass?
+
+1056
+01:03:16,725 --> 01:03:22,280
+Scott: How do I do it fast enough that it doesn't take too long, but slow enough that nobody catches on and blocks me?
+
+1057
+01:03:22,461 --> 01:03:26,020
+Rym: It is so much easier now than the days of writing for loops with WGAD.
+
+1058
+01:03:27,160 --> 01:03:27,421
+Scott: Right.
+
+1059
+01:03:27,481 --> 01:03:27,681
+Scott: Yeah.
+
+1060
+01:03:27,922 --> 01:03:30,085
+Scott: So you could probably still do that to a lot of Web sites.
+
+1061
+01:03:30,165 --> 01:03:38,699
+Scott: But what I would recommend, at least as a way to start, is there is a library called Scrapy, S-C-R-A-P-Y.
+
+1062
+01:03:39,380 --> 01:03:39,560
+Scott: Right.
+
+1063
+01:03:39,601 --> 01:03:51,640
+Scott: P-Y as in Python, that is, you know, basically allows you to do write a program and it solves all those common Web scraping problems for you.
+
+1064
+01:03:52,020 --> 01:03:57,087
+Scott: And you can fully concentrate the code that you write on your specific use case.
+
+1065
+01:03:57,187 --> 01:03:57,387
+Scott: Right.
+
+1066
+01:03:57,447 --> 01:04:07,820
+Scott: Which pieces of data on the page, which page you visiting, you know, et cetera, and ignore all those sort of things that every Web scraper has to do because they're already done for you.
+
+1067
+01:04:08,281 --> 01:04:16,600
+Scott: And, you know, if you're doing something extra fancy, extra high performance, a big deal, that might not be a permanent solution because it's not the fastest.
+
+1068
+01:04:17,281 --> 01:04:20,448
+Scott: But for most cases, it'll get you all the way there.
+
+1069
+01:04:20,869 --> 01:04:25,720
+Scott: And for just about all cases, it'll be the perfect starting place to get you going.
+
+1070
+01:04:27,021 --> 01:04:33,120
+Scott: You know, I don't know of any other like it's like it really is like the most popular Web scraping thing I know of.
+
+1071
+01:04:33,160 --> 01:04:41,380
+Rym: I don't know of any other one that is as big a deal as as long as you're not doing something like scraping data to republish it or all the things that get another authority stuff.
+
+1072
+01:04:41,960 --> 01:04:48,220
+Rym: Honestly, if you can come if you can scrape the Web to make your personal life locally easier, by all means, do it.
+
+1073
+01:04:48,340 --> 01:04:49,083
+Rym: It's a cool thing.
+
+1074
+01:04:49,103 --> 01:04:50,328
+Rym: A lot of nerds do it.
+
+1075
+01:04:50,810 --> 01:04:52,999
+Rym: And you can do some really cool stuff.
+
+1076
+01:04:59,092 --> 01:05:01,230
+Rym: This has been GeekNights with Rym and Scott.
+
+1077
+01:05:01,410 --> 01:05:06,370
+Rym: Special thanks to DJ Pretzel for the opening music, Kat Lee for Web design and Brando Kay for the logos.
+
+1078
+01:05:06,731 --> 01:05:11,770
+Scott: Be sure to visit our Web site at FrontRowCrew.com for show notes, discussion news and more.
+
+1079
+01:05:12,210 --> 01:05:14,717
+Rym: Remember, GeekNights is not one, but four different shows.
+
+1080
+01:05:14,857 --> 01:05:19,430
+Rym: Sci-Tech Mondays, Gaming Tuesdays, Anime Comic Wednesdays and Indiscriminate Thursdays.
+
+1081
+01:05:19,850 --> 01:05:22,966
+Scott: GeekNights is distributed under a Creative Commons Attribution 3.0 license.
+
+1082
+01:05:24,270 --> 01:05:27,320
+Scott: GeekNights is recorded live with no studio and no audience.
+
+1083
+01:05:27,521 --> 01:05:30,410
+Scott: But unlike those other late shows, it's actually recorded at night.
+
+1084
+01:05:30,832 --> 01:05:38,169
+Rym: And the Patreon patrons for this episode of GeekNights are Alan Joyce, Linki G, Dre, Lily Tenebrae, Ohm, Buncha, Peeble, Areli, Dole, Aumy to say the names.
+
+1085
+01:05:39,290 --> 01:05:46,930
+Rym: Case Kerr makes music, Chris Haddad, Chris Rimer, Clinton Walton, Dex, Finn, Rebecca Dunn, Sam Erickson, Shervin Von Holl.
+
+1086
+01:05:47,290 --> 01:05:48,435
+Rym: Stop all the downloading.
+
+1087
+01:05:48,737 --> 01:05:51,630
+Rym: The next station is Finch West, Finch West Station.
+
+1088
+01:05:52,110 --> 01:05:54,790
+Rym: And several people whose names I will not say.
+
+1089
+01:05:55,211 --> 01:05:55,793
+Rym: We're back!
+
+1090
+01:05:56,195 --> 01:06:00,529
+Rym: Stay tuned for our usual nonsense and I simply leave you right now with...
+
+1091
+01:06:24,830 --> 01:06:25,410
+Scott: What's that stuff?
+

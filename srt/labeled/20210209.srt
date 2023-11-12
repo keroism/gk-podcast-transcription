@@ -1,0 +1,3208 @@
+1
+00:00:08,540 --> 00:00:10,259
+Rym: It's Tuesday, February 9th, 2021.
+
+2
+00:00:10,259 --> 00:00:10,500
+Rym: I'm Rym.
+
+3
+00:00:13,637 --> 00:00:14,109
+Scott: I'm Scott.
+
+4
+00:00:14,370 --> 00:00:15,714
+Rym: And this is GeekNights.
+
+5
+00:00:15,754 --> 00:00:21,990
+Rym: Tonight, we are talking about asynchronous play in games as opposed to synchronous play.
+
+6
+00:00:22,811 --> 00:00:23,828
+Scott: Let's do this.
+
+7
+00:00:25,171 --> 00:00:30,190
+Rym: So, uh, I don't need to say, "Oh, I've been playing some Overwatch," because I'm pretty much always playing Overwatch.
+
+8
+00:00:30,371 --> 00:00:43,170
+Rym: Like, if I'm actually at my computer playing a video game, I'm either playing a co-op game with, like, the Scotts, or I'm playing Overwatch, or I'm playing Hades, or I'm playing an asynchronous game like 18XX, but we'll get to that.
+
+9
+00:00:43,890 --> 00:00:53,937
+Rym: But Overwatch now, they use their arcade, like, the non-competitive, non-ranked place you can go to just play a game, to try stuff out.
+
+10
+00:00:53,998 --> 00:00:55,589
+Rym: Like, they'll put weird modes in there.
+
+11
+00:00:56,391 --> 00:00:59,350
+Rym: And they kept putting all these different flavors of capture the flag.
+
+12
+00:01:00,271 --> 00:01:03,925
+Rym: Like, they're clearly trying to make capture the flag a thing.
+
+13
+00:01:03,965 --> 00:01:05,330
+Rym: I think I've even talked about this before.
+
+14
+00:01:05,851 --> 00:01:14,095
+Rym: Like, they know capture the flag, the sort of true genesis of the kind of genre of competitive FPS, that became Overwatch.
+
+15
+00:01:14,436 --> 00:01:16,624
+Rym: Like, the originator of that.
+
+16
+00:01:17,166 --> 00:01:18,090
+Rym: They want to make that work.
+
+17
+00:01:19,030 --> 00:01:29,013
+Rym: And I think they're actually getting close, because over the last couple years, those CTF modes have just gotten, like, more and more playable, and more and more interesting, and more and more good.
+
+18
+00:01:29,394 --> 00:01:38,285
+Rym: And now, in the arcade, instead of different types of capture the flag just, like, coming and going, now capture the flag is its own category.
+
+19
+00:01:38,847 --> 00:01:45,463
+Rym: And in that category, it has two, like, arcade modes, and a ranked competitive mode.
+
+20
+00:01:47,188 --> 00:01:52,203
+Rym: I'm gonna start playing, more so than I've ever done competitive, like, regular Overwatch.
+
+21
+00:01:52,564 --> 00:01:58,506
+Rym: I'm gonna dive deep into competitive capture the flag, because that mode is my goddamn jam.
+
+22
+00:01:58,827 --> 00:01:59,510
+Rym: We'll see how that goes.
+
+23
+00:02:01,110 --> 00:02:10,226
+Scott: - The thing about capture the flag as a whole, right, is that when you play capture the flag video game, tribes, something like that, right, it's like the flag is like,
+
+24
+00:02:10,286 --> 00:02:11,149
+Scott: "Bruh-ver!"
+
+25
+00:02:11,249 --> 00:02:11,410
+Scott: Right?
+
+26
+00:02:11,550 --> 00:02:12,595
+Scott: Or, you know, TF2.
+
+27
+00:02:12,655 --> 00:02:15,086
+Scott: It's like, there's the flag, or the briefcase, or whatever.
+
+28
+00:02:15,147 --> 00:02:16,774
+Scott: It's in this holy location.
+
+29
+00:02:16,794 --> 00:02:19,305
+Rym: - You want, like, old Counter-Strike, where you could hide the hostages.
+
+30
+00:02:19,325 --> 00:02:20,550
+Scott: - No, right.
+
+31
+00:02:20,830 --> 00:02:26,010
+Scott: And, well, I mean, I'm saying it's about, you know, getting in there, past defenses, right?
+
+32
+00:02:26,331 --> 00:02:29,363
+Scott: Going fast, dodging, you know, killing enemies.
+
+33
+00:02:29,383 --> 00:02:36,335
+Rym: - They almost all have the concept of, there's a midfield, there's, like, an offensive zone for either side, and then a defensive zone.
+
+34
+00:02:36,376 --> 00:02:37,320
+Rym: Very much like hockey.
+
+35
+00:02:37,340 --> 00:02:44,804
+Scott: - In real life, in real life, like, that capture the flag is kinda boring, right?
+
+36
+00:02:44,924 --> 00:02:49,540
+Scott: In real life, the good capture the flag is, like, enormous, enormous woods.
+
+37
+00:02:49,761 --> 00:02:51,668
+Scott: You don't even know where the fucking flag is.
+
+38
+00:02:51,789 --> 00:02:53,093
+Scott: It's almost, like, a hide-and-seek.
+
+39
+00:02:53,173 --> 00:02:56,906
+Scott: It's very zoomed in, like, "You're hiding behind a tree," right?
+
+40
+00:02:56,946 --> 00:02:58,471
+Scott: That kind of thing.
+
+41
+00:02:58,552 --> 00:03:01,443
+Scott: And no video game does that capture the flag at all, ever.
+
+42
+00:03:01,463 --> 00:03:07,390
+Rym: - I think one reason for that is that, in a video game, that would probably be boring as shit and difficult to make competitive.
+
+43
+00:03:08,450 --> 00:03:09,375
+Scott: - Yeah, obviously.
+
+44
+00:03:09,395 --> 00:03:12,090
+Rym: - I mean, even in real life, it's only fun because you're out in the woods.
+
+45
+00:03:13,632 --> 00:03:25,050
+Scott: - But the video game capture the flag comes from that experience, yet doesn't look like it, much in the same way that the JRPG comes from the D&D experience, and yet is nothing.
+
+46
+00:03:25,150 --> 00:03:26,978
+Rym: - Oh, that's a good way to think about it.
+
+47
+00:03:26,998 --> 00:03:30,131
+Scott: - It's like when they moved it over to video game, right?
+
+48
+00:03:30,151 --> 00:03:32,302
+Scott: It's like, "Oh, this is really fun to do in real life.
+
+49
+00:03:32,342 --> 00:03:33,427
+Scott: Let's make a video game of
+
+50
+00:03:33,488 --> 00:03:33,548
+Scott: it.".
+
+51
+00:03:34,010 --> 00:03:34,311
+Rym: Oops.
+
+52
+00:03:34,331 --> 00:03:36,577
+Rym: - Actually, so think of this.
+
+53
+00:03:37,239 --> 00:03:38,061
+Rym: Then we'll get into the news.
+
+54
+00:03:39,184 --> 00:04:03,828
+Rym: So, games like Among Us and Fall Guys, like, low-investment, like, massively social games, are really popular lately, for a what if you made a game that was capture the flag, but instead of, like, what you described, but instead of trying to make it, like, a supremely competitive, deep experience, kind of just crank it out at the Among Us/Fall Guys level, and make it massive.
+
+55
+00:04:03,869 --> 00:04:06,718
+Rym: Like, it just makes server 40 on 40.
+
+56
+00:04:06,718 --> 00:04:10,911
+Rym: It's a giant, like, woods map, and people are sneaking around trying to get the flag.
+
+57
+00:04:10,931 --> 00:04:11,915
+Scott: - I played a game like that.
+
+58
+00:04:12,015 --> 00:04:14,867
+Scott: I think it might somewhat still exist.
+
+59
+00:04:14,927 --> 00:04:17,336
+Scott: I played a game like that way back in the day.
+
+60
+00:04:17,356 --> 00:04:20,065
+Scott: It was just a 2D overhead view.
+
+61
+00:04:20,086 --> 00:04:21,290
+Scott: You were in these little vehicles.
+
+62
+00:04:21,670 --> 00:04:39,599
+Scott: They were kind of, like, it looked like UFOs, maybe, and it would be, like, three on three, and you had, like, a laser, and you had, like, a grenade kind of item, and you had a little health bar, and you would move real slow, and you would, you know, you had a team, and you tried to go around and get the flag and bring it back to your base.
+
+63
+00:04:39,700 --> 00:04:40,523
+Scott: What was that game called?
+
+64
+00:04:40,544 --> 00:04:43,335
+Rym: - I don't know this game, but that sounds interesting.
+
+65
+00:04:43,355 --> 00:04:45,442
+Scott: - It was, like, a really tiny little game.
+
+66
+00:04:45,462 --> 00:05:01,963
+Rym: - But I've realized that, well, not realized, we've talked about, we've done panels about this concept before, Horse Remorse, but a game like Fall Guys can be very fun, and people get weird, like, really competitive about it, even if a lot of it ends up being pretty random.
+
+67
+00:05:02,665 --> 00:05:07,380
+Rym: So I feel like there's a way to make a slow, zoomed-in capture the flag.
+
+68
+00:05:07,400 --> 00:05:09,186
+Rym: that's just massively multiplayer.
+
+69
+00:05:09,587 --> 00:05:14,610
+Rym: that would scratch a social itch, even if it wasn't the kind of competitive game that we normally tend to like.
+
+70
+00:05:16,151 --> 00:05:19,530
+Rym: I don't know, I feel like there's a space there, there's an unfilled niche.
+
+71
+00:05:22,140 --> 00:05:38,631
+Rym: Anyway, and some news, we didn't talk about this when it happened, but I want to talk about it now, because it's been weighing heavy on my approaching 40 brow, but Counter-Strike, the game that we played from near its beginning, late last year.
+
+72
+00:05:38,652 --> 00:05:42,566
+Scott: - It was called ARK, Attack Retrieve Capture, A-R-C.
+
+73
+00:05:42,586 --> 00:05:48,240
+Rym: - So we should make bark better, Attack Retrieve Capture, and there we go, that's our game.
+
+74
+00:05:49,560 --> 00:05:50,570
+Scott: - Yeah, the game, you know.
+
+75
+00:05:50,591 --> 00:05:57,220
+Rym: - No, we call it bark, you're all dogs, you can only, wait, there's no map, it never shows you where the flag is.
+
+76
+00:05:57,600 --> 00:05:58,447
+Scott: - Capture the bone.
+
+77
+00:05:58,467 --> 00:06:07,351
+Rym: - Yeah, but it's not like, Overwatch Capture the Flag, where like, it highlights like the flag, someone got your flag, it's fucking there, right there, go get 'em.
+
+78
+00:06:07,712 --> 00:06:18,414
+Rym: It's more like, someone's got your bone, you don't know where, and you can only see, like, other players can point at where they think it is, and you gotta like find them in the woods.
+
+79
+00:06:19,159 --> 00:06:19,300
+Rym: Anyway.
+
+80
+00:06:19,460 --> 00:06:22,660
+Scott: - It still exists, it's now called Armor Critical, armorcritical.com.
+
+81
+00:06:23,240 --> 00:06:33,856
+Rym: - Alright, so Counter-Strike on November 9th, last year, at the end of the year, turned officially 20 years old.
+
+82
+00:06:33,876 --> 00:06:35,120
+Scott: - Pokemon's older.
+
+83
+00:06:35,461 --> 00:06:44,931
+Rym: Yeah, but Pokemon has released a lot of single player experiences, and has a massively evolving culture of card games, video games.
+
+84
+00:06:44,951 --> 00:06:48,171
+Scott: - Counter-Strike has released like three games, four games.
+
+85
+00:06:48,191 --> 00:06:53,680
+Rym: - Counter-Strike has released Counter-Strike, slightly different Counter-Strike, and slightly differenter Counter-Strike.
+
+86
+00:06:55,080 --> 00:06:56,589
+Rym: - Pretty much.
+
+87
+00:06:56,609 --> 00:07:13,980
+Rym: - All I want to say about that, is that it is a testament to the core game loop of Counter-Strike as a competitive team-based first person shooter, the sheer fucking longevity of this game with very few changes over the years.
+
+88
+00:07:15,521 --> 00:07:22,105
+Rym: Like, it is fundamentally the same game now that it was 20 years ago when we were playing it on those beta servers.
+
+89
+00:07:22,125 --> 00:07:24,539
+Scott: - Yeah, pretty much.
+
+90
+00:07:25,681 --> 00:07:42,940
+Rym: But it's interesting to me how popular it still is, and how specifically it is still a, it was a viable esport before esports were really much of a thing, and it remains a significant and important competitive esport that people care about, and there's an ecosystem around it.
+
+91
+00:07:43,740 --> 00:07:45,831
+Scott: - No, it was a skill, you know, a skill-based game.
+
+92
+00:07:45,871 --> 00:07:50,940
+Scott: There weren't that many, you know, games where skill was, you know, there's not luck in Counter-Strike, really.
+
+93
+00:07:55,161 --> 00:08:01,739
+Rym: So in some other news, so that Cyberpunk game had a lot of issues that I think we talked about.
+
+94
+00:08:02,760 --> 00:08:02,961
+Scott: - Oh yeah.
+
+95
+00:08:02,981 --> 00:08:11,400
+Rym: - But the company that made Cyberpunk had some issues that are very Cyberpunk adjacent just recently.
+
+96
+00:08:12,880 --> 00:08:15,430
+Scott: - So it seems like they got hacked somehow.
+
+97
+00:08:15,550 --> 00:08:29,898
+Scott: Some of their internal system was compromised by some unknown means, and someone took a lot of confidential information and data, supposedly, and threatened to release it, and the company basically just, you know, did.
+
+98
+00:08:29,938 --> 00:08:33,594
+Scott: what I guess is what you should do, assuming you're already in the shit, right?
+
+99
+00:08:33,614 --> 00:08:41,015
+Scott: It should have not happened, but they already fucked up, so they basically said, "Yeah, this happened.
+
+100
+00:08:41,397 --> 00:08:45,090
+Scott: No, we're not gonna be, you know, pay the ransom, right?
+
+101
+00:08:45,130 --> 00:08:45,311
+Scott: Go to
+
+102
+00:08:45,351 --> 00:08:45,692
+Scott: hell.".
+
+103
+00:08:45,712 --> 00:08:52,202
+Rym: - Quote, "We will not give into these demands, nor negotiate with the actor, being aware that this may eventually lead to the release of compromised
+
+104
+00:08:52,242 --> 00:08:52,483
+Rym: data.".
+
+105
+00:08:52,503 --> 00:08:54,773
+Scott: - Yep, and then who knows?
+
+106
+00:08:54,834 --> 00:08:56,240
+Scott: Maybe we'll see some compromised data.
+
+107
+00:08:57,040 --> 00:08:58,846
+Rym: - I'm pretty confident we will.
+
+108
+00:08:59,648 --> 00:09:07,169
+Rym: It seems like it was a combination of data stealing, data theft, coupled with straight-up just ransomware on their whole network.
+
+109
+00:09:08,753 --> 00:09:14,548
+Rym: The thing is, if any of you have ever, I've never encountered ransomware.
+
+110
+00:09:14,568 --> 00:09:22,791
+Scott: - I've never seen it in person because no computer that I'm near is so poorly secured that that's gonna happen.
+
+111
+00:09:22,811 --> 00:09:39,225
+Rym: - But the one thing I have seen when ransomware attacks have happened is that typically, if the person who, like, gets attacked pays the ransom, often the person they pay, instead of giving them the code, will just say, "Oh, so you actually want your data back.
+
+112
+00:09:39,527 --> 00:09:40,390
+Rym: Send me twice as much
+
+113
+00:09:40,450 --> 00:09:40,651
+Rym: money.".
+
+114
+00:09:41,755 --> 00:09:44,307
+Rym: Like, there's no guarantee they're gonna give you the data back.
+
+115
+00:09:44,568 --> 00:09:58,364
+Rym: There are some hacker groups where they'll have, like, the verifiable hashes in the websites and the ways to, like, they really want to make it easy for you to pay them a small amount, but generally, these more independent actors tend to just continue to exploit you.
+
+116
+00:09:58,986 --> 00:10:00,330
+Rym: Like, if someone blackmails you.
+
+117
+00:10:00,792 --> 00:10:12,940
+Rym: If you pay someone who blackmails you money so that they stop blackmailing you, there's literally nothing that payment does to prevent them from just blackmailing you in the future, and it verifies for them that the blackmail's legit.
+
+118
+00:10:13,660 --> 00:10:21,786
+Scott: - Right, and it's also, you know, you always see, like, the famous, you know, movie hostage scene, which is kind of fake-ish, right?
+
+119
+00:10:21,806 --> 00:10:24,213
+Rym: - "I want a helicopter and a
+
+120
+00:10:24,234 --> 00:10:24,755
+Rym: pony.".
+
+121
+00:10:24,775 --> 00:10:26,742
+Scott: - "I got a briefcase of money.
+
+122
+00:10:26,842 --> 00:10:28,670
+Scott: You got some person tied up, right?
+
+123
+00:10:28,710 --> 00:10:30,738
+Scott: We come and put them in the middle and swap,
+
+124
+00:10:30,979 --> 00:10:31,100
+Scott: right?".
+
+125
+00:10:31,100 --> 00:10:31,803
+Scott: - "What do you
+
+126
+00:10:31,863 --> 00:10:32,064
+Scott: do?".
+
+127
+00:10:32,084 --> 00:10:33,871
+Scott: - "You show me the person.
+
+128
+00:10:33,931 --> 00:10:35,076
+Scott: I show you the case of money,
+
+129
+00:10:35,136 --> 00:10:35,317
+Scott: right?".
+
+130
+00:10:35,779 --> 00:10:43,080
+Scott: With these ransomware situations, it could be like, "Okay, I've up, you know, it's like, you give me money.
+
+131
+00:10:43,801 --> 00:10:45,104
+Scott: I tell you I've deleted the
+
+132
+00:10:45,144 --> 00:10:45,444
+Scott: data.".
+
+133
+00:10:49,172 --> 00:10:50,295
+Scott: "Okay, it's deleted.
+
+134
+00:10:50,355 --> 00:10:50,655
+Scott: Trust
+
+135
+00:10:50,675 --> 00:10:50,796
+Scott: me.".
+
+136
+00:10:50,816 --> 00:10:52,479
+Rym: - "Yeah, I did not upload a
+
+137
+00:10:52,519 --> 00:10:52,780
+Rym: torrent.".
+
+138
+00:10:54,640 --> 00:11:02,534
+Scott: - Yeah, or it's like, it's like, what, how can you, it's like, you're basically just giving someone money to hope that that person is true to their word.
+
+139
+00:11:02,654 --> 00:11:04,581
+Scott: It's like, you're not buying anything, right?
+
+140
+00:11:04,601 --> 00:11:06,147
+Scott: There's no guarantees or nothing.
+
+141
+00:11:06,187 --> 00:11:16,018
+Scott: How, in what way can you make that fair exchange where you know for certain that, you know, this is, that money has rescued the person somehow?
+
+142
+00:11:16,038 --> 00:11:17,725
+Rym: - But I do want to point out something else.
+
+143
+00:11:18,287 --> 00:11:26,929
+Rym: CD Projekt, for all the problems with that company, for all the problems with Cyberpunk, the one thing that they did right is they recovered fully from the.
+
+144
+00:11:33,922 --> 00:11:40,086
+Rym: If you lose data in a ransomware attack, that just means you fucked up real bad and didn't have any processes in place.
+
+145
+00:11:40,106 --> 00:11:46,989
+Scott: - Yep, they didn't have, so their security at protecting their, you know, systems was bad, but they had backups.
+
+146
+00:11:47,009 --> 00:11:49,115
+Rym: - Backups are so important.
+
+147
+00:11:49,156 --> 00:11:56,421
+Rym: The funniest thing, though, is the hackers, the email they sent them was like, "But we understand that most likely, like, you'll recover this data for
+
+148
+00:11:56,441 --> 00:11:56,862
+Rym: backups.".
+
+149
+00:11:56,902 --> 00:12:00,274
+Rym: Like, they knew that the ransomware wouldn't probably get them.
+
+150
+00:12:00,294 --> 00:12:02,241
+Scott: - Now, that's another situation, right?
+
+151
+00:12:02,281 --> 00:12:05,475
+Scott: Let's say you were really bad, you didn't have your backups, right?
+
+152
+00:12:05,716 --> 00:12:08,587
+Scott: You really sucked and dropped the ball, right?
+
+153
+00:12:08,928 --> 00:12:14,404
+Scott: So now when you pay the ransom, you're hoping to get your data back, right?
+
+154
+00:12:14,645 --> 00:12:20,645
+Scott: So they send you, like what, an encrypted file, and they say, "Yeah, your data's in that encrypted file, right?
+
+155
+00:12:21,107 --> 00:12:23,254
+Scott: Pay us money and we'll send you the key to decrypt
+
+156
+00:12:23,314 --> 00:12:23,394
+Scott: it.".
+
+157
+00:12:23,836 --> 00:12:28,211
+Scott: You pay them money, and they go, "A," they just lol and don't do anything.
+
+158
+00:12:28,753 --> 00:12:31,141
+Scott: "B," they send you a key to decrypt it, it doesn't work.
+
+159
+00:12:31,624 --> 00:12:34,939
+Scott: "C," they send you a key to decrypt it, you decrypt it, and it's a text file that says,
+
+160
+00:12:34,999 --> 00:12:35,120
+Scott: "Lol."
+
+161
+00:12:36,941 --> 00:12:38,729
+Scott: Or a picture of a skull or something, right?
+
+162
+00:12:38,809 --> 00:12:42,383
+Scott: It's just like, and you can't get your money back, you get a refund.
+
+163
+00:12:42,765 --> 00:12:43,889
+Scott: It's not Amazon.
+
+164
+00:12:43,909 --> 00:12:44,792
+Rym: - There's a lesson here.
+
+165
+00:12:44,832 --> 00:12:49,046
+Rym: that's very simple and applies to everything, including this impeachment trial that started today.
+
+166
+00:12:49,708 --> 00:12:57,614
+Rym: Never, ever negotiate with someone where you believe and have reason to believe that they will act in bad faith.
+
+167
+00:12:57,896 --> 00:12:59,020
+Rym: There's literally no point.
+
+168
+00:12:59,301 --> 00:13:07,206
+Rym: Debating, negotiating, none of those things matter at all if the counterparty cannot be reasonably assumed to act in good faith.
+
+169
+00:13:07,226 --> 00:13:15,754
+Scott: - Right, if someone is acting in bad faith, the only thing, the only way that you can get them to do something that they don't want to do is by force.
+
+170
+00:13:15,774 --> 00:13:18,482
+Rym: - Force or collateral, which is just force.
+
+171
+00:13:18,503 --> 00:13:22,436
+Scott: - Force or just let them be, that's your other option.
+
+172
+00:13:22,817 --> 00:13:28,354
+Scott: Just like, ignore them, or if you can't force them to do something, you can't, right?
+
+173
+00:13:28,575 --> 00:13:41,862
+Scott: Only with someone who is acting in good faith where their word has value, where they will do what they say to some extent, where they will listen to what you are saying to some extent is the only kind of person that you can engage with.
+
+174
+00:13:41,962 --> 00:13:58,275
+Scott: If someone is just gonna lie, gonna not do what they say, is saying things but that aren't what they actually believe, they're just saying stuff, they're just gonna do what they're gonna do, don't waste any time on that person, right?
+
+175
+00:13:58,315 --> 00:14:05,556
+Scott: Whether it's a ransomware person or just some jerk you met on the internet, just don't do it, it's not worth it.
+
+176
+00:14:05,576 --> 00:14:10,254
+Rym: - So there's some other news that I want to dwell on a little longer than those other two things.
+
+177
+00:14:10,816 --> 00:14:15,952
+Rym: There was a game that came out, was coming out around the same time as Overwatch.
+
+178
+00:14:16,353 --> 00:14:20,425
+Rym: that had extremely superficial similarities to Overwatch.
+
+179
+00:14:20,927 --> 00:14:32,708
+Rym: If you didn't know anything about games and you watched trailers, you might have assumed they were similar in some way, even though they were actually as different as an FPS and a board game.
+
+180
+00:14:33,590 --> 00:14:38,742
+Rym: But there was a game called Battleborn and there's a game called Overwatch.
+
+181
+00:14:39,264 --> 00:14:43,136
+Rym: Battleborn, if you're not aware, failed catastrophically.
+
+182
+00:14:43,277 --> 00:14:44,240
+Rym: No one played that game.
+
+183
+00:14:45,081 --> 00:14:50,051
+Rym: That game just went downhill so fast, like it was kind of amazing.
+
+184
+00:14:51,033 --> 00:15:16,749
+Rym: So 2K has announced recently, I think on January 31st, like in the last couple weeks, that after February 24th, 2020, which was a while ago, you can't like purchase stuff in the game anymore, on January 31st, which just happened a little while ago, the game servers will go down and at that time the game in its entirety will remain unplayable forever.
+
+185
+00:15:18,454 --> 00:15:19,817
+Rym: Single-player bugs doesn't matter.
+
+186
+00:15:20,098 --> 00:15:23,427
+Rym: The game itself to even launch it requires those servers to be up.
+
+187
+00:15:25,413 --> 00:15:26,998
+Rym: A little bit of a tribes 2 situation.
+
+188
+00:15:27,619 --> 00:15:42,200
+Rym: So there's a lot like this story, there's a lot going on and I think I want to highlight like all the different threads here because these are threads that you can pursue if you find them interesting that talk about like they speak to have greater truths in the game industry.
+
+189
+00:15:42,721 --> 00:15:46,091
+Rym: Point number one, games moving to this online.
+
+190
+00:15:46,231 --> 00:15:51,025
+Rym: only requiring a server to function at all model is kind of a problem.
+
+191
+00:15:52,709 --> 00:15:58,945
+Rym: How do you preserve a game like Battleborn for like posterity if it's literally gone forever?
+
+192
+00:16:00,830 --> 00:16:07,330
+Rym: If the client does not do anything anymore, it's not like there's any way to get the server to like run in a museum.
+
+193
+00:16:07,391 --> 00:16:08,275
+Rym: We know that doesn't work.
+
+194
+00:16:08,556 --> 00:16:10,142
+Rym: Copyright ensures that will never happen.
+
+195
+00:16:10,644 --> 00:16:13,372
+Rym: So basically this game just disappeared forever.
+
+196
+00:16:14,115 --> 00:16:21,482
+Rym: Even though this game was a competitive game, much like Overwatch, there really is not much of a single-player experience to speak of.
+
+197
+00:16:21,863 --> 00:16:25,210
+Rym: The fact that you can't interact with it at all is trouble.
+
+198
+00:16:27,295 --> 00:16:42,235
+Rym: Two, a lot of people are trying to make an argument that Overwatch coming out at the same time is why Battleborn failed and I don't think that is even a remotely credible argument.
+
+199
+00:16:42,896 --> 00:16:45,463
+Rym: Overwatch was a competitive first-person shooter.
+
+200
+00:16:45,864 --> 00:16:49,556
+Rym: Overwatch shares a lot with games like Counter-Strike or Quake.
+
+201
+00:16:49,958 --> 00:16:57,602
+Rym: The skill that game is testing is teamwork and clicking on heads and doing FPS stuff with a high degree of direct personal skill.
+
+202
+00:16:58,363 --> 00:17:02,652
+Rym: Battleborn is basically a MOBA, like straight up.
+
+203
+00:17:03,293 --> 00:17:09,571
+Rym: Individual skill at FPSing or third-person shooting wouldn't matter that much in that game.
+
+204
+00:17:09,893 --> 00:17:17,335
+Rym: If I just compare Battleborn to any other game, it's really more like Risk of Rain or Risk of Rain 2.
+
+205
+00:17:17,335 --> 00:17:19,079
+Scott: I've never played it so I don't know.
+
+206
+00:17:19,721 --> 00:17:38,720
+Rym: Yeah, it's basically Battleborn was a MOBA and my opinion on what happened is that a lot of game journalists, because the games had similar trailers and somewhat similar aesthetics like team-based shooter, they assumed that they were going after the same audiences.
+
+207
+00:17:39,442 --> 00:17:43,983
+Rym: But what appears to have happened is a ton of people started to play Overwatch when it came out and kept playing it.
+
+208
+00:17:44,666 --> 00:17:50,830
+Rym: A ton of people started to play Battleborn when it came out from the numbers I found, but didn't keep playing it.
+
+209
+00:17:51,172 --> 00:18:02,072
+Rym: The situation was a ton of people tried Battleborn, didn't like it, and the player base dropped off catastrophically to the point that within a few months people couldn't even get like a single game going at most times.
+
+210
+00:18:02,755 --> 00:18:18,819
+Scott: So I think that's just a sign of, you know, something that we sort of know but people don't think about a lot is that there are some game companies, right, that are good at supporting their existing game.
+
+211
+00:18:18,859 --> 00:18:21,690
+Scott: They put a game out and then they take care of it, right?
+
+212
+00:18:21,730 --> 00:18:35,861
+Scott: So whether they do a good job or a bad job, right, and they make bad decisions, but the point is is that even if they're negatively active, right, they're doing bad things but they're still doing stuff, like they're still working all the time.
+
+213
+00:18:35,901 --> 00:18:42,247
+Scott: They got a team, it's on the game, they got patches, they got news, you might hate all the patches, but they're working on it.
+
+214
+00:18:42,287 --> 00:18:44,977
+Rym: Valve and Blizzard do this very well, right?
+
+215
+00:18:45,037 --> 00:18:52,829
+Scott: Valve, Blizzard, the League of Legends company, Riot, right, all the companies with the big successful online games, it's sort of a chicken egg, right?
+
+216
+00:18:52,909 --> 00:19:02,824
+Scott: It's like, oh, we have a successful multiplayer game, therefore we keep care of it, or our game became a successful online multiplayer game because we take care of it, who knows?
+
+217
+00:19:02,844 --> 00:19:04,188
+Scott: But
+
+218
+00:19:04,288 --> 00:19:04,609
+Rym: I do
+
+219
+00:19:04,650 --> 00:19:28,227
+Scott: think that a Blizzard-like company, where you have this reputation of doing it over and over again on several different games, when you put out a new game, people trust that that's what it's going to be, that you're going to be taking care of it, and so then, therefore, that game can now build on the trust of the effort you put into your previous games, maintaining those services, right?
+
+220
+00:19:28,247 --> 00:19:30,293
+Scott: Whereas, who made Battleborn, right?
+
+221
+00:19:34,320 --> 00:19:35,044
+Rym: - Well, 2K.
+
+222
+00:19:35,064 --> 00:19:49,731
+Scott: - Right, so what other online, do they have a history and a community engagement of making online multiplayer games and keeping them going and working on them the way that a PUBG does, right?
+
+223
+00:19:49,751 --> 00:19:54,531
+Scott: Or even a Fortnite, Fortnite, the best at it, probably, right?
+
+224
+00:19:54,551 --> 00:19:58,912
+Rym: - Probably, they'll just radically fuck up their game because that's the audience.
+
+225
+00:19:58,932 --> 00:20:02,945
+Rym: they're going after, like radical changes, right?
+
+226
+00:20:02,985 --> 00:20:06,520
+Scott: They keep going, Minecraft, they got people who just keep working on it, right?
+
+227
+00:20:07,280 --> 00:20:10,900
+Rym: - Civilization VI just keeps getting kind of crazy updates.
+
+228
+00:20:11,280 --> 00:20:13,931
+Scott: - Right, so did Battleborn die?
+
+229
+00:20:13,951 --> 00:20:20,740
+Scott: I haven't played it, I don't know anything about what went on with it, but did it die because no one took care of it, or did they take care of it and it just sucks?
+
+230
+00:20:21,520 --> 00:20:23,029
+Rym: - So what I think happened there...
+
+231
+00:20:23,049 --> 00:20:30,260
+Scott: - And now, if they make any more games, if they try to make them online games with the community, that their rep is like ruined.
+
+232
+00:20:31,603 --> 00:20:33,520
+Scott: It's gonna be hard to get people to buy into the next one.
+
+233
+00:20:33,720 --> 00:20:39,905
+Rym: - I feel like what actually happened here happened so early, like the game came out and lost its player base almost instantly.
+
+234
+00:20:40,467 --> 00:20:44,803
+Rym: That implies a more fundamental dysfunction and a mismatch on who the game was targeted at.
+
+235
+00:20:44,823 --> 00:20:50,407
+Rym: That's a situation where, like, Team Fortress 2, when that came out, we were both really excited about it.
+
+236
+00:20:50,467 --> 00:20:57,477
+Rym: Like, I'd been waiting for that game, and when it first came out, I jumped in and I started playing it, and I was pretty disappointed.
+
+237
+00:20:57,497 --> 00:20:58,280
+Rym: It wasn't what I wanted.
+
+238
+00:20:58,360 --> 00:20:58,943
+Rym: I didn't like it.
+
+239
+00:20:59,003 --> 00:21:00,791
+Rym: I kind of stopped playing it pretty quickly.
+
+240
+00:21:00,811 --> 00:21:07,320
+Rym: That mismatch of expectation seems to be what happened here because the player base didn't, like, start strong and slowly decline.
+
+241
+00:21:07,461 --> 00:21:21,860
+Rym: It started strong and then, like, catastrophically and rapidly declined, implying that people who played it for the first time discovered that the core concept of the game was not something they enjoyed, or they expected it to be one thing and it ended up being something else.
+
+242
+00:21:23,381 --> 00:21:26,058
+Scott: I think what happened-- - I've never-- I don't think I've ever even seen the game.
+
+243
+00:21:26,078 --> 00:21:28,085
+Scott: I basically-- - We played it at a PAX!
+
+244
+00:21:29,107 --> 00:21:33,500
+Rym: I have a video of us sitting there, playing it, and talking about it.
+
+245
+00:21:33,920 --> 00:21:36,171
+Scott: - I don't think we played-- if we did, I don't remember it.
+
+246
+00:21:36,191 --> 00:21:37,195
+Scott: - We played one match.
+
+247
+00:21:37,477 --> 00:21:39,526
+Rym: I was bitching the whole time because I couldn't invert the mouse.
+
+248
+00:21:39,546 --> 00:21:41,697
+Scott: - I do not remember this at all.
+
+249
+00:21:41,717 --> 00:21:43,485
+Scott: I just know that there is a game-- - How do you not remember this?
+
+250
+00:21:43,706 --> 00:21:44,490
+Rym: Do I have to, like, get the video?
+
+251
+00:21:44,510 --> 00:21:46,560
+Scott: - I just know that there is a game called Battleborn.
+
+252
+00:21:46,660 --> 00:21:47,303
+Scott: That's all I know.
+
+253
+00:21:47,926 --> 00:21:50,396
+Scott: Until the news that it was gone.
+
+254
+00:21:50,416 --> 00:21:51,440
+Rym: - Here's what I think happened.
+
+255
+00:21:52,640 --> 00:22:16,312
+Rym: Games journalists superficially kept comparing it to Overwatch, so players thought that they would be equivalent games, so I get the impression that the Overwatch-- people who were playing Overwatch or would play Overwatch, people who like a competitive first-person shooter, thought that Battleborn would be some sort of first-person or third-person competitive shooter, but when they got into it, despite what it looked like, it was a MOBA.
+
+256
+00:22:17,095 --> 00:22:23,756
+Rym: Generally, the kind of person who plays a first-person shooter, competitively, is not equally enthused about a MOBA.
+
+257
+00:22:23,816 --> 00:22:29,040
+Rym: Like, they target-- while there's a lot of overlap, they do target fundamentally different game experiences.
+
+258
+00:22:29,620 --> 00:22:38,080
+Rym: I think people expected it to be more of a first-person/third-person shooter, and when they tried it, it was a very different kind of game, and that's why they bounced off of it so hard.
+
+259
+00:22:38,560 --> 00:22:43,414
+Rym: Meanwhile, Battleborn didn't do a good job of getting the word out that, "Yo, this is a MOBA.
+
+260
+00:22:43,454 --> 00:22:43,916
+Rym: MOBA.
+
+261
+00:22:45,920 --> 00:22:46,863
+Rym: Not shooter.
+
+262
+00:22:47,205 --> 00:22:47,505
+Rym: Trust
+
+263
+00:22:47,646 --> 00:22:47,766
+Rym: us.".
+
+264
+00:22:48,368 --> 00:22:59,180
+Rym: So the people who would have liked it probably didn't try it out early, and by the time they might have corrected that message for those people to try it, the game had already declined so far that it didn't have critical mass to keep going.
+
+265
+00:22:59,741 --> 00:23:01,917
+Rym: I don't think any amount of changes to the game would have saved it.
+
+266
+00:23:05,261 --> 00:23:13,869
+Rym: So, I guess one of those threads there is, be wary if you're a game designer or a game publisher, especially the bigger you are.
+
+267
+00:23:13,889 --> 00:23:29,563
+Rym: You have to make it very clear to the people out there who you want to play your game what the game is and who it's for, because if you don't make that crystal clear, lazy game journalists might tell people your game is something different from what it is, and that might destroy you.
+
+268
+00:23:32,408 --> 00:23:38,198
+Rym: So last, this kind of news happens a lot.
+
+269
+00:23:38,639 --> 00:23:39,782
+Rym: This is just the most recent one.
+
+270
+00:23:39,822 --> 00:23:40,886
+Rym: It's kind of a big deal one.
+
+271
+00:23:41,669 --> 00:24:00,720
+Rym: Gearbox, who you may know from Developing Borderlands, was just bought for 1.3 billion dollars by Embracer Group, which is just one more step in the massive consolidation of developers and publishers in the games industry.
+
+272
+00:24:01,220 --> 00:24:06,282
+Rym: I expect eventually every single game made above like indies is going to be just one giant conglomerate.
+
+273
+00:24:06,302 --> 00:24:11,046
+Scott: I think the entertainment, you know, the major entertainment industry as a whole just keeps consolidating.
+
+274
+00:24:11,086 --> 00:24:13,056
+Scott: It's like, I'm surprised there isn't already just one.
+
+275
+00:24:13,096 --> 00:24:14,422
+Scott: It's like Disney's close, right?
+
+276
+00:24:14,442 --> 00:24:17,191
+Scott: But it's like, wow, there's still more than one company.
+
+277
+00:24:17,272 --> 00:24:21,003
+Rym: CVS Paramount, like Paramount Plus, they're really trying to make that a thing.
+
+278
+00:24:22,848 --> 00:24:34,041
+Rym: But the problem they have is how many people out there, like the mass market, think like could list things that Paramount owns the IP to as opposed to another brand?
+
+279
+00:24:34,262 --> 00:24:35,566
+Rym: Like who knows that?
+
+280
+00:24:35,606 --> 00:24:37,492
+Rym: Who's not already a nerd about this stuff?
+
+281
+00:24:39,177 --> 00:24:41,925
+Scott: They, you know, they try to teach people what they're marketing.
+
+282
+00:24:41,966 --> 00:24:43,671
+Scott: That's what that job is.
+
+283
+00:24:44,294 --> 00:24:46,601
+Scott: So, but yeah, so Gearbox got bought.
+
+284
+00:24:47,363 --> 00:24:54,986
+Scott: So this is interesting because, you know, it's, you know, it's been already so much conglomeration going on.
+
+285
+00:24:55,608 --> 00:25:04,176
+Scott: And there's so much, you know, so many different industry ties in terms of, you know, this, this company is the developer and that company is the publisher.
+
+286
+00:25:04,236 --> 00:25:14,031
+Rym: Some publishers are developers, some developers are publishers, some publishers own developers, but also have their own developer companies and some publishers own publishers.
+
+287
+00:25:14,412 --> 00:25:18,146
+Scott: Like some publishers and or developers have IP licenses.
+
+288
+00:25:18,206 --> 00:25:20,755
+Scott: Some of them own the rights to IP, right?
+
+289
+00:25:20,856 --> 00:25:23,384
+Scott: It's like, there's all kinds of weird things going on, right?
+
+290
+00:25:23,404 --> 00:25:26,252
+Scott: So it's like the developers of Pokemon.
+
+291
+00:25:26,372 --> 00:25:27,415
+Scott: is Game Freak, right?
+
+292
+00:25:28,418 --> 00:25:30,225
+Scott: Is Game Freak just owned by Nintendo?
+
+293
+00:25:30,426 --> 00:25:31,329
+Scott: It's like, I think it is.
+
+294
+00:25:31,731 --> 00:25:32,534
+Scott: Do you know for sure?
+
+295
+00:25:32,615 --> 00:25:33,840
+Scott: What exactly is that relationship?
+
+296
+00:25:34,140 --> 00:25:36,494
+Scott: Who, oh, there's a, there's a company called the Pokemon company.
+
+297
+00:25:36,514 --> 00:25:37,380
+Scott: What the fuck do they own?
+
+298
+00:25:37,520 --> 00:25:37,801
+Scott: Yeah.
+
+299
+00:25:38,102 --> 00:25:38,404
+Scott: Right.
+
+300
+00:25:38,444 --> 00:25:41,696
+Rym: It's like, it's like, what if you're not in the industry, like?
+
+301
+00:25:42,177 --> 00:25:48,947
+Rym: I would struggle without looking it up again, just to be crystal clear, especially when there's like joint ownership or like stock swaps.
+
+302
+00:25:49,107 --> 00:25:50,693
+Rym: Like there's lots of nonsense that can happen.
+
+303
+00:25:51,115 --> 00:25:55,688
+Rym: The exact relationship between Gearbox, Take-Two, 2k and THQ Nordic, like.
+
+304
+00:25:56,410 --> 00:26:03,536
+Rym: summarize that quickly or Google around and count the time it takes for you to be able to summarize that succinctly.
+
+305
+00:26:03,617 --> 00:26:05,183
+Rym: It'll take you longer than you might expect.
+
+306
+00:26:06,006 --> 00:26:06,247
+Scott: Yeah.
+
+307
+00:26:06,307 --> 00:26:10,381
+Scott: It's like Super Smash Brothers was made by HAL Laboratory until 2001.
+
+308
+00:26:10,381 --> 00:26:17,943
+Scott: And then starting in 2008, it was made by Sora Limited and from 2014 to now it was made by Bandai Namco Studios.
+
+309
+00:26:18,404 --> 00:26:19,748
+Scott: It's like, wait, what?
+
+310
+00:26:20,129 --> 00:26:22,556
+Scott: Nintendo isn't making Smash.
+
+311
+00:26:22,576 --> 00:26:23,840
+Scott: Someone else is making Smash.
+
+312
+00:26:24,240 --> 00:26:25,486
+Scott: Nintendo publishes it and owns.
+
+313
+00:26:25,827 --> 00:26:31,700
+Rym: When you said Bandai, like I just realized something pretty, like, I don't think this is necessarily profound, but it stood out in my brain.
+
+314
+00:26:32,261 --> 00:26:47,899
+Rym: Whenever we were kids, like we were young and the AOL Time and Warner were all merged together into AOL Time Warner, how utterly alien and like fake that name sounded when it first appeared.
+
+315
+00:26:47,979 --> 00:26:52,470
+Rym: Like saying the words AOL Time Warner seemed ludicrous.
+
+316
+00:26:53,012 --> 00:26:57,164
+Scott: And yet now even at the time it seemed like that shouldn't be legal.
+
+317
+00:26:57,264 --> 00:26:58,551
+Scott: You shouldn't be able to, right.
+
+318
+00:26:58,631 --> 00:27:00,279
+Scott: And now it's even worse than that.
+
+319
+00:27:00,561 --> 00:27:02,529
+Rym: The difference is now we're used to that.
+
+320
+00:27:02,629 --> 00:27:07,049
+Rym: I'll say like Bandai Namco and literally not even bad and I'll string together 10 proper nouns.
+
+321
+00:27:07,089 --> 00:27:10,745
+Scott: NBC, Comcast, who knows what the hell that company is now, right?
+
+322
+00:27:11,046 --> 00:27:11,247
+Rym: Right.
+
+323
+00:27:11,467 --> 00:27:17,151
+Rym: But that like word salad of a bunch of proper nouns that got merged doesn't, like it just rolls off the tongue now.
+
+324
+00:27:17,211 --> 00:27:18,317
+Rym: Like we're just used to that.
+
+325
+00:27:18,357 --> 00:27:19,140
+Rym: That's business as usual.
+
+326
+00:27:19,160 --> 00:27:20,645
+Scott: But anyway, it's bad.
+
+327
+00:27:21,327 --> 00:27:32,204
+Scott: But yeah, so the Gearbox got bought by some giant equity group that owns a fuck ton of stuff, but some of their stuff is published by other companies that are not purchased.
+
+328
+00:27:32,706 --> 00:27:36,740
+Scott: And so there's still the, now those relationships get kind of questionable, right?
+
+329
+00:27:36,820 --> 00:27:38,187
+Scott: Are they going to maintain them?
+
+330
+00:27:38,207 --> 00:27:50,280
+Scott: And you know, like for, it always reminds me of like what happens in the comic book world where like when Disney bought Marvel, because it was like there were other comic book companies, for example, until then Dark Horse did all the Star Wars comics.
+
+331
+00:27:50,481 --> 00:27:51,223
+Scott: Oh yeah.
+
+332
+00:27:51,885 --> 00:27:59,452
+Scott: And then when Disney bought Marvel, they basically waited until the license expired and they said, okay, Dark Horse, you kept making Star Wars comics.
+
+333
+00:27:59,593 --> 00:28:02,383
+Scott: Your license is up and now Marvel will make the Star Wars.
+
+334
+00:28:02,484 --> 00:28:06,984
+Rym: Actually, total aside, but with WandaVision, we talked about that last week on Wednesday a little bit.
+
+335
+00:28:07,004 --> 00:28:08,290
+Scott: Is there Star Wars in WandaVision?
+
+336
+00:28:08,491 --> 00:28:12,623
+Rym: No, but I realized, how the fuck are you going to do House of M if you don't have the X-Men?
+
+337
+00:28:12,643 --> 00:28:19,778
+Scott: They just do, you know, they never keep it true to the book, right?
+
+338
+00:28:19,798 --> 00:28:21,609
+Scott: If they kept it true to the book, I'd probably want to watch it.
+
+339
+00:28:22,572 --> 00:28:25,730
+Rym: If it was like House of M with the X-Men, I would be even more interested.
+
+340
+00:28:27,630 --> 00:28:37,282
+Rym: But like this article about this actually even like there's a few sentences here because nerds, like the fans, they don't care about the industry consolidation.
+
+341
+00:28:37,543 --> 00:28:45,676
+Rym: The only thing anyone who plays games seems to care about is what's going to happen to Borderlands because they don't know or care all these companies involved.
+
+342
+00:28:45,696 --> 00:28:46,339
+Rym: You know what they know?
+
+343
+00:28:46,661 --> 00:28:54,093
+Rym: They like Borderlands and they want another Borderlands to come and they don't want the next Borderlands to be bad because it was made by someone different.
+
+344
+00:28:54,434 --> 00:28:55,378
+Rym: That's all they care about.
+
+345
+00:28:55,820 --> 00:29:07,555
+Rym: So all these press releases are mostly spending a lot of time reassuring fans of the Borderlands IP that the Borderlands IP is fine, but the way they said it is kind of funny.
+
+346
+00:29:08,137 --> 00:29:12,671
+Rym: They said, quote, "We love our relationship with Take-Two and the 2K games
+
+347
+00:29:12,691 --> 00:29:12,792
+Rym: label.".
+
+348
+00:29:12,812 --> 00:29:14,800
+Scott: It's the same political language everyone uses.
+
+349
+00:29:15,102 --> 00:29:18,094
+Scott: It's like a copypasta for merging and buying companies.
+
+350
+00:29:18,114 --> 00:29:19,219
+Rym: The second one's better.
+
+351
+00:29:19,399 --> 00:29:25,078
+Rym: Quote, "A relationship with Take-Two where we've agreed on certain rights for exploitation of the
+
+352
+00:29:25,219 --> 00:29:25,620
+Rym: IP.".
+
+353
+00:29:26,001 --> 00:29:27,746
+Rym: The IP is a gearbox IP.
+
+354
+00:29:28,227 --> 00:29:30,895
+Rym: They frame it in terms of the exploitation of the IP.
+
+355
+00:29:30,915 --> 00:29:32,641
+Scott: Yeah, that's what it is.
+
+356
+00:29:32,922 --> 00:29:38,707
+Rym: That is what it is, but I don't usually see press releases using that terminology when they're aimed at the actual consumers.
+
+357
+00:29:38,767 --> 00:29:40,634
+Scott: I mean, at work, that's the language we use all the time.
+
+358
+00:29:40,654 --> 00:29:41,578
+Rym: That's the word I use at work.
+
+359
+00:29:41,598 --> 00:29:45,592
+Rym: Where was the copyright exploited?
+
+360
+00:29:46,114 --> 00:29:48,380
+Scott: Where's the exploitation territory, et cetera.
+
+361
+00:29:49,382 --> 00:29:57,625
+Rym: So, pretty sure the end result of this for gamers who like Borderlands is that literally nothing will change at all.
+
+362
+00:29:58,527 --> 00:30:07,884
+Scott: Well, I mean, so, you know, anytime any company buys another company, they always say to the employees, especially, but also everyone else, "Nothing will change.
+
+363
+00:30:07,904 --> 00:30:09,512
+Scott: You're just going to carry on business as usual.
+
+364
+00:30:09,552 --> 00:30:10,094
+Scott: We just bought
+
+365
+00:30:10,114 --> 00:30:10,315
+Scott: this.".
+
+366
+00:30:10,416 --> 00:30:12,384
+Scott: And it is 100% always a lie.
+
+367
+00:30:12,404 --> 00:30:20,878
+Scott: You don't buy something because you don't want to... It's like, "Yes, I want to buy that house and never live in it and not jack up the rent or do anything.
+
+368
+00:30:20,898 --> 00:30:22,264
+Scott: I just wanted to... Now I'm the owner.
+
+369
+00:30:22,325 --> 00:30:22,827
+Scott: Nothing else is
+
+370
+00:30:22,847 --> 00:30:23,088
+Scott: changing.".
+
+371
+00:30:23,108 --> 00:30:24,334
+Rym: But people literally do that.
+
+372
+00:30:24,395 --> 00:30:25,380
+Rym: Pita tears are a thing.
+
+373
+00:30:25,420 --> 00:30:27,490
+Rym: That's like a big chunk of the real estate in New York.
+
+374
+00:30:27,790 --> 00:30:29,397
+Rym: It's purely a place to park money.
+
+375
+00:30:30,220 --> 00:30:34,460
+Scott: But I'm saying you're making a... The point is even if you're parking money, you're making a change, right?
+
+376
+00:30:34,520 --> 00:30:36,852
+Scott: It was previously this and now it's something different.
+
+377
+00:30:36,912 --> 00:30:38,259
+Scott: It wasn't, you know, previously.
+
+378
+00:30:38,460 --> 00:30:40,932
+Scott: one person's money park and now a new person's money park.
+
+379
+00:30:41,434 --> 00:30:43,042
+Rym: Well, for pita tears, it usually is.
+
+380
+00:30:43,183 --> 00:30:44,670
+Rym: Very few people live in those apartments.
+
+381
+00:30:45,210 --> 00:30:52,739
+Scott: But I'm just saying is that you don't buy a thing because you don't... It's like you don't go to the Best Buy and buy something and leave it at the Best Buy unopened.
+
+382
+00:30:54,985 --> 00:30:56,208
+Scott: Okay, right?
+
+383
+00:30:56,449 --> 00:30:58,558
+Scott: When you buy something, you're going to do something to it.
+
+384
+00:30:58,638 --> 00:31:01,230
+Scott: So, never leave anyone who says, "Nothing will
+
+385
+00:31:01,250 --> 00:31:01,571
+Scott: change.".
+
+386
+00:31:01,772 --> 00:31:03,841
+Scott: Something will change, but who knows what.
+
+387
+00:31:04,122 --> 00:31:12,913
+Rym: Sometimes you buy something that is printing a small amount of money and you just unplug it, take it home, plug it in, and ask it to keep printing that money for you.
+
+388
+00:31:14,538 --> 00:31:16,404
+Rym: Anyway, and it could be a situation like that.
+
+389
+00:31:16,985 --> 00:31:21,240
+Rym: Lionsgate is involved because of exploitation of like the live action move.
+
+390
+00:31:21,521 --> 00:31:29,408
+Rym: They're like, "Read this article and I dare you to draw a Charlie Day yarn map of all the companies involved in this Borderlands
+
+391
+00:31:29,448 --> 00:31:29,950
+Rym: situation.".
+
+392
+00:31:35,811 --> 00:31:38,998
+Rym: But anyway, things of the day.
+
+393
+00:31:39,359 --> 00:31:41,043
+Rym: So, check this out.
+
+394
+00:31:41,564 --> 00:31:43,168
+Rym: I'm a big fan of speed runs.
+
+395
+00:31:43,188 --> 00:31:54,242
+Rym: Like, I don't watch video game streamers like at all, but I watch a lot of videos that go in depth on speed running like technique and the history of speed running records, etc.
+
+396
+00:31:54,764 --> 00:32:01,770
+Rym: And this one is a really good explanation of one of the weirder kinds of speed runs or one of the weirder kinds of techniques.
+
+397
+00:32:02,292 --> 00:32:15,218
+Rym: Because when people speed run, both real time and TAS, there's certain types of techniques, certain types of exploits, certain types of like frame timing and sub pixels that like exist in multiple games and people become experts at these things.
+
+398
+00:32:16,020 --> 00:32:24,525
+Rym: One of those techniques literally involves fucking with the hardware and there's a lot of discourse on where the line is.
+
+399
+00:32:25,387 --> 00:32:32,970
+Rym: Like, on the N64, is it okay to open the cartridge and push your finger hard on the chip while you're playing?
+
+400
+00:32:33,830 --> 00:32:37,729
+Rym: Is it okay to break an NES controller so you get it left and right at the same time?
+
+401
+00:32:38,551 --> 00:32:43,363
+Rym: Is it okay to put your NES on a hot plate while you play?
+
+402
+00:32:43,805 --> 00:32:49,825
+Rym: Because that is the speed running technique that lets you get faster times in Dragon Quest 3.
+
+403
+00:32:49,825 --> 00:32:56,610
+Rym: Putting your physical console on a hot plate and heating it to a particular temperature while you play the game.
+
+404
+00:32:57,851 --> 00:33:09,710
+Scott: I would say that the hot plate technique would be allowed if there was someone on Earth, right, who basically it was naturally that temperature in their home, right?
+
+405
+00:33:10,671 --> 00:33:12,429
+Rym: Oh, I could plausibly say that the NES.
+
+406
+00:33:12,850 --> 00:33:19,818
+Scott: Right, because like it's like okay so-and-so lives on a tropical island and it's, you know, the sun is directly overhead.
+
+407
+00:33:19,858 --> 00:33:20,742
+Scott: It's that time of the year.
+
+408
+00:33:20,782 --> 00:33:21,686
+Scott: It's 100 degrees.
+
+409
+00:33:21,706 --> 00:33:24,194
+Scott: It's like, well, the air is 100 degrees.
+
+410
+00:33:24,234 --> 00:33:25,619
+Scott: The NES somehow still works.
+
+411
+00:33:26,862 --> 00:33:28,628
+Scott: So I live in Norway.
+
+412
+00:33:28,969 --> 00:33:30,915
+Scott: I'm going to heat up my NES to 100 degrees.
+
+413
+00:33:31,256 --> 00:33:32,039
+Rym: Yep, so it's fair.
+
+414
+00:33:32,119 --> 00:33:34,427
+Rym: I have the same situation as that nerd.
+
+415
+00:33:35,189 --> 00:33:35,350
+Scott: Right.
+
+416
+00:33:35,490 --> 00:33:41,296
+Scott: If you're heating it up like unnaturally, it's like, well, I might as well just play in an emulator and save state, right?
+
+417
+00:33:41,337 --> 00:33:44,428
+Scott: You're modifying the capabilities of the equipment, right?
+
+418
+00:33:45,453 --> 00:33:47,870
+Scott: Yep, but I would say that is not okay.
+
+419
+00:33:48,430 --> 00:33:59,210
+Rym: This video explains in enough detail exactly how and why this works for one particular game and it is fascinating and also pretty straightforward.
+
+420
+00:34:01,591 --> 00:34:18,130
+Scott: So anyway, so one of our favorite games that we, board games that we have played the most is Puerto Rico and we often point out how while mechanically this game is amazing and uh, Euro games, however, you know, it's, it's like the pinnacle of Euro games.
+
+421
+00:34:18,771 --> 00:34:22,542
+Scott: Uh, the theme of Euro games is often very loosely applied.
+
+422
+00:34:22,763 --> 00:34:23,083
+Rym: Yep.
+
+423
+00:34:23,967 --> 00:34:32,889
+Scott: Uh, and in Puerto Rico, the theme of the game is colonization slavery, even though it doesn't use the word slaves in it.
+
+424
+00:34:33,731 --> 00:34:45,783
+Scott: Uh, you are literally taking little wooden Brown discs off of a boat that are specifically in the though many other pieces are not called out by their color.
+
+425
+00:34:46,043 --> 00:34:46,947
+Rym: that bothered me then.
+
+426
+00:34:47,007 --> 00:34:48,813
+Rym: And it bothers me now, right?
+
+427
+00:34:48,855 --> 00:34:51,704
+Scott: They're called colonists, but they show up on a boat.
+
+428
+00:34:52,145 --> 00:34:54,574
+Scott: The more demand there is for them, the more show up.
+
+429
+00:34:54,614 --> 00:34:55,600
+Scott: They don't cost anything.
+
+430
+00:34:55,639 --> 00:34:58,311
+Scott: The mayor just distributes them evenly to everybody.
+
+431
+00:34:59,274 --> 00:35:07,233
+Scott: Um, and your plantations and your buildings don't function unless you put colonists in them.
+
+432
+00:35:07,975 --> 00:35:15,862
+Scott: And there's an expansion that adds different buildings that require, you know, nobles implying that the colonists are somehow not noble.
+
+433
+00:35:15,922 --> 00:35:16,203
+Scott: Right.
+
+434
+00:35:16,845 --> 00:35:29,423
+Scott: Anyway, so it's obviously slavery, even though the game, uh, doesn't say slavery or mention anything about it, it's just sort of there, you know, it's, you know, it's not great.
+
+435
+00:35:30,005 --> 00:35:39,018
+Rym: And so many Euro games, especially from the nineties and early two thousands, like they all, almost all of them just use European colonialism as their default theme.
+
+436
+00:35:39,900 --> 00:35:40,362
+Scott: Yep.
+
+437
+00:35:40,482 --> 00:35:45,538
+Scott: It's very common theme in a lot of games, especially, you know, from the two thousands anyway.
+
+438
+00:35:46,281 --> 00:35:53,670
+Scott: So here, this person made this amazing video that I think anyone who board games, especially Euro games, uh, should watch.
+
+439
+00:35:54,472 --> 00:35:59,026
+Scott: And basically the video, the video is how slavery is presented in board games.
+
+440
+00:35:59,186 --> 00:36:14,707
+Scott: And obviously Puerto Rico features prominently, but they go in depth examining several games and tabletop games overall of, uh, the different ways that slavery is represented both good and not good.
+
+441
+00:36:15,068 --> 00:36:15,209
+Scott: Right.
+
+442
+00:36:15,650 --> 00:36:19,283
+Scott: Cause there are games that represent slavery is like, it's in the game.
+
+443
+00:36:19,625 --> 00:36:20,307
+Scott: Here it is.
+
+444
+00:36:20,568 --> 00:36:21,130
+Scott: It's slavery.
+
+445
+00:36:21,371 --> 00:36:23,058
+Scott: Oh, and it's bad by the way, right.
+
+446
+00:36:23,078 --> 00:36:27,997
+Scott: We're teaching, you know, it's, it's a proper, well done, correct educational game.
+
+447
+00:36:28,057 --> 00:36:29,723
+Scott: Like, yeah, slaves are bad.
+
+448
+00:36:29,743 --> 00:36:34,058
+Scott: And there are other games where it's like, yeah, I have slaves.
+
+449
+00:36:34,118 --> 00:36:35,061
+Scott: It helps you win.
+
+450
+00:36:35,142 --> 00:36:36,266
+Scott: It's like, that's not so great.
+
+451
+00:36:36,286 --> 00:36:41,404
+Rym: There's this fantastic, like early on in the, in the video, he puts up this chart.
+
+452
+00:36:41,565 --> 00:36:43,873
+Rym: that is like a really good way to describe this problem.
+
+453
+00:36:44,154 --> 00:36:47,125
+Rym: It's a two dimensional chart where you can plot a game.
+
+454
+00:36:47,727 --> 00:36:49,473
+Rym: One axis is on the top.
+
+455
+00:36:49,874 --> 00:36:51,178
+Rym: Slavery is negative.
+
+456
+00:36:51,218 --> 00:36:55,010
+Rym: Like in the game, slavery is like shown to be a negative thing.
+
+457
+00:36:55,491 --> 00:36:58,640
+Rym: And at the bottom playing slavery is rewarded.
+
+458
+00:36:58,981 --> 00:37:03,455
+Rym: Like if you exploit slaves in the game, you're rewarded mechanically.
+
+459
+00:37:03,616 --> 00:37:04,399
+Rym: That's one axis.
+
+460
+00:37:04,419 --> 00:37:09,318
+Rym: And the other axis is on one side, the game says it's about slavery.
+
+461
+00:37:09,719 --> 00:37:12,270
+Rym: And on the other side, the game never acknowledges slavery.
+
+462
+00:37:12,570 --> 00:37:17,050
+Rym: And Puerto Rico is just in the, like the furthest bottom left of this fucking chart.
+
+463
+00:37:18,191 --> 00:37:19,856
+Scott: Pretty much so.
+
+464
+00:37:19,876 --> 00:37:20,116
+Scott: Yeah.
+
+465
+00:37:20,678 --> 00:37:23,405
+Scott: Uh, I think this is like necessary viewing.
+
+466
+00:37:23,586 --> 00:37:33,392
+Scott: And also if you are making games, uh, don't make your game theme fucking slavery, unless you are, you know, an expert on slavery
+
+467
+00:37:33,633 --> 00:37:56,281
+Rym: and do not mechanically reward players like, like games like, uh, you know, we always talk about John company or an infamous traffic because those games are a better like historical exploration of this fucked up situation as opposed to Puerto Rico, which is do these things and you will win in the meta moment.
+
+468
+00:37:56,301 --> 00:38:01,513
+Rym: I, uh, I'm leaning toward reading that book, but I have not yet continued it.
+
+469
+00:38:02,497 --> 00:38:02,657
+Scott: Nope.
+
+470
+00:38:02,999 --> 00:38:05,950
+Scott: Cause I plan we've been, we've been that way for about a month or two now.
+
+471
+00:38:06,171 --> 00:38:06,351
+Scott: Yeah.
+
+472
+00:38:06,753 --> 00:38:06,974
+Rym: Yep.
+
+473
+00:38:07,395 --> 00:38:09,222
+Rym: So, uh, we'll just stay in that steady state.
+
+474
+00:38:09,884 --> 00:38:12,897
+Rym: Uh, otherwise we don't really have any online cons coming up for a while.
+
+475
+00:38:13,298 --> 00:38:16,713
+Rym: Pretty sure they're not going to be any cons in person for a long while to come.
+
+476
+00:38:17,195 --> 00:38:18,862
+Rym: So we're just stuck inside doing our thing.
+
+477
+00:38:18,882 --> 00:38:21,955
+Rym: Uh, I don't know what other meta bits we have right now.
+
+478
+00:38:21,995 --> 00:38:26,695
+Rym: Our forums are rocking or discords rocking, uh, every now and then we live stream some games.
+
+479
+00:38:27,197 --> 00:38:29,889
+Rym: I'm going to start playing overwatch CTF pretty competitively.
+
+480
+00:38:29,949 --> 00:38:35,010
+Rym: So if anyone's good at that mode and wants to join up with me, maybe we can, uh, hit that platinum.
+
+481
+00:38:38,591 --> 00:38:39,234
+Rym: That's all I got.
+
+482
+00:38:39,294 --> 00:38:40,097
+Rym: I got nothing going on.
+
+483
+00:38:40,841 --> 00:38:41,805
+Scott: There is nothing going on.
+
+484
+00:38:41,885 --> 00:38:44,375
+Scott: It's, uh, you know, we're waiting for the sun to come back.
+
+485
+00:38:44,576 --> 00:38:44,837
+Rym: Yep.
+
+486
+00:38:45,761 --> 00:38:50,917
+Rym: Both the literal sun and just a post COVID world, or at least a mitigated COVID world at this point.
+
+487
+00:38:51,819 --> 00:38:52,320
+Scott: Pretty much.
+
+488
+00:38:53,002 --> 00:39:08,873
+Rym: So in our current COVID dystopian nightmare, one thing that has kept a lot of people going is the fact that even though we can't play games in person with our friends and loved ones, we can play games online with our friends and loved ones.
+
+489
+00:39:09,434 --> 00:39:15,612
+Rym: But it is despite the fact that no one can go anywhere and everyone's stuck at home.
+
+490
+00:39:16,234 --> 00:39:28,449
+Rym: It is still for reasons that we've talked about in panels in the past, shockingly hard to get a critical mass of an adult's friends together to play a game online at the same time.
+
+491
+00:39:29,232 --> 00:39:33,064
+Scott: People, uh, you're guilty by the way, I am guilty than I am.
+
+492
+00:39:33,084 --> 00:39:33,525
+Scott: Right.
+
+493
+00:39:33,565 --> 00:39:37,175
+Scott: As people don't prioritize, uh, gaming, right.
+
+494
+00:39:37,216 --> 00:39:40,632
+Scott: People have this vision in their mind, especially nerds at least who like games.
+
+495
+00:39:41,093 --> 00:39:41,354
+Scott: Right.
+
+496
+00:39:41,435 --> 00:39:42,920
+Scott: And they think in their mind, man.
+
+497
+00:39:42,941 --> 00:39:43,021
+Scott: Yeah.
+
+498
+00:39:43,442 --> 00:39:49,225
+Scott: It would be so awesome if we just like played, you know, I really want to play samurai sword slash Shogun slash Yakuza.
+
+499
+00:39:49,607 --> 00:39:50,009
+Scott: Yeah.
+
+500
+00:39:50,029 --> 00:39:51,774
+Scott: I really want to play some battle tech.
+
+501
+00:39:51,814 --> 00:39:51,974
+Scott: Yeah.
+
+502
+00:39:52,034 --> 00:39:52,837
+Scott: I really want you.
+
+503
+00:39:52,937 --> 00:40:00,299
+Scott: You imagine doing it and you want to wake your ass up at 9.
+
+504
+00:40:00,299 --> 00:40:00,480
+Scott: Right.
+
+505
+00:40:00,520 --> 00:40:01,966
+Scott: Don't do anything else that day.
+
+506
+00:40:01,986 --> 00:40:04,895
+Scott: Get to your computer, get in the discord chat, right?
+
+507
+00:40:05,036 --> 00:40:09,372
+Scott: Get your TTS loaded, set all your stuff up and we'll fucking do it.
+
+508
+00:40:09,492 --> 00:40:11,221
+Scott: And it's like, then people don't actually do it.
+
+509
+00:40:11,382 --> 00:40:14,475
+Rym: But even in pre-covid times, like, oh, I have to go to a wedding.
+
+510
+00:40:14,736 --> 00:40:16,603
+Rym: My son has to go to the hospital.
+
+511
+00:40:16,623 --> 00:40:18,369
+Scott: You don't have to do that stuff now.
+
+512
+00:40:19,751 --> 00:40:20,253
+Rym: Yup.
+
+513
+00:40:20,273 --> 00:40:21,638
+Scott: You're stuck inside doing nothing.
+
+514
+00:40:21,698 --> 00:40:21,919
+Scott: Right.
+
+515
+00:40:21,959 --> 00:40:24,429
+Scott: It's like, you know, get your ass up and do it.
+
+516
+00:40:24,870 --> 00:40:25,473
+Scott: Make it happen.
+
+517
+00:40:25,895 --> 00:40:26,739
+Scott: Nothing's stopping you.
+
+518
+00:40:26,980 --> 00:40:30,134
+Rym: Except doing other things, working on GeekNights stuff in some cases.
+
+519
+00:40:31,458 --> 00:40:31,639
+Scott: Yeah.
+
+520
+00:40:31,679 --> 00:40:34,329
+Scott: If you're into the game will not happen unless you make it a priority.
+
+521
+00:40:34,349 --> 00:40:36,478
+Scott: You have to put it ahead of the other things.
+
+522
+00:40:36,498 --> 00:40:44,069
+Scott: You have to say when those other things come up, you have to, you know, like, oh, I was gonna, I don't know, go, you know, run or something.
+
+523
+00:40:44,089 --> 00:40:44,952
+Scott: You gotta be like, nope.
+
+524
+00:40:44,972 --> 00:40:46,778
+Scott: Um, I prioritized gaming.
+
+525
+00:40:46,839 --> 00:40:48,826
+Scott: I will not do the running or whatever.
+
+526
+00:40:48,966 --> 00:40:53,326
+Rym: As anyone who sees me at PAX has noticed, especially some of you have said hi to me at PAX Souths in the past.
+
+527
+00:40:53,346 --> 00:41:05,717
+Rym: Cause that's the pax where it's, I'm the most visible doing it, but I get up in a run like every morning during any gaming con we go to, uh, I actually do prioritize running over gaming and I pretty much why you're not fucking gaming.
+
+528
+00:41:05,978 --> 00:41:08,527
+Rym: Cause I'm not gaming with you.
+
+529
+00:41:08,648 --> 00:41:09,832
+Rym: Cause you don't want to play Overwatch.
+
+530
+00:41:10,654 --> 00:41:11,176
+Scott: No, I don't.
+
+531
+00:41:11,557 --> 00:41:12,600
+Rym: That's what I'm mostly playing.
+
+532
+00:41:13,523 --> 00:41:23,310
+Scott: So one way to make things a little bit easier for people who have time, but don't have time at the same time is asynchronous gaming.
+
+533
+00:41:23,411 --> 00:41:26,506
+Scott: We've talked about it a lot, but we've never dedicated a whole show to it.
+
+534
+00:41:26,547 --> 00:41:29,856
+Scott: So the thing is, it's sort of a misnomer in a way.
+
+535
+00:41:29,876 --> 00:41:38,785
+Scott: And that, uh, in computer terms, you know, and I guess also just, you know, uh, semantic terms, synchronous and asynchronous.
+
+536
+00:41:38,826 --> 00:41:41,837
+Scott: synchronous just means one thing happens after the other.
+
+537
+00:41:41,998 --> 00:41:42,218
+Scott: Right.
+
+538
+00:41:42,299 --> 00:41:45,530
+Scott: And the one step B has to wait for step a to finish.
+
+539
+00:41:45,650 --> 00:41:45,891
+Scott: Right.
+
+540
+00:41:45,912 --> 00:41:48,221
+Scott: So I take root is a synchronous game.
+
+541
+00:41:48,281 --> 00:41:48,884
+Scott: I take my turn.
+
+542
+00:41:49,225 --> 00:41:50,008
+Scott: Then you take your turn.
+
+543
+00:41:50,290 --> 00:41:51,534
+Scott: Then next person takes their turn.
+
+544
+00:41:51,775 --> 00:41:51,976
+Scott: Right.
+
+545
+00:41:52,819 --> 00:41:56,532
+Scott: Uh, but race for the galaxy, even if you're sitting at a table, just playing.
+
+546
+00:41:56,573 --> 00:42:01,271
+Scott: it is, I don't know if it's officially an asynchronous game, but it's an asynchronous game.
+
+547
+00:42:01,291 --> 00:42:02,938
+Scott: You all take your turns just together.
+
+548
+00:42:02,958 --> 00:42:03,480
+Scott: Right.
+
+549
+00:42:03,500 --> 00:42:08,118
+Scott: You're not waiting necessarily for the previous person to finish before you go.
+
+550
+00:42:08,138 --> 00:42:08,901
+Scott: Right.
+
+551
+00:42:09,664 --> 00:42:11,993
+Scott: Or, you know, you can do things during other people's turns.
+
+552
+00:42:12,033 --> 00:42:13,378
+Scott: It's asynchronous, right?
+
+553
+00:42:13,439 --> 00:42:17,815
+Rym: Now it's, this isn't just a scale of a game is either asynchronous or it's not.
+
+554
+00:42:18,096 --> 00:42:21,527
+Rym: This is more about how asynchronous is a game.
+
+555
+00:42:21,587 --> 00:42:27,352
+Rym: Cause this is actually a more complex topic than you might think if you actually look at specific games and specific mechanics.
+
+556
+00:42:27,993 --> 00:42:32,146
+Scott: But when it comes to the internet and digital multiplayer gaming, right.
+
+557
+00:42:32,788 --> 00:42:50,114
+Scott: Uh, people will use the term asynchronous, even if games are technically synchronous games where like, you know, you have to take your turn and the next person and before the next person could take their turn, there's no simultaneous or, you know, actual asynchronous play, but you don't all have to play at the same time.
+
+558
+00:42:50,194 --> 00:42:53,323
+Scott: You can take your turn whenever you have time.
+
+559
+00:42:53,343 --> 00:42:56,817
+Scott: And then the next person it's, it could be hours later.
+
+560
+00:42:56,877 --> 00:42:57,843
+Scott: It could be immediately.
+
+561
+00:42:57,863 --> 00:42:58,928
+Scott: It could be the next day.
+
+562
+00:42:58,949 --> 00:42:59,792
+Scott: It could be the next week.
+
+563
+00:42:59,812 --> 00:43:00,616
+Scott: It could be the next year.
+
+564
+00:43:00,636 --> 00:43:03,989
+Scott: They log in and download or whatever they have to do.
+
+565
+00:43:04,811 --> 00:43:11,737
+Scott: And then they take their turn and then time goes by and then you basically just take your turn whenever you have time to take your turn.
+
+566
+00:43:11,777 --> 00:43:11,958
+Scott: Yup.
+
+567
+00:43:12,440 --> 00:43:15,552
+Scott: So you're, it could be still, it could be synchronous.
+
+568
+00:43:15,632 --> 00:43:25,365
+Scott: It could be asynchronous in terms of the true meanings of those words, but in terms of, you know, the meanings you use when applied to multiplayer internet gaming.
+
+569
+00:43:25,826 --> 00:43:36,320
+Scott: synchronous means everyone is sitting there playing the game at the same time, like counter-strike versus you log in and take your turn whenever you have time to do it like sieve.
+
+570
+00:43:36,722 --> 00:43:37,043
+Rym: Yup.
+
+571
+00:43:37,103 --> 00:43:46,251
+Rym: Now this is where what it really comes down to is how well, how well do the mechanics of the game support practical asynchronous play?
+
+572
+00:43:46,311 --> 00:43:51,104
+Rym: Because I could make Overwatch asynchronous frame by frame.
+
+573
+00:43:51,445 --> 00:43:58,088
+Rym: Everyone has to do their next frame and once everyone's done their next frame, the game clock progresses to the following frame.
+
+574
+00:43:59,790 --> 00:44:00,012
+Scott: Any game.
+
+575
+00:44:00,153 --> 00:44:01,866
+Scott: It's like, what are you going to do on this frame?
+
+576
+00:44:01,926 --> 00:44:04,178
+Scott: I'm going to press up and click my mouse button.
+
+577
+00:44:04,318 --> 00:44:06,186
+Scott: What are you going to do on this frame?
+
+578
+00:44:06,246 --> 00:44:08,738
+Scott: I'm going to press the jump button and the special attack.
+
+579
+00:44:08,798 --> 00:44:11,992
+Rym: I will continue holding middle click, but now I'm also going to hit space bar.
+
+580
+00:44:12,855 --> 00:44:13,056
+Scott: Yup.
+
+581
+00:44:13,176 --> 00:44:15,585
+Scott: I'm going to continue holding the forward button.
+
+582
+00:44:15,645 --> 00:44:16,248
+Scott: Actually that.
+
+583
+00:44:16,308 --> 00:44:17,472
+Scott: Continue holding the forward button.
+
+584
+00:44:17,492 --> 00:44:19,360
+Rym: I kind of want to see a fighting game like that.
+
+585
+00:44:21,028 --> 00:44:22,414
+Rym: Like Street Fighter frame by frame.
+
+586
+00:44:22,554 --> 00:44:23,740
+Rym: Everyone, you're just like that.
+
+587
+00:44:23,760 --> 00:44:26,210
+Scott: Well, I mean the fantasy, whatever, what is that called?
+
+588
+00:44:26,571 --> 00:44:27,292
+Scott: Oh, fantasy strike.
+
+589
+00:44:28,074 --> 00:44:28,274
+Scott: Yeah.
+
+590
+00:44:28,334 --> 00:44:29,256
+Scott: It's kind of like that.
+
+591
+00:44:29,336 --> 00:44:30,799
+Scott: It's slower, but not, you know.
+
+592
+00:44:30,839 --> 00:44:38,395
+Scott: But things like that in that nature.
+
+593
+00:44:38,896 --> 00:44:40,763
+Rym: But that's obviously reductive.
+
+594
+00:44:40,843 --> 00:44:45,621
+Rym: So like on the other side of this, there are games that support it incredibly well.
+
+595
+00:44:45,701 --> 00:44:53,606
+Rym: Meaning the game will progress quickly and meaningfully despite larger numbers of players all taking their turns.
+
+596
+00:44:53,867 --> 00:45:05,482
+Rym: What it comes down to is how much does the next atom of the game or the next unit of interaction in the game in this case rely on inputs and particularly interruptions.
+
+597
+00:45:06,083 --> 00:45:11,339
+Rym: So imagine a game where, like Civ, I take my whole turn then Scott takes his whole turn.
+
+598
+00:45:11,861 --> 00:45:17,219
+Rym: It actually supports asynchronous play pretty well in that I can complete my turn no matter what.
+
+599
+00:45:17,360 --> 00:45:19,750
+Rym: No other player ever has to do anything during my turn.
+
+600
+00:45:20,230 --> 00:45:32,494
+Rym: So we can support a long-term asynchronous game of Civ because it just goes turn by turn in a attacked another unit.
+
+601
+00:45:34,079 --> 00:45:39,055
+Rym: Whoever I attacked, that player had the option to do something, like to defend or like take some action.
+
+602
+00:45:39,537 --> 00:45:50,536
+Rym: Now, if I do that on my turn, my turn stops and now the game has to go around and deal with what all the other players could do even if they choose not to do it before it can get back to me.
+
+603
+00:45:51,037 --> 00:45:55,091
+Rym: And that can cause a problem that will grind a game to a literal halt.
+
+604
+00:45:56,073 --> 00:46:06,925
+Scott: What's interesting is how game patterns that are actually bad for in-person play, right, so something like root where it's completely synchronous.
+
+605
+00:46:06,945 --> 00:46:18,265
+Scott: You take your whole turn and the only thing that could matter for someone else on your turn is like, I guess, the field hospital, an ambush car, or a battle where you just roll a die.
+
+606
+00:46:18,285 --> 00:46:19,610
+Scott: You don't really need someone to be there.
+
+607
+00:46:19,670 --> 00:46:23,369
+Scott: Maybe they allocate damage or something, maybe, you know, something like that, right?
+
+608
+00:46:23,409 --> 00:46:28,190
+Scott: But there's very little to do on other players turns and players have a lot to do on their own turn.
+
+609
+00:46:28,631 --> 00:46:32,627
+Scott: So if you play root in person, yeah, people play quickly enough and it's good.
+
+610
+00:46:32,647 --> 00:46:37,042
+Scott: It moves quickly enough, but you can end up waiting for your turn.
+
+611
+00:46:37,102 --> 00:46:41,280
+Scott: Like just, okay, go take a snack break and then come back, take your turn, leave and come back, right?
+
+612
+00:46:41,340 --> 00:46:55,279
+Rym: And part of that is because every time there's a fight at any point, the game has to stop and give anyone involved in a fight the opportunity to play one of those cards if they have them because that card can interrupt an existing action, right?
+
+613
+00:46:55,299 --> 00:46:57,750
+Scott: But what I'm saying is that in person, you have a lot of waiting.
+
+614
+00:46:58,111 --> 00:46:58,612
+Scott: that happens.
+
+615
+00:46:58,873 --> 00:47:04,652
+Scott: Whereas online, there isn't a lot of waiting because you don't actually sit there and wait.
+
+616
+00:47:04,692 --> 00:47:09,352
+Scott: You take your turn and then you know that it's not going to be your turn again for hours.
+
+617
+00:47:09,392 --> 00:47:11,862
+Scott: You don't sit there waiting and wasting your life.
+
+618
+00:47:11,902 --> 00:47:13,348
+Scott: You go and do something else.
+
+619
+00:47:13,769 --> 00:47:17,342
+Scott: Maybe take a turn in a different game, maybe, you know, right?
+
+620
+00:47:17,442 --> 00:47:20,613
+Scott: And then whenever you have free time, you take your turn.
+
+621
+00:47:20,694 --> 00:47:31,370
+Scott: So it's like you actually, if you look at the sum total of time that, you know, you that the each player spent playing the game in total, it'll be a pretty similar.
+
+622
+00:47:32,791 --> 00:47:40,641
+Scott: But if you look at how much time each individual person dedicated to the game, it'll be way less because they subtracted all that waiting time, right?
+
+623
+00:47:40,681 --> 00:47:42,408
+Scott: I didn't waste less of your life.
+
+624
+00:47:42,789 --> 00:47:47,179
+Scott: if the game is, is, uh, supports this kind of play well.
+
+625
+00:47:47,279 --> 00:47:47,660
+Scott: Right.
+
+626
+00:47:48,081 --> 00:47:53,897
+Scott: Um, but you know, a game, uh, that has lots of quick turns, right?
+
+627
+00:47:53,917 --> 00:47:59,380
+Scott: So a game that's really good in person, I always use tickets to ride is to be another one, right?
+
+628
+00:47:59,420 --> 00:48:00,283
+Scott: And take it to ride.
+
+629
+00:48:00,364 --> 00:48:04,441
+Scott: It's like, yeah, you go around taking turns and take it to ride, but you do almost nothing on your turn.
+
+630
+00:48:04,482 --> 00:48:08,457
+Scott: You literally just like, you know, either take a couple cards or put trains at.
+
+631
+00:48:08,497 --> 00:48:09,600
+Scott: your turn is so small.
+
+632
+00:48:10,302 --> 00:48:17,610
+Scott: So it's like you're, you're taking this tiny, tiny turn and then you, what, wait hours for the person to take their tiny turn.
+
+633
+00:48:17,750 --> 00:48:19,197
+Scott: And then you take your tiny turn again.
+
+634
+00:48:19,277 --> 00:48:21,467
+Scott: It's like, that's a really bad experience.
+
+635
+00:48:21,487 --> 00:48:23,133
+Scott: You'll forget what the hell was going on.
+
+636
+00:48:23,454 --> 00:48:25,601
+Scott: Your w your right.
+
+637
+00:48:25,621 --> 00:48:27,206
+Scott: Your turns are so short.
+
+638
+00:48:27,247 --> 00:48:29,253
+Scott: You're better off just playing that live.
+
+639
+00:48:29,393 --> 00:48:30,877
+Scott: Everyone connected at the same time.
+
+640
+00:48:31,419 --> 00:48:33,625
+Scott: It'll zoom by a lot faster.
+
+641
+00:48:34,247 --> 00:48:37,056
+Scott: Um, but there's no reason to stretch that game out.
+
+642
+00:48:37,237 --> 00:48:58,012
+Rym: This is, I think where like the metric here and we're kind of spitball on this because we're thinking about this topic as we go, but that whole root situation, root, you can do a lot on your turn, but root games are significantly slowed down by the fact that there are a handful of potential interrupt actions, which means you can get less done during your turn.
+
+643
+00:48:58,494 --> 00:49:02,912
+Rym: I think the metric for how well a game supports asynchronous play is actually pretty simple in the end.
+
+644
+00:49:03,252 --> 00:49:14,822
+Rym: It is how much can one player progress the game state without any other player interactions before they must seed control to another player.
+
+645
+00:49:15,484 --> 00:49:28,127
+Rym: The longer that is, the more like stuff you can get done before you are forced to seed control, the better a game supports asynchronous play and the less, the less frequent control is seeded, right?
+
+646
+00:49:28,167 --> 00:49:30,774
+Scott: If it's constantly going back and forth a whole bunch.
+
+647
+00:49:31,657 --> 00:49:37,333
+Scott: Um, the other thing is that the longer the total game length, right?
+
+648
+00:49:37,413 --> 00:49:53,050
+Scott: The more advantageous it is to play asynchronously, because if you are playing in person, even live, even if you get everyone together, even if it's fast, if it's a five hour game, let's say playing in person live, um, you know, maybe after
+
+649
+00:49:54,374 --> 00:49:56,781
+Rym: like a Civ game, a live Civ game, that's five hours.
+
+650
+00:49:57,222 --> 00:50:00,695
+Rym: I have done one fifth of that interaction on average, right?
+
+651
+00:50:00,735 --> 00:50:06,989
+Scott: It's like what it's like, what are the chances you're going to get all the, even if you get everyone together, can you get everyone together to the end?
+
+652
+00:50:07,371 --> 00:50:08,556
+Scott: Are you going to finish it?
+
+653
+00:50:08,997 --> 00:50:16,726
+Scott: It's like really unlikely that you're going to get even dedicated people who prioritize gaming together for that long period of time.
+
+654
+00:50:16,786 --> 00:50:17,830
+Scott: It's such a long game.
+
+655
+00:50:18,331 --> 00:50:23,742
+Rym: I'm 39, two AM runs around like I'm stopping, right?
+
+656
+00:50:23,863 --> 00:50:29,056
+Scott: So the asynchronous game is a way that a game can finish, right?
+
+657
+00:50:29,076 --> 00:50:40,318
+Scott: You can keep it going and it will, as long as everyone's dedicated and diligent about paying attention and taking their turns when they come up, you can actually finish the game and get the full experience.
+
+658
+00:50:40,338 --> 00:50:49,552
+Scott: You don't have to just keep replaying the beginning over and over again or save and come back to it and forget what the heck was going on, you know, anything like that.
+
+659
+00:50:49,693 --> 00:50:58,180
+Scott: You can so long, long games, uh, suit themselves much better than a game that's over in five minutes, like playing it asynchronously.
+
+660
+00:50:58,200 --> 00:51:01,194
+Scott: It's like, why we can just get together for five minutes, I think, right?
+
+661
+00:51:01,535 --> 00:51:05,210
+Scott: There's no reason to play deep sea adventure asynchronously.
+
+662
+00:51:07,671 --> 00:51:08,293
+Scott: It's really silly.
+
+663
+00:51:08,434 --> 00:51:08,654
+Scott: Yep.
+
+664
+00:51:08,735 --> 00:51:20,393
+Rym: And that's where, well, the thing that is not obvious is that to design a game that is asynchronous friendly actually like really limits the kinds of mechanics you can include in the game.
+
+665
+00:51:20,955 --> 00:51:29,970
+Rym: Any reactive thing is basically off the table, like ambush cards in route really hampered the ability to make that game play by mail in an effective manner.
+
+666
+00:51:31,010 --> 00:51:31,090
+Scott: Yeah.
+
+667
+00:51:31,131 --> 00:51:36,216
+Scott: Imagine the gathering, you know, is like the, the ultimate interrupting game has cards called interrupt, right?
+
+668
+00:51:36,437 --> 00:51:40,734
+Rym: You got to form the stack of how many interrupts got played and then like play through the stack.
+
+669
+00:51:41,297 --> 00:51:42,802
+Scott: You know, people play it online.
+
+670
+00:51:42,842 --> 00:51:48,062
+Scott: They have a system for that, but it's like, you know, uh, it can even playing it live.
+
+671
+00:51:48,122 --> 00:51:49,025
+Scott: There's still some issues.
+
+672
+00:51:49,086 --> 00:51:50,632
+Scott: Netrunner had all kinds of issues.
+
+673
+00:51:50,672 --> 00:52:01,038
+Scott: Cause it's like, when you play net runner, you go on a run and it's like, there's decisions like points constantly, like every step of the way, the other player has to constantly click, like, okay, not doing anything.
+
+674
+00:52:01,118 --> 00:52:01,340
+Scott: Okay.
+
+675
+00:52:01,360 --> 00:52:01,903
+Scott: Not doing anything.
+
+676
+00:52:01,963 --> 00:52:02,205
+Scott: Okay.
+
+677
+00:52:02,225 --> 00:52:02,688
+Scott: Not doing anything.
+
+678
+00:52:02,728 --> 00:52:02,929
+Scott: Okay.
+
+679
+00:52:02,950 --> 00:52:06,084
+Scott: Not doing anything, doing something, you know, you don't want to miss your chance.
+
+680
+00:52:06,586 --> 00:52:34,490
+Rym: And this is where a lot of board games that go digital, like root made some mistakes when dire wealth, they're a great company, by the way, they've done such a fantastic job with root, but when they brought root online in order to make the game like move faster and support asynchronous play, which they built into the game, they did a few things like if I attack Scott and Scott doesn't have any ambush cards that are applicable, it won't wait for him to say, no, it'll just do the attack.
+
+681
+00:52:35,211 --> 00:52:44,557
+Rym: Meaning if I attack Scott and the game pauses for a while or waits for Scott to consider options, I know for a fact, he has an ambush card.
+
+682
+00:52:45,219 --> 00:52:56,439
+Rym: The only fair way to do that without changing the rules of root for the online version and literally making it a different game would be to have the prompt of Scott is considering his options up here.
+
+683
+00:52:57,101 --> 00:53:02,134
+Rym: Every single time I attack Scott, no matter what, always make Scott click.
+
+684
+00:53:02,917 --> 00:53:05,423
+Scott: Which hugely slows down the game.
+
+685
+00:53:05,764 --> 00:53:06,145
+Scott: Right.
+
+686
+00:53:06,707 --> 00:53:09,795
+Rym: And they made even worse mistake with the field hospital for similar reasons.
+
+687
+00:53:10,356 --> 00:53:11,178
+Scott: They fixed the hate field.
+
+688
+00:53:11,198 --> 00:53:11,920
+Rym: They did fix that.
+
+689
+00:53:12,321 --> 00:53:19,723
+Rym: They have used that information on purpose to my advantage in the past.
+
+690
+00:53:19,924 --> 00:53:20,626
+Scott: I have as well.
+
+691
+00:53:20,827 --> 00:53:23,356
+Scott: I'll attack a place with an ambush card.
+
+692
+00:53:23,617 --> 00:53:23,838
+Rym: Yep.
+
+693
+00:53:23,918 --> 00:53:28,115
+Rym: I'll send like, I'll do like one attack in a bunny clearing and it's, it doesn't do the prompt.
+
+694
+00:53:28,477 --> 00:53:31,472
+Rym: Now I know it can attack the much more important bunny clearing and they got nothing.
+
+695
+00:53:32,494 --> 00:53:32,675
+Scott: Yep.
+
+696
+00:53:33,738 --> 00:53:49,790
+Rym: So, uh, another thing, like an advantage of asynchronous play that I'm finding, especially with like during COVID is you can have a lot of games going at the same time so that even if one of them slows down, like you always got something to do.
+
+697
+00:53:50,131 --> 00:53:54,369
+Rym: I got two different train games and four different sieve games all going at the same time.
+
+698
+00:53:55,311 --> 00:53:55,513
+Scott: Yeah.
+
+699
+00:53:55,593 --> 00:53:57,162
+Scott: It's like you got nothing to, you know, it's taking.
+
+700
+00:53:57,182 --> 00:53:59,594
+Scott: your turn takes like a minute, a few minutes.
+
+701
+00:53:59,674 --> 00:53:59,875
+Scott: Right.
+
+702
+00:53:59,935 --> 00:54:03,131
+Scott: So you can queue up a bunch of games as long as you can keep them on your head.
+
+703
+00:54:03,613 --> 00:54:08,855
+Scott: It's like, yeah, you filled up your, all that free time during the day where you weren't doing anything meaningful.
+
+704
+00:54:09,276 --> 00:54:13,754
+Scott: You can now take turns in games to fill up your calendar there, you know, your schedule.
+
+705
+00:54:13,815 --> 00:54:17,213
+Scott: It's like, yeah, you know, you take a break, eat a snack, take a turn.
+
+706
+00:54:17,233 --> 00:54:19,320
+Scott: You know, what were you going to do otherwise?
+
+707
+00:54:19,381 --> 00:54:19,622
+Scott: Nothing.
+
+708
+00:54:19,642 --> 00:54:21,810
+Scott: You know, it's like, why not?
+
+709
+00:54:22,150 --> 00:54:27,409
+Scott: It's my, it's, you know, Phil, it's a much more exciting and better way to spend your time.
+
+710
+00:54:27,430 --> 00:54:29,498
+Scott: If you're going to be stuck at home, right.
+
+711
+00:54:29,558 --> 00:54:34,355
+Scott: Taking turns and playing games, uh, you know, which is what you would do anyway if you had free time.
+
+712
+00:54:34,375 --> 00:54:36,382
+Scott: Uh, why not?
+
+713
+00:54:36,502 --> 00:54:37,525
+Scott: It's, it's solely awesome.
+
+714
+00:54:38,248 --> 00:54:38,509
+Rym: Yeah.
+
+715
+00:54:38,830 --> 00:54:50,306
+Scott: Uh, I think, you know, one thing is that, uh, while we do have some async games to play, there are not nearly enough of them in the world and a lot of them are not done well.
+
+716
+00:54:50,466 --> 00:54:57,207
+Scott: Even sieve, it's like kind of broken and you need all these weird solutions did not support.
+
+717
+00:54:57,448 --> 00:54:59,356
+Rym: Like there was that pit boss thing with the server.
+
+718
+00:54:59,637 --> 00:55:00,883
+Rym: That thing barely worked.
+
+719
+00:55:00,963 --> 00:55:02,972
+Rym: I've gotten that thing half working so many times.
+
+720
+00:55:03,032 --> 00:55:03,394
+Rym: It sucked.
+
+721
+00:55:04,037 --> 00:55:18,387
+Rym: Uh, and some independent third party made something called giant multiplayer robot that handles it for you and just works and actually still have to save five games that are just still going, but are like wrapping toward their conclusions over these many years.
+
+722
+00:55:18,407 --> 00:55:19,110
+Rym: Yeah.
+
+723
+00:55:19,512 --> 00:55:24,152
+Scott: There's another one called player damn turn that works for sieve six and sieve five and some other games.
+
+724
+00:55:24,594 --> 00:55:27,204
+Scott: Um, but there's still, there's still hacks, right?
+
+725
+00:55:27,244 --> 00:55:29,632
+Scott: They work, but they're still kind of, they're not perfect.
+
+726
+00:55:29,853 --> 00:55:36,674
+Rym: But what bothers me the most is that civilization six in particular is so well suited to asynchronous play.
+
+727
+00:55:37,055 --> 00:55:43,913
+Rym: And yet the publisher and the developer refuse to support it in any meaningful way.
+
+728
+00:55:44,215 --> 00:55:46,445
+Rym: They, the things they've implemented don't actually work.
+
+729
+00:55:46,545 --> 00:55:48,273
+Rym: They failed like regularly.
+
+730
+00:55:48,614 --> 00:55:52,230
+Rym: I've lost so many games to their play by cloud option that I just gave up on it forever.
+
+731
+00:55:53,551 --> 00:55:56,802
+Rym: And like there's such basic stuff like a civilization six game.
+
+732
+00:55:57,123 --> 00:55:59,511
+Rym: Here's a like ideal use case.
+
+733
+00:55:59,571 --> 00:56:14,265
+Rym: If I was like the game, uh, producer or product manager or designer, like trying to solve this problem, start a game, live, get it to a certain point and then convert it to us asynchronous game from that point onward, like blitz through the beginning, play async.
+
+734
+00:56:14,546 --> 00:56:18,381
+Rym: And then if you feel it like, and you all get together, turn it back into a live game.
+
+735
+00:56:19,043 --> 00:56:21,131
+Rym: They don't make that easy to do at all.
+
+736
+00:56:21,252 --> 00:56:23,921
+Rym: Like there is no button that would just make that happen.
+
+737
+00:56:24,382 --> 00:56:25,265
+Scott: You don't make money with that.
+
+738
+00:56:26,750 --> 00:56:28,962
+Scott: They make money if they sell you another DLC.
+
+739
+00:56:29,022 --> 00:56:29,203
+Scott: Right?
+
+740
+00:56:29,223 --> 00:56:30,912
+Scott: So that's what they spend all their time working on.
+
+741
+00:56:31,052 --> 00:56:33,804
+Rym: But yet they may play by cloud for some reason.
+
+742
+00:56:34,225 --> 00:56:36,012
+Rym: I don't know why they even made that at all.
+
+743
+00:56:36,915 --> 00:56:37,096
+Scott: Yeah.
+
+744
+00:56:37,136 --> 00:56:37,778
+Scott: I don't know either.
+
+745
+00:56:37,798 --> 00:56:39,765
+Rym: Uh, especially cause it doesn't work.
+
+746
+00:56:40,467 --> 00:56:44,039
+Scott: You know, sieve is not really a balanced competitive game.
+
+747
+00:56:44,781 --> 00:56:47,089
+Scott: Uh, so it's like the multiplayer aspect of it.
+
+748
+00:56:47,209 --> 00:56:53,346
+Scott: You know, it's like people try to make it one, but it's not problems.
+
+749
+00:56:53,426 --> 00:56:58,566
+Rym: I enjoy sieve multiplayer more like an idea game in that I'm just interested in seeing like what happens.
+
+750
+00:56:58,627 --> 00:56:59,912
+Rym: Like let's just play it.
+
+751
+00:56:59,993 --> 00:57:05,997
+Rym: It's fun, but I'm not trying to win super hard because winning is kind of random if you're playing like optimally.
+
+752
+00:57:06,518 --> 00:57:09,970
+Rym: So it's more like, I just, it's like a fun experience.
+
+753
+00:57:10,291 --> 00:57:13,004
+Rym: Like I actually don't like playing six single player anymore.
+
+754
+00:57:13,024 --> 00:57:14,671
+Rym: I only like playing it with people.
+
+755
+00:57:16,096 --> 00:57:16,538
+Scott: That's fine.
+
+756
+00:57:16,939 --> 00:57:26,623
+Scott: Uh, but yeah, asynchronous games, you know, it's like we bring up, you know, when they're good, they're not always good when they're good when, you know, sometimes different situations, but I definitely think there are enough of them.
+
+757
+00:57:26,663 --> 00:57:32,201
+Scott: There are so many opportunities in this space that are just sort of forgotten.
+
+758
+00:57:32,221 --> 00:57:44,844
+Scott: There's anyone who's made a big long board game, even if it's a crummy board game that we don't like, it's like, you know how many people would like to play asynchronous risk just on the, with a phone app, right?
+
+759
+00:57:45,526 --> 00:57:59,609
+Scott: Um, you know, how many people would play asynchronous twilight imperium phone app or something, you know, it's like, there's all the, all those things that people, uh, you know, nerds want, do want to play long games.
+
+760
+00:57:59,709 --> 00:58:05,993
+Scott: And some of them, you know, they don't prioritize it or for whatever reason, don't have friends or who knows, we can't get it together.
+
+761
+00:58:06,634 --> 00:58:15,242
+Scott: But if you have async with lobbies to join and play and you held people accountable to taking their turn somehow, right.
+
+762
+00:58:15,342 --> 00:58:21,104
+Scott: Or handle situations where people stop taking their turn, um, you know, or abandon a game and things like that.
+
+763
+00:58:21,124 --> 00:58:24,496
+Scott: There's, there's definitely something there to be tapped.
+
+764
+00:58:24,556 --> 00:58:26,242
+Scott: There is an untapped market.
+
+765
+00:58:26,403 --> 00:58:32,402
+Rym: I look in play your damn turn for six and I look in, uh, 18 X X games, 18 X X dot games.
+
+766
+00:58:32,763 --> 00:58:36,997
+Rym: There are a shit ton of people playing these async games with strangers right now.
+
+767
+00:58:37,017 --> 00:58:38,985
+Scott: Well, I think it helps.
+
+768
+00:58:39,005 --> 00:58:53,319
+Scott: people are at home, but even before that, this, there's a lot of, uh, you know, people who want this kind of thing, you know, it's just something to do throughout the day instead of, you know, instead of checking your Twitter instead of doom scrolling or Facebooking, right.
+
+769
+00:58:53,439 --> 00:58:56,431
+Scott: It's like, you can check this site for turns to take in a game.
+
+770
+00:58:56,471 --> 00:58:58,918
+Scott: I think that's much better for you as a person.
+
+771
+00:58:58,938 --> 00:59:01,085
+Scott: Uh, I would say, right.
+
+772
+00:59:02,148 --> 00:59:04,558
+Scott: Uh, you know, and it's like, you could make money.
+
+773
+00:59:04,719 --> 00:59:06,346
+Scott: These things are like kind of free ish.
+
+774
+00:59:06,467 --> 00:59:07,170
+Scott: Some of them, right.
+
+775
+00:59:07,591 --> 00:59:10,260
+Scott: It's like, and make this stuff.
+
+776
+00:59:10,380 --> 00:59:10,922
+Scott: People want it.
+
+777
+00:59:11,223 --> 00:59:13,230
+Rym: I think a big problem is a lot of game designers.
+
+778
+00:59:13,971 --> 00:59:16,881
+Rym: They don't think about the asynchronous use case at all.
+
+779
+00:59:17,122 --> 00:59:21,397
+Rym: So, so many board games have one or two mechanics that make async basically impossible.
+
+780
+00:59:22,883 --> 00:59:25,774
+Rym: Like so many games that feel like they'd be such an asynchronous game.
+
+781
+00:59:26,096 --> 00:59:31,440
+Rym: If you actually try to build that, you're going to find there's one fucking mechanic that makes it not work at all.
+
+782
+00:59:31,822 --> 00:59:32,645
+Rym: And then you have a choice.
+
+783
+00:59:33,188 --> 00:59:36,480
+Rym: If you make it asynchronous by changing that mechanic, you've made a completely different game.
+
+784
+00:59:38,868 --> 00:59:55,050
+Rym: So what I, the real advice I would have, if you're designing a board game that is moderately complicated, see if you can avoid the kinds of mechanics, mostly interrupts or short turns, or it like actions that require all the players to do something before the game can proceed.
+
+785
+00:59:55,472 --> 01:00:04,130
+Rym: Try to make the unit of interaction of the player, like the individual player's atoms, be as big as possible before another player is obligated to take an action.
+
+786
+01:00:10,340 --> 01:00:12,571
+Rym: This has been GeekNights with Rym and Scott.
+
+787
+01:00:12,611 --> 01:00:17,774
+Rym: Special thanks to DJ Pretzel for the opening music, Kat Lee for web design, and Brando K for the logos.
+
+788
+01:00:17,975 --> 01:00:23,014
+Scott: Be sure to visit our website at frontrowcrew.com for show notes, discussion news, and more.
+
+789
+01:00:23,275 --> 01:00:25,946
+Rym: Remember, GeekNights is not one, but four different shows.
+
+790
+01:00:26,086 --> 01:00:30,688
+Rym: SciTech Mondays, Gaming Tuesdays, Anime Comic Wednesdays, and Indiscriminate Thursdays.
+
+791
+01:00:31,030 --> 01:00:35,027
+Scott: GeekNights is distributed under a Creative Commons Attribution 3.0 license.
+
+792
+01:00:35,448 --> 01:00:38,500
+Scott: GeekNights is recorded live with no studio and no audience.
+
+793
+01:00:38,740 --> 01:00:41,620
+Scott: But unlike those other late shows, it's actually recorded at night.
+
+794
+01:00:42,280 --> 01:00:48,371
+Rym: And the Patreon patrons for this episode of GeekNights are Alan Joyce, Heidi McNichol, Linc Yeeji, Graham Finch, Ewoldt, Nikita, my heart.
+
+795
+01:00:48,794 --> 01:00:52,109
+Rym: Now go through the last year or so of podcasts and make room sing.
+
+796
+01:00:52,129 --> 01:01:02,039
+Rym: Clinton Walton, Ren from New Zealand, Ryan Perrin, Review, Mad Bull, 34 Cowards, Dread, Lily Tenerbury, Just Like a Dude Guy, Chris Reimer, Finn, Shervin Von Harl, and a bunch of people who do not want me to say their names.
+
+797
+01:01:02,760 --> 01:01:25,164
+Rym: And now, cause I'm getting ready to play an RPG, I leave you with real work and grain.
+
+798
+01:01:25,285 --> 01:01:27,256
+Rym: You can travel through the tunnel looped by the little lake.
+
+799
+01:01:27,437 --> 01:01:29,607
+Rym: Micro Machines, the real one, the original one.
+
+800
+01:01:29,929 --> 01:01:32,100
+Rym: The Micro Machines Powertrain City comes with a five car train.
+
+801
+01:01:32,220 --> 01:01:33,750
+Rym: Other trains sold separately, batteries not included.
+
+802
+01:01:33,770 --> 01:01:35,339
+Rym: Your parents put it together from Galoob.
+

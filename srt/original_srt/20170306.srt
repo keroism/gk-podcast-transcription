@@ -1,0 +1,3980 @@
+﻿1
+00:00:08,300 --> 00:00:12,463
+Speaker 1: It's Monday March 6th 2017.
+
+2
+00:00:12,463 --> 00:00:15,473
+Speaker 1: I'm rim I'm Scott and this is geek nights tonight.
+
+3
+00:00:15,814 --> 00:00:17,420
+Speaker 1: It's a tech news roundup.
+
+4
+00:00:18,941 --> 00:00:23,718
+Speaker 1: Let's do this Because we haven't done a Monday show yet this year.
+
+5
+00:00:24,401 --> 00:00:30,701
+Speaker 0: I somehow haven't done a Monday show this year and also we haven't done a tech news roundup since March 2016.
+
+6
+00:00:30,701 --> 00:00:32,090
+Speaker 0: So it's okay to do one again.
+
+7
+00:00:32,110 --> 00:00:33,700
+Speaker 1: It's like every year right around March.
+
+8
+00:00:33,801 --> 00:00:38,471
+Speaker 1: We can't come over the Monday show and then one of us says hey Why don't we just do a tech news roundup?
+
+9
+00:00:38,512 --> 00:00:43,060
+Speaker 0: It's like oh, we just did one But it's like I actually know he did one last year that clock never ring.
+
+10
+00:00:43,100 --> 00:00:45,534
+Speaker 1: Well, actually no that clock rings every year in March.
+
+11
+00:00:46,056 --> 00:00:53,560
+Speaker 1: Yeah So, I guess that means we won't do a lot of news in the beginning because we're all our news is in the second half.
+
+12
+00:00:53,962 --> 00:01:03,478
+Speaker 1: So I guess the biggest news we could do this now is the cloud bleed Because I saw a lot of people freaking out about that on the internet and I realized that most people don't seem to understand What the hell I was all about.
+
+13
+00:01:04,242 --> 00:01:15,235
+Speaker 0: So essentially and people people tend to freak out like when something is technically whatever even though that's not actually, you know I mean this one is pretty like I would change my passwords if I were.
+
+14
+00:01:15,275 --> 00:01:18,448
+Speaker 0: you doesn't hurt to change your password anyway, even if nothing's happening.
+
+15
+00:01:18,468 --> 00:01:19,071
+Speaker 0: and
+
+16
+00:01:19,091 --> 00:01:34,325
+Speaker 1: the other danger is if you because you know Basically, the real problem wasn't so much the exploit but the fact that because browser well not browsers But because networks and caches and all these other things search engines were caching a lot of the data It wasn't just oh.
+
+17
+00:01:34,365 --> 00:01:42,840
+Speaker 1: you had to know about the exploit and get the data like as the transactions were happening You could often go back and just get the data.
+
+18
+00:01:43,801 --> 00:01:48,098
+Speaker 1: so while the odds are low the odds are higher than you might expect or basically what happened.
+
+19
+00:01:48,159 --> 00:01:54,236
+Speaker 1: so Cloud flare is a service that seemed like a really good idea when I first heard of it.
+
+20
+00:01:54,276 --> 00:01:57,820
+Speaker 1: until I looked into how it works It is still a really good idea to a degree.
+
+21
+00:01:57,960 --> 00:02:01,940
+Speaker 1: The problem is the way it's set up is half the time and actually I found an article that will summarize it.
+
+22
+00:02:02,202 --> 00:02:11,160
+Speaker 1: So I'm not gonna go into all those details here But I looked into using it for some stuff not too long ago because I mostly knew what it did and it works great.
+
+23
+00:02:12,201 --> 00:02:18,340
+Speaker 1: Unless you're doing SSL then they have an option called like flexible SSL.
+
+24
+00:02:18,722 --> 00:02:27,240
+Speaker 1: Yeah, you don't use that which but that's the only one that you can use cheaply Where basically what it'll do is they have an SSL certificate for your site.
+
+25
+00:02:27,701 --> 00:02:36,615
+Speaker 1: So when people connect to your site, they actually it redirects your domain to their servers with their SSL And then it goes through them to your server.
+
+26
+00:02:36,655 --> 00:02:37,679
+Speaker 1: It does caching and whatever.
+
+27
+00:02:38,321 --> 00:02:42,252
+Speaker 0: But but that if you do this your site doesn't have SSL sitting.
+
+28
+00:02:42,533 --> 00:02:48,552
+Speaker 0: the connection between you and cloud flare is not encrypted Yep, and someone could spy on that part and see what's going on.
+
+29
+00:02:48,853 --> 00:02:53,400
+Speaker 1: So even worse if you do that Yeah, it's just unencrypted to your actual website.
+
+30
+00:02:53,561 --> 00:03:00,751
+Speaker 1: So you're kind of almost lying to your users saying yeah dog we got SSL SSL but it's just not all the way end-to-end.
+
+31
+00:03:00,791 --> 00:03:02,980
+Speaker 0: It's just between the user and the end that they're hitting.
+
+32
+00:03:03,381 --> 00:03:08,160
+Speaker 1: So if you do it, they have another way to do it where you can actually put an SSL certificate on the other side.
+
+33
+00:03:08,501 --> 00:03:13,900
+Speaker 1: So you've got your SSL certificate to cloud flare and then cloud flare has their SSL certificate to your users.
+
+34
+00:03:14,782 --> 00:03:18,740
+Speaker 1: But then you have to 100% trust cloud flares security.
+
+35
+00:03:19,303 --> 00:03:21,493
+Speaker 0: You can do it where it's just your SSL all the way through.
+
+36
+00:03:21,654 --> 00:03:22,960
+Speaker 1: that cost a ton of money.
+
+37
+00:03:23,481 --> 00:03:28,999
+Speaker 1: They do not let you use that normally and even then you have to give them your private key to make that work.
+
+38
+00:03:29,885 --> 00:03:30,711
+Speaker 0: I didn't know about that.
+
+39
+00:03:30,752 --> 00:03:31,760
+Speaker 1: How else would you do it Scott?
+
+40
+00:03:32,160 --> 00:03:35,351
+Speaker 1: How could it be your certificate on their server without the private key?
+
+41
+00:03:35,571 --> 00:03:38,180
+Speaker 1: because they can't just pass the messages through.
+
+42
+00:03:38,602 --> 00:03:42,000
+Speaker 1: They have to actually inspect the messages to be able to cache them and do all that other crap.
+
+43
+00:03:42,160 --> 00:03:44,128
+Speaker 0: How does a router pass the packets from?
+
+44
+00:03:44,228 --> 00:03:46,036
+Speaker 1: the router doesn't have to inspect the packets.
+
+45
+00:03:46,096 --> 00:03:47,120
+Speaker 1: It just passes the packets.
+
+46
+00:03:47,822 --> 00:03:49,327
+Speaker 1: Cloud flare doesn't pass the packets.
+
+47
+00:03:49,347 --> 00:03:53,400
+Speaker 1: Cloudflare has to know like what website they're accessing and what data is there.
+
+48
+00:03:53,643 --> 00:03:54,920
+Speaker 1: So we can do like the caching.
+
+49
+00:03:56,172 --> 00:03:59,540
+Speaker 0: You don't use caching on SSL and load balancing happens in a lower.
+
+50
+00:03:59,821 --> 00:04:04,440
+Speaker 1: That's the whole point of cloud flare is the caching and the reverse proxy and all that nonsense.
+
+51
+00:04:04,783 --> 00:04:08,264
+Speaker 0: You can do that part but with using SSL You can.
+
+52
+00:04:08,404 --> 00:04:11,813
+Speaker 0: you can do a lot of stuff just not on the HTTP layer.
+
+53
+00:04:11,853 --> 00:04:12,956
+Speaker 1: now with cloud flare.
+
+54
+00:04:13,197 --> 00:04:16,434
+Speaker 1: cloud flare service Basically puts a man in the middle.
+
+55
+00:04:16,595 --> 00:04:26,420
+Speaker 1: in your SSL You either give someone your private key or you've got separate SSL on one side and the other side Or there's only SSL on one side and not the other side.
+
+56
+00:04:28,221 --> 00:04:35,339
+Speaker 1: So basically independent of all that the vulnerability as best I can tell was just in cloud flare servers.
+
+57
+00:04:36,161 --> 00:04:37,586
+Speaker 1: So it didn't matter how you're doing it.
+
+58
+00:04:37,907 --> 00:04:55,152
+Speaker 1: They could basically do something like heart bleed and just get your clear text password Mmm, so yeah, if you type the password into a site that uses cloud flare Which is a huge chunk of the internet because a lot of people just click and say yeah I'll point my DNS a cloud flare because it's free and it's great.
+
+59
+00:04:55,172 --> 00:05:04,607
+Speaker 0: No, we use our DNS a cloud flare But we just don't use the cloud flare cloudy part because you know the SSL Mmm, you don't use their like SSL stuff.
+
+60
+00:05:04,788 --> 00:05:06,193
+Speaker 0: No, but there are DNS server.
+
+61
+00:05:06,374 --> 00:05:09,007
+Speaker 0: No, they're a DNS server for Come.
+
+62
+00:05:09,068 --> 00:05:25,608
+Speaker 1: yeah, they offer a lot of services But if you if the website was connected to via SSL and cloud flare combined there was a long period of time where people could just get your stupid password and even worse say Oh, I'm just using two-factor the share.
+
+63
+00:05:25,668 --> 00:05:34,534
+Speaker 1: if you set up your two-factor while this was happening Theoretically someone could have gotten the shared secret for your two-factor and compromise that I theoretically.
+
+64
+00:05:34,554 --> 00:05:35,276
+Speaker 0: but it's not like.
+
+65
+00:05:35,477 --> 00:05:39,280
+Speaker 0: even if you take advantage And went to the cloud flare servers started collecting data.
+
+66
+00:05:39,782 --> 00:05:41,147
+Speaker 0: It's like you couldn't.
+
+67
+00:05:41,247 --> 00:05:41,648
+Speaker 0: how could you?
+
+68
+00:05:41,688 --> 00:05:42,010
+Speaker 0: you couldn't.
+
+69
+00:05:42,030 --> 00:05:43,354
+Speaker 0: it's like I had a search engine.
+
+70
+00:05:43,374 --> 00:05:44,900
+Speaker 0: we could search through this stuff, right?
+
+71
+00:05:45,280 --> 00:05:48,996
+Speaker 1: Well, you could to a degree because I like give me rims password.
+
+72
+00:05:49,036 --> 00:05:49,699
+Speaker 0: Here it is.
+
+73
+00:05:50,040 --> 00:05:51,825
+Speaker 0: Doesn't work like that quote.
+
+74
+00:05:51,865 --> 00:05:58,062
+Speaker 1: the bug was serious because the leaked memory could contain private information and because it was cached by search Engines.
+
+75
+00:05:58,525 --> 00:05:59,168
+Speaker 1: you didn't have to know.
+
+76
+00:05:59,208 --> 00:06:10,520
+Speaker 1: you could go back and search for interesting stuff Which it doesn't increase the chance that your data was leaked But it increases the chance that if your data was leaked and someone was interested they could get it and that data like everyone who?
+
+77
+00:06:10,620 --> 00:06:11,363
+Speaker 1: Cares about this data?
+
+78
+00:06:11,623 --> 00:06:12,787
+Speaker 1: has it all meanwhile.
+
+79
+00:06:12,827 --> 00:06:16,500
+Speaker 0: There isn't one single instance of anyone using anything from this attack.
+
+80
+00:06:16,661 --> 00:06:17,544
+Speaker 0: Well, you wouldn't know.
+
+81
+00:06:18,167 --> 00:06:18,870
+Speaker 1: how could you know?
+
+82
+00:06:19,594 --> 00:06:20,236
+Speaker 0: how could you know?
+
+83
+00:06:20,297 --> 00:06:21,060
+Speaker 0: huh suddenly?
+
+84
+00:06:21,200 --> 00:06:25,176
+Speaker 0: I can't log into my account and it's a website that uses cloud flare.
+
+85
+00:06:25,216 --> 00:06:27,164
+Speaker 0: That is the account I can't log into.
+
+86
+00:06:27,304 --> 00:06:27,705
+Speaker 1: one.
+
+87
+00:06:27,725 --> 00:06:29,632
+Speaker 0: my password got changed so one.
+
+88
+00:06:29,672 --> 00:06:35,320
+Speaker 1: most people like if you're gonna exploit something like this Usually you do it all at once later in an automatic fashion.
+
+89
+00:06:36,255 --> 00:06:38,046
+Speaker 1: I mean You don't just want off something.
+
+90
+00:06:38,066 --> 00:06:41,420
+Speaker 1: very few people are trying to hack an individual person and are using this kind of crap.
+
+91
+00:06:41,801 --> 00:06:48,620
+Speaker 1: The moral is if you're gonna use a service like cloud flare, then you should learn exactly what it does.
+
+92
+00:06:48,962 --> 00:06:51,960
+Speaker 1: So when you wake up in the morning, you see on Twitter that cloud flare is trending.
+
+93
+00:06:51,960 --> 00:06:57,639
+Speaker 1: You're like, oh at least you know What actually happens and what the actual danger is?
+
+94
+00:06:57,940 --> 00:07:11,556
+Speaker 1: Because it's actually kind of an esoteric and difficult to explain problem with a lot of pieces involved Things of the day.
+
+95
+00:07:11,576 --> 00:07:15,006
+Speaker 1: So, uh, you might remember a long time ago.
+
+96
+00:07:15,407 --> 00:07:19,617
+Speaker 1: There was a certain Fake documentary about NASA.
+
+97
+00:07:19,738 --> 00:07:20,480
+Speaker 1: That was pretty funny.
+
+98
+00:07:20,520 --> 00:07:24,372
+Speaker 1: It was a long aging old thing of the day, but This.
+
+99
+00:07:24,953 --> 00:07:33,213
+Speaker 1: so there's this door monster to YouTube account and they've been making among other things these short pretty funny little skits about Civilization 5.
+
+100
+00:07:33,213 --> 00:07:36,385
+Speaker 0: didn't you use them as a thing of the day already so long a while ago.
+
+101
+00:07:36,405 --> 00:07:37,870
+Speaker 1: I found one skit.
+
+102
+00:07:37,950 --> 00:07:45,384
+Speaker 1: It's really sure you got a rerun thing of the day now because basically run all that culminated into this is like a way good video.
+
+103
+00:07:45,404 --> 00:07:55,049
+Speaker 1: and basically what they did is they made a Documentary in that style just like the old thing that we did and it is a documentary of a civilization 5 war.
+
+104
+00:07:56,193 --> 00:07:58,687
+Speaker 1: And this is some choice comedy right here.
+
+105
+00:07:59,432 --> 00:08:00,821
+Speaker 1: You just got to watch it.
+
+106
+00:08:00,902 --> 00:08:02,029
+Speaker 1: This is just really good.
+
+107
+00:08:03,034 --> 00:08:14,263
+Speaker 1: My head is off to these guys I don't know what I can tell you just like you get the quotes from the leaders like Gustavus Adolphus Forming new cheese land next to the whales and then the Ottomans declaring war on them.
+
+108
+00:08:14,283 --> 00:08:19,074
+Speaker 1: That's good stuff, buddy, Foxton You should watch this.
+
+109
+00:08:19,114 --> 00:08:24,494
+Speaker 1: it's like five minutes long and it is in that style of a documentary All right.
+
+110
+00:08:24,534 --> 00:08:29,147
+Speaker 0: So here's another war documentary a Star War Documentary.
+
+111
+00:08:29,915 --> 00:08:33,119
+Speaker 0: And basically when I saw the title for this videos I think I saw.
+
+112
+00:08:33,179 --> 00:08:34,129
+Speaker 0: I forget where I saw the link.
+
+113
+00:08:34,732 --> 00:08:40,690
+Speaker 0: I said I basically my mind was like that's lame and cheesy like anyone could come up with that idea.
+
+114
+00:08:41,131 --> 00:08:51,330
+Speaker 0: They're gonna execute poorly and it's gonna be some corny internet garbage that I don't like, you know Just usually like that shallow nerd garbage like the kind of person who likes it is the kind of person who buys a loot box.
+
+115
+00:08:51,511 --> 00:08:52,799
+Speaker 1: Well like those movie fault videos.
+
+116
+00:08:52,819 --> 00:08:57,230
+Speaker 1: They're like, here's the hundred things wrong with this movie And they're all actually really poorly researched and kind of dumb, right?
+
+117
+00:08:57,290 --> 00:09:00,410
+Speaker 0: It's gonna be one of those like, you know mainstream nerd garbage things.
+
+118
+00:09:00,450 --> 00:09:04,170
+Speaker 0: Yeah, the kind of stuff you see at comic-con out of mag fester packs anyway.
+
+119
+00:09:05,232 --> 00:09:13,930
+Speaker 0: but no, this is super super well executed of You know pretty easy a lame-o idea and because they executed so well.
+
+120
+00:09:15,259 --> 00:09:15,629
+Speaker 0: It's funny.
+
+121
+00:09:15,750 --> 00:09:32,483
+Speaker 0: So what this is is they took most slash all of the scenes in Star Wars new hope Episode four in which r2d2 appears and they removed his And they put in Actual voice acting saying were dialogue.
+
+122
+00:09:32,743 --> 00:09:34,530
+Speaker 0: that completely fits with the scene.
+
+123
+00:09:35,850 --> 00:09:37,436
+Speaker 0: Appropriately, I feel like it fits.
+
+124
+00:09:37,636 --> 00:09:41,068
+Speaker 1: r2d2 is the personality I perceive for r2d2 pretty well, too.
+
+125
+00:09:42,591 --> 00:09:45,762
+Speaker 0: Maybe I mean it's good enough to be a good video.
+
+126
+00:09:45,803 --> 00:09:47,750
+Speaker 1: How do you think he is what it comes down to?
+
+127
+00:09:47,951 --> 00:09:48,715
+Speaker 0: Yeah, no, he's.
+
+128
+00:09:49,037 --> 00:09:50,103
+Speaker 0: so it's pretty good.
+
+129
+00:09:50,867 --> 00:09:58,050
+Speaker 1: in the meta moment The book club book is Frank Herbert's Dune because we never actually read that whole stupid thing and they're gonna gonna talk about it.
+
+130
+00:09:58,331 --> 00:10:00,990
+Speaker 1: Mm-hmm all the previous book club book was Rebecca.
+
+131
+00:10:02,051 --> 00:10:04,341
+Speaker 1: You should read that book and watch the movie and then listen to our podcast.
+
+132
+00:10:04,401 --> 00:10:06,450
+Speaker 0: It was a book club book odds.
+
+133
+00:10:06,550 --> 00:10:07,253
+Speaker 0: Are you should read it?
+
+134
+00:10:07,313 --> 00:10:08,677
+Speaker 0: There's been a weird there.
+
+135
+00:10:08,697 --> 00:10:09,380
+Speaker 0: bad ones though.
+
+136
+00:10:09,881 --> 00:10:14,016
+Speaker 1: The Kingkiller Chronicle may not be your style I mean, we don't do too many.
+
+137
+00:10:14,077 --> 00:10:15,804
+Speaker 0: It's not this millions of good books.
+
+138
+00:10:15,864 --> 00:10:17,190
+Speaker 0: It's not hard to always go back and read.
+
+139
+00:10:17,250 --> 00:10:19,219
+Speaker 0: It's not hard to always pick a good one.
+
+140
+00:10:19,260 --> 00:10:21,370
+Speaker 0: If we only do like two or three one or two a year.
+
+141
+00:10:23,931 --> 00:10:28,707
+Speaker 1: We are going to be on Friday this week at PAX East.
+
+142
+00:10:29,088 --> 00:10:30,728
+Speaker 1: oh shit Ah my god.
+
+143
+00:10:30,870 --> 00:10:38,770
+Speaker 0: Like that is if you're probably gonna listen to this Monday episode on a Tuesday and it's gonna be Wednesday Thursday On Thursday will be in Boston.
+
+144
+00:10:39,613 --> 00:10:40,978
+Speaker 0: It will be packed.
+
+145
+00:10:40,998 --> 00:10:41,219
+Speaker 0: Is there?
+
+146
+00:10:41,259 --> 00:10:44,370
+Speaker 1: is there a pre packs gaming like just like last year in that side?
+
+147
+00:10:44,812 --> 00:10:48,866
+Speaker 1: Not even looked at what's going on at PAX because we were just at PAX.
+
+148
+00:10:48,906 --> 00:10:49,910
+Speaker 0: remember that side room.
+
+149
+00:10:49,970 --> 00:10:53,530
+Speaker 0: It's in the corner of the West on the bottom on the aloft side.
+
+150
+00:10:53,530 --> 00:10:58,676
+Speaker 1: Yeah, that's the same place as last year, which is good because we're staying at the aloft But we're going to be there for the entire weekend.
+
+151
+00:10:58,917 --> 00:11:01,084
+Speaker 1: and on Friday at 6 p.m.
+
+152
+00:11:01,445 --> 00:11:09,310
+Speaker 1: In the bumblebee theater We are doing a brand new panel play dirty to win and you might think it's not brand new.
+
+153
+00:11:09,350 --> 00:11:11,470
+Speaker 0: It's mostly the same as I played away.
+
+154
+00:11:11,658 --> 00:11:23,700
+Speaker 1: No so it was mostly the same and I slowly rewrote the entire thing to the point that now it is a lot more dirty to win Mmm, and it gets into basically we.
+
+155
+00:11:23,981 --> 00:11:32,482
+Speaker 1: it starts with like put poop on the table So everyone runs away and then you technically well, I didn't even think about terrorism I should put in like no baguette fart.
+
+156
+00:11:32,884 --> 00:11:33,890
+Speaker 1: farting is a strategy.
+
+157
+00:11:34,611 --> 00:11:36,117
+Speaker 1: Farting is a real good strategy.
+
+158
+00:11:36,177 --> 00:11:37,442
+Speaker 0: actually be that guy.
+
+159
+00:11:37,462 --> 00:11:38,326
+Speaker 0: So no one wants to play.
+
+160
+00:11:38,366 --> 00:11:39,129
+Speaker 0: they all run forfeit.
+
+161
+00:11:39,149 --> 00:11:41,413
+Speaker 1: you Extend the game forever.
+
+162
+00:11:41,453 --> 00:11:42,135
+Speaker 1: make Monopoly go.
+
+163
+00:11:42,416 --> 00:11:47,450
+Speaker 1: but we progress through varying levels of monstrous ways to win games.
+
+164
+00:11:47,914 --> 00:11:50,597
+Speaker 1: To decide where the line is 109 slides for 60 minutes.
+
+165
+00:11:50,617 --> 00:11:54,397
+Speaker 0: Let's go But you made too many.
+
+166
+00:11:54,417 --> 00:11:58,780
+Speaker 1: so now cuz that whole bit at the end Remember, we have a nice bit of just a bunch of words Ted style.
+
+167
+00:11:59,161 --> 00:11:59,985
+Speaker 1: Mmm.
+
+168
+00:12:00,085 --> 00:12:01,310
+Speaker 1: It's gonna be an interesting panel.
+
+169
+00:12:01,350 --> 00:12:01,854
+Speaker 1: It's brand new.
+
+170
+00:12:01,874 --> 00:12:02,882
+Speaker 1: We've never done this anywhere.
+
+171
+00:12:02,902 --> 00:12:05,461
+Speaker 1: I Keep coming up with good ideas for the panel.
+
+172
+00:12:05,481 --> 00:12:06,629
+Speaker 1: the more we talk about the panel.
+
+173
+00:12:07,092 --> 00:12:14,497
+Speaker 0: So I mean the ways to play dirty are nearly a Myriad way.
+
+174
+00:12:14,578 --> 00:12:16,150
+Speaker 0: turtling up when you're ahead at the end.
+
+175
+00:12:17,010 --> 00:12:18,895
+Speaker 1: Yeah playing or the draw.
+
+176
+00:12:18,956 --> 00:12:22,165
+Speaker 1: if you can't win force it so that nobody wins.
+
+177
+00:12:22,466 --> 00:12:24,050
+Speaker 0: injured the other team on purpose.
+
+178
+00:12:24,432 --> 00:12:25,797
+Speaker 1: Yeah, just cheat.
+
+179
+00:12:26,219 --> 00:12:29,030
+Speaker 0: just straight-up cheat, but all the different ways to cheat.
+
+180
+00:12:29,110 --> 00:12:29,513
+Speaker 1: Well, the two.
+
+181
+00:12:29,533 --> 00:12:30,580
+Speaker 1: there's two kinds of cheating.
+
+182
+00:12:30,621 --> 00:12:34,541
+Speaker 1: I realized in the end there's Conventional cheating and blatant cheating.
+
+183
+00:12:34,562 --> 00:12:40,828
+Speaker 1: conventional cheating is like, you know If you ain't cheating ain't trying like that kind of stuff like push the rules to the limit.
+
+184
+00:12:41,169 --> 00:12:46,958
+Speaker 1: rules don't say a dog can't play baseball or Rules say you got to catch me or it's not cheating.
+
+185
+00:12:47,260 --> 00:12:55,560
+Speaker 1: Mmm, but then there's cheating like I just keep taking money When you're not looking at monopoly like that, that's a different class of cheating and you didn't count my money So you don't know.
+
+186
+00:12:55,744 --> 00:13:00,242
+Speaker 1: yeah Like and I feel like that is a big line like in a board game.
+
+187
+00:13:00,663 --> 00:13:06,979
+Speaker 1: if you just break the rules in a complicated German Board game where it's hard for anyone to notice Arguably, you're not even winning the game.
+
+188
+00:13:07,020 --> 00:13:08,910
+Speaker 1: You're winning because you're not playing the game.
+
+189
+00:13:08,950 --> 00:13:16,369
+Speaker 0: You're in the marathon and you skip you take a bus Yeah, and then you go back after the marathon and use like a bike so that your path looks right.
+
+190
+00:13:18,771 --> 00:13:21,422
+Speaker 1: Yeah, it should be a good panel because it's gonna be mostly ad-lib.
+
+191
+00:13:21,462 --> 00:13:23,250
+Speaker 1: the slides are just the backing and we'll see how this.
+
+192
+00:13:23,411 --> 00:13:25,222
+Speaker 1: I also did some formal research.
+
+193
+00:13:25,242 --> 00:13:26,610
+Speaker 1: I learned about fast and frugal heuristics.
+
+194
+00:13:27,911 --> 00:13:38,310
+Speaker 1: Subscribe to my youtube channel because not only my stream in overwatch and streaming this geek nights episode right now But I've been uploading a whole bunch of our old board game reviews as standalone things.
+
+195
+00:13:38,973 --> 00:13:42,790
+Speaker 1: Also subscribe to Scott's YouTube channel because he's playing that Zelda game on the switch.
+
+196
+00:13:42,971 --> 00:13:43,473
+Speaker 0: I'm just.
+
+197
+00:13:43,674 --> 00:13:46,690
+Speaker 1: I'm just playing Zelda with his sweet new streaming rig that we've been talking about.
+
+198
+00:13:46,750 --> 00:13:49,642
+Speaker 0: I got a thing like this is website restream.io.
+
+199
+00:13:49,662 --> 00:13:57,641
+Speaker 0: It lets you stream to YouTube and twitch And it works so great.
+
+200
+00:13:57,762 --> 00:13:58,345
+Speaker 0: and it's free.
+
+201
+00:13:58,385 --> 00:13:59,289
+Speaker 0: and it works so good.
+
+202
+00:13:59,410 --> 00:14:06,315
+Speaker 0: I'm surprised at how great it works and it even lets you stream to more places at once if you want to but I only Do YouTube into it?
+
+203
+00:14:06,335 --> 00:14:09,690
+Speaker 0: Yeah, I think you have to go to YouTube or twitch and watch me play Zelda.
+
+204
+00:14:09,851 --> 00:14:12,084
+Speaker 0: It doesn't matter whichever one you like better until yet.
+
+205
+00:14:12,285 --> 00:14:13,050
+Speaker 1: It's like cloudflare.
+
+206
+00:14:13,090 --> 00:14:15,825
+Speaker 1: You're just gonna put it to this site and trust the site to stream it out there.
+
+207
+00:14:16,166 --> 00:14:16,790
+Speaker 0: It's working great.
+
+208
+00:14:16,930 --> 00:14:17,613
+Speaker 0: It's like I was.
+
+209
+00:14:17,774 --> 00:14:17,975
+Speaker 0: I was.
+
+210
+00:14:18,075 --> 00:14:19,542
+Speaker 0: I know how well it works.
+
+211
+00:14:19,642 --> 00:14:19,763
+Speaker 0: cuz
+
+212
+00:14:19,803 --> 00:14:22,994
+Speaker 1: I've been looking into because we got a semi Project where we give
+
+213
+00:14:23,034 --> 00:14:26,927
+Speaker 0: you one RTMP and then they send it to a whole bunch of other RTMPs
+
+214
+00:14:27,268 --> 00:14:37,250
+Speaker 1: got a project we're working on where I need a lot of dynamic motion graphics during a stream and I feel like the right way to do that is to do it in-house for a lot of reasons.
+
+215
+00:14:37,571 --> 00:14:44,863
+Speaker 1: But there are a lot of services that will do that shit for you by sending your stream to an RTMP Destination and they'll add the shit and restream it.
+
+216
+00:14:44,883 --> 00:14:46,250
+Speaker 1: So I've been looking at all that stuff late.
+
+217
+00:14:46,331 --> 00:14:46,391
+Speaker 1: I
+
+218
+00:14:46,432 --> 00:14:48,148
+Speaker 0: feel like that sort of thing you want to do locale
+
+219
+00:14:48,872 --> 00:15:03,967
+Speaker 1: Yeah, but even then like it I see why most people do it that way and I think it's because you have to be pretty technically Proficient enough to like make a web service that respond like that provides a web page That ends up providing the graphics that you're controlling with a program and that kind of stuff.
+
+220
+00:15:04,147 --> 00:15:04,348
+Speaker 0: Mm-hmm.
+
+221
+00:15:04,952 --> 00:15:08,540
+Speaker 1: But uh, yeah Anyway, I'll see you guys at PAX.
+
+222
+00:15:09,102 --> 00:15:11,030
+Speaker 1: and the only other reason you might want to subscribe to my youtube.
+
+223
+00:15:11,615 --> 00:15:13,110
+Speaker 1: Is that someone pointed out?
+
+224
+00:15:13,892 --> 00:15:19,509
+Speaker 1: That now that overwatch you can just run servers like you can you spin up a custom server and do stuff.
+
+225
+00:15:20,911 --> 00:15:29,810
+Speaker 1: There are a lot of custom servers like a scary number of them that appear to be 18 plus roleplay no killing allowed What.
+
+226
+00:15:30,352 --> 00:15:31,676
+Speaker 0: yeah, you know FPS.
+
+227
+00:15:32,077 --> 00:15:36,872
+Speaker 1: so like 12 people are on a server and I guess they ironically roleplay overwatch fanfic I don't know.
+
+228
+00:15:37,715 --> 00:15:40,486
+Speaker 1: So I'm curious to all of you out there.
+
+229
+00:15:40,506 --> 00:15:49,407
+Speaker 1: I'm just asking this Should I or should I not Join one of these servers and live stream as I put on my robe and wizard hat.
+
+230
+00:15:49,427 --> 00:15:55,696
+Speaker 0: All right Well, I mean everyone what anyone who's listening is either not gonna say anything or say yes Right.
+
+231
+00:15:55,797 --> 00:15:56,810
+Speaker 0: No one cares if you do it.
+
+232
+00:15:56,830 --> 00:15:58,336
+Speaker 0: They just won't watch if they don't want to care.
+
+233
+00:15:58,376 --> 00:15:59,461
+Speaker 1: but I've got would it?
+
+234
+00:15:59,581 --> 00:15:59,822
+Speaker 1: would it?
+
+235
+00:16:00,043 --> 00:16:01,610
+Speaker 1: should I put in that effort?
+
+236
+00:16:01,930 --> 00:16:03,075
+Speaker 1: Like should I go poke?
+
+237
+00:16:03,296 --> 00:16:06,530
+Speaker 1: someone just gave me five dollars on this on the stream?
+
+238
+00:16:07,092 --> 00:16:09,640
+Speaker 1: I'm assuming that Shawn wants me to do it.
+
+239
+00:16:09,821 --> 00:16:12,590
+Speaker 0: Don't they have something better to buy with that five dollars?
+
+240
+00:16:12,770 --> 00:16:14,117
+Speaker 0: You could have got a bacon egg and cheese.
+
+241
+00:16:14,217 --> 00:16:18,076
+Speaker 0: Well now you rather see rim in a robe and wizard Shawn You just gave me five dollars.
+
+242
+00:16:18,116 --> 00:16:18,760
+Speaker 1: I'm gonna do it.
+
+243
+00:16:18,780 --> 00:16:21,432
+Speaker 0: I Set up the thing.
+
+244
+00:16:21,954 --> 00:16:24,442
+Speaker 1: what I just I'll give us money to say stuff.
+
+245
+00:16:24,462 --> 00:16:25,164
+Speaker 0: Stop doing that.
+
+246
+00:16:25,184 --> 00:16:27,010
+Speaker 1: He said it's this is so exciting.
+
+247
+00:16:27,010 --> 00:16:27,803
+Speaker 1: I guess I'm doing it.
+
+248
+00:16:31,013 --> 00:16:32,187
+Speaker 0: People got no lives here.
+
+249
+00:16:33,392 --> 00:16:34,850
+Speaker 1: There's a lot of things I can do in the server.
+
+250
+00:16:34,971 --> 00:16:38,690
+Speaker 1: So it's not just robe and wizard hat but what if I just start killing people?
+
+251
+00:16:39,430 --> 00:16:39,972
+Speaker 0: They just let you.
+
+252
+00:16:40,254 --> 00:16:41,579
+Speaker 0: they'll probably just kick you off the server.
+
+253
+00:16:41,620 --> 00:16:43,990
+Speaker 1: Yeah, you gotta get so I gotta escalate at the right level.
+
+254
+00:16:44,090 --> 00:16:46,059
+Speaker 1: This will be you know, I wonder though.
+
+255
+00:16:46,099 --> 00:16:46,983
+Speaker 0: How come we don't have it.
+
+256
+00:16:47,003 --> 00:16:48,489
+Speaker 1: So someone just said no, don't do it.
+
+257
+00:16:48,971 --> 00:16:50,537
+Speaker 1: How come we don't said he watch it?
+
+258
+00:16:50,718 --> 00:16:52,485
+Speaker 0: How come we don't I'm doing it.
+
+259
+00:16:52,565 --> 00:16:58,570
+Speaker 0: How come we don't have a Way for the game server to stream itself, right?
+
+260
+00:16:58,650 --> 00:17:03,790
+Speaker 0: Why do I got like stream for my low like a spectator like the server itself has a spectator, right?
+
+261
+00:17:03,910 --> 00:17:08,944
+Speaker 0: It's like, you know, like if you're at say if you're at a Counter-Strike tournament, right?
+
+262
+00:17:09,106 --> 00:17:10,410
+Speaker 0: There's there, you know, this is God.
+
+263
+00:17:10,510 --> 00:17:12,137
+Speaker 1: He says no, he's got nothing better to buy.
+
+264
+00:17:12,299 --> 00:17:14,348
+Speaker 0: So just send me all your money.
+
+265
+00:17:14,387 --> 00:17:20,064
+Speaker 1: then Literally all of it to me not rim You because you keep shit all over these.
+
+266
+00:17:20,084 --> 00:17:20,930
+Speaker 1: send us money stuff.
+
+267
+00:17:20,950 --> 00:17:22,237
+Speaker 1: They're gonna send it to me and not you.
+
+268
+00:17:22,297 --> 00:17:24,530
+Speaker 0: but he says he doesn't need any of anything to buy.
+
+269
+00:17:24,630 --> 00:17:27,148
+Speaker 0: So send all your money better to buy.
+
+270
+00:17:27,290 --> 00:17:29,942
+Speaker 0: There's nothing better than I guess I'm in a robe and a wizard hat.
+
+271
+00:17:30,063 --> 00:17:33,415
+Speaker 1: then me in a robe and a wizard hat on an 18+ only erotic.
+
+272
+00:17:33,435 --> 00:17:35,501
+Speaker 0: you could buy me a beach house to live in.
+
+273
+00:17:36,162 --> 00:17:37,225
+Speaker 1: How does that benefit them?
+
+274
+00:17:37,727 --> 00:17:38,709
+Speaker 0: They could come and visit.
+
+275
+00:17:38,729 --> 00:17:44,689
+Speaker 0: I Guess I don't know the real Would be thankful for the beach house.
+
+276
+00:17:45,131 --> 00:17:50,110
+Speaker 1: The real problem is I feel I suddenly understand those YouTube shouty men.
+
+277
+00:17:50,592 --> 00:17:55,230
+Speaker 1: Because imagine if you're just sitting here shouting into the internet and people keep just giving you money to shout louder.
+
+278
+00:17:55,310 --> 00:17:57,303
+Speaker 1: I see why they're the way they are now.
+
+279
+00:17:57,343 --> 00:17:58,410
+Speaker 0: Yeah, that's why they way they are.
+
+280
+00:17:58,430 --> 00:18:05,677
+Speaker 0: You should see that the two on Twitch like basically every time they get a donation or a subscriber Like they're like, oh, thank you.
+
+281
+00:18:05,758 --> 00:18:13,701
+Speaker 0: So and so it's like, you know, they're like, oh my god, you know, like they're basically Pretend, you know being super nice and fan servicing all the people who give them money.
+
+282
+00:18:13,761 --> 00:18:16,570
+Speaker 0: and they keep getting money because someone is so dumb.
+
+283
+00:18:16,650 --> 00:18:21,470
+Speaker 0: They think it's worth paying like five bucks to have some guy read the one line of text.
+
+284
+00:18:21,530 --> 00:18:30,903
+Speaker 1: You wrote out loud to all the people watching the stream and someone else someone else in the stream Who said don't do it now change their mind and please blood ninja us.
+
+285
+00:18:30,923 --> 00:18:32,468
+Speaker 1: Okay, I guess I'll do it.
+
+286
+00:18:33,576 --> 00:18:34,830
+Speaker 1: Anyway, it's a tech news roundup.
+
+287
+00:18:35,974 --> 00:18:37,270
+Speaker 0: Yeah, I don't have any tech news.
+
+288
+00:18:37,632 --> 00:18:41,530
+Speaker 1: I just went to slash shot and just started going backwards chronologically.
+
+289
+00:18:41,992 --> 00:18:48,757
+Speaker 0: That tech news is probably at least like a month old, but Scott we're doing Commentary not news, whatever.
+
+290
+00:18:49,158 --> 00:18:50,081
+Speaker 0: All right, fine.
+
+291
+00:18:50,161 --> 00:18:50,763
+Speaker 1: It's not news.
+
+292
+00:18:50,964 --> 00:18:53,492
+Speaker 1: Find me a better aggregator of tech news That's just.
+
+293
+00:18:53,733 --> 00:18:58,149
+Speaker 0: you know there I mean literally any tech news aggregators better than slash that these days.
+
+294
+00:18:58,631 --> 00:19:01,921
+Speaker 1: Well slash shot actually is probably the best tech news aggregator in my opinion.
+
+295
+00:19:01,961 --> 00:19:08,710
+Speaker 1: The problem is the comments went from useful to Not useful to holy shit.
+
+296
+00:19:08,790 --> 00:19:12,227
+Speaker 1: The people who comment on slash dot are pretty much nothing but 40 year old.
+
+297
+00:19:12,267 --> 00:19:13,151
+Speaker 0: that guys I mean.
+
+298
+00:19:13,212 --> 00:19:15,160
+Speaker 0: what tech news sites are left in gadget?
+
+299
+00:19:15,582 --> 00:19:17,270
+Speaker 0: Yeah is gizmodo still around?
+
+300
+00:19:17,333 --> 00:19:17,730
+Speaker 0: I don't know.
+
+301
+00:19:18,212 --> 00:19:21,482
+Speaker 1: But those sites always get the same and actually those are the verges around.
+
+302
+00:19:21,583 --> 00:19:28,447
+Speaker 1: all those other sites seem to link primarily To things that are that are way less tech news than the slash shot stuff.
+
+303
+00:19:28,968 --> 00:19:33,350
+Speaker 1: Mm-hmm All right, I'm just gonna go through these in a semi random order.
+
+304
+00:19:34,310 --> 00:19:39,510
+Speaker 1: So yet another hidden backdoor was found in a bunch of Chinese Internet of Things devices.
+
+305
+00:19:39,751 --> 00:19:41,561
+Speaker 0: Yeah, internet things devices are insecure.
+
+306
+00:19:41,621 --> 00:19:43,210
+Speaker 0: if I bought one, I wouldn't plug it in the internet.
+
+307
+00:19:43,310 --> 00:19:46,743
+Speaker 0: You know what I was looking at 4k TVs just to see what the deal was.
+
+308
+00:19:46,924 --> 00:19:50,269
+Speaker 0: no not getting one anytime soon Maybe like a few years from now.
+
+309
+00:19:50,410 --> 00:19:57,939
+Speaker 1: I was looking similarly because my TV is as old as when we moved into this apartment Yeah - - cuz pretty much that we moved into apartment.
+
+310
+00:19:58,180 --> 00:19:59,103
+Speaker 1: you buy a new TV.
+
+311
+00:19:59,143 --> 00:19:59,504
+Speaker 0: That's right.
+
+312
+00:19:59,544 --> 00:20:01,430
+Speaker 0: That's the way RT and beacon.
+
+313
+00:20:03,312 --> 00:20:15,690
+Speaker 1: So in beacon we had the 1974 color RCA and we said yeah, that's way too bad of a TV anyway, so When we oh actually that reminds me of a tech news, that's actually good anyway.
+
+314
+00:20:16,850 --> 00:20:18,413
+Speaker 0: So I was looking at the 4k TVs.
+
+315
+00:20:18,493 --> 00:20:20,737
+Speaker 0: literally all of them are smart TVs.
+
+316
+00:20:20,757 --> 00:20:23,698
+Speaker 0: You can't get a not smart one and It's like damn it.
+
+317
+00:20:23,718 --> 00:20:30,441
+Speaker 0: I just want a dumb Monitor basically, but as long as you can turn off the Y or K monitor That's that big cost like a fortune.
+
+318
+00:20:30,803 --> 00:20:32,010
+Speaker 0: the smart TVs are cheaper.
+
+319
+00:20:32,090 --> 00:20:35,330
+Speaker 0: So basically you just have to turn off all the don't give it an internet connection.
+
+320
+00:20:35,393 --> 00:20:37,637
+Speaker 0: Yeah Don't let it connect to Wi-Fi or Ethernet.
+
+321
+00:20:37,938 --> 00:20:38,360
+Speaker 0: and only.
+
+322
+00:20:38,380 --> 00:20:42,930
+Speaker 1: you don't like trip by accident and like while you have an ethernet A cable in your hand and accidentally plug it.
+
+323
+00:20:43,091 --> 00:20:47,470
+Speaker 0: I just use the TV part of it only and ignore all its smart garbage functionality.
+
+324
+00:20:48,093 --> 00:20:49,941
+Speaker 0: But the problem is all that smart functionality like.
+
+325
+00:20:49,982 --> 00:20:51,770
+Speaker 0: there was a Sony one that look kind of nice.
+
+326
+00:20:51,810 --> 00:20:53,235
+Speaker 1: It's the kind of stuff people want.
+
+327
+00:20:53,917 --> 00:20:57,870
+Speaker 0: yeah, cuz they don't have another real boxes connected to their TVs like our people anyway.
+
+328
+00:20:57,890 --> 00:21:00,290
+Speaker 0: Well thing is but it's like it's running Android.
+
+329
+00:21:00,370 --> 00:21:03,570
+Speaker 0: It's like well, even if you never connect to the internet or use any of that crap.
+
+330
+00:21:03,992 --> 00:21:06,663
+Speaker 0: It's like well, you had to boot the thing into stupid Android.
+
+331
+00:21:06,683 --> 00:21:08,310
+Speaker 0: It doesn't just turn on like on.
+
+332
+00:21:08,772 --> 00:21:10,280
+Speaker 0: It's like got a boot all this software.
+
+333
+00:21:10,300 --> 00:21:15,520
+Speaker 1: It's like ah so Trustwave Discovered the back door in double tech double take.
+
+334
+00:21:15,540 --> 00:21:20,995
+Speaker 1: it looks like they make VoIP products mm-hmm, so This is interesting.
+
+335
+00:21:21,015 --> 00:21:31,070
+Speaker 1: because I just bought like the cheapest like tiny portable Wireless mouse in the world on Amazon just because I just want a wireless mouse for like playing sieve on a plane on my laptop.
+
+336
+00:21:31,210 --> 00:21:33,539
+Speaker 1: Because doing it with the touchpad on a flight.
+
+337
+00:21:33,559 --> 00:21:35,586
+Speaker 1: That's more than a few hours is not comfortable.
+
+338
+00:21:35,827 --> 00:21:39,097
+Speaker 0: if you touch the screen No, that's not comfortably.
+
+339
+00:21:39,137 --> 00:21:41,144
+Speaker 1: they're playing save with the touchpad actually really sucks.
+
+340
+00:21:41,305 --> 00:21:42,027
+Speaker 0: not the touchpad.
+
+341
+00:21:42,087 --> 00:21:42,770
+Speaker 0: touch the screen.
+
+342
+00:21:42,830 --> 00:21:43,897
+Speaker 1: No, that's just as bad.
+
+343
+00:21:43,938 --> 00:21:44,381
+Speaker 1: I've done it.
+
+344
+00:21:44,421 --> 00:21:44,864
+Speaker 1: It's not.
+
+345
+00:21:44,945 --> 00:21:45,710
+Speaker 0: how is that bad?
+
+346
+00:21:46,010 --> 00:21:46,472
+Speaker 1: It's way less.
+
+347
+00:21:46,553 --> 00:21:48,382
+Speaker 0: touch the unit you touch where you want them to go.
+
+348
+00:21:48,422 --> 00:21:49,125
+Speaker 0: you touch the city.
+
+349
+00:21:49,145 --> 00:21:49,829
+Speaker 0: you touch the building.
+
+350
+00:21:49,849 --> 00:21:50,332
+Speaker 0: you want to Go.
+
+351
+00:21:50,352 --> 00:21:52,829
+Speaker 1: cuz I move my hand way less with a mouse.
+
+352
+00:21:54,172 --> 00:21:57,286
+Speaker 1: I play a lot of sieve, but I came.
+
+353
+00:21:57,326 --> 00:21:58,210
+Speaker 0: where do you even put the mouse?
+
+354
+00:21:59,031 --> 00:21:59,534
+Speaker 1: On the tray?
+
+355
+00:21:59,554 --> 00:22:02,189
+Speaker 1: cuz I fly premium economy and I get this giant ass seat to sit in.
+
+356
+00:22:03,732 --> 00:22:04,661
+Speaker 1: Also my laptop's tiny.
+
+357
+00:22:04,681 --> 00:22:05,468
+Speaker 1: they'll totally just fit.
+
+358
+00:22:05,488 --> 00:22:08,290
+Speaker 1: I Only need an inch in any given direction.
+
+359
+00:22:08,854 --> 00:22:19,406
+Speaker 1: But now I realize the thing came and I looked at it And I am NOT a hundred percent convinced that if I plug the tiny USB dongle that came with this thing into my computer That it's not just gonna malware me.
+
+360
+00:22:20,171 --> 00:22:24,025
+Speaker 1: So I'm gonna play with it cuz it's a to be as Chinese knockoff nonsense.
+
+361
+00:22:24,106 --> 00:22:25,290
+Speaker 0: plug it into some other computer.
+
+362
+00:22:25,390 --> 00:22:42,390
+Speaker 1: I'm gonna plug it into a computer and try to do some gonna poke around with it, but Really guys Anything that's an Internet of Things thing is probably Has on purpose back doors, and if it doesn't it almost definitely has not on purpose back door, right?
+
+363
+00:22:42,470 --> 00:22:45,110
+Speaker 0: I mean, it's perfectly fine to get something that is a computer, right?
+
+364
+00:22:45,170 --> 00:22:49,790
+Speaker 0: I mean like my rice cooker is a computer, but it's not the kind of computer that like runs software.
+
+365
+00:22:49,971 --> 00:22:52,750
+Speaker 0: It doesn't have Android or something on it, right?
+
+366
+00:22:53,070 --> 00:23:01,498
+Speaker 0: Oh, it's not like a full operating system in there that can be and it doesn't have an internet connection that could be manipulated From afar or it doesn't need updates.
+
+367
+00:23:01,578 --> 00:23:05,490
+Speaker 0: Like it's like yeah, we want the functionality that's involved with those things, right?
+
+368
+00:23:05,650 --> 00:23:18,024
+Speaker 0: You know people talk about the refrigerator like you can check to see if you have eggs as a camera, you know stuff like that and those are useful features, but Those devices because they're running like this, you know, they're never updated.
+
+369
+00:23:18,064 --> 00:23:19,147
+Speaker 0: They're not maintained.
+
+370
+00:23:19,167 --> 00:23:20,010
+Speaker 0: You're not update.
+
+371
+00:23:20,050 --> 00:23:20,434
+Speaker 0: You know this.
+
+372
+00:23:20,717 --> 00:23:22,090
+Speaker 1: so it's even a more fundamental problem.
+
+373
+00:23:22,230 --> 00:23:29,822
+Speaker 1: Security is already an afterthought in most technology things Because you it's hard enough to keep your real computer secure.
+
+374
+00:23:29,842 --> 00:23:32,270
+Speaker 0: that's running Windows and is super maintained and up-to-date.
+
+375
+00:23:32,591 --> 00:23:37,690
+Speaker 0: How are you gonna take care of the security on your refrigerator unless the company that made the refrigerator is super on top of it?
+
+376
+00:23:37,850 --> 00:23:38,413
+Speaker 0: Which they aren't.
+
+377
+00:23:38,614 --> 00:23:41,690
+Speaker 1: and the reason they're not is because there's no money in that if you're doing a new thing.
+
+378
+00:23:41,770 --> 00:23:44,119
+Speaker 0: Yeah, we sold everyone a refrigerator to fancy features.
+
+379
+00:23:44,741 --> 00:23:47,230
+Speaker 0: What's the point of updating the software in their refrigerators?
+
+380
+00:23:47,390 --> 00:23:47,974
+Speaker 0: No one gives a fuck.
+
+381
+00:23:48,055 --> 00:23:50,130
+Speaker 1: you make money by adding a new feature.
+
+382
+00:23:50,210 --> 00:23:54,065
+Speaker 1: Like if they add a feature of your fridge you can put this out what you eat.
+
+383
+00:23:54,145 --> 00:23:55,310
+Speaker 0: you put that in a later model.
+
+384
+00:23:55,370 --> 00:23:56,614
+Speaker 0: There's no point updating the.
+
+385
+00:23:56,634 --> 00:24:01,410
+Speaker 1: your fridge figures out what you eat and auto orders to keep your groceries refresh like forever.
+
+386
+00:24:01,611 --> 00:24:02,735
+Speaker 0: Sure, you don't need to add that to.
+
+387
+00:24:02,776 --> 00:24:06,250
+Speaker 0: people have already bought fridges and aren't gonna replace them for years and years and years.
+
+388
+00:24:06,270 --> 00:24:08,330
+Speaker 1: Well, no because you can make it a service you can still make money with it.
+
+389
+00:24:08,330 --> 00:24:11,946
+Speaker 0: My point is that if you get people to subscribe to their fridge, I know I'm knowing.
+
+390
+00:24:12,006 --> 00:24:13,758
+Speaker 1: way more fundamental.
+
+391
+00:24:13,798 --> 00:24:19,611
+Speaker 1: the problem is Providing that feature can make you money Sick.
+
+392
+00:24:19,772 --> 00:24:29,810
+Speaker 1: adding security to something cannot make you money because people don't give a shit and don't understand Making something secure cost way more than adding the feature.
+
+393
+00:24:29,910 --> 00:24:34,050
+Speaker 0: Also, it generally happens to a lot of these internet of things like your frigerators and whatnot.
+
+394
+00:24:34,170 --> 00:24:35,936
+Speaker 0: Is that this insecurity?
+
+395
+00:24:35,996 --> 00:24:42,019
+Speaker 0: somebody will basically take it over and turn it into a bot and it'll still do everything You thought it did perhaps slower.
+
+396
+00:24:42,039 --> 00:24:47,594
+Speaker 0: I know noticeably or unnoticeably But as far as you know You don't even realize that it's.
+
+397
+00:24:47,835 --> 00:24:52,410
+Speaker 0: it's like sending spam or trying to hack into stuff while it's also checking.
+
+398
+00:24:52,872 --> 00:24:54,437
+Speaker 1: Modern malware is not stupid.
+
+399
+00:24:54,738 --> 00:24:56,323
+Speaker 1: It's like a good virus in a person.
+
+400
+00:24:56,363 --> 00:24:58,410
+Speaker 1: a good virus in a person doesn't kill you immediately.
+
+401
+00:24:58,551 --> 00:24:59,235
+Speaker 0: It's like herpes.
+
+402
+00:24:59,396 --> 00:25:01,890
+Speaker 1: Yeah, it's got a spread as far and wide as it can.
+
+403
+00:25:02,030 --> 00:25:02,895
+Speaker 0: It's like you don't have.
+
+404
+00:25:03,036 --> 00:25:03,418
+Speaker 0: you know.
+
+405
+00:25:03,438 --> 00:25:04,645
+Speaker 0: have the flu or you just die.
+
+406
+00:25:04,665 --> 00:25:06,835
+Speaker 0: You got herpes Yeah, and you can't.
+
+407
+00:25:06,875 --> 00:25:07,679
+Speaker 0: it's hard to get rid of.
+
+408
+00:25:08,301 --> 00:25:09,626
+Speaker 1: so I guess the moral is.
+
+409
+00:25:09,646 --> 00:25:10,610
+Speaker 1: anyone listening to the show?
+
+410
+00:25:10,690 --> 00:25:11,774
+Speaker 1: You probably already know.
+
+411
+00:25:11,835 --> 00:25:20,650
+Speaker 1: but no matter how great a feature sounds on any internet of things thing You got to be real fucking cynical about the security of those things.
+
+412
+00:25:20,650 --> 00:25:25,192
+Speaker 0: Basically don't plug anything into the internet unless it's something like that You take like.
+
+413
+00:25:25,393 --> 00:25:28,224
+Speaker 0: the only things I have that connect to the internet are actual computers.
+
+414
+00:25:28,325 --> 00:25:29,690
+Speaker 0: Nope phones and tablets.
+
+415
+00:25:29,891 --> 00:25:31,456
+Speaker 0: I don't connect anything else to the internet.
+
+416
+00:25:31,797 --> 00:25:34,085
+Speaker 1: I have what I have a nest camera.
+
+417
+00:25:34,607 --> 00:25:35,370
+Speaker 0: I have a live wedge.
+
+418
+00:25:35,551 --> 00:25:40,230
+Speaker 1: Yep, I do have a nice camera, which yes could be hacked or something, but I use it as a rabbit.
+
+419
+00:25:40,290 --> 00:25:41,899
+Speaker 0: Yeah, like I don't connect my camera.
+
+420
+00:25:42,160 --> 00:25:47,344
+Speaker 0: My camera could theoretically direct Directly connect to the internet and like upload straight to Flickr.
+
+421
+00:25:47,525 --> 00:25:48,450
+Speaker 0: I've never gotten it to work.
+
+422
+00:25:48,550 --> 00:25:51,670
+Speaker 0: I tried once but and I was like wait, why the fuck would I do?
+
+423
+00:25:52,972 --> 00:25:55,210
+Speaker 0: So I just connect it to my phone and do that, right?
+
+424
+00:25:56,551 --> 00:26:00,669
+Speaker 1: Or like my sonos that you gave me that thing is not connected to the internet except you get its data.
+
+425
+00:26:01,592 --> 00:26:03,607
+Speaker 0: But actually that's the thing that has to be connected.
+
+426
+00:26:03,627 --> 00:26:09,150
+Speaker 0: the internet Yep, but I don't know if that actually is capable of like running services.
+
+427
+00:26:09,310 --> 00:26:10,154
+Speaker 1: Well, here's the difference.
+
+428
+00:26:10,274 --> 00:26:17,102
+Speaker 1: The main thing is that that thing at least is not accessible from outside of my network Like the thing that controls.
+
+429
+00:26:17,162 --> 00:26:18,330
+Speaker 1: it connects locally.
+
+430
+00:26:18,793 --> 00:26:19,376
+Speaker 1: I can't control.
+
+431
+00:26:19,396 --> 00:26:21,829
+Speaker 1: I can't turn the thing on from outside of my house.
+
+432
+00:26:22,613 --> 00:26:26,830
+Speaker 1: It is one way unless my router lets something come back in or it does some tunneling.
+
+433
+00:26:26,870 --> 00:26:32,910
+Speaker 0: That is interesting that but you like the apps does connect like the sonos service and then send instructions down.
+
+434
+00:26:32,990 --> 00:26:33,292
+Speaker 0: I don't know.
+
+435
+00:26:33,915 --> 00:26:36,570
+Speaker 0: The thing is I don't know if the speaker itself can run services, right?
+
+436
+00:26:36,670 --> 00:26:37,717
+Speaker 0: Those are the things that to worry about.
+
+437
+00:26:38,020 --> 00:26:44,715
+Speaker 0: your TV has enough CPU and such that it could run services Whereas I don't think that speaker can.
+
+438
+00:26:45,176 --> 00:26:51,030
+Speaker 1: also things that connect to the internet or things that run a service that you can connect you from outside.
+
+439
+00:26:51,710 --> 00:26:53,296
+Speaker 1: Basically, you just got to know what the thing does.
+
+440
+00:26:53,798 --> 00:26:59,321
+Speaker 0: if you don't know if you don't know enough don't do it Alright, so next on this list of random.
+
+441
+00:26:59,361 --> 00:26:59,864
+Speaker 0: So I got.
+
+442
+00:26:59,884 --> 00:27:00,708
+Speaker 0: I actually have a tech news.
+
+443
+00:27:00,748 --> 00:27:01,210
+Speaker 0: I'd have a link.
+
+444
+00:27:01,270 --> 00:27:03,323
+Speaker 0: I just remembered it cuz I read it this morning.
+
+445
+00:27:03,343 --> 00:27:04,570
+Speaker 1: Alright, let me find your tech news.
+
+446
+00:27:04,630 --> 00:27:05,696
+Speaker 1: I can put it in the list of links.
+
+447
+00:27:05,796 --> 00:27:07,042
+Speaker 0: So basically right?
+
+448
+00:27:07,082 --> 00:27:08,590
+Speaker 0: No one's making CRT's anymore.
+
+449
+00:27:09,072 --> 00:27:10,357
+Speaker 1: Oh that was on slash shot.
+
+450
+00:27:10,497 --> 00:27:11,100
+Speaker 0: Well, okay.
+
+451
+00:27:11,180 --> 00:27:13,750
+Speaker 0: Well, I didn't see it on slash that it's not somewhere else.
+
+452
+00:27:13,810 --> 00:27:14,696
+Speaker 0: So I don't need slash.
+
+453
+00:27:14,736 --> 00:27:15,642
+Speaker 0: that's got a telly.
+
+454
+00:27:15,662 --> 00:27:16,830
+Speaker 1: slash shot is the aggregator.
+
+455
+00:27:16,971 --> 00:27:21,549
+Speaker 0: Anyway, so no one's making CRT's anymore, right and you might want to make a CRT.
+
+456
+00:27:21,991 --> 00:27:25,706
+Speaker 1: You know, you still can what the death of CRT displays means for classic arcade machine.
+
+457
+00:27:25,746 --> 00:27:26,328
+Speaker 0: Yeah that one.
+
+458
+00:27:26,368 --> 00:27:32,322
+Speaker 0: Yeah Just cuz it's on slash that me you're saying.
+
+459
+00:27:32,543 --> 00:27:34,350
+Speaker 0: oh it's on slash that therefore slash that is good.
+
+460
+00:27:34,431 --> 00:27:35,722
+Speaker 0: I'm saying it's on other websites.
+
+461
+00:27:35,762 --> 00:27:42,370
+Speaker 0: I don't need slash that Alright find another website that has the website where I saw it wherever it was cuz clearly I saw it and clearly I didn't read.
+
+462
+00:27:42,732 --> 00:27:45,909
+Speaker 1: Yeah, you told me that you couldn't find any tech news.
+
+463
+00:27:46,853 --> 00:27:49,887
+Speaker 1: No, obviously that website sucks at finding tech news.
+
+464
+00:27:50,189 --> 00:27:53,817
+Speaker 0: Anyway so No one's making CRT's.
+
+465
+00:27:53,857 --> 00:27:55,504
+Speaker 0: the all the CRT factories are closed.
+
+466
+00:27:55,785 --> 00:27:56,810
+Speaker 1: There's a separate story.
+
+467
+00:27:56,891 --> 00:27:58,123
+Speaker 1: Actually, I can I can turn this.
+
+468
+00:27:58,163 --> 00:27:58,789
+Speaker 1: we get another news.
+
+469
+00:27:58,870 --> 00:28:08,047
+Speaker 0: anyway to make a CRT you need to wind the tube and it's this complicated process and Basically like no one who knows the people who are good at it.
+
+470
+00:28:08,128 --> 00:28:09,493
+Speaker 0: or yeah It's like no one can do this.
+
+471
+00:28:09,533 --> 00:28:12,001
+Speaker 0: basically the no one can like.
+
+472
+00:28:12,082 --> 00:28:14,610
+Speaker 0: the skill of doing this is almost lost completely.
+
+473
+00:28:16,530 --> 00:28:28,418
+Speaker 0: So right now there's a place that's like supplies for arcade machines and like they're all out of certain sizes of TV of CRT and when they run out, that's it You're gonna have to like.
+
+474
+00:28:28,458 --> 00:28:35,228
+Speaker 0: if you have a broken CRT you're gonna like need to find someone who will rewind the tube or something and you might not be able to find anyone.
+
+475
+00:28:35,248 --> 00:28:41,338
+Speaker 0: and basically, you know, you're gonna have to resort to just using an LCD and Losing the classic.
+
+476
+00:28:41,540 --> 00:28:44,331
+Speaker 0: how it's supposed to look and work function.
+
+477
+00:28:44,472 --> 00:28:52,589
+Speaker 0: already a lot of emulators have a lot of capabilities for Me to make it look like a CRT even though it's on an LCD.
+
+478
+00:28:52,810 --> 00:28:55,111
+Speaker 1: Well, like, you know drop every other scan line Like.
+
+479
+00:28:55,131 --> 00:28:58,670
+Speaker 1: there's a lot of ways you can make it look like it would have looked in the old days.
+
+480
+00:28:59,072 --> 00:29:01,946
+Speaker 1: But I have kind of a total counterpoint to that there.
+
+481
+00:29:02,027 --> 00:29:06,810
+Speaker 1: on one hand There's the idea that you want to recreate the experience of what those games were like and there is a purpose for that.
+
+482
+00:29:07,412 --> 00:29:14,508
+Speaker 1: I'm pretty sure we will be able to recreate that experience in museums even without CRT's with a combination of LCDs.
+
+483
+00:29:14,568 --> 00:29:20,750
+Speaker 0: or you know As long as we have a CR one CRT left to look at which we do right to copy how it affects.
+
+484
+00:29:20,891 --> 00:29:23,389
+Speaker 0: You know cuz like there's that little bit of burn in so you get the blur.
+
+485
+00:29:24,773 --> 00:29:31,404
+Speaker 1: There is also an argument to be made that a lot of those effects Were not desired by the people who made the games in the first place.
+
+486
+00:29:31,425 --> 00:29:32,429
+Speaker 1: They were just stuck with it.
+
+487
+00:29:32,750 --> 00:29:34,277
+Speaker 0: So I'm gonna talk.
+
+488
+00:29:34,457 --> 00:29:37,490
+Speaker 0: but also people took advantage of those effects to make games.
+
+489
+00:29:37,570 --> 00:29:39,958
+Speaker 0: Look, it's like Atari games racing the right.
+
+490
+00:29:40,039 --> 00:29:45,529
+Speaker 0: and if you make them if you just make them solid else like gun on the NES Yeah, I won't work on any modern thing.
+
+491
+00:29:45,851 --> 00:29:49,890
+Speaker 0: Yeah, so it's like yeah, even if you get an LCD and try to make it work, it won't work, right?
+
+492
+00:29:50,340 --> 00:29:56,065
+Speaker 0: We need CRT's to preserve certain experiences, but I'm confident we will eventually lose them all there are.
+
+493
+00:29:56,145 --> 00:30:05,172
+Speaker 0: there are already efforts That have been going on for at least like 10 plus years to preserve video games and I'm sure and it's like, you know But like.
+
+494
+00:30:05,192 --> 00:30:05,858
+Speaker 1: here's a good example.
+
+495
+00:30:05,878 --> 00:30:10,450
+Speaker 1: when you preserve a film Ideally you go further and restore the film.
+
+496
+00:30:10,550 --> 00:30:17,917
+Speaker 1: So like removing film grain from ancient films with modern technology is actually a better Preservation than the original.
+
+497
+00:30:18,198 --> 00:30:20,324
+Speaker 0: but you're making it look like it was when it was new.
+
+498
+00:30:20,345 --> 00:30:22,432
+Speaker 0: the film grain is cuz he got busted And old.
+
+499
+00:30:22,493 --> 00:30:24,745
+Speaker 0: but CRT's that's what it looked like when it was new.
+
+500
+00:30:24,786 --> 00:30:29,852
+Speaker 1: Yep Don't degrade Here's a bet.
+
+501
+00:30:29,892 --> 00:30:31,356
+Speaker 1: Here's a weird like third way to look at.
+
+502
+00:30:31,436 --> 00:30:41,689
+Speaker 1: imagine taking imagine if we used algorithms to take old original vinyl recordings and Recreate the data that was lost by the fact that vinyl is garbage.
+
+503
+00:30:42,591 --> 00:30:47,170
+Speaker 0: We don't need to do that because the original oh you're talking about things that recorded directly to vinyl.
+
+504
+00:30:47,290 --> 00:30:57,050
+Speaker 0: Yeah, like in the old days, which is most music from a lot of eras of music people like I'm talking about I was thinking I thought about I was thinking about like music made in a studio that was just distributed on vinyl.
+
+505
+00:30:57,593 --> 00:31:00,790
+Speaker 0: Right, but the original recording was on like take, you know big old tape wheels.
+
+506
+00:31:00,830 --> 00:31:04,310
+Speaker 1: Yeah, well even then what it was removing is we have the tape reels.
+
+507
+00:31:04,370 --> 00:31:12,730
+Speaker 1: We don't need the removing the artifacts of the creation of old media to get a more true But less authentic experience.
+
+508
+00:31:14,131 --> 00:31:16,120
+Speaker 1: Anyway, there's an interesting world there.
+
+509
+00:31:16,140 --> 00:31:18,310
+Speaker 0: The point is we run out of CRT's right?
+
+510
+00:31:18,710 --> 00:31:23,089
+Speaker 0: Also, if you learn how to wind to CRT, which is I don't know where you're gonna learn this from.
+
+511
+00:31:23,710 --> 00:31:27,064
+Speaker 0: There's just YouTube videos, but I mean, it's not that easy.
+
+512
+00:31:27,386 --> 00:31:28,350
+Speaker 1: No series are paid today.
+
+513
+00:31:28,652 --> 00:31:31,470
+Speaker 1: So there was a separate story and I'm gonna look forward cuz I just won't link to it.
+
+514
+00:31:31,851 --> 00:31:38,156
+Speaker 0: You can make a business out of this basically and be the guy who takes care of that and charge each person who asks for A lot of money.
+
+515
+00:31:38,176 --> 00:31:45,508
+Speaker 1: You'll eventually be the old guy in the museum Who's like the wizard with the ancient technology right like every owner of the busted CRT will come to you.
+
+516
+00:31:46,953 --> 00:31:50,698
+Speaker 1: so TVs basically all of America.
+
+517
+00:31:50,758 --> 00:32:01,924
+Speaker 1: America like everyone had TVs like in the 90s We had sort of like this peak TV and actually I saw an article saying that the number of televisions per home is Declining at a constant rate now.
+
+518
+00:32:01,964 --> 00:32:02,869
+Speaker 0: Yeah, you only need like one.
+
+519
+00:32:03,434 --> 00:32:07,118
+Speaker 1: Well in the old days like when I was a kid right like I almost In the living room.
+
+520
+00:32:07,138 --> 00:32:11,710
+Speaker 0: I almost thought about getting one in the bedroom on the wall So I could lay in bed, but it's like laying in bed with the iPad.
+
+521
+00:32:11,750 --> 00:32:12,273
+Speaker 0: It's just fine.
+
+522
+00:32:12,494 --> 00:32:13,861
+Speaker 1: So I was thinking about mounting.
+
+523
+00:32:13,921 --> 00:32:25,869
+Speaker 1: when I when I do the refresh of all these monitors I'm take this monitor put it here vertical get a new monitor to put here horizontal and take a third monitor and stick it there Because when the hockey games on Emily, I'll watch it there while we're both working on shit.
+
+524
+00:32:26,191 --> 00:32:32,250
+Speaker 1: You need more screen because the other solution is I'm streaming the pirate stream here and Emily's streaming the fire again.
+
+525
+00:32:32,471 --> 00:32:34,297
+Speaker 0: You're gonna pay that much for hockey.
+
+526
+00:32:34,317 --> 00:32:35,581
+Speaker 0: You could just pay for fucking cable.
+
+527
+00:32:36,103 --> 00:32:43,410
+Speaker 0: I'm not paying for cable and be cheaper than I refuse Even if it's the cheapest option you refuse on principle.
+
+528
+00:32:43,711 --> 00:32:46,970
+Speaker 1: The cheapest option is still way more expensive if you add up a few months.
+
+529
+00:32:47,271 --> 00:32:53,536
+Speaker 1: I'm just saying cuz I can't just most of the services to just pay for hockey won't show me Rangers games No, because you live in New York.
+
+530
+00:32:53,797 --> 00:32:57,211
+Speaker 0: Yeah, you could use a like a VPN deal and go outside, you know and then
+
+531
+00:32:57,532 --> 00:33:15,169
+Speaker 1: yeah, but that's way more of a pain than going to the pirate stream that you and I both use because it's but Basically peak TV, you know when I was a kid There was a CRT in my bedroom CRT in my brother's bedroom CRT in my parents bedroom Giant CRT in the living room and the old TV was in the family room.
+
+532
+00:33:15,571 --> 00:33:18,263
+Speaker 1: We yeah, we also had a black and white TV in the basement.
+
+533
+00:33:18,665 --> 00:33:20,372
+Speaker 1: We had to do an old VCR We had.
+
+534
+00:33:20,553 --> 00:33:22,924
+Speaker 0: I mean, you know, we increased our TVs over time.
+
+535
+00:33:23,005 --> 00:33:29,123
+Speaker 0: right in the earliest days All we had was one Tiny black and white TV in the dead and that was it.
+
+536
+00:33:29,565 --> 00:33:31,010
+Speaker 0: and then that one moved to the kitchen.
+
+537
+00:33:31,131 --> 00:33:34,050
+Speaker 0: We got a big old one in the day up and then my parents got one in there.
+
+538
+00:33:34,151 --> 00:33:36,510
+Speaker 0: You keep cascading and then we got one in our room.
+
+539
+00:33:36,631 --> 00:33:40,250
+Speaker 1: Actually, the youngest sibling is the second oldest TV and the oldest one is in the basement.
+
+540
+00:33:40,310 --> 00:33:57,330
+Speaker 0: but it's like we always had like a tiny TV in the kitchen that was pretty much only used for morning show while eating breakfast Jeopardy and then like world news whatever as during dinner and then the main TV and then a TV in every bedroom.
+
+541
+00:33:57,812 --> 00:33:58,394
+Speaker 0: And that was it.
+
+542
+00:33:58,455 --> 00:34:04,727
+Speaker 0: but like other people that we knew had that many TVs plus one They would add one like in the basement area, right?
+
+543
+00:34:06,511 --> 00:34:07,835
+Speaker 0: Like basically double living room.
+
+544
+00:34:07,855 --> 00:34:12,889
+Speaker 1: We only had our basement one had a VCR and an Atari 2600 plugged into it in the basement.
+
+545
+00:34:13,831 --> 00:34:23,465
+Speaker 0: Mmm, I was actually we had a but nowadays you only need one because if you're not in you know The main room where every people are gathering and watching probably got a tablet.
+
+546
+00:34:23,505 --> 00:34:28,243
+Speaker 0: Yeah, you don't need one in the kitchen You don't need you anymore right because you got phones.
+
+547
+00:34:28,524 --> 00:34:33,869
+Speaker 0: you don't need one in your bedroom anymore You only need one in you know, the main main room.
+
+548
+00:34:34,190 --> 00:34:40,850
+Speaker 1: But anyway, the whole point of all that was that we hit peak TV in the 90s and now everyone replaced their screens with modern LCDs.
+
+549
+00:34:41,871 --> 00:34:45,049
+Speaker 1: What happened to all those TVs because they are really hard to deal with.
+
+550
+00:34:46,411 --> 00:34:51,688
+Speaker 0: If you go if you go like various like recycling and dump places, I usually in a pile.
+
+551
+00:34:51,708 --> 00:34:51,788
+Speaker 1: Yeah.
+
+552
+00:34:51,848 --> 00:34:52,791
+Speaker 1: Yeah They are.
+
+553
+00:34:52,851 --> 00:34:54,777
+Speaker 1: so they are all in piles.
+
+554
+00:34:54,818 --> 00:34:55,880
+Speaker 1: because basically what happened?
+
+555
+00:34:56,322 --> 00:35:09,954
+Speaker 1: there was one company and there's a few other companies They're trying to this too that were buying either the rights to or the actual inventory of all those TVs Because they were studying how to safely recycle them and get you know Useful shit out of given
+
+556
+00:35:09,974 --> 00:35:13,009
+Speaker 0: to the arcade guys if they're the right size and shape but if they're not they don't want
+
+557
+00:35:13,029 --> 00:35:13,110
+Speaker 1: them.
+
+558
+00:35:13,230 --> 00:35:15,761
+Speaker 1: So they're TVs like, you know in living rooms.
+
+559
+00:35:15,781 --> 00:35:23,456
+Speaker 1: They're not that weird like the naked ones that were but anyway It turns out there is no economically viable way to recycle them.
+
+560
+00:35:23,857 --> 00:35:27,149
+Speaker 1: and now they're all in warehouses and that company's fucked and No one knows what to do.
+
+561
+00:35:27,210 --> 00:35:32,950
+Speaker 1: There's all these warehouses filled with millions and millions of these things and they're trying to buy so many.
+
+562
+00:35:33,131 --> 00:35:37,010
+Speaker 0: You could have just bought a few to figure out how to recycle because they were buying them for the pipeline.
+
+563
+00:35:37,191 --> 00:35:40,149
+Speaker 1: They're basically they were buying a futures contract to do this.
+
+564
+00:35:40,461 --> 00:35:41,353
+Speaker 0: Yeah I mean I I would.
+
+565
+00:35:41,513 --> 00:35:47,089
+Speaker 0: I would buy a few like 10 and figure out how to do it first and then start buying a After I figured it out.
+
+566
+00:35:47,592 --> 00:35:51,710
+Speaker 1: So our friend Sean who actually promised us that he is not that guy and he gave me a really good reason as to why.
+
+567
+00:35:52,192 --> 00:35:55,409
+Speaker 1: They're all in an ally and an alley behind some shit town in Texas.
+
+568
+00:35:57,092 --> 00:35:58,850
+Speaker 1: But they're all actually in warehouses.
+
+569
+00:35:59,811 --> 00:36:03,763
+Speaker 1: They're in these warehouses and the warehouses are toxic waste dumps.
+
+570
+00:36:03,824 --> 00:36:05,830
+Speaker 1: now because they'll see it because CRT's are toxic.
+
+571
+00:36:06,153 --> 00:36:07,788
+Speaker 1: Yeah, you know why they're toxic?
+
+572
+00:36:09,251 --> 00:36:11,219
+Speaker 0: Because the paint on the inside of the tube.
+
+573
+00:36:11,319 --> 00:36:20,529
+Speaker 1: No, it's mostly because like a chemical coating on there There's the chemicals there's all the chemicals but there's also the fact that the glass has a huge amount of lead in it.
+
+574
+00:36:21,711 --> 00:36:27,214
+Speaker 1: That kind of glass has a lot of lead and because there's no good way to get the lead out The cost
+
+575
+00:36:27,334 --> 00:36:28,218
+Speaker 0: of the lead out
+
+576
+00:36:28,319 --> 00:36:40,038
+Speaker 1: and the cost of safely recycling them Basically destroyed any value in the rest of the components, but because they're toxic waste You can't just put them in a landfill.
+
+577
+00:36:40,058 --> 00:36:41,162
+Speaker 1: So now you're fucked.
+
+578
+00:36:41,202 --> 00:36:41,884
+Speaker 1: No one knows what to do.
+
+579
+00:36:42,547 --> 00:36:43,490
+Speaker 1: It's this giant crisis.
+
+580
+00:36:44,823 --> 00:36:46,956
+Speaker 0: Sure Can't think of what to do.
+
+581
+00:36:47,097 --> 00:36:47,881
+Speaker 1: They don't work.
+
+582
+00:36:48,384 --> 00:36:48,988
+Speaker 1: They're just TVs.
+
+583
+00:36:50,932 --> 00:36:51,413
+Speaker 0: Mmm, why don't you?
+
+584
+00:36:51,794 --> 00:36:53,419
+Speaker 0: they still watch TV right?
+
+585
+00:36:53,740 --> 00:36:54,161
+Speaker 0: some of them?
+
+586
+00:36:54,582 --> 00:36:58,728
+Speaker 0: Yeah give them to people like in the poorest places They don't even have any T on a TV.
+
+587
+00:36:59,871 --> 00:37:01,430
+Speaker 1: Yeah, you know what would happen there?
+
+588
+00:37:01,530 --> 00:37:02,856
+Speaker 1: I think that would just be a scam.
+
+589
+00:37:03,056 --> 00:37:06,636
+Speaker 0: and if those poorest places would become landfills just give it to them for free if it Works.
+
+590
+00:37:06,780 --> 00:37:10,399
+Speaker 1: Yes Landfills that's what they would become plus works.
+
+591
+00:37:10,459 --> 00:37:13,390
+Speaker 1: what it's a TV from the 90s the fuck you gonna plug into it.
+
+592
+00:37:13,671 --> 00:37:14,736
+Speaker 0: They could broadcast TV.
+
+593
+00:37:14,836 --> 00:37:16,825
+Speaker 0: what analog broadcast TV will give them.
+
+594
+00:37:16,845 --> 00:37:22,018
+Speaker 1: Sega Genesis is also Alright moving right along on the tech news.
+
+595
+00:37:22,700 --> 00:37:29,509
+Speaker 1: There is a bill in Congress in the US called the active cyber defense certainty act.
+
+596
+00:37:30,415 --> 00:37:34,421
+Speaker 0: active cyber defense certainty ACD CA.
+
+597
+00:37:34,724 --> 00:37:36,870
+Speaker 0: All right This sound like a bad.
+
+598
+00:37:36,990 --> 00:37:42,470
+Speaker 0: I mean the Congress of the United States doesn't know shit about technology and it's a really it's in a bad state right now.
+
+599
+00:37:42,991 --> 00:37:43,974
+Speaker 0: Imagine as being good.
+
+600
+00:37:44,094 --> 00:37:46,120
+Speaker 1: Yeah, so the problem with our government?
+
+601
+00:37:46,280 --> 00:37:49,750
+Speaker 1: is that the problem with our government about the problems?
+
+602
+00:37:50,770 --> 00:37:57,730
+Speaker 1: Regarding technology is that independent of any bad decisions or Hitler inclinations that are given might have the people who run in government?
+
+603
+00:37:57,910 --> 00:37:58,774
+Speaker 0: Don't know shit about technology.
+
+604
+00:37:58,895 --> 00:38:00,602
+Speaker 1: No one in government knows anything about technology.
+
+605
+00:38:00,964 --> 00:38:02,210
+Speaker 1: I mean remember the CBD tPA.
+
+606
+00:38:02,936 --> 00:38:05,734
+Speaker 1: Yeah, so the CFAA From the 80s.
+
+607
+00:38:06,075 --> 00:38:15,950
+Speaker 1: this will amend that but one thing that it purports to do Which is an interesting concept and I want to talk about the concept instead of the specifics of the bill.
+
+608
+00:38:16,892 --> 00:38:18,069
+Speaker 0: Specifics you're not a lawyer.
+
+609
+00:38:18,404 --> 00:38:25,310
+Speaker 1: No Because even if I did I'm pretty confident that the bill probably has a lot of language about analog computers steam engines.
+
+610
+00:38:27,112 --> 00:38:37,054
+Speaker 1: It would grant the rights to victims of cyber attacks to engage in not merely passive countermeasures but active Countermeasures.
+
+611
+00:38:37,174 --> 00:38:38,901
+Speaker 0: so who counts as a victim?
+
+612
+00:38:39,484 --> 00:38:40,709
+Speaker 1: so say someone is.
+
+613
+00:38:41,913 --> 00:38:50,088
+Speaker 0: So here's here's an example if I have a Facebook account and somebody brute forces the password and logs into it Am I am I a victim or is Facebook a victim or both?
+
+614
+00:38:50,950 --> 00:38:51,453
+Speaker 0: Or not?
+
+615
+00:38:51,473 --> 00:38:57,381
+Speaker 1: an interesting question in and of itself in that in that aspect I would guess that Facebook would be the one who was able to return.
+
+616
+00:38:57,401 --> 00:38:59,026
+Speaker 0: so Facebook would be allowed to.
+
+617
+00:38:59,207 --> 00:39:01,917
+Speaker 0: if they were able to Do two ways this was happening.
+
+618
+00:39:02,178 --> 00:39:05,510
+Speaker 0: They could cyber attack the person who was attacking them legally.
+
+619
+00:39:06,210 --> 00:39:08,576
+Speaker 1: So so the proposal includes caveats.
+
+620
+00:39:08,998 --> 00:39:18,204
+Speaker 1: quote victims cannot take actions that destroy data on another person's computer Pause physical injury or create threats to public safety.
+
+621
+00:39:18,424 --> 00:39:19,849
+Speaker 0: Oh someone actually thought this through.
+
+622
+00:39:19,889 --> 00:39:20,190
+Speaker 0: good job.
+
+623
+00:39:20,492 --> 00:39:21,216
+Speaker 0: So I can't.
+
+624
+00:39:21,256 --> 00:39:23,450
+Speaker 0: but I thought you weren't gonna tie by the specifics of the law.
+
+625
+00:39:23,511 --> 00:39:25,070
+Speaker 0: But clearly someone was thinking about something.
+
+626
+00:39:25,231 --> 00:39:32,829
+Speaker 1: Well, cuz the act of countermeasures means say you're DDSing me and I find the IP address of your botnet I can DDS you back and it's legal.
+
+627
+00:39:33,851 --> 00:39:35,299
+Speaker 0: Wow, that's just great for the internet.
+
+628
+00:39:35,319 --> 00:39:37,129
+Speaker 0: just you know ball the bandwidth even more DDS.
+
+629
+00:39:37,732 --> 00:39:38,938
+Speaker 1: What's the alternative?
+
+630
+00:39:39,079 --> 00:39:40,949
+Speaker 1: if there's a serious attack against you though?
+
+631
+00:39:43,011 --> 00:39:45,120
+Speaker 0: Go and find out where they are, what do you mean?
+
+632
+00:39:45,140 --> 00:39:45,822
+Speaker 1: where they are?
+
+633
+00:39:45,863 --> 00:39:47,489
+Speaker 1: So you're getting attacked by a DDS.
+
+634
+00:39:47,931 --> 00:39:49,536
+Speaker 1: There's millions of IPs coming at you.
+
+635
+00:39:49,677 --> 00:39:49,897
+Speaker 0: Yep.
+
+636
+00:39:50,218 --> 00:39:53,810
+Speaker 0: Well if I'm allowed to do countermeasures, I'm not allowed to destroy data, right?
+
+637
+00:39:53,950 --> 00:39:56,520
+Speaker 0: Yep, but I am allowed to strike back.
+
+638
+00:39:56,701 --> 00:40:00,597
+Speaker 0: Yep, and you didn't really all you said were things I'm not allowed to do which is so far.
+
+639
+00:40:00,658 --> 00:40:03,350
+Speaker 0: It's not allowed public to public safety.
+
+640
+00:40:04,652 --> 00:40:06,597
+Speaker 0: You cannot bomb their building.
+
+641
+00:40:06,677 --> 00:40:13,109
+Speaker 1: I won't do that or cause physical injury physical injury to people Theorists, so I guess I could docks.
+
+642
+00:40:14,013 --> 00:40:15,738
+Speaker 1: That could be part of my active countermeasure.
+
+643
+00:40:15,758 --> 00:40:17,323
+Speaker 0: So I can't cause physical injury to people.
+
+644
+00:40:17,403 --> 00:40:18,868
+Speaker 0: I can't destroy data.
+
+645
+00:40:19,189 --> 00:40:23,895
+Speaker 1: Yep Okay, so I guess I could destroy Network connectivity, right?
+
+646
+00:40:23,915 --> 00:40:25,241
+Speaker 0: Well, here's what I would do right.
+
+647
+00:40:25,482 --> 00:40:30,789
+Speaker 0: I could for example if I find out You know, even if it's a DDoS computers all over the place, right?
+
+648
+00:40:31,471 --> 00:40:37,251
+Speaker 0: I could go to each and every place that this DDoS is coming from like let's say it's for coming from ten houses in the Neighborhood.
+
+649
+00:40:37,392 --> 00:40:38,936
+Speaker 0: Yeah, you know just theoretically right.
+
+650
+00:40:39,638 --> 00:40:43,670
+Speaker 0: go to each of those ten houses and just smash those computers, but not the hard drives.
+
+651
+00:40:43,851 --> 00:40:50,149
+Speaker 0: Yeah, just I won't destroy the data on the hard drives I'm just gonna smash their computer or cut their internet cable outside their head.
+
+652
+00:40:50,250 --> 00:40:50,652
+Speaker 1: Go to that.
+
+653
+00:40:50,692 --> 00:40:53,185
+Speaker 1: cut the cut the Fios cable and every house.
+
+654
+00:40:53,245 --> 00:40:58,210
+Speaker 0: I won't hurt any people I won't cause any public damage, but I can still bust into their house and smash their fucking computer.
+
+655
+00:40:58,310 --> 00:41:07,742
+Speaker 1: Anyway, because we got a lot of other tech news the I guess the question that we should answer right now is our active countermeasures Justifiable and are they and should?
+
+656
+00:41:07,762 --> 00:41:08,728
+Speaker 0: are they useful?
+
+657
+00:41:08,788 --> 00:41:09,130
+Speaker 0: is the real?
+
+658
+00:41:10,812 --> 00:41:13,582
+Speaker 0: If they're effective then yes, we should definitely make them leave.
+
+659
+00:41:13,622 --> 00:41:15,810
+Speaker 1: I've actually always been an advocate of countermeasures.
+
+660
+00:41:16,051 --> 00:41:20,530
+Speaker 0: I think it depends on depending on the attack and the you know, what's going on?
+
+661
+00:41:20,630 --> 00:41:26,210
+Speaker 0: They may actually just cause more harm like fighting a DDS of the DDS just hurts the whole internet doesn't right?
+
+662
+00:41:26,210 --> 00:41:26,351
+Speaker 0: It's?
+
+663
+00:41:26,371 --> 00:41:27,054
+Speaker 0: you're not really?
+
+664
+00:41:27,254 --> 00:41:28,339
+Speaker 1: but imagine and are you really?
+
+665
+00:41:28,620 --> 00:41:30,950
+Speaker 0: is that gonna discourage people from DDS thing?
+
+666
+00:41:31,130 --> 00:41:35,390
+Speaker 1: I don't think here's a better example say someone hacks into my network at work.
+
+667
+00:41:35,530 --> 00:41:41,989
+Speaker 1: I'm at work do my thing and the the IDS goes off and we find out someone SSH is in who wasn't supposed to.
+
+668
+00:41:42,049 --> 00:41:43,777
+Speaker 1: someone has Hacked in or networking of some shit.
+
+669
+00:41:43,857 --> 00:41:45,989
+Speaker 1: All right, I can hack them back.
+
+670
+00:41:46,654 --> 00:41:48,429
+Speaker 1: Hmm I think that's totally fine.
+
+671
+00:41:48,831 --> 00:41:53,729
+Speaker 0: Yeah, if it's that I would argue that kind of thing I I because and only they'll get in trouble.
+
+672
+00:41:53,930 --> 00:41:59,909
+Speaker 1: see I mean in the real world Like I do believe you can you submit the evidence in court after you hack into them?
+
+673
+00:42:00,550 --> 00:42:02,216
+Speaker 1: So here's the thing in the real world.
+
+674
+00:42:02,597 --> 00:42:07,530
+Speaker 1: if I believe that people have a basic right to self-defense in that But it must be proportional.
+
+675
+00:42:07,691 --> 00:42:12,530
+Speaker 1: So like if someone punches me and I can't get like I can you shoot them in the face with a gun?
+
+676
+00:42:13,072 --> 00:42:20,186
+Speaker 1: Now if they were trying to kill I bet you can't use lethal force unless you think Like there is a real danger of you know, similar force being used.
+
+677
+00:42:20,226 --> 00:42:25,190
+Speaker 1: proportional response I feel like because humans are not physically in danger.
+
+678
+00:42:25,993 --> 00:42:30,430
+Speaker 1: The proportional responses can be much greater in cyberspace.
+
+679
+00:42:31,313 --> 00:42:36,570
+Speaker 0: I think that this kind of law is the kind of thing where like it won't matter too much.
+
+680
+00:42:36,710 --> 00:42:44,648
+Speaker 0: What's gonna matter a whole bunch is when we actually have a cyberpunk dystopia and you're in cyberspace And it's like someone's actually ghost in the shelling you you can.
+
+681
+00:42:44,749 --> 00:42:46,495
+Speaker 0: it goes well this matter a lot too.
+
+682
+00:42:46,836 --> 00:43:00,222
+Speaker 1: when say Google runs some Internet of Things thing and Say that Internet of Things thing gets attacked by some shadier Internet of Things things Google can fucking shut that botnet down.
+
+683
+00:43:00,684 --> 00:43:00,844
+Speaker 0: Mm-hmm.
+
+684
+00:43:01,507 --> 00:43:02,410
+Speaker 1: I think that's fine.
+
+685
+00:43:04,379 --> 00:43:07,211
+Speaker 1: All right, let's move on to So.
+
+686
+00:43:07,312 --> 00:43:15,175
+Speaker 1: the FCC wants carriers to block robocalls from sprucing spoof numbers, I thought he hated regulation, mr Pie, he didn't like.
+
+687
+00:43:15,195 --> 00:43:17,765
+Speaker 0: he didn't like regulation, but now he's regulating what's going on, man.
+
+688
+00:43:17,785 --> 00:43:18,829
+Speaker 0: Yeah, what's going on?
+
+689
+00:43:19,170 --> 00:43:21,521
+Speaker 0: So this doesn't seem like you guys sticking to your principles there.
+
+690
+00:43:21,541 --> 00:43:22,405
+Speaker 0: Oh, I did.
+
+691
+00:43:22,826 --> 00:43:23,550
+Speaker 1: Oh, it's almost like.
+
+692
+00:43:24,074 --> 00:43:25,670
+Speaker 0: It's almost like you don't have any principles.
+
+693
+00:43:26,612 --> 00:43:31,050
+Speaker 1: Get money, but you this is a problem that for some reason I don't experience.
+
+694
+00:43:31,211 --> 00:43:35,676
+Speaker 1: I think it's just because my phone number is like way upstate and Like.
+
+695
+00:43:35,957 --> 00:43:39,610
+Speaker 1: it's real old and not that many people have it, but I don't get robocalls ever.
+
+696
+00:43:41,413 --> 00:43:42,745
+Speaker 0: I've gotten actually more lately.
+
+697
+00:43:44,711 --> 00:43:46,922
+Speaker 1: Everyone I know has been the internet like.
+
+698
+00:43:46,942 --> 00:43:47,786
+Speaker 1: this is a problem.
+
+699
+00:43:48,087 --> 00:43:49,312
+Speaker 0: phone numbers I think I like.
+
+700
+00:43:49,413 --> 00:43:53,730
+Speaker 0: it's only been like like this year and late last year that suddenly I've gotten a bunch.
+
+701
+00:43:53,851 --> 00:44:05,537
+Speaker 1: But actually it's because if phones get used less It is easier to Purchase in bulk abilities to send phone calls Through various exchanges.
+
+702
+00:44:05,557 --> 00:44:10,505
+Speaker 0: The other thing is that what I've been doing is when I pick up the phone for some unknown number I don't say anything.
+
+703
+00:44:10,688 --> 00:44:17,984
+Speaker 0: Nope I don't even say hello and then I hear that it's quiet and no one's saying anything and I'm like aha I got you and then hang up but my Google Voice number.
+
+704
+00:44:18,085 --> 00:44:19,250
+Speaker 1: I turned on the Google spam stuff.
+
+705
+00:44:19,270 --> 00:44:20,442
+Speaker 1: But the problem is email.
+
+706
+00:44:20,482 --> 00:44:34,777
+Speaker 1: at the same problem the phone numbers are getting the problem that email got in its like middling early days and email solved it by Super aggressive spam filters, but you can't spam filter a normal landline or cell number Like.
+
+707
+00:44:34,797 --> 00:44:35,988
+Speaker 1: there's no easy way to do that.
+
+708
+00:44:36,712 --> 00:44:44,630
+Speaker 1: So people can't defend themselves and yet you can't just turn off your phone number Because you still need phone numbers for stuff in the real world.
+
+709
+00:44:44,710 --> 00:44:47,970
+Speaker 0: I think the phone company should be you know, whatever phone company you have.
+
+710
+00:44:48,050 --> 00:44:55,146
+Speaker 0: So my case like Verizon Wireless, right what they should be doing is basically Whitelisting and blacklisting phone numbers on a global level.
+
+711
+00:44:55,207 --> 00:45:05,310
+Speaker 0: Yes, right It's like they should basically if a brand if a phone number tries to call anyone with a Verizon fellow cell phone For example, and that phone number has never called a Verizon cell phone ever.
+
+712
+00:45:05,551 --> 00:45:09,266
+Speaker 0: Yeah, then they shouldn't let that call go through period right?
+
+713
+00:45:09,346 --> 00:45:16,990
+Speaker 0: Even if it's a real person They should have a Verizon operator or Verizon computer pick up and see what happens on that phone call.
+
+714
+00:45:17,110 --> 00:45:18,415
+Speaker 0: Does it say anything?
+
+715
+00:45:18,495 --> 00:45:18,997
+Speaker 0: Is it like a?
+
+716
+00:45:19,057 --> 00:45:31,050
+Speaker 0: you know, someone's saying hello phones need to do what emails did I mean, it's like prove that you're a real person making calls and then alright We're gonna allow this number to call people on Verizon and then you can start calling.
+
+717
+00:45:31,070 --> 00:45:37,810
+Speaker 1: Well like those honeypot email addresses in the old days put a honeypot email out and if there's even if anyone emails it Ban that domain forever, right?
+
+718
+00:45:37,890 --> 00:45:42,670
+Speaker 0: And if there's even one robo call for that number up that number is just gone forever can never make a phone call to anyone.
+
+719
+00:45:42,750 --> 00:45:43,696
+Speaker 0: Verizon ever again the end.
+
+720
+00:45:43,978 --> 00:45:44,159
+Speaker 0: Yep.
+
+721
+00:45:44,742 --> 00:45:46,090
+Speaker 1: The problem is we don't have any of these tools.
+
+722
+00:45:46,211 --> 00:45:46,754
+Speaker 1: The phone companies.
+
+723
+00:45:46,794 --> 00:45:49,390
+Speaker 1: don't give a shit and look at this rule.
+
+724
+00:45:49,390 --> 00:45:52,624
+Speaker 0: You can report spam texts really easily, but you can't report much.
+
+725
+00:45:52,644 --> 00:45:54,090
+Speaker 0: you can't report robo calls.
+
+726
+00:45:54,371 --> 00:45:56,542
+Speaker 1: So the all the rules would allow.
+
+727
+00:45:56,562 --> 00:45:57,828
+Speaker 1: this is how bad it is.
+
+728
+00:45:58,936 --> 00:46:10,779
+Speaker 1: They're not allowed to block phone calls Generally, yeah, all this rule would allow is for them to block phone calls where the caller ID is obviously spoofed Mm-hmm because caller ID is Trivial to spoof.
+
+729
+00:46:10,839 --> 00:46:12,268
+Speaker 1: it has been from the beginning.
+
+730
+00:46:12,429 --> 00:46:15,661
+Speaker 1: Yep There is a sort of real caller ID, but you don't have access to that.
+
+731
+00:46:15,681 --> 00:46:20,146
+Speaker 1: No, so, uh, yeah, I This is one of those rules.
+
+732
+00:46:20,956 --> 00:46:27,848
+Speaker 0: If I get a spam text I can basically copy and paste that text and send it to text it to Verizon at this number.
+
+733
+00:46:27,908 --> 00:46:30,403
+Speaker 0: the spam number it's whatever number is SP a.m.
+
+734
+00:46:30,423 --> 00:46:31,934
+Speaker 0: and They go.
+
+735
+00:46:32,055 --> 00:46:34,049
+Speaker 0: Oh, we got a spam text and then they shut that shit down.
+
+736
+00:46:34,850 --> 00:46:42,035
+Speaker 0: But there's no way for me to like if I get a robo call for me to send that phone number to Verizon and say Hey, this was a robo call.
+
+737
+00:46:42,356 --> 00:46:43,119
+Speaker 0: Why don't they have that?
+
+738
+00:46:43,380 --> 00:46:45,046
+Speaker 0: I can't report spam on a robo call.
+
+739
+00:46:45,087 --> 00:46:45,829
+Speaker 0: Why isn't that a thing?
+
+740
+00:46:46,070 --> 00:46:50,064
+Speaker 1: Partly because the rules prevent them from doing a lot of things.
+
+741
+00:46:50,084 --> 00:46:51,730
+Speaker 0: Yeah, it's like I can report spam on a text.
+
+742
+00:46:51,811 --> 00:46:56,923
+Speaker 0: I should be able to report spam on a call You know and then it that should be like they can collect that data.
+
+743
+00:46:56,943 --> 00:47:01,670
+Speaker 0: when people report spam on calls They could just be a report spam button in the phone app on your phone.
+
+744
+00:47:01,770 --> 00:47:03,536
+Speaker 1: I think the what's gonna happen.
+
+745
+00:47:03,576 --> 00:47:17,519
+Speaker 1: my guess is that by the time there is in any regulation That will solve this problem phone numbers will no longer be in common use probably kind of like how the volume on Advertisements was only recently dealt with on TV.
+
+746
+00:47:17,539 --> 00:47:19,184
+Speaker 1: It's gonna be the same thing.
+
+747
+00:47:19,324 --> 00:47:19,545
+Speaker 1: Hmm.
+
+748
+00:47:20,387 --> 00:47:21,490
+Speaker 1: Wow, this shows been going on for a while.
+
+749
+00:47:21,490 --> 00:47:22,694
+Speaker 1: I don't think I'm gonna get through all these newses.
+
+750
+00:47:22,714 --> 00:47:23,978
+Speaker 0: All right, good.
+
+751
+00:47:24,540 --> 00:47:31,446
+Speaker 1: Uber has been using a secret program Grayballing to identify the name of the program is great.
+
+752
+00:47:31,586 --> 00:47:35,046
+Speaker 0: So so Or is grayballing a thing that I don't know what it is?
+
+753
+00:47:35,066 --> 00:47:36,713
+Speaker 1: grayballing is a thing What's grayballing?
+
+754
+00:47:36,773 --> 00:47:38,298
+Speaker 1: so, you know blackballing right?
+
+755
+00:47:38,579 --> 00:47:39,442
+Speaker 1: you blackball someone?
+
+756
+00:47:39,623 --> 00:47:40,827
+Speaker 0: Yeah, you just don't let them.
+
+757
+00:47:41,369 --> 00:47:43,890
+Speaker 0: you know It's like you'll never work in this town again.
+
+758
+00:47:43,990 --> 00:47:49,570
+Speaker 1: Yeah, blackballing is when you were put on a semi official or at least like reasonably agreed-upon.
+
+759
+00:47:49,590 --> 00:48:01,189
+Speaker 0: Right, so like I fire you from my restaurant But now none of the restaurants in town are hiring you it and they refuse to because you've been blackballed by the whole Cartel like fan conventions, like if you pull some shenanigans at a con that I work at.
+
+760
+00:48:02,197 --> 00:48:03,590
+Speaker 0: Yeah, you're not going to any con ever.
+
+761
+00:48:03,630 --> 00:48:04,795
+Speaker 1: Yeah, we have a blackball list.
+
+762
+00:48:05,136 --> 00:48:08,670
+Speaker 1: all the people who run conventions share the names of people who are bad news.
+
+763
+00:48:08,751 --> 00:48:10,342
+Speaker 1: We have a list that we pass around.
+
+764
+00:48:10,363 --> 00:48:10,483
+Speaker 1: Mm-hmm.
+
+765
+00:48:11,490 --> 00:48:23,149
+Speaker 1: So grayballing is when you basically do that sort of thing With data or you basically you set up some sort of like soft or deniable way around it.
+
+766
+00:48:24,093 --> 00:48:25,905
+Speaker 1: The way you uber was doing it is.
+
+767
+00:48:25,985 --> 00:48:26,790
+Speaker 1: it's a concrete example.
+
+768
+00:48:26,790 --> 00:48:27,233
+Speaker 0: Are they trying?
+
+769
+00:48:27,253 --> 00:48:27,997
+Speaker 0: were they trying to black?
+
+770
+00:48:28,258 --> 00:48:30,250
+Speaker 0: they were trying to customers or drivers?
+
+771
+00:48:30,530 --> 00:48:38,830
+Speaker 1: They were trying to prevent law enforcement and regulators from Getting uber to work in places where uber is banned.
+
+772
+00:48:40,231 --> 00:48:41,315
+Speaker 1: So they would figure out.
+
+773
+00:48:41,415 --> 00:48:45,430
+Speaker 0: so if you were in a banned place where uber is not allowed to you were a normal person.
+
+774
+00:48:45,754 --> 00:48:47,050
+Speaker 1: They totally let you hail an uber.
+
+775
+00:48:47,391 --> 00:48:54,437
+Speaker 1: But if they figured out that you were probably a regulator or an investigator the uber would say sorry We can't come and pick you up in this area.
+
+776
+00:48:54,457 --> 00:48:57,390
+Speaker 1: Yeah, the uber would basically say yeah, there's no one driving in this town.
+
+777
+00:48:57,632 --> 00:49:01,133
+Speaker 1: sorry, dude, hmm and They got caught.
+
+778
+00:49:01,354 --> 00:49:10,066
+Speaker 1: finally and a quote uber is using a tool called gray ball To work to identify requests made by certain users and denied them service.
+
+779
+00:49:10,267 --> 00:49:13,534
+Speaker 1: according to the report They basically.
+
+780
+00:49:13,614 --> 00:49:26,549
+Speaker 1: the service was ostensibly to prevent people who have harmed uber users or actually worked for their Competitors and we're trying to harm their network, but they realized they could pretty trivially figure out who was trying to regulate them.
+
+781
+00:49:26,971 --> 00:49:28,838
+Speaker 0: Mm-hmm.
+
+782
+00:49:29,279 --> 00:49:32,330
+Speaker 0: I mean all these taxi companies even lyft and whatever.
+
+783
+00:49:32,390 --> 00:49:33,495
+Speaker 0: They're all bad.
+
+784
+00:49:33,837 --> 00:49:36,650
+Speaker 0: all of them and over is just the worst by a million.
+
+785
+00:49:37,232 --> 00:49:45,339
+Speaker 1: Cabs are great cabs are also shitty, but these services are Dangerous to the health of basic economic forces.
+
+786
+00:49:45,660 --> 00:49:45,761
+Speaker 0: Yeah.
+
+787
+00:49:45,781 --> 00:49:57,737
+Speaker 0: I mean there's a bunch of rules that cabs have to follow right and basically uber and all these other people can run their business only works because they're ignoring all these regulations and the Enforcement hasn't cracked.
+
+788
+00:49:57,757 --> 00:50:00,830
+Speaker 0: like if you wanted to they could just like arrest everyone driving an uber.
+
+789
+00:50:01,193 --> 00:50:05,197
+Speaker 0: They could because they're all breaking the law by not, you know There's certain things that cab has to do.
+
+790
+00:50:05,277 --> 00:50:07,707
+Speaker 0: it has to pick you up if you right if you wanted to.
+
+791
+00:50:07,948 --> 00:50:09,354
+Speaker 0: it has to take You where you want to go.
+
+792
+00:50:09,374 --> 00:50:12,710
+Speaker 0: it has to charge a certain rate and that rate never changes no matter what?
+
+793
+00:50:13,210 --> 00:50:16,687
+Speaker 0: you know if it changes it changes for all the cabs at once and it's a big fucking deal.
+
+794
+00:50:16,707 --> 00:50:19,966
+Speaker 0: and Basically the ubers and lifts and all these they just ignore all those rules.
+
+795
+00:50:19,986 --> 00:50:20,529
+Speaker 0: They don't have to pick up.
+
+796
+00:50:20,891 --> 00:50:23,302
+Speaker 0: They can't get in trouble for not picking up handicapped people.
+
+797
+00:50:23,322 --> 00:50:25,815
+Speaker 0: Yeah, it's like all these kinds of rules They're just ignoring.
+
+798
+00:50:25,835 --> 00:50:28,270
+Speaker 0: It's like yeah, if I ignore all the rules I could open up a restaurant.
+
+799
+00:50:28,310 --> 00:50:31,201
+Speaker 0: Yeah, I won't let the health inspector in I'll just put out poison food.
+
+800
+00:50:31,442 --> 00:50:31,884
+Speaker 0: I'll make it.
+
+801
+00:50:31,944 --> 00:50:33,490
+Speaker 0: Yeah, I'll just load it up with sugar.
+
+802
+00:50:33,791 --> 00:50:37,764
+Speaker 1: They're also mostly being subsidized by venture capital, which is the only reason why they're even that cheap.
+
+803
+00:50:37,905 --> 00:50:41,360
+Speaker 0: Yeah, they're not even making profits They're just you know, someone else is paying.
+
+804
+00:50:41,421 --> 00:50:42,748
+Speaker 1: so so yeah.
+
+805
+00:50:43,070 --> 00:50:54,990
+Speaker 1: Anyway, this is that that's an interesting problem in the modern era that semi-regulated industries can Basically use data to figure out who the cops are and not let the cops into the club.
+
+806
+00:50:55,311 --> 00:51:00,064
+Speaker 0: Not once have I ever taken an uber or lyft or anything and nor will I.
+
+807
+00:51:00,265 --> 00:51:06,730
+Speaker 1: I rode in an uber that someone else hailed Once cuz I was on a work trip, but I refused to hell one and I won't use it when I travel on my own.
+
+808
+00:51:06,951 --> 00:51:09,039
+Speaker 0: No, I'll just get a real cab wherever I am.
+
+809
+00:51:09,119 --> 00:51:11,990
+Speaker 0: Even if it's more money or a hat or a hassle or whatever.
+
+810
+00:51:13,400 --> 00:51:15,380
+Speaker 1: alright That Amazon outage.
+
+811
+00:51:15,883 --> 00:51:16,670
+Speaker 0: Oh, that's a big one.
+
+812
+00:51:16,836 --> 00:51:24,061
+Speaker 1: Yeah That affected me but only indirectly because yeah like oh no Some of my storage first like some UAT environments wasn't working.
+
+813
+00:51:24,101 --> 00:51:31,170
+Speaker 1: I can live but it affected Atlassian Which I use for a lot of ticketing and documentation and stuff.
+
+814
+00:51:31,552 --> 00:51:34,530
+Speaker 1: So some of my stuff was unavailable or slow for a while anyway.
+
+815
+00:51:34,670 --> 00:51:40,446
+Speaker 0: So basically Amazon is what one of Amazon's many web services s3, which is storage, right?
+
+816
+00:51:40,786 --> 00:51:42,110
+Speaker 0: See store things there.
+
+817
+00:51:42,150 --> 00:51:46,348
+Speaker 0: It's like a infinite hard drive and you can make as many as you want and they don't cost a lot of money.
+
+818
+00:51:46,368 --> 00:51:47,447
+Speaker 0: geek nights Is backed up there?
+
+819
+00:51:49,151 --> 00:51:54,690
+Speaker 0: And they didn't lose any data cuz it's like super guaranteed not to lose data and that's pretty well guaranteed.
+
+820
+00:51:54,871 --> 00:51:57,699
+Speaker 0: But it was down and inaccessible for quite a while.
+
+821
+00:51:58,180 --> 00:52:07,130
+Speaker 0: and because so many other services relied on it those services in turn Went down or had issues Including the Amazon the I mean the Amazon status page.
+
+822
+00:52:07,811 --> 00:52:11,925
+Speaker 0: It could it couldn't tell you that s3 was down because all the green and red check marks were stored at s3.
+
+823
+00:52:11,966 --> 00:52:16,698
+Speaker 0: Yeah Also that Amazon status page has always been shitty.
+
+824
+00:52:16,759 --> 00:52:23,703
+Speaker 0: it never updates fast enough like they'll be down and it'll have all green check marks Yep, and then like it'll show red when it only came back up.
+
+825
+00:52:23,743 --> 00:52:30,290
+Speaker 0: No and then our an hour later It'll have like a yellow check mark saying oh, we're good and it's like this should have just down hard and it's like.
+
+826
+00:52:31,311 --> 00:52:37,709
+Speaker 0: It's like I would have put that red check mark up like an hour ago, and they went to yellow after you know anyway.
+
+827
+00:52:39,052 --> 00:52:44,013
+Speaker 0: so basically the reason it happened is because someone was typing in some commands and they took down.
+
+828
+00:52:44,033 --> 00:52:51,308
+Speaker 0: they were taking down some servers to update them or whatever and they took down too many and then they had to restart and the restart took too long.
+
+829
+00:52:51,529 --> 00:52:58,664
+Speaker 1: and so on one hand The reality of technology is people are gonna make mistakes like that.
+
+830
+00:52:58,865 --> 00:53:00,570
+Speaker 1: Yeah, and you cannot prevent them.
+
+831
+00:53:00,630 --> 00:53:01,916
+Speaker 1: They will always happen.
+
+832
+00:53:02,398 --> 00:53:08,750
+Speaker 1: You're measured by how well you plan for Mistakes that are difficult to plan for and how well you recover from them.
+
+833
+00:53:09,072 --> 00:53:18,430
+Speaker 0: The most interesting thing was basically there was a Subsystem of s3 and they took down too many servers in that subsystem at once and that'll cause the failure.
+
+834
+00:53:18,932 --> 00:53:22,610
+Speaker 0: They said in there, you know post whatever like the oops.
+
+835
+00:53:23,492 --> 00:53:34,750
+Speaker 0: Yeah, I've written a lot of those in my life and it's basically said we're putting in a new system that basically looks at all the subsystems and Always keeps them at a minimum number of servers up.
+
+836
+00:53:35,012 --> 00:53:37,030
+Speaker 1: That is a very good kind of change.
+
+837
+00:53:37,050 --> 00:53:46,730
+Speaker 0: So like even if you type the wrong thing and say like turn off all servers in the subsystem It'll only turn off so many and won't refuse to turn off any more because that would bring it down.
+
+838
+00:53:47,051 --> 00:53:49,381
+Speaker 1: That is exactly the right kind of response to that kind of.
+
+839
+00:53:49,401 --> 00:53:52,094
+Speaker 0: so I'm like, oh, that's pretty clever I should do that
+
+840
+00:53:52,375 --> 00:54:02,563
+Speaker 1: that you've got actually part of my job for my whole life Not just now but every company I've worked for except one that that one was shitty is doing you know qualitative risk analysis and that kind of stuff.
+
+841
+00:54:02,965 --> 00:54:08,706
+Speaker 1: and one of those things is When there's a problem, I would get the report that is like here's what went down.
+
+842
+00:54:09,047 --> 00:54:15,310
+Speaker 1: Here's the root cause Here's the effects and I would just sit down with a group of people and try to come up with clever ways.
+
+843
+00:54:15,310 --> 00:54:16,635
+Speaker 0: That's exactly what they did.
+
+844
+00:54:16,676 --> 00:54:17,981
+Speaker 0: That's how tech business works.
+
+845
+00:54:18,021 --> 00:54:18,563
+Speaker 0: It's like oops.
+
+846
+00:54:18,583 --> 00:54:19,507
+Speaker 0: We had an oops guys.
+
+847
+00:54:19,547 --> 00:54:20,612
+Speaker 0: All right fix the oops Oh my god.
+
+848
+00:54:20,652 --> 00:54:21,335
+Speaker 0: Okay, you fixed it.
+
+849
+00:54:21,355 --> 00:54:21,576
+Speaker 0: Good.
+
+850
+00:54:21,616 --> 00:54:27,599
+Speaker 1: All right, baby's first mistake would be to lock down Access to those commands and all that kind of.
+
+851
+00:54:27,619 --> 00:54:28,000
+Speaker 0: now I know.
+
+852
+00:54:28,020 --> 00:54:30,410
+Speaker 0: and then they have a meeting and like what how did we oops?
+
+853
+00:54:31,371 --> 00:54:34,040
+Speaker 0: Alright, how do we prevent this oops from happening again?
+
+854
+00:54:34,441 --> 00:54:35,103
+Speaker 0: Let's do this.
+
+855
+00:54:35,123 --> 00:54:36,187
+Speaker 0: Oh good idea.
+
+856
+00:54:36,207 --> 00:54:36,668
+Speaker 0: Let's do that.
+
+857
+00:54:36,749 --> 00:54:37,030
+Speaker 0: done it.
+
+858
+00:54:37,652 --> 00:54:38,254
+Speaker 0: That's how you go.
+
+859
+00:54:38,435 --> 00:54:39,740
+Speaker 0: Yep, and they do that.
+
+860
+00:54:39,820 --> 00:54:42,089
+Speaker 0: but one time also the whole internet was done.
+
+861
+00:54:43,034 --> 00:54:44,601
+Speaker 1: So one time there's a long time ago.
+
+862
+00:54:44,621 --> 00:54:49,725
+Speaker 1: I was doing like this early morning thing We had a new server up and that server just handled all our monitoring.
+
+863
+00:54:49,745 --> 00:54:50,890
+Speaker 1: It was like the monitoring server.
+
+864
+00:54:51,315 --> 00:54:52,326
+Speaker 1: It was a brand new ish.
+
+865
+00:54:52,710 --> 00:55:00,450
+Speaker 1: we had the old monitoring server that we shut down because we'd moved to the new and the new ones up and The server was new and something was not working a hundred percent, right?
+
+866
+00:55:00,590 --> 00:55:02,189
+Speaker 1: I was gonna set up some monitoring for thing didn't work.
+
+867
+00:55:02,732 --> 00:55:20,487
+Speaker 1: So I start tighten type in shown and some stuff Because I'm changing the ownership of some files to do a thing and I type forward slash and I'm about to type the full Absolute path to a thing and I end up just flubbing it and it starts chowing the entire computer.
+
+868
+00:55:20,688 --> 00:55:22,694
+Speaker 0: Mmm Load the backup.
+
+869
+00:55:23,336 --> 00:55:23,597
+Speaker 1: Yep.
+
+870
+00:55:23,698 --> 00:55:26,990
+Speaker 1: Well, so load the backup would not happen quickly.
+
+871
+00:55:27,692 --> 00:55:29,037
+Speaker 1: No for obvious reasons.
+
+872
+00:55:29,057 --> 00:55:30,402
+Speaker 0: You have more than one computer.
+
+873
+00:55:30,944 --> 00:55:32,750
+Speaker 0: Why is any system just one computer?
+
+874
+00:55:33,290 --> 00:55:35,221
+Speaker 1: Well, so it's one computer per data set.
+
+875
+00:55:35,241 --> 00:55:36,729
+Speaker 1: There's a to explain.
+
+876
+00:55:37,533 --> 00:55:38,918
+Speaker 0: Basically, you know redundancy.
+
+877
+00:55:39,139 --> 00:55:40,846
+Speaker 1: So there's there was tons of redundancy.
+
+878
+00:55:41,007 --> 00:55:46,425
+Speaker 1: Okay, however Basically, it happened so quick that I couldn't you know you it's.
+
+879
+00:55:46,485 --> 00:55:47,830
+Speaker 0: it's like a nuclear redundancy.
+
+880
+00:55:48,252 --> 00:55:52,789
+Speaker 0: Just turn that computer off and unplug it and then well, it's another one will take over different levels.
+
+881
+00:55:52,829 --> 00:56:04,310
+Speaker 1: redundant You know, you always have your time to recovery and like all the different metrics Not every system needs an immediate time to recovery like immediate come back online Like if I mess up a web server, which has never happened.
+
+882
+00:56:04,370 --> 00:56:09,912
+Speaker 0: But if it did I would probably just shut it down and then remove it from the load balancer and then make a brand new One.
+
+883
+00:56:09,932 --> 00:56:16,210
+Speaker 1: Yep, if I needed that Yeah, any any sort of like redundant load balance systems if anything goes wrong kill it.
+
+884
+00:56:16,451 --> 00:56:19,381
+Speaker 1: In fact, there's a if you're doing like high availability stuff.
+
+885
+00:56:19,602 --> 00:56:21,790
+Speaker 1: There's an acronym Stonyth, you know Stonyth?
+
+886
+00:56:23,052 --> 00:56:24,859
+Speaker 1: No, shoot the other node in the head.
+
+887
+00:56:24,879 --> 00:56:40,586
+Speaker 1: The idea is if you have a replication pair and There is any ambiguity as to whether or not you should fail over when in doubt Fail over and fucking shut down the other one no matter what state it's in to guarantee.
+
+888
+00:56:40,606 --> 00:56:44,015
+Speaker 1: There's only one head node Stonyth, okay.
+
+889
+00:56:44,457 --> 00:56:46,387
+Speaker 1: I think we do one more news and then we've got an hour.
+
+890
+00:56:46,467 --> 00:56:51,161
+Speaker 1: So, let's see Let's see, we could do the loneliness thing we could do.
+
+891
+00:56:51,181 --> 00:56:54,774
+Speaker 1: Oh, this is an interesting one Let's see.
+
+892
+00:56:54,814 --> 00:56:55,701
+Speaker 1: We can talk about Russia.
+
+893
+00:56:55,721 --> 00:56:56,508
+Speaker 1: What do you want to talk about?
+
+894
+00:56:57,310 --> 00:57:01,584
+Speaker 0: Streaming asides have more subscribers anything but so just pick something a fast-food mess.
+
+895
+00:57:01,624 --> 00:57:05,747
+Speaker 1: restaurants are actually getting the robots now robots delivering groceries.
+
+896
+00:57:06,691 --> 00:57:07,416
+Speaker 1: The FBI does.
+
+897
+00:57:07,637 --> 00:57:08,000
+Speaker 1: Oh, okay.
+
+898
+00:57:08,020 --> 00:57:08,623
+Speaker 1: Let's do this one.
+
+899
+00:57:09,006 --> 00:57:12,942
+Speaker 1: the FBI Dismissed a child porn case that it was doing.
+
+900
+00:57:13,585 --> 00:57:14,309
+Speaker 1: you want to know why?
+
+901
+00:57:15,350 --> 00:57:18,929
+Speaker 0: Because so they found someone who was actually child porn pedo Yep.
+
+902
+00:57:19,271 --> 00:57:20,014
+Speaker 0: And they were gonna.
+
+903
+00:57:20,034 --> 00:57:23,146
+Speaker 0: they brought him to court and said you pedo we're gonna put you in jail pedo man.
+
+904
+00:57:23,487 --> 00:57:23,929
+Speaker 1: the court.
+
+905
+00:57:24,029 --> 00:57:26,760
+Speaker 0: and then They said you know what actually pedo man you go free.
+
+906
+00:57:26,780 --> 00:57:29,170
+Speaker 0: So the why the fuck would they do that?
+
+907
+00:57:29,310 --> 00:57:30,575
+Speaker 0: Also, who's the pedo man?
+
+908
+00:57:30,595 --> 00:57:31,339
+Speaker 0: Let's go mess him up.
+
+909
+00:57:31,499 --> 00:57:35,094
+Speaker 0: So in the court case, right the court, of course He committed a cyber crime.
+
+910
+00:57:35,114 --> 00:57:38,970
+Speaker 1: We can retaliate needs evidence about the custody of the information, you know.
+
+911
+00:57:38,990 --> 00:57:39,896
+Speaker 1: How did they get the information?
+
+912
+00:57:39,936 --> 00:57:40,519
+Speaker 1: How'd you get this guy?
+
+913
+00:57:40,540 --> 00:57:42,752
+Speaker 0: You know, uh, he went to this He.
+
+914
+00:57:42,772 --> 00:57:44,440
+Speaker 0: we've set up a fake child porn website.
+
+915
+00:57:44,460 --> 00:57:46,510
+Speaker 1: trials have to be fair, right?
+
+916
+00:57:46,630 --> 00:57:49,427
+Speaker 1: Do you agree that in the court system the trial has to be fair?
+
+917
+00:57:49,527 --> 00:57:49,688
+Speaker 1: how?
+
+918
+00:57:49,748 --> 00:57:58,250
+Speaker 1: yeah So in the course of the trial the court wanted to find out how they got this data from this tour?
+
+919
+00:57:58,351 --> 00:57:58,814
+Speaker 1: No, didn't?
+
+920
+00:57:58,834 --> 00:58:04,964
+Speaker 0: they just like oh, oh there was a tour node That's really a porn guy was using tour because he's smart.
+
+921
+00:58:05,265 --> 00:58:05,807
+Speaker 0: So they didn't.
+
+922
+00:58:05,947 --> 00:58:06,690
+Speaker 1: I'm assuming it's a key.
+
+923
+00:58:06,751 --> 00:58:07,684
+Speaker 1: It's almost always a dude.
+
+924
+00:58:07,704 --> 00:58:08,110
+Speaker 0: It's all right.
+
+925
+00:58:08,130 --> 00:58:10,905
+Speaker 0: So they didn't like go to the dude's house and find child porn on his computer.
+
+926
+00:58:10,925 --> 00:58:11,609
+Speaker 1: So they caught him.
+
+927
+00:58:12,072 --> 00:58:12,354
+Speaker 1: They did.
+
+928
+00:58:12,375 --> 00:58:25,570
+Speaker 1: well, I'm not gonna the whole deal's a story but essentially the court was like you got to tell us how you got this evidence and the FBI was like No, because if I tell you then they'll fix this exploit we know about in tour.
+
+929
+00:58:26,471 --> 00:58:29,566
+Speaker 0: So they dropped the case instead and just let the child porn guy go this.
+
+930
+00:58:30,390 --> 00:58:33,870
+Speaker 1: Yes, because otherwise they would give up their tour exploit.
+
+931
+00:58:33,930 --> 00:58:37,910
+Speaker 1: So the takeaways are the FBI has a tour exploit that's still in the wild.
+
+932
+00:58:37,970 --> 00:58:41,584
+Speaker 0: Well now that everyone knows this aren't all the child porn people gonna stop using tour?
+
+933
+00:58:41,645 --> 00:58:43,010
+Speaker 1: and then what else they're gonna use?
+
+934
+00:58:43,973 --> 00:58:46,370
+Speaker 0: I mean is aren't there other orders real good?
+
+935
+00:58:47,310 --> 00:58:47,990
+Speaker 0: I don't know how good it is.
+
+936
+00:58:48,010 --> 00:58:56,482
+Speaker 0: I've never really trusted it because basically the way tour works is like people set up these tour nodes and you're basically doing like there's a multiple VPN situation.
+
+937
+00:58:56,543 --> 00:59:02,810
+Speaker 0: effectively, right and You know, it's like encrypted and anonymous other than you know from the tour node to you.
+
+938
+00:59:02,950 --> 00:59:05,703
+Speaker 0: But it's like any tour node that's compromised can give you away.
+
+939
+00:59:05,723 --> 00:59:12,370
+Speaker 0: So it's like, you know, it depends To you have to trust the tour node that so that it won't fuck you.
+
+940
+00:59:12,410 --> 00:59:16,384
+Speaker 0: Oh, we could do a whole show on tour and I basically don't trust and it.
+
+941
+00:59:16,404 --> 00:59:17,227
+Speaker 0: but it's like I don't need.
+
+942
+00:59:17,548 --> 00:59:21,599
+Speaker 1: I'm not doing child Poor if it's working correctly seems to work well.
+
+943
+00:59:22,201 --> 00:59:28,181
+Speaker 1: and but for this exploit, I don't think the FBI could have gotten this guy Mmm, but at the same time I'm not using tour.
+
+944
+00:59:28,582 --> 00:59:30,269
+Speaker 1: All right, so Scott, here's a question for you.
+
+945
+00:59:31,471 --> 00:59:36,810
+Speaker 1: If they fix this exploit and the CP guys are totally gonna get away with it, is that fine?
+
+946
+00:59:38,530 --> 00:59:49,170
+Speaker 1: Mmm, I mean that argument comes down to if there is good encryption good If good deniable encryption is within the reach of normal people child porn shitheads are gonna get away with their shit.
+
+947
+00:59:49,292 --> 00:59:50,127
+Speaker 1: What do we do about that?
+
+948
+00:59:51,410 --> 00:59:51,792
+Speaker 0: Really?
+
+949
+00:59:51,812 --> 00:59:57,068
+Speaker 0: I mean the main thing should be focusing on the people who actually are hurting the children.
+
+950
+00:59:57,088 --> 00:59:59,676
+Speaker 0: Yep, right It's like I think we should arrest them first.
+
+951
+01:00:00,238 --> 01:00:01,502
+Speaker 0: and the guy who's just you're.
+
+952
+01:00:01,682 --> 01:00:08,690
+Speaker 0: so I want to arrest the guy who's downloading Picks too, but let's just get the guy who's actually, you know taking the pics first.
+
+953
+01:00:08,830 --> 01:00:09,753
+Speaker 1: So what are the guys taking?
+
+954
+01:00:09,773 --> 01:00:14,970
+Speaker 0: I feel like the FBI, you know goes to the low-hanging fruit of the people downloading the pics first.
+
+955
+01:00:15,552 --> 01:00:15,833
+Speaker 0: Right.
+
+956
+01:00:15,993 --> 01:00:20,970
+Speaker 0: Yep, and regardless it's like as much as that sucks that you know.
+
+957
+01:00:21,251 --> 01:00:23,482
+Speaker 0: There's a technology that lets you get away with crime.
+
+958
+01:00:23,502 --> 01:00:28,141
+Speaker 0: It's like yeah Well, it sucks at this gravity too that prevents you from flying.
+
+959
+01:00:28,242 --> 01:00:29,586
+Speaker 0: Yeah, but that's just reality.
+
+960
+01:00:29,627 --> 01:00:30,530
+Speaker 0: You just have to accept it.
+
+961
+01:00:30,570 --> 01:00:34,004
+Speaker 0: You can't fight reality if encryption exists and these things can be done.
+
+962
+01:00:34,506 --> 01:00:41,030
+Speaker 0: You can't like Outlaw gravity and something everyone flies can't put clipper chips and all our technology, right?
+
+963
+01:00:41,070 --> 01:00:41,615
+Speaker 0: It's like it.
+
+964
+01:00:42,019 --> 01:00:44,834
+Speaker 0: reality is reality Laws don't change it.
+
+965
+01:00:44,854 --> 01:00:47,742
+Speaker 0: You have to deal with reality in the best way possible.
+
+966
+01:00:48,083 --> 01:00:50,690
+Speaker 0: Even if reality makes things not happy.
+
+967
+01:00:52,393 --> 01:00:54,790
+Speaker 1: And I guess that's enough tech news for a tech news roundup.
+
+968
+01:01:01,024 --> 01:01:03,550
+Speaker 1: This has been geek nights with rim and Scott special.
+
+969
+01:01:03,610 --> 01:01:05,297
+Speaker 1: Thanks to DJ pretzel for the opening.
+
+970
+01:01:05,337 --> 01:01:08,370
+Speaker 1: music can't leave for web design and Brando K for the logos.
+
+971
+01:01:08,671 --> 01:01:10,638
+Speaker 0: Be sure to visit our website at front row.
+
+972
+01:01:10,678 --> 01:01:13,690
+Speaker 0: crew calm for show notes discussion news and more.
+
+973
+01:01:13,950 --> 01:01:21,370
+Speaker 1: Remember geek nights is not one but four different shows sci-tech Mondays gaming Tuesdays and make comic Wednesdays and indiscriminate Thursdays.
+
+974
+01:01:21,731 --> 01:01:24,886
+Speaker 0: Geek nights is distributed under a Creative Commons attribution 3.0 license.
+
+975
+01:01:26,152 --> 01:01:29,244
+Speaker 0: Geek nights is recorded live with no studio and no audience.
+
+976
+01:01:29,444 --> 01:01:32,411
+Speaker 0: But unlike those other late shows It's actually recorded at night
+
+977
+01:01:38,017 --> 01:01:49,251
+Speaker 1: and the patreon patrons for this episode of geek nights in order the money when I think it's gonna give me bases are This is real hard to do guys Ellen Joyce Rebecca Dunn Nicholas Brando Heidi McNichol Amanda Duchette great job.
+
+978
+01:01:49,311 --> 01:01:50,134
+Speaker 1: Emoji Ivy Faye.
+
+979
+01:01:50,174 --> 01:01:52,260
+Speaker 1: my stage calm William is rose Jeremy minor.
+
+980
+01:01:52,844 --> 01:01:55,340
+Speaker 1: All I want to do is see you turn into a giant woman.
+
+981
+01:01:56,782 --> 01:01:59,454
+Speaker 1: Chris Reimer and Thomas Hahn cajon tapasan.
+
+982
+01:01:59,996 --> 01:02:00,900
+Speaker 1: Where are you from?
+
+983
+01:02:01,120 --> 01:02:03,270
+Speaker 1: Anyway, Matthew Smith redacted.
+
+984
+01:02:03,351 --> 01:02:14,112
+Speaker 1: Brian Fisher Chris Reimer Joshua Joe star run from New Zealand Finn Eric the allegedly human Daniel Redman Shervin von Horrell Don Schleich Rochelle, Monta Nona, I had a cat named snowball.
+
+985
+01:02:14,172 --> 01:02:14,917
+Speaker 1: She died.
+
+986
+01:02:14,997 --> 01:02:15,480
+Speaker 1: She died.
+
+987
+01:02:16,502 --> 01:02:17,927
+Speaker 1: Chris Knox Chris midkiff.
+
+988
+01:02:17,987 --> 01:02:35,220
+Speaker 1: really well, I paid five bucks to make rim say Topeka Tyler Eller Clinton Walton Ryan Perrin Brian Cedroni Thomas Hahn Sam Cordery Sean Klein Christian Coon's James David white Sean Yeager and a whole bunch of people who either don't want their name said or are below the line.
+
+989
+01:02:36,062 --> 01:02:37,186
+Speaker 1: Oh, yeah max this week.
+
+990
+01:02:37,628 --> 01:02:38,892
+Speaker 1: Stay tuned for a whole bunch of stuff.
+
+991
+01:02:38,932 --> 01:02:49,609
+Speaker 1: We've upped the production pipeline as you can see and Now I leave you with something Said there'd be days like this.
+
+992
+01:02:50,131 --> 01:02:51,716
+Speaker 1: There'd be days like this.
+
+993
+01:02:51,916 --> 01:02:57,712
+Speaker 1: mama said Mama said there'd be days like this.
+
+994
+01:02:58,333 --> 01:02:59,997
+Speaker 1: There'd be days like this.
+
+995
+01:03:00,077 --> 01:03:01,140
+Speaker 1: my mama said
+

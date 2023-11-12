@@ -1,0 +1,3088 @@
+1
+00:00:09,180 --> 00:00:12,008
+Scott: It's Monday October 29th.
+
+2
+00:00:12,650 --> 00:00:13,272
+Scott: I'm Scott.
+
+3
+00:00:13,532 --> 00:00:20,200
+Scott: I'm Rym, and this is GeekNights Tonight we teach you about CPU architecture.
+
+4
+00:00:24,360 --> 00:00:35,276
+Scott: Let's do this All right, so my I wrote a thing on my blog which I've been doing more recently cuz I said hey I got free time at work.
+
+5
+00:00:35,799 --> 00:00:37,570
+Scott: You know I haven't written my blog in like months.
+
+6
+00:00:37,630 --> 00:00:40,267
+Scott: I used to do at least like one thing a month at least you know.
+
+7
+00:00:40,328 --> 00:00:42,316
+Scott: so I'm I'm loading it up again.
+
+8
+00:00:42,537 --> 00:00:45,569
+Rym: It was also something that we and the crew were debating.
+
+9
+00:00:45,790 --> 00:00:47,168
+Scott: yeah Well, you know I wrote it.
+
+10
+00:00:47,330 --> 00:00:51,229
+Scott: Then I brought it up to confirm that other people will think in the same thing and then I posted it.
+
+11
+00:00:51,752 --> 00:00:54,908
+Scott: And then I said you know what this is sort of dig material here.
+
+12
+00:00:54,948 --> 00:00:58,761
+Scott: this thing I wrote and you know there's a stigma about submitting your own thing to dig right.
+
+13
+00:00:59,042 --> 00:01:01,903
+Rym: well a stigma among crazy dig people no one else.
+
+14
+00:01:01,924 --> 00:01:04,402
+Scott: well I sort of bought into the stigma because I felt like.
+
+15
+00:01:04,804 --> 00:01:08,282
+Scott: you know it was sort of like this Shameful self-promotion kind of deal you know.
+
+16
+00:01:08,905 --> 00:01:10,494
+Scott: so, but you know what I said all right I'm gonna dig it.
+
+17
+00:01:10,756 --> 00:01:15,208
+Scott: so I dug it and Then it made the front page eventually and I was like oh well look at that.
+
+18
+00:01:16,072 --> 00:01:19,222
+Scott: And I sort of realized that that stigma is completely stupid.
+
+19
+00:01:19,262 --> 00:01:21,430
+Scott: cuz think about right sure I dug it.
+
+20
+00:01:21,590 --> 00:01:22,152
+Scott: What did that do?
+
+21
+00:01:22,213 --> 00:01:23,638
+Scott: that brought it to one?
+
+22
+00:01:24,019 --> 00:01:25,404
+Scott: What's it at now like over 1100?
+
+23
+00:01:25,404 --> 00:01:25,444
+Scott: so?
+
+24
+00:01:27,931 --> 00:01:30,230
+Scott: What does it matter if I dug it one?
+
+25
+00:01:30,671 --> 00:01:31,032
+Scott: It's not.
+
+26
+00:01:31,092 --> 00:01:35,468
+Scott: I mean no one else in the world want it cares if that story gets to the front page.
+
+27
+00:01:35,608 --> 00:01:36,796
+Scott: besides me No one has a motive.
+
+28
+00:01:36,816 --> 00:01:37,663
+Scott: there's no ads on it.
+
+29
+00:01:37,683 --> 00:01:38,450
+Scott: all right.
+
+30
+00:01:38,610 --> 00:01:48,670
+Scott: So the fact that it's 1100 means that my story must have been good enough that I wrote that Over 1100. other people thought that it was good or clicked on it for whatever reason.
+
+31
+00:01:48,751 --> 00:01:49,718
+Scott: I don't know what they're thinking.
+
+32
+00:01:49,940 --> 00:01:50,101
+Rym: well.
+
+33
+00:01:50,343 --> 00:01:51,310
+Scott: I mostly was the headline.
+
+34
+00:01:51,411 --> 00:01:55,110
+Rym: I think I think we've learned two very important things about dig and dig users.
+
+35
+00:01:55,150 --> 00:01:59,614
+Scott: I've learned quite a few important things in which I wrote a blog post about yeah, well I think number one.
+
+36
+00:01:59,635 --> 00:02:00,799
+Rym: I just want to get this one out.
+
+37
+00:02:01,100 --> 00:02:08,568
+Rym: It seems like the formula to getting dug up is Inflammatory headline plus wall of text that many people will not read before commenting.
+
+38
+00:02:08,788 --> 00:02:09,949
+Scott: well That's one formula.
+
+39
+00:02:09,990 --> 00:02:16,589
+Scott: But I think the number one thing is headline because looking at because you know once my story got on dig you got you got Linked all over the place.
+
+40
+00:02:16,690 --> 00:02:24,046
+Scott: you know in other places that cared about it right and I looked at comments on many of those places and on my blog and No one fucking read it.
+
+41
+00:02:24,792 --> 00:02:27,161
+Scott: I mean there were a few people who read it and those people were like.
+
+42
+00:02:27,281 --> 00:02:30,756
+Scott: they said exactly pretty much like yes I agree entirely.
+
+43
+00:02:30,816 --> 00:02:32,465
+Scott: and some people said yes, I agree entirely.
+
+44
+00:02:32,485 --> 00:02:33,370
+Scott: here's an additional thing.
+
+45
+00:02:33,450 --> 00:02:42,080
+Scott: The only people who said things that were anti obviously didn't read every word that I wrote and I like how a lot of them They'd say something like oh, well, it's not blah.
+
+46
+00:02:42,120 --> 00:02:44,648
+Rym: It's blah, but that's pretty much exactly what Scott said.
+
+47
+00:02:44,668 --> 00:02:48,786
+Scott: yeah some people were like Oh, I'll explain it cuz it's my own writing is gonna be my news.
+
+48
+00:02:48,827 --> 00:02:49,209
+Scott: take that.
+
+49
+00:02:50,771 --> 00:02:58,478
+Scott: Another thing I learned right is that you know how you go on dig and WordPress is always infamous for going down like oh You got dug on your WordPress blog and now it's not working.
+
+50
+00:02:58,498 --> 00:03:00,384
+Scott: I got a WordPress blog.
+
+51
+00:03:00,404 --> 00:03:08,970
+Scott: It was just fine Perfectly, okay, I think that everyone who has their website go down, and I'm not even doing any caching or anything special.
+
+52
+00:03:09,071 --> 00:03:15,842
+Scott: It's just P it land Linux Apache MySQL and PHP 4. it's old and busted right.
+
+53
+00:03:15,862 --> 00:03:16,906
+Scott: this is old and busted.
+
+54
+00:03:16,946 --> 00:03:29,790
+Scott: Linux are talking about here Not even the new hotness, and he was just fine, and it just WordPress going Millions thousands and thousands of people visiting no problems, so uh respect - - for anyone who's blog.
+
+55
+00:03:30,611 --> 00:03:32,902
+Scott: Granted I didn't have any images on my blog.
+
+56
+00:03:32,942 --> 00:03:34,249
+Scott: It's just CSS and text.
+
+57
+00:03:34,329 --> 00:03:40,024
+Scott: but Even that I mean if your site goes down from getting dug either.
+
+58
+00:03:40,044 --> 00:03:47,425
+Scott: You're serving up something big-time or You're got like the $5 hosting plan, which is you can't eat.
+
+59
+00:03:47,746 --> 00:03:52,707
+Scott: if you get the $5 hosting plan that's because you don't expect anyone to ever visit your website except you and you're maybe your friends.
+
+60
+00:03:52,727 --> 00:03:59,250
+Scott: or They just don't know how to set up a web server, but I think most of those people don't actually set them up.
+
+61
+00:03:59,330 --> 00:04:04,089
+Scott: They just buy a wordpress on somewhere, or they get a free one at wordpress.com.
+
+62
+00:04:04,511 --> 00:04:06,527
+Rym: Yeah, that's not the best place to host anything real.
+
+63
+00:04:06,788 --> 00:04:08,076
+Scott: no I mean, that's the place you host.
+
+64
+00:04:08,096 --> 00:04:10,729
+Scott: something like no one's ever gonna look at this, but I want to make it so I'm gonna.
+
+65
+00:04:12,190 --> 00:04:15,266
+Scott: Yeah, the headline is all that matters to getting dug up a lot.
+
+66
+00:04:15,307 --> 00:04:28,850
+Scott: pretty much no one will read what you wrote except for a few cool people and I do find it interesting how it seems like Very few people bother to comment on an actual blog anymore.
+
+67
+00:04:28,890 --> 00:04:32,807
+Rym: No, a lot of people commented on my blog compared to how many people commented on dig.
+
+68
+00:04:33,189 --> 00:04:36,866
+Scott: Oh, yeah A lot of people comment that I'm like always news.com.
+
+69
+00:04:36,966 --> 00:04:37,750
+Scott: Yeah other places.
+
+70
+00:04:37,890 --> 00:04:38,753
+Rym: That's what I'm saying.
+
+71
+00:04:38,793 --> 00:04:51,350
+Rym: I feel like because most of the comments I see on actual blog especially kind of small blogs are usually either fanatical people or People who are in the community around blogs or that blog or something and I don't know.
+
+72
+00:04:51,410 --> 00:04:58,876
+Rym: I feel like the only place worth commenting on things anymore is in The sort of meta sites like if I'm gonna comment on a story I'm gonna comment on dig.
+
+73
+00:04:58,896 --> 00:05:01,672
+Rym: I would never think to even comment on the blog I.
+
+74
+00:05:01,973 --> 00:05:05,910
+Scott: it sort of depends unless I comment on the blog because I want the person who wrote.
+
+75
+00:05:05,950 --> 00:05:11,650
+Rym: I was about to say I would comment on a blog only as though it were an open letter to the person who wrote.
+
+76
+00:05:11,650 --> 00:05:14,881
+Scott: That's what I'm saying Because I want to talk to that person if I want to.
+
+77
+00:05:14,901 --> 00:05:18,541
+Scott: if I'm on dig I'm sort of talking about The article to the dig people.
+
+78
+00:05:18,581 --> 00:05:19,749
+Scott: It's sort of like who you want to talk to.
+
+79
+00:05:20,191 --> 00:05:24,144
+Scott: However, I really think that right now we have a trackback system.
+
+80
+00:05:24,185 --> 00:05:25,790
+Scott: that's sort of an open standard on the web.
+
+81
+00:05:25,850 --> 00:05:28,569
+Scott: That's pretty much used between all kinds of sites that you know.
+
+82
+00:05:28,991 --> 00:05:32,162
+Scott: And the way it works is you write you have a blog you write a story.
+
+83
+00:05:32,604 --> 00:05:47,342
+Scott: if I write a blog story about Your blog story and I link to your blog story Most blog software like WordPress and stuff will then like if I blog about your blog It'll put it'll automatically put a comment on your blog.
+
+84
+00:05:47,362 --> 00:05:50,533
+Scott: that links back to my blog Right.
+
+85
+00:05:50,794 --> 00:05:53,205
+Rym: I think a lot of the reasons for this are kind of self-serving.
+
+86
+00:05:53,245 --> 00:05:56,040
+Rym: in order to create, you know Web networks for Google.
+
+87
+00:05:56,141 --> 00:05:57,268
+Scott: it sort of lets you.
+
+88
+00:05:57,388 --> 00:06:06,970
+Scott: if you know If there's a bunch of people blogging about the same thing like there's a news story and ten people blog on it You can go to the news story and there'll be links to ten different blog posts about it.
+
+89
+00:06:07,030 --> 00:06:07,673
+Scott: So it's sort of like.
+
+90
+00:06:08,295 --> 00:06:15,470
+Scott: what you can do is instead of putting a comment on someone else's blog If you want to write like an essay you can make that on your own blog.
+
+91
+00:06:15,610 --> 00:06:25,444
+Scott: But it's also a comment and I really think we should have some sort of system where in addition to that if someone comments On dig dig should post that comment as a comment on the blog.
+
+92
+00:06:25,846 --> 00:06:26,307
+Scott: You see week.
+
+93
+00:06:26,348 --> 00:06:27,030
+Scott: That's perfectly.
+
+94
+00:06:27,191 --> 00:06:32,190
+Rym: No, I don't think it would be that hard to use the API and just scrape comments from dig.
+
+95
+00:06:32,652 --> 00:06:33,134
+Rym: I don't know.
+
+96
+00:06:33,194 --> 00:06:34,882
+Scott: Okay, you could just scrape comments.
+
+97
+00:06:34,942 --> 00:06:36,669
+Rym: Yeah, I mean, what are the terms of service on the API?
+
+98
+00:06:36,830 --> 00:06:40,996
+Scott: I never looked I have no idea but I that that would be a solution.
+
+99
+00:06:41,377 --> 00:06:47,376
+Scott: but I think that the the the sort of track back solution would be the Technologically superior one.
+
+100
+00:06:47,839 --> 00:06:49,869
+Rym: see it's really hard to say cuz I don't.
+
+101
+00:06:49,889 --> 00:06:51,717
+Rym: well I mean how many people I mean.
+
+102
+00:06:51,737 --> 00:06:53,544
+Rym: look it's kind of the 1% rule.
+
+103
+00:06:53,845 --> 00:06:54,990
+Rym: how many people read a website?
+
+104
+00:06:55,370 --> 00:06:57,980
+Rym: How many people are going to comment on that website?
+
+105
+00:06:58,301 --> 00:07:00,830
+Rym: How many people are going to go beyond simply commenting?
+
+106
+00:07:01,250 --> 00:07:04,890
+Rym: Yep, like it's a solution that solves a problem that very few people actually have.
+
+107
+00:07:05,010 --> 00:07:08,381
+Scott: Well, it's actually it's one of those things that benefits the bloggers.
+
+108
+00:07:08,441 --> 00:07:11,250
+Scott: cuz I mean if how cool would it have been right if I?
+
+109
+00:07:11,310 --> 00:07:12,595
+Scott: Wrote this blog post right.
+
+110
+00:07:12,876 --> 00:07:16,690
+Scott: some people comment on the post some people comment on dig some people comment somewhere else.
+
+111
+00:07:17,051 --> 00:07:21,427
+Scott: I had to sort of travel around the net looking at refers and things to find out all the people commenting.
+
+112
+00:07:21,447 --> 00:07:27,490
+Scott: cuz you know Usually on dig I don't read the comments much But if it's my story, I want to read all the comments see what people have to say.
+
+113
+00:07:27,631 --> 00:07:30,490
+Scott: You know, I guess it was good and worthwhile.
+
+114
+00:07:30,771 --> 00:07:38,866
+Rym: But and semi-standard blogs, you know common WordPress blogs You could probably set up something where the track back scraped comments from the other blog post.
+
+115
+00:07:38,926 --> 00:07:39,950
+Scott: That's not how track back works.
+
+116
+00:07:40,171 --> 00:07:43,710
+Rym: Well, you could use that to figure out where Pete like where someone wrote a story about you.
+
+117
+00:07:44,212 --> 00:07:48,190
+Rym: And then I have a separate thing that gets triggered that goes there scrapes the comments and puts them in your blog.
+
+118
+00:07:48,311 --> 00:07:54,785
+Rym: But that wouldn't be exactly what you want, but no Well, there's also you know, you're taking someone else's content and what are the like?
+
+119
+00:07:54,905 --> 00:07:57,171
+Scott: it's not whatever but yeah It.
+
+120
+00:07:57,573 --> 00:08:02,549
+Scott: the point is it'd be cool to just all the comments together somehow So I don't have to go traveling around to find them.
+
+121
+00:08:02,891 --> 00:08:07,130
+Rym: I think eventually most commenting is going to be there in blogs or in some sort of meta side.
+
+122
+00:08:07,210 --> 00:08:11,530
+Rym: Maybe not dig but like the next generation of you know web whatever point whatever.
+
+123
+00:08:11,570 --> 00:08:16,950
+Scott: Well, a lot of people have tried to make things where basically like comment on any website.
+
+124
+00:08:16,990 --> 00:08:21,210
+Rym: Those were all great back in the day where you could like put a post-it note on some website.
+
+125
+00:08:21,250 --> 00:08:22,897
+Scott: Yeah, there's a bunch of those.
+
+126
+00:08:22,937 --> 00:08:26,150
+Rym: Yeah, and the only people who saw it were people who use that sir.
+
+127
+00:08:26,210 --> 00:08:26,852
+Scott: Yeah It's like you keep.
+
+128
+00:08:27,033 --> 00:08:35,208
+Scott: you keep the separate window open or a sidebar open or something like that And when you visit a website anyone who uses the same sidebar all these comments show up.
+
+129
+00:08:36,809 --> 00:08:39,143
+Scott: There's these comments going on the left my favorite one.
+
+130
+00:08:39,163 --> 00:08:47,427
+Rym: you could not only leave comments You could also just draw on the web page, of course Within about a week it ended up being nothing but penises on every website ever.
+
+131
+00:08:47,648 --> 00:08:50,316
+Scott: Yeah But yeah, you know something like that.
+
+132
+00:08:50,336 --> 00:08:53,044
+Scott: I the current implementations are not so good.
+
+133
+00:08:53,084 --> 00:08:54,890
+Scott: But the idea is is definitely sound.
+
+134
+00:08:54,930 --> 00:08:56,205
+Scott: Well the problem there go for it.
+
+135
+00:08:56,265 --> 00:08:59,770
+Rym: if it worked No one did it well enough for everyone to use their solutions.
+
+136
+00:08:59,911 --> 00:09:02,407
+Rym: Everyone use different ones who cared about that and no one else cared.
+
+137
+00:09:02,467 --> 00:09:07,990
+Rym: as a result We need I guess if any one thing that did something like that got critical mass, it could be great.
+
+138
+00:09:08,371 --> 00:09:14,479
+Scott: Yep, because if you just call the comments about everything would be you know one Unified place, of course.
+
+139
+00:09:14,861 --> 00:09:16,250
+Rym: How do you deal with moderation?
+
+140
+00:09:16,450 --> 00:09:16,892
+Rym: I mean digs.
+
+141
+00:09:16,932 --> 00:09:18,940
+Rym: moderation system barely works.
+
+142
+00:09:19,101 --> 00:09:21,310
+Rym: slashed out only works because all the stupid people left.
+
+143
+00:09:21,451 --> 00:09:22,259
+Scott: That's why it's.
+
+144
+00:09:22,380 --> 00:09:23,329
+Scott: it's not happening yet.
+
+145
+00:09:23,811 --> 00:09:25,176
+Rym: Well, I guess one of those.
+
+146
+00:09:25,357 --> 00:09:30,478
+Rym: if we solve the problem of comment moderation and spam prevention Then this sort of thing gets a lot easier.
+
+147
+00:09:30,498 --> 00:09:31,001
+Scott: It does.
+
+148
+00:09:31,764 --> 00:09:38,025
+Rym: Okay anyway, so It must be Scott night because this news affected Scott in a very near and dear way.
+
+149
+00:09:38,045 --> 00:09:38,446
+Rym: Uh-huh.
+
+150
+00:09:38,868 --> 00:09:39,590
+Rym: There is a bug.
+
+151
+00:09:40,192 --> 00:09:42,241
+Scott: It's actually this isn't sort is sort of an old news.
+
+152
+00:09:42,261 --> 00:09:44,269
+Scott: Like it's many weeks old, but it's suddenly coming out.
+
+153
+00:09:44,731 --> 00:09:45,875
+Rym: Well, I didn't know about it.
+
+154
+00:09:45,896 --> 00:09:46,177
+Scott: Yes.
+
+155
+00:09:46,277 --> 00:09:49,248
+Rym: Yeah, I don't think many people knew about it and they probably should.
+
+156
+00:09:49,268 --> 00:09:52,158
+Rym: yeah There's a bug in Ubuntu.
+
+157
+00:09:52,820 --> 00:09:53,321
+Scott: It's also.
+
+158
+00:09:53,381 --> 00:09:54,786
+Scott: it's generally it's in Linux in general.
+
+159
+00:09:54,846 --> 00:09:56,210
+Scott: I think yeah, mostly Ubuntu.
+
+160
+00:09:56,452 --> 00:09:58,909
+Rym: I don't have it because I have all that power management stuff turned off.
+
+161
+00:09:59,130 --> 00:10:10,290
+Scott: Well, it's mostly laptops that have this problem because even if you don't have the power management stuff turned off Your desktop computer is on AC power and thus the power management decides not to enable this.
+
+162
+00:10:10,350 --> 00:10:13,350
+Rym: Well, yeah, but like even in the BIOS I disabled all the power management that has.
+
+163
+00:10:13,912 --> 00:10:15,057
+Scott: That has nothing to do with it.
+
+164
+00:10:15,137 --> 00:10:18,350
+Rym: Linux ignores that yeah, and I also I also disabled it in Linux.
+
+165
+00:10:18,611 --> 00:10:20,139
+Scott: Yeah, well that doesn't that does matter.
+
+166
+00:10:20,340 --> 00:10:20,923
+Rym: I did both.
+
+167
+00:10:21,064 --> 00:10:31,687
+Rym: Yeah, and Basically, if you're using Ubuntu on a laptop and you use various ACPI things are going Your computer will just spin up and spin down the hard drive a bunch.
+
+168
+00:10:32,210 --> 00:10:36,685
+Scott: It's not spinning up and spill its parking the heads parking because he in a laptop right.
+
+169
+00:10:36,986 --> 00:10:44,610
+Scott: you want to save Electricity because you don't want your battery to run out and you also you the heads the things that read the hard drive.
+
+170
+00:10:45,011 --> 00:10:51,734
+Scott: You don't want them sitting on the hard drive when they don't have to be because if you bump the laptop or drop it that Can damage the drive?
+
+171
+00:10:51,795 --> 00:10:53,864
+Rym: Yeah now remember they don't actually sit on the hard drive.
+
+172
+00:10:53,904 --> 00:10:55,170
+Scott: They fly above it.
+
+173
+00:10:55,471 --> 00:10:56,336
+Rym: Yeah, they're a little wing.
+
+174
+00:10:56,396 --> 00:10:57,260
+Rym: But anyway, we did all.
+
+175
+00:10:57,280 --> 00:10:59,130
+Rym: we did a whole show about that a long time ago, right?
+
+176
+00:10:59,610 --> 00:11:02,680
+Scott: So the power management thing in your laptop will notice.
+
+177
+00:11:02,720 --> 00:11:04,045
+Scott: Hey the computers idle.
+
+178
+00:11:04,225 --> 00:11:05,630
+Scott: No one's really doing anything with me.
+
+179
+00:11:05,971 --> 00:11:09,690
+Scott: I'm gonna pick up the heads on the hard drive and put them to rest and gonna park them.
+
+180
+00:11:09,852 --> 00:11:10,790
+Scott: That's what it's called parking.
+
+181
+00:11:11,011 --> 00:11:23,449
+Rym: But well the real problem is just that alright your computer can do that But if the hard drive is spun down or the heads are parked the bug will often if you're experiencing it Just immediately tell the hard drive to unpack or spin back up.
+
+182
+00:11:23,891 --> 00:11:28,950
+Scott: Basically what it does is it tells it to park when it doesn't need to and it tells it to park too often.
+
+183
+00:11:29,111 --> 00:11:31,280
+Scott: So you get a lot of oh, I'm idle Park.
+
+184
+00:11:31,602 --> 00:11:32,646
+Scott: I'm not idle on Park.
+
+185
+00:11:32,807 --> 00:11:33,450
+Scott: I'm idle Park.
+
+186
+00:11:33,610 --> 00:11:42,010
+Scott: I'm not an idle Park on Park, you know, it's it like parks a whole bunch of times unnecessarily and you know That isn't really so bad.
+
+187
+00:11:42,110 --> 00:11:46,810
+Scott: But the problem is that any hard drive is rated for a certain number of parks.
+
+188
+00:11:47,372 --> 00:11:52,290
+Scott: So if it parks say 10,000 times it's gonna wear out and it's gonna be the end.
+
+189
+00:11:52,510 --> 00:11:53,756
+Rym: And the worst thing is the bug.
+
+190
+00:11:53,836 --> 00:11:54,499
+Rym: a lot of people.
+
+191
+00:11:54,760 --> 00:11:57,872
+Rym: I'm reading all the comments of people looking at their stats and seeing What's going on?
+
+192
+00:11:58,394 --> 00:12:02,910
+Rym: The bug will put it into loops riddle park on park park on park constantly for like 10 minutes sometimes.
+
+193
+00:12:03,171 --> 00:12:08,430
+Rym: Yeah, and the long long and short of it is that Ubuntu can destroy your hard drive.
+
+194
+00:12:08,550 --> 00:12:11,099
+Scott: Yeah, it's really not so much a bug as a bad configuration.
+
+195
+00:12:11,340 --> 00:12:14,070
+Scott: But yeah, it destroyed my laptops hard drive.
+
+196
+00:12:14,271 --> 00:12:20,290
+Rym: Yeah, however, it worked out because now Scott's got that fancy solid-state body solid-state hard drive, which has no parking.
+
+197
+00:12:20,350 --> 00:12:21,393
+Scott: It's all flash.
+
+198
+00:12:21,694 --> 00:12:22,175
+Scott: take that.
+
+199
+00:12:22,395 --> 00:12:28,030
+Rym: and while it will eventually not work anymore because you know, it's rated it's rated according to the manufacturer.
+
+200
+00:12:28,131 --> 00:12:29,884
+Scott: So take that with a glump of salt.
+
+201
+00:12:30,005 --> 00:12:32,775
+Scott: Yes of Mount Rushmore, right?
+
+202
+00:12:33,296 --> 00:12:34,059
+Scott: It's rated for.
+
+203
+00:12:34,099 --> 00:12:37,009
+Scott: guess how you know how they rate hard drives for hours of working.
+
+204
+00:12:37,149 --> 00:12:40,790
+Scott: Yeah Alright, how many hours is like a normal hard drive rated for god?
+
+205
+00:12:41,010 --> 00:12:44,323
+Rym: I don't know some stupid amount of time like thousands of hours.
+
+206
+00:12:44,364 --> 00:12:45,810
+Rym: You'd say more than thousands.
+
+207
+00:12:47,131 --> 00:12:50,750
+Scott: This solid-state drive is rated for 2 million hours of operation.
+
+208
+00:12:50,971 --> 00:12:54,526
+Rym: Yeah now granted that the real thing that'll make I mean it can't wear out from being you.
+
+209
+00:12:54,606 --> 00:13:00,630
+Rym: it'll wear out If you're writing to it a lot and that's why I turned off all the logging.
+
+210
+00:13:01,295 --> 00:13:03,170
+Scott: Yep, and that's gonna save me a lot.
+
+211
+00:13:03,551 --> 00:13:08,210
+Rym: I mean, it's not like if you browse the web too much the cache is gonna ruin your drive.
+
+212
+00:13:08,291 --> 00:13:11,150
+Rym: It's more like these things do have a finite lifespan finite.
+
+213
+00:13:11,351 --> 00:13:19,161
+Scott: But yeah, like you had one bit of flash memory, right you you write a 1 to it You erase it to a 0 or you can and you write don't you?
+
+214
+00:13:19,462 --> 00:13:21,330
+Rym: don't you erase to 1 in flash?
+
+215
+00:13:21,631 --> 00:13:29,870
+Scott: It doesn't matter like I'm explaining it I know and that so it's 1 0 1 0 1. so you can only do that so many times before it just doesn't work.
+
+216
+00:13:29,910 --> 00:13:32,344
+Scott: And you yep, so I break that one bit.
+
+217
+00:13:32,384 --> 00:13:37,482
+Rym: you won't break any other bits Yep and I mean flash drives are supposed to and there's different ways to do this.
+
+218
+00:13:37,502 --> 00:13:41,195
+Rym: they'll write and then if you're depending on when you're Writing data or overwriting data.
+
+219
+00:13:41,235 --> 00:13:44,930
+Rym: Sometimes you can rewrite the data and not have to refresh all the bits.
+
+220
+00:13:45,332 --> 00:13:49,257
+Scott: Yeah, they they the flash drives have the logic in them So you don't have to work.
+
+221
+00:13:49,277 --> 00:13:51,049
+Scott: worry if you Linux or Windows supports it.
+
+222
+00:13:51,691 --> 00:13:57,650
+Scott: I just modern flash drives are smart enough that they will die at the slowest rate possible with modern mathematics.
+
+223
+00:13:57,992 --> 00:14:06,144
+Rym: But I'm not gonna say really more other than if you're running Ubuntu Particularly if you're using a laptop or use a lot of crazy power management for whatever reason.
+
+224
+00:14:06,726 --> 00:14:09,717
+Rym: read this do what it says See if you've got the problem and prevent it.
+
+225
+00:14:09,757 --> 00:14:11,363
+Rym: otherwise your hard drive will die.
+
+226
+00:14:11,383 --> 00:14:16,420
+Scott: There are ways to use HD parm To to make your drive actually less or not at all.
+
+227
+00:14:16,460 --> 00:14:24,350
+Rym: what I'm linking to will tell you exactly how to see what's going on And from there there are links to pretty much everything you can do to make it stop happening at the present time.
+
+228
+00:14:24,631 --> 00:14:28,470
+Rym: Yeah, I imagine there will be some sort of official fix just to make it go away.
+
+229
+00:14:28,550 --> 00:14:32,069
+Rym: But for now, even if you've had the problem you find out about it.
+
+230
+00:14:32,712 --> 00:14:43,148
+Rym: It might be advisable to back up your important data Mmm because as we all know smart is not going to tell you when your hard drive Marty's family smart is going to tell you basically nothing.
+
+231
+00:14:43,248 --> 00:14:46,600
+Scott: Yes Alright, so I wrote that blog post.
+
+232
+00:14:46,660 --> 00:14:48,087
+Scott: they got dug up to the front page.
+
+233
+00:14:48,167 --> 00:14:48,750
+Rym: Yes, you did.
+
+234
+00:14:48,950 --> 00:14:59,757
+Scott: Well, you know what that blog post said, uh, you know, I'm gonna I'll let you run with this Alright, so you're using your Linux right and a lot of people, you know, they say all Linux It doesn't support this hardware.
+
+235
+00:14:59,818 --> 00:15:02,190
+Scott: that hardware, you know, it's like I can't couldn't get this to work.
+
+236
+00:15:02,351 --> 00:15:05,042
+Scott: I couldn't get that to work right and that's true.
+
+237
+00:15:05,143 --> 00:15:06,730
+Scott: There are many pieces of hardware.
+
+238
+00:15:06,851 --> 00:15:16,230
+Scott: They just don't work in Linux that you for for Windows, you know It comes with a driver CD or it just works in Windows or whatever like my motherboard my sound card.
+
+239
+00:15:17,112 --> 00:15:20,590
+Scott: Well, no, that's not what I'm talking like, you know, there are many people have a wireless card.
+
+240
+00:15:20,650 --> 00:15:21,877
+Scott: They just can't work.
+
+241
+00:15:21,897 --> 00:15:24,470
+Rym: like the half the things on my motherboard just don't work in Linux.
+
+242
+00:15:24,651 --> 00:15:30,905
+Scott: Yeah, but there are other things, you know most things actually in Linux I would dare to say right more.
+
+243
+00:15:30,985 --> 00:15:35,550
+Scott: so There's you know for everything that doesn't work in Linux at you know at all.
+
+244
+00:15:35,710 --> 00:15:37,839
+Scott: Like there are a bunch of things that do work.
+
+245
+00:15:37,980 --> 00:15:40,570
+Scott: I mean it works on my computer works on my laptop.
+
+246
+00:15:40,711 --> 00:15:43,730
+Scott: It works on the vast majority of PCs out there works my parents computer.
+
+247
+00:15:44,071 --> 00:15:49,650
+Rym: I mean if you really look at it all told in terms of all the consumer hardware is still available on the market.
+
+248
+00:15:50,092 --> 00:15:52,988
+Rym: Linux supports out of the box a hell of a lot more than Windows.
+
+249
+00:15:53,068 --> 00:16:03,870
+Scott: Yep The problem is is that a lot of the stuff that Linux does support it only supports Mostly or kinda or it's like for example my sound card right in Windows.
+
+250
+00:16:04,273 --> 00:16:05,824
+Scott: My sound card is crazy.
+
+251
+00:16:05,884 --> 00:16:20,109
+Scott: advanced features Like it can do hardware mixing surround sound up the wazoo forward like back Dolby digital DTS god knows you can turn on like enhancing things that are chips on it or firmware things on it.
+
+252
+00:16:20,290 --> 00:16:26,694
+Scott: There's all sorts of crazy stuff that the sound card built into my motherboard the piece of shit sound card of my motherboard can do In Linux.
+
+253
+00:16:26,794 --> 00:16:30,989
+Scott: it can pretty much play audio and record audio and that's it.
+
+254
+00:16:31,170 --> 00:16:34,933
+Scott: I mean you go into the mixer and you see all these options But they don't do anything.
+
+255
+00:16:35,194 --> 00:16:36,880
+Rym: or if they do they don't really like.
+
+256
+00:16:37,262 --> 00:16:39,530
+Rym: like even old sound cards you go into the also mixer.
+
+257
+00:16:39,530 --> 00:16:46,510
+Rym: All right I like it says all these gibberish options at the end and those change those parameters on the draw on the card.
+
+258
+00:16:47,112 --> 00:16:51,990
+Rym: But because they're not really supported no one really documented them or use them properly.
+
+259
+00:16:52,512 --> 00:16:56,810
+Rym: You can't know what changing those will do and it'll probably just make everything sound terrible.
+
+260
+00:16:57,111 --> 00:17:00,264
+Scott: Yeah, so it's like things work in Linux.
+
+261
+00:17:00,425 --> 00:17:05,650
+Scott: enough for the you know A person to use their computer and most people might not even realize that you know.
+
+262
+00:17:05,670 --> 00:17:08,520
+Scott: They have you know things features of their heart.
+
+263
+00:17:08,560 --> 00:17:14,288
+Scott: They have working hardware hardware that is supported by Linux But not every feature of the hardware is supported.
+
+264
+00:17:14,348 --> 00:17:14,489
+Scott: now.
+
+265
+00:17:15,192 --> 00:17:25,222
+Scott: Sometimes the problem is a problem of the driver in the kernel that where it doesn't actually support the feature on the hardware For example a Sound Blaster live the EAX is unsupported by the driver.
+
+266
+00:17:25,323 --> 00:17:32,790
+Scott: It's not gonna happen, but in other circumstances It's supported by the kernel so that the kernel can get this information from your hardware.
+
+267
+00:17:32,790 --> 00:17:46,240
+Scott: It knows how to talk to your hardware and get all the stuff going on but the user space the software outside of the kernel either ignores or doesn't want to deal with Your particular piece of hardware or the special feature.
+
+268
+00:17:46,300 --> 00:17:49,250
+Scott: now think about you don't have access to it in the user interface.
+
+269
+00:17:49,411 --> 00:17:54,569
+Rym: So alright, it's supported and it technically works, but it doesn't really work.
+
+270
+00:17:55,452 --> 00:18:03,880
+Scott: So my what I was saying in the blog post is that it doesn't really matter whether it's unsupported by the kernel or unsupported by user space or whatever.
+
+271
+00:18:03,921 --> 00:18:07,596
+Scott: the point is is that Linux really isn't.
+
+272
+00:18:07,776 --> 00:18:11,830
+Scott: if you look at the numbers right I mean a lot of people do complain my wireless doesn't work.
+
+273
+00:18:11,891 --> 00:18:13,130
+Scott: This doesn't work right whatever.
+
+274
+00:18:14,020 --> 00:18:17,699
+Scott: If you look at the numbers There's a whole shit ton of hardware supported by Linux.
+
+275
+00:18:17,739 --> 00:18:20,228
+Scott: in fact Linux supports a lot of hardware that Windows doesn't support.
+
+276
+00:18:20,268 --> 00:18:24,029
+Scott: like you know power PC chips You can run.
+
+277
+00:18:25,110 --> 00:18:29,830
+Scott: Yeah We're gonna be talking about that very soon this episode.
+
+278
+00:18:29,910 --> 00:18:33,865
+Scott: But you know Linux runs on a lot of hardware including a lot of hardware Windows doesn't run on.
+
+279
+00:18:33,966 --> 00:18:36,757
+Scott: the problem is is a lot Of the hardware that Linux runs on.
+
+280
+00:18:37,440 --> 00:18:38,143
+Scott: you can't?
+
+281
+00:18:38,183 --> 00:18:44,365
+Scott: the user of a desktop machine Will not actually be able to access all the features of that hardware like my scanner.
+
+282
+00:18:44,405 --> 00:18:46,295
+Scott: the buttons on the front of my scanner don't Do anything.
+
+283
+00:18:46,617 --> 00:18:48,090
+Scott: you know I got two buttons on my laptop?
+
+284
+00:18:48,350 --> 00:18:49,034
+Scott: They don't do anything.
+
+285
+00:18:49,235 --> 00:18:51,005
+Rym: or the sound card that came into my motherboard.
+
+286
+00:18:51,066 --> 00:18:54,121
+Rym: It'll play audio Just fine in recording this podcast right now.
+
+287
+00:18:54,362 --> 00:18:56,010
+Rym: You'll know I'm using my old Sound Blaster.
+
+288
+00:18:56,291 --> 00:18:58,704
+Scott: Oh, okay, because it can't record in Linux.
+
+289
+00:18:58,784 --> 00:18:59,829
+Rym: It just doesn't work.
+
+290
+00:19:00,812 --> 00:19:08,326
+Rym: Mixer just can't deal with it No matter it just and when you do like you can get it to record Kinda, but it records like shit cuz there's some setting.
+
+291
+00:19:08,366 --> 00:19:09,029
+Rym: I got a change.
+
+292
+00:19:09,271 --> 00:19:12,423
+Scott: Yeah, so it's like it works, but it doesn't work fully.
+
+293
+00:19:12,483 --> 00:19:15,617
+Rym: and now the guy who wrote the kernel module say yeah It works fine, and he's right.
+
+294
+00:19:15,697 --> 00:19:17,950
+Rym: his kernel module probably works a hundred percent.
+
+295
+00:19:18,493 --> 00:19:23,498
+Rym: That's not the problem, but to most people I mean not us But a normal person who doesn't care where.
+
+296
+00:19:23,519 --> 00:19:31,128
+Scott: because in other operating systems like OS X and Windows I mean there is in me in the software architecture a separation of kernel and user space.
+
+297
+00:19:31,168 --> 00:19:36,003
+Scott: but in Linux It's a really big separation like completely separate plus in Windows.
+
+298
+00:19:36,043 --> 00:19:36,425
+Rym: think about it.
+
+299
+00:19:36,465 --> 00:19:49,789
+Rym: most people buy a thing And they put in their computer right and it comes with the CD and the CD includes the kernel space the driver and the user Space the program though whatever yep, and in Linux that isn't usually the case.
+
+300
+00:19:49,909 --> 00:19:54,769
+Scott: yeah It's like the kernel developers keep making things in the kernel and then the user space.
+
+301
+00:19:54,809 --> 00:19:57,901
+Scott: people You know choose which ones to or not to do.
+
+302
+00:19:57,921 --> 00:20:00,210
+Scott: that's why it's like you use gnome and stuff.
+
+303
+00:20:00,431 --> 00:20:11,930
+Scott: Or you know you you see certain you have access to certain things and they make user interfaces for some parts It's not for others and KDE makes like a user interface for every part, and it's crazy complicated, and it's not you yeah.
+
+304
+00:20:12,111 --> 00:20:20,353
+Scott: So it's like yeah these two ends of the spectrum And it's yeah, and that was basically what I was saying in the blog post was hey we need to work Concentrate.
+
+305
+00:20:20,393 --> 00:20:24,635
+Scott: you know we still need to concentrate on making hardware work in Linux But we've mostly got that down.
+
+306
+00:20:24,896 --> 00:20:27,544
+Scott: mostly you know as almost as good as we can.
+
+307
+00:20:27,664 --> 00:20:31,100
+Rym: well like my complaint earlier about how half The stuff on my motherboard doesn't work.
+
+308
+00:20:31,482 --> 00:20:32,670
+Rym: it works in the newest kernel.
+
+309
+00:20:32,831 --> 00:20:36,102
+Rym: I'm just using a slightly old kernel because I'm using a slightly older one
+
+310
+00:20:36,123 --> 00:20:45,542
+Scott: - that's it the most you can expect if you buy A brand new motherboard like just on the market and all the features work and the next kernel That's about as good as it's ever gonna be and
+
+311
+00:20:45,562 --> 00:20:46,386
+Rym: that's fine.
+
+312
+00:20:46,427 --> 00:20:47,352
+Scott: That's fine What?
+
+313
+00:20:47,473 --> 00:20:49,290
+Scott: but we really need to concentrate me?
+
+314
+00:20:49,430 --> 00:20:50,875
+Scott: We've got sound blaster live.
+
+315
+00:20:51,096 --> 00:20:54,930
+Scott: the card is like 10 years old and not all of the features work.
+
+316
+00:20:55,030 --> 00:20:59,949
+Scott: I mean sure you know it would be nice if creative decided to give us the specs.
+
+317
+00:21:00,009 --> 00:21:05,190
+Scott: yes Yes that would make the world a better place, but I mean we're reverse engineering stuff left and right.
+
+318
+00:21:05,251 --> 00:21:07,370
+Scott: We can't reverse engineer a ten-year-old sound card.
+
+319
+00:21:07,390 --> 00:21:11,710
+Rym: I think the issue is that the users for the people who would write the userspace stuff don't care.
+
+320
+00:21:11,710 --> 00:21:12,698
+Rym: I mean look at all.
+
+321
+00:21:12,738 --> 00:21:14,110
+Rym: so all this is a pile of garbage.
+
+322
+00:21:14,511 --> 00:21:18,930
+Scott: I know they replaced OSS a pile of garbage with also and also still a pile of garbage.
+
+323
+00:21:18,930 --> 00:21:20,810
+Rym: It's slightly less a pile of garbage.
+
+324
+00:21:20,890 --> 00:21:25,817
+Scott: They put also in the kernel still a pile of garbage And I mean Jack doesn't.
+
+325
+00:21:25,917 --> 00:21:29,530
+Rym: I mean people say oh Jack, but Jack doesn't do what a lot of people think it does.
+
+326
+00:21:29,610 --> 00:21:32,090
+Rym: It's not gonna solve the basic problem of things not working.
+
+327
+00:21:32,090 --> 00:21:32,574
+Scott: Yeah It's like.
+
+328
+00:21:32,898 --> 00:21:33,141
+Scott: you know.
+
+329
+00:21:33,162 --> 00:21:36,340
+Scott: a lot of people Commented on my blog post saying what are you talking about?
+
+330
+00:21:36,360 --> 00:21:37,686
+Scott: my sound card does more in Linux.
+
+331
+00:21:37,726 --> 00:21:44,265
+Scott: in a dozen windows I can get It to be all low latency for my stuffs, and I'm like well That's what you need, but what about the surround sound?
+
+332
+00:21:44,426 --> 00:21:47,130
+Scott: you know it's like Depending on your particular.
+
+333
+00:21:47,391 --> 00:21:48,657
+Scott: You know thing you want to do.
+
+334
+00:21:48,677 --> 00:21:50,827
+Scott: you know like if you want low latency.
+
+335
+00:21:51,168 --> 00:21:56,090
+Scott: sound Linux is the business because you can get a craptacular sound card and make it do awesome things.
+
+336
+00:21:56,210 --> 00:22:06,389
+Rym: I mean we're doing that now with Jack and we're recording and super awesome low latency like crazy Yeah, but then again in Windows your craptacular sound card can be a surround sound home theater monster.
+
+337
+00:22:06,449 --> 00:22:07,573
+Scott: in Linux You can't do that.
+
+338
+00:22:07,694 --> 00:22:11,410
+Rym: also the fact that the sound card just works in Windows yes.
+
+339
+00:22:11,872 --> 00:22:15,850
+Scott: So you know it's mostly sound cards and like my mouse and stuff like that.
+
+340
+00:22:15,910 --> 00:22:21,852
+Scott: But Linux really needs to concentrate on looking at the hardware that works and making it work Fully.
+
+341
+00:22:21,912 --> 00:22:32,990
+Scott: make every single feature on the piece of hardware work and in fact if you do that You'll usually turn out better than Windows like I just said the sound cards being low latency in Linux with Jack that don't do that.
+
+342
+00:22:33,030 --> 00:22:36,835
+Scott: In Windows you know the hardware has a feature that Windows doesn't do.
+
+343
+00:22:37,197 --> 00:22:46,690
+Scott: so if Linux can make every feature of all the hardware available Then it will be better than Windows across the board instead of just in the areas of stability security and performance.
+
+344
+00:22:53,620 --> 00:22:55,231
+Rym: Things of the day.
+
+345
+00:22:55,755 --> 00:23:02,816
+Rym: now once again This is I mean it is Scott night And I can say that Scott is the one who discovered this but I discovered it by.
+
+346
+00:23:02,836 --> 00:23:04,824
+Scott: I was you were on YouTube And I was.
+
+347
+00:23:04,924 --> 00:23:06,713
+Scott: I was done with dig videos and things.
+
+348
+00:23:06,733 --> 00:23:12,777
+Scott: so I just clicked on YouTube randomly And I saw that like you know the thumbnail which looked like an animation of some sort.
+
+349
+00:23:12,797 --> 00:23:13,460
+Scott: so I clicked it.
+
+350
+00:23:13,480 --> 00:23:14,304
+Scott: That's how I discovered.
+
+351
+00:23:14,425 --> 00:23:23,885
+Rym: much like the zombies in one of these things of the day We stumbled upon one of the few undiscovered nests of awesome on the internet And we went.
+
+352
+00:23:24,106 --> 00:23:24,910
+Rym: we played it out.
+
+353
+00:23:24,970 --> 00:23:25,473
+Rym: We went from.
+
+354
+00:23:25,513 --> 00:23:26,115
+Rym: this is great.
+
+355
+00:23:26,156 --> 00:23:26,919
+Rym: We watched it all.
+
+356
+00:23:26,979 --> 00:23:28,119
+Rym: now We're done with it all right.
+
+357
+00:23:28,240 --> 00:23:31,650
+Scott: So there's a guy and his username on YouTube is grickle gr.
+
+358
+00:23:31,750 --> 00:23:35,360
+Scott: I see Kaylee, and he's a. his real name is Graham Annable.
+
+359
+00:23:35,480 --> 00:23:36,806
+Scott: I hope I pronounced the last name right.
+
+360
+00:23:36,826 --> 00:23:38,191
+Rym: Graham and Apple it could grab.
+
+361
+00:23:38,773 --> 00:23:40,480
+Scott: his first name is definitely Graham anyway.
+
+362
+00:23:41,962 --> 00:23:47,020
+Scott: He's a cartoonist from Oregon, and he's also an animator and stuff, and you know he's made a lot of things.
+
+363
+00:23:47,040 --> 00:23:51,080
+Scott: He's got some comics going on which I'll probably be trying to check out and all kinds of stuff.
+
+364
+00:23:51,140 --> 00:24:00,868
+Scott: But he's made a bunch of these animations And they're on YouTube and all of them are awesome to one degree or another and you should just go to his YouTube channel And watch all of them now.
+
+365
+00:24:00,929 --> 00:24:02,780
+Scott: I'm going to use two of them for our things of the day.
+
+366
+00:24:02,840 --> 00:24:04,128
+Rym: I debated like we should.
+
+367
+00:24:04,430 --> 00:24:11,500
+Rym: what if we just get people to watch them in the order We did because we happen to watch them in an order that created large levels of rofl.
+
+368
+00:24:13,041 --> 00:24:14,144
+Scott: Yeah, it is true.
+
+369
+00:24:14,164 --> 00:24:29,039
+Rym: I guess if nothing else have some of the videos are like just really funny or interesting or well done on their own and all the rest of them have this kind of Ren and Stimpy humor to a little degree and They're all kind of the same.
+
+370
+00:24:29,662 --> 00:24:32,151
+Rym: But them all being the same does not detract.
+
+371
+00:24:32,211 --> 00:24:34,279
+Rym: It's like it builds up over time like a family guy.
+
+372
+00:24:34,299 --> 00:24:34,500
+Rym: Joe.
+
+373
+00:24:34,520 --> 00:24:39,140
+Scott: Yeah, it's like if you there's two videos we're gonna use this thing of the day are good on their own right.
+
+374
+00:24:39,200 --> 00:24:53,044
+Scott: but there's these other videos that are all really short like a minute or less than two minutes mostly and They all follow a common theme and Individually some of them are good like the alien one and the the Western one the Western
+
+375
+00:24:53,144 --> 00:24:53,605
+Rym: one because
+
+376
+00:24:53,625 --> 00:24:54,307
+Scott: we watch the
+
+377
+00:24:54,347 --> 00:24:55,309
+Rym: Western one like last.
+
+378
+00:24:55,650 --> 00:25:00,590
+Rym: So I'm like I like the thing pops up like I know what's gonna happen and then something else happened.
+
+379
+00:25:00,691 --> 00:25:03,247
+Rym: I'm like oh and then the thing I expected happened.
+
+380
+00:25:03,348 --> 00:25:10,629
+Scott: yep And if you watch them together like you just keep watching and watching more and more of them And they all have the same theme it gets funnier and funnier.
+
+381
+00:25:11,433 --> 00:25:23,099
+Rym: So first off this is by far my favorite one Just because it's a great one just because the way it ends and how they could have gone a lot of directions with it But the fact that they immediately end it with.
+
+382
+00:25:23,461 --> 00:25:25,530
+Rym: well obviously you should get the t-shirt of this one.
+
+383
+00:25:25,550 --> 00:25:27,237
+Scott: This is the only one on his website.
+
+384
+00:25:27,257 --> 00:25:30,310
+Scott: He sells merchandise, and he sells a t-shirt for this animation.
+
+385
+00:25:30,731 --> 00:25:32,457
+Rym: I very well may and it's very.
+
+386
+00:25:32,678 --> 00:25:36,090
+Scott: it's your style cuz it just has you know the tiny icon in the top left area.
+
+387
+00:25:36,130 --> 00:25:39,517
+Rym: yep, but I Don't even want to ruin it.
+
+388
+00:25:39,617 --> 00:25:40,402
+Scott: It's can't ruin it.
+
+389
+00:25:40,443 --> 00:25:41,288
+Scott: It's a minute and 40 seconds.
+
+390
+00:25:41,610 --> 00:25:45,985
+Rym: It's called space wolf, and it is everything you would hope it to be.
+
+391
+00:25:46,005 --> 00:25:47,450
+Scott: it begins with some astronauts.
+
+392
+00:25:47,611 --> 00:25:48,398
+Scott: That's all I'll say.
+
+393
+00:25:48,600 --> 00:25:56,677
+Scott: oh, man, okay The one I'm gonna talk about is the first one we watched which is called the last duet on earth And I will tell you that this is an animation.
+
+394
+00:25:56,697 --> 00:26:09,475
+Scott: That's an almost four minutes long, and it involves It's and it is a poignant and humorous and Wonderful.
+
+395
+00:26:09,495 --> 00:26:14,218
+Rym: I also again we don't want to ruin it, but It is quite the high quality.
+
+396
+00:26:14,238 --> 00:26:21,870
+Scott: so what I recommend you do is watch these two things the day And then we're gonna have we're also gonna have a link to them individually And then we'll have a link to his YouTube channel.
+
+397
+00:26:22,271 --> 00:26:24,519
+Scott: Just go to the YouTube channel and like pick one.
+
+398
+00:26:24,539 --> 00:26:26,004
+Scott: that isn't one of these things of the day.
+
+399
+00:26:26,044 --> 00:26:27,710
+Rym: my recommendation is you see it?
+
+400
+00:26:27,850 --> 00:26:29,154
+Rym: Yeah, there's one about aliens.
+
+401
+00:26:29,555 --> 00:26:30,838
+Rym: watch that one first rice.
+
+402
+00:26:30,899 --> 00:26:32,403
+Rym: It will introduce something.
+
+403
+00:26:32,503 --> 00:26:37,345
+Scott: so watch the alien one and after you watch it Which is like transmission tower or something like that.
+
+404
+00:26:37,687 --> 00:26:38,150
+Rym: It's pretty odd.
+
+405
+00:26:38,170 --> 00:26:40,638
+Rym: There's a transmission tower and some guys right.
+
+406
+00:26:40,959 --> 00:26:43,748
+Scott: watch that then at the end of a YouTube video.
+
+407
+00:26:43,808 --> 00:26:46,150
+Scott: It'll say here Here's some other recommended YouTube videos.
+
+408
+00:26:46,210 --> 00:26:49,874
+Scott: Just keep clicking on ones you haven't seen until you know.
+
+409
+00:26:49,914 --> 00:26:55,639
+Scott: you start seeing the same ones over and over again and then go to the YouTube channel and clean up and make Sure, you've seen all of them pretty much.
+
+410
+00:26:55,760 --> 00:26:59,845
+Rym: run this out and be done with it But while you're running it out do it with a bunch of people.
+
+411
+00:26:59,865 --> 00:27:00,730
+Rym: Yeah, that's great.
+
+412
+00:27:00,891 --> 00:27:07,606
+Scott: Just watch as many of these as you can and When you figure out what the common theme is and you start seeing more and more of the common theme.
+
+413
+00:27:07,747 --> 00:27:08,590
+Scott: it really starts to work.
+
+414
+00:27:08,651 --> 00:27:11,939
+Scott: It's magic on you And watch out for the Western one.
+
+415
+00:27:11,959 --> 00:27:13,025
+Scott: That's my one of my favorites.
+
+416
+00:27:13,045 --> 00:27:19,551
+Rym: cuz you're gonna think oh I know what's gonna happen here, and you're wrong, but not entirely Right.
+
+417
+00:27:20,013 --> 00:27:21,380
+Scott: so we're gonna go.
+
+418
+00:27:21,400 --> 00:27:23,430
+Rym: I mean this is one of those how computers work nights.
+
+419
+00:27:23,631 --> 00:27:32,864
+Rym: but we're gonna go unlike previous ones really broad within a net within a range and Kind of shallow because deeper than where we're going is a place.
+
+420
+00:27:32,884 --> 00:27:33,486
+Rym: You don't want to be.
+
+421
+00:27:33,507 --> 00:27:37,542
+Scott: yeah I mean, it's basically like we're gonna talk about CPU architectures.
+
+422
+00:27:37,583 --> 00:27:46,517
+Scott: You know x86 power PC Alpha arm you might have heard like risk system Sisk system spark Yeah, all those things.
+
+423
+00:27:46,577 --> 00:27:47,803
+Scott: people talk about these things.
+
+424
+00:27:47,823 --> 00:27:54,850
+Scott: you know AMD 64 Stuff like ie 64. people talk about these things and you most people just go.
+
+425
+00:27:55,031 --> 00:28:01,216
+Scott: It's a different kind of you know cell process different kind of something Ship something.
+
+426
+00:28:01,256 --> 00:28:02,624
+Scott: you don't really know what that means.
+
+427
+00:28:02,724 --> 00:28:09,670
+Scott: really there's the Pentium but and they had MMX to explain the actual differences between them like It would take forever.
+
+428
+00:28:09,912 --> 00:28:11,724
+Scott: And it's so complex and you don't care.
+
+429
+00:28:11,865 --> 00:28:13,894
+Scott: and you don't care And you don't need to know.
+
+430
+00:28:13,914 --> 00:28:23,650
+Scott: unless you're writing assembly language programs in assembly language or maybe in C. You don't need to know this and I guess if you're designing chips you need to know.
+
+431
+00:28:23,710 --> 00:28:30,090
+Scott: But that's about it and it's not useful for the average person who wants to learn how to take advantage of their computer.
+
+432
+00:28:30,170 --> 00:28:37,082
+Scott: So we're gonna make analogies and metaphors and pretty much everything So that you will only know as much as you need to know.
+
+433
+00:28:37,323 --> 00:28:41,958
+Rym: and in between all that will be brief explanations of the acronyms and jargon.
+
+434
+00:28:41,998 --> 00:28:46,109
+Rym: just yeah, so you'll know when someone says risk system like oh, well, that's that thing right.
+
+435
+00:28:46,169 --> 00:28:48,336
+Scott: so You have a car Rym, right?
+
+436
+00:28:48,918 --> 00:28:49,260
+Rym: I do.
+
+437
+00:28:49,280 --> 00:28:50,143
+Scott: I have a car.
+
+438
+00:28:50,585 --> 00:28:51,630
+Scott: is our car the same car?
+
+439
+00:28:51,931 --> 00:28:52,513
+Rym: No, it's not.
+
+440
+00:28:52,874 --> 00:28:54,379
+Scott: but they do basically the same thing.
+
+441
+00:28:54,399 --> 00:28:55,824
+Rym: I'm I get where I'm going gas pedal.
+
+442
+00:28:55,844 --> 00:28:57,570
+Rym: I got an engine exhaust, right?
+
+443
+00:28:57,690 --> 00:28:58,574
+Scott: Yeah, so so I got.
+
+444
+00:28:58,594 --> 00:29:01,006
+Scott: I got an AMD rotten apple in the bag my computer.
+
+445
+00:29:01,026 --> 00:29:01,809
+Scott: I got an AMD, right?
+
+446
+00:29:02,290 --> 00:29:03,074
+Scott: Yeah computer we have.
+
+447
+00:29:03,616 --> 00:29:06,349
+Rym: I have a core to duo right completely different, right?
+
+448
+00:29:06,770 --> 00:29:07,214
+Scott: They're like that.
+
+449
+00:29:07,335 --> 00:29:09,290
+Scott: if you look at the physical things, they're nothing like each other.
+
+450
+00:29:09,330 --> 00:29:12,250
+Rym: Yeah, mine's got this really little totally silent fan on it.
+
+451
+00:29:12,250 --> 00:29:18,315
+Rym: It's this tiny little chip and it's got an Intel logo and mine's kind of loud Kind of slow Kind of hot.
+
+452
+00:29:18,335 --> 00:29:19,080
+Rym: mine's not so hot?
+
+453
+00:29:20,470 --> 00:29:24,243
+Scott: No, but it was cheap, but they do pretty much the same thing.
+
+454
+00:29:24,303 --> 00:29:26,310
+Scott: only yours does it faster and with two cores.
+
+455
+00:29:26,631 --> 00:29:30,410
+Rym: I mean think of this installing windows on Scott's computer versus my computer.
+
+456
+00:29:30,731 --> 00:29:33,279
+Rym: It's not like I have to install a different version of Windows.
+
+457
+00:29:33,559 --> 00:29:38,014
+Scott: It's the same thing because they both have the same Architecture.
+
+458
+00:29:38,416 --> 00:29:43,378
+Scott: it's it they you know four wheels and they go, you know Mine is four wheels and it goes.
+
+459
+00:29:43,438 --> 00:29:46,090
+Scott: only rims has a bigger engine in it, but it doesn't matter.
+
+460
+00:29:46,110 --> 00:29:50,527
+Scott: you know if someone teaches you how to drive one you can drive the other and it's the same thing.
+
+461
+00:29:50,788 --> 00:29:59,639
+Rym: if you write a Program for one the program will work on the other unless it's so weird different other one Like say my car was a Mazda rx-7.
+
+462
+00:30:00,081 --> 00:30:02,610
+Rym: It goes like a car but best analogy.
+
+463
+00:30:02,731 --> 00:30:10,350
+Scott: I would say more if it's like if your car didn't have a steering wheel if it had levers Yeah instead of a steering wheel and you'd have to completely relearn how to drive.
+
+464
+00:30:10,470 --> 00:30:18,641
+Rym: But I don't know cuz the users both I guess to take the metaphor to higher level because the inside of the car is different But once you get it going driving, it's the same.
+
+465
+00:30:18,722 --> 00:30:20,550
+Scott: Yeah, the inputs are different.
+
+466
+00:30:20,650 --> 00:30:32,030
+Scott: You know how you how you control the car how you talk to the the processor and get it to do what you want to Do and how it works internally is different, but the function of it is to digital computing.
+
+467
+00:30:32,211 --> 00:30:33,075
+Scott: That's what it does.
+
+468
+00:30:33,115 --> 00:30:36,189
+Rym: is it computes digital things because you might remember we did the show about.
+
+469
+00:30:36,209 --> 00:30:44,290
+Rym: you know Like how processors work and how everything else works and how you know You write a program the program is a language and that gets translated into like the machine code.
+
+470
+00:30:44,731 --> 00:30:47,000
+Rym: That's what you talk to the processor with yep.
+
+471
+00:30:47,361 --> 00:30:48,023
+Scott: I mean you.
+
+472
+00:30:48,204 --> 00:30:49,328
+Scott: a processor is just.
+
+473
+00:30:49,428 --> 00:30:49,850
+Scott: it's a chip.
+
+474
+00:30:50,011 --> 00:30:54,688
+Scott: It takes input does stuff and then outputs right and it's got some registers in there and other business who.
+
+475
+00:30:54,768 --> 00:30:55,250
+Scott: it's crazy.
+
+476
+00:30:55,370 --> 00:30:55,752
+Scott: That's the part.
+
+477
+00:30:55,772 --> 00:30:56,474
+Scott: We don't want to talk about.
+
+478
+00:30:56,494 --> 00:31:00,808
+Scott: Yeah, but you generally tell it to do things and it does them, right?
+
+479
+00:31:00,868 --> 00:31:11,447
+Scott: So an x86 CPU has the x86 instruction set and you can tell it X86 instructions and it knows how to do them.
+
+480
+00:31:11,609 --> 00:31:17,782
+Rym: Yep There is a list of commands and if you tell it those commands and give it inputs It'll always answer those commands the same way, right?
+
+481
+00:31:17,903 --> 00:31:21,238
+Rym: You don't care how it comes to the answer You just know that it's gonna give you the same answer.
+
+482
+00:31:21,439 --> 00:31:33,851
+Scott: Oh, so I can write a program that says Move the memory in address 1 to address 2 right and what that'll do is it'll look at the bits in Address number 1 move them to address number 2.
+
+483
+00:31:33,851 --> 00:31:37,625
+Scott: I can take that x86 program and put it on a 386 and it'll run it.
+
+484
+00:31:39,492 --> 00:31:43,650
+Scott: I can take that same single assembly instruction program, which is a program by the way.
+
+485
+00:31:43,670 --> 00:31:48,348
+Scott: It's just one instruction though and give it to rims computer and it'll do the same exact thing because it's x86.
+
+486
+00:31:50,275 --> 00:31:51,590
+Scott: x86 x86 instructions it works.
+
+487
+00:31:51,670 --> 00:31:54,479
+Scott: This is why you don't need to recompile a program.
+
+488
+00:31:54,519 --> 00:31:57,770
+Scott: if it was written for like a 386 and it'll still work on your computer.
+
+489
+00:31:58,112 --> 00:32:02,170
+Rym: It might not work as well, but that's because it's a whole bunch of other things, right?
+
+490
+00:32:02,790 --> 00:32:12,198
+Scott: so now when someone talks about something like SSE or MMX or SSE 2 or 3d now right what they're talking about?
+
+491
+00:32:12,459 --> 00:32:12,900
+Rym: 3d now.
+
+492
+00:32:12,920 --> 00:32:13,863
+Rym: We hardly knew you.
+
+493
+00:32:14,184 --> 00:32:16,915
+Scott: what they're talking about are extra Instructions.
+
+494
+00:32:17,116 --> 00:32:19,810
+Scott: so or AMD 64 is extra instructions.
+
+495
+00:32:19,810 --> 00:32:26,590
+Rym: Let's look at this way say say but you've got a processor the Rym proc and it's all it can do is add binary numbers together.
+
+496
+00:32:26,871 --> 00:32:29,521
+Rym: Yep, so say I wanted to multiply.
+
+497
+00:32:29,541 --> 00:32:31,790
+Rym: I have to tell it to add a bunch of times.
+
+498
+00:32:32,111 --> 00:32:35,690
+Rym: I want it to divide I have to tell it to subtract a bunch of times and do a bunch of other things.
+
+499
+00:32:35,991 --> 00:32:36,693
+Scott: Well, you'd have it.
+
+500
+00:32:36,833 --> 00:32:38,358
+Scott: actually if it adds it can.
+
+501
+00:32:38,398 --> 00:32:42,332
+Scott: well it can add subtract multiply and divide because you can add negative numbers a Bunch.
+
+502
+00:32:42,413 --> 00:32:43,590
+Rym: Oh, yeah, that's what I was getting at.
+
+503
+00:32:43,590 --> 00:32:49,250
+Rym: But the point is that if I want it to multiply I have to tell it to add a whole bunch of times.
+
+504
+00:32:49,290 --> 00:32:52,850
+Rym: I've got this one simple instruction add if I want to subtract I've tell it to add a negative number.
+
+505
+00:32:54,031 --> 00:32:57,103
+Rym: Now say I make the Rym proc proc plus.
+
+506
+00:32:57,585 --> 00:32:58,970
+Rym: it supports everything the Rym proc.
+
+507
+00:32:59,090 --> 00:33:03,269
+Scott: So the program's written for Rym proc that just add a bunch of times will still work.
+
+508
+00:33:03,871 --> 00:33:08,846
+Rym: It still has the ad command but added a new command multiply and it's special.
+
+509
+00:33:08,966 --> 00:33:15,270
+Rym: and if I tell it to multiply Internally, it might do a special chip thing to do the multiplication.
+
+510
+00:33:15,752 --> 00:33:17,800
+Rym: It might just translate that to a bunch of ads.
+
+511
+00:33:18,101 --> 00:33:22,459
+Rym: It might have a separate adding pipelines Optimized for multiplying.
+
+512
+00:33:22,480 --> 00:33:29,270
+Rym: but the point is it's an extra instruction I have added to do a commonly done thing faster better easier simpler
+
+513
+00:33:29,370 --> 00:33:37,107
+Scott: Yep, so now programs written for Rym proc will work on Rym procs and Rym proc pluses But programs written for Rym pod plus only will not work on Rym proc
+
+514
+00:33:37,188 --> 00:33:37,610
+Rym: because I like it.
+
+515
+00:33:37,790 --> 00:33:43,609
+Scott: We don't tell him product to multiply and Rym proc will say what the fuck we keep saying proc differently I know right Tupac Tupac who?
+
+516
+00:33:44,590 --> 00:33:45,353
+Scott: Whatever, right?
+
+517
+00:33:45,654 --> 00:33:51,757
+Scott: So if you compile a program you wrote for x86 It'll work on any x86.
+
+518
+00:33:51,797 --> 00:34:00,346
+Scott: if you compile it for five eighty six, you know It won't work on three and four eighty sixes But it will be optimized for the community.
+
+519
+00:34:00,366 --> 00:34:00,849
+Scott: think about it.
+
+520
+00:34:01,211 --> 00:34:05,232
+Scott: If you want something to work on any x86 processor you can.
+
+521
+00:34:05,272 --> 00:34:11,893
+Scott: you can't use any instructions except for the instructions on the 386 or the 286 or actually the 8086 the original.
+
+522
+00:34:11,954 --> 00:34:13,178
+Rym: realistically the 386 right.
+
+523
+00:34:13,518 --> 00:34:17,310
+Scott: realistically the 386 because that was the first one that worked in the modern fashion.
+
+524
+00:34:17,389 --> 00:34:18,717
+Scott: But that's as a separate story.
+
+525
+00:34:18,777 --> 00:34:21,270
+Scott: So it could go a lot faster.
+
+526
+00:34:21,451 --> 00:34:25,103
+Scott: I mean you could use all the special instructions that the Intel core 2 duo has.
+
+527
+00:34:25,145 --> 00:34:25,667
+Scott: that the 386 does not.
+
+528
+00:34:25,687 --> 00:34:31,170
+Rym: yeah Because they don't add those instructions for the benefit of programmers to make it easier to write assembly.
+
+529
+00:34:31,250 --> 00:34:33,839
+Rym: They add them because they've made a thing usually.
+
+530
+00:34:33,860 --> 00:34:36,649
+Rym: that'll do that thing faster than if you did it.
+
+531
+00:34:36,690 --> 00:34:47,110
+Scott: man Yes, the compiler knows the thing that converts your you know, normal programmer programming language into assembler Which you know, most people don't deal with assembler anymore at least on PCs.
+
+532
+00:34:47,985 --> 00:34:50,937
+Scott: You know It converts to from C to assembler.
+
+533
+00:34:51,438 --> 00:35:00,784
+Scott: if it knows that you're on an AMD 64 and you wrote a program in C It knows about these extra instructions and it will use them if it has to.
+
+534
+00:35:01,025 --> 00:35:02,590
+Scott: it knows it's smart.
+
+535
+00:35:02,710 --> 00:35:07,610
+Scott: So you tell it which processor you want to compile for and it will compile for that processor.
+
+536
+00:35:07,710 --> 00:35:15,189
+Scott: Hell you could even be on an x86 and say hey compiler make Compile this code for power PC so I can run on my Mac.
+
+537
+00:35:15,632 --> 00:35:18,244
+Rym: But then you can't run it on your computer that you just compiled it on.
+
+538
+00:35:18,264 --> 00:35:20,515
+Scott: you have to copy it over to the Mac And then run it now.
+
+539
+00:35:20,555 --> 00:35:26,022
+Rym: see this is why when people use Gentoo or Linux from scratch They talk about like I'm gonna optimize my kernel.
+
+540
+00:35:26,042 --> 00:35:27,749
+Rym: I'm gonna optimize everything to run on my PC.
+
+541
+00:35:28,372 --> 00:35:34,275
+Rym: They use like a march instruction or something to basically compile For as much as they can like.
+
+542
+00:35:34,295 --> 00:35:45,626
+Rym: they'll look at their processor and tell the compiler to use all the stuff that that processor supports As much as possible, but now that code won't run on a lesser processor or a different processor.
+
+543
+00:35:45,987 --> 00:35:53,221
+Rym: Yeah, it just won't happen like if I compile something for a 686 and then I give it to you with your 586 it won't work.
+
+544
+00:35:53,522 --> 00:35:55,488
+Scott: and that that's the theory of a source coast.
+
+545
+00:35:55,508 --> 00:36:01,743
+Scott: be a source code based distribution of Linux is that we're not gonna compile the code and then give it to you like in Ubuntu.
+
+546
+00:36:01,763 --> 00:36:06,302
+Scott: Ubuntu compiles the code and Gives you the results of the compilation.
+
+547
+00:36:06,322 --> 00:36:07,530
+Scott: you download the binaries.
+
+548
+00:36:07,891 --> 00:36:09,176
+Scott: You don't compile the code yourself.
+
+549
+00:36:09,237 --> 00:36:12,530
+Scott: most of the time you download something that's already been compiled by someone else.
+
+550
+00:36:12,590 --> 00:36:28,174
+Scott: Which means if you had the source code and compiled it yourself You could probably get it to be better and use your computer better, but it would take forever Because compiling takes a long time if it takes less forever now with fast processors But still still.
+
+551
+00:36:28,194 --> 00:36:30,503
+Scott: I mean it takes like two days to install gen 2 Linux.
+
+552
+00:36:30,523 --> 00:36:32,370
+Scott: it takes 20 minutes to install Ubuntu Linux.
+
+553
+00:36:32,651 --> 00:36:36,590
+Scott: Yeah, yeah Microsoft Windows they give you everything already compiled.
+
+554
+00:36:37,132 --> 00:36:40,789
+Scott: You're not compiling source code to Windows or else the world would be a different place.
+
+555
+00:36:41,991 --> 00:36:47,870
+Rym: Plus, I mean just dealing with installing everything from source takes a little bit more knowledge and you gotta know it in the air.
+
+556
+00:36:47,910 --> 00:36:49,457
+Rym: Yes, God half the time.
+
+557
+00:36:49,557 --> 00:36:52,088
+Rym: installing gen 2 is just learning all that crap the first time.
+
+558
+00:36:52,108 --> 00:36:58,070
+Scott: but then again This is why gen 2 is always one of the first Distributions that you can use to you know, run it on an Xbox or run.
+
+559
+00:36:58,090 --> 00:37:05,170
+Rym: That's also why until recently we were able to do GeekNights fully on an old busted 800 megahertz processor.
+
+560
+00:37:05,572 --> 00:37:08,846
+Rym: Yeah, because I used a compiled to fuck all gen 2.
+
+561
+00:37:08,846 --> 00:37:15,540
+Scott: Yep Alright, so, you know you might be saying okay we know that you know a CPU architecture.
+
+562
+00:37:15,600 --> 00:37:22,770
+Scott: different CPU architectures use different instructions and Ones that you know, they might have all the instructions of an old one but some new instructions.
+
+563
+00:37:22,911 --> 00:37:26,210
+Scott: So things for the new one don't work on the old but things for the old work on the new.
+
+564
+00:37:26,491 --> 00:37:31,805
+Scott: Alright, but what are actually some of the differences between CPU architectures?
+
+565
+00:37:31,825 --> 00:37:32,486
+Scott: like what makes it?
+
+566
+00:37:32,506 --> 00:37:33,629
+Scott: why why don't I just have one?
+
+567
+00:37:34,010 --> 00:37:34,708
+Scott: That's the best one.
+
+568
+00:37:35,011 --> 00:37:38,742
+Rym: Well, we're kind of in many cases converging on that kind of.
+
+569
+00:37:39,363 --> 00:37:41,811
+Scott: well back in the day when they were thinking about it Right.
+
+570
+00:37:41,831 --> 00:37:45,603
+Scott: There were these two philosophies of how we're gonna make a CPU architecture.
+
+571
+00:37:46,185 --> 00:37:49,787
+Scott: one philosophy was risk reduced instruction set.
+
+572
+00:37:51,033 --> 00:37:57,555
+Rym: You might be aware of this term from the movie hackers where someone said something along the lines of man I got a sweeter ISK system.
+
+573
+00:37:57,816 --> 00:38:04,176
+Scott: Yeah, I think C stands for CPU but or computing reduced instructions at computing I don't I forget what the C is.
+
+574
+00:38:04,216 --> 00:38:04,838
+Scott: It doesn't matter.
+
+575
+00:38:04,858 --> 00:38:06,162
+Scott: It's reduced instruction set.
+
+576
+00:38:06,182 --> 00:38:11,283
+Rym: The idea was that if you have a Language for the processor itself.
+
+577
+00:38:11,624 --> 00:38:20,576
+Rym: That's very simple Very simple and you use and it's mostly in terms of how the processor handles things internally to like internally Pipelining and such.
+
+578
+00:38:20,817 --> 00:38:23,670
+Rym: internally it does very simple things very quickly.
+
+579
+00:38:24,014 --> 00:38:37,410
+Rym: And if you want to do complex things The idea was that you can make those simple things so refined and so fast that as a result Complex things are always broken down into a bunch of simple problems that the processor can solve really really quickly, right?
+
+580
+00:38:37,490 --> 00:38:42,270
+Scott: So the idea with a risk reduced instruction set computer a pair according to Wikipedia, right?
+
+581
+00:38:42,652 --> 00:38:44,560
+Scott: Is that you know, I want to multiply.
+
+582
+00:38:44,580 --> 00:38:46,690
+Scott: well, I'm not gonna have a multiply instruction.
+
+583
+00:38:46,771 --> 00:38:54,068
+Scott: I'm just gonna have the add instruction and I'm gonna make this CPU in such a way that it can add a whole shit ton of times really fast.
+
+584
+00:38:54,350 --> 00:39:00,951
+Rym: now You might have a multiply in whatever you're writing with but the compiler turns that into a bunch of ads before it gets to the Process.
+
+585
+00:39:00,971 --> 00:39:08,878
+Scott: Yeah, but the way the CPU works internally it can add so fast that you know It's better than having a multiply instruction.
+
+586
+00:39:08,918 --> 00:39:11,870
+Scott: You just go add it in it in it in it right now.
+
+587
+00:39:11,910 --> 00:39:17,986
+Scott: The other philosophy was a CISC C ISC complex instruction set computer.
+
+588
+00:39:18,507 --> 00:39:22,941
+Scott: the idea behind this As you can guess was to have a whole shit ton of instructions.
+
+589
+00:39:23,302 --> 00:39:32,272
+Scott: that way you would you know, whatever you want to do There'd be an instruction that did it and you would just be like use this instruction anyway Just do it that one, you know, and you know It would do.
+
+590
+00:39:32,352 --> 00:39:39,070
+Scott: it might be slower because some of these instructions are pretty complex But you could do a lot of things with very few instructions.
+
+591
+00:39:39,593 --> 00:39:44,958
+Scott: so it's a lot less instructions and do a lot more and There are benefits to both of these.
+
+592
+00:39:45,038 --> 00:39:46,303
+Scott: and well in the end.
+
+593
+00:39:46,343 --> 00:39:48,029
+Scott: We sort of landed somewhere in the middle.
+
+594
+00:39:49,573 --> 00:39:54,270
+Scott: I mean computers that you're using right now are not really RISC or CISC so much.
+
+595
+00:39:54,311 --> 00:39:58,157
+Scott: They have a lot of instructions but they use a lot of the principles of.
+
+596
+00:39:58,178 --> 00:40:02,249
+Scott: you know RISC design like pipelining and such to go a lot faster.
+
+597
+00:40:02,269 --> 00:40:05,079
+Scott: and Yeah, the you know, this is.
+
+598
+00:40:05,119 --> 00:40:06,968
+Scott: but these are the philosophies that started.
+
+599
+00:40:06,988 --> 00:40:12,268
+Scott: all you know The reasons why we had all these different CPU architecture showing up is because you know people were.
+
+600
+00:40:12,288 --> 00:40:12,810
+Scott: you know.
+
+601
+00:40:12,850 --> 00:40:14,657
+Scott: They were like, huh, you know we can.
+
+602
+00:40:14,677 --> 00:40:19,777
+Scott: you know, we have we're making something that you give it instructions It does stuff and then there's output right?
+
+603
+00:40:20,078 --> 00:40:21,825
+Scott: There's so many different ways to do it.
+
+604
+00:40:22,206 --> 00:40:23,130
+Scott: Which way is the best?
+
+605
+00:40:23,310 --> 00:40:31,610
+Scott: Let's try all these different ways and they've tried all these different ways and we've actually found in the end that Some ways are better depending on what you're doing.
+
+606
+00:40:32,011 --> 00:40:38,270
+Scott: I mean people who have like these giant mainframe farms, you know where they're doing supercomputing stuff, right?
+
+607
+00:40:39,030 --> 00:40:44,932
+Scott: They need a different CPU architecture than you do to play, you know your Team Fortress 2?
+
+608
+00:40:44,932 --> 00:40:53,147
+Scott: Yeah, they're doing a lot of similar math over and over and over and over and over again Whereas you you're doing all sorts of random stuff all over the place all the time.
+
+609
+00:40:53,187 --> 00:40:53,610
+Scott: Who knows?
+
+610
+00:40:54,390 --> 00:41:04,749
+Scott: So if you were using say a supercomputer, I guess it would be fast Just just on you know, the point that it's a crazy supercomputer But it you know, he wouldn't be heavily optimized for the kind of work that you do.
+
+611
+00:41:05,251 --> 00:41:10,051
+Rym: I'm sure we'll get yelled at by my about minor details from some of our friends who know a lot more about this than we Do.
+
+612
+00:41:10,253 --> 00:41:12,590
+Scott: I'm trying to just make talk about this for normal people.
+
+613
+00:41:13,233 --> 00:41:16,930
+Scott: I'm not gonna get into like, you know, what a register is and you know this.
+
+614
+00:41:17,871 --> 00:41:19,879
+Scott: This this architecture has.
+
+615
+00:41:19,899 --> 00:41:22,750
+Scott: you know one, you know program counter register.
+
+616
+00:41:22,971 --> 00:41:25,646
+Scott: The other one has three double size registers.
+
+617
+00:41:25,706 --> 00:41:29,275
+Rym: It's like I just remember way back in the day.
+
+618
+00:41:29,295 --> 00:41:36,823
+Rym: I like I wanted Windows NT because I thought it was like better Before I realized that Windows NT basically stood for Windows.
+
+619
+00:41:36,883 --> 00:41:44,726
+Rym: nice try but Michael you could get Windows NT for alpha back then and I thought alpha what's alpha?
+
+620
+00:41:45,066 --> 00:41:50,662
+Rym: so I looked it up and all I knew was Alpha processors had higher megahertz is than other processors.
+
+621
+00:41:50,983 --> 00:41:54,872
+Rym: They were like four or five hundred megahertz and I thought wow Awesomesauce.
+
+622
+00:41:55,293 --> 00:41:58,503
+Rym: and I always wondered why no one used alpha and why it was so expensive.
+
+623
+00:41:59,064 --> 00:42:02,154
+Rym: and now no alphas gone Because it doesn't matter.
+
+624
+00:42:02,414 --> 00:42:04,380
+Scott: Well, there's still people who use alpha.
+
+625
+00:42:04,400 --> 00:42:07,790
+Rym: They never get bought out or something that digital equipment corporation.
+
+626
+00:42:07,910 --> 00:42:11,762
+Scott: I'm not sure who owns it now, but you know Linux like.
+
+627
+00:42:11,842 --> 00:42:14,390
+Scott: there was big things in Linux on alpha in the early days.
+
+628
+00:42:14,411 --> 00:42:14,829
+Rym: Oh, here we go.
+
+629
+00:42:14,930 --> 00:42:20,755
+Rym: The alpha series was sold along with most parts of the parent company to Compaq in 1998.
+
+630
+00:42:20,755 --> 00:42:30,868
+Rym: Compaq and Intel customer phased out alpha in favor of I64 itanium architecture and sold all of alphas intellectual property to Intel in 2001 killing the product.
+
+631
+00:42:31,249 --> 00:42:32,045
+Rym: Uh-huh There you go.
+
+632
+00:42:32,311 --> 00:42:34,250
+Scott: But yeah alpha was a big deal for a long.
+
+633
+00:42:34,430 --> 00:42:41,450
+Rym: HP now owns it and promised to continue selling alphabay systems to the existing customer base until last year.
+
+634
+00:42:41,950 --> 00:42:46,484
+Scott: Uh-huh, because you see, you know, there's a lot of they extended sales until whatever.
+
+635
+00:42:46,544 --> 00:42:48,290
+Scott: no one until later last year.
+
+636
+00:42:48,390 --> 00:42:49,988
+Scott: No one cares according to Wikipedia.
+
+637
+00:42:50,331 --> 00:43:01,370
+Scott: The point is is that there are people out there mostly businesses right where they have an alpha system that say been doing their business For you know 30 years some long period of time and you know, they don't want it.
+
+638
+00:43:01,430 --> 00:43:08,592
+Scott: they could either rewrite that whole all that software for some, you know, an Intel machine or Not.
+
+639
+00:43:08,612 --> 00:43:10,689
+Scott: they can just get a new thing.
+
+640
+00:43:10,910 --> 00:43:16,353
+Scott: They'd get a new alpha machine when the old one breaks and keep running the old software because they don't have the source codes of That software.
+
+641
+00:43:16,373 --> 00:43:19,630
+Scott: it's not like they can recompile it for some, you know, different architecture.
+
+642
+00:43:22,092 --> 00:43:25,429
+Scott: Yeah, it's like they need an alpha processor to run their software.
+
+643
+00:43:25,469 --> 00:43:29,990
+Rym: granted The real solution would be to hire someone to look at what the business process is and write a new program.
+
+644
+00:43:30,192 --> 00:43:30,898
+Scott: I know that.
+
+645
+00:43:30,979 --> 00:43:35,516
+Rym: but yeah, yeah Regardless, yep, and I mean x86.
+
+646
+00:43:35,637 --> 00:43:40,310
+Rym: I mean you might have heard way back that Oh Apple is moving to the Intel business.
+
+647
+00:43:40,471 --> 00:43:48,125
+Scott: That's basically Apple drop power PC and uses x86 now And that's why old Apple programs need to run in some sort of.
+
+648
+00:43:48,145 --> 00:43:52,585
+Rym: you know, emulating mode And I saw that it looks like leopard doesn't have dropped it.
+
+649
+00:43:52,625 --> 00:43:53,770
+Scott: They they screwed it now.
+
+650
+00:43:53,870 --> 00:43:56,827
+Rym: See, that's one thing that part of the reason we use x86 today.
+
+651
+00:43:57,310 --> 00:44:02,418
+Rym: I mean there's a lot of reasons but it's simply that Backward compatibility has always been considered like.
+
+652
+00:44:02,840 --> 00:44:06,993
+Rym: but the most important thing because they don't want to piss off the people who just use computers And don't know better.
+
+653
+00:44:07,415 --> 00:44:10,750
+Scott: Yeah, I mean if you have a program that runs in your computer, right?
+
+654
+00:44:10,790 --> 00:44:14,241
+Scott: Let's say we the whole world came up with a brand new CPU architecture.
+
+655
+00:44:14,281 --> 00:44:15,686
+Scott: It's it's totally brand new.
+
+656
+00:44:15,746 --> 00:44:16,890
+Scott: It's optimized for everything.
+
+657
+00:44:16,910 --> 00:44:17,494
+Scott: It's amazing.
+
+658
+00:44:17,514 --> 00:44:18,843
+Rym: It's better in every way.
+
+659
+00:44:18,903 --> 00:44:19,769
+Scott: better in every way.
+
+660
+00:44:20,352 --> 00:44:27,028
+Scott: Alright now everyone, you know because not everyone's using open Linux Run on it because we just recompile Linux for it.
+
+661
+00:44:27,531 --> 00:44:32,790
+Scott: Right make a new module for Linux and it would work the same way they did for alpha back in the day.
+
+662
+00:44:32,790 --> 00:44:35,110
+Scott: I mean Linux runs on all sorts of different CPU architectures.
+
+663
+00:44:35,612 --> 00:44:41,414
+Scott: All you do is when you're compiling it you pick which one you want to use or if you use like Ubuntu you download the One you want right?
+
+664
+00:44:41,454 --> 00:44:49,092
+Scott: You have to download a different vert, you know, Ubuntu version for the different, you know architecture using but Windows Microsoft.
+
+665
+00:44:49,112 --> 00:44:57,185
+Scott: yet to re-release Windows and everyone who writes a Windows application that isn't open source We'd have to re-release the application and a lot of applications out.
+
+666
+00:44:57,205 --> 00:44:58,310
+Scott: There aren't gonna get re-released.
+
+667
+00:44:58,390 --> 00:44:59,716
+Scott: Oh, yeah, you think about only one?
+
+668
+00:44:59,957 --> 00:45:02,770
+Scott: Yeah, only ones that people are maintaining are gonna be re-released.
+
+669
+00:45:03,334 --> 00:45:11,110
+Scott: So it would just basically be like, okay We're gonna say that pretty much every all the software ever isn't gonna work anymore.
+
+670
+00:45:11,431 --> 00:45:14,806
+Rym: Yeah, redo it all what it what Apple did back in the day like.
+
+671
+00:45:14,826 --> 00:45:19,267
+Rym: well not back in the day but when they first switched to Intel and what the future is showing us more and more.
+
+672
+00:45:19,287 --> 00:45:23,130
+Rym: that with VMware, you know virtualization and emulation more and more.
+
+673
+00:45:23,752 --> 00:45:31,736
+Rym: I don't think it's gonna be that long like in the coming decade if better architectures are around People and emulation gets better.
+
+674
+00:45:31,756 --> 00:45:36,268
+Rym: I could see general shifts in the future to better architectures with emulation.
+
+675
+00:45:36,308 --> 00:45:38,786
+Scott: support for old stuff There could be there could be.
+
+676
+00:45:38,826 --> 00:45:39,351
+Scott: indeed I mean,
+
+677
+00:45:39,392 --> 00:45:58,730
+Rym: I don't I mean it's not happening now on any large scale But it's happening in server farms already where like a company has a million crap old Programs on servers everywhere and they buy one like supercomputer and they virtualize all the operating systems Whatever architectures and then they run all those old crap things on one fancy computer that they can maintain.
+
+678
+00:45:59,012 --> 00:46:01,130
+Scott: That's a good way getting rid of a bunch of shitty computers.
+
+679
+00:46:01,230 --> 00:46:06,597
+Rym: That's a great way of getting rid of a bunch of shitty computers and saving a ton of money because old computers use a lot Of power.
+
+680
+00:46:06,617 --> 00:46:14,756
+Scott: Yep But yeah in general that you know, there's other differences between CPU architectures Like here's an example of how they're different.
+
+681
+00:46:14,796 --> 00:46:20,270
+Scott: ready some CPUs are big Indian and some are little Indian.
+
+682
+00:46:20,511 --> 00:46:22,181
+Rym: You really don't want to know you don't care.
+
+683
+00:46:22,221 --> 00:46:23,870
+Scott: Well, it's pretty simple what it is, right?
+
+684
+00:46:23,970 --> 00:46:25,961
+Rym: Yeah, but thinking about the ramifications of it.
+
+685
+00:46:26,042 --> 00:46:27,550
+Scott: No, they're not gonna talk about the ramifications.
+
+686
+00:46:27,771 --> 00:46:33,478
+Scott: I'm just trying to show you how how there's different designs and why you know We didn't just pick one and go with it forever.
+
+687
+00:46:33,819 --> 00:46:36,170
+Scott: All right, so, you know a binary number, right?
+
+688
+00:46:36,250 --> 00:46:38,682
+Scott: Let's say I want to have the number two and binary.
+
+689
+00:46:38,762 --> 00:46:39,747
+Scott: Well, that's one zero.
+
+690
+00:46:40,028 --> 00:46:40,270
+Scott: All right.
+
+691
+00:46:40,832 --> 00:46:44,910
+Scott: Well, what if I put you know, is it one zero or is it zero one?
+
+692
+00:46:45,030 --> 00:46:47,850
+Scott: Am I writing the numbers from left to right or right to left?
+
+693
+00:46:48,090 --> 00:46:50,119
+Rym: I mean you might say that's a given but yeah, that's a given.
+
+694
+00:46:50,219 --> 00:46:52,670
+Rym: if you're writing in English your computer doesn't think in English.
+
+695
+00:46:53,072 --> 00:46:54,237
+Scott: Yeah, your computer doesn't think in English.
+
+696
+00:46:54,257 --> 00:46:57,010
+Scott: It's a bunch of wires going in a bunch of pins, you know.
+
+697
+00:46:57,130 --> 00:46:59,740
+Scott: So it's like do the is the is the leftmost pin?
+
+698
+00:46:59,780 --> 00:47:00,964
+Scott: the is the first one?
+
+699
+00:47:00,984 --> 00:47:02,470
+Scott: or is the rightmost pin the first one?
+
+700
+00:47:02,710 --> 00:47:04,868
+Scott: You don't you don't know how it's you know?
+
+701
+00:47:05,170 --> 00:47:11,090
+Scott: So some CPU architecture is a big endian and some are a little endian and it's just a difference, you know.
+
+702
+00:47:11,110 --> 00:47:12,355
+Scott: And there there are.
+
+703
+00:47:12,375 --> 00:47:15,929
+Scott: there are reasons to do one or reasons to do the other but that's not important.
+
+704
+00:47:15,949 --> 00:47:16,230
+Scott: right now.
+
+705
+00:47:16,310 --> 00:47:30,625
+Scott: The point is is that CPUs make those kinds of decisions that matter, you know If I write a program and I compile it for a little endian and I run it on a big endian chip It's gonna be all backwards all the little numbers gonna be big and the big numbers give me little
+
+706
+00:47:30,645 --> 00:47:31,368
+Rym: and it's not
+
+707
+00:47:31,388 --> 00:47:31,830
+Scott: gonna work.
+
+708
+00:47:31,930 --> 00:47:33,909
+Scott: It's not gonna work the way I thought it would at least.
+
+709
+00:47:34,854 --> 00:47:50,796
+Scott: So this is you know Why we have different CPU architectures and why programs only work on some and not on the other and why people you know design different Things to try to get different thing that work different ways optimize for different kinds of tasks and such, you know It's you have all these different cars.
+
+710
+00:47:50,816 --> 00:47:51,740
+Scott: You have a sports car.
+
+711
+00:47:51,760 --> 00:47:52,563
+Scott: You have a minivan.
+
+712
+00:47:52,603 --> 00:47:53,386
+Scott: You have an SUV.
+
+713
+00:47:53,406 --> 00:47:54,330
+Scott: You have a tractor-trailer.
+
+714
+00:47:54,330 --> 00:47:57,577
+Scott: They're all cars But they all have different design considerations.
+
+715
+00:47:57,638 --> 00:48:03,690
+Scott: and you know, like you can get an engine that might work in like 20 different cars But it might not work in a tractor-trailer.
+
+716
+00:48:04,851 --> 00:48:08,066
+Scott: Yeah, I'm running out of analogies here pretty much the the.
+
+717
+00:48:08,327 --> 00:48:16,367
+Rym: in the end Everything you're gonna deal with or care about is X I want to talk about like the travesty of x86 and then end it the travesty of x86.
+
+718
+00:48:16,387 --> 00:48:26,264
+Scott: you say yes Well, you know back in the day They made the 8086 which is the original x86 processor and then eventually got to the 386 which is the only one that the first one that really mattered.
+
+719
+00:48:26,687 --> 00:48:36,729
+Scott: and then they the 486 and the 586. and now everything we use today is 686 and then AMD 64 is have like AMD 64 stuff added on and there's MMX and SSE, right?
+
+720
+00:48:38,211 --> 00:48:41,795
+Scott: But it's basically 386 is the first x86.
+
+721
+00:48:41,815 --> 00:48:42,598
+Scott: that's real.
+
+722
+00:48:42,678 --> 00:48:45,913
+Scott: and you know, we still wouldn't it was still running a 386.
+
+723
+00:48:45,913 --> 00:48:49,490
+Scott: Well, maybe not Ubuntu but Linux will run in a 386 still like totally fine.
+
+724
+00:48:49,851 --> 00:48:52,502
+Rym: Now some people argue that why do we bother?
+
+725
+00:48:52,602 --> 00:48:53,526
+Rym: no one has a 486 anymore?
+
+726
+00:48:55,310 --> 00:49:00,725
+Scott: Well, the thing is is that you know back when the 486 came out They still kept going with.
+
+727
+00:49:01,149 --> 00:49:07,632
+Scott: you know It had some stuff the 486 didn't have and they added they tack some stuff on but they a lot of people still had 386 Software.
+
+728
+00:49:07,652 --> 00:49:11,003
+Scott: so they kept it going the 586 and then people still had stuff.
+
+729
+00:49:11,023 --> 00:49:21,030
+Scott: so they kept it going and they they just Never wanted to screw the most recent generation and then by proxy They didn't screw the previous or the previous generation.
+
+730
+00:49:21,110 --> 00:49:31,387
+Scott: And if you actually look at the way the x86 CPU architecture is designed It looks a lot like Windows where it's not some cleanly designed system.
+
+731
+00:49:31,407 --> 00:49:37,450
+Scott: from the ground up It was and then they just kept tacking shit on in order to keep pace with the modern world.
+
+732
+00:49:37,631 --> 00:49:43,010
+Rym: It's much like a post in the average forum with a whole bunch of commas and semicolons and going nowhere.
+
+733
+00:49:43,030 --> 00:49:43,812
+Scott: Yeah, it's.
+
+734
+00:49:43,913 --> 00:49:45,377
+Scott: it's basically a big mess.
+
+735
+00:49:45,417 --> 00:49:49,710
+Scott: They just kept tacking more and more stuff on to it like this hideous monster.
+
+736
+00:49:50,111 --> 00:49:53,101
+Scott: You know, it's not a very clean and well-designed architecture.
+
+737
+00:49:53,121 --> 00:49:54,606
+Scott: However, it works.
+
+738
+00:49:55,127 --> 00:50:06,130
+Scott: It still works and we've learned because Dealing with it over the years so much that we can design x86 CPUs to be pretty damn efficient.
+
+739
+00:50:06,130 --> 00:50:07,138
+Scott: I mean core to duo.
+
+740
+00:50:07,400 --> 00:50:08,429
+Scott: it's fucking fast.
+
+741
+00:50:08,951 --> 00:50:09,935
+Scott: It says it could.
+
+742
+00:50:09,995 --> 00:50:14,050
+Scott: you could use that technology to make a CPU is a lot faster if it was a different architecture.
+
+743
+00:50:15,031 --> 00:50:21,070
+Scott: But we don't really need to and we want to run all our x86 programs and no one would you know?
+
+744
+00:50:21,150 --> 00:50:23,204
+Scott: No home users gonna buy a non x86 CPU nowadays.
+
+745
+00:50:24,190 --> 00:50:29,085
+Scott: Yeah, so that's just how it is and it's probably gonna be that way for a long time.
+
+746
+00:50:29,125 --> 00:50:34,281
+Scott: and you know while it does hold us Back to some extent it doesn't really hold us back that much.
+
+747
+00:50:34,402 --> 00:50:34,823
+Scott: but it is.
+
+748
+00:50:34,843 --> 00:50:38,809
+Scott: if you ever program an assembly language That's the time when you're gonna be pissed off.
+
+749
+00:50:39,171 --> 00:50:43,567
+Scott: Luckily, most of you never will never will and thus you won't need to be pissed off.
+
+750
+00:50:44,068 --> 00:50:44,934
+Scott: lucky you I guess.
+
+751
+00:50:44,995 --> 00:50:48,373
+Scott: if more people had to write an assembler We would have moved to a better Architecture.
+
+752
+00:50:48,554 --> 00:50:51,150
+Scott: if more people had people would have gone nuts trying to write.
+
+753
+00:50:51,231 --> 00:50:57,042
+Rym: I said that if more people in the world had to write an assembler We have moved into a much different society.
+
+754
+00:50:57,082 --> 00:50:58,930
+Rym: that I probably would like greatly.
+
+755
+00:51:00,514 --> 00:51:02,047
+Scott: But yeah, I mean, you know, it's it's like.
+
+756
+00:51:02,992 --> 00:51:18,370
+Scott: basically if writing x86 assembly language is like a nightmare but writing x86 writing like ARM or PVC assembly language, it's not great, but it's a breath of fresh air compared to writing Assembly-language.
+
+757
+00:51:24,922 --> 00:51:27,512
+Rym: This has been GeekNights with Rym and Scott.
+
+758
+00:51:27,552 --> 00:51:29,680
+Rym: Special thanks to DJ pretzel for the opening music.
+
+759
+00:51:30,386 --> 00:51:41,600
+Scott: Be sure to visit our website at www.frontroadcrew.com Where you'll find show notes links our awesome forum a link to our frapper map and links to all the RSS feeds.
+
+760
+00:51:42,161 --> 00:51:47,800
+Rym: We say feeds plural because GeekNights airs four nights a week covering four different brands of geekery.
+
+761
+00:51:48,342 --> 00:51:50,511
+Rym: Mondays are science and technology Tuesdays.
+
+762
+00:51:50,551 --> 00:51:52,560
+Rym: We have video games board games and RPGs.
+
+763
+00:51:53,021 --> 00:51:58,440
+Rym: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+764
+00:51:58,901 --> 00:52:07,044
+Scott: You can send us feedback by email to GeekNights at front row crew comm or you can send audio feedback Via audio.
+
+765
+00:52:07,325 --> 00:52:10,540
+Scott: just click the link that says send me an audio on the right side of our website.
+
+766
+00:52:10,903 --> 00:52:16,050
+Rym: If you like what you hear you can catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+767
+00:52:16,270 --> 00:52:19,380
+Rym: for the complete archives visit the website which has everything.
+
+768
+00:52:19,942 --> 00:52:25,965
+Scott: GeekNights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+769
+00:52:26,467 --> 00:52:28,274
+Scott: this means you can do whatever you want with it.
+
+770
+00:52:28,615 --> 00:52:32,519
+Scott: as long as you give us credit Don't make money and share it in kind.
+
+771
+00:52:33,322 --> 00:52:38,736
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+772
+00:52:39,037 --> 00:52:40,360
+Scott: It's actually recorded at night.
+

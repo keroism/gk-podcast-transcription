@@ -1,0 +1,3052 @@
+1
+00:00:08,540 --> 00:00:11,411
+Rym: It's Tuesday, February 11th, 2020.
+
+2
+00:00:11,411 --> 00:00:11,792
+Rym: I'm Rym.
+
+3
+00:00:11,993 --> 00:00:14,040
+Rym: I'm Scott and this is GeekNights tonight.
+
+4
+00:00:14,563 --> 00:00:16,660
+Rym: Rumble nation the board game.
+
+5
+00:00:18,481 --> 00:00:19,191
+Scott: Let's do this.
+
+6
+00:00:22,467 --> 00:00:26,774
+Rym: You might heard me many times on GeekNights I. well one day there's two things that Rym always says.
+
+7
+00:00:26,975 --> 00:00:30,870
+Rym: one of them is Something about like skeletons and the network time protocol.
+
+8
+00:00:30,930 --> 00:00:32,034
+Rym: Maybe the fixed protocol.
+
+9
+00:00:32,676 --> 00:00:35,529
+Rym: and the other thing is Don't run marathons.
+
+10
+00:00:35,549 --> 00:00:38,887
+Scott: They're bad for you, but Time gov got updated.
+
+11
+00:00:38,968 --> 00:00:39,731
+Rym: Yeah time got that.
+
+12
+00:00:39,751 --> 00:00:40,835
+Rym: that's a Monday news though.
+
+13
+00:00:40,855 --> 00:00:41,498
+Rym: I can't spoil.
+
+14
+00:00:41,678 --> 00:00:56,010
+Rym: Okay But time gov did get updated and I will just point out a lot of you pointed this out to me I Think I still have a reputation despite having not touched an NTP demon in like eight.
+
+15
+00:00:57,020 --> 00:00:59,329
+Scott: Yeah, yeah, but if you had to I haven't had to.
+
+16
+00:00:59,349 --> 00:00:59,992
+Rym: I don't care anymore.
+
+17
+00:01:00,012 --> 00:01:05,175
+Scott: I'm if you had to if I had to Yeah, there would be anyone at your company more qualified.
+
+18
+00:01:05,194 --> 00:01:18,656
+Rym: Oh I Hope that there's someone in my company who is using something more precise like PTP For the kinds of synchronization that need to happen, but I am beyond the level.
+
+19
+00:01:18,676 --> 00:01:19,900
+Rym: like I don't log into servers.
+
+20
+00:01:20,182 --> 00:01:21,491
+Rym: I don't even know the whose names.
+
+21
+00:01:21,612 --> 00:01:29,460
+Rym: I'm just saying yeah but So I ended up putting myself in the lottery for the New York Marathon because I figure I'll run one.
+
+22
+00:01:30,244 --> 00:01:31,952
+Rym: I'll do run exactly one marathon.
+
+23
+00:01:31,973 --> 00:01:33,340
+Rym: I've never run a marathon before.
+
+24
+00:01:33,946 --> 00:01:42,452
+Rym: I'll run one get it Okay time and then I can say I've done it and I'll go back to running more reasonable distances like 13 to 16 miles Which is what I do on a regular basis.
+
+25
+00:01:42,472 --> 00:01:45,066
+Rym: You don't survive that one though I feel like I can survive the one.
+
+26
+00:01:45,106 --> 00:01:46,090
+Scott: but what I'll do?
+
+27
+00:01:46,130 --> 00:01:51,647
+Rym: this extremely dangerous thing one to up Yeah, but it's more like like skiing like.
+
+28
+00:01:51,667 --> 00:01:55,960
+Rym: yeah, I've done like double black scary Glade, but I've also seen ski trails.
+
+29
+00:01:56,161 --> 00:01:58,451
+Scott: You should just do all those people who do marathons.
+
+30
+00:01:58,491 --> 00:02:00,600
+Scott: They cheat cutting corners and taking some ways.
+
+31
+00:02:01,022 --> 00:02:02,789
+Scott: Yeah, cheating cross the line first.
+
+32
+00:02:03,291 --> 00:02:04,235
+Rym: Oh, I could not happens.
+
+33
+00:02:04,356 --> 00:02:05,400
+Rym: I can wear the cheating shoes.
+
+34
+00:02:05,562 --> 00:02:06,229
+Scott: See what happens if.
+
+35
+00:02:06,249 --> 00:02:07,180
+Scott: well, I mean you could do that, too.
+
+36
+00:02:07,240 --> 00:02:11,000
+Scott: But just see what happens if you cross the line first ahead of like all the actual professionals.
+
+37
+00:02:11,321 --> 00:02:22,336
+Rym: The problem is the professionals like even if I run at my sprinting pace and on the subway Yeah, but I've got a guide in some hide in some building near the finish line.
+
+38
+00:02:22,497 --> 00:02:23,480
+Scott: I know where the finish line is.
+
+39
+00:02:23,831 --> 00:02:25,566
+Scott: Yeah I can like bike.
+
+40
+00:02:25,686 --> 00:02:30,280
+Scott: you can give you my bike and that I can use the subway and catch up and get the bike And then you can go to the finish line.
+
+41
+00:02:30,280 --> 00:02:36,474
+Rym: I think a better way to go is we need someone who looks like me to be hanging out near the finish line and Slip in at the last minute.
+
+42
+00:02:36,555 --> 00:02:37,020
+Rym: I disappear.
+
+43
+00:02:37,904 --> 00:02:39,189
+Scott: So the way the marathon works is.
+
+44
+00:02:39,229 --> 00:02:39,932
+Scott: I've biked along.
+
+45
+00:02:39,952 --> 00:02:41,880
+Scott: the route is they have these digital checkpoints?
+
+46
+00:02:42,041 --> 00:02:42,944
+Scott: Yeah, so it's like they're.
+
+47
+00:02:43,185 --> 00:02:47,300
+Scott: you have to get to each point and they'll know how much time was between each point.
+
+48
+00:02:47,643 --> 00:02:49,660
+Rym: So if you skip one, you're disqualified, right?
+
+49
+00:02:49,740 --> 00:02:52,892
+Rym: You have to go to all of them or they'll use video evidence and it would be pretty.
+
+50
+00:02:52,993 --> 00:03:03,487
+Scott: it would be pretty hard to You know like really take a major detour because you would either take too long because you had to make the checkpoint and you can't if you Go to two checkpoints real fast.
+
+51
+00:03:03,788 --> 00:03:05,094
+Scott: That's not gonna work, right?
+
+52
+00:03:05,114 --> 00:03:06,460
+Scott: You have to have a reasonable Rym.
+
+53
+00:03:06,560 --> 00:03:09,555
+Rym: It seems here that you ran 98 miles an hour on.
+
+54
+00:03:09,595 --> 00:03:10,560
+Rym: this saw exactly.
+
+55
+00:03:10,761 --> 00:03:13,711
+Scott: You have to have a reasonable time between the between the spots.
+
+56
+00:03:13,951 --> 00:03:14,172
+Scott: Yeah.
+
+57
+00:03:14,272 --> 00:03:27,740
+Scott: So what I think you got to do right is you need to have Somebody who was like quintuplets or some shit And you can do a relay right and you throw the thing to each other.
+
+58
+00:03:27,920 --> 00:03:30,469
+Rym: Yeah, well you relay it and you just quietly slip out of the race.
+
+59
+00:03:30,529 --> 00:03:35,179
+Rym: cuz right I can run a real fast for like five Miles, I just can't run real fast.
+
+60
+00:03:35,240 --> 00:03:35,782
+Scott: So what either?
+
+61
+00:03:35,883 --> 00:03:37,871
+Scott: one person runs five miles six miles.
+
+62
+00:03:37,891 --> 00:03:47,222
+Scott: someone else takes the subway gets in front of them Right takes a rest waits for them to show up you pass off the thing the next person starts going fresh Right.
+
+63
+00:03:47,383 --> 00:03:51,120
+Scott: The next person is taking a break taking a riding on the subway, you know having a drink.
+
+64
+00:03:51,765 --> 00:03:57,980
+Scott: You get out in front of the first person Right you wait for that and if you have two people that's a little hard still cuz you don't run a half marathon.
+
+65
+00:03:58,682 --> 00:04:02,032
+Scott: But if you start getting three four people, right now, we're talking.
+
+66
+00:04:02,132 --> 00:04:07,036
+Rym: thing is I can easily like with no effort I can run a half marathon in about an hour 45, right?
+
+67
+00:04:07,761 --> 00:04:13,366
+Scott: But I'm saying we meaning we need someone to do it at world record pace yeah, which is why we need four or five people.
+
+68
+00:04:13,487 --> 00:04:20,399
+Rym: or like a skilled adult like this time people shoot for is like four ish hours like A little over four hours is pretty damn good for anyone.
+
+69
+00:04:21,921 --> 00:04:26,020
+Rym: So I'm shooting for like a 445 because I've never run a marathon before so we'll see how that goes.
+
+70
+00:04:26,161 --> 00:04:29,904
+Scott: I can bike it in less than four hours easily Pretty quick.
+
+71
+00:04:30,004 --> 00:04:39,618
+Rym: There's like one so one or two, but so to put this in perspective I Run a half marathon, which is literally 13 miles half of a real marathon in an hour and 45 minutes.
+
+72
+00:04:40,482 --> 00:04:48,417
+Rym: The course record for the New York Marathon for a man This guy Jeffrey Mattai is two hours and five minutes.
+
+73
+00:04:48,779 --> 00:04:52,791
+Rym: So They're running almost twice as fast as me.
+
+74
+00:04:52,811 --> 00:04:54,678
+Scott: That's why I bike faster than that guy ran.
+
+75
+00:04:54,698 --> 00:04:56,929
+Scott: Yeah That's good.
+
+76
+00:04:57,172 --> 00:05:02,760
+Rym: Yeah, so see So many people sign up there's a lottery or you have to like run another races and qualify.
+
+77
+00:05:02,780 --> 00:05:03,800
+Scott: I don't know why you need a lottery.
+
+78
+00:05:03,920 --> 00:05:07,374
+Scott: It's a they close the road and that you look on the pictures and it's just a mob.
+
+79
+00:05:07,735 --> 00:05:12,269
+Rym: so it's like that mob Subset of the number of people who want to run in it.
+
+80
+00:05:12,711 --> 00:05:13,173
+Scott: Good lord.
+
+81
+00:05:13,233 --> 00:05:13,876
+Scott: Let everyone do it.
+
+82
+00:05:14,037 --> 00:05:14,760
+Rym: There's not enough room.
+
+83
+00:05:14,820 --> 00:05:16,908
+Rym: There's not enough logistic support doing waves.
+
+84
+00:05:16,968 --> 00:05:18,695
+Rym: No, dude, they already do it in waves.
+
+85
+00:05:18,715 --> 00:05:19,900
+Rym: They do it in a ton of waves.
+
+86
+00:05:19,980 --> 00:05:20,645
+Scott: Just keep waving.
+
+87
+00:05:20,867 --> 00:05:22,036
+Rym: Nah, they just shut it down.
+
+88
+00:05:22,056 --> 00:05:22,499
+Scott: do it all day.
+
+89
+00:05:23,162 --> 00:05:27,680
+Rym: They also cut you off if you're going too slow and there is a way to get in without doing the lottery.
+
+90
+00:05:28,302 --> 00:05:37,964
+Rym: You have to run a half marathon on a real race under a certain time and I thought well I have a really good half marathon time Professional pace.
+
+91
+00:05:38,085 --> 00:05:43,987
+Rym: I'm not that far off, but I would have to shave like 20 ish minutes off of my halftime.
+
+92
+00:05:44,107 --> 00:05:45,251
+Scott: You have to be professional pace.
+
+93
+00:05:45,271 --> 00:05:49,744
+Rym: I'm currently I'm currently reducing about Couple minutes a year.
+
+94
+00:05:49,784 --> 00:05:51,430
+Rym: is how much I'm making it that time faster.
+
+95
+00:05:52,152 --> 00:05:53,798
+Scott: Are you decreasing from being old up?
+
+96
+00:05:54,600 --> 00:06:00,469
+Rym: So funnily while my short distance times are getting worse as I get old My long distance times are getting shorter and shorter and shorter.
+
+97
+00:06:00,770 --> 00:06:02,095
+Rym: I'm getting better at longer distance.
+
+98
+00:06:02,136 --> 00:06:02,557
+Scott: Eventually.
+
+99
+00:06:02,597 --> 00:06:03,280
+Scott: Everything will get worse.
+
+100
+00:06:03,423 --> 00:06:05,769
+Rym: Oh, yeah, eventually Eventually, I'm just gonna be a skeleton.
+
+101
+00:06:06,051 --> 00:06:07,900
+Rym: the race will start and my skeleton just falls over.
+
+102
+00:06:07,920 --> 00:06:09,252
+Scott: You always see old people doing the race though.
+
+103
+00:06:09,272 --> 00:06:10,039
+Scott: I don't know what's wrong with them.
+
+104
+00:06:11,162 --> 00:06:17,296
+Rym: My goal is to be like that 98 year old skeleton looking dude Running in the middle of the winter at like 5 a.m.
+
+105
+00:06:18,140 --> 00:06:23,240
+Rym: And Central Park you you do that you can be the usher at a Mets game and I'll get a skeleton man in the park.
+
+106
+00:06:23,441 --> 00:06:23,805
+Scott: That's right.
+
+107
+00:06:24,653 --> 00:06:27,445
+Scott: So in the news Speaking of skeleton men.
+
+108
+00:06:28,147 --> 00:06:29,671
+Rym: This is kind of great.
+
+109
+00:06:29,731 --> 00:06:31,155
+Rym: So if you aren't.
+
+110
+00:06:31,195 --> 00:06:47,380
+Rym: if you don't know Red Dead Redemption Grand Theft Auto with horses in the Wild West has an online mode and people play it like it's a thing but Hackers keep fucking with it because it's not that secure because doesn't matter that much and apparently the hack that's been happy.
+
+111
+00:06:47,380 --> 00:06:49,770
+Scott: It's not competitive now as far as I'm aware.
+
+112
+00:06:49,790 --> 00:06:52,000
+Rym: It's just go hang out in this world and be a cowboy.
+
+113
+00:06:53,001 --> 00:06:54,667
+Rym: Do stuff with like with horses.
+
+114
+00:06:54,687 --> 00:07:09,920
+Rym: Yeah, so people have just been dropping these Really aggressive terrifying two-headed skeletons into the game and if they see a PC They run toward them as fast as possible and proceed to aggressively beat them to get death making scary noises.
+
+115
+00:07:10,241 --> 00:07:12,694
+Scott: Couldn't you just if you're a strong character though couldn't just kill it.
+
+116
+00:07:12,734 --> 00:07:13,860
+Rym: No, they're invincible to bullets.
+
+117
+00:07:13,920 --> 00:07:18,880
+Rym: They're basically like almost impossible to kill and they will fuck you up and they're scaring you hit it with something.
+
+118
+00:07:19,235 --> 00:07:19,360
+Rym: Yeah.
+
+119
+00:07:19,440 --> 00:07:29,681
+Rym: So the advice on this Kotaku article is like if one of these is coming after you The best thing to do is to hogtie it and if you succeed at that just drop it in a lake or something and leave It there.
+
+120
+00:07:30,103 --> 00:07:30,464
+Scott: Okay.
+
+121
+00:07:31,026 --> 00:07:32,852
+Rym: Otherwise, it'll follow you to the ends of the earth.
+
+122
+00:07:32,872 --> 00:07:35,080
+Rym: All right, this is my kind of hack.
+
+123
+00:07:35,624 --> 00:07:42,600
+Rym: I want to see someone hack Oh Weirdly aggressive skeletons into other multiplayer games where they don't belong.
+
+124
+00:07:42,600 --> 00:07:46,273
+Scott: Well, this reminds me of an idea I had a long time ago, which is to make an MMO.
+
+125
+00:07:46,293 --> 00:07:49,462
+Scott: That is Terminator Universe.
+
+126
+00:07:49,864 --> 00:07:56,940
+Scott: Oh, you got a hack but in the horrible future where it's like apocalyptic and you're you know They're hiding in the oh you're pay a dollar to get a life, right?
+
+127
+00:07:57,400 --> 00:08:03,140
+Scott: Yeah, you die you die and you're you're all working together co-op to try to beat Skynet.
+
+128
+00:08:03,521 --> 00:08:08,900
+Scott: But when you go out, it's like alright, I'm gonna leave this cave and try to go and see what's out there.
+
+129
+00:08:08,920 --> 00:08:10,687
+Scott: It'll be sort of fallout II right?
+
+130
+00:08:10,767 --> 00:08:18,320
+Scott: I imagine right and you go out there and it's like yeah I'm a fucking terminator sees you you're in deep fucking shit the same kind of deep shit.
+
+131
+00:08:18,340 --> 00:08:21,359
+Scott: You are probably even worse deep shit than if the skeleton sees you.
+
+132
+00:08:22,461 --> 00:08:26,360
+Scott: That's and that would be the forced co-op would be like, yeah, you would have to work together.
+
+133
+00:08:26,460 --> 00:08:35,240
+Scott: Otherwise if you see literally because remember there's that very brief scene that I'm obsessed with from Terminator 2 Where it shows like the thousand killers or whatever?
+
+134
+00:08:35,559 --> 00:08:41,822
+Scott: Yeah, right with a giant triangle treads and the big like doom style gatling gun arms or whatever It's like.
+
+135
+00:08:41,842 --> 00:08:46,940
+Scott: yeah, I want to play a game where you walk around and one of those sees you and then you're tiny Gibbs.
+
+136
+00:08:50,302 --> 00:08:54,262
+Rym: It's basically Dark Souls but with guns and co-op Mm-hmm.
+
+137
+00:08:55,004 --> 00:08:56,087
+Rym: So you got any news?
+
+138
+00:08:56,769 --> 00:08:58,493
+Scott: I got no news going on.
+
+139
+00:08:58,513 --> 00:08:58,914
+Scott: But I got.
+
+140
+00:08:58,934 --> 00:09:09,223
+Scott: it is two geek bites of two Extremely similar games with different aesthetics and one of them you can get on your mobile device and one of them you can get on Your PC.
+
+141
+00:09:09,907 --> 00:09:12,320
+Scott: and one of them had you know, the aesthetics are both good.
+
+142
+00:09:13,103 --> 00:09:15,271
+Scott: One of them is programmed much better though than the other.
+
+143
+00:09:15,512 --> 00:09:17,560
+Rym: Oh, this one bit one looks real good.
+
+144
+00:09:17,722 --> 00:09:18,820
+Rym: Yeah looks up my alley.
+
+145
+00:09:18,900 --> 00:09:20,024
+Scott: So there's one game called it.
+
+146
+00:09:20,044 --> 00:09:35,519
+Scott: they're both RTS games and one game is called death crown and it recently had a free DLC Adding a human campaign because the default campaign is you're the skeleton evil people or evil looking even though the king of humans looks like an evil version of.
+
+147
+00:09:38,500 --> 00:09:41,759
+Scott: Yes, it's like CDI Zelda crossed with like Denethor.
+
+148
+00:09:43,563 --> 00:09:46,270
+Scott: And then the other one is called neon something.
+
+149
+00:09:46,691 --> 00:09:47,273
+Scott: What's it called?
+
+150
+00:09:47,413 --> 00:09:49,399
+Scott: It is called neon amo mio.
+
+151
+00:09:49,861 --> 00:09:57,436
+Scott: No, so the way these RTS games work is You know the problem with a lot of RTS games that I have is I'm slow old and I don't.
+
+152
+00:09:57,517 --> 00:09:58,420
+Scott: I can't click too fast.
+
+153
+00:09:58,861 --> 00:10:02,953
+Scott: So I always want to play something like Starcraft where clicking fast doesn't make you win.
+
+154
+00:10:03,394 --> 00:10:10,763
+Scott: So the way both of these games solve that is Effectively in order to do a thing to build more onto the board You have to.
+
+155
+00:10:10,783 --> 00:10:11,306
+Scott: there's like little.
+
+156
+00:10:11,447 --> 00:10:17,220
+Scott: there's like a little countdown timers sort of like, you know Your cooldowns on your abilities in a MOBA, right?
+
+157
+00:10:17,980 --> 00:10:19,225
+Scott: So it's sort of like in neon.
+
+158
+00:10:19,266 --> 00:10:20,169
+Scott: amo you're getting.
+
+159
+00:10:20,230 --> 00:10:22,720
+Scott: you have a timer that's spinning out Tetris pieces.
+
+160
+00:10:23,162 --> 00:10:36,869
+Scott: You have a timer that's spinning out lightning bolts and every time you get a lightning bolt you can put a Tetris piece on the board as long as at least one square of it is adjacent to your existing network and You have swords and every time a sword fills up You can put a piece.
+
+161
+00:10:37,191 --> 00:10:47,600
+Scott: you need a lightning bolt to put the piece anyway but with a lightning bolt and a sword you can put a piece that is Literally on top of an enemy piece and it would destroy anything that's on top of all right.
+
+162
+00:10:47,800 --> 00:10:59,940
+Scott: So we have these three timers building up right and you use them and put stuff on the board conquering space If any piece that you place touches the enemy base, which is just a permanent thing in the corner.
+
+163
+00:11:00,185 --> 00:11:07,019
+Scott: You immediately win all right and some of the maps have stuff on the board and if you're adjacent to it you get it and it gets them.
+
+164
+00:11:07,039 --> 00:11:07,942
+Scott: you gives You an ability.
+
+165
+00:11:07,962 --> 00:11:11,092
+Scott: and also there are three buildings you can build.
+
+166
+00:11:11,132 --> 00:11:16,090
+Scott: you can build those buildings infinitely and freely But you can only build them where they fit.
+
+167
+00:11:16,151 --> 00:11:18,280
+Scott: so it's like one of them is two as a two by four.
+
+168
+00:11:18,702 --> 00:11:28,760
+Scott: So that means you have to arraign, you know fill in an entire two by four space Your tetrominoes in order to then put that building on top of your own stuff, right?
+
+169
+00:11:28,840 --> 00:11:29,302
+Scott: And it could ours.
+
+170
+00:11:29,563 --> 00:11:33,320
+Scott: if someone comes in with a sword and takes away even one square the building's gone.
+
+171
+00:11:33,443 --> 00:11:34,017
+Rym: It's pretty good.
+
+172
+00:11:34,220 --> 00:11:35,224
+Scott: So that's neon amo.
+
+173
+00:11:35,285 --> 00:11:37,534
+Scott: and the thing about neon amo that I like is you play it you.
+
+174
+00:11:37,835 --> 00:11:41,256
+Scott: I recommend playing on an iPad against a human against the computers.
+
+175
+00:11:41,276 --> 00:11:51,976
+Scott: kind of meh right against the human because you can put the iPad down on the table and sit on one side of it each and Both play together in real time and I think that's the ideal here.
+
+176
+00:11:52,017 --> 00:11:55,366
+Scott: So death crown Is very similar right is?
+
+177
+00:11:55,386 --> 00:11:56,229
+Scott: you have three buildings.
+
+178
+00:11:56,249 --> 00:11:59,520
+Scott: you can build the tower building which is sort of like a defensive thing.
+
+179
+00:11:59,580 --> 00:12:03,196
+Scott: That also gets you some territory and it shoots it incoming bad guys.
+
+180
+00:12:03,216 --> 00:12:08,299
+Scott: a castle Which you put a castle and then you click and drag from the castle to draw a path.
+
+181
+00:12:08,917 --> 00:12:21,440
+Scott: well it makes the shortest path between the place the hex you draw to and Any and basically mobs will March from the castle at a regular rate Attacking all the enemies in the path right until they reach their destination.
+
+182
+00:12:22,363 --> 00:12:29,860
+Scott: And then you can build the farm and the farm Increases your currency regeneration rate and all three of the buildings cost currency to place.
+
+183
+00:12:30,502 --> 00:12:32,400
+Scott: Alright, so it's this very very similar.
+
+184
+00:12:32,460 --> 00:12:36,696
+Scott: You have a hex map and you're waiting for the currency to build up and you put a building.
+
+185
+00:12:36,716 --> 00:12:38,002
+Scott: you wait for the currency to Build up.
+
+186
+00:12:38,022 --> 00:12:40,100
+Scott: you put a building so being faster doesn't help you.
+
+187
+00:12:40,160 --> 00:12:44,039
+Scott: It's just choosing the order of what to put and in which hex to put it.
+
+188
+00:12:44,180 --> 00:12:48,219
+Scott: Mmm, and for castles you have to choose where to draw the line and you can.
+
+189
+00:12:48,239 --> 00:12:51,112
+Scott: actually You can move the line around whenever you want.
+
+190
+00:12:51,132 --> 00:12:54,628
+Rym: pretty I like how I see both mouse Cursors on the map at the same time.
+
+191
+00:12:54,648 --> 00:13:04,680
+Scott: Yes, because death crown in addition to being this RTS You can play against the computer has I don't know if it has versus mode, but they heavily push their co-op mode.
+
+192
+00:13:05,861 --> 00:13:12,057
+Scott: You would you know you and another person would both be on the same side, you know working to defeat.
+
+193
+00:13:12,198 --> 00:13:15,660
+Scott: I guess the Environment PC controlled enemy, right?
+
+194
+00:13:15,780 --> 00:13:22,520
+Scott: Maybe you both have your own castle or you both have your separate currency piles and the aesthetic of death crown is excellent.
+
+195
+00:13:22,801 --> 00:13:24,711
+Rym: I'm into this for the aesthetic alone.
+
+196
+00:13:24,992 --> 00:13:25,756
+Scott: Yes, of course you are.
+
+197
+00:13:25,776 --> 00:13:26,440
+Scott: look at that skeleton.
+
+198
+00:13:27,463 --> 00:13:29,640
+Scott: These games aren't perfect by any means.
+
+199
+00:13:30,581 --> 00:13:34,440
+Scott: They both have a neon city crashed a lot on yana mode.
+
+200
+00:13:35,905 --> 00:13:37,731
+Rym: I assume it's Apple device only right now.
+
+201
+00:13:37,751 --> 00:13:38,172
+Scott: I don't know.
+
+202
+00:13:38,212 --> 00:13:39,135
+Scott: it cost three dollars.
+
+203
+00:13:39,396 --> 00:13:40,600
+Rym: Yep says it's only in the App Store.
+
+204
+00:13:40,761 --> 00:13:44,713
+Scott: Okay, and death crown cost more than that, but it's on PC.
+
+205
+00:13:44,733 --> 00:13:46,198
+Scott: Yeah, I got an itch I/o.
+
+206
+00:13:46,218 --> 00:13:46,880
+Scott: you can get on Steam.
+
+207
+00:13:48,528 --> 00:13:57,880
+Scott: but yeah the The problem with death crown is basically is that it gets you know, super annoyingly hard and against the computer by yourself.
+
+208
+00:13:59,023 --> 00:14:07,120
+Scott: You know the computer can still go super super fast Nah semi cheat because if it couldn't cheat or didn't have any advantages you would just win.
+
+209
+00:14:07,642 --> 00:14:09,491
+Scott: So it's like you beat all the missions.
+
+210
+00:14:09,532 --> 00:14:11,220
+Scott: I play against it where it's an even footing.
+
+211
+00:14:11,360 --> 00:14:13,408
+Scott: I just destroyed the computer because I'm smart.
+
+212
+00:14:13,930 --> 00:14:16,880
+Scott: but when I the harder missions you get later in the game.
+
+213
+00:14:16,980 --> 00:14:22,755
+Scott: It's like okay now the computer has this crazy building and halfway through the battle.
+
+214
+00:14:22,815 --> 00:14:26,763
+Scott: It just like obliterates your territory and Makes a bunch of hexes.
+
+215
+00:14:26,783 --> 00:14:29,070
+Scott: You can't build on and it's like alright.
+
+216
+00:14:29,110 --> 00:14:30,895
+Scott: Well it cheats basically.
+
+217
+00:14:31,015 --> 00:14:31,838
+Scott: so fuck this.
+
+218
+00:14:31,878 --> 00:14:32,620
+Scott: why I'm even bothering?
+
+219
+00:14:33,183 --> 00:14:34,449
+Scott: It's like I played the fun part.
+
+220
+00:14:34,489 --> 00:14:36,560
+Scott: I'm good, but it's cheap and it's quick.
+
+221
+00:14:36,982 --> 00:14:37,403
+Scott: I played.
+
+222
+00:14:37,484 --> 00:14:41,220
+Scott: I basically played all there was to play in a very brief period of time.
+
+223
+00:14:41,541 --> 00:14:45,498
+Scott: Not bad, and I didn't feel disappointed even though I got to cheaty parts.
+
+224
+00:14:45,678 --> 00:14:46,040
+Rym: I'm into it.
+
+225
+00:14:46,120 --> 00:14:52,540
+Scott: I will poke at this game actually beat the cheaty parts in the first campaign But in the new DLC campaign, I did not beat the cheaty part.
+
+226
+00:14:52,540 --> 00:14:57,280
+Rym: We'll see if it sucks me in like Advance Wars or war groove did where everything it's not like that.
+
+227
+00:14:57,440 --> 00:14:58,892
+Scott: Yes, it's much less.
+
+228
+00:14:58,912 --> 00:14:59,980
+Scott: It's much simpler, right?
+
+229
+00:15:00,080 --> 00:15:02,571
+Scott: It's like a you look you can one play one game.
+
+230
+00:15:02,611 --> 00:15:05,704
+Scott: All you do is put two trauma knows on a board And the other game.
+
+231
+00:15:06,105 --> 00:15:10,860
+Scott: all you do is choose one of three buildings to build whenever you have enough currency to do so.
+
+232
+00:15:11,201 --> 00:15:11,863
+Scott: That's all you do.
+
+233
+00:15:11,923 --> 00:15:13,166
+Scott: you do almost nothing else.
+
+234
+00:15:13,647 --> 00:15:25,100
+Scott: It's like pared down to this absolute minimum thing while still being Sort of really unique and interesting because they're pretty much aren't any games that I've seen like these except for these two games.
+
+235
+00:15:25,381 --> 00:15:27,750
+Rym: Well that is in general like the games that get us going.
+
+236
+00:15:27,770 --> 00:15:39,180
+Rym: the most are the ones that are like either a perfect Expression of their craft like hyper polished or the ones that are distilled down to the core essence of something unique Mm-hmm, like that's what gets us going elegance and simplicity.
+
+237
+00:15:40,502 --> 00:15:43,699
+Rym: So yeah, I will try death crown and it looks like I can't play the other one.
+
+238
+00:15:43,961 --> 00:15:45,207
+Scott: We can play it after the show.
+
+239
+00:15:45,247 --> 00:15:45,950
+Scott: It'll take five seconds.
+
+240
+00:15:45,970 --> 00:15:46,191
+Scott: Yeah.
+
+241
+00:15:46,754 --> 00:15:48,980
+Rym: All right in some other news I saw an interesting headline.
+
+242
+00:15:49,020 --> 00:15:54,536
+Rym: So I want to see what the deal was and the headline was Why the Paris Overwatch League team is based out of New Jersey this season.
+
+243
+00:15:54,596 --> 00:15:55,520
+Scott: Is there a New Jersey team?
+
+244
+00:15:56,421 --> 00:15:58,815
+Scott: So the New York team I know doesn't play in New Jersey.
+
+245
+00:15:58,855 --> 00:15:59,560
+Scott: they play in New York.
+
+246
+00:15:59,761 --> 00:16:06,070
+Rym: Yeah, like it like all good people do but Paris eternal Seems to be the only team they're still gonna play there.
+
+247
+00:16:06,091 --> 00:16:07,115
+Scott: What about the London team?
+
+248
+00:16:07,698 --> 00:16:09,557
+Rym: Uh who cares about the London team?
+
+249
+00:16:09,577 --> 00:16:12,520
+Rym: because We'll get to that in a second Spitfire.
+
+250
+00:16:13,002 --> 00:16:18,845
+Rym: So basically Paris eternal is going to play their home game still in Paris Like like they would like.
+
+251
+00:16:18,865 --> 00:16:25,928
+Scott: they want their fan base in Paris like so but if they New York has to play at Paris New York and Paris are gonna get on a flight to Paris.
+
+252
+00:16:26,188 --> 00:16:26,550
+Scott: think so.
+
+253
+00:16:26,570 --> 00:16:28,837
+Scott: Okay, but that's why it seems wasteful.
+
+254
+00:16:28,857 --> 00:16:31,179
+Rym: I mean Look over there was well.
+
+255
+00:16:31,340 --> 00:16:38,780
+Rym: So the reason they're doing this is actually very interesting and it's a problem that is kind of unique to eSports in their nascent form.
+
+256
+00:16:39,362 --> 00:16:45,040
+Rym: Basically the Overwatch League team in Paris wants to scrimmage and practice with the other teams.
+
+257
+00:16:47,081 --> 00:16:53,520
+Rym: Almost every Overwatch League team is in North America except for like the handful of them that are in mainland China
+
+258
+00:16:53,987 --> 00:16:54,758
+Scott: mm-hmm, so
+
+259
+00:16:55,642 --> 00:17:06,124
+Rym: Between and like other parts of Asia There's basically the Asia set and the North American set and then there's only two European teams London Spitfire and Paris eternal.
+
+260
+00:17:06,405 --> 00:17:07,852
+Rym: Paris eternal is a competitor.
+
+261
+00:17:07,992 --> 00:17:13,200
+Rym: They're like number five in the league right now Like they're doing fine London Spitfire dead last in the league.
+
+262
+00:17:13,461 --> 00:17:18,012
+Rym: Okay, so the Paris team just wants to be able to practice with other teams.
+
+263
+00:17:18,313 --> 00:17:24,280
+Rym: This is interesting because think about it Rangers don't just practice with like the Red Wings, right?
+
+264
+00:17:24,460 --> 00:17:33,720
+Scott: Oh, there's preseason games where they would semi practice, but yeah, right They're not really not even putting out their best players right when you're a professional sports team, right?
+
+265
+00:17:34,081 --> 00:17:34,987
+Scott: That's you know professional.
+
+266
+00:17:35,350 --> 00:17:37,723
+Scott: you practice against Yourself.
+
+267
+00:17:38,004 --> 00:17:40,093
+Scott: Yeah, right your own team, right?
+
+268
+00:17:40,113 --> 00:17:49,711
+Scott: So if you're hockey team, it's like, okay We'll just put our first line out there with one goalie against their second line with the backup goalie And two defenseman on each side, there you go top four defenseman.
+
+269
+00:17:49,972 --> 00:17:52,480
+Scott: we can practice against ourselves at ice hockey.
+
+270
+00:17:52,560 --> 00:17:55,950
+Scott: We don't need you know to practice against some other team, right?
+
+271
+00:17:56,451 --> 00:18:02,085
+Scott: And if you are let's say I don't know Professional boxer, right?
+
+272
+00:18:02,125 --> 00:18:04,631
+Scott: You're not practicing against the person you're going to fight.
+
+273
+00:18:04,952 --> 00:18:08,020
+Scott: you hire people right to like spar with you, right?
+
+274
+00:18:08,140 --> 00:18:08,843
+Scott: That's their job.
+
+275
+00:18:09,164 --> 00:18:13,300
+Scott: If you're a professional football team, right you have a practice squad.
+
+276
+00:18:13,380 --> 00:18:14,827
+Scott: It's literally a really good job.
+
+277
+00:18:14,947 --> 00:18:21,539
+Scott: Actually if you're on the NFL practice squad you make Surprising amount of money even though no one knows who the hell you are.
+
+278
+00:18:21,822 --> 00:18:26,638
+Scott: There's a chance you could end up on the real team If enough people get hurt or there's no one better than you to go get.
+
+279
+00:18:26,819 --> 00:18:28,407
+Scott: yeah And that's a real job.
+
+280
+00:18:28,468 --> 00:18:38,229
+Scott: like you're on the practice squad and during football season your job is to help the team practice and play against the real players and then You just don't go and you're not in the real games.
+
+281
+00:18:38,249 --> 00:18:39,252
+Scott: You're not on the team.
+
+282
+00:18:39,633 --> 00:18:41,640
+Scott: You just have a sort of help, right?
+
+283
+00:18:41,742 --> 00:18:42,046
+Scott: So why?
+
+284
+00:18:43,881 --> 00:18:44,323
+Scott: The pain?
+
+285
+00:18:44,383 --> 00:18:51,120
+Scott: I have a lot of ideas as to why the pink thing is understandable But why are these teams practicing against each other?
+
+286
+00:18:51,300 --> 00:18:52,907
+Scott: I think it's probably not have.
+
+287
+00:18:53,268 --> 00:19:00,352
+Scott: just if you're the Paris team go and find The second best team of overwatch people in Paris and practice against them.
+
+288
+00:19:00,452 --> 00:19:03,580
+Scott: think the problem is the lizard effect runs the league.
+
+289
+00:19:03,620 --> 00:19:07,486
+Scott: They should be able to help you out by looking at Blizzard, you know players.
+
+290
+00:19:07,506 --> 00:19:08,049
+Scott: this
+
+291
+00:19:08,069 --> 00:19:11,286
+Rym: problem happens in almost all eSports though They should
+
+292
+00:19:11,366 --> 00:19:16,952
+Scott: be able to look at the blizzard, you know users and say who's the best five players in France that aren't on this team
+
+293
+00:19:17,112 --> 00:19:22,153
+Rym: now because most of those best players aren't actually Members of like specific teams you could practice against.
+
+294
+00:19:22,374 --> 00:19:22,876
+Scott: you don't have to.
+
+295
+00:19:22,896 --> 00:19:23,620
+Scott: they could just be people.
+
+296
+00:19:23,660 --> 00:19:24,304
+Scott: No, fine.
+
+297
+00:19:24,345 --> 00:19:25,492
+Rym: That's worthless practice.
+
+298
+00:19:25,512 --> 00:19:30,075
+Rym: for this at this level of play You need to practice against a team that's acting as a complete unit.
+
+299
+00:19:30,377 --> 00:19:34,013
+Scott: That's the only I'm saying The five best people they can or how.
+
+300
+00:19:34,074 --> 00:19:34,878
+Scott: it's five people, right?
+
+301
+00:19:35,661 --> 00:19:46,515
+Scott: Find the best people you can find who live in France who are playing overwatch by looking at the overwatch competitive rankings and then Hire them and make them work as a team as your practice opponent first off.
+
+302
+00:19:46,555 --> 00:19:47,939
+Rym: It's six now five and two.
+
+303
+00:19:48,243 --> 00:19:48,694
+Scott: What do I know?
+
+304
+00:19:49,680 --> 00:19:55,900
+Rym: Find the six best people there aren't like the people who are good enough at overwatch to compete with the people in the Pro League.
+
+305
+00:19:56,161 --> 00:20:00,059
+Rym: There's still a pretty wide Gulf and there aren't that many great players out there.
+
+306
+00:20:00,642 --> 00:20:05,040
+Rym: There's not just a low supply and I think that is the case with most truly.
+
+307
+00:20:05,984 --> 00:20:10,059
+Scott: Anyone who's good enough to compete against is on a team pretty much, right?
+
+308
+00:20:10,480 --> 00:20:17,631
+Scott: But as the thing is like even the NFL the people on the practice team obviously are not as good as the people on the Real team, but they still get valuable practice from them.
+
+309
+00:20:18,273 --> 00:20:19,940
+Rym: Yep, and I think they do that, too.
+
+310
+00:20:20,141 --> 00:20:28,435
+Rym: I think it's just that there is definitely a culture of play and it's not just overwatch League It's other eSports to of doing scrimmages and like practice games with other.
+
+311
+00:20:28,515 --> 00:20:30,120
+Scott: those are pretty pre-season thing.
+
+312
+00:20:30,200 --> 00:20:32,150
+Scott: I said, you know, but that shouldn't be your practice.
+
+313
+00:20:32,391 --> 00:20:36,472
+Scott: Yeah, but maybe what they need to do is like Okay, so are you telling me so it's six people right?
+
+314
+00:20:36,814 --> 00:20:37,920
+Scott: Are you telling me that the Paris?
+
+315
+00:20:38,120 --> 00:20:39,285
+Scott: What are they called eternal?
+
+316
+00:20:39,446 --> 00:20:41,214
+Scott: the Paris eternal are only six people?
+
+317
+00:20:41,234 --> 00:20:43,826
+Rym: I Don't know what the backup roster is.
+
+318
+00:20:43,847 --> 00:20:43,987
+Rym: Cuz.
+
+319
+00:20:44,027 --> 00:20:46,600
+Rym: honestly while I watch the games, I don't pay much attention, right?
+
+320
+00:20:46,961 --> 00:20:58,418
+Scott: I feel like if you simply just had a requirement that you have to have 12 people and there's your people to practice against I don't know if there's 12 great overwatch players and they could but every team has to have 12 people.
+
+321
+00:20:58,921 --> 00:21:06,640
+Scott: So if you just said this is the number of people that will be in the league then Yeah, teams are gonna have a bottom, you know, everyone has a bottom line, right?
+
+322
+00:21:06,840 --> 00:21:15,440
+Rym: you've got people partly to though that unlike say football like American football the Variety of skills that are required among all the players.
+
+323
+00:21:15,520 --> 00:21:27,060
+Rym: It's hard to find people who can change up a team a six unit like team Strategy on the fly because the backup players and all those like lower tier players aren't gonna have like the dedicated coaches, right?
+
+324
+00:21:28,122 --> 00:21:33,398
+Scott: That's the thing is you need, you know developmental league right where you can make good players.
+
+325
+00:21:33,438 --> 00:21:35,715
+Scott: there does no support right this.
+
+326
+00:21:35,817 --> 00:21:41,297
+Scott: the Developmental league for pretty much all eSports is kid gets good at the game at home on his own.
+
+327
+00:21:41,478 --> 00:21:42,702
+Rym: Yeah, we need more I need.
+
+328
+00:21:42,762 --> 00:21:48,103
+Scott: and then when you reach school team, right when you reach a certain level of play They do have.
+
+329
+00:21:48,203 --> 00:21:50,752
+Scott: actually they have been doing great support for college play.
+
+330
+00:21:50,792 --> 00:21:53,180
+Scott: I think they have there's across the board.
+
+331
+00:21:53,220 --> 00:21:55,257
+Scott: I think eSports has done a lot of focus on.
+
+332
+00:21:55,278 --> 00:21:57,740
+Scott: partly We're just in the very early days of that.
+
+333
+00:21:57,840 --> 00:22:03,940
+Scott: I think that the the caring about the college play is extremely low except for people at the college.
+
+334
+00:22:04,502 --> 00:22:09,680
+Rym: Yeah, I mean, I literally will not watch anyone except the actual overwatch league.
+
+335
+00:22:09,740 --> 00:22:13,440
+Scott: Yeah, you never see college eSports getting a lot of views on streams.
+
+336
+00:22:13,481 --> 00:22:14,398
+Scott: At least I haven't seen it.
+
+337
+00:22:14,782 --> 00:22:19,145
+Scott: But I think the people at the colleges I have seen Caring about their team.
+
+338
+00:22:19,226 --> 00:22:25,860
+Rym: if it's good though if our IT had had an overwatch team and we would have cared about it at The time yeah, they've already had a tribes to team.
+
+339
+00:22:25,920 --> 00:22:26,684
+Rym: I would have tried to join.
+
+340
+00:22:26,704 --> 00:22:29,960
+Scott: our IT does have an overwatch team tribes to do you care about it at all?
+
+341
+00:22:30,080 --> 00:22:31,746
+Rym: Cuz I know I'm not there right now.
+
+342
+00:22:31,846 --> 00:22:33,352
+Scott: exactly were I there?
+
+343
+00:22:33,372 --> 00:22:35,499
+Scott: I might care but anyway.
+
+344
+00:22:36,205 --> 00:22:38,723
+Scott: But also the point is there's no Developmental leagues.
+
+345
+00:22:38,763 --> 00:22:43,398
+Scott: development is like get good enough on your own and then maybe someone will find you.
+
+346
+00:22:43,458 --> 00:22:43,900
+Scott: right though.
+
+347
+00:22:44,980 --> 00:22:47,432
+Scott: Developmental leagues to produce people to practice with.
+
+348
+00:22:47,935 --> 00:22:56,620
+Rym: what would professional sports look like if cross-team Practice was actually a part of that culture from day.
+
+349
+00:22:56,680 --> 00:22:59,640
+Rym: Well, like what if half the baseball team is a little bit of cross?
+
+350
+00:22:59,680 --> 00:23:00,627
+Rym: But what if they were more like?
+
+351
+00:23:00,647 --> 00:23:01,996
+Rym: what if that was part of much?
+
+352
+00:23:02,197 --> 00:23:13,580
+Rym: I'm saying The eSports because it is a relatively new thing and it's sort of a green field or a blue ocean Depending how you want to look at it, but they could Theoretically try like very different cultural practices.
+
+353
+00:23:13,701 --> 00:23:25,451
+Rym: It'd be interesting to see how a sport will evolve if the players on the teams Like practice cross-team regularly and that's just part of what they do a lot less secret-keeping exactly then there's there's no more like I saw.
+
+354
+00:23:25,772 --> 00:23:34,280
+Scott: because strat also because You know the preseason in eSports isn't like gonna damage your body like in hockey or football.
+
+355
+00:23:34,420 --> 00:23:36,728
+Scott: Yeah, they'll their best players can play.
+
+356
+00:23:36,749 --> 00:23:42,940
+Scott: and also because you don't have this sort of You know, if they had the developmental league, right?
+
+357
+00:23:42,980 --> 00:23:50,997
+Scott: It would be more like a baseball spring training where your people are trying out for the team All right, and you're you're seeing what minor leaguers can do, right?
+
+358
+00:23:51,600 --> 00:23:52,403
+Scott: But they don't have people.
+
+359
+00:23:52,443 --> 00:23:53,747
+Scott: they need to see what they can do.
+
+360
+00:23:54,209 --> 00:23:54,911
+Scott: right because there's.
+
+361
+00:23:54,952 --> 00:23:57,199
+Scott: no there's no farm system at all.
+
+362
+00:23:57,441 --> 00:23:58,778
+Rym: Yeah, it's all kind of ad hoc.
+
+363
+00:23:59,281 --> 00:24:04,960
+Scott: So without the farm system is nothing else to do with those preseason games other than let the top people practice.
+
+364
+00:24:05,482 --> 00:24:10,060
+Scott: They need that farm system and developmental league to get the people which all this stuff will come.
+
+365
+00:24:10,140 --> 00:24:12,720
+Scott: It's just because you're not gonna solve the ping problem, right?
+
+366
+00:24:12,800 --> 00:24:13,102
+Scott: This is the.
+
+367
+00:24:13,223 --> 00:24:15,879
+Scott: this is the real solution and it's a thing you need anyway.
+
+368
+00:24:16,181 --> 00:24:35,659
+Rym: Yeah other reasons and it happens to also solve your practice problem Yep, but also like eSports real competition for most games still requires extreme low latency connections but anyway things of the day what he got.
+
+369
+00:24:36,821 --> 00:24:48,829
+Scott: So there's been a lot of hubbub lately because Apple successfully Since the release of you know, the original iPhone in 19 2007 hot seven routine years ago.
+
+370
+00:24:48,849 --> 00:24:51,420
+Rym: Yeah start saying hot again for the not seven.
+
+371
+00:24:52,324 --> 00:24:54,815
+Scott: They managed to kill flash and they pretty much succeeded.
+
+372
+00:24:54,875 --> 00:24:55,940
+Scott: No one has flash anymore.
+
+373
+00:24:56,261 --> 00:24:59,551
+Scott: When's the last time you went to anything that required flash or got the pop-up?
+
+374
+00:24:59,571 --> 00:25:07,612
+Rym: that said install flash only when I go to sites that broadcast Certain sporting events without prior written consent.
+
+375
+00:25:07,632 --> 00:25:09,780
+Scott: I don't even need it for those only the shitty ones.
+
+376
+00:25:10,222 --> 00:25:24,324
+Scott: anyway, the point is flash is pretty much dead basically, but even Adobe changed the name of flash to like Animators and something like that because you only pretty much use it now for making animations and not for you know Making, you know web
+
+377
+00:25:24,504 --> 00:25:24,986
+Rym: entire
+
+378
+00:25:25,046 --> 00:25:27,232
+Scott: website embedded web things or entire.
+
+379
+00:25:27,252 --> 00:25:36,623
+Scott: but yeah, so there's been a crazy You know rumble because people are like, oh shit We don't we want flash to die We don't really care.
+
+380
+00:25:36,703 --> 00:25:48,290
+Scott: but there's a bajillion flash games this entire history of the internet from the late 90s through You know the late 2000s yeah, like maybe like, you know, ten plus years worth of stuff
+
+381
+00:25:48,611 --> 00:25:49,573
+Rym: and the stuff and it's
+
+382
+00:25:49,653 --> 00:25:59,440
+Scott: an enormous amount of content much of Which was important and or revolutionary right despite having its problems of being flash and not being accessible, etc.
+
+383
+00:25:59,981 --> 00:26:02,869
+Rym: Point you for example to radish skull and devil doll.
+
+384
+00:26:02,889 --> 00:26:11,780
+Scott: All right homestar runner, you know, there's a wide variety of quality right, but Preserving it is it historically important?
+
+385
+00:26:11,960 --> 00:26:12,877
+Scott: We don't want to let it go.
+
+386
+00:26:13,642 --> 00:26:16,312
+Scott: So somebody did manage to come to the rescue.
+
+387
+00:26:16,372 --> 00:26:18,600
+Scott: here is blue Maxima's flashpoint.
+
+388
+00:26:18,761 --> 00:26:29,953
+Scott: What this is is a thing you can download and they they took all the open source tools that they could get and they combined them together sort of like Harmy's Star Wars.
+
+389
+00:26:29,993 --> 00:26:37,254
+Scott: Yeah, right and they made basically a software that can run flash right equivalently That's not Adobe.
+
+390
+00:26:37,294 --> 00:26:38,177
+Scott: So you got your emulator.
+
+391
+00:26:38,217 --> 00:26:52,070
+Scott: now, just like you have an open source flash emulator sort of thing and then they've gone around trying to collect as many flash things as they could and then Modifying their code to make them all the things work properly.
+
+392
+00:26:52,130 --> 00:27:02,901
+Scott: And so you download this and you will get 30,000 plus flash games 2400 plus animations And it runs on like all kinds of different platforms.
+
+393
+00:27:02,941 --> 00:27:05,768
+Scott: You just got to compile, you know, you might need to compile the code Who knows?
+
+394
+00:27:07,431 --> 00:27:13,210
+Scott: But yeah, you can get this preserved library of the flash things of the internet.
+
+395
+00:27:13,290 --> 00:27:18,990
+Scott: It's not a perfect preservation because they're not like embedded in the web page as they were originally.
+
+396
+00:27:19,233 --> 00:27:25,630
+Scott: It's more like ah Here is the tablet taken out of the ancient ruin and put on a stand in a museum kind of thing.
+
+397
+00:27:26,152 --> 00:27:28,320
+Scott: But hey, it's way better than nothing.
+
+398
+00:27:28,581 --> 00:27:29,303
+Rym: It's important work.
+
+399
+00:27:29,564 --> 00:27:36,408
+Scott: Yeah, this is an important thing And in case some sort of copyright thing comes down on this download it today.
+
+400
+00:27:36,829 --> 00:27:43,753
+Rym: Yep Get it preserve it on your nose because like some of these things like people have made like YouTube videos of a lot of flash Experiences.
+
+401
+00:27:43,773 --> 00:27:48,272
+Rym: but well that works for some things but not all things like even homestar runner Like there's.
+
+402
+00:27:48,373 --> 00:27:49,457
+Scott: all those are runners.
+
+403
+00:27:49,578 --> 00:27:57,869
+Rym: animations were interactive to a small degree Yep, and this is very similar to that problem of how do you recreate the experience of an old MMO?
+
+404
+00:27:58,450 --> 00:27:59,239
+Rym: Like how do you emulate?
+
+405
+00:27:59,259 --> 00:28:00,149
+Scott: that's even worse than this?
+
+406
+00:28:00,350 --> 00:28:17,290
+Scott: Yeah So but that's another thing is some of these flash things did have either Online components to the MMO level or they had online components Just like high scoreboards or chats or these sorts of things and those are obviously definitely completely gone.
+
+407
+00:28:18,812 --> 00:28:20,999
+Scott: I even remember a lot of flash experiences.
+
+408
+00:28:21,401 --> 00:28:29,281
+Scott: For example, I remember one summer at RIT I think we're in colony maybe and Nintendo had like a summer camp thing they did.
+
+409
+00:28:29,301 --> 00:28:35,170
+Scott: it was like a special website You would sign up for and go to and it was official Nintendo biz.
+
+410
+00:28:35,250 --> 00:28:37,435
+Scott: it was like welcome to official Nintendo summer camp.
+
+411
+00:28:37,455 --> 00:28:41,543
+Scott: does all kinds of stuff in here, right and You know, there's.
+
+412
+00:28:41,584 --> 00:28:47,660
+Scott: there are things like that that happened in those days that have been not preserved in any way whatsoever.
+
+413
+00:28:47,801 --> 00:28:48,587
+Scott: They're completely gone.
+
+414
+00:28:48,608 --> 00:28:49,212
+Scott: Goodbye camp.
+
+415
+00:28:49,253 --> 00:28:55,174
+Rym: Hyrule Old annual online virtual camp sponsored by Nintendo first came to life in 1995.
+
+416
+00:28:55,174 --> 00:28:56,398
+Scott: That must have been it.
+
+417
+00:28:56,418 --> 00:28:56,638
+Scott: Yeah.
+
+418
+00:28:57,019 --> 00:28:58,725
+Rym: Yep I think that was it.
+
+419
+00:28:58,846 --> 00:29:00,050
+Rym: I don't remember this at all.
+
+420
+00:29:00,090 --> 00:29:02,700
+Scott: I only did it once and there was definitely flash involved.
+
+421
+00:29:02,881 --> 00:29:04,087
+Scott: Yeah, I feel like in chat rooms.
+
+422
+00:29:04,167 --> 00:29:05,112
+Rym: I feel like whatever this was.
+
+423
+00:29:05,172 --> 00:29:06,760
+Rym: I either ignored you doing it or whatever.
+
+424
+00:29:06,760 --> 00:29:11,830
+Scott: Like a day I Saw I saw a post about it somewhere.
+
+425
+00:29:11,910 --> 00:29:12,613
+Scott: I signed up for it.
+
+426
+00:29:12,714 --> 00:29:14,020
+Scott: I did it for one day and that was it.
+
+427
+00:29:14,120 --> 00:29:15,029
+Scott: Yeah, so
+
+428
+00:29:15,413 --> 00:29:31,940
+Rym: here's the thing most people know Penn and Teller like as they look today and like The magic they've done over the years, but I remember a very different Penn and Teller because as a kid I remember watching either VHS tapes and sometimes live broadcasts of the early Penn and Teller.
+
+429
+00:29:32,001 --> 00:29:33,120
+Scott: I mean that was a big thing.
+
+430
+00:29:33,120 --> 00:29:35,360
+Scott: I mean, I don't know if it's still a thing cuz I don't watch television.
+
+431
+00:29:35,380 --> 00:29:41,917
+Rym: I used to watch a lot of magic performances in on TV in the 80s 90s David Copperfield exactly in the 80s 90s.
+
+432
+00:29:43,100 --> 00:29:45,428
+Scott: Magic was like a like it was always wouldn't?
+
+433
+00:29:45,448 --> 00:29:50,611
+Scott: there wouldn't be like regular magic TV shows like frequently, but there'd be big right, there would be like these.
+
+434
+00:29:50,671 --> 00:29:52,622
+Scott: that was the thing like Special.
+
+435
+00:29:52,762 --> 00:29:56,593
+Scott: a magician is gonna do a special on TV hour-long thing.
+
+436
+00:29:56,894 --> 00:29:59,280
+Scott: David Copperfield's gonna make a Statue of Liberty disappear.
+
+437
+00:29:59,280 --> 00:30:01,207
+Scott: Well, it's gonna be an hour-long special.
+
+438
+00:30:01,227 --> 00:30:04,178
+Scott: he's gonna fly, you know Penn and Teller is gonna.
+
+439
+00:30:04,198 --> 00:30:06,600
+Scott: they're gonna do that The the drowning trick they did.
+
+440
+00:30:06,684 --> 00:30:17,520
+Scott: Yeah It's like they would come up with a new trick and they would do a TV special as like an advertisement for themselves And also as a TV show to sell ads and it was like a fucking event because there was no internet.
+
+441
+00:30:18,380 --> 00:30:24,980
+Rym: So and you know see magic like in your town Frequently and like people would tape them and rewatch them try to figure out how they did him.
+
+442
+00:30:25,101 --> 00:30:27,016
+Rym: Everyone would be talking about him in school the next day.
+
+443
+00:30:27,036 --> 00:30:37,800
+Rym: Yep So this YouTube video is a compilation is like 27 minutes long of a lot of the early Early Penn and Teller stuff when they were on public access.
+
+444
+00:30:38,661 --> 00:30:41,409
+Rym: Mm-hmm, although it was Penn and Teller go public.
+
+445
+00:30:41,791 --> 00:30:48,974
+Scott: It was on channel 4 in like 1986 where if it's public access it had a location.
+
+446
+00:30:49,054 --> 00:30:50,400
+Rym: Yeah, or it might have been public television.
+
+447
+00:30:50,460 --> 00:30:53,498
+Rym: I'm not a hundred percent sure cuz I don't remember how TV worked like.
+
+448
+00:30:53,558 --> 00:31:00,079
+Rym: I was not All right, but I know they also did a lot of stuff for like telethons for public TV and all sorts like.
+
+449
+00:31:00,099 --> 00:31:01,024
+Scott: well Yeah, telethons.
+
+450
+00:31:01,044 --> 00:31:03,054
+Scott: You always have like a magician come out and do like one trick.
+
+451
+00:31:03,194 --> 00:31:04,360
+Scott: Yeah a telethon, right?
+
+452
+00:31:04,480 --> 00:31:06,575
+Rym: I remember watching telethons as a kid Mm-hmm.
+
+453
+00:31:06,820 --> 00:31:14,514
+Rym: I remember especially watching the one telethon that was also a charity auction because every now and then Nerdy shit would come up in the telethon.
+
+454
+00:31:14,534 --> 00:31:22,760
+Scott: Brian swords of your Usually just never gonna be able to think about a telethon again without thinking about Brian's words of York.
+
+455
+00:31:22,860 --> 00:31:24,808
+Rym: There are who's still around.
+
+456
+00:31:24,928 --> 00:31:35,037
+Rym: there are certainly okay, dude, certainly enjoying themselves In the better moment, we're gonna be live at PAX East which is not yet sold out and occurs in 16 days.
+
+457
+00:31:36,563 --> 00:31:40,459
+Rym: Well, 15 days 15 hours 6 minutes and 55 seconds give or take.
+
+458
+00:31:42,346 --> 00:31:43,360
+Rym: All the badges are available.
+
+459
+00:31:43,642 --> 00:31:51,500
+Rym: I don't know if it's because they're selling more badges or because Literally every hotel in the stupid city of Boston is sold out and people just can't get hotel rooms.
+
+460
+00:31:51,861 --> 00:31:53,387
+Rym: But PAX East is huge.
+
+461
+00:31:53,448 --> 00:31:54,030
+Rym: We will be there.
+
+462
+00:31:54,050 --> 00:31:54,954
+Rym: We're doing one panel.
+
+463
+00:31:55,516 --> 00:31:56,480
+Rym: Take your fucking turn.
+
+464
+00:31:57,022 --> 00:32:01,659
+Rym: We flagged it as 13 plus so we're gonna say the word fuck a lot and it's gonna be a good time.
+
+465
+00:32:01,699 --> 00:32:04,287
+Rym: Otherwise When we're not enforcing we'll just be.
+
+466
+00:32:04,347 --> 00:32:08,268
+Scott: if you are going if you're not going to PAX East you can see that panel on YouTube Already.
+
+467
+00:32:08,369 --> 00:32:08,572
+Rym: Yep.
+
+468
+00:32:08,613 --> 00:32:11,366
+Scott: It's all Are going to PAX East.
+
+469
+00:32:11,446 --> 00:32:15,625
+Scott: you can just not go to that panel and watch it out on YouTube instead and do it's with your Time.
+
+470
+00:32:15,665 --> 00:32:16,800
+Scott: do something else at PAX East.
+
+471
+00:32:16,860 --> 00:32:24,260
+Rym: However, if you have a friend who perhaps needs to see take your fucking turn because perhaps they need to take them.
+
+472
+00:32:24,300 --> 00:32:25,340
+Scott: Make them watch it on YouTube.
+
+473
+00:32:25,610 --> 00:32:30,119
+Rym: No You should tell them that they have to go to our panel and then they'll go.
+
+474
+00:32:30,502 --> 00:32:40,290
+Rym: They'll waste an hour seeing our panel and at the end We're gonna tell everyone you couldn't watch this whole thing on YouTube and they'll feel slighted for having wasted their hour And that's your tiny revenge.
+
+475
+00:32:40,672 --> 00:32:42,019
+Rym: Maybe they'll take their turn faster.
+
+476
+00:32:42,265 --> 00:32:48,300
+Rym: Okay Otherwise, there's other stuff coming up, but we don't have any major conventions until I'll probably be at Connecticut.
+
+477
+00:32:48,802 --> 00:32:50,869
+Rym: We got PAX West coming up in September.
+
+478
+00:32:51,190 --> 00:32:53,840
+Scott: The book club book is tale of Genji.
+
+479
+00:32:53,860 --> 00:32:56,337
+Scott: I'm reading it on the train as I planned.
+
+480
+00:32:56,458 --> 00:32:57,445
+Rym: Yep I'm.
+
+481
+00:32:57,465 --> 00:33:03,119
+Rym: uh, I've mentioned my thoughts on Genji But I gotta get further in before I decide if I actually like Genji or not.
+
+482
+00:33:03,682 --> 00:33:11,170
+Rym: So far I live I if I list all the characters I like or care about it all Genji is not on that list Characters that I barely like.
+
+483
+00:33:11,190 --> 00:33:12,760
+Rym: I have to look back and figure out what their name is.
+
+484
+00:33:12,820 --> 00:33:21,168
+Rym: I'm more invested in Genji's brother-in-law his cousin Genji's mom's uncle's And I was the other.
+
+485
+00:33:21,188 --> 00:33:22,939
+Rym: this whole like right versus left thing goes.
+
+486
+00:33:23,421 --> 00:33:27,293
+Rym: I was reading a Wikipedia on like the details of what I didn't even try to understand it.
+
+487
+00:33:27,674 --> 00:33:28,095
+Rym: Yeah, it's.
+
+488
+00:33:28,256 --> 00:33:33,850
+Rym: uh, I Don't understand it enough to explain it to you now But I read a Wikipedia article on it and it might help me.
+
+489
+00:33:33,890 --> 00:33:42,819
+Scott: when I'm watching all like I keep watching like samurai movies You know emperors and shoguns and shit and it doesn't seem to come into it, but maybe I'm just missing it.
+
+490
+00:33:43,261 --> 00:33:45,106
+Rym: Yeah, the shogun stuff would be way later.
+
+491
+00:33:45,126 --> 00:33:49,518
+Rym: Okay, so, uh speaking of that's why we played a game at.
+
+492
+00:33:50,701 --> 00:33:55,054
+Rym: I think I played it with Emily and a couple other people at PAX unplugged in.
+
+493
+00:33:55,154 --> 00:34:02,792
+Scott: I saw it and first look at PAX unplugged and then Matt The enforcer put it into the library for PAX East.
+
+494
+00:34:02,832 --> 00:34:05,200
+Scott: but then I was like, hey that game we played at PAX unplugged.
+
+495
+00:34:05,240 --> 00:34:10,795
+Scott: I got it and he played it and he's like, oh and he put it back into first look Yeah after he saw that it was good.
+
+496
+00:34:10,856 --> 00:34:15,129
+Scott: So This game rumble nation What was the Japanese name again?
+
+497
+00:34:15,310 --> 00:34:18,442
+Rym: Oh god, we had Emily to help us with this Something.
+
+498
+00:34:18,601 --> 00:34:22,835
+Rym: it's complicated but dependent like the meaning of the name of this.
+
+499
+00:34:23,097 --> 00:34:24,100
+Scott: Oh tank on a dough.
+
+500
+00:34:24,301 --> 00:34:27,893
+Scott: Yeah, so the the it paste it into Google.
+
+501
+00:34:27,935 --> 00:34:38,804
+Scott: It'll be like world sound right, so apparently tanka means like everything under the heavens and May doe can mean like, you know Rumbling ringing curses.
+
+502
+00:34:38,925 --> 00:34:42,915
+Scott: Yeah, like sort of like a sound plus a shaking was kind of.
+
+503
+00:34:42,955 --> 00:34:51,719
+Scott: so you understand why they use the rumble nation As a valid translation, but I guess the original Japanese meaning is more.
+
+504
+00:34:51,943 --> 00:34:55,748
+Scott: you know is Rumble not as or not as corny.
+
+505
+00:34:55,909 --> 00:34:56,873
+Rym: Yeah rumble nation.
+
+506
+00:34:56,933 --> 00:34:58,620
+Rym: Is there a corny name in English?
+
+507
+00:34:59,222 --> 00:35:01,629
+Scott: It's like they translated it kind you could you could see.
+
+508
+00:35:01,649 --> 00:35:03,575
+Scott: oh I can see why you translate is that?
+
+509
+00:35:03,896 --> 00:35:07,900
+Scott: but the feeling of those Words despite having a similar meaning is way off.
+
+510
+00:35:07,980 --> 00:35:11,735
+Rym: I feel like we should just call it the upheaval of all the lands under heaven.
+
+511
+00:35:12,076 --> 00:35:12,257
+Scott: Sure.
+
+512
+00:35:12,277 --> 00:35:12,960
+Scott: We could call it that.
+
+513
+00:35:13,643 --> 00:35:17,200
+Scott: So this game is actually not a complicated or long game.
+
+514
+00:35:17,260 --> 00:35:30,220
+Rym: this game takes five minutes to learn how to play from reading the rules four minutes to teach to anyone if you've read those rules and Maybe 20 minutes to play if someone is super slow.
+
+515
+00:35:30,380 --> 00:35:33,673
+Scott: I think it might take 30 minutes like the complexity of like sir.
+
+516
+00:35:33,773 --> 00:35:35,479
+Scott: Oh that kind of level but plus one.
+
+517
+00:35:36,082 --> 00:35:44,120
+Rym: But in terms of like the meat of like the strategy of the game It's like a super condensed and extremely tight El Grande.
+
+518
+00:35:44,264 --> 00:35:55,066
+Rym: Oh, yeah Like distill El Grande down to its like fundamental essence and then add one really clever mechanic and then one Really clever twist
+
+519
+00:35:55,086 --> 00:36:02,760
+Scott: you're getting a lot of game in a small space and being like, wow That's not it's not a lot of game compared to games that are actually a lot of game.
+
+520
+00:36:03,001 --> 00:36:11,038
+Scott: but for the amount of time I spent on it and the complexity of the rules, I really got a lot out of this and And I don't get tired of it, right?
+
+521
+00:36:11,340 --> 00:36:18,280
+Scott: Well, you think if the replay value could run out good I think if you played this a lot you might go man.
+
+522
+00:36:18,561 --> 00:36:26,480
+Scott: But if you use this I think as your warm-up game as opposed to something really, you know A lot of you will warm up with something super simple like maybe like a six nymph.
+
+523
+00:36:26,721 --> 00:36:27,344
+Scott: Yeah, it's like.
+
+524
+00:36:27,384 --> 00:36:30,358
+Scott: this will get you, you know ramped up more than a six nymphs.
+
+525
+00:36:30,740 --> 00:36:36,744
+Rym: Yeah, this one and I guess what I like about it is that it is good enough to be your primary game But it's so fast
+
+526
+00:36:37,105 --> 00:36:41,420
+Scott: that it's good enough to be your primary game when you're playing with less powerful gamers
+
+527
+00:36:41,781 --> 00:36:52,980
+Rym: Yep, or if you don't have a lot of time or if you're craving the brain feel of a game like El Grande But you don't want to spend an hour and ten minutes you want to spend fifteen minutes
+
+528
+00:36:53,141 --> 00:36:53,722
+Scott: Or you want to.
+
+529
+00:36:53,983 --> 00:36:59,060
+Scott: you want to get the brain feel of like the kind of game that you could only play if you had a bunch of nerds around.
+
+530
+00:36:59,582 --> 00:37:01,290
+Scott: But you don't have a bunch of nerds around.
+
+531
+00:37:01,410 --> 00:37:06,817
+Scott: maybe you want to get like, you know Your siblings to play this and they're not super hardcore, right?
+
+532
+00:37:07,620 --> 00:37:12,296
+Scott: Maybe you could get them to play this and get some of the brain feel you like But also they could play it.
+
+533
+00:37:12,640 --> 00:37:17,280
+Rym: Yep, and the game, you know, we talked about in the very beginning of the show like elegance and that's what we like in game design.
+
+534
+00:37:17,441 --> 00:37:20,159
+Rym: See, this is one of the most elegant board games I have ever seen.
+
+535
+00:37:20,784 --> 00:37:21,834
+Scott: So here's how the game works.
+
+536
+00:37:21,874 --> 00:37:22,318
+Scott: You got a map.
+
+537
+00:37:22,600 --> 00:37:23,986
+Scott: Yeah, right and it's pretty simple.
+
+538
+00:37:24,026 --> 00:37:25,431
+Scott: You want to have you know each.
+
+539
+00:37:25,511 --> 00:37:27,720
+Scott: we randomly put numbers on all the spaces.
+
+540
+00:37:28,001 --> 00:37:29,105
+Scott: Yeah, that's how it has.
+
+541
+00:37:29,125 --> 00:37:32,677
+Scott: how many points each space is worth and they're two two through twelve.
+
+542
+00:37:32,758 --> 00:37:33,079
+Rym: It's two six.
+
+543
+00:37:33,662 --> 00:37:35,419
+Scott: So there's your replay value right there.
+
+544
+00:37:35,560 --> 00:37:35,761
+Scott: Is it?
+
+545
+00:37:35,822 --> 00:37:39,520
+Scott: every time you play different spaces on the map are worth different amount of points?
+
+546
+00:37:39,981 --> 00:37:41,988
+Scott: Obviously the spot that's worth twelve is the best.
+
+547
+00:37:42,028 --> 00:37:42,971
+Scott: the spot that was two.
+
+548
+00:37:43,011 --> 00:37:43,472
+Scott: who cares?
+
+549
+00:37:43,813 --> 00:37:49,083
+Scott: and then whoever has the most dudes in each Space wins the points for that space GG.
+
+550
+00:37:49,304 --> 00:37:50,608
+Rym: Yeah, Colonel Blotto game.
+
+551
+00:37:50,628 --> 00:37:54,300
+Scott: You're putting the most dudes in the spots and some spots are better than others.
+
+552
+00:37:54,340 --> 00:37:55,163
+Scott: Now here's how it works.
+
+553
+00:37:55,564 --> 00:37:57,471
+Scott: You can't just put your fucking dudes wherever you want.
+
+554
+00:37:57,491 --> 00:37:59,177
+Rym: Yeah, this is the clever mechanic.
+
+555
+00:37:59,337 --> 00:38:07,308
+Scott: now you roll 3d6 right on every turn and then you pick One of the d6.
+
+556
+00:38:07,530 --> 00:38:08,519
+Scott: is that you rolled?
+
+557
+00:38:08,821 --> 00:38:11,860
+Scott: Yeah to tell you how many dudes you're gonna put out.
+
+558
+00:38:11,920 --> 00:38:13,630
+Scott: So let's say I roll a one a two and a three.
+
+559
+00:38:14,213 --> 00:38:18,292
+Scott: I could put one dude out I could put two dudes out or I could put three dudes.
+
+560
+00:38:18,412 --> 00:38:19,437
+Rym: No, that's not it.
+
+561
+00:38:19,497 --> 00:38:20,160
+Rym: You're off a little bit.
+
+562
+00:38:20,180 --> 00:38:20,842
+Rym: I'm awful of it.
+
+563
+00:38:20,983 --> 00:38:21,746
+Rym: a water or two.
+
+564
+00:38:21,786 --> 00:38:22,167
+Rym: Let's you go.
+
+565
+00:38:22,328 --> 00:38:23,150
+Scott: Oh, right.
+
+566
+00:38:23,271 --> 00:38:25,258
+Scott: It's it's it's the number divided by two.
+
+567
+00:38:25,378 --> 00:38:26,120
+Rym: round it up All right.
+
+568
+00:38:26,160 --> 00:38:28,128
+Scott: So I roll a one a three and a six.
+
+569
+00:38:28,188 --> 00:38:31,923
+Scott: I could put one two or three dudes out because you get to divide the d6 By two.
+
+570
+00:38:32,004 --> 00:38:32,668
+Scott: Yeah, right.
+
+571
+00:38:32,708 --> 00:38:34,520
+Scott: You can only can't put more than three dudes out at once.
+
+572
+00:38:34,680 --> 00:38:38,933
+Scott: Anyway, the other two dice that you leave behind, right?
+
+573
+00:38:38,953 --> 00:38:39,395
+Scott: So I rolled.
+
+574
+00:38:39,415 --> 00:38:41,080
+Scott: I rolled what I said a one a three and a six.
+
+575
+00:38:41,225 --> 00:38:41,377
+Scott: Yeah.
+
+576
+00:38:41,783 --> 00:38:44,100
+Scott: So if I decide to put one dude out with the one.
+
+577
+00:38:44,662 --> 00:38:49,299
+Scott: That dude is gonna go in spot number nine because the three plus six is nine.
+
+578
+00:38:49,641 --> 00:38:50,788
+Scott: It's a placement.
+
+579
+00:38:50,969 --> 00:38:57,120
+Scott: if I want to put two dudes out They're right that I have to use the number three dice to get my two dudes.
+
+580
+00:38:57,563 --> 00:39:00,040
+Scott: Those two dudes are gonna go in spot number seven.
+
+581
+00:39:00,602 --> 00:39:04,320
+Scott: And if I want to put dudes, I want to put three dudes on the board.
+
+582
+00:39:04,580 --> 00:39:06,520
+Scott: It's going into four it's going into four.
+
+583
+00:39:06,661 --> 00:39:11,404
+Scott: So not only does this give you an interesting decision But also luck.
+
+584
+00:39:11,545 --> 00:39:17,749
+Rym: each turn of three possible moves and you can do a reroll But we don't get one if your role and your role sucks.
+
+585
+00:39:17,809 --> 00:39:18,812
+Rym: Well, that sucks right.
+
+586
+00:39:19,394 --> 00:39:19,816
+Scott: you gives you.
+
+587
+00:39:20,117 --> 00:39:21,140
+Scott: it limits your choices.
+
+588
+00:39:21,281 --> 00:39:25,037
+Scott: You're not sitting there thinking like super hard on your turn because you've only got three options.
+
+589
+00:39:25,178 --> 00:39:25,660
+Scott: Yep, right?
+
+590
+00:39:25,740 --> 00:39:25,949
+Scott: You're not.
+
+591
+00:39:26,281 --> 00:39:29,300
+Scott: Analysis paralysis yourself to death there with all your choice.
+
+592
+00:39:29,360 --> 00:39:31,630
+Rym: It also forces you to be a little tactical like you might have.
+
+593
+00:39:31,730 --> 00:39:33,940
+Rym: you might be stuck doing something that feels suboptimal.
+
+594
+00:39:34,222 --> 00:39:37,080
+Rym: So now you might have to base like your strategy for the rest of the game.
+
+595
+00:39:37,180 --> 00:39:37,742
+Rym: Oh, you've always.
+
+596
+00:39:37,822 --> 00:39:48,299
+Scott: mechanic is also genius in that it is easy to put lots of dudes on The spots that aren't worth a lot of points.
+
+597
+00:39:48,650 --> 00:39:54,140
+Scott: Yeah It's hard to put a lot of dudes on the spots that aren't like wherever the seven is right.
+
+598
+00:39:54,260 --> 00:39:54,944
+Scott: Anyone can just be.
+
+599
+00:39:54,964 --> 00:39:56,571
+Rym: so let's go in tight throw it.
+
+600
+00:39:56,712 --> 00:39:59,684
+Scott: Say I want to let's say I get lucky I get to put.
+
+601
+00:39:59,804 --> 00:40:02,712
+Scott: actually get put to put dudes on the 12.
+
+602
+00:40:02,712 --> 00:40:05,240
+Scott: You already have to roll two sixes, right?
+
+603
+00:40:05,860 --> 00:40:09,420
+Scott: So I roll two out of the three dice that I roll two or sixes.
+
+604
+00:40:09,560 --> 00:40:14,640
+Scott: I can finally put dudes on the 12 spot the most valuable spot on the board, right?
+
+605
+00:40:14,880 --> 00:40:16,639
+Scott: So almost no one can ever put dudes there.
+
+606
+00:40:16,981 --> 00:40:21,940
+Scott: Because how often is someone in the game gonna roll two sixes out of 3d six and yell in the same role?
+
+607
+00:40:22,562 --> 00:40:26,471
+Rym: My 299 and Gonsher and clever is just staring at me for this.
+
+608
+00:40:26,672 --> 00:40:31,669
+Scott: and then that third D is gonna determine how many dudes I get to put on the 12.
+
+609
+00:40:31,669 --> 00:40:33,841
+Scott: So it's like alright, I'm definitely going on the 12.
+
+610
+00:40:33,841 --> 00:40:36,480
+Scott: I'm using both of my sixes to go there, right?
+
+611
+00:40:36,820 --> 00:40:38,367
+Scott: But my third dice is a two.
+
+612
+00:40:38,407 --> 00:40:46,550
+Scott: so I can only put one dude on the 12. instead of doing that I could have put three dudes on like The seven or the eight or whatever.
+
+613
+00:40:46,590 --> 00:40:48,340
+Scott: it came out and you got a pile of armies.
+
+614
+00:40:48,400 --> 00:40:49,725
+Rym: So their turns are real quick.
+
+615
+00:40:49,786 --> 00:40:51,030
+Rym: Like just go go go.
+
+616
+00:40:51,171 --> 00:40:53,520
+Scott: Yeah, you keep going until you put all your dudes on the board.
+
+617
+00:40:54,260 --> 00:40:58,920
+Scott: Obviously putting your dudes on the board last means that you're have more information on your turn.
+
+618
+00:40:59,503 --> 00:41:04,965
+Scott: So whoever puts all their dudes on the board first gets a slight advantage And in terms of tie-breaking.
+
+619
+00:41:05,526 --> 00:41:09,396
+Scott: and then also there are these cards that you can do that are just.
+
+620
+00:41:09,416 --> 00:41:11,202
+Scott: there's some cards face-up next To the cell.
+
+621
+00:41:11,222 --> 00:41:13,935
+Rym: these cards are very similar also to the El Grande cards.
+
+622
+00:41:13,975 --> 00:41:15,100
+Rym: They do very simple things.
+
+623
+00:41:15,100 --> 00:41:15,642
+Rym: They'll be four.
+
+624
+00:41:15,683 --> 00:41:16,546
+Scott: move two dudes on.
+
+625
+00:41:16,587 --> 00:41:17,631
+Scott: they were already on the board.
+
+626
+00:41:17,651 --> 00:41:19,620
+Scott: Yeah remove some dudes that are already on the board.
+
+627
+00:41:19,640 --> 00:41:26,893
+Rym: They'll have fun names like take a prisoner or whatever, but it's literally take a dude that that's in a place That's not one of yours and move it to another place.
+
+628
+00:41:26,913 --> 00:41:28,140
+Rym: for you have dudes, right?
+
+629
+00:41:28,220 --> 00:41:28,481
+Scott: So these.
+
+630
+00:41:28,722 --> 00:41:30,008
+Scott: so if you have three players, they'll be.
+
+631
+00:41:30,028 --> 00:41:31,635
+Scott: there's n plus one cards.
+
+632
+00:41:31,675 --> 00:41:32,680
+Scott: face up next to the board.
+
+633
+00:41:32,680 --> 00:41:32,925
+Scott: There's a
+
+634
+00:41:32,966 --> 00:41:34,864
+Rym: big deck of them But you can use a number
+
+635
+00:41:34,965 --> 00:41:36,410
+Scott: where n is the number of players and
+
+636
+00:41:36,450 --> 00:41:40,780
+Rym: you never refresh them and every player can use up to one ever
+
+637
+00:41:41,101 --> 00:41:41,402
+Scott: Right, so
+
+638
+00:41:41,422 --> 00:41:42,666
+Rym: and once you use it so over
+
+639
+00:41:42,686 --> 00:41:47,724
+Scott: the course of the whole game right on one turn and one turn only you can Just say you know what?
+
+640
+00:41:47,744 --> 00:41:48,066
+Scott: I'm gonna do.
+
+641
+00:41:48,086 --> 00:41:50,260
+Scott: I'm gonna use a card on this turn instead of rolling the dice.
+
+642
+00:41:50,642 --> 00:41:53,200
+Scott: Yep, and you use a card and you do what the card says instead of the dice.
+
+643
+00:41:53,321 --> 00:41:54,607
+Rym: No one else can ever use that card.
+
+644
+00:41:54,668 --> 00:41:56,980
+Rym: You can never use the card again, and that's it.
+
+645
+00:41:57,081 --> 00:41:58,200
+Scott: So it's just the rest of the game.
+
+646
+00:41:58,220 --> 00:42:09,260
+Rym: You're gonna be rolling 3d6 and choosing one of your three options and it's interesting to see like sometimes I've seen people like Make decisions based on what cards are available But they don't want to commit to taking one because then someone else could take another one.
+
+647
+00:42:09,642 --> 00:42:12,100
+Rym: I've seen games where everyone blows their load on their cards right away.
+
+648
+00:42:12,401 --> 00:42:15,720
+Scott: So now here's the final thing about this game that makes it so great the twist.
+
+649
+00:42:15,981 --> 00:42:22,767
+Scott: Everyone's finally put all their dudes on the board using this 3d6 choose to to Location one number of dudes.
+
+650
+00:42:22,787 --> 00:42:25,818
+Rym: your mayor may not have used a card and eventually everything set.
+
+651
+00:42:25,838 --> 00:42:26,440
+Rym: the game is over.
+
+652
+00:42:26,581 --> 00:42:28,609
+Scott: Every player has put all their dudes on the board.
+
+653
+00:42:28,670 --> 00:42:29,714
+Scott: now you start scoring.
+
+654
+00:42:29,754 --> 00:42:30,960
+Scott: you look at the number two spot.
+
+655
+00:42:31,301 --> 00:42:33,027
+Rym: You score wherever that happens to be.
+
+656
+00:42:33,047 --> 00:42:35,395
+Scott: you start at the lowest one that you the two spot.
+
+657
+00:42:35,476 --> 00:42:36,720
+Scott: Yeah the cheapest worthless.
+
+658
+00:42:37,162 --> 00:42:40,716
+Scott: It's only two victory points and you say who's got the most dudes in the two spot.
+
+659
+00:42:41,318 --> 00:42:41,800
+Scott: It was Ram.
+
+660
+00:42:41,880 --> 00:42:43,808
+Scott: He's got the most dudes in the two two points.
+
+661
+00:42:43,969 --> 00:42:45,635
+Scott: whoopty Rym gets the two points.
+
+662
+00:42:45,675 --> 00:43:00,669
+Scott: Congratulations, but Every space that is adjacent to the two spot right where Rym has at least one dude already will now get reinforcements from the Concord to spot.
+
+663
+00:43:00,890 --> 00:43:02,540
+Rym: Yep, general supply, right?
+
+664
+00:43:02,760 --> 00:43:12,930
+Rym: So if I win the two and I and the two is next to say the four and the three or maybe the twelve Yep, and I have at least one army.
+
+665
+00:43:12,970 --> 00:43:18,448
+Scott: Hey, I don't have any dudes in those adjacent spots Then you don't get any reinforcements, right?
+
+666
+00:43:18,548 --> 00:43:22,400
+Scott: But if you do have at least one dude in the adjacent spot, you're getting in reinforcements.
+
+667
+00:43:22,581 --> 00:43:33,084
+Rym: So you might want to win the two because it's in the like on this map I'm looking at on the screen right now The two is in the middle of an adjacent to five six and twelve has three Adjacency.
+
+668
+00:43:33,125 --> 00:43:35,459
+Scott: so you could get a ton of reinforce and this cascade.
+
+669
+00:43:36,002 --> 00:43:38,435
+Rym: So if you win the time you put some armies in the three.
+
+670
+00:43:38,476 --> 00:43:39,159
+Rym: that's next to it.
+
+671
+00:43:39,461 --> 00:43:41,960
+Rym: If you win the three you keep putting armies, right?
+
+672
+00:43:42,060 --> 00:43:48,631
+Scott: So if like let's say that the seven and the eight are both Adjacent to the twelve and you win the seven.
+
+673
+00:43:48,752 --> 00:43:50,740
+Scott: it cascades into the eight and the twelve.
+
+674
+00:43:50,941 --> 00:43:51,985
+Scott: You win the eight.
+
+675
+00:43:52,125 --> 00:43:54,073
+Scott: it cast because you got the reinforcements from the seven.
+
+676
+00:43:54,375 --> 00:43:57,348
+Scott: that will cascade even more Reinforcements into the twelve.
+
+677
+00:43:57,609 --> 00:43:59,700
+Scott: So you have at least one guy in the twelve.
+
+678
+00:43:59,780 --> 00:44:00,784
+Scott: So you've got it.
+
+679
+00:44:01,025 --> 00:44:06,403
+Scott: you had to put at least one in the twelve via dice or card at some point in the game Otherwise nothing.
+
+680
+00:44:06,664 --> 00:44:19,360
+Rym: so you got to keep all this in mind while you're playing and the combination of four random cards come up rolling the 3d6 every turn and The placement much like in settlers when you just randomly put the tokens out instead of following a pattern.
+
+681
+00:44:20,580 --> 00:44:22,750
+Rym: That's why the game has so much replay value.
+
+682
+00:44:22,810 --> 00:44:25,140
+Rym: you can't come into this with a set strategy.
+
+683
+00:44:25,481 --> 00:44:26,004
+Scott: You are now.
+
+684
+00:44:26,044 --> 00:44:29,860
+Scott: you got to play the dice that you roll and just make the optimal move each turn.
+
+685
+00:44:30,443 --> 00:44:42,336
+Scott: But you also need to have in order to make that optimal move You need to have the vision to see how the board will score with all these Reinforcements that do not appear at all until the end game.
+
+686
+00:44:42,497 --> 00:44:42,819
+Scott: Yeah, right.
+
+687
+00:44:43,060 --> 00:44:47,985
+Scott: And so you got to be like, okay, you could look at the board and it looks like you're really weak somewhere He's only got one guy.
+
+688
+00:44:48,045 --> 00:44:51,557
+Scott: it's like they're like six reinforcements probably coming in to that spot.
+
+689
+00:44:51,577 --> 00:44:54,379
+Scott: They're adjacent They're winning all three adjacent spots to that.
+
+690
+00:44:54,460 --> 00:45:01,114
+Scott: Yep And you have to be able to visualize that end game cascade Every turn when you're making your decision about.
+
+691
+00:45:01,154 --> 00:45:09,159
+Scott: you know, I guess not in the early turns But in the late turns where it matters more You need to be able to visualize the cascade to make your decision about where to put your guys.
+
+692
+00:45:09,782 --> 00:45:13,796
+Rym: So the other minor mechanic that's worth mentioning is that it has a tie breaking system.
+
+693
+00:45:13,816 --> 00:45:14,760
+Rym: So there's never a tie.
+
+694
+00:45:14,860 --> 00:45:22,060
+Scott: Well, like I said, whoever ends puts all their dudes on the board first therefore made their moves with less information available.
+
+695
+00:45:22,140 --> 00:45:23,871
+Rym: Yeah, they had ties break towards them.
+
+696
+00:45:23,891 --> 00:45:25,339
+Scott: ties break towards them.
+
+697
+00:45:25,821 --> 00:45:30,520
+Scott: So you're not heavily punished for and there are a lot of ties because there aren't that many dudes.
+
+698
+00:45:30,660 --> 00:45:32,206
+Scott: Yeah, and there are a lot of spaces.
+
+699
+00:45:32,567 --> 00:45:39,080
+Scott: So you're not heavily punished for just getting all your dudes on the board quick Relative not stupidly quick, right?
+
+700
+00:45:39,340 --> 00:45:43,358
+Scott: But more quickly than the other players because the other players will be able to make.
+
+701
+00:45:43,378 --> 00:45:46,279
+Scott: you know They're going like one here one there one there.
+
+702
+00:45:46,702 --> 00:45:52,769
+Scott: They're getting better decisions and more optimally placing their dudes but so they shouldn't have a tie to make.
+
+703
+00:45:52,789 --> 00:45:54,817
+Scott: they're doing so slowly to make up for that.
+
+704
+00:45:54,877 --> 00:46:04,252
+Rym: and what makes it an Inter like what makes this all very balanced is that as soon as one player is done and takes that first tie break marker No one can ever play a card again.
+
+705
+00:46:04,272 --> 00:46:05,740
+Rym: Yeah cards are just out of the game.
+
+706
+00:46:05,740 --> 00:46:07,125
+Scott: You got to play your card before.
+
+707
+00:46:07,245 --> 00:46:13,709
+Scott: so when if you haven't played a card and you see somebody's running low on dudes the most Dudes anyone can put it once is three.
+
+708
+00:46:13,970 --> 00:46:21,540
+Scott: Yeah, so if someone has three or less dudes Or four, you know close to three like four or five or six dudes left.
+
+709
+00:46:22,123 --> 00:46:25,340
+Scott: Then you might want to play a card real soon before they you know.
+
+710
+00:46:25,500 --> 00:46:27,506
+Scott: Eliminate cards from an option you can use.
+
+711
+00:46:27,767 --> 00:46:35,800
+Rym: but this game like I would say it's something that if you regularly attend conventions or play Board games like it's almost a must-buy just because it's so quick.
+
+712
+00:46:36,581 --> 00:46:38,226
+Scott: It's also really small.
+
+713
+00:46:38,307 --> 00:46:42,220
+Scott: you can fit this game in a very tiny space, especially if you rebox it.
+
+714
+00:46:42,304 --> 00:46:46,560
+Scott: Yeah It's just a map and a bag of cubes and a little deck of cards.
+
+715
+00:46:46,620 --> 00:46:48,335
+Rym: It's like if you made the map out of claw and 3d6.
+
+716
+00:46:49,201 --> 00:46:52,320
+Rym: You could make a map out of cloth for this and then just fit the whole thing in a tiny bag.
+
+717
+00:46:52,561 --> 00:46:54,007
+Scott: Oh, yeah, the map is way simple.
+
+718
+00:46:54,047 --> 00:46:56,880
+Scott: You could easily make a functionally equivalent map.
+
+719
+00:46:57,000 --> 00:46:59,749
+Scott: That was not the same map and it's just like.
+
+720
+00:47:00,331 --> 00:47:03,984
+Rym: I was surprised how satisfying such a simple game This was.
+
+721
+00:47:04,024 --> 00:47:05,269
+Rym: the packs like I mentioned.
+
+722
+00:47:05,289 --> 00:47:09,104
+Scott: when we talk about PAX Unplugged it also goes up to it like four or five players Or four players.
+
+723
+00:47:09,125 --> 00:47:10,431
+Scott: That's pretty good for four player.
+
+724
+00:47:10,451 --> 00:47:12,279
+Scott: Yeah, any minute kind of game.
+
+725
+00:47:15,115 --> 00:47:17,650
+Rym: This has been GeekNights with Rym and Scott.
+
+726
+00:47:17,710 --> 00:47:22,470
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+727
+00:47:22,771 --> 00:47:24,738
+Scott: Be sure to visit our website at front row.
+
+728
+00:47:24,778 --> 00:47:27,770
+Scott: crew calm for show notes discussion news and more.
+
+729
+00:47:28,050 --> 00:47:34,930
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays and my comic Wednesdays and indiscriminate Thursday.
+
+730
+00:47:35,812 --> 00:47:39,833
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+731
+00:47:40,254 --> 00:47:43,342
+Scott: GeekNights is recorded live with no studio and no audience.
+
+732
+00:47:43,542 --> 00:47:45,006
+Scott: But unlike those other late shows.
+
+733
+00:47:45,126 --> 00:47:53,972
+Rym: It's actually recorded at night and The patreon patrons for this episode of GeekNights.
+
+734
+00:47:53,992 --> 00:47:57,511
+Rym: I'm still poking around to this new UI So I have to click a bunch to get to it.
+
+735
+00:47:57,572 --> 00:47:58,378
+Rym: Here we go.
+
+736
+00:47:58,921 --> 00:48:04,320
+Rym: They are in mostly the same order that they were in before but it's a new interface and they've done something weird with the sorting.
+
+737
+00:48:04,382 --> 00:48:08,066
+Rym: but anyway Ellen Joyce, Heidi McNichol Marty green.
+
+738
+00:48:08,086 --> 00:48:12,237
+Rym: Yeah, just like a dude guy chart option link eg you hold the key to my heart.
+
+739
+00:48:13,180 --> 00:48:15,450
+Rym: I Got in one little fight and my mom got scared.
+
+740
+00:48:15,712 --> 00:48:17,500
+Rym: Clinton Walton my steady calm.
+
+741
+00:48:17,600 --> 00:48:20,253
+Rym: Jay Vance Ren from New Zealand Ryan parent drove in Lander.
+
+742
+00:48:20,575 --> 00:48:36,759
+Rym: Nicholas Brando Chris midkiff Mac the thirst for hydrated Greg Gannon dread Lily tenebrae Chris Reimer Finn Sean Klein Thomas Hahn Shervin van Horl and a Bunch of other people who didn't want their names to be said.
+
+743
+00:48:37,801 --> 00:48:50,119
+Rym: Now I leave you with something that some of you may remember but I doubt many of you have ever encountered Wrong officer, sir.
+
+744
+00:48:50,139 --> 00:48:51,608
+Scott: We're looking for these two fugitives.
+
+745
+00:48:52,751 --> 00:48:53,856
+Scott: Well, I'll be dang.
+
+746
+00:48:54,378 --> 00:48:57,350
+Rym: That's them two kids that have been walking in my camper.
+
+747
+00:48:57,851 --> 00:48:58,653
+Scott: You saw these two.
+
+748
+00:48:59,094 --> 00:49:00,679
+Scott: I sure did boy.
+
+749
+00:49:00,699 --> 00:49:02,644
+Rym: I never seen two kids do so much.
+
+750
+00:49:02,744 --> 00:49:04,028
+Scott: damn walking Lou den.
+
+751
+00:49:04,048 --> 00:49:04,950
+Scott: This is post 9.
+
+752
+00:49:04,950 --> 00:49:05,976
+Scott: I have positive ID.
+
+753
+00:49:06,117 --> 00:49:08,610
+Scott: Well, they're just like a couple little old spider monkeys.
+
+754
+00:49:08,791 --> 00:49:11,310
+Scott: I tell you I'm gonna have to ask you and your wife to step out of the vehicle.
+
+755
+00:49:11,712 --> 00:49:12,777
+Rym: Well now wait a minute.
+
+756
+00:49:12,817 --> 00:49:15,509
+Rym: me and the missus here are on our way to Washington DC.
+
+757
+00:49:31,620 --> 00:49:33,669
+Scott: Master beating is a man's camper.
+
+758
+00:49:34,091 --> 00:49:35,920
+Scott: We're dealing with two sick individuals.
+
+759
+00:49:36,422 --> 00:49:37,830
+Scott: I want that camper torn apart.
+
+760
+00:49:38,011 --> 00:49:39,639
+Scott: full cavity searches all around.
+
+761
+00:49:41,022 --> 00:49:43,239
+Scott: Something tells me he could be involved.
+
+762
+00:49:45,583 --> 00:49:46,586
+Scott: Chief just came in.
+
+763
+00:49:47,048 --> 00:49:50,460
+Scott: two days ago Express Airways had a disturbance by someone calling himself.
+

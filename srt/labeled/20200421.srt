@@ -1,0 +1,2672 @@
+1
+00:00:08,380 --> 00:00:12,021
+Rym: It's Tuesday April 21st 2020.
+
+2
+00:00:12,021 --> 00:00:15,069
+Rym: I'm Rym I'm Scott and this is GeekNights.
+
+3
+00:00:15,109 --> 00:00:20,430
+Rym: tonight We are talking about Luigi's Mansion 3 on the Nintendo switch.
+
+4
+00:00:21,378 --> 00:00:22,408
+Scott: Let's do this.
+
+5
+00:00:23,931 --> 00:00:30,050
+Rym: So, uh, yeah, this would normally be meta but you know, we keep trying to increase and improve the GeekNights pipeline.
+
+6
+00:00:30,371 --> 00:00:35,370
+Rym: So we are now streaming the show live on YouTube with both my face and Scott's face.
+
+7
+00:00:35,611 --> 00:00:41,028
+Rym: Thanks to three OBS's plus an nginx server that was pre-configured by someone.
+
+8
+00:00:41,068 --> 00:00:49,290
+Scott: we sent money to Yep, and you know, it's surprisingly requires a lot of technological hardware or software.
+
+9
+00:00:49,431 --> 00:00:55,300
+Scott: You can either spend money on hardware to make life easy Yeah, or you can spend a lot of time configuring free software.
+
+10
+00:00:55,340 --> 00:00:58,067
+Scott: that kind of sucks or you can buy software.
+
+11
+00:00:58,087 --> 00:01:00,373
+Scott: That's easier Suck so much.
+
+12
+00:01:00,674 --> 00:01:06,170
+Rym: what sucks though is that OBS is better than a lot of paid software in many areas, but not all areas.
+
+13
+00:01:06,695 --> 00:01:08,088
+Scott: No, not all areas at all.
+
+14
+00:01:09,034 --> 00:01:11,225
+Scott: Yeah, we may it seems to be working enough.
+
+15
+00:01:11,446 --> 00:01:25,470
+Rym: Yeah The problem I run into the most but we'll save this for a Monday show, but what I will say is that Consumer level networking hardware like consumer level routers just are not great and I got too used to real stuff.
+
+16
+00:01:26,313 --> 00:01:31,310
+Scott: I think the biggest problem really is just that you can only have so many.
+
+17
+00:01:33,074 --> 00:01:36,190
+Scott: You know video input devices on like a computer, right?
+
+18
+00:01:36,730 --> 00:01:42,170
+Scott: So if you want to have like multiple things involved you want to stream from different devices?
+
+19
+00:01:42,370 --> 00:01:47,227
+Scott: Like I want to show you my iPad screen and my face and Rym's face and right.
+
+20
+00:01:47,267 --> 00:01:48,070
+Scott: it's like with audio.
+
+21
+00:01:48,191 --> 00:01:49,720
+Scott: Well, there's a device called like a mixer.
+
+22
+00:01:49,880 --> 00:01:51,510
+Scott: you could buy and get a lot of expensive.
+
+23
+00:01:51,853 --> 00:01:54,818
+Rym: I spent a lot of money on our mixer But you know what you can get.
+
+24
+00:01:55,100 --> 00:02:01,069
+Scott: but you could just get a mixer Yeah, but even better plug as many audio input devices as you want into it and you're good to go.
+
+25
+00:02:01,254 --> 00:02:09,893
+Rym: Yeah but but the other word is because that mixer is like Bob like the technology behind mixers is mature and stable it just Works.
+
+26
+00:02:10,354 --> 00:02:12,323
+Scott: Well, that's not the problem of just working right?
+
+27
+00:02:12,343 --> 00:02:14,030
+Scott: So OBS is the video mixer.
+
+28
+00:02:14,612 --> 00:02:15,515
+Scott: It just works.
+
+29
+00:02:15,916 --> 00:02:22,098
+Scott: The problem is it when you buy an audio mixer a hardware one It has a million audio inputs on it.
+
+30
+00:02:22,218 --> 00:02:31,468
+Scott: Yeah, your computer doesn't have enough video inputs Right that OBS will all recognize independently of each other as different inputs.
+
+31
+00:02:31,609 --> 00:02:40,210
+Rym: Yep So you need to use which I can't just buy a video capture card But then you run it all the encoder issues and you can only have so many of those for one computer.
+
+32
+00:02:40,370 --> 00:02:41,254
+Scott: But I so this.
+
+33
+00:02:41,555 --> 00:02:50,330
+Scott: so the RTMP solution is where Europe instead is each device That is a video source will stream itself to a server.
+
+34
+00:02:50,972 --> 00:02:51,232
+Scott: Right.
+
+35
+00:02:51,774 --> 00:02:57,350
+Scott: So and then OBS will look at all of those streams as individual video sources and mix them.
+
+36
+00:02:57,952 --> 00:03:01,910
+Scott: But now every video source you have has to have a network connection.
+
+37
+00:03:02,412 --> 00:03:06,230
+Scott: So like my really good camera doesn't have a network card in it.
+
+38
+00:03:06,591 --> 00:03:07,814
+Scott: It has Wi-Fi, but it doesn't.
+
+39
+00:03:07,974 --> 00:03:09,498
+Scott: it can't stream over that Wi-Fi.
+
+40
+00:03:09,819 --> 00:03:10,220
+Scott: Yeah, right.
+
+41
+00:03:10,240 --> 00:03:11,564
+Scott: That's not a feature it offers.
+
+42
+00:03:11,945 --> 00:03:18,730
+Rym: So but I am using a Significant amount of bandwidth streaming everything both internally and from Scott.
+
+43
+00:03:19,593 --> 00:03:20,539
+Scott: We have a lot of bandwidth.
+
+44
+00:03:20,559 --> 00:03:21,324
+Scott: you might as well use it.
+
+45
+00:03:21,344 --> 00:03:22,250
+Rym: You know what next Monday show?
+
+46
+00:03:22,270 --> 00:03:23,370
+Rym: Maybe we'll talk about this pipeline.
+
+47
+00:03:23,470 --> 00:03:27,816
+Rym: I like what we had to do because I realized something kind of an aside talking to some of our friends who want to stream stuff.
+
+48
+00:03:28,271 --> 00:03:30,824
+Rym: Scott and I can figure this out because we are both professionals like.
+
+49
+00:03:30,845 --> 00:03:32,956
+Rym: we know a lot about Technology and network.
+
+50
+00:03:33,076 --> 00:03:38,283
+Scott: if a normal person wants to do anything that out-of-the-box Software just does not do and they don't want to pay money.
+
+51
+00:03:38,303 --> 00:03:39,530
+Scott: They are boned.
+
+52
+00:03:39,972 --> 00:03:55,970
+Rym: Yeah, like good luck getting this going if you don't know networking Never mind, like how to synchronize audio and video and like time codes and shit Mm-hmm at the 8 megabytes of network buffers that are hanging out in here, but I digress it's Tuesday.
+
+53
+00:03:56,070 --> 00:03:58,357
+Rym: We can talk about games and the first news we got?
+
+54
+00:03:58,678 --> 00:04:01,387
+Rym: you might remember a humble little game called torchbearer.
+
+55
+00:04:01,407 --> 00:04:04,135
+Rym: Oh Yeah, I've only played it a few times.
+
+56
+00:04:05,118 --> 00:04:08,870
+Scott: Oh, yeah, so they have announced torchbearer second edition.
+
+57
+00:04:09,851 --> 00:04:13,020
+Rym: Wonder if it's like advanced Dungeons & Dragons second edition.
+
+58
+00:04:13,040 --> 00:04:21,628
+Scott: All right, they've got a huge Kickstarter that launched today And there are various levels of kicking that you can select from right.
+
+59
+00:04:21,648 --> 00:04:25,408
+Scott: the lowest level I think is just the game PDF and that's it.
+
+60
+00:04:26,932 --> 00:04:29,803
+Scott: The highest levels include three different books.
+
+61
+00:04:30,244 --> 00:04:36,750
+Scott: There's the regular book There's a dungeoneers handbook and there is a scholars guide.
+
+62
+00:04:37,191 --> 00:04:39,839
+Scott: Oh, no, the dungeoneers handbook is the first book.
+
+63
+00:04:39,960 --> 00:04:51,175
+Scott: that's like players handbook right scholars guide I think is the I mean the highest one is for game stores only The feasting.
+
+64
+00:04:51,516 --> 00:04:54,004
+Scott: I'm talking about the three books not the levels.
+
+65
+00:04:54,084 --> 00:04:55,830
+Rym: Oh, yeah, we got the lore masters manual.
+
+66
+00:04:56,232 --> 00:04:56,935
+Rym: We've got the dungeon.
+
+67
+00:04:56,955 --> 00:04:59,870
+Scott: the lore masters manual is like extra optional rules.
+
+68
+00:05:00,151 --> 00:05:00,914
+Scott: And then there's basically.
+
+69
+00:05:00,934 --> 00:05:04,410
+Scott: the other two books are basically players handbook and DM guide.
+
+70
+00:05:05,493 --> 00:05:09,835
+Scott: And then if you go higher in level you can get Game master screens.
+
+71
+00:05:09,855 --> 00:05:11,601
+Scott: you can get action decks.
+
+72
+00:05:11,681 --> 00:05:13,407
+Scott: I highly recommend the action deck.
+
+73
+00:05:13,427 --> 00:05:16,215
+Rym: They make torchbearer Million times easier to play.
+
+74
+00:05:16,857 --> 00:05:17,478
+Scott: Yeah, so you can.
+
+75
+00:05:17,498 --> 00:05:28,930
+Scott: you get two but you can add more decks if you you know as bonuses at The end and then you can also get these bad counters to help you do tracking on the GM screen.
+
+76
+00:05:29,171 --> 00:05:31,988
+Scott: I'm like, you know what what turn it is and whatnot.
+
+77
+00:05:33,771 --> 00:05:37,130
+Scott: Then they have some player decks which are okay.
+
+78
+00:05:37,411 --> 00:05:41,228
+Scott: There's a deck of cards you can use to keep track of like your armors and weapons and things like that.
+
+79
+00:05:41,268 --> 00:05:45,910
+Scott: conditions Those are not necessary, but they're nice with a wooden card holder, right?
+
+80
+00:05:46,050 --> 00:05:55,635
+Scott: They're adding some wooden card holders some a custom wooden dice set and some custom metal coins based on how high your pledge Increases to.
+
+81
+00:05:55,775 --> 00:05:59,470
+Rym: I own too many custom metal coins from other kickstarters already.
+
+82
+00:06:00,353 --> 00:06:02,050
+Scott: Yeah, yeah seems unnecessary.
+
+83
+00:06:02,571 --> 00:06:26,029
+Scott: So if you want to play a an RPG that is a dungeon crawling RPG Much in the ways of first ed D&D but is modern and streamlined and better in every conceivable way And this is now your time you maybe you maybe you have torchbearer first ed in which case I don't know what you're gonna do with that probably
+
+84
+00:06:26,792 --> 00:06:30,025
+Rym: How many different editions of burning wheel.
+
+85
+00:06:30,065 --> 00:06:31,149
+Rym: do I have a bunch of books of?
+
+86
+00:06:32,153 --> 00:06:33,778
+Scott: Yeah, I'm not getting a torchbearer 3e.
+
+87
+00:06:33,818 --> 00:06:41,453
+Rym: they can right unless I play torchbearer 2e so much Yeah, but the thing is the games I'm actually into playing right now I mean online.
+
+88
+00:06:41,473 --> 00:06:53,113
+Rym: I got a good burning wheel game going and even then we found there are multiple sub editions of burning wheel gold that have slightly different rules on some pages, so Yeah, I mean In game.
+
+89
+00:06:53,133 --> 00:06:59,410
+Rym: the dispute in game came down to what is the fourth word on page whatever and then we discovered the problem.
+
+90
+00:07:00,452 --> 00:07:08,260
+Scott: Right normally I would have been like I think under normal circumstances I would have looked at torchbearer 2e and said man I love torchbearer, but I didn't play torchbearer 1e enough.
+
+91
+00:07:08,360 --> 00:07:10,046
+Scott: I could just play torchbearer 1e more, right?
+
+92
+00:07:12,471 --> 00:07:13,638
+Scott: Why would I buy 2e?
+
+93
+00:07:13,678 --> 00:07:15,670
+Scott: when am I even gonna play it, right?
+
+94
+00:07:17,011 --> 00:07:22,050
+Scott: Even though the people who make it right, you know Luke and Tor, you know, I'm close with them, right?
+
+95
+00:07:22,310 --> 00:07:23,368
+Scott: I like to support them.
+
+96
+00:07:23,892 --> 00:07:24,917
+Scott: Why would I go for this?
+
+97
+00:07:25,218 --> 00:07:27,489
+Scott: but I guess I'll go for it because what else do I have to do?
+
+98
+00:07:27,710 --> 00:07:29,075
+Rym: Yep, all I mean I'll be.
+
+99
+00:07:29,115 --> 00:07:31,121
+Rym: so this is the time.
+
+100
+00:07:31,342 --> 00:07:33,850
+Rym: if you want to play RPGs do it on discord.
+
+101
+00:07:34,173 --> 00:07:35,002
+Rym: It just works.
+
+102
+00:07:35,103 --> 00:07:41,350
+Rym: the burning wheel game We've been playing on discord works so well and for there's a design consideration like user experience thing.
+
+103
+00:07:41,370 --> 00:07:42,734
+Rym: I didn't really think about one.
+
+104
+00:07:42,774 --> 00:07:47,387
+Rym: our friend Tracy made a bot that handles all the burning wheel dice rolling like perfectly.
+
+105
+00:07:47,407 --> 00:07:59,815
+Rym: Mmm, but two Basically, whoever's role-playing in the voice chat Everyone else all the table chatter and like the meta commentary and all the nonsense people are just typing that shit without Interrupting the role-playing.
+
+106
+00:08:00,357 --> 00:08:03,690
+Rym: So it actually ends up being better role-playing than I tend to see at the table.
+
+107
+00:08:04,772 --> 00:08:05,274
+Scott: That's not bad.
+
+108
+00:08:05,495 --> 00:08:08,170
+Rym: Like I did not expect that to happen, but it happened.
+
+109
+00:08:08,230 --> 00:08:17,349
+Rym: So people are like posting gifs in the text channel and DMing each other and there's a bunch of fun going on in there While like the three characters involved in the scene are doing their thing.
+
+110
+00:08:18,213 --> 00:08:22,709
+Scott: My hope is that I'm so starved for role-playing by the time we can role-play in person again.
+
+111
+00:08:24,192 --> 00:08:25,882
+Scott: Oh, yeah that I mean be.
+
+112
+00:08:25,942 --> 00:08:26,284
+Scott: this will be.
+
+113
+00:08:26,304 --> 00:08:35,970
+Rym: I've got a Blades in the dark game that I'm ready to run that I was planning to start like Literally right after PAX East and then of course things happen.
+
+114
+00:08:36,472 --> 00:08:45,006
+Rym: But I don't know if I could run that game on discord because not all the people involved I think could get the technology working enough for voice chat to work effectively.
+
+115
+00:08:45,026 --> 00:08:47,732
+Rym: So I'm just gonna wait Mm-hmm.
+
+116
+00:08:48,574 --> 00:08:51,162
+Rym: So, uh, yeah all their news in the gaming world.
+
+117
+00:08:51,422 --> 00:08:52,806
+Rym: This is actually kind of a big deal.
+
+118
+00:08:53,087 --> 00:09:00,877
+Rym: There is a Significant update to Mario maker - uh, oh, yeah, I would say well It's also the final major update.
+
+119
+00:09:00,897 --> 00:09:07,963
+Scott: there might be minor updates in the future, but there will not be supposedly major updates in the future, but it added the one.
+
+120
+00:09:08,304 --> 00:09:15,147
+Rym: the sole feature that Prevented me from going deep into Mario maker the lack of phanto.
+
+121
+00:09:15,509 --> 00:09:19,309
+Rym: Yeah Well while I care about phanto got a great deal.
+
+122
+00:09:19,792 --> 00:09:22,830
+Rym: The thing I wanted more than anything was to be able to make a world.
+
+123
+00:09:23,011 --> 00:09:28,250
+Rym: I wanted to be able to make a bunch of different levels that are all tied together and make a real game.
+
+124
+00:09:28,571 --> 00:09:32,270
+Rym: I'm not interested in these like one-off like level experiences.
+
+125
+00:09:32,310 --> 00:09:37,129
+Rym: I want to make a world with secrets and stuff and that is exactly what you can do now.
+
+126
+00:09:37,894 --> 00:09:39,650
+Scott: Yeah, you can even put mushroom houses on your map.
+
+127
+00:09:39,911 --> 00:09:45,830
+Rym: Yeah, uh, I saw that image and I knew what was happening and then I read what was added and that was exactly it.
+
+128
+00:09:45,950 --> 00:09:46,813
+Rym: That's the main feature.
+
+129
+00:09:47,134 --> 00:09:49,762
+Scott: So now Mario also added a lot of other things.
+
+130
+00:09:49,782 --> 00:09:52,209
+Scott: They added frog suit boomerang suit.
+
+131
+00:09:53,112 --> 00:09:58,470
+Scott: Can the Mario to mushroom the Mario to mushroom which will let you jump on bad guys and throw them.
+
+132
+00:09:58,973 --> 00:10:03,318
+Rym: That actually is really important to a kind of level I kind of want to make that now I can actually make like.
+
+133
+00:10:03,358 --> 00:10:06,911
+Rym: that adds a feature I needed to make the specific kind of Level.
+
+134
+00:10:07,673 --> 00:10:08,857
+Rym: I'm going deep into this.
+
+135
+00:10:09,038 --> 00:10:09,218
+Scott: Yeah.
+
+136
+00:10:09,459 --> 00:10:16,209
+Scott: Yeah the previous Mario maker 2 updates added a lot of stuff But this one adds a lot more than those ones added.
+
+137
+00:10:16,490 --> 00:10:22,750
+Rym: I wonder if these were all intended to be smaller updates along the way and Nintendo accelerated it because of the quarantines.
+
+138
+00:10:23,091 --> 00:10:23,733
+Scott: Well, I figured it.
+
+139
+00:10:23,753 --> 00:10:33,910
+Scott: when Nintendo seems to do is they put out a game and their DLC strategy seems to be don't be evil Right, don't like don't do micro transaction bullshit, right at least not on console.
+
+140
+00:10:34,030 --> 00:10:34,894
+Scott: They do it on this.
+
+141
+00:10:34,914 --> 00:10:38,848
+Scott: some mobile apps like the Animal Crossing, you know, whatever right?
+
+142
+00:10:38,988 --> 00:10:41,222
+Scott: Yeah The Animal Crossing that's on the phone.
+
+143
+00:10:41,544 --> 00:10:53,310
+Scott: Not the that the real one Yeah, and then what they do with the DLCs is I think it a allows them to release the game earlier When there's still stuff in development, they can still get the game out there, right?
+
+144
+00:10:54,331 --> 00:10:58,128
+Scott: And then to the DLCs that they sell they make a little bit more money.
+
+145
+00:10:58,188 --> 00:10:59,956
+Scott: It's like alright We sold you the game for 60 bucks.
+
+146
+00:11:00,177 --> 00:11:01,382
+Scott: We did 60 bucks of work.
+
+147
+00:11:02,025 --> 00:11:03,250
+Scott: We're gonna give even more stuff.
+
+148
+00:11:03,451 --> 00:11:14,204
+Scott: It might be free like it is with Mario maker or it might not be like with Zelda There was some extra stuff you had to pay for or Smash Brothers you to pay for All right, and that stuff keeps the game alive, right.
+
+149
+00:11:14,264 --> 00:11:20,190
+Scott: and by keeping the game alive You are basically extending the sales on that game, right?
+
+150
+00:11:20,230 --> 00:11:22,380
+Scott: So someone like Mario maker 2 came out.
+
+151
+00:11:22,461 --> 00:11:24,954
+Scott: people played it and they played it out Right.
+
+152
+00:11:25,336 --> 00:11:27,087
+Scott: and now it's like well, why would you play Mario maker 2 now?
+
+153
+00:11:27,890 --> 00:11:29,095
+Scott: It's that game got played out
+
+154
+00:11:29,376 --> 00:11:32,730
+Rym: and if you want now like most of the things people are making is just like kaizo nonsense
+
+155
+00:11:33,551 --> 00:11:43,050
+Scott: right, but now by putting this update people are gonna come back to Mario maker who have it already and People who say maybe bought a switch to get animal crossing.
+
+156
+00:11:43,712 --> 00:11:47,806
+Scott: Maybe Mario maker will be their second game because that game is basically like it new again.
+
+157
+00:11:47,826 --> 00:11:49,009
+Scott: Yeah, even though it's not new.
+
+158
+00:11:50,193 --> 00:11:51,623
+Scott: So that's the Nintendo strategy.
+
+159
+00:11:51,644 --> 00:11:52,449
+Scott: It seems to be working.
+
+160
+00:11:52,851 --> 00:12:09,790
+Scott: There's also big free updates coming to Animal Crossing to no one's surprise and there are also updates to the my Nintendo app On the phone which is sort of like your Nintendo account manager, but also in-game communicator app.
+
+161
+00:12:09,912 --> 00:12:12,770
+Scott: It's pretty useful Even though it's imperfect.
+
+162
+00:12:13,432 --> 00:12:16,021
+Scott: But for example what the major thing really is?
+
+163
+00:12:16,041 --> 00:12:18,470
+Scott: you're gonna be able to buy games in the eShop on your phone.
+
+164
+00:12:18,631 --> 00:12:23,574
+Scott: So like if someone says hey, there's a big Mario maker update and you say oh snap I really wanted that game.
+
+165
+00:12:23,594 --> 00:12:30,169
+Scott: you take out your phone you buy Mario maker and then the next time you go to your switch Mario makers Already installed because you just paid for it on your phone.
+
+166
+00:12:31,191 --> 00:12:37,911
+Scott: So that update is I think out in Japan now soon and will probably be coming soon to the u.s I guess.
+
+167
+00:12:38,112 --> 00:12:43,587
+Rym: but yeah as of this like Mario maker now is like a must-buy game for a switch like this.
+
+168
+00:12:43,707 --> 00:12:45,954
+Scott: is Mario maker - yeah Yeah, Mario maker - for sure.
+
+169
+00:12:46,235 --> 00:12:47,359
+Rym: Like there is nothing else.
+
+170
+00:12:47,439 --> 00:12:48,603
+Rym: I want from the game.
+
+171
+00:12:48,643 --> 00:12:50,750
+Rym: They filled every hole I cared about.
+
+172
+00:12:51,171 --> 00:12:52,576
+Scott: Oh, there's more things I could want from there.
+
+173
+00:12:53,479 --> 00:12:58,303
+Rym: Uh, I mean, yes, I would like a full Super Mario - Like game style.
+
+174
+00:12:58,384 --> 00:13:00,957
+Rym: but I Understand why they're not gonna do that.
+
+175
+00:13:01,458 --> 00:13:08,529
+Scott: My main concern is that if I make a boo house I can't make that like field of infinite boos up in the ceiling.
+
+176
+00:13:10,090 --> 00:13:10,692
+Scott: There's no way.
+
+177
+00:13:10,732 --> 00:13:12,898
+Scott: there's no way to do that with the right.
+
+178
+00:13:13,460 --> 00:13:14,583
+Rym: Yeah, I can let that go.
+
+179
+00:13:14,603 --> 00:13:15,485
+Rym: I can let that go.
+
+180
+00:13:15,505 --> 00:13:28,824
+Scott: I Know I know also mad that if you make a boo ring Apparently if you get up if you're inside of a dry bones shell you can jump on kill the boos in a boo ring Which I'm not a fan of.
+
+181
+00:13:29,798 --> 00:13:30,490
+Scott: Who my boos alone?
+
+182
+00:13:31,010 --> 00:13:42,859
+Rym: I did not know that because that's not something I could do in any old Mario Mario maker - has a lot of those things That like you don't realize the interactions between different Enemies and they're not really documented.
+
+183
+00:13:42,899 --> 00:13:45,749
+Rym: like I there's that one huge other documented but very it's.
+
+184
+00:13:45,769 --> 00:13:46,431
+Scott: you know You have to.
+
+185
+00:13:46,551 --> 00:13:47,534
+Scott: really there's
+
+186
+00:13:47,554 --> 00:13:57,564
+Rym: a YouTube channel deep that I think I made a thing of a long time ago that does experiments to show Specific undocumented behaviors and then show you how to use them in levels
+
+187
+00:13:58,026 --> 00:14:04,264
+Scott: like if you watch Mario maker - streamers you will about once a day see something you didn't know before.
+
+188
+00:14:04,285 --> 00:14:05,147
+Scott: Yeah, it's.
+
+189
+00:14:05,247 --> 00:14:06,250
+Scott: it's pretty fascinating.
+
+190
+00:14:07,076 --> 00:14:08,447
+Rym: So this is pretty exciting stuff.
+
+191
+00:14:09,291 --> 00:14:17,595
+Rym: Yeah, I look forward to what you guys are making and I am definitely going to make a world that I will share with all Of you and I want you to play it.
+
+192
+00:14:17,615 --> 00:14:18,217
+Rym: I'm kind of excited.
+
+193
+00:14:18,237 --> 00:14:21,390
+Scott: I'm definitely making some boo Fanto combinations, right?
+
+194
+00:14:21,631 --> 00:14:22,876
+Scott: I don't think there is a Mario.
+
+195
+00:14:22,896 --> 00:14:25,868
+Scott: get an official Mario game that has that combination in it.
+
+196
+00:14:26,972 --> 00:14:32,289
+Scott: But imagine like you go in a room and you're you can't look left and right because there's booze and there's a key.
+
+197
+00:14:32,329 --> 00:14:34,216
+Scott: you grab The key and now a phantos coming.
+
+198
+00:14:34,236 --> 00:14:36,124
+Scott: you gotta run but there's booze.
+
+199
+00:14:36,385 --> 00:14:37,730
+Scott: Yeah, but the phantos coming.
+
+200
+00:14:38,256 --> 00:14:41,898
+Rym: Yeah, you can do that But I put a Fanta in one area.
+
+201
+00:14:42,099 --> 00:14:43,945
+Rym: put a Fanta really far away from the keys.
+
+202
+00:14:43,965 --> 00:14:45,732
+Rym: you pick up the key and nothing happens Nothing.
+
+203
+00:14:45,752 --> 00:14:47,198
+Scott: I don't know if they you choose.
+
+204
+00:14:47,218 --> 00:14:50,230
+Scott: I'll have to see at the specifics of it which were not revealed.
+
+205
+00:14:50,752 --> 00:14:54,809
+Scott: I don't know if you position the Fanta or you just put a Fanta key and that's it.
+
+206
+00:14:55,010 --> 00:15:02,490
+Rym: Yeah, the thing the thing I'm looking at doesn't even say anything about Fanta Right, so I'm not sure the specifics of how those the things work, which is fine.
+
+207
+00:15:02,812 --> 00:15:04,922
+Rym: All I really needed is the world making.
+
+208
+00:15:05,103 --> 00:15:09,101
+Rym: even if that was the only thing they added I would have been equally jazzed for this release.
+
+209
+00:15:09,282 --> 00:15:10,487
+Scott: right and the world thing is.
+
+210
+00:15:10,688 --> 00:15:15,482
+Scott: first of all They let you do a full eight worlds with 40 up to 40 total levels.
+
+211
+00:15:15,562 --> 00:15:22,684
+Scott: Yeah in your eight worlds and then On top of that they gave you all the Koopa kids.
+
+212
+00:15:22,825 --> 00:15:24,290
+Scott: so you have bosses to fill your worlds.
+
+213
+00:15:24,370 --> 00:15:29,293
+Rym: Yeah, actual bosses not just the same like boomer boss at the end of every level Right.
+
+214
+00:15:29,333 --> 00:15:33,690
+Scott: and then on top of that you think about how much fun you're gonna have making your Mario worlds.
+
+215
+00:15:34,031 --> 00:15:36,344
+Scott: However, many you are allowed to make right?
+
+216
+00:15:37,068 --> 00:15:41,614
+Scott: Uh You're gonna get to play worlds Made by other people.
+
+217
+00:15:41,915 --> 00:15:42,216
+Rym: Yep.
+
+218
+00:15:42,898 --> 00:15:45,486
+Scott: This is like, you know, it's not like right now.
+
+219
+00:15:45,546 --> 00:15:50,326
+Scott: you open Mario maker today And by the way, the update comes out tomorrow the 22nd and today's the 21st.
+
+220
+00:15:51,952 --> 00:15:54,409
+Scott: So probably by the time you listen to this the update will be out.
+
+221
+00:15:54,550 --> 00:15:59,784
+Scott: Yeah, you can open up Mario maker today and it's like okay play random levels created by other people.
+
+222
+00:16:00,286 --> 00:16:01,228
+Scott: This will now be okay.
+
+223
+00:16:01,830 --> 00:16:04,629
+Scott: I'm gonna just go play entire Mario games.
+
+224
+00:16:05,711 --> 00:16:18,610
+Scott: Right the amount of content, you know singles used to come out But now we have albums and you just have to tons and tons of albums Like, you know every player will probably have at least one or two that they've made.
+
+225
+00:16:18,670 --> 00:16:19,433
+Scott: Yeah, right.
+
+226
+00:16:19,453 --> 00:16:21,964
+Scott: So you're just like I played a whole Mario world today.
+
+227
+00:16:21,984 --> 00:16:22,446
+Scott: tomorrow.
+
+228
+00:16:22,507 --> 00:16:23,290
+Scott: I'll play a whole different.
+
+229
+00:16:25,052 --> 00:16:25,433
+Scott: It's great.
+
+230
+00:16:26,196 --> 00:16:26,638
+Rym: All right.
+
+231
+00:16:26,960 --> 00:16:37,045
+Rym: But anyway, it's time for the Eggs of the day.
+
+232
+00:16:37,065 --> 00:16:37,626
+Rym: What do you got?
+
+233
+00:16:37,767 --> 00:16:41,719
+Scott: So way back at one ConnectiCon I forgot what year it was.
+
+234
+00:16:42,828 --> 00:16:50,890
+Scott: friend of the show Constantine von Hoffman did a panel that we accepted and put on the schedule Called the history of dice.
+
+235
+00:16:51,834 --> 00:16:55,590
+Scott: all gamers love dice I think even video gamers who don't play RPGs or any.
+
+236
+00:16:55,630 --> 00:16:59,940
+Rym: I didn't get to go to this panel because I was the head of Panels and I was dealing with other stuff.
+
+237
+00:17:00,040 --> 00:17:06,079
+Rym: But the feedback I got from that panel that first time it was running ConnectiCon was a plus feedback.
+
+238
+00:17:06,622 --> 00:17:07,585
+Scott: Oh, yeah, I went to the panel.
+
+239
+00:17:07,846 --> 00:17:21,779
+Scott: It was a plus s-rank panel even about the history of dice of interest to all all nerds And You know, but there was no video of that panel and there was no way for the general population to see it.
+
+240
+00:17:21,839 --> 00:17:33,840
+Scott: However Constantine was at magfest and did the panel at magfest and Magfest is took videos of all its panels and the video quality of the panels that that magfest recorded was low.
+
+241
+00:17:33,960 --> 00:17:51,240
+Scott: They had like cheapo camcorders right on tripods that were not moving But they were recording audio from the mixer boards in the room And they even though the trip Cameras weren't moving and were pretty low quality and the lighting wasn't great.
+
+242
+00:17:51,762 --> 00:17:58,569
+Scott: they did an okay job of making sure to get the speaker and the Not the audio speaker the person speaking.
+
+243
+00:17:58,729 --> 00:18:01,880
+Scott: Yeah, you and the projector screen in the frame.
+
+244
+00:18:02,682 --> 00:18:08,920
+Scott: So the recordings of the panels while not amazing like not II, you know, like GeekNights panel recordings aren't that great?
+
+245
+00:18:09,020 --> 00:18:10,485
+Scott: But these are not as good as those.
+
+246
+00:18:10,566 --> 00:18:18,411
+Scott: Yeah, but because the audio is good enough to hear and you can see the screen They are very much above the bar where it's like.
+
+247
+00:18:18,431 --> 00:18:18,752
+Scott: Yes.
+
+248
+00:18:18,912 --> 00:18:21,540
+Scott: This is where I'm not gonna like not watch this.
+
+249
+00:18:21,741 --> 00:18:28,895
+Rym: Yeah better than most Conventions videos for panels everywhere on earth for all of time, right?
+
+250
+00:18:28,935 --> 00:18:30,740
+Scott: Exactly the content comes through.
+
+251
+00:18:31,283 --> 00:18:32,148
+Scott: You're not missing anything.
+
+252
+00:18:32,208 --> 00:18:37,760
+Scott: So here is the video of Constantine von Hoffman magfest 2020 the history of dice.
+
+253
+00:18:37,760 --> 00:18:40,367
+Rym: 5,000 years of the d6 2500 years of the d20.
+
+254
+00:18:42,302 --> 00:18:55,120
+Scott: Yes, this is a fascinating panel that is worth your 30 minutes of time to watch and learn all about Everything you knew and didn't know about dice the most one of the most important gaming components.
+
+255
+00:18:55,804 --> 00:19:04,120
+Rym: Yeah, so, uh my thing of the day This is Tom Scott, which sure you've run into this person on YouTube before just makes generally good videos.
+
+256
+00:19:04,221 --> 00:19:08,040
+Rym: But are you familiar Scott with the concept in our language of a prefix?
+
+257
+00:19:10,003 --> 00:19:10,265
+Rym: Yeah, yep.
+
+258
+00:19:10,426 --> 00:19:13,863
+Scott: It's the part of the word that comes before the yeah The main part of the word.
+
+259
+00:19:14,244 --> 00:19:16,892
+Scott: and how about us like if I said anti Rym?
+
+260
+00:19:17,313 --> 00:19:18,798
+Scott: right anti would be a prefix.
+
+261
+00:19:19,038 --> 00:19:21,427
+Rym: Yep Suffixes are also a thing.
+
+262
+00:19:21,447 --> 00:19:22,473
+Rym: You're really with suffixes.
+
+263
+00:19:22,513 --> 00:19:23,539
+Rym: You can stick stuff at the end.
+
+264
+00:19:23,901 --> 00:19:26,187
+Scott: Are you familiar with like a Rym ism?
+
+265
+00:19:26,328 --> 00:19:27,351
+Scott: ism would be the suffix.
+
+266
+00:19:27,411 --> 00:19:30,520
+Rym: Are you familiar with the concept of an infix?
+
+267
+00:19:32,388 --> 00:19:35,829
+Scott: I can imagine what it means But I can't think of an example of one right now.
+
+268
+00:19:35,870 --> 00:19:42,873
+Rym: that is because with one exception They do not exist in English, but they do exist in other languages.
+
+269
+00:19:43,174 --> 00:19:45,060
+Scott: I imagine German probably has them.
+
+270
+00:19:45,724 --> 00:19:48,020
+Scott: So they're like the kings of combo words.
+
+271
+00:19:48,422 --> 00:20:06,448
+Rym: This video explains the deal with infixes But the part that's fascinating is that the one exception to the rule where we do use infixes in English The exception is saying Kurt saying bad words like fuck Abso-fucking-lutely is an infix.
+
+272
+00:20:06,629 --> 00:20:07,793
+Scott: Oh, there you go.
+
+273
+00:20:07,873 --> 00:20:12,745
+Rym: That is basically the only time Infixes are used in English.
+
+274
+00:20:13,870 --> 00:20:16,640
+Rym: like 90% of all English infixes are the word fuck.
+
+275
+00:20:18,283 --> 00:20:18,928
+Rym: And even better.
+
+276
+00:20:18,948 --> 00:20:20,700
+Rym: this video does a really great job.
+
+277
+00:20:20,760 --> 00:20:28,880
+Rym: You know when you're a kid and like middle school and you take Spanish class or French class and you start to learn how English Worked in a way that was never taught to you before.
+
+278
+00:20:29,821 --> 00:20:35,460
+Rym: The cool thing about this video is it points out that I know how to construct the word abso-fucking-lutely.
+
+279
+00:20:35,941 --> 00:20:38,329
+Rym: But why does fuck have to go in that spot?
+
+280
+00:20:38,671 --> 00:20:41,299
+Rym: Why does abs fuck solutely not work?
+
+281
+00:20:43,500 --> 00:20:46,348
+Rym: Like why does it have to be abso-fucking-lutely?
+
+282
+00:20:46,589 --> 00:20:54,612
+Rym: this video explains the rule that we all knew and could never explain absolute fuckly.
+
+283
+00:20:54,632 --> 00:20:59,574
+Rym: I Feel like I'm gonna try to affect in my language using infixes with the.
+
+284
+00:20:59,614 --> 00:21:05,070
+Scott: well, okay, so it can't go between The the Lee because the Lee is actually a suffering.
+
+285
+00:21:05,671 --> 00:21:06,815
+Scott: So it's you got absolute.
+
+286
+00:21:07,437 --> 00:21:08,460
+Scott: so it's absolutes.
+
+287
+00:21:08,480 --> 00:21:12,100
+Scott: So you know they either go between the abs and the so or between the so and the loot.
+
+288
+00:21:12,300 --> 00:21:16,013
+Scott: Yeah, so it could be abso-fucking-lute or abs fucking solute.
+
+289
+00:21:16,515 --> 00:21:21,116
+Rym: Yeah, but the only one of those sounds right Abfuck solutely.
+
+290
+00:21:22,442 --> 00:21:23,190
+Scott: That's not too bad.
+
+291
+00:21:23,230 --> 00:21:27,387
+Scott: if we're pronounced that way It's obviously not as good as abso-fucking-lute.
+
+292
+00:21:27,547 --> 00:21:27,748
+Scott: Yep.
+
+293
+00:21:28,049 --> 00:21:31,278
+Rym: So this video explains the full deal in less than five minutes.
+
+294
+00:21:31,318 --> 00:21:31,779
+Rym: It's pretty good.
+
+295
+00:21:32,583 --> 00:21:36,640
+Rym: Okay, uh, since we're in the meta moment now, uh, one thing I will point out.
+
+296
+00:21:36,801 --> 00:21:40,320
+Rym: We are obviously not going to be appearing at any conventions for the foreseeable future.
+
+297
+00:21:41,082 --> 00:21:47,202
+Scott: No, even though PAX West today did announce that they are as still on Right.
+
+298
+00:21:47,243 --> 00:21:49,570
+Scott: Yeah, and a lot of people are mad about that.
+
+299
+00:21:49,690 --> 00:21:54,125
+Scott: understandably if they see an announcement like that and they don't understand The the full deal.
+
+300
+00:21:54,145 --> 00:21:54,848
+Scott: Yeah, right.
+
+301
+00:21:54,948 --> 00:21:56,534
+Rym: We do not have inside knowledge.
+
+302
+00:21:56,594 --> 00:21:59,349
+Rym: Like we're not about to reveal any secrets We know from packs.
+
+303
+00:21:59,389 --> 00:22:00,640
+Scott: Yeah, I don't know any secrets.
+
+304
+00:22:00,720 --> 00:22:07,883
+Scott: However, I just know things in general about conventions and what I know and I'm not a hundred percent sure that this is true But this is just
+
+305
+00:22:07,903 --> 00:22:16,300
+Rym: well I can let's say let's say this we cannot say if this is true or not for packs in particular But it is true of other similar conventions.
+
+306
+00:22:16,661 --> 00:22:17,405
+Scott: Yes, we have.
+
+307
+00:22:17,425 --> 00:22:30,760
+Scott: no we have known this to be true of other large events Right in general and therefore we could presume it might also be true for packs and explain why they are saying they're still on In such a scenario, right?
+
+308
+00:22:30,900 --> 00:22:33,420
+Scott: So you're having a big ol event, right?
+
+309
+00:22:33,760 --> 00:22:37,600
+Scott: You have a contract with the with the space that you've already signed yours in advance.
+
+310
+00:22:38,062 --> 00:22:42,159
+Scott: You have contracts with vendors hotels all kinds of people, right?
+
+311
+00:22:43,802 --> 00:22:52,815
+Scott: If you just cancel your event and say yeah, we're not having it then for example The convention center can say well you sign this contract with us your kit.
+
+312
+00:22:52,835 --> 00:22:53,577
+Scott: You just cancel.
+
+313
+00:22:53,597 --> 00:22:54,380
+Scott: you still to pay us.
+
+314
+00:22:54,440 --> 00:22:55,484
+Scott: You can't just cancel.
+
+315
+00:22:55,564 --> 00:22:58,154
+Rym: Yep, right maybe the whole amount in many cases.
+
+316
+00:22:58,214 --> 00:22:59,138
+Rym: It's the full amount.
+
+317
+00:22:59,198 --> 00:23:02,668
+Rym: in other cases There's a penalty fee that depends on the circumstances.
+
+318
+00:23:02,708 --> 00:23:03,871
+Scott: It gets coming who knows right.
+
+319
+00:23:04,172 --> 00:23:11,640
+Scott: also, for example, the hotel nearby might be like Hey, I was holding some rooms for you that I could have sold you canceled.
+
+320
+00:23:11,761 --> 00:23:15,640
+Scott: I'm gonna sue you to get you know, you made me lose money, right?
+
+321
+00:23:16,982 --> 00:23:19,211
+Scott: And that who knows that that lawsuit would succeed or fail?
+
+322
+00:23:19,271 --> 00:23:21,260
+Scott: I'm not a lawyer but that could happen, right?
+
+323
+00:23:21,741 --> 00:23:35,099
+Scott: Yeah, and also you're regardless of whether these sorts of things happen or not Your relationships with some of these other Businesses that are you know where you're working together with for the convention could be harmed if you just cancel.
+
+324
+00:23:35,160 --> 00:23:39,012
+Rym: now You might think but a global catastrophe like coronavirus?
+
+325
+00:23:39,333 --> 00:23:41,560
+Rym: shouldn't humans just be able to do the right thing?
+
+326
+00:23:41,620 --> 00:23:44,029
+Rym: The problem is humans have no say in this.
+
+327
+00:23:44,130 --> 00:23:46,820
+Rym: it is law and capitalism that has a say, right?
+
+328
+00:23:46,920 --> 00:23:49,000
+Scott: The contracts have already been signed years in advance.
+
+329
+00:23:49,181 --> 00:23:52,169
+Scott: So the result is the final piece.
+
+330
+00:23:52,270 --> 00:23:55,620
+Scott: and listen to a previous GeekNights episode about insurance, right?
+
+331
+00:23:56,480 --> 00:24:10,140
+Scott: If you are a big convention you have insurance, right and it presumably if you have some insurance to protect your event You know to mitigate the risk of your event not happening, right which is a good insurance to buy if you're holding a large event.
+
+332
+00:24:10,300 --> 00:24:15,000
+Scott: Yeah, if we have a big night's that insurance won't pay out if you cancel, right?
+
+333
+00:24:15,360 --> 00:24:18,109
+Scott: It would only pay out if you are forced to cancel.
+
+334
+00:24:18,169 --> 00:24:21,780
+Scott: like my insurance won't pay if I burn my house down.
+
+335
+00:24:21,901 --> 00:24:23,679
+Scott: It would only pay if my house got burned.
+
+336
+00:24:24,721 --> 00:24:30,256
+Scott: So as a result, right packs cannot say we're canceling right?
+
+337
+00:24:30,336 --> 00:24:31,680
+Scott: Otherwise, they would be burned.
+
+338
+00:24:32,841 --> 00:24:34,887
+Rym: Because again, we don't know the specifics of packs.
+
+339
+00:24:35,208 --> 00:24:39,580
+Scott: but right and it's even worse we can presume that that might be the case.
+
+340
+00:24:39,640 --> 00:24:54,543
+Rym: It's likely a convention in general can't even say we'd like to cancel but we can't yet because that shows In legal terms effectively bad faith so that later when you do have an excuse to cancel You could still.
+
+341
+00:24:54,763 --> 00:25:01,102
+Rym: people could still go after you saying ah, you were trying to cancel the whole time to get out of this contract Exactly.
+
+342
+00:25:01,864 --> 00:25:13,960
+Scott: So as a result packs is sort of Possibly, you know, we can assume based on just logic they might be Forced to say that they are still on even though they may.
+
+343
+00:25:14,060 --> 00:25:18,050
+Scott: the people behind it may be thinking we're not having this, right?
+
+344
+00:25:19,230 --> 00:25:27,602
+Scott: Until such a time as they are forced to for example of Washington State or the city of Seattle said you can't have this packs This year you better move it or cancel it.
+
+345
+00:25:27,944 --> 00:25:32,430
+Scott: then they can say well Pay us or even insurance give us money.
+
+346
+00:25:32,531 --> 00:25:43,758
+Rym: It's usually a lot of the contracts involved have clauses that cover all this stuff Like yep, if the con can't happen for reasons then and basically everybody don't know your money now right exactly so.
+
+347
+00:25:43,959 --> 00:25:44,160
+Scott: but the
+
+348
+00:25:44,562 --> 00:26:00,653
+Rym: part capitalism wise is Let's say and generally an event like packs other types of conventions It would often be cheaper for them to run Anyway, say say like it comes to the point where the government doesn't give them an excuse to cancel They're not forced to cancel.
+
+349
+00:26:01,195 --> 00:26:07,210
+Rym: It would probably be cheaper for them to run anyway, even if zero people attend than to cancel.
+
+350
+00:26:08,195 --> 00:26:12,476
+Scott: right, so my My guess and my advice right?
+
+351
+00:26:12,497 --> 00:26:17,270
+Scott: So my guess is that PAX West 2020 has a less than 50% chance of happening.
+
+352
+00:26:17,350 --> 00:26:20,219
+Rym: Yeah, I'm feeling like one in three shot at best.
+
+353
+00:26:20,641 --> 00:26:20,962
+Scott: Yes.
+
+354
+00:26:21,544 --> 00:26:29,722
+Scott: My advice is that If it gets you know is if you really want to go Especially if you're close why not buy a ticket?
+
+355
+00:26:29,743 --> 00:26:31,270
+Scott: you get a refund if it cancels, right?
+
+356
+00:26:31,350 --> 00:26:36,690
+Rym: There could be that I trust packs to give me refunds more than I trust pretty much any other goddamn con.
+
+357
+00:26:37,252 --> 00:26:45,150
+Scott: Right, if you're buying plane, you know, I can always cancel hotel and get a refund on the tickets But the plane tickets if you want to fly to it might be a problem.
+
+358
+00:26:45,250 --> 00:26:50,250
+Scott: So make sure if you are buying plane tickets to packs who has 2020 to get refundable one?
+
+359
+00:26:50,331 --> 00:26:55,242
+Rym: I mean, I'm not gonna be If PAX West looks like it's still gonna happen and we get to August.
+
+360
+00:26:55,523 --> 00:26:57,390
+Rym: I'm still not buying my tickets until right before.
+
+361
+00:26:57,812 --> 00:27:00,885
+Scott: Yeah, my plan is if it actually happens.
+
+362
+00:27:01,006 --> 00:27:01,749
+Scott: Will I go?
+
+363
+00:27:02,690 --> 00:27:02,951
+Scott: Maybe?
+
+364
+00:27:03,413 --> 00:27:05,059
+Rym: yep depends on a lot of factors.
+
+365
+00:27:05,380 --> 00:27:08,030
+Rym: It depends on a lot depending on how things go.
+
+366
+00:27:08,532 --> 00:27:20,195
+Rym: It's not out of the realm that we could go to PAX Australia, but not to packs Wes like, you know it might be bad because considering the fact that Like the u.s.
+
+367
+00:27:20,236 --> 00:27:26,041
+Rym: Might be a situation where like u.s Cons are all canceled, but the rest of the world starts to have conventions again, right?
+
+368
+00:27:26,061 --> 00:27:28,709
+Scott: Right if Australia lets us go there, right?
+
+369
+00:27:29,150 --> 00:27:38,579
+Scott: Yeah, we've got vacation days piled up right this this storm could be a resulting in us You know going to PAX Australia in October.
+
+370
+00:27:38,840 --> 00:27:42,290
+Rym: Yep, but not going to any other taxes because they may or may not happen.
+
+371
+00:27:42,812 --> 00:27:52,430
+Rym: We'll see what happens with yep, which would be fine because I've been to two PAX Australia's Threatened to return someday and maybe I'll have to make good on that threat cuz you have a lot.
+
+372
+00:27:52,510 --> 00:27:54,841
+Scott: Australia ever fix their fire situation.
+
+373
+00:27:55,082 --> 00:27:56,870
+Rym: Yeah that that that got better.
+
+374
+00:27:57,673 --> 00:27:59,178
+Rym: Okay, not saying everything's great.
+
+375
+00:27:59,258 --> 00:28:01,466
+Rym: But that that situation is not the immediate crisis.
+
+376
+00:28:01,507 --> 00:28:02,269
+Scott: I was pretty bad.
+
+377
+00:28:03,471 --> 00:28:03,913
+Rym: Well, I was.
+
+378
+00:28:03,933 --> 00:28:04,615
+Rym: that was worse.
+
+379
+00:28:04,856 --> 00:28:10,846
+Rym: I was in Sydney and Melbourne during the height of that and Sydney was so bad I could barely breathe just in the street.
+
+380
+00:28:12,371 --> 00:28:14,398
+Scott: All right, anyway, yeah Luigi's Mansion.
+
+381
+00:28:14,458 --> 00:28:21,850
+Rym: so Luigi's Mansion is part of the Luigi video game series Which started with Luigi's hammer toss in?
+
+382
+00:28:21,850 --> 00:28:22,893
+Rym: 1990.
+
+383
+00:28:22,893 --> 00:28:24,379
+Scott: I never heard of that game.
+
+384
+00:28:24,560 --> 00:28:24,781
+Rym: Yep.
+
+385
+00:28:25,122 --> 00:28:26,127
+Rym: Mario is missing.
+
+386
+00:28:26,468 --> 00:28:27,191
+Rym: Luigi's I'm aware of.
+
+387
+00:28:27,211 --> 00:28:30,564
+Rym: that game was the third Luigi game in 2001 on the game of cube.
+
+388
+00:28:32,707 --> 00:28:38,093
+Scott: Yeah So I played the GameCube one as soon as it came out because I bought a GameCube on release day and that was the launch Title on the GameCube.
+
+389
+00:28:38,113 --> 00:28:38,273
+Scott: Yep.
+
+390
+00:28:38,414 --> 00:28:41,282
+Rym: I remember I drove Scott to pick up his launch day.
+
+391
+00:28:41,302 --> 00:28:43,770
+Rym: GameCube at the media play, right?
+
+392
+00:28:44,130 --> 00:28:48,367
+Scott: So the original Luigi's man, I didn't play the second Luigi's Mansion, which I think was a dark 3ds game.
+
+393
+00:28:49,111 --> 00:28:50,003
+Rym: Yeah, I didn't play any of those.
+
+394
+00:28:50,206 --> 00:28:51,953
+Rym: I didn't One.
+
+395
+00:28:52,074 --> 00:28:54,082
+Rym: I watched Scott play most of it.
+
+396
+00:28:54,403 --> 00:28:55,367
+Rym: That's how I know about.
+
+397
+00:28:55,407 --> 00:29:05,510
+Scott: mentioned one was basically It was sort of you know, it was a game where you walk around the mansion and you basically touch everything, right?
+
+398
+00:29:05,590 --> 00:29:10,470
+Scott: So it's like it's just almost like a funhouse right which is fitting for a haunted mansion, right?
+
+399
+00:29:11,212 --> 00:29:14,850
+Scott: You know you go around and you interact with all the bits that you can interact with right?
+
+400
+00:29:15,090 --> 00:29:16,778
+Scott: There was a painting on the wall, right?
+
+401
+00:29:16,819 --> 00:29:17,964
+Scott: There's a there's a desk.
+
+402
+00:29:18,025 --> 00:29:19,934
+Scott: There's a bed There's a right.
+
+403
+00:29:19,954 --> 00:29:22,970
+Scott: this stuff and everything sort of does something.
+
+404
+00:29:23,030 --> 00:29:27,347
+Rym: Yeah, it's not often a super game mechanic II thing, but just like it'll react in some way.
+
+405
+00:29:27,387 --> 00:29:31,541
+Scott: That's mildly amusing Right, or you know, sometimes you just push a to open a drawer.
+
+406
+00:29:31,601 --> 00:29:39,950
+Scott: Sometimes you vacuum something off the wall Because Luigi has his vacuum and then this is intermittently dispersed with combat.
+
+407
+00:29:40,030 --> 00:29:46,650
+Scott: Well combat with with ghosts booze of sorts, right and all of general regard, right?
+
+408
+00:29:46,850 --> 00:29:50,413
+Scott: They're they're sort of a combination of a puzzle Right of like.
+
+409
+00:29:50,433 --> 00:29:51,637
+Scott: how do I get this guy?
+
+410
+00:29:51,778 --> 00:29:54,870
+Scott: and also a little bit of action gamepad fitness?
+
+411
+00:29:55,350 --> 00:29:58,442
+Scott: You gotta think much like you do not have very easy, right?
+
+412
+00:29:58,542 --> 00:29:59,125
+Scott: It's like okay.
+
+413
+00:29:59,145 --> 00:30:00,470
+Scott: I have to get this guy from behind.
+
+414
+00:30:00,591 --> 00:30:03,466
+Scott: Okay, I have to distract this guy and then get him right.
+
+415
+00:30:03,486 --> 00:30:07,470
+Scott: this, you know It's just a little bit of something something strategy for each of the ghosts.
+
+416
+00:30:07,531 --> 00:30:09,150
+Scott: Some of them are harder easier than others.
+
+417
+00:30:09,190 --> 00:30:13,330
+Rym: This is why I got bored with the original Luigi's Mansion pretty quick.
+
+418
+00:30:13,511 --> 00:30:14,855
+Rym: I didn't actually play be.
+
+419
+00:30:14,916 --> 00:30:17,464
+Rym: I played like an hour of it and I was done right.
+
+420
+00:30:17,806 --> 00:30:24,430
+Scott: and then as you go on You know your you as you catch more ghosts more of the mansion unlocks, right?
+
+421
+00:30:24,730 --> 00:30:30,830
+Scott: So you're going you know to higher floors in the mansion exploring more rooms and eventually there's a boss and the games over.
+
+422
+00:30:31,652 --> 00:30:37,650
+Scott: So I didn't play Luigi's Mansion - right but Luigi's Mansion 3 came out for the switch and I figured why not?
+
+423
+00:30:37,670 --> 00:30:42,178
+Scott: I go what else I have to do and It's pretty much the same genre of game.
+
+424
+00:30:42,218 --> 00:30:42,399
+Scott: right?
+
+425
+00:30:42,439 --> 00:30:55,590
+Scott: you walk around this this mansion, which is actually a hotel now haunted hotel And you can interact with all the different things in the hotel and as you go on you catch ghosts with some minor little action gameplay up.
+
+426
+00:30:57,973 --> 00:31:00,662
+Scott: They give you though a lot more ways to interact right.
+
+427
+00:31:00,682 --> 00:31:02,970
+Scott: there's not just the vacuum and the flashlight and the.
+
+428
+00:31:04,135 --> 00:31:14,788
+Scott: You know Luigi pressing a. You can say Mario sure You can You can you know, the vacuum sucks in and out.
+
+429
+00:31:15,914 --> 00:31:19,070
+Scott: You can do sort of a radius poof with it with the vacuum.
+
+430
+00:31:19,512 --> 00:31:21,380
+Rym: So there's a lot more like kind of almost
+
+431
+00:31:21,481 --> 00:31:21,782
+Scott: physics
+
+432
+00:31:21,842 --> 00:31:24,854
+Rym: puzzles in a lot of the game Like they're not
+
+433
+00:31:24,914 --> 00:31:28,289
+Scott: quite physics puzzles like order of operations puzzles
+
+434
+00:31:29,311 --> 00:31:30,075
+Rym: Yeah, or it's like,
+
+435
+00:31:30,235 --> 00:31:33,671
+Scott: oh I have to do this to that then do this to that Yeah,
+
+436
+00:31:33,952 --> 00:31:35,397
+Rym: or like I see a thing in the rafters.
+
+437
+00:31:35,498 --> 00:31:39,150
+Rym: How could I Russell the rafters Jimmy's cuz that'll probably knock it down.
+
+438
+00:31:39,392 --> 00:31:41,790
+Scott: Oh, I know I have to suck this thing into the vacuum.
+
+439
+00:31:41,890 --> 00:31:48,050
+Scott: It'll get stuck on the front and then I'll shoot it out reverse the vacuum to shoot it like a projectile, right?
+
+440
+00:31:48,190 --> 00:31:57,389
+Rym: Yep, and you basically go around just fussing with stuff and seeing funny animations and getting little cutscenes and sort of just exploring This mansion for several hours.
+
+441
+00:31:58,233 --> 00:32:05,294
+Scott: right now the key thing that they've added here in Luigi's Mansion 3 is Gooigi which The fiction of it.
+
+442
+00:32:05,916 --> 00:32:19,910
+Scott: It appears that your soul inhabits this thing and leaves your body Right, so you could play a two-player Co-op sort of situation where someone else is Gooigi right and you're Luigi.
+
+443
+00:32:21,051 --> 00:32:31,484
+Scott: But normal single-player gameplay you just switch between the two right and the deal with Gooigi is he's like another Luigi But he has additional powers to because he's made of goo.
+
+444
+00:32:31,704 --> 00:32:34,900
+Rym: Yeah, like you can walk through spikes He could walk through spikes.
+
+445
+00:32:34,940 --> 00:32:36,750
+Scott: He could walk through the bars of a jail cell.
+
+446
+00:32:36,810 --> 00:32:39,541
+Scott: He could go through a plumbing and come out the other end.
+
+447
+00:32:39,561 --> 00:32:41,548
+Scott: Yeah, but if he touches water, that's it.
+
+448
+00:32:41,629 --> 00:32:41,950
+Scott: No good.
+
+449
+00:32:43,371 --> 00:32:52,580
+Scott: And so you have to move Luigi and Gooigi in concert with each other switching back and forth To sort of puzzle your way through different areas.
+
+450
+00:32:52,700 --> 00:32:59,480
+Scott: and it's that puzzle element really is the additional thing that Luigi's Mansion 1 didn't have too much of
+
+451
+00:32:59,661 --> 00:33:10,800
+Rym: yep, and it gave me enough meat to where unlike Luigi's Mansion 1 Where I got bored within about an hour just didn't play anymore because it started to feel more and more samey Luigi's Mansion 3 is keeping my attention.
+
+452
+00:33:10,961 --> 00:33:12,527
+Rym: I'm gonna beat it soon.
+
+453
+00:33:12,588 --> 00:33:13,150
+Rym: I'm near the end.
+
+454
+00:33:13,210 --> 00:33:15,739
+Rym: I haven't beaten it yet just because other games came out.
+
+455
+00:33:16,341 --> 00:33:21,018
+Scott: Well, not only is it the puzzle aspect of Gooigi Right and his incorporation.
+
+456
+00:33:21,400 --> 00:33:22,022
+Scott: There's also.
+
+457
+00:33:22,063 --> 00:33:23,830
+Scott: the game is just bigger because it's on the switch.
+
+458
+00:33:23,910 --> 00:33:24,734
+Scott: It's not an in cube.
+
+459
+00:33:25,436 --> 00:33:27,725
+Scott: you're going this huge hotel with tons of floors.
+
+460
+00:33:27,806 --> 00:33:28,910
+Scott: All the floors are unique.
+
+461
+00:33:29,311 --> 00:33:31,017
+Scott: There's backtracking to different floors.
+
+462
+00:33:31,037 --> 00:33:31,719
+Scott: You have to do.
+
+463
+00:33:32,061 --> 00:33:34,168
+Scott: there's a lot of secrets to find on each floor, right?
+
+464
+00:33:35,851 --> 00:33:36,936
+Scott: There's like a boo radar.
+
+465
+00:33:36,956 --> 00:33:40,090
+Scott: you get to like, oh, okay you cleared out that floor, that's great.
+
+466
+00:33:40,191 --> 00:33:42,002
+Scott: But did you know there's a boo hiding on that floor?
+
+467
+00:33:42,022 --> 00:33:43,089
+Scott: Do you want to go back and get it?
+
+468
+00:33:43,290 --> 00:33:44,010
+Scott: It's hiding somewhere.
+
+469
+00:33:44,030 --> 00:33:46,229
+Scott: You're gonna have to use follow solve a clever puzzle.
+
+470
+00:33:46,712 --> 00:33:51,901
+Scott: Even though you found the boo you might not be able to catch it until you figure out how to make it come out of Its shell or whatever.
+
+471
+00:33:51,962 --> 00:33:54,835
+Scott: It's in right You know, it's like.
+
+472
+00:33:55,016 --> 00:33:57,370
+Scott: oh I had to find the hidden thing behind the whatever.
+
+473
+00:33:57,701 --> 00:34:03,330
+Rym: Yep And there's just the right amount of those kinds of secrets kind of like the new Mario Brothers kind of like Breath of the Wild.
+
+474
+00:34:03,390 --> 00:34:16,909
+Rym: Nintendo's really been on a kick lately of having a Density of things to find without necessarily expecting you to find all the things just to make sure that the density is sufficient To where pretty much anywhere you go poking around you'll find something interesting.
+
+475
+00:34:17,692 --> 00:34:23,810
+Scott: Well, also the game, you know Luigi is trying to collect I guess money just generally right and there's basically money everywhere.
+
+476
+00:34:24,116 --> 00:34:24,850
+Scott: Yeah constantly.
+
+477
+00:34:25,393 --> 00:34:33,742
+Scott: So that money is sort of what gives you that Psychological Reward impulse for interacting with every single thing in the game.
+
+478
+00:34:33,862 --> 00:34:34,786
+Scott: Yeah, it's like you might.
+
+479
+00:34:34,826 --> 00:34:41,900
+Scott: just normally it's like, okay I only need to catch the boss ghost to beat this floor and get the Elevator button to go to the next floor, right?
+
+480
+00:34:42,183 --> 00:34:43,469
+Scott: I'll just run straight at the boss.
+
+481
+00:34:43,871 --> 00:34:45,216
+Scott: So you run past a bunch of stuff.
+
+482
+00:34:45,255 --> 00:34:45,899
+Scott: you could do that.
+
+483
+00:34:45,978 --> 00:34:46,702
+Scott: Nothing's stopping you.
+
+484
+00:34:46,742 --> 00:34:48,609
+Scott: I'm sure speedrunners will do exactly that.
+
+485
+00:34:49,791 --> 00:34:53,125
+Scott: But a normal casual player goes down the hallway and there's ten paintings.
+
+486
+00:34:53,165 --> 00:34:57,403
+Scott: They're vacuuming every painting Flashing their flashlight at every painting especially kids.
+
+487
+00:34:57,685 --> 00:34:58,830
+Rym: this game like I like it.
+
+488
+00:34:58,850 --> 00:35:00,255
+Rym: Okay, like it's a pretty good game.
+
+489
+00:35:00,275 --> 00:35:04,450
+Rym: Like it's just worth playing but this game is definitely aimed at kids.
+
+490
+00:35:04,591 --> 00:35:11,603
+Rym: I can imagine me as a kid and other kids I've known Vacuuming up every goddamn dollar in that entire hotel.
+
+491
+00:35:12,346 --> 00:35:13,129
+Scott: Oh, yeah, right.
+
+492
+00:35:14,491 --> 00:35:15,114
+Scott: So that's a ton of fun.
+
+493
+00:35:15,194 --> 00:35:23,423
+Scott: And the other thing about this is that you know, Luigi's Mansion 1, you know Thematically speaking it was kind of samey, right?
+
+494
+00:35:23,483 --> 00:35:28,823
+Scott: I mean there were different rooms with slightly different themes But it was really capture ten different general beauregard's.
+
+495
+00:35:29,506 --> 00:35:30,570
+Scott: Yeah, basically, right?
+
+496
+00:35:30,750 --> 00:35:38,061
+Scott: It's like, you know, but this one every floor of the hotel is Dramatically different right some of them are.
+
+497
+00:35:38,081 --> 00:35:39,850
+Scott: it's like how is this even a hotel floor?
+
+498
+00:35:39,950 --> 00:35:46,062
+Scott: Right and each hotel floor is almost like its own game with two tells its own story Right and has its own boss.
+
+499
+00:35:46,102 --> 00:35:47,149
+Scott: that fits with that story.
+
+500
+00:35:47,651 --> 00:35:54,476
+Rym: And like the radical difference like the moment when I realized this game was actually big was when I got to the like pretty early On you get to the medieval floor.
+
+501
+00:35:54,496 --> 00:36:03,450
+Rym: the medieval floor is the biggest craziest one so far Yeah, but it's so big and different from everything you've seen in the game up to that point, right?
+
+502
+00:36:03,550 --> 00:36:04,553
+Scott: There's the medieval floor.
+
+503
+00:36:04,694 --> 00:36:09,270
+Scott: then there's like this floor where there's a movie directing ghost and you have to go to the different scenes.
+
+504
+00:36:09,370 --> 00:36:11,219
+Scott: they're directing a whole new mic.
+
+505
+00:36:11,460 --> 00:36:16,290
+Scott: that floor has its own mechanic of Having to look through the camera.
+
+506
+00:36:16,872 --> 00:36:22,168
+Scott: Right while one Luigi looks through the camera and the other one acts out the scenes in front of the camera.
+
+507
+00:36:22,189 --> 00:36:23,514
+Scott: and when you look Through the camera you're.
+
+508
+00:36:23,735 --> 00:36:25,182
+Scott: it's like when you're not looking through the camera.
+
+509
+00:36:25,223 --> 00:36:26,690
+Scott: all you see is a movie set now.
+
+510
+00:36:26,770 --> 00:36:31,108
+Scott: But when you look through the camera, you see the actual movie as it would look to the.
+
+511
+00:36:31,128 --> 00:36:35,401
+Scott: you know Concept pot, you know, whoever would be watching it in the theater,
+
+512
+00:36:35,482 --> 00:36:35,963
+Rym: right
+
+513
+00:36:36,726 --> 00:36:50,424
+Scott: and you have to combine You know adjusting the movie set with also You know doing things in the movie to solve the puzzle of the room and you have to solve all the rooms Right, and then you know, there's the floor the Egyptian floor where you go in.
+
+514
+00:36:50,444 --> 00:36:57,829
+Scott: It's just a big room full of sand Right and that floor is like, you know a crazy pyramid puzzle right as you right.
+
+515
+00:36:58,553 --> 00:37:01,205
+Scott: But it's also there's a sand mechanic on that floor.
+
+516
+00:37:01,708 --> 00:37:12,237
+Scott: So it's like Not only is each floor thematically different But they're also mechanically different each one of them introducing a new Twist on on how the game works.
+
+517
+00:37:12,418 --> 00:37:16,628
+Scott: Yeah, and that even though you've already learned all of Luigi's abilities They've given him.
+
+518
+00:37:16,790 --> 00:37:25,790
+Scott: You know the first few floors that you gain all your abilities your vacuum and your flashlight and you know, everything you're gooey G. Yeah, like okay, you've got all the abilities.
+
+519
+00:37:26,091 --> 00:37:28,139
+Scott: We're gonna make you do something new with them every time.
+
+520
+00:37:28,380 --> 00:37:31,151
+Rym: and that's where this game shines where the original illusion that you just couldn't Get me.
+
+521
+00:37:31,191 --> 00:37:34,423
+Rym: there's enough variety of stuff to do to where I don't get bored.
+
+522
+00:37:34,724 --> 00:37:39,255
+Rym: as soon as I have to capture a ghost the Same way multiple times in a game like this I'm definitely gonna get bored.
+
+523
+00:37:39,616 --> 00:37:46,444
+Rym: but this game just keeps changing things up enough to where Despite having like doom eternal and all these other games to play.
+
+524
+00:37:46,685 --> 00:37:50,064
+Rym: I'm finishing Luigi's Mansion something I didn't really expect to do that quickly.
+
+525
+00:37:50,084 --> 00:37:52,765
+Scott: Mm-hmm But yeah it.
+
+526
+00:37:52,785 --> 00:37:54,193
+Scott: uh, you know It definitely keeps thing.
+
+527
+00:37:54,294 --> 00:38:03,209
+Scott: it keeps your interest on each floor as you ascend and then you beat it and you beat it and then You're good, you know, you could play it again and try to give be a completionist about it.
+
+528
+00:38:03,330 --> 00:38:04,615
+Rym: Yeah I don't think that's.
+
+529
+00:38:05,017 --> 00:38:05,961
+Rym: I would not would not do that.
+
+530
+00:38:06,021 --> 00:38:11,141
+Scott: if you're if you're the person who likes Completing things like hundred percent and collect all the stuff.
+
+531
+00:38:11,562 --> 00:38:13,208
+Scott: Why don't you just play Animal Crossing instead?
+
+532
+00:38:13,248 --> 00:38:15,700
+Scott: That's all you do Is collect all the stuff.
+
+533
+00:38:15,720 --> 00:38:16,789
+Scott: that seems like a better choice?
+
+534
+00:38:18,211 --> 00:38:19,998
+Scott: You know Luigi's Mansion definitely were.
+
+535
+00:38:20,079 --> 00:38:27,890
+Scott: if you have the time and you have the money and maybe it'll go It'll probably is the kind of game that Nintendo will actually put on sale for less than the full price at some point.
+
+536
+00:38:28,933 --> 00:38:29,558
+Rym: Yeah, you could wait.
+
+537
+00:38:29,599 --> 00:38:30,809
+Rym: Oh, this game's not going anywhere.
+
+538
+00:38:31,392 --> 00:38:34,786
+Scott: Yeah, or you could buy the cartridge play and then sell it to your friend or something like that.
+
+539
+00:38:34,806 --> 00:38:39,649
+Scott: It's a good pro move Yeah, but yeah, it's definitely worth playing through once and being done with.
+
+540
+00:38:40,711 --> 00:38:49,797
+Scott: you know not like the all-time greatest game, but definitely, you know, pretty interesting and You know better than the first Luigi's Mansion.
+
+541
+00:38:50,018 --> 00:38:52,585
+Rym: It is also the the first way she's matching like I just I was.
+
+542
+00:38:53,287 --> 00:39:00,010
+Rym: it looked so Repetitive when I saw you playing it that I just I lost interest before I even got to the repetitive part.
+
+543
+00:39:01,152 --> 00:39:06,159
+Scott: yeah, Luigi's Mansion 1 definitely had some of the Repetition of like, you know catch 10 booze.
+
+544
+00:39:06,501 --> 00:39:08,610
+Scott: Yeah, at least that's you know, it's been so long, right?
+
+545
+00:39:08,690 --> 00:39:10,416
+Scott: That's just my could be my faulty memory.
+
+546
+00:39:10,476 --> 00:39:11,400
+Rym: That's all I remember.
+
+547
+00:39:11,460 --> 00:39:14,230
+Rym: is you chasing down multiple general boo regards?
+
+548
+00:39:14,673 --> 00:39:15,539
+Scott: It did feel it.
+
+549
+00:39:15,620 --> 00:39:16,970
+Scott: There's only one general boo regard.
+
+550
+00:39:17,371 --> 00:39:18,575
+Scott: It does feel like you're.
+
+551
+00:39:18,675 --> 00:39:25,919
+Scott: you're going around and getting you know, a lot of dudes where the booze all in names But they all were the same.
+
+552
+00:39:26,160 --> 00:39:27,726
+Rym: like there was no actual difference between.
+
+553
+00:39:27,746 --> 00:39:31,803
+Scott: there was some difference But it's definitely the different boot.
+
+554
+00:39:31,823 --> 00:39:38,999
+Scott: the bosses in Just mentioned three are drastically different Different games.
+
+555
+00:39:39,240 --> 00:39:46,430
+Rym: the way you capture and defeat ghosts Involves a surprising amount of ultra violence inflicted upon these ghosts.
+
+556
+00:39:46,671 --> 00:39:51,997
+Scott: Oh, yeah, you suck them and then you sort of that's a slam them back and forth And then you lose enough hit.
+
+557
+00:39:52,399 --> 00:39:54,509
+Scott: once they lose enough hit points then you can get them.
+
+558
+00:39:55,311 --> 00:40:01,350
+Rym: So I guess after a four-year hiatus, this is a a good addition to the Luigi series of games.
+
+559
+00:40:01,370 --> 00:40:03,230
+Rym: There's a whole Wikipedia page about the Luigi series.
+
+560
+00:40:04,111 --> 00:40:15,691
+Rym: Yeah, you'll be waiting quite a while for the next one because the last one was Luigi's Mansion arcade in 2015 Which never made it to the US for probably obvious reasons and before that pictures of that It's.
+
+561
+00:40:15,851 --> 00:40:20,025
+Scott: it looks like one of those, you know, sit-down rail kind of shootery thing else.
+
+562
+00:40:20,587 --> 00:40:28,680
+Rym: There was what I remember Luigi, which you never played because it was on the Wii U. There isn't even a screenshot of dr.
+
+563
+00:40:28,740 --> 00:40:30,828
+Rym: Luigi on the Wikipedia page about dr.
+
+564
+00:40:30,888 --> 00:40:31,290
+Rym: Luigi.
+
+565
+00:40:33,191 --> 00:40:33,492
+Rym: Dr.
+
+566
+00:40:33,512 --> 00:40:35,700
+Rym: Luigi and bacteria eradication.
+
+567
+00:40:36,142 --> 00:40:36,643
+Scott: Yeah, I was right.
+
+568
+00:40:36,663 --> 00:40:41,124
+Scott: Luigi's Mansion arcade was a Rail shooter situation where you you know, you just sit there.
+
+569
+00:40:41,164 --> 00:40:42,270
+Scott: It's like a little vacuum in there.
+
+570
+00:40:42,410 --> 00:40:47,508
+Scott: Yeah, you just sort of sit on the seat and then vacuum ghosts on while you're on rails, right?
+
+571
+00:40:48,010 --> 00:40:56,202
+Rym: Yeah I remember way back when I was younger and more naive I was interested in all those Nintendo arcade systems that you could never get a hold of and never see.
+
+572
+00:40:56,222 --> 00:41:02,490
+Rym: the f-zero one is really the f-zero one was the only Good one because even like the Mario Kart one was not actually good when I played it.
+
+573
+00:41:03,291 --> 00:41:10,528
+Scott: No, no, the Mario Kart one has a lot of interesting features But they didn't give it the the important feature of making it actually a competitive racing game.
+
+574
+00:41:10,568 --> 00:41:17,012
+Scott: Yeah Right, whereas initial D lets you hold down the button to turn off the catch-up Mechanism.
+
+575
+00:41:17,153 --> 00:41:22,369
+Rym: Yep, which I invariably will do and then someone beats me by like a mile because they're good.
+
+576
+00:41:22,389 --> 00:41:22,830
+Scott: That's all right.
+
+577
+00:41:22,870 --> 00:41:23,593
+Scott: I'd rather lose.
+
+578
+00:41:23,613 --> 00:41:28,188
+Scott: I'd rather lose that way lose by one second because I got boosts.
+
+579
+00:41:28,509 --> 00:41:28,710
+Rym: Yep.
+
+580
+00:41:29,493 --> 00:41:36,823
+Rym: So yeah, if you're really if you've never played Luigi's Mansion game And this sounds that all interesting get this one.
+
+581
+00:41:36,944 --> 00:41:38,290
+Rym: Don't bother with any that came before.
+
+582
+00:41:38,370 --> 00:41:40,101
+Rym: This is the best one like by far.
+
+583
+00:41:40,122 --> 00:41:41,571
+Scott: if you have what it is It's.
+
+584
+00:41:42,273 --> 00:41:46,310
+Scott: there's their games that are like, you know, you buy the switch for the game, right?
+
+585
+00:41:46,370 --> 00:41:48,719
+Scott: You could buy a switch for breath of the wild.
+
+586
+00:41:48,780 --> 00:41:51,430
+Scott: Yep, you could buy a switch for Mario maker, too.
+
+587
+00:41:52,250 --> 00:41:57,250
+Scott: Right, you could borrow spy switch for Animal Crossing buying a switch for Luigi's Mansion 3.
+
+588
+00:41:57,250 --> 00:42:01,384
+Scott: They're not buying a switch to play Luigi's Mansion 3, but it's rich.
+
+589
+00:42:02,247 --> 00:42:05,058
+Scott: if you got a switch Why not get Luigi's credit?
+
+590
+00:42:05,118 --> 00:42:07,086
+Rym: It's basically impossible to get switches now.
+
+591
+00:42:07,126 --> 00:42:08,210
+Rym: They're sold out everywhere.
+
+592
+00:42:09,091 --> 00:42:10,901
+Scott: Well, you're gonna be able to get one eventually.
+
+593
+00:42:11,002 --> 00:42:12,389
+Scott: Yeah, if you don't have one now.
+
+594
+00:42:12,570 --> 00:42:18,709
+Rym: So if you already got a switch like you're probably bored and you have free time During the quarantine and everything.
+
+595
+00:42:19,071 --> 00:42:24,769
+Rym: So like Scott said buy this on a cartridge because you will trivially be able to resell it or give it to someone later.
+
+596
+00:42:25,752 --> 00:42:41,143
+Scott: Also, I got to say I personally predict based on no information other than hunches and experience There will probably be some sort of like switch plus new switch switch upgrade Thing in the near ish future next year year after.
+
+597
+00:42:41,163 --> 00:42:43,995
+Rym: so I could see that I'd say within two years Definitely.
+
+598
+00:42:44,015 --> 00:42:45,145
+Scott: Yeah something like right.
+
+599
+00:42:45,185 --> 00:42:51,293
+Scott: so I would If you don't have a switch right now, and you're not desperate to play these games right now Yep, hold out.
+
+600
+00:42:51,896 --> 00:42:55,733
+Scott: I would hold if you can hold out, you know, you got enough PC games I mean one.
+
+601
+00:42:55,773 --> 00:42:58,685
+Rym: I'm curious what your deal was because breath of the wild was the.
+
+602
+00:42:58,805 --> 00:42:59,930
+Rym: everyone must buy a switch.
+
+603
+00:42:59,950 --> 00:43:09,050
+Rym: Yeah, I don't know why you didn't buy a switch when it came out But if you know down we are on console exclusives like don't buy an Xbox just to play one game.
+
+604
+00:43:09,371 --> 00:43:10,896
+Rym: But seriously breath of the wild.
+
+605
+00:43:11,538 --> 00:43:14,007
+Rym: if that was the only game I had ever played on my switch.
+
+606
+00:43:14,067 --> 00:43:14,829
+Rym: It was worth the money.
+
+607
+00:43:15,512 --> 00:43:17,581
+Rym: Oh, yeah, and you're gonna get a new breath of the wild.
+
+608
+00:43:17,641 --> 00:43:18,143
+Rym: that's coming.
+
+609
+00:43:19,107 --> 00:43:22,319
+Scott: Oh, yeah, that's right Yeah, and Metroid Prime 4 is coming eventually.
+
+610
+00:43:22,379 --> 00:43:24,989
+Rym: Yeah, I'm excited about all these games with the switch.
+
+611
+00:43:25,009 --> 00:43:28,761
+Rym: is The best console to have come out since the GameCube?
+
+612
+00:43:29,183 --> 00:43:30,669
+Rym: across the board like hands down?
+
+613
+00:43:32,190 --> 00:43:33,114
+Scott: Sure, yeah.
+
+614
+00:43:33,515 --> 00:43:35,001
+Rym: All right, then we killed enough time.
+
+615
+00:43:35,222 --> 00:43:37,450
+Rym: There's not that much to say about a Luigi's Mansion.
+
+616
+00:43:37,610 --> 00:43:39,456
+Rym: No, that's why we got a little short here.
+
+617
+00:43:39,476 --> 00:43:46,010
+Rym: cuz the the short of talking about individual bosses Which no none of you can't just go experience.
+
+618
+00:43:46,030 --> 00:43:51,070
+Scott: I do have to say if you want to err that the floor it was a disappointment on the the museum floor.
+
+619
+00:43:51,130 --> 00:43:55,930
+Scott: It was a very short floor after having those other floors before it that were longer and more involved.
+
+620
+00:43:56,031 --> 00:43:56,796
+Scott: Experiences.
+
+621
+00:43:56,876 --> 00:43:58,810
+Scott: that floor it was done in like two seconds.
+
+622
+00:43:58,971 --> 00:44:01,100
+Rym: It felt a little bit like castle crashers.
+
+623
+00:44:01,200 --> 00:44:02,646
+Rym: Once you got past the first three levels.
+
+624
+00:44:02,666 --> 00:44:03,530
+Rym: You're like, wait a minute.
+
+625
+00:44:03,973 --> 00:44:06,210
+Rym: These aren't that unique anymore.
+
+626
+00:44:07,111 --> 00:44:08,540
+Scott: Yeah, but no, it's it was good.
+
+627
+00:44:08,842 --> 00:44:09,063
+Scott: Yeah.
+
+628
+00:44:09,768 --> 00:44:10,029
+Rym: All right.
+
+629
+00:44:10,351 --> 00:44:15,106
+Rym: So let us know how this stream went because honestly this was a brand new streaming pipeline.
+
+630
+00:44:15,126 --> 00:44:24,708
+Rym: people seem to say like it was going okay, I see people watching but Like I said, there are three OBS's an nginx server and a bunch of nonsense making this episode come out to you.
+
+631
+00:44:24,748 --> 00:44:25,290
+Rym: live right now.
+
+632
+00:44:26,232 --> 00:44:30,110
+Scott: Mm-hmm, if it's not live then it's just a normal mp3 and you don't have to worry about a lot.
+
+633
+00:44:30,110 --> 00:44:31,048
+Rym: You don't know about any of that.
+
+634
+00:44:31,353 --> 00:44:38,578
+Rym: But if you want to heckle us in the chat We do stream these things on YouTube and unless this looks bad when I watch it myself later tonight We will continue to stream them on YouTube.
+
+635
+00:44:39,201 --> 00:44:40,285
+Scott: All right, I have to go you poo.
+
+636
+00:44:40,506 --> 00:44:48,820
+Rym: Yeah as do I. This has been GeekNights with Rym and Scott.
+
+637
+00:44:48,860 --> 00:44:53,620
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+638
+00:44:53,921 --> 00:44:55,888
+Scott: Be sure to visit our website at front row.
+
+639
+00:44:55,928 --> 00:44:58,940
+Scott: crew calm for show notes discussion news and more.
+
+640
+00:44:59,200 --> 00:45:06,620
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+641
+00:45:06,981 --> 00:45:10,156
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+642
+00:45:11,401 --> 00:45:14,510
+Scott: GeekNights is recorded live with no studio and no audience.
+
+643
+00:45:14,691 --> 00:45:16,155
+Scott: But unlike those other late shows.
+
+644
+00:45:16,296 --> 00:45:26,590
+Rym: It's actually recorded at night and the patreon patrons for this episode of GeekNights are Now enjoys hiding the nickel of Mardi Gras just like a dude guy.
+
+645
+00:45:26,630 --> 00:45:27,694
+Rym: chart option link Egypt.
+
+646
+00:45:27,734 --> 00:45:29,320
+Rym: you called the key to my car.
+
+647
+00:45:30,302 --> 00:45:47,334
+Rym: She said you're moving with your auntie and uncle in Bel Air Clinton Walton Jay bench friend from New Zealand, Ryan Penn parent drove and Leonard Nicholas Brando Chris midkiff the thirst for hydrated Gannon dread Lily Tenebrae Chris Reimer Finn Sean Klein Thomas on Sure But hurl Sean Yeager and a bunch of people who don't want me to say their names.
+
+648
+00:45:47,796 --> 00:45:51,635
+Rym: if you didn't catch the live stream We had both a Rym cam and a Scott cam.
+
+649
+00:45:51,675 --> 00:45:54,371
+Rym: Thanks to all that crap I set up let us know how it worked.
+
+650
+00:45:54,391 --> 00:45:55,820
+Rym: We even keep her finding that process.
+
+651
+00:45:56,222 --> 00:46:03,150
+Rym: That was also the work we needed to do to set up a pipeline for some Multi streams we're looking at in the future.
+
+652
+00:46:03,210 --> 00:46:05,720
+Rym: Maybe some versus NES games and such.
+
+653
+00:46:06,061 --> 00:46:12,520
+Rym: But anyway, now I leave you with something you probably forgot and it was probably for the best.
+
+654
+00:46:29,601 --> 00:46:30,649
+Rym: Believe it or not.
+
+655
+00:46:30,971 --> 00:46:34,749
+Rym: I'm not home George pick up.
+
+656
+00:46:34,789 --> 00:46:35,940
+Rym: I know you're screening for Allison.
+
+657
+00:46:37,221 --> 00:46:38,626
+Rym: Hey, so coffee shop.
+
+658
+00:46:39,047 --> 00:46:39,549
+Rym: No, I can't.
+
+659
+00:46:39,589 --> 00:46:40,312
+Rym: she knows I go there.
+
+660
+00:46:40,352 --> 00:46:40,934
+Rym: It's not secure.
+
+661
+00:46:41,657 --> 00:46:42,520
+Rym: Hey, I got another call coming in.
+
+662
+00:46:42,661 --> 00:46:43,452
+Rym: I gotta let the machine get it.
+
+663
+00:46:43,513 --> 00:46:48,943
+Scott: Bye Believe it or not.
+
+664
+00:46:49,023 --> 00:46:50,628
+Scott: George isn't at home.
+
+665
+00:46:50,668 --> 00:46:53,316
+Scott: Please leave a message at the beat.
+
+666
+00:46:54,740 --> 00:46:57,219
+Rym: I Must be out or I pick up the phone.
+
+667
+00:47:05,565 --> 00:47:06,669
+Rym: George are you there?
+
+668
+00:47:06,689 --> 00:47:10,040
+Rym: I hate that stupid message.
+

@@ -1,0 +1,2840 @@
+1
+00:00:09,900 --> 00:00:12,214
+Rym: It's Monday May 14th.
+
+2
+00:00:12,715 --> 00:00:13,276
+Rym: I'm Rym.
+
+3
+00:00:13,556 --> 00:00:15,840
+Scott: I'm Scott, and this is GeekNights.
+
+4
+00:00:17,791 --> 00:00:25,550
+Rym: Tonight we give you a brief overview of IT security which will probably lead to a long-running series on IT security.
+
+5
+00:00:27,313 --> 00:00:28,328
+Scott: Let's do this.
+
+6
+00:00:32,055 --> 00:00:41,579
+Rym: So you're all aware that I've been Painting over the decision to buy a new computer for the past several months and last wait Past several decades there you go.
+
+7
+00:00:41,839 --> 00:00:44,709
+Rym: No because I really wasn't looking for a new computer until just now.
+
+8
+00:00:45,732 --> 00:00:46,835
+Scott: You needed one.
+
+9
+00:00:46,955 --> 00:00:47,496
+Rym: not really.
+
+10
+00:00:47,536 --> 00:00:49,542
+Rym: yeah, there's nothing wrong with my computer.
+
+11
+00:00:50,203 --> 00:00:51,246
+Scott: It's pretty bad.
+
+12
+00:00:51,266 --> 00:00:52,730
+Rym: It does the show just fine.
+
+13
+00:00:53,292 --> 00:00:59,551
+Scott: I think you're the only one in the listening to the show or any way related to the show that would be satisfied with that Computer.
+
+14
+00:00:59,571 --> 00:01:00,192
+Scott: you've got there.
+
+15
+00:01:00,453 --> 00:01:05,045
+Rym: this computer can do an entire four nights a week podcast with no problems.
+
+16
+00:01:05,285 --> 00:01:08,519
+Scott: It can barely do it Barely actually.
+
+17
+00:01:08,580 --> 00:01:20,062
+Rym: no the only problems It's really having are That some of the components like the fans have started to fail and I really didn't want to spend the money to replace it and the Usbs and sometimes it doesn't boot and it's horribly slow.
+
+18
+00:01:20,082 --> 00:01:21,647
+Rym: It's not that slow and any day now.
+
+19
+00:01:21,687 --> 00:01:22,650
+Scott: It's gonna explode.
+
+20
+00:01:23,252 --> 00:01:28,510
+Rym: It takes less than 10 minutes to do all the post-processing of GeekNights despite it being a 1 gigahertz process.
+
+21
+00:01:28,570 --> 00:01:29,553
+Scott: That's pretty slow.
+
+22
+00:01:29,573 --> 00:01:30,857
+Rym: That's not that bad.
+
+23
+00:01:31,098 --> 00:01:32,803
+Rym: Yeah, okay, anyway.
+
+24
+00:01:32,823 --> 00:01:38,510
+Rym: I don't need new one for well The only reason I really need a new one is I want to play a bunch of PC games.
+
+25
+00:01:40,313 --> 00:01:41,682
+Rym: So I get this new PC.
+
+26
+00:01:41,742 --> 00:01:42,507
+Rym: I ordered everything.
+
+27
+00:01:42,527 --> 00:01:46,927
+Rym: it all came I put it all together, and it doesn't boot doesn't even post.
+
+28
+00:01:47,048 --> 00:01:55,553
+Rym: in fact It has a little readout that shows me what part of the post and CMOS and all that it gets to and it doesn't even Get past the first step.
+
+29
+00:01:55,934 --> 00:02:04,844
+Scott: Yeah, it basically says all right enable ATX power supply wait for ATX power supply to be ready Wait for ATX powers apply to be ready forever.
+
+30
+00:02:05,287 --> 00:02:05,890
+Scott: It's never ready.
+
+31
+00:02:06,161 --> 00:02:13,849
+Rym: Yeah It doesn't even get to the point where the RAM or the CPU or anything to be the problem And it doesn't even get to a point where I can seriously diagnose anything.
+
+32
+00:02:13,869 --> 00:02:17,121
+Scott: yeah I know we just you take the motherboard out of the box right?
+
+33
+00:02:17,161 --> 00:02:18,044
+Scott: so it's the motherboard.
+
+34
+00:02:18,285 --> 00:02:20,535
+Scott: you take the power supply out of The box you put them on.
+
+35
+00:02:20,616 --> 00:02:21,621
+Scott: you know a mat.
+
+36
+00:02:21,902 --> 00:02:23,169
+Scott: you plug in the power supply.
+
+37
+00:02:23,189 --> 00:02:25,419
+Scott: so no It's just the power supply the motherboard no CPU.
+
+38
+00:02:25,459 --> 00:02:25,860
+Scott: No RAM.
+
+39
+00:02:25,881 --> 00:02:26,543
+Scott: No video card.
+
+40
+00:02:26,584 --> 00:02:28,070
+Scott: No nothing no case.
+
+41
+00:02:28,471 --> 00:02:31,679
+Scott: No, can't possibly be anything, but the motherboard and the power supply.
+
+42
+00:02:32,000 --> 00:02:32,883
+Scott: you turn it on.
+
+43
+00:02:33,444 --> 00:02:36,864
+Scott: it says waiting for ATX power supply to be Ready and nothing happens.
+
+44
+00:02:37,168 --> 00:02:47,822
+Rym: now I'm reasonably certain that the power supply is just fine because the power supply does activate and spin up all the fans and everything Just the CPU or the processor the motherboard the RAM.
+
+45
+00:02:47,862 --> 00:02:50,030
+Rym: nothing else seems to have any effect.
+
+46
+00:02:50,533 --> 00:02:52,650
+Scott: I'm pretty sure it's a problem with the motherboard.
+
+47
+00:02:53,514 --> 00:02:56,488
+Scott: Or perhaps the BIOS needs an update or something like that.
+
+48
+00:02:56,910 --> 00:02:57,574
+Rym: well I doubt it's.
+
+49
+00:02:57,614 --> 00:03:00,150
+Rym: the BIOS needs an update because it doesn't even get to the award pile.
+
+50
+00:03:00,170 --> 00:03:02,081
+Scott: I know, but people are talking about things like that.
+
+51
+00:03:02,101 --> 00:03:12,401
+Rym: so who knows the only post I saw in regards to that were that Conrose weren't supported with some ass old version of the BIOS from a long time ago when This motherboard was first made.
+
+52
+00:03:12,462 --> 00:03:22,170
+Scott: yeah, but anyway I just want to say that it really kind of sucks that it's non Trivial to fake when you're building a computer to figure out which power supply will do the trick.
+
+53
+00:03:22,573 --> 00:03:26,941
+Scott: It's like all these power supplies They say watts, and it's like obviously a power supply.
+
+54
+00:03:26,981 --> 00:03:31,427
+Scott: with more watts you can have more drives You can have a faster better equipment etc.
+
+55
+00:03:31,487 --> 00:03:31,568
+Scott: etc.
+
+56
+00:03:32,553 --> 00:03:36,570
+Rym: Well except for the fact that the people who make up those watt numbers pretty much just lie.
+
+57
+00:03:36,811 --> 00:03:40,265
+Scott: Yeah, there are plenty of power supplies out there that say like a thousand watts.
+
+58
+00:03:40,345 --> 00:03:43,159
+Scott: They're not a thousand watts They're just baking up bullshit.
+
+59
+00:03:43,240 --> 00:03:44,849
+Scott: You know it doesn't also doesn't help.
+
+60
+00:03:45,172 --> 00:03:55,482
+Scott: There's a whole bunch of other Factors in the power supply like people now talk about how many rails it has and how many volts the rails are and how Many amps you can get total and how that might be.
+
+61
+00:03:55,522 --> 00:04:07,150
+Scott: it not be enough to boot your motherboard Or it might be enough and they just need to say hey if you have this equipment Then this is the power this these power supplies will be able to boot your mother.
+
+62
+00:04:07,170 --> 00:04:08,194
+Scott: But who's they?
+
+63
+00:04:08,274 --> 00:04:09,177
+Rym: who's gonna say that?
+
+64
+00:04:09,258 --> 00:04:12,570
+Rym: every people who make the motherboard, but the motherboard has nothing to do with it.
+
+65
+00:04:12,590 --> 00:04:14,397
+Rym: The motherboard is a very little factor.
+
+66
+00:04:14,437 --> 00:04:20,230
+Rym: what matters a lot more is how many drives you have what kind of drives they are What kind of video card you have how many of them you have yes?
+
+67
+00:04:20,370 --> 00:04:31,706
+Scott: But obviously in this case if the motherboard isn't broken which it probably is But there are cases where the power supply is just not even sufficient to boot the motherboard.
+
+68
+00:04:31,766 --> 00:04:34,595
+Rym: however the odds of that are Incredibly low.
+
+69
+00:04:34,615 --> 00:04:36,402
+Scott: that happened to me way back.
+
+70
+00:04:36,442 --> 00:04:36,543
+Scott: Well.
+
+71
+00:04:36,563 --> 00:04:37,245
+Rym: That's because you bought.
+
+72
+00:04:37,286 --> 00:04:38,370
+Scott: happening to a lot of people.
+
+73
+00:04:38,430 --> 00:04:43,290
+Rym: I read around the internet that was one because you bought a tiny weak power supply for a powerful computer.
+
+74
+00:04:43,611 --> 00:04:57,645
+Scott: I know, but it wasn't well known and it still isn't well known that computers now are requiring more and more powerful power supplies and No one is telling you like the minimum required power supply or anything or the recommended power supply.
+
+75
+00:04:57,705 --> 00:04:58,507
+Rym: well actually no.
+
+76
+00:04:58,608 --> 00:05:05,612
+Rym: Intel does tell You what kinds of power supplies they test and a bit does tell you what kinds of power supplies They test and they tell you what'll work Reasonably.
+
+77
+00:05:05,632 --> 00:05:11,070
+Rym: the factor that people run into problems with are the hard drives mostly and the video cards.
+
+78
+00:05:11,130 --> 00:05:13,193
+Scott: I don't know all the problems I've seen are I?
+
+79
+00:05:13,334 --> 00:05:14,318
+Scott: my computer doesn't boot.
+
+80
+00:05:14,418 --> 00:05:20,120
+Rym: once you've got it booting Scott you realize you can go to a bits website and they List a bunch of power supplies they tested and how many watts they were.
+
+81
+00:05:20,140 --> 00:05:23,856
+Rym: and if you go to Intel they list power supplies they tested How many watts they were.
+
+82
+00:05:23,876 --> 00:05:26,029
+Scott: no I haven't seen that and I've looked for it.
+
+83
+00:05:26,532 --> 00:05:29,468
+Rym: I found that right away when I was figuring out what power supply to buy.
+
+84
+00:05:29,488 --> 00:05:32,120
+Scott: well We'll see if I can find it, but regardless.
+
+85
+00:05:32,180 --> 00:05:34,250
+Scott: It's not readily available enough.
+
+86
+00:05:34,613 --> 00:05:44,230
+Rym: Regardless my goddamn computer won't work And I'm kind of miffed about that and I discovered that new eggs RMA process is currently broken And you can't actually print shipping labels.
+
+87
+00:05:44,772 --> 00:05:52,109
+Rym: And they seem to be aware that it's broken because when I eventually called them on the phone They immediately manually made me one, and then I could do my business.
+
+88
+00:05:52,714 --> 00:05:54,973
+Scott: Mm-hmm yeah It does.
+
+89
+00:05:55,033 --> 00:06:00,874
+Scott: also doesn't help that a bits website was down for like three days and just now is it Finally is up again.
+
+90
+00:06:00,894 --> 00:06:01,437
+Rym: Is it still up?
+
+91
+00:06:01,457 --> 00:06:02,984
+Rym: because it wasn't up an hour ago.
+
+92
+00:06:03,004 --> 00:06:03,888
+Scott: It's up right now.
+
+93
+00:06:04,812 --> 00:06:10,410
+Scott: We'll see how it's actually fast right now, which is like a miracle because it's been completely non-existent for days.
+
+94
+00:06:10,490 --> 00:06:14,984
+Rym: Yeah, I love a bit, and they make some of the best motherboards out there as head PCs.
+
+95
+00:06:15,044 --> 00:06:17,030
+Rym: however a bit does have.
+
+96
+00:06:17,253 --> 00:06:18,570
+Rym: It's kind of like how I went with Sprint.
+
+97
+00:06:19,032 --> 00:06:21,302
+Rym: They had better coverage where I lived there better prices.
+
+98
+00:06:21,322 --> 00:06:25,160
+Rym: everything was great about Sprint except They had the worst customer service in the world.
+
+99
+00:06:25,522 --> 00:06:27,390
+Rym: a bits the same way great products.
+
+100
+00:06:27,490 --> 00:06:32,430
+Rym: But if you try to get a hold of a bit in any fashion you're better off just killing yourself.
+
+101
+00:06:32,852 --> 00:06:35,729
+Rym: There is no way to talk to a human who knows anything.
+
+102
+00:06:35,769 --> 00:06:36,151
+Rym: well It's cuz.
+
+103
+00:06:36,171 --> 00:06:38,963
+Scott: they're a Taiwanese company, so just just give up right now.
+
+104
+00:06:39,003 --> 00:06:42,374
+Rym: Yeah, I mean their website Usually doesn't work.
+
+105
+00:06:42,475 --> 00:06:46,649
+Rym: I'd say it's down more often than not partly because it's hosted in Taiwan.
+
+106
+00:06:47,474 --> 00:06:53,790
+Rym: Mmm now now I point out that the Taiwanese website That's hosted in Taiwan is for US customers.
+
+107
+00:06:54,432 --> 00:06:57,584
+Rym: Every other customer they have in the rest of the world has a different site.
+
+108
+00:06:57,604 --> 00:07:02,601
+Rym: that isn't hosted in Taiwan and Works just fine, but you can't get support from that site.
+
+109
+00:07:02,882 --> 00:07:07,882
+Rym: if you're an American who bought it in America You got to go to the a bit USA site in Taiwan.
+
+110
+00:07:08,143 --> 00:07:08,886
+Rym: that doesn't work.
+
+111
+00:07:09,428 --> 00:07:13,181
+Scott: Yeah Yeah, it also doesn't help that since a bit is a Taiwanese company.
+
+112
+00:07:13,642 --> 00:07:16,090
+Scott: It's hard for Americans to talk to them to get help.
+
+113
+00:07:16,211 --> 00:07:20,110
+Scott: I'm sure if we were Taiwanese it would be very easy for a bit to help us very easy.
+
+114
+00:07:20,150 --> 00:07:21,709
+Scott: They probably would be glad to help us.
+
+115
+00:07:21,830 --> 00:07:25,491
+Rym: but I've read stories of people calling a bit to try to get support and They don't.
+
+116
+00:07:25,531 --> 00:07:29,124
+Rym: it's not like they get an answering machine or some sort of voicemail system or a loop.
+
+117
+00:07:29,505 --> 00:07:31,776
+Rym: the phone just rings and no One answers.
+
+118
+00:07:32,179 --> 00:07:40,220
+Scott: yeah, but yeah a bit I have you know in my life, but to a bit motherboards and was very happy with both of them But I guess Rym got a bad one.
+
+119
+00:07:40,481 --> 00:07:41,486
+Scott: most likely we'll see.
+
+120
+00:07:41,506 --> 00:07:42,410
+Rym: I are I made it.
+
+121
+00:07:42,611 --> 00:07:43,355
+Rym: So I don't know.
+
+122
+00:07:43,435 --> 00:07:45,850
+Rym: in six to eight days when a new one comes.
+
+123
+00:07:46,131 --> 00:07:47,114
+Scott: Yeah, we'll see.
+
+124
+00:07:47,274 --> 00:07:47,575
+Rym: well one.
+
+125
+00:07:47,595 --> 00:07:50,345
+Rym: they have to accept the RMA which means they're gonna inspect the motherboard.
+
+126
+00:07:50,385 --> 00:07:53,347
+Rym: even though I already did I couldn't Find any physical problems with.
+
+127
+00:07:53,408 --> 00:08:00,990
+Scott: well They probably have better equipment to inspect it and they'll probably if they can get it to boot Then you can get it to boot and it's probably it's the power supply.
+
+128
+00:08:01,231 --> 00:08:08,855
+Rym: so yeah, well from what I look at they only seem to reject an RMA and not just send you a new one if It's physically broken.
+
+129
+00:08:08,915 --> 00:08:12,250
+Rym: and if it's physically broken they won't give you a refund or anything because you broke it.
+
+130
+00:08:12,331 --> 00:08:13,506
+Scott: Well don't physically break it.
+
+131
+00:08:14,023 --> 00:08:20,224
+Rym: Yeah Apparently a lot of people with these new Intel chips Will just touch all those pins on the motherboard and ruin them.
+
+132
+00:08:20,465 --> 00:08:25,884
+Rym: good idea genius Despite the fact that there are like 12 warnings all over saying don't touch anything.
+
+133
+00:08:25,944 --> 00:08:26,406
+Rym: Don't touch it.
+
+134
+00:08:26,426 --> 00:08:26,867
+Rym: Don't touch it.
+
+135
+00:08:26,888 --> 00:08:31,099
+Scott: Don't touch it Lol, oh, so just to finish this off.
+
+136
+00:08:31,219 --> 00:08:37,090
+Scott: I finally found where hidden on the 8-bit website it lists the power supplies that work with the motherboards.
+
+137
+00:08:38,150 --> 00:08:43,390
+Scott: Yep, it's kind of hidden I will admit but your power supply isn't listed with that motherboard.
+
+138
+00:08:44,171 --> 00:08:45,836
+Scott: Yeah, however, it's pointing that out.
+
+139
+00:08:45,956 --> 00:08:48,103
+Rym: If you look at the list of wattages.
+
+140
+00:08:48,303 --> 00:08:55,150
+Rym: Yeah, those are equivalent power supplies and Far weaker power supplies work just fine with this motherboard than the one I've got.
+
+141
+00:08:55,296 --> 00:08:59,243
+Scott: Yeah but I think those are from companies that make superior power supplies.
+
+142
+00:08:59,263 --> 00:09:04,361
+Scott: because I see the thing is we just keep The number one stat everyone looks at for a power supply.
+
+143
+00:09:04,381 --> 00:09:06,409
+Scott: is the wattage just like when you look at a CPU.
+
+144
+00:09:06,429 --> 00:09:12,721
+Scott: look at Megahertz, but I'm beginning to think that nowadays The wattage isn't what really matters and whether it's gonna work or not.
+
+145
+00:09:12,761 --> 00:09:18,780
+Scott: Like there's probably a 700 watt power supply out there That's not gonna do the trick and there's probably a 300 out there that will.
+
+146
+00:09:19,182 --> 00:09:25,526
+Scott: so it just it's just too hard for people Alright, so there isn't really tech news this week so much.
+
+147
+00:09:25,626 --> 00:09:31,229
+Scott: if you haven't noticed Maybe you listen to the most recent episode of twit, which was one of the worst podcasts I ever heard.
+
+148
+00:09:32,013 --> 00:09:34,305
+Scott: They should really just not make a show and there's no tech news.
+
+149
+00:09:34,366 --> 00:09:35,873
+Scott: cuz it was so bad I don't know.
+
+150
+00:09:35,913 --> 00:09:38,082
+Rym: I thought there was plenty of interesting tech news.
+
+151
+00:09:38,243 --> 00:09:39,930
+Rym: Well, anyway, I have a bit.
+
+152
+00:09:39,990 --> 00:09:41,659
+Rym: I don't know why they didn't talk about any of it.
+
+153
+00:09:41,840 --> 00:09:43,629
+Rym: Yeah, I don't know why you listen to twit.
+
+154
+00:09:44,072 --> 00:09:44,797
+Scott: I don't know either.
+
+155
+00:09:45,501 --> 00:09:46,326
+Scott: after that episode.
+
+156
+00:09:46,346 --> 00:09:46,870
+Scott: Maybe I won't.
+
+157
+00:09:48,730 --> 00:09:57,088
+Scott: But a new version of an open source program came out and this is a program I think a lot of people are unfamiliar with and perhaps they should be.
+
+158
+00:09:57,658 --> 00:10:05,391
+Scott: blender 2.44 came out and this is a piece of software that no it does not grind things up into mush for you to drink or Beat.
+
+159
+00:10:05,672 --> 00:10:06,837
+Scott: that is that is not what it does.
+
+160
+00:10:07,319 --> 00:10:09,810
+Scott: It does not combine things in any way really.
+
+161
+00:10:10,411 --> 00:10:19,895
+Scott: This is a piece of software that allows you to make things in 3d 3d animations 3d models 3d everything and It is free.
+
+162
+00:10:20,338 --> 00:10:21,082
+Scott: the story of it.
+
+163
+00:10:21,283 --> 00:10:24,682
+Scott: Is that there was a program I think I forget if it was called blender before.
+
+164
+00:10:24,702 --> 00:10:27,143
+Scott: it was open source or not, but equivalent.
+
+165
+00:10:27,265 --> 00:10:34,448
+Scott: basically The program blender was made by a closed source company and then the company went down and it.
+
+166
+00:10:34,488 --> 00:10:35,708
+Scott: basically no one Used this thing.
+
+167
+00:10:36,171 --> 00:10:56,270
+Scott: So either some open source guys got together and bought it or the people making it gave it up or some Combination of those events happened and this amazing closed source 3d rendering and modeling animation program Was made free free open source and it has been continued to be developed until today and it's actually pretty impressive.
+
+168
+00:10:56,431 --> 00:11:10,805
+Scott: You if you are someone who needs to do the 3ds like 3d studio max or any Maya or any of those type of things But you don't have mad monies to shell out for those and maybe you want to run the Linux so you don't want to pirate anything.
+
+169
+00:11:11,850 --> 00:11:14,029
+Scott: Blender exists and you can go get it for free.
+
+170
+00:11:14,552 --> 00:11:22,789
+Scott: The best part is if you're someone who doesn't even care about 3d modeling But you might want to just poke a program that does that to see what it's like blenders free Why not go for it?
+
+171
+00:11:22,971 --> 00:11:31,510
+Rym: We could probably do an episode on blender But we'd have to get Emily on because I know pretty much nothing about 3d anything other than what she has told me.
+
+172
+00:11:31,570 --> 00:11:33,935
+Scott: I know how to use AutoCAD Release 13.
+
+173
+00:11:33,935 --> 00:11:37,091
+Scott: Yeah, which is older than AutoCAD 2000.
+
+174
+00:11:37,091 --> 00:11:41,409
+Rym: It's actually better than you'd expect at modeling simple things in 3d.
+
+175
+00:11:41,770 --> 00:11:50,470
+Scott: if you give me a physical object or a blueprint or something like that and AutoCAD I can recreate it or make a model of it in time.
+
+176
+00:11:50,732 --> 00:11:59,210
+Scott: You know, it might take me a while once I got to relearn it because you know But that's what I learned how to do Like if you give me like a machine and mechanical desktop.
+
+177
+00:11:59,451 --> 00:12:05,072
+Scott: I will have a model of that machine for you and depending on the complexity of the machine in some weeks Maybe.
+
+178
+00:12:05,495 --> 00:12:08,450
+Scott: but yeah, the thing with blender is that it is very powerful.
+
+179
+00:12:08,550 --> 00:12:10,639
+Scott: If you look at sample renderings from blender you go.
+
+180
+00:12:10,679 --> 00:12:13,088
+Scott: Wow, that's like better than the first toy story.
+
+181
+00:12:13,148 --> 00:12:16,348
+Scott: Holy shit That's damn good stuff right there and it is damn good stuff.
+
+182
+00:12:17,112 --> 00:12:20,168
+Scott: But blender is not so easy for the people to use.
+
+183
+00:12:20,188 --> 00:12:24,030
+Rym: now I don't think it's as bad as the difference between the gimp and Photoshop.
+
+184
+00:12:24,251 --> 00:12:24,874
+Scott: No, it is not.
+
+185
+00:12:25,075 --> 00:12:30,197
+Scott: it's not a difference of it's a bad user interface It's that it's a different user.
+
+186
+00:12:30,277 --> 00:12:33,087
+Rym: Well, that was quite the off-handed jab at the gimp.
+
+187
+00:12:33,408 --> 00:12:33,729
+Scott: I know.
+
+188
+00:12:35,491 --> 00:12:36,476
+Rym: See the thing with the game.
+
+189
+00:12:36,516 --> 00:12:40,136
+Rym: I just bring this up because we used to always say yeah the gimp is fine The gimp is fine.
+
+190
+00:12:40,318 --> 00:12:41,730
+Rym: It's fine for what I'm doing people.
+
+191
+00:12:41,971 --> 00:12:47,748
+Rym: I didn't use it a lot and I never really use it for anything more complex than resizing an image.
+
+192
+00:12:47,848 --> 00:12:50,949
+Scott: or possibly I resize images with image magic on the command line.
+
+193
+00:12:51,351 --> 00:12:56,779
+Scott: Yeah, actually the gimp to like, you know now that it's like there's a part of an image or something like that Flicker.
+
+194
+00:12:56,860 --> 00:13:07,330
+Rym: I also do that Yeah But we had a bunch of artists friends over the last several years come over and we try to make them do art for us for various reasons and We didn't have Photoshop.
+
+195
+00:13:07,631 --> 00:13:22,610
+Rym: So they try to use the gimp on either the Mac downstairs or one of our computers and they hated it so much that we looked into it and I tried to do a few slightly more complex things in the gimp and Discovered that it's not just a problem of it's different from Photoshop.
+
+196
+00:13:22,670 --> 00:13:23,414
+Rym: That was.
+
+197
+00:13:23,434 --> 00:13:26,510
+Scott: my original thinking was oh these people are just so used to Photoshop.
+
+198
+00:13:26,671 --> 00:13:36,290
+Scott: It's like I use vim every goddamn day and I use SSH and I you know If I try to use Emacs it totally throws me off, but I see other people using Emacs quite well.
+
+199
+00:13:36,430 --> 00:13:42,368
+Scott: So I know it's not a problem with Emacs or vim, but when it comes to the gimp, it's just bad.
+
+200
+00:13:42,428 --> 00:13:42,930
+Rym: It's counterintuitive.
+
+201
+00:13:43,490 --> 00:13:51,709
+Scott: Well, I mean there are people who can use the gimp quite well, but if you compare a gimp master and a Photoshop master It's really no contest.
+
+202
+00:13:52,931 --> 00:13:57,990
+Scott: Photoshop just has more action and is easier to use to do awesome things.
+
+203
+00:13:58,775 --> 00:14:06,488
+Scott: alright, so blender if you are Looking for some 3d rendering modeling animating action for free if you ever want to try it.
+
+204
+00:14:06,528 --> 00:14:07,170
+Scott: see what it's like.
+
+205
+00:14:07,291 --> 00:14:13,143
+Scott: Maybe you're you know in high school You're thinking about maybe doing that college or something or you're a poor college student.
+
+206
+00:14:13,223 --> 00:14:15,763
+Scott: Who knows blender free get it Why not?
+
+207
+00:14:16,452 --> 00:14:24,766
+Rym: So there was an article on slashdot last week and it bothered me enough to where I actually Delicious it and waited until today tonight where I could talk about it.
+
+208
+00:14:24,806 --> 00:14:26,475
+Rym: Whoa Now the head.
+
+209
+00:14:26,676 --> 00:14:29,230
+Rym: I'm just gonna talk about the slashdot right up in the headline.
+
+210
+00:14:29,330 --> 00:14:33,503
+Rym: I didn't even bother reading the the stupid Harvard professors paper.
+
+211
+00:14:33,523 --> 00:14:40,669
+Rym: I like how I said stupid Harvard professor But I think you'll see why I held this opinion once I get into this a bit.
+
+212
+00:14:41,092 --> 00:14:42,540
+Rym: But the headline was Harvard.
+
+213
+00:14:42,560 --> 00:14:44,249
+Rym: prof says computers need to forget.
+
+214
+00:14:45,690 --> 00:14:47,422
+Scott: Computers need to forget quote.
+
+215
+00:14:47,684 --> 00:14:55,873
+Rym: a Harvard professor Argues that too much information is being retained by computers and the machines need to learn how to forget things as humans always have quotes.
+
+216
+00:14:56,475 --> 00:15:06,330
+Rym: if whenever we if whatever we do can be held against us years later if All of our impulsive comments are preserved they can easily be combined into a composite picture of ourselves.
+
+217
+00:15:07,471 --> 00:15:12,685
+Rym: further quotes afraid of how our words and actions may be perceived years later and taken out of context.
+
+218
+00:15:13,167 --> 00:15:14,230
+Rym: the lack of forgetting is.
+
+219
+00:15:14,711 --> 00:15:19,330
+Rym: I love that grammar right there may prompt us to speak less freely and openly.
+
+220
+00:15:21,331 --> 00:15:22,093
+Rym: Before
+
+221
+00:15:22,113 --> 00:15:23,438
+Scott: before Wow
+
+222
+00:15:23,579 --> 00:15:35,129
+Rym: I get into my specific complaints with this professor and before I get into my Much more strongly held opinions regarding people like him and my opinions regarding age and its relation to these opinions
+
+223
+00:15:36,473 --> 00:15:37,074
+Scott: I
+
+224
+00:15:38,237 --> 00:15:44,756
+Rym: would like to point out that John Gabriel's greater internet fuckwad theory very Directly counters this.
+
+225
+00:15:44,977 --> 00:15:53,470
+Rym: he's saying that if people's words are kept online And there's records of what people say that somehow people will be less open in their opinions.
+
+226
+00:15:53,993 --> 00:16:04,664
+Rym: I point out that the vast majority of people on the internet say absolutely horrendous things to each other 24/7 regardless of if anyone actually that argument.
+
+227
+00:16:04,764 --> 00:16:13,110
+Scott: while it holds some water with me I think the appropriate counter to it would be that the John Gabriel's greater internet fuckwad theory includes anonymity.
+
+228
+00:16:13,672 --> 00:16:15,220
+Rym: Anonymity is easily had.
+
+229
+00:16:15,320 --> 00:16:16,888
+Scott: anonymity is easily had.
+
+230
+00:16:16,928 --> 00:16:20,499
+Scott: however Imagine a world in which there was no anonymity.
+
+231
+00:16:20,599 --> 00:16:24,330
+Scott: would his this professor's crackpot theories be correct?
+
+232
+00:16:24,771 --> 00:16:31,770
+Scott: See now people would restrain themselves without anonymity, or do you think the current internet free speech?
+
+233
+00:16:32,190 --> 00:16:34,205
+Scott: Everyone's saying whatever the fuck they want would continue.
+
+234
+00:16:34,588 --> 00:16:50,257
+Rym: see now Here's the point where I really want to dig into this guy because this opinion has been Expressed in my presence many times in my life and without fail it has been expressed by people who were very much older than me and Specifically in a lot of my jobs.
+
+235
+00:16:50,538 --> 00:16:58,096
+Rym: a lot of the older people who work to these companies or various places Would go so far as to refuse or avoid Responding to anything.
+
+236
+00:16:58,156 --> 00:17:17,910
+Rym: I sent them an email or in writing whatever possible And they went out of their way to do business over the phone or in person Because they didn't like the fact that if they had an email or a document or a memo Then whatever they promised to do or whatever we'd agreed on or whatever They said was now recorded and could be referred to later.
+
+237
+00:17:18,290 --> 00:17:19,797
+Rym: And they were so afraid of that.
+
+238
+00:17:20,159 --> 00:17:22,769
+Scott: maybe you shouldn't say something you're not gonna do.
+
+239
+00:17:23,511 --> 00:17:31,650
+Rym: See it seems that people who are afraid of computers retaining information are the kinds of people who are especially like he says here.
+
+240
+00:17:31,991 --> 00:17:41,010
+Rym: You know if all of our impulsive comments are preserved and be combined later into a composite picture of ourselves All of those impulsive comments are indeed a composite picture of ourselves.
+
+241
+00:17:41,472 --> 00:17:52,330
+Rym: So if you say all these things on the internet or in your life or all over the place And then you don't want anyone to remember what you said Why did you say it also?
+
+242
+00:17:53,871 --> 00:18:04,610
+Scott: The only people who should be afraid of the things they say creating composite picture of themselves are people who are ugly not ugly Physically looking though they may be if they're putting pictures on Craigslist or something.
+
+243
+00:18:04,650 --> 00:18:15,640
+Scott: But if you if you're an ugly person on the inside and that comes out when you say things on the internet And you don't want anyone to realize you're an ugly person You should I just shut up or stop being an ugly person
+
+244
+00:18:15,921 --> 00:18:18,370
+Rym: like let's say you're the kind of person who loses your temper really?
+
+245
+00:18:18,470 --> 00:18:20,156
+Rym: Easily and you lash out at people.
+
+246
+00:18:20,537 --> 00:18:25,655
+Rym: so you're on the internet and very frequent frequently in your internet conversations You lash out at people.
+
+247
+00:18:26,117 --> 00:18:32,218
+Rym: well now me who is trying to learn about you can see wow He's short-tempered and lashes out at people duly noted.
+
+248
+00:18:32,700 --> 00:18:42,150
+Scott: Yeah, this guy's this professor is basically saying hey Let's create a world in which we know less in which things are shittier in which it is harder to make good decisions.
+
+249
+00:18:42,311 --> 00:18:43,118
+Scott: Yes, that way.
+
+250
+00:18:43,158 --> 00:18:44,490
+Scott: It'll be more interesting.
+
+251
+00:18:45,215 --> 00:18:47,390
+Rym: See it's a very very simply sum up my position.
+
+252
+00:18:47,531 --> 00:18:55,544
+Rym: I'm of the mind that in any case possible in the world More information is better because information is not evil.
+
+253
+00:18:55,765 --> 00:19:04,430
+Rym: the only problems that arrive from Information are when evil people use it for evil reasons or when people take information and try to obscure it with no good cause.
+
+254
+00:19:04,971 --> 00:19:14,847
+Rym: Yep, I say no good cause because I do agree there are situations where it is good to at least temporarily or for whatever important Reason keep information somewhat under wraps.
+
+255
+00:19:15,028 --> 00:19:22,208
+Rym: yes Well, you don't tell anyone your password, or if there's a military operation you don't post it on Craigslist moments before.
+
+256
+00:19:22,228 --> 00:19:24,177
+Scott: yes That's also a bad idea.
+
+257
+00:19:24,478 --> 00:19:29,739
+Rym: Yes, if the government has a secret plan to invade I don't know Australia, and they're gonna do it tomorrow.
+
+258
+00:19:30,280 --> 00:19:33,008
+Rym: I'm fine with them keeping someone quiet for another 24 hours.
+
+259
+00:19:34,918 --> 00:19:40,061
+Scott: however There is way too much information that people attempt to keep secret.
+
+260
+00:19:40,382 --> 00:19:43,530
+Scott: that is absolutely unnecessary and in fact harmful.
+
+261
+00:19:43,732 --> 00:19:52,390
+Scott: Maybe not harmful in that they're keeping it But harmful in that the releasing the information would be a benefit and thus they are preventing benefit if not causing harm.
+
+262
+00:19:52,852 --> 00:20:05,799
+Rym: Now what's funny is I run into this very often in my life And I can remember two separate instances at RIT Because now pretty much no one even thinks everyone logs their chats or at least I assume they do But pretty much right from the moment.
+
+263
+00:20:06,140 --> 00:20:16,598
+Rym: I started using instant messaging when I got ICQ God a fucking long time ago when I was in high school back before instant aim And there was really no instant messaging.
+
+264
+00:20:16,638 --> 00:20:20,554
+Rym: this was brand new and I saw hey I can log Conversations.
+
+265
+00:20:21,057 --> 00:20:29,929
+Rym: so I set it up to log every single conversation I had online ever and in fact sitting next to me in my hand right now is a hard drive a broken hard drive.
+
+266
+00:20:29,970 --> 00:20:35,410
+Rym: the Hard drive is fine the controller card on the outside is broken, but there's no way we can get the information off of there.
+
+267
+00:20:35,470 --> 00:20:36,456
+Rym: Well without a bunch of money.
+
+268
+00:20:36,657 --> 00:20:37,924
+Scott: You're like thousands of dollars.
+
+269
+00:20:37,964 --> 00:20:53,838
+Rym: Yeah, if I'm ever rich I'll probably pay to get the data off because on this hard drive is the transcript of every single chat and email conversation I had from 1997 until two years into college and Once I got to RIT I continued doing this.
+
+270
+00:20:54,120 --> 00:21:01,990
+Rym: I remember one time a few years ago before this hard drive died I was sitting around with everyone and I pulled up the very first thing Scott had ever said to me online.
+
+271
+00:21:02,371 --> 00:21:07,029
+Rym: It was the first conversation we had ever had and the Internet's yeah, well the first real conversation beyond.
+
+272
+00:21:07,069 --> 00:21:09,381
+Rym: hi I'm a guy who likes anime.
+
+273
+00:21:09,582 --> 00:21:09,763
+Rym: Hi.
+
+274
+00:21:09,864 --> 00:21:14,459
+Scott: I also enjoy anime Had a real conversation in person and before being on.
+
+275
+00:21:14,539 --> 00:21:20,196
+Rym: I am but barely because this was pretty much the second week of school on Monday right before Gracie's.
+
+276
+00:21:20,457 --> 00:21:24,330
+Rym: Oh knows yeah, yeah, but yeah, so I started logging everything.
+
+277
+00:21:24,450 --> 00:21:32,339
+Rym: I remember a couple people who I will not name thought this was creepy and odd and in fact They said that I was acting like a J Edgar Hoover.
+
+278
+00:21:32,800 --> 00:21:34,285
+Rym: and why do I want to record everything?
+
+279
+00:21:34,747 --> 00:21:35,530
+Rym: one of these people?
+
+280
+00:21:36,190 --> 00:21:39,270
+Rym: Sometime later that year I had an argument with online.
+
+281
+00:21:39,772 --> 00:21:44,850
+Rym: I then had another argument with in person and the person said that they did not say something previously.
+
+282
+00:21:45,292 --> 00:21:49,870
+Rym: Well, uh, I pulled up my chat log and sure enough he had said exactly that.
+
+283
+00:21:50,210 --> 00:21:51,853
+Rym: he said exactly what I had said he said.
+
+284
+00:21:52,194 --> 00:21:59,762
+Rym: so I pulled it up and I've showed it to him and continued the argument and He considered this to be some crazy horrible thing.
+
+285
+00:21:59,802 --> 00:22:04,501
+Rym: that how dare I refer to a previous Conversation with proof that he had said something.
+
+286
+00:22:04,823 --> 00:22:06,370
+Rym: How dare I prove the truth?
+
+287
+00:22:07,413 --> 00:22:11,307
+Rym: How dare you how dare I record a conversation I had with someone?
+
+288
+00:22:11,588 --> 00:22:34,408
+Scott: oh no Yeah, basically the way I see it is anyone who thinks like this Harvard professor is someone with regrets or shame and as far as I'm concerned anything that makes it harder for people with regrets and shame to get along is a good thing because Part of one factor in the perfect world of Scott is a world in which no one has any regrets or any shame.
+
+289
+00:22:34,589 --> 00:22:43,448
+Rym: like me Plus without these paper trails I'd never get anything done at any of my jobs because a lot of people just won't do things Unless I have proof that they said they'd do it.
+
+290
+00:22:44,011 --> 00:22:46,037
+Scott: Also, just think about just I am.
+
+291
+00:22:46,077 --> 00:22:49,527
+Scott: logs Rym sends me a link yesterday if that's not in my history.
+
+292
+00:22:49,547 --> 00:22:52,255
+Scott: It's How am I supposed to find it again?
+
+293
+00:22:52,275 --> 00:22:59,558
+Scott: It's it's necessary just for functioning let alone, you know getting people who are stupid Just for my personal usefulness.
+
+294
+00:22:59,960 --> 00:23:07,010
+Scott: I need to keep all the information that I communicate Somewhere to refer to it at a later time because it's useful to me.
+
+295
+00:23:07,191 --> 00:23:17,049
+Scott: there's a reason someone told me something a reason I told something to someone and If I if it wasn't important, I probably didn't say it and if it was important I need to know it again at some point.
+
+296
+00:23:17,512 --> 00:23:21,829
+Rym: So I guess I suppose to be warned that I am one of those people and I think it's a very good thing to do.
+
+297
+00:23:22,371 --> 00:23:26,164
+Rym: Who keeps a record of every single written conversation?
+
+298
+00:23:26,245 --> 00:23:26,967
+Rym: I have ever.
+
+299
+00:23:27,067 --> 00:23:30,269
+Rym: I have every email I ever send and Gmail is making that very easy.
+
+300
+00:23:31,012 --> 00:23:34,160
+Scott: Also, you might note that in our forum light is the same way.
+
+301
+00:23:34,281 --> 00:23:41,762
+Scott: anything that has ever said in our forum will be kept probably forever Yeah, as long as digital data can be stored and an apocalypse does not happen.
+
+302
+00:23:41,922 --> 00:23:50,545
+Scott: Yep barring direct intervention by law enforcement yep, and Not only that even when we delete posts on the forum, they're still in the database.
+
+303
+00:23:50,565 --> 00:23:51,589
+Scott: Just no one can see him.
+
+304
+00:23:52,373 --> 00:23:54,567
+Scott: So watch out don't say anything.
+
+305
+00:23:54,587 --> 00:24:03,376
+Rym: you regret Things of the day.
+
+306
+00:24:03,917 --> 00:24:10,562
+Rym: so you all know our James Randi who we revere as a minor deity Minor deity police you do.
+
+307
+00:24:10,742 --> 00:24:12,069
+Scott: I think he's a cranky old man.
+
+308
+00:24:12,371 --> 00:24:15,020
+Rym: He I think he is probably an awesome cranky old man.
+
+309
+00:24:15,040 --> 00:24:20,919
+Rym: James Randi is probably the god of Cremadines, uh, yes granted.
+
+310
+00:24:21,019 --> 00:24:26,397
+Rym: I I do not use that in a pre-charted sense because James Randi is still the man But he's very old.
+
+311
+00:24:26,658 --> 00:24:28,466
+Rym: I mean he was friends with Houdini.
+
+312
+00:24:28,947 --> 00:24:31,762
+Rym: That's old Yeah, but basically real.
+
+313
+00:24:31,782 --> 00:24:39,230
+Rym: briefly he goes around the world Proving that people who claim to have psychic powers or magic powers or ghosts or whatever are full of bullshit.
+
+314
+00:24:39,692 --> 00:24:41,460
+Rym: And he has a million dollar prize
+
+315
+00:24:41,802 --> 00:24:42,666
+Scott: where he used to have a $10,000 prize
+
+316
+00:24:43,590 --> 00:24:53,157
+Rym: Yep, where if anyone ever can provide any evidence of any supernatural or paranormal phenomenon at all Even the simplest thing ever
+
+317
+00:24:53,558 --> 00:24:54,200
+Scott: you immediately
+
+318
+00:24:54,240 --> 00:24:57,169
+Rym: win the million dollars that he actually has ready to give you.
+
+319
+00:24:58,232 --> 00:25:01,329
+Rym: And in all these years No one has even come close.
+
+320
+00:25:01,831 --> 00:25:02,293
+Scott: Pretty much.
+
+321
+00:25:02,313 --> 00:25:08,273
+Scott: what generally happens is people say they have some sort of magic or something and James Randi says, all right I'll give you a million dollars.
+
+322
+00:25:08,314 --> 00:25:15,292
+Scott: Let me see it and they'll either say no or you don't have a million dollars or something like that or They'll say all right Let's do it.
+
+323
+00:25:15,452 --> 00:25:16,135
+Scott: and then they do it.
+
+324
+00:25:16,235 --> 00:25:21,080
+Scott: and then they're like they make up excuses and they say Randy's a bullshit and no one Has ever done it.
+
+325
+00:25:21,487 --> 00:25:23,377
+Rym: Yep And the thing is I mean it's not like.
+
+326
+00:25:23,718 --> 00:25:26,750
+Rym: he just says like maybe a psychic would come and do it and he'd be like.
+
+327
+00:25:26,971 --> 00:25:27,813
+Rym: I don't believe that.
+
+328
+00:25:28,174 --> 00:25:33,390
+Rym: he actually proves pretty much straight out that the person didn't have powers and he doesn't even have the final call.
+
+329
+00:25:33,951 --> 00:25:40,833
+Rym: Usually if another scientist says yep statistically this guy did it then Randi would have to give it to him and he couldn't just back Out.
+
+330
+00:25:41,297 --> 00:25:42,467
+Rym: but no one's ever won it.
+
+331
+00:25:42,930 --> 00:25:51,862
+Rym: Well, he's been doing this for a long time and here's a video from some talk show from back in the like the proto Culture days of television.
+
+332
+00:25:52,083 --> 00:25:53,110
+Scott: Yeah, I don't know.
+
+333
+00:25:53,110 --> 00:25:55,621
+Scott: It's got Bob Barker and it looks like the price is right.
+
+334
+00:25:55,661 --> 00:25:56,946
+Scott: set but it's not.
+
+335
+00:25:56,986 --> 00:25:57,790
+Scott: the price is right
+
+336
+00:25:58,291 --> 00:26:03,083
+Rym: Yeah, but basically it's a video showing him completely owning this
+
+337
+00:26:03,564 --> 00:26:03,825
+Scott: really
+
+338
+00:26:03,885 --> 00:26:06,601
+Rym: kind of a tool guy named James Hydric,
+
+339
+00:26:06,987 --> 00:26:15,796
+Scott: yeah basically this guy says he trained with a Chinese master and learned psychic powers and that he can move a pencil and Turn pages in a phone book without touching them.
+
+340
+00:26:15,897 --> 00:26:16,037
+Rym: Now.
+
+341
+00:26:16,117 --> 00:26:20,270
+Rym: The guy reminds me a lot of a guy from Napoleon Dynamite.
+
+342
+00:26:20,351 --> 00:26:26,320
+Rym: He's just kind of this really dumb With an ugly haircut and he's obviously a charlatan.
+
+343
+00:26:26,521 --> 00:26:29,530
+Rym: There is no doubt that he's a charlatan a fake a fraud a phony.
+
+344
+00:26:29,872 --> 00:26:30,736
+Rym: I'm gonna say all those things.
+
+345
+00:26:30,776 --> 00:26:33,669
+Rym: Penn and Teller are afraid to say cuz I don't care if this guy sues me.
+
+346
+00:26:34,111 --> 00:26:36,457
+Scott: Yeah, he's a scammer.
+
+347
+00:26:36,899 --> 00:26:47,776
+Rym: So uh his trick was oh, he'll use psychic powers to move a pencil But he just blows on it and then he uses psychic powers to turn pages in a phone book But he just blows on it.
+
+348
+00:26:48,338 --> 00:26:56,109
+Scott: and the way that James Randi shows that he doesn't have psychic power Like I thought Randy was gonna put like a little plastic wall around the phone book Yeah, and I was like up.
+
+349
+00:26:56,210 --> 00:26:59,390
+Scott: No, the guy will make an excuse saying it blocks his psychic power or something.
+
+350
+00:26:59,812 --> 00:27:03,710
+Scott: But James Randi has a much better idea than putting up a plastic wall around it.
+
+351
+00:27:04,000 --> 00:27:14,170
+Rym: Yeah And it's really kind of pathetic how badly this guy gets owned though It does kind of bother me how polite everyone is to the guy even after he's been straight-up shown to be a fraud.
+
+352
+00:27:14,491 --> 00:27:22,066
+Scott: Yeah, the thing that really got me watching this video is I wasn't worried You know, I wasn't in suspense of ooh, is he gonna be able to do it or not?
+
+353
+00:27:22,127 --> 00:27:24,821
+Scott: That was not a Obviously he was going to fail.
+
+354
+00:27:24,862 --> 00:27:26,229
+Scott: There was no question about it.
+
+355
+00:27:26,791 --> 00:27:37,214
+Scott: the question I had was is he going to blow and thus reveal his charlatan ways or is he going to refrain from blowing and Make some excuse up.
+
+356
+00:27:37,635 --> 00:27:38,799
+Rym: Yeah, we're not gonna answer that one.
+
+357
+00:27:38,819 --> 00:27:39,863
+Rym: You'll have to watch it yourself.
+
+358
+00:27:40,043 --> 00:27:40,585
+Scott: Also.
+
+359
+00:27:40,886 --> 00:27:47,970
+Scott: The other question is There is a way out where he could just admit that he blew or whatever and take out the honorable path?
+
+360
+00:27:48,111 --> 00:27:50,123
+Scott: But that's pretty unlikely.
+
+361
+00:27:50,144 --> 00:27:51,069
+Scott: I didn't expect it to happen.
+
+362
+00:27:51,270 --> 00:28:02,772
+Rym: Now the funny thing is they have three quote-unquote impartial judges for all the judges and one of whom has is a professor of Parapsychology, which is another word for Idiot.
+
+363
+00:28:02,953 --> 00:28:03,273
+Scott: Yeah.
+
+364
+00:28:03,915 --> 00:28:05,539
+Scott: Oh, I study psychic powers.
+
+365
+00:28:05,680 --> 00:28:07,224
+Scott: So you study nothing because they don't exist.
+
+366
+00:28:07,505 --> 00:28:09,450
+Scott: That's like if I studied fairies.
+
+367
+00:28:09,954 --> 00:28:10,318
+Scott: Guess what?
+
+368
+00:28:10,338 --> 00:28:11,107
+Scott: There are no fairies.
+
+369
+00:28:11,531 --> 00:28:16,430
+Scott: Maybe if I was a liberal arts teacher studying fairy literature or something like that, that would be okay.
+
+370
+00:28:16,530 --> 00:28:26,364
+Rym: But see now I would have nothing wrong with the title of parapsychology if the people who studied Parapsychology went around just debunking it or well actually investigated.
+
+371
+00:28:26,405 --> 00:28:33,625
+Scott: Yeah, if you actually honestly Investigated psychic phenomena you would every time you would go and investigate and say nope.
+
+372
+00:28:33,666 --> 00:28:34,127
+Scott: Nothing here.
+
+373
+00:28:34,308 --> 00:28:35,010
+Scott: No, nothing here.
+
+374
+00:28:35,030 --> 00:28:40,310
+Rym: No, luckily in here this charlatan was such a charlatan and was so bad at what he was doing.
+
+375
+00:28:40,350 --> 00:28:42,510
+Scott: Yeah, this isn't even like a high quality charlatan.
+
+376
+00:28:42,570 --> 00:28:47,306
+Scott: This isn't the kind of people we have now like the those psychics on TV who talked with the dead.
+
+377
+00:28:47,346 --> 00:28:54,446
+Scott: or this guy was pretty Bad and he was not prepared to be Punned so thoroughly and I think that's part of why he agreed to be on the show.
+
+378
+00:28:54,466 --> 00:28:57,041
+Scott: a better charlatan would not have agreed to appear.
+
+379
+00:28:57,523 --> 00:29:02,630
+Rym: and even the Parapsychology judge was like yeah, you don't have psychic powers.
+
+380
+00:29:02,650 --> 00:29:15,305
+Rym: Yeah, but this guy was such a milquetoast little me that he went so far as to say However, I do believe that psychic powers do exist and a reasonable man would But he says it in a really halting nervous way and he's just kind of a twat.
+
+381
+00:29:15,787 --> 00:29:16,650
+Scott: Yeah total twat.
+
+382
+00:29:17,172 --> 00:29:19,300
+Rym: I've been calling people twats quite a bit lately.
+
+383
+00:29:19,320 --> 00:29:22,090
+Scott: I realize you got to come up with new words every now and again.
+
+384
+00:29:22,110 --> 00:29:24,989
+Scott: You got to recycle the vocabulary, but I'm not sure if I mean.
+
+385
+00:29:25,592 --> 00:29:30,090
+Rym: It's definitely a kind of British thing to call someone a twat, but it's not used so often in the u.s.
+
+386
+00:29:30,451 --> 00:29:31,735
+Rym: But I wonder if I'm using cuz.
+
+387
+00:29:31,776 --> 00:29:32,438
+Rym: Emily pointed out.
+
+388
+00:29:32,819 --> 00:29:35,970
+Rym: are you using the word twat the way a British person would use it?
+
+389
+00:29:36,211 --> 00:29:39,010
+Rym: Would you call someone like that a twat or would you use another word?
+
+390
+00:29:39,351 --> 00:29:40,536
+Rym: I'll have to defer to the movies.
+
+391
+00:29:40,576 --> 00:29:49,286
+Scott: You should see people or because I don't know All right, well I got a pretty cool thing of the day here that I discovered.
+
+392
+00:29:49,487 --> 00:29:58,982
+Scott: oh really yep You know how you listen to a song from say the 80s or the 90s or whatever and it always has some sort of Synthesized sound and you always hear these synthesized noises, right?
+
+393
+00:29:59,323 --> 00:30:00,045
+Scott: And you're like, huh?
+
+394
+00:30:00,286 --> 00:30:01,510
+Scott: I hear these cool noises.
+
+395
+00:30:01,631 --> 00:30:03,480
+Scott: I wonder what machine makes those noises.
+
+396
+00:30:03,782 --> 00:30:05,350
+Scott: I wonder how you use that machine.
+
+397
+00:30:05,732 --> 00:30:06,053
+Scott: It's not.
+
+398
+00:30:06,113 --> 00:30:11,703
+Scott: it's obviously not a musical instrument that you know is like a. You know guitar or violin.
+
+399
+00:30:11,743 --> 00:30:12,850
+Scott: that requires lots of practice.
+
+400
+00:30:12,991 --> 00:30:18,210
+Scott: It's a machine with buttons and dials that somehow creates music and you want to know how those machines work.
+
+401
+00:30:18,672 --> 00:30:27,170
+Scott: well one very popular one of those machines is The Roland 909 music composer and it's a pretty cool machine.
+
+402
+00:30:27,331 --> 00:30:36,964
+Scott: it has like drums in it and it's got all sorts of other cool stuff going on and This machine is not a machine that I guess is easy to come by.
+
+403
+00:30:37,044 --> 00:30:42,370
+Scott: it might be I don't know cuz I don't really know Much about it, but I don't imagine it would be that easy to buy one.
+
+404
+00:30:42,410 --> 00:30:45,470
+Scott: Maybe they're on eBay who knows but they don't sell them in the music store.
+
+405
+00:30:45,530 --> 00:30:51,090
+Scott: They sell newer fancier more modern expensive machines that are possibly more complicated maybe even superior.
+
+406
+00:30:51,552 --> 00:30:54,585
+Scott: But this is a popular one that if you listen to it, you'll go.
+
+407
+00:30:54,786 --> 00:30:55,790
+Scott: Oh, I know that noise.
+
+408
+00:30:55,972 --> 00:31:13,812
+Scott: I've heard that noise and like a bajillion songs And if you want to learn how to use this machine or just play around with it and see how it works some guy Basically emulated the entire machine and flash and if you go to this web page You'll see the machine and you can click on it and manipulate all of its buttons and dials and generate all the sounds it can Generate
+
+409
+00:31:13,993 --> 00:31:14,636
+Rym: hot shit.
+
+410
+00:31:14,717 --> 00:31:15,722
+Rym: I thought you were just gonna go.
+
+411
+00:31:15,742 --> 00:31:16,848
+Rym: I didn't even look at what you're thinking.
+
+412
+00:31:16,868 --> 00:31:17,250
+Rym: the day was.
+
+413
+00:31:17,310 --> 00:31:18,978
+Rym: I thought you were just gonna talk about the machine.
+
+414
+00:31:19,118 --> 00:31:19,902
+Scott: No, look right here.
+
+415
+00:31:20,203 --> 00:31:23,969
+Rym: Look not bad I'm gonna have to play with this as soon as I finish.
+
+416
+00:31:24,252 --> 00:31:26,669
+Scott: Uh, I'm pushing the button to play the demo reel right now.
+
+417
+00:31:27,171 --> 00:31:35,862
+Rym: So we've been asking a lot for show ideas for the last several weeks now and Often many of you have said things along the lines of computer security.
+
+418
+00:31:36,023 --> 00:31:38,330
+Scott: Yeah, most of you are like, how do I not get spywares?
+
+419
+00:31:39,451 --> 00:31:41,128
+Scott: How do I set up my firewalls?
+
+420
+00:31:41,932 --> 00:31:42,305
+Scott: How do I?
+
+421
+00:31:43,171 --> 00:31:44,969
+Scott: Make it so I can hack into people?
+
+422
+00:31:45,451 --> 00:31:53,316
+Rym: yep, and also a lot of people have asked about very specific things like wireless security or like how WEP works or why WEP is Insecure all sorts of things like that.
+
+423
+00:31:53,757 --> 00:31:57,670
+Rym: and our how computers work series has been very popular among all of you.
+
+424
+00:31:58,091 --> 00:32:19,210
+Rym: so we decided to add computer security to the whole mix and we realized that pretty much all of those topics each warrant individual shows and Furthermore we really can't talk about it at all without doing some sort of overview because what computer security or IT Security actually are is quite a bit more involved in complex than a lot of you might realize.
+
+425
+00:32:19,872 --> 00:32:22,744
+Scott: Yes, I just told you how to set up a firewall.
+
+426
+00:32:22,945 --> 00:32:24,170
+Scott: that basically wouldn't mean dick.
+
+427
+00:32:24,351 --> 00:32:24,893
+Scott: There are many.
+
+428
+00:32:25,114 --> 00:32:28,710
+Scott: all those things like firewalls and SSH is and encryptions and webs.
+
+429
+00:32:28,830 --> 00:32:29,855
+Scott: those are just tools.
+
+430
+00:32:30,216 --> 00:32:36,609
+Scott: the same way that a lock is a tool or that a I don't know a low jack is a tool as a security device.
+
+431
+00:32:37,232 --> 00:32:43,350
+Scott: Just knowing how to use the security device or how to deploy it or how to configure it is not enough to make you secure.
+
+432
+00:32:43,791 --> 00:32:47,343
+Scott: Knowing how to use a lock and key on your front door isn't enough.
+
+433
+00:32:47,484 --> 00:32:49,150
+Scott: that it's not gonna do anything for you.
+
+434
+00:32:49,250 --> 00:33:04,402
+Scott: you need to learn the basic principles of security in general and then the further principles of electronic digital security and then you can start to learn how those tools can be a help to you in your quest to Protect yourself and others.
+
+435
+00:33:04,684 --> 00:33:10,568
+Rym: and to put it lightly There are a lot more factors you would probably even think about considering when it comes to security.
+
+436
+00:33:10,588 --> 00:33:12,053
+Scott: their factors I don't even consider.
+
+437
+00:33:12,073 --> 00:33:19,311
+Rym: I mean I take a security at its base is really just a combination of data security and physical Security.
+
+438
+00:33:19,672 --> 00:33:46,110
+Rym: I say data security separately because data security is all the data all the stuff you're trying to protect from either being read By someone you don't want to read it all the things you're trying to protect from someone writing over changing getting access to anything like that and Physical security is just the fact that usually very high-powered servers very expensive You don't want anyone to steal them break them or get access to them, which then also compromises the data security.
+
+439
+00:33:46,572 --> 00:33:48,943
+Scott: Yeah, it's like you could have a server right.
+
+440
+00:33:48,963 --> 00:33:57,190
+Scott: let's say we have a server in our house Right and we make a billion firewalls that are all perfectly configured and unbreakable and we have every kind of encryption in the world.
+
+441
+00:33:57,351 --> 00:34:01,850
+Scott: So quantum encryption, it's the craziest technology security imaginable.
+
+442
+00:34:02,131 --> 00:34:06,850
+Scott: We don't have wireless everything is locked down so tight and we leave the front door to the house open.
+
+443
+00:34:07,492 --> 00:34:10,222
+Scott: Oh shit, that all stuff was all a waste.
+
+444
+00:34:10,322 --> 00:34:10,905
+Scott: We're smart.
+
+445
+00:34:11,387 --> 00:34:12,190
+Scott: Oh, you're so smart.
+
+446
+00:34:13,172 --> 00:34:15,489
+Scott: Someone just walked into our house took the computer and walked out.
+
+447
+00:34:15,951 --> 00:34:24,062
+Rym: Yep, because before we go I mean one of the biggest problems in computer data IT security is the human factor and we can talk about fact.
+
+448
+00:34:24,081 --> 00:34:25,848
+Scott: the human factor is the number one thing.
+
+449
+00:34:25,888 --> 00:34:28,016
+Scott: if you don't lock down The human factor nothing else matters.
+
+450
+00:34:28,178 --> 00:34:34,185
+Rym: Yep human error and human issues Account for the vast majority of actual computer security.
+
+451
+00:34:34,245 --> 00:34:37,074
+Rym: I would say 90% easily, I mean it depends.
+
+452
+00:34:37,396 --> 00:34:44,257
+Rym: part of the problem is that a lot of industries are very tight-lipped about when they are compromised and how They were compromised for obvious reasons.
+
+453
+00:34:44,820 --> 00:34:58,349
+Rym: So it's not like there's a lot of hard data as to what happens But the majority of data breaches are caused by users either not following security protocols Following bad security protocols or more importantly just being stupid.
+
+454
+00:34:59,155 --> 00:35:02,197
+Scott: Human security is all about one thing it's about trust.
+
+455
+00:35:02,680 --> 00:35:11,868
+Scott: you have people and You trust people a certain amount and the more you trust someone the more you allow them to do or you more Things you put in their hands.
+
+456
+00:35:11,888 --> 00:35:19,265
+Scott: and the way to fail for sure at Having good security is to trust the wrong people or to trust people the wrong amount.
+
+457
+00:35:19,586 --> 00:35:26,768
+Scott: if you trust people who are more Trustworthy not enough then they can't help you and if you trust people who are not trustworthy too much They will fuck you.
+
+458
+00:35:27,252 --> 00:35:36,605
+Rym: You see it's all a matter of compromise because if you've graphed it on one end of a graph You've got accessibility and usefulness of the computer of the data being able to get to it.
+
+459
+00:35:36,625 --> 00:35:38,834
+Rym: do stuff to it on the other end You've got security.
+
+460
+00:35:39,377 --> 00:35:40,503
+Rym: I can make a 100% secure server.
+
+461
+00:35:42,133 --> 00:35:47,669
+Rym: All I would have to do is run it in my room Not connect it to the internet and sit there with it all the time.
+
+462
+00:35:48,051 --> 00:35:54,480
+Rym: No one can get access to it short of killing me and no one Remotely can get any access to it because there's no network whatsoever.
+
+463
+00:35:54,821 --> 00:35:57,430
+Rym: However, I do point out that this server is not doing anything.
+
+464
+00:35:57,892 --> 00:36:00,610
+Scott: Yes, this is actually a fundamental principle of security.
+
+465
+00:36:00,710 --> 00:36:09,825
+Scott: That is almost always true and that the more you increase how secure something is the greater difficulty it is to actually use the thing.
+
+466
+00:36:10,127 --> 00:36:13,057
+Scott: for example My house it has a lock on the front door.
+
+467
+00:36:13,498 --> 00:36:17,730
+Scott: that makes me waste like 10 seconds opening the door when I get home.
+
+468
+00:36:18,151 --> 00:36:21,343
+Scott: My house is more secure, but I now suffer.
+
+469
+00:36:21,825 --> 00:36:22,005
+Rym: Yep.
+
+470
+00:36:22,025 --> 00:36:23,210
+Rym: So we want that was more secure.
+
+471
+00:36:23,652 --> 00:36:26,426
+Rym: Say we put a gigantic portcullis in front of the door.
+
+472
+00:36:27,029 --> 00:36:30,870
+Rym: now It takes us five minutes to get the door open, but the door is much more secure.
+
+473
+00:36:31,051 --> 00:36:34,428
+Scott: Let's say I have a drawbridge a portcullis and then a giant lock.
+
+474
+00:36:34,709 --> 00:36:41,561
+Scott: now it takes me a half hour to get into my house and No one can get into my house pretty much without bombs or a battering ram.
+
+475
+00:36:41,601 --> 00:36:44,670
+Scott: That is mighty large and metal, but I'm secure.
+
+476
+00:36:44,710 --> 00:36:46,920
+Scott: It's just a pain in the ass for me.
+
+477
+00:36:47,061 --> 00:36:49,090
+Scott: Well, the same thing is true with computers.
+
+478
+00:36:49,190 --> 00:36:50,234
+Scott: You want to be more secure?
+
+479
+00:36:50,475 --> 00:36:53,728
+Scott: You need a longer more complicated harder to remember password.
+
+480
+00:36:53,989 --> 00:36:56,777
+Rym: Yep I mean think about wireless is a good example.
+
+481
+00:36:57,179 --> 00:37:08,457
+Rym: by default if you want a wireless access point or wireless internet to work great Just plug it in turn off all the security set it up automatically and if you want to get online Your computer is already online.
+
+482
+00:37:08,718 --> 00:37:11,066
+Rym: If you have a wireless card, it just finds it and you're online.
+
+483
+00:37:11,368 --> 00:37:12,030
+Rym: No trouble at all.
+
+484
+00:37:12,110 --> 00:37:15,340
+Scott: Yeah, it's as easy as connecting to wireless at a coffee shop.
+
+485
+00:37:15,401 --> 00:37:18,290
+Rym: It's just wide open, but now anyone can connect to it.
+
+486
+00:37:18,571 --> 00:37:19,635
+Rym: So you want to secure it a little bit.
+
+487
+00:37:19,675 --> 00:37:21,402
+Rym: you put on your web, whatever.
+
+488
+00:37:21,443 --> 00:37:23,230
+Rym: you turn off broadcasting your SSID.
+
+489
+00:37:23,915 --> 00:37:25,650
+Rym: Now you have to go a little bit further.
+
+490
+00:37:25,710 --> 00:37:28,220
+Rym: You have to configure your web stuff to make sure it'll work.
+
+491
+00:37:28,280 --> 00:37:30,388
+Rym: know the SSID and then you can connect.
+
+492
+00:37:30,448 --> 00:37:34,850
+Rym: it adds more difficulty But even then it's not totally secure because WEP is broken.
+
+493
+00:37:35,171 --> 00:37:43,407
+Rym: So you got to go with WEP or something else and every layer of security you add the more Inconvenience you were adding to any users who were trying to use that resource.
+
+494
+00:37:43,468 --> 00:37:47,869
+Scott: Yep Sometimes there are ways to add security without act.
+
+495
+00:37:48,331 --> 00:37:53,510
+Scott: Add real security without causing a great deal more difficulty and those are usually better solutions.
+
+496
+00:37:54,012 --> 00:37:55,841
+Scott: There are also ways to add security.
+
+497
+00:37:56,082 --> 00:38:01,147
+Scott: that only in a little bit of security But making things a lot harder for everyone and those are generally bad solutions.
+
+498
+00:38:01,489 --> 00:38:10,096
+Rym: Yep Now there's also the issue that it's a really multifaceted problem because on one hand most people when they think about computer security They only think about one thing.
+
+499
+00:38:10,598 --> 00:38:13,010
+Rym: I don't want those evil hackers getting into my computer.
+
+500
+00:38:13,352 --> 00:38:16,470
+Rym: So they set up a personal firewall or maybe they're behind a net.
+
+501
+00:38:16,751 --> 00:38:26,030
+Rym: Maybe they run antivirus to make sure they didn't pick up some sort of Trojan or whatever and they try to secure themselves from people getting into their computer from the outside and accessing their data.
+
+502
+00:38:26,511 --> 00:38:30,261
+Rym: That is one tiny part of individual computer security.
+
+503
+00:38:30,682 --> 00:38:33,690
+Rym: because alright, so you're the only person who uses your computer.
+
+504
+00:38:34,091 --> 00:38:38,869
+Rym: So the only threats you have to worry about are threats from the outside threats from people trying to get in.
+
+505
+00:38:39,451 --> 00:38:44,890
+Rym: What if you share a computer or you have a house with multiple people living in it in the case of the latter?
+
+506
+00:38:45,331 --> 00:38:47,210
+Rym: Now you also have to worry about the physical security.
+
+507
+00:38:47,635 --> 00:38:52,690
+Rym: Sure, if you lived alone You can just leave your computer on and unlocked and use it whatever you want as long as your house is physically.
+
+508
+00:38:52,730 --> 00:38:53,095
+Scott: Yeah,
+
+509
+00:38:53,419 --> 00:38:59,411
+Rym: but now I live with Scott So I have to lock my computer to make sure that he can't just walk into my room and access it and must with my Data,
+
+510
+00:38:59,692 --> 00:39:04,270
+Scott: it's not that I'm evil that Rym thinks that I'm gonna come and erase his hard drive or anything like that.
+
+511
+00:39:04,774 --> 00:39:06,330
+Scott: It's just a matter of common sense.
+
+512
+00:39:06,350 --> 00:39:07,874
+Scott: I Lock my computer.
+
+513
+00:39:07,914 --> 00:39:11,910
+Scott: to do I if I left it unlocked one day would Rym go in there and muscle with my shit?
+
+514
+00:39:12,030 --> 00:39:15,289
+Scott: Probably not probably not but I do it anyway, cuz I'm not a fool.
+
+515
+00:39:15,853 --> 00:39:18,510
+Scott: It's the same reason I have a password on my computer at all.
+
+516
+00:39:18,592 --> 00:39:26,543
+Scott: Yeah I mean if I you know cuz no one comes into this house that I know whatever comes into this house that I think Would go around my computer and mess it up.
+
+517
+00:39:26,825 --> 00:39:27,590
+Scott: pretty much nobody.
+
+518
+00:39:28,052 --> 00:39:33,437
+Scott: But I still lock it down and I no one knows the password for me and no one can use my computer But me is it?
+
+519
+00:39:33,538 --> 00:39:34,807
+Scott: it's the way it goes.
+
+520
+00:39:34,827 --> 00:39:37,158
+Rym: now Let's say you share a computer with someone else.
+
+521
+00:39:37,178 --> 00:39:39,830
+Rym: this happens a lot at offices or in schools or whatever.
+
+522
+00:39:40,392 --> 00:39:42,961
+Rym: Now you've got another layer that you have to worry about.
+
+523
+00:39:43,021 --> 00:39:45,690
+Rym: not only do you have to protect the computer from access?
+
+524
+00:39:46,330 --> 00:39:54,610
+Rym: Unauthorized from the outside, but you have to protect Individual users data from other users and you have to protect the system itself from all of the users.
+
+525
+00:39:54,610 --> 00:40:00,008
+Scott: Yeah How many people like have a family and they use Windows XP or whatever and they all log into the computer?
+
+526
+00:40:00,630 --> 00:40:03,702
+Scott: Automatically logs in and no one writes a password in or they?
+
+527
+00:40:03,863 --> 00:40:05,670
+Scott: you know, they don't have separate user accounts.
+
+528
+00:40:05,730 --> 00:40:13,419
+Scott: You all just log in with the same user account and you don't have your own separate my documents folders and your separate bookmarks Or you know, everyone just uses the same one.
+
+529
+00:40:13,941 --> 00:40:16,190
+Scott: It's bad news real bad news.
+
+530
+00:40:16,651 --> 00:40:17,575
+Rym: Well, not necessarily.
+
+531
+00:40:17,635 --> 00:40:29,330
+Rym: it's more that there are drawbacks to that but there are also benefits in terms of ease of use Yep, but - if you're looking at security one thing you have to worry about especially in a corporate setting is How do you protect a system from the users?
+
+532
+00:40:29,510 --> 00:40:35,556
+Rym: It's not as though you're assuming that all your users are malicious and trying to destroy it though There are situations where you do assume that.
+
+533
+00:40:35,696 --> 00:40:37,643
+Rym: yeah, I have been told ex-employees.
+
+534
+00:40:38,084 --> 00:40:52,810
+Rym: Yep, or a kiosk for example I built machines to be used by basically factory workers know nothing about computers all over IBM and As a result, I locked them down assuming that the person using the computer was hostile toward my system.
+
+535
+00:40:53,192 --> 00:40:59,709
+Rym: I made the computer so that they could not no matter what they knew Damage the computer simply by using it.
+
+536
+00:41:00,151 --> 00:41:05,450
+Rym: I had to protect the computer from its own users and that is a very critical part of security.
+
+537
+00:41:05,851 --> 00:41:09,041
+Scott: In fact, think about it most computers out there in the world.
+
+538
+00:41:09,483 --> 00:41:11,630
+Scott: They're getting used by the users every day.
+
+539
+00:41:12,033 --> 00:41:13,310
+Scott: They're getting hacked every day.
+
+540
+00:41:13,431 --> 00:41:22,510
+Scott: No, not likely I mean and not the kind of hacking attempt that you know You fantasize about in movies where some hacker tries to infiltrate like, you know and sneak in and steal the important data.
+
+541
+00:41:22,911 --> 00:41:27,670
+Scott: But even in terms of spyware viruses and stuff is that coming in on a daily basis?
+
+542
+00:41:28,010 --> 00:41:29,729
+Scott: Well only if the user is a complete idiot.
+
+543
+00:41:30,211 --> 00:41:31,174
+Scott: So you're really.
+
+544
+00:41:31,576 --> 00:41:36,010
+Scott: the user is the most dangerous enemy to the security of the machine.
+
+545
+00:41:36,210 --> 00:41:39,841
+Rym: Yep, the majority of data loss is not caused by hackers deleting it.
+
+546
+00:41:40,122 --> 00:41:45,223
+Rym: It's caused by users accidentally deleting their own data Yep, or corrupting their data or something.
+
+547
+00:41:45,846 --> 00:41:55,410
+Scott: another interesting fact I even have to protect the computer from myself sometimes so I don't accidentally do something, you know Like if I'm you know, try the ever typed are you're trying to delete a bunch of stuff?
+
+548
+00:41:55,490 --> 00:42:02,410
+Rym: You have like RM - our space star dot whatever but you accidentally put a space between the star and the dot whatever.
+
+549
+00:42:02,631 --> 00:42:05,747
+Scott: Yep, it's it's all over or you'll.
+
+550
+00:42:05,767 --> 00:42:12,070
+Scott: uh, you know I'll be backing up a database and I accidentally drop the tables instead of just dumping the tables and then oh shit.
+
+551
+00:42:12,130 --> 00:42:13,816
+Scott: So I fucked up and it's bad news.
+
+552
+00:42:14,258 --> 00:42:17,690
+Scott: I get work if I ever do anything with any sort of important data.
+
+553
+00:42:18,192 --> 00:42:19,877
+Scott: I'm so ludicrously cautious.
+
+554
+00:42:20,218 --> 00:42:22,907
+Scott: Like I won't push the button unless I'm a hundred percent sure.
+
+555
+00:42:22,927 --> 00:42:27,519
+Scott: I won't push the button That's I'm 110 percent sure and I can't be 110 percent sure now.
+
+556
+00:42:27,560 --> 00:42:36,486
+Rym: computers particularly Unix and Linux based computers while operating systems I guess were built with that in mind while Windows wasn't until recently with NT in 2000 XP and all that.
+
+557
+00:42:37,572 --> 00:42:48,989
+Rym: Yeah so though these computers these operating systems have things built in that set it up so that you can partition off users from each other to where user Bob can't read user Joe's files.
+
+558
+00:42:49,009 --> 00:42:51,836
+Rym: and Even now I'm using my current computer.
+
+559
+00:42:52,318 --> 00:42:54,003
+Rym: I am NOT root on my computer.
+
+560
+00:42:54,304 --> 00:42:56,170
+Rym: I'm never logged in as administrator or root.
+
+561
+00:42:56,492 --> 00:42:59,290
+Rym: I'm logged in as Rym and I have a separate root account.
+
+562
+00:42:59,752 --> 00:43:04,150
+Rym: So if I'm messing around with my computer and doing stuff and I accidentally delete a whole bunch of files.
+
+563
+00:43:04,612 --> 00:43:09,170
+Rym: At least I can't delete system files because by default I don't have permission to do so.
+
+564
+00:43:09,491 --> 00:43:17,190
+Rym: I have to go through an interlock or one extra step to prove that yes I wish to have these permissions and these powers before I continue.
+
+565
+00:43:17,330 --> 00:43:17,491
+Rym: Yep,
+
+566
+00:43:17,932 --> 00:43:37,805
+Scott: and the reason that the systems are designed that way is because originally unlike Windows which was used Which is an operating system designed for one person sitting at one computer to use on their own originally Unix and Linux and all that stuff were mainframe type things where you'd have one giant Ludicrously expensive computer and then a bunch of terminals that were not computers.
+
+567
+00:43:37,825 --> 00:43:43,146
+Scott: They were just monitors keyboards No mouse is just monitors and keyboards that would hook up to this mainframe.
+
+568
+00:43:43,166 --> 00:43:55,430
+Scott: We need to have 30 people simultaneously sharing the same CPU the same drives the same memory and You needed to find a way that those people could all share the machine and not fuck each other over at the same time.
+
+569
+00:43:55,510 --> 00:43:57,316
+Rym: Yep, and think about how many things that they could do.
+
+570
+00:43:57,357 --> 00:44:03,598
+Rym: what if one user executes a process that completely hoses the CPU It just uses the resources 100%.
+
+571
+00:44:03,598 --> 00:44:06,910
+Rym: someone else tries to fill up the entire hard disk system on the server.
+
+572
+00:44:07,432 --> 00:44:11,029
+Rym: Someone else tries to hack into a fourth person's account and read their files.
+
+573
+00:44:12,434 --> 00:44:16,550
+Rym: now also I Said IT security is basically data security.
+
+574
+00:44:16,952 --> 00:44:17,594
+Rym: Think about this.
+
+575
+00:44:17,654 --> 00:44:23,176
+Rym: just here's an idea of all the possible factors you have to take into account And well, I guess you don't have to.
+
+576
+00:44:23,237 --> 00:44:26,650
+Rym: it's more a matter of how secure do you want to be and how much do you?
+
+577
+00:44:26,830 --> 00:44:28,114
+Rym: Care and how important is the data?
+
+578
+00:44:28,455 --> 00:44:32,849
+Rym: say I've got a computer that has a database in it and it serves a web page out.
+
+579
+00:44:33,174 --> 00:44:40,668
+Rym: so first I have to make sure that my web page and all that is secure and up-to-date so that someone can't Bust into the web server and take control of the computer.
+
+580
+00:44:41,118 --> 00:44:41,408
+Rym: Mm-hmm.
+
+581
+00:44:41,731 --> 00:44:46,108
+Rym: I have to make sure that there aren't any other ports or ways that someone can break into the computer.
+
+582
+00:44:46,349 --> 00:44:49,025
+Rym: other Services that might be vulnerable like net bios.
+
+583
+00:44:49,066 --> 00:44:53,082
+Rym: Let's say I Have to make sure that the data on the computer.
+
+584
+00:44:53,223 --> 00:44:56,850
+Rym: not only do I have to try to prevent people from Modifying it without my knowledge.
+
+585
+00:44:57,352 --> 00:45:03,170
+Rym: I want some sort of system to see if and when the data has been modified so that I know if anything is fishy.
+
+586
+00:45:04,110 --> 00:45:04,411
+Rym: Alright.
+
+587
+00:45:04,852 --> 00:45:07,079
+Rym: now let's say I want to have backups of this database.
+
+588
+00:45:07,420 --> 00:45:08,343
+Rym: So I make the backups.
+
+589
+00:45:08,945 --> 00:45:10,510
+Rym: Where are the backups stored?
+
+590
+00:45:10,830 --> 00:45:11,833
+Rym: How are they secured?
+
+591
+00:45:12,234 --> 00:45:20,745
+Rym: all the security on a server in the world is useless if the backups are just shipped off to some Company that keeps them in a warehouse with a padlock on the door.
+
+592
+00:45:20,765 --> 00:45:23,517
+Rym: Yeah That happens kind of often.
+
+593
+00:45:23,858 --> 00:45:26,750
+Rym: you'd be surprised how easy it is to get access to corporate backups.
+
+594
+00:45:27,233 --> 00:45:37,290
+Scott: Yep, you just walk right into some places you know like there are places that have a service that will store backups because the idea of backups is you don't want to Keep your backup in the same building as the server.
+
+595
+00:45:37,450 --> 00:45:43,148
+Scott: Like let's say I have a server and I back up the hard drive to another hard drive and I just put that hard drive In a box on the floor.
+
+596
+00:45:43,692 --> 00:45:46,082
+Scott: Okay, sure if the hard drive in the server crashes I'm safe.
+
+597
+00:45:46,102 --> 00:45:48,653
+Scott: because I have a hard drive on the floor that's got the same Data, what if?
+
+598
+00:45:48,853 --> 00:45:50,158
+Rym: what if the office burns down?
+
+599
+00:45:50,198 --> 00:45:52,928
+Scott: What if the whole place is bombed or something crazy?
+
+600
+00:45:52,948 --> 00:45:53,570
+Scott: There's an earthquake.
+
+601
+00:45:54,493 --> 00:45:56,006
+Scott: I lost both of those drives shit.
+
+602
+00:45:56,087 --> 00:45:56,410
+Scott: I'm done.
+
+603
+00:45:56,791 --> 00:46:05,230
+Scott: So if I have that other hard drive stored far away in another office That's quite a bit safer than just putting it in the same office.
+
+604
+00:46:05,451 --> 00:46:10,870
+Rym: It's safer from a data retention standpoint, but it's far more dangerous from a data protection standpoint.
+
+605
+00:46:11,030 --> 00:46:14,603
+Scott: Yep, because now there are two places and two ways people can get the data.
+
+606
+00:46:14,623 --> 00:46:22,325
+Scott: if it's in one lockdown office You know, let's say Fort Knox then someone has to break into Fort Knox to get the data period.
+
+607
+00:46:22,706 --> 00:46:25,969
+Scott: let's say the data is in Fort Knox and it's also in Fort Rym.
+
+608
+00:46:26,511 --> 00:46:37,190
+Scott: well now people have the option of breaking into either Fort Rym or Fort Knox and if one of them is easier to Break into well, you know what they say the chain is as strong as the weakest link.
+
+609
+00:46:37,591 --> 00:46:49,890
+Rym: There's a possibly apocryphal tale about a financial company that was stationed in the World Trade Center and They had their data backups locally and they also had remote off-site backups that they contracted out to another company.
+
+610
+00:46:50,131 --> 00:46:51,053
+Scott: They weren't that dumb?
+
+611
+00:46:51,253 --> 00:46:57,590
+Rym: that other company supposedly was also in the World Trade Center like 25 floors down from them.
+
+612
+00:46:57,951 --> 00:47:03,770
+Scott: Well, I heard that actually what it was was that they is also agreeing that this is possibly a lie.
+
+613
+00:47:04,211 --> 00:47:15,290
+Scott: But supposedly a company outsourced their backups to be stored at some company far away and that company far away I re outsourced to another third company that was in the World Trade Center.
+
+614
+00:47:15,671 --> 00:47:26,116
+Scott: So the first company thought their backups were safe and far away and that first comfort the second company not realizing The first company was in the World Trade Center Outsourced the backups to the World Trade Center.
+
+615
+00:47:26,518 --> 00:47:29,706
+Rym: So you see there are a lot of factors involved and there's really.
+
+616
+00:47:29,726 --> 00:47:31,190
+Rym: there's no answer.
+
+617
+00:47:31,573 --> 00:47:32,077
+Rym: There's no.
+
+618
+00:47:32,258 --> 00:47:33,710
+Rym: this is how you secure something.
+
+619
+00:47:33,790 --> 00:47:34,713
+Rym: this is how you do it.
+
+620
+00:47:35,175 --> 00:47:51,770
+Rym: the industry practices and standards are pretty much just conveniences at best and true IT security basically requires someone like me or Scott or Some sort of IT professional to look at the exact situation the exact data how important the data is who needs to access it?
+
+621
+00:47:51,850 --> 00:47:52,592
+Scott: Into what level?
+
+622
+00:47:52,813 --> 00:47:59,157
+Rym: Yep when they need to access it how much it needs to be backed up how how much trouble they're willing to Go through to access it.
+
+623
+00:47:59,198 --> 00:48:00,909
+Scott: How efficiently do they need to access it?
+
+624
+00:48:01,151 --> 00:48:03,303
+Rym: Yep, I mean we need to look at such things as.
+
+625
+00:48:03,605 --> 00:48:11,691
+Rym: here's a funny example There is one place at a place I worked at before Where we had a raised floor data center and the data center was locked 24/7.
+
+626
+00:48:11,691 --> 00:48:19,582
+Rym: you had to have a special code to get into the data center and there's a control room in the front and there's an Emergency door in the back that can't be opened from the outside without a code.
+
+627
+00:48:20,385 --> 00:48:21,530
+Rym: now the raised floor.
+
+628
+00:48:21,792 --> 00:48:23,930
+Rym: All right, the door is locked everything's secure.
+
+629
+00:48:24,010 --> 00:48:31,749
+Rym: But the raised floor went under the door and then outside of the back door There was like a landing where it was still raised floor and then stairs down.
+
+630
+00:48:32,353 --> 00:48:45,619
+Rym: So if theoretically if you wanted to get into this data center You could just pull up the floor tile on the outside crawl under the secure door and then pop up inside the data center through the floor Because no one thought about it now.
+
+631
+00:48:45,659 --> 00:48:53,965
+Rym: Luckily this actual data center was not Critical in terms of the data being useful for people to steal.
+
+632
+00:48:53,985 --> 00:48:55,830
+Rym: It was a fairly small data center.
+
+633
+00:48:55,910 --> 00:48:59,830
+Rym: So when I pointed this out, it was basically said that yes, we're aware of it.
+
+634
+00:49:00,211 --> 00:49:08,040
+Rym: It is not worth going through the trouble to secure this particular data because this particular data is not terribly valuable And that's not necessarily a bad decision.
+
+635
+00:49:08,221 --> 00:49:10,470
+Scott: Yes, you have to make these sorts of things.
+
+636
+00:49:10,510 --> 00:49:16,850
+Scott: I mean on the one hand if you wanted absolute security locked down impossible, you could run plan 9.
+
+637
+00:49:16,850 --> 00:49:18,738
+Scott: There's an operating system called plan 9.
+
+638
+00:49:18,738 --> 00:49:22,995
+Scott: I'm pretty sure it's mostly a theoretical operating system But I'm pretty sure it does.
+
+639
+00:49:23,336 --> 00:49:38,843
+Scott: you can actually run it and it's pretty much designed with nothing but security and perfection in mind and If you actually run it and try to do anything with it other than very few applications in the world It'll basically be a nightmare for users and it'll suck.
+
+640
+00:49:39,144 --> 00:49:40,610
+Scott: It'll suck really big.
+
+641
+00:49:40,992 --> 00:49:42,901
+Rym: I mean think in terms of the equivalent.
+
+642
+00:49:43,243 --> 00:49:44,590
+Rym: you all saw a mission impossible.
+
+643
+00:49:45,314 --> 00:49:48,110
+Rym: You know the computer room they had and how he broke in and got all the data.
+
+644
+00:49:48,690 --> 00:49:53,790
+Rym: That's the kind of security that makes a computer perfectly secure and it makes the computer almost unusable.
+
+645
+00:49:54,011 --> 00:49:55,237
+Rym: I mean think about that computer.
+
+646
+00:49:55,258 --> 00:49:57,570
+Rym: how the hell did people use that computer?
+
+647
+00:49:58,710 --> 00:49:59,474
+Scott: They didn't it?
+
+648
+00:49:59,514 --> 00:50:01,202
+Scott: just that it was stupid.
+
+649
+00:50:01,383 --> 00:50:02,288
+Scott: It was stupid.
+
+650
+00:50:02,649 --> 00:50:06,064
+Rym: now We're going to break this up into a whole bunch of individual shows.
+
+651
+00:50:06,385 --> 00:50:10,530
+Rym: if you care about the order We do these security topics in let us know in the forums.
+
+652
+00:50:10,992 --> 00:50:16,172
+Rym: We're really not in any particular hurry to get into specific ones since we can talk about all of them about equally Yep.
+
+653
+00:50:16,574 --> 00:50:20,090
+Scott: Now the only other thing I want to add is that we are not experts in security.
+
+654
+00:50:20,211 --> 00:50:22,328
+Scott: Sure, we took some security classes in college.
+
+655
+00:50:22,408 --> 00:50:26,650
+Scott: Sure We're generally smart about this sort of thing, but we are not the geniuses of security.
+
+656
+00:50:26,770 --> 00:50:29,702
+Rym: No, in fact, I'm basically an IT guy.
+
+657
+00:50:29,722 --> 00:50:35,508
+Rym: I can manage IT security fairly Well, I don't know a lot about application security at all.
+
+658
+00:50:35,689 --> 00:50:51,346
+Scott: Yeah well If you want to hear from someone who is pretty much in my opinion and the opinion of many others the world Genius perfect expert of security you want to look up a man named Bruce Schneier S-c-h-n-e-i-e-r not Gibson.
+
+659
+00:50:51,587 --> 00:50:54,589
+Scott: No Steve Gibson and he's a little crazy.
+
+660
+00:50:55,192 --> 00:51:02,441
+Scott: Bruce Schneier is like if you go look for the IT conversations network, you can find There's a few podcasts with him talking in it.
+
+661
+00:51:02,762 --> 00:51:21,090
+Scott: He's not only a genius of IT security He's a genius of all security in general and he has written at least one or two books and you can hear him talking All over the internet and read things he's written everywhere and as far as I'm concerned There is no person on earth who can better secure things and better know about security than this man.
+
+662
+00:51:21,491 --> 00:51:24,702
+Scott: And if you really want to know stuff, he is your go-to guy.
+
+663
+00:51:24,943 --> 00:51:27,070
+Rym: Yep, particularly low-level stuff.
+
+664
+00:51:27,230 --> 00:51:34,735
+Rym: I mean we can talk a lot about the high level or the ideas but in terms of actual direct practice of especially the more Esoteric security options.
+
+665
+00:51:35,378 --> 00:51:42,930
+Rym: I've never actually had call to use a lot of them and most of the companies I've worked for Actually care a lot less about security than I personally do on my own computer.
+
+666
+00:51:43,265 --> 00:52:00,450
+Scott: Yeah But also do not fear like if you don't if you think you don't understand computers super well Don't be afraid to go listen to this guy anyway because like the most interesting thing he talked about once is he was talking about airport security and He didn't talk about like oh, this is how the you know, the metal detector works and how you can sneak through.
+
+667
+00:52:00,550 --> 00:52:08,382
+Scott: He was like, oh this and the psychology of the people there and you know This is how you this actually gets you security and that doesn't etc.
+
+668
+00:52:08,402 --> 00:52:08,783
+Scott: etc.
+
+669
+00:52:08,823 --> 00:52:10,750
+Scott: and it was really goddamn interesting.
+
+670
+00:52:11,432 --> 00:52:16,810
+Scott: And if I was in some position of power, I would assign him to secure the airports and not whoever's doing it.
+
+671
+00:52:16,850 --> 00:52:17,151
+Scott: Yeah,
+
+672
+00:52:17,573 --> 00:52:35,245
+Rym: so basically what we're trying to say here is that we will go up to the level We are comfortable speaking as experts we got in regards to computer security and we will not authoritatively say anything beyond that level because While we can make educated guesses and we can definitely put forth how we would do it.
+
+673
+00:52:35,606 --> 00:52:40,908
+Rym: We are definitely not Experts in computer security like this person or some other people out there.
+
+674
+00:52:41,069 --> 00:52:48,284
+Scott: Yes Also, I think our next episode should probably be like hey If you have a personal computer with Windows is what you do to not be a fool.
+
+675
+00:52:48,464 --> 00:52:52,477
+Rym: Yep, or possibly just Security in terms of individual PCs.
+
+676
+00:52:52,758 --> 00:52:52,959
+Scott: Yep.
+
+677
+00:52:53,279 --> 00:52:53,460
+Scott: Yep.
+
+678
+00:52:53,861 --> 00:52:54,362
+Scott: That's a good one.
+
+679
+00:52:54,583 --> 00:52:56,990
+Scott: That's actually useful to the most people in the most ways.
+
+680
+00:52:57,291 --> 00:53:12,010
+Rym: Yes, luckily, it's actually pretty simple to secure a single standalone PC that you're not backing up Especially if it's your personal PC because the crack hackers of the world are not trying to get into Joey Jojo shabbat whose PC to look at his Pokemon poll.
+
+681
+00:53:12,090 --> 00:53:13,730
+Scott: They're not actively trying to get into it.
+
+682
+00:53:13,770 --> 00:53:18,180
+Scott: If you went to say if you brought it to Def Con then yes They would be actively trying to get into sure.
+
+683
+00:53:18,361 --> 00:53:25,190
+Scott: if you're just sitting there on your cable modem There isn't a hacker out there sitting, you know manually trying to break into your computer.
+
+684
+00:53:25,290 --> 00:53:39,190
+Scott: However, there are many automatic computers out there zombies if you will roaming around just attempting to get you In a very stupid and predictable manner, but if you are equally stupid You will get bit and turn into a zombie yourself.
+
+685
+00:53:39,591 --> 00:54:04,564
+Rym: See my point there is simply that if you do your due diligence and luckily the due diligence for a standalone PC is very Very very simple and easy to do you're immune to the probably 99% of any attack that will ever hit your PC because the only attacks that will get past basic due diligence are direct Concentrated efforts by people who know what they're doing against you and those
+
+686
+00:54:04,945 --> 00:54:06,550
+Scott: are rare or you being an idiot
+
+687
+00:54:07,092 --> 00:54:13,490
+Rym: In which case you have not undergone due diligence and then the fault is at least as far as I'm concerned entirely yours.
+
+688
+00:54:13,550 --> 00:54:19,189
+Scott: Yes, if you go to some where's site download an exe and run it you get what you put your page.
+
+689
+00:54:19,973 --> 00:54:28,229
+Rym: if you read a website that tells you how to access something and Part of their instructions are turn off your firewall and then open up all the ports on your router and you do it.
+
+690
+00:54:29,071 --> 00:54:29,936
+Scott: Yeah, good job.
+
+691
+00:54:30,761 --> 00:54:38,290
+Rym: I'm sure we'll have a lot to say about this But for now, I'm gonna stare in misery at my half-completed computer that is now missing the motherboard.
+
+692
+00:54:38,832 --> 00:54:40,779
+Scott: Well, I can tell you one thing about this computer.
+
+693
+00:54:41,000 --> 00:54:42,384
+Rym: It's perfectly secure.
+
+694
+00:54:42,405 --> 00:54:43,508
+Scott: Oh you stole it.
+
+695
+00:54:51,837 --> 00:54:54,026
+Rym: This Has been GeekNights with Rym and Scott.
+
+696
+00:54:54,106 --> 00:54:56,613
+Rym: special thanks to DJ pretzel for the opening music.
+
+697
+00:54:57,275 --> 00:55:08,439
+Scott: Be sure to visit our website at www.frontroadcrew.com where you'll find show notes links our awesome forum a link to our frapper map and links to all the RSS feeds.
+
+698
+00:55:09,042 --> 00:55:14,700
+Rym: We say feeds plural because GeekNights airs four nights a week covering four different brands of geekery.
+
+699
+00:55:15,244 --> 00:55:16,896
+Rym: Mondays are science and technology.
+
+700
+00:55:16,937 --> 00:55:19,563
+Rym: Tuesdays We have video games board games and RPGs.
+
+701
+00:55:19,923 --> 00:55:24,910
+Rym: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+702
+00:55:25,781 --> 00:55:37,440
+Scott: You can send us feedback by email to GeekNights at front row crew comm or you can send audio feedback via Audio, just click the link that says send me an audio on the right side of our website.
+
+703
+00:55:37,783 --> 00:55:38,691
+Rym: If you like what you hear.
+
+704
+00:55:38,772 --> 00:55:42,930
+Rym: you can catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+705
+00:55:43,170 --> 00:55:46,280
+Rym: for the complete archives visit the website which has everything.
+
+706
+00:55:46,842 --> 00:55:52,865
+Scott: GeekNights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+707
+00:55:53,347 --> 00:55:56,720
+Scott: this means you can do whatever you want with it as long as you give us credit.
+
+708
+00:55:57,183 --> 00:55:59,399
+Scott: Don't make money and share it in kind.
+
+709
+00:56:00,202 --> 00:56:05,636
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+710
+00:56:05,937 --> 00:56:07,240
+Scott: It's actually recorded at night.
+

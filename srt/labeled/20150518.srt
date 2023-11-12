@@ -1,0 +1,3120 @@
+1
+00:00:08,860 --> 00:00:15,721
+Rym: It's Monday May 18.
+
+2
+00:00:15,721 --> 00:00:16,263
+Rym: I'm Rym.
+
+3
+00:00:16,906 --> 00:00:17,649
+Scott: I'm Scott.
+
+4
+00:00:17,910 --> 00:00:19,799
+Rym: And this is GeekNights.
+
+5
+00:00:19,839 --> 00:00:26,639
+Rym: Tonight We're talking about ad blocking and I was delaying because I forgot what we picked as our show The crab people.
+
+6
+00:00:28,541 --> 00:00:29,558
+Scott: Let's do this.
+
+7
+00:00:30,624 --> 00:00:31,130
+Rym: Yeah, we had it.
+
+8
+00:00:31,151 --> 00:00:31,860
+Rym: We have another idea.
+
+9
+00:00:31,941 --> 00:00:36,432
+Rym: We might do a show next time on VPNs But I gotta read up a little bit to remind myself of some things.
+
+10
+00:00:36,452 --> 00:00:38,280
+Scott: It's not a thing you work with very often.
+
+11
+00:00:38,320 --> 00:00:40,419
+Rym: Yeah, I used to like that used to be my job.
+
+12
+00:00:40,661 --> 00:00:44,131
+Rym: I was like, hey a set of a VPN is the second phase up.
+
+13
+00:00:44,171 --> 00:00:45,876
+Rym: what's going on with the?
+
+14
+00:00:45,916 --> 00:00:47,220
+Rym: the time would but I don't care.
+
+15
+00:00:47,621 --> 00:00:48,746
+Rym: I have people who do that for me.
+
+16
+00:00:48,766 --> 00:00:54,292
+Rym: I just say things like yeah, I'll put a VPN between those two things Mmm, so we'll see.
+
+17
+00:00:54,453 --> 00:00:55,599
+Rym: It could be an interesting show.
+
+18
+00:00:56,942 --> 00:01:03,317
+Rym: I could do a show on the fixed protocol because I know you guys are all fascinated by it But Scott doesn't want to do a show on it.
+
+19
+00:01:04,221 --> 00:01:09,000
+Scott: Should we just do a show on every single protocol there is because we can just you know, let's go to any industry.
+
+20
+00:01:09,060 --> 00:01:14,358
+Scott: I'm sure there's like a medical protocol that like those computers used to exchange medical records.
+
+21
+00:01:14,398 --> 00:01:16,124
+Scott: I'm sure there's a Big difference.
+
+22
+00:01:16,204 --> 00:01:20,258
+Rym: Is there a protocol like that that either of us knows fuck all about.
+
+23
+00:01:20,278 --> 00:01:23,652
+Scott: I understand There's plenty of protocols that I know FTPs.
+
+24
+00:01:23,672 --> 00:01:25,280
+Rym: I said, do you really know FTP?
+
+25
+00:01:26,360 --> 00:01:27,827
+Scott: Yeah, you know FTP fully.
+
+26
+00:01:28,028 --> 00:01:30,599
+Rym: how many ports does FTP open and in what directions?
+
+27
+00:01:32,045 --> 00:01:35,385
+Scott: It only really needs two Getting and receiving.
+
+28
+00:01:35,405 --> 00:01:38,494
+Rym: Oh, it's not sending and receiving its data and control.
+
+29
+00:01:38,535 --> 00:01:39,758
+Rym: You don't know shit about FTP.
+
+30
+00:01:39,778 --> 00:01:42,005
+Rym: the same thing No, it's not FTP.
+
+31
+00:01:42,045 --> 00:01:49,104
+Rym: No Scott FTP is actually like if you use it kind of Overcomplicated and fucked up.
+
+32
+00:01:49,606 --> 00:01:58,652
+Rym: and to this day most young people I know in the industry like just in general Cannot set up a firewall to let FTP through properly.
+
+33
+00:01:58,672 --> 00:02:00,840
+Rym: They don't know the difference between passive and active FTP.
+
+34
+00:02:01,522 --> 00:02:03,149
+Scott: It's a giant nightmare, but I can do that.
+
+35
+00:02:03,491 --> 00:02:05,680
+Rym: What's the difference between passive and active FTP?
+
+36
+00:02:08,661 --> 00:02:11,489
+Rym: It has to do with how you can open the firewall.
+
+37
+00:02:11,970 --> 00:02:24,980
+Rym: in which direction depending on who initiates which of the two Street or two connections that need to be open FTP will fail in Mysterious ways if you don't know like the weird details of what's going on down there.
+
+38
+00:02:25,661 --> 00:02:26,110
+Scott: Okay.
+
+39
+00:02:26,130 --> 00:02:29,146
+Rym: Yeah Maybe we should do a show on FTP.
+
+40
+00:02:29,187 --> 00:02:30,492
+Scott: How many protocols are we gonna do?
+
+41
+00:02:30,512 --> 00:02:32,400
+Scott: shows us be a Monday night protocol?
+
+42
+00:02:32,804 --> 00:02:33,098
+Scott: Let's name.
+
+43
+00:02:33,321 --> 00:02:38,517
+Rym: So what are all the protocols that we know like either of us know enough to talk for at least 20 minutes about.
+
+44
+00:02:38,617 --> 00:02:45,804
+Scott: I got fixed HTTP NTP SSH FTP Something else that ends in P.
+
+45
+00:02:45,824 --> 00:02:50,359
+Rym: Uh, I can talk a little bit about Tib RV the middleware TCP IP.
+
+46
+00:02:51,422 --> 00:02:54,516
+Rym: I know a little bit about tervela and solace, but they're just middleware.
+
+47
+00:02:54,536 --> 00:02:57,345
+Scott: They're not that special It's probably a lot more of.
+
+48
+00:02:57,405 --> 00:02:59,332
+Scott: I would just think of them XML RPC.
+
+49
+00:02:59,352 --> 00:03:03,987
+Scott: It's not really a protocol to really Yes, it's the standard.
+
+50
+00:03:04,147 --> 00:03:13,125
+Rym: Yeah a protocol is like one, you know, well, you know what actually that show we have to get into the differences like the difference between a transport or a Semantic or like what were.
+
+51
+00:03:13,145 --> 00:03:13,868
+Rym: you know, there's a lot of.
+
+52
+00:03:14,149 --> 00:03:15,535
+Rym: there's a lot of the meta show.
+
+53
+00:03:15,615 --> 00:03:16,780
+Scott: It's like about protocols.
+
+54
+00:03:17,101 --> 00:03:19,209
+Rym: That's actually a pretty good idea for a show.
+
+55
+00:03:19,390 --> 00:03:19,872
+Scott: no, it's not.
+
+56
+00:03:19,972 --> 00:03:21,057
+Rym: I think it's no idea.
+
+57
+00:03:21,117 --> 00:03:22,418
+Scott: go on to the news All right.
+
+58
+00:03:22,763 --> 00:03:24,600
+Rym: So in the news this kind of an aside.
+
+59
+00:03:25,062 --> 00:03:30,040
+Rym: But Scott kind of makes fun of me sometimes because I will often even if you know, there's news in tech.
+
+60
+00:03:30,521 --> 00:03:43,539
+Rym: But I'll usually go link to when we do the show like in the show notes to the slash shot article about the thing mostly because slash shot articles don't disappear unlike every fucking other thing we link to and to.
+
+61
+00:03:44,700 --> 00:03:48,557
+Rym: Usually in the past at least the comments would have a lot of like.
+
+62
+00:03:48,678 --> 00:03:51,200
+Rym: oh by the way Here's the technical reason why that article was completely wrong.
+
+63
+00:03:51,261 --> 00:03:52,733
+Rym: like a lot of smart stuff would be down there.
+
+64
+00:03:52,753 --> 00:03:59,420
+Rym: and Also, usually they link to a bunch of different sources of the news and a little bit of commentary.
+
+65
+00:03:59,883 --> 00:04:02,279
+Rym: So like it was just it was a good landing place for our links.
+
+66
+00:04:03,440 --> 00:04:06,702
+Rym: but as time has gone on I Feel like.
+
+67
+00:04:07,003 --> 00:04:11,019
+Rym: obviously I mean like dig and read it and all these things came and went and came again.
+
+68
+00:04:12,100 --> 00:04:17,177
+Rym: Slashdot has not been the most growing and active community on the internet.
+
+69
+00:04:17,237 --> 00:04:21,375
+Rym: to put it lightly Slashdot is a relative growing of the late 90s at best.
+
+70
+00:04:24,160 --> 00:04:40,559
+Rym: so I Suspected for a long time and I kind of noticed that when I was on slashdot in the 90s and then like at RIT Slashdot was like people on the not the bleeding edge But the cutting edge of technology like people knew shit about brand new shit and there was a lot of like.
+
+71
+00:04:40,880 --> 00:04:42,584
+Rym: well We'll just do crazy stuff in the future.
+
+72
+00:04:42,624 --> 00:04:45,452
+Rym: and fast computers and like mod my body technology.
+
+73
+00:04:45,512 --> 00:04:47,136
+Rym: Let's go fuck the consequences.
+
+74
+00:04:47,156 --> 00:04:56,326
+Rym: I feel like the exact same people are now on slashdot and they're all in their 40s and Now they really want to slow things down.
+
+75
+00:04:56,407 --> 00:05:04,314
+Rym: like they're not as comfortable with new stuff and instead of being forward-thinking They're backward thinking and they want all technology to be like it was in the 90s.
+
+76
+00:05:04,334 --> 00:05:04,435
+Rym: Why?
+
+77
+00:05:06,721 --> 00:05:11,129
+Scott: I'm sure someone must have researched why people become Conservative when they get old.
+
+78
+00:05:11,230 --> 00:05:11,793
+Scott: is it because?
+
+79
+00:05:11,833 --> 00:05:12,598
+Scott: why can't we do it?
+
+80
+00:05:13,180 --> 00:05:13,963
+Scott: I can't we use it cuz?
+
+81
+00:05:13,983 --> 00:05:18,860
+Scott: clearly it doesn't happen to everyone but like slash dot you'd think like why can't we undo this?
+
+82
+00:05:19,160 --> 00:05:23,055
+Rym: A lot of us nerds like to say like Oh techie computer II people it doesn't happen to.
+
+83
+00:05:23,336 --> 00:05:25,946
+Rym: I think it happens to them at the Same percentage as everyone else.
+
+84
+00:05:26,207 --> 00:05:29,180
+Rym: Yeah, I think it's just a percentage of people flat across the board.
+
+85
+00:05:29,381 --> 00:05:29,744
+Scott: I don't know.
+
+86
+00:05:29,804 --> 00:05:31,920
+Scott: How do we un-prevent that from happening?
+
+87
+00:05:32,160 --> 00:05:34,390
+Rym: Is it because do people actually get more conservative?
+
+88
+00:05:34,772 --> 00:05:36,700
+Rym: or were they always conservative?
+
+89
+00:05:37,101 --> 00:05:42,420
+Rym: But they their baseline was the technology level like just ahead of them when they were teenagers.
+
+90
+00:05:42,500 --> 00:05:46,199
+Rym: So when they become adults now, it's way behind them and they're scared.
+
+91
+00:05:47,222 --> 00:05:52,670
+Rym: But in the course of one fucking day Slashdot like really?
+
+92
+00:05:52,991 --> 00:05:54,256
+Rym: Well, I guess it's two days, but 24-hour period.
+
+93
+00:05:55,602 --> 00:06:06,940
+Rym: Slashdots was batting a thousand for having an article a day where the comments like exposed Really deep-rooted Misogyny and racism and just conservatism.
+
+94
+00:06:07,281 --> 00:06:12,860
+Scott: But I mean this used to be the site where you would post things like GNA for funniness.
+
+95
+00:06:13,121 --> 00:06:13,825
+Rym: Those are still there.
+
+96
+00:06:13,845 --> 00:06:15,052
+Rym: All right, but they're all.
+
+97
+00:06:15,112 --> 00:06:16,620
+Rym: they're all auto-moderated to zero.
+
+98
+00:06:16,660 --> 00:06:19,270
+Rym: The GNA is probably in this article if I go find it.
+
+99
+00:06:19,631 --> 00:06:21,880
+Rym: I'm not talking about trolls trolly bullshit.
+
+100
+00:06:21,880 --> 00:06:22,706
+Rym: It's always been in there.
+
+101
+00:06:23,129 --> 00:06:29,820
+Rym: I'm talking about there's an article Men's rights activists call for boycott of Mad Max Fury Road and it linked to you know that news.
+
+102
+00:06:29,900 --> 00:06:30,542
+Scott: I heard about that.
+
+103
+00:06:30,703 --> 00:06:37,545
+Rym: So it linked to that ridiculous bullshit of those really psychotic people who feel this Alright, so that sounds like a good news post.
+
+104
+00:06:37,605 --> 00:06:38,307
+Scott: It's pointing out.
+
+105
+00:06:38,368 --> 00:06:40,233
+Scott: Hey, look the horrible people don't like this movie.
+
+106
+00:06:40,314 --> 00:06:40,775
+Rym: It should be.
+
+107
+00:06:40,795 --> 00:06:48,000
+Rym: a lot of the comments Were people saying oh those guys don't represent MRAs.
+
+108
+00:06:48,161 --> 00:06:50,027
+Rym: MRAs really stand for all these things.
+
+109
+00:06:50,128 --> 00:06:50,951
+Rym: and it was basically.
+
+110
+00:06:50,991 --> 00:06:52,235
+Rym: it was super downvoted.
+
+111
+00:06:52,255 --> 00:06:55,684
+Scott: Uh, no The problem.
+
+112
+00:06:55,705 --> 00:06:58,734
+Rym: see I used every mod point I had.
+
+113
+00:06:58,754 --> 00:07:05,408
+Scott: you're gonna see you're gonna see posts like that No matter what community you're in, but the slash shot community You see upvotes.
+
+114
+00:07:05,549 --> 00:07:06,916
+Scott: then, you know, there's a problem.
+
+115
+00:07:07,358 --> 00:07:14,860
+Rym: Yep So a lot of really fucked up and egregiously misogynistic things got modded way up.
+
+116
+00:07:14,940 --> 00:07:19,619
+Rym: insightful and so insightful yeah, well with the C I guess.
+
+117
+00:07:21,686 --> 00:07:36,338
+Rym: So the day before There's another article Harvard hit with racial bias complaint and it was a link to a study showing that Asian Americans on average were rejected from you know from Harvard compared to other races.
+
+118
+00:07:37,402 --> 00:07:39,814
+Rym: Well, all that, you know race being a statistical category.
+
+119
+00:07:39,834 --> 00:07:48,739
+Rym: We know race doesn't really exist Basically, they on average had to score 140 points higher on the system than other races to get in.
+
+120
+00:07:49,021 --> 00:07:50,610
+Scott: Yeah, it's probably because there's some.
+
+121
+00:07:50,671 --> 00:07:52,200
+Scott: I mean, it's weird, right?
+
+122
+00:07:52,260 --> 00:07:55,754
+Scott: It's like it's racist to even explain the truth.
+
+123
+00:07:55,955 --> 00:08:03,700
+Scott: Yeah, but it's true Is that you know, they study harder because their culture is to study harder generally, right?
+
+124
+00:08:03,880 --> 00:08:07,113
+Rym: So there's a lot more I'm waiting for you because you're walking on the edge of that cliff.
+
+125
+00:08:07,273 --> 00:08:08,056
+Scott: Yeah, right.
+
+126
+00:08:08,117 --> 00:08:08,358
+Scott: No.
+
+127
+00:08:08,378 --> 00:08:11,777
+Scott: Yeah I mean statistically speaking, right?
+
+128
+00:08:13,120 --> 00:08:20,020
+Scott: They're gonna be smarter and have better grades and do better in school and there's more of them People in just China alone, right.
+
+129
+00:08:20,321 --> 00:08:26,820
+Scott: So just population wise right not counting the cultural emphasis on education and better schools and everything like that.
+
+130
+00:08:27,000 --> 00:08:31,763
+Scott: So, you know, they have a quota there at Harvard probably and they're like, well We can't.
+
+131
+00:08:31,923 --> 00:08:40,317
+Scott: if we just accepted people looking at grades only and not looking at other things This school would probably be a huge percent Asian now.
+
+132
+00:08:40,658 --> 00:08:43,707
+Rym: This was Just an article about.
+
+133
+00:08:43,727 --> 00:08:47,545
+Scott: you know affirmative action and those kinds of issues have a quota So they got to take.
+
+134
+00:08:47,686 --> 00:08:50,080
+Scott: only X percent of the school should be Asian people.
+
+135
+00:08:50,341 --> 00:08:56,540
+Scott: So they only take the creamiest of the crop and meet some people who were Asian and were smarter than some white dude.
+
+136
+00:08:57,006 --> 00:08:57,514
+Scott: Don't get in.
+
+137
+00:08:58,968 --> 00:09:03,327
+Rym: so basically Regardless, you know, it's a very complex issue.
+
+138
+00:09:03,448 --> 00:09:14,940
+Rym: But affirmative action and the concepts around it are Probably a net positive Because systemic oppression over time fucks up whole communities in ways that are difficult to remediate.
+
+139
+00:09:15,402 --> 00:09:18,940
+Rym: So I feel like affirmative action is probably a positive force.
+
+140
+00:09:19,272 --> 00:09:28,710
+Scott: Yeah the person who Got amazingly good grades and didn't get into Harvard because some other is gonna get into Yale and be just fine Yeah, their life is gonna be okay.
+
+141
+00:09:29,011 --> 00:09:30,178
+Rym: Yeah, you're still on easy mode.
+
+142
+00:09:30,198 --> 00:09:30,580
+Rym: It's fine.
+
+143
+00:09:30,921 --> 00:09:39,493
+Rym: so the top two first basically a Bunch of ridiculous racism and anti affirmative action is all plus five insightful.
+
+144
+00:09:39,814 --> 00:09:41,800
+Scott: Okay, so why is it new?
+
+145
+00:09:42,362 --> 00:09:43,145
+Scott: News that slash.
+
+146
+00:09:43,285 --> 00:09:43,928
+Scott: that is awful.
+
+147
+00:09:43,948 --> 00:09:49,706
+Rym: I basically I bring it up because slash shot I need a better place to link to.
+
+148
+00:09:49,726 --> 00:10:03,024
+Rym: so I'm curious if anyone out there has a place that has the baseline type of information about tech issues that slash shot has doesn't post a bunch of bullshit and Doesn't have link rot.
+
+149
+00:10:03,566 --> 00:10:05,391
+Scott: Well, there's no place without link rod.
+
+150
+00:10:05,512 --> 00:10:05,672
+Scott: Yeah.
+
+151
+00:10:05,692 --> 00:10:07,277
+Rym: Well slash shot has no link rod.
+
+152
+00:10:07,478 --> 00:10:15,134
+Rym: That's the only place Yeah, so if there is a place like that I would like to know about it and I'm sure a lot of you are thinking but what about?
+
+153
+00:10:15,495 --> 00:10:17,442
+Rym: I've probably already checked that Place out.
+
+154
+00:10:17,482 --> 00:10:18,967
+Rym: it probably doesn't do what I need.
+
+155
+00:10:19,389 --> 00:10:32,700
+Rym: But anyway, I would like to stop linking to slash dot Because the community seems to be a bunch of 40 year old kind of racist kind of misogynist fat white guys living in basements or at least basement apartments.
+
+156
+00:10:34,141 --> 00:10:36,174
+Rym: Sorry, but that's just how it feels right now.
+
+157
+00:10:36,416 --> 00:10:36,980
+Rym: in real news.
+
+158
+00:10:37,800 --> 00:10:43,700
+Rym: Microsoft pretty much said to all you people who kept saying Oh Windows 10 upgrade is gonna be free even for the pirates.
+
+159
+00:10:43,962 --> 00:10:45,292
+Rym: No, that's not true.
+
+160
+00:10:45,312 --> 00:10:46,400
+Scott: I thought that was true.
+
+161
+00:10:46,545 --> 00:10:48,752
+Rym: No Quote from slash shot.
+
+162
+00:10:48,933 --> 00:10:55,233
+Rym: if it sounds too good to be true Then it probably is all that talk about Windows pirates getting free Windows 10 upgrades not happening.
+
+163
+00:10:55,654 --> 00:11:02,659
+Rym: for genuine users a free upgrade to Windows 10 means receiving ongoing Windows innovation and blah blah blah blah blah for the lifetime of that device.
+
+164
+00:11:03,683 --> 00:11:08,539
+Rym: So you can't upgrade to Windows 10 and then transfer to another computer or anything like that.
+
+165
+00:11:09,142 --> 00:11:12,538
+Rym: Granted that whole definition of what is a computer is pretty dubious.
+
+166
+00:11:12,679 --> 00:11:17,981
+Scott: fine Just install my Windows 7 again on a different computer and upgrade that to Windows 10.
+
+167
+00:11:17,981 --> 00:11:18,564
+Scott: What are you gonna do?
+
+168
+00:11:18,825 --> 00:11:29,260
+Rym: But basically the article talks about how if you have a pirated version of Windows It's not just going to freely like launder your pirated copy into a legit copy and let you upgrade.
+
+169
+00:11:29,641 --> 00:11:39,241
+Scott: A lot of people said that no the news story originally was that yes Even if your windows is pirated you will still be able to upgrade it to Windows 10.
+
+170
+00:11:39,241 --> 00:11:42,180
+Scott: Yeah, it just won't be genuine because your current one isn't genuine.
+
+171
+00:11:42,722 --> 00:11:53,186
+Scott: And if you want it to become genuine, you'll still have to pay but you'll still be able to upgrade it and use it Just like any other non genuine windows, so they confirm Yeah that January so they may.
+
+172
+00:11:53,367 --> 00:12:06,854
+Rym: Microsoft made a few days ago this extremely detailed discussion of exactly how Upgrades will or will not work for people who have non genuine windows.
+
+173
+00:12:06,935 --> 00:12:08,459
+Scott: So right the same way it does now.
+
+174
+00:12:08,539 --> 00:12:09,864
+Scott: basically It's not really a change.
+
+175
+00:12:09,924 --> 00:12:10,265
+Scott: This isn't?
+
+176
+00:12:10,767 --> 00:12:13,356
+Scott: this doesn't contradict any of the previous information we heard.
+
+177
+00:12:13,797 --> 00:12:20,660
+Scott: if there's any news here It's simply that people didn't read what they wrote so that they had to write it again an even clearer language for the dum-dums.
+
+178
+00:12:20,721 --> 00:12:21,272
+Scott: You don't read.
+
+179
+00:12:21,496 --> 00:12:27,823
+Rym: Yep So if you have to not read if you were at all confused about what's going on with Windows 10 Read this.
+
+180
+00:12:28,184 --> 00:12:35,468
+Rym: and to as an aside if you're avoiding upgrading to Windows 10 or you're afraid of it and you're you know Windows 7 not really gonna have much choice.
+
+181
+00:12:35,548 --> 00:12:38,949
+Scott: I mean, I've been using Windows 7 probably just gonna go Windows 10.
+
+182
+00:12:38,949 --> 00:12:39,479
+Rym: Yeah, you know what?
+
+183
+00:12:39,680 --> 00:12:39,942
+Rym: You know what?
+
+184
+00:12:39,962 --> 00:12:45,537
+Rym: My philosophy is whenever I get a new computer Whatever the newest version of Windows is is what gets installed.
+
+185
+00:12:45,577 --> 00:12:46,019
+Rym: on that thing.
+
+186
+00:12:46,362 --> 00:12:48,480
+Scott: People also people always be hating on Windows versions.
+
+187
+00:12:48,560 --> 00:12:51,830
+Scott: The only Windows version that deserves any real hate is Windows ME.
+
+188
+00:12:52,512 --> 00:12:54,037
+Scott: even Vista totally worked.
+
+189
+00:12:54,077 --> 00:12:55,020
+Scott: I had no problems with it.
+
+190
+00:12:56,821 --> 00:12:59,830
+Rym: I bought Windows fucking 2000 like right when it came out.
+
+191
+00:12:59,891 --> 00:13:00,292
+Rym: I was proud.
+
+192
+00:13:00,312 --> 00:13:02,940
+Rym: That was a great great OS for its time.
+
+193
+00:13:03,161 --> 00:13:04,989
+Scott: I'm sorry Windows finally has the right idea though.
+
+194
+00:13:05,050 --> 00:13:07,160
+Scott: not charging you a fucking fortune to get Windows, right?
+
+195
+00:13:07,441 --> 00:13:19,220
+Rym: I should be free and then they should charge you for you know, you know, it's interesting how a lot of people Suspected that Windows would get cheaper or something like this would happen if Linux on the desktop became a serious competitor?
+
+196
+00:13:19,361 --> 00:13:28,840
+Rym: No, but yet instead this all happened Basically right after we put the last nail in the coffin of Windows of a Linux on the desktop and buried it under some rock.
+
+197
+00:13:28,900 --> 00:13:30,916
+Scott: And I'll OS X is the competitor.
+
+198
+00:13:31,037 --> 00:13:35,537
+Scott: Yeah Yeah also non-computers.
+
+199
+00:13:38,243 --> 00:13:38,966
+Rym: So you got any news.
+
+200
+00:13:39,267 --> 00:13:40,432
+Scott: I do have a news so check.
+
+201
+00:13:40,452 --> 00:13:42,300
+Scott: so this story is really interesting.
+
+202
+00:13:42,843 --> 00:13:45,119
+Scott: It's sort of obvious once you think about it.
+
+203
+00:13:46,863 --> 00:13:48,960
+Scott: But it's like you don't think about it until you hear the story.
+
+204
+00:13:49,100 --> 00:13:53,100
+Scott: So there was a drug dealer and the drug dealer was smart.
+
+205
+00:13:55,122 --> 00:13:57,212
+Scott: He was a smart drug dealer.
+
+206
+00:13:57,252 --> 00:13:58,740
+Rym: they had those drugs in the stove.
+
+207
+00:13:59,422 --> 00:14:00,968
+Scott: They couldn't catch him right.
+
+208
+00:14:01,048 --> 00:14:04,119
+Scott: his drug Dealey website was all encrypty and whatnot.
+
+209
+00:14:04,380 --> 00:14:11,938
+Scott: I guess you know, they had a hard time finding what he was all about, you know He had a hit a pretty secure action going on.
+
+210
+00:14:12,792 --> 00:14:26,020
+Scott: but What they did is you know, they I think they bought some drugs from him or they got him to buy some drugs from them and They sent the drugs by USPS because you'd be some drug dealers.
+
+211
+00:14:26,140 --> 00:14:32,020
+Scott: They they just deliver their drugs like by driving around or by delivering through UPS, you know, you go to UPS.
+
+212
+00:14:32,100 --> 00:14:33,908
+Scott: They say are there any hazardous things and you're using?
+
+213
+00:14:33,968 --> 00:14:34,852
+Scott: no and they mail it.
+
+214
+00:14:34,872 --> 00:14:36,880
+Scott: They don't inspect every frickin package, right?
+
+215
+00:14:37,060 --> 00:14:40,471
+Scott: Yeah, so I don't know if they got him to buy something.
+
+216
+00:14:40,532 --> 00:14:52,552
+Scott: if they they bought something from him But they basically had it shipped by US Postal Service, which the government has access to and they Check the tracking right.
+
+217
+00:14:52,874 --> 00:14:53,840
+Scott: the package had tracking.
+
+218
+00:14:55,200 --> 00:14:56,004
+Scott: So, okay.
+
+219
+00:14:56,325 --> 00:14:57,310
+Scott: Someone shipped a package.
+
+220
+00:14:57,370 --> 00:14:58,254
+Scott: It was being tracked.
+
+221
+00:14:58,696 --> 00:14:59,700
+Scott: How do we find the person?
+
+222
+00:14:59,780 --> 00:15:01,600
+Scott: It's not like they put their return address on it, right?
+
+223
+00:15:01,620 --> 00:15:02,083
+Scott: You don't know.
+
+224
+00:15:02,324 --> 00:15:03,812
+Scott: they went to the post office and mailed it.
+
+225
+00:15:03,832 --> 00:15:05,319
+Scott: You don't know where they live or whatever.
+
+226
+00:15:05,962 --> 00:15:09,375
+Scott: They guess they could have checked the cameras at the post office, but they don't know that either.
+
+227
+00:15:09,395 --> 00:15:13,045
+Scott: but Uh, they went to see.
+
+228
+00:15:13,527 --> 00:15:17,740
+Scott: someone went to the website to check the status of the package.
+
+229
+00:15:18,483 --> 00:15:26,760
+Scott: Oh and they checked the logs of the US Postal Service website And they saw which IP address visited to check the status of that package.
+
+230
+00:15:27,362 --> 00:15:31,860
+Scott: The only person who had the tracking number the person I guess the drugs are going to or from or whatever.
+
+231
+00:15:32,153 --> 00:15:32,862
+Scott: Wow You know what.
+
+232
+00:15:32,942 --> 00:15:36,937
+Scott: and then they went to the ISP and like hey who's that IP address belong to?
+
+233
+00:15:36,997 --> 00:15:38,684
+Scott: and then they went boom We got your drug dealer.
+
+234
+00:15:38,965 --> 00:15:40,551
+Rym: That is actually very similar.
+
+235
+00:15:40,812 --> 00:15:42,980
+Scott: Nothing illegal or shady about that whatsoever.
+
+236
+00:15:43,723 --> 00:15:50,957
+Rym: That's very similar to the way you can detect if someone is you know sniffing packets from your network to spy on you.
+
+237
+00:15:50,977 --> 00:16:08,331
+Rym: if You watch your DNS servers for Requests to find out the names of IP addresses that no one's using Because you're putting a fake traffic on network segments to see if anyone looks into it because someone knows that IP They've been snooping around.
+
+238
+00:16:08,593 --> 00:16:09,880
+Scott: this is why you know cloudflare.
+
+239
+00:16:10,496 --> 00:16:11,426
+Rym: Yeah I know cloudflare.
+
+240
+00:16:11,447 --> 00:16:14,805
+Scott: so cloudflare is basically like the number one company in terms of.
+
+241
+00:16:14,825 --> 00:16:29,274
+Scott: I don't want to have to deal with blocking bots from hitting my website or going down because I'm getting flooded with traffic and basically the way they manage to do this is that they handle so many different people's web traffic That they are able to.
+
+242
+00:16:29,294 --> 00:16:35,500
+Scott: you know Basically when one person gets attacked they can build a defense for that attack and apply it to everyone who's using cloudflare.
+
+243
+00:16:35,981 --> 00:16:48,640
+Scott: But when you use cloudflare you make them your DNS server also for reasons like you just said So that they can see the DNS requests coming in and that additional information is what makes their blocking so effective.
+
+244
+00:16:54,863 --> 00:16:59,311
+Rym: so anyway things Of the day, so I have a map here.
+
+245
+00:16:59,331 --> 00:17:00,516
+Rym: Scott saw it from the distance.
+
+246
+00:17:00,556 --> 00:17:01,460
+Rym: He was like, what's that map?
+
+247
+00:17:01,740 --> 00:17:03,771
+Scott: It's a map of the bunch of those triangles.
+
+248
+00:17:03,791 --> 00:17:04,555
+Scott: Those are poops.
+
+249
+00:17:04,595 --> 00:17:05,520
+Scott: Those aren't triangles.
+
+250
+00:17:06,320 --> 00:17:08,988
+Scott: Is that like someone went around town pooping and that's?
+
+251
+00:17:09,048 --> 00:17:13,741
+Rym: these are the most popular places in Miami where human beings just poop in the Street.
+
+252
+00:17:14,344 --> 00:17:15,869
+Scott: Oh my god that like that.
+
+253
+00:17:15,910 --> 00:17:18,060
+Rym: You can see say Miami, Miami.
+
+254
+00:17:18,261 --> 00:17:20,619
+Rym: So Florida man, Florida man is pooping.
+
+255
+00:17:21,361 --> 00:17:26,180
+Rym: Florida man really likes to poop at the corner of Frasier Avenue and Northeast Second Avenue.
+
+256
+00:17:26,180 --> 00:17:27,031
+Scott: There must be something there.
+
+257
+00:17:27,070 --> 00:17:38,780
+Scott: No, Frasier Street You should use Street View on that map and see like what kind of object there is people can get behind Like an alley or maybe a dumpster that they can get behind the scatological Atlas.
+
+258
+00:17:39,700 --> 00:17:41,087
+Scott: Okay, the scatless.
+
+259
+00:17:41,429 --> 00:17:43,660
+Rym: Yeah, so I would like to see something like this for New York City.
+
+260
+00:17:45,381 --> 00:17:46,243
+Scott: New York City mostly.
+
+261
+00:17:46,263 --> 00:17:48,449
+Scott: you get people peeing on trees and whatnot.
+
+262
+00:17:48,609 --> 00:17:57,918
+Scott: because or door frames because like you're a taxi driver you drive around All over the city and you can't pee in your car really and there aren't a lot of public bathrooms to use.
+
+263
+00:17:58,078 --> 00:17:59,800
+Scott: and you know It's like you gotta get out of your car.
+
+264
+00:17:59,921 --> 00:18:03,100
+Rym: You pee in a milk jug and then at the end of the day you leave it in a dumpster.
+
+265
+00:18:03,180 --> 00:18:04,005
+Rym: That's how you do that.
+
+266
+00:18:04,105 --> 00:18:06,740
+Scott: Yeah, so there's a lot of peeing situations in New York.
+
+267
+00:18:07,021 --> 00:18:08,889
+Rym: Yeah, pooping is another level though.
+
+268
+00:18:09,110 --> 00:18:16,803
+Rym: Now actually this is sort of a social justice thing in the sense that they're trying to Get public bathrooms.
+
+269
+00:18:17,084 --> 00:18:25,874
+Rym: They're trying to bring attention to the fact that most of the people doing this are homeless people Yeah, when there's no public bathrooms who are also possibly mentally ill.
+
+270
+00:18:26,175 --> 00:18:32,040
+Rym: Yeah, there's no help for them either Of course not, but good place to go cuz no one no one gives a shit.
+
+271
+00:18:33,081 --> 00:18:35,774
+Scott: If I was a homeless, I'd go to somewhere like Miami where it's warm.
+
+272
+00:18:35,874 --> 00:18:36,859
+Rym: Yeah, I would not.
+
+273
+00:18:36,879 --> 00:18:38,428
+Rym: you know I would not go to Miami though.
+
+274
+00:18:38,448 --> 00:18:42,694
+Rym: I would not go to a place somewhere warm Yeah, but I would not go to the place all the other homeless people are.
+
+275
+00:18:43,056 --> 00:18:47,179
+Rym: but then again I have the luxury of being smart and not mentally ill.
+
+276
+00:18:47,782 --> 00:18:52,195
+Rym: So I could figure think like I can make a plan that a lot of these people really can't.
+
+277
+00:18:52,276 --> 00:18:56,019
+Scott: I mean seriously at worst you'd Be that you know homeless teenager.
+
+278
+00:18:56,686 --> 00:18:57,840
+Scott: Well, not teenager anymore.
+
+279
+00:18:57,840 --> 00:19:03,617
+Rym: I'd be that creepy old guy hanging around a can be in the public library and the Starbucks with your internet.
+
+280
+00:19:03,657 --> 00:19:09,119
+Scott: Yeah homeless You know anyway, oh, yeah, this is an interesting thing All right.
+
+281
+00:19:09,541 --> 00:19:24,300
+Scott: So this is just an image of a tombstone or part of a tombstone of someone named K. I don't know the rest of their name, but the tombstone has a recipe on it for K's fudge and I kind of want to make K's fudge.
+
+282
+00:19:25,082 --> 00:19:30,280
+Scott: So, I guess they you know, they got the recipe over K's dead body.
+
+283
+00:19:33,102 --> 00:19:35,848
+Scott: It says on the tombstone wherever she goes there's laughter.
+
+284
+00:19:35,868 --> 00:19:46,147
+Scott: so this is probably like an amazing fudge bacon lady K and would have been a good person to know and That's awesome tombstone.
+
+285
+00:19:46,730 --> 00:19:48,460
+Rym: You gotta have a sense of humor about death.
+
+286
+00:19:49,343 --> 00:19:53,679
+Scott: I would I would have a tombstone like that if I had some sort of secret to reveal.
+
+287
+00:19:53,719 --> 00:20:00,219
+Scott: that Would be useful to people who didn't know who I was and came around the cemetery years later.
+
+288
+00:20:00,239 --> 00:20:04,274
+Rym: Yeah So in the meta moment, the book club book is still Watership Down.
+
+289
+00:20:04,294 --> 00:20:08,467
+Scott: I read some of it yesterday Like halfway when you're done with it.
+
+290
+00:20:08,567 --> 00:20:09,591
+Rym: We could watch the movie too.
+
+291
+00:20:10,294 --> 00:20:11,498
+Rym: Yeah, it's an animated movie.
+
+292
+00:20:11,619 --> 00:20:21,551
+Rym: It's short short and good and then we can do a show on it and then we can do the next book club book, which is Dangerous, you're not gonna tell me what it is.
+
+293
+00:20:21,571 --> 00:20:23,040
+Scott: I'll tell you after we finish.
+
+294
+00:20:24,251 --> 00:20:26,393
+Rym: Just be careful careful son cuz.
+
+295
+00:20:26,413 --> 00:20:31,520
+Rym: uh, the comb de Monte Cristo is hanging out with his friend Dumas just waiting for an excuse, okay.
+
+296
+00:20:33,823 --> 00:20:36,060
+Rym: And also, uh, we don't have any conventions till Connecticut.
+
+297
+00:20:37,181 --> 00:20:40,370
+Scott: You sooner than you think you should go to Connecticut.
+
+298
+00:20:40,510 --> 00:20:41,794
+Scott: Connecticut is really soon.
+
+299
+00:20:41,854 --> 00:20:44,140
+Scott: Yeah in July and it's already end of May.
+
+300
+00:20:44,361 --> 00:20:45,245
+Rym: It's a great con.
+
+301
+00:20:45,285 --> 00:20:46,471
+Rym: like we would go to it.
+
+302
+00:20:46,531 --> 00:20:50,826
+Rym: Even if we weren't running the panels department Airplane to get there.
+
+303
+00:20:50,846 --> 00:20:51,690
+Scott: I would not go.
+
+304
+00:20:51,751 --> 00:20:56,871
+Scott: if you can get there with a car It doesn't matter what kind of geek interest you have.
+
+305
+00:20:56,931 --> 00:20:59,098
+Scott: if you can get to Connecticut with a car you should.
+
+306
+00:20:59,299 --> 00:21:00,966
+Scott: yeah It's worth your weekend.
+
+307
+00:21:01,127 --> 00:21:01,850
+Scott: Even in the summer.
+
+308
+00:21:01,870 --> 00:21:02,674
+Scott: It's worth your weekend.
+
+309
+00:21:02,975 --> 00:21:04,100
+Rym: Yeah, I would.
+
+310
+00:21:04,763 --> 00:21:07,135
+Rym: Well, we did go before we were running all these departments.
+
+311
+00:21:07,236 --> 00:21:08,000
+Rym: We had fun every year.
+
+312
+00:21:08,261 --> 00:21:10,508
+Scott: I should just quit working and then just play games.
+
+313
+00:21:10,548 --> 00:21:10,990
+Scott: all the whole.
+
+314
+00:21:11,130 --> 00:21:14,000
+Rym: I know Connecticut is a better tabletop than most gaming cons.
+
+315
+00:21:14,942 --> 00:21:20,565
+Scott: Like I mean you'll see if you if I quit and you keep the job you'll still like give me a panel, right So I'd have to pay.
+
+316
+00:21:20,646 --> 00:21:33,179
+Rym: and then and one last thing just because it's happening If you're a friend of ours who is an enforcer at PAX Go look at the enforcer shit because something's happening a good thing, but don't forget to do the thing.
+
+317
+00:21:33,962 --> 00:21:39,080
+Rym: Yeah, like seriously, don't forget you don't have all the time in the world to do the thing.
+
+318
+00:21:39,563 --> 00:21:42,140
+Rym: You'll be really sad if you don't do the thing.
+
+319
+00:21:42,802 --> 00:21:45,233
+Rym: So go to the place and look at the thread and do the thing.
+
+320
+00:21:45,253 --> 00:21:46,859
+Rym: Yeah, I did the thing today.
+
+321
+00:21:47,161 --> 00:21:48,406
+Scott: I also did the thing today.
+
+322
+00:21:48,426 --> 00:21:51,359
+Rym: I want to make sure that all my awesome enforcer friends do the thing.
+
+323
+00:21:51,641 --> 00:21:58,995
+Rym: Yep, and if you're not an enforcer and that sounds intriguing Whenever they open up general enrollment again, try to be an enforcer.
+
+324
+00:21:59,156 --> 00:22:00,080
+Rym: It's really awesome.
+
+325
+00:22:00,201 --> 00:22:04,560
+Scott: I heard for prime that that last year they didn't even because they had enough roll call.
+
+326
+00:22:04,701 --> 00:22:06,672
+Rym: Yeah, so I'll call is still going for another week.
+
+327
+00:22:06,692 --> 00:22:07,336
+Rym: Mm-hmm.
+
+328
+00:22:08,361 --> 00:22:11,353
+Rym: So this is the kind of article that someone who doesn't know us too.
+
+329
+00:22:11,393 --> 00:22:14,604
+Rym: Well would see and say oh wow I'm Scott are probably happy about that.
+
+330
+00:22:14,624 --> 00:22:17,331
+Rym: This is the worst idea in the world.
+
+331
+00:22:17,512 --> 00:22:18,254
+Scott: Yes, it is.
+
+332
+00:22:18,455 --> 00:22:25,103
+Rym: European telecoms are considering blocking mobile ads Full stop.
+
+333
+00:22:25,664 --> 00:22:33,865
+Rym: they're considering putting basically an ad block on the ISP to block ads on Mobile carriers, right?
+
+334
+00:22:33,905 --> 00:22:35,251
+Scott: So I go to a website.
+
+335
+00:22:35,773 --> 00:22:37,380
+Scott: I have Verizon phone, right?
+
+336
+00:22:38,664 --> 00:22:41,300
+Scott: The website tries to send me over their HTML.
+
+337
+00:22:41,340 --> 00:22:55,879
+Scott: Yeah And the Verizon website the Verizon server before it gives me the HTML looks at it Find stuff it considers to be ads using in similar technology to ad block and then removes them from that HTML and sends me the resulting HTML.
+
+338
+00:22:56,970 --> 00:23:00,905
+Rym: now Net neutrality is Cut and dry.
+
+339
+00:23:00,926 --> 00:23:12,180
+Rym: The reason we want net neutrality is because carriers ISPs telcos Providers they should not have any right to fuck with your traffic in any way.
+
+340
+00:23:12,741 --> 00:23:17,375
+Rym: I should be able to send whatever poop I want over those pipes.
+
+341
+00:23:17,456 --> 00:23:22,269
+Rym: if I break a law with that poop I break that law and someone comes and gets me.
+
+342
+00:23:22,690 --> 00:23:25,939
+Rym: but I can send whatever I want over the pipes, right?
+
+343
+00:23:26,460 --> 00:23:29,500
+Rym: They can't differentiate between my brown poop and my black poop.
+
+344
+00:23:29,782 --> 00:23:31,211
+Scott: We just talked about the post office.
+
+345
+00:23:31,271 --> 00:23:33,823
+Scott: right if I mail drugs I mail drugs.
+
+346
+00:23:33,964 --> 00:23:41,110
+Scott: the post office shouldn't be messing with what's in my package or changing the address on it or Doing anything to it, right?
+
+347
+00:23:41,332 --> 00:23:42,660
+Scott: They are a delivery service.
+
+348
+00:23:42,700 --> 00:23:44,665
+Scott: Their job is to deliver and deliver only.
+
+349
+00:23:44,725 --> 00:23:53,744
+Scott: so your ISP whether it's mobile Verizon or home Verizon or whoever you got They should just be delivering the packets You want delivered.
+
+350
+00:23:54,246 --> 00:23:57,119
+Scott: the server on the other end will then deliver packets back to you.
+
+351
+00:23:57,382 --> 00:23:58,560
+Scott: Everyone's just sending packets.
+
+352
+00:23:58,660 --> 00:24:09,559
+Scott: Their job is to send those packets without modifying them in any way shape or form and then whoever receives those packets May respond or not respond as they so choose.
+
+353
+00:24:10,442 --> 00:24:16,640
+Rym: But Rym and Scott you guys run adblock and you block ads and you talk constantly about how much you hate ads.
+
+354
+00:24:16,961 --> 00:24:18,607
+Rym: Why don't you just not care about this?
+
+355
+00:24:18,627 --> 00:24:19,711
+Rym: Well, I'm gonna net benefit.
+
+356
+00:24:19,811 --> 00:24:21,959
+Scott: That is my choice to block those ads.
+
+357
+00:24:22,261 --> 00:24:34,720
+Rym: The The protocol the whole point of the world wide web is that I can provide data with markup hypertext transport markup language.
+
+358
+00:24:35,061 --> 00:24:41,400
+Rym: I am marking up data with hyperlinks and putting it somewhere so that anyone in the world can go to that place.
+
+359
+00:24:41,901 --> 00:24:47,940
+Rym: Take that data down take that markup language down and display it and process it as they see fit.
+
+360
+00:24:48,842 --> 00:24:54,780
+Rym: I happen to take that HTTP traffic and remove ads from it and reformat it before I look at it.
+
+361
+00:24:55,161 --> 00:24:55,923
+Rym: Some people don't.
+
+362
+00:24:56,304 --> 00:24:59,613
+Rym: some people change the colors of websites with local style sheets.
+
+363
+00:25:00,034 --> 00:25:01,859
+Rym: That's the whole point of the world wide web.
+
+364
+00:25:02,463 --> 00:25:04,200
+Scott: Consider like a simple use case.
+
+365
+00:25:04,361 --> 00:25:13,920
+Scott: I'm making a website and I put one tasteful advertisement on it and then I you know Make a mobile version of that website and I'm going to go on my phone and test to see if this advertisement is working.
+
+366
+00:25:14,522 --> 00:25:24,059
+Scott: Oh the ad is being blocked by the ISP and I cannot see my own advertisement and now I don't know what advertisement it is And it's much harder to get another phone to look at it.
+
+367
+00:25:24,140 --> 00:25:26,911
+Scott: And this is just the basic example that I came up with in two seconds.
+
+368
+00:25:27,734 --> 00:25:27,915
+Scott: Mm-hmm.
+
+369
+00:25:28,096 --> 00:25:29,080
+Scott: So now I can't even see it.
+
+370
+00:25:29,100 --> 00:25:30,648
+Scott: There's no way to turn that ad block off.
+
+371
+00:25:30,688 --> 00:25:32,215
+Scott: It's not my ad block right?
+
+372
+00:25:32,236 --> 00:25:35,723
+Scott: The ISP is Basically fucking with.
+
+373
+00:25:35,743 --> 00:25:40,973
+Scott: it's like someone sent me a letter and the ISP opened it up and crossed off a few sentences and send To me.
+
+374
+00:25:42,000 --> 00:25:44,754
+Scott: Senses were full of bullshit, but that's not for them to judge.
+
+375
+00:25:44,995 --> 00:25:46,060
+Scott: Yeah, it's my letter.
+
+376
+00:25:46,281 --> 00:25:48,226
+Scott: I'll cross out those sentences if I want to.
+
+377
+00:25:48,407 --> 00:25:49,951
+Rym: now there's also the matter of intent.
+
+378
+00:25:50,573 --> 00:25:59,040
+Rym: if this were some like nerdy ISP that was an option among many saying hey, we're the ISP that blocks ads right?
+
+379
+00:25:59,200 --> 00:26:01,730
+Scott: it's for example, you have a cool nerdy ISP.
+
+380
+00:26:02,111 --> 00:26:08,053
+Scott: they you can log into their website and Enable or disable or configure ad blocking as you choose.
+
+381
+00:26:08,093 --> 00:26:10,160
+Scott: they give you a proxy server as a service.
+
+382
+00:26:10,507 --> 00:26:11,020
+Scott: That's okay.
+
+383
+00:26:11,141 --> 00:26:24,800
+Scott: I could set up my own proxy server on my own point my phone at it and Block ads my own that way and if an ISP wants to offer that as an option That's actually really cool, but to force it upon you is not cool.
+
+384
+00:26:25,021 --> 00:26:26,707
+Rym: So it there's pretty much.
+
+385
+00:26:26,767 --> 00:26:32,791
+Rym: from digging around a bit there are at best three likely Actual motivations as to why they're exploring.
+
+386
+00:26:32,811 --> 00:26:33,875
+Scott: Well, I can think of one.
+
+387
+00:26:33,895 --> 00:26:34,960
+Scott: You're an ISP.
+
+388
+00:26:35,020 --> 00:26:37,451
+Scott: Yeah ads take up bandwidth.
+
+389
+00:26:38,054 --> 00:26:39,240
+Scott: you can save a lot of money.
+
+390
+00:26:39,361 --> 00:26:41,359
+Scott: I mean the ads aren't making you any freaking money, right?
+
+391
+00:26:41,901 --> 00:26:47,460
+Scott: So if you block them, you're gonna save money because they're gonna be less data transfer over your lines all these ads.
+
+392
+00:26:47,681 --> 00:26:52,457
+Scott: They're probably losing thousands and thousands of dollars just transmitting ads back and forth.
+
+393
+00:26:52,537 --> 00:27:03,398
+Rym: counter-argument Bandwidth is actually especially in Europe Insanely cheap to the point that these savings there would be negligible and probably less than the cost of implementing such a system.
+
+394
+00:27:03,659 --> 00:27:06,575
+Rym: Mmm Here's my real reasons why I think they're doing it.
+
+395
+00:27:06,696 --> 00:27:13,183
+Scott: either one You maybe you think customers will like you more because you're blocking ads and because they don't understand the net neutrality Aspect.
+
+396
+00:27:13,203 --> 00:27:17,000
+Scott: they're just like ooh, I'll switch to that ISP or switch that mobile carrier.
+
+397
+00:27:17,080 --> 00:27:18,827
+Scott: They block all the ads and it's way better.
+
+398
+00:27:18,867 --> 00:27:31,116
+Scott: It's faster to use my phone and it's all you know, they can advertise higher Speeds and who knows what they may be doing this so that they can then sell The ability to sell ads to their mobile customers.
+
+399
+00:27:31,256 --> 00:27:37,760
+Scott: that is Very very not only that is not only bad that is possibly illegal, right?
+
+400
+00:27:37,980 --> 00:27:39,960
+Rym: Well should be but we don't have net neutrality.
+
+401
+00:27:40,261 --> 00:27:52,759
+Scott: that would be like if you know someone buys ads in the newspaper and I subscribe to the newspaper and The paper boy not only takes a scissor and removes the ads from the newspaper before delivering it to me.
+
+402
+00:27:53,421 --> 00:28:03,371
+Scott: He takes money from the local drugstore and takes a you know tape and tapes that Drugstores ads over or where the other ads used to be.
+
+403
+00:28:03,652 --> 00:28:06,200
+Scott: and now the paper boy is taking a cut from the drugstore.
+
+404
+00:28:07,000 --> 00:28:09,689
+Scott: Yeah, right fucking over the newspaper.
+
+405
+00:28:10,151 --> 00:28:12,880
+Scott: and then the people buying ads in the newspaper and me.
+
+406
+00:28:13,021 --> 00:28:14,800
+Scott: We're all getting fucked by this paper boy.
+
+407
+00:28:14,820 --> 00:28:19,746
+Scott: We have a new job is to deliver that paper in the original condition and if he fucks with it He should be fired.
+
+408
+00:28:19,787 --> 00:28:24,442
+Rym: All I can think of you're saying that is $2.
+
+409
+00:28:24,442 --> 00:28:34,976
+Rym: So I saw that movie a bunch of times recently just randomly, okay, so uh The other reason they might be doing it is to try to fuck Google because we know Europe.
+
+410
+00:28:35,097 --> 00:28:36,460
+Scott: Europe hates guzzy European store.
+
+411
+00:28:36,520 --> 00:28:38,528
+Scott: Yes, Europe hates Google so much.
+
+412
+00:28:38,629 --> 00:28:41,460
+Rym: Europe has like such this ridiculous hate boner for Google.
+
+413
+00:28:41,661 --> 00:28:43,367
+Rym: They're basically trying to break Google up.
+
+414
+00:28:43,548 --> 00:28:46,720
+Rym: They're trying to break Google's, you know, quote-unquote monopoly with it.
+
+415
+00:28:47,212 --> 00:28:54,180
+Scott: I mean I Would be more sympathetic if it weren't for the fact that one they only go after Google and know and know the other giant companies.
+
+416
+00:28:54,562 --> 00:28:57,340
+Rym: Yeah, well, they went after Microsoft way back in the day way back.
+
+417
+00:28:57,480 --> 00:29:01,032
+Scott: Yeah, they basically hate the fact that it's an American company, right?
+
+418
+00:29:01,092 --> 00:29:03,420
+Scott: If Google was a European company, they wouldn't do jack shit.
+
+419
+00:29:03,640 --> 00:29:04,362
+Scott: Yep, right.
+
+420
+00:29:04,723 --> 00:29:08,795
+Scott: So the fact that basically like Google has a monopoly on search.
+
+421
+00:29:08,955 --> 00:29:09,557
+Scott: No question.
+
+422
+00:29:09,717 --> 00:29:10,500
+Scott: Sorry, they do.
+
+423
+00:29:10,760 --> 00:29:13,791
+Rym: Well, they don't because there are alternatives that are legitimate.
+
+424
+00:29:13,831 --> 00:29:15,155
+Scott: This is an alternative.
+
+425
+00:29:15,175 --> 00:29:16,520
+Scott: doesn't mean that you don't have a monopoly.
+
+426
+00:29:16,520 --> 00:29:16,921
+Rym: Well, they have.
+
+427
+00:29:16,962 --> 00:29:24,691
+Rym: they have a. they have a I guess feature monopoly in the sense that Google search is Literally objectively superior to every other.
+
+428
+00:29:24,732 --> 00:29:26,560
+Scott: imagine if there were three car companies.
+
+429
+00:29:27,102 --> 00:29:30,980
+Scott: Two of the car companies are basically selling you goes and one was selling real cars.
+
+430
+00:29:31,381 --> 00:29:36,559
+Scott: That's a monopoly just because there's some other competitor if their product can't really do shit.
+
+431
+00:29:37,000 --> 00:29:37,823
+Rym: so what's the line?
+
+432
+00:29:38,164 --> 00:29:43,378
+Rym: is Google being anti-competitive by shutting out anyone who can compete like actively?
+
+433
+00:29:43,398 --> 00:29:47,517
+Rym: or They being anti-competitive just by the fact that they're that much superior and they're free?
+
+434
+00:29:47,657 --> 00:29:52,579
+Scott: right being Being anti-competitive and just out competing, right?
+
+435
+00:29:53,921 --> 00:29:58,080
+Scott: For example, you know, Michael Schumacher, he won f1 championships year after year after year.
+
+436
+00:29:58,241 --> 00:30:01,620
+Rym: It's not like he was going to other drivers houses and like waking him up at night, right?
+
+437
+00:30:02,142 --> 00:30:02,202
+Scott: Why?
+
+438
+00:30:02,465 --> 00:30:05,222
+Scott: because he's a better driver Right.
+
+439
+00:30:05,322 --> 00:30:07,889
+Scott: Well and also he was in a better car, but they were just.
+
+440
+00:30:08,491 --> 00:30:09,213
+Scott: they didn't cheat.
+
+441
+00:30:09,274 --> 00:30:10,016
+Scott: They were just better.
+
+442
+00:30:10,557 --> 00:30:16,597
+Scott: Lance Armstrong Cheated he won out competed by breaking the rules.
+
+443
+00:30:16,738 --> 00:30:18,944
+Scott: Google Doesn't break the rules.
+
+444
+00:30:18,964 --> 00:30:19,185
+Scott: They're.
+
+445
+00:30:19,566 --> 00:30:23,880
+Scott: they're just better at doing search and no one can do it as well as they do it.
+
+446
+00:30:23,980 --> 00:30:25,830
+Rym: I was gonna is now.
+
+447
+00:30:25,971 --> 00:30:35,320
+Scott: I mean they didn't break any rules Yet, but Europe's strategy is basically make rules such that Google is breaking them and that is you know.
+
+448
+00:30:35,601 --> 00:30:44,600
+Scott: It's like if they were to come out with the anti-drug rules after Lance Armstrong cheated or it wouldn't have been cheating Because the rule didn't exist when he did it, but the rule did exist when he did it.
+
+449
+00:30:44,620 --> 00:30:47,395
+Scott: So he cheated but Google didn't break any rules.
+
+450
+00:30:47,415 --> 00:30:51,820
+Scott: while they're doing stuff Europe just tries to make new rules to make what Google is already doing.
+
+451
+00:30:51,861 --> 00:30:52,741
+Scott: No good There
+
+452
+00:30:52,781 --> 00:31:10,220
+Rym: seems to be a sentiment when I was poking around that a lot of your a lot of people in Europe at least on Like sort of the government II level have this argument that Google and ads like that are basically Forcing this American culture and this commercialism on Europe and they should have the right to protect themselves from it.
+
+453
+00:31:10,742 --> 00:31:12,067
+Scott: Okay, you can protect yourselves from it.
+
+454
+00:31:12,589 --> 00:31:13,895
+Scott: Google will just stop serving you.
+
+455
+00:31:13,915 --> 00:31:20,066
+Rym: Yeah, I Kind of look forward to the day when Google does what they did to China where they're like, yeah, fuck it We'll just be in Hong Kong.
+
+456
+00:31:20,389 --> 00:31:31,340
+Rym: Yeah So to me, it's interesting because Europe does not have any tech company That exists on the level of a Google or a Microsoft.
+
+457
+00:31:32,103 --> 00:31:32,826
+Scott: I wonder why?
+
+458
+00:31:32,906 --> 00:31:36,460
+Scott: maybe they because they keep treating them like this and not doing things properly.
+
+459
+00:31:36,500 --> 00:31:42,681
+Rym: Yeah, I mean there's no real free speech in Europe and the EU has done a lot of squirrely things like this in the past Right.
+
+460
+00:31:42,701 --> 00:31:47,100
+Scott: Well, it's reasons like this that tech companies are not going to put their shit in Europe.
+
+461
+00:31:47,501 --> 00:31:55,877
+Scott: Right if you have you know, all these kinds of restrictions and poor policies and I start a tech company Why the fuck would I put it in your country?
+
+462
+00:31:55,897 --> 00:31:59,413
+Rym: Yeah now I don't want to put it necessarily in the US either because the spying.
+
+463
+00:31:59,794 --> 00:32:01,260
+Rym: but maybe I'll go to Ireland.
+
+464
+00:32:01,461 --> 00:32:03,050
+Rym: That's where a lot of people are putting their data lately.
+
+465
+00:32:03,070 --> 00:32:06,064
+Scott: There are a lot of tech companies going in Ireland Bad spot.
+
+466
+00:32:06,425 --> 00:32:11,762
+Rym: so the right way to do this is to block the ads at the client level the way the internet was intended mm-hmm.
+
+467
+00:32:12,184 --> 00:32:18,445
+Rym: and a lot of people don't seem to understand how that shit actually works and To this day.
+
+468
+00:32:18,525 --> 00:32:21,620
+Rym: It amazes me when I see someone not to get it.
+
+469
+00:32:21,640 --> 00:32:31,600
+Rym: You know, I we knew some people who try to argue that is morally unethical like it to block ads to which I say Oh fuck is it morally unethical to change the color on a website?
+
+470
+00:32:31,660 --> 00:32:36,157
+Rym: You're looking at to use a text-based browser to be blind and use the internet.
+
+471
+00:32:36,177 --> 00:32:36,679
+Rym: Mm-hmm.
+
+472
+00:32:37,482 --> 00:32:45,474
+Rym: But to a lot of people who use adblock even like they they download Basically something that looks like adblock and is called adblock.
+
+473
+00:32:45,494 --> 00:32:49,023
+Rym: That is actually just malware Happens a lot.
+
+474
+00:32:49,604 --> 00:32:53,414
+Scott: the current thing you should use is the you block or micro block.
+
+475
+00:32:53,495 --> 00:32:55,500
+Scott: That is the current adblock thing.
+
+476
+00:32:55,581 --> 00:32:56,858
+Scott: That is the right one to use.
+
+477
+00:32:57,181 --> 00:33:02,500
+Rym: So in the old days like I was blocking ads in the 90s like as soon as the internet I had internet.
+
+478
+00:33:03,082 --> 00:33:05,020
+Rym: It's the first time I saw an ad I was like.
+
+479
+00:33:05,060 --> 00:33:11,231
+Rym: I wonder if there's a way to not see that because I grew up in a household where every night the TV shows like The Simpsons that we watched.
+
+480
+00:33:11,633 --> 00:33:19,964
+Rym: someone's job was to record it and Pause the recording to cut out all the commercials so that the rest of the family could watch the shows Without ads.
+
+481
+00:33:19,984 --> 00:33:23,138
+Rym: so we all took turns being the ad blocker for the family.
+
+482
+00:33:23,158 --> 00:33:35,552
+Rym: Yep So when I got a computer the first time I saw an ad I immediately started editing my host file and Maintaining basically a list of IP addresses that ads came from right.
+
+483
+00:33:35,592 --> 00:33:38,540
+Scott: so basically what this method is the oldest jankiest method.
+
+484
+00:33:38,620 --> 00:33:45,820
+Scott: So your host file is basically something that every computer every desktop PC has right and I'm sure phones have it, too.
+
+485
+00:33:45,900 --> 00:33:56,579
+Scott: You just can't access it right because it's in the file system somewhere where you can basically hard code DNS entries and your computer your DNS, you know stack will basically not in.
+
+486
+00:33:56,739 --> 00:33:59,920
+Scott: you know Contact any DNS servers if there's an entry in your host file.
+
+487
+00:33:59,960 --> 00:34:04,615
+Scott: so you can go in your host file and type in google.com and some IP address after that.
+
+488
+00:34:04,735 --> 00:34:06,099
+Scott: or I guess the IP address comes first.
+
+489
+00:34:06,280 --> 00:34:17,639
+Scott: and Now if you go to any browser any application on your whole computer and you type in google.com It's not gonna go out to the DNS servers on the internet and figure out what is the IP address to google.com?
+
+490
+00:34:17,780 --> 00:34:21,599
+Scott: It's just gonna trust that the IP address in the host file is the right one and use it.
+
+491
+00:34:22,121 --> 00:34:34,938
+Scott: So if you say find out that a particular domain ads dot Rym calm Has a bunch of ads coming from it and that domain doesn't really do anything else There's no other reason you would ever contact it.
+
+492
+00:34:35,322 --> 00:34:37,233
+Scott: You just go in your host file and type in like.
+
+493
+00:34:37,253 --> 00:34:40,326
+Scott: look one two seven Oh one adds that Rym calm.
+
+494
+00:34:40,386 --> 00:34:46,406
+Scott: and now when your web browser tries to make a request to get the ads from as their M It's gonna hit a server.
+
+495
+00:34:46,446 --> 00:34:47,309
+Scott: that's not even serving.
+
+496
+00:34:47,370 --> 00:34:50,120
+Scott: any web content is no HTTP server there.
+
+497
+00:34:50,179 --> 00:34:55,797
+Scott: It's gonna timeout and nothing will happen and you won't see those ads on your browser.
+
+498
+00:34:55,818 --> 00:34:56,743
+Rym: now It turned out.
+
+499
+00:34:56,844 --> 00:35:04,860
+Rym: even back then there were people who were making Large host files that you could download and deploy where they'd already figured out where all the ads were coming from, right?
+
+500
+00:35:04,900 --> 00:35:08,780
+Scott: Because when you're serving up a website, you don't put the ad server on the same exact.
+
+501
+00:35:08,981 --> 00:35:11,612
+Scott: You know machines as that are serving up the web page.
+
+502
+00:35:11,672 --> 00:35:18,160
+Scott: unless you're trying to get around that kind of ad block Even if you do it, it's infrastructurally difficult and you're at least gonna put it at a different path.
+
+503
+00:35:18,220 --> 00:35:20,578
+Scott: It'll be like Rym comm slash ads or Rym night.
+
+504
+00:35:21,041 --> 00:35:33,671
+Scott: It's very very difficult to have those ads mixed in with everything else at the same URLs So that there's no way to determine based on the domain and or URL path Where it's an ad and what's not.
+
+505
+00:35:33,731 --> 00:35:35,760
+Rym: so that was the next level of heuristics.
+
+506
+00:35:35,820 --> 00:35:39,240
+Rym: That was when ad blocking as software as opposed to hacks started to exist.
+
+507
+00:35:39,240 --> 00:35:43,140
+Scott: Well, it started to exist when they started to make browser extensions, right?
+
+508
+00:35:43,920 --> 00:35:54,615
+Scott: Originally, there were just browser plugins and the way browser plugins worked was that when you typed in a URL The browser knew how to handle HTML, JPEGs, GIFs, pings, right?
+
+509
+00:35:54,636 --> 00:35:55,378
+Scott: Those sorts of things.
+
+510
+00:35:55,398 --> 00:35:55,940
+Scott: You mean GIFs?
+
+511
+00:35:56,240 --> 00:35:59,619
+Scott: Yeah, and it didn't know how to handle for example an SWF.
+
+512
+00:35:59,941 --> 00:36:05,060
+Scott: So you get a plug-in and now if the browser hit an SWF it said well, I don't know what to do with that.
+
+513
+00:36:05,160 --> 00:36:16,700
+Scott: Let me see if any of these plugins that are installed are registered to handle SWF and it would find one flash and it would say Okay Execute flash and give it this file to do its thing.
+
+514
+00:36:16,840 --> 00:36:29,468
+Rym: So you basically stick a plug-in that would grab everything along the way and then use heuristics Like there were standard sizes for ads and standard locations for ads right or any image in those locations It would just not download plugins.
+
+515
+00:36:29,589 --> 00:36:32,500
+Scott: plugins didn't really block ads because of the way that they work.
+
+516
+00:36:32,560 --> 00:36:33,670
+Scott: They were very bad at that.
+
+517
+00:36:33,750 --> 00:36:37,876
+Scott: I don't even know if there was an ad block But I use the one extensive.
+
+518
+00:36:38,036 --> 00:36:46,080
+Scott: once people made Extensions right with the beginning that came around with the first Firefox known as Phoenix known as Firebird known as whatever, right?
+
+519
+00:36:46,820 --> 00:36:59,811
+Scott: once you had extensions that actually allowed you to interact with the browser API and sort of execute JavaScript on every web page and modify CSS and every web page programmatically Then you got to be really clever with the ad blocking.
+
+520
+00:36:59,851 --> 00:37:02,120
+Scott: you could be like, okay, you just got the HTML.
+
+521
+00:37:03,021 --> 00:37:13,580
+Scott: Here's the execute this JavaScript on this page and like search for anything URLs matching these patterns and replace them with this and searcher right and then render the page after applying that.
+
+522
+00:37:14,081 --> 00:37:17,711
+Scott: So now you can really block ads very very intelligently
+
+523
+00:37:17,751 --> 00:37:28,929
+Rym: and now you have an increasingly complex set of heuristics to figure out What isn't is not an ad based on context because in the old days like you could just block anything slash ads Slash anything and assume it was an ad
+
+524
+00:37:29,531 --> 00:37:31,399
+Scott: but that one method I used to use would just be
+
+525
+00:37:31,924 --> 00:37:32,755
+Rym: Turn off all
+
+526
+00:37:33,482 --> 00:37:34,851
+Scott: Images from automatically loading.
+
+527
+00:37:34,872 --> 00:37:41,981
+Scott: Yep on a whole page You just wouldn't see any images and then if you wanted to see an image you would explicitly click and that would make the image Load.
+
+528
+00:37:42,202 --> 00:37:43,066
+Rym: I did that too.
+
+529
+00:37:43,367 --> 00:37:45,254
+Rym: And I also did that with JavaScript's.
+
+530
+00:37:45,314 --> 00:37:46,820
+Rym: I did that with flashes, right?
+
+531
+00:37:46,900 --> 00:37:48,919
+Scott: Well, this was in the day in the earliest days, you know.
+
+532
+00:37:49,281 --> 00:37:54,474
+Scott: It's like people would just be like don't use JavaScript because JavaScript is only used to do annoying bullshit.
+
+533
+00:37:54,514 --> 00:37:56,600
+Scott: It wasn't have any legitimate use.
+
+534
+00:37:57,303 --> 00:37:59,816
+Rym: Well, you can't right click on my website brah.
+
+535
+00:38:00,118 --> 00:38:11,540
+Rym: Yeah So the interesting thing is that that technology like the early ad block extensions Often had options that don't exist in a lot of them today.
+
+536
+00:38:11,620 --> 00:38:14,731
+Rym: The one in particular is whether or not to be in stealth mode.
+
+537
+00:38:15,333 --> 00:38:26,118
+Rym: So in the old days they would either not download the ad elements at all to save you bandwidth or Download everything and just not show you.
+
+538
+00:38:26,139 --> 00:38:37,668
+Scott: well Just not showing was what happened with the earliest extensions because they could really just do a lot of CSS modifications that would set like display none on all the things the Containers that had ads and that was easy to do.
+
+539
+00:38:37,688 --> 00:38:40,760
+Scott: It was much harder to stop the browser from making the requests.
+
+540
+00:38:40,921 --> 00:38:45,580
+Scott: Yeah, it took a while for extension technology and browser api's to advance before they could do that.
+
+541
+00:38:45,580 --> 00:38:55,240
+Rym: But nowadays I feel like we need to go back because an increasing number of terrible websites Will if they detect that you didn't download the ad elements will not display content.
+
+542
+00:38:55,690 --> 00:38:57,766
+Scott: Hmm I haven't seen that.
+
+543
+00:38:58,027 --> 00:39:01,740
+Rym: I've bumped into that a lot and I've been doing some research about it.
+
+544
+00:39:01,840 --> 00:39:07,340
+Scott: What I have seen is people basically putting a non ad image behind the ad.
+
+545
+00:39:07,601 --> 00:39:08,945
+Scott: So the ad is blocked.
+
+546
+00:39:09,025 --> 00:39:09,948
+Scott: you see this thing.
+
+547
+00:39:09,968 --> 00:39:11,834
+Scott: that's basically like you blocked our ads.
+
+548
+00:39:11,935 --> 00:39:13,620
+Scott: frowny face and I'm like tough shit.
+
+549
+00:39:13,901 --> 00:39:15,469
+Rym: So Fark does that.
+
+550
+00:39:15,489 --> 00:39:16,554
+Rym: they always have a thing at the top.
+
+551
+00:39:16,574 --> 00:39:17,740
+Rym: that I've been seeing for years.
+
+552
+00:39:18,101 --> 00:39:19,385
+Rym: Let's wait for it to come back again.
+
+553
+00:39:19,405 --> 00:39:22,293
+Rym: It basically says Fark lives on ad revenue.
+
+554
+00:39:22,634 --> 00:39:23,938
+Rym: Please white list us.
+
+555
+00:39:24,399 --> 00:39:26,169
+Rym: Nope Oh, look, it didn't know there it is.
+
+556
+00:39:26,189 --> 00:39:27,114
+Rym: There it is.
+
+557
+00:39:27,134 --> 00:39:27,919
+Rym: There it is.
+
+558
+00:39:29,900 --> 00:39:34,240
+Rym: Okay, so but I've been running into that increasingly mostly from websites.
+
+559
+00:39:34,320 --> 00:39:38,789
+Rym: I wouldn't just like if I go to a site and anything is broken because of my ad block I just never go to that site again.
+
+560
+00:39:38,809 --> 00:39:45,473
+Rym: Yeah, but The arms race is trivial to advance ad block.
+
+561
+00:39:45,734 --> 00:40:00,080
+Rym: That is undetectable is trivial to implement and The technology will go back down that road if ads start creeping in again because right kinds of people who run ad block Don't fucking want to see ads and are never going to buy anything because of an ad they saw.
+
+562
+00:40:00,261 --> 00:40:05,440
+Scott: So the way the stealth mode worked is that your web brat you would get your browser to still make the request for the ad.
+
+563
+00:40:06,042 --> 00:40:13,858
+Scott: So you would you know send a get request out to the web service and give me that ad and then you just ignore Everything that came back and they don't have any idea that you did that.
+
+564
+00:40:14,341 --> 00:40:20,750
+Scott: no, so as far as they know you tried to load all the ads but They don't know that you didn't actually load any of the ads.
+
+565
+00:40:20,790 --> 00:40:22,637
+Scott: you just ignored all that data that came through.
+
+566
+00:40:22,678 --> 00:40:23,844
+Scott: you didn't let it Slow you down.
+
+567
+00:40:23,864 --> 00:40:25,939
+Scott: You just blocked it on your port or whatever, you know.
+
+568
+00:40:26,180 --> 00:40:37,392
+Rym: Now the bandwidth is cheap and ad ad blocker blockers like like n-jammer jammers are getting increasingly Agro, we're gonna go back to that and that arms race.
+
+569
+00:40:38,074 --> 00:40:39,920
+Rym: ad blockers will always win, right?
+
+570
+00:40:39,980 --> 00:40:44,474
+Scott: Well, the one of the problems here is the fact is the interstitials.
+
+571
+00:40:44,755 --> 00:40:46,380
+Scott: Well, no, it's fraud, right?
+
+572
+00:40:47,142 --> 00:40:52,136
+Scott: So the fraud situation is so the person who's selling the ads.
+
+573
+00:40:52,236 --> 00:40:53,159
+Scott: I own the website, right?
+
+574
+00:40:53,801 --> 00:40:59,340
+Scott: I want to increase the numbers of people who click on the ads and I want to increase the number of times ads are displayed.
+
+575
+00:40:59,461 --> 00:41:03,292
+Rym: Yeah, because then I get more money Irrespective of the quality of who sees them.
+
+576
+00:41:03,353 --> 00:41:11,321
+Scott: sure and I you know if I could I would lie to the person buying the ads and tell them a much bigger number than reality to get more money from Them.
+
+577
+00:41:12,103 --> 00:41:22,160
+Scott: if someone visits my website and blocks the ads, but I count them as having seen the ads This person who's buying ads for me is now paying for an ad that no one saw.
+
+578
+00:41:22,602 --> 00:41:23,628
+Rym: Yep, but opposed to.
+
+579
+00:41:23,668 --> 00:41:27,987
+Scott: if I just legitimately block the ads I'm not I'm a web so far could get.
+
+580
+00:41:28,027 --> 00:41:30,014
+Scott: so the current method FARC gets screwed over.
+
+581
+00:41:30,054 --> 00:41:32,703
+Scott: the advertiser doesn't pay FARC because the ad Wasn't seen.
+
+582
+00:41:33,205 --> 00:41:45,696
+Scott: with the stealth kind of way FARC is getting paid But the advert person buying the ads is getting fucked because no one's seeing the ads but they're paying like someone is seeing them And they have no way to know who saw them and who didn't and what the real number is now
+
+583
+00:41:45,877 --> 00:41:46,419
+Rym: option two.
+
+584
+00:41:46,881 --> 00:41:56,680
+Rym: the first one the one where FARC the odd just doesn't get downloaded is better for everyone because Honestly to this day it amazes me the number of people who don't run any form of ad blocking.
+
+585
+00:41:56,680 --> 00:41:58,351
+Rym: I mean, I see their computers.
+
+586
+00:41:58,391 --> 00:42:08,319
+Rym: They always have some malware and Websites look like shit Yeah, and there's garbage everywhere, and there's like pop unders and all this crap happens to them, but they live with it.
+
+587
+00:42:08,922 --> 00:42:13,000
+Rym: So those are probably the kinds of people who also will in fact click on an ad.
+
+588
+00:42:14,181 --> 00:42:17,094
+Rym: Maybe like the people who go out of their way to run ad block.
+
+589
+00:42:17,616 --> 00:42:21,195
+Rym: you're better off Having like just pretending they don't exist.
+
+590
+00:42:21,335 --> 00:42:26,100
+Scott: ad wise well Yes, and no if you're getting if you want to increase your conversion rate, right?
+
+591
+00:42:26,220 --> 00:42:32,216
+Scott: So if you want to be able to say to an advertiser You're a website selling ads you want to be able to say to them look we have a 50% click-through rate.
+
+592
+00:42:33,541 --> 00:42:35,990
+Scott: We show an ad twice it gets clicked on once.
+
+593
+00:42:36,351 --> 00:42:38,860
+Scott: that means half the people who visit our site are clicking on this ad.
+
+594
+00:42:38,980 --> 00:42:40,728
+Scott: Yeah, that's a ridiculously high rate.
+
+595
+00:42:40,768 --> 00:42:43,260
+Scott: like like a few percent is considered high, right?
+
+596
+00:42:43,380 --> 00:42:43,661
+Rym: You're right.
+
+597
+00:42:43,681 --> 00:42:47,456
+Rym: in that case you want the people who are anti ad to just not see the ads right.
+
+598
+00:42:47,476 --> 00:42:52,132
+Rym: otherwise your quality click Go down, but if you're goes down right so, but that's only a thing.
+
+599
+00:42:52,413 --> 00:42:54,460
+Scott: see different kinds of ads happen on the internet.
+
+600
+00:42:54,460 --> 00:42:56,613
+Scott: You got to understand the business of ads on the internet right.
+
+601
+00:42:56,653 --> 00:43:04,600
+Scott: so if I'm advertising Some free-to-play game on my website I'm gonna be probably getting conversion rates.
+
+602
+00:43:04,922 --> 00:43:13,706
+Scott: You know are what I want to be high because I'm probably getting paid Based on the number of people that sign up and start playing the game After clicking a link on my website.
+
+603
+00:43:13,746 --> 00:43:15,311
+Scott: same thing like an Amazon affiliate link.
+
+604
+00:43:15,351 --> 00:43:19,163
+Scott: right you get paid if people buy products and Amazon after Clicking your link.
+
+605
+00:43:19,364 --> 00:43:20,267
+Scott: you want conversions.
+
+606
+00:43:20,288 --> 00:43:28,294
+Scott: you want people to click, but if I'm my advertiser is Ford they just want people to see the ad to sort of get forward in their brains.
+
+607
+00:43:28,335 --> 00:43:30,819
+Scott: if your advertiser is coca-cola They just want people to see it.
+
+608
+00:43:30,880 --> 00:43:33,194
+Scott: They don't need someone to click through and buy coke.
+
+609
+00:43:33,214 --> 00:43:39,760
+Scott: but again if I watch I'm gonna be getting paid based on how many thousands of people see it And I just want that number to be as high as possible.
+
+610
+00:43:40,201 --> 00:43:43,632
+Scott: So if people are using adblock I'm getting fucked because no one's seeing the ad.
+
+611
+00:43:43,673 --> 00:43:49,936
+Rym: but if people aren't using adblock Then the person who bought the ad is now getting fucked because they're showing their car ad to.
+
+612
+00:43:49,956 --> 00:43:51,368
+Rym: a bunch of people live in New York City.
+
+613
+00:43:51,551 --> 00:43:52,120
+Scott: they don't care.
+
+614
+00:43:52,964 --> 00:44:04,637
+Rym: Yeah, well because the problem the real problem is the entire advertising industry and when terms of the internet is in my opinion a huge broken bubble of fake ads.
+
+615
+00:44:04,939 --> 00:44:09,079
+Scott: all Advertising industry period is a huge broken bubble regardless of media.
+
+616
+00:44:09,099 --> 00:44:12,174
+Rym: well No, because the fucked up thing is traditional internet more.
+
+617
+00:44:12,194 --> 00:44:19,054
+Rym: so yeah I've seen so many studies that show that traditional car ads and soda ads Directly correlate to sales.
+
+618
+00:44:19,094 --> 00:44:19,780
+Rym: people are that dumb?
+
+619
+00:44:19,961 --> 00:44:34,548
+Scott: I'm sure that they work to some extent But it's still a scam in terms of how much they pay for the ads Verses it right, but it's a system where everyone involved in the system Neat like has a like.
+
+620
+00:44:34,608 --> 00:44:37,060
+Rym: they benefit from a positive feedback loop.
+
+621
+00:44:37,542 --> 00:44:42,740
+Rym: No one has any desire to introduce the bad news of reality into that system.
+
+622
+00:44:43,141 --> 00:44:44,125
+Rym: So it turns into a bubble.
+
+623
+00:44:44,406 --> 00:44:58,303
+Rym: the stock market does not have that problem because you can sell shorts Mm-hmm otherwise if you couldn't sell short No one involved has any reason to say anything bad about any stock ever because everyone wants stocks to go up forever Right.
+
+624
+00:44:58,323 --> 00:44:59,670
+Scott: so so consider this right.
+
+625
+00:44:59,710 --> 00:45:05,943
+Scott: so outside my window right now at work I mean, I'm in Times Square just a bit north of it, right There's an ad.
+
+626
+00:45:05,963 --> 00:45:11,102
+Scott: there's an ad that keeps changing and usually it's two big billboards next to each other and they're usually Advertising.
+
+627
+00:45:11,142 --> 00:45:12,607
+Scott: some hot movie that's coming out soon.
+
+628
+00:45:12,888 --> 00:45:13,449
+Scott: so right now.
+
+629
+00:45:13,510 --> 00:45:15,857
+Scott: It's about Jurassic World, which is looks like garbage.
+
+630
+00:45:15,957 --> 00:45:16,800
+Scott: I heard it's terrible.
+
+631
+00:45:16,881 --> 00:45:17,450
+Scott: I'm sure it is.
+
+632
+00:45:17,471 --> 00:45:19,505
+Scott: so Why is that?
+
+633
+00:45:19,565 --> 00:45:22,420
+Scott: there is there anyone who's going to see Jurassic World?
+
+634
+00:45:23,300 --> 00:45:25,360
+Scott: After seeing that who would not have seen it otherwise?
+
+635
+00:45:25,581 --> 00:45:34,332
+Scott: Maybe a very small number of people right who even notices this thing in the in the Times Square area right now I've at the same time that maybe look out the window, but I'm not seeing it.
+
+636
+00:45:34,593 --> 00:45:35,436
+Rym: Maybe enough people.
+
+637
+00:45:35,476 --> 00:45:36,380
+Rym: I mean spam works.
+
+638
+00:45:36,922 --> 00:45:39,471
+Rym: Maybe some people are just that influenceable.
+
+639
+00:45:39,612 --> 00:45:41,740
+Scott: consider how much it costs to put that up there.
+
+640
+00:45:41,941 --> 00:45:44,740
+Scott: You're making what a few hundred people see it.
+
+641
+00:45:44,780 --> 00:45:47,051
+Scott: You're not making up for the cost of those frickin things right.
+
+642
+00:45:47,071 --> 00:45:49,964
+Scott: that is not a cost-effective advertisement I would not believe.
+
+643
+00:45:50,084 --> 00:45:51,810
+Scott: but are you any stretch of the imagination?
+
+644
+00:45:51,870 --> 00:45:58,500
+Rym: if it really wasn't to enough the people involved Then it wouldn't be there like the the money funnel keeps.
+
+645
+00:45:59,383 --> 00:46:03,660
+Scott: So this is why this is because you have to understand the people right that are happening here.
+
+646
+00:46:03,720 --> 00:46:07,319
+Scott: So the first person is like the producer executive of Jurassic World, right?
+
+647
+00:46:08,420 --> 00:46:12,554
+Scott: They like the fact that there's an advertisement for their movie in Times Square.
+
+648
+00:46:13,015 --> 00:46:14,299
+Scott: They like seeing that it's for them.
+
+649
+00:46:15,302 --> 00:46:16,911
+Scott: They like seeing it there there.
+
+650
+00:46:17,052 --> 00:46:18,480
+Scott: We our company buys ads.
+
+651
+00:46:18,621 --> 00:46:20,359
+Scott: I'm pretty sure those ads don't do shit.
+
+652
+00:46:20,721 --> 00:46:25,987
+Scott: But you'll see people in our company are like I saw our ad on the Metro North train today And they'll take a picture of it and post it.
+
+653
+00:46:26,048 --> 00:46:28,420
+Scott: and it's like the ad is for the person buying it.
+
+654
+00:46:28,440 --> 00:46:34,390
+Scott: They like to see their name in lights and they're paying to see their name in lights And they don't give a shit if it sells one goddamn product.
+
+655
+00:46:34,510 --> 00:46:37,180
+Scott: see now at the same time or they falsely believe it's selling product.
+
+656
+00:46:37,240 --> 00:46:38,003
+Scott: They don't care right.
+
+657
+00:46:38,144 --> 00:46:40,896
+Rym: so I feel on a gut level that you're right about this to a degree.
+
+658
+00:46:41,036 --> 00:46:44,180
+Rym: at the same time There is real evidence.
+
+659
+00:46:44,441 --> 00:46:45,690
+Rym: There is a lot of fun.
+
+660
+00:46:45,710 --> 00:46:47,862
+Scott: that is a significant factor And that's what's.
+
+661
+00:46:47,923 --> 00:46:56,414
+Scott: that factor is what's making up for the fact that the ad is not cost-effective Because that extra price premium they're paying for the ad is for.
+
+662
+00:46:56,815 --> 00:46:58,080
+Scott: I want to see my name in light.
+
+663
+00:46:58,100 --> 00:47:05,500
+Rym: there is also an argument that those kinds of ads are Holding ground to not cede space to a possible competitor.
+
+664
+00:47:05,500 --> 00:47:06,426
+Scott: That's also true.
+
+665
+00:47:06,607 --> 00:47:16,560
+Rym: if there's no ads for your Broadway tickets No ads for Broadway tickets at all then some startup that like gets some people together and does something can advertise in an empty space.
+
+666
+00:47:16,823 --> 00:47:17,995
+Scott: That's true an empty field.
+
+667
+00:47:18,238 --> 00:47:23,120
+Rym: now I'm just paying to keep grass in the place that your competitor is gonna set up shop right now.
+
+668
+00:47:23,240 --> 00:47:24,886
+Scott: There's another factor here right?
+
+669
+00:47:25,247 --> 00:47:27,434
+Scott: so that person you know for that movie.
+
+670
+00:47:27,735 --> 00:47:29,220
+Scott: We all know about movie budgets, right?
+
+671
+00:47:29,320 --> 00:47:31,700
+Scott: They got to get the expenses way high, so there's no profits.
+
+672
+00:47:31,760 --> 00:47:33,326
+Scott: Yeah, so just buy ads.
+
+673
+00:47:33,346 --> 00:47:34,410
+Scott: you can get the expenses away.
+
+674
+00:47:34,450 --> 00:47:35,695
+Scott: has movie specific though?
+
+675
+00:47:35,715 --> 00:47:35,855
+Scott: right?
+
+676
+00:47:35,895 --> 00:47:37,019
+Scott: not every industry is like that.
+
+677
+00:47:37,800 --> 00:47:38,844
+Scott: There's a step below.
+
+678
+00:47:39,064 --> 00:47:40,148
+Scott: so this producer.
+
+679
+00:47:40,208 --> 00:47:41,953
+Scott: They're not buying the ads themselves.
+
+680
+00:47:41,973 --> 00:47:44,240
+Scott: you think they called up clear channel to buy a billboard.
+
+681
+00:47:44,681 --> 00:47:45,263
+Scott: Give me a break.
+
+682
+00:47:45,323 --> 00:47:48,574
+Scott: right there's a person who works for them and that person is an ad buyer.
+
+683
+00:47:48,854 --> 00:47:50,580
+Scott: their job is to buy ads.
+
+684
+00:47:50,942 --> 00:47:52,254
+Scott: Their job is to spend money.
+
+685
+00:47:52,294 --> 00:47:54,366
+Scott: they get a budget And they must spend it all.
+
+686
+00:47:54,788 --> 00:47:56,776
+Scott: if they don't spend it all that budget will shrink it.
+
+687
+00:47:56,836 --> 00:47:57,720
+Scott: the budget shrinks too much.
+
+688
+00:47:57,821 --> 00:47:58,592
+Scott: They don't have a job.
+
+689
+00:47:58,855 --> 00:47:58,997
+Rym: now.
+
+690
+00:47:59,017 --> 00:48:06,860
+Rym: remember There's an unstated assumption that you need ads in certain spaces so they'll buy them to write what that person's job is to buy ads.
+
+691
+00:48:06,920 --> 00:48:07,241
+Scott: That's it.
+
+692
+00:48:07,322 --> 00:48:08,607
+Scott: It's the easiest job in the world.
+
+693
+00:48:08,647 --> 00:48:11,980
+Scott: you call people up and buy the most impressive fucking ads you can buy.
+
+694
+00:48:12,381 --> 00:48:15,532
+Scott: You don't give a shit if it caught much it costs or how effective it is.
+
+695
+00:48:15,853 --> 00:48:17,359
+Scott: right you don't get paid based on that.
+
+696
+00:48:17,620 --> 00:48:18,384
+Scott: you Get promoted.
+
+697
+00:48:18,424 --> 00:48:20,597
+Scott: because look I got us a billboard in Times Square.
+
+698
+00:48:20,617 --> 00:48:21,443
+Scott: look how awesome I am.
+
+699
+00:48:21,504 --> 00:48:22,454
+Scott: I got us a Super Bowl ad.
+
+700
+00:48:22,475 --> 00:48:23,421
+Scott: look how awesome I am.
+
+701
+00:48:23,702 --> 00:48:27,333
+Scott: the more impressive ads that person buys the more they are praised.
+
+702
+00:48:27,653 --> 00:48:32,311
+Scott: the more they get raises the more they get promoted And then move up to some job, but they have to do shit right.
+
+703
+00:48:32,693 --> 00:48:35,504
+Scott: so of course It doesn't matter.
+
+704
+00:48:35,524 --> 00:48:38,454
+Scott: if you're selling ads who are you selling them to?
+
+705
+00:48:38,655 --> 00:48:41,203
+Scott: you're not selling them to someone who cares How effective they are.
+
+706
+00:48:41,444 --> 00:48:46,960
+Scott: you're selling them to this ad buyer person who just wants the most impressive fucking shit that you can sell them.
+
+707
+00:48:47,201 --> 00:48:50,192
+Rym: Now you see there's a couple reasons for this too though.
+
+708
+00:48:50,614 --> 00:48:56,058
+Rym: for startups for small companies Those ads can get them on the radar of companies that might buy them.
+
+709
+00:48:56,078 --> 00:48:59,250
+Scott: mmm Yeah, they also don't care if they mean they somewhat care.
+
+710
+00:48:59,592 --> 00:49:08,080
+Scott: everyone somewhat cares if the ads are effective But mostly the person buying the ads even though the company as a whole might want the ads to be effective.
+
+711
+00:49:08,642 --> 00:49:13,980
+Scott: Right the person who actually makes the decision of what ad to buy only cares about how impressive it is.
+
+712
+00:49:14,100 --> 00:49:18,272
+Rym: But the smart companies the small like those companies that have really smart people.
+
+713
+00:49:18,834 --> 00:49:27,920
+Rym: they're advertising in quotes Mostly through social media and word-of-mouth and clever things that aren't just ads on websites.
+
+714
+00:49:28,422 --> 00:49:31,457
+Scott: I mean there are people out there buying ads who care about how effective is.
+
+715
+00:49:31,497 --> 00:49:31,678
+Scott: right?
+
+716
+00:49:31,718 --> 00:49:36,819
+Scott: some guy Just started his dry cleaning business, and he's gonna maybe buy in the yellow pages, right?
+
+717
+00:49:37,901 --> 00:49:39,266
+Scott: That's not gonna be effective these days.
+
+718
+00:49:39,286 --> 00:49:40,651
+Scott: Yeah, but pages.
+
+719
+00:49:40,751 --> 00:49:43,160
+Scott: It's like they actually care about how effective is.
+
+720
+00:49:43,180 --> 00:49:47,300
+Scott: They're gonna look and see how many you know they're not buying it to see their dry cleaners name and lights.
+
+721
+00:49:47,441 --> 00:49:48,266
+Scott: They want to know.
+
+722
+00:49:48,286 --> 00:49:50,320
+Scott: is this getting me more customers?
+
+723
+00:49:50,681 --> 00:49:52,348
+Scott: You know am I building a customer base with this?
+
+724
+00:49:52,368 --> 00:49:54,075
+Scott: and if they're not they'll stop buying that ad.
+
+725
+00:49:54,215 --> 00:49:54,356
+Scott: right.
+
+726
+00:49:54,376 --> 00:49:59,834
+Scott: so there's two different kind Of ad buyers out there, but these big-time website ones is mostly the.
+
+727
+00:49:59,934 --> 00:50:01,900
+Scott: I want to see my name in lights ad buyer.
+
+728
+00:50:02,081 --> 00:50:06,746
+Rym: The worst thing now is like like Hulu like a terrible example is like ads I want to block.
+
+729
+00:50:07,190 --> 00:50:09,485
+Rym: even if you pay for Hulu They still show you the ads.
+
+730
+00:50:09,786 --> 00:50:17,054
+Rym: of course you can't pay to not see them and the ads are literally 100% for things that I will never buy.
+
+731
+00:50:17,074 --> 00:50:17,556
+Scott: nope.
+
+732
+00:50:18,098 --> 00:50:28,259
+Rym: so What's interesting is that a lot of ad blocking software can even like within like the Daily Show and stuff like that in Video detect an interstitial ad and skip it.
+
+733
+00:50:28,501 --> 00:50:33,480
+Scott: I don't see any YouTube ads anywhere at all except on mobile except on mobile right.
+
+734
+00:50:33,540 --> 00:50:34,445
+Scott: But I can said I've just.
+
+735
+00:50:34,826 --> 00:50:40,122
+Scott: I should set up a proxy like I just said yeah my own proxy So that I control not the eyes I like.
+
+736
+00:50:40,162 --> 00:50:46,645
+Rym: do these people realize that if they like Hulu sometimes won't work now with like some ad blocking things and a lot Of video sites try to block it?
+
+737
+00:50:46,766 --> 00:50:49,600
+Rym: you Google smartly is not on desktops.
+
+738
+00:50:50,142 --> 00:50:54,019
+Rym: But if they make it to where ad block gets detected and doesn't work I?
+
+739
+00:50:55,240 --> 00:51:02,620
+Rym: Foresee a real ad blocking technology like real software that people use that it won't skip the ad because it can't.
+
+740
+00:51:03,320 --> 00:51:08,980
+Rym: It'll show you like random YouTube videos of puppies during the ad because I'd rather see that or nothing.
+
+741
+00:51:09,401 --> 00:51:15,560
+Rym: I'd rather see a blank screen and nothing and a minute and 30 second countdown timer than any ad for anything.
+
+742
+00:51:15,761 --> 00:51:18,740
+Scott: And what if there's no countdown timer at all and you didn't know how long it was gonna be?
+
+743
+00:51:18,881 --> 00:51:20,740
+Scott: I don't know you don't know if it's broken or not.
+
+744
+00:51:20,780 --> 00:51:22,738
+Rym: I don't know how long the fucking ads gonna be either.
+
+745
+00:51:22,818 --> 00:51:29,668
+Scott: well No actually on YouTube and Hulu and most video ads on the internet They seem to have a countdown that tells you how long the ad.
+
+746
+00:51:29,708 --> 00:51:35,150
+Rym: so I'll show that and I'll keep streaming the ad to the hard Drive and then dumping it to dev.
+
+747
+00:51:35,191 --> 00:51:36,820
+Rym: no just so I keep streaming it.
+
+748
+00:51:36,880 --> 00:51:40,414
+Rym: They think I'm watching it and maybe even have heuristics to detect like.
+
+749
+00:51:40,434 --> 00:51:41,980
+Rym: does it show a quiz or a survey at the end?
+
+750
+00:51:42,000 --> 00:51:42,965
+Rym: yeah I pick a random answer.
+
+751
+00:51:43,950 --> 00:51:45,097
+Scott: I just don't watch anything on Hulu.
+
+752
+00:51:45,117 --> 00:51:45,680
+Scott: That's my snow.
+
+753
+00:51:45,801 --> 00:51:47,409
+Rym: Yeah, problem is a lot of good stuffs.
+
+754
+00:51:47,449 --> 00:51:49,560
+Rym: moving over to Hulu like South Park is all on Hulu.
+
+755
+00:51:50,202 --> 00:51:51,987
+Scott: I just get it from the Pirate Bay.
+
+756
+00:51:52,368 --> 00:51:57,806
+Rym: I'd rather not pirate, but I'm kind of driven to just Advertisement.
+
+757
+00:51:57,846 --> 00:51:59,453
+Scott: I'm gonna fire it if that's the easiest.
+
+758
+00:51:59,514 --> 00:52:00,920
+Scott: I'm gonna get things the easiest way.
+
+759
+00:52:00,980 --> 00:52:02,746
+Rym: I know what we actually just bought.
+
+760
+00:52:02,827 --> 00:52:04,192
+Scott: I pay money for Spotify.
+
+761
+00:52:04,212 --> 00:52:05,195
+Scott: Why it's easy.
+
+762
+00:52:05,215 --> 00:52:08,645
+Rym: Yeah, we even bought a Steven Universe on Amazon.
+
+763
+00:52:08,665 --> 00:52:09,427
+Rym: just it was easy.
+
+764
+00:52:10,109 --> 00:52:10,691
+Scott: How much was it?
+
+765
+00:52:10,912 --> 00:52:11,976
+Rym: I like 20 bucks a season.
+
+766
+00:52:12,437 --> 00:52:13,260
+Scott: That's actually a good deal.
+
+767
+00:52:13,380 --> 00:52:15,090
+Rym: Yeah, like it wasn't that bad at all is it?
+
+768
+00:52:15,130 --> 00:52:16,920
+Scott: you buy DVDs or digital digital?
+
+769
+00:52:17,021 --> 00:52:18,930
+Rym: DVDs me if I got DVDs.
+
+770
+00:52:18,971 --> 00:52:20,157
+Rym: I just throw them away anyway.
+
+771
+00:52:20,338 --> 00:52:24,426
+Scott: Yeah, no Yeah, that's how that goes.
+
+772
+00:52:24,486 --> 00:52:27,599
+Scott: so ad blocking blocking ads block all the ads.
+
+773
+00:52:34,023 --> 00:52:36,560
+Rym: This has been GeekNights with Rym and Scott.
+
+774
+00:52:36,620 --> 00:52:40,252
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and brand.
+
+775
+00:52:40,292 --> 00:52:43,643
+Scott: ok for the logos be sure to visit our website At front row.
+
+776
+00:52:43,683 --> 00:52:46,734
+Scott: crew comm for show notes discussion news and more.
+
+777
+00:52:46,975 --> 00:52:54,359
+Rym: remember GeekNights is not one But four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+778
+00:52:54,741 --> 00:52:57,896
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+779
+00:52:59,141 --> 00:53:03,916
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+780
+00:53:04,036 --> 00:53:05,320
+Scott: It's actually recorded at night.
+

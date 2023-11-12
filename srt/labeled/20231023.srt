@@ -1,0 +1,3552 @@
+1
+00:00:07,980 --> 00:00:09,627
+Rym: It's Monday, October 23rd, 2023.
+
+2
+00:00:09,627 --> 00:00:09,848
+Rym: I'm Rym.
+
+3
+00:00:13,345 --> 00:00:13,860
+Scott: I'm Scott.
+
+4
+00:00:14,040 --> 00:00:15,126
+Rym: And this is GeekNights.
+
+5
+00:00:15,166 --> 00:00:17,760
+Rym: Tonight we are talking about remote access.
+
+6
+00:00:18,540 --> 00:00:19,538
+Scott: Let's do this.
+
+7
+00:00:20,460 --> 00:00:23,419
+Rym: So, uh, I hope it was gonna be that I got my flu shot today.
+
+8
+00:00:23,761 --> 00:00:28,660
+Rym: As all good people should, unless you specifically are told by your doctor you cannot get one.
+
+9
+00:00:28,780 --> 00:00:30,580
+Rym: Like, you might be allergic to the vaccine or something.
+
+10
+00:00:30,640 --> 00:00:33,499
+Rym: In which case, everyone else should get a flu shot to protect you.
+
+11
+00:00:35,341 --> 00:00:41,600
+Rym: But, uh, if you weren't planning to get your flu shot, and you live anywhere on Earth, go get your flu shot.
+
+12
+00:00:41,720 --> 00:00:45,760
+Rym: Otherwise, I am personally deeply disappointed in you and would never want to meet you in person.
+
+13
+00:00:46,440 --> 00:00:50,279
+Scott: I mean, way back in the day, I didn't get it just because I didn't think about it.
+
+14
+00:00:50,661 --> 00:00:53,411
+Scott: And also, I was less happy.
+
+15
+00:00:53,431 --> 00:00:55,720
+Scott: You know, I cared more about getting shots.
+
+16
+00:00:55,920 --> 00:00:57,500
+Scott: I was like, you know, I didn't want to get shots.
+
+17
+00:00:57,601 --> 00:00:59,900
+Rym: Well, also, the public perception was different.
+
+18
+00:01:00,000 --> 00:01:04,900
+Rym: And Lewis Black did not help that perception with his one stand-up routine that we all remember.
+
+19
+00:01:06,100 --> 00:01:06,840
+Scott: Uh, barely remember.
+
+20
+00:01:07,180 --> 00:01:11,540
+Rym: I used to get flu shots all the time, but that was only because I would get flus kinda often.
+
+21
+00:01:12,043 --> 00:01:13,620
+Rym: And I didn't want to get them anymore.
+
+22
+00:01:13,820 --> 00:01:16,280
+Scott: Yeah, I didn't really get the flu, and I felt like I was healthy.
+
+23
+00:01:16,560 --> 00:01:18,280
+Scott: And, you know, I didn't understand any better.
+
+24
+00:01:18,380 --> 00:01:21,036
+Scott: But then, starting, you know, several years ago, maybe...
+
+25
+00:01:21,660 --> 00:01:23,500
+Rym: Yeah, something happened, and suddenly...
+
+26
+00:01:23,601 --> 00:01:24,849
+Scott: No, it was earlier than that.
+
+27
+00:01:24,889 --> 00:01:27,341
+Scott: It was maybe, like, 2000...
+
+28
+00:01:27,341 --> 00:01:31,980
+Rym: Well, the messaging from the CDC and the WHO also changed around flu shots.
+
+29
+00:01:32,200 --> 00:01:34,339
+Rym: And I forget what year it was, but there was a change.
+
+30
+00:01:34,541 --> 00:01:38,420
+Scott: I think it was maybe around 25th, 2014, 15, 16, somewhere around there, probably.
+
+31
+00:01:39,100 --> 00:01:39,193
+Scott: Yeah.
+
+32
+00:01:39,440 --> 00:01:41,600
+Scott: Is when I was like, oh, this is A, free.
+
+33
+00:01:42,261 --> 00:01:45,597
+Scott: B, and also, you know, good, right?
+
+34
+00:01:46,943 --> 00:01:48,820
+Scott: Not harmful in any way, only good.
+
+35
+00:01:49,121 --> 00:01:52,337
+Scott: And I'm not... I don't care about getting shots anymore.
+
+36
+00:01:52,357 --> 00:01:52,860
+Scott: They don't even hurt.
+
+37
+00:01:53,402 --> 00:02:00,711
+Rym: Yeah, but there was some point where they went from just being available, to being recommended, and then to being, like, officially recommended.
+
+38
+00:02:00,771 --> 00:02:02,360
+Rym: Everyone should get one as policy.
+
+39
+00:02:04,728 --> 00:02:05,539
+Rym: And that was a good call.
+
+40
+00:02:06,060 --> 00:02:07,105
+Rym: 'Cause now, we're moving forward.
+
+41
+00:02:07,125 --> 00:02:10,139
+Rym: Like, there's an RSV vaccine that they're gonna start giving kids.
+
+42
+00:02:10,442 --> 00:02:12,380
+Rym: There's that chickenpox vaccine that I really...
+
+43
+00:02:12,400 --> 00:02:16,920
+Scott: The RSV one, they said, like, old people, and it's like, well, they didn't tell me to get it, so I'm not gonna.
+
+44
+00:02:17,080 --> 00:02:18,040
+Scott: But if they did, I would.
+
+45
+00:02:18,360 --> 00:02:22,340
+Scott: But, so I'm just... I just go and get every vaccination that I'm told that I should get.
+
+46
+00:02:22,701 --> 00:02:22,962
+Rym: Yup.
+
+47
+00:02:23,784 --> 00:02:29,060
+Rym: And I really wish the chickenpox vaccine had existed when I was a kid, 'cause chickenpox sucked.
+
+48
+00:02:30,340 --> 00:02:32,900
+Scott: I mean, I barely remember the... I definitely had the chickenpox.
+
+49
+00:02:33,880 --> 00:02:35,426
+Rym: I have a few distinct memories.
+
+50
+00:02:35,547 --> 00:02:42,740
+Rym: I have this very clear memory of laying on the couch, and I remember what that couch smelled like, 'cause it was the couch the dogs usually used.
+
+51
+00:02:43,320 --> 00:02:44,759
+Rym: So it was like the couch that no one wanted to sit on.
+
+52
+00:02:44,800 --> 00:02:46,011
+Rym: I think I was, like, super young.
+
+53
+00:02:46,051 --> 00:02:47,040
+Scott: I might have been, like, three, four, five.
+
+54
+00:02:47,060 --> 00:02:48,167
+Rym: Oh, yeah, I was super young.
+
+55
+00:02:48,570 --> 00:02:50,099
+Rym: My brother and I both got it at the same time.
+
+56
+00:02:50,501 --> 00:02:53,900
+Rym: But that couch smelled funny, 'cause the dogs also used it all the time.
+
+57
+00:02:54,300 --> 00:03:01,640
+Rym: And whenever we were sick, I think our parents put us on that one, because, you know, if unfortunate kid-being-sick things happen, well, it's already the janky couch.
+
+58
+00:03:02,981 --> 00:03:13,598
+Rym: And I just remember really wanting to itch myself, and I had an oven mitt on my hand that prevented me from itching myself, and I was just rubbing as much as I could with the oven mitt, and my parents were like, "That's defeating the
+
+59
+00:03:13,618 --> 00:03:13,859
+Rym: point.".
+
+60
+00:03:14,563 --> 00:03:16,110
+Scott: I just remembered that I had a rash.
+
+61
+00:03:16,150 --> 00:03:17,919
+Scott: I don't remember anything else, but I had it.
+
+62
+00:03:18,623 --> 00:03:21,000
+Scott: But, yeah, it would have been much better to have a vaccine and not have that.
+
+63
+00:03:21,220 --> 00:03:22,164
+Rym: Yeah, never mind.
+
+64
+00:03:22,988 --> 00:03:25,740
+Rym: Now we have to get a shingles vaccine at some point, 'cause I don't wanna get shingles.
+
+65
+00:03:26,660 --> 00:03:27,382
+Scott: Definitely don't want that.
+
+66
+00:03:27,422 --> 00:03:32,720
+Scott: That hurts, like, it's supposed to hurt, like, you know, but no one's told me to get it, so I'll, when they tell me to.
+
+67
+00:03:32,980 --> 00:03:44,180
+Rym: So I actually had an interesting tech thing happen on my way home, and I don't know, I couldn't find it, 'cause, you know, Twitter's dead, so I didn't have anywhere to look to see if this was a thing, and Citi Bike doesn't seem to post, like, outages.
+
+68
+00:03:44,461 --> 00:03:48,280
+Rym: Like, I checked their website, and they don't really announce when there's outages.
+
+69
+00:03:49,020 --> 00:03:54,187
+Rym: And I opened a ticket, and they still haven't responded to it, but basically, so I've tried- Citi Bike service updates.
+
+70
+00:03:54,529 --> 00:03:54,751
+Scott: Nope.
+
+71
+00:03:55,133 --> 00:03:56,220
+Scott: That's not live status.
+
+72
+00:03:57,042 --> 00:03:57,223
+Rym: Yep.
+
+73
+00:03:57,264 --> 00:04:00,159
+Rym: There's no, like, "Is Citi Bike up and working or
+
+74
+00:04:00,219 --> 00:04:00,420
+Rym: not?".
+
+75
+00:04:00,500 --> 00:04:04,680
+Scott: There's one that will tell you, like, which stations are out of comm- you know, are, like, closed or whatever.
+
+76
+00:04:04,800 --> 00:04:06,219
+Scott: Yeah, but the app just does that, too.
+
+77
+00:04:06,300 --> 00:04:07,960
+Scott: Most of them because there's road work, right?
+
+78
+00:04:08,161 --> 00:04:08,482
+Scott: Yeah.
+
+79
+00:04:08,622 --> 00:04:14,080
+Rym: Like, a bunch near my officer clothes, 'cause they're finishing the rest of that whole Pershing Square, like, cleanup and park thing.
+
+80
+00:04:14,720 --> 00:04:21,940
+Rym: But anyway, so I leave work, and I go, uh, in the afternoon, a little early, 'cause I'm coming home, 'cause I'm tired from this flu shot, I wanted to take a nap.
+
+81
+00:04:23,181 --> 00:04:32,320
+Rym: And I get a Citi Bike out, and I start to ride it, and it's one of those white e-bikes, and I get a little bit down the road, and then suddenly, the wheels lock up, and its alarm starts going off.
+
+82
+00:04:33,701 --> 00:04:37,920
+Rym: And this wasn't, like, I stole it in a situation, this was just, like, it just out of nowhere did this.
+
+83
+00:04:38,400 --> 00:04:43,560
+Rym: But I notice someone else on a white e-bike behind me also happened to them.
+
+84
+00:04:44,560 --> 00:04:57,120
+Rym: So, we both kind of stopped, and we weren't that far away from a dock, so instead of being a- instead of just leaving it there, like I normally would do, I actually walked it over to the dock, and so did he, and I try to dock it, and the dock, like, doesn't light up normally.
+
+85
+00:04:57,601 --> 00:04:58,203
+Rym: But I put it in.
+
+86
+00:04:58,243 --> 00:05:04,040
+Rym: But it stays in the dock, but, like, the green light doesn't come on, and look at the app, and the app doesn't act like I have a Citi Bike out.
+
+87
+00:05:04,681 --> 00:05:05,924
+Rym: And the other guy does the same thing.
+
+88
+00:05:06,305 --> 00:05:11,600
+Rym: So I try to get another bike out, and it just sits there for a little while, and then denies me with the red light.
+
+89
+00:05:11,980 --> 00:05:15,520
+Rym: So I try another bike, and it also doesn't work, so I assume the dock's busted.
+
+90
+00:05:15,961 --> 00:05:22,320
+Rym: And I walk away and go to another dock, and no bikes work, and there's growing numbers of people all trying to get Citi Bikes and can't get them.
+
+91
+00:05:23,181 --> 00:05:32,380
+Rym: And as I give up on the fourth dock, and just start walking back to the subway, I notice there are white e-bikes laying around everywhere.
+
+92
+00:05:34,081 --> 00:05:43,500
+Rym: So, I don't know if Citi Bike went down, or just, like, Citi Bike in Midtown went down, something happened to Citi Bike, and I could not use a bike home, and I had to go into the subway.
+
+93
+00:05:44,320 --> 00:05:47,180
+Scott: I'm sure the Citi Bike employees are thrilled at this event.
+
+94
+00:05:47,440 --> 00:05:58,340
+Rym: Oh yeah, but it is really funny that the nature of an outage like that is if you have an e-bike, it will just die, and act like it was stolen.
+
+95
+00:05:58,880 --> 00:06:03,715
+Rym: Because they've told it that it's stolen, or it's lost its lease, or however the technology works.
+
+96
+00:06:03,775 --> 00:06:05,320
+Rym: I don't know how they implemented any of that stuff.
+
+97
+00:06:06,040 --> 00:06:09,971
+Scott: I don't know, what if you try to bike somewhere, like, the internet goes out, right?
+
+98
+00:06:10,032 --> 00:06:12,940
+Scott: And it can't reach the internet even though the network is working.
+
+99
+00:06:13,581 --> 00:06:14,463
+Scott: Actually, it could have been that.
+
+100
+00:06:14,483 --> 00:06:22,600
+Scott: It could have been just, like, the Citi Bike network is working, but whatever data provider in the area, Verizon, T-Mobile, who knows what they got in there.
+
+101
+00:06:23,322 --> 00:06:23,925
+Rym: Yeah, could have been.
+
+102
+00:06:23,965 --> 00:06:26,920
+Rym: Also, I don't know how any of it works, and I couldn't find any.
+
+103
+00:06:27,080 --> 00:06:30,800
+Scott: Like, if all the cell towers in that area cut power, that could, you know.
+
+104
+00:06:31,421 --> 00:06:33,491
+Rym: Yeah, I guess it depends on exactly how that works.
+
+105
+00:06:33,531 --> 00:06:35,240
+Rym: But anyway, that was my interesting thing that happened.
+
+106
+00:06:36,321 --> 00:06:38,187
+Rym: So, there's a lot of news.
+
+107
+00:06:38,207 --> 00:06:42,080
+Rym: We're only going to talk about a couple, because, you know, shows got to last a reasonable amount of time.
+
+108
+00:06:42,521 --> 00:06:46,519
+Rym: So, I'm going to link to an article, it's on TechCrunch, from a few days ago.
+
+109
+00:06:47,441 --> 00:06:59,500
+Rym: And it is a comprehensive list of all of the tech layoffs from companies that are at least above the line of a website like TechCrunch noticing them, which is a lower line than you might expect.
+
+110
+00:06:59,941 --> 00:07:03,628
+Rym: It's basically every layoff that's happened so far in 2023.
+
+111
+00:07:03,628 --> 00:07:10,340
+Rym: And it'll give you a sense of, it's interesting, because on one hand, I see a ton of tech companies struggling to hire.
+
+112
+00:07:11,560 --> 00:07:20,539
+Rym: Simultaneously, I see a ton of tech companies laying people off at a high rate, but not the highest rate I've ever seen, because Scott and I are in our 40s.
+
+113
+00:07:22,060 --> 00:07:25,931
+Rym: We've lived through multiple .com style booms and busts over the years.
+
+114
+00:07:26,112 --> 00:07:28,900
+Rym: I remember people being laid off from IBM when I was a kid.
+
+115
+00:07:29,140 --> 00:07:36,860
+Rym: Tech layoffs are not a new thing, but this feels like it's an accelerating bad year for tech layoffs, and there's a lot going on.
+
+116
+00:07:36,980 --> 00:07:40,088
+Scott: It's basically been constant layoffs, not just in tech, but everywhere.
+
+117
+00:07:40,549 --> 00:07:44,559
+Scott: And it's been going on for a while, to where it's like, "Oh, another
+
+118
+00:07:44,680 --> 00:07:44,760
+Scott: one.".
+
+119
+00:07:44,800 --> 00:07:47,585
+Scott: And it's like, "Haven't they been saying 'another one' for months
+
+120
+00:07:47,665 --> 00:07:48,327
+Scott: now?".
+
+121
+00:07:48,367 --> 00:07:51,713
+Scott: They just keep laying off constantly.
+
+122
+00:07:52,174 --> 00:07:55,380
+Scott: New game companies, tech companies, every kind of company.
+
+123
+00:07:55,660 --> 00:07:56,562
+Rym: Some of them were surprised.
+
+124
+00:07:56,582 --> 00:08:08,700
+Rym: There's a lot of stories of people who got through the arduous application process at maybe a big fang-type company, got hired, and then got fired and laid off before they even started.
+
+125
+00:08:09,061 --> 00:08:10,699
+Rym: There's a bunch of stories like that.
+
+126
+00:08:11,861 --> 00:08:18,437
+Scott: I always really don't like, it's like, come on, you have to at least get your shit together to where, you know, you're hiring and you're firing departments.
+
+127
+00:08:18,457 --> 00:08:19,560
+Scott: You need to be in communications.
+
+128
+00:08:19,740 --> 00:08:25,310
+Scott: So you're not, like, it's so weird, like companies that lay off, yet you go to their website and you see job postings.
+
+129
+00:08:25,350 --> 00:08:30,720
+Scott: It's like, if you're laying off people, there should be zero job postings on your website.
+
+130
+00:08:30,820 --> 00:08:40,200
+Scott: Because if you're trying to move people around from one role to another, you should do all the internal rejiggering that you can.
+
+131
+00:08:40,340 --> 00:08:52,020
+Rym: Yeah, you want to know something, depending on the state and the country you are in, many times, job postings, even for internal transfers, have to be published for a certain amount of time.
+
+132
+00:08:52,400 --> 00:08:58,340
+Scott: That's perfectly fine, but you should then get those up, fill the roles, then, right?
+
+133
+00:08:58,440 --> 00:09:09,220
+Rym: But you have to put a good faith effort, again, depending on where you are, I'm not a lawyer, that's not legal advice, to interview people who apply to those jobs, even if you have no intention of hiring them.
+
+134
+00:09:09,861 --> 00:09:10,543
+Scott: Yeah, of course.
+
+135
+00:09:10,683 --> 00:09:18,980
+Rym: Because you have to act like you have an intention of hiring them, even though, really, you just want to take Joey Jojo Shabadoo from the TPS department and moving him into the PTS department.
+
+136
+00:09:19,381 --> 00:09:24,199
+Scott: Yeah, but you might find that the person you interview is better than Joey Jojo Shabadoo, and that's perfectly fine.
+
+137
+00:09:24,219 --> 00:09:24,560
+Scott: That's good.
+
+138
+00:09:24,760 --> 00:09:29,629
+Rym: Of course, there is also the trouble of a lot of these jobs are not- I like those, I'm saying, I like those rules, right?
+
+139
+00:09:29,689 --> 00:09:30,932
+Scott: I know why there are postings.
+
+140
+00:09:31,012 --> 00:09:35,160
+Scott: I'm saying, you just have to work on your timing such that you sort your shit out.
+
+141
+00:09:35,200 --> 00:09:37,423
+Scott: I would zoom out for your timing.
+
+142
+00:09:37,443 --> 00:09:52,660
+Rym: We got to work on being fucking human beings to each other, and I am not about to say things were better in the old times, but there is a thing that was broadly better in the past in larger companies that is not that way anymore.
+
+143
+00:09:53,160 --> 00:10:14,260
+Rym: Now, then again, I cannot stress enough that business in the older times was not good, and a lot of things were still fucked up about capitalism, but generally, companies had a lot more slack and a lot more leeway in terms of day-to-day, week-to-week profits and nonsense, and a lot of companies would give employees who were being laid off a lot of notice.
+
+144
+00:10:14,881 --> 00:10:17,064
+Rym: There would be a lot more human conversations.
+
+145
+00:10:17,525 --> 00:10:27,960
+Rym: A lot of big companies would keep people around a lot longer than they needed them out of personal reasons, like humans involved in the process had a lot of discretion for how things went down.
+
+146
+00:10:28,901 --> 00:10:32,805
+Rym: A lot of humans didn't use that discretion for good, but it was at least there.
+
+147
+00:10:33,386 --> 00:10:47,180
+Rym: The difference today, I have found very profoundly, is that regardless of if humans would give that slack, it's moot, because no humans involved in these processes have any discretion to make that kind of decision anymore, at any company just about.
+
+148
+00:10:48,162 --> 00:10:54,658
+Scott: Well, I mean, if you think about it, the main difference is that not that there weren't shareholders back then, but today...
+
+149
+00:10:55,540 --> 00:10:56,800
+Rym: There weren't as many activist shareholders.
+
+150
+00:10:57,700 --> 00:11:00,925
+Scott: Right, but today, it's more all about the shareholders.
+
+151
+00:11:01,325 --> 00:11:07,834
+Scott: It used to be about the CEO wasn't someone who was put there by the board.
+
+152
+00:11:07,854 --> 00:11:11,820
+Scott: The CEO would be the person who started the company.
+
+153
+00:11:14,143 --> 00:11:34,400
+Scott: And when someone like that, if there's no shareholders to be beholden to, and you've made yourself wealthy, a lot of those people... It wasn't some sort of, I guess, generosity entirely speaking, but it was simply that the people that worked for them were their people.
+
+154
+00:11:36,003 --> 00:11:38,448
+Scott: It wasn't like, "Ah, I'm enriching
+
+155
+00:11:38,468 --> 00:11:39,069
+Scott: others.".
+
+156
+00:11:39,270 --> 00:11:41,254
+Scott: It's like, "I'm enriching my guys.
+
+157
+00:11:41,394 --> 00:11:42,236
+Scott: I'm a white guy.
+
+158
+00:11:42,256 --> 00:11:44,099
+Scott: These are my white guys that I've
+
+159
+00:11:44,119 --> 00:11:44,460
+Scott: hired.".
+
+160
+00:11:45,521 --> 00:11:50,080
+Scott: We're all getting rich together, us employees kind of deal.
+
+161
+00:11:50,940 --> 00:11:58,360
+Rym: Plus, you know, back then, a lot more companies had pensions, 401(k)s. In my personal opinion, the scam of the 401(k) didn't exist yet.
+
+162
+00:11:59,262 --> 00:12:07,460
+Scott: Right, so the profits of the company were there to enrich the employees and the people who worked there.
+
+163
+00:12:07,820 --> 00:12:16,960
+Scott: Whereas now, the profits of the company are there to enrich some investor who doesn't even know anyone who works at the company and just has some numbers somewhere.
+
+164
+00:12:18,541 --> 00:12:21,700
+Scott: So that doesn't give a shit about anyone who works there, the employees.
+
+165
+00:12:21,840 --> 00:12:28,600
+Rym: That also leads to an erosion of a lot of the, I guess, lubricant that kept communities working.
+
+166
+00:12:29,420 --> 00:12:40,820
+Rym: The example I always like to use is, in an older time, a company that was in a local place would basically sponsor a lot of kids' sports stuff and things in the community.
+
+167
+00:12:42,641 --> 00:12:49,718
+Rym: They put it under a marketing budget usually, but did it really impact whether or not that company sold more wrenches or whatever?
+
+168
+00:12:49,798 --> 00:12:50,460
+Rym: Probably not.
+
+169
+00:12:50,941 --> 00:12:53,068
+Rym: But they kind of just all did it anyway.
+
+170
+00:12:53,148 --> 00:12:57,160
+Rym: It was seen as just one of the aspects of being a good corporate citizen.
+
+171
+00:12:57,941 --> 00:13:02,620
+Rym: Again, not saying every company did it or even did it for good reasons, but that would happen a lot more.
+
+172
+00:13:02,780 --> 00:13:06,847
+Rym: Nowadays, a company would have to go to the shareholders and justify.
+
+173
+00:13:07,589 --> 00:13:11,896
+Rym: what return on investment will we get by spending $500 a year sponsoring that little league team.
+
+174
+00:13:14,983 --> 00:13:18,572
+Scott: Think about something like the Flintstones, which obviously is just a cartoon.
+
+175
+00:13:18,973 --> 00:13:20,798
+Scott: But you've got the boss guy.
+
+176
+00:13:20,838 --> 00:13:21,460
+Scott: What was his name?
+
+177
+00:13:23,280 --> 00:13:26,090
+Scott: Or I guess the Jetsons, because I know the guy's name was Mr.
+
+178
+00:13:26,110 --> 00:13:27,193
+Scott: Sprocket.
+
+179
+00:13:27,876 --> 00:13:29,220
+Scott: Same character, basically.
+
+180
+00:13:29,600 --> 00:13:30,934
+Scott: Same show, basically.
+
+181
+00:13:32,120 --> 00:13:32,922
+Scott: Same show, right.
+
+182
+00:13:32,982 --> 00:13:37,293
+Scott: But that guy is portrayed as an evil character.
+
+183
+00:13:37,333 --> 00:13:40,220
+Scott: He was the evil boss and the labor was good.
+
+184
+00:13:41,162 --> 00:13:44,890
+Scott: Flintstone and Jetson were good guys who were the laborers.
+
+185
+00:13:45,571 --> 00:13:46,774
+Scott: Those guys were evil.
+
+186
+00:13:46,914 --> 00:13:48,878
+Scott: They would overwork you, treat you poorly.
+
+187
+00:13:50,940 --> 00:13:55,909
+Scott: But even then, they were still people who still had moments of caretaking for their employees.
+
+188
+00:14:04,044 --> 00:14:12,980
+Scott: Companies like to say they're family, but there seemed to be a more genuine, occasional family-like thing that happened there.
+
+189
+00:14:13,040 --> 00:14:17,347
+Rym: We were hedging a lot here, but it was more like that in the past than it is now.
+
+190
+00:14:17,968 --> 00:14:24,960
+Rym: There are other toxic problems with the idea of company as family, but the human factor has just been removed in most cases.
+
+191
+00:14:27,081 --> 00:14:38,220
+Rym: And the other thing that's fascinating is who is being laid off is really interesting, because there is still a huge demand for technological labor across the board.
+
+192
+00:14:39,340 --> 00:14:53,980
+Rym: The real underlying factor, in my own opinion, it seems like it is that companies increasingly just cannot make money and thus cannot support the staff necessary to make the kinds of things that they would make.
+
+193
+00:14:54,742 --> 00:14:56,606
+Rym: That just seems to be what's happening everywhere.
+
+194
+00:14:56,987 --> 00:14:58,550
+Rym: Big companies overinvested.
+
+195
+00:14:58,971 --> 00:15:01,678
+Rym: Even look at all the news with all the drugstores.
+
+196
+00:15:01,698 --> 00:15:02,600
+Rym: They're all going out of business.
+
+197
+00:15:02,780 --> 00:15:05,748
+Rym: And they said it was because of shoplifting and now they're admitting that.
+
+198
+00:15:05,808 --> 00:15:07,773
+Rym: no, actually, we just don't make any money.
+
+199
+00:15:08,033 --> 00:15:10,540
+Rym: We're going out of business no matter what and nothing's going to stop that.
+
+200
+00:15:12,821 --> 00:15:13,181
+Scott: Yep.
+
+201
+00:15:13,201 --> 00:15:20,873
+Scott: Well, you know, I think there's also a lot of people who work at these places who are like us, right?
+
+202
+00:15:20,893 --> 00:15:25,020
+Scott: Or like me, definitely, who are not really contributing.
+
+203
+00:15:26,320 --> 00:15:33,494
+Scott: It's like if you actually are in money trouble, it's like the people who are pretending are not really your phone and an in.
+
+204
+00:15:33,875 --> 00:15:36,200
+Scott: It's like, is it wrong to get rid of them?
+
+205
+00:15:37,382 --> 00:15:48,100
+Rym: Well, arguably, it is wrong to get rid of them in a society where your entire existence depends upon gainful full-time employment and there is no other alternative that works.
+
+206
+00:15:49,440 --> 00:16:02,660
+Rym: That is a big part of why unions often operate the way they do because they're looking out for the workers as a collective, but they will effectively raise the cost of operating a company for everyone else.
+
+207
+00:16:03,321 --> 00:16:10,100
+Rym: But a company that doesn't have unionized workers is basically just exploiting its workers and has an unfair advantage over everyone else.
+
+208
+00:16:11,100 --> 00:16:16,053
+Rym: And everything else I could say that I'm not going to say because this would take over the entire show.
+
+209
+00:16:16,334 --> 00:16:18,640
+Rym: Capitalism is a failure and we need to do something about it.
+
+210
+00:16:19,040 --> 00:16:21,720
+Scott: Yeah, I mean, it's like it's a different story at every company, right?
+
+211
+00:16:22,461 --> 00:16:31,500
+Rym: But like Google, their layoffs were mostly laying off very senior people, like the most senior developers, the most senior product people.
+
+212
+00:16:31,961 --> 00:16:40,660
+Rym: They're laying off the people at the top, partly because I think entire product lines and entire areas of investment are just deemed not worth it anymore.
+
+213
+00:16:40,840 --> 00:16:43,585
+Rym: And I feel like they probably were never worth it.
+
+214
+00:16:43,686 --> 00:16:51,000
+Rym: They were just subsidized by vapor and dreams and unrealistic optimism about the way the market would go.
+
+215
+00:16:52,041 --> 00:16:56,620
+Scott: Yeah, I mean, there's a lot of companies that seem to just do things, right, that don't make money.
+
+216
+00:16:56,800 --> 00:17:00,340
+Scott: And when the economy is good and not fucked the fuck up, I mean, it's always fucked the fuck up.
+
+217
+00:17:01,441 --> 00:17:16,140
+Scott: When it's not as bad as it is now, companies can sort of just afford to do a bunch of things, even if those things aren't big profit and no one really is taking a close look at them or caring too much if they lose money because the overall picture is good.
+
+218
+00:17:16,220 --> 00:17:17,182
+Scott: The stock is going up.
+
+219
+00:17:17,222 --> 00:17:17,863
+Scott: Who cares?
+
+220
+00:17:18,444 --> 00:17:27,060
+Scott: And then when things are looking down, the stock is going down and the people at the top start to look around and they say, OK, which parts of this company don't actually make any money?
+
+221
+00:17:27,599 --> 00:17:27,800
+Scott: Right.
+
+222
+00:17:28,021 --> 00:17:29,063
+Scott: Let's get rid of them now.
+
+223
+00:17:29,805 --> 00:17:36,920
+Scott: And, you know, it sucks because like I think about the thing that I think about the most are the comic book artists, writers.
+
+224
+00:17:37,461 --> 00:17:37,721
+Scott: Right.
+
+225
+00:17:37,822 --> 00:17:38,322
+Scott: Whatever.
+
+226
+00:17:38,403 --> 00:17:48,780
+Scott: Who are always complaining, rightfully so, that it's an insanely hard amount of hard work to do that, especially on the frequent high page rate basis that Marvel, DC demand especially.
+
+227
+00:17:49,001 --> 00:17:49,161
+Scott: Right.
+
+228
+00:17:49,201 --> 00:17:50,526
+Scott: But also manga.
+
+229
+00:17:50,706 --> 00:17:50,927
+Scott: Right.
+
+230
+00:17:50,967 --> 00:17:54,920
+Scott: How many pages you got to do over there for no two cents a page or whatever.
+
+231
+00:17:55,960 --> 00:17:56,802
+Rym: Here's your half.
+
+232
+00:17:56,862 --> 00:18:02,555
+Scott: And it's like and it's like those people are working very, very hard for extensive hours, suffering.
+
+233
+00:18:02,615 --> 00:18:04,118
+Scott: Their health is suffering greatly.
+
+234
+00:18:04,138 --> 00:18:04,238
+Scott: Right.
+
+235
+00:18:05,160 --> 00:18:09,693
+Scott: Yet their compensation is minuscule, unfair relative to the amount of work they do.
+
+236
+00:18:10,114 --> 00:18:12,040
+Scott: They're actually working hard, unlike the tech people.
+
+237
+00:18:12,861 --> 00:18:14,082
+Scott: Right.
+
+238
+00:18:14,543 --> 00:18:16,986
+Scott: And yet their compensation is meager.
+
+239
+00:18:17,527 --> 00:18:22,973
+Scott: because the fact is they're there even if the companies were the best.
+
+240
+00:18:23,093 --> 00:18:28,420
+Scott: and Marvel and DC, Disney, whoever, Warner, whatever, you're the opposite of evil, which they aren't.
+
+241
+00:18:28,500 --> 00:18:29,062
+Scott: They are evil.
+
+242
+00:18:29,102 --> 00:18:35,040
+Scott: But if they weren't evil and they were doing things good, a comic book would cost like 20 bucks.
+
+243
+00:18:35,581 --> 00:18:37,885
+Scott: The comic books don't sell enough copies.
+
+244
+00:18:38,606 --> 00:18:46,280
+Scott: The thing that your hard work is producing something that does not itself bring in enough cash to pay you what you deserve.
+
+245
+00:18:46,640 --> 00:18:47,402
+Rym: And that gets into.
+
+246
+00:18:47,462 --> 00:18:49,246
+Scott: there's nothing we can do about that.
+
+247
+00:18:49,346 --> 00:18:56,000
+Rym: Short of social, the fundamental divide of in a fully capitalist society, there are only two ways to price labor.
+
+248
+00:18:56,541 --> 00:19:00,747
+Rym: It is either value based pricing or it is cost based pricing.
+
+249
+00:19:01,048 --> 00:19:05,455
+Rym: Value based pricing is what is the market value of that labor?
+
+250
+00:19:05,515 --> 00:19:08,620
+Rym: Like how much would people or society pay for that labor?
+
+251
+00:19:08,760 --> 00:19:11,407
+Rym: How much do people value that labor?
+
+252
+00:19:11,708 --> 00:19:15,860
+Rym: And then separately, cost based pricing is how much does it cost to make that thing?
+
+253
+00:19:16,621 --> 00:19:30,240
+Rym: And I think, I feel like a lot of things in American capitalism and western, actually global capitalism, cost a lot and are valued shockingly little by society.
+
+254
+00:19:30,900 --> 00:19:36,120
+Rym: And simultaneously there's a lot of things that are valued a lot, but actually cost relatively little.
+
+255
+00:19:36,721 --> 00:19:48,380
+Rym: And that extreme inversion of both sides of that, I feel like the way capitalism works, the pressures are sort of forcing everything into the wrong category of how you price it for society.
+
+256
+00:19:48,701 --> 00:19:50,928
+Scott: It costs me nothing to make a casino.
+
+257
+00:19:51,049 --> 00:19:53,999
+Scott: It costs me nothing to make a leap box app.
+
+258
+00:19:54,280 --> 00:19:55,985
+Rym: My day job is in capital markets.
+
+259
+00:19:56,005 --> 00:19:59,034
+Rym: You want to talk about something that basically just leeches money out.
+
+260
+00:19:59,134 --> 00:20:01,200
+Rym: It's like it adds momentum to everything.
+
+261
+00:20:02,181 --> 00:20:06,308
+Scott: It's like it costs us nothing to do this, but people will spend a lot of money on it.
+
+262
+00:20:06,629 --> 00:20:09,433
+Scott: And then to produce a comic book costs a lot.
+
+263
+00:20:09,454 --> 00:20:10,676
+Scott: It's such an enormous effort.
+
+264
+00:20:10,696 --> 00:20:13,120
+Scott: To produce a movie costs such an enormous effort.
+
+265
+00:20:13,641 --> 00:20:18,460
+Rym: To produce opium costs almost nothing compared to how much people are willing to pay for opium.
+
+266
+00:20:19,520 --> 00:20:26,876
+Scott: Right, but to produce a movie, to produce these artworks and scientific discoveries is enormous and yet people won't pay for them.
+
+267
+00:20:26,997 --> 00:20:28,540
+Scott: It's too expensive.
+
+268
+00:20:29,663 --> 00:20:31,150
+Scott: I'll pay you a dollar for that comic book.
+
+269
+00:20:31,471 --> 00:20:33,320
+Scott: It cost me a hundred dollars to make the comic book.
+
+270
+00:20:34,320 --> 00:20:39,420
+Rym: Look at how many people won't buy a video game unless it's on sale for a dollar, like myself included.
+
+271
+00:20:39,880 --> 00:20:40,266
+Scott: That's me.
+
+272
+00:20:40,409 --> 00:20:40,999
+Scott: That's me.
+
+273
+00:20:42,721 --> 00:20:54,340
+Rym: Alright, in some other news, Twitch has responded to a long chain of annoyance, complaints, and criticism and changed their simulcasting guidelines.
+
+274
+00:20:55,321 --> 00:21:00,388
+Scott: Yeah, so basically the idea is that, you know, we talk about the posse model.
+
+275
+00:21:00,428 --> 00:21:03,032
+Scott: You publish on your own website and you syndicate elsewhere.
+
+276
+00:21:03,112 --> 00:21:07,459
+Scott: But if you're live streaming video, that is more than just about anyone can deal with.
+
+277
+00:21:09,041 --> 00:21:13,512
+Scott: I could do it, but I'd have to pay for all this bandwidth and storage and whatever.
+
+278
+00:21:13,572 --> 00:21:14,495
+Scott: It would be expensive.
+
+279
+00:21:14,535 --> 00:21:16,640
+Scott: I would lose out to pay money to do that.
+
+280
+00:21:17,441 --> 00:21:30,660
+Scott: So the fact that someone else will help me stream video for free or even pay me to do it, that's like, well, you know, even though they're putting ads on it or whatever, and the fact that they'll share some of the money with me, it's like, it's hard not to take that deal.
+
+281
+00:21:31,820 --> 00:21:40,311
+Scott: The thing is, if you take that deal from Twitch, at least up until now, they would not let you simultaneously stream on another platform.
+
+282
+00:21:40,331 --> 00:21:48,180
+Scott: So you had to either only stream on Twitch or only stream on literally everyone else because no one else I think had that policy that I know of.
+
+283
+00:21:48,340 --> 00:21:53,987
+Scott: You could stream on YouTube and Facebook, wherever the hell the fuck Mixer, which died, right?
+
+284
+00:21:54,328 --> 00:22:04,000
+Scott: Any place that you can find, you could live stream in all those places, giving your audience a choice, Instagram, TikTok, a choice of where to watch you.
+
+285
+00:22:04,120 --> 00:22:08,568
+Scott: They could watch you wherever they felt like watching you and you could stream once and you're all good.
+
+286
+00:22:10,231 --> 00:22:15,100
+Scott: But Twitch said, hey, if you want to stream on Twitch, you can't stream anywhere else at the same time.
+
+287
+00:22:15,180 --> 00:22:17,883
+Scott: You could still have accounts on those other places, right?
+
+288
+00:22:17,903 --> 00:22:20,105
+Scott: You could stream sometimes YouTube, sometimes switch.
+
+289
+00:22:20,406 --> 00:22:22,648
+Scott: You could stream on Twitch and upload your VODs to YouTube.
+
+290
+00:22:23,008 --> 00:22:23,209
+Scott: Right.
+
+291
+00:22:23,269 --> 00:22:33,680
+Scott: But you can't have the live stream going on Twitch and YouTube or anywhere else at the same exact time because we want you to be focusing on us.
+
+292
+00:22:33,780 --> 00:22:33,940
+Scott: Right.
+
+293
+00:22:33,940 --> 00:22:39,785
+Rym: It's understandable why they need to make money because I want to point out Twitch has laid off at least 400 employees so far this year.
+
+294
+00:22:39,805 --> 00:22:41,026
+Rym: Right.
+
+295
+00:22:41,046 --> 00:22:45,609
+Scott: Because if they allowed that, then the idea would be like, well, every single person would do it.
+
+296
+00:22:46,430 --> 00:22:54,096
+Scott: And then now suddenly it's no longer a competition of which platform has the content people want to see if everyone is streaming everywhere.
+
+297
+00:22:54,436 --> 00:22:59,240
+Scott: Now it's who has the best app that makes that the users like the best.
+
+298
+00:22:59,340 --> 00:23:10,348
+Rym: And then Twitch, who are already basically subsidizing the concept of streaming full stop with this infrastructure, now just become invisible white labeled infrastructure for other people making money on their own.
+
+299
+00:23:11,228 --> 00:23:11,469
+Scott: Right.
+
+300
+00:23:11,729 --> 00:23:20,575
+Scott: But, uh, you know, they for some reason, I guess, decided to do a good guy move and have gotten rid of this policy that no one else that I know of had the same policy.
+
+301
+00:23:20,615 --> 00:23:21,616
+Scott: There probably is someone's.
+
+302
+00:23:21,796 --> 00:23:23,017
+Scott: the listener will let us know.
+
+303
+00:23:23,477 --> 00:23:24,998
+Scott: But they got rid of the policy.
+
+304
+00:23:25,178 --> 00:23:27,580
+Scott: So now you can simultaneously stream.
+
+305
+00:23:27,700 --> 00:23:32,624
+Scott: However, they have three, I guess, limits right on this.
+
+306
+00:23:32,724 --> 00:23:32,924
+Scott: Right.
+
+307
+00:23:32,944 --> 00:23:38,709
+Scott: So limit number one, which is sort of a common sense kind of limit.
+
+308
+00:23:38,809 --> 00:23:39,089
+Scott: Right.
+
+309
+00:23:39,189 --> 00:23:43,473
+Scott: Is that you can't be making Twitch like a lower quality deal.
+
+310
+00:23:43,653 --> 00:23:43,873
+Scott: Right.
+
+311
+00:23:43,913 --> 00:23:44,614
+Scott: It's like you got it.
+
+312
+00:23:44,654 --> 00:23:49,157
+Scott: You can't be like doing HD on YouTube and crapo quality on Twitch.
+
+313
+00:23:49,177 --> 00:23:52,380
+Scott: You have to give Twitch a fair shake.
+
+314
+00:23:52,460 --> 00:23:52,600
+Scott: Right.
+
+315
+00:23:52,700 --> 00:24:00,205
+Scott: And so that way the app will be what is competing for the user and not, you know, the fact that you're benefiting one over the other.
+
+316
+00:24:00,225 --> 00:24:04,708
+Rym: Now, the terms don't define any details or parameters at all.
+
+317
+00:24:04,788 --> 00:24:05,349
+Rym: It's it's.
+
+318
+00:24:05,869 --> 00:24:07,050
+Rym: it's so vague language.
+
+319
+00:24:07,150 --> 00:24:07,330
+Scott: Yeah.
+
+320
+00:24:07,350 --> 00:24:12,654
+Scott: The language on the page you're going to link is is too ambiguous, which is not great.
+
+321
+00:24:12,914 --> 00:24:17,737
+Scott: There might be legal language somewhere that is not ambiguous, but I don't know where that is.
+
+322
+00:24:17,777 --> 00:24:19,118
+Scott: It's not linked from this page.
+
+323
+00:24:19,158 --> 00:24:21,900
+Scott: So so that's that's understandable.
+
+324
+00:24:22,020 --> 00:24:23,021
+Scott: Why they would have that rule.
+
+325
+00:24:23,441 --> 00:24:28,665
+Scott: The second rule is that you shouldn't go tell your audience, hey, you should.
+
+326
+00:24:28,865 --> 00:24:32,247
+Scott: I know I'm simul streaming on five places, but really you should use YouTube.
+
+327
+00:24:32,607 --> 00:24:32,807
+Scott: Right.
+
+328
+00:24:33,268 --> 00:24:36,650
+Scott: Or here's a link to my to watch me on YouTube instead, everybody.
+
+329
+00:24:36,990 --> 00:24:40,352
+Scott: I'm just I'm just keeping the stream on Twitch to get you over to where I want you.
+
+330
+00:24:40,372 --> 00:24:41,213
+Scott: You can't be doing that.
+
+331
+00:24:41,253 --> 00:24:41,413
+Scott: Right.
+
+332
+00:24:41,433 --> 00:24:41,993
+Scott: You have to.
+
+333
+00:24:42,454 --> 00:24:49,699
+Scott: if you're going to be on Twitch, it's because you want to be on Twitch, not just because you want to scoop up people who found you on the Twitch search.
+
+334
+00:24:49,979 --> 00:24:50,219
+Scott: Right.
+
+335
+00:24:50,519 --> 00:24:51,760
+Scott: And get them to go somewhere else.
+
+336
+00:24:52,080 --> 00:25:01,029
+Rym: Now, granted, I suppose if you chose not to take the partner agreement, you could just use Twitch as a funnel into your other platform.
+
+337
+00:25:01,049 --> 00:25:06,034
+Scott: Well, I think that it used to be the partner agreement was what prevented you from simul streaming.
+
+338
+00:25:06,154 --> 00:25:08,417
+Scott: But now this is literally just terms of service.
+
+339
+00:25:08,457 --> 00:25:11,700
+Scott: So you're agreeing to these rules, everybody on Twitch, not just the partners.
+
+340
+00:25:14,200 --> 00:25:15,962
+Rym: So, yeah, well, because there is that fact at the bottom.
+
+341
+00:25:16,002 --> 00:25:20,405
+Rym: What if my partner agreement was terminated previously because I did the things that you're now allowing?
+
+342
+00:25:20,425 --> 00:25:21,325
+Rym: Will you let me back on?
+
+343
+00:25:21,385 --> 00:25:22,846
+Scott: Yeah, that's a. that's a separate.
+
+344
+00:25:22,947 --> 00:25:24,968
+Scott: that's separate from the actual thing itself.
+
+345
+00:25:25,028 --> 00:25:25,228
+Scott: Right.
+
+346
+00:25:26,189 --> 00:25:28,651
+Scott: But anyway, the third thing, which is the most vague.
+
+347
+00:25:29,091 --> 00:25:29,391
+Scott: Right.
+
+348
+00:25:29,471 --> 00:25:41,740
+Scott: That says you won't use third party services that combine activity from other platforms or services on your Twitch stream during your simulcast, such as merging chat or other features to ensure the Twitch community is included.
+
+349
+00:25:41,840 --> 00:25:44,062
+Scott: In the entirety of the experience of your live stream.
+
+350
+00:25:44,102 --> 00:25:45,322
+Scott: So it's like, well, wait a minute.
+
+351
+00:25:45,823 --> 00:25:50,646
+Scott: If I merge chat, wouldn't that be including you in the entirety of the experience?
+
+352
+00:25:50,726 --> 00:25:57,050
+Scott: If I keep a separate YouTube chat and Twitch chat out, I then neither one is getting the entirety of the experience.
+
+353
+00:25:57,090 --> 00:25:57,331
+Scott: Yeah.
+
+354
+00:25:57,471 --> 00:26:00,473
+Rym: And even say another one, you they call out chat specifically.
+
+355
+00:26:01,073 --> 00:26:11,160
+Rym: The Twitch simultaneously simulcast at minimum must be no less than the experience on the other platforms, including your engagement with the Twitch community, for example, via chat.
+
+356
+00:26:11,220 --> 00:26:15,053
+Rym: So if I even message the YouTube chat once, have I violated?
+
+357
+00:26:15,073 --> 00:26:15,715
+Rym: No, no, no.
+
+358
+00:26:15,735 --> 00:26:17,340
+Rym: What if I message them equally?
+
+359
+00:26:18,360 --> 00:26:25,487
+Scott: I mean, the wording is clearly I agree with you, ambiguous and not so that you could make those interpretations.
+
+360
+00:26:25,547 --> 00:26:27,810
+Scott: But the spirit of it is clearly they.
+
+361
+00:26:27,910 --> 00:26:37,760
+Scott: what they don't want is you to have simul streams on several places and like you only talk to the people who are on YouTube and you're just sort of Twitch is just over there.
+
+362
+00:26:37,760 --> 00:26:39,322
+Scott: You're not even looking at Twitch chat.
+
+363
+00:26:39,422 --> 00:26:40,864
+Scott: You're only looking at the YouTube chat.
+
+364
+00:26:40,884 --> 00:26:42,587
+Scott: You're not talking to the Twitch users.
+
+365
+00:26:42,967 --> 00:26:43,168
+Scott: Right.
+
+366
+00:26:43,388 --> 00:26:45,972
+Scott: You just stream in there off to the side or something.
+
+367
+00:26:46,032 --> 00:26:46,232
+Scott: Right.
+
+368
+00:26:47,093 --> 00:26:51,800
+Scott: But there are a lot of questions like, hey, a lot of people embed their chat in the stream.
+
+369
+00:26:52,401 --> 00:26:59,070
+Scott: And it's like if I show a combined chat in my stream, I'm not copying messages over into the different chats.
+
+370
+00:26:59,571 --> 00:26:59,852
+Scott: Right.
+
+371
+00:27:00,272 --> 00:27:05,580
+Scott: But because obviously they wouldn't want you to copy the Twitch chat messages over to YouTube because that's giving Google their data.
+
+372
+00:27:05,600 --> 00:27:10,025
+Rym: And they have a fact that someone asks, what if I combine them for for like for my own usage?
+
+373
+00:27:10,126 --> 00:27:13,790
+Rym: They explicitly say you're free to use tools like that for personal use.
+
+374
+00:27:14,091 --> 00:27:19,097
+Rym: The prohibition on third party tools applies only to content presented to viewers either on or off Twitch.
+
+375
+00:27:19,497 --> 00:27:21,500
+Rym: Anything you show to anyone is covered by this.
+
+376
+00:27:22,580 --> 00:27:22,880
+Scott: Mm hmm.
+
+377
+00:27:23,541 --> 00:27:24,362
+Scott: But I mean, it's still.
+
+378
+00:27:24,422 --> 00:27:26,083
+Scott: it's like, why shouldn't I be able?
+
+379
+00:27:26,183 --> 00:27:31,868
+Scott: it's like I can understand actually using the API and combining the chats in the chat as being a problem.
+
+380
+00:27:31,888 --> 00:27:39,534
+Scott: But so if I display the chat in the video, I can only show the Twitch chat in the video and not the YouTube chat in there.
+
+381
+00:27:39,614 --> 00:27:42,016
+Scott: Also, maybe I can have to I can.
+
+382
+00:27:42,236 --> 00:27:43,016
+Scott: I will combine them.
+
+383
+00:27:43,076 --> 00:27:44,938
+Scott: I'll have two separate chats in my video.
+
+384
+00:27:44,958 --> 00:27:47,580
+Rym: But are they not then combined in the video?
+
+385
+00:27:48,760 --> 00:27:50,021
+Scott: I guess they won't be combined.
+
+386
+00:27:50,041 --> 00:27:53,083
+Scott: They'll be like these two separate little boxes on my stream.
+
+387
+00:27:53,123 --> 00:27:53,584
+Scott: Yeah.
+
+388
+00:27:54,064 --> 00:27:54,284
+Scott: Right.
+
+389
+00:27:55,545 --> 00:27:57,667
+Scott: They don't they don't they're not explicit enough.
+
+390
+00:27:57,747 --> 00:28:08,295
+Scott: But clearly the spirit of it is that they don't want you ignoring the people who choose to use Twitch because that is a way to encourage them to use the other platform because you'll pay attention to.
+
+391
+00:28:08,335 --> 00:28:08,675
+Scott: Yeah.
+
+392
+00:28:08,835 --> 00:28:09,075
+Scott: Right.
+
+393
+00:28:09,415 --> 00:28:15,400
+Scott: It's like you have to pay attention to the users who are on Twitch so that they don't get pressured to leave.
+
+394
+00:28:15,540 --> 00:28:15,760
+Scott: Right.
+
+395
+00:28:16,040 --> 00:28:26,269
+Rym: I just wonder how long Twitch will continue to exist because Twitch really feels like another can't make money, heavily subsidized, struggling to figure out how to make money in this dystopian future.
+
+396
+00:28:27,209 --> 00:28:35,316
+Scott: Personally, I just hope that some of the things that I like to watch on Twitch simulcast on YouTube now so I can choose to watch them there because I prefer YouTube.
+
+397
+00:28:35,556 --> 00:28:37,678
+Rym: I really only watch streams on YouTube.
+
+398
+00:28:37,938 --> 00:28:40,160
+Rym: I don't even have a Twitch account anymore in heaven for many years.
+
+399
+00:28:42,181 --> 00:28:46,924
+Scott: I mean, you know, I used there was a time where I was going to Twitch a lot, but that time is over.
+
+400
+00:28:48,125 --> 00:28:49,786
+Scott: But I go there occasionally.
+
+401
+00:28:50,187 --> 00:28:50,867
+Rym: Well, you know what it was.
+
+402
+00:28:50,887 --> 00:28:52,589
+Rym: partly I do pay for YouTube.
+
+403
+00:28:52,689 --> 00:28:55,131
+Rym: So there's no ads, but I didn't pay for Twitch.
+
+404
+00:28:55,471 --> 00:28:56,452
+Rym: So streams would have ads.
+
+405
+00:28:56,472 --> 00:28:59,314
+Scott: Because Twitch paying for no ads isn't a good value.
+
+406
+00:28:59,334 --> 00:28:59,414
+Scott: Nope.
+
+407
+00:29:00,815 --> 00:29:07,120
+Rym: Especially because the VOD without ads would show up on YouTube like the next day for almost anything I cared about on Earth.
+
+408
+00:29:12,311 --> 00:29:15,393
+Rym: But anyway, things of the day.
+
+409
+00:29:15,493 --> 00:29:21,878
+Rym: So a while back, Emily and I watched Deep Space Nine all the way through when it was just like on Netflix.
+
+410
+00:29:22,959 --> 00:29:26,262
+Rym: And I had only ever seen the end of Deep Space Nine.
+
+411
+00:29:27,002 --> 00:29:34,228
+Rym: Partly just because when I was in high school, I was watching Next Generation, syndication, reruns, etc.
+
+412
+00:29:34,508 --> 00:29:36,210
+Rym: And DS9 always came on after TNG.
+
+413
+00:29:38,631 --> 00:29:39,711
+Scott: I've seen some of it.
+
+414
+00:29:39,792 --> 00:29:41,893
+Scott: And I know that it's a Star Trek.
+
+415
+00:29:42,093 --> 00:29:43,014
+Scott: It is a Star Trek.
+
+416
+00:29:43,334 --> 00:29:45,816
+Scott: I know that it is on like a space station.
+
+417
+00:29:45,856 --> 00:29:47,257
+Rym: Yeah, but it's not set on a ship.
+
+418
+00:29:47,317 --> 00:29:49,098
+Rym: They're on a space station.
+
+419
+00:29:49,418 --> 00:29:50,159
+Scott: Like a big ring.
+
+420
+00:29:50,419 --> 00:29:51,540
+Rym: In the aftermath of a big war.
+
+421
+00:29:51,560 --> 00:29:52,420
+Rym: Like they move into the space station.
+
+422
+00:29:52,441 --> 00:30:00,106
+Scott: And I knew that it would always either be on before the show I wanted to watch, in which case I'd like ignore it, or it'd be on after the show I wanted to watch, and then I turned the TV off.
+
+423
+00:30:00,246 --> 00:30:01,447
+Scott: That's what I know about that show.
+
+424
+00:30:01,547 --> 00:30:02,648
+Rym: So I tended to see it.
+
+425
+00:30:02,668 --> 00:30:05,790
+Scott: Oh, and it has the stereotype Jew guy at the bartender.
+
+426
+00:30:05,910 --> 00:30:10,855
+Rym: Oh yeah, Quark, who also like written and writing and acting by Jewish people.
+
+427
+00:30:10,915 --> 00:30:13,137
+Rym: So there's a complicated discourse around that character.
+
+428
+00:30:13,477 --> 00:30:15,419
+Scott: Yeah, but that's the only other thing I know.
+
+429
+00:30:16,440 --> 00:30:18,922
+Rym: That character is continued, so he is in the new Lower Decks.
+
+430
+00:30:19,283 --> 00:30:20,644
+Scott: Is it the same actor?
+
+431
+00:30:20,844 --> 00:30:22,266
+Rym: Yeah.
+
+432
+00:30:22,306 --> 00:30:26,610
+Scott: So the real actor from the old show is voice acting the cartoon character?
+
+433
+00:30:26,630 --> 00:30:26,730
+Scott: Yeah.
+
+434
+00:30:27,570 --> 00:30:33,540
+Rym: They actually got, so Kira and other characters, they had the original voice actors, or the original actors voice act the characters.
+
+435
+00:30:33,721 --> 00:30:36,165
+Rym: It's set like years after Deep Space Nine.
+
+436
+00:30:36,185 --> 00:30:38,108
+Rym: Like it's set in a more modern Star Trek era.
+
+437
+00:30:40,210 --> 00:30:40,531
+Scott: Okay.
+
+438
+00:30:41,393 --> 00:30:42,816
+Rym: Anyway, in fact you go to their home planet.
+
+439
+00:30:43,116 --> 00:30:44,760
+Scott: I'm sure the fans really love that.
+
+440
+00:30:45,081 --> 00:30:45,862
+Rym: I really love that.
+
+441
+00:30:47,045 --> 00:30:49,590
+Rym: The Deep Space Nine nostalgia episode was a really good episode.
+
+442
+00:30:50,191 --> 00:31:03,465
+Rym: Anyway, we were watching and there was a random episode where we paused it, we zoomed in, and sure enough the silverware they were using was the exact same silverware that I have.
+
+443
+00:31:03,505 --> 00:31:04,686
+Rym: That stuff was brought to RIT.
+
+444
+00:31:04,706 --> 00:31:07,890
+Rym: Like the wrought iron stuff with the little curlicues at the end.
+
+445
+00:31:08,690 --> 00:31:09,631
+Rym: My weird silverware.
+
+446
+00:31:09,651 --> 00:31:12,775
+Scott: You have a screenshot and then you have a photo of your silverware?
+
+447
+00:31:12,795 --> 00:31:17,741
+Rym: Yeah, so we paused it and sure enough they were using the exact silverware that I still have.
+
+448
+00:31:17,781 --> 00:31:19,563
+Scott: I want to see, it could be similar.
+
+449
+00:31:19,583 --> 00:31:22,526
+Scott: I need some video evidence.
+
+450
+00:31:22,646 --> 00:31:24,448
+Rym: I will link you to it and you will see.
+
+451
+00:31:24,488 --> 00:31:25,850
+Scott: I'm not denying it, I'm just saying.
+
+452
+00:31:27,690 --> 00:31:29,633
+Scott: Because that's really specific silverware.
+
+453
+00:31:29,673 --> 00:31:30,595
+Scott: It's not run of the mill.
+
+454
+00:31:30,856 --> 00:31:31,376
+Scott: It is.
+
+455
+00:31:31,457 --> 00:31:34,181
+Rym: So we're like, it's the same silverware.
+
+456
+00:31:34,221 --> 00:31:37,527
+Rym: And I remember thinking, I'm going to get a screenshot and make a whole blog post.
+
+457
+00:31:37,567 --> 00:31:38,148
+Rym: This will be funny.
+
+458
+00:31:38,168 --> 00:31:39,090
+Rym: I've got to share it with everyone.
+
+459
+00:31:39,430 --> 00:31:50,330
+Rym: And I tried to get a screenshot and this was right around when Netflix did the thing that prevents screenshotting and then I just gave up and I forgot what episode it was in and I didn't think about it again.
+
+460
+00:31:51,530 --> 00:32:09,190
+Rym: This website, my thing of the day, is called Star Trek Plus Design and these people are methodically finding every single prop in any Star Trek episode from any series that is something available to consumers and identifying it.
+
+461
+00:32:09,670 --> 00:32:15,558
+Rym: Like, this is this chair, this is this plate, this is this painting you could buy from Crate and Barrel.
+
+462
+00:32:16,359 --> 00:32:24,529
+Rym: And the silverware set was the Treble Clef Flatware by Gourmet Settings, designed in the 1990s.
+
+463
+00:32:26,271 --> 00:32:28,516
+Rym: And I found they have screenshots.
+
+464
+00:32:28,596 --> 00:32:32,524
+Rym: It's actually in three episodes and I didn't even notice one of the episodes it was in.
+
+465
+00:32:33,326 --> 00:32:34,990
+Rym: And it's the same fucking silverware.
+
+466
+00:32:36,135 --> 00:32:36,999
+Scott: Looks pretty close.
+
+467
+00:32:37,019 --> 00:32:39,349
+Scott: It's got the three prongs instead of four.
+
+468
+00:32:40,210 --> 00:32:44,856
+Rym: So now I got these screenshots, I can get additional screenshots and do a thing about it.
+
+469
+00:32:44,936 --> 00:32:47,760
+Rym: But this website has been fascinating.
+
+470
+00:32:48,240 --> 00:32:56,210
+Rym: I've just been looking at random props that they just clearly bought from like IKEA or something and used in a random episode.
+
+471
+00:32:56,630 --> 00:33:01,789
+Rym: Like, one episode had a weird toaster and Picard uses the toaster and the toast pops out.
+
+472
+00:33:02,432 --> 00:33:06,790
+Scott: I mean, that's a whole job is, you know, putting together this stuff for shows and movies.
+
+473
+00:33:07,070 --> 00:33:13,598
+Rym: But the funniest thing is on this website, they point out that toaster the toast doesn't pop out of.
+
+474
+00:33:13,658 --> 00:33:24,390
+Rym: That means that the prop department of Star Trek bought this toaster and then modified it to pop the toast out of the top because it doesn't fucking do that in real life.
+
+475
+00:33:25,071 --> 00:33:25,426
+Scott: That's right.
+
+476
+00:33:26,470 --> 00:33:28,133
+Rym: So this was a rabbit hole.
+
+477
+00:33:28,173 --> 00:33:29,175
+Rym: I went down pretty deeply.
+
+478
+00:33:29,496 --> 00:33:30,317
+Rym: It's a good website.
+
+479
+00:33:30,417 --> 00:33:32,100
+Rym: Well-designed, well-researched.
+
+480
+00:33:33,182 --> 00:33:35,906
+Rym: And there's no ads on it as far as I can see.
+
+481
+00:33:36,007 --> 00:33:38,030
+Rym: So good job, people who made this website.
+
+482
+00:33:39,190 --> 00:33:41,697
+Scott: Alright, so my thing of the day is this cute little video game.
+
+483
+00:33:41,877 --> 00:33:44,384
+Scott: You can beat this game like in a very, very short amount of time.
+
+484
+00:33:44,404 --> 00:33:46,530
+Scott: We're talking like minutes if you click really fast, right?
+
+485
+00:33:47,471 --> 00:33:53,622
+Scott: But it's basically a little adventure and you're just trying to go home from where you are, right?
+
+486
+00:33:54,082 --> 00:33:58,710
+Scott: And you're presented with a series of yes/no situations, right?
+
+487
+00:33:58,950 --> 00:34:00,775
+Scott: It's like, you meet an old lady in the woods.
+
+488
+00:34:01,236 --> 00:34:03,843
+Scott: Do you take what she's offering you or not?
+
+489
+00:34:03,903 --> 00:34:05,166
+Scott: Do you buy emotion or not?
+
+490
+00:34:05,427 --> 00:34:06,289
+Scott: Yes/no, yes/no.
+
+491
+00:34:06,870 --> 00:34:13,730
+Scott: But they add this little bit of spice, which is a little square backpack grid where you can manage your inventory.
+
+492
+00:34:14,810 --> 00:34:16,889
+Rym: inventory Tetris is one of my favorite things.
+
+493
+00:34:17,710 --> 00:34:19,454
+Scott: And for some of the choices, right?
+
+494
+00:34:19,614 --> 00:34:22,119
+Scott: You can't just, it'll be like a yes/no choice, right?
+
+495
+00:34:22,219 --> 00:34:25,125
+Scott: But for example, it's like, oh, do you want to buy a potion?
+
+496
+00:34:25,165 --> 00:34:25,726
+Scott: Yes or no?
+
+497
+00:34:25,766 --> 00:34:27,429
+Scott: Well, you can click no, no matter what.
+
+498
+00:34:27,530 --> 00:34:34,364
+Scott: But if you want to click yes, you have to grab a money bag from your inventory, drag it over to the yes button and then click it.
+
+499
+00:34:34,445 --> 00:34:36,750
+Scott: Otherwise you can't click yes because you got it right.
+
+500
+00:34:37,071 --> 00:34:42,500
+Scott: And you might have a few different choices of money items in your bag, you know, to send out over.
+
+501
+00:34:43,621 --> 00:34:48,590
+Scott: And you can play this several times to explore different branching paths because it's so quick and easy.
+
+502
+00:34:48,909 --> 00:34:49,650
+Scott: That's the whole game.
+
+503
+00:34:49,670 --> 00:34:50,933
+Scott: I beat it.
+
+504
+00:34:51,815 --> 00:34:52,235
+Scott: Enjoy.
+
+505
+00:34:52,255 --> 00:34:54,199
+Scott: And it plays in your browser.
+
+506
+00:34:54,379 --> 00:34:55,261
+Scott: No problem, right?
+
+507
+00:34:55,281 --> 00:34:56,262
+Scott: No money, no nothing.
+
+508
+00:34:56,563 --> 00:34:56,743
+Rym: Yep.
+
+509
+00:34:56,944 --> 00:34:59,548
+Rym: I tried to make it start and it's stuck preparing.
+
+510
+00:34:59,668 --> 00:35:00,790
+Rym: one out of two live on the show.
+
+511
+00:35:00,790 --> 00:35:01,552
+Rym: You have to wait a while.
+
+512
+00:35:01,572 --> 00:35:02,093
+Scott: It's downloading.
+
+513
+00:35:02,173 --> 00:35:03,436
+Rym: Okay, good to know.
+
+514
+00:35:03,536 --> 00:35:04,398
+Scott: It will download.
+
+515
+00:35:04,418 --> 00:35:05,801
+Scott: If it says preparing, just wait.
+
+516
+00:35:06,142 --> 00:35:06,543
+Scott: It'll come.
+
+517
+00:35:06,864 --> 00:35:09,028
+Rym: I will play this game and I think you all should too.
+
+518
+00:35:09,049 --> 00:35:09,670
+Rym: It looks really cute.
+
+519
+00:35:10,510 --> 00:35:10,871
+Scott: It's cute.
+
+520
+00:35:12,133 --> 00:35:15,459
+Rym: In the meta moment, the GeekNights Book Club book is all the Murderbot books.
+
+521
+00:35:15,799 --> 00:35:21,990
+Rym: I am about a third of the way through the last of the currently available published Murderbot books.
+
+522
+00:35:22,711 --> 00:35:26,697
+Scott: I have read all of them except for the one that's coming out like in some weeks, I guess.
+
+523
+00:35:27,198 --> 00:35:27,418
+Rym: Yep.
+
+524
+00:35:27,919 --> 00:35:34,870
+Rym: So when the one that comes out in some weeks comes out, we will read it and then we'll give you all some amount of time to read that one.
+
+525
+00:35:35,350 --> 00:35:39,836
+Rym: And then we're going to do the episode on the collected works about Murderbot.
+
+526
+00:35:40,017 --> 00:35:41,178
+Rym: by what, Martha Wells?
+
+527
+00:35:42,160 --> 00:35:43,421
+Rym: It's good stuff.
+
+528
+00:35:43,441 --> 00:35:45,344
+Rym: I don't know.
+
+529
+00:35:45,424 --> 00:35:49,550
+Rym: So far these have been a moderately refreshing science fiction series to read.
+
+530
+00:35:49,870 --> 00:35:53,914
+Rym: Partly because first person, not often done, let alone done well.
+
+531
+00:35:54,094 --> 00:35:56,196
+Rym: And I think first person works very well in this.
+
+532
+00:35:56,236 --> 00:35:58,037
+Rym: Like everything's through the perspective of Murderbot.
+
+533
+00:35:58,958 --> 00:36:09,447
+Rym: And I don't know, I'm a sucker for corporate dystopia of the alien/aliens type coupled with precursor technology.
+
+534
+00:36:09,467 --> 00:36:13,390
+Rym: It scratches a lot of itches that I personally care about in science fiction.
+
+535
+00:36:16,190 --> 00:36:16,832
+Rym: It's a lot to say.
+
+536
+00:36:17,252 --> 00:36:19,536
+Rym: We could definitely do a long episode about this when we do it.
+
+537
+00:36:19,556 --> 00:36:22,862
+Scott: The new GeekNights website is actually live right now.
+
+538
+00:36:23,283 --> 00:36:27,390
+Scott: It is not completed, but it is live because it's better than the old website.
+
+539
+00:36:27,510 --> 00:36:32,934
+Rym: And if the listener has any grievances, which many have been raised, raise them, continue to raise them.
+
+540
+00:36:33,234 --> 00:36:40,299
+Scott: The whole point is somebody, somebody already went to GitHub and posted an issue and they provided enough technical information.
+
+541
+00:36:40,339 --> 00:36:43,782
+Scott: And they were like, hey, you did the RSS chapter tags wrong.
+
+542
+00:36:43,822 --> 00:36:45,783
+Scott: It should be start and not start time.
+
+543
+00:36:46,263 --> 00:36:48,285
+Scott: And I fixed that shit like within a few minutes.
+
+544
+00:36:48,765 --> 00:36:55,750
+Scott: And I have been told that actually the podcast chapters like in advanced, sufficiently advanced podcast apps are working.
+
+545
+00:36:55,870 --> 00:36:59,733
+Rym: And I'm really glad to hear that because that was a pain in the ass for both of us.
+
+546
+00:37:00,554 --> 00:37:04,277
+Scott: So and so, yeah, we got the main functionality down.
+
+547
+00:37:04,297 --> 00:37:06,519
+Scott: There's something I've been working on today.
+
+548
+00:37:06,579 --> 00:37:09,322
+Scott: Try to get the things of the day to appear in more places.
+
+549
+00:37:09,342 --> 00:37:13,626
+Scott: You know, the links because they're not in RSS feeds right now.
+
+550
+00:37:14,546 --> 00:37:16,628
+Scott: I got to get the automatic forum post working again.
+
+551
+00:37:16,668 --> 00:37:18,650
+Scott: I guess we'll have to do a manual forum post again.
+
+552
+00:37:18,950 --> 00:37:22,052
+Rym: Yeah, there's a lot of stuff we got to do, but it's it's live.
+
+553
+00:37:22,413 --> 00:37:32,480
+Rym: And I got to say because, you know, my day job is enterprise, like with a capital E, which is a really interesting space to work in.
+
+554
+00:37:33,681 --> 00:37:45,790
+Rym: I can count on one hand without all my fingers the number of times I have ever been in a situation where something was migrated from a legacy platform to a new platform.
+
+555
+00:37:46,350 --> 00:37:51,334
+Rym: And that legacy platform was able to be shut down completely and walked away from.
+
+556
+00:37:52,215 --> 00:37:57,039
+Rym: that has happened so few times in my life that I still it's hard for me to believe that we're on the new website.
+
+557
+00:37:57,719 --> 00:37:57,920
+Scott: Yeah.
+
+558
+00:38:11,130 --> 00:38:15,757
+Rym: Learn and play with hearts and wizard.
+
+559
+00:38:15,797 --> 00:38:24,330
+Rym: We're going to teach you all how to play with hearts and wizard, because between the three you will learn every important core concept of trick taking games.
+
+560
+00:38:24,671 --> 00:38:34,430
+Rym: And if you go to this event for two hours, Scott and I are going to fairly personally teach you how to be good at trick taking games in a way that will not make you a world champion.
+
+561
+00:38:34,510 --> 00:38:36,953
+Scott: Not great because we're not the best, but quite good.
+
+562
+00:38:37,053 --> 00:38:50,230
+Rym: You will beat anyone who is not great at trick taking games and does not go to an event like this because we're going to give you very specific advice about how to force someone to eat that fucking queen in hearts.
+
+563
+00:38:51,673 --> 00:38:52,296
+Scott: Count the cards.
+
+564
+00:38:53,844 --> 00:38:54,910
+Scott: Desuit yourself quickly.
+
+565
+00:38:56,291 --> 00:38:59,275
+Rym: I will say I am real, real good at hearts.
+
+566
+00:38:59,355 --> 00:39:09,129
+Rym: Like hearts is a game that I think I play as perfectly as you can without completely counting cards because I'm just not willing to completely count cards.
+
+567
+00:39:09,349 --> 00:39:10,130
+Rym: You don't cheat at hearts.
+
+568
+00:39:10,590 --> 00:39:13,629
+Rym: The only game you cheat at is Euchre and we're not teaching Euchre.
+
+569
+00:39:14,245 --> 00:39:14,409
+Scott: Good.
+
+570
+00:39:15,210 --> 00:39:16,270
+Rym: Euchre's just better with.
+
+571
+00:39:18,390 --> 00:39:21,374
+Rym: Anyway, and on Saturday, December 2nd, two thirty p.m.
+
+572
+00:39:21,394 --> 00:39:24,038
+Rym: in the Crab God Theater, we're doing a brand new panel.
+
+573
+00:39:24,398 --> 00:39:33,730
+Rym: We're making a series of panels now following on from an old panel we did a long time ago that was very, very, very popular and was in a far too small room.
+
+574
+00:39:33,810 --> 00:39:34,551
+Rym: So there's video of it.
+
+575
+00:39:34,571 --> 00:39:36,335
+Rym: Thankfully, mastering game mechanics.
+
+576
+00:39:36,355 --> 00:39:41,965
+Rym: We are now going to take a bunch of game mechanics for many years to come and do entire panels about them.
+
+577
+00:39:42,005 --> 00:39:44,730
+Rym: So we are doing our first one worker placement.
+
+578
+00:39:45,151 --> 00:39:50,149
+Rym: If you want to hear me and Scott talk about just worker placement games for an hour.
+
+579
+00:39:50,731 --> 00:39:56,810
+Scott: Well, not even games, the mechanic worker worker, the other part of the game that is not worker placement.
+
+580
+00:39:56,850 --> 00:39:58,770
+Scott: We're not talking about that part, just the worker part.
+
+581
+00:39:59,030 --> 00:40:06,570
+Rym: I feel like we're going to spend about six minutes just talking about the baby in Agricola, not even any other part of Agricola, just the baby.
+
+582
+00:40:07,430 --> 00:40:08,433
+Scott: That's probably the first thing.
+
+583
+00:40:08,453 --> 00:40:10,239
+Scott: It's like we're probably half.
+
+584
+00:40:10,279 --> 00:40:12,666
+Scott: the panel will be like, what is worker placement, right?
+
+585
+00:40:12,706 --> 00:40:13,830
+Scott: History of worker placement.
+
+586
+00:40:14,111 --> 00:40:19,110
+Scott: And the other half of the panel will be like how to how to place the workers the best, how to win.
+
+587
+00:40:19,350 --> 00:40:19,631
+Scott: Yep.
+
+588
+00:40:19,812 --> 00:40:20,655
+Rym: Zoomed in.
+
+589
+00:40:20,735 --> 00:40:23,665
+Rym: Maybe the attributes of where you'll see there'll be a good panel.
+
+590
+00:40:23,685 --> 00:40:24,669
+Rym: I'm excited about this one.
+
+591
+00:40:26,370 --> 00:40:28,837
+Rym: And Magfest panel submissions closed.
+
+592
+00:40:29,178 --> 00:40:33,690
+Rym: There is a very good chance GeekNights will be at Magfest doing a bunch of content details TBD.
+
+593
+00:40:34,571 --> 00:40:36,395
+Rym: If you didn't get a hotel room for Magfest.
+
+594
+00:40:36,655 --> 00:40:37,978
+Rym: Well, good fucking luck.
+
+595
+00:40:38,038 --> 00:40:41,446
+Rym: Now, Magfest seems to be back in its full.
+
+596
+00:40:41,947 --> 00:40:43,210
+Rym: impossible to get hotels.
+
+597
+00:40:43,471 --> 00:40:49,190
+Scott: I went into the Magfest hotel lottery just to see and the queue of people was tens of thousands.
+
+598
+00:40:49,530 --> 00:40:58,970
+Scott: And I looked up online that the capacity, the number of rooms in the Gaylord National Harbor Hotel Convention Center place was much fewer than that number.
+
+599
+00:40:59,250 --> 00:41:04,330
+Scott: So most people will not have rooms in the Magfest main hotel.
+
+600
+00:41:04,711 --> 00:41:11,650
+Rym: It's an aside and it sucks because on one hand, I want as many people to be able to experience things like Magfest as possible.
+
+601
+00:41:12,111 --> 00:41:13,595
+Rym: But the physical world is limited.
+
+602
+00:41:13,635 --> 00:41:19,390
+Rym: Like there's nowhere that could host everyone who wants to go to Magfest at Magfest.
+
+603
+00:41:19,590 --> 00:41:27,770
+Rym: Nowhere exists that could host Magfest that Magfest would be capable of using and could take all the people who want to go to Magfest.
+
+604
+00:41:28,750 --> 00:41:34,245
+Rym: But at the same time, Magfest was great when it was all in one hotel.
+
+605
+00:41:35,208 --> 00:41:35,930
+Rym: Those old times.
+
+606
+00:41:36,711 --> 00:41:43,985
+Rym: I really wish there was a way to have a convention that was like those old Magfests, but did not have 100,000 people trying to get like 8,000 slots.
+
+607
+00:41:47,290 --> 00:41:49,210
+Scott: It wouldn't be 100,000.
+
+608
+00:41:49,210 --> 00:41:49,633
+Rym: I don't know.
+
+609
+00:41:49,713 --> 00:41:52,369
+Rym: How many people want to go to Magfest now?
+
+610
+00:41:53,570 --> 00:41:54,560
+Scott: Probably between 10 and 20K, I'd say.
+
+611
+00:41:55,912 --> 00:41:57,770
+Rym: I guess more between 30 and 40.
+
+612
+00:41:57,770 --> 00:41:59,389
+Scott: Or at least 10 and 20K rooms.
+
+613
+00:42:00,710 --> 00:42:00,810
+Scott: True.
+
+614
+00:42:00,930 --> 00:42:02,569
+Scott: Each room is going to have more than one person.
+
+615
+00:42:02,870 --> 00:42:03,071
+Scott: Yup.
+
+616
+00:42:03,591 --> 00:42:07,377
+Rym: But how many rooms are there in the actual building?
+
+617
+00:42:07,417 --> 00:42:15,390
+Rym: Because what made those old Magfest magical was that it was 24/7 for four days and everyone who was at that event was staying in the same fucking hotel.
+
+618
+00:42:15,750 --> 00:42:18,817
+Scott: The hotel contains 2,000 guest rooms, 95 event rooms, 53, 7 square feet, blah blah blah.
+
+619
+00:42:18,817 --> 00:42:19,419
+Scott: 2,000 guest rooms.
+
+620
+00:42:24,511 --> 00:42:25,630
+Rym: That is terrifying.
+
+621
+00:42:26,470 --> 00:42:26,560
+Scott: Yeah.
+
+622
+00:42:28,441 --> 00:42:28,710
+Rym: Alright.
+
+623
+00:42:30,530 --> 00:42:49,450
+Rym: So, in ancient, ancient times, like, once computers were on the internet and you could try, like you wanted to access your computer from somewhere else and that was possible without like special setups and special technology that are probably too old to really be worth talking about and derailing us.
+
+624
+00:42:49,550 --> 00:42:58,490
+Rym: Like, once I had a computer on the internet, the next thing I wanted to do was access that computer when I wasn't in my house and...
+
+625
+00:42:59,010 --> 00:42:59,070
+Scott: Yup.
+
+626
+00:42:59,090 --> 00:43:06,349
+Scott: Like, if I'm at school, it's like, you know, "Hey, you know, I gotta bring my data to school back and forth on floppy
+
+627
+00:43:06,369 --> 00:43:06,570
+Scott: disks.".
+
+628
+00:43:06,650 --> 00:43:09,159
+Scott: I did that up until like, you know, early 2000s.
+
+629
+00:43:09,199 --> 00:43:12,150
+Scott: I was still using floppy disks and, you know, I didn't have a zip drive.
+
+630
+00:43:12,190 --> 00:43:13,642
+Rym: Up until about 2003, I had a zip drive.
+
+631
+00:43:15,410 --> 00:43:17,510
+Scott: USB sticks weren't really a thing yet.
+
+632
+00:43:17,670 --> 00:43:18,954
+Rym: Yeah, I had a zip drive.
+
+633
+00:43:19,295 --> 00:43:19,977
+Rym: Z.I.P.
+
+634
+00:43:20,017 --> 00:43:21,661
+Rym: If you don't know what those are, well, thank God.
+
+635
+00:43:21,821 --> 00:43:22,684
+Rym: They were bad news.
+
+636
+00:43:25,850 --> 00:43:32,990
+Scott: But the only way that you were carrying your data around with you was either a laptop or some sort of disks of some kind.
+
+637
+00:43:34,131 --> 00:43:34,412
+Rym: Yup.
+
+638
+00:43:34,432 --> 00:43:40,530
+Rym: Data was, let alone applications, anything else you wanted to actually like do with your computer.
+
+639
+00:43:40,930 --> 00:43:50,230
+Rym: Like, there weren't really clouds yet, so a lot of the stuff I would want to do if I could access my computer were because I needed access to all the things that computer could do.
+
+640
+00:43:50,970 --> 00:43:54,822
+Rym: Like, couldn't take my save files and run them somewhere else on video games.
+
+641
+00:43:54,862 --> 00:43:57,310
+Rym: Like, save files barely existed and the way they were stored was nonsense.
+
+642
+00:43:57,911 --> 00:44:10,408
+Rym: There was, the world was very different and it was kind of a, unless you were a nerd with access to a lot of interesting tech, or very clever and technologically adept, there really wasn't a good way to do it.
+
+643
+00:44:11,449 --> 00:44:11,850
+Rym: At all.
+
+644
+00:44:13,310 --> 00:44:32,090
+Scott: It's your computer was, even though there was internet, and even if your computer didn't even have dial-up, if you had a cable modem or an always-on internet connection, it was still quite difficult to reach the computer at your home, even though it should be theoretically possible because that's on the internet and this computer you're sitting at in the library is on the internet.
+
+645
+00:44:32,794 --> 00:44:32,957
+Scott: Yup.
+
+646
+00:44:32,977 --> 00:44:33,850
+Scott: But, good luck.
+
+647
+00:44:34,390 --> 00:44:36,938
+Rym: And I remember a specific moment, a long, long time ago.
+
+648
+00:44:37,359 --> 00:44:38,863
+Rym: Scott and I did the thing we used to do.
+
+649
+00:44:38,903 --> 00:44:41,230
+Rym: We went to Wildwood for a week so there wouldn't be GeekNights.
+
+650
+00:44:41,710 --> 00:44:48,450
+Rym: But back when we were, I guess, insane and we did the show four nights a week, we also had a thing where we didn't want to skip a show.
+
+651
+00:44:48,871 --> 00:44:52,384
+Rym: So we got a bunch of guests to record episodes for while we were going to be out of town.
+
+652
+00:44:52,705 --> 00:44:54,170
+Rym: We scheduled them all up to go live.
+
+653
+00:44:54,650 --> 00:45:00,143
+Rym: And one of the episodes failed to post because I fucked something up when I set it up.
+
+654
+00:45:00,183 --> 00:45:02,269
+Rym: The MP3 was too big and it failed.
+
+655
+00:45:02,289 --> 00:45:02,870
+Rym: Something happened.
+
+656
+00:45:03,470 --> 00:45:06,178
+Rym: So we're in Wildwood and the Monday episode went live.
+
+657
+00:45:07,020 --> 00:45:09,045
+Rym: And then I think the Tuesday episode went live.
+
+658
+00:45:09,066 --> 00:45:10,590
+Rym: But one of the episodes didn't go live.
+
+659
+00:45:11,351 --> 00:45:26,330
+Rym: And there was literally no way for me to fix this short of driving home to my computer because there was no possible way to get the file I needed and then use the web to fix it and upload the episode.
+
+660
+00:45:27,891 --> 00:45:30,595
+Rym: Now, anyone can do remote access anywhere.
+
+661
+00:45:30,655 --> 00:45:32,659
+Rym: There's a million, million, million ways to do it.
+
+662
+00:45:33,520 --> 00:45:39,130
+Rym: And it comes down kind of, it's almost like, for many people, it's kind of an obsolete concept.
+
+663
+00:45:39,310 --> 00:45:54,570
+Rym: Because now, very few people have anything on their physical computer sitting in their home that they actually need access to because all the things they use their computer for are themselves online and most of anyone's interactions with the computer is through a web browser.
+
+664
+00:45:54,650 --> 00:46:01,150
+Rym: In fact, if you type remote access into Google or Bing right now, the top result is Chrome remote desktop.
+
+665
+00:46:01,951 --> 00:46:13,950
+Scott: Yeah, it's, you know, if you're storing all your stuff in, quote, the cloud, someone else's computer, it's like, well, that someone else's computer is in, you know, one of these cloud services, Azure, Oz, whatever.
+
+666
+00:46:14,210 --> 00:46:18,959
+Scott: They're on computers that are just have domains like the Google's computers or whatever.
+
+667
+00:46:18,999 --> 00:46:24,590
+Scott: And it's like, you know, no matter which computer or phone or device you're using on Earth, you can reach those computers.
+
+668
+00:46:25,191 --> 00:46:28,516
+Scott: And so what purpose is there of reaching your computer?
+
+669
+00:46:28,716 --> 00:46:37,430
+Scott: It's like, if you have your phone and you can, all your data is at Google and you can reach Google, why the fuck would you need to reach your desktop in your house?
+
+670
+00:46:37,811 --> 00:46:38,051
+Scott: Yep.
+
+671
+00:46:38,572 --> 00:46:40,196
+Scott: There's no reason to do that, right?
+
+672
+00:46:40,216 --> 00:46:44,204
+Scott: Because there's nothing on that computer at your house that you need so desperately.
+
+673
+00:46:44,945 --> 00:46:47,150
+Scott: You got your phone and your stuff is in the cloud, the end.
+
+674
+00:46:47,450 --> 00:46:47,570
+Scott: Yep.
+
+675
+00:46:47,831 --> 00:46:58,030
+Rym: And I would say right now that in the modern era, there are two classes of use cases for actually needing access to your actual physical desktop computer when you are not in your home.
+
+676
+00:46:59,350 --> 00:47:06,742
+Rym: Class one, you actually don't and you're just not technological or knowledgeable enough to not have to access that computer.
+
+677
+00:47:06,842 --> 00:47:11,109
+Rym: Like you could do whatever you're doing in a way where you don't need to access that physical computer.
+
+678
+00:47:11,129 --> 00:47:11,770
+Rym: You just don't know it.
+
+679
+00:47:12,270 --> 00:47:15,615
+Rym: Or two, you're a nerd with some sort of specialized use case.
+
+680
+00:47:15,756 --> 00:47:24,930
+Rym: Like there are things, there is data and things I might want to have access to or do something with that literally are only on my local network for specific reasons.
+
+681
+00:47:24,930 --> 00:47:25,110
+Rym: Yeah.
+
+682
+00:47:25,331 --> 00:47:27,435
+Scott: I got a data on my NAS, right?
+
+683
+00:47:27,496 --> 00:47:29,320
+Scott: And I'm not paying to store that shit in the cloud.
+
+684
+00:47:29,360 --> 00:47:33,910
+Scott: It's a bunch of giant video files, but I want to edit video and I forgot to bring the video file with me.
+
+685
+00:47:34,370 --> 00:47:34,670
+Scott: Yep.
+
+686
+00:47:35,171 --> 00:47:39,036
+Scott: Oh, I'm running, I'm running services from in my house.
+
+687
+00:47:39,076 --> 00:47:42,581
+Scott: There's a website that I'm not paying to host on a hosting platform.
+
+688
+00:47:42,621 --> 00:47:49,730
+Scott: I have the website running on a server in my house and I got to mess with it, which means I need to access the network in my house.
+
+689
+00:47:51,431 --> 00:47:52,635
+Scott: What else could there be?
+
+690
+00:47:53,959 --> 00:47:57,290
+Scott: I want to play a video game with somebody who's in my house.
+
+691
+00:47:58,631 --> 00:48:07,450
+Scott: But that video game is some ancient weird video game with land mode and it's not like Counter-Strike where you can just play against each other because there's cloud servers.
+
+692
+00:48:07,870 --> 00:48:14,210
+Rym: Though even in that case, if the game runs on Steam, Steam has actually provided some capabilities to solve that kind of problem.
+
+693
+00:48:14,972 --> 00:48:15,870
+Scott: They have indeed.
+
+694
+00:48:16,210 --> 00:48:18,990
+Rym: It works pretty well most of the time.
+
+695
+00:48:19,699 --> 00:48:20,409
+Scott: They sure have.
+
+696
+00:48:20,750 --> 00:48:23,250
+Rym: And where it hasn't worked has been for inexplicable reasons.
+
+697
+00:48:23,650 --> 00:48:25,933
+Scott: Another good example would be Steam stream, right?
+
+698
+00:48:25,953 --> 00:48:31,682
+Scott: It's like Steam streaming only works in your house, but it's like, Hey, I got to, I want to run the game on my computer.
+
+699
+00:48:31,702 --> 00:48:36,930
+Scott: that's in my house, but I want to play the game on my phone at a cafe somewhere, right?
+
+700
+00:48:37,710 --> 00:48:41,138
+Scott: It's like Steam stream is going to be like, Hey, I don't detect any other Steam device.
+
+701
+00:48:41,178 --> 00:48:44,286
+Scott: If you just try to use it straight up, it only looks on the land.
+
+702
+00:48:44,346 --> 00:48:46,030
+Scott: It won't see your computer at your house.
+
+703
+00:48:46,811 --> 00:48:52,370
+Scott: You have to connect your phone with like a VPN to your house, so then it can see your desktop and then do the Steam stream.
+
+704
+00:48:53,351 --> 00:48:58,870
+Rym: Now, the whole other set of use cases, I don't know if we want to talk about them today, are for work purposes.
+
+705
+00:48:59,011 --> 00:49:04,390
+Rym: Like if you have a work machine that you need remote access to, as opposed to a personal machine you need access to.
+
+706
+00:49:04,912 --> 00:49:06,122
+Rym: That could be a separate show.
+
+707
+00:49:06,182 --> 00:49:06,989
+Rym: It could be part of this.
+
+708
+00:49:08,691 --> 00:49:14,910
+Scott: I'm doing a 3d work and I pushed render and then I leave the house, but that render is just going to be on this desktop.
+
+709
+00:49:15,070 --> 00:49:19,585
+Scott: And then when I get to work, I need to reach home to grab it from that computer.
+
+710
+00:49:19,625 --> 00:49:21,270
+Scott: There's no auto upload configured.
+
+711
+00:49:21,690 --> 00:49:22,512
+Rym: I work for a company.
+
+712
+00:49:22,852 --> 00:49:32,830
+Rym: Some of the things I need to do, I can access via the internet in a very secure manner from any computer using a bunch of security, but there are some things that are more sensitive.
+
+713
+00:49:32,970 --> 00:49:35,975
+Rym: And actually as a person, I have personal use cases like this too.
+
+714
+00:49:36,376 --> 00:49:45,170
+Rym: Things that are sensitive enough to where they have security, but I explicitly make sure they are only accessible from within the network that I trust.
+
+715
+00:49:46,070 --> 00:49:47,352
+Rym: So, and my work does the same thing.
+
+716
+00:49:47,372 --> 00:49:58,330
+Rym: There are some things I can only access if I do the equivalent of a VPN or a secure remote desktop into a physical facility owned by the company and from there access that service.
+
+717
+00:49:58,972 --> 00:49:59,293
+Scott: All right.
+
+718
+00:49:59,313 --> 00:50:01,821
+Scott: So we talked about the reasons you would do this.
+
+719
+00:50:01,841 --> 00:50:03,687
+Scott: Let's talk about how to do it in the year 2023, right?
+
+720
+00:50:04,630 --> 00:50:10,230
+Scott: So the first way to do it in the year 2023 is somehow get a static IP address for your house, right?
+
+721
+00:50:10,610 --> 00:50:18,970
+Scott: If you can get a static IP address for your house, then you can just configure your router to intentionally expose some services and not others.
+
+722
+00:50:19,491 --> 00:50:25,450
+Scott: And as long as those exposed services are secure, you can use those services to access your home network properly.
+
+723
+00:50:25,530 --> 00:50:28,810
+Scott: For example, like an SSH tunnel or a VPN.
+
+724
+00:50:29,830 --> 00:50:33,921
+Rym: If you have a static IP, you can literally just configure your network and all your servers.
+
+725
+00:50:34,222 --> 00:50:36,107
+Rym: You can expose them publicly to the internet.
+
+726
+00:50:36,187 --> 00:50:37,170
+Rym: You can do a lot.
+
+727
+00:50:38,030 --> 00:50:38,090
+Scott: Yep.
+
+728
+00:50:38,110 --> 00:50:39,335
+Scott: You get your smart firewalls.
+
+729
+00:50:39,355 --> 00:50:43,750
+Scott: You just got to protect yourself because you don't want to let just any shmo into your home network, right?
+
+730
+00:50:43,790 --> 00:50:47,930
+Scott: You have to put up a big beefy wall of correctness in front of that.
+
+731
+00:50:48,830 --> 00:50:54,150
+Scott: The second thing, just as close to being as simple, you have an IP address that changes, but not too often.
+
+732
+00:50:54,631 --> 00:50:58,543
+Scott: And you actually go through the effort of using dynamic DNS, however that works today.
+
+733
+00:50:58,583 --> 00:50:59,767
+Scott: It's always been a mess.
+
+734
+00:50:59,827 --> 00:51:00,710
+Scott: It always will be a mess.
+
+735
+00:51:01,452 --> 00:51:01,833
+Rym: Yep.
+
+736
+00:51:01,874 --> 00:51:05,090
+Rym: Find two how-to guides and between the two of them, you'll get it to work.
+
+737
+00:51:05,130 --> 00:51:08,849
+Scott: You might have to pay a service to help you or something, but some sort of dynamic DNS.
+
+738
+00:51:09,850 --> 00:51:16,446
+Scott: And then, okay, your IP address changes, but you can always visit scottshouse.dynamicdns.com.
+
+739
+00:51:18,832 --> 00:51:25,010
+Scott: And that will go to your house and you'll get the IP address of your house where the same setup is existing and now you can access your house.
+
+740
+00:51:25,770 --> 00:51:37,230
+Rym: Now, that still depends on what are you going to do with that access because if you are running nerdy server type stuff, direct access means I SSH directly into the thing I want to futz with.
+
+741
+00:51:37,691 --> 00:51:45,430
+Rym: But say you got a Windows desktop, you probably need to set up some sort of remote access desktop like RDP or Chrome remote access.
+
+742
+00:51:45,570 --> 00:51:51,489
+Rym: You need something to give you UI access, like a service to hit to do something with.
+
+743
+00:51:53,792 --> 00:51:59,050
+Scott: Alright, now your third option is that you basically enlist the help of the cloud.
+
+744
+00:51:59,390 --> 00:52:02,762
+Scott: It's like, okay, my home stuff is completely sealed off.
+
+745
+00:52:02,982 --> 00:52:05,110
+Scott: There's no way to directly connect to my house.
+
+746
+00:52:05,852 --> 00:52:08,903
+Scott: It's normal router with the normal configuration, NAT router.
+
+747
+00:52:09,204 --> 00:52:11,150
+Scott: There's no exposed ports whatsoever.
+
+748
+00:52:12,251 --> 00:52:17,290
+Scott: Even if I know the IP address and it never changes, I can't get in that way, which is good for security.
+
+749
+00:52:17,890 --> 00:52:18,532
+Scott: So what do we do?
+
+750
+00:52:18,592 --> 00:52:20,375
+Scott: is we enlist some cloud assistance.
+
+751
+00:52:20,656 --> 00:52:27,350
+Scott: We get some other point out in the cloud somewhere, someone else's computer, or you host your own computer with a colo, I guess, I don't know.
+
+752
+00:52:27,770 --> 00:52:37,370
+Scott: But some other computer on the internet that's accessible from anywhere and your home computers connect to that computer with some sort of VPN.
+
+753
+00:52:38,350 --> 00:52:41,942
+Scott: And then your remote device also connects to that remote computer.
+
+754
+00:52:42,363 --> 00:52:44,570
+Scott: And now you sort of have a link to go through.
+
+755
+00:52:44,670 --> 00:52:51,770
+Scott: So it's like, okay, I can't connect directly to my house, but my home computer is always connected with a VPN to this computer.
+
+756
+00:52:52,111 --> 00:52:54,936
+Scott: And so am I with, from wherever I am in the world.
+
+757
+00:52:55,077 --> 00:52:56,840
+Scott: And now I can reach my home.
+
+758
+00:52:56,921 --> 00:52:59,466
+Scott: So tail scale is a really popular thing.
+
+759
+00:52:59,506 --> 00:53:01,430
+Scott: that does this with WireGuard these days.
+
+760
+00:53:02,930 --> 00:53:13,390
+Scott: It's very, very, it's shockingly easy to use, which is why I think, you know, I didn't know what it was and then I used it and I was like, oh, this is so easy and simple and mostly free.
+
+761
+00:53:14,492 --> 00:53:16,397
+Scott: I can see why this has become a thing, right?
+
+762
+00:53:16,517 --> 00:53:22,150
+Scott: It's like, you just, any device you have, you just connect to tails, your own tail scale virtual network.
+
+763
+00:53:22,690 --> 00:53:26,840
+Scott: And now it's like you have this other LAN that doesn't really exist.
+
+764
+00:53:27,241 --> 00:53:31,310
+Scott: But because tail scale servers are reachable from anywhere, you're good.
+
+765
+00:53:31,771 --> 00:53:36,601
+Scott: And the tail scale servers theoretically just sort of assist you in making a direct connection.
+
+766
+00:53:36,621 --> 00:53:40,530
+Scott: Like your traffic, I think mostly doesn't flow through tail scale.
+
+767
+00:53:40,611 --> 00:53:42,589
+Scott: I think sometimes it does, but mostly it doesn't.
+
+768
+00:53:42,870 --> 00:53:42,970
+Scott: Yeah.
+
+769
+00:53:42,990 --> 00:53:46,200
+Rym: These kind of services basically get around the need a big beefy wall.
+
+770
+00:53:46,220 --> 00:53:47,805
+Rym: You leave the beefy wall in place.
+
+771
+00:53:47,885 --> 00:53:49,349
+Rym: Like you just don't open up.
+
+772
+00:53:49,771 --> 00:53:51,097
+Scott: It's literally impossible.
+
+773
+00:53:51,178 --> 00:53:53,268
+Scott: You have no ports open to the internet whatsoever.
+
+774
+00:53:53,288 --> 00:53:53,690
+Scott: Right?
+
+775
+00:53:53,930 --> 00:53:54,391
+Rym: Yeah.
+
+776
+00:53:54,431 --> 00:54:04,309
+Rym: And because it's the idea of you want the thing in the two separate environments to reach out, to ask for a connection instead of listening for anyone to try to talk to it.
+
+777
+00:54:05,211 --> 00:54:05,371
+Scott: Yep.
+
+778
+00:54:06,012 --> 00:54:09,877
+Scott: You just sort of have this third party assistant out there.
+
+779
+00:54:10,017 --> 00:54:12,300
+Scott: that doesn't, you're not storing your data in the cloud.
+
+780
+00:54:12,521 --> 00:54:19,450
+Scott: You're not running your services in the cloud, but you, all your separate devices all around the world can connect.
+
+781
+00:54:19,990 --> 00:54:26,149
+Scott: And you know, this one sort of orchestrator traffic director can help them make secure connections to each other.
+
+782
+00:54:27,391 --> 00:54:36,890
+Scott: You know, and I guess the only, now your point of failure would be if somebody could authenticate with that service, they could get their device onto your network, your virtual network and then access everything.
+
+783
+00:54:37,710 --> 00:54:39,172
+Rym: And most services work like that.
+
+784
+00:54:39,212 --> 00:54:51,948
+Rym: Like even Chrome remote desktop looks like you're, you use a code and it does some stuff, but Google's just the cloud server sitting in the middle, bridging the gap between wherever you are in Chrome and wherever your computer is.
+
+785
+00:54:51,988 --> 00:54:53,290
+Rym: that's running Chrome remote desktop.
+
+786
+00:54:54,011 --> 00:54:54,211
+Scott: Yep.
+
+787
+00:54:54,271 --> 00:54:54,792
+Scott: Precisely.
+
+788
+00:54:55,693 --> 00:55:01,579
+Scott: Um, now the final method, and this is, I may have talked about this as a news, but I've actually been using it for a while.
+
+789
+00:55:02,040 --> 00:55:05,584
+Scott: Um, and I'm kind of sad that the best implementation is cloud flare.
+
+790
+00:55:05,664 --> 00:55:10,710
+Scott: Cause I'd love to use one that isn't from that company, but their solution just works really, really well.
+
+791
+00:55:11,371 --> 00:55:16,581
+Scott: And this is the case where you want to host services that are open to the public, right?
+
+792
+00:55:16,661 --> 00:55:21,750
+Scott: I want to run a web server in my house and have people access it from around the world.
+
+793
+00:55:22,211 --> 00:55:27,700
+Scott: But I don't want to aim my DNS at the IP address of my house, even if it never changes, right?
+
+794
+00:55:27,820 --> 00:55:31,226
+Scott: I want to keep my house completely locked up, right?
+
+795
+00:55:31,246 --> 00:55:33,250
+Scott: So no packets can come directly to my house.
+
+796
+00:55:33,590 --> 00:55:34,572
+Scott: How is this possible?
+
+797
+00:55:34,592 --> 00:55:37,775
+Scott: Well, they have a product called cloud fair tunnel, which is shockingly free.
+
+798
+00:55:39,017 --> 00:55:46,306
+Scott: Um, and the way it works is you run this little demon app on a computer in your home network, right?
+
+799
+00:55:46,846 --> 00:55:50,090
+Scott: And that little app makes a VPN connection to cloud flare.
+
+800
+00:55:50,410 --> 00:55:50,671
+Scott: Okay.
+
+801
+00:55:51,412 --> 00:55:53,934
+Scott: So now there is a connection between you and cloud flare.
+
+802
+00:55:54,475 --> 00:56:07,290
+Scott: And so theoretically, if you configure this, people can now reach from anywhere, can now talk to cloud flare, and then cloud flare will talk to the service that is running in your house and expose the service in your house to the wider internet.
+
+803
+00:56:07,991 --> 00:56:19,466
+Scott: Uh, and the way you do this is you go to cloud flares website and you say, Hey, you know, that cloud flare demon running there, it sees a service at this host name relative to it.
+
+804
+00:56:19,626 --> 00:56:22,790
+Scott: And this, I, this, you know, port relative to it.
+
+805
+00:56:23,271 --> 00:56:32,523
+Scott: I want you to expose that service at this public, you know, space, this public DNS, this public port, right?
+
+806
+00:56:32,783 --> 00:56:33,745
+Scott: Make that connection.
+
+807
+00:56:34,085 --> 00:56:37,790
+Scott: And it, as long as it's running properly, it sure enough, it makes that connection.
+
+808
+00:56:38,310 --> 00:56:50,090
+Scott: So you could run like the Apache web server on your home network with port 80 exposed to only the local network or even only to the computer that is running the cloud flare demon tunnel thing.
+
+809
+00:56:50,931 --> 00:57:03,950
+Scott: And then out on cloud flare, you say, Hey, the cloud flare demon that's running there sees a on port 80 on this machine, Scott's web server, a service exposed that on my website.com.
+
+810
+00:57:04,871 --> 00:57:05,992
+Scott: And it happens.
+
+811
+00:57:06,053 --> 00:57:16,550
+Scott: Anyone who visits my website.com DNS will send them to cloud flares, IP address, cloud flare will see they're coming in and know that they're trying to go to my website.com.
+
+812
+00:57:17,131 --> 00:57:26,490
+Scott: And then it'll go down through the VPN to that little web service, forward it through the little tunnel app and bring the HTML all the way back and deliver it to the, to the person.
+
+813
+00:57:27,251 --> 00:57:30,295
+Scott: And, but your home network is still completely safe.
+
+814
+00:57:30,516 --> 00:57:30,756
+Scott: Right.
+
+815
+00:57:31,337 --> 00:57:33,520
+Scott: Uh, and that's a pretty powerful technology.
+
+816
+00:57:34,182 --> 00:57:36,305
+Scott: Many people, there's actually a GitHub link.
+
+817
+00:57:36,325 --> 00:57:39,410
+Scott: Someone's like collected a list of everyone who offers this kind of service.
+
+818
+00:57:40,211 --> 00:57:52,369
+Scott: Um, and the thing is most of them are only offering it in such a way where it's only useful for like, I'm doing web development work and I'm running a little web server locally and I want to show it to my client quickly.
+
+819
+00:57:52,389 --> 00:57:53,090
+Scott: Right.
+
+820
+00:57:53,490 --> 00:57:57,037
+Scott: The very few, pretty much cloud flare is the only easy one.
+
+821
+00:57:57,237 --> 00:58:00,123
+Scott: that's doing it to where I have a permanent service running.
+
+822
+00:58:00,784 --> 00:58:01,024
+Scott: Right.
+
+823
+00:58:01,305 --> 00:58:03,910
+Scott: That I want to actually be good and work and not have it.
+
+824
+00:58:04,330 --> 00:58:08,354
+Scott: Things change on it or have to use, I want to use my actual domain on it.
+
+825
+00:58:08,555 --> 00:58:23,310
+Rym: Well, plus I think what you're doing, like that kind of setup is going to be more important as parts of the internet and platforms that people use start to implode of being able to directly provide services at scale that are nerdy and local and fun.
+
+826
+00:58:24,431 --> 00:58:27,936
+Scott: I think the downside of this pattern, cause it's, it's an amazing pattern, right?
+
+827
+00:58:28,056 --> 00:58:36,909
+Scott: Besides the, uh, if the, if someone else offered this service besides cloud flare, that would solve a lot of the single point of failure problems.
+
+828
+00:58:37,150 --> 00:58:37,310
+Scott: Right.
+
+829
+00:58:38,151 --> 00:58:48,807
+Scott: Um, but I think the other problem is that even if you're, you know, your, your ISP is like cool with this or they can't detect it cause it's all just a VPN.
+
+830
+00:58:48,827 --> 00:58:50,390
+Scott: It looks like you're just VPN-ing over to work.
+
+831
+00:58:51,011 --> 00:59:00,170
+Scott: If you start doing high bandwidth stuff, you get a lot of visitors to your website that runs in your house, your regular old residential ISP, even if you have a lot of upstream.
+
+832
+00:59:00,190 --> 00:59:00,310
+Scott: Yeah.
+
+833
+00:59:00,351 --> 00:59:06,470
+Rym: Your, your Verizon files gig was symmetric gigabit is going to get cut the fuck off if you're hosting YouTube.
+
+834
+00:59:06,590 --> 00:59:15,725
+Scott: Even if you pay for the symmetric gigabit, if you start doing like live streaming video from your house, uh, you know, it's like you.
+
+835
+00:59:15,765 --> 00:59:18,990
+Scott: better have some sort of other thing out in front of that, like a CDN.
+
+836
+00:59:21,091 --> 00:59:21,312
+Scott: Right.
+
+837
+00:59:21,372 --> 00:59:27,601
+Scott: Because otherwise you're going to be putting out the full bandwidth per visitor from your house that, you know, get out of your architecture.
+
+838
+00:59:27,661 --> 00:59:27,862
+Scott: Right.
+
+839
+00:59:27,922 --> 00:59:33,310
+Scott: If you get a, even just a website, if peoples are visiting that website too much, that's going to be trouble.
+
+840
+00:59:33,930 --> 00:59:44,829
+Scott: So, um, but yeah, I think the other thing is a lot of people do want is to, you know, they're running like obviously the Plex piracy kind of server deals.
+
+841
+00:59:45,170 --> 00:59:45,370
+Scott: Right.
+
+842
+00:59:46,191 --> 00:59:50,617
+Scott: Um, and where you want to expose it to some people, but not all the people.
+
+843
+00:59:51,639 --> 00:59:59,910
+Scott: in which case, I think the tail scale sort of model where it's like you have a LAN where the limited number of people can get on the LAN and then you run services on this virtual LAN.
+
+844
+01:00:00,770 --> 01:00:03,094
+Scott: And one of those services is your piracy.
+
+845
+01:00:04,756 --> 01:00:07,180
+Scott: Uh, I think a lot of people do that exactly that way.
+
+846
+01:00:07,400 --> 01:00:07,581
+Scott: Right.
+
+847
+01:00:07,601 --> 01:00:13,550
+Scott: They have a Plex in their house, but people have a way to connect to it, um, without exposing it to the whole fricking internet.
+
+848
+01:00:15,250 --> 01:00:32,750
+Rym: So I guess the thing you should do if you think you need remote access to anything, just generally, because you're listening to this episode to the end, you didn't just turn it off when we started talking about this, is you need to really just define exactly in detail, what are you trying to accomplish and why.
+
+849
+01:00:35,431 --> 01:00:37,234
+Scott: And then that's, that's the same with everything.
+
+850
+01:00:37,715 --> 01:00:45,410
+Rym: I mean, that is, I could just record that and stick it to the end of literally every GeekNights episode, how to do anything, determine what you want to accomplish and why.
+
+851
+01:00:46,550 --> 01:00:47,451
+Scott: Yes, the end.
+
+852
+01:00:49,213 --> 01:01:03,389
+Scott: Uh, but yeah, I would recommend that in the year 2023 that you, you know, if you have truly sensitive things or like a reason to do things from your house, cost savings is a reason.
+
+853
+01:01:03,429 --> 01:01:04,770
+Scott: the cloud for tunnels free, right?
+
+854
+01:01:04,830 --> 01:01:12,145
+Scott: So if you have low traffic websites, you can host them for free, um, uh, and determine like if it's piracy, yeah, do that from your house.
+
+855
+01:01:12,185 --> 01:01:14,590
+Scott: Don't host your pirated movies on some cloud provider, right?
+
+856
+01:01:14,610 --> 01:01:20,443
+Scott: It's like, but if you don't need to do it from your house, doing it from your house is just a more of a pain in the ass.
+
+857
+01:01:20,724 --> 01:01:23,109
+Scott: So pay money to do it from the cloud and stuff.
+
+858
+01:01:26,390 --> 01:01:33,650
+Rym: This has been GeekNights with Rym and Scott special thanks to DJ pretzel for the opening music cat Lee for web design and Brando K for the logos.
+
+859
+01:01:33,891 --> 01:01:38,910
+Scott: Be sure to visit our website at frontrowcrew.com for show notes, discussion, news, and more.
+
+860
+01:01:39,230 --> 01:01:41,857
+Rym: Remember, GeekNights is not one, but four different shows.
+
+861
+01:01:41,997 --> 01:01:46,610
+Rym: SciTech Mondays, gaming Tuesdays, anime comic Wednesdays, and indiscriminate Thursdays.
+
+862
+01:01:47,010 --> 01:01:50,957
+Scott: GeekNights is distributed under a creative commons attribution 3.0 license.
+
+863
+01:01:51,398 --> 01:01:57,570
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows, it's actually recorded at night.
+
+864
+01:01:58,171 --> 01:02:19,230
+Rym: And the Patreon patrons for this episode of GeekNights are Alan Joyce, Linky G, Dread, Lily Tenebrae, Case Care, Makes Music, Christa Dodd, Christopher Orr, Clinton Walton, M Def Mac, Finn, Joel Hayes, Penny Reimer, Rebecca Dunn, Sam Erickson, Shervin Von Horl, and a bunch of people who are below the threshold probably to get access to that sweet Patreon RSS feed.
+
+865
+01:02:19,891 --> 01:02:21,775
+Rym: So yeah, keep giving us feedback on the website.
+
+866
+01:02:21,815 --> 01:02:22,998
+Rym: We're going to keep improving it.
+
+867
+01:02:23,879 --> 01:02:29,050
+Rym: Now that it's live, we can move a lot faster because we don't have to continuously also keep the old one running.
+
+868
+01:02:30,430 --> 01:02:40,510
+Rym: So for now, tonight, I'll just leave you with... People only say Ubuntu's for beginners because they want to feel superior.
+
+869
+01:02:42,210 --> 01:02:46,370
+Scott: I also say Ubuntu's for beginners because I also want to feel superior.
+
+870
+01:02:46,690 --> 01:02:47,973
+Scott: That's a nice what you got there.
+
+871
+01:02:48,214 --> 01:02:49,738
+Scott: Want me to turn it into a web server?
+
+872
+01:02:49,838 --> 01:02:54,510
+Scott: If you want to turn your old Pentium beige box into a web server, I got just the tool for you.
+
+873
+01:02:54,790 --> 01:02:55,808
+Scott: Have you heard of Linux?
+
+874
+01:02:56,410 --> 01:02:57,576
+Rym: I'd just like to interject for a moment.
+
+875
+01:02:57,596 --> 01:03:00,169
+Scott: What you're referring to as Linux is in fact GNU Linux.
+
+876
+01:03:00,490 --> 01:03:00,854
+Scott: Linux.
+
+877
+01:03:01,036 --> 01:03:01,603
+Scott: I mean GNU/Linux.
+
+878
+01:03:02,451 --> 01:03:02,855
+Scott: Linux.
+
+879
+01:03:03,239 --> 01:03:03,745
+Scott: I mean GNU/Linux.
+
+880
+01:03:04,530 --> 01:03:05,160
+Scott: I mean GNU+Linux.
+
+881
+01:03:06,210 --> 01:03:07,298
+Scott: These are GNU-tils.
+
+882
+01:03:07,641 --> 01:03:08,850
+Scott: That's not Linux's fault.
+
+883
+01:03:09,111 --> 01:03:10,133
+Scott: Linux is just a kernel.
+
+884
+01:03:10,314 --> 01:03:16,950
+Scott: That's the fault of GNOME, X11, GCC, libGC, KGB, KDE, GRUB, Java, Pac-Man.
+
+885
+01:03:17,110 --> 01:03:17,651
+Scott: No, the game.
+
+886
+01:03:17,772 --> 01:03:18,995
+Scott: The package manager is fine.
+
+887
+01:03:19,075 --> 01:03:24,730
+Scott: LibreOffice, Firefox, Pulse Audio, System D, Incompetence, System D, Nvidia.
+
+888
+01:03:25,871 --> 01:03:31,050
+Scott: At this point, GNU and Linux are just small parts of the System D operating system.
+

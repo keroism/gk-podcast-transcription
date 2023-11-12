@@ -1,0 +1,4116 @@
+﻿1
+00:00:09,260 --> 00:00:10,886
+Speaker 0: It's Monday July 14th.
+
+2
+00:00:11,709 --> 00:00:12,171
+Speaker 1: I'm rim.
+
+3
+00:00:12,191 --> 00:00:14,440
+Speaker 0: I'm Scott, and this is geek nides.
+
+4
+00:00:14,681 --> 00:00:17,800
+Speaker 0: Eventually we get to talking a bit about Scott's new iPhone.
+
+5
+00:00:25,911 --> 00:00:26,908
+Speaker 1: Let's do this.
+
+6
+00:00:30,893 --> 00:00:32,436
+Speaker 0: So for the past week at work.
+
+7
+00:00:32,476 --> 00:00:36,970
+Speaker 0: I've been confronted with a somewhat difficult and amusing problem.
+
+8
+00:00:37,231 --> 00:00:39,524
+Speaker 1: How difficult and amusing could it be?
+
+9
+00:00:39,585 --> 00:00:40,450
+Speaker 1: I'm not laughing yet.
+
+10
+00:00:40,731 --> 00:00:45,745
+Speaker 0: I'd complained a while ago about how I was having trouble with time synchronization in like this.
+
+11
+00:00:45,785 --> 00:00:48,995
+Speaker 1: like all you do is set clocks Professional clock setter.
+
+12
+00:00:49,016 --> 00:00:50,802
+Speaker 1: you get paid that much money to set clocks.
+
+13
+00:00:51,043 --> 00:00:53,150
+Speaker 0: actually there is a lot more to my job.
+
+14
+00:00:53,271 --> 00:01:00,669
+Speaker 0: But because I built the entire NTP infrastructure I also maintain it and improve it, but does it really have to be maintained or prove that?
+
+15
+00:01:00,749 --> 00:01:06,466
+Speaker 1: often I mean NTP is kind of this kind of thing where you set it up And you just leave it be for months and months and months for one.
+
+16
+00:01:06,526 --> 00:01:16,068
+Speaker 0: the only maintenance I do at all is what I have a report that gets generated that I wrote a script that does this periodically that figures out What NIST time servers stopped responding.
+
+17
+00:01:16,108 --> 00:01:19,740
+Speaker 0: because you know this changes their time servers up every now and then and a lot of times.
+
+18
+00:01:20,041 --> 00:01:22,472
+Speaker 0: Some this time servers just won't freakin work like.
+
+19
+00:01:22,512 --> 00:01:24,837
+Speaker 0: they'll just be broken for a month or so Mm-hmm.
+
+20
+00:01:25,000 --> 00:01:31,665
+Speaker 0: So I got to keep track of that to make sure that all the different time servers like the core time servers at least have Four or five NIST or isn't?
+
+21
+00:01:31,845 --> 00:01:35,317
+Speaker 1: isn't there a server you can use that does a DNS round-robin see?
+
+22
+00:01:35,377 --> 00:01:37,241
+Speaker 1: you never have to worry That?
+
+23
+00:01:37,282 --> 00:01:39,529
+Speaker 0: that would be completely beside the point.
+
+24
+00:01:39,569 --> 00:01:40,994
+Speaker 0: It would actually break NTP.
+
+25
+00:01:41,395 --> 00:01:41,676
+Speaker 1: why?
+
+26
+00:01:41,696 --> 00:01:49,833
+Speaker 0: for reasons I don't want to get into no But what you do is you point the server at like five or six NIST servers And I point them to DNS names the issues.
+
+27
+00:01:49,853 --> 00:01:51,060
+Speaker 0: just sometimes the servers go down.
+
+28
+00:01:51,100 --> 00:01:54,157
+Speaker 0: So I have a report that figures that out, and then I change them accordingly.
+
+29
+00:01:54,218 --> 00:01:56,363
+Speaker 0: That's the only Manual intervention.
+
+30
+00:01:56,383 --> 00:02:01,940
+Speaker 0: the system is otherwise run without a hitch and without a single point of intervention for me since I built it.
+
+31
+00:02:02,103 --> 00:02:03,040
+Speaker 1: So why is it?
+
+32
+00:02:03,560 --> 00:02:13,336
+Speaker 0: Okay, well the issue is like I said we want to have a lot of virtual servers now for like you know QA Testing all the nine kinds of things where we don't need a full-on server, but we don't.
+
+33
+00:02:13,356 --> 00:02:17,500
+Speaker 0: we want this kind of Virtualized environment around the VMware and all these other solutions.
+
+34
+00:02:17,600 --> 00:02:24,117
+Speaker 0: But as I discovered fully for basically you cannot have accurate time in a fully virtualized machine.
+
+35
+00:02:24,177 --> 00:02:25,199
+Speaker 0: It is just impossible.
+
+36
+00:02:25,219 --> 00:02:30,858
+Speaker 0: and What bothers me is that all the people who make virtual solutions are pretty upfront about that?
+
+37
+00:02:31,780 --> 00:02:32,925
+Speaker 0: Except VMware.
+
+38
+00:02:33,226 --> 00:02:35,255
+Speaker 0: they they dance around that issue.
+
+39
+00:02:35,296 --> 00:02:48,494
+Speaker 0: They say oh, yeah, it works Just fine just install VMware tools, and I've talked to a lot of their engineers And I've got escalated things all over the place and the end result is and if anyone wants to challenge me on this I'm willing to back it up.
+
+40
+00:02:49,120 --> 00:02:53,676
+Speaker 1: VMware can't do accurate time for shit alright, so you did a whole episode on this before.
+
+41
+00:02:53,736 --> 00:03:00,717
+Speaker 0: where's the new bits, so We're using Zen now, which does our para virtualization, and it's working real well perfect time.
+
+42
+00:03:00,858 --> 00:03:01,580
+Speaker 1: Zen's pretty good.
+
+43
+00:03:01,580 --> 00:03:05,999
+Speaker 1: There's one thing that's a little bit newer better Maybe than Zen, but Zen is where it's at right now.
+
+44
+00:03:06,160 --> 00:03:14,480
+Speaker 0: well Zen is awesome partly because it's the way redheads doing it now is with these kind of Standardized wrappers around it, so I don't need to learn Zen.
+
+45
+00:03:14,520 --> 00:03:24,845
+Speaker 0: I only need to know these red hat standardized things that it works really really well, but We the issue I had was that in order to decide for sure you know well Are we gonna do VMware?
+
+46
+00:03:24,885 --> 00:03:27,838
+Speaker 0: we're gonna do this like what is our rationale for our business decisions?
+
+47
+00:03:27,878 --> 00:03:28,240
+Speaker 0: and also?
+
+48
+00:03:28,980 --> 00:03:33,480
+Speaker 0: What are we going to tell VMware and see if we can kind of weasel a discount out of them on their bad time?
+
+49
+00:03:33,600 --> 00:03:34,043
+Speaker 0: System.
+
+50
+00:03:34,786 --> 00:03:36,294
+Speaker 0: so I wasn't just.
+
+51
+00:03:36,375 --> 00:03:37,400
+Speaker 0: oh, I know the time is bad.
+
+52
+00:03:37,480 --> 00:03:42,999
+Speaker 0: I was asked to provide a statistically verifiable measure of how bad the time was.
+
+53
+00:03:43,059 --> 00:03:47,220
+Speaker 0: now Riddle me this how do you tell how does a server?
+
+54
+00:03:48,161 --> 00:03:53,179
+Speaker 0: In and of itself know if its own time is bad if it can't trust its own hardware clock?
+
+55
+00:03:54,422 --> 00:03:59,899
+Speaker 0: It can't yes, so I was tasked with coming up with clever ways around this.
+
+56
+00:04:00,301 --> 00:04:00,723
+Speaker 1: What do you mean?
+
+57
+00:04:01,587 --> 00:04:02,069
+Speaker 1: you can't.
+
+58
+00:04:02,109 --> 00:04:06,755
+Speaker 1: unless you have some source of correct time You don't know if your time is correct.
+
+59
+00:04:06,816 --> 00:04:10,311
+Speaker 0: I mean first I wrote a script right on a server.
+
+60
+00:04:10,371 --> 00:04:12,700
+Speaker 1: time was correct at some other time.
+
+61
+00:04:13,500 --> 00:04:16,255
+Speaker 0: Then no no there's plenty of ways to do this all right.
+
+62
+00:04:16,416 --> 00:04:16,577
+Speaker 1: so
+
+63
+00:04:16,618 --> 00:04:34,066
+Speaker 0: first I wrote a clever script that ran on a server that knew the time and what it would do is Query the other server ask it what it thought the time was and made this nice sort of graph of how off the time got And that worked okay, but I ran into some like Asymmetric latency issues on the network.
+
+64
+00:04:34,467 --> 00:04:46,635
+Speaker 0: so all I did was I turned off all the BS and all the kind of clock catch-up Mechanisms and I just ran NTP tinker mode zero and I got these nice graphs And I figured out exactly how off the time we got.
+
+65
+00:04:46,936 --> 00:04:49,508
+Speaker 0: I figured out What was causing the time to get off.
+
+66
+00:04:49,548 --> 00:04:52,620
+Speaker 0: I figured out like what sorts of things made the time fall behind more or less?
+
+67
+00:04:53,502 --> 00:04:58,720
+Speaker 0: And I pretty much proved exactly like the differences between all the different systems, and that was fine.
+
+68
+00:04:59,322 --> 00:05:00,867
+Speaker 0: and then I was told all right.
+
+69
+00:05:00,908 --> 00:05:04,179
+Speaker 0: the last thing we need to do is figure out how bad it is on Windows.
+
+70
+00:05:04,199 --> 00:05:09,975
+Speaker 0: and Good God is it not easy to deal with Windows in time because Windows servers.
+
+71
+00:05:10,015 --> 00:05:10,596
+Speaker 0: Just don't care.
+
+72
+00:05:10,637 --> 00:05:11,339
+Speaker 0: What time it is.
+
+73
+00:05:12,404 --> 00:05:15,040
+Speaker 1: No, I mean you know what does Windows give a shit?
+
+74
+00:05:15,301 --> 00:05:24,754
+Speaker 0: Well it does for Kerberos, but the little-known secret is that while Kerberos requires accurate clocks Most Windows domains will pretty much just all the hosts.
+
+75
+00:05:25,276 --> 00:05:32,000
+Speaker 0: if the time is off We'll just kind of synchronize the time to the person they're trying to authenticate to and then authenticate.
+
+76
+00:05:32,282 --> 00:05:33,811
+Speaker 1: Yeah, cuz it's all about doing something.
+
+77
+00:05:33,831 --> 00:05:35,200
+Speaker 1: that gets the job done.
+
+78
+00:05:35,320 --> 00:05:40,080
+Speaker 1: And you know if you're someone who just wants to log in then that gets the job done.
+
+79
+00:05:40,160 --> 00:05:41,869
+Speaker 1: It logs you in and that's all they care about.
+
+80
+00:05:41,889 --> 00:05:44,843
+Speaker 0: so I finally figured out how to actually Deal with.
+
+81
+00:05:44,983 --> 00:05:49,138
+Speaker 0: you know you can run NTP on a Windows box, but there are some issues with that.
+
+82
+00:05:49,178 --> 00:05:57,500
+Speaker 0: so instead I figured out how to actually configure W32 time - you can actually tell that to point at an NTP server.
+
+83
+00:05:57,581 --> 00:06:00,180
+Speaker 0: And there's all these crazy internal options in the registry.
+
+84
+00:06:00,782 --> 00:06:11,929
+Speaker 0: So I figured all that out and I set all that up, and then I discovered the joy of Windows debugging and I enabled all 116 log levels of W32 time.
+
+85
+00:06:12,931 --> 00:06:15,639
+Speaker 0: and let me tell you there's some cryptic bullshit in there.
+
+86
+00:06:17,198 --> 00:06:26,146
+Speaker 0: But Basically if anyone is interested all I discovered was that if you run a Windows box in Zen It's fully virtualized.
+
+87
+00:06:26,166 --> 00:06:29,420
+Speaker 0: There's no such thing as paravirtualized windows in these sorts of situations.
+
+88
+00:06:29,681 --> 00:06:30,203
+Speaker 1: Well they have that.
+
+89
+00:06:30,243 --> 00:06:32,392
+Speaker 1: Microsoft has the new thing that what's it called?
+
+90
+00:06:32,432 --> 00:06:33,978
+Speaker 1: I forget, but it's it's a new thing.
+
+91
+00:06:34,239 --> 00:06:35,168
+Speaker 0: yes But that's separate.
+
+92
+00:06:35,188 --> 00:06:40,579
+Speaker 0: like if you're using Zen or VMware You can't have a paravirtualized system because you need access to the kernel.
+
+93
+00:06:40,599 --> 00:06:42,444
+Speaker 0: you need Linux only.
+
+94
+00:06:42,805 --> 00:06:44,970
+Speaker 0: well now you can run a Windows really just fine.
+
+95
+00:06:45,471 --> 00:06:48,940
+Speaker 0: the thing is it fully virtualizes it and under the covers.
+
+96
+00:06:49,242 --> 00:06:56,778
+Speaker 0: I actually like it a lot more than VMware, but It kept the time a little bit better than VMware in Windows, but it was still shit.
+
+97
+00:06:57,805 --> 00:07:02,248
+Speaker 0: So there's pretty much unless you use the Windows thing There's no way to keep accurate time at a Windows virtual machine.
+
+98
+00:07:02,288 --> 00:07:22,430
+Speaker 0: and after all this research my kind of here's the part you might My professional opinion this I have to clarify that this has I say nothing about the company VMware It's future or anything like that because there's a lot in the works for VMware besides this specific thing, but VMware is kind of crap.
+
+99
+00:07:22,490 --> 00:07:26,265
+Speaker 0: for server virtualization if you care about performance It's great.
+
+100
+00:07:26,305 --> 00:07:38,180
+Speaker 0: for desktop virtualization if you're like a developer And you need a bunch of just you know images to test your web stuff on it's great, but for running a server It's kind of ass and I think Zen is a lot better.
+
+101
+00:07:38,481 --> 00:07:46,769
+Speaker 1: Well, I think the thing is is that it's very few people who are running you know VMware that actually need performance.
+
+102
+00:07:46,929 --> 00:07:48,152
+Speaker 0: no are you kidding?
+
+103
+00:07:48,253 --> 00:07:49,536
+Speaker 1: or exact time?
+
+104
+00:07:49,616 --> 00:07:50,860
+Speaker 1: are you like that?
+
+105
+00:07:51,000 --> 00:07:53,319
+Speaker 0: You know how many giant corporations use?
+
+106
+00:07:53,940 --> 00:07:57,336
+Speaker 0: Gigantic VMware clusters to host all their servers?
+
+107
+00:07:57,376 --> 00:08:03,859
+Speaker 1: virtually yeah But those servers are like a web server, or you know something like that where VMware is just fine one?
+
+108
+00:08:04,241 --> 00:08:11,920
+Speaker 0: It's not and a lot of these people run into a lot of problems But they don't realize that the VMware time is what's causing the problems like what kind of problem?
+
+109
+00:08:13,161 --> 00:08:16,520
+Speaker 1: What's wrong with running of just a normal web server in a VMware?
+
+110
+00:08:16,960 --> 00:08:21,920
+Speaker 0: It depends on exactly how you've got got it set up, and I couldn't go into all the different possibilities.
+
+111
+00:08:22,100 --> 00:08:28,760
+Speaker 0: But depending on how the time is jumping and what's going on your logs might get out of sync or like web servers.
+
+112
+00:08:28,780 --> 00:08:31,411
+Speaker 0: They'll just crash because the like requests coming in are weird.
+
+113
+00:08:31,451 --> 00:08:33,639
+Speaker 0: if you're running an SSH or something it just won't work.
+
+114
+00:08:34,081 --> 00:08:47,700
+Speaker 0: The thing is most people just care about does the web page get served and it's pretty much gonna get sir actually No, a lot of people are using virtual servers for much more intensive things and there are ways to make these VMware's work better.
+
+115
+00:08:48,181 --> 00:08:50,832
+Speaker 0: But there's semi undocumented and kind of fiddly.
+
+116
+00:08:50,853 --> 00:09:05,675
+Speaker 0: but beyond that I've been you know I've used kind of all the VM all that VMware has to offer all their sort of Management systems and the hypervisor stuff and how to like do it and the good enterprise workflows And it doesn't really work so well.
+
+117
+00:09:05,736 --> 00:09:09,191
+Speaker 0: and under the covers It's kind of counterintuitive and crap and it's fiddly.
+
+118
+00:09:09,251 --> 00:09:21,630
+Speaker 0: and I got to say with Zen there's an image file or an image partition and one configuration file that is totally straightforward and Everything just works and it works so much better than VMware.
+
+119
+00:09:21,671 --> 00:09:26,740
+Speaker 0: so my professional recommendation if you're out there Do you need to use some sort of virtualization?
+
+120
+00:09:27,220 --> 00:09:29,710
+Speaker 0: You're probably better off with Zen or user mode Linux.
+
+121
+00:09:30,231 --> 00:09:32,460
+Speaker 1: well user mode Linux is sort of old and slow also.
+
+122
+00:09:32,480 --> 00:09:45,293
+Speaker 1: I mean our hosting that we use for you know our stuff our personal stuff is Switching from user mode Linux to Zen because that's mostly because all that what Zen has over virtual or up User mode is just that there's better management tools.
+
+123
+00:09:45,313 --> 00:09:50,829
+Speaker 0: basically yeah, oh Anyway, that's what I spent my day doing great.
+
+124
+00:09:52,335 --> 00:09:52,716
+Speaker 1: I don't know.
+
+125
+00:09:52,736 --> 00:09:53,740
+Speaker 1: do I have anything to say?
+
+126
+00:09:54,664 --> 00:09:56,712
+Speaker 1: Not really, let's get some news action going on.
+
+127
+00:09:56,752 --> 00:09:58,520
+Speaker 0: so I don't feel like you're getting enough sleep lately.
+
+128
+00:09:58,721 --> 00:09:59,847
+Speaker 1: How am I not getting enough sleep?
+
+129
+00:09:59,867 --> 00:10:00,108
+Speaker 0: I don't know.
+
+130
+00:10:00,128 --> 00:10:01,556
+Speaker 0: you've been cranky for the last few days.
+
+131
+00:10:01,616 --> 00:10:02,280
+Speaker 1: How am I cranky?
+
+132
+00:10:02,480 --> 00:10:03,266
+Speaker 0: I don't know just any.
+
+133
+00:10:03,528 --> 00:10:04,999
+Speaker 0: yo you poo-poo everything you're kind of.
+
+134
+00:10:09,162 --> 00:10:09,483
+Speaker 1: I don't know.
+
+135
+00:10:09,503 --> 00:10:12,634
+Speaker 1: I don't do anything different, and then just you know like every couple weeks.
+
+136
+00:10:12,855 --> 00:10:19,422
+Speaker 1: You'll be like hey Scott You're all cranky, and then the next week you won't say anything and then the week after that you might be cranky Next week.
+
+137
+00:10:19,442 --> 00:10:20,205
+Speaker 0: you weren't cranky.
+
+138
+00:10:20,646 --> 00:10:21,690
+Speaker 1: whatever it's like this week.
+
+139
+00:10:21,710 --> 00:10:22,894
+Speaker 0: You're cranky, but two weeks ago.
+
+140
+00:10:22,934 --> 00:10:23,456
+Speaker 1: Not cranky.
+
+141
+00:10:23,516 --> 00:10:25,283
+Speaker 1: You know you're all pointing out I'm cranky.
+
+142
+00:10:25,384 --> 00:10:27,757
+Speaker 0: Yes, I am at least I admit it.
+
+143
+00:10:29,061 --> 00:10:29,804
+Speaker 1: I'm not Denny.
+
+144
+00:10:30,065 --> 00:10:32,414
+Speaker 1: I don't have any weirdness going on all right.
+
+145
+00:10:32,494 --> 00:10:35,671
+Speaker 1: Yes, the only weirdness I have going on is being pestered by you.
+
+146
+00:10:35,711 --> 00:10:37,040
+Speaker 1: I guess you're not huffing.
+
+147
+00:10:38,740 --> 00:10:40,105
+Speaker 1: Yeah, yeah, not not.
+
+148
+00:10:40,266 --> 00:10:44,120
+Speaker 1: not with the huffing okay, and I'm puffing though definitely, okay.
+
+149
+00:10:46,142 --> 00:10:56,259
+Speaker 1: So I'm a huffer Jerry not a puffer, but I'm a huffer Alright, so today was like the e3 which I thought the e3 was dead, and I know it's my what.
+
+150
+00:10:56,279 --> 00:10:57,704
+Speaker 0: it wasn't Clearly not dead.
+
+151
+00:10:57,744 --> 00:11:01,720
+Speaker 0: it turned into this kind of exclusive thing that only the press cared about in the industry.
+
+152
+00:11:02,302 --> 00:11:03,205
+Speaker 1: Yeah, but it's still.
+
+153
+00:11:03,246 --> 00:11:06,578
+Speaker 1: it's not the big extravaganza used to be it's much more subdued.
+
+154
+00:11:06,598 --> 00:11:09,511
+Speaker 1: yet It you know it seems to be a little bigger than this.
+
+155
+00:11:09,612 --> 00:11:11,200
+Speaker 1: one seems to be a little bigger than the last one.
+
+156
+00:11:11,240 --> 00:11:21,839
+Speaker 1: There's more action more announcements that are significant you know and it really does seem like all the stuff that the professionals didn't want was offloaded to packs and such.
+
+157
+00:11:21,900 --> 00:11:27,720
+Speaker 1: so I Today they announced among other things not going to talk about the non gaming related.
+
+158
+00:11:28,163 --> 00:11:46,580
+Speaker 1: I'm not going to talk about the gaming related ones because it's not Tuesday But Microsoft announced that the Xbox is basically going to be able to do everything the Roku does If you have the you know live gold which if you have an Xbox You have the live gold because otherwise what's the point really?
+
+159
+00:11:47,762 --> 00:11:57,965
+Speaker 1: so this is pretty interesting now, I think because Suddenly people who buy Xboxes might be encouraged to subscribe to the Netflix If they haven't already.
+
+160
+00:11:58,266 --> 00:12:04,646
+Speaker 1: if they haven't already which I think a lot of people have and people with the Netflix's might go get Xboxes instead of Roku's.
+
+161
+00:12:04,666 --> 00:12:05,871
+Speaker 1: you know it's sort of like that old.
+
+162
+00:12:05,891 --> 00:12:08,160
+Speaker 1: because think about this right the ps2.
+
+163
+00:12:09,461 --> 00:12:18,607
+Speaker 1: Really in the United States the reason that the ps2 took off crazily was because it came out at a time When DVD had already won.
+
+164
+00:12:18,807 --> 00:12:20,473
+Speaker 1: people knew DVD was the winner.
+
+165
+00:12:20,553 --> 00:12:21,898
+Speaker 1: it was the next best thing.
+
+166
+00:12:21,938 --> 00:12:26,719
+Speaker 1: it was set But the DVD player hadn't covered the market.
+
+167
+00:12:26,759 --> 00:12:31,880
+Speaker 1: yet There are a lot of people who needed DVD players and wanted DVD players.
+
+168
+00:12:31,940 --> 00:12:34,274
+Speaker 1: They didn't have them yet, and they were expensive.
+
+169
+00:12:34,314 --> 00:12:36,625
+Speaker 0: not only were they expensive But there weren't like.
+
+170
+00:12:36,805 --> 00:12:38,190
+Speaker 0: there weren't even like knockoff brands.
+
+171
+00:12:38,230 --> 00:12:42,305
+Speaker 0: yet like the only ones that were out there were the kind of like Sony Super-expensive.
+
+172
+00:12:42,325 --> 00:12:43,108
+Speaker 0: check out my DVD.
+
+173
+00:12:43,168 --> 00:12:44,955
+Speaker 1: It's sort of like HD DVD players are.
+
+174
+00:12:45,015 --> 00:12:48,110
+Speaker 1: now there aren't $60 Players either.
+
+175
+00:12:48,372 --> 00:12:49,559
+Speaker 1: I mean blu-ray players.
+
+176
+00:12:50,061 --> 00:12:51,888
+Speaker 1: This is only expensive ones right?
+
+177
+00:12:52,169 --> 00:12:56,720
+Speaker 1: so DVD was like that and the ps2 came onto the scene And it was like two or three hundred bucks.
+
+178
+00:12:57,081 --> 00:13:00,110
+Speaker 1: But it was also a game console and a DVD player and it took over.
+
+179
+00:13:00,130 --> 00:13:05,131
+Speaker 0: in fact the first DVD player in my house Was a ps2 right.
+
+180
+00:13:05,292 --> 00:13:06,340
+Speaker 1: and Sony?
+
+181
+00:13:07,361 --> 00:13:09,348
+Speaker 1: Tried the same exact thing with a ps3.
+
+182
+00:13:09,388 --> 00:13:10,772
+Speaker 1: they use the same logic.
+
+183
+00:13:10,853 --> 00:13:11,434
+Speaker 1: you know which is.
+
+184
+00:13:11,655 --> 00:13:13,080
+Speaker 1: it wasn't a bad logic.
+
+185
+00:13:13,140 --> 00:13:14,425
+Speaker 1: You know it worked the first time.
+
+186
+00:13:14,465 --> 00:13:18,018
+Speaker 1: the problem was is that they didn't put out you know the blu-ray?
+
+187
+00:13:19,321 --> 00:13:19,361
+Speaker 1: Ps3.
+
+188
+00:13:19,783 --> 00:13:24,340
+Speaker 1: at a time when blu-ray had won everyone already wanted a blu-ray player.
+
+189
+00:13:24,400 --> 00:13:28,029
+Speaker 1: They just didn't own one yet because they were a little too expensive And they didn't buy them.
+
+190
+00:13:28,090 --> 00:13:28,291
+Speaker 1: yet.
+
+191
+00:13:28,332 --> 00:13:31,113
+Speaker 0: see at the same time I feel like they were trying to go in the other direction.
+
+192
+00:13:31,153 --> 00:13:32,905
+Speaker 0: they were trying to Like.
+
+193
+00:13:33,086 --> 00:13:35,300
+Speaker 0: they were trying to use both to prop each other up.
+
+194
+00:13:35,360 --> 00:13:46,533
+Speaker 0: It's like they wanted to put the blu-ray ps3 together because the gamers will buy it and bolster blu-ray and the blu-ray people will buy It and bolster the ps3 and they kind of faltered on both regards.
+
+195
+00:13:46,593 --> 00:13:50,270
+Speaker 0: blu-ray only won because HD Blu-ray didn't win.
+
+196
+00:13:50,290 --> 00:13:50,854
+Speaker 1: HD DVD died.
+
+197
+00:13:55,369 --> 00:13:56,391
+Speaker 0: Blu-ray winning.
+
+198
+00:13:56,431 --> 00:13:59,880
+Speaker 0: that is like I was gonna make a horrible joke, so I'm gonna avoid that.
+
+199
+00:14:00,281 --> 00:14:02,550
+Speaker 0: It's like if glass Joe and Gabby J. Had a fight.
+
+200
+00:14:02,791 --> 00:14:03,915
+Speaker 0: Yeah, Gabby J.
+
+201
+00:14:03,996 --> 00:14:18,268
+Speaker 1: Won, but No, because you know even though we blu-ray might have been the better physical optical disc media format of high-definition video The no one wants blu-ray.
+
+202
+00:14:18,348 --> 00:14:21,160
+Speaker 1: people want downloading and digital and all that action.
+
+203
+00:14:21,160 --> 00:14:22,023
+Speaker 1: That's the real winner.
+
+204
+00:14:22,344 --> 00:14:23,468
+Speaker 1: blu-ray is just sort of.
+
+205
+00:14:23,528 --> 00:14:27,120
+Speaker 1: hey DVD is still way more popular than anything else right?
+
+206
+00:14:27,420 --> 00:14:29,868
+Speaker 0: I mean sadly blu-ray is actually sales are?
+
+207
+00:14:29,889 --> 00:14:33,280
+Speaker 0: I mean they're really low, but they're a lot higher than I expected.
+
+208
+00:14:33,441 --> 00:14:37,160
+Speaker 1: I'll admit that yeah, but they're not enough to make it go anywhere.
+
+209
+00:14:37,415 --> 00:14:38,182
+Speaker 0: No Well the thing is by.
+
+210
+00:14:38,243 --> 00:14:40,551
+Speaker 0: I feel like they're like Betamax levels.
+
+211
+00:14:40,571 --> 00:14:42,036
+Speaker 1: a lot of people had Betamax.
+
+212
+00:14:42,097 --> 00:14:43,020
+Speaker 1: a lot of it sold.
+
+213
+00:14:43,100 --> 00:14:45,410
+Speaker 0: I think what a lot of you didn't get anywhere don't realize.
+
+214
+00:14:45,491 --> 00:14:47,600
+Speaker 1: a track tapes a lot of them sold didn't get anywhere.
+
+215
+00:14:47,701 --> 00:14:53,125
+Speaker 0: well, no what a lot of people don't realize is that the the cycle of Technology for these sorts of media.
+
+216
+00:14:53,446 --> 00:14:57,556
+Speaker 0: there haven't been that many iterations of video media period.
+
+217
+00:14:57,957 --> 00:15:05,406
+Speaker 0: I mean look there was proprietary professional stuff VHS Betamax laserdisc DVD.
+
+218
+00:15:05,728 --> 00:15:06,954
+Speaker 0: how many generations is this?
+
+219
+00:15:07,015 --> 00:15:16,806
+Speaker 0: it's not that many and Because technology is moving so fast the amount of time that one will exist on the market before something better comes along and incremental improvements Decreases faster and faster.
+
+220
+00:15:16,846 --> 00:15:20,800
+Speaker 0: and faster and incremental improvements come faster and faster to where all right.
+
+221
+00:15:20,820 --> 00:15:32,023
+Speaker 0: So it made a lot of sense to develop DVD and sell it because DVD was gonna be around for a while And it was so much better than anything else, but then blu-ray is an incremental improvement and Blue it.
+
+222
+00:15:32,063 --> 00:15:36,460
+Speaker 0: look how long it took for something to be better enough than DVD to where anyone even wanted.
+
+223
+00:15:36,580 --> 00:15:37,604
+Speaker 0: And it's not better enough.
+
+224
+00:15:37,905 --> 00:15:38,046
+Speaker 1: Well.
+
+225
+00:15:38,106 --> 00:15:41,298
+Speaker 0: It was for some people for enough people to where it's it's making do.
+
+226
+00:15:41,358 --> 00:15:41,699
+Speaker 0: for now.
+
+227
+00:15:42,661 --> 00:15:45,807
+Speaker 1: Sony's not exactly Hang with uncle money bags.
+
+228
+00:15:45,867 --> 00:15:47,754
+Speaker 0: I think blu-ray sales are higher than you think.
+
+229
+00:15:48,135 --> 00:15:49,299
+Speaker 1: yeah, but they're not high enough.
+
+230
+00:15:50,003 --> 00:15:50,345
+Speaker 1: It's not.
+
+231
+00:15:50,405 --> 00:15:50,767
+Speaker 1: it's not it.
+
+232
+00:15:50,908 --> 00:15:51,611
+Speaker 1: They haven't read.
+
+233
+00:15:51,672 --> 00:15:54,609
+Speaker 1: come anywhere near what DVDs You know took off like.
+
+234
+00:15:54,871 --> 00:16:01,760
+Speaker 0: well part of the reason for that I think is that it still took a while for DVD to kind of Get into people's homes even after it won.
+
+235
+00:16:01,820 --> 00:16:02,664
+Speaker 0: It took a long time.
+
+236
+00:16:02,704 --> 00:16:07,596
+Speaker 1: like people don't even have HD TVs and people who do have HD TVs a lot of them I'm hooked up properly.
+
+237
+00:16:07,677 --> 00:16:12,633
+Speaker 1: so HD you know while it's out there more than it was and it's it's definitely.
+
+238
+00:16:12,773 --> 00:16:13,857
+Speaker 0: I'm not even talking about that.
+
+239
+00:16:13,897 --> 00:16:20,736
+Speaker 0: what I'm saying is that DVD came out and because Technology didn't advance and so quickly.
+
+240
+00:16:20,816 --> 00:16:26,418
+Speaker 0: in that realm DVD had a long time to become completely ubiquitous, but now blu-ray won.
+
+241
+00:16:27,080 --> 00:16:33,137
+Speaker 0: Gabby J beat glass Joe, but piston Honda and soda Popinski are right there.
+
+242
+00:16:33,458 --> 00:16:34,040
+Speaker 0: on the horizon.
+
+243
+00:16:34,140 --> 00:16:46,120
+Speaker 0: There's already better formats than blu-ray and by the time blu-ray starts to get any momentum There's gonna be ten more better formats and in the end The investment in a physical media is just gonna be overshadowed by broadband and download.
+
+244
+00:16:46,160 --> 00:16:58,820
+Speaker 1: Yeah, really optical storage mediums I think are gonna be reduced to say, you know personal backups and those sorts of things except even then the technology is moving So fast that any one standard becomes obsolete.
+
+245
+00:16:59,320 --> 00:17:01,547
+Speaker 1: Well, cuz everyone's buying Nasus and stuff.
+
+246
+00:17:01,587 --> 00:17:02,509
+Speaker 1: Look at the Drobo.
+
+247
+00:17:02,550 --> 00:17:06,280
+Speaker 1: Look at the Apple's time capsule thingy the memristor.
+
+248
+00:17:06,401 --> 00:17:09,800
+Speaker 0: I'm not gonna talk about it, but there was that as someone for a while.
+
+249
+00:17:09,839 --> 00:17:20,521
+Speaker 0: No, but there was that somewhat speculative somewhat dubious But yet very popular story on slashed out about how we might see the earliest memristor products embedded devices as early as 2009.
+
+250
+00:17:20,521 --> 00:17:21,712
+Speaker 1: Yeah, give it some years.
+
+251
+00:17:21,792 --> 00:17:22,479
+Speaker 1: It's gonna be a while.
+
+252
+00:17:22,599 --> 00:17:24,976
+Speaker 0: But well they were saying we might have it pretty quick.
+
+253
+00:17:25,016 --> 00:17:28,735
+Speaker 0: because yeah I think now the research has been moving along faster than anyone expect.
+
+254
+00:17:28,956 --> 00:17:30,021
+Speaker 1: believe it when I see it They.
+
+255
+00:17:30,482 --> 00:17:34,212
+Speaker 1: the point is that Nasus and you know things like this.
+
+256
+00:17:34,252 --> 00:17:37,039
+Speaker 1: streaming video are definitely the real winners here.
+
+257
+00:17:37,179 --> 00:17:44,220
+Speaker 1: and The Xbox which started out just being you know video games primarily with a little bit of media action.
+
+258
+00:17:44,220 --> 00:17:47,125
+Speaker 0: Yeah, notice how Microsoft was like, yeah HD-DVD add-on.
+
+259
+00:17:49,442 --> 00:17:53,494
+Speaker 1: Now they're like, aha now the downloads are here Netflix.
+
+260
+00:17:53,555 --> 00:17:55,280
+Speaker 0: Ahoy now look at think about this.
+
+261
+00:17:56,860 --> 00:17:57,924
+Speaker 0: Ps3 they had to put.
+
+262
+00:17:57,944 --> 00:18:00,212
+Speaker 0: this physical thing cost a lot of money.
+
+263
+00:18:00,253 --> 00:18:05,623
+Speaker 0: the ps3 cost a shit ton And a lot of that was because of the blu-ray Xbox.
+
+264
+00:18:06,245 --> 00:18:11,400
+Speaker 1: all they have to do is update the firmware and they're dropping the price to 300 for the big xbox.
+
+265
+00:18:12,342 --> 00:18:16,774
+Speaker 0: The thing is the Roku as it as it is is awesome.
+
+266
+00:18:17,195 --> 00:18:18,879
+Speaker 1: So think about this thing about this, right?
+
+267
+00:18:19,441 --> 00:18:21,851
+Speaker 1: Xbox 360 $300 now.
+
+268
+00:18:21,911 --> 00:18:31,946
+Speaker 1: right Roku $100 that means the game part of the Xbox 360 all the non Netflix part $200 cheaper than we now.
+
+269
+00:18:32,427 --> 00:18:33,853
+Speaker 1: get that math now like that.
+
+270
+00:18:34,074 --> 00:18:44,470
+Speaker 0: now what they're probably gonna do if I were Microsoft and if I were Netflix and what I would do is do crazy promotion to be to get Xbox people to buy into Netflix.
+
+271
+00:18:44,550 --> 00:18:52,262
+Speaker 1: Netflix has got to put Xboxes and all their little envelopes and Microsoft has got to put Netflix's and all their specifically.
+
+272
+00:18:52,302 --> 00:18:57,337
+Speaker 0: what I would do is I would offer a no DVD plan only to Xbox people.
+
+273
+00:18:57,979 --> 00:19:06,680
+Speaker 0: if you have Gold I'd say you can buy it in the Xbox store Netflix for five bucks a month Yes, or Netflix you pay Microsoft points to get Netflix.
+
+274
+00:19:06,828 --> 00:19:09,952
+Speaker 0: Yes You just buy it and it's ain't you in the Xbox gold or whatever.
+
+275
+00:19:09,972 --> 00:19:11,879
+Speaker 0: and if you have gold you get a discount.
+
+276
+00:19:11,939 --> 00:19:12,897
+Speaker 0: if you Have silver you don't get it.
+
+277
+00:19:13,020 --> 00:19:18,416
+Speaker 1: Well now because yeah apparently what they're doing is you can only get this thing right now.
+
+278
+00:19:18,436 --> 00:19:19,680
+Speaker 1: the what that's really happy.
+
+279
+00:19:19,800 --> 00:19:21,849
+Speaker 1: Oh, yeah, is if you have to have gold.
+
+280
+00:19:21,889 --> 00:19:24,660
+Speaker 1: if you don't have gold you got nothing and you have to have Netflix.
+
+281
+00:19:24,780 --> 00:19:29,700
+Speaker 0: So that's even better cuz that forces you to upgrade to gold if you didn't which I know a lot everyone uses.
+
+282
+00:19:29,884 --> 00:19:31,303
+Speaker 0: No, no You know who doesn't?
+
+283
+00:19:31,584 --> 00:19:36,420
+Speaker 0: there are a lot of people who really only play single-player games who got an Xbox because they like gaming.
+
+284
+00:19:36,580 --> 00:19:41,580
+Speaker 0: But a lot of older people like people like in the five years older than rim and scott demographic.
+
+285
+00:19:41,882 --> 00:19:45,220
+Speaker 0: They don't have Xbox gold because they don't play games with people they play by themselves.
+
+286
+00:19:45,542 --> 00:19:48,178
+Speaker 0: No, those people will eventually want it.
+
+287
+00:19:48,580 --> 00:19:55,770
+Speaker 0: They'll they're either gonna force those people to get gold which might get them to buy into gaming more and get even more invested in The Xbox or later.
+
+288
+00:19:55,851 --> 00:19:57,260
+Speaker 0: They'll offer it for the silver people.
+
+289
+00:19:57,280 --> 00:20:03,240
+Speaker 0: You just have to pay more, but if I were them the cross-promotion would be painfully apparent.
+
+290
+00:20:03,441 --> 00:20:06,010
+Speaker 1: Yeah, it looks like the Xbox definitely going somewhere.
+
+291
+00:20:06,070 --> 00:20:15,359
+Speaker 1: the thing that gets me right is like okay and the only reason I don't have an Xbox to be perfectly honest cuz I don't have an HDTV and the reason I have an HDTV is they don't have a house to put it in.
+
+292
+00:20:15,379 --> 00:20:24,680
+Speaker 0: well I mean yes, you know play it sounds dumb, but we could buy an HDTV, but for the size of our living room We need a certain like size and we have to mount it on the wall.
+
+293
+00:20:24,720 --> 00:20:29,849
+Speaker 1: I'm gonna pay someone to mount this thing on the wall with an expensive wall mount and a house I don't own and screw up the wall.
+
+294
+00:20:29,909 --> 00:20:41,631
+Speaker 0: and now I got when I get a house I foresee like permanently professionally installed HDTV and or projector in the theater both Considering that land I still got a call about right.
+
+295
+00:20:42,133 --> 00:20:43,620
+Speaker 1: we should drive over and take a look at the land.
+
+296
+00:20:43,721 --> 00:20:45,552
+Speaker 0: I actually I ran over there yesterday.
+
+297
+00:20:45,632 --> 00:20:46,860
+Speaker 1: She look at the land on Google Maps.
+
+298
+00:20:47,303 --> 00:20:48,652
+Speaker 0: I didn't do that, but I know where it is.
+
+299
+00:20:48,673 --> 00:20:52,491
+Speaker 0: and yeah We shouldn't talk about this on the show, but we're thinking about buying a land.
+
+300
+00:20:53,014 --> 00:20:54,500
+Speaker 1: buy some land buy some land.
+
+301
+00:20:57,301 --> 00:20:59,395
+Speaker 0: So why not just get both we can get both.
+
+302
+00:20:59,838 --> 00:21:03,199
+Speaker 1: so Yeah, this is gonna be pretty interesting here.
+
+303
+00:21:03,360 --> 00:21:07,780
+Speaker 1: But the above guy right what I was saying about not having a house to get HDTV.
+
+304
+00:21:08,161 --> 00:21:09,146
+Speaker 1: So I can't get a 360.
+
+305
+00:21:09,146 --> 00:21:11,958
+Speaker 0: there's a hole in the bucket Delilah not Delilah.
+
+306
+00:21:12,340 --> 00:21:12,681
+Speaker 0: Do whatever.
+
+307
+00:21:12,701 --> 00:21:22,153
+Speaker 1: whatever her name is right the 360 is already some years old and even though they're updating it big time How long until the Xbox you know for 60 or whatever?
+
+308
+00:21:22,173 --> 00:21:23,136
+Speaker 1: right am I gonna get?
+
+309
+00:21:23,236 --> 00:21:24,520
+Speaker 1: I'm gonna be too late.
+
+310
+00:21:25,167 --> 00:21:26,079
+Speaker 1: Is it gonna be too late?
+
+311
+00:21:26,300 --> 00:21:27,204
+Speaker 0: We're just what you could do.
+
+312
+00:21:27,465 --> 00:21:32,709
+Speaker 0: what we could do is just hold out like I did when a you know They when the m64 was announced.
+
+313
+00:21:33,111 --> 00:21:34,900
+Speaker 0: I was already can trenching PC gaming.
+
+314
+00:21:35,001 --> 00:21:38,200
+Speaker 0: I kind of decided I'm gonna hold out until consoles forced me back.
+
+315
+00:21:38,220 --> 00:21:38,782
+Speaker 1: I was also.
+
+316
+00:21:38,882 --> 00:21:45,984
+Speaker 1: I was PC gaming from the end of the 16-bit era to the GameCube No to the GBA.
+
+317
+00:21:46,024 --> 00:21:49,736
+Speaker 1: well, I guess portable gaming of all from the GBA from the Game Boy Color on.
+
+318
+00:21:49,796 --> 00:21:59,040
+Speaker 1: I was in portable gaming But until the GameCube I was out of console gaming from 16-bit to GameCube so that whole 64 PlayStation Saturn.
+
+319
+00:21:59,242 --> 00:22:00,780
+Speaker 0: I see the way our lives are going.
+
+320
+00:22:01,041 --> 00:22:09,194
+Speaker 1: We're not gonna get in on the Xbox 360, but I foresee the thing is I look and some of the stuff They've got they're gonna come out with a sequel to Galaga.
+
+321
+00:22:09,354 --> 00:22:15,039
+Speaker 0: Oh, yeah, but What they're going to do is eventually there will be the Xbox 970 or whatever.
+
+322
+00:22:17,103 --> 00:22:24,319
+Speaker 0: it's over 9000 and All we'll have to do is get in on the ground floor of that because by then we'll be idly rich.
+
+323
+00:22:25,420 --> 00:22:35,439
+Speaker 1: Hopefully and hopefully everything that works on the 360 will be forwards compatible and the the 9000 we backwards give that Then I'll be alright cuz I'll still be able to play the Carcassonne that I missed out on.
+
+324
+00:22:35,459 --> 00:22:36,525
+Speaker 1: Chris No one else will be playing it.
+
+325
+00:22:36,847 --> 00:22:38,235
+Speaker 1: Yeah, but I'll play naked Uno.
+
+326
+00:22:38,717 --> 00:22:40,864
+Speaker 0: Oh god I'll play some naked Uno.
+
+327
+00:22:40,884 --> 00:22:44,859
+Speaker 1: Alright, so you got any news that I do besides saying the same thing you've said before.
+
+328
+00:22:44,879 --> 00:22:48,840
+Speaker 0: but One more thing to say about the thing you said, but I'll say it real quick.
+
+329
+00:22:49,661 --> 00:23:04,299
+Speaker 0: I have a feeling that in the end the Xbox 360 with the Roku downloadable content Especially if the barely a rumor that I could eventually see Hulu getting in on this is some sort of partnership Who is definitely got to make with some kind of action?
+
+330
+00:23:04,540 --> 00:23:05,163
+Speaker 1: But imagine
+
+331
+00:23:05,183 --> 00:23:20,326
+Speaker 0: if who if Netflix does this on the Xbox and with the Roku, you know for grandmas and people like us And then Hulu gets in on that The Xbox 360 and the Roku are going to do for downloadable on-demand media Exactly what the ps2 did for
+
+332
+00:23:20,346 --> 00:23:20,626
+Speaker 1: DC.
+
+333
+00:23:20,767 --> 00:23:25,760
+Speaker 1: I think Sony has to go and find some sort of streaming video action now to compete.
+
+334
+00:23:25,921 --> 00:23:26,826
+Speaker 0: What are they gonna do though?
+
+335
+00:23:26,846 --> 00:23:29,160
+Speaker 0: Cuz it's already all everything I want.
+
+336
+00:23:30,084 --> 00:23:36,063
+Speaker 1: Does unlike Microsoft Source its media empire Sony has the media empire they also own.
+
+337
+00:23:36,203 --> 00:23:40,215
+Speaker 1: yes and Sony is just horribly bad at getting parts of their company to cooperate.
+
+338
+00:23:40,255 --> 00:23:46,560
+Speaker 1: like one arm of the company is Like let's make computer parts The other part of the company is like don't make anything they can copy.
+
+339
+00:23:46,560 --> 00:23:50,151
+Speaker 1: It's like they're simultaneously making mp3 players and also putting out DRM.
+
+340
+00:23:50,191 --> 00:24:06,566
+Speaker 0: and it's like, but the other trouble is that That the best course of action would be for all the Sony few companies to deny their media to all of these downloadable things and have their own Sony thing, but one if they really did.
+
+341
+00:24:06,606 --> 00:24:13,243
+Speaker 0: that I have a feeling that there would be lawsuits and antitrust business in the long run and - it just.
+
+342
+00:24:14,045 --> 00:24:14,748
+Speaker 0: I feel like what.
+
+343
+00:24:14,968 --> 00:24:21,960
+Speaker 0: the other possibility is that as media kind of gets more balkanized People will just issue anything Sony because they wouldn't care.
+
+344
+00:24:22,120 --> 00:24:23,826
+Speaker 1: Yeah, this is an interesting question though.
+
+345
+00:24:23,886 --> 00:24:28,460
+Speaker 1: Are there any Sony pictures available on the Netflix streaming?
+
+346
+00:24:28,700 --> 00:24:35,020
+Speaker 1: You know instant queue service and if so, you watch them on your 360, that's incredibly ironic.
+
+347
+00:24:37,322 --> 00:24:41,200
+Speaker 0: If I were Sony I would try to just buy out Hulu outright.
+
+348
+00:24:42,181 --> 00:24:47,674
+Speaker 1: No, it's thing is it's so many hands in that one I know but that's why it might not and the reason that's the reason who it's it.
+
+349
+00:24:47,775 --> 00:24:49,261
+Speaker 1: the Hulu is kind of good is cuz You got.
+
+350
+00:24:49,482 --> 00:24:52,855
+Speaker 1: you got Fox in there yellow get a little Viacom in there.
+
+351
+00:24:52,915 --> 00:24:53,960
+Speaker 1: It's you know, it's all mixed up.
+
+352
+00:24:54,161 --> 00:24:55,025
+Speaker 1: That's why it's so great.
+
+353
+00:24:55,628 --> 00:24:57,638
+Speaker 0: I just think it might be too late for Sony to do anything.
+
+354
+00:24:57,678 --> 00:25:04,458
+Speaker 1: I think Microsoft and Nintendo the thing is it just Sony is just such a large beast especially for the 80s.
+
+355
+00:25:05,000 --> 00:25:06,949
+Speaker 0: But Microsoft is a large beast too.
+
+356
+00:25:07,311 --> 00:25:09,340
+Speaker 1: No, but the thing is they're so large.
+
+357
+00:25:09,865 --> 00:25:19,994
+Speaker 1: I think that like Sony Sometime around like maybe four or five years ago was like shot dead in the head and now it's just taking forever for it To fall down because it's so high up running around like a chicken without a head.
+
+358
+00:25:20,296 --> 00:25:21,904
+Speaker 1: No, it's just it died It's cool.
+
+359
+00:25:21,944 --> 00:25:23,414
+Speaker 1: It's just completely unconscious.
+
+360
+00:25:23,434 --> 00:25:24,078
+Speaker 1: It's just falling.
+
+361
+00:25:25,703 --> 00:25:27,120
+Speaker 1: It's just taking a long time.
+
+362
+00:25:28,461 --> 00:25:33,736
+Speaker 1: So big it's real tall and it takes like years for it eventually land on the ground.
+
+363
+00:25:34,057 --> 00:25:35,220
+Speaker 0: what I could foresee.
+
+364
+00:25:35,561 --> 00:25:41,440
+Speaker 0: But this is totally me as rim speculating and I'm not making any prediction as to market whatever.
+
+365
+00:25:41,561 --> 00:25:58,246
+Speaker 0: but I could see Sony in the long run just Either the technology wings of it will just break away or the technology wings but somehow they will divest themselves of all the interests that are counter to where the future is as in Everything that relies on IP.
+
+366
+00:25:58,667 --> 00:26:03,304
+Speaker 1: Yeah, they either need to have all their different businesses Separate.
+
+367
+00:26:03,364 --> 00:26:06,395
+Speaker 1: that way they won't you know got themselves separated.
+
+368
+00:26:06,535 --> 00:26:18,377
+Speaker 1: because if they do that Then each individual business part can actually do its job to the best of its ability without being Hindered by the other ones, you know the mp3 people will be able to make the best MP3 players without the media wing fucking them up.
+
+369
+00:26:18,960 --> 00:26:23,517
+Speaker 1: or They actually need to partner up properly and boost each other.
+
+370
+00:26:23,537 --> 00:26:28,002
+Speaker 1: because right now It's just every part of Sony hurts every other part of Sony Right.
+
+371
+00:26:28,082 --> 00:26:33,539
+Speaker 0: So in much more bullshitty news a lot's been happening with eBay lately.
+
+372
+00:26:33,619 --> 00:26:40,420
+Speaker 0: now Qualify this by saying that I have an eBay account that I have not logged into in almost two years.
+
+373
+00:26:41,743 --> 00:26:50,744
+Speaker 1: I use it incredibly rarely like maybe once in a blue moon I'll buy something and I think once ever I sold something and it was okay but it wasn't worth the effort.
+
+374
+00:26:50,984 --> 00:26:58,190
+Speaker 0: three times I bid on something on eBay and once I tried to sell something and The experience was generally unpleasant.
+
+375
+00:26:58,250 --> 00:27:03,006
+Speaker 0: like eBay is not fun to use eBay's I really don't like.
+
+376
+00:27:03,046 --> 00:27:04,830
+Speaker 0: like everything about eBay is just kind of.
+
+377
+00:27:05,252 --> 00:27:09,401
+Speaker 0: it's always a little bit shady and a little bit like 1990.
+
+378
+00:27:09,401 --> 00:27:10,866
+Speaker 1: well, really you have to have.
+
+379
+00:27:10,886 --> 00:27:17,031
+Speaker 1: I mean think about look how successful like fishing is right where they just send you an email That says go to paypool.com right?
+
+380
+00:27:17,333 --> 00:27:22,729
+Speaker 1: There's something wrong with your cable And you know that totally works on people.
+
+381
+00:27:22,789 --> 00:27:24,817
+Speaker 1: so eBay it's really.
+
+382
+00:27:24,897 --> 00:27:28,711
+Speaker 1: for me at least It's really easy to tell fraud apart.
+
+383
+00:27:28,791 --> 00:27:30,256
+Speaker 0: I'm not worried about fraud.
+
+384
+00:27:30,316 --> 00:27:31,360
+Speaker 0: I see the fraud all the time.
+
+385
+00:27:31,400 --> 00:27:34,832
+Speaker 1: It's really easy to sort out what's BS and what's not.
+
+386
+00:27:34,873 --> 00:27:40,120
+Speaker 1: the thing is is so, you know, it's like 90% of what goes on on eBay is not BS.
+
+387
+00:27:40,200 --> 00:27:41,869
+Speaker 1: That's because you know the ease.
+
+388
+00:27:41,909 --> 00:27:47,700
+Speaker 1: the detection of BS is pretty simple But it's still like it looks like a mess.
+
+389
+00:27:47,780 --> 00:27:49,044
+Speaker 1: It's not clean.
+
+390
+00:27:49,064 --> 00:27:54,421
+Speaker 1: the Apple really needs to go in there and shine it up for him because it just really messy and it's not Pleasant.
+
+391
+00:27:55,224 --> 00:27:59,720
+Speaker 0: Yeah, and I just I mean I just I avoid eBay because it's kind of scummy and kind of blend.
+
+392
+00:27:59,740 --> 00:28:01,469
+Speaker 1: I just you don't go there because you want to.
+
+393
+00:28:01,489 --> 00:28:02,574
+Speaker 1: you go there because you need to.
+
+394
+00:28:02,815 --> 00:28:05,780
+Speaker 1: you can't find what you want Anywhere else kind of like a Walmart.
+
+395
+00:28:07,341 --> 00:28:08,466
+Speaker 1: Don't go to Walmart for any reason.
+
+396
+00:28:08,546 --> 00:28:11,216
+Speaker 0: I have been to Walmart's a couple of times out of necessity.
+
+397
+00:28:11,257 --> 00:28:13,289
+Speaker 0: when I was in Arizona That was the only place to go.
+
+398
+00:28:13,612 --> 00:28:17,680
+Speaker 0: when I was in North Carolina That was the only place to go at 3 in the morning to get Red Bull.
+
+399
+00:28:18,001 --> 00:28:21,895
+Speaker 1: It's sort of like the place to go to buy something if it's not available from any.
+
+400
+00:28:22,076 --> 00:28:24,613
+Speaker 1: if you can't find it on Amazon You can't find it anywhere else.
+
+401
+00:28:24,674 --> 00:28:25,260
+Speaker 1: go to eBay.
+
+402
+00:28:25,461 --> 00:28:26,685
+Speaker 1: It was more than it'll be there somewhere.
+
+403
+00:28:26,705 --> 00:28:37,960
+Speaker 0: like most of the read like I while I dislike a lot of Walmart's business practice I can't put the full-on hate on Walmart because they're not that much worse than target or any of those other stores.
+
+404
+00:28:37,980 --> 00:28:39,299
+Speaker 0: That's not the reason I don't go there.
+
+405
+00:28:39,340 --> 00:28:42,803
+Speaker 0: I know that's the thing like both of us are down on Walmart But for different reasons.
+
+406
+00:28:42,843 --> 00:28:48,440
+Speaker 0: we're down on them partly because I don't like any one entity having so much control over entertainment media.
+
+407
+00:28:49,167 --> 00:28:50,360
+Speaker 1: It's not just entertainment media.
+
+408
+00:28:50,360 --> 00:28:58,160
+Speaker 0: Well, yeah, but entertainment media is the one that they I think they have the most undue control perhaps But also it did on a purely visceral level.
+
+409
+00:28:58,501 --> 00:29:00,630
+Speaker 0: It is unpleasant to be in a Walmart.
+
+410
+00:29:00,650 --> 00:29:02,919
+Speaker 0: that that also and the atmosphere.
+
+411
+00:29:02,959 --> 00:29:07,796
+Speaker 0: in the event I really don't like being in Walmart's and I feel really uncomfortable.
+
+412
+00:29:07,836 --> 00:29:08,559
+Speaker 1: How about Walmart?
+
+413
+00:29:08,619 --> 00:29:08,820
+Speaker 1: calm?
+
+414
+00:29:09,741 --> 00:29:11,508
+Speaker 0: I've never actually been to Walmart doc.
+
+415
+00:29:11,609 --> 00:29:14,180
+Speaker 1: It just looks like oh, you know, did you just buy stuff?
+
+416
+00:29:14,500 --> 00:29:17,130
+Speaker 0: Yeah, but at the same time that's not the kind of stuff I'd buy online.
+
+417
+00:29:17,331 --> 00:29:19,880
+Speaker 1: Yeah, I guess yeah, they sell everything though.
+
+418
+00:29:19,960 --> 00:29:21,308
+Speaker 0: So yeah, but so does Amazon.
+
+419
+00:29:21,590 --> 00:29:24,763
+Speaker 0: I know right and I like Amazon I buy.
+
+420
+00:29:24,823 --> 00:29:27,737
+Speaker 0: in fact, I've realized that I buy about half of what I buy.
+
+421
+00:29:27,777 --> 00:29:28,320
+Speaker 0: that isn't food.
+
+422
+00:29:28,603 --> 00:29:33,172
+Speaker 0: Well, you know what if I don't count food I probably buy a good 80% of what I buy on Amazon.
+
+423
+00:29:33,192 --> 00:29:34,257
+Speaker 1: you can buy food on Amazon.
+
+424
+00:29:34,377 --> 00:29:35,000
+Speaker 0: I know but I don't.
+
+425
+00:29:36,261 --> 00:29:40,988
+Speaker 0: Anyway, so eBay All that aside there was a. this is an old story.
+
+426
+00:29:41,008 --> 00:29:44,117
+Speaker 0: But a while ago they got sued in France.
+
+427
+00:29:44,358 --> 00:29:53,498
+Speaker 0: Oh Now the story was that they got sued over the fact that they were selling Counterfeit goods like Christian Dior or Louis Vuitton or all those other like.
+
+428
+00:29:53,538 --> 00:29:54,100
+Speaker 1: what'd you say?
+
+429
+00:29:55,022 --> 00:29:56,066
+Speaker 0: Yeah, the hippity-hoopities.
+
+430
+00:29:56,307 --> 00:30:02,637
+Speaker 0: I gotta know what that is, you know, eight million dollar handbags and Perfume that cost a hundred thousand dollars.
+
+431
+00:30:02,678 --> 00:30:03,444
+Speaker 1: Oh wait They were.
+
+432
+00:30:03,484 --> 00:30:05,480
+Speaker 1: so someone on a B wasn't selling anything.
+
+433
+00:30:05,580 --> 00:30:11,180
+Speaker 1: Someone went on eBay and sold something that looked like a million dollar handbag, but was actually a five dollar handbag.
+
+434
+00:30:11,300 --> 00:30:16,323
+Speaker 1: It was perhaps it was the first and they sold it for over and they were selling it for $20.
+
+435
+00:30:16,323 --> 00:30:23,006
+Speaker 0: The fake research part of it was that they were selling legitimate Fake Versace Disney crossovers.
+
+436
+00:30:23,407 --> 00:30:23,788
+Speaker 1: Okay.
+
+437
+00:30:23,968 --> 00:30:25,893
+Speaker 0: Well, that's some inside baseball.
+
+438
+00:30:25,993 --> 00:30:28,339
+Speaker 0: Anyway, so they're selling the fake Versace.
+
+439
+00:30:28,359 --> 00:30:32,968
+Speaker 0: and Is this real?
+
+440
+00:30:32,988 --> 00:30:40,706
+Speaker 0: no All right, there's this movie called suicide Kamikaze girls, you probably like it.
+
+441
+00:30:40,846 --> 00:30:44,260
+Speaker 1: Yes girls is different different thing very different, right?
+
+442
+00:30:44,760 --> 00:30:45,443
+Speaker 0: So they were.
+
+443
+00:30:45,524 --> 00:30:49,360
+Speaker 0: you know, people were selling possibly illegitimate designer goods on eBay.
+
+444
+00:30:49,500 --> 00:30:52,189
+Speaker 0: All right, so the French court said stop that we're suing you.
+
+445
+00:30:52,209 --> 00:30:55,500
+Speaker 0: you have to pay us 40 million euros.
+
+446
+00:30:55,681 --> 00:30:56,724
+Speaker 1: It's not eBay's fault.
+
+447
+00:30:57,166 --> 00:30:59,132
+Speaker 1: Well people selling it.
+
+448
+00:30:59,273 --> 00:31:00,276
+Speaker 0: the French court ruled.
+
+449
+00:31:00,377 --> 00:31:00,577
+Speaker 0: Yes.
+
+450
+00:31:00,638 --> 00:31:03,247
+Speaker 0: It's eBay's fault All right, and here's the thing.
+
+451
+00:31:03,468 --> 00:31:04,813
+Speaker 1: I would just close down eBay France.
+
+452
+00:31:04,853 --> 00:31:06,780
+Speaker 1: how much money can a France be making?
+
+453
+00:31:07,061 --> 00:31:14,253
+Speaker 0: Well, if they're selling all this verse and I guess but here's the thing They are probably the fake.
+
+454
+00:31:14,294 --> 00:31:22,966
+Speaker 0: for save your indignation The primary impetus here was not that they were selling Illegitimate Versace.
+
+455
+00:31:23,368 --> 00:31:26,660
+Speaker 0: All right, but that they were selling real Versace.
+
+456
+00:31:27,244 --> 00:31:28,980
+Speaker 1: They're not allowed to have real Versace.
+
+457
+00:31:29,121 --> 00:31:39,200
+Speaker 0: Apparently France does not have the right of first sale Which is one of the most important consumer protections in the world, so there's no tag sales in France.
+
+458
+00:31:39,220 --> 00:31:39,943
+Speaker 1: Is that what you're saying?
+
+459
+00:31:40,404 --> 00:31:43,816
+Speaker 0: I guess there are but apparently we've with dawn Mattel.
+
+460
+00:31:43,836 --> 00:31:45,646
+Speaker 0: Yeah Maletti I don't know all these.
+
+461
+00:31:45,666 --> 00:31:47,380
+Speaker 0: you know all those designer Versace's.
+
+462
+00:31:48,682 --> 00:31:56,398
+Speaker 0: We're saying that people were selling their goods on eBay But the people selling them were not authorized sellers and therefore they shouldn't be allowed to.
+
+463
+00:31:57,702 --> 00:32:10,667
+Speaker 1: All right, so something basically said alright eBay you owe us 40 million euros, but by that law something like eBay Cannot possibly exist in France.
+
+464
+00:32:10,687 --> 00:32:12,152
+Speaker 1: I would just close down eBay France.
+
+465
+00:32:12,212 --> 00:32:17,795
+Speaker 0: eBay can sell what you can sell whatever you want on eBay except for things that are protected by these.
+
+466
+00:32:17,956 --> 00:32:22,019
+Speaker 0: other things like Those are the Kirby vacuums.
+
+467
+00:32:22,301 --> 00:32:25,840
+Speaker 0: They have this thing where they say you can't sell a Kirby vacuum ever.
+
+468
+00:32:26,261 --> 00:32:29,132
+Speaker 0: But you see him on eBay a lot because they can't enforce that we have.
+
+469
+00:32:29,373 --> 00:32:31,340
+Speaker 0: humans have a right to first sale in the US.
+
+470
+00:32:31,581 --> 00:32:34,833
+Speaker 1: Yep, apparently citizens have a right to first sale the US.
+
+471
+00:32:34,873 --> 00:32:35,054
+Speaker 1: well.
+
+472
+00:32:35,315 --> 00:32:38,428
+Speaker 1: I technically humans do too I know, but did you know?
+
+473
+00:32:38,850 --> 00:32:40,920
+Speaker 0: well well you see you see what I was doing there.
+
+474
+00:32:41,282 --> 00:32:53,419
+Speaker 0: I said humans because apparently in France aha Yes, apparently the French don't have the right to first sale and these sorts of things and I think eBay's argument against this is absolutely brilliant.
+
+475
+00:32:54,501 --> 00:33:03,760
+Speaker 0: Basically they said quote today's ruling is about an attempt to protect Uncompetitive commercial practices at the expense of computer consumer choice and the livelihood of law-abiding sellers.
+
+476
+00:33:03,920 --> 00:33:08,373
+Speaker 0: Yeah, pretty much anyone who's really we were seeking to leave to appeal.
+
+477
+00:33:08,473 --> 00:33:18,075
+Speaker 1: the right to first sale means that If you buy something like if I go to the store, and I buy a book I'm allowed to sell the book to someone else.
+
+478
+00:33:18,115 --> 00:33:18,678
+Speaker 1: That's the writer.
+
+479
+00:33:18,718 --> 00:33:21,384
+Speaker 1: first sale They're not having.
+
+480
+00:33:21,424 --> 00:33:29,434
+Speaker 1: that means if you buy something it's yours and you can throw it out But you can't give it away or sell it or anything.
+
+481
+00:33:29,454 --> 00:33:29,875
+Speaker 1: you know this.
+
+482
+00:33:29,895 --> 00:33:30,819
+Speaker 1: you're not allowed to sell it.
+
+483
+00:33:31,121 --> 00:33:39,233
+Speaker 0: We're not lawyers, so we won't go into this any further, but in terms of technology first sale There's a lot of rumbling in the legal world.
+
+484
+00:33:39,374 --> 00:33:40,659
+Speaker 0: and think of this right now.
+
+485
+00:33:40,981 --> 00:33:43,954
+Speaker 0: Microsoft doesn't let you resell licenses their software.
+
+486
+00:33:44,014 --> 00:33:47,751
+Speaker 1: if I buy a copy of Windows I can't sell that copy of Windows to rim.
+
+487
+00:33:47,771 --> 00:33:49,840
+Speaker 1: That's because I'm not actually buying Windows.
+
+488
+00:33:49,961 --> 00:33:52,351
+Speaker 0: I'm buying a Windows license, and there's all this cut.
+
+489
+00:33:52,371 --> 00:33:54,400
+Speaker 1: like I'm just signing a contract with Microsoft.
+
+490
+00:33:54,480 --> 00:33:57,400
+Speaker 1: I'm not purchasing a copy like a copy of a book.
+
+491
+00:33:57,601 --> 00:34:01,020
+Speaker 0: They're EULA's say that you can't sell the software to other people.
+
+492
+00:34:01,100 --> 00:34:07,200
+Speaker 0: But there have been some court cases that are going slowly in the direction of first sale bitches.
+
+493
+00:34:07,481 --> 00:34:22,715
+Speaker 0: And let me tell you if when the day comes when you can buy Last year's version of Adobe for five bucks on eBay Think about that that'll mean that someone you know a professional design place right.
+
+494
+00:34:22,735 --> 00:34:24,179
+Speaker 1: they buy Adobe software.
+
+495
+00:34:24,260 --> 00:34:27,152
+Speaker 1: Then because they're so professional they got to have the new version.
+
+496
+00:34:27,455 --> 00:34:28,540
+Speaker 1: they upgrade right.
+
+497
+00:34:29,101 --> 00:34:33,958
+Speaker 1: But they have these old versions that they still own there are allowed to sell them.
+
+498
+00:34:34,521 --> 00:34:35,223
+Speaker 1: They'll be mad.
+
+499
+00:34:35,424 --> 00:34:42,896
+Speaker 1: used saw a legal used software market going around and the pirated used software market will go away Or be severely damaged.
+
+500
+00:34:43,056 --> 00:34:45,244
+Speaker 0: now the People would much rather.
+
+501
+00:34:45,385 --> 00:34:56,889
+Speaker 1: I believe that people would much rather pay say 50 bucks for a legitimate But used copy of say Adobe, you know illustrator I've been paid five bucks for a shady one.
+
+502
+00:34:56,969 --> 00:35:00,783
+Speaker 0: I'd be willing to pay 50 bucks for a copy a cool edit Pro That was legitimate.
+
+503
+00:35:00,983 --> 00:35:13,775
+Speaker 1: I know right people would like having the safety of legitimate software, but when the price is prohibitive They'll resort to piracy, but and if there was a legitimate legal used market like there is with video games People would go for that.
+
+504
+00:35:13,795 --> 00:35:18,200
+Speaker 0: yeah I mean and the thing is the arguments that the software companies offer companies to be screwed.
+
+505
+00:35:18,541 --> 00:35:19,887
+Speaker 0: They say you'll put us out of business.
+
+506
+00:35:19,927 --> 00:35:21,072
+Speaker 0: It's unfair, but you know what.
+
+507
+00:35:21,594 --> 00:35:24,326
+Speaker 1: you should have a business model That matches the real world.
+
+508
+00:35:24,487 --> 00:35:30,951
+Speaker 0: if reselling a software license is unfair Then selling a car or a book is also unfair.
+
+509
+00:35:31,272 --> 00:35:39,620
+Speaker 0: the fact that I can go to a used bookstore or a used CD store For a dollar used car lots not putting the car lots out of business.
+
+510
+00:35:39,961 --> 00:35:44,339
+Speaker 1: You know used video game sales are keeping the video game stores in business not putting them out.
+
+511
+00:35:44,520 --> 00:35:45,785
+Speaker 0: Well, they never use sales.
+
+512
+00:35:45,825 --> 00:35:47,291
+Speaker 1: They'd be screwed by the best buys.
+
+513
+00:35:47,351 --> 00:35:47,652
+Speaker 0: Yeah, well.
+
+514
+00:35:47,692 --> 00:35:49,158
+Speaker 0: No they'd be screwed by Amazon.
+
+515
+00:35:49,178 --> 00:36:01,649
+Speaker 0: I do But luckily there's some good news because here in the good old United States of America There was a similar lawsuit made by Tiffany's against eBay But they were saying you're selling Tiffany's.
+
+516
+00:36:01,689 --> 00:36:02,633
+Speaker 1: that are actually did now.
+
+517
+00:36:02,673 --> 00:36:06,306
+Speaker 0: this one was because we have first sale here So they couldn't do that instead.
+
+518
+00:36:06,587 --> 00:36:07,330
+Speaker 0: It was pretty much.
+
+519
+00:36:07,470 --> 00:36:08,414
+Speaker 1: You're selling fake Tiffany.
+
+520
+00:36:08,434 --> 00:36:10,180
+Speaker 0: You're allowing people to sell fake Tiffany's.
+
+521
+00:36:10,240 --> 00:36:16,384
+Speaker 0: You have to stop it and the court ruled unambiguously and Pretty much.
+
+522
+00:36:16,505 --> 00:36:19,619
+Speaker 0: I think the quote some lawyer said was it was a home run.
+
+523
+00:36:20,442 --> 00:36:23,259
+Speaker 0: Fuck you Tiffany's doesn't have to do shit for you.
+
+524
+00:36:23,360 --> 00:36:27,877
+Speaker 1: You know if I was Tiffany's first of all I wouldn't had a lawyer so dumb to try that.
+
+525
+00:36:27,917 --> 00:36:32,619
+Speaker 1: what I would have had is That the lawyers find these people who find these sellers and go after them.
+
+526
+00:36:32,639 --> 00:36:33,384
+Speaker 0: well Here's the thing.
+
+527
+00:36:33,445 --> 00:36:37,524
+Speaker 0: this is a four-year-old lawsuit Finally came to fruition.
+
+528
+00:36:37,544 --> 00:36:38,587
+Speaker 1: wasted four years on.
+
+529
+00:36:38,627 --> 00:36:43,158
+Speaker 0: no this was in federal court and the US District Court in Manhattan.
+
+530
+00:36:43,599 --> 00:36:45,927
+Speaker 1: it Pretty much as their Tiffany's is.
+
+531
+00:36:46,168 --> 00:36:52,386
+Speaker 0: this is this has gone beyond just this Tiffany's thing because what this has done is very much strengthened.
+
+532
+00:36:52,466 --> 00:37:00,371
+Speaker 0: the case that if someone have a company has a trademark or Possibly in the end this might be able to be extended to intellectual property in general.
+
+533
+00:37:00,892 --> 00:37:08,467
+Speaker 0: It is their responsibility to police it not resellers not modes like not ISPs not anything like that.
+
+534
+00:37:08,768 --> 00:37:11,800
+Speaker 0: so you can't sue YouTube for showing a video.
+
+535
+00:37:12,141 --> 00:37:18,146
+Speaker 0: You can sue the person who put the video on YouTube and you can go after YouTube if they don't take it down with Reasonable notice and all that business.
+
+536
+00:37:18,528 --> 00:37:27,240
+Speaker 1: that's why what YouTube does is if you're saying like you know Disney They actually give you a special account that lets you go around finding Disney things and getting rid of them.
+
+537
+00:37:27,521 --> 00:37:28,325
+Speaker 1: It's like do-it-yourself.
+
+538
+00:37:28,345 --> 00:37:29,249
+Speaker 1: We're not doing it for you.
+
+539
+00:37:29,571 --> 00:37:30,154
+Speaker 1: That's what they do.
+
+540
+00:37:30,556 --> 00:37:34,232
+Speaker 1: so eBay Totally eBay should do a similar thing.
+
+541
+00:37:34,252 --> 00:37:36,403
+Speaker 1: they should say alright for Satch Here's this.
+
+542
+00:37:36,483 --> 00:37:38,309
+Speaker 1: you here's your special eBay account.
+
+543
+00:37:38,349 --> 00:37:41,139
+Speaker 1: you can go around looking for for Satch's and getting them off there.
+
+544
+00:37:41,380 --> 00:37:42,466
+Speaker 1: now We're not doing it for you.
+
+545
+00:37:42,566 --> 00:37:46,637
+Speaker 0: to quote from this article on Yahoo I figure I should cite my source at least a little bit.
+
+546
+00:37:47,422 --> 00:37:59,820
+Speaker 0: The judge in a 66-page decision following a non jury trial in the US District Court of Manhattan Oh 66 pages got his arm must be dying said that he was quote not unsympathetic Not unsympathetic.
+
+547
+00:38:00,121 --> 00:38:02,188
+Speaker 1: In other words he was sympathetic.
+
+548
+00:38:02,449 --> 00:38:03,071
+Speaker 0: He was not.
+
+549
+00:38:03,111 --> 00:38:03,793
+Speaker 0: that you know.
+
+550
+00:38:04,154 --> 00:38:05,800
+Speaker 0: judges say that a lot.
+
+551
+00:38:06,563 --> 00:38:07,688
+Speaker 0: That phrase not I'm said.
+
+552
+00:38:07,728 --> 00:38:08,230
+Speaker 0: it's kind of.
+
+553
+00:38:08,491 --> 00:38:12,719
+Speaker 0: here's what I do say your car blew up And you tried to make me buy you a new car.
+
+554
+00:38:13,281 --> 00:38:21,787
+Speaker 0: I would basically say while I am not unsympathetic to your claim and your and your pain and your suffering and your loss I'm not buying you a new car.
+
+555
+00:38:22,069 --> 00:38:22,210
+Speaker 1: Well.
+
+556
+00:38:22,310 --> 00:38:24,100
+Speaker 1: Couldn't you just say I'm sympathetic.
+
+557
+00:38:24,981 --> 00:38:32,448
+Speaker 0: Avoid the double negative now because there's reasons, but anyway while he was not have my cities But I'm not giving you money quote the article.
+
+558
+00:38:32,689 --> 00:38:35,560
+Speaker 0: He said the law was clearly on eBay's side.
+
+559
+00:38:36,062 --> 00:38:46,800
+Speaker 0: It is the trademark owners burden to police its mark and companies like eBay Cannot be held liable for trademark infringement based solely on their generalized knowledge of that trademark infringement.
+
+560
+00:38:47,182 --> 00:38:48,427
+Speaker 0: It might be occurring on their website.
+
+561
+00:38:48,467 --> 00:38:48,808
+Speaker 1: Okay, now.
+
+562
+00:38:48,848 --> 00:38:49,611
+Speaker 1: Here's a question.
+
+563
+00:38:49,873 --> 00:38:50,736
+Speaker 1: ready for this question.
+
+564
+00:38:50,776 --> 00:38:51,660
+Speaker 1: This is a. this is tough.
+
+565
+00:38:52,161 --> 00:38:54,429
+Speaker 1: I'm ready so you get a trademark right?
+
+566
+00:38:54,890 --> 00:38:57,860
+Speaker 1: It's your responsibility to police the trademark.
+
+567
+00:38:57,981 --> 00:39:00,151
+Speaker 1: Let's say you're a small town Joe.
+
+568
+00:39:00,191 --> 00:39:01,880
+Speaker 1: you trademarked like you want it.
+
+569
+00:39:01,920 --> 00:39:04,307
+Speaker 1: You want to start like a franchise Scott?
+
+570
+00:39:04,327 --> 00:39:13,771
+Speaker 1: the answer is you're fucked right because it's the cost of policing a friend trademark Even if you're just small-time guy or big-time guy.
+
+571
+00:39:13,831 --> 00:39:27,898
+Speaker 1: the cost of policing any trademark With the internet and technology in the world being so large and society being so huge is so prohibitive well at the same that it becomes actually impossible even for a gigantic company.
+
+572
+00:39:27,938 --> 00:39:34,620
+Speaker 1: thus is Trademarks if you you know require people to you know at the same time.
+
+573
+00:39:34,720 --> 00:39:45,379
+Speaker 0: It's not quite that bad because what you can do as far as I've seen this is what we at geek nights would be doing Because while we will have a lawyer on retainer We will not be using said lawyer every day.
+
+574
+00:39:45,802 --> 00:39:52,620
+Speaker 0: But you know if in the future with trademarks and all that because you know our common-law Trademark will eventually become a real trademark and all this sort of business.
+
+575
+00:39:52,701 --> 00:40:12,860
+Speaker 0: But we would send out takedown notices And we would send down you know these desist orders and all these things written on our own and keep paper trails and all That and that way if Someone refused to bring it down we have this paper trail And then we go to a lawyer and you can do kind of some of this preliminary work I would imagine on your own and then the lawsuit only if someone fails to comply.
+
+576
+00:40:13,661 --> 00:40:14,705
+Speaker 1: Yeah, but it's still.
+
+577
+00:40:14,725 --> 00:40:15,710
+Speaker 1: it's a lot of work.
+
+578
+00:40:15,750 --> 00:40:16,855
+Speaker 1: You'd like to do all that.
+
+579
+00:40:17,016 --> 00:40:17,397
+Speaker 1: You know what.
+
+580
+00:40:17,418 --> 00:40:17,940
+Speaker 1: keep up with it.
+
+581
+00:40:18,164 --> 00:40:19,803
+Speaker 1: Oh, he's at a hundred percent I'm.
+
+582
+00:40:19,863 --> 00:40:28,960
+Speaker 0: I will say this if you are not willing and able to at least put forth some Basic level of due diligence, then you do not deserve a trademark.
+
+583
+00:40:29,482 --> 00:40:30,908
+Speaker 0: That's the way the world is today.
+
+584
+00:40:30,948 --> 00:40:33,660
+Speaker 0: Yeah trademarks should be a special and somewhat rare thing.
+
+585
+00:40:33,760 --> 00:40:41,158
+Speaker 1: I think yeah, but I still I think it's gonna get to the point where it's impossible to pretty much Have a trademark and keep it in force at the same time.
+
+586
+00:40:48,483 --> 00:40:53,044
+Speaker 0: Anyway, we went on a while there so things of the day This is something.
+
+587
+00:40:53,084 --> 00:40:54,408
+Speaker 0: I think is super cool.
+
+588
+00:40:54,428 --> 00:41:07,219
+Speaker 0: I obviously they're not building it yet, but it looks like California might actually be getting a usable workable Downtown to downtown bullet train.
+
+589
+00:41:08,141 --> 00:41:08,845
+Speaker 1: Bullet train.
+
+590
+00:41:09,006 --> 00:41:13,785
+Speaker 0: Yes bullet train the NIMBYs lost Everyone in the way lost.
+
+591
+00:41:14,106 --> 00:41:18,259
+Speaker 0: that pretty much is gonna come down to a bond vote in November and a cup like.
+
+592
+00:41:18,279 --> 00:41:27,798
+Speaker 0: there's still a lot of political shenanigans going on around this but There's a good chance that this 40 billion dollar project is going to.
+
+593
+00:41:27,918 --> 00:41:31,996
+Speaker 0: oh, sorry Sorry, I think it's 226 billion dollars.
+
+594
+00:41:32,016 --> 00:41:32,720
+Speaker 1: That's about right.
+
+595
+00:41:33,222 --> 00:41:39,693
+Speaker 0: Well, there's all these different figures because that that larger figure includes a whole bunch of other projects and public works and things.
+
+596
+00:41:39,733 --> 00:41:51,035
+Speaker 0: but regardless California and the West are very likely in the next decade going to get a serious awesome Modern bullet train and I am so excited about this
+
+597
+00:41:51,115 --> 00:41:57,020
+Speaker 1: because people in the West Coast They don't know from trains, you know, so it's like now they're gonna get like a real deal tray.
+
+598
+00:41:57,101 --> 00:41:58,359
+Speaker 1: They'll actually be useful to them.
+
+599
+00:41:58,460 --> 00:42:02,239
+Speaker 0: Well, the thing is we need this in the East Coast too and we could have it if it were for the NIMBYs.
+
+600
+00:42:03,284 --> 00:42:12,999
+Speaker 0: Look how much the NIMBYs fought giving Metro North One more station on already existing already in use tracks and the station was already in use too.
+
+601
+00:42:14,025 --> 00:42:16,080
+Speaker 0: It was an Amtrak station on the Metro North.
+
+602
+00:42:16,401 --> 00:42:22,478
+Speaker 0: All they had to do was make the Poughkeepsie train go one stop further north and the people in Rhinebeck said no We don't want people commuting from here.
+
+603
+00:42:23,241 --> 00:42:25,331
+Speaker 0: Luckily, they're gonna do it anyway, but it's alright.
+
+604
+00:42:25,853 --> 00:42:26,998
+Speaker 0: Yeah, I think this is cool.
+
+605
+00:42:27,079 --> 00:42:29,408
+Speaker 0: So That's all I have to say about that.
+
+606
+00:42:29,428 --> 00:42:31,137
+Speaker 1: That was your thing of the day train.
+
+607
+00:42:31,419 --> 00:42:33,726
+Speaker 0: Yeah I'm kind of a rail buff.
+
+608
+00:42:33,766 --> 00:42:36,054
+Speaker 0: I really like railroads and trains night.
+
+609
+00:42:36,496 --> 00:42:37,520
+Speaker 1: So check this out, right?
+
+610
+00:42:37,980 --> 00:42:39,626
+Speaker 1: How many video games do you play it?
+
+611
+00:42:39,646 --> 00:42:41,332
+Speaker 1: I mean you played tf2.
+
+612
+00:42:41,432 --> 00:42:46,736
+Speaker 1: you play yes to try to You play natural selection.
+
+613
+00:42:46,756 --> 00:42:47,258
+Speaker 1: I hope to.
+
+614
+00:42:48,762 --> 00:42:52,599
+Speaker 1: And all these games have some sort of sentry gun right aliens?
+
+615
+00:42:53,322 --> 00:42:54,468
+Speaker 1: You know the movie.
+
+616
+00:42:55,010 --> 00:42:57,120
+Speaker 1: it's a gun that just stands there in one spot.
+
+617
+00:42:57,601 --> 00:43:02,780
+Speaker 1: But if anyone if he can get line of sight on you it will shoot you with whatever it shoots.
+
+618
+00:43:03,021 --> 00:43:10,533
+Speaker 0: I think that the natural selection sentry gun is the best stylistically Definitely because it feels so much like the alien one.
+
+619
+00:43:10,693 --> 00:43:14,068
+Speaker 0: Oh, yeah, it's definitely the alien man That's seen an alien with an ammo counter.
+
+620
+00:43:14,349 --> 00:43:15,836
+Speaker 0: I want to watch that movie again right now.
+
+621
+00:43:16,097 --> 00:43:16,780
+Speaker 1: Is it on the Roku?
+
+622
+00:43:17,140 --> 00:43:17,424
+Speaker 0: I don't know.
+
+623
+00:43:17,484 --> 00:43:18,639
+Speaker 0: I'll look anyway.
+
+624
+00:43:19,540 --> 00:43:23,725
+Speaker 1: So, you know things like this are definitely Technologically feasible.
+
+625
+00:43:23,745 --> 00:43:38,026
+Speaker 1: I mean you pretty much use a camera some sort of motion detection Which is pretty simple, you know visual calculus there You know image processing to figure out, you know, I got one frame and in this frame, you know These pixels are different than in the last frame.
+
+626
+00:43:38,046 --> 00:43:39,630
+Speaker 1: Therefore something over there moved.
+
+627
+00:43:39,671 --> 00:43:40,694
+Speaker 0: You know, it's totally not.
+
+628
+00:43:40,714 --> 00:43:43,985
+Speaker 0: neither is alien nation or alien 3.
+
+629
+00:43:43,985 --> 00:43:57,140
+Speaker 1: Anyway, anyway You know and then you can you know have some sort of calibration like how much how many things change and then you know Something's there and you know the whole thing and then you just trigger something to fire which is also pretty trivial.
+
+630
+00:43:57,943 --> 00:44:02,560
+Speaker 1: And many times we've seen people, you know, I've seen YouTube videos of sentry guns.
+
+631
+00:44:02,680 --> 00:44:09,400
+Speaker 1: People have made or you know military contractors showing things off and nothing has really impressed me.
+
+632
+00:44:09,540 --> 00:44:12,353
+Speaker 1: You know, I've seen these sentry guns are really like wow.
+
+633
+00:44:12,394 --> 00:44:13,619
+Speaker 1: That's a real sentry gun.
+
+634
+00:44:14,402 --> 00:44:20,640
+Speaker 1: Until now this guy made a briefcase sentry gun that has paintballs and it's a paintball gun.
+
+635
+00:44:20,640 --> 00:44:26,825
+Speaker 1: It's not a real gun, but you know, you could switch, you know, well, there's laws about man traps in the US But it's a briefcase.
+
+636
+00:44:27,127 --> 00:44:27,809
+Speaker 1: He opens it up.
+
+637
+00:44:27,829 --> 00:44:28,773
+Speaker 1: There's a laptop.
+
+638
+00:44:28,813 --> 00:44:36,819
+Speaker 1: He turns it on and the gun activates in anything that enters if the guns sort of viewing area gets shot at.
+
+639
+00:44:37,602 --> 00:44:44,773
+Speaker 1: And in this video, what's really impressive is he doesn't just show the gun, you know Like hitting a basketball before it hits the ground.
+
+640
+00:44:44,793 --> 00:44:50,174
+Speaker 1: or you know Shooting at this guy as he peeks out from behind a wooden board.
+
+641
+00:44:50,235 --> 00:44:54,653
+Speaker 1: and you know aiming at his head He's wearing a paintball mask, he's alright, he knows he's gonna get hit.
+
+642
+00:44:54,693 --> 00:44:56,060
+Speaker 1: he's doing it for demonstration purposes.
+
+643
+00:44:56,961 --> 00:45:01,680
+Speaker 1: The guy tries to distract it by throwing a stick to one direction running in the other direction.
+
+644
+00:45:02,162 --> 00:45:03,969
+Speaker 1: It shoots at the stick then turns to shoot at him.
+
+645
+00:45:03,989 --> 00:45:06,680
+Speaker 1: Yeah, it's it's pretty good.
+
+646
+00:45:06,901 --> 00:45:09,690
+Speaker 1: I'm very very impressed as what they've been able to do here.
+
+647
+00:45:09,891 --> 00:45:12,480
+Speaker 0: Actually, that's a really interesting think of the logic here, right?
+
+648
+00:45:12,580 --> 00:45:16,120
+Speaker 0: So say you're making one of these for the military or you know to keep aliens out.
+
+649
+00:45:17,601 --> 00:45:20,500
+Speaker 0: You you want it to shoot anything that moves in the radius, right?
+
+650
+00:45:20,942 --> 00:45:21,926
+Speaker 0: You don't want to just shoot it.
+
+651
+00:45:22,026 --> 00:45:26,565
+Speaker 0: one thing you want it to kind of have some sort of logic of alright I tracked that object.
+
+652
+00:45:26,645 --> 00:45:27,228
+Speaker 0: I shot it.
+
+653
+00:45:27,549 --> 00:45:28,654
+Speaker 0: It's probably dead.
+
+654
+00:45:28,714 --> 00:45:30,040
+Speaker 0: I'll move on to another target.
+
+655
+00:45:30,201 --> 00:45:38,215
+Speaker 1: Well, I think what it is is it's like he threw the stake But he him moving was many more pixels moving more quickly than the stake.
+
+656
+00:45:38,235 --> 00:45:42,536
+Speaker 1: so you could have some sort of logic to Prioritize the targets if there are many of them.
+
+657
+00:45:42,818 --> 00:45:51,880
+Speaker 1: Oh, yeah I'd really like to see them do something sort of crazy like get a big like piece of paper and draw all over it and Put the gun out and then wiggle the piece of paper.
+
+658
+00:45:52,161 --> 00:45:55,054
+Speaker 1: So it looks like this stuff moving all over the place and see what it would shoot at.
+
+659
+00:45:55,074 --> 00:45:57,244
+Speaker 1: I don't know There's an idea.
+
+660
+00:45:57,284 --> 00:45:59,980
+Speaker 0: But yeah, I've always been I've always liked sentry guns.
+
+661
+00:46:00,342 --> 00:46:02,497
+Speaker 0: I tried to make them with varying success.
+
+662
+00:46:02,537 --> 00:46:02,940
+Speaker 0: as a kid.
+
+663
+00:46:03,121 --> 00:46:03,262
+Speaker 0: This
+
+664
+00:46:03,322 --> 00:46:18,440
+Speaker 1: is pretty impressive and if I was a guy who owned a paintball place I would requisition these people to make like, you know a bunch of these for me perhaps, you know a little more, you know Sturdy and plastic boxes not just you know, crappy briefcases with laptops sticking up.
+
+665
+00:46:18,520 --> 00:46:19,022
+Speaker 1: You know something.
+
+666
+00:46:19,243 --> 00:46:21,453
+Speaker 1: something won't get damaged something will be easier to use.
+
+667
+00:46:22,177 --> 00:46:25,759
+Speaker 1: and you know Deploy them on my paintball grounds and it'd be kind of fun.
+
+668
+00:46:26,081 --> 00:46:33,082
+Speaker 0: Maybe some sort of you have them defending like a base cuz capture the flag paintballs actually kind of lame and I much I like that is.
+
+669
+00:46:33,283 --> 00:46:41,196
+Speaker 1: that is a good idea if you had some sort of base versus base paintball, but You put one of these sort of at the main entrance to the base.
+
+670
+00:46:41,578 --> 00:46:48,300
+Speaker 1: therefore You know encouraging a different kind of play because people aren't gonna be sitting there Just covering the entry to the base the whole time.
+
+671
+00:46:48,521 --> 00:46:56,720
+Speaker 0: What I do is I put them kind of protecting the goal, you know Whatever the mission objective is, but there'd be the secondary objective of the switch that turns that thing on and off.
+
+672
+00:46:58,281 --> 00:47:06,329
+Speaker 0: So you have to storm like that outpost take the switch turn the sentry off and then you get a guard to switch So the enemy team doesn't come and turn it back on.
+
+673
+00:47:06,350 --> 00:47:07,214
+Speaker 1: that's pretty good.
+
+674
+00:47:07,375 --> 00:47:08,239
+Speaker 0: You know why I thought of that.
+
+675
+00:47:08,501 --> 00:47:12,438
+Speaker 0: Oh, I think that thing happened to me in tribes - yesterday is a good idea.
+
+676
+00:47:12,458 --> 00:47:12,800
+Speaker 1: You ready?
+
+677
+00:47:13,625 --> 00:47:20,112
+Speaker 1: You have a sentry in the middle of the field, right and It's off and there's a switch in some sort of outpost.
+
+678
+00:47:20,233 --> 00:47:22,300
+Speaker 1: right and your actual goal is something else.
+
+679
+00:47:22,741 --> 00:47:34,179
+Speaker 1: but if you get the switch pulled to you know to your team side the gun will aim at the enemy team and shoot them and Vice versa and make it color-sensitive because everyone wears red everywhere is blue you get that's not too hard.
+
+680
+00:47:34,842 --> 00:47:40,160
+Speaker 0: So anyway tonight we're gonna talk kind of briefly because we want to long in the rest of it about my brand new blackberry curve.
+
+681
+00:47:40,602 --> 00:47:41,566
+Speaker 1: Really how is it?
+
+682
+00:47:41,827 --> 00:47:42,410
+Speaker 0: It's okay.
+
+683
+00:47:42,631 --> 00:47:43,454
+Speaker 1: Yeah, what does it do?
+
+684
+00:47:43,635 --> 00:47:47,409
+Speaker 0: Google Reader and GPS Google Maps, and that's totally it really.
+
+685
+00:47:47,429 --> 00:47:51,022
+Speaker 1: yeah, I don't do Google Reader on my iPhone now Don't you?
+
+686
+00:47:51,042 --> 00:47:51,667
+Speaker 1: well, I guess there.
+
+687
+00:47:51,687 --> 00:47:53,440
+Speaker 1: let me try going to reader dot google.com.
+
+688
+00:47:53,500 --> 00:47:56,500
+Speaker 1: I didn't try to go there because I haven't used Google Reader a long time.
+
+689
+00:47:56,560 --> 00:47:58,668
+Speaker 0: There's no Google Reader app for the iPhone.
+
+690
+00:47:59,089 --> 00:47:59,752
+Speaker 1: No there is not.
+
+691
+00:47:59,792 --> 00:48:09,359
+Speaker 0: the only Google app is a Google search app Because they actually made a Google Reader app for the curve Which is that is the only thing that makes my curve useful outside of work and GPS.
+
+692
+00:48:10,142 --> 00:48:14,134
+Speaker 1: That is the one thing that I sort of knew about the iPhone when I bought it right?
+
+693
+00:48:14,234 --> 00:48:14,595
+Speaker 1: is that?
+
+694
+00:48:14,976 --> 00:48:16,200
+Speaker 1: and am I basically what?
+
+695
+00:48:16,400 --> 00:48:18,790
+Speaker 1: I knew is it's sort of like I knew something.
+
+696
+00:48:18,850 --> 00:48:21,120
+Speaker 1: I got the phone and I found out I was right.
+
+697
+00:48:21,644 --> 00:48:23,500
+Speaker 1: Is that the iPhone does everything?
+
+698
+00:48:24,400 --> 00:48:34,139
+Speaker 1: Except it doesn't do the Google as well as the Android phone probably will and I use Google heavily like Google apps and whatnot But it does everything else just great.
+
+699
+00:48:35,202 --> 00:48:36,147
+Speaker 1: So, let's see let see.
+
+700
+00:48:36,509 --> 00:48:38,300
+Speaker 1: I kind of a lot of other place.
+
+701
+00:48:38,380 --> 00:48:42,680
+Speaker 1: I mean, it's been iPhone talk for two weeks and it's gonna be iPhone talk until next week.
+
+702
+00:48:43,142 --> 00:48:44,147
+Speaker 1: So I kind of want to don't.
+
+703
+00:48:44,167 --> 00:48:46,759
+Speaker 1: I don't want to say anything that's been said elsewhere.
+
+704
+00:48:47,041 --> 00:48:53,740
+Speaker 1: I want to sort of stick to things that no one else is gonna You know say you think did because otherwise why are we doing iPhone coverage?
+
+705
+00:48:54,040 --> 00:48:59,000
+Speaker 0: Yes, really Scott's not gonna talk about you zoom in like this and the 3g works like this.
+
+706
+00:48:59,020 --> 00:49:03,540
+Speaker 1: It's kind of lame to do iPhone coverage in the first place because it's just so much of it out there, right?
+
+707
+00:49:04,042 --> 00:49:15,502
+Speaker 1: But anyway, I went to get the iPhone on Friday last Friday And I wasn't stupid like everybody else waiting at the Apple store or showing up at like 730.
+
+708
+00:49:15,502 --> 00:49:20,340
+Speaker 1: I went and I was at the AT&T store one block away from the Apple store.
+
+709
+00:49:20,922 --> 00:49:23,109
+Speaker 1: I got there around 615.
+
+710
+00:49:23,109 --> 00:49:28,949
+Speaker 1: So maybe I waited 90 minutes a little more and There were five guys in line in front of me.
+
+711
+00:49:29,109 --> 00:49:29,571
+Speaker 1: That was it.
+
+712
+00:49:29,993 --> 00:49:30,414
+Speaker 1: That was it.
+
+713
+00:49:31,358 --> 00:49:35,460
+Speaker 1: at 8 o'clock They came out and they're like six people come right in now my boss.
+
+714
+00:49:35,520 --> 00:49:37,979
+Speaker 1: He came and got in line with me later because he lives right around there.
+
+715
+00:49:38,404 --> 00:49:49,046
+Speaker 1: So he was seventh in line Which is good because he was transferring his number from Sprint and his contract was up long ago like he's had it for years and years and years and So he took like 45 minutes.
+
+716
+00:49:49,689 --> 00:49:50,933
+Speaker 1: I only took like five minutes.
+
+717
+00:49:50,954 --> 00:49:51,516
+Speaker 1: I went in.
+
+718
+00:49:51,817 --> 00:49:52,680
+Speaker 1: I talked to the guy.
+
+719
+00:49:52,780 --> 00:49:56,960
+Speaker 1: I said I wanted a brand new plan brand new number, you know, give me the phone.
+
+720
+00:49:57,100 --> 00:49:58,866
+Speaker 1: Okay, the SIM card.
+
+721
+00:49:58,886 --> 00:50:01,153
+Speaker 1: the phones are pre-loaded with SIM cards.
+
+722
+00:50:01,354 --> 00:50:03,180
+Speaker 1: the SIM card in my phone must have been busted.
+
+723
+00:50:03,642 --> 00:50:08,380
+Speaker 1: So he just took another SIM card switched out and it was all good and I've had no problems.
+
+724
+00:50:09,043 --> 00:50:10,973
+Speaker 1: I know some people having problems with the activation.
+
+725
+00:50:11,234 --> 00:50:12,299
+Speaker 1: They got to the store too late.
+
+726
+00:50:13,202 --> 00:50:15,380
+Speaker 1: I know some people are having problems waiting in line.
+
+727
+00:50:15,440 --> 00:50:18,239
+Speaker 1: They went to an Apple store instead of an AT&T store and they went at a bad time.
+
+728
+00:50:18,420 --> 00:50:20,066
+Speaker 0: I saw people lined up today.
+
+729
+00:50:20,086 --> 00:50:23,840
+Speaker 1: Yeah, people were like I went to the Apple store today to try to buy some accessories.
+
+730
+00:50:23,860 --> 00:50:31,260
+Speaker 1: I was half successful And there are people lined up for the iPhone, but there was a special sort of iPhone corner of the store.
+
+731
+00:50:31,381 --> 00:50:34,260
+Speaker 1: But you could roam around the rest of the store, but anywhere in the store.
+
+732
+00:50:34,300 --> 00:50:43,195
+Speaker 1: They were like the area of the store where they were selling iPhone protective thingies Stupidly crowded couldn't get near there because it was a little tight little corner and people were crammed in.
+
+733
+00:50:43,256 --> 00:50:49,083
+Speaker 1: it was it was not good but yeah, I got the phone and It works.
+
+734
+00:50:49,263 --> 00:50:51,049
+Speaker 1: It's everything that everyone said.
+
+735
+00:50:51,069 --> 00:50:54,780
+Speaker 1: it is the thing that really I think is most impressive about it.
+
+736
+00:50:54,840 --> 00:50:57,000
+Speaker 1: Is that again something I knew already?
+
+737
+00:50:57,481 --> 00:51:02,900
+Speaker 1: But actually in reality is much more impressive once you actually have it is not it does.
+
+738
+00:51:02,980 --> 00:51:05,568
+Speaker 1: There's not any one particular thing that it does.
+
+739
+00:51:05,588 --> 00:51:06,812
+Speaker 1: that is incredibly amazing.
+
+740
+00:51:07,032 --> 00:51:13,260
+Speaker 1: Oh, actually the baseball thing is kind of amazing and Some of the like the urban spoon thing is kind of amazing.
+
+741
+00:51:13,920 --> 00:51:17,696
+Speaker 1: It's the number of things it does and does well because they think about.
+
+742
+00:51:17,756 --> 00:51:26,334
+Speaker 1: right back in the day they start coming with the camera phones the music phones and People's complaint was you know, I'd rather have three separate things.
+
+743
+00:51:26,474 --> 00:51:32,220
+Speaker 1: if it does the separate thing Well, then have one thing that's supposed to do five things but does them all shittily.
+
+744
+00:51:32,742 --> 00:51:44,757
+Speaker 1: It's like the attitude was if I can have a good phone and a good mp3 player and a good camera Why would I buy one device that is a shitty phone a shitty camera and a shitty mp3 player?
+
+745
+00:51:44,817 --> 00:51:45,840
+Speaker 1: What's the point, right?
+
+746
+00:51:47,061 --> 00:51:47,783
+Speaker 1: The iPhone?
+
+747
+00:51:48,084 --> 00:51:59,840
+Speaker 1: why it's so impressive even compared to other devices like blackberries or Nokia things Is that it is so many things but it is well at all of those things too.
+
+748
+00:51:59,960 --> 00:52:01,946
+Speaker 1: Well, and it has.
+
+749
+00:52:02,046 --> 00:52:03,029
+Speaker 1: I believe you mean good.
+
+750
+00:52:03,049 --> 00:52:04,874
+Speaker 1: No, I mean, well it is.
+
+751
+00:52:04,935 --> 00:52:09,355
+Speaker 1: Well, yes, it is quite well You know.
+
+752
+00:52:09,476 --> 00:52:11,285
+Speaker 1: and The when.
+
+753
+00:52:11,847 --> 00:52:14,497
+Speaker 1: the other thing is that unlike say the Nokia n95?
+
+754
+00:52:16,280 --> 00:52:21,400
+Speaker 1: The integration between the different things is also super impressive.
+
+755
+00:52:21,701 --> 00:52:27,584
+Speaker 1: So when you open up, I'll open up urban spoon, right urban spoon is one of the apps You can get from the app store.
+
+756
+00:52:27,906 --> 00:52:28,829
+Speaker 1: you tell it a city.
+
+757
+00:52:28,850 --> 00:52:33,386
+Speaker 0: All right, so I'll choose to find some Mexican food and right.
+
+758
+00:52:33,648 --> 00:52:35,275
+Speaker 1: so we tell me well, you can't do beacon.
+
+759
+00:52:35,295 --> 00:52:36,260
+Speaker 1: You can only do major cities.
+
+760
+00:52:36,280 --> 00:52:37,684
+Speaker 1: Yeah, so I pick New York City.
+
+761
+00:52:37,825 --> 00:52:39,309
+Speaker 1: I choose a neighborhood Harlem.
+
+762
+00:52:39,690 --> 00:52:41,616
+Speaker 1: I choose a type of food Korean.
+
+763
+00:52:42,018 --> 00:52:42,780
+Speaker 1: I choose a price.
+
+764
+00:52:43,883 --> 00:52:44,867
+Speaker 1: I don't care about the price.
+
+765
+00:52:44,927 --> 00:52:45,890
+Speaker 1: I'm not gonna choose a price.
+
+766
+00:52:46,231 --> 00:52:48,198
+Speaker 1: then I shake the iPhone shake.
+
+767
+00:52:48,438 --> 00:52:48,880
+Speaker 1: Come on shake.
+
+768
+00:52:49,404 --> 00:52:49,788
+Speaker 1: There we go.
+
+769
+00:52:49,808 --> 00:52:53,810
+Speaker 1: I Can go to the wah-wah canteen.
+
+770
+00:52:53,830 --> 00:52:55,175
+Speaker 1: All right, so I push ice.
+
+771
+00:52:55,235 --> 00:52:56,500
+Speaker 1: touch wah-wah canteen.
+
+772
+00:52:57,162 --> 00:53:00,154
+Speaker 1: It says serves curry and 54% of people like it.
+
+773
+00:53:00,174 --> 00:53:03,849
+Speaker 1: There's the phone number and the address 54%.
+
+774
+00:53:03,849 --> 00:53:07,520
+Speaker 1: I know it's a pretty bad place But at least I know it's a bad place.
+
+775
+00:53:07,600 --> 00:53:10,026
+Speaker 1: Right if I touch that phone number it calls them.
+
+776
+00:53:10,648 --> 00:53:15,380
+Speaker 1: if I touch that address it shows the Google map of exactly where they are.
+
+777
+00:53:16,164 --> 00:53:18,134
+Speaker 1: I can then push the GPS button.
+
+778
+00:53:18,154 --> 00:53:19,260
+Speaker 1: then push the directions button.
+
+779
+00:53:19,763 --> 00:53:22,599
+Speaker 1: It will give me directions from my current location to there.
+
+780
+00:53:23,442 --> 00:53:31,125
+Speaker 1: It does all these things but it ties them all together in a way that makes me if you had to do this on say The Nokia, right?
+
+781
+00:53:31,588 --> 00:53:35,586
+Speaker 1: Okay, so you'd go to a website Right or you'd install some.
+
+782
+00:53:35,606 --> 00:53:39,600
+Speaker 1: so I don't even think there's an urban spoon application, but let's be generous and say there is okay.
+
+783
+00:53:39,780 --> 00:53:40,704
+Speaker 1: So there's an application.
+
+784
+00:53:40,985 --> 00:53:41,929
+Speaker 1: it tells you the restaurant.
+
+785
+00:53:42,411 --> 00:53:44,057
+Speaker 1: then you got to go and open up.
+
+786
+00:53:44,861 --> 00:53:52,037
+Speaker 1: You know the maps thing separately and type the address in and has a. you know I might have a little better keyboard than the iPhone does but it doesn't.
+
+787
+00:53:52,117 --> 00:53:53,684
+Speaker 1: and you know Can you really?
+
+788
+00:53:53,985 --> 00:53:57,320
+Speaker 1: can the Nokia or any of those other devices, you know, you search or something?
+
+789
+00:53:57,380 --> 00:53:59,747
+Speaker 1: There's a phone number you touch the phone number and it calls them.
+
+790
+00:53:59,767 --> 00:54:01,051
+Speaker 1: That doesn't happen.
+
+791
+00:54:01,493 --> 00:54:02,757
+Speaker 1: I don't see that action anywhere.
+
+792
+00:54:02,777 --> 00:54:05,568
+Speaker 0: I Generally like using my curve.
+
+793
+00:54:06,171 --> 00:54:07,939
+Speaker 0: It really can't do anything.
+
+794
+00:54:08,361 --> 00:54:11,740
+Speaker 0: Well, other than the blackberry thing of push email, right?
+
+795
+00:54:12,020 --> 00:54:20,732
+Speaker 1: That's the thing is I had a blackberry a pretty good one five thousand series something when I was working at that other company and It did email pretty well.
+
+796
+00:54:20,752 --> 00:54:33,520
+Speaker 1: and you know If I really needed it badly I could open up the web browser like in an emergency and there was actually an SSH client that wasn't free But it wasn't bad if I just didn't pay for it and it was actually a Gmail application.
+
+797
+00:54:33,580 --> 00:54:48,979
+Speaker 1: but it didn't work because I use Gmail for domains and the Google Maps was a little air, but it kind of worked and It technically speaking had a zillion features perhaps almost as many as the iPhone except of course for the you know, the video and the audio features.
+
+798
+00:54:48,999 --> 00:54:54,580
+Speaker 1: and The thing was though is because the features were sort of had a bad interface.
+
+799
+00:54:55,044 --> 00:54:57,060
+Speaker 1: They might as well not have been there.
+
+800
+00:54:57,060 --> 00:55:01,000
+Speaker 1: I have a cell phone right that I that I still haven't cancelled or done anything with yet.
+
+801
+00:55:01,060 --> 00:55:01,603
+Speaker 1: You know the mic.
+
+802
+00:55:01,704 --> 00:55:02,549
+Speaker 1: I didn't port my number.
+
+803
+00:55:02,589 --> 00:55:02,931
+Speaker 1: I got new.
+
+804
+00:55:02,952 --> 00:55:07,626
+Speaker 1: I got a new AT&T and You know, it has a web browser.
+
+805
+00:55:07,686 --> 00:55:08,950
+Speaker 1: it has an mp3 player.
+
+806
+00:55:08,970 --> 00:55:11,940
+Speaker 1: I can take videos it can has a camera.
+
+807
+00:55:12,321 --> 00:55:13,665
+Speaker 1: It has a shit ton of stuff.
+
+808
+00:55:13,805 --> 00:55:17,817
+Speaker 1: almost as much as you know, the smartphones do it as a calculator in there.
+
+809
+00:55:17,877 --> 00:55:20,326
+Speaker 1: all kinds of shit None of it.
+
+810
+00:55:20,608 --> 00:55:22,300
+Speaker 1: It might as well not be there.
+
+811
+00:55:22,400 --> 00:55:33,300
+Speaker 1: the only thing the phone is good for is making calls because despite having all those features the Interface of those features is so bad and so painful that it's not even worth using.
+
+812
+00:55:33,421 --> 00:55:34,410
+Speaker 1: There's just that you might.
+
+813
+00:55:34,431 --> 00:55:35,258
+Speaker 1: it just don't do it.
+
+814
+00:55:35,480 --> 00:55:35,741
+Speaker 1: it did.
+
+815
+00:55:35,801 --> 00:55:52,519
+Speaker 1: no, you know, this is why and and to prove that this is actually going on if you look at statistics right of all phones a very small percentage of phones out there mobile phones are smartphones and I think like 19% of smartphones are iPhones right now.
+
+816
+00:55:52,920 --> 00:55:57,375
+Speaker 1: So you're looking at like one in five of a very small segment are iPhones.
+
+817
+00:55:57,435 --> 00:55:58,760
+Speaker 1: is not many of them out there?
+
+818
+00:55:59,522 --> 00:56:06,840
+Speaker 1: Now look at the web traffic that is going to websites from mobile devices any mobile device no matter what?
+
+819
+00:56:07,820 --> 00:56:13,580
+Speaker 1: Like over 50% of web traffic to you know from mobile devices from iPhones.
+
+820
+00:56:14,545 --> 00:56:25,834
+Speaker 1: that tells you that Even though pretty much every phone out there has a web browser of some kind Blackberry's got one Nokia's have one Symbian Windows mobiles have one.
+
+821
+00:56:25,874 --> 00:56:27,619
+Speaker 1: my even my crappy cell phone has one.
+
+822
+00:56:29,041 --> 00:56:35,200
+Speaker 1: People aren't using them except for the people of iPhones are actually using mobile Safari because it's actually usable.
+
+823
+00:56:36,224 --> 00:56:46,970
+Speaker 1: Yeah, I mean on the PC will often complain about Apple because on the PC there's like this expectation that you should be able to do whatever you want and You're willing to suffer a little bad interface.
+
+824
+00:56:47,010 --> 00:56:51,186
+Speaker 1: Like I'm using handbrake interface is not so great I'm using you know, some other.
+
+825
+00:56:51,386 --> 00:56:53,814
+Speaker 1: at Windows applications interface is not perfect.
+
+826
+00:56:53,854 --> 00:56:59,160
+Speaker 1: Linux a lot of things command-line interface And which is good a lot of times but also bad sometimes.
+
+827
+00:56:59,682 --> 00:57:12,200
+Speaker 1: But it doesn't bother me because a mouse and a keyboard and a big screen You can get through that you can still manage to use the inner the crappy interface at a comfortable level that tiny little screen.
+
+828
+00:57:12,721 --> 00:57:16,173
+Speaker 1: But I know much on a tiny little screen, you know, sure.
+
+829
+00:57:16,193 --> 00:57:18,120
+Speaker 1: I have to give up the fact that it's open.
+
+830
+00:57:18,482 --> 00:57:21,000
+Speaker 1: I know that I'm not gonna be able to do whatever I want with it.
+
+831
+00:57:21,040 --> 00:57:24,740
+Speaker 1: There is an unfulfilled potential just like the unfulfilled potential of the Wii.
+
+832
+00:57:26,061 --> 00:57:41,880
+Speaker 1: But because the interface is actually good Even though it might not have features that some other devices have on paper and the tech specs in Reality, it has a billion times more features than any of those things because the features it has are actually usable.
+
+833
+00:57:42,562 --> 00:57:52,931
+Speaker 1: If you have a phone that can do a hundred things badly and painfully and a phone that can do five things really easily The phone is the foot that does the five things properly.
+
+834
+00:57:53,272 --> 00:57:54,316
+Speaker 1: is the phone you're gonna get?
+
+835
+00:57:54,336 --> 00:58:00,040
+Speaker 1: because in reality It does five more things than the other phone when you get right down to it in practical speaking.
+
+836
+00:58:00,582 --> 00:58:02,007
+Speaker 0: So what's is there?
+
+837
+00:58:02,047 --> 00:58:04,355
+Speaker 0: anything like that is bad about it right now?
+
+838
+00:58:04,375 --> 00:58:05,560
+Speaker 0: that isn't working right for you.
+
+839
+00:58:05,922 --> 00:58:16,988
+Speaker 1: well, we got the exchange worked out which was Something that was mostly the the the works exchange server was testing all that now Right, but we got it to work.
+
+840
+00:58:17,269 --> 00:58:19,680
+Speaker 1: We just need to get the SSL signed and that sort of thing.
+
+841
+00:58:21,081 --> 00:58:26,080
+Speaker 1: One annoying thing that's really bothering me is that it has a built-in calendar thing, right?
+
+842
+00:58:26,800 --> 00:58:29,972
+Speaker 1: But this built-in calendar thing can't really work.
+
+843
+00:58:30,232 --> 00:58:32,300
+Speaker 1: It works at the mobile me and it works with exchange.
+
+844
+00:58:33,241 --> 00:58:37,052
+Speaker 1: It doesn't work with Google Calendar, and there's no reason.
+
+845
+00:58:37,072 --> 00:58:38,877
+Speaker 1: there's no technological reason that it couldn't.
+
+846
+00:58:39,037 --> 00:58:40,522
+Speaker 1: it could very easily But it doesn't.
+
+847
+00:58:41,145 --> 00:58:42,792
+Speaker 1: and there are ways out there people are.
+
+848
+00:58:42,812 --> 00:58:47,492
+Speaker 1: there's many many different methods of Synchronizing iPhone with Google Calendar many of them.
+
+849
+00:58:48,074 --> 00:58:49,319
+Speaker 1: There's one really good one.
+
+850
+00:58:49,983 --> 00:58:52,239
+Speaker 1: That really good one requires that you have a Mac.
+
+851
+00:58:52,722 --> 00:59:00,058
+Speaker 1: And in fact, I went to the website for this thing and it said oh for all you Windows users get a Mac And it's like fuck you.
+
+852
+00:59:01,221 --> 00:59:03,672
+Speaker 1: So yeah, I can't use Google Calendar with it.
+
+853
+00:59:03,793 --> 00:59:04,797
+Speaker 1: And that's something I knew.
+
+854
+00:59:04,898 --> 00:59:07,767
+Speaker 1: Google Integration with it is rather poor.
+
+855
+00:59:07,787 --> 00:59:12,440
+Speaker 0: Yeah, we're just sad because Google apps is pretty much the lifeblood of my internet.
+
+856
+00:59:12,601 --> 00:59:16,900
+Speaker 1: It is that really if I could get the Google apps on here more seriously, I'd be much better off now.
+
+857
+00:59:17,262 --> 00:59:22,220
+Speaker 0: Hey Google, I'd pay a lot of money just to have it work I know but I think Google's more on their Android.
+
+858
+00:59:22,340 --> 00:59:27,340
+Speaker 1: The thing is Google did make a search app for this so they're making a search app and they got their maps on here.
+
+859
+00:59:27,641 --> 00:59:29,148
+Speaker 1: Why not put the other apps on here?
+
+860
+00:59:29,228 --> 00:59:35,656
+Speaker 1: Come on, you know that there was an article I read today That was actually saying hey Google, you know keep going with the Android.
+
+861
+00:59:35,696 --> 00:59:36,420
+Speaker 1: that's all good.
+
+862
+00:59:36,841 --> 00:59:41,680
+Speaker 1: But the way Google got so big is they they did the daffodil method.
+
+863
+00:59:41,801 --> 00:59:43,680
+Speaker 1: We don't care where these grow.
+
+864
+00:59:43,740 --> 00:59:52,971
+Speaker 1: You just want to grow anywhere we can possibly grow and by not growing on the iPhone as much as they possibly could Google is Sort of missing out, but I'm not too worried about Google.
+
+865
+00:59:53,654 --> 00:59:53,995
+Speaker 1: Actually.
+
+866
+00:59:54,036 --> 00:59:55,020
+Speaker 1: I was kind of surprised.
+
+867
+00:59:56,202 --> 01:00:02,548
+Speaker 1: There are a lot of websites that are like specifically designed to work Well on the iPhone like meebo.com.
+
+868
+01:00:02,588 --> 01:00:06,340
+Speaker 1: if you visit it on the iPhone you would swear that it's an app.
+
+869
+01:00:06,662 --> 01:00:07,228
+Speaker 1: But it's not.
+
+870
+01:00:07,309 --> 01:00:08,379
+Speaker 1: it's actually just a website.
+
+871
+01:00:08,841 --> 01:00:12,534
+Speaker 1: Cuz meebo.com is done so well and Gmail is the same way.
+
+872
+01:00:12,574 --> 01:00:22,940
+Speaker 1: if I go to my Google Mail in the browser It's it actually feels and looks like an app, you know It doesn't feel and look like a website that I'm looking at in a browser and I have to zoom in and stuff like that.
+
+873
+01:00:23,020 --> 01:00:27,100
+Speaker 1: It actually works properly and there's a lot of sites like that and they're pretty good.
+
+874
+01:00:28,062 --> 01:00:34,600
+Speaker 1: The thing is is I also tried to set up my Google Mail through the built-in mail application, you know and use the I map.
+
+875
+01:00:35,523 --> 01:00:37,007
+Speaker 1: That actually worked better.
+
+876
+01:00:37,148 --> 01:00:38,271
+Speaker 1: I think than visiting.
+
+877
+01:00:38,331 --> 01:00:44,900
+Speaker 1: Yeah, because I mean sure I can't like, you know What they did that Google is very smart about right?
+
+878
+01:00:45,000 --> 01:00:51,020
+Speaker 1: Is that even though I don't have the sort of interface like starring things or that sort of stuff, right?
+
+879
+01:00:51,882 --> 01:01:01,300
+Speaker 1: They sort of matched up the I map interface with the real interface so I can't click report trash But I can move something to the spam folder report spam.
+
+880
+01:01:01,360 --> 01:01:05,460
+Speaker 1: But I can move something to the spam folder and on Google's end a report spam.
+
+881
+01:01:06,327 --> 01:01:14,819
+Speaker 1: so because the Email app the default, you know built into the iPhone one is really good at reading my gmails on there is not so bad.
+
+882
+01:01:16,902 --> 01:01:22,227
+Speaker 1: Something that is kind of bad is the camera doesn't do video which my shitty phone did Which is kind of sad.
+
+883
+01:01:22,509 --> 01:01:24,119
+Speaker 0: Yeah, but how often did you use that?
+
+884
+01:01:25,060 --> 01:01:27,119
+Speaker 1: Not often but on the iPhone I would use it.
+
+885
+01:01:27,240 --> 01:01:32,578
+Speaker 1: You know, it's things that my other phone did but because the iPhone now does them I do use them.
+
+886
+01:01:32,979 --> 01:01:41,560
+Speaker 1: you see I have that car audio link thing that I use with my old iPod, you know to play music over the in-car speakers.
+
+887
+01:01:42,541 --> 01:01:44,860
+Speaker 1: That actually works really well with the iPhone.
+
+888
+01:01:45,001 --> 01:01:53,548
+Speaker 1: In fact, I think it works better with the iPhone But it doesn't charge the iPhone which on a long trip is gonna kill me because People are right.
+
+889
+01:01:53,568 --> 01:01:55,480
+Speaker 1: the battery life on this, right?
+
+890
+01:01:56,340 --> 01:01:56,843
+Speaker 1: It won't.
+
+891
+01:01:56,904 --> 01:02:07,579
+Speaker 1: if you don't charge it in at morning and at night You're gonna have trouble right and that's the thing is for my average 99% of the time That's gonna be adequate for me.
+
+892
+01:02:07,700 --> 01:02:10,330
+Speaker 0: That's not good for trips though because I'll like.
+
+893
+01:02:10,350 --> 01:02:13,642
+Speaker 0: the one thing about my blackberry is I'll take it out of town for a whole Weekend.
+
+894
+01:02:14,124 --> 01:02:18,060
+Speaker 0: battery will be fine the whole weekend and then I get home and then I plug it in again.
+
+895
+01:02:18,180 --> 01:02:21,650
+Speaker 1: Yep, the thing is when I think about my real situation, right?
+
+896
+01:02:22,172 --> 01:02:25,814
+Speaker 1: I always travel everywhere with cords to charge everything So that's not a problem.
+
+897
+01:02:26,881 --> 01:02:36,916
+Speaker 1: Okay, so let's say I go to my average day charge it in the morning charge it while I'm at work charge it When I'm at home, it only really uses battery and I'm on the train.
+
+898
+01:02:37,077 --> 01:02:37,660
+Speaker 1: That's fine.
+
+899
+01:02:37,720 --> 01:02:40,160
+Speaker 1: It barely is any battery for two train rides, right?
+
+900
+01:02:41,826 --> 01:02:47,920
+Speaker 1: If I go to a convention I'm not gonna be pulling out of my pocket that often and I'll be charging it in the morning and at the night.
+
+901
+01:02:48,423 --> 01:02:50,135
+Speaker 1: So it'll make it through a convention.
+
+902
+01:02:50,155 --> 01:02:50,840
+Speaker 0: What do you mean at the night?
+
+903
+01:02:50,900 --> 01:02:52,216
+Speaker 0: So we get back to the room at like 4 a.m.
+
+904
+01:02:52,640 --> 01:02:56,520
+Speaker 0: You charge it for four hours and then we're back up and at the con again, it'll be alright.
+
+905
+01:02:57,123 --> 01:02:58,288
+Speaker 1: It doesn't take that long to charge.
+
+906
+01:02:58,348 --> 01:02:58,509
+Speaker 1: Actually.
+
+907
+01:02:58,529 --> 01:03:00,197
+Speaker 1: I haven't checked how long it takes to charge.
+
+908
+01:03:00,237 --> 01:03:00,900
+Speaker 1: That's something to look at.
+
+909
+01:03:00,960 --> 01:03:02,285
+Speaker 0: I'm sure someone made a website.
+
+910
+01:03:02,666 --> 01:03:16,480
+Speaker 1: I'm sure but yeah, but when you look get right down to it, though You can conserve battery life if you want by like disabling the 3g radio Disabling the Wi-Fi turning off the Bluetooth, you know, that's her so you can turn the brightness down.
+
+911
+01:03:16,701 --> 01:03:18,932
+Speaker 1: There's a lot of ways that you can save the battery.
+
+912
+01:03:18,972 --> 01:03:20,540
+Speaker 1: if you know, you're gonna be out for a long time.
+
+913
+01:03:20,580 --> 01:03:24,797
+Speaker 1: Don't watch videos, you know, don't use the GPS All right.
+
+914
+01:03:26,561 --> 01:03:31,238
+Speaker 1: And when you really look at the competition look at the other smartphones that have 3g.
+
+915
+01:03:31,278 --> 01:03:31,519
+Speaker 1: in them.
+
+916
+01:03:32,082 --> 01:03:38,150
+Speaker 1: The battery life is worse than the iPhone the iPhone 3g While it doesn't have as good battery life as the original iPhone.
+
+917
+01:03:38,772 --> 01:03:41,060
+Speaker 1: It beats every single other 3g smartphone.
+
+918
+01:03:41,241 --> 01:03:44,614
+Speaker 0: Well, we can talk a lot about how 3g works, but we'll save that for another show.
+
+919
+01:03:44,976 --> 01:03:46,040
+Speaker 1: 3g is just faster.
+
+920
+01:03:46,662 --> 01:03:49,891
+Speaker 1: It means I can browse the web when there's no wireless access.
+
+921
+01:03:49,951 --> 01:03:52,820
+Speaker 0: I'm talking about why it uses more batteries specifically.
+
+922
+01:03:53,322 --> 01:03:53,824
+Speaker 1: Okay.
+
+923
+01:03:54,065 --> 01:03:57,360
+Speaker 1: Well anything that's faster and wireless is usually uses more electricity.
+
+924
+01:03:59,201 --> 01:04:03,052
+Speaker 1: Other things I don't like is that there's you can't remove the built-in apps.
+
+925
+01:04:03,112 --> 01:04:11,254
+Speaker 1: like it comes at the iTunes, you know store I'm never gonna buy anything from the iTunes music store ever, but I can't remove the icon.
+
+926
+01:04:11,615 --> 01:04:13,540
+Speaker 1: you see there's a stocks app.
+
+927
+01:04:13,641 --> 01:04:14,899
+Speaker 1: I can't remove the icon.
+
+928
+01:04:15,462 --> 01:04:27,388
+Speaker 1: Actually, I think I can use the parental control setting to remove the iTunes icon But I can't move the stocks icon, which is like it's in the way I want it, you know, I sort of moved it to the other screen where I don't go so often But it's still there.
+
+929
+01:04:27,408 --> 01:04:29,801
+Speaker 1: I Don't know.
+
+930
+01:04:30,503 --> 01:04:32,749
+Speaker 1: Is there anything else really interesting to say about it?
+
+931
+01:04:33,231 --> 01:04:37,041
+Speaker 1: Basically, it's just so amazing the wide variety of things It does.
+
+932
+01:04:37,081 --> 01:04:41,635
+Speaker 1: well, I mean, it's an iPod that plays audio and video amazingly.
+
+933
+01:04:41,675 --> 01:04:42,939
+Speaker 1: I'm so glad I got the 16 gig.
+
+934
+01:04:43,601 --> 01:04:46,020
+Speaker 1: I can fit two entire anime series on here.
+
+935
+01:04:46,401 --> 01:04:51,460
+Speaker 1: I have all of Evangelion and all of Escaflowne and four Evangelion director's cut episodes.
+
+936
+01:04:51,580 --> 01:04:59,780
+Speaker 1: I ripped them from the DVDs and I put them on here and I have a cable that goes from this to the television And I just tried it and it totally works.
+
+937
+01:05:00,282 --> 01:05:10,233
+Speaker 1: So I can like go to a hotel and plug this tiny thing into a TV and watch Full anime series with no disk switching on a TV.
+
+938
+01:05:10,734 --> 01:05:11,957
+Speaker 1: It's just unbelievable.
+
+939
+01:05:12,098 --> 01:05:13,000
+Speaker 1: Absolutely unbelievable.
+
+940
+01:05:13,121 --> 01:05:15,411
+Speaker 0: So you've been watching some of that there Escaflowne?
+
+941
+01:05:15,472 --> 01:05:16,818
+Speaker 1: I watched episode one of the choo-choo.
+
+942
+01:05:17,542 --> 01:05:19,089
+Speaker 0: Ah, it was 45 minutes long wasn't?
+
+943
+01:05:19,109 --> 01:05:20,436
+Speaker 0: I remember the first episode as long?
+
+944
+01:05:20,517 --> 01:05:21,160
+Speaker 1: it is quite long.
+
+945
+01:05:22,621 --> 01:05:26,335
+Speaker 1: There's an application called Twitterific that has a free version and a pay version.
+
+946
+01:05:26,375 --> 01:05:34,688
+Speaker 1: the pay version gets rid of the ads but they didn't put enough ads in the free version to annoy me into paying for the non free one and It just uses Twitter.
+
+947
+01:05:34,789 --> 01:05:43,364
+Speaker 1: but having this Suddenly makes the Twitter make sense for some reason like I'm using it like crazy like every time I'll turn the phone on I'll check it.
+
+948
+01:05:43,546 --> 01:05:45,019
+Speaker 0: pooping poop is coming out.
+
+949
+01:05:45,209 --> 01:05:48,952
+Speaker 1: No It's actually like good stuff going on now and it's like all people.
+
+950
+01:05:49,113 --> 01:05:54,010
+Speaker 1: pretty much almost everyone is using the Twitterific With the Twitter now because everyone has the iPhones and it's.
+
+951
+01:05:54,391 --> 01:05:58,807
+Speaker 1: it's kind of crazy and it's it's you know You you can po it's really.
+
+952
+01:05:58,867 --> 01:06:02,300
+Speaker 1: I can't take a picture of something and then it will immediately.
+
+953
+01:06:02,521 --> 01:06:07,560
+Speaker 1: It'll add the picture to the Twitter message that I just took with the phone and then I can push another button.
+
+954
+01:06:07,861 --> 01:06:10,469
+Speaker 1: It'll add my current location to the Twitter message.
+
+955
+01:06:10,911 --> 01:06:15,445
+Speaker 1: So if I see something cool and on the street, I take a picture I push the button I click send.
+
+956
+01:06:15,766 --> 01:06:19,336
+Speaker 1: everyone knows that cool thing is right there like instantly.
+
+957
+01:06:19,917 --> 01:06:20,800
+Speaker 1: It's pretty awesome.
+
+958
+01:06:21,541 --> 01:06:24,953
+Speaker 1: This is the same thing that plays video when you plug it into a television.
+
+959
+01:06:25,294 --> 01:06:26,980
+Speaker 1: is the same thing that makes phone calls.
+
+960
+01:06:27,241 --> 01:06:28,666
+Speaker 1: It's the same thing that browses the web.
+
+961
+01:06:28,886 --> 01:06:30,291
+Speaker 1: the same thing that checks email.
+
+962
+01:06:30,532 --> 01:06:35,317
+Speaker 1: the same thing that gets all the baseball highlights From the games as they're going on.
+
+963
+01:06:36,420 --> 01:06:39,120
+Speaker 1: It's the same thing that can tell you where the restaurants are.
+
+964
+01:06:39,521 --> 01:06:41,289
+Speaker 1: It's the same thing that I can write notes in.
+
+965
+01:06:41,309 --> 01:06:42,915
+Speaker 1: the same thing remembers all my contacts.
+
+966
+01:06:42,935 --> 01:06:43,859
+Speaker 1: the same thing that runs aim.
+
+967
+01:06:43,879 --> 01:06:44,966
+Speaker 1: the same It tells me the weather.
+
+968
+01:06:45,429 --> 01:06:50,446
+Speaker 1: the same thing that can remotely control The iTunes on my desktop computer when I'm lying in bed.
+
+969
+01:06:50,466 --> 01:06:54,124
+Speaker 1: the same thing with a calculator and a clock and It's it's.
+
+970
+01:06:54,204 --> 01:07:02,223
+Speaker 1: you know, it looks big when they show you pictures of it but really I put it up next to my old cell phone, which is a flip phone and the flip.
+
+971
+01:07:02,263 --> 01:07:10,460
+Speaker 1: this cell phone when flipped closed is actually like Almost as big as this thing like if you could flip the iPhone in half.
+
+972
+01:07:11,002 --> 01:07:15,897
+Speaker 1: I think it actually takes up like it would be less space in your pocket than my flip phone.
+
+973
+01:07:16,197 --> 01:07:16,980
+Speaker 1: It's kind of crazy.
+
+974
+01:07:18,341 --> 01:07:20,669
+Speaker 1: You can also send people money with PayPal on it.
+
+975
+01:07:21,070 --> 01:07:22,194
+Speaker 0: Yeah, everyone knows that.
+
+976
+01:07:22,274 --> 01:07:25,525
+Speaker 1: Yeah, but it's one thing Yes, which is crazy.
+
+977
+01:07:25,605 --> 01:07:30,783
+Speaker 1: And the only reason that's the crazy thing about I mean, there are things it can't do plenty of things It can't do that.
+
+978
+01:07:30,803 --> 01:07:33,353
+Speaker 1: It should be able to do for example cunnilingus.
+
+979
+01:07:33,553 --> 01:07:33,875
+Speaker 1: Yes.
+
+980
+01:07:34,457 --> 01:07:42,800
+Speaker 1: Oh, no, I mean like People with the Nokia's right they can do that quick thing where they can stream live video to the web from their phone.
+
+981
+01:07:43,285 --> 01:07:44,499
+Speaker 1: iPhone can't do that, right?
+
+982
+01:07:45,525 --> 01:07:46,699
+Speaker 1: It doesn't do the Google Apps.
+
+983
+01:07:48,022 --> 01:07:49,832
+Speaker 1: It doesn't have turn-by-turn GPS though.
+
+984
+01:07:49,873 --> 01:07:51,079
+Speaker 1: That might be coming soon.
+
+985
+01:07:51,622 --> 01:07:57,006
+Speaker 1: There are a lot of apps that are possible that just aren't written yet It can't.
+
+986
+01:07:57,067 --> 01:07:58,480
+Speaker 1: it doesn't have flash, right?
+
+987
+01:07:58,680 --> 01:08:00,609
+Speaker 1: So you pretty much the only videos you can.
+
+988
+01:08:00,729 --> 01:08:03,000
+Speaker 1: the only flash you can do is is a YouTube client.
+
+989
+01:08:03,442 --> 01:08:07,036
+Speaker 1: So I can watch a YouTube video, but I can't watch any other kind of flash anything.
+
+990
+01:08:07,377 --> 01:08:16,212
+Speaker 1: No flash games No flash videos YouTube only which is actually kind of cool because I can go to a hotel plug this in Watch YouTube on the TV.
+
+991
+01:08:16,232 --> 01:08:20,020
+Speaker 1: Ah And it's the same thing that plays my podcast.
+
+992
+01:08:21,060 --> 01:08:23,212
+Speaker 0: Alright on that note because we've gone kind of long.
+
+993
+01:08:23,254 --> 01:08:24,319
+Speaker 0: I think we'll end it there.
+
+994
+01:08:24,581 --> 01:08:27,871
+Speaker 1: Yeah, if anyone has like specific questions, I'll answer them.
+
+995
+01:08:27,890 --> 01:08:30,018
+Speaker 1: cuz I'm sure you know, there's just so many it's.
+
+996
+01:08:30,098 --> 01:08:33,140
+Speaker 1: it's crazy that There's just so many things to say about it.
+
+997
+01:08:33,220 --> 01:08:35,908
+Speaker 1: it's hard to say them all without being redundant with.
+
+998
+01:08:36,048 --> 01:08:36,209
+Speaker 1: other.
+
+999
+01:08:36,249 --> 01:08:37,551
+Speaker 1: people have said and such.
+
+1000
+01:08:37,633 --> 01:08:54,180
+Speaker 1: but if you can afford one and You don't have some reason to get some other smartphone instead, you know, like your company bought you a blackberry or something like that I think you should definitely go for it at least in the United States where the competition is weak sauce.
+
+1001
+01:08:54,359 --> 01:08:57,770
+Speaker 0: Yeah, you don't want up in Canada with their crazy stupid plans.
+
+1002
+01:08:58,051 --> 01:08:58,252
+Speaker 1: No.
+
+1003
+01:08:58,774 --> 01:09:00,600
+Speaker 1: Yeah the thing the plans are there.
+
+1004
+01:09:01,247 --> 01:09:04,283
+Speaker 1: They're a little bit expensive But you know I'm willing to deal with.
+
+1005
+01:09:04,384 --> 01:09:07,416
+Speaker 1: I can afford it so I will suffer in order to get the benefit.
+
+1006
+01:09:07,435 --> 01:09:09,004
+Speaker 1: cuz I mean what's the Alternative?
+
+1007
+01:09:09,386 --> 01:09:11,240
+Speaker 1: stick with something that just makes calls.
+
+1008
+01:09:12,180 --> 01:09:13,466
+Speaker 1: It's only been like three days.
+
+1009
+01:09:13,506 --> 01:09:14,872
+Speaker 1: There's no way I can ever go back to that.
+
+1010
+01:09:15,033 --> 01:09:16,560
+Speaker 1: It's already it's already game over.
+
+1011
+01:09:16,580 --> 01:09:17,291
+Speaker 0: You're one of them.
+
+1012
+01:09:17,595 --> 01:09:26,758
+Speaker 0: Yeah This has been geek nights with rim and Scott special.
+
+1013
+01:09:26,778 --> 01:09:28,964
+Speaker 0: Thanks to DJ pretzel for the opening music.
+
+1014
+01:09:29,626 --> 01:09:40,788
+Speaker 1: Be sure to visit our website at www.frontroadcrew.com where you'll find show notes links our awesome forum a link to our crapper map and Links to all the RSS feeds.
+
+1015
+01:09:41,390 --> 01:09:47,029
+Speaker 0: We say feeds plural because geek nights airs four nights a week covering four different brands of geekery.
+
+1016
+01:09:47,591 --> 01:09:49,761
+Speaker 0: Mondays are science and technology Tuesdays.
+
+1017
+01:09:49,801 --> 01:09:51,870
+Speaker 0: We have video games board games and RPGs.
+
+1018
+01:09:52,270 --> 01:09:57,710
+Speaker 0: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+1019
+01:09:58,131 --> 01:10:05,390
+Speaker 1: You can send us feedback by email to geek nights at front row crew comm or you can send audio feedback.
+
+1020
+01:10:05,892 --> 01:10:09,790
+Speaker 1: Odeo just click the link that says send me an audio on the right side of our website.
+
+1021
+01:10:10,133 --> 01:10:11,041
+Speaker 0: If you like what you hear.
+
+1022
+01:10:11,122 --> 01:10:15,280
+Speaker 0: you can catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+1023
+01:10:15,300 --> 01:10:18,610
+Speaker 0: for the complete archives visit the website which has everything.
+
+1024
+01:10:19,192 --> 01:10:24,127
+Speaker 1: Geek nights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+1025
+01:10:25,692 --> 01:10:27,517
+Speaker 1: This means you can do whatever you want with it.
+
+1026
+01:10:27,858 --> 01:10:31,749
+Speaker 1: As long as you give us credit don't make money and share it in time.
+
+1027
+01:10:32,552 --> 01:10:36,061
+Speaker 1: Geek nights is recorded live with no studio and no audience.
+
+1028
+01:10:36,482 --> 01:10:37,986
+Speaker 1: But unlike those other late shows.
+
+1029
+01:10:38,287 --> 01:10:39,570
+Speaker 1: It's actually recorded at night.
+

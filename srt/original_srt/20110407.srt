@@ -1,0 +1,3440 @@
+﻿1
+00:00:09,100 --> 00:00:18,470
+Speaker 0: It's Thursday April 7th 2011 I'm rim and this is geek nights tonight MichioKaku's hyperspace on the geek nights book club.
+
+2
+00:00:22,292 --> 00:00:23,023
+Speaker 1: Let's do this.
+
+3
+00:00:27,254 --> 00:00:35,509
+Speaker 0: It was kind of amazing at work that and I'm sitting there do working on some code or something and suddenly Suddenly I noticed that that didn't really matter.
+
+4
+00:00:35,990 --> 00:00:38,257
+Speaker 0: the market dropped like point six percent.
+
+5
+00:00:38,818 --> 00:00:39,300
+Speaker 1: Is that a lot?
+
+6
+00:00:40,182 --> 00:00:41,567
+Speaker 1: The whole market almost 1%.
+
+7
+00:00:41,567 --> 00:00:42,830
+Speaker 1: yeah, there's one almost at six.
+
+8
+00:00:49,142 --> 00:00:57,320
+Speaker 0: So basically think about this the market dips six Suddenly and I see all these alarms like ah, and I wonder alright what happened?
+
+9
+00:00:57,460 --> 00:01:00,730
+Speaker 0: I have CNBC and everything on and all the news feeds and there's nothing.
+
+10
+00:01:01,332 --> 00:01:02,836
+Speaker 0: I go to FARC and there's nothing.
+
+11
+00:01:03,378 --> 00:01:13,700
+Speaker 0: I go to Twitter And I just start to see a couple of tweets Coming in about aftershock and then minutes later the news is like oh shit and aftershock hit Japan.
+
+12
+00:01:14,405 --> 00:01:16,460
+Speaker 0: Everything's mostly okay, you know and all the news after that.
+
+13
+00:01:16,540 --> 00:01:24,689
+Speaker 0: But the fact that the market reacted before I think any human on the at least in the United States Knew that there was an aftershock was amazing.
+
+14
+00:01:24,709 --> 00:01:26,295
+Speaker 1: Well, this is something I wonder about right?
+
+15
+00:01:26,315 --> 00:01:27,319
+Speaker 1: It's like where did that?
+
+16
+00:01:27,940 --> 00:01:29,214
+Speaker 1: movement come from right.
+
+17
+00:01:29,234 --> 00:01:38,233
+Speaker 1: so I We know that there are people out there who have trading systems hooked up to news feeds But they wouldn't be able to react for minutes.
+
+18
+00:01:38,313 --> 00:01:41,307
+Speaker 0: also little-known fact you think you know there are different ways to do news feeds.
+
+19
+00:01:41,447 --> 00:01:48,358
+Speaker 0: one way is to just consume a feed of like text news and Do some sort of you know algorithm to parse out words or whatever.
+
+20
+00:01:48,439 --> 00:01:53,739
+Speaker 1: Yes There could have been someone on the AP wire which may have been fast But most could have been a human doing it.
+
+21
+00:01:54,081 --> 00:01:55,869
+Speaker 0: But most people respond.
+
+22
+00:01:56,150 --> 00:01:59,263
+Speaker 0: the news feeds that you hear about are actually Scores.
+
+23
+00:01:59,364 --> 00:02:03,540
+Speaker 0: someone else does all the work for you with proprietary whatevers and they send you a score.
+
+24
+00:02:03,681 --> 00:02:07,280
+Speaker 0: That's like good or bad for this sector or this stuff, right?
+
+25
+00:02:07,360 --> 00:02:10,937
+Speaker 1: But that person is analyzing the same internet news that we're analyzing.
+
+26
+00:02:10,979 --> 00:02:17,256
+Speaker 0: Yes So my guess as to what happened and obviously I'm not speaking to any particular stock.
+
+27
+00:02:17,316 --> 00:02:18,760
+Speaker 0: Nor am I giving investment advice?
+
+28
+00:02:19,784 --> 00:02:20,128
+Speaker 1: Is that?
+
+29
+00:02:20,451 --> 00:02:21,098
+Speaker 1: let me call the SEC?
+
+30
+00:02:21,501 --> 00:02:22,387
+Speaker 1: I'll see what they think about.
+
+31
+00:02:22,407 --> 00:02:24,259
+Speaker 0: is that because it happened in Japan, right?
+
+32
+00:02:24,861 --> 00:02:31,980
+Speaker 0: So there were reactions in the financial sector in Japan which triggered things in the u.s Almost immediately.
+
+33
+00:02:32,744 --> 00:02:36,200
+Speaker 1: So the Japanese people clicked on, you know manually trade.
+
+34
+00:02:36,240 --> 00:02:43,903
+Speaker 1: Oh, no Because the market was open and then those movements were automatically detected by computer systems in the u.s That automatically trade.
+
+35
+00:02:43,923 --> 00:02:51,487
+Speaker 0: my other guess is that or Japanese people traded on the American exchanges now There's a latency back to the u.s.
+
+36
+00:02:51,527 --> 00:02:52,209
+Speaker 0: And then to Japan.
+
+37
+00:02:52,229 --> 00:02:53,112
+Speaker 0: again is pretty high.
+
+38
+00:02:53,433 --> 00:02:54,496
+Speaker 0: the market react, but it's not.
+
+39
+00:02:54,877 --> 00:02:55,760
+Speaker 1: it's not minutes.
+
+40
+00:02:56,443 --> 00:02:59,400
+Speaker 0: No, it's not minutes, but it was just kind of amazing.
+
+41
+00:02:59,601 --> 00:03:04,360
+Speaker 0: Remember when people were pointing out that the tweets are far faster than actual earthquakes.
+
+42
+00:03:04,903 --> 00:03:06,411
+Speaker 1: Yeah, so here's it.
+
+43
+00:03:06,612 --> 00:03:08,020
+Speaker 1: This gave me an idea actually.
+
+44
+00:03:09,142 --> 00:03:18,800
+Speaker 1: So these people are trading based on news right from the news, you know And they're trying to parse things that journalists have written or the AP is written in English to make trades.
+
+45
+00:03:19,141 --> 00:03:22,310
+Speaker 0: Well, most people are parsing more complex data feeds.
+
+46
+00:03:22,371 --> 00:03:25,420
+Speaker 0: that score the news based, right?
+
+47
+00:03:25,440 --> 00:03:29,440
+Speaker 1: But it's based on looking at news written in English, which is then turned into a score.
+
+48
+00:03:29,962 --> 00:03:30,926
+Speaker 0: Oh, yes to a degree though.
+
+49
+00:03:30,946 --> 00:03:38,050
+Speaker 0: I just want to qualify that some of that news is actually Formatted in kind of reliable ways like it's normalized data.
+
+50
+00:03:38,170 --> 00:03:41,179
+Speaker 0: Like I don't know corporate actions that happen.
+
+51
+00:03:41,259 --> 00:03:42,045
+Speaker 1: Oh, yeah Yeah, I'm sure.
+
+52
+00:03:42,348 --> 00:03:43,559
+Speaker 1: so here's an idea I had.
+
+53
+00:03:43,740 --> 00:03:50,020
+Speaker 1: What if we put sensors all over the world of different varieties, for example detected disaster in cell, right?
+
+54
+00:03:50,060 --> 00:03:57,464
+Speaker 1: We have a size a seismograph in Japan and if we can program it to put it connected to a computer Or it is a computer.
+
+55
+00:03:57,966 --> 00:04:06,373
+Speaker 1: if the earth if there's too much earthquake in this area cell You could be way faster than the guy parsing the news and we would get out.
+
+56
+00:04:06,733 --> 00:04:08,338
+Speaker 0: There's no guy parsing the news.
+
+57
+00:04:08,418 --> 00:04:09,200
+Speaker 0: It's algos.
+
+58
+00:04:09,300 --> 00:04:16,558
+Speaker 1: I'm just saying is it would be faster than the news algorithm because those few seconds where someone types in that news story We're beating them.
+
+59
+00:04:16,779 --> 00:04:17,944
+Speaker 0: Well, the news I'll see.
+
+60
+00:04:18,505 --> 00:04:23,640
+Speaker 0: the way to use a news feed like that is more to prime other decision-making systems.
+
+61
+00:04:23,861 --> 00:04:25,890
+Speaker 1: It doesn't matter we can make money because it'd be faster.
+
+62
+00:04:25,910 --> 00:04:28,220
+Speaker 1: You're saying milliseconds usually count this work.
+
+63
+00:04:28,301 --> 00:04:29,398
+Speaker 1: This is on the order of seconds.
+
+64
+00:04:29,801 --> 00:04:30,523
+Speaker 0: So here's the trouble.
+
+65
+00:04:30,784 --> 00:04:33,091
+Speaker 0: you can't guarantee that the market will drop or not.
+
+66
+00:04:33,151 --> 00:04:39,880
+Speaker 0: a similar earthquake in a different place in a different time Wouldn't have had this reaction and the market recovered almost all the way.
+
+67
+00:04:39,940 --> 00:04:43,760
+Speaker 1: Well, this is why you have to have you know, it's not just a simple decision hooked up to the data.
+
+68
+00:04:43,860 --> 00:04:49,600
+Speaker 1: It's you have the algo hooked up to this raw data of and not just a site one seismograph in Japan, right?
+
+69
+00:04:49,660 --> 00:04:51,267
+Speaker 1: I'm talking about get all kinds of data.
+
+70
+00:04:51,528 --> 00:04:53,556
+Speaker 1: hook it up to weather stations around the world.
+
+71
+00:04:53,697 --> 00:04:56,243
+Speaker 0: I can guarantee Seismographs.
+
+72
+00:04:56,504 --> 00:05:08,275
+Speaker 0: I can guarantee taking photos in Scott Scott I can guarantee to you that there are small outfits out there that are looking at the goddamn weather and trying to see how it Correlates to stocks, but I'm saying not just whether right.
+
+73
+00:05:08,335 --> 00:05:09,320
+Speaker 1: that's just one example.
+
+74
+00:05:10,561 --> 00:05:18,000
+Speaker 1: Everything they're looking at anything they can get sudden the checks like radio active radio wave activity, you know and stuff like that.
+
+75
+00:05:18,322 --> 00:05:26,681
+Speaker 1: Yeah, if there's any Possible link so increase we can detects increased cell phone and Wi-Fi activity in localized areas We got.
+
+76
+00:05:26,742 --> 00:05:29,874
+Speaker 0: if there's any possible link to anything people are doing it.
+
+77
+00:05:29,894 --> 00:05:35,765
+Speaker 1: I don't know I haven't heard about anyone doing these sorts of things Anything about how it even works.
+
+78
+00:05:36,447 --> 00:05:43,208
+Speaker 1: we can hook it sign up to you know, detecting tides and ocean movements and Yeah, you could yeah.
+
+79
+00:05:43,712 --> 00:05:46,245
+Speaker 0: Yeah Okay, you got any news?
+
+80
+00:05:46,325 --> 00:05:46,807
+Speaker 0: It's Thursday.
+
+81
+00:05:46,827 --> 00:05:47,971
+Speaker 0: We can talk about whatever we want.
+
+82
+00:05:48,393 --> 00:05:55,060
+Speaker 1: You know, we often give Government a hard time because you know, it doesn't usually do stuff that makes us happy.
+
+83
+00:05:55,302 --> 00:05:58,665
+Speaker 1: Yeah, especially when it's making laws We usually does a bad job.
+
+84
+00:05:58,725 --> 00:06:04,655
+Speaker 0: the worst thing is we're getting to getting better pretty much constantly except The years and Bush was in office.
+
+85
+00:06:04,938 --> 00:06:12,438
+Speaker 0: Oh But it's getting better just because we're smarter and we have more access to information than previous generations.
+
+86
+00:06:12,539 --> 00:06:16,891
+Speaker 0: as a whole We're very aware of the glacial pace of change.
+
+87
+00:06:17,312 --> 00:06:23,932
+Speaker 1: But anyway, I just wanted to you know Highlight a good law and what I consider to be a good law.
+
+88
+00:06:23,952 --> 00:06:24,915
+Speaker 0: a good law.
+
+89
+00:06:24,935 --> 00:06:25,637
+Speaker 1: You might disagree.
+
+90
+00:06:25,657 --> 00:06:26,820
+Speaker 1: It's a new good law.
+
+91
+00:06:26,920 --> 00:06:27,905
+Speaker 1: It's a New York law.
+
+92
+00:06:28,246 --> 00:06:31,140
+Speaker 1: It's just a few weeks old right, but it's really good.
+
+93
+00:06:31,601 --> 00:06:42,393
+Speaker 1: so basically there was this problem and the problem was is that you know, the vast majority of Crimes and especially assaults and batteries and those sorts of things are domestic disturbances.
+
+94
+00:06:42,433 --> 00:06:44,498
+Speaker 0: Yep closed-door versus open-door crimes.
+
+95
+00:06:44,578 --> 00:06:59,540
+Speaker 1: Yes now The fact is I wasn't aware of this problem right that a lot of people when they get mad You know instead of punching and kicking or beating with a frying pan or whatever They do some strangling activity and maybe they don't strangle someone to death.
+
+96
+00:06:59,740 --> 00:07:02,269
+Speaker 1: But you know, they give someone a nice choke, right?
+
+97
+00:07:02,469 --> 00:07:03,734
+Speaker 1: Yeah, and what happened?
+
+98
+00:07:03,754 --> 00:07:04,115
+Speaker 0: I mean, what?
+
+99
+00:07:04,135 --> 00:07:05,680
+Speaker 0: what's the phrase choke a motherfucker?
+
+100
+00:07:06,060 --> 00:07:06,402
+Speaker 0: That's right.
+
+101
+00:07:06,442 --> 00:07:07,045
+Speaker 0: Choke a bitch.
+
+102
+00:07:07,367 --> 00:07:19,468
+Speaker 1: Apparently what was happening for a very long time Is that when you choke somebody there wasn't a whole lot of evidence because by the time anyone gets there You're done gasping for air, right?
+
+103
+00:07:19,548 --> 00:07:21,214
+Speaker 1: You didn't really leave any bruises.
+
+104
+00:07:21,234 --> 00:07:29,387
+Speaker 1: Yeah, cuz if you choked him enough to bruise him There's probably enough permanent injury, you know, and you know, there might have been red marks around your neck But they fade.
+
+105
+00:07:29,589 --> 00:07:29,992
+Speaker 0: so Scott.
+
+106
+00:07:30,033 --> 00:07:34,480
+Speaker 0: I just want to point out We're gonna have to have a second follow-up law now or follow-up forensic evidence.
+
+107
+00:07:34,600 --> 00:07:38,474
+Speaker 0: We need a way to handle the sack full of doorknobs problem.
+
+108
+00:07:38,554 --> 00:07:50,520
+Speaker 1: I know but anyway anyway The point is is that a lot of people who strangled somebody We're getting away with it or getting very reduced sentences because of the lack of evidence of the lack of quality evidence.
+
+109
+00:07:51,142 --> 00:07:52,667
+Speaker 1: There is a new law in New York.
+
+110
+00:07:52,727 --> 00:07:53,890
+Speaker 1: It's just a few weeks old.
+
+111
+00:07:54,171 --> 00:07:55,856
+Speaker 1: That's basically like it's an.
+
+112
+00:07:56,077 --> 00:07:57,060
+Speaker 1: it's a strangling law.
+
+113
+00:07:57,221 --> 00:08:00,434
+Speaker 1: It's like strangling is illegal and this is what you do if there's a strangling.
+
+114
+00:08:00,454 --> 00:08:01,137
+Speaker 1: All right.
+
+115
+00:08:01,158 --> 00:08:04,266
+Speaker 1: All right, and So far how many people?
+
+116
+00:08:04,547 --> 00:08:07,075
+Speaker 1: how many times do you think they have used the strangling law?
+
+117
+00:08:07,135 --> 00:08:08,600
+Speaker 1: in just a few weeks now?
+
+118
+00:08:08,800 --> 00:08:10,267
+Speaker 1: You won't even a month.
+
+119
+00:08:10,548 --> 00:08:12,175
+Speaker 1: How many times do you think this law has been used?
+
+120
+00:08:12,195 --> 00:08:13,200
+Speaker 0: to quote Futurama?
+
+121
+00:08:13,380 --> 00:08:15,876
+Speaker 0: You wouldn't ask unless it was either really high or really low.
+
+122
+00:08:15,937 --> 00:08:22,054
+Speaker 1: I'm gonna say So far in just less than a month, right?
+
+123
+00:08:22,295 --> 00:08:26,064
+Speaker 1: They have arrested Two Thousand people.
+
+124
+00:08:26,084 --> 00:08:30,500
+Speaker 1: how many bitches need choking first strangling with this new law?
+
+125
+00:08:31,143 --> 00:08:34,720
+Speaker 1: So there you go a quality new law that seems to be working.
+
+126
+00:08:36,525 --> 00:08:41,068
+Speaker 1: Government did a good thing for once in How do you know?
+
+127
+00:08:41,087 --> 00:08:43,659
+Speaker 0: they're not arresting people who didn't actually strangle?
+
+128
+00:08:45,180 --> 00:08:50,540
+Speaker 1: There's actually some interesting things in this law about like if there was a strangling then you got it.
+
+129
+00:08:50,620 --> 00:08:57,034
+Speaker 1: Then that means that you have to investigate DNA evidence Which previously they would not investigate in such a case and such and such.
+
+130
+00:08:57,536 --> 00:08:58,559
+Speaker 1: so there's actually here.
+
+131
+00:08:58,964 --> 00:08:59,433
+Speaker 1: Here's what it is.
+
+132
+00:09:00,221 --> 00:09:06,720
+Speaker 1: The new law recognized the serious in the offense and has teeth sharp enough to keep a convicted offender behind bars or under scrutiny.
+
+133
+00:09:07,302 --> 00:09:13,020
+Speaker 1: Under the new strangulation law anyone convicted of either felony or misdemeanor counts must submit a DNA sample to authorities.
+
+134
+00:09:13,682 --> 00:09:14,746
+Speaker 1: So yeah, yada yada.
+
+135
+00:09:15,027 --> 00:09:18,760
+Speaker 1: So basically if you're if there's a strangling involved, right?
+
+136
+00:09:18,901 --> 00:09:28,720
+Speaker 1: There's gonna be a whole bunch more Evidence right to actually make sure that that the you know It sticks as opposed to getting away with it because there wasn't any bruising or whatever.
+
+137
+00:09:28,760 --> 00:09:38,307
+Speaker 1: Yeah, well the and since most of these strangling people are people who've had run-ins with the law previously They've got DNA on them so they can look at the person's neck and say yeah This dude is strangled.
+
+138
+00:09:38,890 --> 00:09:40,259
+Speaker 1: and then what are you gonna do about it?
+
+139
+00:09:40,600 --> 00:09:41,242
+Speaker 0: What now?
+
+140
+00:09:41,362 --> 00:09:43,388
+Speaker 0: the next step of course is what do we do about this?
+
+141
+00:09:43,429 --> 00:09:56,828
+Speaker 0: because all domestic violence and you know crimes of passion like that in general are Usually driven by poor impulse control which is correlated with all sorts of things ranging from bad Nutrition to bad upbringing.
+
+142
+00:09:56,848 --> 00:09:57,410
+Speaker 1: it says here.
+
+143
+00:09:57,450 --> 00:10:03,612
+Speaker 1: domestic abusers aren't usually first-time offenders And we're expecting to see that as people get convicted of these offenses.
+
+144
+00:10:03,994 --> 00:10:05,640
+Speaker 1: It will lead to solving other crimes.
+
+145
+00:10:05,981 --> 00:10:07,207
+Speaker 1: Ah, but what you find?
+
+146
+00:10:07,227 --> 00:10:10,140
+Speaker 1: a guy who's strangling somebody he's probably done something else.
+
+147
+00:10:10,201 --> 00:10:13,729
+Speaker 1: You found him and you look and you say oh, yeah This is the guy who did the whatever.
+
+148
+00:10:14,011 --> 00:10:17,170
+Speaker 0: so you find a guy who's guilty of I don't know some computer a crime.
+
+149
+00:10:17,351 --> 00:10:18,640
+Speaker 0: Oh, he might be doing weed.
+
+150
+00:10:19,361 --> 00:10:21,967
+Speaker 0: maybe That's a bad path.
+
+151
+00:10:22,027 --> 00:10:23,678
+Speaker 1: That is well, but you know, but that's just.
+
+152
+00:10:23,698 --> 00:10:26,192
+Speaker 1: you know There's nothing you can do about that as long as the weeds illegal.
+
+153
+00:10:26,212 --> 00:10:30,758
+Speaker 1: There's a separate issue from the strangling Yeah, and plus, you know now the Boston Strangler will get him.
+
+154
+00:10:32,263 --> 00:10:33,579
+Speaker 0: Yeah, because he totally wouldn't have done it.
+
+155
+00:10:34,245 --> 00:10:48,944
+Speaker 1: I know he was getting away with it all those years But now finally it you know, the glacial pace of government after how many centuries we finally made it illegal to strangle Luckily just hit the Boston Strang just in time for the government to shut itself down Whatever.
+
+156
+00:10:49,448 --> 00:10:51,060
+Speaker 1: It's the New York government at the federal government.
+
+157
+00:10:51,060 --> 00:10:52,110
+Speaker 0: Well, you know, it's kind of this thing where?
+
+158
+00:10:52,130 --> 00:10:56,398
+Speaker 0: because we argue I the thing is we were just arguing in the forum about the problem.
+
+159
+00:10:56,438 --> 00:10:56,619
+Speaker 0: where?
+
+160
+00:10:57,480 --> 00:11:03,780
+Speaker 0: Laws are often passed with a supposed deterrent effect, even though the punishments are shown to not actually deter.
+
+161
+00:11:04,522 --> 00:11:12,640
+Speaker 0: But in a case like this where there's clear evidence of recidivism and linked crimes It seems like this is a case where it will be a deterrent.
+
+162
+00:11:12,660 --> 00:11:13,163
+Speaker 1: Well, this is.
+
+163
+00:11:13,284 --> 00:11:15,175
+Speaker 1: this is basically a case of law.
+
+164
+00:11:15,215 --> 00:11:16,080
+Speaker 1: was no good, right?
+
+165
+00:11:16,160 --> 00:11:19,396
+Speaker 1: It's we had laws against a certain thing, but there was a loophole.
+
+166
+00:11:19,416 --> 00:11:23,160
+Speaker 1: you can get away with it If you strangled instead of punching someone in the face, so people were strangling.
+
+167
+00:11:23,583 --> 00:11:26,120
+Speaker 1: So now you can't get away with it just cuz you're strangling now.
+
+168
+00:11:26,341 --> 00:11:26,904
+Speaker 0: That's perfect.
+
+169
+00:11:26,924 --> 00:11:28,693
+Speaker 0: That does imply a secondary thing.
+
+170
+00:11:29,136 --> 00:11:42,620
+Speaker 0: if this is true it implies that there is a significant number of people or are who Wanted to punch someone and then had they had that moment of restraint where they thought oh shit I might get caught if I punch them.
+
+171
+00:11:42,740 --> 00:11:46,959
+Speaker 1: I think it was more than they happen to strangle and then they happen to get away with it because they did.
+
+172
+00:11:47,059 --> 00:11:54,593
+Speaker 0: or Maybe strength is choking a bitch Requires far more dedication to your choking cause.
+
+173
+00:11:54,633 --> 00:11:56,340
+Speaker 0: I mean if you want, but they weren't choking him to death.
+
+174
+00:11:56,360 --> 00:11:57,310
+Speaker 1: You're not gonna get away with that.
+
+175
+00:11:57,391 --> 00:11:58,280
+Speaker 0: Oh, yeah, but even a little bit.
+
+176
+00:11:58,300 --> 00:12:01,577
+Speaker 0: I mean I punch someone like say I get mad I go BAM and I punch someone.
+
+177
+00:12:01,838 --> 00:12:12,820
+Speaker 0: All right Maybe I'm not mad three seconds later, but it only took me a half a second to punch But to start to even reach out and start strangling by the time you're proper choking.
+
+178
+00:12:13,206 --> 00:12:25,245
+Speaker 0: It's been some seconds And if you want to maintain that joke for any reasonable amount of time, you gotta really want it because they're gonna fight back Unless you're just way bigger than Fighting back.
+
+179
+00:12:25,647 --> 00:12:26,430
+Speaker 0: So you had a good law.
+
+180
+00:12:26,451 --> 00:12:28,300
+Speaker 0: Let's talk about a bad law.
+
+181
+00:12:29,343 --> 00:12:37,003
+Speaker 0: I learned recently that kuya hoga which is the name of the guy who accidentally caused dude, bro My shit is fucked up.
+
+182
+00:12:37,044 --> 00:12:38,569
+Speaker 1: It's his internet name is cool.
+
+183
+00:12:38,589 --> 00:12:43,389
+Speaker 0: So I got to shoot slash slice you it's straight-up dog - no It's dude, bro.
+
+184
+00:12:43,752 --> 00:12:44,597
+Speaker 1: My shit is fucked up.
+
+185
+00:12:44,638 --> 00:12:47,298
+Speaker 0: So I got It's straight.
+
+186
+00:12:49,142 --> 00:12:52,375
+Speaker 0: Well kuya hoga is also the name of a town kuya hoga Falls.
+
+187
+00:12:52,556 --> 00:12:53,380
+Speaker 1: I've heard of this town.
+
+188
+00:12:53,662 --> 00:12:54,146
+Speaker 0: I've heard of it.
+
+189
+00:12:54,206 --> 00:12:57,391
+Speaker 1: now that I think about that I knew if you said what's kuya hoga Falls.
+
+190
+00:12:57,431 --> 00:12:58,660
+Speaker 1: I would have said a town in the Midwest.
+
+191
+00:12:58,760 --> 00:13:00,907
+Speaker 0: Yeah, but before we're like yeah, and this guy?
+
+192
+00:13:00,927 --> 00:13:01,309
+Speaker 1: where is it?
+
+193
+00:13:01,329 --> 00:13:02,613
+Speaker 1: in the Midwest, Ohio?
+
+194
+00:13:02,633 --> 00:13:03,676
+Speaker 1: Oh, it makes sense.
+
+195
+00:13:03,737 --> 00:13:10,187
+Speaker 0: Yeah, kuya hoga kuya hoga Falls has a Really white mare.
+
+196
+00:13:10,648 --> 00:13:30,220
+Speaker 0: No, and this really white mare is afraid of those goth kids with their piercings and those gangbangers hanging out on the riverfront Intimidating everybody else and these dangerous kids listening to their quote hippity-hop music hanging out under bridges.
+
+197
+00:13:31,563 --> 00:13:39,940
+Speaker 1: So the old people voted for an old guy And the old guy got nowhere to hang out in town except for the old cool bridges down by the boardwalk.
+
+198
+00:13:39,980 --> 00:13:43,800
+Speaker 0: So this story is great because the what he's done.
+
+199
+00:13:43,961 --> 00:13:47,440
+Speaker 1: Why does he make a park for the kids to hang out and so they don't hang out in the riverfront because they got nowhere?
+
+200
+00:13:48,047 --> 00:13:49,119
+Speaker 0: Oh, so maybe they were.
+
+201
+00:13:50,901 --> 00:13:59,861
+Speaker 0: But his town much like my town when I was a kid after I moved out of Detroit He has passed or proposed to pass a curfew for anyone under 18.
+
+202
+00:13:59,861 --> 00:14:01,928
+Speaker 1: The other under 18, that's the law we can do.
+
+203
+00:14:02,109 --> 00:14:04,657
+Speaker 0: Yeah, unless maybe we signed the Human Rights Accord.
+
+204
+00:14:04,677 --> 00:14:05,340
+Speaker 1: Yeah, right.
+
+205
+00:14:07,181 --> 00:14:12,480
+Speaker 0: So I have many things to say about this article and it's just funny that it happened to take place in kuya hoga Falls.
+
+206
+00:14:12,621 --> 00:14:16,741
+Speaker 1: Of course, I greatly disagree with this idea of a curfew, but they're under 18.
+
+207
+00:14:16,741 --> 00:14:21,220
+Speaker 1: That's law and you know, I want to change that law a great deal, but nothing I could do.
+
+208
+00:14:21,361 --> 00:14:21,903
+Speaker 0: No, but I still did.
+
+209
+00:14:22,084 --> 00:14:27,511
+Speaker 0: you can disagree with the law independent of the realities of voting But here's my reality.
+
+210
+00:14:27,531 --> 00:14:28,760
+Speaker 0: is the Constitution point the one?
+
+211
+00:14:29,402 --> 00:14:30,224
+Speaker 1: Alright, maybe
+
+212
+00:14:30,785 --> 00:14:48,985
+Speaker 0: if this guy just had a generic statement and a generic law like we're gonna have a curfew because of rising crime Rising youth related crime something like that The fact that he earnestly is afraid of people with piercings and goth style clothing and spiky hair and Hanging out under bridges.
+
+213
+00:14:49,668 --> 00:14:52,580
+Speaker 0: It's like he's afraid of the opening montage from the Lost Boys.
+
+214
+00:14:53,581 --> 00:14:56,430
+Speaker 0: Now I recently watched the Lost Boys again.
+
+215
+00:14:56,450 --> 00:14:59,540
+Speaker 0: You know what it really holds up as a vampire movie.
+
+216
+00:14:59,560 --> 00:15:03,025
+Speaker 0: It's got Corey Haim Corey Feldman Kiefer Sutherland like.
+
+217
+00:15:03,447 --> 00:15:05,173
+Speaker 0: it's a great movie about vampires.
+
+218
+00:15:05,455 --> 00:15:10,788
+Speaker 0: before vampires were cool 80s movie and It's set in the 80s, right?
+
+219
+00:15:10,808 --> 00:15:12,417
+Speaker 0: But you know a lot of movies that are made in the 80s.
+
+220
+00:15:13,060 --> 00:15:14,267
+Speaker 0: They're not set in the 80s.
+
+221
+00:15:14,307 --> 00:15:16,077
+Speaker 0: They're just made in the 80s.
+
+222
+00:15:16,760 --> 00:15:19,878
+Speaker 1: So they lose all this 80s stuff, even though they weren't trying to set it in the 80s.
+
+223
+00:15:20,280 --> 00:15:30,033
+Speaker 1: Yeah, like they have that crappy synthy music and the montage Especially if it's try if they try to set it in the future, but they made it in the 80s There'll be stuff like key tars and shit like that.
+
+224
+00:15:30,053 --> 00:15:34,755
+Speaker 1: It'll look like You know, what's the name of the the teacher in ponies?
+
+225
+00:15:35,479 --> 00:15:46,173
+Speaker 0: Oh, Charlie yeah, I look like, you know Charlie's, uh, you know Charlie's high school that was more like early 90s Even so early to midnight that was that was that solos punky Brewster.
+
+226
+00:15:46,334 --> 00:15:47,478
+Speaker 1: even so right?
+
+227
+00:15:47,598 --> 00:15:47,980
+Speaker 1: It's like.
+
+228
+00:15:48,921 --> 00:15:50,970
+Speaker 1: You know it looked that they made in the 80s.
+
+229
+00:15:50,990 --> 00:15:52,638
+Speaker 1: the future looked like the future 80s.
+
+230
+00:15:53,180 --> 00:15:56,478
+Speaker 0: But you know that like that like there's movies that happen to have been made in the 80s.
+
+231
+00:15:56,820 --> 00:15:57,919
+Speaker 0: So they look like shit today.
+
+232
+00:15:58,262 --> 00:16:06,305
+Speaker 0: But then there are movies that even if they were made in the 80s or not They were set in the 80s, but they didn't have the meta Constructs of the 80s.
+
+233
+00:16:06,586 --> 00:16:08,674
+Speaker 0: like the music isn't shitty 80s synth.
+
+234
+00:16:08,914 --> 00:16:10,139
+Speaker 0: It's just music from the 80s.
+
+235
+00:16:11,301 --> 00:16:12,630
+Speaker 0: So the lost boys is like that.
+
+236
+00:16:13,416 --> 00:16:14,040
+Speaker 0: It's a great movie.
+
+237
+00:16:14,100 --> 00:16:15,665
+Speaker 0: You should watch it, but I digress.
+
+238
+00:16:16,027 --> 00:16:23,251
+Speaker 0: the opening montage of lost boys shows all the scary Weirdos on the boardwalk while it plays the cover of the doors.
+
+239
+00:16:23,291 --> 00:16:27,205
+Speaker 0: people are strange and it's just like yeah Look at that scary guy.
+
+240
+00:16:27,265 --> 00:16:28,489
+Speaker 0: He's wearing all black.
+
+241
+00:16:28,770 --> 00:16:31,660
+Speaker 0: Oh my god, that guy's got a mohawk and he's on a motorcycle.
+
+242
+00:16:31,882 --> 00:16:44,233
+Speaker 0: Watch the fuck out And It seems like this guy from Ohio is afraid of that, but I see people like that every day Just like walking around in Midtown, and they're usually not scary at all.
+
+243
+00:16:44,293 --> 00:16:54,939
+Speaker 0: in fact people who dress the way People were afraid of scary people in the 80s like the people that 80s people were afraid of in the 80s are the nerds.
+
+244
+00:16:55,019 --> 00:16:58,492
+Speaker 0: today The guy with the mohawk is the gamer nerd.
+
+245
+00:16:58,532 --> 00:17:00,219
+Speaker 0: more often than not that's true.
+
+246
+00:17:02,601 --> 00:17:06,031
+Speaker 1: He's playing that dangerous Dungeons and Dragons, it's like this.
+
+247
+00:17:06,071 --> 00:17:15,339
+Speaker 0: guy just came here out of 1981 and passed a curfew and I have more to say because I you know curfews suck and there was a curfew.
+
+248
+00:17:15,540 --> 00:17:23,821
+Speaker 0: I ran away from the police at least every other night as a kid because of the fucking curfew and you know I just be out at night getting into trouble, but That's it.
+
+249
+00:17:24,042 --> 00:17:25,347
+Speaker 0: I just kind of ran it for a while.
+
+250
+00:17:25,769 --> 00:17:27,635
+Speaker 0: There's no news that I want to talk about yet.
+
+251
+00:17:27,955 --> 00:17:37,370
+Speaker 0: Yeah, all right Because it's time for things of the day.
+
+252
+00:17:39,572 --> 00:17:40,517
+Speaker 0: Got a thing of the day.
+
+253
+00:17:40,537 --> 00:17:45,578
+Speaker 1: Yeah, so there is a little meme quick meme I guess it's on reddit or something.
+
+254
+00:17:45,658 --> 00:17:47,205
+Speaker 0: This is pretty great right.
+
+255
+00:17:47,285 --> 00:17:49,294
+Speaker 1: it says if you are religious Don't look at this.
+
+256
+00:17:49,395 --> 00:17:51,868
+Speaker 1: if not enjoy, so it's a meme and every all it is.
+
+257
+00:17:52,531 --> 00:18:01,244
+Speaker 1: It's one of those you know head in the middle picture of someone's head in the middle of a square With sort of a starburst and some text on the top and the bottom and the impact font.
+
+258
+00:18:01,284 --> 00:18:02,970
+Speaker 1: you know that and there's a lot.
+
+259
+00:18:03,191 --> 00:18:06,609
+Speaker 0: I believe the what the kids used to call that is a macro right.
+
+260
+00:18:06,649 --> 00:18:09,241
+Speaker 1: so Let me just read the first few of these.
+
+261
+00:18:09,261 --> 00:18:11,090
+Speaker 1: there's many many pages of them ready.
+
+262
+00:18:12,531 --> 00:18:13,877
+Speaker 1: It's a picture of God's face.
+
+263
+00:18:14,118 --> 00:18:17,150
+Speaker 1: You know from you know the the roof of the Sistine Chapel.
+
+264
+00:18:17,231 --> 00:18:18,158
+Speaker 1: At least that's what it looks like.
+
+265
+00:18:18,279 --> 00:18:19,186
+Speaker 1: it might be a different God.
+
+266
+00:18:19,307 --> 00:18:19,710
+Speaker 1: It doesn't matter.
+
+267
+00:18:19,710 --> 00:18:26,849
+Speaker 1: It's God's face, and he says I hurricane cities because that are gay people usually in hurricane prone areas during hurricane season.
+
+268
+00:18:28,331 --> 00:18:32,709
+Speaker 1: Libyans being slaughtered too busy helping millionaires win golden statuettes.
+
+269
+00:18:33,872 --> 00:18:35,702
+Speaker 1: Make sex really awesome.
+
+270
+00:18:35,883 --> 00:18:36,647
+Speaker 1: forbid it.
+
+271
+00:18:36,949 --> 00:18:43,829
+Speaker 1: I Gave you free will so use it exactly as I command you to create world for humans.
+
+272
+00:18:43,829 --> 00:18:48,055
+Speaker 1: 70% salt water Day one.
+
+273
+00:18:48,135 --> 00:18:49,703
+Speaker 1: create light day for.
+
+274
+00:18:49,824 --> 00:18:50,909
+Speaker 1: create light source.
+
+275
+00:18:51,775 --> 00:18:53,569
+Speaker 1: ban sex before marriage.
+
+276
+00:18:54,230 --> 00:18:56,049
+Speaker 1: impregnate unmarried virgin.
+
+277
+00:18:57,451 --> 00:18:58,594
+Speaker 1: demand Adam and Eve.
+
+278
+00:18:58,654 --> 00:18:59,376
+Speaker 1: follow a rule.
+
+279
+00:18:59,416 --> 00:19:01,342
+Speaker 1: that requires the understanding of right and wrong.
+
+280
+00:19:01,623 --> 00:19:06,235
+Speaker 1: don't give Adam and Eve the knowledge of right and wrong and It keeps going.
+
+281
+00:19:06,315 --> 00:19:08,323
+Speaker 1: but there there are big day eating a pork.
+
+282
+00:19:08,845 --> 00:19:09,990
+Speaker 1: make pork delicious.
+
+283
+00:19:10,712 --> 00:19:11,796
+Speaker 0: I think that's the best one.
+
+284
+00:19:12,458 --> 00:19:14,283
+Speaker 1: create mechanical and scientific universe.
+
+285
+00:19:14,384 --> 00:19:18,522
+Speaker 1: punish those who don't believe in the supernatural Great man with foreskin.
+
+286
+00:19:18,542 --> 00:19:19,530
+Speaker 1: command him to cut it off.
+
+287
+00:19:22,610 --> 00:19:27,950
+Speaker 0: I Love that those sorts of things like the courage wolf or the courage bridge.
+
+288
+00:19:28,191 --> 00:19:33,110
+Speaker 0: There's something about that style of meme of statement statement that has just never worn thin with me.
+
+289
+00:19:33,431 --> 00:19:37,870
+Speaker 1: Yeah, this is this many six pages of this stuff, so there's plenty for you to read back.
+
+290
+00:19:37,990 --> 00:19:45,189
+Speaker 0: There's only one meme of this style that I enjoy more than this particular one, and that is the haha guy haha.
+
+291
+00:19:46,913 --> 00:19:51,073
+Speaker 1: So I'm making fun of God's Inconsistency.
+
+292
+00:19:51,695 --> 00:19:53,922
+Speaker 0: my thing of the day here is just not.
+
+293
+00:19:54,002 --> 00:20:02,590
+Speaker 0: it's a complaint, but I can't really justify Complaining because I do not willing to step up and do something better.
+
+294
+00:20:03,332 --> 00:20:18,876
+Speaker 0: but you know we're into the ponies as all men are and the only place you can really go to get your pony business is Either randomly searching YouTube which doesn't work Or going to equestria daily, which is 90% fanfiction.
+
+295
+00:20:20,702 --> 00:20:22,069
+Speaker 1: You can just ignore the fanfiction.
+
+296
+00:20:22,110 --> 00:20:22,612
+Speaker 1: you know that you can.
+
+297
+00:20:22,793 --> 00:20:28,016
+Speaker 1: you can look at all the other sections Individually yeah, and not look at the fanfiction, but it's not really a filter.
+
+298
+00:20:28,056 --> 00:20:29,060
+Speaker 0: It's more like a sin.
+
+299
+00:20:29,562 --> 00:20:33,260
+Speaker 0: It's just every pony thing and not all of it.
+
+300
+00:20:33,360 --> 00:20:35,609
+Speaker 1: Well is equestria daily not a crest here weekly?
+
+301
+00:20:35,649 --> 00:20:38,400
+Speaker 0: so they need something yeah, but College humor is daily, and you know what?
+
+302
+00:20:39,160 --> 00:20:41,149
+Speaker 0: Mostly gold or at least bronze.
+
+303
+00:20:41,531 --> 00:20:43,640
+Speaker 1: well cuz they got a lot more stuff coming in the filters.
+
+304
+00:20:43,700 --> 00:20:45,433
+Speaker 1: They could be more selective the pony stuff.
+
+305
+00:20:45,473 --> 00:20:46,399
+Speaker 1: That's pretty much all of it.
+
+306
+00:20:46,480 --> 00:20:47,001
+Speaker 0: Yeah But you've.
+
+307
+00:20:47,423 --> 00:20:52,380
+Speaker 0: the way to make a successful internet filter is to you have the slider like the line of how much do you let?
+
+308
+00:20:52,801 --> 00:20:54,148
+Speaker 0: Through you have to set it.
+
+309
+00:20:54,188 --> 00:20:56,660
+Speaker 1: problem with the question is they've already let so much through.
+
+310
+00:20:56,760 --> 00:20:57,422
+Speaker 1: It's like will you let?
+
+311
+00:20:57,523 --> 00:21:04,748
+Speaker 1: if they if they start being filtering more harshly before you know the the source material Quantity increases well.
+
+312
+00:21:04,768 --> 00:21:06,619
+Speaker 0: This is it will create drama.
+
+313
+00:21:07,343 --> 00:21:15,996
+Speaker 0: This is why someone needs to make the Ponyville Street Journal That is the like erudite version that only posts and has no fanfiction whatsoever.
+
+314
+00:21:16,297 --> 00:21:20,938
+Speaker 0: No fanfiction whatsoever Except comics which while technically fanfiction I?
+
+315
+00:21:22,360 --> 00:21:22,962
+Speaker 0: Think you agree.
+
+316
+00:21:22,983 --> 00:21:27,258
+Speaker 0: Yeah, they're fanfiction, but they're okay because they're short yeah, and they're drawn.
+
+317
+00:21:27,459 --> 00:21:27,600
+Speaker 0: yeah.
+
+318
+00:21:28,082 --> 00:21:30,612
+Speaker 0: There's a barrier to entry a higher barrier to entry.
+
+319
+00:21:30,853 --> 00:21:35,858
+Speaker 1: so because there's a lot Still deny comics that weren't funny, or we're poorly drawn yep.
+
+320
+00:21:36,360 --> 00:21:44,300
+Speaker 0: But because there is not a lot of great pony stuff and a lot of it's actually kind of hard to find My thing of the day is just a really awesome pony video notice.
+
+321
+00:21:44,420 --> 00:21:47,715
+Speaker 1: I've been laying off the ponies entirely in the podcast since the let.
+
+322
+00:21:47,735 --> 00:21:48,820
+Speaker 1: we actually had a pony episode.
+
+323
+00:21:48,921 --> 00:21:50,052
+Speaker 1: We him cannot hold back.
+
+324
+00:21:50,112 --> 00:21:50,859
+Speaker 1: He can't help himself.
+
+325
+00:21:51,422 --> 00:21:54,534
+Speaker 0: Yeah, we were talking about ponies for a while before the episode.
+
+326
+00:21:54,634 --> 00:21:54,956
+Speaker 1: I didn't.
+
+327
+00:21:55,016 --> 00:21:55,960
+Speaker 1: I just said not in the show.
+
+328
+00:21:56,382 --> 00:21:59,639
+Speaker 1: Yeah, not only restrained myself so much Oh my god.
+
+329
+00:22:00,904 --> 00:22:02,076
+Speaker 0: So yeah ponies ponies.
+
+330
+00:22:04,001 --> 00:22:16,786
+Speaker 0: And very briefly in the meta moment we will be this weekend at Saturday pretty much all day Or at least most of it at the mocha festival in New York starts at 11 a.m.. Yeah, whatever it starts We'll be there around that time.
+
+331
+00:22:16,806 --> 00:22:20,640
+Speaker 0: Yeah, I plan to talk to pretty much everyone at every table.
+
+332
+00:22:21,760 --> 00:22:28,200
+Speaker 0: Yep, yep, yep, yep, I thought no more ponies no more ponies accidental pony accidental pony.
+
+333
+00:22:28,200 --> 00:22:28,945
+Speaker 0: You can't hold it in.
+
+334
+00:22:29,005 --> 00:22:30,133
+Speaker 1: stop make it stop extending it.
+
+335
+00:22:30,717 --> 00:22:31,200
+Speaker 0: wait a minute.
+
+336
+00:22:31,822 --> 00:22:35,796
+Speaker 0: I just noticed that because I'm looking at our con schedule because I was about to announce that.
+
+337
+00:22:35,836 --> 00:22:37,322
+Speaker 0: don't forget anime Boston.
+
+338
+00:22:37,503 --> 00:22:40,899
+Speaker 0: April 22nd through 24th in Boston at the hiney.
+
+339
+00:22:41,120 --> 00:22:44,174
+Speaker 0: We will be at anime Boston doing a shit ton of panels.
+
+340
+00:22:44,375 --> 00:22:45,440
+Speaker 1: Are we really doing a shit ton?
+
+341
+00:22:45,540 --> 00:22:47,238
+Speaker 1: I thought we're only doing like four really like four.
+
+342
+00:22:47,922 --> 00:22:51,076
+Speaker 0: We've really cut down from our days of seven or eight panels at con.
+
+343
+00:22:51,096 --> 00:22:51,820
+Speaker 1: forget those days.
+
+344
+00:22:54,584 --> 00:23:00,271
+Speaker 0: But I just noticed I think someone might have told us before and I forgot that There's a band playing Saturday night called stereo pony.
+
+345
+00:23:00,431 --> 00:23:02,820
+Speaker 1: I don't think that band acts has anything to do with my little pony.
+
+346
+00:23:03,900 --> 00:23:05,907
+Speaker 0: No, but it's nomen.
+
+347
+00:23:06,549 --> 00:23:08,656
+Speaker 1: some people are planning a brony meetup at Otakon.
+
+348
+00:23:08,676 --> 00:23:10,924
+Speaker 0: Oh We should.
+
+349
+00:23:11,145 --> 00:23:15,100
+Speaker 0: uh we should be the ones who force the impromptu brony meetup at anime Boston.
+
+350
+00:23:15,221 --> 00:23:16,748
+Speaker 1: I'm sure there will be a brony meetup.
+
+351
+00:23:16,768 --> 00:23:18,859
+Speaker 0: Yeah, well has Daryl Surratt seen it?
+
+352
+00:23:18,899 --> 00:23:19,100
+Speaker 0: yet?
+
+353
+00:23:19,381 --> 00:23:24,139
+Speaker 0: I don't know cuz the last I heard he had not actually watched an episode yet.
+
+354
+00:23:25,064 --> 00:23:27,138
+Speaker 0: Yeah, whatever if that is true I'll make him watch.
+
+355
+00:23:27,219 --> 00:23:31,453
+Speaker 0: anyway We will be at anime Boston doing panels like anime openers from around the world.
+
+356
+00:23:31,733 --> 00:23:33,238
+Speaker 0: and who is hot today?
+
+357
+00:23:33,278 --> 00:23:37,230
+Speaker 1: Miku Yep, high quality panels that have been rarely seen.
+
+358
+00:23:37,350 --> 00:23:39,015
+Speaker 0: Yeah, I've done anime openers.
+
+359
+00:23:39,095 --> 00:23:40,800
+Speaker 0: I think one at anime Boston.
+
+360
+00:23:41,061 --> 00:23:43,350
+Speaker 0: Yeah, and it was a way different panel.
+
+361
+00:23:43,370 --> 00:23:46,040
+Speaker 1: I did miko one Miku once at Kinetic Con.
+
+362
+00:23:46,100 --> 00:23:58,258
+Speaker 1: It was the best panel ever but there was hardly anyone in there because it was late at night and now it's gonna be the Awesomest panel you ever seen yep, and of course the book club book was Michio Kaku's hyperspace, which we're now gonna talk about.
+
+363
+00:23:58,458 --> 00:24:00,952
+Speaker 0: yep Are you gonna announce the next book?
+
+364
+00:24:01,194 --> 00:24:02,060
+Speaker 1: well actually?
+
+365
+00:24:03,020 --> 00:24:06,315
+Speaker 1: Actually, I had a book in mind my favoritest book of ever.
+
+366
+00:24:06,335 --> 00:24:07,360
+Speaker 0: yeah a little prince.
+
+367
+00:24:07,661 --> 00:24:10,170
+Speaker 1: No, that was my second favorite book ever.
+
+368
+00:24:10,190 --> 00:24:12,357
+Speaker 1: That's probably my third favorite book ever.
+
+369
+00:24:12,518 --> 00:24:15,187
+Speaker 1: Oh wow But anyway, I was gonna pick that book.
+
+370
+00:24:15,227 --> 00:24:18,879
+Speaker 1: my Claire Bibble might now my favorite is book ever, but you know what I?
+
+371
+00:24:19,781 --> 00:24:21,448
+Speaker 1: Changed my mind like yesterday.
+
+372
+00:24:21,508 --> 00:24:24,180
+Speaker 1: god damn it, so I'm glad I didn't say anything.
+
+373
+00:24:24,341 --> 00:24:25,589
+Speaker 1: And you know why I changed my mind.
+
+374
+00:24:25,851 --> 00:24:26,596
+Speaker 0: you want to read something.
+
+375
+00:24:26,616 --> 00:24:30,514
+Speaker 1: You've never read That's right, and also because I read hyperspace, and it gave me an idea.
+
+376
+00:24:30,876 --> 00:24:35,980
+Speaker 0: well whatever it is You're gonna have to wait because a book I've been waiting for for a long time is gonna be delivered to my door any day.
+
+377
+00:24:36,186 --> 00:24:36,580
+Speaker 1: It's all right.
+
+378
+00:24:36,580 --> 00:24:39,300
+Speaker 1: We waited a long time to do hyperspace, and I think that was worthwhile.
+
+379
+00:24:39,400 --> 00:24:45,931
+Speaker 1: But hyperspace gave me the idea of the book that I should choose and then after that I will go and choose my favoritest book ever.
+
+380
+00:24:45,991 --> 00:24:47,420
+Speaker 0: so what brief history of the universe.
+
+381
+00:24:47,982 --> 00:24:48,986
+Speaker 0: No, we're gonna read.
+
+382
+00:24:49,086 --> 00:24:55,628
+Speaker 1: you know we're gonna read fucking foundation bitches, that's right Foundation that's right foundation number one.
+
+383
+00:24:55,648 --> 00:24:59,820
+Speaker 0: Yeah, I should actually read that bought all three on am?
+
+384
+00:24:59,840 --> 00:25:01,487
+Speaker 1: I see there's more than three, but I bought that.
+
+385
+00:25:01,527 --> 00:25:03,695
+Speaker 1: the read that the original three on Amazon.
+
+386
+00:25:03,716 --> 00:25:04,780
+Speaker 0: That's all we're doing.
+
+387
+00:25:05,282 --> 00:25:06,447
+Speaker 1: Yep, yeah one.
+
+388
+00:25:06,487 --> 00:25:06,909
+Speaker 1: We're not.
+
+389
+00:25:07,110 --> 00:25:08,134
+Speaker 1: we're not doing the all three.
+
+390
+00:25:08,154 --> 00:25:09,199
+Speaker 1: We're doing just the first one.
+
+391
+00:25:09,219 --> 00:25:11,526
+Speaker 1: yeah Otherwise we'll be here all night.
+
+392
+00:25:11,867 --> 00:25:12,531
+Speaker 0: It's about time.
+
+393
+00:25:12,611 --> 00:25:14,058
+Speaker 0: I actually did read foundation.
+
+394
+00:25:14,078 --> 00:25:14,520
+Speaker 1: That's right.
+
+395
+00:25:15,363 --> 00:25:16,526
+Speaker 0: As much as I know about it.
+
+396
+00:25:16,567 --> 00:25:18,011
+Speaker 0: I've never actually read it.
+
+397
+00:25:18,573 --> 00:25:19,938
+Speaker 1: I started to read it one time.
+
+398
+00:25:21,145 --> 00:25:22,480
+Speaker 1: I think my parents have like a hardcover.
+
+399
+00:25:22,500 --> 00:25:26,239
+Speaker 1: That's like a three in one, but I bought the three separate ones, so we're gonna read.
+
+400
+00:25:26,561 --> 00:25:31,820
+Speaker 1: We're just gonna read the first foundation and by Asimov, and that's it all right.
+
+401
+00:25:31,960 --> 00:25:34,873
+Speaker 1: So there you go done, and then next time it is my turn.
+
+402
+00:25:35,295 --> 00:25:36,400
+Speaker 1: I'll read my favorite his book every.
+
+403
+00:25:37,461 --> 00:25:49,640
+Speaker 0: So when I was a kid this was a long time ago, and I didn't realize how long ago Was until I read hyperspace again, I read hyperspace a scientific Odyssey through parallel universes time warps and the 10th dimension.
+
+404
+00:25:49,802 --> 00:25:52,665
+Speaker 0: I don't even know Why I read hyperspace like.
+
+405
+00:25:52,685 --> 00:25:58,446
+Speaker 0: I don't know if someone gave it to me if I just found it in the bookstore like I can't I don't remember.
+
+406
+00:25:58,527 --> 00:26:02,907
+Speaker 0: all I know was that when I was really young Something like 1995 or 1996.
+
+407
+00:26:02,907 --> 00:26:04,130
+Speaker 1: well the book came out in like 93 94 94.
+
+408
+00:26:04,130 --> 00:26:13,118
+Speaker 0: I read it and it seemed really profound to me and I forgot about it.
+
+409
+00:26:13,562 --> 00:26:18,446
+Speaker 0: And then you know I was kind of reminded of it recently cuz I read that Bryson book and a bunch of other books on science I was like oh hyperspace.
+
+410
+00:26:18,990 --> 00:26:19,775
+Speaker 0: I could read that again.
+
+411
+00:26:19,795 --> 00:26:20,580
+Speaker 0: I think it's a good book.
+
+412
+00:26:20,781 --> 00:26:21,685
+Speaker 0: We just did cosmos.
+
+413
+00:26:21,745 --> 00:26:24,698
+Speaker 0: it fits with my theme, and you know we'll see how it stands up.
+
+414
+00:26:25,901 --> 00:26:30,839
+Speaker 0: It amazes me how little I remembered from that book from reading it as a kid.
+
+415
+00:26:31,662 --> 00:26:38,200
+Speaker 0: But at the same time it amazes me how much I realize now that hyperspace affected my worldview.
+
+416
+00:26:39,062 --> 00:26:39,503
+Speaker 1: I'm reading
+
+417
+00:26:39,543 --> 00:27:09,892
+Speaker 0: this book as a kid and thinking about the things I cared about as I got older and the things I was interested in and What I understood didn't understand and thought I understood, but didn't about particle physics And even like what I got into in high school like when I really started gravitating toward physics and away from biology and away from chemistry and toward math and the fact that I got really really really fucking into math toward the end of high school and actually Considered for a while going into math like as a career.
+
+418
+00:27:09,972 --> 00:27:13,964
+Speaker 0: obviously that would have been maybe a mistake, but Definitely, I don't know.
+
+419
+00:27:14,044 --> 00:27:19,230
+Speaker 0: actually my co-workers a lot of them on the research side are trying to convince me to go back and get Like a master's in mathematics.
+
+420
+00:27:19,250 --> 00:27:25,658
+Speaker 0: Uh-huh sure I Would if I didn't have to pay for it if I had a full ride to go back to college and learn math.
+
+421
+00:27:25,698 --> 00:27:28,932
+Speaker 1: hell's Fuck yeah, math was great up until calculus.
+
+422
+00:27:29,273 --> 00:27:30,860
+Speaker 0: Ah calculus was my favorite thing.
+
+423
+00:27:31,262 --> 00:27:32,953
+Speaker 1: I do not like calculus see in high school.
+
+424
+00:27:32,993 --> 00:27:34,120
+Speaker 0: We used to have calculus parties.
+
+425
+00:27:34,220 --> 00:27:34,903
+Speaker 0: We'd get together.
+
+426
+00:27:34,923 --> 00:27:36,368
+Speaker 0: This is like when I was a senior.
+
+427
+00:27:36,388 --> 00:27:37,211
+Speaker 0: We'd watch The Simpsons.
+
+428
+00:27:37,231 --> 00:27:39,720
+Speaker 1: How many people at this party - like eight, okay?
+
+429
+00:27:40,360 --> 00:27:43,792
+Speaker 0: I mean look like my AP bio class was I don't know 12 people total.
+
+430
+00:27:43,933 --> 00:27:44,776
+Speaker 0: so anyway.
+
+431
+00:27:44,936 --> 00:27:45,619
+Speaker 1: Let's talk about this book.
+
+432
+00:27:45,739 --> 00:27:50,951
+Speaker 0: so hyperspace like I The analogies, I think that's where it really shows.
+
+433
+00:27:50,991 --> 00:27:58,660
+Speaker 0: like whenever up until I reread this book I you I would make an analogy for anything related to physics or time or space or math or anything.
+
+434
+00:27:59,721 --> 00:28:06,019
+Speaker 0: Almost all of those analogies I realized came out of hyperspace, and I just forgotten that that's where they came from.
+
+435
+00:28:06,039 --> 00:28:15,159
+Speaker 1: yeah I mean, I never read the book, but I've always also been an analogy person and when it comes to science I'm obviously weak very weak in the math department right, but I'm very strong.
+
+436
+00:28:15,239 --> 00:28:17,960
+Speaker 1: at least I think I'm very strong in the conceptual department.
+
+437
+00:28:18,561 --> 00:28:25,358
+Speaker 0: So words that were said by one of my favorite physics teachers in high school were that and I quote as well.
+
+438
+00:28:25,398 --> 00:28:31,013
+Speaker 0: as I can remember Everybody likes the conceptual side of physics because you don't need to know fucking anything.
+
+439
+00:28:31,053 --> 00:28:31,715
+Speaker 1: That's right.
+
+440
+00:28:31,735 --> 00:28:36,580
+Speaker 0: That's exactly right Because I said the same thing to him.
+
+441
+00:28:36,761 --> 00:28:38,130
+Speaker 1: We even says so in this book.
+
+442
+00:28:38,170 --> 00:28:39,580
+Speaker 1: there's a part pretty close to the end.
+
+443
+00:28:39,620 --> 00:28:44,655
+Speaker 1: He's like look if you just want to describe you know conceptually what we've learned in physics.
+
+444
+00:28:44,696 --> 00:28:46,140
+Speaker 1: It's actually pretty simple, right?
+
+445
+00:28:46,340 --> 00:28:46,562
+Speaker 1: It's like.
+
+446
+00:28:46,643 --> 00:28:54,338
+Speaker 1: it's like you could say in a few sentences You know it's it's you know, but to actually describe why we know that and how we know that metric tensors.
+
+447
+00:28:54,459 --> 00:29:02,297
+Speaker 1: Yeah But thing is even though this book talks about a lot of math it doesn't actually do any math right.
+
+448
+00:29:02,598 --> 00:29:05,971
+Speaker 1: he names Equations and he describes what you know he's like.
+
+449
+00:29:06,232 --> 00:29:11,733
+Speaker 1: so there's an equation called of this You know a metric tensor and a metric tensor means this.
+
+450
+00:29:11,753 --> 00:29:12,154
+Speaker 0: well.
+
+451
+00:29:12,215 --> 00:29:13,700
+Speaker 0: He showed you like a matrix.
+
+452
+00:29:13,820 --> 00:29:16,991
+Speaker 0: He's like all right, and then he shows those boxes where he's like.
+
+453
+00:29:17,372 --> 00:29:19,017
+Speaker 0: here's where Einstein's theory fits in.
+
+454
+00:29:19,379 --> 00:29:19,800
+Speaker 0: here's this.
+
+455
+00:29:19,880 --> 00:29:21,789
+Speaker 0: You see them like growing out like when he does so.
+
+456
+00:29:21,849 --> 00:29:23,114
+Speaker 1: it's like I couldn't.
+
+457
+00:29:23,536 --> 00:29:23,797
+Speaker 1: you know.
+
+458
+00:29:23,817 --> 00:29:36,976
+Speaker 1: based on this I couldn't actually do any of this math, but obviously but if You so if you showed me an equation and said what the name of the equation was I'd be like oh That's the equation that does this thing right and you know it's like.
+
+459
+00:29:37,036 --> 00:29:37,859
+Speaker 1: I could match the.
+
+460
+00:29:38,000 --> 00:29:49,402
+Speaker 1: now I can match the conceptual ideas with the names of the mathematical equations and actually if I understood and knew how to read those Mathematical equations I could probably say oh, that's the one that matches up with that idea You know.
+
+461
+00:29:49,443 --> 00:29:58,777
+Speaker 1: so it's like you can't think about the math directly But it gives you sort of this idea of You know which maths are used for what.
+
+462
+00:29:59,099 --> 00:29:59,220
+Speaker 0: well?
+
+463
+00:29:59,360 --> 00:30:04,400
+Speaker 0: I think for as a kid though what this book did what is a cosmos is very different?
+
+464
+00:30:04,580 --> 00:30:06,084
+Speaker 0: But they both serve the same purpose.
+
+465
+00:30:06,104 --> 00:30:10,959
+Speaker 0: They're like hey you guys realize that science is actually the most awesome thing right?
+
+466
+00:30:11,260 --> 00:30:14,600
+Speaker 1: yeah It's very similar to cosmos a lot of ways because you know he talks about the history.
+
+467
+00:30:14,821 --> 00:30:16,612
+Speaker 1: Yeah, he's talking about all the old sigh.
+
+468
+00:30:16,652 --> 00:30:27,589
+Speaker 0: You know he does a lot of storytelling Like second style of getting people excited about science is more of a awe and like oh my god You know how many anythings there are anywhere.
+
+469
+00:30:27,991 --> 00:30:28,954
+Speaker 0: just think about that.
+
+470
+00:30:29,054 --> 00:30:30,720
+Speaker 1: whoa he doesn't do a lot of that here.
+
+471
+00:30:30,760 --> 00:30:33,527
+Speaker 0: He'd know cock who does more this thing of?
+
+472
+00:30:34,149 --> 00:30:35,212
+Speaker 0: yeah fucking wormholes.
+
+473
+00:30:35,332 --> 00:30:35,954
+Speaker 0: Holy shit.
+
+474
+00:30:36,154 --> 00:30:37,117
+Speaker 0: Yeah, they might be real.
+
+475
+00:30:37,457 --> 00:30:38,280
+Speaker 0: Oh, here's the math.
+
+476
+00:30:39,966 --> 00:30:45,771
+Speaker 1: Instead of being like you know trying to awe you with the wonders of the universe He does a lot more practical stuff like he's like.
+
+477
+00:30:46,152 --> 00:30:47,438
+Speaker 1: so what does this mean for you?
+
+478
+00:30:47,458 --> 00:30:47,518
+Speaker 1: Yep?
+
+479
+00:30:48,141 --> 00:30:48,462
+Speaker 1: You know.
+
+480
+00:30:48,582 --> 00:30:50,369
+Speaker 1: and oh this discovery.
+
+481
+00:30:50,389 --> 00:30:51,312
+Speaker 1: Well, what did that mean?
+
+482
+00:30:51,332 --> 00:30:53,340
+Speaker 0: Yeah, I'm like all right the universe is gonna end.
+
+483
+00:30:53,621 --> 00:30:54,764
+Speaker 0: Can we do anything about that?
+
+484
+00:30:55,206 --> 00:30:59,299
+Speaker 0: Yeah, huh, and he actually poses like hey, maybe maybe we can.
+
+485
+00:31:00,481 --> 00:31:03,879
+Speaker 1: He's like there's a chance that we can do this and there's a chance that we can do that.
+
+486
+00:31:04,181 --> 00:31:06,911
+Speaker 1: You know he doesn't really you know have any definitive things cuz.
+
+487
+00:31:06,971 --> 00:31:12,891
+Speaker 1: well at the site then except for where the science is definitive Yeah, it's like he's directly in line with whatever the science says.
+
+488
+00:31:13,353 --> 00:31:13,935
+Speaker 1: you know he's like.
+
+489
+00:31:13,975 --> 00:31:15,884
+Speaker 1: could there be a God and as you read Through the book.
+
+490
+00:31:15,924 --> 00:31:16,389
+Speaker 1: It's like yes.
+
+491
+00:31:16,873 --> 00:31:17,035
+Speaker 1: Nope
+
+492
+00:31:17,418 --> 00:31:17,560
+Speaker 0: yes
+
+493
+00:31:19,003 --> 00:31:27,697
+Speaker 1: No, maybe yes, no, but oh, but then you know towards the end He's like well you can you can't have the God of miracles But you have the God of order, and it's like make
+
+494
+00:31:27,737 --> 00:31:28,820
+Speaker 0: up your mind Yep
+
+495
+00:31:29,562 --> 00:31:38,015
+Speaker 1: Because as you learn more sciences throughout the book the answers to the clay keeps asking the same questions again And you keeps answering them differently because you learned a new thing.
+
+496
+00:31:38,035 --> 00:31:39,060
+Speaker 1: so now the answer has changed.
+
+497
+00:31:39,281 --> 00:31:44,040
+Speaker 0: I do enjoy how he went through and I had with with like light as a particle in different different aspects.
+
+498
+00:31:44,702 --> 00:31:55,537
+Speaker 0: Well based on what everything we've talked about so far it seems like this is true the next chapter is basically yeah That's a bunch of horseshit, and here's why yeah, I mean you know he also does a lot of concentration on.
+
+499
+00:31:55,818 --> 00:32:00,210
+Speaker 1: you know Theoretic the theoretical versus the experimental is like experimentally.
+
+500
+00:32:00,531 --> 00:32:02,656
+Speaker 1: standard model is the king right?
+
+501
+00:32:02,676 --> 00:32:04,120
+Speaker 1: There's just so much evidence.
+
+502
+00:32:04,341 --> 00:32:04,984
+Speaker 1: It's unbelievable.
+
+503
+00:32:05,024 --> 00:32:09,146
+Speaker 1: it always works, but it doesn't work 100%.
+
+504
+00:32:09,146 --> 00:32:10,339
+Speaker 1: So we got to go to this.
+
+505
+00:32:10,842 --> 00:32:18,479
+Speaker 1: But we can't actually use the string theory because we would need the energy of a hajillion And we don't have that and we're not gonna have that for a long time.
+
+506
+00:32:18,961 --> 00:32:21,311
+Speaker 0: I also think about remember how when we're at our IT.
+
+507
+00:32:21,351 --> 00:32:23,740
+Speaker 0: We'd argue about physics or causality or whatever.
+
+508
+00:32:24,101 --> 00:32:26,912
+Speaker 0: I'd always be like yeah the Planck constant the Planck limit.
+
+509
+00:32:27,314 --> 00:32:28,900
+Speaker 0: That's because I read hyperspace as a kid.
+
+510
+00:32:29,140 --> 00:32:32,210
+Speaker 0: Yeah, Planck didn't come up that much in my physics classes.
+
+511
+00:32:32,430 --> 00:32:32,631
+Speaker 0: No.
+
+512
+00:32:32,711 --> 00:32:34,075
+Speaker 1: I still have.
+
+513
+00:32:34,135 --> 00:32:34,456
+Speaker 1: I still.
+
+514
+00:32:34,516 --> 00:32:39,034
+Speaker 1: that is one thing That I you know a lot of the things he describes in this book.
+
+515
+00:32:39,114 --> 00:32:43,931
+Speaker 1: right I can have a much better Conceptual understanding of after reading it obviously like strings and such.
+
+516
+00:32:44,031 --> 00:32:51,840
+Speaker 1: yeah, but one thing I do have a better understanding of it But I still have a hard time understanding it right is the idea that there's these other dimensions.
+
+517
+00:32:51,962 --> 00:32:53,080
+Speaker 1: I understand that other dimensions.
+
+518
+00:32:53,562 --> 00:32:58,620
+Speaker 1: I can't picture them in my brain, but I can I can you know understand more multiple spatial dimensions.
+
+519
+00:32:59,081 --> 00:33:03,817
+Speaker 1: But I still have a hard time thinking about is that the other spatial dimensions are collapsed.
+
+520
+00:33:04,078 --> 00:33:04,720
+Speaker 1: It's like why?
+
+521
+00:33:05,406 --> 00:33:15,287
+Speaker 1: Okay, I understand Mathematically they're collapsed and I can understand that the fact that they are collapsed But I can't actually well It's picture why they're collapsed.
+
+522
+00:33:15,307 --> 00:33:19,200
+Speaker 1: like why can't they just be fully remember the part in cosmos?
+
+523
+00:33:20,020 --> 00:33:25,959
+Speaker 0: Where Sagan talks about the the fact that we don't know for sure if our universe is open or closed.
+
+524
+00:33:26,563 --> 00:33:28,978
+Speaker 0: mm-hmm a dimension can be the same thing.
+
+525
+00:33:28,998 --> 00:33:42,830
+Speaker 0: a Spherical dimension would be closed and that you can go infinitely in any direction Along the surface, but yet there is a finite amount of space But yet infinite space depending on how you look at it.
+
+526
+00:33:43,191 --> 00:33:45,760
+Speaker 0: that it's closed in on itself that there's like this discrete.
+
+527
+00:33:46,142 --> 00:33:50,180
+Speaker 1: So this is basically there's an edge whether but there is no edge, okay?
+
+528
+00:33:50,440 --> 00:33:57,147
+Speaker 0: So let me think about this there's no edge whether or not it's open or closed it either loops back on itself or goes off Or so it's either pac-man or its infinity.
+
+529
+00:33:57,368 --> 00:33:59,216
+Speaker 1: Yeah, okay, so so what you're?
+
+530
+00:33:59,336 --> 00:34:10,679
+Speaker 1: so the thing is Let's pretend that the third dimensions you have a cube right yeah What if the third dimension was collapsed resulting in two dimensions, but there's really three, but the third ones collapsed?
+
+531
+00:34:10,760 --> 00:34:11,563
+Speaker 1: What would that be like?
+
+532
+00:34:11,583 --> 00:34:13,774
+Speaker 1: because we can imagine that right same thing.
+
+533
+00:34:13,915 --> 00:34:14,980
+Speaker 1: so what would that be like though?
+
+534
+00:34:15,060 --> 00:34:18,170
+Speaker 1: Would it be like flat land, but you can go around the you can pac-man?
+
+535
+00:34:18,190 --> 00:34:19,556
+Speaker 1: yeah, right so.
+
+536
+00:34:19,576 --> 00:34:20,659
+Speaker 1: but then where's the third dimension?
+
+537
+00:34:20,780 --> 00:34:25,929
+Speaker 1: Is it just the cube got flattened, but but there is a cube is just a really short cube the way I I think.
+
+538
+00:34:25,989 --> 00:34:31,300
+Speaker 1: so there is an up and down But you can't actually go up and down because as soon as you go up you pac-man to the bottom.
+
+539
+00:34:31,380 --> 00:34:33,578
+Speaker 1: I mean think of this you can't really tell there's nothing down.
+
+540
+00:34:33,619 --> 00:34:35,668
+Speaker 0: the way I always envisioned is you know there is you can see me.
+
+541
+00:34:35,748 --> 00:34:46,300
+Speaker 0: I'm savo tendering right now, but for all you know I'm moving back and forth all over the place in this fourth dimension, but because it's so small I'm just looping back around and there's no way to detect that.
+
+542
+00:34:46,702 --> 00:34:48,409
+Speaker 1: So there is a fourth dimension, but it's so.
+
+543
+00:34:48,449 --> 00:34:51,100
+Speaker 1: it's like if you squish a cube like a pancake right.
+
+544
+00:34:51,422 --> 00:34:52,628
+Speaker 1: So there is a third dimension.
+
+545
+00:34:52,688 --> 00:34:56,737
+Speaker 1: we can where even though we think we're in flat land We can actually jump up and down a little bit.
+
+546
+00:34:57,282 --> 00:35:05,997
+Speaker 1: But because it's pac-man when you get to the top when you jump up and down It doesn't actually look like you're jumping up and down because you're hardly actually jumping because your head comes out the bottom.
+
+547
+00:35:06,037 --> 00:35:11,644
+Speaker 0: another complication I don't know if this is in hyperspace or not because I read it again Long time ago.
+
+548
+00:35:11,664 --> 00:35:15,478
+Speaker 0: it took a while for us to do this episode, but three to met.
+
+549
+00:35:15,498 --> 00:35:20,920
+Speaker 0: the third Three-dimensional physical space is the only place where a knot can exist.
+
+550
+00:35:21,302 --> 00:35:22,331
+Speaker 1: I know that's that's I want.
+
+551
+00:35:22,371 --> 00:35:26,499
+Speaker 1: he didn't give me the math for that But it made me reminded me that thing of the day you had a long time ago.
+
+552
+00:35:27,242 --> 00:35:27,965
+Speaker 1: What was that one?
+
+553
+00:35:28,105 --> 00:35:29,610
+Speaker 0: Oh the four-dimensional knots?
+
+554
+00:35:29,831 --> 00:35:32,440
+Speaker 1: Yeah, whatever that would think that it was the thing of the day you had.
+
+555
+00:35:32,500 --> 00:35:33,323
+Speaker 1: It just reminded me of it.
+
+556
+00:35:33,363 --> 00:35:33,925
+Speaker 1: I don't know.
+
+557
+00:35:34,467 --> 00:35:40,044
+Speaker 1: I remember a four-dimensional game that no it was like he was like some like visualization of some.
+
+558
+00:35:40,466 --> 00:35:48,743
+Speaker 0: oh, it's the one where you have you take it this three-dimensional shape and Cross it over itself without Breaking it.
+
+559
+00:35:48,823 --> 00:35:49,526
+Speaker 1: Yeah, that's the one.
+
+560
+00:35:49,546 --> 00:35:52,660
+Speaker 0: Yeah, but anyway, I'll try to find that that was amazing.
+
+561
+00:35:52,881 --> 00:35:56,320
+Speaker 1: Yeah, so anyway, there were you know, of course reading a book like this, right?
+
+562
+00:35:56,520 --> 00:36:00,120
+Speaker 1: Someone like me who doesn't know any math is gonna come up with crazy ideas, right?
+
+563
+00:36:00,400 --> 00:36:01,926
+Speaker 1: Yeah, I came up with two crazy ideas.
+
+564
+00:36:01,946 --> 00:36:02,730
+Speaker 1: I would like to discuss.
+
+565
+00:36:02,991 --> 00:36:03,613
+Speaker 0: All right.
+
+566
+00:36:03,633 --> 00:36:05,942
+Speaker 1: All right, so crazy idea number one You ready for this?
+
+567
+00:36:05,962 --> 00:36:06,704
+Speaker 1: I'm ready.
+
+568
+00:36:06,764 --> 00:36:12,800
+Speaker 1: So he at one point he talks about light actually being a vibration of the fourth dimension, right?
+
+569
+00:36:13,060 --> 00:36:14,465
+Speaker 1: Yeah, so is that true or not?
+
+570
+00:36:14,525 --> 00:36:17,175
+Speaker 1: Or is that just you know in progress kind of thing?
+
+571
+00:36:17,717 --> 00:36:18,500
+Speaker 0: Ah, it makes sense.
+
+572
+00:36:18,821 --> 00:36:22,634
+Speaker 1: Okay, so if we pretend that light is a vibration of the fourth dimension, right?
+
+573
+00:36:22,654 --> 00:36:27,318
+Speaker 1: Yes, that means Let's combine it with another idea that we understand very well.
+
+574
+00:36:27,358 --> 00:36:31,660
+Speaker 1: You're right Photosynthesis, so you got a plant Scott.
+
+575
+00:36:31,740 --> 00:36:37,880
+Speaker 0: There was just an article on slashdot not that long ago talking about quantum effects and how important they are to photosynthesis.
+
+576
+00:36:37,960 --> 00:36:38,643
+Speaker 0: They're really.
+
+577
+00:36:38,703 --> 00:36:39,948
+Speaker 1: I don't read that anymore.
+
+578
+00:36:40,169 --> 00:36:44,939
+Speaker 1: Well, maybe you should maybe I should because I was thinking wow There's a wave in the fourth dimension.
+
+579
+00:36:45,682 --> 00:36:50,796
+Speaker 1: Shake some molecules and atoms or whatever inside a plant and then the plant eats it.
+
+580
+00:36:51,177 --> 00:36:52,280
+Speaker 1: How crazy is that shit?
+
+581
+00:36:52,640 --> 00:36:53,565
+Speaker 1: So that is crazy.
+
+582
+00:36:53,705 --> 00:36:55,152
+Speaker 0: Think about it even one step further.
+
+583
+00:36:55,213 --> 00:36:56,700
+Speaker 0: Imagine that we're in flatland, right?
+
+584
+00:36:56,840 --> 00:37:00,371
+Speaker 0: All right, and say that light or whatever in some other dimension.
+
+585
+00:37:00,411 --> 00:37:03,200
+Speaker 0: There's a sheet that's like a vibrating like waves.
+
+586
+00:37:03,682 --> 00:37:10,729
+Speaker 0: So say a wave like a bulb pops up through flatland momentarily Depending on at what point we observe.
+
+587
+00:37:10,769 --> 00:37:11,754
+Speaker 0: it say it's oscillating.
+
+588
+00:37:11,774 --> 00:37:12,940
+Speaker 0: So it's a wave like a book.
+
+589
+00:37:13,142 --> 00:37:14,280
+Speaker 1: So it appears and disappears.
+
+590
+00:37:14,360 --> 00:37:18,380
+Speaker 0: So it's a bubble going up and down up and down up and down intersecting with our universe at some point.
+
+591
+00:37:18,670 --> 00:37:32,966
+Speaker 0: Okay if the peak the absolute peak of that wave is the Exact point of our universe then it appears and it's a point an oscillating point that appears and disappears Infinitely and regularly.
+
+592
+00:37:32,986 --> 00:37:35,134
+Speaker 1: Okay, but it's if it's only a point.
+
+593
+00:37:35,195 --> 00:37:38,072
+Speaker 1: it's kind of hard to see though, but it's there All right, and we can interact with it.
+
+594
+00:37:38,092 --> 00:37:38,978
+Speaker 0: Maybe it messes stuff up.
+
+595
+00:37:39,622 --> 00:37:44,500
+Speaker 1: It might pop up like in just like the worst place in your brain or hurt if it's just a little bit taller.
+
+596
+00:37:45,062 --> 00:37:48,497
+Speaker 0: It's a circle now instead a sphere a circle that keeps appearing.
+
+597
+00:37:48,517 --> 00:37:48,758
+Speaker 0: it does.
+
+598
+00:37:48,818 --> 00:37:49,260
+Speaker 0: that's correct.
+
+599
+00:37:49,982 --> 00:37:51,086
+Speaker 0: so think about that.
+
+600
+00:37:51,146 --> 00:37:55,344
+Speaker 0: in terms of electrons and the fact that they're not a point.
+
+601
+00:37:55,931 --> 00:37:57,324
+Speaker 0: they're a particle.
+
+602
+00:37:57,344 --> 00:37:57,887
+Speaker 0: they're not either.
+
+603
+00:37:57,987 --> 00:38:01,103
+Speaker 0: they're like a wave of probability that They're.
+
+604
+00:38:01,264 --> 00:38:02,287
+Speaker 0: we know they're like.
+
+605
+00:38:02,307 --> 00:38:10,486
+Speaker 0: this is the area where it could be and we know it's somewhere in there but we can't know where it is specifically and Maybe that has something to do with.
+
+606
+00:38:10,566 --> 00:38:26,665
+Speaker 0: imagine, you know that dimension something appearing in our universe Repeatedly in that manner that I described the bubble coming in through flatland Like the area where it's intersecting our universe is the probability wave but the actual structure of the electron.
+
+607
+00:38:26,686 --> 00:38:34,005
+Speaker 0: the reason we can't really interact with it directly is because it is actually just of Oscillation on that other dimension.
+
+608
+00:38:34,387 --> 00:38:34,688
+Speaker 0: Hmm.
+
+609
+00:38:35,089 --> 00:38:38,220
+Speaker 0: It's not a thing but in our universe it manifests as a thing.
+
+610
+00:38:39,063 --> 00:38:43,238
+Speaker 0: Mmm, that would also explain why there are so many different particles.
+
+611
+00:38:43,258 --> 00:38:49,377
+Speaker 1: Yeah So my second crazy idea isn't really chemo is like just knocking that hoof against his.
+
+612
+00:38:49,457 --> 00:38:54,395
+Speaker 1: I'm sure every every I'm sure every real physicist listening to us non-physicist is going crazy.
+
+613
+00:38:54,435 --> 00:38:55,580
+Speaker 1: And for that we apologize.
+
+614
+00:38:55,801 --> 00:38:56,504
+Speaker 0: Yeah, what if a computer?
+
+615
+00:38:56,524 --> 00:39:02,564
+Speaker 1: but you should be glad that we are interested and we are not people who believe in Metaphysical or it's not?
+
+616
+00:39:02,584 --> 00:39:04,972
+Speaker 1: you want to do scientific things Scott and all.
+
+617
+00:39:05,012 --> 00:39:12,295
+Speaker 1: you are just curious and we know we are Unlearned and we do not believe the gods that are crazy you and all we just computer people can.
+
+618
+00:39:12,355 --> 00:39:13,900
+Speaker 0: now I'm going to do something.
+
+619
+00:39:14,524 --> 00:39:21,151
+Speaker 0: I will use magic to let you experience Exactly what all the physicists listening to this episode are right now.
+
+620
+00:39:21,171 --> 00:39:24,220
+Speaker 0: All right, man, so computers use binary, right?
+
+621
+00:39:24,280 --> 00:39:25,223
+Speaker 0: It's just like zeros and ones.
+
+622
+00:39:25,263 --> 00:39:28,032
+Speaker 0: What if I had like a one two or five?
+
+623
+00:39:28,313 --> 00:39:30,380
+Speaker 0: it'd be so much more powerful.
+
+624
+00:39:30,441 --> 00:39:31,159
+Speaker 1: We could do that.
+
+625
+00:39:31,240 --> 00:39:41,160
+Speaker 1: But in fact if they're physicists they will know that how a transistor works and a transistor is actually a quantum device Right, so they would know that you couldn't have a one two, three or five if they were physicists.
+
+626
+00:39:41,281 --> 00:39:45,578
+Speaker 1: But if they were normal people they would think you could have one two, three or five which you can actually do.
+
+627
+00:39:46,822 --> 00:39:50,560
+Speaker 1: There have been computers that use their own one and they just kind of suck and they're hard to program.
+
+628
+00:39:50,721 --> 00:39:52,126
+Speaker 0: Yeah, there's a lot of reason.
+
+629
+00:39:52,367 --> 00:39:54,133
+Speaker 0: also are the way we do.
+
+630
+00:39:54,214 --> 00:39:59,913
+Speaker 1: logic is not as easy or useful No, but anyway, here's my second crazy idea, which isn't really that crazy.
+
+631
+00:39:59,953 --> 00:40:03,668
+Speaker 1: It's actually just you know a Increased understanding right?
+
+632
+00:40:03,688 --> 00:40:08,720
+Speaker 1: So I always since it was explained to me originally I always sort of understood Einstein's gravity, right?
+
+633
+00:40:08,860 --> 00:40:09,283
+Speaker 1: You got a lot of.
+
+634
+00:40:09,303 --> 00:40:10,270
+Speaker 1: you got a lot of mass.
+
+635
+00:40:10,593 --> 00:40:20,920
+Speaker 1: when you have a lot of mass You know, if you have a two-dimensional universe and you have a heavy thing It's gonna put a big dent in it, you know And that dent is actually a dent three a three-dimensional dent in the two-dimensional universe.
+
+636
+00:40:21,163 --> 00:40:25,580
+Speaker 1: So things seem to be falling into it Even though you can't see why they're falling into it because you're a two-dimensional person.
+
+637
+00:40:25,881 --> 00:40:32,709
+Speaker 1: Yeah, and likewise in three dimensions when there's a heavy thing right with a lot of mass It makes a big dent, but it's a four-dimensional dent.
+
+638
+00:40:32,930 --> 00:40:35,720
+Speaker 1: So things fall into it right and gravity, whatever.
+
+639
+00:40:36,743 --> 00:40:37,856
+Speaker 1: But think about this, right?
+
+640
+00:40:37,936 --> 00:40:46,320
+Speaker 1: So Well, if there was a four-dimensional thing and it you know Let's say I was a four-dimensional person and I was not touching the third dimension and then I punched it, right?
+
+641
+00:40:46,660 --> 00:40:47,685
+Speaker 1: Yeah, so I put my fist into it.
+
+642
+00:40:47,725 --> 00:40:48,428
+Speaker 1: What's gonna happen?
+
+643
+00:40:48,730 --> 00:40:50,820
+Speaker 1: Well, they're gonna see three-dimensional people.
+
+644
+00:40:51,841 --> 00:40:59,312
+Speaker 0: I'm gonna say that it's not that you're putting your fist into the third dimension It's that there is a thing in the third dimension that you can.
+
+645
+00:40:59,332 --> 00:41:00,436
+Speaker 0: there's a three-dimensional thing.
+
+646
+00:41:00,737 --> 00:41:06,905
+Speaker 0: It's the equivalent of me I'm holding say this piece of paper is actually totally flat and there's things living on it That are effectively two-dimensional.
+
+647
+00:41:07,206 --> 00:41:08,049
+Speaker 0: I just start fucking with them.
+
+648
+00:41:08,371 --> 00:41:16,954
+Speaker 0: Yeah, I'm not putting my hand into the second dimension I'm just interacting with a four-dimensional object that happens to have also.
+
+649
+00:41:16,974 --> 00:41:24,460
+Speaker 1: you're saying that so we live in a third dimensional object That is floating in a fourth dimension and a lot of that fourth dimension isn't touching us only some of it is touching us.
+
+650
+00:41:24,722 --> 00:41:26,720
+Speaker 0: I guess that's the best way we can say it anyway.
+
+651
+00:41:26,861 --> 00:41:31,500
+Speaker 1: But the point is if something from the fourth dimension were to enter our dimension, right?
+
+652
+00:41:31,840 --> 00:41:35,040
+Speaker 1: It would sort of appear out of a point and grow larger, right?
+
+653
+00:41:35,040 --> 00:41:38,197
+Speaker 1: It would be like if a basketball came in a four-dimensional basketball.
+
+654
+00:41:38,217 --> 00:41:40,587
+Speaker 1: So a Four-ball right would.
+
+655
+00:41:40,667 --> 00:41:42,032
+Speaker 1: they threw it at us right?
+
+656
+00:41:42,072 --> 00:41:42,835
+Speaker 1: They poked at us.
+
+657
+00:41:43,095 --> 00:41:44,360
+Speaker 1: We would see this a basketball.
+
+658
+00:41:44,421 --> 00:41:45,439
+Speaker 1: It would start out as like a dot.
+
+659
+00:41:45,540 --> 00:41:58,932
+Speaker 1: It would grow to a full basketball and then it would shrink again into another dot Right or something like that something along those lines, but isn't that what you know, like, you know The Sun looks like right, you know, it's got.
+
+660
+00:41:59,052 --> 00:42:01,825
+Speaker 1: you know, it's it gets bigger I get in.
+
+661
+00:42:01,866 --> 00:42:03,318
+Speaker 1: gravity makes it smaller, right?
+
+662
+00:42:03,640 --> 00:42:04,864
+Speaker 1: So it's like they.
+
+663
+00:42:05,065 --> 00:42:10,000
+Speaker 1: you know that that lends itself your gravity versus things from the fourth to met.
+
+664
+00:42:10,020 --> 00:42:15,557
+Speaker 1: You know things all matter being something from the fourth dimension protruding into the third dimension, right?
+
+665
+00:42:15,757 --> 00:42:16,219
+Speaker 0: Well, it's not.
+
+666
+00:42:16,279 --> 00:42:20,009
+Speaker 0: if Gravity is the distortion of space-time or something like that.
+
+667
+00:42:20,049 --> 00:42:23,060
+Speaker 0: Then it's just that's a dip in another dimension effectively
+
+668
+00:42:23,582 --> 00:42:36,680
+Speaker 1: No, but I'm saying is that it ever all if all matter is actually Something from the fourth dimension poking its way in Right, yeah, and then gravity is sort of it being sucked, you know back out to the fourth.
+
+669
+00:42:36,722 --> 00:42:39,610
+Speaker 0: well that's exactly what I guess it would be.
+
+670
+00:42:39,630 --> 00:42:46,333
+Speaker 0: and that if if all the individual particles are just the Manifestations of strings or waves or whatever in this multi-dimensional universe.
+
+671
+00:42:46,373 --> 00:42:57,299
+Speaker 0: We can't really interact with then What we are is just kind of this meta structure that is manifest of all those other things That themselves are unrelated to their constituents.
+
+672
+00:42:58,481 --> 00:43:09,921
+Speaker 1: Yeah, I was really struggling to have a sentence there but you see but that's the thing is you look at you look at You know a star and it's gravity and you look at the four-dimensional basketball just sort of passing by and it's the same sort of Thing.
+
+673
+00:43:10,061 --> 00:43:12,230
+Speaker 0: I know the trouble we have is looks the same.
+
+674
+00:43:12,290 --> 00:43:17,562
+Speaker 0: the trouble we have to watch out for is that we're definitely we can fall into the trap of the anthropic principle of We.
+
+675
+00:43:17,622 --> 00:43:22,100
+Speaker 0: it's very easy for us to analogize things because they appear similar and they're complete bullshit in the math.
+
+676
+00:43:22,261 --> 00:43:31,696
+Speaker 1: It doesn't even match at all Of course Sagan because I was ran but you know Like a star going into a black hole looks the same with our eyeballs as a bat.
+
+677
+00:43:31,776 --> 00:43:34,505
+Speaker 1: a four-dimensional basketball Leaving our dimension.
+
+678
+00:43:34,565 --> 00:43:35,528
+Speaker 1: remember in cos.
+
+679
+00:43:35,588 --> 00:43:36,912
+Speaker 1: it shrinks to a point and goes away.
+
+680
+00:43:36,993 --> 00:43:53,540
+Speaker 0: when Sagan points out that if our universe is closed It's as though we are our entire universe is contained within or it is effectively an electron But one in a greater universe and that every point particle in our universe is in fact a closed universe.
+
+681
+00:43:53,902 --> 00:43:56,459
+Speaker 0: That itself, you know, and it's ad infinitum up and down.
+
+682
+00:43:56,620 --> 00:44:01,040
+Speaker 1: Yeah, but I don't think that you know, you could fit a billion billion galaxies in in one of our electrons.
+
+683
+00:44:01,140 --> 00:44:02,245
+Speaker 1: That's that's not in there.
+
+684
+00:44:02,747 --> 00:44:03,168
+Speaker 0: Why not?
+
+685
+00:44:03,570 --> 00:44:05,036
+Speaker 1: Yeah, I'm pretty sure it's not in there.
+
+686
+00:44:05,116 --> 00:44:05,578
+Speaker 0: then how come?
+
+687
+00:44:05,759 --> 00:44:06,080
+Speaker 0: how do you know?
+
+688
+00:44:06,140 --> 00:44:07,003
+Speaker 0: We're not an electron.
+
+689
+00:44:07,645 --> 00:44:12,040
+Speaker 1: I'm pretty sure that our universe of a billion billion galaxies is not an electron.
+
+690
+00:44:12,120 --> 00:44:12,945
+Speaker 1: Maybe why not?
+
+691
+00:44:13,065 --> 00:44:13,789
+Speaker 1: Maybe it's a proton.
+
+692
+00:44:13,890 --> 00:44:15,719
+Speaker 0: I don't think you listen to Carl Sagan that much.
+
+693
+00:44:18,321 --> 00:44:19,205
+Speaker 1: It's not it's not.
+
+694
+00:44:19,847 --> 00:44:21,334
+Speaker 1: this isn't turtles all the way down.
+
+695
+00:44:21,695 --> 00:44:27,414
+Speaker 0: so I did ask Timo our Non-resident expert on these man.
+
+696
+00:44:27,454 --> 00:44:28,376
+Speaker 1: What did you ask him?
+
+697
+00:44:28,396 --> 00:44:30,820
+Speaker 0: I was like, yeah, so I really know hyperspace.
+
+698
+00:44:30,961 --> 00:44:38,200
+Speaker 0: I was talking a little bit and I gave me permission to read this But he gave a short like mini review of his feelings in the hyperspace.
+
+699
+00:44:38,280 --> 00:44:39,545
+Speaker 0: My question was here.
+
+700
+00:44:39,585 --> 00:44:41,551
+Speaker 0: Let me find the exact question that I asked him.
+
+701
+00:44:41,572 --> 00:44:45,926
+Speaker 0: doo doo doo doo doo doo doo Doo doo doo doo doo I can't find it.
+
+702
+00:44:45,986 --> 00:44:47,953
+Speaker 0: I was basically like hey you have the answer.
+
+703
+00:44:47,973 --> 00:44:52,406
+Speaker 1: You know the question is hyperspace legit Did anything?
+
+704
+00:44:52,426 --> 00:44:54,133
+Speaker 1: that is something I do want to comment on.
+
+705
+00:44:54,213 --> 00:44:55,700
+Speaker 1: oh actually two things I want to comment on.
+
+706
+00:44:55,740 --> 00:45:07,560
+Speaker 1: So one thing if you were not someone who understood science and math, you know, I mean and you read this book Just from the look like if you were not an educated person like if you were, you know, very uneducated.
+
+707
+00:45:07,701 --> 00:45:08,665
+Speaker 0: Oh, it's rock-solid.
+
+708
+00:45:08,765 --> 00:45:11,236
+Speaker 1: No, no, but this book even though it is rock-solid.
+
+709
+00:45:11,276 --> 00:45:11,818
+Speaker 1: I agree, right?
+
+710
+00:45:12,880 --> 00:45:19,140
+Speaker 1: The way it presents itself physically and with diagrams and lit, you know in its wording, right?
+
+711
+00:45:20,161 --> 00:45:25,757
+Speaker 1: Easily and On a surface level very much resembles pretty much any time cube.
+
+712
+00:45:25,818 --> 00:45:26,340
+Speaker 1: Randy book.
+
+713
+00:45:26,721 --> 00:45:34,409
+Speaker 1: You know, you actually you have to have some sort of beginning knowledge or intelligence To be able to tell the difference between this.
+
+714
+00:45:34,429 --> 00:45:35,412
+Speaker 0: you want to know why.
+
+715
+00:45:35,754 --> 00:45:36,376
+Speaker 0: you want to know why.
+
+716
+00:45:36,396 --> 00:45:37,720
+Speaker 0: two dimensional?
+
+717
+00:45:38,580 --> 00:45:50,338
+Speaker 0: Simple drawings that illustrate very powerful analogies that directly relate to feelings people have look at the fourth way I know exactly so, you know, it's like What's what really does?
+
+718
+00:45:50,560 --> 00:45:52,126
+Speaker 1: Separate this from time cube.
+
+719
+00:45:52,167 --> 00:45:55,159
+Speaker 1: besides the fact that the math is right and as opposed to the math is not made up.
+
+720
+00:45:55,179 --> 00:46:00,860
+Speaker 1: and if you're Not an expert who can tell you you whatever book you read first time cube or hyperspace is gonna get you know How?
+
+721
+00:46:00,921 --> 00:46:03,610
+Speaker 0: you you know how you solve that if I read time cube?
+
+722
+00:46:03,690 --> 00:46:04,713
+Speaker 0: Alright time cube.
+
+723
+00:46:05,396 --> 00:46:07,908
+Speaker 0: I read a different book That isn't time cube.
+
+724
+00:46:07,968 --> 00:46:08,934
+Speaker 0: They don't match up.
+
+725
+00:46:09,317 --> 00:46:09,739
+Speaker 1: That's true.
+
+726
+00:46:10,161 --> 00:46:14,544
+Speaker 0: If I read hyperspace and then some other quantum physics book, they're gonna match up quite a bit They are.
+
+727
+00:46:14,564 --> 00:46:18,728
+Speaker 1: and as for the up-to-date ness, you know I was also thinking about that because this book is from 94.
+
+728
+00:46:18,728 --> 00:46:20,092
+Speaker 1: Yeah there it's.
+
+729
+00:46:20,273 --> 00:46:22,300
+Speaker 1: it's at least a lot of years later.
+
+730
+00:46:23,202 --> 00:46:25,460
+Speaker 1: Right, there had to be some development since then.
+
+731
+00:46:25,540 --> 00:46:27,689
+Speaker 1: So there are things in this book that are out of date.
+
+732
+00:46:27,749 --> 00:46:30,640
+Speaker 1: For example, he talks about the superconducting supercollider.
+
+733
+00:46:30,720 --> 00:46:34,895
+Speaker 1: We already know that we now have the hadron collider, right?
+
+734
+00:46:34,975 --> 00:46:36,400
+Speaker 1: He didn't know about that when he wrote the book.
+
+735
+00:46:36,621 --> 00:46:39,636
+Speaker 1: Yeah, but we haven't found anything huge there yet.
+
+736
+00:46:39,736 --> 00:46:39,978
+Speaker 1: Yeah.
+
+737
+00:46:40,118 --> 00:46:44,529
+Speaker 1: Yeah But anyway so that sort of thing is out of date.
+
+738
+00:46:44,670 --> 00:46:52,217
+Speaker 1: but I thought about the out-of-date ness of this book when I was reading it and I was like 20 years whatever but reading the book most of the time.
+
+739
+00:46:52,277 --> 00:46:53,080
+Speaker 1: what's he talking about?
+
+740
+00:46:53,180 --> 00:46:59,740
+Speaker 1: He's talking about people like von Neumann or Riemann or Einstein or even Newton, right?
+
+741
+00:46:59,960 --> 00:47:03,378
+Speaker 1: It's like those guys are centuries old.
+
+742
+00:47:03,438 --> 00:47:06,239
+Speaker 0: Scott Who does Sagan talk about?
+
+743
+00:47:06,862 --> 00:47:08,288
+Speaker 1: Ancient Greek, right?
+
+744
+00:47:08,369 --> 00:47:15,343
+Speaker 1: So he's talking about these old old Scientists, right and even a lot of the ones, you know Even the more recent ones.
+
+745
+00:47:15,363 --> 00:47:20,560
+Speaker 1: he talks about our 20th early 20th century guys and their shit still holds up.
+
+746
+00:47:20,620 --> 00:47:21,383
+Speaker 1: You know, he's got like he'll.
+
+747
+00:47:21,424 --> 00:47:23,975
+Speaker 1: you look at the matrix he's got and whose names are in there?
+
+748
+00:47:24,035 --> 00:47:25,100
+Speaker 1: Maxwell and Einstein.
+
+749
+00:47:25,201 --> 00:47:27,763
+Speaker 1: Those are not recent, dude right, I mean.
+
+750
+00:47:28,124 --> 00:47:47,416
+Speaker 1: so if there was something, you know, and if their stuff is still legit after centuries then In the 20-something years since this book has been written You're I don't think you know the odds of there being something devastatingly Huge that changes this book completely and makes it invalid are pretty low.
+
+751
+00:47:47,537 --> 00:47:51,380
+Speaker 1: if centuries Couldn't have invalidated these other guys, right?
+
+752
+00:47:51,741 --> 00:48:00,897
+Speaker 1: If their stuff is still right Then the stuff in this book is still gonna be mostly right and right enough for a layman like myself Who's never going to do any sort of?
+
+753
+00:48:01,341 --> 00:48:02,969
+Speaker 1: Scientific experiment in this department.
+
+754
+00:48:03,030 --> 00:48:05,060
+Speaker 0: one thing that's really cool is that look at cosmos.
+
+755
+00:48:05,261 --> 00:48:09,939
+Speaker 0: I was reading through all the errata like all the updates since cosmos came out.
+
+756
+00:48:11,220 --> 00:48:15,076
+Speaker 0: Very few corrections very few outright.
+
+757
+00:48:15,096 --> 00:48:15,940
+Speaker 0: This was wrong.
+
+758
+00:48:16,660 --> 00:48:23,120
+Speaker 0: Mostly it's we confirmed this even more or we confirm something even crazier than we suspected.
+
+759
+00:48:23,481 --> 00:48:26,635
+Speaker 0: Yeah, or you know, this science is happening things like that.
+
+760
+00:48:26,715 --> 00:48:27,800
+Speaker 1: It was there was some article.
+
+761
+00:48:27,820 --> 00:48:29,453
+Speaker 1: I don't remember what it was, but I read it.
+
+762
+00:48:29,514 --> 00:48:48,260
+Speaker 1: I think yesterday I don't even I just read it really quickly I'd even bother but it was about a very similar hyperspace related topic on a real science blog and a lot of the stuff that was written in that post was like Totally just straight from this book and I was like I understood half that blog post because it was just out of this book.
+
+763
+00:48:48,842 --> 00:48:59,140
+Speaker 1: So if it hasn't changed since a blog post from yesterday, I think this book is still Incredibly valuable to someone who wants to learn about this and is not yet so out of date.
+
+764
+00:48:59,201 --> 00:49:00,420
+Speaker 1: It's not no longer worth reading.
+
+765
+00:49:00,621 --> 00:49:07,820
+Speaker 0: So from Timo who is a physicist who actually does know what he's talking about, you know 10 billion times more than we do I read hyperspace over the weekend.
+
+766
+00:49:07,960 --> 00:49:14,818
+Speaker 0: Here's the short of it too many boring anecdotes and strained analogies, but I like anecdotes and analogies, especially strained one.
+
+767
+00:49:14,919 --> 00:49:17,686
+Speaker 0: Yes Longer, here's the long of it.
+
+768
+00:49:18,167 --> 00:49:25,320
+Speaker 0: I am tempted to say that there are too many overly generalized explanations But in hindsight, I say that he doesn't actually explain anything.
+
+769
+00:49:25,761 --> 00:49:29,094
+Speaker 0: The book is basically a dog and pony show.
+
+770
+00:49:29,114 --> 00:49:38,280
+Speaker 0: Yep of neat ideas Yep, and that it doesn't fail completely Although there are parts where I get an interesting insight into his thoughts on some meaningful physical concepts.
+
+771
+00:49:38,662 --> 00:49:40,490
+Speaker 0: There are few and far between hmm.
+
+772
+00:49:40,771 --> 00:49:45,591
+Speaker 0: The book is scientifically sound Though mostly old news.
+
+773
+00:49:45,973 --> 00:49:50,740
+Speaker 1: Yeah, well dots is 94 it's old news there has especially for someone who's a profession.
+
+774
+00:49:50,740 --> 00:49:52,206
+Speaker 0: This is the part I want I get to learn more about.
+
+775
+00:49:52,488 --> 00:49:56,404
+Speaker 0: there has been a second revolution in string theory in the early 2000s.
+
+776
+00:49:56,424 --> 00:49:57,510
+Speaker 1: Oh, so that is that is the thing.
+
+777
+00:49:57,530 --> 00:49:59,040
+Speaker 1: That is pretty the only thing that's not in this book.
+
+778
+00:49:59,080 --> 00:50:10,609
+Speaker 0: probably also over the last decade Cosmology has become a precision science and added a lot of new opportunities for testing some of the ideas in the latter part of the Book that I'm really excited about.
+
+779
+00:50:11,051 --> 00:50:11,835
+Speaker 1: I want to learn about that.
+
+780
+00:50:11,835 --> 00:50:17,291
+Speaker 0: 17 years Even for the glacial pace that science advances.
+
+781
+00:50:17,311 --> 00:50:19,097
+Speaker 1: Yeah, see glacial pace of science.
+
+782
+00:50:19,338 --> 00:50:23,480
+Speaker 0: all in all It's not a bad popular science book, but I'm a scientist.
+
+783
+00:50:23,600 --> 00:50:28,800
+Speaker 0: So I see all the ifs and buts no kidding and I want more meat on my explanation.
+
+784
+00:50:28,921 --> 00:50:33,519
+Speaker 1: Of course if this if there's a computer science book that was written like this It would have no little to no value for me.
+
+785
+00:50:33,680 --> 00:50:38,217
+Speaker 0: the thing is this is a book to where you could throw this at almost anyone and they can.
+
+786
+00:50:38,237 --> 00:50:45,164
+Speaker 1: you could throw it at a Nerdy middle school student or a non fit or a beep or higher High school student.
+
+787
+00:50:45,224 --> 00:50:47,572
+Speaker 0: I think that the best person to give this a
+
+788
+00:50:47,613 --> 00:50:48,556
+Speaker 1: good high school is
+
+789
+00:50:48,636 --> 00:50:51,310
+Speaker 0: someone who's a little nerdy Who but like
+
+790
+00:50:51,472 --> 00:51:04,274
+Speaker 1: early on in there I think it's best if there's a kid who's starting to show who actually shows interest in science like if they're in science class at all and they go ooh, or if they watch Discovery Channel and they're like, oh And they go all even once you gotta give this book.
+
+791
+00:51:04,415 --> 00:51:07,294
+Speaker 1: Yep, or Cosmos or any of those similar books.
+
+792
+00:51:07,455 --> 00:51:11,775
+Speaker 0: Yes But it's I think middle school is the age because that you know.
+
+793
+00:51:11,895 --> 00:51:13,160
+Speaker 0: end of middle school early high school.
+
+794
+00:51:13,180 --> 00:51:16,659
+Speaker 1: It's like they'll get some of it, but they won't understand a lot of it as well.
+
+795
+00:51:16,921 --> 00:51:19,620
+Speaker 0: And if they're like me, it'll influence them in surprising way.
+
+796
+00:51:19,660 --> 00:51:22,474
+Speaker 1: I mean, I still can't even really understand how that dimension collapses.
+
+797
+00:51:22,876 --> 00:51:26,340
+Speaker 0: besides pac-man Yeah, and I can talk out my ass for hours.
+
+798
+00:51:26,420 --> 00:51:30,480
+Speaker 1: So in a third is in a three is actually in a three-dimensional space.
+
+799
+00:51:30,520 --> 00:51:33,518
+Speaker 1: But the third dimension collapse actually pac-man because he can go.
+
+800
+00:51:34,061 --> 00:51:35,086
+Speaker 0: Depends depends on the map.
+
+801
+00:51:35,187 --> 00:51:40,472
+Speaker 0: Can you just call it the sides of the top didn't go at the sides and the top Okay, so come up with a shape that works.
+
+802
+00:51:40,492 --> 00:51:42,039
+Speaker 0: You've got a shape that crosses over itself.
+
+803
+00:51:42,743 --> 00:51:43,345
+Speaker 1: Oh, didn't he say?
+
+804
+00:51:43,365 --> 00:51:48,498
+Speaker 1: there was one point where he said it was like pac-man's on a cylinder or no He's on a Taurus, right?
+
+805
+00:51:48,538 --> 00:51:51,294
+Speaker 1: Yes But it's like how can pac-man be on a Taurus?
+
+806
+00:51:51,374 --> 00:51:57,275
+Speaker 1: I don't know whatever But if he's on a Taurus then it's three-dimensional but but it's a collapsed Taurus.
+
+807
+00:51:57,736 --> 00:51:58,659
+Speaker 1: I don't I still don't get it.
+
+808
+00:51:59,041 --> 00:52:00,752
+Speaker 0: That's why we need a book with more meat on it now.
+
+809
+00:52:00,792 --> 00:52:02,000
+Speaker 0: I think we've gotten past this point.
+
+810
+00:52:02,000 --> 00:52:06,900
+Speaker 1: I want to see a picture of a three-dimensional universe where the third where the third dimension collapsed.
+
+811
+00:52:07,322 --> 00:52:08,105
+Speaker 0: I guess it's only.
+
+812
+00:52:08,125 --> 00:52:14,029
+Speaker 0: I'm glad I read this book when I was much younger because I think there are better books for someone Of my age to read on these topics.
+
+813
+00:52:14,471 --> 00:52:16,440
+Speaker 0: I think I could do for a little more math.
+
+814
+00:52:17,403 --> 00:52:23,853
+Speaker 0: Yeah, I could you know, I could Like the math is unimportant, but let's move on.
+
+815
+00:52:24,134 --> 00:52:25,620
+Speaker 1: Yeah, the math is just kind of hard.
+
+816
+00:52:26,142 --> 00:52:30,117
+Speaker 0: Yeah, I would least like more of the grounding of the math like more of the.
+
+817
+00:52:30,137 --> 00:52:33,997
+Speaker 0: alright Here's what this implies Mathematically and here's why it implies that.
+
+818
+00:52:34,138 --> 00:52:45,560
+Speaker 1: yeah The only thing that I sort of question and obviously I'm almost I'm actually I'm 100% sure I'm wrong Right is that you know, he keeps showing you the matrix of like Einstein in the top left then Maxwell then Yang Mills, right?
+
+819
+00:52:45,560 --> 00:52:46,739
+Speaker 1: It's like now we have enough room.
+
+820
+00:52:46,800 --> 00:52:58,439
+Speaker 1: It's like adding more dimensions increase the size of the matrix Which means you have more room to fit stuff in there Which means you could add these, you know Now we can add all these guys in and everything fits together, right and I understood that conceptually very well.
+
+821
+00:52:58,822 --> 00:53:00,640
+Speaker 0: But it's like in taking stuff, right?
+
+822
+00:53:00,680 --> 00:53:02,405
+Speaker 0: But it's like and other people.
+
+823
+00:53:02,425 --> 00:53:11,360
+Speaker 1: but at the same time I was thinking obviously wrong and mathematically right obviously, but it's like Couldn't I just make any matrix bigger and fit in any kind of maths?
+
+824
+00:53:11,540 --> 00:53:14,656
+Speaker 1: I wanted I could make a giant matrix and fit all the math in the world and it wouldn't.
+
+825
+00:53:14,696 --> 00:53:15,400
+Speaker 1: it would totally work.
+
+826
+00:53:15,881 --> 00:53:16,825
+Speaker 1: So what is so?
+
+827
+00:53:16,845 --> 00:53:18,069
+Speaker 1: what does that even mean?
+
+828
+00:53:18,129 --> 00:53:18,370
+Speaker 1: Right?
+
+829
+00:53:18,551 --> 00:53:19,394
+Speaker 0: I guess the that was.
+
+830
+00:53:19,434 --> 00:53:21,020
+Speaker 1: that was my stupid and incorrect thinking.
+
+831
+00:53:21,322 --> 00:53:25,627
+Speaker 1: Well, I guess my way around that is it's like yeah I can take two completely unrelated things.
+
+832
+00:53:25,928 --> 00:53:28,999
+Speaker 1: make a big enough matrix so that there's enough spots in there to put both of them.
+
+833
+00:53:29,360 --> 00:53:31,691
+Speaker 1: But if you but if you make that does that make them related?
+
+834
+00:53:32,153 --> 00:53:36,653
+Speaker 0: if you make it too much bigger Like bigger than it needs to be there's this extra space in there.
+
+835
+00:53:36,693 --> 00:53:38,179
+Speaker 0: You don't have anything to put in that space.
+
+836
+00:53:38,981 --> 00:53:40,995
+Speaker 0: So there's a hole that you can't fill.
+
+837
+00:53:41,015 --> 00:53:45,180
+Speaker 1: that's meaning Well, there are some little holes that he said they do put something in there.
+
+838
+00:53:45,200 --> 00:53:47,899
+Speaker 1: But he said yeah, we're not gonna talk about what they put in that corner bit.
+
+839
+00:53:49,801 --> 00:54:02,809
+Speaker 0: Yeah, I about three times reading this book again I went to Wikipedia and tried to learn more about metric tensors and I even asked some of the mathematicians at work and one of them I was like so I'm interested in metric tensors.
+
+840
+00:54:02,869 --> 00:54:11,640
+Speaker 0: and he looked at me and he said really and I said Yes And he said why reading some kaku?
+
+841
+00:54:18,400 --> 00:54:20,193
+Speaker 0: So We've got our new book.
+
+842
+00:54:20,273 --> 00:54:20,980
+Speaker 0: we had our old book.
+
+843
+00:54:21,181 --> 00:54:31,961
+Speaker 0: I think it's a worthwhile read especially if you've got like a nerdy Cousin who's younger than you or something or like a nerdy nephew or niece and you need a book to give them like a science Book.
+
+844
+00:54:32,182 --> 00:54:33,066
+Speaker 0: that'll get them thinking.
+
+845
+00:54:33,086 --> 00:54:35,879
+Speaker 1: Yeah, also it's like I delayed starting of reading it.
+
+846
+00:54:36,081 --> 00:54:37,993
+Speaker 1: You know by a lot of time just cuz mostly cuz.
+
+847
+00:54:38,013 --> 00:54:38,960
+Speaker 1: I was busy with other things.
+
+848
+00:54:39,221 --> 00:54:48,040
+Speaker 1: But once I started reading it, I not only did I have to finish it quickly to be in time for this episode I finished it yesterday last night, but I really wanted to finish it very quickly.
+
+849
+00:54:48,222 --> 00:54:50,160
+Speaker 1: Yes, you kept wanting to read more.
+
+850
+00:54:50,301 --> 00:54:55,810
+Speaker 0: I dragged through the first and that's kind of a good book because I remembered it pretty well But then after that it was like, oh, whoa.
+
+851
+00:54:55,851 --> 00:54:56,635
+Speaker 0: Wait, what what?
+
+852
+00:54:57,118 --> 00:55:08,080
+Speaker 1: Oh Yeah, so it's once you you know It's the kind of thing where it's like you won't want to start reading it because it's nonfiction and it's kind of like how no One wants to play a goddamn wooden cube game until I play it.
+
+853
+00:55:08,160 --> 00:55:12,040
+Speaker 1: Then once you start reading it, you're not gonna stop just like my little phone.
+
+854
+00:55:17,053 --> 00:55:19,590
+Speaker 0: This has been geek nights with rim and Scott special.
+
+855
+00:55:19,650 --> 00:55:24,390
+Speaker 0: Thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+856
+00:55:24,691 --> 00:55:29,710
+Speaker 1: Be sure to visit our website at front row crew comm for show notes discussion news and more.
+
+857
+00:55:29,990 --> 00:55:37,390
+Speaker 0: Remember geek nights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+858
+00:55:37,751 --> 00:55:40,926
+Speaker 1: Geek nights is distributed under a Creative Commons attribution 3.0 license.
+
+859
+00:55:42,191 --> 00:55:46,946
+Speaker 1: Geek nights is recorded live with no studio and no audience, but unlike those other late shows.
+
+860
+00:55:47,066 --> 00:55:48,370
+Speaker 1: It's actually recorded at night.
+

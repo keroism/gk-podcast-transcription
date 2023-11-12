@@ -1,0 +1,3320 @@
+﻿1
+00:00:08,220 --> 00:00:11,283
+Speaker 0: It's Monday April 13th 2020.
+
+2
+00:00:11,283 --> 00:00:11,685
+Speaker 0: I'm rim.
+
+3
+00:00:12,066 --> 00:00:14,595
+Speaker 0: I'm Scott and this is geek nights tonight.
+
+4
+00:00:14,876 --> 00:00:20,920
+Speaker 0: We are talking about Postgres or Postgres QL the database you should probably be using.
+
+5
+00:00:23,083 --> 00:00:24,118
+Speaker 1: Let's do this.
+
+6
+00:00:27,267 --> 00:00:29,813
+Speaker 0: So I've been live streaming myself playing DDR.
+
+7
+00:00:29,993 --> 00:00:32,619
+Speaker 0: I've done it a few times now and I find anyone watching that.
+
+8
+00:00:32,819 --> 00:00:34,425
+Speaker 0: yeah But interesting.
+
+9
+00:00:34,847 --> 00:00:38,180
+Speaker 0: well, some people come in to not particularly good.
+
+10
+00:00:39,845 --> 00:00:49,820
+Speaker 1: Good, I mean, you know, you're in the same zone that we're both at with most video games Which is better than most people but not remotely good as the really good people.
+
+11
+00:00:49,940 --> 00:00:51,206
+Speaker 1: So we're you know, it's like you could.
+
+12
+00:00:51,267 --> 00:00:54,060
+Speaker 1: those people are like interesting to watch because of their amazing.
+
+13
+00:00:54,180 --> 00:01:00,805
+Speaker 0: Well, one thing I've noticed is that I was looking around at other people who are live streaming DDR and there aren't many Because it's kind of hard to do.
+
+14
+00:01:00,845 --> 00:01:06,600
+Speaker 0: well most of the DDR streams have a decent number of viewers But like they look like garbage.
+
+15
+00:01:06,700 --> 00:01:12,960
+Speaker 0: They're like super out of sync or like the audio sounds really bad or it's like a webcam in a dark room pointed.
+
+16
+00:01:13,020 --> 00:01:16,038
+Speaker 1: Oh the best DDR videos are recorded videos, right?
+
+17
+00:01:16,098 --> 00:01:21,474
+Speaker 0: Not Yep, but like people just like live streaming like hey, I'm playing fourth mix right now tune in.
+
+18
+00:01:21,775 --> 00:01:22,737
+Speaker 0: They're just all pretty bad.
+
+19
+00:01:23,038 --> 00:01:37,147
+Speaker 0: But also Most of the streams I found are people who are either on an arcade machine holding on to the bar Even if they're really good or they've made a fucking bar for their home pad and they're holding on to that Mm-hmm.
+
+20
+00:01:37,167 --> 00:01:39,580
+Speaker 0: So because I'm doing bar lists, I got a few viewers.
+
+21
+00:01:39,703 --> 00:01:40,239
+Speaker 0: It's pretty fun.
+
+22
+00:01:40,320 --> 00:01:46,102
+Speaker 0: But the most fun thing is getting random requests like I do max 300 because I can pass most of the weird shit people try To make me do.
+
+23
+00:01:46,664 --> 00:01:49,974
+Speaker 0: but I am definitely too old to ever pass max 300 again.
+
+24
+00:01:49,994 --> 00:01:51,760
+Speaker 1: Holy shit if you use the bar.
+
+25
+00:01:52,641 --> 00:02:02,769
+Speaker 0: Well, the bar doesn't help me because I just I can walk around the pad and I can pass max 300 if I do The first half and the second half separately.
+
+26
+00:02:02,909 --> 00:02:09,979
+Speaker 0: I am too old to do the whole song in one go My legs just run out of steam and I just fall over about two-thirds of the way through it.
+
+27
+00:02:10,562 --> 00:02:12,169
+Speaker 1: I think this harder songs in that now.
+
+28
+00:02:12,330 --> 00:02:14,740
+Speaker 0: Oh, yeah, there's Legend of Max, which I can get about halfway through.
+
+29
+00:02:14,800 --> 00:02:17,680
+Speaker 1: I'm saying this even harder songs in that there've been so many DDR versions.
+
+30
+00:02:17,800 --> 00:02:23,540
+Speaker 0: Oh, yeah, there's max though what we would consider a nine-footer from the old days if they change the foot system.
+
+31
+00:02:23,620 --> 00:02:30,512
+Speaker 0: But there's basically the equivalent of like 15 footers now Mmm, but they're not fun to watch anyone do it's just fanboy piston.
+
+32
+00:02:31,335 --> 00:02:43,931
+Speaker 0: Yeah, but Getting the stream synced to where the two cameras pointed at my at me and my feet plus the audio plus step mania getting those all in sync the fucking nightmare.
+
+33
+00:02:43,971 --> 00:02:57,600
+Speaker 1: because there is no good synchronization tools for Non-professional video equipment like good best synchronization that I found for someone Streaming a recording stuff at home is to simply send the audio through one of the cameras.
+
+34
+00:02:57,600 --> 00:03:00,271
+Speaker 0: Yeah, but if you have multiple cameras, you got to sync those.
+
+35
+00:03:00,311 --> 00:03:03,704
+Speaker 1: but yeah, you definitely well at multiple cameras You would simply have.
+
+36
+00:03:03,764 --> 00:03:08,260
+Speaker 1: hopefully the primary best camera would be the one with the audio going through it.
+
+37
+00:03:08,300 --> 00:03:13,260
+Speaker 1: Yeah, right and if you switch to a different camera, well then that one's out of sync.
+
+38
+00:03:13,320 --> 00:03:17,939
+Speaker 0: But I don't have a good way to plug my real fancy camera in to OBS.
+
+39
+00:03:17,959 --> 00:03:21,655
+Speaker 0: yet Cuz I don't have a good video capture card, but I think I said the one that I sent you there.
+
+40
+00:03:22,920 --> 00:03:28,080
+Speaker 0: I'm gonna buy one of those janky bootleg looking RTMP encoders and just stick it on my camcorder.
+
+41
+00:03:28,421 --> 00:03:30,088
+Speaker 1: Well, oh well that yeah, that's for that.
+
+42
+00:03:30,128 --> 00:03:32,277
+Speaker 1: But you know cuz then I can use it if that works.
+
+43
+00:03:32,337 --> 00:03:41,296
+Speaker 0: I want one also Yeah I'm gonna get like a cheapo one cuz from what I can tell the cheap ones Are kind of dodgy and probably are not paying for the right licenses for their like whatever codex they have.
+
+44
+00:03:41,337 --> 00:03:47,715
+Speaker 1: the cheap one was - it Was less $200 or less and the one that actually looked like totally legit.
+
+45
+00:03:47,755 --> 00:03:49,983
+Speaker 1: Super good was close to like $1,700.
+
+46
+00:03:49,983 --> 00:03:53,980
+Speaker 1: so it's like this and there weren't a lot of products on the market.
+
+47
+00:03:54,141 --> 00:03:58,059
+Speaker 0: So if I break one every six months, it's still cheaper to get the crappy one.
+
+48
+00:03:58,923 --> 00:04:06,131
+Speaker 0: because it seems like the primary problem with the crappy ones is they'll just randomly break or die and they're kind of Even the Cerevo live shell X.
+
+49
+00:04:06,231 --> 00:04:14,017
+Speaker 1: I saw people complaining that Sometimes their cloud service is down at some time and some battery that's in it is not great.
+
+50
+00:04:14,298 --> 00:04:14,780
+Speaker 0: That's the thing.
+
+51
+00:04:14,881 --> 00:04:19,244
+Speaker 0: It's like some domains like when I buy audio equipment Like there are.
+
+52
+00:04:19,363 --> 00:04:24,740
+Speaker 0: if the pro versions the reason why they cost so much is that they just work like they just work.
+
+53
+00:04:24,800 --> 00:04:25,724
+Speaker 0: You don't have to worry about it.
+
+54
+00:04:25,744 --> 00:04:26,407
+Speaker 0: The support is great.
+
+55
+00:04:26,427 --> 00:04:29,760
+Speaker 1: But the problem is those pro ones do so much more stuff.
+
+56
+00:04:29,820 --> 00:04:33,235
+Speaker 0: Yeah, I don't need like four-way cell bonding right that we don't need.
+
+57
+00:04:33,315 --> 00:04:34,762
+Speaker 1: I wish the pro one It's like.
+
+58
+00:04:34,902 --> 00:04:40,044
+Speaker 1: all we need is a device that takes HDMI in as HDMI outs.
+
+59
+00:04:40,405 --> 00:04:46,220
+Speaker 1: it's that for for you know connecting to like a monitor or right remove HTTP just in case.
+
+60
+00:04:47,142 --> 00:05:01,500
+Speaker 1: Sure, it needs to take whatever video is on that HDMI and then encode it and send it via Wi-Fi Or Ethernet to an arbitrary RTMP destination to an arbitrary RTMP URL at 1080p 60.
+
+61
+00:05:01,500 --> 00:05:02,504
+Speaker 1: That's all it has to do.
+
+62
+00:05:02,624 --> 00:05:03,888
+Speaker 1: It doesn't need any other feature.
+
+63
+00:05:04,209 --> 00:05:12,832
+Speaker 1: The only configuration should be the Wi-Fi connection right SSID and info for that and the RTMP URL.
+
+64
+00:05:13,075 --> 00:05:15,905
+Speaker 0: yeah and RTMP authentication like.
+
+65
+00:05:15,925 --> 00:05:19,880
+Speaker 0: I don't even care if like the color is bad or really anything.
+
+66
+00:05:20,847 --> 00:05:30,340
+Speaker 1: Yeah, no I mean People were actually complaining that like the live shell X the color is bad Like it doesn't get to white it only gets to gray and it doesn't get to black.
+
+67
+00:05:30,461 --> 00:05:33,060
+Speaker 1: It only gets to dark gray, but see that's what I'm talking about.
+
+68
+00:05:33,180 --> 00:05:37,680
+Speaker 0: It's one thing if there's a really expensive version, but it is perfect and just works.
+
+69
+00:05:37,760 --> 00:05:41,954
+Speaker 0: But it's just way too expensive if the expensive option also has people complaining about it.
+
+70
+00:05:42,255 --> 00:05:43,580
+Speaker 0: That space is not mature yet.
+
+71
+00:05:43,640 --> 00:05:44,502
+Speaker 1: That wasn't the XP.
+
+72
+00:05:44,562 --> 00:05:48,052
+Speaker 1: alive shell X is 700. the 1700 that that won $1,000 more is the one that has no problem.
+
+73
+00:05:48,072 --> 00:05:53,607
+Speaker 0: Yep At least I had described.
+
+74
+00:05:53,889 --> 00:05:56,640
+Speaker 0: I restrained myself from buying as I need to do monitor speakers.
+
+75
+00:05:57,165 --> 00:06:03,260
+Speaker 0: I got the ones that were Appropriate to the size of this room as opposed to the ones that I wanted to get.
+
+76
+00:06:04,803 --> 00:06:13,520
+Speaker 1: Well, I mean, yeah, there's definitely you know You look at the market for any sort of electronic stuff and there's always things that are made for houses and large rooms big TV.
+
+77
+00:06:14,604 --> 00:06:15,730
+Speaker 1: You know all this kind of stuff.
+
+78
+00:06:15,750 --> 00:06:23,660
+Speaker 1: and when you live in a tiny apartment, you know Even though those products are awesome when in a vacuum, they're not awesome in a tiny room without a lot of space.
+
+79
+00:06:23,901 --> 00:06:29,254
+Speaker 0: So I saved $300 by having 50 total watts of output power in this tiny room instead of 250 watts.
+
+80
+00:06:29,274 --> 00:06:33,438
+Speaker 0: Yep So I got any news.
+
+81
+00:06:34,681 --> 00:06:35,865
+Speaker 1: Do I have news all this?
+
+82
+00:06:35,926 --> 00:06:49,846
+Speaker 1: the first of all is you know, I guess virus ish related news you may have seen this is that various states are looking for COBOL programmers because There's a lot of unemployment right now.
+
+83
+00:06:49,866 --> 00:06:55,747
+Speaker 1: Yeah, and all the unemployment systems are written in COBOL And you're thinking well, okay.
+
+84
+00:06:55,827 --> 00:06:59,800
+Speaker 1: First of all, you know, we need to talk about why it's still they haven't replaced that system.
+
+85
+00:06:59,981 --> 00:07:06,292
+Speaker 0: Yeah, there's a lot while there's a lot mostly bad reasons why there are Surprisingly good reasons in some cases.
+
+86
+00:07:06,694 --> 00:07:12,150
+Speaker 1: Oh, yeah plenty of good reasons but the Fact is those are still the systems in use.
+
+87
+00:07:12,511 --> 00:07:18,610
+Speaker 1: people go to work and they're looking at some cruddy old terminal Connecting to this old database that still works and still gets the job done.
+
+88
+00:07:18,650 --> 00:07:23,505
+Speaker 1: and still people get their unemployment checks and you think well Why do they need programmers?
+
+89
+00:07:23,565 --> 00:07:25,051
+Speaker 1: this this system has been there?
+
+90
+00:07:25,132 --> 00:07:25,654
+Speaker 1: It's working.
+
+91
+00:07:25,694 --> 00:07:26,156
+Speaker 1: It's working.
+
+92
+00:07:26,216 --> 00:07:29,165
+Speaker 1: So well since 1960 who knows how old the?
+
+93
+00:07:29,305 --> 00:07:37,551
+Speaker 0: but there were more unemployment claims in the last like two weeks than in like Entire quarters in recent year, but it's not about the probe.
+
+94
+00:07:37,571 --> 00:07:40,760
+Speaker 1: You don't need programming to increase the capacity necessarily.
+
+95
+00:07:41,447 --> 00:07:42,539
+Speaker 1: Why do you need?
+
+96
+00:07:43,200 --> 00:07:46,299
+Speaker 1: programming Because they change the law.
+
+97
+00:07:46,823 --> 00:08:02,539
+Speaker 1: That's why right the law Goes from some legislators hands they vote on it and when they change unemployment law Say to give everyone an extra six hundred dollars You have to change the code in the kobolds isn't to match the law.
+
+98
+00:08:02,619 --> 00:08:14,639
+Speaker 0: now That is an area where I actually have a lot of expertise because as you know My day job is in capital markets and capital markets have extreme Regulations in some cases.
+
+99
+00:08:15,201 --> 00:08:33,438
+Speaker 0: So like a law will happen and then an entire global industry has to implement that law in code Within like a couple years, but unlike every other sector in the entire global economy Capital markets has a shit ton of engineering resources available and they just do it.
+
+100
+00:08:33,840 --> 00:08:48,760
+Speaker 0: But even then it's a pain because laws are written in a way that is not necessarily that easy to transform into code Mm-hmm, but outside of capital markets you can't just hire like a hundred three hundred thousand dollar a year engineers to solve this problem.
+
+101
+00:08:48,801 --> 00:08:50,079
+Speaker 0: You don't have enough money to do that.
+
+102
+00:08:50,828 --> 00:09:03,098
+Speaker 1: Right, you might be thinking well You could find a kobold guy to figure out this old not only to know kobold but to figure out this old busted system and Update it without breaking it right and get it to get the law changes in there.
+
+103
+00:09:03,158 --> 00:09:06,399
+Speaker 1: Yeah, right It's like okay, you could do that, which is what you're gonna do.
+
+104
+00:09:07,143 --> 00:09:10,240
+Speaker 1: It's like well, why not just rewrite the whole thing and some modern thing?
+
+105
+00:09:10,540 --> 00:09:10,681
+Speaker 1: Okay.
+
+106
+00:09:11,023 --> 00:09:16,569
+Speaker 1: Well the even if you were gonna pay people to do that, you're like, okay Let's do the right thing and replace this old credit system.
+
+107
+00:09:16,951 --> 00:09:23,910
+Speaker 1: Right the you have to a how much Institutional knowledge is in that old code.
+
+108
+00:09:24,371 --> 00:09:31,450
+Speaker 1: Yeah, right that old system is calculating Things correctly, right regardless of how busted it is.
+
+109
+00:09:31,570 --> 00:09:32,573
+Speaker 1: It's doing it, right?
+
+110
+00:09:33,195 --> 00:09:39,538
+Speaker 1: So you need to build a system and Based on it just knowledge that people have that you can talk to.
+
+111
+00:09:39,558 --> 00:09:39,658
+Speaker 1: right.
+
+112
+00:09:40,761 --> 00:09:48,799
+Speaker 1: they might not be able to explain things to you they might forget things things they say might be wrong and The the system is right.
+
+113
+00:09:49,482 --> 00:09:58,013
+Speaker 1: You have to match you to reverse engineer every single edge case in that old system To make your system correct even worse.
+
+114
+00:09:58,254 --> 00:10:08,051
+Speaker 1: you have to that process Alone, right will take you so long That you'll still be using the cobalt one for years and even worse.
+
+115
+00:10:08,733 --> 00:10:17,668
+Speaker 0: all that aside the old systems are more like normal engineering Which is something that most software does not follow.
+
+116
+00:10:17,708 --> 00:10:22,742
+Speaker 0: like the bet the practices of real engineering is not something that most code in the world Follows.
+
+117
+00:10:23,063 --> 00:10:25,832
+Speaker 0: that's why code has a lot of bugs and a lot of issues.
+
+118
+00:10:25,852 --> 00:10:37,609
+Speaker 0: software like this cannot have bugs You cannot just use like the kinds of frameworks and the kinds of data structures and the kinds of validations That most programmers use in most code that they write.
+
+119
+00:10:37,850 --> 00:10:38,352
+Speaker 0: you have to write.
+
+120
+00:10:38,412 --> 00:10:45,333
+Speaker 1: you say that but from what I've heard most of These old cobalt systems for this kind of thing are just spaghetti code.
+
+121
+00:10:45,373 --> 00:10:50,651
+Speaker 0: Yeah, but it's often spaghetti code that will have Like multiple verification paths.
+
+122
+00:10:50,671 --> 00:10:52,158
+Speaker 0: the problem is it'll be three spaghetti.
+
+123
+00:10:52,198 --> 00:10:59,527
+Speaker 0: It's correct It's correct spaghetti code, but it's it's not good, but they tend to have multiple paths of verification Which is something that it's not.
+
+124
+00:10:59,547 --> 00:11:00,069
+Speaker 1: that I mean.
+
+125
+00:11:00,170 --> 00:11:05,417
+Speaker 1: you might get that with code for like space shuttles Yeah, medical devices, but not for unemployment systems.
+
+126
+00:11:05,578 --> 00:11:20,080
+Speaker 0: Yeah systems right But it's also sort of a more broader picture that I've realized more and more as the scale of what I do during my day Job increases and like the number of systems and like these things I interact with have just grown over the years.
+
+127
+00:11:20,180 --> 00:11:28,040
+Speaker 0: but one thing that's really become abundantly clear is that Enterprise doesn't just mean shitty interfaces and garbage software.
+
+128
+00:11:28,141 --> 00:11:30,400
+Speaker 0: I mean that that is a big part of the word enterprise.
+
+129
+00:11:30,881 --> 00:11:33,309
+Speaker 0: but enterprise also really like this is enterprise.
+
+130
+00:11:33,369 --> 00:11:48,693
+Speaker 0: enterprise means that you're writing software or code or Systems that work on a scale that is beyond what 99.9 percent of all people will ever interact with Just the number of stakeholders number of users the use cases the constraints.
+
+131
+00:11:48,773 --> 00:11:51,040
+Speaker 0: like it's a it's a totally different discipline.
+
+132
+00:11:51,321 --> 00:12:05,265
+Speaker 0: it's almost like there's a kid there's a computer science discipline and a software engineering discipline and you almost need like a Scaled software engineering discipline that follows a different path through schooling and education Hmm.
+
+133
+00:12:05,285 --> 00:12:08,496
+Speaker 1: Yeah, like the system that we've been replacing at my work for the past.
+
+134
+00:12:08,536 --> 00:12:09,279
+Speaker 1: However long.
+
+135
+00:12:09,339 --> 00:12:09,942
+Speaker 1: Yeah I still haven't.
+
+136
+00:12:10,243 --> 00:12:10,966
+Speaker 1: we're you know, we're get.
+
+137
+00:12:11,046 --> 00:12:11,187
+Speaker 1: it's.
+
+138
+00:12:11,387 --> 00:12:12,773
+Speaker 1: it's not nearly as complicated.
+
+139
+00:12:12,813 --> 00:12:13,435
+Speaker 1: I'm sure right.
+
+140
+00:12:13,455 --> 00:12:14,600
+Speaker 1: We're making a lot of progress.
+
+141
+00:12:14,721 --> 00:12:22,510
+Speaker 1: we are gonna replace it and but the reason that it's a good idea is because a The old system is actually not COBOL.
+
+142
+00:12:22,630 --> 00:12:24,676
+Speaker 1: It's like Microsoft SQL servers.
+
+143
+00:12:24,776 --> 00:12:25,318
+Speaker 0: Oh god.
+
+144
+00:12:25,338 --> 00:12:30,980
+Speaker 0: Oh god Is there just like database trigger like stored procedures in there all kinds of garbage like that?
+
+145
+00:12:32,082 --> 00:12:33,729
+Speaker 0: Yeah, but you want to give me a thousand less.
+
+146
+00:12:33,929 --> 00:12:38,264
+Speaker 0: say the word stored procedure with with business logic in it It's less awful than COBOL.
+
+147
+00:12:38,304 --> 00:12:41,171
+Speaker 1: So it's like we can sort of you know, figure it out.
+
+148
+00:12:41,492 --> 00:12:51,000
+Speaker 1: Yeah, the other thing is that unlike the Unemployment system situation right the system we're replacing is actually often wrong, right?
+
+149
+00:12:51,400 --> 00:12:52,386
+Speaker 1: So it's not a matter.
+
+150
+00:12:52,607 --> 00:12:53,995
+Speaker 1: It's not a matter of this.
+
+151
+00:12:54,035 --> 00:12:54,800
+Speaker 1: thing is right.
+
+152
+00:12:54,961 --> 00:12:55,624
+Speaker 1: It's a matter of.
+
+153
+00:12:55,644 --> 00:12:57,634
+Speaker 1: this is the thing everyone uses.
+
+154
+00:12:57,735 --> 00:12:58,619
+Speaker 1: it's right enough.
+
+155
+00:12:59,382 --> 00:13:02,012
+Speaker 1: We cannot write by replacing it.
+
+156
+00:13:02,092 --> 00:13:04,260
+Speaker 1: Not only are we fixing all of its flaws?
+
+157
+00:13:04,961 --> 00:13:05,484
+Speaker 1: But we're gonna.
+
+158
+00:13:05,585 --> 00:13:07,739
+Speaker 1: we have the opportunity to do better, right?
+
+159
+00:13:08,240 --> 00:13:13,457
+Speaker 1: So with you don't have that opportunity with these COBOL systems to do better than them.
+
+160
+00:13:13,678 --> 00:13:19,058
+Speaker 1: Yep, right As much there isn't that much room and there isn't like some motive for doing better.
+
+161
+00:13:19,219 --> 00:13:19,480
+Speaker 1: Really?
+
+162
+00:13:20,420 --> 00:13:23,837
+Speaker 0: Yeah the cost of a lift and shift of this kind of thing is your hope.
+
+163
+00:13:23,857 --> 00:13:27,332
+Speaker 1: like your hope for the Unemployment system is to never have to is to like.
+
+164
+00:13:27,372 --> 00:13:31,129
+Speaker 1: the goal is for it to go away What no one's unemployed like.
+
+165
+00:13:31,169 --> 00:13:43,880
+Speaker 0: whatever you out there if you don't work in enterprise scale Like whatever you think it would cost to do this kind of thing within one firm Raise it by an order of magnitude and then double it and that's probably a low-end estimate of the actual real cost.
+
+166
+00:13:44,402 --> 00:13:46,810
+Speaker 1: Yeah, but I don't recommend you learn COBOL.
+
+167
+00:13:46,850 --> 00:13:47,512
+Speaker 1: No, no, no.
+
+168
+00:13:47,873 --> 00:13:58,090
+Speaker 1: the one time I heard of someone replacing an old system was someone who worked at an big insurance company in the city that had an old busted system.
+
+169
+00:13:58,651 --> 00:14:06,811
+Speaker 1: and the way that they were escaping that system is They were screen reading from a terminals to get the data out.
+
+170
+00:14:06,972 --> 00:14:07,252
+Speaker 1: Whoo.
+
+171
+00:14:07,373 --> 00:14:10,020
+Speaker 0: I've done I've implemented things like that before, right?
+
+172
+00:14:10,260 --> 00:14:16,904
+Speaker 1: So they were like, you know using a virtual terminal protocol to connect Right to the system Right inter.
+
+173
+00:14:16,924 --> 00:14:28,579
+Speaker 1: basically the new system was interacting with the old system as a user would because it's not like the old system has an Ethernet Port right exactly and then they were getting the data out that way, right?
+
+174
+00:14:30,100 --> 00:14:36,360
+Speaker 1: So that you know and that required basically almost no knowledge of the old system other than how to use a terminal.
+
+175
+00:14:36,621 --> 00:14:37,244
+Speaker 1: Yep, right.
+
+176
+00:14:37,364 --> 00:14:38,850
+Speaker 0: COBOL is definitely on its way out.
+
+177
+00:14:38,910 --> 00:14:43,950
+Speaker 0: But in general like my career too like here's a fun example I'm one of the global experts in the fixed protocol.
+
+178
+00:14:44,011 --> 00:14:46,159
+Speaker 0: It's some old busted stuff, but people need it.
+
+179
+00:14:46,722 --> 00:14:54,530
+Speaker 0: You will never go wrong by learning and becoming the expert in Old boring weird bullshit that nobody wants to deal with.
+
+180
+00:14:54,810 --> 00:14:56,334
+Speaker 1: because well by that we don't.
+
+181
+00:14:56,475 --> 00:15:09,000
+Speaker 1: I don't necessarily mean a language like COBOL But with some old boring weird shit would be like a specific You know Technology or product like that has to be something that's actually used in an industry.
+
+182
+00:15:09,080 --> 00:15:10,705
+Speaker 0: Yeah, like knowing COBOL is not the important part.
+
+183
+00:15:10,886 --> 00:15:15,200
+Speaker 0: understanding how systems like this work is the hard part, right?
+
+184
+00:15:15,680 --> 00:15:23,344
+Speaker 1: So for example, like there's some specialized product that everyone in industry X uses to do a particular thing in the world Right.
+
+185
+00:15:23,886 --> 00:15:26,335
+Speaker 1: It's like oh there are people trading.
+
+186
+00:15:26,436 --> 00:15:27,600
+Speaker 1: I don't know commodities, right?
+
+187
+00:15:27,740 --> 00:15:30,617
+Speaker 1: All the commodities traders probably have a thing that they use.
+
+188
+00:15:30,718 --> 00:15:33,108
+Speaker 1: Yeah That's like the commodities trading thing.
+
+189
+00:15:33,268 --> 00:15:40,153
+Speaker 0: learn that if you sing and either if you become the master of that thing You're good You don't even need to be a programmer you just be a BA like a business analyst.
+
+190
+00:15:40,173 --> 00:15:52,769
+Speaker 0: if there are people who make as much Money as me and Scott and then write any code their sole job is to understand explain and document complex systems based on Research and their own just knowledge and intelligence.
+
+191
+00:15:52,789 --> 00:15:53,351
+Speaker 1: Well, that's also.
+
+192
+00:15:53,371 --> 00:15:55,720
+Speaker 1: a large part of the problem is these old COBOL systems.
+
+193
+00:15:55,961 --> 00:16:01,032
+Speaker 1: They were like I said spaghetti code But also not documented from a developer standpoint.
+
+194
+00:16:01,153 --> 00:16:09,080
+Speaker 1: if they're right if there's any documentation Which there probably isn't it's from a user standpoint like how to use right like you have to enter someone's claim.
+
+195
+00:16:09,221 --> 00:16:10,026
+Speaker 1: Here's how to do it.
+
+196
+00:16:10,127 --> 00:16:10,368
+Speaker 1: Right?
+
+197
+00:16:10,469 --> 00:16:12,100
+Speaker 0: Yeah, but what's going on behind the scenes?
+
+198
+00:16:12,700 --> 00:16:13,846
+Speaker 0: Mysteries mysteries.
+
+199
+00:16:14,329 --> 00:16:16,340
+Speaker 0: So in some other news, that's very sad and tragic.
+
+200
+00:16:16,481 --> 00:16:18,509
+Speaker 0: I knew he died and I felt bad about it because he was.
+
+201
+00:16:18,529 --> 00:16:23,250
+Speaker 0: he was like over 80 like he was old I at one point years ago.
+
+202
+00:16:23,290 --> 00:16:47,153
+Speaker 0: I was surprised he was still alive, but COVID-19 claimed the life of John Conway who is what a very very important person when it comes to computer science and other fields Mm-hmm, John Conway also like not that I knew him or anything but you know Sometimes there's a an important person who's also a dick or has problems as far as I can tell John Conway seemed like mostly a really cool person.
+
+203
+00:16:48,461 --> 00:16:58,096
+Speaker 1: Yeah, John Conway, basically, it's like, you know, it's like you everyone knows like the game of life But like the amount of things that he worked on that are like significant.
+
+204
+00:16:58,136 --> 00:17:00,688
+Speaker 1: and it's like oh that thing The Guardian.
+
+205
+00:17:00,728 --> 00:17:04,204
+Speaker 0: I found a quote here the Guardian in his Basically the eulogy.
+
+206
+00:17:04,244 --> 00:17:08,599
+Speaker 0: they said John Conway is a cross between Archimedes Mick Jagger and Salvador Dali.
+
+207
+00:17:09,521 --> 00:17:10,491
+Speaker 1: That's pretty much correct.
+
+208
+00:17:10,531 --> 00:17:17,480
+Speaker 0: Yeah for many years He was worried that his obsession with playing silly games was ruining his career until he realized that it could lead to extraordinary discoveries.
+
+209
+00:17:18,946 --> 00:17:26,156
+Speaker 0: so Pour one out for John Conway He's he's an important person and if you can find videos of his lectures and talks and just stuff he's done.
+
+210
+00:17:26,175 --> 00:17:27,380
+Speaker 0: It's all fascinating.
+
+211
+00:17:28,104 --> 00:17:30,218
+Speaker 0: Mm-hmm In some other news.
+
+212
+00:17:31,025 --> 00:17:33,140
+Speaker 0: This is a Scott news, but it's up my alley.
+
+213
+00:17:33,240 --> 00:17:33,501
+Speaker 0: I didn't.
+
+214
+00:17:33,642 --> 00:17:37,175
+Speaker 0: I wasn't paying attention to this one because I don't set clocks anymore.
+
+215
+00:17:37,195 --> 00:17:38,440
+Speaker 0: I have people to do that for me.
+
+216
+00:17:39,024 --> 00:17:41,242
+Speaker 0: I have not touched NTP in 3.2 years.
+
+217
+00:17:44,262 --> 00:17:52,763
+Speaker 1: I'm not gonna get into the specifics of this because I'll be wrong and it's because it's about quantum mechanics And I'm reading this article right now So I'll see what I can.
+
+218
+00:17:53,484 --> 00:17:54,507
+Speaker 1: but the basic.
+
+219
+00:17:54,527 --> 00:18:09,037
+Speaker 1: the basic gist is that there's an atomic clock that works somehow by Quantum, you know check like charging a particle and then checking what charge level the electrons are add or something And it makes it makes a very very accurate clock.
+
+220
+00:18:10,182 --> 00:18:11,787
+Speaker 0: But because okay, I'm reading this article.
+
+221
+00:18:11,827 --> 00:18:13,452
+Speaker 0: This is what the fuck.
+
+222
+00:18:14,053 --> 00:18:23,360
+Speaker 1: but because the clock works on you know such a Quantum level right it obeys the theory of relativity.
+
+223
+00:18:24,002 --> 00:18:29,520
+Speaker 1: So if you make push if you pick up the clock and carry it away from the earth, right?
+
+224
+00:18:29,940 --> 00:18:35,809
+Speaker 1: It will on its own naturally Right speed up or slow down, right?
+
+225
+00:18:36,311 --> 00:18:37,675
+Speaker 1: I guess all clocks do that.
+
+226
+00:18:37,735 --> 00:18:39,079
+Speaker 1: Technically they see I'm already wrong.
+
+227
+00:18:40,281 --> 00:18:42,148
+Speaker 1: The point is the time is relative.
+
+228
+00:18:42,689 --> 00:18:51,043
+Speaker 1: Yeah, so the point is that the clock is so precise Right that if you can use it as an altimeter Right.
+
+229
+00:18:51,404 --> 00:18:56,202
+Speaker 0: So if you go to carry it a chanly induced frequency shift Right.
+
+230
+00:18:56,302 --> 00:19:03,260
+Speaker 0: the frequency of this thing shifted by 21 hertz at a distance an elevation change of what?
+
+231
+00:19:03,260 --> 00:19:04,482
+Speaker 0: 450 meters.
+
+232
+00:19:04,823 --> 00:19:05,845
+Speaker 1: what right fuck.
+
+233
+00:19:06,307 --> 00:19:15,669
+Speaker 1: so you if you were to bring it up the Empire State Building you could theoretically tell how tall the Empire State Building is based on How much this clock is.
+
+234
+00:19:15,690 --> 00:19:16,614
+Speaker 1: I don't know.
+
+235
+00:19:16,755 --> 00:19:17,779
+Speaker 1: slow down or sped up.
+
+236
+00:19:18,201 --> 00:19:18,963
+Speaker 0: The clock is.
+
+237
+00:19:19,284 --> 00:19:24,219
+Speaker 0: you can use this clock alone as an altimeter that's accurate to within 10 centimeters.
+
+238
+00:19:25,286 --> 00:19:26,212
+Speaker 0: Look at your watch.
+
+239
+00:19:26,514 --> 00:19:32,139
+Speaker 0: run up a building Look at your watch again and then be able to say just from what you saw on the watch how tall that building is.
+
+240
+00:19:32,540 --> 00:19:39,978
+Speaker 1: That's how much less how much less gravity there is up there than down here because there is less Right up there.
+
+241
+00:19:40,241 --> 00:19:42,138
+Speaker 1: Yes, less gravity up there.
+
+242
+00:19:42,481 --> 00:19:48,600
+Speaker 0: Yeah, because the inverse square laws the further away you get from something the gravitational influence drops off rapidly.
+
+243
+00:19:49,104 --> 00:19:51,359
+Speaker 0: However, it has never hit zero, right?
+
+244
+00:19:51,520 --> 00:20:03,000
+Speaker 1: So normally the an atomic clock like this would be so valuable and so fragile that you would keep it in a room not move It connected to the internet so everyone could take advantage of its extra precise time.
+
+245
+00:20:03,743 --> 00:20:07,499
+Speaker 1: But yeah, they basically put it in several boxes in the back of a Honda Civic.
+
+246
+00:20:07,559 --> 00:20:15,254
+Speaker 0: Oh Yeah This is just cool stuff, uh, but yeah, I don't set clocks anymore.
+
+247
+00:20:15,635 --> 00:20:20,279
+Speaker 1: NTP works fine, but If you did set a clock you'd set it against that one.
+
+248
+00:20:21,262 --> 00:20:24,544
+Speaker 0: No, I would set it against a static Atomic clock.
+
+249
+00:20:24,604 --> 00:20:25,126
+Speaker 0: I think still.
+
+250
+00:20:25,146 --> 00:20:28,280
+Speaker 1: I know that one seems pretty good to me this one.
+
+251
+00:20:28,862 --> 00:20:35,083
+Speaker 0: I got to read more about this thing because this article is more funny than directly informative, but this is cool Mm-hmm.
+
+252
+00:20:35,546 --> 00:20:35,908
+Speaker 0: All right.
+
+253
+00:20:36,170 --> 00:20:48,397
+Speaker 0: So last but definitely not least One thing that the global pandemic has shown is that very few people have Reasonable solutions for doing like online meetings with more than like two people.
+
+254
+00:20:49,060 --> 00:20:50,024
+Speaker 1: Yeah I mean, you know, we.
+
+255
+00:20:50,747 --> 00:20:53,600
+Speaker 1: I'm sure you've already read all about how zoom sucks, right?
+
+256
+00:20:53,840 --> 00:21:07,691
+Speaker 1: But I want people don't seem to realize why did zoom become a big hit and it's because there were no other Products out there that were free Accessible to everyone on air on almost every platform.
+
+257
+00:21:08,353 --> 00:21:10,320
+Speaker 1: that did exactly what it does.
+
+258
+00:21:10,400 --> 00:21:15,340
+Speaker 1: There are tons of video conferencing video chat solutions, right and most of them are better than zoom.
+
+259
+00:21:15,844 --> 00:21:18,061
+Speaker 1: But for example FaceTime FaceTime Which was?
+
+260
+00:21:18,302 --> 00:21:19,725
+Speaker 1: I'm still mad at Apple about this.
+
+261
+00:21:19,826 --> 00:21:28,270
+Speaker 1: go back and watch the keynote where they announced FaceTime and said it would be an open Protocol that anyone could build FaceTime.
+
+262
+00:21:28,411 --> 00:21:33,571
+Speaker 1: I thought there was going to be FaceTime on Windows And on everything Android everything and there wasn't.
+
+263
+00:21:33,993 --> 00:21:34,615
+Speaker 1: there still isn't.
+
+264
+00:21:34,636 --> 00:21:35,580
+Speaker 1: I would have used it.
+
+265
+00:21:35,700 --> 00:21:37,688
+Speaker 1: They straight out lied like the president.
+
+266
+00:21:37,808 --> 00:21:41,000
+Speaker 1: they straight out lied, but FaceTime is the best video.
+
+267
+00:21:41,421 --> 00:21:43,871
+Speaker 1: You know consumer video chat solution there is.
+
+268
+00:21:43,891 --> 00:21:46,380
+Speaker 1: yeah, you can need an Apple device to use it, right?
+
+269
+00:21:46,480 --> 00:21:47,564
+Speaker 1: So that's right out right.
+
+270
+00:21:47,945 --> 00:21:50,253
+Speaker 1: so that can't beat zoom which runs on everything.
+
+271
+00:21:50,394 --> 00:21:54,809
+Speaker 0: Yep, and there's a lot of great solutions But they're all enterprise II or cost money right?
+
+272
+00:21:55,010 --> 00:21:58,040
+Speaker 1: or even Google meet Google meet which my company uses.
+
+273
+00:21:58,162 --> 00:22:03,080
+Speaker 1: You need to have a Google You know company account and all the people have to be on it.
+
+274
+00:22:03,401 --> 00:22:04,506
+Speaker 1: You can use it at your company.
+
+275
+00:22:04,546 --> 00:22:07,900
+Speaker 1: if your company uses Google, you know, Microsoft Teams or whatever.
+
+276
+00:22:08,020 --> 00:22:10,349
+Speaker 1: You got to have a company that uses Microsoft Teams.
+
+277
+00:22:10,369 --> 00:22:12,959
+Speaker 1: That's not something that someone at home can use with their friends.
+
+278
+00:22:13,682 --> 00:22:19,040
+Speaker 1: Zoom was also designed for companies to use to run little video chats, right?
+
+279
+00:22:19,460 --> 00:22:22,210
+Speaker 1: But it was free to try and set up.
+
+280
+00:22:22,250 --> 00:22:24,800
+Speaker 1: you can have a 40-minute chat for free or something like that.
+
+281
+00:22:24,820 --> 00:22:33,156
+Speaker 1: Then it times you out you start another one And Everyone get us download it for free use it for free and it did.
+
+282
+00:22:33,196 --> 00:22:37,131
+Speaker 1: the grid display Right, the other chats did not do grid displays.
+
+283
+00:22:37,191 --> 00:22:39,760
+Speaker 1: They did, you know switch to whoever's talking.
+
+284
+00:22:40,242 --> 00:22:42,010
+Speaker 1: I did all sorts of other, you know, you know.
+
+285
+00:22:42,171 --> 00:22:48,659
+Speaker 0: FaceTime does like a picture and picture, you know We use at work is proprietary like we paid a company to build it for us.
+
+286
+00:22:49,061 --> 00:22:56,394
+Speaker 0: But it has a really good model where it'll line everyone up at the bottom But it'll only show like the ten or so recent people who talked.
+
+287
+00:22:56,755 --> 00:23:04,100
+Speaker 0: but then some of Google does Yeah, and if anyone talks they come up in the big screen and then they kind of settled back into the array of people who?
+
+288
+00:23:04,260 --> 00:23:04,803
+Speaker 0: Recently talked.
+
+289
+00:23:04,823 --> 00:23:06,633
+Speaker 1: Yeah, that's what most you know bit.
+
+290
+00:23:06,694 --> 00:23:16,400
+Speaker 1: as for business cases That's what you want because in a business case, you know There's usually some people talking and a lot of people listening and maybe occasionally asking a question or chiming in.
+
+291
+00:23:16,902 --> 00:23:21,280
+Speaker 1: But if you're chatting with all your friends, right you want this party atmosphere, right?
+
+292
+00:23:21,420 --> 00:23:28,460
+Speaker 1: The grid view is actually better for that social arrangement where even if someone doesn't talk you see their face always there.
+
+293
+00:23:28,520 --> 00:23:30,553
+Speaker 1: You you know, you feel like you're there with them.
+
+294
+00:23:30,594 --> 00:23:31,479
+Speaker 1: you get their reactions.
+
+295
+00:23:31,801 --> 00:23:33,531
+Speaker 1: Yeah, right, you know what they're up to.
+
+296
+00:23:33,591 --> 00:23:39,140
+Speaker 1: you can see their environment, you know The business one that wouldn't be so great for that kind of kind of thing.
+
+297
+00:23:39,180 --> 00:23:41,189
+Speaker 1: You'd only ever see the chatty people like rim.
+
+298
+00:23:41,450 --> 00:23:43,520
+Speaker 1: Yeah other people you would be like were they even on the chat?
+
+299
+00:23:43,740 --> 00:23:44,342
+Speaker 1: I don't know.
+
+300
+00:23:44,843 --> 00:23:46,087
+Speaker 1: you wouldn't feel that togetherness.
+
+301
+00:23:46,508 --> 00:23:48,734
+Speaker 1: So that is wise piece of shit.
+
+302
+00:23:48,775 --> 00:23:52,286
+Speaker 1: garbage zoom took over But obviously it sucks.
+
+303
+00:23:52,306 --> 00:23:54,414
+Speaker 1: It has security issues privacy issues.
+
+304
+00:23:54,474 --> 00:23:57,963
+Speaker 1: It's just a piece of shit really But there isn't anything else.
+
+305
+00:23:58,384 --> 00:24:03,157
+Speaker 0: Well, there wasn't anything else until this update as of dateline today.
+
+306
+00:24:03,177 --> 00:24:08,350
+Speaker 0: Oh Okay, so discord which not discord is not perfect.
+
+307
+00:24:08,531 --> 00:24:11,679
+Speaker 0: However, I trust discord a lot more than I trust zoom.
+
+308
+00:24:13,042 --> 00:24:14,549
+Speaker 0: Yeah, like I use discord low bar.
+
+309
+00:24:14,589 --> 00:24:21,940
+Speaker 0: But yeah, but it's a low bar but like We are flying high above that bar with discord even though there's still our problems there.
+
+310
+00:24:22,040 --> 00:24:28,080
+Speaker 0: Like I want there to be more open solutions for this kind of thing, you know back when web 2.0 existed miss those days.
+
+311
+00:24:28,401 --> 00:24:31,172
+Speaker 0: but anyway discord is right now.
+
+312
+00:24:31,513 --> 00:24:39,240
+Speaker 0: they have rolled out a Feature that basically does all this stuff in five percent of discord servers out in the wild for free.
+
+313
+00:24:39,260 --> 00:24:41,108
+Speaker 0: It's just there and they're testing it.
+
+314
+00:24:41,128 --> 00:24:43,780
+Speaker 0: They're gonna roll it out to everyone else on a schedule to be determined.
+
+315
+00:24:44,181 --> 00:24:44,984
+Speaker 0: There's a fact here.
+
+316
+00:24:45,105 --> 00:24:48,176
+Speaker 0: I'm like literally just looking at this because it's brand new.
+
+317
+00:24:48,658 --> 00:24:50,903
+Speaker 0: it looks Basically, perfect.
+
+318
+00:24:50,923 --> 00:24:54,695
+Speaker 1: Yeah, and you know, they were already positioned to build something.
+
+319
+00:24:54,735 --> 00:24:55,277
+Speaker 1: I was surprised.
+
+320
+00:24:55,297 --> 00:24:56,340
+Speaker 1: They didn't have it already, right?
+
+321
+00:24:56,400 --> 00:24:57,359
+Speaker 1: They already do voice chat.
+
+322
+00:24:57,741 --> 00:25:02,056
+Speaker 0: I already suspect they were already working on this and just hadn't rolled it out yet.
+
+323
+00:25:02,116 --> 00:25:03,160
+Speaker 0: and then coronavirus happens.
+
+324
+00:25:03,664 --> 00:25:11,240
+Speaker 0: Yeah, probably because I remember way back We were at a PAX and we were already Anxing about like we got to get off a Google Hangouts because we can't trust Google.
+
+325
+00:25:11,361 --> 00:25:15,460
+Speaker 1: They're starting to like destroy all their services or it's not perfect, but I guess that's what we'll use for now.
+
+326
+00:25:15,600 --> 00:25:22,988
+Speaker 0: But I remember we talked to some discord people and they that was back when they were really trying to pitch like hey We exist check us out and they like.
+
+327
+00:25:23,249 --> 00:25:30,060
+Speaker 0: they like in person really aggressively like yeah Forget your forget your forum put all your community in our discord.
+
+328
+00:25:30,120 --> 00:25:30,823
+Speaker 0: We'll help you out.
+
+329
+00:25:31,224 --> 00:25:34,836
+Speaker 0: and we Scott was very like yeah, I don't trust you.
+
+330
+00:25:34,856 --> 00:25:36,080
+Speaker 1: I don't trust them at all.
+
+331
+00:25:36,161 --> 00:25:37,069
+Speaker 1: I still don't trust them.
+
+332
+00:25:37,109 --> 00:25:37,997
+Speaker 1: Where are they making money?
+
+333
+00:25:39,101 --> 00:25:40,566
+Speaker 0: Well, they make but what the thing is?
+
+334
+00:25:40,606 --> 00:25:43,295
+Speaker 0: they do have a direct revenue stream.
+
+335
+00:25:44,058 --> 00:25:47,440
+Speaker 1: the booth sure But yeah, but I don't think that makes them enough money to survive.
+
+336
+00:25:47,540 --> 00:25:50,936
+Speaker 1: I still think they're basically living on borrowed Silicon Valley time.
+
+337
+00:25:50,956 --> 00:25:53,967
+Speaker 0: Yeah, like everyone else I think they are but there is a difference.
+
+338
+00:25:54,128 --> 00:25:57,720
+Speaker 0: like there's a meaningful difference because of course, there's differences of degree everywhere.
+
+339
+00:25:57,820 --> 00:26:15,180
+Speaker 0: But I do think when it comes to these kinds of companies, I'm not saying discord is great from this perspective but a company that has Zero sources of direct revenue versus a company that has at least one real Used source of direct revenue like Twitter has no direct revenue.
+
+340
+00:26:15,220 --> 00:26:17,988
+Speaker 0: They can only make money by betraying you and selling ads.
+
+341
+00:26:18,268 --> 00:26:22,480
+Speaker 0: but at least discord has a way to pay them directly for stuff.
+
+342
+00:26:23,322 --> 00:26:24,707
+Speaker 0: I will always trust a company.
+
+343
+00:26:24,807 --> 00:26:28,980
+Speaker 0: I can pay with money over a company where there is literally no way to pay them with anything.
+
+344
+00:26:29,141 --> 00:26:40,956
+Speaker 1: But stealing my soul getting my information spying on me selling the ads sure Whatever discord might be the main problem with discord is that you know, you know, it's gonna die.
+
+345
+00:26:40,976 --> 00:26:42,640
+Speaker 0: Yeah, everything's gonna die.
+
+346
+00:26:42,720 --> 00:26:51,600
+Speaker 0: I've I've lived through so much other works But I was able to preserve our alternative to Twitter with our friends at one point for you.
+
+347
+00:26:51,740 --> 00:26:55,470
+Speaker 1: But I can preserve all of my data from all of those.
+
+348
+00:26:55,490 --> 00:26:59,040
+Speaker 1: but discord it is much harder to back up a discord.
+
+349
+00:26:59,180 --> 00:27:00,344
+Speaker 0: Yep, I have a blog.
+
+350
+00:27:00,564 --> 00:27:09,689
+Speaker 0: every chat I have ever had online with anyone ever going back to the year 1997 mine's not that comprehensive.
+
+351
+00:27:09,729 --> 00:27:12,040
+Speaker 1: But I mean I have a lot of chat logs going way back.
+
+352
+00:27:12,160 --> 00:27:13,063
+Speaker 0: I read the fire.
+
+353
+00:27:13,224 --> 00:27:16,394
+Speaker 0: I can go back the first thing I ever said to Scott online.
+
+354
+00:27:16,715 --> 00:27:18,020
+Speaker 0: We uh, I met.
+
+355
+00:27:18,682 --> 00:27:31,520
+Speaker 0: He messaged me and he was like, hey, I was the guy who was at the anime club and I was like, oh, yeah Yeah, you want to meet at Gracie's for dinner and Scott was like sure and that was the first time we met Outside of the context of anime club in our way.
+
+356
+00:27:32,282 --> 00:27:34,529
+Speaker 1: Yeah, I wasn't sure cuz it was sort of like.
+
+357
+00:27:34,609 --> 00:27:39,325
+Speaker 1: I guess we were at an anime club and I guess I do an anime Club and I wasn't there.
+
+358
+00:27:39,445 --> 00:27:39,967
+Speaker 0: cuz I skipped.
+
+359
+00:27:40,268 --> 00:27:42,316
+Speaker 1: I mean, I guess I oh no, that's what it was.
+
+360
+00:27:42,336 --> 00:27:42,637
+Speaker 1: It was the.
+
+361
+00:27:44,382 --> 00:27:46,053
+Speaker 1: It wasn't actually the anime club.
+
+362
+00:27:46,154 --> 00:27:50,235
+Speaker 1: It was our way D&d at our way with dammit Dwayne.
+
+363
+00:27:50,798 --> 00:27:58,137
+Speaker 0: Yes Yeah it was after that session where we right rolled up characters for that game and then I was in that game as I was alone.
+
+364
+00:27:58,157 --> 00:28:08,604
+Speaker 0: and then But then I kept seeing you, you know A very distinctive mustache hat first up and you stood out because you and Katsu were talking about like I just kept overhearing Proper nouns.
+
+365
+00:28:08,705 --> 00:28:11,074
+Speaker 0: I cared about like battle tech something something.
+
+366
+00:28:11,656 --> 00:28:12,579
+Speaker 1: Yeah, that's pretty much it.
+
+367
+00:28:13,761 --> 00:28:16,572
+Speaker 0: But I have detailed records of every conversation online.
+
+368
+00:28:16,592 --> 00:28:25,859
+Speaker 0: I've ever had going back to that moment And it annoys me that there isn't just like a good API For me to scrape and archive everything that I've ever said on any discord ever.
+
+369
+00:28:26,161 --> 00:28:26,522
+Speaker 1: You should.
+
+370
+00:28:26,582 --> 00:28:31,998
+Speaker 1: discord should have a thing where a server administrator can save as and download it the.
+
+371
+00:28:32,018 --> 00:28:40,920
+Speaker 1: you know Of every channel on the server, you know as a discord user You should be able to download and save as and text files all of your DMS.
+
+372
+00:28:40,940 --> 00:28:47,200
+Speaker 0: You know that IRC like thing that Tracy uses with discord does log everything, right?
+
+373
+00:28:47,260 --> 00:28:49,168
+Speaker 1: But that's logging things as they come through.
+
+374
+00:28:49,248 --> 00:29:00,780
+Speaker 0: Yeah, but if I was rain something like that forever You'd have to run something to go back though and get all the old chats, yeah Might just have to start from now, but at least then we'd have everything from now onward.
+
+375
+00:29:01,601 --> 00:29:02,244
+Speaker 1: I don't know how it works.
+
+376
+00:29:02,264 --> 00:29:03,348
+Speaker 1: I haven't looked at anyway.
+
+377
+00:29:03,428 --> 00:29:05,175
+Speaker 0: last but certainly not least.
+
+378
+00:29:05,215 --> 00:29:06,540
+Speaker 0: This is a fascinating news.
+
+379
+00:29:06,841 --> 00:29:09,673
+Speaker 0: I don't know if we ever talked about Brian swords of York on geek knives.
+
+380
+00:29:09,934 --> 00:29:10,657
+Speaker 0: I feel like it was.
+
+381
+00:29:10,717 --> 00:29:18,440
+Speaker 0: we may have It had to have been a thing of the day, but you might have seen this YouTube video that made rounds years ago long time ago.
+
+382
+00:29:18,500 --> 00:29:20,197
+Speaker 1: We're so cool because we knew about this before.
+
+383
+00:29:20,217 --> 00:29:24,637
+Speaker 0: it was cool And if you were a pro you might have seen this on TV in the 80s.
+
+384
+00:29:26,366 --> 00:29:26,998
+Speaker 1: No one's that pro.
+
+385
+00:29:27,901 --> 00:29:28,764
+Speaker 0: Someone had to be.
+
+386
+00:29:29,065 --> 00:29:29,788
+Speaker 0: but anyway, there is.
+
+387
+00:29:29,808 --> 00:29:31,776
+Speaker 0: basically there was a PBS auction.
+
+388
+00:29:31,896 --> 00:29:32,840
+Speaker 0: There's all into an article.
+
+389
+00:29:32,860 --> 00:29:37,520
+Speaker 0: I'm not gonna tell the whole story, but this auction had like a bunch of random crack to raise money for PBS.
+
+390
+00:29:37,941 --> 00:29:54,820
+Speaker 0: but one of the things that kept coming up is there was this person named Brian swords who lived in York and Brian drew up anthropomorphic erotica, but tasteful Anthropomorphic erotica and That's the kind of thing that could just be on a PBS auction.
+
+391
+00:29:55,601 --> 00:30:04,320
+Speaker 1: Like like he donated his artworks to support the local public television channel and they auctioned them off and made money To keep showing you Sesame Street.
+
+392
+00:30:04,342 --> 00:30:04,407
+Speaker 1: Yep.
+
+393
+00:30:04,660 --> 00:30:13,549
+Speaker 0: And there was this just like compilation of YouTube of every time one of his art pieces appeared in these auctions The commentators like not making fun of it.
+
+394
+00:30:13,569 --> 00:30:15,980
+Speaker 0: They were just like, oh, yeah, and here's a piece of art.
+
+395
+00:30:16,121 --> 00:30:19,060
+Speaker 0: Oh, it's uh, looks like it's two rats and they're having a good time.
+
+396
+00:30:19,160 --> 00:30:22,294
+Speaker 0: This is a. this is an interesting piece and they would just talk about it.
+
+397
+00:30:22,375 --> 00:30:27,899
+Speaker 0: and it's just like this Really really obvious furry erotica just hanging out on PBS in the 90s.
+
+398
+00:30:29,281 --> 00:30:37,739
+Speaker 0: So fast forward 90s after 80s and 90s this 1992 is the year of the one that most people know the smell of wet fur.
+
+399
+00:30:38,685 --> 00:30:45,508
+Speaker 0: so fast forward to Dateline today Many of you might have seen like rumblings of this.
+
+400
+00:30:45,568 --> 00:31:00,176
+Speaker 0: but if you're not aware John Oliver of last week tonight Fend a very important human being who I love dearly has purchased the actual Original one that is most commonly known from Brian sorts of your.
+
+401
+00:31:00,396 --> 00:31:01,059
+Speaker 0: he has it.
+
+402
+00:31:01,782 --> 00:31:04,354
+Speaker 0: There's a picture of him holding the original painting.
+
+403
+00:31:04,374 --> 00:31:05,439
+Speaker 0: it is done.
+
+404
+00:31:06,741 --> 00:31:10,817
+Speaker 1: Yeah, it was I guess somehow he found out about Brian sorts of your any tweeted.
+
+405
+00:31:10,877 --> 00:31:15,512
+Speaker 0: He was like, hey Does anyone know a Brian swords of York?
+
+406
+00:31:15,954 --> 00:31:17,820
+Speaker 0: I would like to purchase his art.
+
+407
+00:31:18,121 --> 00:31:19,667
+Speaker 0: I want to track this down.
+
+408
+00:31:20,068 --> 00:31:21,032
+Speaker 1: So I know he got the.
+
+409
+00:31:21,273 --> 00:31:22,036
+Speaker 1: someone sold it to him.
+
+410
+00:31:22,056 --> 00:31:23,180
+Speaker 0: Yeah, apparently it's cool.
+
+411
+00:31:23,240 --> 00:31:30,284
+Speaker 0: We know some people who are closer to Brian swords orbit than I expected Mm-hmm.
+
+412
+00:31:30,304 --> 00:31:34,560
+Speaker 0: So I almost want a frame picture of John Oliver holding this frame picture.
+
+413
+00:31:35,382 --> 00:31:37,429
+Speaker 0: Okay, he looks so delighted with himself.
+
+414
+00:31:38,151 --> 00:31:38,954
+Speaker 1: How was your thing of the day?
+
+415
+00:31:38,974 --> 00:31:50,993
+Speaker 0: Uh, no, that was just some news but anyway, I guess it is time for things Of the day.
+
+416
+00:31:51,013 --> 00:31:51,579
+Speaker 0: So what do you got?
+
+417
+00:31:52,700 --> 00:31:56,851
+Speaker 1: so We were talking lately about all kinds of Animal Crossing biz and it.
+
+418
+00:31:57,091 --> 00:31:59,760
+Speaker 1: people are like posting online all kinds of crazy stuff.
+
+419
+00:31:59,940 --> 00:32:04,920
+Speaker 1: That is like hard to believe because like how the turnip market works and all this other stuff, right?
+
+420
+00:32:05,000 --> 00:32:07,153
+Speaker 1: And it's like how did you figure this stuff out?
+
+421
+00:32:07,193 --> 00:32:14,051
+Speaker 0: like data mom, you know It's like that long and it's not like a lot of yes Where you can dump the whole thing out and like read it in person.
+
+422
+00:32:14,091 --> 00:32:20,280
+Speaker 1: a lot of people have posted stuff that's wrong Right or not quite exactly right so I can't trust them necessarily.
+
+423
+00:32:21,564 --> 00:32:25,671
+Speaker 1: so Apparently I didn't realize how far it had come.
+
+424
+00:32:25,731 --> 00:32:28,920
+Speaker 1: I knew there was switch, you know homebrew stuff, right?
+
+425
+00:32:29,640 --> 00:32:32,558
+Speaker 1: But here is a link to like the actual switch home brews.
+
+426
+00:32:32,980 --> 00:32:40,120
+Speaker 1: You know people's is my thing of the day because they have come way further in switch homebrew than I had realized.
+
+427
+00:32:41,384 --> 00:32:53,647
+Speaker 1: You can do some crazy stuff with switch homebrew and apparently if you do things correctly, it will not impair your ability to connect to switch online or Run legit games correctly.
+
+428
+00:32:53,667 --> 00:32:58,060
+Speaker 1: I would still personally recommend only doing this on like a spare switch.
+
+429
+00:32:58,321 --> 00:33:00,329
+Speaker 1: Maybe grab a switch light and do it to that.
+
+430
+00:33:00,711 --> 00:33:02,800
+Speaker 1: No just in case you never know, right?
+
+431
+00:33:03,140 --> 00:33:08,255
+Speaker 0: How cautious you are with your because Nintendo is not Sony bad, but Nintendo is the.
+
+432
+00:33:08,415 --> 00:33:09,699
+Speaker 0: oh, I guess you bricked yourself.
+
+433
+00:33:09,759 --> 00:33:19,404
+Speaker 1: Sorry Right, but they are doing some phenomenal things and they have actual like supposed source code to the turnip market Was posted.
+
+434
+00:33:19,424 --> 00:33:22,180
+Speaker 1: that could obviously change at any time with a version update to the game.
+
+435
+00:33:22,603 --> 00:33:24,919
+Speaker 1: But that's supposedly the code that's being run right now.
+
+436
+00:33:25,461 --> 00:33:32,897
+Speaker 1: And there are several websites that you type in your current prices and they tell you you know What your prices could be coming up in the future?
+
+437
+00:33:32,917 --> 00:33:42,472
+Speaker 1: So Yeah, if you're someone who's interested in some homebrewing running other software on your switch Maybe even pirating games if that's possible, you know do it.
+
+438
+00:33:42,512 --> 00:33:47,177
+Speaker 1: changing your switch home screen to suck less It's kind of man.
+
+439
+00:33:49,401 --> 00:33:52,883
+Speaker 1: That's that's like one major thing you can do, you know, there's all kinds of crazy good stuff You can do.
+
+440
+00:33:52,944 --> 00:33:54,639
+Speaker 1: write your own software to run on your switch.
+
+441
+00:33:55,163 --> 00:33:57,679
+Speaker 1: You know me play some doom on there without buying it in the e-shop.
+
+442
+00:33:58,064 --> 00:34:05,480
+Speaker 0: Yeah, I mean I bought in the e-shop But I would I want to run a doom that can play remotely with other people the killer fucking app.
+
+443
+00:34:05,761 --> 00:34:09,795
+Speaker 0: Well, I can no one ever do the obvious thing on a Nintendo platform right.
+
+444
+00:34:09,835 --> 00:34:13,788
+Speaker 1: make your own switch software I'm sure is easily possible with this, right?
+
+445
+00:34:14,007 --> 00:34:16,775
+Speaker 1: Yeah, this is a very detailed and cool guide.
+
+446
+00:34:16,795 --> 00:34:20,168
+Speaker 1: - yeah No, it's like actually like totally legit.
+
+447
+00:34:20,630 --> 00:34:21,313
+Speaker 1: It's not legit.
+
+448
+00:34:21,333 --> 00:34:25,425
+Speaker 1: It's a legit but but It works.
+
+449
+00:34:25,686 --> 00:34:28,275
+Speaker 1: it legit and that it works not that it is legal.
+
+450
+00:34:28,815 --> 00:34:31,590
+Speaker 0: So my thing of the day I was watching this over the weekend.
+
+451
+00:34:31,630 --> 00:34:35,523
+Speaker 0: I watched the beginning of it, but Apollo 13 in real time.
+
+452
+00:34:35,563 --> 00:34:37,087
+Speaker 0: This is some cool ass shit.
+
+453
+00:34:37,127 --> 00:34:51,920
+Speaker 0: So basically you go to this website and NASA has all the video all the audio all the transcripts photography Everything from the entire Apollo 13 mission all why we need to save all the chat from discord.
+
+454
+00:34:52,020 --> 00:34:58,728
+Speaker 0: So you can do right so what they've done and you can go right now and watch this Because it's the anniversary of Apollo 13.
+
+455
+00:34:58,728 --> 00:35:02,300
+Speaker 0: They are replaying all of it in a really complex website.
+
+456
+00:35:02,380 --> 00:35:06,680
+Speaker 0: You can be like like in real time as the events happened so long ago.
+
+457
+00:35:07,102 --> 00:35:11,120
+Speaker 0: So you can log in right now and be like at this on this date at this time.
+
+458
+00:35:11,602 --> 00:35:16,540
+Speaker 0: What was the like the person responsible for the thrusters saying to anyone in Mission Control?
+
+459
+00:35:17,100 --> 00:35:21,220
+Speaker 0: I want to see what the video was in like the secondary Mission Control Center.
+
+460
+00:35:21,361 --> 00:35:25,939
+Speaker 1: I want to get young until all the different people at the Mission Control in Houston all you know.
+
+461
+00:35:27,845 --> 00:35:30,214
+Speaker 0: If you watch the movie like it feels like it was a pretty compressed thing.
+
+462
+00:35:30,294 --> 00:35:37,277
+Speaker 0: Apollo 13 went down over A lot longer period of time than you realize it is not until it didn't take 90 minutes.
+
+463
+00:35:37,578 --> 00:35:45,000
+Speaker 0: It is 56 hours in is when the famous phrase that haunting Houston we have a problem happens, right?
+
+464
+00:35:45,120 --> 00:35:46,945
+Speaker 1: Imagine the movie was 56 hours long.
+
+465
+00:35:47,046 --> 00:35:51,378
+Speaker 0: Yeah, so obviously I watched the entire launch because it's just amazing to see.
+
+466
+00:35:51,398 --> 00:35:58,513
+Speaker 0: but You can also for a fast-forward rewind like you can jump to segments like if you want to see a particularly interesting bit.
+
+467
+00:35:59,017 --> 00:36:00,723
+Speaker 0: this is Amazing.
+
+468
+00:36:00,844 --> 00:36:11,702
+Speaker 0: and if you don't understand what's going on there is a Shockingly in-depth text commentary that is time synced to the entire thing that explains Everything.
+
+469
+00:36:11,742 --> 00:36:16,300
+Speaker 0: like every acronym at one point they were like this guy sounds really boring, right?
+
+470
+00:36:16,621 --> 00:36:18,400
+Speaker 0: It sounds like no one's paying attention to him, right?
+
+471
+00:36:18,780 --> 00:36:27,706
+Speaker 0: And then it goes into explain What that guy was saying and why he had to say it in the boring way he did and what purpose that served and it's just Pages and pages of this fascinating stuff.
+
+472
+00:36:28,188 --> 00:36:34,725
+Speaker 1: stuff like this is super important simply not from the perspective of just you know space Yeah, but also just history.
+
+473
+00:36:34,825 --> 00:36:46,363
+Speaker 1: if you look people talk about like pre-recorded history, right where we're doing archaeology and guessing Yeah, right Recorded history where it's like, oh, yeah, we have some writings of people in 1700 or whatever.
+
+474
+00:36:46,383 --> 00:36:49,612
+Speaker 1: Yeah, it's like it's not, you know, there's so much, you know.
+
+475
+00:36:49,672 --> 00:36:52,560
+Speaker 1: guest work and interpretation Romans the earliest historians.
+
+476
+00:36:53,744 --> 00:37:01,447
+Speaker 0: Some of the things that they wrote down are plausible, however Not likely right exactly.
+
+477
+00:37:01,829 --> 00:37:09,817
+Speaker 0: So like I just think there were a hundred thousand soldiers at that battle, dude This kind of detailed recorded history, right?
+
+478
+00:37:10,760 --> 00:37:18,460
+Speaker 1: Is it basically as close to an objective complete recording of at least one zoomed in area at one zoomed in time?
+
+479
+00:37:19,002 --> 00:37:20,548
+Speaker 1: That you can have to like?
+
+480
+00:37:20,568 --> 00:37:27,793
+Speaker 1: if you sent this to someone in the distant distant future They would have basically other than maybe not knowing our language.
+
+481
+00:37:28,074 --> 00:37:30,060
+Speaker 1: once they get past that right sort of thing.
+
+482
+00:37:30,120 --> 00:37:35,256
+Speaker 1: Yeah, there would be no question about what was what happened right at this point.
+
+483
+00:37:35,296 --> 00:37:36,680
+Speaker 1: Why was this event special?
+
+484
+00:37:36,920 --> 00:37:37,745
+Speaker 1: What was this event?
+
+485
+00:37:37,785 --> 00:37:38,710
+Speaker 1: What was happening?
+
+486
+00:37:38,770 --> 00:37:39,877
+Speaker 1: What were people doing?
+
+487
+00:37:39,897 --> 00:37:39,997
+Speaker 1: Right?
+
+488
+00:37:40,700 --> 00:37:43,699
+Speaker 1: Yeah long as you had basic understanding of like these are people.
+
+489
+00:37:44,342 --> 00:37:46,591
+Speaker 0: Yeah, and it also really gives this perspective of like people.
+
+490
+00:37:46,611 --> 00:37:55,940
+Speaker 0: think about Apollo 13 and the astronauts themselves But the number of people involved in a 10-second sequence where one engine has to do one thing.
+
+491
+00:37:56,781 --> 00:38:01,266
+Speaker 0: I don't think people understand how big the Apollo program was.
+
+492
+00:38:01,687 --> 00:38:07,404
+Speaker 0: as a project the number of people involved is Staggering is way less good.
+
+493
+00:38:07,444 --> 00:38:08,506
+Speaker 1: You need a lot more people.
+
+494
+00:38:08,807 --> 00:38:11,413
+Speaker 0: Yep, but also just like There's a lot.
+
+495
+00:38:11,453 --> 00:38:16,827
+Speaker 0: even with modern computers modern space launches still require a terrifying number of people.
+
+496
+00:38:16,847 --> 00:38:21,908
+Speaker 0: Oh, yes So this is just so cool and I'm gonna continue to watch choice bits from it.
+
+497
+00:38:22,611 --> 00:38:27,344
+Speaker 0: Also, it would be a lot harder watching if I didn't know how this ended because it's not a movie.
+
+498
+00:38:27,725 --> 00:38:29,410
+Speaker 1: all the dramatization is removed.
+
+499
+00:38:29,511 --> 00:38:32,668
+Speaker 1: Yeah, see what is it's really like for real real real.
+
+500
+00:38:33,211 --> 00:38:42,199
+Speaker 0: It's like when the problem happens like you see some people kind of freak out like in the video in the background and like it's You can hear like the fear in their eyes.
+
+501
+00:38:42,259 --> 00:38:46,494
+Speaker 0: because even watching the movie like as dramatized as it is We all know how it ended.
+
+502
+00:38:47,135 --> 00:38:50,503
+Speaker 0: but they're like at the early parts of the disaster.
+
+503
+00:38:51,105 --> 00:38:53,210
+Speaker 0: No one thought they were coming home, right?
+
+504
+00:38:53,310 --> 00:39:01,390
+Speaker 1: There's also a difference between a real person Freaking out for real an actor protect acting as if they're freaked out people on the ground.
+
+505
+00:39:01,470 --> 00:39:03,804
+Speaker 0: We're freaking out way more than the astronauts.
+
+506
+00:39:04,508 --> 00:39:04,749
+Speaker 1: Oh, yeah.
+
+507
+00:39:06,313 --> 00:39:08,049
+Speaker 0: So, uh, yeah, otherwise met a moment.
+
+508
+00:39:09,191 --> 00:39:13,449
+Speaker 0: We're currently not reading the tale of Genji because we don't have commutes or free time.
+
+509
+00:39:14,671 --> 00:39:16,301
+Speaker 1: Maybe I'll read some I don't know.
+
+510
+00:39:16,764 --> 00:39:21,490
+Speaker 0: I feel like I will as It gets a little warmer Like I'm gonna when I go for a long bike ride.
+
+511
+00:39:21,610 --> 00:39:25,908
+Speaker 0: I might like stop in an empty part of a park somewhere and read a little bit.
+
+512
+00:39:25,968 --> 00:39:26,250
+Speaker 0: We'll see.
+
+513
+00:39:27,474 --> 00:39:28,059
+Speaker 0: But I'm mostly.
+
+514
+00:39:28,282 --> 00:39:29,110
+Speaker 0: you know, it's weird.
+
+515
+00:39:29,931 --> 00:39:34,489
+Speaker 0: I have this illusion of free time and that because I'm working from home every day and because of the way the world is.
+
+516
+00:39:34,509 --> 00:39:39,750
+Speaker 1: I Have this sense that I have more free time, but there ain't a little bit of free time by not commuting.
+
+517
+00:39:39,932 --> 00:39:43,518
+Speaker 0: Yeah, that saves me 22 minutes a weekday.
+
+518
+00:39:43,719 --> 00:39:43,920
+Speaker 1: That's it.
+
+519
+00:39:43,960 --> 00:39:48,380
+Speaker 1: I've gained a little bit more free time by not showering Yep, but I don't actually.
+
+520
+00:39:48,400 --> 00:39:55,590
+Speaker 0: not only do I not have more free time But I picked up all these projects because I'm stuck at home and those projects are actually taking up more time.
+
+521
+00:39:55,872 --> 00:39:58,130
+Speaker 0: I have less free time now than I did before the disaster.
+
+522
+00:39:58,271 --> 00:40:02,410
+Speaker 1: I made a significant progress on the meet redoing the geek night's website technology.
+
+523
+00:40:02,631 --> 00:40:02,952
+Speaker 0: I am.
+
+524
+00:40:03,474 --> 00:40:08,150
+Speaker 1: I've also spent a lot of time cooking because it used to be I just got home.
+
+525
+00:40:08,251 --> 00:40:11,743
+Speaker 1: I don't really want to cook now Got all this time.
+
+526
+00:40:11,824 --> 00:40:12,270
+Speaker 1: Let me cook.
+
+527
+00:40:12,310 --> 00:40:13,575
+Speaker 1: Yeah, well cooking takes time.
+
+528
+00:40:13,595 --> 00:40:17,410
+Speaker 0: that now I got some roasted root vegetables in there that I gotta go tend to at some point.
+
+529
+00:40:17,471 --> 00:40:18,448
+Speaker 0: I got to make some chili.
+
+530
+00:40:19,532 --> 00:40:21,161
+Speaker 1: All the cleaning I used to put off.
+
+531
+00:40:21,543 --> 00:40:22,005
+Speaker 1: I'm cleaning.
+
+532
+00:40:22,146 --> 00:40:24,466
+Speaker 1: Yep Just not myself.
+
+533
+00:40:26,931 --> 00:40:30,030
+Speaker 0: So, uh, yeah, I don't actually have more free time, but we are doing a ton of projects.
+
+534
+00:40:30,050 --> 00:40:30,792
+Speaker 0: So stay tuned.
+
+535
+00:40:31,133 --> 00:40:37,270
+Speaker 0: like our YouTube channels and like all our biz we are actively progressing on a lot of real projects.
+
+536
+00:40:38,051 --> 00:40:38,573
+Speaker 0: Stay tuned.
+
+537
+00:40:38,593 --> 00:40:47,438
+Speaker 0: like we're not taking this time idly geek nights is gonna bust out with more and more content But right now we're focused on Just yeah, I'm constantly doing stuff.
+
+538
+00:40:47,498 --> 00:40:50,110
+Speaker 1: It's just it's got to get to done before anyone could see it.
+
+539
+00:40:50,190 --> 00:40:53,866
+Speaker 0: Yeah, I also started building a hurdy-gurdy kit and that's taking some time.
+
+540
+00:40:53,886 --> 00:40:54,369
+Speaker 1: You got it.
+
+541
+00:40:54,449 --> 00:40:55,373
+Speaker 0: Okay I'm already.
+
+542
+00:40:55,454 --> 00:40:56,619
+Speaker 0: I've built a good chunk of it.
+
+543
+00:40:56,659 --> 00:40:58,608
+Speaker 1: But now I'm glad I am far away from it.
+
+544
+00:40:58,749 --> 00:41:01,335
+Speaker 0: now I'm at the hard part Stringing that thing.
+
+545
+00:41:01,355 --> 00:41:02,719
+Speaker 0: I do not look forward to.
+
+546
+00:41:03,020 --> 00:41:03,843
+Speaker 1: I hope you fail.
+
+547
+00:41:03,923 --> 00:41:05,829
+Speaker 1: So you can't make annoying noises at me.
+
+548
+00:41:06,632 --> 00:41:11,309
+Speaker 0: Well, the problem is if I like playing this janky hurdy-gurdy probably gonna get a real one.
+
+549
+00:41:12,513 --> 00:41:18,876
+Speaker 0: Okay, great So Postgres, why are we talking about Prosegress?
+
+550
+00:41:19,278 --> 00:41:36,070
+Speaker 1: Well because in recent episodes and not even Mondays We've talked about how like, you know, if you are building any sort of modern System computer system It's almost definitely going to be just like a database and an application combo of some kind.
+
+551
+00:41:36,090 --> 00:41:48,947
+Speaker 1: yep, with some sort of you it interface right for users whether it's a desktop app or a web app or a mobile app and You should almost definitely just be doing Postgres as your database because it is the one.
+
+552
+00:41:49,087 --> 00:41:50,050
+Speaker 0: Yeah now we've done.
+
+553
+00:41:50,190 --> 00:41:55,830
+Speaker 0: I'm pretty sure we did a geek nights on like what databases are and really get a nice on relational databases.
+
+554
+00:41:56,010 --> 00:42:03,310
+Speaker 1: So we're not gonna repeat what a relational database is other than to say Postgres is a relational database that is free.
+
+555
+00:42:03,471 --> 00:42:06,171
+Speaker 0: Oh, we did that show recently 2018.
+
+556
+00:42:06,171 --> 00:42:09,441
+Speaker 1: Yeah, I think we I think it might have been a repeat show might have been.
+
+557
+00:42:09,461 --> 00:42:13,896
+Speaker 0: I'll search around but basically there are a lot Of different relational database solutions.
+
+558
+00:42:13,916 --> 00:42:24,770
+Speaker 0: We're not talking about non relational databases because frankly if You think you need a non relational database and you aren't already an expert in all this you are wrong And you're about to make a terrible mistake.
+
+559
+00:42:25,292 --> 00:42:29,350
+Speaker 0: If you are smart enough and right enough to where you know, you need a non relational database.
+
+560
+00:42:29,731 --> 00:42:32,018
+Speaker 0: Don't listen to me or Scott for advice.
+
+561
+00:42:32,559 --> 00:42:32,981
+Speaker 1: That's right.
+
+562
+00:42:33,482 --> 00:42:36,170
+Speaker 1: Oh and the thing is, you know, so the question is Postgres.
+
+563
+00:42:36,431 --> 00:42:38,760
+Speaker 1: It's like why Postgres right?
+
+564
+00:42:38,840 --> 00:42:41,290
+Speaker 1: What is special about this one versus the other ones?
+
+565
+00:42:41,470 --> 00:42:45,209
+Speaker 1: Why should be this one the one that you go to without thinking about the other ones?
+
+566
+00:42:45,830 --> 00:42:54,957
+Speaker 0: Until unless you have a reason I would say Postgres has been the one you should use for most purposes since about 2000 and Since a very long time.
+
+567
+00:42:54,998 --> 00:43:03,921
+Speaker 1: so Postgres started out as not even SQL But it was like a Berkeley project as most computing things started out Way older than you realize right.
+
+568
+00:43:04,021 --> 00:43:09,182
+Speaker 1: and then I think sometime in the 90s They had it's they they changed it up to Postgres 95.
+
+569
+00:43:09,182 --> 00:43:11,551
+Speaker 0: I'd never heard of Postgres till like 2003.
+
+570
+00:43:11,551 --> 00:43:25,910
+Speaker 1: So yeah, Postgres 95 was a thing and then it finally became the open source project that it is now of Postgres SQL yeah sometime later in the 2000s and that project is still the project that is happening now.
+
+571
+00:43:26,050 --> 00:43:30,964
+Speaker 1: I think I'm not sure that when it switched over to its modern incarnation.
+
+572
+00:43:31,025 --> 00:43:36,230
+Speaker 1: It was like Postgres 6 I want to say yeah, they went back to the original numbering
+
+573
+00:43:36,511 --> 00:43:45,492
+Speaker 0: I have not used like the last time I used for like I used to manage and operate a High performance Postgres databases as a job like that used to be a thing I did.
+
+574
+00:43:45,533 --> 00:43:55,953
+Speaker 0: that was something I was paid a lot of money to do but That was circa 2008 like that era but they're currently on Postgres 12.
+
+575
+00:43:55,953 --> 00:44:03,965
+Speaker 0: Yep, like back when I was using Postgres on a day-to-day basis It did not really have reliable binary replication or disaster recovery capabilities.
+
+576
+00:44:04,306 --> 00:44:11,470
+Speaker 0: I had to hack together like Replicating the like the back-end stores on DRBD and all this sort of nonsense.
+
+577
+00:44:11,652 --> 00:44:13,310
+Speaker 0: But Postgres has evolved rapidly.
+
+578
+00:44:13,370 --> 00:44:26,535
+Speaker 0: The thing I'll say is that in that era even back then in like 2008 ish Postgres was already way better than any other free database solution like my sequel In the non free one.
+
+579
+00:44:26,555 --> 00:44:36,477
+Speaker 0: Yeah, like Postgres I found performed better than Oracle for the things I was using it for the other commercial ones Microsoft sequel why?
+
+580
+00:44:36,498 --> 00:44:41,476
+Speaker 0: and my sequel like not that great I mean my sequel.
+
+581
+00:44:41,556 --> 00:44:45,010
+Speaker 1: it's the reason my sequel took off was because easy.
+
+582
+00:44:45,050 --> 00:44:51,370
+Speaker 1: It's all news is also free and easy to use and a lot of things were built on top of it.
+
+583
+00:44:51,450 --> 00:45:04,430
+Speaker 0: That would would not work with other solutions like so many web apps back then were like download this software Download my sequel install my head point your software at my sequel and the software will set up the database and just work.
+
+584
+00:45:04,992 --> 00:45:22,490
+Speaker 1: Right before we had you know cloud hosting like we have today the typical web stack was PHP, which had a good connector for my sequel not so much for Postgres and So you would run PHP my sequel to get your website running with Apache and that was like this lamp stack.
+
+585
+00:45:22,590 --> 00:45:24,415
+Speaker 1: And that was the stack and it.
+
+586
+00:45:24,876 --> 00:45:36,017
+Speaker 1: that stack dying and becoming less popular people moving away from PHP specifically to other languages and had Postgres connectors is Postgres is better than my sequel.
+
+587
+00:45:36,137 --> 00:45:39,530
+Speaker 0: even in the lamp stack the performance was night and day in my experience.
+
+588
+00:45:39,931 --> 00:45:56,216
+Speaker 1: Right, and it not just that but just like basic things like handling Unicode correctly all these basic fundamental things that you don't realize right foreign key constraints working properly supporting modern features I'm just remembering some shit.
+
+589
+00:45:56,256 --> 00:45:57,842
+Speaker 0: I went right.
+
+590
+00:45:58,404 --> 00:45:59,186
+Speaker 1: It's just like all this.
+
+591
+00:45:59,307 --> 00:46:02,530
+Speaker 0: It's just Postgres very right janky.
+
+592
+00:46:03,491 --> 00:46:04,416
+Speaker 1: Yeah, no Postgres.
+
+593
+00:46:04,637 --> 00:46:05,441
+Speaker 1: It's a database.
+
+594
+00:46:05,481 --> 00:46:06,626
+Speaker 1: It does things the right way.
+
+595
+00:46:06,707 --> 00:46:08,374
+Speaker 1: It works the way It's supposed to work.
+
+596
+00:46:08,775 --> 00:46:16,263
+Speaker 1: and whether you're someone who doesn't even know anything about the database You're just doing basic sequel or you're doing fancy fancy shit.
+
+597
+00:46:17,026 --> 00:46:18,090
+Speaker 1: It it totally works.
+
+598
+00:46:18,331 --> 00:46:18,391
+Speaker 1: I
+
+599
+00:46:18,471 --> 00:46:36,245
+Speaker 0: found like in my professional career up until I stopped being at the level where I interacted with systems directly I found that generally systems that I inherited that were based on my sequel We're only based on my sequel because that's what someone set up who didn't really know what they were doing a long time ago And anything new was Postgres like everything was Postgres.
+
+600
+00:46:36,587 --> 00:46:40,382
+Speaker 0: even in my current job I've had engineers migrate things to Postgres because it's great.
+
+601
+00:46:40,442 --> 00:46:40,643
+Speaker 1: Right?
+
+602
+00:46:41,105 --> 00:46:42,390
+Speaker 1: So what makes Postgres so great?
+
+603
+00:46:42,430 --> 00:46:48,630
+Speaker 1: Well, first of all, we already talked about how it's free and how it just does everything right normally right out of the gate.
+
+604
+00:46:49,533 --> 00:46:51,200
+Speaker 1: So that's a good reason to use it.
+
+605
+00:46:51,501 --> 00:47:00,610
+Speaker 1: Yeah, the real reason Postgres is great is All the other things it does that you may not ever need to use but are there for you when you need them.
+
+606
+00:47:01,211 --> 00:47:06,607
+Speaker 1: That make it so that you're not really looking at other tools too much.
+
+607
+00:47:06,828 --> 00:47:08,293
+Speaker 1: It's like Simon It's like a right.
+
+608
+00:47:08,655 --> 00:47:10,924
+Speaker 1: It's like usually you have to choose in the world.
+
+609
+00:47:10,964 --> 00:47:13,641
+Speaker 1: when you're when you're picking out tools You might be like, okay.
+
+610
+00:47:13,681 --> 00:47:14,650
+Speaker 1: Well, here's a chef's knife.
+
+611
+00:47:14,770 --> 00:47:22,050
+Speaker 1: It's really good at cutting and I can use it a lot of different ways, but it's still just a chef's knife I can't screw to use it as a screwdriver.
+
+612
+00:47:22,494 --> 00:47:24,070
+Speaker 1: Right that I need a Swiss Army knife.
+
+613
+00:47:24,151 --> 00:47:30,339
+Speaker 0: I could try really hard to use this screwdriver But I might hurt myself and I'm definitely fucking up both the knife and the screw Right now.
+
+614
+00:47:30,420 --> 00:47:36,603
+Speaker 1: imagine a Swiss Army knife but the knife on it is a chef's knife and the screwdriver is like an amazing screwdriver.
+
+615
+00:47:36,724 --> 00:47:42,500
+Speaker 1: and the corkscrew is an amazing corkscrew and None of them might be as good as the best.
+
+616
+00:47:42,560 --> 00:47:43,101
+Speaker 1: right this?
+
+617
+00:47:43,182 --> 00:47:49,450
+Speaker 1: the chef's knife on there isn't as good isn't the best chef's knife In the world, but it's like damn good, right?
+
+618
+00:47:49,510 --> 00:47:53,007
+Speaker 1: Like no one's you know, what's gonna reject that one saying it's not good enough.
+
+619
+00:47:53,268 --> 00:47:53,730
+Speaker 1: Nope, right?
+
+620
+00:47:53,971 --> 00:47:56,450
+Speaker 1: It's like 90% as good as the best one, right?
+
+621
+00:47:56,892 --> 00:47:58,119
+Speaker 1: So that's a Postgres did so.
+
+622
+00:47:58,280 --> 00:48:01,113
+Speaker 1: examples of things Postgres does Right.
+
+623
+00:48:01,494 --> 00:48:06,108
+Speaker 1: So for example, you know, you're doing your SQL right and normally when you got SQL you got columns.
+
+624
+00:48:06,168 --> 00:48:06,770
+Speaker 1: They got numbers.
+
+625
+00:48:07,122 --> 00:48:08,835
+Speaker 1: Yeah They got caret text right.
+
+626
+00:48:09,517 --> 00:48:16,879
+Speaker 1: a lot of applications out there have to put in some kind of weird data That you don't query with text or numbers right.
+
+627
+00:48:17,341 --> 00:48:20,650
+Speaker 1: the most common example of this is GPS data, right?
+
+628
+00:48:21,230 --> 00:48:25,590
+Speaker 1: It's two numbers usually right your latitude and your longitude down to a bunch of decimal points.
+
+629
+00:48:26,072 --> 00:48:30,610
+Speaker 1: But when you want to query it, you don't want to do greater than less than plus minus, right?
+
+630
+00:48:30,670 --> 00:48:33,176
+Speaker 1: You got to say here's some GPS coordinates.
+
+631
+00:48:33,477 --> 00:48:38,469
+Speaker 1: query this table and give me the one that's closest by distance, right?
+
+632
+00:48:38,489 --> 00:48:43,970
+Speaker 1: or Yeah, someone gave me an address and here's the location of that city.
+
+633
+00:48:44,516 --> 00:48:52,570
+Speaker 1: Give me all G Give me all rows in this table that have GPS coordinates within this radius because they're you know within five miles of Scott.
+
+634
+00:48:52,651 --> 00:48:53,798
+Speaker 1: He wants to find the restaurants.
+
+635
+00:48:53,878 --> 00:48:55,026
+Speaker 1: Yeah that are nearby, right?
+
+636
+00:48:56,610 --> 00:48:57,253
+Speaker 1: How do you do that?
+
+637
+00:48:57,615 --> 00:48:59,425
+Speaker 1: Postgres has a thing called post GIS.
+
+638
+00:48:59,445 --> 00:49:00,028
+Speaker 1: that just does it?
+
+639
+00:49:00,229 --> 00:49:01,033
+Speaker 0: Yep I'm looking.
+
+640
+00:49:01,053 --> 00:49:03,546
+Speaker 0: I'm looking at the list because I haven't used Postgres directly in a while.
+
+641
+00:49:03,868 --> 00:49:04,190
+Speaker 0: the date.
+
+642
+00:49:04,270 --> 00:49:06,358
+Speaker 0: There are some fascinating data types in here.
+
+643
+00:49:06,378 --> 00:49:07,442
+Speaker 0: Yeah.
+
+644
+00:49:07,462 --> 00:49:07,984
+Speaker 1: Yeah, it's like.
+
+645
+00:49:08,124 --> 00:49:09,670
+Speaker 1: so you think that's just one case.
+
+646
+00:49:09,790 --> 00:49:14,428
+Speaker 1: No, it has these sorts of things for every case that you can imagine.
+
+647
+00:49:14,468 --> 00:49:21,270
+Speaker 1: let you know I've seen stuff for like graphs and spherical coordinates and all sorts of other crazy biz.
+
+648
+00:49:21,711 --> 00:49:27,530
+Speaker 0: Alright, like do you know how many times I've seen people put like IP addresses in like MySQL databases just as strings?
+
+649
+00:49:28,790 --> 00:49:29,357
+Speaker 1: Mm-hmm.
+
+650
+00:49:29,640 --> 00:49:29,782
+Speaker 1: Mm-hmm.
+
+651
+00:49:30,450 --> 00:49:37,910
+Speaker 0: Yeah Address fields like another main feature like the triggers and Postgres are really good.
+
+652
+00:49:38,812 --> 00:49:43,950
+Speaker 0: Yeah way better than like what I would do with an equivalent stored procedure in some bullshit data.
+
+653
+00:49:44,030 --> 00:49:52,062
+Speaker 1: Oh, yes, all those basic database features that you expect views materialized views Triggers all these sort they've.
+
+654
+00:49:52,223 --> 00:49:54,753
+Speaker 1: now they've added Notifications.
+
+655
+00:49:54,893 --> 00:49:56,821
+Speaker 0: actually notifications are added a while ago.
+
+656
+00:49:56,841 --> 00:49:57,725
+Speaker 0: Oh, yeah.
+
+657
+00:49:57,765 --> 00:50:00,193
+Speaker 1: No this night Right.
+
+658
+00:50:00,414 --> 00:50:01,358
+Speaker 1: Yeah, they have.
+
+659
+00:50:01,399 --> 00:50:01,579
+Speaker 1: they've.
+
+660
+00:50:01,800 --> 00:50:08,641
+Speaker 1: more recently they've added a computed columns, so Normally, let's say you have a table.
+
+661
+00:50:08,842 --> 00:50:10,569
+Speaker 1: Yeah, and in the table you have a name.
+
+662
+00:50:12,072 --> 00:50:13,398
+Speaker 1: Add your birth year, right?
+
+663
+00:50:13,438 --> 00:50:18,943
+Speaker 1: I was born in 1982 and you did like damn I want to add a column that says how old you are, right?
+
+664
+00:50:19,205 --> 00:50:20,330
+Speaker 1: I know your birth date.
+
+665
+00:50:20,591 --> 00:50:21,738
+Speaker 1: Yeah, right, but I need to.
+
+666
+00:50:21,799 --> 00:50:23,610
+Speaker 1: I just want to know how many years the old you are.
+
+667
+00:50:23,670 --> 00:50:24,396
+Speaker 0: There's a lot of.
+
+668
+00:50:24,497 --> 00:50:26,736
+Speaker 0: there's a lot of bad ways to do that Right.
+
+669
+00:50:26,756 --> 00:50:33,910
+Speaker 1: So you could in the old days What you could do is you could a make a real column and have your application keep one of the columns up to date.
+
+670
+00:50:34,111 --> 00:50:40,901
+Speaker 0: I would probably in my old dumb days either make a view for that or In SQL directly, right?
+
+671
+00:50:40,921 --> 00:50:47,269
+Speaker 1: You can make a view that would Produce another second table that has the extra column on it.
+
+672
+00:50:47,390 --> 00:50:50,390
+Speaker 1: Yeah, right and not and you would query that view instead of querying.
+
+673
+00:50:50,511 --> 00:50:51,700
+Speaker 0: That's probably what I would have done.
+
+674
+00:50:51,761 --> 00:50:52,870
+Speaker 0: thinking back to you could do that.
+
+675
+00:50:53,172 --> 00:50:56,530
+Speaker 1: You could set up a database trigger to populate at that third column.
+
+676
+00:50:56,670 --> 00:51:00,081
+Speaker 1: Yeah, right, but now they have actually just computed columns.
+
+677
+00:51:00,221 --> 00:51:00,924
+Speaker 1: see every table.
+
+678
+00:51:01,205 --> 00:51:07,747
+Speaker 1: you add a computed column and you say yeah This column equals this function this function on that other column done.
+
+679
+00:51:08,249 --> 00:51:13,490
+Speaker 0: Yep It just have it or a feat like the feature other than because binary replication of disaster recovery.
+
+680
+00:51:13,550 --> 00:51:18,830
+Speaker 0: That was added like a long time ago, but the notifications are even better because I remembered that they'd added notifications.
+
+681
+00:51:18,910 --> 00:51:20,456
+Speaker 0: They were good, but now I'm reading details.
+
+682
+00:51:20,777 --> 00:51:22,946
+Speaker 0: They're way better than I realized.
+
+683
+00:51:23,307 --> 00:51:24,050
+Speaker 1: everything's better.
+
+684
+00:51:24,331 --> 00:51:30,350
+Speaker 0: You can replace a lot of the things you would use like an enterprise service bus or a polling system.
+
+685
+00:51:30,771 --> 00:51:33,240
+Speaker 0: Just with the database you can just yeah.
+
+686
+00:51:33,341 --> 00:51:38,865
+Speaker 0: Hey if this table gets updated in this way Notify this endpoints right now.
+
+687
+00:51:38,925 --> 00:51:47,230
+Speaker 1: a lot of a Reservation I've had as a programmer right is I've always stayed away from putting too many things in the database especially business logic.
+
+688
+00:51:47,952 --> 00:51:53,145
+Speaker 1: Right because when something's in the database, it's not in your say git repository.
+
+689
+00:51:53,265 --> 00:51:54,970
+Speaker 1: You're not carrying that around with you.
+
+690
+00:51:55,050 --> 00:51:55,735
+Speaker 1: That's lost.
+
+691
+00:51:55,916 --> 00:51:57,669
+Speaker 1: It's like in this other area, right?
+
+692
+00:51:59,391 --> 00:52:03,730
+Speaker 1: And when you work with old systems that have a lot of things in the database, that's a big problem.
+
+693
+00:52:03,730 --> 00:52:05,925
+Speaker 1: It's like this hidden part of the application.
+
+694
+00:52:05,945 --> 00:52:06,610
+Speaker 1: You don't understand.
+
+695
+00:52:07,731 --> 00:52:09,379
+Speaker 1: Where is the code that does this?
+
+696
+00:52:09,480 --> 00:52:10,364
+Speaker 1: Oh, it's in the database.
+
+697
+00:52:10,384 --> 00:52:11,570
+Speaker 0: I felt there's not a problem at IBM.
+
+698
+00:52:11,711 --> 00:52:26,495
+Speaker 0: I couldn't solve forever and finally got the database team on to look at it And the problem was every time this data got inserted into the database There was a local stored procedure that would call out to an external service do some bullshit and then change the road That was inserted.
+
+699
+00:52:26,515 --> 00:52:28,405
+Speaker 0: Yeah with business logic.
+
+700
+00:52:28,988 --> 00:52:35,859
+Speaker 1: Yep So what you what I do these days to handle that is I just put all my SQL into my code, right?
+
+701
+00:52:37,451 --> 00:52:41,940
+Speaker 1: so that like So for example, would you go to front-row-crew.com?
+
+702
+00:52:42,140 --> 00:52:45,150
+Speaker 1: right if you were to say take the code of front-row-crew.com?
+
+703
+00:52:45,190 --> 00:52:48,237
+Speaker 1: And you wanted to make your own website You have a blank postgres.
+
+704
+00:52:48,277 --> 00:52:51,590
+Speaker 1: you have to make a user with enough permissions to execute the SQL obviously.
+
+705
+00:52:52,253 --> 00:52:53,901
+Speaker 1: But then all the SQL is there.
+
+706
+00:52:53,921 --> 00:53:03,370
+Speaker 1: so you just type a command and it would build The front-row-crew.com database for you out of nothing including any views that had to be made or anything like that.
+
+707
+00:53:03,430 --> 00:53:07,851
+Speaker 0: You know, that's a pattern I used at my last few jobs as well I can't?
+
+708
+00:53:07,891 --> 00:53:18,185
+Speaker 0: we sold software and what we put together was the like the genericized SQL Method of creating the database structure regardless of what database type you're using right?
+
+709
+00:53:18,205 --> 00:53:19,228
+Speaker 1: So an example, right?
+
+710
+00:53:19,268 --> 00:53:22,177
+Speaker 1: So just the other day I'm working on because we're upgrading for a crew.
+
+711
+00:53:22,198 --> 00:53:22,719
+Speaker 1: calm right.
+
+712
+00:53:23,020 --> 00:53:27,610
+Speaker 1: the old front-row-crew.com had my sequel because it was originally WordPress and the original days, right?
+
+713
+00:53:27,870 --> 00:53:32,510
+Speaker 1: Yeah, and again, I got all that data out of there and I want to bring it over to a new postgres database.
+
+714
+00:53:33,072 --> 00:53:36,146
+Speaker 1: So they have a feature called the foreign data wrapper, right?
+
+715
+00:53:36,528 --> 00:53:36,970
+Speaker 0: Oh, yeah.
+
+716
+00:53:38,176 --> 00:53:41,975
+Speaker 1: So the foreign data wrapper is this amazing thing Which I highly recommend.
+
+717
+00:53:42,036 --> 00:54:04,769
+Speaker 1: back in the day if you wanted to migrate from say my sequel to postgres What you would do is you would do something like dump your MySQL database Into a SQL file massage that SQL and then run that SQL on postgres to insert all the rows Right or run a bunch of queries on my SQL to generate like a CSV or some set of csv's or something like
+
+718
+00:54:04,809 --> 00:54:05,010
+Speaker 0: that
+
+719
+00:54:05,614 --> 00:54:07,230
+Speaker 1: And then insert those in the postgres.
+
+720
+00:54:07,431 --> 00:54:07,571
+Speaker 1: I don't.
+
+721
+00:54:07,591 --> 00:54:12,170
+Speaker 1: you'd have like up some sort of procedure that you'd have to do with the foreign data wrapper.
+
+722
+00:54:12,270 --> 00:54:14,741
+Speaker 1: What I do is I tell postgres.
+
+723
+00:54:14,761 --> 00:54:15,725
+Speaker 1: Hey postgres.
+
+724
+00:54:15,765 --> 00:54:16,830
+Speaker 1: There's a MySQL server.
+
+725
+00:54:17,292 --> 00:54:31,270
+Speaker 1: You can connect to it on this IP address with this username and password and it says Alright cool, and then I say oh by the way postgres Look at all the tables in that MySQL database and make tables on your side that exactly match those tables.
+
+726
+00:54:31,410 --> 00:54:33,076
+Speaker 1: Yeah, it says okay.
+
+727
+00:54:33,116 --> 00:54:37,710
+Speaker 1: I made tables that exactly match those tables and now I'm in postgres on my local machine.
+
+728
+00:54:38,333 --> 00:54:46,490
+Speaker 1: I go to a table I query it postgres queries my SQL Gets the data and returns it to me as if I had queried a local table.
+
+729
+00:54:47,232 --> 00:54:54,113
+Speaker 0: If any of you know that my site we managing databases before where you're trying to migrate from an old database system to a new Database system.
+
+730
+00:54:54,395 --> 00:54:56,082
+Speaker 0: I think you can already see the potential here.
+
+731
+00:54:56,605 --> 00:54:59,620
+Speaker 1: and now you think oh, yeah So one relational database to another.
+
+732
+00:54:59,660 --> 00:55:01,330
+Speaker 1: that's kind of fancy and really powerful.
+
+733
+00:55:01,450 --> 00:55:06,028
+Speaker 1: No, the foreign data wrapper can wrap all sorts of any data source.
+
+734
+00:55:06,068 --> 00:55:17,990
+Speaker 1: You can wrap API's in the cloud as web servers Where you can so you can write you can wrap a file you can have a CSV file You can have someone's Excel spreadsheet and wrap it and now it's a postgres table.
+
+735
+00:55:18,010 --> 00:55:25,757
+Speaker 0: So you could write your application to only interact with postgres now and forever and then all your legacy wells Any data source that you have.
+
+736
+00:55:25,817 --> 00:55:29,208
+Speaker 1: you can SQL it by putting a foreign data wrapper and postgres around it.
+
+737
+00:55:29,429 --> 00:55:32,230
+Speaker 1: Yep So that's a basic included feature.
+
+738
+00:55:32,511 --> 00:55:32,772
+Speaker 0: I guess
+
+739
+00:55:32,792 --> 00:55:33,797
+Speaker 1: my advice just works
+
+740
+00:55:33,898 --> 00:55:44,866
+Speaker 0: to all of you like to kind of wrap up like where we're going with this Is that if you're young and getting into like you're in school or you're doing your first jobs and you're in programming Like computer science or anything like that.
+
+741
+00:55:44,906 --> 00:55:51,950
+Speaker 0: for one Learn how databases work because too many programmers don't know how databases work and basically reimplement databases in their code.
+
+742
+00:55:52,571 --> 00:55:58,827
+Speaker 0: Yep, but to learn postgres specifically because postgres is really well made.
+
+743
+00:55:58,907 --> 00:56:01,813
+Speaker 0: if you learn postgres You can work with any goddamn database on earth.
+
+744
+00:56:02,375 --> 00:56:04,859
+Speaker 1: You can also solve almost any problem.
+
+745
+00:56:04,939 --> 00:56:07,357
+Speaker 1: It's like It's constantly at work.
+
+746
+00:56:07,377 --> 00:56:10,110
+Speaker 1: We have all our data in postgres and it's like oh, no, we have a problem.
+
+747
+00:56:10,632 --> 00:56:18,219
+Speaker 1: I have found a solution that involves SQL and does not involve me having the algorithm like oh We have this field with a dumb default value.
+
+748
+00:56:18,259 --> 00:56:20,690
+Speaker 0: Can we change the default value without messed up anything else?
+
+749
+00:56:20,830 --> 00:56:26,910
+Speaker 1: Yeah in a database that is trivial Don't think about postgres as like a place you store all your data.
+
+750
+00:56:27,251 --> 00:56:41,964
+Speaker 1: You have to think about it as this program that can solve information problems, right and it already has all of the well-known commonly needed information Problem solutions built in for you to use.
+
+751
+00:56:42,546 --> 00:56:46,680
+Speaker 1: you just have to learn Which prob which problem you have and what the solution is.
+
+752
+00:56:46,741 --> 00:56:49,570
+Speaker 1: and there it is for you already implemented basically perfectly.
+
+753
+00:56:50,213 --> 00:56:51,277
+Speaker 1: Just take advantage of it.
+
+754
+00:56:51,519 --> 00:56:53,949
+Speaker 1: Yeah, I couldn't even scratch the surface before getting hungry.
+
+755
+00:56:54,351 --> 00:56:56,638
+Speaker 1: So many other things relative.
+
+756
+00:56:56,999 --> 00:56:59,728
+Speaker 1: Yeah, they got JSON fields this search involved.
+
+757
+00:56:59,768 --> 00:57:00,470
+Speaker 1: They got L tree.
+
+758
+00:57:00,813 --> 00:57:09,269
+Speaker 0: also, the full text search in postgres is Fast enough to where a lot of people could use that as their primary means of querying.
+
+759
+00:57:09,309 --> 00:57:11,567
+Speaker 0: postgres Like it'll actually perform pretty well.
+
+760
+00:57:12,251 --> 00:57:14,336
+Speaker 0: Just a full text search your whole goddamn database.
+
+761
+00:57:14,637 --> 00:57:18,608
+Speaker 1: Postgres can even do like your image processing for you, right?
+
+762
+00:57:18,748 --> 00:57:19,470
+Speaker 1: It's that crazy.
+
+763
+00:57:19,670 --> 00:57:23,461
+Speaker 0: Yeah, if you're going into IT database management is really important.
+
+764
+00:57:24,003 --> 00:57:33,070
+Speaker 0: learn how to get a postgres server Running and how to deal with it because it doesn't matter what's in a database if you're an IT doing support or operation.
+
+765
+00:57:33,332 --> 00:57:41,350
+Speaker 0: If you know how to work with databases You can be the go-to person to solve like 80% of all problems that happen.
+
+766
+00:57:42,451 --> 00:57:44,619
+Speaker 0: Like you'll become the database go-to person.
+
+767
+00:57:44,961 --> 00:57:46,868
+Speaker 0: That is a really good way to get your career.
+
+768
+00:57:47,048 --> 00:57:54,030
+Speaker 1: like god I like bootstrap it and most of the programming that you can do right if you're not stuck at someplace with COBOL.
+
+769
+00:57:54,091 --> 00:58:02,853
+Speaker 1: Yeah if you want to make money as a programmer with a job at a company almost all the code you write is gonna be some code that goes between That.
+
+770
+00:58:03,275 --> 00:58:06,178
+Speaker 1: a has code to tell postgres to solve a problem Yeah.
+
+771
+00:58:06,591 --> 00:58:12,410
+Speaker 1: And then B takes data from postgres and massages it to present it to users and buy and back and forth.
+
+772
+00:58:12,731 --> 00:58:14,562
+Speaker 1: Yeah, that's the code that almost I've written it.
+
+773
+00:58:14,602 --> 00:58:18,664
+Speaker 1: pretty much every job is Code that goes between a person and a database.
+
+774
+00:58:18,966 --> 00:58:28,521
+Speaker 0: Yep, right Like as soon as you get to the point where you need more than postgres plus code to interact with the data in the postgres You're edging into enterprise nonsense.
+
+775
+00:58:28,662 --> 00:58:33,315
+Speaker 1: Even you've gone down a very bad territory Postgres can still get the job.
+
+776
+00:58:33,335 --> 00:58:35,000
+Speaker 1: You just might need more postcresses.
+
+777
+00:58:35,301 --> 00:58:36,264
+Speaker 0: Yeah more hardware.
+
+778
+00:58:36,365 --> 00:58:41,306
+Speaker 0: or you need a few other Specialized things that are like postgres for adjacent areas.
+
+779
+00:58:42,978 --> 00:58:52,850
+Speaker 1: It takes a lot before You would have to have some crazy problem and some crazy scale like Google level before you would be Having to leave postgres because it's you know, right?
+
+780
+00:58:53,250 --> 00:58:59,870
+Speaker 0: It's not gonna cause you problems like the next area you would leave postgres for and this is again a giant scale.
+
+781
+00:59:00,192 --> 00:59:02,950
+Speaker 0: It's things like enterprise service buses and middlewares.
+
+782
+00:59:03,311 --> 00:59:08,290
+Speaker 0: But at that point you're solving problems that 99% of the people listening will never encounter in their lives.
+
+783
+00:59:08,573 --> 00:59:09,585
+Speaker 1: No, never in your whole life.
+
+784
+00:59:10,673 --> 00:59:17,350
+Speaker 1: So whether it's your local website or the company you work for This is this is the thing and it has been the thing for a long time.
+
+785
+00:59:17,450 --> 00:59:19,639
+Speaker 1: So I see no reason it would not continue to be this and
+
+786
+00:59:19,720 --> 00:59:21,266
+Speaker 0: one thing I can really want to stress before
+
+787
+00:59:21,547 --> 00:59:23,476
+Speaker 1: it deserves its Own geek nights episode even
+
+788
+00:59:23,496 --> 00:59:32,389
+Speaker 0: back in like 2007 2008 a problem My head with things like my sequel and like all these other things was the documentation was kind of bad like wasn't super clear.
+
+789
+00:59:32,931 --> 00:59:34,535
+Speaker 0: Didn't just explain postgres.
+
+790
+00:59:34,575 --> 00:59:37,824
+Speaker 0: is documentation has always been a plus?
+
+791
+00:59:37,884 --> 00:59:39,227
+Speaker 0: like it is not I think it's.
+
+792
+00:59:39,368 --> 00:59:40,310
+Speaker 1: I think it's a minus.
+
+793
+00:59:40,471 --> 00:59:43,669
+Speaker 1: I think the problem that I have with it is it doesn't show enough examples.
+
+794
+00:59:44,772 --> 00:59:45,759
+Speaker 1: It's a good like you look up.
+
+795
+00:59:45,860 --> 00:59:50,780
+Speaker 1: if you look up some SQL in there You get a document that fully explains every option you can possibly give.
+
+796
+00:59:51,261 --> 00:59:52,585
+Speaker 1: and they don't give an actual.
+
+797
+00:59:52,625 --> 01:00:02,155
+Speaker 1: just add an example of that SQL actually being used Data because I SQL and all the other databases.
+
+798
+01:00:02,175 --> 01:00:07,750
+Speaker 0: the problem was the documentation consisted primarily of examples, but it didn't explain exactly what that parameter.
+
+799
+01:00:07,951 --> 01:00:15,736
+Speaker 1: Yeah, the postgres documentation explains everything and then if you if you just do Google searches the next not page out You find will be example.
+
+800
+01:00:16,118 --> 01:00:18,469
+Speaker 1: someone else or I was like, here's how to use this thing, right?
+
+801
+01:00:19,111 --> 01:00:20,297
+Speaker 0: So, all right.
+
+802
+01:00:20,318 --> 01:00:20,760
+Speaker 0: All right.
+
+803
+01:00:20,800 --> 01:00:25,229
+Speaker 0: So yeah, I'll leave you with this in 2008. ish this is so long ago.
+
+804
+01:00:25,893 --> 01:00:35,610
+Speaker 0: We use postgres to run the real-time live Transactional system for trades at a major dark pool in US capital markets like algorithmic trading.
+
+805
+01:00:36,436 --> 01:00:41,772
+Speaker 0: That was the performance level you could achieve in 2008.
+
+806
+01:00:41,772 --> 01:00:42,334
+Speaker 1: It's now 2020.
+
+807
+01:00:42,334 --> 01:00:45,305
+Speaker 0: Yeah postgres has come a long way and now I really got a 12.
+
+808
+01:00:45,305 --> 01:00:52,920
+Speaker 0: Yes This has been geek nights with rim and Scott special.
+
+809
+01:00:52,980 --> 01:00:57,719
+Speaker 0: Thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+810
+01:00:58,041 --> 01:01:03,060
+Speaker 1: Be sure to visit our website at front row crew comm for show notes discussion news and more.
+
+811
+01:01:03,340 --> 01:01:10,380
+Speaker 0: Remember geek nights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+812
+01:01:11,100 --> 01:01:14,276
+Speaker 1: Geek nights is distributed under a Creative Commons attribution 3.0 license.
+
+813
+01:01:15,521 --> 01:01:18,634
+Speaker 1: Geek nights is recorded live with no studio and no audience.
+
+814
+01:01:18,814 --> 01:01:39,269
+Speaker 0: But unlike those other late shows It's actually recorded at night and the patreon patrons for this episode of geek nights are As I sort this the patreon viewer is not as good as it used to be.
+
+815
+01:01:39,671 --> 01:01:44,730
+Speaker 0: Ellen Joyce Heidi McNichol Mardi Grénya just like a dude guy chartavish and link eg you hold the key to my heart.
+
+816
+01:01:45,333 --> 01:01:47,625
+Speaker 0: She said you're moving with your auntie and uncle in Bel Air.
+
+817
+01:01:47,846 --> 01:02:02,430
+Speaker 0: Clinton Walton J Bats friend from New Zealand Ryan parent rope and Lander Nicholas Brando Me Chris midkiff the thirst for hydrated Gannon dread Lily Tenebrae Chris Reimer Finn Sean Klein Thomason Sherman Van Horl Sean Yeager and a whole bunch of people who don't want me to say their names.
+
+818
+01:02:02,912 --> 01:02:12,430
+Speaker 0: We are closer to resuming having a Scott cam in the live streams But I got to continue to fuss with some RTMP servers and some tech were sorting out.
+
+819
+01:02:12,851 --> 01:02:18,010
+Speaker 0: The pipelines are getting more complex, but this will all bear fruit when we eventually start doing board game live streams.
+
+820
+01:02:18,571 --> 01:02:26,150
+Speaker 0: But anyway now I leave you with something you may have forgotten and even if he did he wouldn't comprehend them.
+
+821
+01:02:26,852 --> 01:02:28,678
+Speaker 1: I've dwelt among the humans.
+
+822
+01:02:29,140 --> 01:02:32,170
+Speaker 0: their entire culture is built around their penises.
+
+823
+01:02:32,853 --> 01:02:34,761
+Speaker 1: It's funny to say they are small.
+
+824
+01:02:35,343 --> 01:02:36,930
+Speaker 1: It's funny to say they are big.
+
+825
+01:02:37,573 --> 01:02:45,522
+Speaker 1: I've been at parties where humans have held bottles Pencils thermoses in front of themselves and called out.
+
+826
+01:02:45,944 --> 01:02:46,927
+Speaker 1: Hey look at me.
+
+827
+01:02:46,947 --> 01:02:49,013
+Speaker 1: I'm mr So-and-so dick.
+
+828
+01:02:49,575 --> 01:02:51,580
+Speaker 0: I've got such-and-such for a penis.
+
+829
+01:02:52,523 --> 01:02:54,548
+Speaker 0: I never saw it fail to get a laugh.
+
+830
+01:02:54,809 --> 01:02:55,829
+Speaker 0: all right That's enough.
+

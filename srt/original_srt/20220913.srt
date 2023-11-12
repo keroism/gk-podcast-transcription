@@ -1,0 +1,3748 @@
+﻿1
+00:00:08,620 --> 00:00:10,488
+Speaker 1: It's Tuesday, September 13th, 2022.
+
+2
+00:00:10,488 --> 00:00:10,709
+Speaker 1: I'm Rym.
+
+3
+00:00:14,185 --> 00:00:14,657
+Speaker 0: I'm Scott.
+
+4
+00:00:15,020 --> 00:00:16,226
+Speaker 1: And this is Geek Nights.
+
+5
+00:00:16,245 --> 00:00:19,560
+Speaker 1: Tonight, we are talking about multiplayer game servers.
+
+6
+00:00:21,902 --> 00:00:22,938
+Speaker 0: Let's do this.
+
+7
+00:00:26,131 --> 00:00:29,230
+Speaker 0: So, the place in which I live, you know, New York City, right?
+
+8
+00:00:29,390 --> 00:00:38,810
+Speaker 0: Most of the establishments of commerce, right, are gonna be your small, you know, tight places that are in a mixed zone building, right?
+
+9
+00:00:38,870 --> 00:00:41,669
+Speaker 0: You know, bodegas, nail salons, restaurants, right?
+
+10
+00:00:42,191 --> 00:00:47,970
+Speaker 0: You got a few larger grocery stores here and there, but they're not, like, supermarkets from the suburbs, right?
+
+11
+00:00:48,050 --> 00:00:51,110
+Speaker 0: Those only exist in car places, pretty much, right?
+
+12
+00:00:52,431 --> 00:00:58,550
+Speaker 0: You know, and then I guess the third kind might be, like, Fancy Manhattan Store would be the third kind of establishment, right?
+
+13
+00:00:59,030 --> 00:01:03,570
+Speaker 0: You know, but lately, you know, there have been more suburban-style establishments, right?
+
+14
+00:01:03,590 --> 00:01:04,589
+Speaker 0: There's a Wegmans in Brooklyn.
+
+15
+00:01:04,730 --> 00:01:06,850
+Speaker 0: They're gonna open a Wegmans where, I guess it's not a new one.
+
+16
+00:01:06,850 --> 00:01:08,830
+Speaker 1: I was about to mention that other Wegmans that's coming.
+
+17
+00:01:09,430 --> 00:01:16,070
+Speaker 0: The other Wegmans is in a former Kmart location, so it's not really a change from city-style to suburban-style.
+
+18
+00:01:16,910 --> 00:01:32,890
+Speaker 0: But one suburban-style commerce establishment that has existed in New York for as long as I've lived here, even longer, that I've never gone to, despite the fact that it's literally two or three blocks away from where I live, is Costco.
+
+19
+00:01:33,093 --> 00:01:34,190
+Speaker 0: There is an enormous Costco.
+
+20
+00:01:34,390 --> 00:01:39,290
+Speaker 1: Oh, yeah, I run past that Costco, like, two or three times a week in the summer.
+
+21
+00:01:39,450 --> 00:01:40,670
+Speaker 0: Have you ever been in the Costco?
+
+22
+00:01:40,950 --> 00:01:43,450
+Speaker 1: Never once, though I often, you know what I do?
+
+23
+00:01:43,870 --> 00:01:50,150
+Speaker 1: There is, a condition of that Costco being built was that they had to make the waterfront accessible to the public.
+
+24
+00:01:50,391 --> 00:01:51,410
+Speaker 0: That is, that is correct.
+
+25
+00:01:51,470 --> 00:01:57,230
+Speaker 1: So there's a really nice waterfront park that connects, like, kind of between the Socrates sculpture, like, there's this nice little park back there.
+
+26
+00:01:57,270 --> 00:02:01,550
+Speaker 0: It goes from Socrates to Rainy Park, like, this little tiny path behind the Costco.
+
+27
+00:02:01,671 --> 00:02:02,730
+Speaker 1: It's a nice little running path.
+
+28
+00:02:02,870 --> 00:02:06,490
+Speaker 1: There are almost always cool dudes fishing back there, families having little picnics.
+
+29
+00:02:07,156 --> 00:02:08,229
+Speaker 1: It's actually a pretty nice place.
+
+30
+00:02:08,550 --> 00:02:13,970
+Speaker 1: If I was a kid, that is the place our parents would have dumped us while they shopped, because it is a pain in the ass to shop with kids.
+
+31
+00:02:14,870 --> 00:02:16,110
+Speaker 0: There are many kids dumped back there.
+
+32
+00:02:16,450 --> 00:02:20,930
+Speaker 0: But anyway, you know, I've been thinking, you know, because the economy has fucked the fuck up.
+
+33
+00:02:21,730 --> 00:02:24,430
+Speaker 1: Oh, I got some, I can talk about some fuck-the-fuck-up economy.
+
+34
+00:02:25,093 --> 00:02:26,789
+Speaker 1: PAX, uh, PAX was weird.
+
+35
+00:02:27,490 --> 00:02:27,970
+Speaker 1: I'll leave it at that.
+
+36
+00:02:28,153 --> 00:02:29,190
+Speaker 1: We'll talk about that in a minute.
+
+37
+00:02:29,831 --> 00:02:38,250
+Speaker 0: But anyway, even though the economy has fucked the fuck up, despite the fact that I'm admittedly very affluent, right, I'm like, you know, it wouldn't hurt to save some money at the Costco.
+
+38
+00:02:38,390 --> 00:02:43,990
+Speaker 0: The reason I've never gone to the Costco is because it's like, I don't have a lot of room in my apartment.
+
+39
+00:02:44,251 --> 00:02:49,790
+Speaker 1: Oh yeah, I order, like, one 12-pack of toilet paper and we get a new one when we're down to, like, four rolls left.
+
+40
+00:02:50,010 --> 00:02:50,930
+Speaker 1: Like, I do not keep stuff.
+
+41
+00:02:50,950 --> 00:02:57,170
+Speaker 0: So I'm like, yeah, I could go in there and I could buy something large, right, to save money, you know, per unit, at least on the unit price.
+
+42
+00:02:57,791 --> 00:03:11,910
+Speaker 0: But if I don't finish or use all of that before it spoils, assuming it's a spoilable good, or if it takes up too much space and I have nowhere to store it in my small apartment, that's like I'm not really saving any money here, right, if I'm throwing stuff away.
+
+43
+00:03:12,430 --> 00:03:24,450
+Speaker 0: You know, one time I bought a, um, I bought a giant Kirkland olive oil on the internet, and whoever I bought it from obviously just arbitraged and went to Costco and bought the olive oil and sold it to me as a markup.
+
+44
+00:03:24,671 --> 00:03:25,595
+Speaker 1: I'm pretty confident.
+
+45
+00:03:25,635 --> 00:03:29,309
+Speaker 1: a lot of things I could buy on Amazon are just people doing that at Costco's.
+
+46
+00:03:30,410 --> 00:03:39,741
+Speaker 0: Very, I've seen people, I've bought things on Amazon in the past, you know, maybe a handful of times, and gotten a Costco email, right?
+
+47
+00:03:39,802 --> 00:03:43,166
+Speaker 0: Someone just went to Costco.com, bought it, and put in my address, right?
+
+48
+00:03:43,206 --> 00:03:48,610
+Speaker 0: So, which I could start doing now, because if it wasn't clear- Whoa, so you actually got a membership.
+
+49
+00:03:48,790 --> 00:03:57,643
+Speaker 0: Right, right, because I was like, you know, I'm like, it's 60 bucks for the cheap membership, you know, 120 for the, I'm not sure if it's actually a good deal, better membership, right?
+
+50
+00:03:57,684 --> 00:04:02,010
+Speaker 0: And I'm like, you know, we'll try it, worst case, I'm out 60 bucks, right?
+
+51
+00:04:02,090 --> 00:04:09,860
+Speaker 0: If we go in there, and we don't buy anything, then I'll just won't renew, and I'll be out 60 bucks, I've spent more on less in the past, right?
+
+52
+00:04:10,561 --> 00:04:17,450
+Speaker 0: Um, and if it, somehow it's good, and we get a bunch of stuff, then good, I didn't waste my money, right?
+
+53
+00:04:17,529 --> 00:04:28,245
+Speaker 0: It's like, um, so for the first time ever, we went and bought a membership, we went to the Costco, and I haven't, I have been in these kind of warehouse-y stores in the past, but not this millennia.
+
+54
+00:04:28,425 --> 00:04:32,150
+Speaker 0: Lately, I'm doing a lot of things that I've done before, but not this millennia.
+
+55
+00:04:32,150 --> 00:04:35,759
+Speaker 1: Yeah, that could be a good Thursday show, actually, that specific topic.
+
+56
+00:04:36,782 --> 00:04:39,689
+Speaker 1: I'm in a similar boat for a lot of reasons, COVID being one of them.
+
+57
+00:04:40,271 --> 00:04:42,429
+Speaker 0: Watch television, you know, things like that.
+
+58
+00:04:43,351 --> 00:04:48,170
+Speaker 1: At night, you know, we've been doing them every now and then over dinner, watching, like, PBS, the news.
+
+59
+00:04:49,570 --> 00:04:49,637
+Speaker 0: Ugh.
+
+60
+00:04:50,010 --> 00:04:51,030
+Speaker 1: Yeah, weird.
+
+61
+00:04:53,570 --> 00:04:56,114
+Speaker 0: Anyway, so I got some good things about Costco.
+
+62
+00:04:56,174 --> 00:05:06,710
+Speaker 0: Number one, we did indeed buy many things in there that I didn't expect that would be in there, and we saved a lot of money, and it was worth it from a commerce perspective, right?
+
+63
+00:05:07,250 --> 00:05:12,941
+Speaker 0: Big box of fig bars, we got, like, electric toothbrush heads, those are real expensive, right?
+
+64
+00:05:13,362 --> 00:05:17,370
+Speaker 0: And it was, it was expensive, it was like a pack of, like, a whole bunch for 50 bucks.
+
+65
+00:05:17,570 --> 00:05:21,350
+Speaker 1: I go to your house, there's, like, a shipping container full of toothbrushes.
+
+66
+00:05:21,430 --> 00:05:25,959
+Speaker 0: No, it was, like, one big package of, like, maybe 20-something, I'm not sure how many, but it was a lot, right?
+
+67
+00:05:26,219 --> 00:05:31,990
+Speaker 0: For 50 bucks, which seems like a lot, but if you go online, like, three cost, like, 30 bucks, right?
+
+68
+00:05:32,390 --> 00:05:35,495
+Speaker 0: So it was a huge savings, right, despite the high price.
+
+69
+00:05:36,857 --> 00:05:39,100
+Speaker 0: The butter was the best deal, right?
+
+70
+00:05:39,120 --> 00:05:46,010
+Speaker 0: It's like, if you go to the grocery store in New York City, and you buy butter, it's like, two sticks could be four or five dollars.
+
+71
+00:05:46,210 --> 00:05:49,374
+Speaker 0: Four sticks could be, like, six, seven dollars, right?
+
+72
+00:05:50,095 --> 00:05:54,641
+Speaker 0: I was able to get, not just any butter, the fancy Irish Kerrygold butter, right?
+
+73
+00:05:55,061 --> 00:06:01,890
+Speaker 0: It was a box, and the box contained eight butters, but they were double butters, two sticks worth each.
+
+74
+00:06:02,470 --> 00:06:05,280
+Speaker 0: So, effectively, 16 butters, right?
+
+75
+00:06:05,722 --> 00:06:08,570
+Speaker 0: For, like, $15.
+
+76
+00:06:08,570 --> 00:06:12,270
+Speaker 1: That's too much butter to put in my fridge, unless I'm using it imminently.
+
+77
+00:06:13,111 --> 00:06:18,346
+Speaker 0: But it's, like, it's basically, it was, like, buy three butters, get one free, which is 25% off.
+
+78
+00:06:18,387 --> 00:06:19,490
+Speaker 0: butter is, like, a huge deal.
+
+79
+00:06:19,750 --> 00:06:21,449
+Speaker 1: Well, it's keeping the fridge, like, it's not gonna go bad.
+
+80
+00:06:22,210 --> 00:06:25,017
+Speaker 0: Yeah, and they weren't, it wasn't that large, physically, right?
+
+81
+00:06:25,098 --> 00:06:29,008
+Speaker 0: It's, like, it's more butter than you would normally have in your fridge, but it wasn't, like, buying 24 rolls of TP.
+
+82
+00:06:30,190 --> 00:06:33,190
+Speaker 1: You cram, like, two of those way in the back of the fridge, and you put two up front.
+
+83
+00:06:33,190 --> 00:06:34,329
+Speaker 0: 56 rolls of TP against 24 wouldn't be that big.
+
+84
+00:06:34,512 --> 00:06:34,599
+Speaker 0: Yeah.
+
+85
+00:06:35,031 --> 00:06:35,673
+Speaker 0: So that was good.
+
+86
+00:06:36,034 --> 00:06:40,670
+Speaker 0: There's also, people are correct, there are some services you can avail yourself of at Costco without a membership.
+
+87
+00:06:40,710 --> 00:06:48,270
+Speaker 1: I was always told the best thing at Costco, I never verified this, this is based on, like, some guy saying this, but it was multiple some guys over the years.
+
+88
+00:06:48,812 --> 00:06:52,508
+Speaker 1: If you go to a Costco that has a tire center, you buy car tires, and they're, like, nothing.
+
+89
+00:06:53,230 --> 00:06:55,357
+Speaker 0: Our Costco does, indeed, have the tire center.
+
+90
+00:06:55,497 --> 00:06:56,701
+Speaker 0: It has the food court.
+
+91
+00:06:57,082 --> 00:06:59,490
+Speaker 0: It also has the liquor store, which, obviously, I don't drink.
+
+92
+00:06:59,771 --> 00:07:03,290
+Speaker 0: But it's, if you want to buy liquor, you can go there without a membership.
+
+93
+00:07:03,790 --> 00:07:06,790
+Speaker 1: They got various king and ducal peas of various qualities.
+
+94
+00:07:06,830 --> 00:07:10,439
+Speaker 0: I mean, I'm sure it would be cheaper than normal if they had that in stock, right?
+
+95
+00:07:10,459 --> 00:07:14,710
+Speaker 0: I mean, I think that's the downside of the Costco, is, like, there's no reliable inventory.
+
+96
+00:07:14,870 --> 00:07:17,300
+Speaker 0: Like, you can't go there expecting something to be there.
+
+97
+00:07:17,360 --> 00:07:19,770
+Speaker 0: It's, like, they got what they got right now, right?
+
+98
+00:07:20,410 --> 00:07:22,009
+Speaker 0: You know, because that's what they've got.
+
+99
+00:07:22,450 --> 00:07:27,210
+Speaker 1: Plus, booze is hard to shop discount for, unless you're an alcoholic, because, like, I like booze.
+
+100
+00:07:27,850 --> 00:07:31,102
+Speaker 0: The quantities were large, but they had, the selection was large.
+
+101
+00:07:31,122 --> 00:07:33,170
+Speaker 0: There's a whole separate place to buy booze.
+
+102
+00:07:33,330 --> 00:07:38,584
+Speaker 1: I buy, like, a bottle of whiskey every seven to fifteen months.
+
+103
+00:07:38,765 --> 00:07:40,570
+Speaker 1: Like, it's not like I drink this stuff that fast.
+
+104
+00:07:41,170 --> 00:07:50,250
+Speaker 0: I mean, obviously, I would obviously tell someone never drink poison ever, but if you're gonna drink the poison, even me, a non-poisoned drinker, it's, like, it's probably a good deal.
+
+105
+00:07:50,310 --> 00:07:53,698
+Speaker 0: All right, so it was the bad, the bad parts of the Costco, right?
+
+106
+00:07:54,119 --> 00:07:58,470
+Speaker 0: The bad part was that, due to circumstances, right, we went there Saturday afternoon.
+
+107
+00:07:59,571 --> 00:08:07,610
+Speaker 1: Oh, no, when I run past that place, part of the reason I run through that park, people are, like, blocking the sidewalk down the street trying to get into this place.
+
+108
+00:08:07,610 --> 00:08:09,200
+Speaker 0: Well, I mean, we walked in with our little wagon.
+
+109
+00:08:09,220 --> 00:08:10,830
+Speaker 0: We didn't use a car, so that wasn't a problem.
+
+110
+00:08:11,330 --> 00:08:16,230
+Speaker 0: What was a problem is that the aisles in the store, at least the New York one, were too narrow.
+
+111
+00:08:16,630 --> 00:08:18,275
+Speaker 0: They were, like, bare, two wagons.
+
+112
+00:08:18,336 --> 00:08:19,841
+Speaker 0: Everyone uses the giant wagons there.
+
+113
+00:08:19,901 --> 00:08:22,690
+Speaker 0: We were using our pole wagon that we brought, you know, our own wagon.
+
+114
+00:08:23,992 --> 00:08:28,610
+Speaker 0: But the wagons that everyone uses are, they, basically, two of them can barely fit in an aisle.
+
+115
+00:08:28,990 --> 00:08:33,304
+Speaker 0: So, if there's even one person who's not fully to the side of an aisle, the aisle's blocked.
+
+116
+00:08:33,707 --> 00:08:34,529
+Speaker 0: It's, like, no one can go.
+
+117
+00:08:35,111 --> 00:08:38,830
+Speaker 0: And if you try to turn around the ends of the aisles, it's, like, it's not any wider on the end cap.
+
+118
+00:08:39,070 --> 00:08:42,481
+Speaker 0: It's just, like, it's really hard to move around that store.
+
+119
+00:08:42,501 --> 00:08:44,949
+Speaker 0: I would recommend going at a different time.
+
+120
+00:08:46,711 --> 00:08:49,720
+Speaker 0: But, yeah, I was, I was, I was expecting to have thrown away $60.
+
+121
+00:08:49,720 --> 00:08:53,270
+Speaker 0: I was pleasantly surprised I didn't throw it away.
+
+122
+00:08:53,751 --> 00:08:55,757
+Speaker 0: We'll see how many, I still might not renew.
+
+123
+00:08:55,778 --> 00:08:59,330
+Speaker 0: It depends how many more times I go in a year, because, like, we stocked up.
+
+124
+00:08:59,690 --> 00:09:01,754
+Speaker 0: Like, when am I going to need more butter now?
+
+125
+00:09:03,537 --> 00:09:10,550
+Speaker 0: Maybe I won't need it again this year, in which case I'm not going to pay 60 bucks in order to get a discount on butter.
+
+126
+00:09:13,752 --> 00:09:20,750
+Speaker 0: But, you know, it was, it was an experience, a novel experience, and there was some things they had there that I was surprised I wasn't expecting to see there.
+
+127
+00:09:21,851 --> 00:09:25,289
+Speaker 0: Giant bag of pistachio nuts, you know, come on.
+
+128
+00:09:27,371 --> 00:09:31,099
+Speaker 1: So, I was, of course, me and Emily were at PAX West the other weekend.
+
+129
+00:09:31,600 --> 00:09:35,810
+Speaker 1: We're well out of the incubation period, so I guess we did, in fact, avoid COVID at it, and now I'm boosted.
+
+130
+00:09:36,315 --> 00:09:37,650
+Speaker 0: So, uh, alright.
+
+131
+00:09:37,970 --> 00:09:45,910
+Speaker 0: I got boosted yesterday at the Costco pharmacy, which is just as good as the Rite Aid pharmacy, only there's less slow people waiting in line.
+
+132
+00:09:46,211 --> 00:09:46,949
+Speaker 1: Good to know.
+
+133
+00:09:47,792 --> 00:09:51,350
+Speaker 0: I think you might be able to use that without a membership as well, I'm not sure.
+
+134
+00:09:51,710 --> 00:09:58,330
+Speaker 1: Yeah, there's a bunch, depending on the state you're in, too, different states have rules where Costco's will have things that technically they have to let you use.
+
+135
+00:09:59,130 --> 00:10:04,190
+Speaker 0: Yeah, but I went to it, and they did not check my membership card when I entered the store or at the pharmacy, so.
+
+136
+00:10:05,991 --> 00:10:10,060
+Speaker 1: So, uh, PAX West was interesting because it was still a small PAX West.
+
+137
+00:10:10,160 --> 00:10:12,526
+Speaker 1: It was not even close to sold out.
+
+138
+00:10:12,566 --> 00:10:14,009
+Speaker 1: The scalpers were like...
+
+139
+00:10:14,290 --> 00:10:17,270
+Speaker 0: Well, they were pushing hard on Twitter to sell tickets on the internet.
+
+140
+00:10:17,350 --> 00:10:18,375
+Speaker 1: Oh, the dudes in the street?
+
+141
+00:10:18,576 --> 00:10:21,570
+Speaker 1: There were still the same number of them as always was the crazy thing.
+
+142
+00:10:21,930 --> 00:10:22,389
+Speaker 1: They were like...
+
+143
+00:10:22,410 --> 00:10:28,450
+Speaker 0: They're probably there for every single, you know, public convention center event, and you'd probably go over to the stadiums during every sporting event.
+
+144
+00:10:28,651 --> 00:10:34,130
+Speaker 1: At normal PAXes, pre-COVID, those dudes would be, like, selling them for, like, nearly what PAX sells them for.
+
+145
+00:10:34,550 --> 00:10:39,430
+Speaker 1: Here, they would buy them from you for, like, ten bucks when you were leaving, because people leaving really didn't go back in.
+
+146
+00:10:39,570 --> 00:10:40,896
+Speaker 1: People, of course, expo hall and bail.
+
+147
+00:10:41,499 --> 00:10:43,710
+Speaker 1: And they were selling them back to people for, like, five bucks.
+
+148
+00:10:45,431 --> 00:10:45,558
+Speaker 1: So...
+
+149
+00:10:45,912 --> 00:10:47,329
+Speaker 0: They were losing money on scalping?
+
+150
+00:10:47,590 --> 00:10:56,470
+Speaker 1: No, they were buying them for five bucks, they were selling them to people for ten bucks, they were making basically, like, five dollar profit on each one of these badges, which isn't bad for nothing.
+
+151
+00:10:56,711 --> 00:10:57,989
+Speaker 1: Just hanging out outside, I guess.
+
+152
+00:10:58,311 --> 00:11:05,290
+Speaker 0: I mean, first of all, right, suddenly, right, everyone's mad at the scalpers when, you know, they're jacking up the price.
+
+153
+00:11:05,390 --> 00:11:11,190
+Speaker 0: But look, here in this situation, right, you know, arguments that capitalism should be destroyed aside.
+
+154
+00:11:11,890 --> 00:11:12,007
+Speaker 1: Right?
+
+155
+00:11:12,632 --> 00:11:15,910
+Speaker 1: Just assume that's our Carthago de Lendem Est on any conversation.
+
+156
+00:11:16,170 --> 00:11:24,830
+Speaker 0: Arbitrage suddenly becomes useful, right, when supply is high, like, "Oh, look, you don't have to pay fucking full price to go into the PAX, you know, that's perhaps sub-par.
+
+157
+00:11:25,331 --> 00:11:27,310
+Speaker 0: The scalper is actually a good guy suddenly.
+
+158
+00:11:27,411 --> 00:11:28,909
+Speaker 1: But I think there's a phenomenon...
+
+159
+00:11:28,990 --> 00:11:30,845
+Speaker 0: Not to defend the scalper, right?
+
+160
+00:11:31,790 --> 00:11:35,950
+Speaker 0: I'm just saying, again, the scalper is not the core problem.
+
+161
+00:11:36,151 --> 00:11:37,370
+Speaker 0: Don't be mad at the scalper.
+
+162
+00:11:37,610 --> 00:11:38,270
+Speaker 1: Very side effects.
+
+163
+00:11:38,510 --> 00:11:39,410
+Speaker 0: Not the player, yes.
+
+164
+00:11:39,490 --> 00:11:46,828
+Speaker 1: But what's interesting is that I think this is going to continue even after COVID, this trend, partly because what seems to be happening is...
+
+165
+00:11:47,731 --> 00:11:49,069
+Speaker 0: I don't think there is an after COVID.
+
+166
+00:11:49,390 --> 00:11:54,530
+Speaker 1: Well, as far as, like, as good as it gets and everything's as normal as it's ever going to be again...
+
+167
+00:11:54,550 --> 00:11:56,509
+Speaker 0: It's like, we're not after flu right now.
+
+168
+00:11:57,133 --> 00:12:00,590
+Speaker 0: It's like, there's going to be some sort of COVID forever.
+
+169
+00:12:00,990 --> 00:12:06,710
+Speaker 0: We're just going to live, like, and deal with it, suffer, you know, just like we suffer with flu and everything else.
+
+170
+00:12:06,730 --> 00:12:15,610
+Speaker 1: But I do think this is going to escalate incredibly because there's a lot... I feel like this PAX, almost everyone who was there was only there for expo haul.
+
+171
+00:12:15,750 --> 00:12:23,970
+Speaker 1: Like, the ratio of expo only versus literally anything else was the starkest I've ever seen at any PAX ever by a wide margin.
+
+172
+00:12:24,533 --> 00:12:27,430
+Speaker 1: Pretty much everyone came just on Saturday just for expo.
+
+173
+00:12:28,111 --> 00:12:33,810
+Speaker 1: All the other days were mostly quiet and empty and all the non-expo areas were mostly quiet and empty.
+
+174
+00:12:34,370 --> 00:12:37,290
+Speaker 1: Big panels, got giant crowds, of course, like big celebrity panels.
+
+175
+00:12:38,172 --> 00:12:39,770
+Speaker 1: Uh, main events never filled despite...
+
+176
+00:12:39,790 --> 00:12:40,950
+Speaker 0: Did you go to the Reggie panel?
+
+177
+00:12:41,431 --> 00:12:42,320
+Speaker 1: Uh, no, I didn't.
+
+178
+00:12:42,360 --> 00:12:43,250
+Speaker 1: We were busy with some other stuff.
+
+179
+00:12:43,975 --> 00:12:44,389
+Speaker 0: That's a shame.
+
+180
+00:12:44,590 --> 00:12:46,590
+Speaker 1: Yeah, I'm pretty sure it was streamed, actually.
+
+181
+00:12:46,971 --> 00:12:49,070
+Speaker 0: I'm sure I'll be able to see it if I really want to.
+
+182
+00:12:49,130 --> 00:12:50,129
+Speaker 0: I don't know how good it is.
+
+183
+00:12:50,330 --> 00:12:53,088
+Speaker 0: It just, you know, be in the same room as Reggie, be like, "Oh, there's that
+
+184
+00:12:53,108 --> 00:12:53,269
+Speaker 0: guy.".
+
+185
+00:12:53,390 --> 00:12:57,370
+Speaker 1: So it was a weird PAX in that they didn't have any of the external venues.
+
+186
+00:12:57,510 --> 00:12:58,298
+Speaker 1: There was nothing in, uh...
+
+187
+00:12:59,410 --> 00:13:05,370
+Speaker 0: Well, the external venues are for the... Oh, you mean the PAX-rented external venues.
+
+188
+00:13:05,650 --> 00:13:13,130
+Speaker 1: Yeah, so there was... Main Theatre was actually just in the ballroom where normally Tabletop Expo is in the Hyatt Regency.
+
+189
+00:13:14,531 --> 00:13:16,390
+Speaker 1: And that was the only PAX thing in that building.
+
+190
+00:13:16,810 --> 00:13:20,630
+Speaker 1: Tabletop was just the entire top floor of the Seattle Convention Center.
+
+191
+00:13:21,032 --> 00:13:23,830
+Speaker 1: I note it is no longer the Washington State Convention Center.
+
+192
+00:13:24,152 --> 00:13:25,970
+Speaker 1: It is now the Seattle Convention Center.
+
+193
+00:13:26,310 --> 00:13:27,650
+Speaker 1: The rules around it have changed.
+
+194
+00:13:27,891 --> 00:13:30,670
+Speaker 1: They can bar the public from entry, which they did for this PAX.
+
+195
+00:13:31,052 --> 00:13:32,029
+Speaker 1: They even closed the park.
+
+196
+00:13:32,370 --> 00:13:34,470
+Speaker 1: The park behind the convention center was for PAX only.
+
+197
+00:13:34,830 --> 00:13:36,268
+Speaker 1: You can only get to it from inside of PAX.
+
+198
+00:13:37,837 --> 00:13:39,030
+Speaker 0: Do we know why this happened?
+
+199
+00:13:39,793 --> 00:13:41,690
+Speaker 1: I don't know the full deal, so I'm not going to speculate.
+
+200
+00:13:42,690 --> 00:13:46,889
+Speaker 1: But they renamed it, they rebranded it, there's signs everywhere about it.
+
+201
+00:13:47,332 --> 00:13:50,630
+Speaker 1: And there's that other convention center space that they were talking about building.
+
+202
+00:13:51,210 --> 00:13:55,310
+Speaker 1: It is very near completion and it is fucking gigantic.
+
+203
+00:13:56,170 --> 00:13:57,709
+Speaker 0: Oh, the one that's where the buses used to be?
+
+204
+00:13:58,030 --> 00:13:59,209
+Speaker 1: Holy shit, is it big.
+
+205
+00:14:00,233 --> 00:14:02,090
+Speaker 0: Is that going to be the Washington State Convention Center?
+
+206
+00:14:02,170 --> 00:14:02,909
+Speaker 0: Is that what the deal is?
+
+207
+00:14:02,930 --> 00:14:03,195
+Speaker 1: I don't know.
+
+208
+00:14:03,439 --> 00:14:04,090
+Speaker 1: I expect PAX...
+
+209
+00:14:04,090 --> 00:14:05,309
+Speaker 0: Or is it all going to be one thing?
+
+210
+00:14:05,754 --> 00:14:06,147
+Speaker 1: I don't know.
+
+211
+00:14:06,530 --> 00:14:13,630
+Speaker 0: I don't know any event that could even... The Paxist of peak PAX could probably not fill all of that.
+
+212
+00:14:13,670 --> 00:14:18,950
+Speaker 1: Peak PAX could fill both of those if they stop using the higher regency for tabletop.
+
+213
+00:14:19,410 --> 00:14:20,230
+Speaker 1: And just put tabletop in the convention.
+
+214
+00:14:20,230 --> 00:14:21,970
+Speaker 0: Oh, if they stop using any other building whatsoever?
+
+215
+00:14:22,872 --> 00:14:28,170
+Speaker 1: I bet they still use Benaroya for main events or Paramount for main events.
+
+216
+00:14:28,290 --> 00:14:29,510
+Speaker 1: I think they'll keep doing that kind of stuff.
+
+217
+00:14:29,870 --> 00:14:35,710
+Speaker 1: Apparently the only reason they didn't have them for this PAX was like, Hamilton was in one of them, like pre-arranged.
+
+218
+00:14:36,530 --> 00:14:38,948
+Speaker 1: And something else was in the other one, like there was big stuff going on.
+
+219
+00:14:41,194 --> 00:14:43,650
+Speaker 0: That reminds me, the Met Opera season starts soon.
+
+220
+00:14:44,112 --> 00:14:47,110
+Speaker 1: Oh, maybe it's time to mask up and go to an opera.
+
+221
+00:14:47,590 --> 00:14:48,229
+Speaker 1: But I digress.
+
+222
+00:14:49,010 --> 00:15:08,030
+Speaker 1: The PAX itself, tabletop, despite it being such a tiny PAX, on Saturday and also on Sunday during primetime hours, because tabletop was so tiny, being just the top floor of the SCC, it was completely full, there were no tables, there was nowhere to sit, it was crammed with people.
+
+223
+00:15:08,961 --> 00:15:09,610
+Speaker 1: The other two days?
+
+224
+00:15:09,790 --> 00:15:12,070
+Speaker 0: I thought you said the non-expo areas were not crowded.
+
+225
+00:15:12,350 --> 00:15:13,276
+Speaker 0: Just tabletop.
+
+226
+00:15:14,021 --> 00:15:15,410
+Speaker 1: Only tabletop freeplay.
+
+227
+00:15:16,210 --> 00:15:20,330
+Speaker 1: Because tabletop freeplay was like a fifth of the tabletop space.
+
+228
+00:15:20,670 --> 00:15:22,770
+Speaker 1: There was almost no tabletop freeplay space.
+
+229
+00:15:23,230 --> 00:15:28,209
+Speaker 1: All the tabletop space was magic and tabletop tourney and tabletop expo.
+
+230
+00:15:29,611 --> 00:15:29,969
+Speaker 0: Oh, alright.
+
+231
+00:15:30,270 --> 00:15:32,350
+Speaker 1: So there were hardly any tables for freeplay.
+
+232
+00:15:32,810 --> 00:15:34,387
+Speaker 1: Pretty much everyone was just freeplaying in hotels.
+
+233
+00:15:34,710 --> 00:15:35,890
+Speaker 0: Freeplay is not a moneymaker.
+
+234
+00:15:36,891 --> 00:15:41,750
+Speaker 0: Every room you make freeplay is a room that costs the convention money and doesn't bring in any revenue.
+
+235
+00:15:42,430 --> 00:15:48,150
+Speaker 1: So when I say tabletop freeplay was full and you couldn't get a table, that's because there were only like 40 tables total.
+
+236
+00:15:51,070 --> 00:15:51,693
+Speaker 1: Our panel got.
+
+237
+00:15:51,713 --> 00:15:54,810
+Speaker 1: a whole ton of people came to the panel, I think that went really well.
+
+238
+00:15:55,371 --> 00:15:57,849
+Speaker 1: It was a pretty okay normal PAX.
+
+239
+00:15:59,730 --> 00:16:16,230
+Speaker 1: However, and I want to preface this very much, I do not want to imply that I am saying anything that you might see like Fox News type dipshit people say, but Seattle did not recover well from the earlier days of the pandemic.
+
+240
+00:16:16,550 --> 00:16:23,890
+Speaker 1: The entire area around the convention center in every direction is pretty fucking rough right now.
+
+241
+00:16:24,352 --> 00:16:25,848
+Speaker 1: A whole bunch of businesses just boarded up.
+
+242
+00:16:26,350 --> 00:16:28,150
+Speaker 1: Lots of restaurants are gone, stores are gone.
+
+243
+00:16:28,750 --> 00:16:32,430
+Speaker 1: The businesses that are open all had smash out windows everywhere.
+
+244
+00:16:33,194 --> 00:16:39,150
+Speaker 1: The Bartels, the drugstore near the convention center, someone smashed the window out between Friday and Saturday.
+
+245
+00:16:39,770 --> 00:16:45,850
+Speaker 1: Every store has guards wearing like fucking fake ass body armor standing outside their doors, acting like bouncers.
+
+246
+00:16:47,172 --> 00:16:51,510
+Speaker 1: There are angry and altercation ready people all over the streets.
+
+247
+00:16:52,472 --> 00:16:56,730
+Speaker 1: I had several specific, honestly dangerous altercations.
+
+248
+00:16:57,732 --> 00:17:00,310
+Speaker 1: And there are fucking cops everywhere.
+
+249
+00:17:01,013 --> 00:17:04,849
+Speaker 1: Like more cops than you see in Times Square, everywhere in Seattle.
+
+250
+00:17:05,030 --> 00:17:06,569
+Speaker 1: It was just weird and rough.
+
+251
+00:17:07,530 --> 00:17:14,006
+Speaker 0: Well, clearly the one thing you can take away from that is cops everywhere has not solved the problem, has it?
+
+252
+00:17:16,991 --> 00:17:22,150
+Speaker 0: If cops are the solution and there's cops everywhere, why is it so rough?
+
+253
+00:17:22,633 --> 00:17:23,848
+Speaker 0: That's the takeaway I have.
+
+254
+00:17:25,193 --> 00:17:34,210
+Speaker 1: This is a combination of the economy of a small city like Seattle not even being close to recovering at the rate that larger cities did.
+
+255
+00:17:34,510 --> 00:17:35,488
+Speaker 1: Not that larger cities have recovered.
+
+256
+00:17:35,710 --> 00:17:39,850
+Speaker 0: I think it's also like downtown Seattle, right?
+
+257
+00:17:44,535 --> 00:17:46,650
+Speaker 0: Something like a pandemic will make you leave there.
+
+258
+00:17:46,910 --> 00:17:47,889
+Speaker 1: Oh, it looks like that's happening.
+
+259
+00:17:48,412 --> 00:17:49,656
+Speaker 1: I was looking around at rents.
+
+260
+00:17:49,736 --> 00:17:53,689
+Speaker 1: Rents look like they're way down in downtown Seattle and people are just GTFOing.
+
+261
+00:17:55,051 --> 00:18:02,090
+Speaker 0: Right, it's not like New York where there's an extremely strong reason to live in New York City.
+
+262
+00:18:03,932 --> 00:18:06,570
+Speaker 0: What's the benefit of living in downtown Seattle?
+
+263
+00:18:06,790 --> 00:18:09,130
+Speaker 0: It's like you can walk to Pike Place Market as your grocery.
+
+264
+00:18:11,251 --> 00:18:15,408
+Speaker 1: Emily's bosses live right above Pike Place, right in that area apparently, and they love it.
+
+265
+00:18:18,094 --> 00:18:21,849
+Speaker 1: I think Seattle downtown is going the route of Hartford pretty fast.
+
+266
+00:18:23,071 --> 00:18:29,890
+Speaker 0: Especially since Seattle actually does not the best job, far from as good a job as they should be doing.
+
+267
+00:18:30,290 --> 00:18:33,030
+Speaker 1: There's so many asterisks we've got to put into this conversation.
+
+268
+00:18:33,550 --> 00:18:39,730
+Speaker 0: Better than most places in terms of having a good public transport to downtown Seattle.
+
+269
+00:18:40,272 --> 00:18:44,410
+Speaker 0: They got the light rail and the bus system is not complete garbage.
+
+270
+00:18:45,891 --> 00:18:56,750
+Speaker 0: You can reasonably live outside of downtown Seattle in a different place, in a fancy suburb place, and get to downtown Seattle when you need to get there.
+
+271
+00:18:57,531 --> 00:19:04,690
+Speaker 0: Faster than someone living where we used to live takes the metro north to New York City, and the cost of living will be much lower.
+
+272
+00:19:05,172 --> 00:19:08,004
+Speaker 1: There's also way more bike lanes, fantastically.
+
+273
+00:19:08,164 --> 00:19:09,309
+Speaker 1: There's just bike lanes everywhere now.
+
+274
+00:19:09,750 --> 00:19:13,870
+Speaker 1: But nobody fucking rides in them, and everyone's riding on the sidewalk anyway.
+
+275
+00:19:14,770 --> 00:19:16,069
+Speaker 0: Well the hills are an issue.
+
+276
+00:19:16,350 --> 00:19:22,150
+Speaker 1: Oh yeah, but despite the fact that there are bike lanes everywhere, every single person on a bike is on the sidewalk.
+
+277
+00:19:22,451 --> 00:19:28,630
+Speaker 1: And those Lime electric scooters that were the bane of San Antonio were clogging up all of downtown Seattle.
+
+278
+00:19:29,011 --> 00:19:34,189
+Speaker 0: I mean people can just go watch any of the, you know, not just bikes, YouTube or whatever, and learn why that is.
+
+279
+00:19:34,770 --> 00:19:34,911
+Speaker 1: Yup.
+
+280
+00:19:35,452 --> 00:19:39,203
+Speaker 1: So it's like, I wouldn't have even talked about this.
+
+281
+00:19:39,503 --> 00:19:41,830
+Speaker 1: That's not the kind of thing I would mention, even visiting a city.
+
+282
+00:19:42,070 --> 00:19:46,830
+Speaker 1: Because cities are all different and the world's kind of fucked and capitalism is a toxic cancer on the earth.
+
+283
+00:19:47,351 --> 00:19:50,989
+Speaker 1: But it was honestly so bad that it stuck with me.
+
+284
+00:19:53,591 --> 00:19:57,137
+Speaker 1: There's never been a place I have been and returned to.
+
+285
+00:19:57,558 --> 00:20:03,509
+Speaker 1: that has gotten so radically different for the worse, so fast compared to Seattle in my entire life.
+
+286
+00:20:04,811 --> 00:20:05,939
+Speaker 0: No, it wasn't that fast.
+
+287
+00:20:06,000 --> 00:20:07,209
+Speaker 0: It was like three years, right?
+
+288
+00:20:07,390 --> 00:20:10,129
+Speaker 1: Yeah, but three years and I go back and it's like a totally different city.
+
+289
+00:20:11,331 --> 00:20:14,040
+Speaker 1: And Detroit actually got better when I went back.
+
+290
+00:20:14,361 --> 00:20:16,990
+Speaker 1: Most places I visited have gotten better or at least neutral.
+
+291
+00:20:17,856 --> 00:20:18,885
+Speaker 1: But Seattle is just...
+
+292
+00:20:19,550 --> 00:20:20,769
+Speaker 0: Fortunes rise and fall.
+
+293
+00:20:22,132 --> 00:20:22,614
+Speaker 1: Yup.
+
+294
+00:20:22,935 --> 00:20:26,230
+Speaker 1: I think it'll be a challenge for PEX as this continues, too.
+
+295
+00:20:26,350 --> 00:20:30,902
+Speaker 1: Because it was definitely causing issues and altercations around the convention center.
+
+296
+00:20:30,963 --> 00:20:33,369
+Speaker 1: that I think will be more of a problem as time goes on.
+
+297
+00:20:33,791 --> 00:20:38,410
+Speaker 1: Unless something radical changes in the entire American economy and government.
+
+298
+00:20:38,650 --> 00:20:41,590
+Speaker 0: What'll it mean for that new giant convention center that they're building?
+
+299
+00:20:41,850 --> 00:20:42,456
+Speaker 1: I don't know.
+
+300
+00:20:42,476 --> 00:20:43,728
+Speaker 1: I think this can actually hurt.
+
+301
+00:20:44,412 --> 00:20:48,870
+Speaker 0: Who's gonna want to run an event there if it's not a nice place to go, right?
+
+302
+00:20:48,970 --> 00:20:52,904
+Speaker 1: I think it could actually hurt the usage of that convention center.
+
+303
+00:20:53,887 --> 00:20:54,730
+Speaker 1: We'll see how it goes.
+
+304
+00:20:54,930 --> 00:20:58,270
+Speaker 1: But it was rough to the point that it was actually notable.
+
+305
+00:21:00,130 --> 00:21:07,690
+Speaker 1: In much lighter news, and I think the only real news we're gonna talk about in this segment today, the Nintendo Direct happened.
+
+306
+00:21:08,010 --> 00:21:10,029
+Speaker 1: So we can at least cover all the important bits.
+
+307
+00:21:10,110 --> 00:21:11,219
+Speaker 0: I thought it was gonna be at 1.
+
+308
+00:21:11,219 --> 00:21:12,610
+Speaker 0: It was at 10 AM, at least our time.
+
+309
+00:21:13,411 --> 00:21:14,073
+Speaker 0: I know!
+
+310
+00:21:14,154 --> 00:21:17,185
+Speaker 1: I had a note in my calendar, but it was one of those all-day notes.
+
+311
+00:21:17,346 --> 00:21:18,330
+Speaker 1: I didn't really think about it.
+
+312
+00:21:19,011 --> 00:21:22,210
+Speaker 1: So I got online to go to the Discord, like, "Alright, when's the Nintendo...".
+
+313
+00:21:22,270 --> 00:21:23,819
+Speaker 1: "Oh, it's almost... Oh, fuck.
+
+314
+00:21:23,939 --> 00:21:24,221
+Speaker 1: Okay.".
+
+315
+00:21:26,452 --> 00:21:30,730
+Speaker 0: Anyway, most of the announcements were stuff nobody cares about, as usual.
+
+316
+00:21:31,250 --> 00:21:31,318
+Speaker 1: Yup.
+
+317
+00:21:32,490 --> 00:21:33,210
+Speaker 0: Notable announcements.
+
+318
+00:21:34,030 --> 00:21:39,190
+Speaker 0: There's a remake of, I believe... I think it's the GameCube Kirby game, maybe?
+
+319
+00:21:39,892 --> 00:21:41,082
+Speaker 0: It's a previous Kirby game.
+
+320
+00:21:41,102 --> 00:21:42,090
+Speaker 0: It's getting an HD remake.
+
+321
+00:21:42,931 --> 00:21:43,112
+Speaker 1: Oh, yeah.
+
+322
+00:21:43,153 --> 00:21:44,927
+Speaker 1: Kirby's Return to Dreamland Deluxe.
+
+323
+00:21:46,450 --> 00:21:46,572
+Speaker 0: Yup.
+
+324
+00:21:46,958 --> 00:21:47,669
+Speaker 0: So that's one.
+
+325
+00:21:48,530 --> 00:21:49,135
+Speaker 1: I'll probably play that.
+
+326
+00:21:49,156 --> 00:21:50,689
+Speaker 1: I'd put it in these kinds of remakes.
+
+327
+00:21:51,610 --> 00:21:54,730
+Speaker 0: I still didn't play the new, actually new Switch Kirby.
+
+328
+00:21:54,850 --> 00:22:00,530
+Speaker 0: So I don't know why I would go back and play this remake of an old one that I missed.
+
+329
+00:22:01,954 --> 00:22:07,309
+Speaker 1: They announced, like, I saw a bunch of people in my timeline really excited about Octopath Traveler 2, which I guess...
+
+330
+00:22:08,551 --> 00:22:13,890
+Speaker 0: I played the demo, and it's like I can understand why JRPG people are all over the Octopath Traveler.
+
+331
+00:22:13,950 --> 00:22:16,570
+Speaker 0: Like, if I was a JRPG person, that would be the one.
+
+332
+00:22:16,791 --> 00:22:17,329
+Speaker 0: Oh, absolutely.
+
+333
+00:22:18,151 --> 00:22:18,426
+Speaker 0: I'm not.
+
+334
+00:22:18,870 --> 00:22:19,043
+Speaker 1: Yup.
+
+335
+00:22:21,130 --> 00:22:25,329
+Speaker 1: GoldenEye 007 with online play was actually a surprise to me.
+
+336
+00:22:26,271 --> 00:22:34,189
+Speaker 0: Right, so if you have Nintendo Switch online, you can play NES, SNES, Genesis, and N64 games on the Switch.
+
+337
+00:22:35,332 --> 00:22:39,810
+Speaker 0: It's not a full library, but it's basically all of the S-tier titles, like most of them.
+
+338
+00:22:40,150 --> 00:22:40,225
+Speaker 0: Yup.
+
+339
+00:22:40,510 --> 00:22:43,830
+Speaker 0: But there are a bunch of N64 S-tier titles that were missing.
+
+340
+00:22:44,230 --> 00:22:47,089
+Speaker 0: They just announced they're adding a significant portion of those.
+
+341
+00:22:47,210 --> 00:22:56,217
+Speaker 1: GoldenEye, Pilotwings, Mario Party, Mario Party, Mario Party, Pokemon Stadium, Pokemon Stadium, 1080 Snowboarding, Excitebike 64.
+
+342
+00:22:56,217 --> 00:23:08,150
+Speaker 1: Yup, so... I'm honestly moderately excited to be able to play GoldenEye 007 online with the caveat that online play has never worked in any Nintendo game, and I don't trust that it'll work with GoldenEye.
+
+343
+00:23:09,714 --> 00:23:11,049
+Speaker 1: I honestly do not think it'll work.
+
+344
+00:23:11,590 --> 00:23:17,110
+Speaker 1: Like, maybe I'll be wrong, but they've been batting zero with those things working.
+
+345
+00:23:17,130 --> 00:23:21,570
+Speaker 0: As long as you can play four people with Switches just sitting around, play GoldenEye against each other.
+
+346
+00:23:21,731 --> 00:23:25,890
+Speaker 0: I could see that happening if there are enough people with Switches in the same place, right?
+
+347
+00:23:25,950 --> 00:23:30,570
+Speaker 0: You don't need a TV, you don't need to... Remember, you used to have to set up, like, TVs and all that, right?
+
+348
+00:23:30,810 --> 00:23:30,930
+Speaker 0: Yup.
+
+349
+00:23:31,231 --> 00:23:38,470
+Speaker 1: Though I have found, in my experience with the Switch, doing local no-TV multiplayer across Switches also doesn't fucking work in most cases.
+
+350
+00:23:40,231 --> 00:23:42,170
+Speaker 0: Local no-TV multiplayer, I guess.
+
+351
+00:23:42,250 --> 00:23:50,290
+Speaker 1: Every time I've tried to do it with a Switch or a 3DS, it never actually worked, but I've only ever tried to do it at conventions where that stuff tends to not work anyway.
+
+352
+00:23:50,612 --> 00:23:54,089
+Speaker 1: But conventions are the place I most often want to do exactly that, so...
+
+353
+00:23:55,510 --> 00:24:03,210
+Speaker 0: Anyway, they announced, I predicted that there would be one of the second-tier first-party franchises that would get a new game announcement, and I was correct.
+
+354
+00:24:03,450 --> 00:24:05,610
+Speaker 0: Pikmin, they announced Pikmin 4.
+
+355
+00:24:05,610 --> 00:24:07,028
+Speaker 1: Yeah, moderately excited.
+
+356
+00:24:07,150 --> 00:24:13,084
+Speaker 0: I played the demo of Pikmin 3, and I enjoyed it, but I wasn't like... It didn't make me want to buy and play the whole thing.
+
+357
+00:24:13,124 --> 00:24:13,870
+Speaker 0: It's just like, that's enough.
+
+358
+00:24:15,010 --> 00:24:16,638
+Speaker 1: Yeah, I like it.
+
+359
+00:24:16,698 --> 00:24:18,970
+Speaker 1: Actually, I kind of want to go back and play the old Pikmins again.
+
+360
+00:24:19,879 --> 00:24:20,250
+Speaker 0: Go ahead.
+
+361
+00:24:20,531 --> 00:24:21,148
+Speaker 1: Yeah, maybe I should.
+
+362
+00:24:22,851 --> 00:24:31,210
+Speaker 1: I don't know why people were mad that they didn't announce Breath of the Wild is coming out, or Breath of the Wild 2, because obviously it's coming out next year.
+
+363
+00:24:31,770 --> 00:24:32,390
+Speaker 1: We've known this forever.
+
+364
+00:24:33,110 --> 00:24:34,437
+Speaker 1: Yeah, they announced the date.
+
+365
+00:24:34,940 --> 00:24:35,724
+Speaker 1: They did not announce.
+
+366
+00:24:35,804 --> 00:24:36,910
+Speaker 1: it is coming out imminently.
+
+367
+00:24:37,270 --> 00:24:39,802
+Speaker 1: All the people who kept saying, "Oh, they're going to announce it's a Christmas
+
+368
+00:24:39,822 --> 00:24:40,002
+Speaker 1: game.".
+
+369
+00:24:40,043 --> 00:24:41,650
+Speaker 1: Of course it's not a Christmas game.
+
+370
+00:24:41,930 --> 00:24:45,950
+Speaker 1: This is coming out in May 12th, next year, and that's fine.
+
+371
+00:24:46,151 --> 00:24:48,890
+Speaker 0: That's around the time that most Zelda games have come out.
+
+372
+00:24:49,211 --> 00:24:50,134
+Speaker 1: Not a surprise.
+
+373
+00:24:50,816 --> 00:24:54,007
+Speaker 1: Honestly, I'm just ignoring all news about Breath of the Wild 2.
+
+374
+00:24:54,007 --> 00:24:54,970
+Speaker 1: I guess now we know the title.
+
+375
+00:24:55,350 --> 00:24:56,353
+Speaker 1: Tears of the Kingdom.
+
+376
+00:24:57,416 --> 00:25:00,604
+Speaker 1: Because it's just something I'm going to pre-order.
+
+377
+00:25:00,845 --> 00:25:02,650
+Speaker 1: I'm going to play immediately when it comes out.
+
+378
+00:25:03,090 --> 00:25:07,810
+Speaker 1: No words anyone says on the internet are going to change what I do when this game comes out.
+
+379
+00:25:08,732 --> 00:25:08,974
+Speaker 0: Yeah.
+
+380
+00:25:09,358 --> 00:25:10,710
+Speaker 0: I don't even know why they need trailers.
+
+381
+00:25:11,714 --> 00:25:15,910
+Speaker 0: They could just be like, you know, if I was Nintendo, right, I would pull a poll.
+
+382
+00:25:16,552 --> 00:25:19,130
+Speaker 0: They're already pretty secretive, right, but not Apple secretive.
+
+383
+00:25:19,290 --> 00:25:22,830
+Speaker 0: But I would be like, I would just not say anything.
+
+384
+00:25:23,350 --> 00:25:26,142
+Speaker 1: On May 11th, it would just be like, "Breath of the Wild 2 has a
+
+385
+00:25:26,162 --> 00:25:26,383
+Speaker 1: date.".
+
+386
+00:25:28,070 --> 00:25:30,675
+Speaker 0: Just on May 11th, put up a YouTube video.
+
+387
+00:25:30,776 --> 00:25:38,290
+Speaker 0: that's a still black screen, and it just says the words like, you know, the Zelda logo appears.
+
+388
+00:25:38,793 --> 00:25:41,650
+Speaker 0: It could just be a solid white Zelda logo on a black background.
+
+389
+00:25:42,650 --> 00:25:46,930
+Speaker 0: And then there's a link, there's a purchase, there's a purchase link, right?
+
+390
+00:25:47,390 --> 00:25:48,270
+Speaker 0: A link to purchase link.
+
+391
+00:25:49,111 --> 00:25:53,362
+Speaker 0: A link to purchase link, and then it says, "Available today, right now.
+
+392
+00:25:53,422 --> 00:25:53,823
+Speaker 0: Available
+
+393
+00:25:53,863 --> 00:25:54,004
+Speaker 0: now.".
+
+394
+00:25:56,591 --> 00:25:58,030
+Speaker 0: Right, so there's no ambiguity on that.
+
+395
+00:25:58,190 --> 00:26:03,330
+Speaker 0: I still think if I- And then anyone who goes to the eShop, it's just like right there at the top, like a full width banner.
+
+396
+00:26:03,431 --> 00:26:04,622
+Speaker 0: Just like, "Click here for
+
+397
+00:26:04,703 --> 00:26:05,067
+Speaker 0: Zelda.".
+
+398
+00:26:05,893 --> 00:26:08,710
+Speaker 0: No screenshots, no trailers, no nothing.
+
+399
+00:26:08,850 --> 00:26:10,423
+Speaker 0: Just, "New, Zelda, click
+
+400
+00:26:10,625 --> 00:26:10,907
+Speaker 0: here.".
+
+401
+00:26:11,611 --> 00:26:18,930
+Speaker 0: It's like people who are really, you know, whatever, are gonna wait for a video game news site to buy it and post screenshots and YouTubes.
+
+402
+00:26:19,210 --> 00:26:21,809
+Speaker 0: And some streamer will stream it right away, and then you'll see it.
+
+403
+00:26:22,110 --> 00:26:25,110
+Speaker 0: But they don't waste money on any marketing content.
+
+404
+00:26:25,330 --> 00:26:26,244
+Speaker 0: Just be like, "New Zelda's out
+
+405
+00:26:26,264 --> 00:26:26,508
+Speaker 0: today.".
+
+406
+00:26:26,790 --> 00:26:33,070
+Speaker 1: I think there's only one company and one major game that ever has a chance of getting that treatment.
+
+407
+00:26:33,793 --> 00:26:38,570
+Speaker 1: If there is ever a Half-Life 3, I feel like that's how they're gonna release it.
+
+408
+00:26:38,972 --> 00:26:40,329
+Speaker 1: It's just one day is for sale.
+
+409
+00:26:41,490 --> 00:26:42,269
+Speaker 0: Just like today, guys.
+
+410
+00:26:42,310 --> 00:26:42,790
+Speaker 0: Just like, bam!
+
+411
+00:26:43,732 --> 00:26:44,202
+Speaker 0: Half-Life 3, out.
+
+412
+00:26:44,931 --> 00:26:49,429
+Speaker 0: If I were the product manager- On the Steam homepage is just the Half-Life logo and a Buy Now button.
+
+413
+00:26:49,831 --> 00:26:56,770
+Speaker 0: If I were a product manager at Valve- Just put an orange lambda in a circle on a black background and an add to my library button.
+
+414
+00:26:57,010 --> 00:27:02,290
+Speaker 1: I would stake my career on launching it like that being the best decision I could ever make.
+
+415
+00:27:02,411 --> 00:27:04,009
+Speaker 1: And I am confident I would be right.
+
+416
+00:27:04,873 --> 00:27:05,701
+Speaker 0: You don't gotta do nothing.
+
+417
+00:27:05,721 --> 00:27:06,508
+Speaker 0: You don't gotta hype it.
+
+418
+00:27:07,871 --> 00:27:11,510
+Speaker 0: The hardest part would be keeping the Valve employees from spilling the beans ahead of time.
+
+419
+00:27:12,830 --> 00:27:16,070
+Speaker 1: I mean, they all get buried with the first production disc in the tomb.
+
+420
+00:27:17,070 --> 00:27:24,828
+Speaker 0: Thankfully, they've cried wolf so much, or at least reverse wolf cried, that even if Valve employees come out, they're like, "Half-Life 3 is coming,
+
+421
+00:27:24,848 --> 00:27:25,230
+Speaker 0: everybody!".
+
+422
+00:27:25,410 --> 00:27:28,207
+Speaker 0: People are like, "Tell me another
+
+423
+00:27:28,287 --> 00:27:28,468
+Speaker 0: one.".
+
+424
+00:27:28,770 --> 00:27:29,658
+Speaker 0: It's like, "I work at Valve.
+
+425
+00:27:29,880 --> 00:27:30,163
+Speaker 0: Sure you
+
+426
+00:27:30,203 --> 00:27:30,284
+Speaker 0: do.".
+
+427
+00:27:32,695 --> 00:27:34,010
+Speaker 1: And there's a few other things.
+
+428
+00:27:34,511 --> 00:27:37,130
+Speaker 1: Looks like there's a Harvest Moon remake coming.
+
+429
+00:27:38,411 --> 00:27:44,690
+Speaker 0: There are a lot of farming games getting remade or new farming games coming, which tells me farming games must be making a lot of money.
+
+430
+00:27:45,231 --> 00:27:45,870
+Speaker 0: People keep making them.
+
+431
+00:27:46,431 --> 00:27:51,229
+Speaker 1: The Turbo Nerds, Fast Karate, if it was still producing podcasts, would be excited about this.
+
+432
+00:27:52,770 --> 00:28:00,549
+Speaker 1: The Fatal Frame that came out in Japan only on the Wii in the late 2000s is apparently coming out on the Switch in the US.
+
+433
+00:28:01,371 --> 00:28:05,450
+Speaker 0: They are doing a good job of getting the old missing Japanese titles out in the US.
+
+434
+00:28:07,872 --> 00:28:20,750
+Speaker 0: Ever since, I think what must have happened is that the Secret of Mana, Seiken Densetsu 2, 3, whatever, must have sold so that everyone caught on to that.
+
+435
+00:28:22,051 --> 00:28:24,770
+Speaker 1: And there's some other announcements, but honestly, we don't really play those kinds of games.
+
+436
+00:28:24,870 --> 00:28:27,250
+Speaker 1: And if you play those games, you already know about these announcements.
+
+437
+00:28:27,552 --> 00:28:30,290
+Speaker 1: Just go read a website to find out everything Nintendo announced.
+
+438
+00:28:31,470 --> 00:28:36,370
+Speaker 1: I will say, though, I'm a tiny geek by now that I have played a bunch more of Cult of the Lamb.
+
+439
+00:28:37,371 --> 00:28:43,190
+Speaker 1: Yeah, it is just sloppy Hades, Binding of Isaac Melee.
+
+440
+00:28:43,873 --> 00:28:44,742
+Speaker 1: That is 90% of the gameplay.
+
+441
+00:28:46,010 --> 00:28:49,590
+Speaker 1: Decide if that's what you want or not, if you are not already playing that game.
+
+442
+00:28:50,631 --> 00:28:53,770
+Speaker 0: So if you're looking for more Animal Crossing, you should not buy Cult of the Lamb?
+
+443
+00:28:53,951 --> 00:28:54,662
+Speaker 0: I would not.
+
+444
+00:28:54,723 --> 00:28:55,169
+Speaker 1: It is not.
+
+445
+00:28:55,510 --> 00:28:55,970
+Speaker 0: Some other game?
+
+446
+00:28:56,333 --> 00:28:58,810
+Speaker 1: Most of the gameplay is sloppy.
+
+447
+00:28:59,911 --> 00:29:05,710
+Speaker 1: Take a sloppy port of Hades and mash it into the Binding of Isaac engine, or what feels like the Binding of Isaac engine.
+
+448
+00:29:06,212 --> 00:29:08,110
+Speaker 1: That is the majority of the actual gameplay.
+
+449
+00:29:09,410 --> 00:29:10,410
+Speaker 0: Oh, I guess two more.
+
+450
+00:29:10,850 --> 00:29:12,861
+Speaker 0: There's the new Fire Emblem, and all the Fire Emblem.
+
+451
+00:29:12,881 --> 00:29:14,430
+Speaker 0: people are, you know, raveling.
+
+452
+00:29:14,591 --> 00:29:16,270
+Speaker 0: And I just haven't played a Fire Emblem in forever.
+
+453
+00:29:16,351 --> 00:29:19,290
+Speaker 1: I can't tell if they're happy or mad about the new Fire Emblem.
+
+454
+00:29:20,072 --> 00:29:21,902
+Speaker 0: There's so much mixed ravel.
+
+455
+00:29:21,942 --> 00:29:23,470
+Speaker 0: I can't tell what's going on in that scene.
+
+456
+00:29:23,852 --> 00:29:26,910
+Speaker 0: And then, lastly, The Fist of the North Star.
+
+457
+00:29:27,270 --> 00:29:27,756
+Speaker 0: Oh, right!
+
+458
+00:29:27,796 --> 00:29:29,050
+Speaker 1: I almost forgot to talk about that.
+
+459
+00:29:29,411 --> 00:29:35,250
+Speaker 0: It's not exactly the game that we played in the arcade with the six punching bags.
+
+460
+00:29:35,350 --> 00:29:39,510
+Speaker 1: Because that game requires a full arcade machine with six physical things to punch.
+
+461
+00:29:40,370 --> 00:29:43,850
+Speaker 0: It's effectively that game is coming out for the Switch.
+
+462
+00:29:44,212 --> 00:29:44,888
+Speaker 0: I might buy that.
+
+463
+00:29:45,130 --> 00:29:46,620
+Speaker 1: Oh, I will absolutely buy that.
+
+464
+00:29:46,640 --> 00:29:48,030
+Speaker 1: We're doing a fucking show on that.
+
+465
+00:29:48,150 --> 00:29:49,030
+Speaker 1: That's gonna be great.
+
+466
+00:29:50,597 --> 00:29:51,108
+Speaker 1: Or it's gonna be bad.
+
+467
+00:29:51,231 --> 00:29:52,770
+Speaker 0: That's not a game I can buy on PC either.
+
+468
+00:29:53,335 --> 00:29:54,849
+Speaker 1: I am absolutely getting that game.
+
+469
+00:30:00,656 --> 00:30:03,020
+Speaker 1: But, anyway, things of the day.
+
+470
+00:30:03,481 --> 00:30:13,140
+Speaker 1: It is, despite the fact that it's like 85 degrees and humid outside, and it sounds like I saw rumblings that there's gonna be a New York heatwave, like, in October is predicted.
+
+471
+00:30:13,862 --> 00:30:14,108
+Speaker 0: Oh, good.
+
+472
+00:30:14,149 --> 00:30:14,660
+Speaker 0: I can go biking.
+
+473
+00:30:14,940 --> 00:30:15,212
+Speaker 1: Oh, yeah.
+
+474
+00:30:16,421 --> 00:30:23,360
+Speaker 1: But, because it's September, we have technically entered spooky season as far as I'm concerned.
+
+475
+00:30:23,702 --> 00:30:25,980
+Speaker 0: We already bought some Halloween decorations at the dollar store.
+
+476
+00:30:26,060 --> 00:30:26,424
+Speaker 0: Oh, yeah.
+
+477
+00:30:26,464 --> 00:30:28,020
+Speaker 1: It is already over the garden wall season.
+
+478
+00:30:28,180 --> 00:30:41,350
+Speaker 1: So, my thing of the day is this is one of many channels that just gives you, like, one to two hour long compilations of music of a genre on YouTube of various provenance.
+
+479
+00:30:42,542 --> 00:30:50,140
+Speaker 1: And this one is specifically an hour and a half of electro swing, nicely mixed together into an experience, my kind of jam.
+
+480
+00:30:50,501 --> 00:30:55,300
+Speaker 1: But, it is specifically spooky electro swing.
+
+481
+00:30:56,401 --> 00:31:00,840
+Speaker 1: And, if you're a spookies fan or an electro swing fan, I think you will actually enjoy it.
+
+482
+00:31:01,260 --> 00:31:04,520
+Speaker 1: I picked the 2021 one because it was a particularly good one.
+
+483
+00:31:04,620 --> 00:31:06,512
+Speaker 1: It was much better than the 2021 from this channel.
+
+484
+00:31:10,155 --> 00:31:10,540
+Speaker 1: So, what do you got?
+
+485
+00:31:10,660 --> 00:31:10,941
+Speaker 0: All right.
+
+486
+00:31:11,142 --> 00:31:15,480
+Speaker 0: So, recently, I did a thing of the day from a YouTube channel called Karen Puzzles.
+
+487
+00:31:15,721 --> 00:31:23,400
+Speaker 0: And Karen, the jigsaw puzzle YouTuber, bought a 24,000 piece puzzle and spent six YouTube videos putting it together.
+
+488
+00:31:23,580 --> 00:31:32,540
+Speaker 0: Now, normally, I would never use the same YouTube channel again for another thing of the day, especially not so soon after already featuring that YouTube channel as a thing of the day.
+
+489
+00:31:32,620 --> 00:31:42,100
+Speaker 0: But, Karen managed to succeed at making an exception for themselves, and they did a video so different from their other videos, right?
+
+490
+00:31:42,461 --> 00:31:55,138
+Speaker 0: And, what they did is there was a live stream of the World Jigsaw Puzzle Championships, and they commentated it from their home on their own and edited that commentary together into two videos, right?
+
+491
+00:31:57,181 --> 00:32:11,340
+Speaker 0: And, uploaded those two videos so you can experience spectating the World Jigsaw Puzzle Championships in a lot less than the many, many hours that it takes to watch the actual live stream, right?
+
+492
+00:32:12,204 --> 00:32:14,835
+Speaker 0: And, I learned a lot about the World Jigsaw Puzzle Championship.
+
+493
+00:32:14,916 --> 00:32:15,840
+Speaker 0: We may talk about it.
+
+494
+00:32:15,980 --> 00:32:18,420
+Speaker 0: I think we're going to do a jigsaw puzzle episode eventually.
+
+495
+00:32:18,540 --> 00:32:21,299
+Speaker 1: We spent like 20 minutes talking about this before we did the show.
+
+496
+00:32:24,462 --> 00:32:25,265
+Speaker 0: Yeah.
+
+497
+00:32:25,325 --> 00:32:34,880
+Speaker 0: But, what I can say is that competition game-wise, the World Jigsaw Puzzle Championship, it has room for improvement, but it's actually not too bad, right?
+
+498
+00:32:34,960 --> 00:32:37,467
+Speaker 0: It's a decent, competitive structure.
+
+499
+00:32:37,488 --> 00:32:41,760
+Speaker 0: It looked like it had a friendly, high-quality environment.
+
+500
+00:32:44,002 --> 00:32:49,754
+Speaker 0: And, I would be willing to go to it if it wasn't in Spain, and not because I don't want to go to Spain, because I don't want to go to Spain now.
+
+501
+00:32:51,881 --> 00:32:52,379
+Speaker 1: That's fair.
+
+502
+00:32:52,804 --> 00:32:53,739
+Speaker 0: I would love to go to Spain.
+
+503
+00:32:55,901 --> 00:33:01,060
+Speaker 1: In the meta moment, the Geek Nuts Book Club book, which I guess we'll do in October, because this is the last Geek Nuts for a while.
+
+504
+00:33:01,080 --> 00:33:02,151
+Speaker 0: I have read, right?
+
+505
+00:33:02,171 --> 00:33:03,019
+Speaker 1: Well, go on.
+
+506
+00:33:03,201 --> 00:33:04,908
+Speaker 1: Yeah, it's a short book.
+
+507
+00:33:04,989 --> 00:33:05,672
+Speaker 1: Scott has read it.
+
+508
+00:33:06,134 --> 00:33:06,656
+Speaker 1: I have read it.
+
+509
+00:33:06,917 --> 00:33:07,480
+Speaker 1: It is great.
+
+510
+00:33:09,761 --> 00:33:14,960
+Speaker 1: Just don't have time to do a show on it, because Geek Nuts is going to be on a three-fucking-week hiatus.
+
+511
+00:33:16,000 --> 00:33:17,979
+Speaker 0: Thursday night, I'm going to- The book is what?
+
+512
+00:33:18,782 --> 00:33:18,931
+Speaker 1: Binti.
+
+513
+00:33:19,840 --> 00:33:24,340
+Speaker 0: Alright, so I just want to clarify that you have chosen only the first book as your book club book?
+
+514
+00:33:24,360 --> 00:33:24,938
+Speaker 0: You read all three?
+
+515
+00:33:25,826 --> 00:33:26,398
+Speaker 0: I read all three.
+
+516
+00:33:26,904 --> 00:33:27,578
+Speaker 1: I'll read the other two.
+
+517
+00:33:28,240 --> 00:33:30,980
+Speaker 0: They were, like, people said these were short.
+
+518
+00:33:31,302 --> 00:33:33,339
+Speaker 1: I told you, one setting for both had most.
+
+519
+00:33:33,660 --> 00:33:38,360
+Speaker 0: Each one of them took me maybe an hour, so it's like three hours for the whole trilogy.
+
+520
+00:33:39,221 --> 00:33:40,468
+Speaker 0: I feel like we got a retcon.
+
+521
+00:33:40,549 --> 00:33:42,320
+Speaker 0: How many people are really reading it anyway, right?
+
+522
+00:33:42,640 --> 00:33:45,120
+Speaker 0: I feel like you got to retcon and make the trilogy the book club book.
+
+523
+00:33:45,181 --> 00:33:45,929
+Speaker 1: I think I can do that.
+
+524
+00:33:45,970 --> 00:33:46,880
+Speaker 1: We can talk about all three.
+
+525
+00:33:47,060 --> 00:33:48,005
+Speaker 0: It's your book club book.
+
+526
+00:33:48,066 --> 00:33:50,359
+Speaker 0: I can't force that upon you, but you know.
+
+527
+00:33:50,963 --> 00:33:52,040
+Speaker 1: I think I will do it.
+
+528
+00:33:52,080 --> 00:33:54,920
+Speaker 0: It takes three hours, maybe three to four hours to read all three.
+
+529
+00:33:55,400 --> 00:34:07,780
+Speaker 1: Well, especially because we were extending the deadline, because like I said, the big meta news is where I'm going to be biking 500 miles from our apartment to Emily's parents' house way upstate, like an hour away from Buffalo.
+
+530
+00:34:07,780 --> 00:34:08,556
+Speaker 0: Not in one shot, though.
+
+531
+00:34:09,440 --> 00:34:13,659
+Speaker 1: Over the course of seven days, starting Friday when the sun comes up.
+
+532
+00:34:14,280 --> 00:34:15,045
+Speaker 0: Very reasonable.
+
+533
+00:34:15,065 --> 00:34:15,791
+Speaker 0: Not in one day.
+
+534
+00:34:17,679 --> 00:34:18,800
+Speaker 1: No, I would die.
+
+535
+00:34:19,100 --> 00:34:21,931
+Speaker 1: We're doing 100 miles the first day, and every day after.
+
+536
+00:34:21,972 --> 00:34:23,900
+Speaker 1: that is way easier than the first day.
+
+537
+00:34:24,702 --> 00:34:32,820
+Speaker 0: There was a guy I met at a family function who might, you know, he might be old man Scott.
+
+538
+00:34:32,960 --> 00:34:35,190
+Speaker 0: He has like a Mets tattoo.
+
+539
+00:34:35,351 --> 00:34:37,340
+Speaker 0: He's like an old biking man.
+
+540
+00:34:37,741 --> 00:34:43,420
+Speaker 0: But he said that he biked a length of New Jersey 200 miles in one shot.
+
+541
+00:34:43,501 --> 00:34:45,378
+Speaker 0: And I'm like, all right, he's more biking than I am.
+
+542
+00:34:46,083 --> 00:34:46,446
+Speaker 0: Yeah.
+
+543
+00:34:46,688 --> 00:34:48,018
+Speaker 1: And he's way older than I am.
+
+544
+00:34:48,179 --> 00:34:53,000
+Speaker 1: I can reliably bike 80 miles with zero discomfort whatsoever.
+
+545
+00:34:53,141 --> 00:34:55,873
+Speaker 1: I'm just living my best life the whole time, averaging like 12 to 15 miles an hour.
+
+546
+00:34:57,380 --> 00:34:58,059
+Speaker 0: Depends on the terrain.
+
+547
+00:34:58,762 --> 00:34:58,924
+Speaker 1: Yep.
+
+548
+00:34:58,964 --> 00:34:59,711
+Speaker 1: I mean, not 80 miles.
+
+549
+00:35:00,840 --> 00:35:02,017
+Speaker 0: Depends on how many people I got with me.
+
+550
+00:35:02,500 --> 00:35:02,575
+Speaker 1: Yep.
+
+551
+00:35:02,921 --> 00:35:03,620
+Speaker 0: Depends on the weather.
+
+552
+00:35:05,703 --> 00:35:10,160
+Speaker 1: But 100 miles, usually the last 10 or 20 miles are still type two fun.
+
+553
+00:35:10,260 --> 00:35:12,798
+Speaker 1: Like it's fun, but it's not as fun as the first 80 miles.
+
+554
+00:35:13,260 --> 00:35:18,360
+Speaker 1: Like that is when Rims old man body starts to say, you need a break before you do another 100 miles, buddy.
+
+555
+00:35:19,664 --> 00:35:20,679
+Speaker 1: So this should be a good time.
+
+556
+00:35:20,760 --> 00:35:25,620
+Speaker 1: And then I am immediately flying to London for a week for a work trip.
+
+557
+00:35:26,180 --> 00:35:28,680
+Speaker 1: And then I'm flying to Frankfurt for a week for a work trip.
+
+558
+00:35:29,080 --> 00:35:34,197
+Speaker 1: So I ain't going to be back in the United States or back to do geek nights until like the week of October 10th.
+
+559
+00:35:35,881 --> 00:35:38,160
+Speaker 0: No royal shit is going to interfere with your plans?
+
+560
+00:35:38,320 --> 00:35:48,189
+Speaker 1: Actually, the royal shit has fucked up a bunch of other people's plans because there's now an ad hoc holiday on like the Monday, I guess, that a bunch of people are traveling for some stuff.
+
+561
+00:35:48,209 --> 00:35:51,640
+Speaker 1: that's semi-related to why I'm going there, but that doesn't affect me.
+
+562
+00:35:52,180 --> 00:35:57,356
+Speaker 1: But I booked my trip looking at the US calendar and the London calendar.
+
+563
+00:35:57,396 --> 00:35:58,580
+Speaker 1: I didn't look at the German calendar.
+
+564
+00:35:59,040 --> 00:36:01,839
+Speaker 1: So I'm going to be in London for a week and then I fly to Frankfurt for a week.
+
+565
+00:36:02,221 --> 00:36:06,760
+Speaker 1: But there's a German holiday and our office is closed on that Monday.
+
+566
+00:36:07,340 --> 00:36:10,600
+Speaker 1: So I hope no co-workers are listening to this.
+
+567
+00:36:11,000 --> 00:36:14,680
+Speaker 1: I'm just going to hang out in Frankfurt on Monday and I get a vacation.
+
+568
+00:36:14,720 --> 00:36:18,212
+Speaker 0: Wait, I'm looking at my actual calendar.
+
+569
+00:36:18,372 --> 00:36:20,780
+Speaker 0: Is this an Oktoberfest related holiday?
+
+570
+00:36:22,261 --> 00:36:23,264
+Speaker 1: We'll see what happens.
+
+571
+00:36:23,365 --> 00:36:27,380
+Speaker 1: We'll see what photos I post to Twitter in Frankfurt.
+
+572
+00:36:27,781 --> 00:36:29,451
+Speaker 0: Many pretzel emojis appearing.
+
+573
+00:36:29,532 --> 00:36:30,478
+Speaker 0: Pretzel sausage emojis.
+
+574
+00:36:31,341 --> 00:36:41,580
+Speaker 1: What I'll say is the one thing to know if you go to Germany, especially if you were in Bavaria, because I fucked this up the first time I went to Munich.
+
+575
+00:36:42,021 --> 00:36:48,780
+Speaker 1: If you go to a restaurant and they just bring out a bunch of bread or a bunch of pretzels, don't fucking eat them.
+
+576
+00:36:49,160 --> 00:36:50,971
+Speaker 1: They're like a euro each.
+
+577
+00:36:51,535 --> 00:36:52,360
+Speaker 1: They are not free.
+
+578
+00:36:52,462 --> 00:36:52,837
+Speaker 0: I'd eat one.
+
+579
+00:36:53,340 --> 00:36:54,064
+Speaker 1: Yeah, they will not.
+
+580
+00:36:54,345 --> 00:36:57,440
+Speaker 1: At least know that they are not free when they bring you those pretzels.
+
+581
+00:36:57,741 --> 00:36:59,894
+Speaker 1: They are bringing them out and you are not.
+
+582
+00:36:59,914 --> 00:37:00,779
+Speaker 1: Don't eat them all.
+
+583
+00:37:01,100 --> 00:37:02,820
+Speaker 0: I probably couldn't even eat the whole pretzel anyway, right?
+
+584
+00:37:03,240 --> 00:37:04,145
+Speaker 0: They were kind of small.
+
+585
+00:37:04,547 --> 00:37:05,733
+Speaker 1: They brought a bread basket.
+
+586
+00:37:05,894 --> 00:37:07,020
+Speaker 1: I ate the whole bread basket.
+
+587
+00:37:07,281 --> 00:37:13,158
+Speaker 1: The guy came back later and was like, "Yeah, you owe me like 23 euros for that entire fucking basket of bread you
+
+588
+00:37:13,238 --> 00:37:13,379
+Speaker 1: ate.".
+
+589
+00:37:14,024 --> 00:37:14,558
+Speaker 0: Was it worth it?
+
+590
+00:37:15,469 --> 00:37:15,720
+Speaker 1: Yeah.
+
+591
+00:37:18,764 --> 00:37:20,907
+Speaker 1: Oh, and last but not least, the panel.
+
+592
+00:37:22,130 --> 00:37:27,660
+Speaker 1: I promise there was a new version of that losing panel and it was a radically redone version of that panel.
+
+593
+00:37:28,061 --> 00:37:29,300
+Speaker 1: It is a completely different talk.
+
+594
+00:37:29,560 --> 00:37:33,440
+Speaker 0: I haven't watched it, so I can't say it, but I wager that it's not.
+
+595
+00:37:33,881 --> 00:37:40,720
+Speaker 1: It actually is because the original panel, the first half was single player games, the second half was multiplayer games.
+
+596
+00:37:40,920 --> 00:37:42,199
+Speaker 1: Barely talked about role playing games.
+
+597
+00:37:42,580 --> 00:37:45,540
+Speaker 1: This one, the first half is a rewritten single player games.
+
+598
+00:37:45,922 --> 00:37:47,500
+Speaker 1: The second half is tabletop RPGs.
+
+599
+00:37:48,140 --> 00:37:53,720
+Speaker 1: We don't talk about multiplayer at all and I tell everyone to go watch the other video, but I'm not going to change anything.
+
+600
+00:37:53,800 --> 00:37:54,446
+Speaker 1: That video is perfect.
+
+601
+00:37:54,568 --> 00:37:55,800
+Speaker 1: where we talked about multiplayer games.
+
+602
+00:37:57,020 --> 00:37:59,726
+Speaker 1: Losing is on YouTube in its entirety.
+
+603
+00:37:59,847 --> 00:38:05,800
+Speaker 1: Me and Emily doing the panel with a link to all the slides and every reference we made.
+
+604
+00:38:05,960 --> 00:38:08,399
+Speaker 1: All the other panels and videos we talked about are all just there.
+
+605
+00:38:08,860 --> 00:38:09,302
+Speaker 1: Go watch it.
+
+606
+00:38:09,322 --> 00:38:10,065
+Speaker 1: It was a really good time.
+
+607
+00:38:10,106 --> 00:38:13,400
+Speaker 1: We had a good audience and we ended with five minutes to spare.
+
+608
+00:38:13,960 --> 00:38:17,700
+Speaker 1: We took a question from the audience and I followed my rule.
+
+609
+00:38:18,221 --> 00:38:35,680
+Speaker 1: I called on the first non-male, non-white appearing person who raised their hand and not only did they ask a fantastic question, but they are already a Geek Nights fan and they came to the panel specifically because they wanted to ask us this question that was relevant to this panel at a previous panel we did at PAX West before COVID.
+
+610
+00:38:37,201 --> 00:38:40,180
+Speaker 0: I guess I'll go and skip to the end and listen to this question.
+
+611
+00:38:40,680 --> 00:38:41,560
+Speaker 0: That was a pretty good question.
+
+612
+00:38:41,800 --> 00:38:42,260
+Speaker 0: That has been cheesed.
+
+613
+00:38:43,185 --> 00:38:44,080
+Speaker 0: A cheesed question.
+
+614
+00:38:44,240 --> 00:38:51,800
+Speaker 1: Listener, I did not catch your name and because of COVID protocols, the enforcers of course shooed almost everyone out of the room so we couldn't interact too much.
+
+615
+00:38:51,880 --> 00:38:54,569
+Speaker 1: So if you're listening to this, email us.
+
+616
+00:38:54,990 --> 00:38:57,860
+Speaker 1: I will happily answer your question in more detail via email.
+
+617
+00:38:59,963 --> 00:39:02,079
+Speaker 0: Okay, we can finally get to the main bit.
+
+618
+00:39:02,281 --> 00:39:03,520
+Speaker 1: Finally get to the main bit.
+
+619
+00:39:03,900 --> 00:39:16,239
+Speaker 1: This is something that I spent a lot of time thinking about in middle school and high school because you kids don't realize what it was like to try to play games.
+
+620
+00:39:17,621 --> 00:39:23,900
+Speaker 1: In this case, we're pretty much only talking about PC games, like multiplayer PC games for the most part.
+
+621
+00:39:24,421 --> 00:39:40,600
+Speaker 1: If you wanted to play Quake or Doom or any one of those games like Command & Conquer against someone else, you had to know like the phone number of a special service to dial, the actual direct IP address of a specific server that someone was running.
+
+622
+00:39:41,061 --> 00:39:41,912
+Speaker 1: How were they running it?
+
+623
+00:39:42,256 --> 00:39:42,540
+Speaker 1: Magic.
+
+624
+00:39:43,022 --> 00:39:46,360
+Speaker 1: I didn't know how to run a server until like late high school.
+
+625
+00:39:48,161 --> 00:39:53,440
+Speaker 0: Yeah, I mean, you know, the way that I played multiplayer PC games was of course local, right?
+
+626
+00:39:54,080 --> 00:39:57,375
+Speaker 0: Whether you're sitting at the same computer with two input devices or a LAN.
+
+627
+00:39:59,221 --> 00:40:04,620
+Speaker 0: All the computers are just plugged into the same hub and you connect that way using IPX or something.
+
+628
+00:40:06,263 --> 00:40:07,488
+Speaker 0: And then you've got the dial up.
+
+629
+00:40:07,609 --> 00:40:10,260
+Speaker 0: One person opens up their modem, the other person dials the modem.
+
+630
+00:40:10,400 --> 00:40:13,414
+Speaker 0: You call it, you're effectively just making a phone call and then playing.
+
+631
+00:40:13,434 --> 00:40:14,640
+Speaker 0: I've done that method.
+
+632
+00:40:16,185 --> 00:40:19,718
+Speaker 0: But yeah, because, you know, we don't have IPv6 really, right?
+
+633
+00:40:20,320 --> 00:40:25,394
+Speaker 0: It's like you could, you know, go to like open up Half-Life back in the 90s or early 2000s and be like click new game.
+
+634
+00:40:28,121 --> 00:40:31,760
+Speaker 0: And then that would sort of create a server and run the game locally.
+
+635
+00:40:31,881 --> 00:40:36,239
+Speaker 0: And then someone else could try to find your game either in the game list or typing in your IP.
+
+636
+00:40:37,100 --> 00:40:42,820
+Speaker 1: Good luck actually making that work the way people's houses and internet actually worked at the time.
+
+637
+00:40:43,503 --> 00:40:52,900
+Speaker 0: Yeah, especially so your computer, even if you could get the networking part to work, your computer had to run the server and the game for you, the client for you at the same time.
+
+638
+00:40:52,960 --> 00:40:55,779
+Speaker 0: So you needed a very powerful computer for this to be a good experience.
+
+639
+00:40:55,880 --> 00:40:56,620
+Speaker 0: Oh my god, remember in RIT?
+
+640
+00:40:57,000 --> 00:41:00,280
+Speaker 0: Especially if there were more than just a few players, right?
+
+641
+00:41:01,421 --> 00:41:11,100
+Speaker 1: Remember in RIT when we were playing Ricochet locally with IPX and our neighbors like bullshit firewall detected it and they called campus safety on us claiming we were hacking them?
+
+642
+00:41:12,061 --> 00:41:12,281
+Speaker 0: Yeah.
+
+643
+00:41:12,542 --> 00:41:20,220
+Speaker 0: Anyway, so what happened is you basically had to just run a game server.
+
+644
+00:41:20,340 --> 00:41:27,440
+Speaker 0: You would get a computer that was dedicated to doing nothing else, but running the game server, the computer would have a publicly accessible IP address.
+
+645
+00:41:28,103 --> 00:41:30,599
+Speaker 0: And now everybody who wanted to play could connect to the server.
+
+646
+00:41:31,043 --> 00:41:33,060
+Speaker 0: Their local computer would only have to run the client.
+
+647
+00:41:33,522 --> 00:41:43,160
+Speaker 0: And as long as your network connection to the server was solid and low latency enough, 100 or less usually, hopefully even less than that, maybe less than 50 if you're really good.
+
+648
+00:41:43,680 --> 00:41:45,439
+Speaker 0: A single digit if you're in college, right?
+
+649
+00:41:46,041 --> 00:41:48,618
+Speaker 1: A single digit for me in high school for reasons I'll get into.
+
+650
+00:41:50,060 --> 00:41:57,538
+Speaker 0: But anyway, then multiplayer PC gaming became a good, decent experience in the early 2000s, late 90s.
+
+651
+00:41:58,941 --> 00:42:00,260
+Speaker 1: Now it was a fascinating time.
+
+652
+00:42:00,440 --> 00:42:07,560
+Speaker 1: I think we'll start by talking about what it was like to be a player and then we can talk about what it was like and the challenges of actually running a server.
+
+653
+00:42:08,023 --> 00:42:10,460
+Speaker 1: And then what sort of killed this and what the current state of things are.
+
+654
+00:42:10,620 --> 00:42:15,920
+Speaker 1: Because those are the three main interesting topics here that don't overlap other Geek Nights episodes we've already done.
+
+655
+00:42:16,621 --> 00:42:22,260
+Speaker 1: As a player, you got to understand, this was already a rarefied experience.
+
+656
+00:42:22,720 --> 00:42:36,900
+Speaker 1: The tiniest percentage of people who even had access to a computer that could play a game like Quake had the ability, knowledge, and community to play it online with significant numbers of other people.
+
+657
+00:42:37,182 --> 00:42:40,280
+Speaker 1: That was already very rare for most people.
+
+658
+00:42:41,402 --> 00:42:46,000
+Speaker 0: It might be common if you go to, say, a nerdy college, everyone's playing Counter-Strike in every room.
+
+659
+00:42:46,480 --> 00:42:48,940
+Speaker 0: But worldwide, almost nobody.
+
+660
+00:42:50,040 --> 00:42:55,660
+Speaker 1: And even most college kids, when we were in high school, not a lot of colleges even had this stuff set up.
+
+661
+00:42:56,609 --> 00:42:57,399
+Speaker 0: Only the nerdy ones.
+
+662
+00:42:57,861 --> 00:43:01,820
+Speaker 1: RIT was notable in that it had a, for real, campus network that worked.
+
+663
+00:43:02,561 --> 00:43:06,100
+Speaker 0: And even if the college wasn't nerdy, there might be a nerdy section of the college.
+
+664
+00:43:06,260 --> 00:43:08,793
+Speaker 0: Like just the people in the CS department, but no one else.
+
+665
+00:43:08,974 --> 00:43:10,200
+Speaker 0: The whole rest of the college wasn't in it.
+
+666
+00:43:10,520 --> 00:43:13,540
+Speaker 1: So in high school, like skipping modems, because that's a little dicey.
+
+667
+00:43:13,640 --> 00:43:15,560
+Speaker 1: If I wanted to play Quake online on a server.
+
+668
+00:43:16,180 --> 00:43:22,420
+Speaker 1: One, I had to know a community of people online who lived pretty close to me.
+
+669
+00:43:22,480 --> 00:43:25,300
+Speaker 1: Like they had to live in Southeast Michigan or it wouldn't work.
+
+670
+00:43:25,540 --> 00:43:26,939
+Speaker 1: Internet was a lot slower back then.
+
+671
+00:43:27,080 --> 00:43:30,240
+Speaker 1: Like so much slower and so much higher latency.
+
+672
+00:43:30,701 --> 00:43:32,960
+Speaker 1: Whatever you think it was like, you were wrong.
+
+673
+00:43:33,061 --> 00:43:34,359
+Speaker 1: Unless you were as old as us or older.
+
+674
+00:43:34,960 --> 00:43:42,760
+Speaker 1: So I had to just somehow know like a bunch of people who lived in Southeast Michigan who all played Quake.
+
+675
+00:43:43,403 --> 00:43:44,700
+Speaker 1: All had similar sensibilities.
+
+676
+00:43:45,440 --> 00:43:55,140
+Speaker 1: And knew someone in our collective circles who had the arcane knowledge to run a public Quake server with a real IP address.
+
+677
+00:43:55,742 --> 00:44:00,800
+Speaker 1: So it was some rich white kid usually running a server on like dedicated hardware.
+
+678
+00:44:01,423 --> 00:44:05,600
+Speaker 1: And the local community of people playing one specific game.
+
+679
+00:44:05,780 --> 00:44:11,920
+Speaker 1: And only that game would find each other on BBS's and web-based forums and bulletin boards.
+
+680
+00:44:13,241 --> 00:44:18,020
+Speaker 1: I spent a lot of time in IRC just watching for is anyone playing Quake?
+
+681
+00:44:18,361 --> 00:44:25,840
+Speaker 1: Because if anyone I know is playing Quake, they would post in IRC the IP address or often just the name of the server they were on.
+
+682
+00:44:26,340 --> 00:44:28,720
+Speaker 1: Because some of the servers were kind of exclusive.
+
+683
+00:44:29,261 --> 00:44:35,160
+Speaker 1: Like Bunnies was a place I would play where it was only chill cool people and people tried to win.
+
+684
+00:44:35,942 --> 00:44:41,021
+Speaker 1: And it had like a 20 millisecond ping even in 1997.
+
+685
+00:44:41,021 --> 00:44:46,420
+Speaker 0: And the thing is, you know, not all of the servers, right?
+
+686
+00:44:46,440 --> 00:44:49,580
+Speaker 0: It's not like today where you can just get a server list, right?
+
+687
+00:44:49,861 --> 00:44:52,215
+Speaker 0: It's like, ah, here are all the Quake servers, right?
+
+688
+00:44:52,255 --> 00:44:53,000
+Speaker 0: Let me choose one.
+
+689
+00:44:53,241 --> 00:44:55,900
+Speaker 0: It's like back in those days, there wasn't a server list.
+
+690
+00:44:56,001 --> 00:44:57,458
+Speaker 0: It was type in the IP here.
+
+691
+00:44:58,301 --> 00:45:01,840
+Speaker 0: There might have been some other software that was separate that you could use.
+
+692
+00:45:04,046 --> 00:45:08,880
+Speaker 0: It might list servers, but people had to add their servers to those lists on purpose, right?
+
+693
+00:45:09,801 --> 00:45:17,200
+Speaker 0: If someone wasn't advertising to the world that they have a server at an IP address, finding it was going to be very, very difficult.
+
+694
+00:45:17,300 --> 00:45:23,440
+Speaker 1: But even worse, the more well known the IP address was of a server, the more dipshits were there.
+
+695
+00:45:23,580 --> 00:45:25,920
+Speaker 1: And the more popular it was, you try to log in, it's full.
+
+696
+00:45:26,660 --> 00:45:32,020
+Speaker 1: I spent a lot of time, literally, I would just sit there at my computer, like looking at the internet.
+
+697
+00:45:32,361 --> 00:45:38,160
+Speaker 1: Well, I had Quake open constantly trying to connect to the IP address of a good server because it was full.
+
+698
+00:45:38,200 --> 00:45:41,212
+Speaker 0: Because as soon as someone quits, there's a spot open.
+
+699
+00:45:41,232 --> 00:45:43,280
+Speaker 0: It's first come, first served digitally.
+
+700
+00:45:43,640 --> 00:45:44,959
+Speaker 0: If you can get that spot, you're in.
+
+701
+00:45:45,801 --> 00:45:48,834
+Speaker 1: And generally, if the server was full, that's a hopping server.
+
+702
+00:45:48,874 --> 00:45:50,260
+Speaker 1: You definitely want to be there.
+
+703
+00:45:50,701 --> 00:45:52,240
+Speaker 1: If a server lets you in right away, it's usually empty.
+
+704
+00:45:52,360 --> 00:45:59,940
+Speaker 0: Sure, you could join a server that's got two people playing and hope that maybe there's a lot of people who are currently refreshing and trying to join the full server.
+
+705
+00:46:00,321 --> 00:46:04,379
+Speaker 0: And if they see the server with two people go to three and four, they might go to that one.
+
+706
+00:46:05,121 --> 00:46:06,900
+Speaker 0: And this only works, though, when there's a server listing.
+
+707
+00:46:08,486 --> 00:46:10,364
+Speaker 0: But the more public servers... Sometimes it doesn't happen.
+
+708
+00:46:10,384 --> 00:46:13,560
+Speaker 0: Sometimes you go to the server with two people and no one comes and it's like, god damn it.
+
+709
+00:46:13,900 --> 00:46:19,400
+Speaker 1: So there were a bunch of Quake 1 and Quake 2 servers running various mods and some of them were vanilla in my area.
+
+710
+00:46:19,800 --> 00:46:27,080
+Speaker 1: But most of them, there were people there, but they were bad people, they were griefers and trolls and cheaters and all this crap.
+
+711
+00:46:27,680 --> 00:46:36,640
+Speaker 1: So separately, there was a list of servers that I knew about and the people I knew knew about from private IRC that weren't listed on all those websites.
+
+712
+00:46:37,042 --> 00:46:39,719
+Speaker 1: And those were the cool places where chill people would hang out.
+
+713
+00:46:41,661 --> 00:46:46,620
+Speaker 0: But it was harder for those ones to have enough people to be playing.
+
+714
+00:46:47,100 --> 00:46:50,599
+Speaker 0: It was more rare that you would go there and actually get a good game going on.
+
+715
+00:46:51,020 --> 00:46:53,400
+Speaker 0: Because it's not open to the public with lots of players coming all the time.
+
+716
+00:46:53,460 --> 00:46:53,962
+Speaker 0: Except Bunnies.
+
+717
+00:46:54,022 --> 00:46:58,880
+Speaker 1: Bunnies was pretty much full 24/7 because that was the best server in Southeast Michigan.
+
+718
+00:46:59,601 --> 00:47:02,952
+Speaker 1: And you had to... Bunny had to talk to you to vet.
+
+719
+00:47:02,992 --> 00:47:05,159
+Speaker 1: you were a chill person before they'd even tell you the IP.
+
+720
+00:47:06,081 --> 00:47:10,840
+Speaker 1: And I was password protected and that was where I spent a lot of time playing Quake games back in the day.
+
+721
+00:47:11,500 --> 00:47:18,194
+Speaker 1: But you were 100% at the mercy of whoever out there ran the server.
+
+722
+00:47:18,535 --> 00:47:21,140
+Speaker 1: They were the dictator god as far as you were concerned.
+
+723
+00:47:22,280 --> 00:47:24,700
+Speaker 0: Yep, and the person running the server can do all sorts of nonsense.
+
+724
+00:47:24,900 --> 00:47:29,340
+Speaker 0: They can kick you, they can ban you, at least ban your IP based on what system it was.
+
+725
+00:47:29,420 --> 00:47:31,631
+Speaker 0: When Steam came around, they could ban your Steam ID.
+
+726
+00:47:31,832 --> 00:47:33,360
+Speaker 0: You need to get a whole new Steam account.
+
+727
+00:47:34,501 --> 00:47:36,049
+Speaker 0: They could change the rules on the server.
+
+728
+00:47:36,150 --> 00:47:37,215
+Speaker 0: They could change the gravity.
+
+729
+00:47:37,315 --> 00:47:38,160
+Speaker 0: They could change the map.
+
+730
+00:47:38,660 --> 00:47:40,369
+Speaker 0: They could change fucking anything.
+
+731
+00:47:40,489 --> 00:47:42,600
+Speaker 0: Anything that was a Quake variable, right?
+
+732
+00:47:43,120 --> 00:47:46,380
+Speaker 1: I had three different versions of Weapons Factory, a mod for Quake 2 installed.
+
+733
+00:47:46,500 --> 00:47:51,800
+Speaker 1: Because all the different servers I connected to were all running different versions of the mod that were mutually incompatible.
+
+734
+00:47:52,620 --> 00:47:53,344
+Speaker 0: Yeah, they could cheat.
+
+735
+00:47:55,354 --> 00:47:56,500
+Speaker 0: They could do whatever the hell they wanted.
+
+736
+00:47:56,600 --> 00:47:57,510
+Speaker 0: They ran the server.
+
+737
+00:47:57,732 --> 00:47:58,460
+Speaker 0: They were in charge.
+
+738
+00:47:58,620 --> 00:47:59,950
+Speaker 0: The people who made the game have no say.
+
+739
+00:47:59,990 --> 00:48:01,360
+Speaker 0: The people playing the game have no say.
+
+740
+00:48:01,681 --> 00:48:07,260
+Speaker 0: The person running the server is like a GM in old school D&D where they just do whatever they want.
+
+741
+00:48:07,440 --> 00:48:09,048
+Speaker 0: And that was, in some ways, good.
+
+742
+00:48:09,952 --> 00:48:11,720
+Speaker 0: And in some ways, not good.
+
+743
+00:48:11,940 --> 00:48:15,399
+Speaker 1: Yep, like you talk about today, like, "Oh, without matchmaking, gaming
+
+744
+00:48:15,419 --> 00:48:15,520
+Speaker 1: sucks.".
+
+745
+00:48:16,442 --> 00:48:19,100
+Speaker 1: This is so far beyond without matchmaking.
+
+746
+00:48:19,781 --> 00:48:20,379
+Speaker 0: Yeah, right?
+
+747
+00:48:22,022 --> 00:48:22,907
+Speaker 1: And I had a lot of fun.
+
+748
+00:48:22,927 --> 00:48:25,180
+Speaker 1: And it was a really interesting time.
+
+749
+00:48:25,581 --> 00:48:27,653
+Speaker 1: But those days also sucked.
+
+750
+00:48:27,894 --> 00:48:36,099
+Speaker 1: They were a giant pain in the... I had a notepad file that was the list of, like, the specific servers I could play each game I cared about on.
+
+751
+00:48:36,921 --> 00:48:37,333
+Speaker 1: And that was it.
+
+752
+00:48:38,401 --> 00:48:38,602
+Speaker 0: Yep.
+
+753
+00:48:39,707 --> 00:48:42,940
+Speaker 0: So, as time went on, right, things progressed a bit, right?
+
+754
+00:48:43,161 --> 00:48:45,699
+Speaker 0: The "run your own server" got a little bit easier.
+
+755
+00:48:48,203 --> 00:48:50,759
+Speaker 0: Some normal people could do it or just pay someone else to do it.
+
+756
+00:48:51,280 --> 00:48:57,020
+Speaker 1: Freshman year of RIT, I ran a Counter-Strike server, a really crappy one, from my dorm room.
+
+757
+00:48:57,401 --> 00:49:00,618
+Speaker 1: And then Scott and I ran a much better one from our colony apartment.
+
+758
+00:49:01,020 --> 00:49:03,980
+Speaker 0: When I bought a new computer, the old computer ran the IcyWorld server.
+
+759
+00:49:04,260 --> 00:49:05,233
+Speaker 0: Yep, we ran an FYI.
+
+760
+00:49:05,940 --> 00:49:11,400
+Speaker 0: It wasn't a strong enough computer to run, like, Dust 2 or whatever, but IcyWorld is a tiny map, so it worked.
+
+761
+00:49:11,680 --> 00:49:11,740
+Speaker 1: Yep.
+
+762
+00:49:11,760 --> 00:49:14,695
+Speaker 1: We limited it to, what, like eight or ten players, I think.
+
+763
+00:49:14,876 --> 00:49:15,720
+Speaker 1: Otherwise it would lay out.
+
+764
+00:49:15,880 --> 00:49:17,480
+Speaker 0: Yeah, IcyWorld doesn't need that many players, right?
+
+765
+00:49:17,522 --> 00:49:17,798
+Speaker 0: Exactly.
+
+766
+00:49:18,802 --> 00:49:19,679
+Speaker 0: Per team, per team.
+
+767
+00:49:20,222 --> 00:49:23,940
+Speaker 1: I spent a lot of time playing on our dumpy little IcyWorld server at RIT.
+
+768
+00:49:24,240 --> 00:49:24,657
+Speaker 0: Yeah, me too.
+
+769
+00:49:24,921 --> 00:49:27,499
+Speaker 1: What I was very happy about is, it was always bumping.
+
+770
+00:49:28,041 --> 00:49:29,932
+Speaker 1: There were always people there, even if we weren't using it.
+
+771
+00:49:30,033 --> 00:49:31,119
+Speaker 1: I was very happy about that.
+
+772
+00:49:32,461 --> 00:49:35,520
+Speaker 0: Anyway, but yeah, running your own server got easier.
+
+773
+00:49:35,740 --> 00:49:40,580
+Speaker 0: There was the server listings that were run by the game developers, right, so it's easy to find games.
+
+774
+00:49:41,700 --> 00:49:45,360
+Speaker 0: You know, the anti-cheat technology came into play.
+
+775
+00:49:45,440 --> 00:49:49,320
+Speaker 0: There was already, like, existing anti-cheat, like Punkbuster, if anyone remembers that.
+
+776
+00:49:49,901 --> 00:49:54,640
+Speaker 1: Oh my god, I was not cool with Punkbuster until people were cheating so much.
+
+777
+00:49:55,023 --> 00:49:56,940
+Speaker 1: That I was willing to accept that malware.
+
+778
+00:49:57,741 --> 00:50:04,739
+Speaker 0: Yeah, then Valve came out with that VAC, right, which was much better, but not perfect anti-cheat, right?
+
+779
+00:50:06,203 --> 00:50:08,580
+Speaker 0: But yeah, you know, it was okay times, right?
+
+780
+00:50:08,680 --> 00:50:14,740
+Speaker 0: It was, they eliminated some of the problems of the old day, but you still had the fundamental same situation, right?
+
+781
+00:50:14,760 --> 00:50:17,720
+Speaker 0: Where a server is run by a person, that person is in charge.
+
+782
+00:50:19,261 --> 00:50:26,900
+Speaker 0: Every, you know, there aren't really, some of the games, their company might run a few servers of their own, just to create, like, a baseline.
+
+783
+00:50:27,422 --> 00:50:30,440
+Speaker 0: But people rarely played on those very much, right?
+
+784
+00:50:31,141 --> 00:50:36,780
+Speaker 1: And the cool part about that era, all those eras, was in the early days, they were just dictators.
+
+785
+00:50:36,940 --> 00:50:49,220
+Speaker 1: But that brief period where the ease of running a server expanded, we saw a lot of servers where people set up really fun and clever stuff.
+
+786
+00:50:49,480 --> 00:50:56,400
+Speaker 1: That sort of threw gasoline on the existing mod scene, and people were doing really interesting things.
+
+787
+00:50:56,720 --> 00:51:04,580
+Speaker 1: Some servers would have completely different rulesets, like, people were experimenting, whole communities would, like, form around weird servers.
+
+788
+00:51:05,182 --> 00:51:09,340
+Speaker 1: It was, honestly, a really fun time to be alive in terms of gaming, because you gotta wait for the-.
+
+789
+00:51:09,340 --> 00:51:12,958
+Speaker 0: Yeah, not all of those mods and customizations were, like, good as games.
+
+790
+00:51:13,300 --> 00:51:15,780
+Speaker 1: Oh, most of them were absolute dogshit, don't get us wrong.
+
+791
+00:51:16,000 --> 00:51:22,740
+Speaker 0: Right, but it was still, like, a flourishing period of creativity and excitement and all sorts of, you know, there were lots of options.
+
+792
+00:51:23,681 --> 00:51:28,120
+Speaker 0: And you'd be surprised, like, what random Half-Life mod you could turn on and actually find players, right?
+
+793
+00:51:28,140 --> 00:51:29,567
+Speaker 0: It's like, Natural Selection.
+
+794
+00:51:29,567 --> 00:51:31,235
+Speaker 0: 1 was a Half-Life 1 mod.
+
+795
+00:51:31,476 --> 00:51:32,180
+Speaker 0: That's what it was.
+
+796
+00:51:32,320 --> 00:51:40,020
+Speaker 0: It wasn't a new game, you know, it's like, it was a Half-Life 1 mod, and if it wasn't for the ability to run your own server, it's like, it wouldn't have been possible.
+
+797
+00:51:41,142 --> 00:51:41,639
+Speaker 0: It never happened.
+
+798
+00:51:42,600 --> 00:51:52,780
+Speaker 1: So, it went from an era of a very small number of nerds with money and arcane knowledge could run these, to almost any nerd who cared could run this, like, it was pretty easy.
+
+799
+00:51:53,401 --> 00:51:56,850
+Speaker 1: But then, the server world, like, kind of went away.
+
+800
+00:51:56,890 --> 00:52:00,920
+Speaker 1: Like, in the modern era, very few people run their own servers.
+
+801
+00:52:01,080 --> 00:52:10,060
+Speaker 1: They're almost entirely reliant on the company that released the game will let people spawn games, but not necessarily dedicated servers.
+
+802
+00:52:10,241 --> 00:52:12,487
+Speaker 1: A lot of these companies will let you customize.
+
+803
+00:52:13,269 --> 00:52:16,940
+Speaker 1: Some games let you customize to extreme extents, like Overwatch.
+
+804
+00:52:17,402 --> 00:52:22,139
+Speaker 1: If you spawn a custom game, you can put some ridiculous mods in there.
+
+805
+00:52:23,040 --> 00:52:26,460
+Speaker 0: Right, but you can't make up your own mod, you can just choose from the mods that they're providing.
+
+806
+00:52:26,660 --> 00:52:27,999
+Speaker 0: It could be an extensive list.
+
+807
+00:52:28,460 --> 00:52:32,760
+Speaker 1: But you can also tune every parameter, you can import objects, there's a lot of customization.
+
+808
+00:52:32,821 --> 00:52:33,911
+Speaker 0: You can't write code, though.
+
+809
+00:52:33,931 --> 00:52:34,759
+Speaker 0: There's a line.
+
+810
+00:52:35,923 --> 00:52:39,320
+Speaker 1: You can get close to writing code with some of the modding capabilities.
+
+811
+00:52:39,320 --> 00:52:40,979
+Speaker 0: You couldn't make something like Natural Selection 1 Overwatch.
+
+812
+00:52:41,040 --> 00:52:41,546
+Speaker 0: You could not.
+
+813
+00:52:42,213 --> 00:52:42,779
+Speaker 0: Absolutely not.
+
+814
+00:52:42,860 --> 00:52:43,448
+Speaker 0: You could make another game.
+
+815
+00:52:43,489 --> 00:52:44,240
+Speaker 0: that's not Overwatch.
+
+816
+00:52:44,481 --> 00:52:47,940
+Speaker 1: Yeah, but if we just focus on the server aspect of it...
+
+817
+00:52:47,980 --> 00:52:49,658
+Speaker 0: You couldn't add some character that didn't exist.
+
+818
+00:52:51,241 --> 00:52:58,280
+Speaker 1: I don't think the fact that companies went this way is what killed people running their own dedicated servers.
+
+819
+00:52:58,460 --> 00:53:07,680
+Speaker 1: What killed it is the fact that the fatal flaw of all dedicated servers was that without matchmaking, you had to do manual matchmaking.
+
+820
+00:53:07,880 --> 00:53:17,280
+Speaker 1: Unless you played on servers where the people who played were all roughly your same skill level, gaming sucked.
+
+821
+00:53:17,680 --> 00:53:21,080
+Speaker 1: You were either better than everyone else or you died instantly every game no matter what.
+
+822
+00:53:21,860 --> 00:53:22,407
+Speaker 1: And that was it.
+
+823
+00:53:22,508 --> 00:53:23,500
+Speaker 1: There was zero middle ground.
+
+824
+00:53:23,780 --> 00:53:31,420
+Speaker 0: Because a lot of these games were skill-based, high skill cap games, if there were other games... That's also a consequence of the game itself.
+
+825
+00:53:31,620 --> 00:53:36,360
+Speaker 0: If you had been playing with a server of some other game that wasn't a high skill game, that wouldn't have happened.
+
+826
+00:53:36,661 --> 00:53:40,659
+Speaker 0: But you were playing Counter-Strike or Quake, so that was definitely what was going on.
+
+827
+00:53:41,061 --> 00:53:47,920
+Speaker 1: But most games that had dedicated server technology were competitive first person shooter ortho games.
+
+828
+00:53:48,140 --> 00:53:48,424
+Speaker 0: Of course.
+
+829
+00:53:48,993 --> 00:53:49,318
+Speaker 0: Of course.
+
+830
+00:53:49,600 --> 00:53:50,518
+Speaker 1: Because most other games...
+
+831
+00:53:50,620 --> 00:53:55,940
+Speaker 0: Who's going to go through the effort to do all that for, I don't know, for Candyland?
+
+832
+00:53:56,440 --> 00:54:01,500
+Speaker 1: And other games like Civilization and stuff like that really didn't have multiplayer capabilities.
+
+833
+00:54:02,280 --> 00:54:03,239
+Speaker 0: They did play by mail.
+
+834
+00:54:03,604 --> 00:54:03,900
+Speaker 0: Exactly.
+
+835
+00:54:03,961 --> 00:54:05,071
+Speaker 0: You couldn't even run a server.
+
+836
+00:54:06,320 --> 00:54:19,560
+Speaker 1: FPSs really were the emergence of that concept for most people of run a dedicated server, curate a community around it, and that is the place you play this game with your friends and your extended community.
+
+837
+00:54:20,241 --> 00:54:22,039
+Speaker 1: Nowadays, you do that via friends lists.
+
+838
+00:54:23,160 --> 00:54:26,760
+Speaker 0: So companies started running the servers themselves, and this had some pluses and minuses.
+
+839
+00:54:27,020 --> 00:54:27,522
+Speaker 0: We already talked about.
+
+840
+00:54:27,622 --> 00:54:31,800
+Speaker 0: one minus is the lack of the flourishing creativity of the mods and all that.
+
+841
+00:54:32,300 --> 00:54:32,858
+Speaker 0: But here's the plus.
+
+842
+00:54:33,021 --> 00:54:34,190
+Speaker 1: Quake 1 today, we want to play.
+
+843
+00:54:35,960 --> 00:54:38,840
+Speaker 1: I right click on all my friends' names in Quake.
+
+844
+00:54:38,940 --> 00:54:39,298
+Speaker 0: And it works.
+
+845
+00:54:39,600 --> 00:54:40,299
+Speaker 1: It just works.
+
+846
+00:54:40,640 --> 00:54:42,480
+Speaker 1: A server appears, my friends are in it.
+
+847
+00:54:42,480 --> 00:54:42,820
+Speaker 0: It works great.
+
+848
+00:54:43,080 --> 00:54:43,878
+Speaker 1: Nobody else is in it.
+
+849
+00:54:44,920 --> 00:54:45,675
+Speaker 1: Everyone has the same version.
+
+850
+00:54:46,000 --> 00:54:47,336
+Speaker 0: No one has to go and update their...
+
+851
+00:54:47,766 --> 00:54:47,936
+Speaker 1: Yup.
+
+852
+00:54:48,442 --> 00:54:48,920
+Speaker 1: I make it public.
+
+853
+00:54:49,180 --> 00:54:52,297
+Speaker 0: No one gets a message like, "Oh, the server's got a newer version than you do, or an older
+
+854
+00:54:52,337 --> 00:54:52,679
+Speaker 0: version.".
+
+855
+00:54:52,880 --> 00:54:56,220
+Speaker 1: Random people do just join and play with us, and it's totally fun.
+
+856
+00:55:00,085 --> 00:55:02,940
+Speaker 0: Some of those games, you still can get your own maps in there, right?
+
+857
+00:55:03,201 --> 00:55:03,719
+Speaker 0: To an extent.
+
+858
+00:55:04,040 --> 00:55:04,110
+Speaker 0: Yup.
+
+859
+00:55:04,860 --> 00:55:05,355
+Speaker 0: Things like that.
+
+860
+00:55:06,602 --> 00:55:08,979
+Speaker 0: But the other players have to have the maps for it to work.
+
+861
+00:55:10,020 --> 00:55:23,860
+Speaker 1: But I guess it's a nuanced space, because it is true that we have lost some of the power and control and modability of servers and the unique aspects of running dedicated servers that you control in these games.
+
+862
+00:55:24,502 --> 00:55:29,778
+Speaker 1: But I think almost all of the pros of the modern era outweigh the cons, because...
+
+863
+00:55:30,464 --> 00:55:31,320
+Speaker 0: Yeah, they do outweigh.
+
+864
+00:55:31,500 --> 00:55:32,400
+Speaker 1: I can't stress this enough.
+
+865
+00:55:32,440 --> 00:55:42,280
+Speaker 1: Without matchmaking, orthogames online that are highly skill-based are absolutely unplayable now that so many more people play games.
+
+866
+00:55:43,260 --> 00:55:43,335
+Speaker 0: Yup.
+
+867
+00:55:44,401 --> 00:55:49,000
+Speaker 0: So some other positives, right, is that cheating has decreased.
+
+868
+00:55:49,380 --> 00:55:51,740
+Speaker 0: It's still out there, but it's decreased significantly.
+
+869
+00:55:51,740 --> 00:55:57,220
+Speaker 1: You had to find a server where the social contract was, "Nobody cheats," and the mod would actually ban people who cheated.
+
+870
+00:55:57,820 --> 00:55:59,740
+Speaker 1: That isn't a problem anymore.
+
+871
+00:56:00,021 --> 00:56:01,000
+Speaker 1: Nobody cheats at Overwatch.
+
+872
+00:56:01,100 --> 00:56:04,280
+Speaker 1: If someone cheats at Overwatch, they are banned by the company pretty quickly.
+
+873
+00:56:05,100 --> 00:56:09,920
+Speaker 0: You also don't have to worry too much about the server admin being some jerk, right?
+
+874
+00:56:10,241 --> 00:56:14,960
+Speaker 0: It's like the servers are all adminned by the company, which has the terms of service, right?
+
+875
+00:56:15,340 --> 00:56:23,493
+Speaker 0: It's like if you go to some old Quake server that's run out of someone's house, people there might be going, you know, "Racial slur, racial slur, racial slur,".
+
+876
+00:56:23,954 --> 00:56:25,740
+Speaker 0: and what are you gonna do about it?
+
+877
+00:56:25,860 --> 00:56:27,480
+Speaker 0: Report it to who, right?
+
+878
+00:56:27,560 --> 00:56:30,240
+Speaker 0: It's like the admin who's the one saying racial slur?
+
+879
+00:56:30,500 --> 00:56:31,800
+Speaker 0: The person who owns that computer?
+
+880
+00:56:32,160 --> 00:56:33,299
+Speaker 0: It's like, no, right?
+
+881
+00:56:33,380 --> 00:56:44,940
+Speaker 0: But if companies are running them as evil as corporate capitalist entities are, they can actually protect the player base with their terms of service and things of that nature.
+
+882
+00:56:45,000 --> 00:56:56,820
+Speaker 0: And you'll get, you know, it's obviously they haven't completely solved the problem because plenty of people have shitty experiences on their servers all the time, but they can do something about it as opposed to nothing.
+
+883
+00:56:58,841 --> 00:57:02,920
+Speaker 0: So it's better, you know, even if it's still poopy.
+
+884
+00:57:04,180 --> 00:57:11,420
+Speaker 1: And I think maybe they're like, while there's more we could say, we've gone on over an hour, I'm hungry and I have to play Blades in the Dark like in an hour.
+
+885
+00:57:11,420 --> 00:57:18,054
+Speaker 0: Well, I think the one thing that really needs to be said is the major downside of the not being able to run your own server.
+
+886
+00:57:18,254 --> 00:57:20,920
+Speaker 0: is the game preservation aspect, right?
+
+887
+00:57:21,120 --> 00:57:38,159
+Speaker 0: All of these multiplayer game experiences, I think this really started with the MMOs and the MUDs, right, is that if the companies running these servers turn their shit off and they don't open source their code or whatever, then you can never experience these games again.
+
+888
+00:57:38,340 --> 00:57:38,660
+Speaker 0: Nobody.
+
+889
+00:57:38,740 --> 00:57:41,087
+Speaker 0: It's like they're just lost to time permanently.
+
+890
+00:57:41,107 --> 00:57:42,130
+Speaker 0: They're gone.
+
+891
+00:57:42,492 --> 00:57:43,475
+Speaker 0: There might be screenshots.
+
+892
+00:57:44,317 --> 00:57:45,260
+Speaker 0: There might be videos.
+
+893
+00:57:45,760 --> 00:57:51,250
+Speaker 0: There might be some, you know, there might be someone hacks together, like tries to reverse engineer the server or something.
+
+894
+00:57:51,310 --> 00:57:57,540
+Speaker 0: But unless that original server is running, it's a thing that humans can no longer experience.
+
+895
+00:57:57,640 --> 00:57:59,889
+Speaker 0: Like it is gone, gone the end.
+
+896
+00:58:00,753 --> 00:58:02,600
+Speaker 0: And that's not cool, right?
+
+897
+00:58:03,261 --> 00:58:17,940
+Speaker 0: I'm a person who believes that is, you know, if humans are going to survive, right, it's like, what's the point of surviving if we cannot preserve our, you know, a very important note about what you said, though, MMOs did not let players run their own servers ever.
+
+898
+00:58:18,921 --> 00:58:19,081
+Speaker 0: Nope.
+
+899
+00:58:19,582 --> 00:58:21,426
+Speaker 1: And in fact, the people who did, they were charging money.
+
+900
+00:58:21,467 --> 00:58:21,908
+Speaker 0: That's why.
+
+901
+00:58:21,928 --> 00:58:22,329
+Speaker 0: Yeah.
+
+902
+00:58:22,950 --> 00:58:27,160
+Speaker 1: And FPS is meanwhile, the ones that were well remembered.
+
+903
+00:58:27,922 --> 00:58:35,860
+Speaker 0: Also battle that was really one of the first ones to run their own server with the, you know, the, uh, and the, um, you know, the Diablo.
+
+904
+00:58:36,380 --> 00:58:43,390
+Speaker 1: But like FPS is at least like most FPS is if you have the game, the game usually just includes the ability to host a server.
+
+905
+00:58:43,731 --> 00:58:46,094
+Speaker 1: So the game is preserved in some way.
+
+906
+00:58:46,515 --> 00:58:50,280
+Speaker 0: What's not preserved are the reason that we can play quick online today.
+
+907
+00:58:50,781 --> 00:58:57,496
+Speaker 0: But there isn't really, you know, other games that had servers, you know, there isn't a tribes to remake on steam, right?
+
+908
+00:58:57,716 --> 00:58:58,939
+Speaker 0: Because no one can run that server.
+
+909
+00:58:58,979 --> 00:58:59,340
+Speaker 0: That's why.
+
+910
+00:58:59,940 --> 00:59:00,140
+Speaker 1: Exactly.
+
+911
+00:59:01,342 --> 00:59:11,660
+Speaker 1: Uh, but one thing that I don't, I want to disavow you all of is the idea that a lot was lost in the individual servers that disappeared when people couldn't run them.
+
+912
+00:59:11,700 --> 00:59:28,638
+Speaker 1: Because as much as there's a big creative flourishing, 99.999% of all servers for any game during that entire era, we're running absolutely terrible custom configurations that the admin liked that are best forgotten.
+
+913
+00:59:29,278 --> 00:59:30,640
+Speaker 1: to be really blunt about it.
+
+914
+00:59:32,321 --> 00:59:34,567
+Speaker 1: This has been Geek Nights with Rim and Scott.
+
+915
+00:59:34,607 --> 00:59:39,600
+Speaker 1: Special thanks to DJ Pretzel for the opening music, Kat Lee for web design, and Brando K for the logos.
+
+916
+00:59:39,980 --> 00:59:45,000
+Speaker 0: Be sure to visit our website at FrontRowCrew.com for show notes, discussion news, and more.
+
+917
+00:59:45,280 --> 00:59:47,947
+Speaker 1: Remember, Geek Nights is not one, but four different shows.
+
+918
+00:59:48,067 --> 00:59:52,660
+Speaker 1: Sci-Tech Mondays, Gaming Tuesdays, Anime Comic Wednesdays, and Indiscriminate Thursdays.
+
+919
+00:59:53,021 --> 00:59:57,028
+Speaker 0: Geek Nights is distributed under a Creative Commons Attribution 3.0 license.
+
+920
+00:59:57,449 --> 01:00:00,534
+Speaker 0: Geek Nights is recorded live with no studio and no audience.
+
+921
+01:00:00,735 --> 01:00:03,640
+Speaker 0: But unlike those other late shows, it's actually recorded at night.
+
+922
+01:00:03,960 --> 01:00:21,359
+Speaker 1: And the Patreon patrons for this episode of Geek Nights are Alan Joyce, Linki G, Dread, Lily Tenebrae, A Bunch of People Who Really Don't Want Me to Say Their Names, Casecar Makes Music, Chris Dodd, Chris Reimer, Clinton Walton, Dex, Finn, Rebecca Dunn, Sam Erickson, Sherwin von Horrell.
+
+923
+01:00:21,419 --> 01:00:22,660
+Speaker 1: Stop all the downloading.
+
+924
+01:00:23,142 --> 01:00:24,767
+Speaker 1: The next station is Finch West.
+
+925
+01:00:24,848 --> 01:00:25,771
+Speaker 1: Finch West Station.
+
+926
+01:00:26,333 --> 01:00:28,300
+Speaker 1: And several people whose names I will not say.
+
+927
+01:00:29,361 --> 01:00:35,400
+Speaker 1: I'm going to pause the Patreon collection for at least a month, because we're going to skip basically a month of shows, and that wouldn't be fair to you.
+
+928
+01:00:35,840 --> 01:00:42,480
+Speaker 1: So, hold on to your little bit of cash for a bit, and I'll see you guys generally in about three weeks.
+
+929
+01:00:42,940 --> 01:00:47,058
+Speaker 1: So for now, I simply leave you with Snurch.
+
+930
+01:00:52,660 --> 01:01:00,875
+Speaker 0: Snurch knows every snail's disapproval Should've snortshipped her snooner If the Snevans ever did speak.
+
+931
+01:01:01,375 --> 01:01:03,820
+Speaker 0: She's the last truce, now's the peace.
+
+932
+01:01:04,470 --> 01:01:09,500
+Speaker 0: Every snowflake's getting more bleak A fresh noisun each week.
+
+933
+01:01:10,101 --> 01:01:13,271
+Speaker 1: We were born snick, you heard them say it.
+
+934
+01:01:13,913 --> 01:01:16,320
+Speaker 0: My snurch offers no absolutes.
+
+935
+01:01:16,541 --> 01:01:18,990
+Speaker 0: She tells me worship in the snail room.
+
+936
+01:01:19,351 --> 01:01:24,492
+Speaker 1: The only Snevin I'll be sent to Is when I'm snalone with you.
+
+937
+01:01:24,512 --> 01:01:26,300
+Speaker 1: We were born snick.
+

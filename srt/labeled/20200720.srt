@@ -1,0 +1,3384 @@
+1
+00:00:08,460 --> 00:00:10,196
+Rym: It's Monday July 20th 2020.
+
+2
+00:00:10,196 --> 00:00:12,542
+Rym: I'm Rym I'm Scott and this is GeekNights.
+
+3
+00:00:12,823 --> 00:00:18,670
+Rym: tonight We're talking about bud bounties and responsible disclosure.
+
+4
+00:00:20,531 --> 00:00:21,567
+Scott: Let's do this.
+
+5
+00:00:23,251 --> 00:00:30,354
+Rym: So I guess bike nights is back cuz we went on a long bike ride this weekend in the in the heat wave Wave.
+
+6
+00:00:30,615 --> 00:00:31,098
+Rym: no, it's funny.
+
+7
+00:00:31,138 --> 00:00:39,190
+Rym: I looked at the weather and I was like, alright, it's gonna be like 80 Something when we start and it'll be 95 96 like when we're toward the end of the run.
+
+8
+00:00:39,250 --> 00:00:40,093
+Rym: So I can deal with that.
+
+9
+00:00:40,836 --> 00:00:42,020
+Rym: and it was super hot.
+
+10
+00:00:42,080 --> 00:00:43,586
+Rym: The heat index was like a hundred and five.
+
+11
+00:00:43,606 --> 00:00:55,269
+Rym: It's a good ride but Cars are starting to creep into New York City again as things start to open up and the ozone Was back up into the orange during the hundred and five heat index.
+
+12
+00:00:56,172 --> 00:00:57,943
+Rym: Yeah, so we only biked like 40 over.
+
+13
+00:00:57,963 --> 00:00:59,110
+Scott: you leave the city, right?
+
+14
+00:00:59,110 --> 00:01:01,356
+Scott: You know if you don't stay in the city This time.
+
+15
+00:01:01,396 --> 00:01:03,890
+Rym: we did a loop down Rockaway and back so we were in Queens.
+
+16
+00:01:04,691 --> 00:01:06,981
+Scott: Oh, oh you had near where all the the crazy bad people are.
+
+17
+00:01:07,222 --> 00:01:07,423
+Rym: Yep.
+
+18
+00:01:07,624 --> 00:01:08,990
+Rym: We skirted the side of the beach.
+
+19
+00:01:09,050 --> 00:01:12,505
+Rym: We could see the chaos over the like on the boardwalk and steered clear of it.
+
+20
+00:01:12,525 --> 00:01:14,877
+Scott: I Don't know what people are thinking.
+
+21
+00:01:15,159 --> 00:01:18,937
+Rym: the good news is though because it was so hot There really wasn't anyone anywhere else.
+
+22
+00:01:18,957 --> 00:01:20,282
+Rym: Like we didn't really encounter people.
+
+23
+00:01:20,382 --> 00:01:20,984
+Rym: It was pretty great.
+
+24
+00:01:21,687 --> 00:01:28,470
+Rym: But uh, So yeah, it was 105 with the heat index and the ozone was way higher than I expected.
+
+25
+00:01:29,011 --> 00:01:36,030
+Rym: So, uh, this might only be in a 40-mile ride a little bit tired in that last 10 miles on the way home on Queens Boulevard.
+
+26
+00:01:37,111 --> 00:01:45,405
+Scott: No, you know biking always takes at least 10 degrees off whatever the actual temperature is up to a point Once the temperature is approaching human body temperature.
+
+27
+00:01:45,505 --> 00:01:46,048
+Rym: It does not.
+
+28
+00:01:47,152 --> 00:01:51,266
+Scott: Hey, you got like a fan blowing on your body the whole fans blowing on your body.
+
+29
+00:01:51,687 --> 00:01:59,624
+Rym: in certain environments Like where the air temperature is higher than body temperature and also as I humidity can actually increase your body temperature as opposed to decreasing it.
+
+30
+00:02:02,190 --> 00:02:09,009
+Rym: It's evaporating the sweat off your body if it's too humid because then the Evaporation doesn't actually happen fast enough and you end up increasing your body temperature.
+
+31
+00:02:10,931 --> 00:02:11,376
+Scott: It's not.
+
+32
+00:02:11,437 --> 00:02:11,800
+Scott: it's fine.
+
+33
+00:02:11,921 --> 00:02:12,930
+Rym: It's a rare situation.
+
+34
+00:02:13,191 --> 00:02:15,482
+Rym: Very few people have to worry about that, but it can't happen.
+
+35
+00:02:16,085 --> 00:02:16,969
+Scott: never had that happen.
+
+36
+00:02:17,852 --> 00:02:20,583
+Rym: So, uh, yeah, what's up before we get into the tech news?
+
+37
+00:02:20,643 --> 00:02:23,815
+Rym: Cuz there is a big big big tech news We're gonna talk about at length.
+
+38
+00:02:23,975 --> 00:02:25,681
+Scott: Is there anything up at all?
+
+39
+00:02:25,701 --> 00:02:28,070
+Scott: I was sitting in the house not going anywhere.
+
+40
+00:02:28,371 --> 00:02:30,938
+Scott: Yeah, I guess I'll go biking next weekend.
+
+41
+00:02:31,059 --> 00:02:32,423
+Rym: We're gonna do another night bike.
+
+42
+00:02:32,463 --> 00:02:33,325
+Rym: I think on Friday.
+
+43
+00:02:33,345 --> 00:02:34,910
+Scott: No, good luck with that.
+
+44
+00:02:35,111 --> 00:02:36,097
+Rym: Why it's great night.
+
+45
+00:02:36,117 --> 00:02:38,310
+Rym: biking is like the best way to get out during all this.
+
+46
+00:02:38,490 --> 00:02:41,279
+Scott: You just can't go anywhere distant at night thing.
+
+47
+00:02:41,319 --> 00:02:42,102
+Scott: Everything's closed.
+
+48
+00:02:42,483 --> 00:02:44,570
+Rym: Yeah, well I could like the loop we just did we could do again.
+
+49
+00:02:44,610 --> 00:02:45,959
+Rym: There's no bridges that are blocked.
+
+50
+00:02:45,979 --> 00:02:50,920
+Scott: I Don't know actually if the bridge has a gate on it.
+
+51
+00:02:51,221 --> 00:02:57,609
+Rym: I looked there in the gate that can be pulled up is Trivial to just like toss your bike over like it's not even that high.
+
+52
+00:02:58,472 --> 00:03:00,230
+Scott: Yeah, some of them have like doors that close.
+
+53
+00:03:01,414 --> 00:03:03,501
+Rym: Some of them like the I don't like.
+
+54
+00:03:03,521 --> 00:03:06,390
+Rym: the RFK gets sealed up pretty tight on the Randall's Island side.
+
+55
+00:03:06,491 --> 00:03:08,127
+Rym: It looks like like I don't want to have to deal with that.
+
+56
+00:03:09,005 --> 00:03:09,672
+Scott: Yeah this also.
+
+57
+00:03:09,712 --> 00:03:15,780
+Scott: sometimes you have to go to an area where it's like you don't want to go there in the dark because a car will Get you or a crazy person.
+
+58
+00:03:15,901 --> 00:03:17,390
+Rym: Yeah, we picked some routes that are good.
+
+59
+00:03:17,430 --> 00:03:20,150
+Rym: The cool thing is Manhattan is basically a complete ghost town at night.
+
+60
+00:03:20,231 --> 00:03:25,662
+Rym: So if we go out biking at like 11 o'clock at night Times Square or like any like Second Avenue.
+
+61
+00:03:25,903 --> 00:03:27,870
+Rym: just no cars completely empty.
+
+62
+00:03:28,312 --> 00:03:31,205
+Rym: You can just bike across to the west side do the loop around Manhattan.
+
+63
+00:03:31,225 --> 00:03:32,330
+Scott: Yeah, that's the thing.
+
+64
+00:03:32,330 --> 00:03:37,148
+Scott: It's like it's so empty rope But when a car does come it's probably some crazy person zooming down the road.
+
+65
+00:03:37,168 --> 00:03:39,549
+Scott: like you know We're having a fun time on the empty road in a car.
+
+66
+00:03:39,670 --> 00:03:40,755
+Rym: Yeah, you know we ran into you.
+
+67
+00:03:40,775 --> 00:03:43,730
+Rym: last time was that gang of people on four-wheelers and ATVs.
+
+68
+00:03:44,431 --> 00:03:47,250
+Rym: Yeah, you gotta watch out for that, but they stuck to the west side highway.
+
+69
+00:03:47,512 --> 00:03:49,630
+Rym: So we were able to avoid them by staying in the bike path.
+
+70
+00:03:49,871 --> 00:03:53,088
+Rym: They only drove into the bike path when they were ready to have a party in the bike path.
+
+71
+00:03:54,190 --> 00:03:55,994
+Rym: hmm All right.
+
+72
+00:03:56,034 --> 00:04:01,161
+Rym: So yeah Twitter if you didn't notice Some weird happened the other day.
+
+73
+00:04:01,181 --> 00:04:08,790
+Rym: a bunch of rich shit heads Suddenly all tweeted that they're gonna give back to the community and a whole bunch of people smartly said that's a hack.
+
+74
+00:04:09,332 --> 00:04:22,329
+Rym: There is no way any of those people would have said those words and the night But that they all posted was send bitcoins here and I will send you back Twice as many bitcoins now regardless of a Twitter hack.
+
+75
+00:04:23,356 --> 00:04:26,188
+Rym: how Could anyone fall for that?
+
+76
+00:04:27,170 --> 00:04:27,333
+Scott: Okay.
+
+77
+00:04:27,353 --> 00:04:31,014
+Scott: So first of all so Falling for that.
+
+78
+00:04:31,094 --> 00:04:34,670
+Scott: I don't believe that anyone very many people fell for that.
+
+79
+00:04:34,810 --> 00:04:36,114
+Rym: Oh, I have some data on that.
+
+80
+00:04:36,195 --> 00:04:43,489
+Scott: Oh, so all that people doing it were doing it, you know to like say Oh, man, you know high five to whoever pulled this off.
+
+81
+00:04:43,630 --> 00:04:51,402
+Scott: But in the past there have been many scams just like that scam not only in real life But also in.
+
+82
+00:04:51,422 --> 00:04:52,569
+Scott: you know video games.
+
+83
+00:04:53,533 --> 00:04:55,730
+Scott: So, you know Ponzi schemes usually work that way.
+
+84
+00:04:56,570 --> 00:04:59,660
+Rym: Ponzi scheme inside of the realm and made a lot right.
+
+85
+00:04:59,760 --> 00:05:02,107
+Scott: invest and invest a little bit into me.
+
+86
+00:05:02,227 --> 00:05:03,270
+Scott: I give me $100.
+
+87
+00:05:03,270 --> 00:05:04,795
+Scott: Oh, look, here's $200.
+
+88
+00:05:04,795 --> 00:05:06,380
+Scott: Oh, this person is a good investment.
+
+89
+00:05:06,581 --> 00:05:06,982
+Scott: They give you $500.
+
+90
+00:05:06,982 --> 00:05:07,544
+Scott: you give them back $1,000.
+
+91
+00:05:07,544 --> 00:05:11,484
+Scott: Oh, man Here's a million dollars.
+
+92
+00:05:11,504 --> 00:05:16,404
+Rym: if anyone They're trying to buy enchanted orbs from a cotton account named acute.
+
+93
+00:05:16,444 --> 00:05:18,230
+Rym: that then disappeared one day with all your money.
+
+94
+00:05:18,695 --> 00:05:19,405
+Rym: That was me, right?
+
+95
+00:05:19,870 --> 00:05:23,630
+Scott: The scam usually works where you get the person to give you a little bit you double their money.
+
+96
+00:05:23,650 --> 00:05:24,640
+Scott: They give you a little bit more.
+
+97
+00:05:24,680 --> 00:05:25,447
+Scott: you double their money.
+
+98
+00:05:25,468 --> 00:05:26,434
+Scott: now They believe you.
+
+99
+00:05:26,595 --> 00:05:29,130
+Scott: then they give you a whole bunch and you give them back nothing, right?
+
+100
+00:05:29,350 --> 00:05:30,294
+Scott: In fact, that's getting work.
+
+101
+00:05:30,335 --> 00:05:38,535
+Rym: that was an evolved form of that was the plot of the square one movie Mm-hmm.
+
+102
+00:05:38,555 --> 00:05:44,295
+Scott: So the thing is is I don't know how the scam works when it's just a one-shot of Give me money.
+
+103
+00:05:44,456 --> 00:05:45,701
+Scott: Well, you know you have it.
+
+104
+00:05:45,841 --> 00:05:47,970
+Scott: You didn't have that opportunity to build up the trust.
+
+105
+00:05:48,010 --> 00:05:50,070
+Scott: Yeah, it's like an immediate give me money.
+
+106
+00:05:50,150 --> 00:05:55,589
+Rym: Well, what's interesting is coin base said that they actually blocked over a hundred thousand attempts to send money to those addresses.
+
+107
+00:05:57,951 --> 00:05:58,956
+Rym: I'd I'd believe it.
+
+108
+00:05:59,177 --> 00:06:05,425
+Rym: the thing that's interesting really before we get into the details of the hack Is that for once it looks like it was actually a hack though.
+
+109
+00:06:05,445 --> 00:06:07,031
+Scott: There's sort of it was Not?
+
+110
+00:06:07,051 --> 00:06:10,623
+Rym: yeah, so well, I mean social engineering I would say is hacking.
+
+111
+00:06:11,266 --> 00:06:12,550
+Scott: sure what I did not.
+
+112
+00:06:12,610 --> 00:06:14,197
+Scott: I don't care about the semantics right.
+
+113
+00:06:14,498 --> 00:06:17,229
+Scott: the point is that I keep making that is still true.
+
+114
+00:06:17,972 --> 00:06:24,110
+Scott: Is that there is no magical purely technological way to log in to a major?
+
+115
+00:06:25,010 --> 00:06:25,595
+Scott: Application?
+
+116
+00:06:26,059 --> 00:06:31,890
+Scott: as someone you are not Right, you know via it's not like this a magical sequence of keys.
+
+117
+00:06:31,950 --> 00:06:37,018
+Scott: I can press on my keyboard and log into Twitter as The president without knowing the password.
+
+118
+00:06:37,339 --> 00:06:39,006
+Scott: right knowing the password is the only way.
+
+119
+00:06:39,126 --> 00:06:40,852
+Scott: there's no other way Right.
+
+120
+00:06:41,133 --> 00:06:47,269
+Scott: It's not like I can download some software and run it and ping some port and do a thing and get login.
+
+121
+00:06:47,309 --> 00:06:48,052
+Scott: is anyone I want?
+
+122
+00:06:48,072 --> 00:06:48,814
+Scott: that's not possible.
+
+123
+00:06:48,895 --> 00:06:53,050
+Rym: I mean occasionally there are zero-day exploits in those spaces, but they're rare.
+
+124
+00:06:53,151 --> 00:06:54,477
+Rym: They tend to get patched pretty quickly.
+
+125
+00:06:54,799 --> 00:07:04,210
+Rym: There's also you don't need to know the password You just need to have sufficient information to cause a password reset that you somehow control, right?
+
+126
+00:07:04,290 --> 00:07:16,287
+Scott: so the way that these hack when most of the 90% of the time when someone says they were hacked or you see someone get hacked on a social network like their account was taken Over by someone who is not them it is for one of the following reasons.
+
+127
+00:07:16,348 --> 00:07:18,165
+Scott: number one Someone has guessed their password.
+
+128
+00:07:18,205 --> 00:07:18,387
+Scott: number.
+
+129
+00:07:18,448 --> 00:07:20,364
+Scott: two They've told someone their password.
+
+130
+00:07:20,606 --> 00:07:20,868
+Scott: number.
+
+131
+00:07:20,888 --> 00:07:25,410
+Scott: three Someone took their phone or something and just started using their account or transferred it to themselves.
+
+132
+00:07:25,892 --> 00:07:26,574
+Scott: Someone hack.
+
+133
+00:07:26,654 --> 00:07:34,320
+Scott: someone got the password to one of their other things like their email and then was able to Switch the emails on the account and get the password reset.
+
+134
+00:07:34,360 --> 00:07:44,694
+Rym: with a lot of somewhere else with a lot of like government sites Especially like ones that don't seem that important There are a lot of direct exploits where people can just do like a really simple cross site nonsense Right.
+
+135
+00:07:44,714 --> 00:07:46,690
+Rym: some other accounts data, right?
+
+136
+00:07:46,810 --> 00:07:46,950
+Scott: You.
+
+137
+00:07:47,031 --> 00:07:55,344
+Scott: someone somehow got enough personal information about the person to be able to recover the account to themselves Into the non-correct person.
+
+138
+00:07:55,364 --> 00:07:57,431
+Scott: right sim Forwarding.
+
+139
+00:07:57,451 --> 00:07:59,719
+Scott: we see a lot where you see you call the phone company.
+
+140
+00:07:59,739 --> 00:08:02,790
+Scott: you get them to switch someone's sim card to your sim card.
+
+141
+00:08:02,832 --> 00:08:07,994
+Scott: Yeah So now that you so all your phone calls and all your texts are now going to the wrong phone Then you do a password reset.
+
+142
+00:08:08,054 --> 00:08:13,450
+Rym: most companies do the password reset like recover your account thing via SMS thus getting you in the door.
+
+143
+00:08:14,390 --> 00:08:15,778
+Scott: Yep, so that's you.
+
+144
+00:08:15,818 --> 00:08:17,930
+Scott: that's almost always how it happens.
+
+145
+00:08:18,091 --> 00:08:23,790
+Scott: There's no magical thing like some evil genius hacker can do with a black screen with green text on it.
+
+146
+00:08:24,031 --> 00:08:25,541
+Scott: It's like log into my Twitter.
+
+147
+00:08:25,561 --> 00:08:26,669
+Scott: Yeah, that can't happen.
+
+148
+00:08:26,900 --> 00:08:28,033
+Rym: No The second way.
+
+149
+00:08:28,053 --> 00:08:34,669
+Scott: that especially can't happen if you use two-factor authentication because now even if they guess the password they can't do it.
+
+150
+00:08:34,789 --> 00:08:57,082
+Rym: Yeah Now a second way to go after this is sort of a middle ground there where you're not really like hacking like Scott described But what you're doing is spear phishing your target to convince them to do things like Take their one-time password like the the TOTP that they get from the Google Authenticator and Text it to you Because you're tending to be the entity that's checking.
+
+151
+00:08:57,342 --> 00:08:59,990
+Scott: There's a lot or some store some straight-up phishing, right?
+
+152
+00:09:00,030 --> 00:09:04,549
+Scott: It's like they like that you make a fake Twitter login page and you trick someone into logging into it, right?
+
+153
+00:09:04,890 --> 00:09:13,430
+Rym: Yeah, another thing that happens Specifically is phishing coupled with I targeting a specific individual where you know things about them.
+
+154
+00:09:13,852 --> 00:09:14,355
+Scott: Yeah, it's pretty.
+
+155
+00:09:14,375 --> 00:09:15,903
+Scott: it's pretty rare for it to be successful.
+
+156
+00:09:15,963 --> 00:09:23,930
+Rym: but again when this a hack Affected almost entirely high prominence blue checkboxes spear phishing was one of my earliest ideas as to what was happening here.
+
+157
+00:09:24,050 --> 00:09:24,211
+Rym: Yeah,
+
+158
+00:09:24,553 --> 00:09:37,836
+Scott: the other another thing that happened is an OAuth exploit where you know You ever see those websites where it's like you go there and it's like hey, you know log into our site with Twitter And click OK, and we will show you We'll give you like some feature like.
+
+159
+00:09:37,876 --> 00:09:39,921
+Scott: we'll show you your Twitter rank or something.
+
+160
+00:09:39,941 --> 00:09:41,786
+Scott: Yeah, it's like you giving.
+
+161
+00:09:41,827 --> 00:09:51,267
+Scott: you're giving someone else Permissions on your to on your account right that you know to do to log in as you and do a limited subset of things With the Twitter API.
+
+162
+00:09:52,012 --> 00:09:58,515
+Scott: So if you trick someone into going to one of those and they don't read the fine print and they're just like log in with Twitter give OAuth permissions.
+
+163
+00:09:58,616 --> 00:09:58,896
+Scott: Okay.
+
+164
+00:09:58,977 --> 00:09:59,217
+Scott: Okay.
+
+165
+00:09:59,277 --> 00:09:59,619
+Scott: Okay.
+
+166
+00:09:59,699 --> 00:10:03,450
+Scott: It's like I gave that website permission to tweet as me, right?
+
+167
+00:10:03,910 --> 00:10:05,175
+Scott: Yeah, so that's what I thought it could be.
+
+168
+00:10:05,215 --> 00:10:21,710
+Scott: is like oh a bunch of people, you know gave logged into some app Right and gave the app permission to tweet as them and then either the owners of that app Were acted maliciously or that app was compromised and somebody right was able to use that.
+
+169
+00:10:22,071 --> 00:10:26,908
+Scott: I guess think about how many things like you've like allowed to tweet on your account that aren't you?
+
+170
+00:10:26,928 --> 00:10:33,930
+Rym: Yep I uh, I once every couple months actually go and check all the apps authorized and remember do I use this app?
+
+171
+00:10:34,090 --> 00:10:34,934
+Rym: Did I authorize this?
+
+172
+00:10:34,974 --> 00:10:35,758
+Rym: does this make sense?
+
+173
+00:10:35,959 --> 00:10:36,823
+Rym: and I've kept it down to.
+
+174
+00:10:36,904 --> 00:10:38,110
+Rym: I have exactly two today.
+
+175
+00:10:39,093 --> 00:10:40,123
+Scott: Let's see how many I have.
+
+176
+00:10:40,184 --> 00:10:46,030
+Rym: that aren't Myself because I know what I just removed was the internet creators guild because they seemed they kind of folded.
+
+177
+00:10:47,291 --> 00:10:47,553
+Scott: Let's see.
+
+178
+00:10:47,593 --> 00:10:48,859
+Scott: We got my Nintendo account.
+
+179
+00:10:48,900 --> 00:10:49,965
+Scott: Can that tweet as me?
+
+180
+00:10:50,166 --> 00:10:50,890
+Scott: No, it's read-only.
+
+181
+00:10:51,951 --> 00:10:53,657
+Scott: Let's see twitch TV.
+
+182
+00:10:53,938 --> 00:10:54,982
+Scott: Oh, so twitch could be.
+
+183
+00:10:55,082 --> 00:10:57,230
+Scott: so if someone compromised twitch they could tweet as me.
+
+184
+00:10:58,090 --> 00:11:02,046
+Scott: Right because I guess I gave twitch permission to tweet when I go live on twitch.
+
+185
+00:11:02,126 --> 00:11:07,890
+Scott: Yep, right So that means someone who had access to my twitch account could therefore tweet on my Twitter account.
+
+186
+00:11:07,990 --> 00:11:14,509
+Scott: So basically, we don't know the foot wouldn't be able to reset the password on my Twitter account But they could tweet as me and send a tweet asking for a bit cut.
+
+187
+00:11:15,011 --> 00:11:18,704
+Rym: So what happened here is best we can tell and this is still like an evolving story.
+
+188
+00:11:18,724 --> 00:11:20,350
+Rym: Like this is pretty new news.
+
+189
+00:11:22,011 --> 00:11:27,586
+Rym: Most likely this was the social engineering and/or inside job because I think it was.
+
+190
+00:11:27,647 --> 00:11:28,870
+Scott: and inside job clearly.
+
+191
+00:11:29,131 --> 00:11:34,270
+Rym: Yeah, well, there are some reports of low paid Twitter employees being straight-up bribed.
+
+192
+00:11:35,094 --> 00:11:37,103
+Scott: I mean that you pay your employees more.
+
+193
+00:11:37,123 --> 00:11:41,383
+Rym: Yep, like I'm I'm paid enough to where nobody could.
+
+194
+00:11:41,484 --> 00:11:42,430
+Rym: there's no amount of money.
+
+195
+00:11:42,510 --> 00:11:45,408
+Rym: Someone could would likely be willing to hand me to cop.
+
+196
+00:11:47,076 --> 00:11:50,090
+Rym: I say likely because for a trillion dollars, I'll do almost anything.
+
+197
+00:11:50,331 --> 00:11:53,142
+Scott: I mean for a lot less than a trillion I think but no one's.
+
+198
+00:11:53,222 --> 00:11:54,828
+Scott: likely it's like for a million.
+
+199
+00:11:54,868 --> 00:11:57,197
+Scott: I do it But it's like no one's gonna pay millions not enough.
+
+200
+00:11:57,237 --> 00:12:00,690
+Rym: I would I would not compromise my entire life for a million dollars.
+
+201
+00:12:01,093 --> 00:12:02,810
+Scott: What do you mean you would compromise your life?
+
+202
+00:12:02,810 --> 00:12:04,529
+Scott: You just get the million dollars and that's it.
+
+203
+00:12:05,711 --> 00:12:08,160
+Rym: It's really hard to not get caught with that kind of thing.
+
+204
+00:12:08,943 --> 00:12:10,368
+Scott: Don't don't get caught.
+
+205
+00:12:10,549 --> 00:12:10,749
+Rym: Yeah
+
+206
+00:12:12,871 --> 00:12:13,173
+Scott: Anyway,
+
+207
+00:12:13,494 --> 00:12:13,775
+Rym: but in
+
+208
+00:12:13,876 --> 00:12:31,670
+Scott: so yeah, yeah, so base turns out that it was a Inside job slash social engineering thing where there are various Twitter employees Presumably people who are low paid moderator types Who still had or customer service people who had the ability to like reset accounts and help customers with their passwords and things of that.
+
+209
+00:12:31,991 --> 00:12:33,396
+Rym: Someone has to do that job.
+
+210
+00:12:33,476 --> 00:12:37,190
+Rym: Like what if Bill Gates calls Twitter and says my Twitter stopped fix it, right?
+
+211
+00:12:37,412 --> 00:12:38,769
+Scott: And it's not a high skill job.
+
+212
+00:12:38,890 --> 00:12:43,888
+Scott: So it's not a high paid job, but it's a job that gives you a lot of access to the systems.
+
+213
+00:12:43,949 --> 00:12:51,670
+Scott: at Twitter You know the ability to reset people's passwords probably to do things like verify accounts or moderate tweets or all kinds of things.
+
+214
+00:12:52,555 --> 00:12:54,163
+Rym: The SIM card swapping we just talked about.
+
+215
+00:12:54,425 --> 00:13:06,110
+Rym: there's a dashboard probably on an internal web app and every cell phone provider where employees can do things like Reassign a SIM assign a new SIM change the email address associated with an account.
+
+216
+00:13:06,971 --> 00:13:08,517
+Scott: Yeah, that's why it goes to the shell.
+
+217
+00:13:08,538 --> 00:13:13,689
+Scott: You always see them hack into those people and then do bad stuff Right.
+
+218
+00:13:15,052 --> 00:13:17,727
+Scott: So yeah, and you know, so that's what happened.
+
+219
+00:13:18,752 --> 00:13:18,972
+Rym: Yep.
+
+220
+00:13:19,032 --> 00:13:24,085
+Rym: Now what's really interesting is this was not a high-tech or even a high-impact hat cuz one.
+
+221
+00:13:24,126 --> 00:13:25,569
+Rym: it was caught pretty quick to.
+
+222
+00:13:26,831 --> 00:13:28,423
+Rym: Let's say this game works super well.
+
+223
+00:13:28,483 --> 00:13:28,926
+Rym: what you made?
+
+224
+00:13:28,946 --> 00:13:29,369
+Rym: a few mil?
+
+225
+00:13:30,492 --> 00:13:33,150
+Scott: Okay, I heard they only made tens of thousands of dollars.
+
+226
+00:13:33,150 --> 00:13:34,516
+Rym: Well, let's say you even made a few mil.
+
+227
+00:13:34,858 --> 00:13:49,392
+Rym: you blew your load you had you had Access to some of the most read and most important Twitter accounts on earth And you just did a really quick cash grab with a Bitcoin scam and walked away Like.
+
+228
+00:13:49,432 --> 00:13:59,710
+Rym: that's why I didn't think this was a state-sponsored act because that is a threat vector that I don't tend to like we don't want to talk about because it's not Ninety-nine point nine nine nine percent of the time when something's hacked.
+
+229
+00:13:59,992 --> 00:14:08,649
+Rym: It is not a state-sponsored actor like for real spies But a for real spy type threat vector could very much do this kind of thing.
+
+230
+00:14:09,686 --> 00:14:13,625
+Scott: Yeah But I thought a spy would not ask for bitcoins.
+
+231
+00:14:14,289 --> 00:14:22,190
+Rym: Yes That's not what they're after unless the spy was after something else like discrediting or messing up Twitter in some way like this.
+
+232
+00:14:22,992 --> 00:14:34,469
+Rym: No, but this just really reeked of some people tried something got got way more access than they Expected used it to pull off the quickest scam they could to then bail.
+
+233
+00:14:37,892 --> 00:14:40,280
+Rym: There aren't really that many takeaways other than that like.
+
+234
+00:14:40,320 --> 00:14:49,869
+Rym: the real message here is that every service you use No matter how much security you use like you use two-factor you have good passwords You have like everything's good on your side.
+
+235
+00:14:50,391 --> 00:14:59,049
+Rym: You still have to trust the lowest paid employee with administrative capabilities inside of every company you trust.
+
+236
+00:15:01,233 --> 00:15:03,341
+Rym: And there's really no way around that.
+
+237
+00:15:03,923 --> 00:15:22,070
+Rym: and the worst part is I suspect at companies like like social media companies in general I would not be surprised if they do not have the types of controls and audit Capabilities that most other industries have that things like Sarbanes-Oxley regulation require.
+
+238
+00:15:22,790 --> 00:15:25,579
+Rym: Pretty sure it's just a Wild West inside these places.
+
+239
+00:15:26,040 --> 00:15:28,247
+Rym: compared to say banks like in a bank.
+
+240
+00:15:28,789 --> 00:15:39,253
+Rym: tellers Yeah, they take key and did all the time a teller could be like yeah I'll just send a billion dollars to this bank that there are so many audits that there is zero way to get away with that Right.
+
+241
+00:15:39,293 --> 00:15:40,859
+Scott: So the teller is right.
+
+242
+00:15:40,900 --> 00:15:43,490
+Scott: a teller is an employee with a lot of power, right?
+
+243
+00:15:43,932 --> 00:15:48,270
+Scott: But and they're not paid that well, they're paid kind of well, but there are controls the worst job.
+
+244
+00:15:48,410 --> 00:15:50,738
+Rym: There are right controls and writes the way.
+
+245
+00:15:50,918 --> 00:15:54,590
+Scott: so it's like if you know, you could compromise a teller with bribery very easily.
+
+246
+00:15:54,991 --> 00:16:03,810
+Scott: but they managed to keep them from doing bad things with controls in the system and also People are watching them who are being paid more, right?
+
+247
+00:16:03,890 --> 00:16:08,730
+Scott: So though it's harder you'd have to bribe not only the teller but also the watchers and the watcher watchers, right?
+
+248
+00:16:09,152 --> 00:16:13,370
+Scott: That's how they avoid paying every bank teller millions of dollars to not be.
+
+249
+00:16:13,931 --> 00:16:24,470
+Rym: That is that only exists in these enterprise spaces where like the company will have a budget for security and auditing That is probably larger than the entire administrative budget of a car.
+
+250
+00:16:24,570 --> 00:16:25,192
+Rym: Well be Twitter.
+
+251
+00:16:25,273 --> 00:16:34,286
+Scott: that's because that money that they are paying right for that that Protective system right is actually saving the money because they're a bank.
+
+252
+00:16:34,326 --> 00:16:35,430
+Scott: They would lose a shit ton of money.
+
+253
+00:16:35,551 --> 00:16:36,316
+Scott: Twitter lose.
+
+254
+00:16:36,356 --> 00:16:37,262
+Scott: for what did Twitter lose?
+
+255
+00:16:37,322 --> 00:16:37,644
+Scott: nothing?
+
+256
+00:16:38,006 --> 00:16:42,421
+Rym: Yeah My Twitter account and discuss right.
+
+257
+00:16:42,561 --> 00:16:44,410
+Scott: mostly it was undamaged by this.
+
+258
+00:16:44,631 --> 00:16:48,890
+Scott: So why would they spend a bunch of money to protect from this kind of attack when it doesn't harm them?
+
+259
+00:16:49,194 --> 00:17:01,410
+Rym: Yep Now here's an interesting point The banks and like the enterprise companies that do this the money they would lose is not so much from the hacks themselves But from the legal consequences of not having the controls in place.
+
+260
+00:17:01,631 --> 00:17:10,589
+Rym: There's regulations that force them to do a lot of things because by failing to follow those regulations and have controls The government can take huge amounts of money from them.
+
+261
+00:17:12,732 --> 00:17:15,241
+Rym: So maybe we just need more regulation in Silicon Valley?
+
+262
+00:17:15,462 --> 00:17:17,630
+Scott: maybe well by me you do need regulation.
+
+263
+00:17:17,750 --> 00:17:19,696
+Scott: But there's also the point of like, okay.
+
+264
+00:17:19,757 --> 00:17:21,541
+Scott: Why are you regulating this thing?
+
+265
+00:17:21,583 --> 00:17:23,047
+Scott: That's not damaging.
+
+266
+00:17:23,108 --> 00:17:27,040
+Scott: It's like, okay It's like even someone who is able to compromise this system.
+
+267
+00:17:27,102 --> 00:17:27,763
+Scott: What can they do?
+
+268
+00:17:27,905 --> 00:17:29,370
+Scott: It's like nothing of value there.
+
+269
+00:17:29,450 --> 00:17:30,253
+Scott: It's like haha.
+
+270
+00:17:30,474 --> 00:17:32,261
+Scott: You've broken into the bank of nothing.
+
+271
+00:17:32,361 --> 00:17:33,124
+Scott: Congratulations.
+
+272
+00:17:33,164 --> 00:17:34,550
+Scott: Steal all the air in this vault.
+
+273
+00:17:35,213 --> 00:17:42,268
+Rym: I could foresee things people could do with this kind of attack on Twitter Mostly getting access to sensitive DMS to then blackmail someone
+
+274
+00:17:44,516 --> 00:17:44,828
+Scott: Sure
+
+275
+00:17:46,910 --> 00:17:56,989
+Rym: Compromise high-profile accounts on say an election day and tweet some crazy nonsense that dominates the news cycle Even for an hour before people figure out what's going on like during it.
+
+276
+00:17:57,391 --> 00:17:58,235
+Scott: But I mean I could.
+
+277
+00:17:58,355 --> 00:18:02,230
+Scott: I could just concoct some screenshots to make it look like I've compromised someone's DMS.
+
+278
+00:18:02,310 --> 00:18:05,348
+Scott: And how would you know whether I was legit or not if I had actually done it?
+
+279
+00:18:05,970 --> 00:18:08,061
+Scott: But let's say you actually did it and I faked it.
+
+280
+00:18:08,141 --> 00:18:09,890
+Scott: How would anyone know who was real and who wasn't?
+
+281
+00:18:11,451 --> 00:18:12,996
+Scott: Why even bother doing it for real?
+
+282
+00:18:13,016 --> 00:18:13,537
+Scott: What's the point?
+
+283
+00:18:13,958 --> 00:18:24,910
+Rym: So actually that gets into my news Which is around that Nixon deep fake Which is yeah, the video itself is my thing of the day because it is fucking amazing.
+
+284
+00:18:25,432 --> 00:18:33,830
+Rym: Like I watched it it looks if you showed that to me without telling me it was a deep fake I would have thought literally wow, they actually recorded that video and never aired.
+
+285
+00:18:33,911 --> 00:18:37,347
+Scott: It can't tell from the pixels that it's a shot like good lord It is good.
+
+286
+00:18:37,671 --> 00:18:51,405
+Rym: But the news is this video this long article and a bunch of videos that explain how the deep thing was made like the technology behind it like everything about this space and you really got to pay attention to the space.
+
+287
+00:18:51,445 --> 00:18:53,090
+Rym: because deep fakes are real.
+
+288
+00:18:53,572 --> 00:19:03,309
+Rym: Dangerous because as Scott pointed out once you can fake things with fidelity enough to fool Most people then we enter a post-evident society pretty quick.
+
+289
+00:19:04,612 --> 00:19:16,090
+Rym: That's where auditing and metadata and things like multiple camera angles are Almost the only way to detect reality from lies like to prove a DM that Scott concocted was fake.
+
+290
+00:19:16,531 --> 00:19:27,674
+Rym: We would need to look like get Twitter subpoena the actual raw metadata like logs from physical Servers that handle that information and concoct a context not concoct But construct.
+
+291
+00:19:27,915 --> 00:19:38,450
+Rym: concocting is what Scott's gonna try to do if Scott ahead to construct or concoct in his case The like all the metadata that would be left behind in log files throughout Twitter's infrastructure.
+
+292
+00:19:38,530 --> 00:19:43,130
+Rym: That is way harder to do if not impossible than just faking the screenshot.
+
+293
+00:19:43,591 --> 00:19:52,490
+Rym: the deep fake video by itself is perfect as far as most people are concerned but the way to have Deepfake proof proof in the future is to have metadata.
+
+294
+00:19:53,053 --> 00:19:56,029
+Rym: Evidence like here is a physical tape that they used to record it.
+
+295
+00:19:56,291 --> 00:19:59,767
+Rym: Here is a photo someone took while they were recording it all this other data.
+
+296
+00:19:59,787 --> 00:20:00,410
+Rym: That's harder to fake.
+
+297
+00:20:02,310 --> 00:20:09,129
+Scott: But the point of this news is just that even if even if someone could prove that the stuff was fake Right that takes time and effort right?
+
+298
+00:20:09,570 --> 00:20:16,170
+Rym: Coming through the day after the election not the day of the election Right journalists comb through all your fake Twitter logs.
+
+299
+00:20:16,290 --> 00:20:17,976
+Scott: Okay, these have we found out?
+
+300
+00:20:18,016 --> 00:20:19,942
+Scott: these have been faked and it's like well, yeah.
+
+301
+00:20:20,003 --> 00:20:22,090
+Rym: Well, if you already lost the election there aren't do-overs.
+
+302
+00:20:24,570 --> 00:20:27,590
+Rym: So, uh, I don't want to dominate the whole show with this.
+
+303
+00:20:27,671 --> 00:20:31,285
+Rym: I'm not gonna get more into it But I urge you to read this article even if you need.
+
+304
+00:20:31,305 --> 00:20:32,745
+Rym: the Nixon video is cool Like watch it.
+
+305
+00:20:33,131 --> 00:20:39,730
+Rym: But honestly read this article and watch the video in this article that actually explains how this stuff works.
+
+306
+00:20:40,233 --> 00:20:46,522
+Scott: It is way more accessible than you might think Yeah, people make their own all the time at home like.
+
+307
+00:20:46,542 --> 00:20:51,430
+Scott: you can just make them as easily as you can make Photoshop Yes, need some CPU time and yeah software.
+
+308
+00:20:51,571 --> 00:20:53,980
+Rym: I've seen awesome people in my own Twitter feed who made some.
+
+309
+00:20:54,000 --> 00:20:59,404
+Rym: they weren't great, but they were like, yeah to make it great I would have to spend like another few months training it.
+
+310
+00:20:59,786 --> 00:21:00,690
+Rym: like there's a lot of things.
+
+311
+00:21:00,791 --> 00:21:01,675
+Scott: Yeah, well you can make.
+
+312
+00:21:01,816 --> 00:21:06,177
+Scott: you can't make great ones like the Nixon one at home easily But you can make really damn good ones.
+
+313
+00:21:06,318 --> 00:21:08,367
+Scott: That would probably still fool a bunch of stupid people.
+
+314
+00:21:08,588 --> 00:21:12,979
+Scott: Yep So, I guess not soup not stupid people but gullible people.
+
+315
+00:21:13,180 --> 00:21:17,070
+Rym: yeah gullible people naive people unaware people noobs.
+
+316
+00:21:18,691 --> 00:21:28,792
+Rym: So someone who is not aware of the existence of deep fake technology Yep, or someone who is primed to believe the thing you've deep fake and thus we'll just ignore all the bad pixels Mmm.
+
+317
+00:21:29,113 --> 00:21:32,450
+Rym: in a final news this happened a while ago, but we didn't really get a chance to talk about it.
+
+318
+00:21:33,193 --> 00:21:44,694
+Scott: I think we mentioned a few times that you probably should not run tick-tock Like on any device you own if you want to watch some good tick-tocks cuz there are some good ones you to watch them on To watch them on Twitter and YouTube.
+
+319
+00:21:44,955 --> 00:21:50,385
+Scott: Yep, when they get real uploaded do not install the actual tick-tock app on anything you own Yep.
+
+320
+00:21:50,631 --> 00:21:52,480
+Rym: So I got a three articles to link to.
+
+321
+00:21:52,661 --> 00:21:58,570
+Rym: one is there was a guy Not that long ago who basically posted a thing where he was like.
+
+322
+00:21:58,951 --> 00:22:04,849
+Rym: so I fucked around with the tick-tock app and like sniffed its packets and reverse engineered as much as I could.
+
+323
+00:22:04,869 --> 00:22:09,103
+Rym: and Yes, it steals your data, but you do that like everything steals your data.
+
+324
+00:22:09,163 --> 00:22:12,028
+Rym: every app you install steals your data for something Especially if it's free.
+
+325
+00:22:12,571 --> 00:22:24,630
+Rym: But he compared what tick-tock looked like it was doing to all those other similarly shady apps and tick-tock seems to go Way beyond what any other app is doing.
+
+326
+00:22:25,591 --> 00:22:29,449
+Rym: Like the proof of the threat profile of tick-tock appeared to be really bad.
+
+327
+00:22:30,330 --> 00:22:39,190
+Rym: independent of that There is a lot of evidence that tick-tock is probably tied to the Chinese government in ways that are concerning.
+
+328
+00:22:40,091 --> 00:22:51,670
+Rym: these articles go into a lot of detail about all the different angles from which tick-tock is basically a Terrible idea that you should never trust on any device you own under any circumstances.
+
+329
+00:22:52,192 --> 00:22:53,257
+Scott: So I find it strange.
+
+330
+00:22:53,457 --> 00:22:56,450
+Scott: I find it strange that vine died and vine was perfectly fine.
+
+331
+00:22:56,610 --> 00:22:59,638
+Scott: All right Twitter bought it then it died right?
+
+332
+00:22:59,658 --> 00:23:03,307
+Rym: well Twitter and then because it wasn't the right demographic whatever.
+
+333
+00:23:03,688 --> 00:23:09,667
+Scott: and then Several people attempted to remake vine including the people who originally made vine.
+
+334
+00:23:10,189 --> 00:23:14,610
+Scott: and yet Why was tick-tock the one that ended up being successful?
+
+335
+00:23:15,210 --> 00:23:19,523
+Scott: Whereas the the actual remake of vine by the vine people was not successful.
+
+336
+00:23:19,603 --> 00:23:20,085
+Scott: It's like what.
+
+337
+00:23:20,607 --> 00:23:22,735
+Scott: I don't understand how that happened I suspect.
+
+338
+00:23:22,835 --> 00:23:24,482
+Scott: why would you if you're sitting there?
+
+339
+00:23:24,583 --> 00:23:26,070
+Scott: It's like why would you choose that one?
+
+340
+00:23:26,611 --> 00:23:28,283
+Rym: I suspect but I'm die.
+
+341
+00:23:28,323 --> 00:23:45,649
+Rym: This is pure opinion but these articles actually talk about this a little bit that it's partly because tick-tock had massive amounts of marketing money behind itself to drive Its interaction in the early days to drive early adopters and to make tick-tock float to the top everywhere.
+
+342
+00:23:46,532 --> 00:23:48,881
+Rym: Mm-hmm pretty sure that's what happens.
+
+343
+00:23:49,483 --> 00:23:51,490
+Rym: But again, you can read these articles.
+
+344
+00:23:51,490 --> 00:23:55,328
+Rym: I'll link to a CNN one and a Bloomberg one because they get into a lot of the details.
+
+345
+00:23:55,408 --> 00:23:58,890
+Rym: like Multiple governments around the world have banned tick-tock.
+
+346
+00:23:59,930 --> 00:24:04,110
+Rym: Recently multiple companies have banned tick-tock being installed on any company owned devices.
+
+347
+00:24:05,352 --> 00:24:08,510
+Rym: The tick-tock is not cool and you should not be running right, right?
+
+348
+00:24:08,590 --> 00:24:16,317
+Scott: Tick-tock is not a situation like with zoom where zoom is just made by people who's not trying to fuck up Zoom's actually trying really hard zoom.
+
+349
+00:24:16,458 --> 00:24:18,847
+Scott: Yeah, zoom is just low quality software.
+
+350
+00:24:18,947 --> 00:24:19,670
+Rym: I don't trust zoom.
+
+351
+00:24:19,851 --> 00:24:23,852
+Rym: I refuse to ensure all it but I don't think they're trying to get it's trying to get better Right.
+
+352
+00:24:24,173 --> 00:24:25,942
+Scott: Tick-tock is not low quality software.
+
+353
+00:24:25,982 --> 00:24:27,509
+Scott: It's actively malicious software.
+
+354
+00:24:27,529 --> 00:24:32,207
+Rym: Yep Now I know I'm the kind of person who treats both equally like work.
+
+355
+00:24:32,428 --> 00:24:36,575
+Scott: Well, of course It's just I'm getting some Difference.
+
+356
+00:24:36,916 --> 00:24:39,104
+Rym: and they the only conferencing they support a zoom.
+
+357
+00:24:39,486 --> 00:24:40,610
+Rym: So I even raised an issue.
+
+358
+00:24:40,691 --> 00:24:42,470
+Rym: I was like I refused to install this client.
+
+359
+00:24:42,791 --> 00:24:48,410
+Rym: They let me use the web client instead like I was unwilling to install this client on any device I owned.
+
+360
+00:24:48,711 --> 00:24:50,460
+Rym: But again zoom is not malicious.
+
+361
+00:24:50,842 --> 00:24:52,370
+Rym: They just have fucked up several times.
+
+362
+00:24:59,047 --> 00:25:01,869
+Rym: but anyway things Of the day.
+
+363
+00:25:01,950 --> 00:25:03,380
+Rym: so I kind of preempted myself.
+
+364
+00:25:03,480 --> 00:25:05,651
+Rym: My thing of the day is that Nixon video.
+
+365
+00:25:05,692 --> 00:25:07,199
+Rym: but the context of this video.
+
+366
+00:25:08,022 --> 00:25:14,440
+Rym: When Apollo 11 happened like we sent human beings to the goddamn moon for the first time ever.
+
+367
+00:25:15,204 --> 00:25:23,380
+Rym: That was so long ago that it's terrifying But it happened long before any of us most people listening to the show were born.
+
+368
+00:25:23,843 --> 00:25:26,060
+Rym: People went up on the moon and walked around and that was crazy.
+
+369
+00:25:26,665 --> 00:25:28,240
+Scott: And not only that we did it a bunch of times.
+
+370
+00:25:28,260 --> 00:25:35,660
+Scott: If you forget all that They only forget the first time where we like poked our head out and went back in and we don't people forget the time We're like we went out and drove around and shit.
+
+371
+00:25:35,741 --> 00:25:37,866
+Rym: Yeah, of course There wasn't what people also remember.
+
+372
+00:25:37,906 --> 00:25:41,541
+Rym: the time we what we tried to go out and blew up and barely made it back Right.
+
+373
+00:25:41,742 --> 00:25:46,440
+Scott: the two most famous times not the awesomest time where we went around and did a whole bunch of stuff.
+
+374
+00:25:46,561 --> 00:25:50,888
+Rym: Yeah, who remembers what happened in Apollo 17?
+
+375
+00:25:50,888 --> 00:26:02,640
+Rym: I But this like people really today do not fully appreciate how I'm quoting someone who wrote an article about this a while ago fucking insane.
+
+376
+00:26:02,881 --> 00:26:18,440
+Rym: It was to send humans to the moon with the technology we had in 1969. like the odds of success were as high as they could be and they were not as high as I think any of you would have been comfortable with if you were fully like involved in this situation.
+
+377
+00:26:19,460 --> 00:26:32,620
+Rym: So the president of the United States Richard Richard Nixon into the time who is no longer the most corrupt president in American history somehow Had to write about like head of speech for the success.
+
+378
+00:26:32,740 --> 00:26:36,537
+Rym: Like he gave this big speech like we fucking send people to the moon and now they're home.
+
+379
+00:26:36,657 --> 00:26:41,140
+Rym: Oh my god They also wrote a speech for all the different ways.
+
+380
+00:26:41,180 --> 00:26:52,313
+Rym: The astronauts might not come back like every possible Terrifying news that the president would have to give to the American people Quickly if something went very wrong and right.
+
+381
+00:26:52,333 --> 00:26:54,000
+Scott: because I mean, you know rocket exploded.
+
+382
+00:26:54,362 --> 00:26:56,679
+Scott: They made it there and they're gonna be stuck on the moon.
+
+383
+00:26:56,840 --> 00:26:59,974
+Rym: I'm like, they're gonna die there and I can't get stuck in space.
+
+384
+00:26:59,994 --> 00:27:01,180
+Scott: that even make it to the moon.
+
+385
+00:27:01,902 --> 00:27:02,564
+Scott: They they're gonna.
+
+386
+00:27:02,624 --> 00:27:05,012
+Scott: they died on their way back to earth in the atmosphere.
+
+387
+00:27:05,032 --> 00:27:11,300
+Scott: You know, it's this is why the odds are low Many many ways to die and very few ways to succeed.
+
+388
+00:27:11,742 --> 00:27:16,120
+Rym: So the text of one of those speeches like those speeches that's all public information.
+
+389
+00:27:16,160 --> 00:27:22,400
+Rym: Now like you can go read the text of every version of a speech Nixon Who was gonna give depending on how things went with all these launches?
+
+390
+00:27:23,100 --> 00:27:35,607
+Rym: But the deep fake video is someone took one of those speeches He never made and the deep fake is Nixon very convincingly giving that speech Mmm and it fooled me.
+
+391
+00:27:36,029 --> 00:27:38,560
+Rym: at least it would have fooled me if I didn't already know it was a fake.
+
+392
+00:27:39,042 --> 00:27:40,226
+Scott: Well, I mean you could have been fooled.
+
+393
+00:27:40,286 --> 00:27:42,615
+Scott: all I think it's the as the additional effect of like.
+
+394
+00:27:42,636 --> 00:27:43,780
+Scott: you could tell someone right?
+
+395
+00:27:43,940 --> 00:27:48,998
+Scott: Like hey, they actually recorded Nixon making all the speeches and that way they could just play the one that was the real one.
+
+396
+00:27:49,038 --> 00:27:51,698
+Rym: Yep And that's plausible right?
+
+397
+00:27:52,360 --> 00:27:53,724
+Rym: Plausibility plus deep fake.
+
+398
+00:27:54,105 --> 00:27:54,807
+Rym: you're good to go.
+
+399
+00:27:54,907 --> 00:27:56,932
+Rym: You can fuck things up with that technology.
+
+400
+00:27:57,354 --> 00:27:59,419
+Rym: So be if your pet be prepared.
+
+401
+00:28:00,224 --> 00:28:02,380
+Scott: So he only gave the one that actually happened.
+
+402
+00:28:03,344 --> 00:28:04,055
+Scott: What do I have?
+
+403
+00:28:04,096 --> 00:28:04,218
+Scott: so?
+
+404
+00:28:05,501 --> 00:28:16,891
+Scott: You know last I think on a recent thing of the day maybe even the most recent one I was I talked about how I was watching a bunch of DJ's on Twitch because you know That's what you do when you're stuck inside all the time, right?
+
+405
+00:28:16,951 --> 00:28:18,015
+Scott: You're looking for new music.
+
+406
+00:28:18,056 --> 00:28:18,638
+Scott: No concerts.
+
+407
+00:28:18,678 --> 00:28:19,040
+Scott: No nothing.
+
+408
+00:28:19,788 --> 00:28:20,839
+Scott: The club is closed, right?
+
+409
+00:28:21,981 --> 00:28:25,720
+Scott: Or the club is trying to open and getting shut down because they were stupid and tried to open.
+
+410
+00:28:27,702 --> 00:28:29,948
+Scott: And You know just I looked at.
+
+411
+00:28:29,968 --> 00:28:39,360
+Scott: my last thing of the day was a video showing how to DJ But I wanted to highlight one of maybe my favorite DJ that I found on Twitch and also other services.
+
+412
+00:28:39,922 --> 00:28:42,630
+Scott: Right is the lovely Natasha dig.
+
+413
+00:28:42,670 --> 00:28:45,740
+Scott: so there was this show that I didn't know existed until now.
+
+414
+00:28:46,121 --> 00:28:53,039
+Scott: So I guess we have to thank being trapped inside and people DJing online for my discovery of it But apparently it's been going on for many years.
+
+415
+00:28:53,825 --> 00:28:57,743
+Scott: They got this show called soul and the horn and The.
+
+416
+00:28:57,884 --> 00:29:07,379
+Scott: it's basically two people, you know the DJ Natasha and this music curator producer type person named D prosper who I don't know anything about because I don't see them on the screen.
+
+417
+00:29:07,742 --> 00:29:08,497
+Scott: I only see the DJ.
+
+418
+00:29:10,342 --> 00:29:13,515
+Scott: And apparently they were doing shows like all over the city, and you could see like.
+
+419
+00:29:13,535 --> 00:29:20,673
+Scott: if you look on their Twitter account It'll be like yeah, Chelsea music call 12 bucks You know be like yeah, even even saw like Lincoln Center like you know like.
+
+420
+00:29:20,693 --> 00:29:22,600
+Scott: they're playing all around the city all this time.
+
+421
+00:29:23,246 --> 00:29:27,988
+Scott: Right you know doing shows But of course they were forced to stop doing shows.
+
+422
+00:29:28,570 --> 00:29:45,943
+Scott: so now they have an excellent streaming setup From their little record vault in Brooklyn and also other locations as you know the case may be And basically it is absolutely far and away the best DJing I've seen or heard On.
+
+423
+00:29:46,003 --> 00:29:50,656
+Scott: Twitch is totally free, and they're doing all sorts of cool stuff over there right.
+
+424
+00:29:50,676 --> 00:29:51,459
+Scott: so the first cool thing.
+
+425
+00:29:51,479 --> 00:30:04,094
+Scott: They're doing They are not Filtering their money through twitch right they're basically I guess Elicitly going around and they're like yeah, send us money with cash app or whatever directly.
+
+426
+00:30:04,175 --> 00:30:05,740
+Scott: There's no there's no twitch subs.
+
+427
+00:30:05,901 --> 00:30:06,606
+Scott: There's no nothing.
+
+428
+00:30:07,090 --> 00:30:16,951
+Rym: that's honestly Probably the right way to go with anything like if we tried to make money from our streaming We would not rely on YouTube and twitch monetization.
+
+429
+00:30:17,533 --> 00:30:19,300
+Scott: right it's only it's only Friday nights.
+
+430
+00:30:19,781 --> 00:30:27,020
+Scott: So you have to you want to check with their website or their social media Instagram whatever to figure out exactly when it's gonna be On Friday, but it's like it's only Fridays.
+
+431
+00:30:27,161 --> 00:30:30,200
+Scott: It's not like a constant thing right like some of these other people are doing.
+
+432
+00:30:31,063 --> 00:30:37,909
+Scott: and the other cool thing they do which really I think helps build the community around it is They have a zoom.
+
+433
+00:30:38,171 --> 00:30:39,519
+Scott: It's a zoom whatever right.
+
+434
+00:30:40,443 --> 00:30:48,459
+Scott: But what they do is the idea is that you would since there's no club It's just this person in in Brooklyn DJing by themselves with a bunch of cameras, right?
+
+435
+00:30:49,463 --> 00:30:55,100
+Scott: That you would go on zoom and dance and then they show people dancing at home.
+
+436
+00:30:55,902 --> 00:31:09,480
+Scott: Right it's like you're watching and like someone's controlling the camera and switching between like you know the DJ someone dancing at home Some old-school video footage right some models dancing at home Right and it's like actually pretty fun.
+
+437
+00:31:10,582 --> 00:31:11,545
+Scott: It gives you like this.
+
+438
+00:31:11,585 --> 00:31:15,940
+Scott: You know sort of community feeling and plus the music is like unbelievable.
+
+439
+00:31:17,622 --> 00:31:24,434
+Scott: So yeah, if you are looking for something to do on Friday night, and you don't want to go outside This is as close as you're gonna get to go into the club.
+
+440
+00:31:24,655 --> 00:31:27,471
+Scott: Yeah, so on the horn There's no relation this Friday.
+
+441
+00:31:27,511 --> 00:31:32,659
+Scott: No relation to The album soul in the horn by what's-his-name nah?
+
+442
+00:31:33,462 --> 00:31:34,068
+Scott: What's-his-name?
+
+443
+00:31:34,088 --> 00:31:34,734
+Scott: well done?
+
+444
+00:31:36,522 --> 00:31:36,905
+Scott: I'll hurt.
+
+445
+00:31:37,147 --> 00:31:40,375
+Scott: no relation to the owl hurt album That I'm aware of.
+
+446
+00:31:41,541 --> 00:31:42,666
+Rym: All right in the meta moment.
+
+447
+00:31:42,867 --> 00:31:43,631
+Rym: We're stuck.
+
+448
+00:31:44,193 --> 00:31:45,740
+Rym: Oh, we can't do stuff.
+
+449
+00:31:46,201 --> 00:31:53,140
+Rym: It's actually really hard to record panels because we're not in the same physical place and this is barely works.
+
+450
+00:31:53,301 --> 00:31:54,153
+Rym: What we're doing right here?
+
+451
+00:31:55,610 --> 00:31:58,294
+Scott: It is not easy Working on plans.
+
+452
+00:31:58,416 --> 00:31:58,740
+Rym: We're good.
+
+453
+00:31:58,760 --> 00:32:06,883
+Rym: We're gonna have live or at least live to tape panels at the crunchyroll Expo at PAX online and at more Conventions.
+
+454
+00:32:07,004 --> 00:32:11,160
+Rym: TBD magfest looks like they're doing something cool, so stay tuned on all that.
+
+455
+00:32:11,260 --> 00:32:15,980
+Rym: We are working hard to bring a bunch of content online in all these places.
+
+456
+00:32:17,621 --> 00:32:19,807
+Rym: The fun part is for various reasons.
+
+457
+00:32:19,927 --> 00:32:21,411
+Rym: you might end up the video you watch.
+
+458
+00:32:22,154 --> 00:32:29,017
+Rym: we might be doing the show live like Outside in a New York City park somewhere who knows we'll see.
+
+459
+00:32:29,238 --> 00:32:29,620
+Rym: stay tuned.
+
+460
+00:32:30,521 --> 00:32:35,078
+Scott: Yeah, so also I've been playing pay for Mario or a gummy king that just came out.
+
+461
+00:32:35,218 --> 00:32:35,600
+Rym: I got it.
+
+462
+00:32:35,700 --> 00:32:36,890
+Rym: I'm gonna start it tonight.
+
+463
+00:32:36,911 --> 00:32:37,274
+Rym: I think no.
+
+464
+00:32:38,060 --> 00:32:52,384
+Scott: I don't know if it's your jam or not, but I finally went through the effort, and I set up a good twitch streaming setup here, so Because it's now so easy to just turn it on and play That's what I've been doing.
+
+465
+00:32:52,605 --> 00:32:55,414
+Scott: so if you want to watch me play pay for Mario.
+
+466
+00:32:55,856 --> 00:32:57,000
+Scott: It's a my twitch channel.
+
+467
+00:32:57,120 --> 00:33:02,036
+Scott: I didn't go to YouTube because YouTube still has some in Nintendo stuff going on.
+
+468
+00:33:02,437 --> 00:33:02,698
+Scott: right.
+
+469
+00:33:03,079 --> 00:33:05,379
+Rym: yeah You can't really stream Nintendo games.
+
+470
+00:33:07,237 --> 00:33:14,420
+Scott: And Also, I could do some discord, but it's a little hard to do discord and something else at the same time.
+
+471
+00:33:14,983 --> 00:33:18,020
+Scott: So you know maybe what I see if I stream some non Nintendo.
+
+472
+00:33:18,160 --> 00:33:22,653
+Scott: Maybe I'll do the twitch plus YouTube or discord only or you know who knows.
+
+473
+00:33:22,753 --> 00:33:29,740
+Scott: maybe you'll just have to go and subscribe to all Three of those places if you want to figure out when or what I'm just dreaming.
+
+474
+00:33:30,603 --> 00:33:31,485
+Scott: My setup is good.
+
+475
+00:33:31,806 --> 00:33:43,535
+Rym: basically follow Scott on Twitch and YouTube scallops follow me on YouTube and join the front row crew Forum discord where occasionally like I'll just stream quest for glory in there.
+
+476
+00:33:43,575 --> 00:33:44,780
+Rym: I'm playing quest for glory one again.
+
+477
+00:33:46,805 --> 00:33:48,500
+Rym: That game is actually.
+
+478
+00:33:49,504 --> 00:33:59,260
+Rym: It holds up way better than I expected though There are a few soft locks that I remembered from being a kid and those were never fixed.
+
+479
+00:33:59,502 --> 00:34:01,316
+Rym: So I tested and I found them all again.
+
+480
+00:34:01,336 --> 00:34:01,880
+Rym: They're still there.
+
+481
+00:34:01,941 --> 00:34:03,822
+Rym: So if you play that game Don't are they?
+
+482
+00:34:03,883 --> 00:34:05,168
+Scott: are they at least the ones we like?
+
+483
+00:34:05,188 --> 00:34:06,353
+Scott: you know you soft locked?
+
+484
+00:34:06,454 --> 00:34:07,860
+Scott: or are they the ones where you're gonna be?
+
+485
+00:34:08,120 --> 00:34:11,659
+Scott: If you've never played the game before you're just gonna be sitting there for hours wanting to hurt yourself.
+
+486
+00:34:12,280 --> 00:34:15,051
+Rym: They're obvious because you can't click on anything anymore and the game just kind of.
+
+487
+00:34:15,071 --> 00:34:16,275
+Rym: for oh is that?
+
+488
+00:34:16,335 --> 00:34:17,179
+Scott: so that's a hard lock?
+
+489
+00:34:17,360 --> 00:34:22,940
+Rym: Well, no no cuz the game still progresses But you can't interact with anything anymore.
+
+490
+00:34:22,980 --> 00:34:26,835
+Rym: But the like the animations on screen are still going the NPCs are still walking around.
+
+491
+00:34:26,857 --> 00:34:27,620
+Scott: still a hard lock.
+
+492
+00:34:27,760 --> 00:34:28,021
+Scott: Is that?
+
+493
+00:34:28,041 --> 00:34:28,844
+Scott: the game is broken?
+
+494
+00:34:28,864 --> 00:34:29,628
+Scott: you can't do anything.
+
+495
+00:34:29,668 --> 00:34:31,735
+Scott: a soft lock is like you're playing Mario, right?
+
+496
+00:34:32,418 --> 00:34:34,625
+Scott: And You you know, you're.
+
+497
+00:34:34,665 --> 00:34:41,165
+Scott: you're in a room and you're surrounded by bricks and the p-switches on the outside of the bricks And you can't get out there.
+
+498
+00:34:41,407 --> 00:34:41,708
+Scott: Yeah.
+
+499
+00:34:41,830 --> 00:34:42,574
+Scott: Well a soft lock.
+
+500
+00:34:42,634 --> 00:34:43,540
+Scott: It's like you can still play.
+
+501
+00:34:43,580 --> 00:34:43,904
+Scott: There's nothing.
+
+502
+00:34:43,944 --> 00:34:44,895
+Scott: the game's not broken, right?
+
+503
+00:34:45,420 --> 00:34:49,000
+Scott: You're just can't progress because the state of the game is such that you're stuck.
+
+504
+00:34:49,159 --> 00:34:49,341
+Scott: There
+
+505
+00:34:49,601 --> 00:35:03,944
+Rym: are some ways to kill yourself where you don't realize you've done it until later But that you're actually warned about that and they're all obvious and the game tells you save a lot for that reason because a lot Of times those deaths are really funny But they never.
+
+506
+00:35:04,325 --> 00:35:09,520
+Rym: it's like there's this one blue monster and if you keep fucking with it, it eventually jumps up into the sky.
+
+507
+00:35:09,560 --> 00:35:10,447
+Rym: It's like this bouncing thing.
+
+508
+00:35:10,487 --> 00:35:12,119
+Rym: it disappears and you're like, huh?
+
+509
+00:35:13,142 --> 00:35:18,411
+Rym: Okay Five minutes later whatever you're doing in the game.
+
+510
+00:35:18,451 --> 00:35:24,423
+Rym: If you didn't like deal with that situation it you just hear Exactly Five minutes later.
+
+511
+00:35:24,524 --> 00:35:24,885
+Rym: I think it's.
+
+512
+00:35:24,945 --> 00:35:30,968
+Rym: I forget exactly how long it is, but some short span of time later That's just long enough for you have forgotten.
+
+513
+00:35:31,269 --> 00:35:33,320
+Rym: You'll hear that noise and it'll fall on you and kill you.
+
+514
+00:35:34,142 --> 00:35:34,927
+Scott: Okay, pretty cool.
+
+515
+00:35:35,270 --> 00:35:37,866
+Rym: But yeah, but the game's playable Okay.
+
+516
+00:35:38,636 --> 00:35:38,980
+Rym: All right.
+
+517
+00:35:39,341 --> 00:35:42,168
+Rym: So we talked about the book.
+
+518
+00:35:42,188 --> 00:35:43,751
+Scott: club book is still the tale of Genji.
+
+519
+00:35:43,812 --> 00:35:44,754
+Scott: when we'll reread it?
+
+520
+00:35:44,974 --> 00:35:45,937
+Scott: some nobody knows.
+
+521
+00:35:46,358 --> 00:35:50,991
+Scott: Yeah Biking a lot summer eating some reading is canceled 2020.
+
+522
+00:35:50,991 --> 00:35:53,667
+Rym: Yeah I'm reading a lot of nonfiction lately.
+
+523
+00:35:53,968 --> 00:35:54,830
+Rym: for a lot of reasons.
+
+524
+00:35:54,931 --> 00:35:58,200
+Scott: we're going for the record of longest book club book without being read.
+
+525
+00:35:58,280 --> 00:35:59,790
+Rym: The worst part is if COVID hadn't happened.
+
+526
+00:35:59,810 --> 00:36:00,937
+Rym: I feel like we would have read it by now.
+
+527
+00:36:01,681 --> 00:36:02,284
+Scott: Yes, I do.
+
+528
+00:36:02,304 --> 00:36:04,635
+Scott: I believe that because I was reading on the subway.
+
+529
+00:36:04,655 --> 00:36:07,890
+Rym: Yeah, I was reading on the subway Also, I had a lot of travel or I would have powered through it.
+
+530
+00:36:08,473 --> 00:36:13,189
+Rym: So oh, yeah, we each Talked about this topic at least out.
+
+531
+00:36:13,390 --> 00:36:17,080
+Rym: similar related topic a long time ago on GeekNights back in like 2009.
+
+532
+00:36:17,080 --> 00:36:19,671
+Scott: that's been 11 years.
+
+533
+00:36:19,691 --> 00:36:21,478
+Scott: Okay, we can do a half redo
+
+534
+00:36:22,089 --> 00:36:39,320
+Rym: Yep but the topic was basically full disclosure the idea being if you find a bug or an exploit that could be like that you Could exploit in some way in commercial software in an online system Do you tell the world about it and tell the full details about how it works?
+
+535
+00:36:39,880 --> 00:36:45,560
+Rym: Do you just tell the company that's affected and tell them the full detail of how it works but hide it from everyone else?
+
+536
+00:36:45,980 --> 00:36:53,300
+Rym: Do you tell the whole world that it exists but only tell the company that has the problem the full details like that whole conversation?
+
+537
+00:36:53,960 --> 00:37:07,739
+Rym: But we want to expand this and talk about it more generically in the terms of disclosure at all like the idea of responsible disclosure especially because Bug bounties have become a much bigger thing in the decades since we did that last show.
+
+538
+00:37:08,462 --> 00:37:19,021
+Scott: Well, I mean bug bounties are nothing new always been around right but I think what's happened is that they had like a big spike and now they've sort of like settled into the status quo for quite a few years of Like.
+
+539
+00:37:19,041 --> 00:37:22,680
+Scott: these expectations like of what bug bounties are all about.
+
+540
+00:37:22,805 --> 00:37:32,399
+Scott: Yeah And there's a lot of problems with these bug bounty systems that exist and they're basically aren't being addressed because the status quo Which is not good is being maintained.
+
+541
+00:37:33,682 --> 00:37:42,777
+Scott: So the first major problem with the bug bounty systems is that a lot of companies employ them when it is not really appropriate for their situation, right.
+
+542
+00:37:43,139 --> 00:37:48,280
+Scott: so Usually when when would a company have value in a bug bounty program, right?
+
+543
+00:37:48,500 --> 00:37:54,500
+Scott: So the idea is hey, we have software that's important security wise that we make right?
+
+544
+00:37:54,720 --> 00:38:04,720
+Scott: We want to know about all the vulnerabilities in that software so we can solve them quickly And we're willing to pay people to solve those problems because it's our product is worth money, right?
+
+545
+00:38:05,820 --> 00:38:09,920
+Scott: The thing is you could just hire security experts to do that, right?
+
+546
+00:38:10,080 --> 00:38:15,415
+Scott: Why would you know that the bounty program is like, you know in case someone else out there?
+
+547
+00:38:15,435 --> 00:38:24,659
+Scott: Yeah, right has Right accidentally found something That you would hope that your bounty program would convince them.
+
+548
+00:38:25,122 --> 00:38:39,090
+Scott: Okay person out there you found a bug in our software, right We're encouraging you with this with this bounty money to tell us responsibly, yeah and Get paid by us as opposed to doing crime with it.
+
+549
+00:38:39,130 --> 00:38:44,215
+Rym: to get money or you could a low dollar programs Where the goal is even simpler?
+
+550
+00:38:45,400 --> 00:39:00,320
+Rym: If I get people out there to find low Importance like minor bugs that you don't care that much about but you're not gonna invest enough in QA to find and test and fix but it'll say it's almost like an On-demand secondary QA of your thing.
+
+551
+00:39:00,741 --> 00:39:02,426
+Rym: I've seen that you or you could.
+
+552
+00:39:02,507 --> 00:39:06,840
+Scott: you could use that as a hiring pool like you're finding people to hire to become your security.
+
+553
+00:39:07,141 --> 00:39:09,312
+Rym: I didn't even think of that because that is someone.
+
+554
+00:39:09,352 --> 00:39:13,380
+Rym: how I got my last job Not someone cares is but a similar situation.
+
+555
+00:39:13,520 --> 00:39:19,360
+Scott: Right, someone cares enough about your software to in their spare time find some bugs in it and they're successful at it.
+
+556
+00:39:19,380 --> 00:39:26,489
+Scott: It's like yeah, you'll give them money and hire them right and have the joy the team like I'll tell you all this is like This is useful anecdotal information for you in the future.
+
+557
+00:39:26,730 --> 00:39:27,793
+Rym: My previous job.
+
+558
+00:39:27,853 --> 00:39:29,860
+Rym: The way I got it was I was at a company.
+
+559
+00:39:30,425 --> 00:39:32,179
+Rym: I bought software from another company.
+
+560
+00:39:33,182 --> 00:39:48,216
+Rym: that software had a lot of problems and I sent them a huge number of extremely detailed bug reports and feature requests to the point that they literally Approached me and said you want to just come and manage this product for us.
+
+561
+00:39:48,256 --> 00:39:50,579
+Rym: We'll pay you plenty Sure.
+
+562
+00:39:51,481 --> 00:39:59,282
+Scott: So anyway, so the problem is a lot of companies set up these bug bounty programs when a they don't have the resources to fix All the bugs.
+
+563
+00:39:59,644 --> 00:40:09,020
+Scott: Yeah, so people start submitting all kinds of bugs and security vulnerabilities And they don't have the capacity to fix all the bugs in their bug log, right?
+
+564
+00:40:09,220 --> 00:40:12,812
+Scott: Yeah, it's getting filled up like crazy and it's like oh shit.
+
+565
+00:40:12,933 --> 00:40:14,980
+Rym: And now what do you pay the bounties now?
+
+566
+00:40:15,101 --> 00:40:17,960
+Rym: You're just spending cash and not fixing the problem.
+
+567
+00:40:18,321 --> 00:40:26,065
+Scott: You're spending cash to fill up your bug log or you and now people know about bugs in your software that you can't fix You're actually in a worse position.
+
+568
+00:40:26,185 --> 00:40:27,891
+Scott: Yep, or encouraging people.
+
+569
+00:40:28,232 --> 00:40:30,780
+Rym: Do you not pay the bounties now?
+
+570
+00:40:30,880 --> 00:40:38,859
+Rym: You've got a bunch of angry hackers who have found bugs And have documented those bugs and are ready and willing to exploit them.
+
+571
+00:40:40,901 --> 00:40:41,940
+Rym: Mm-hmm.
+
+572
+00:40:41,960 --> 00:40:43,560
+Scott: So yeah, that's a big problem.
+
+573
+00:40:45,081 --> 00:40:52,060
+Scott: Another problem and I see this is like the real crime here right is when it sort of gets turned on its head, right?
+
+574
+00:40:52,160 --> 00:40:52,763
+Scott: It's like okay.
+
+575
+00:40:53,024 --> 00:40:58,858
+Scott: We don't want people who find security vulnerabilities to do crimes So we'll give a monetary incentive to do the good thing.
+
+576
+00:40:59,622 --> 00:41:01,871
+Scott: People then turn around and say oh, well, you know what?
+
+577
+00:41:02,795 --> 00:41:04,100
+Scott: I'm not gonna get hired by anyone.
+
+578
+00:41:04,180 --> 00:41:10,195
+Scott: I'm just gonna sit at home and try to complete as many bug bounties as I can and that'll be my you know Not real job.
+
+579
+00:41:10,235 --> 00:41:13,207
+Rym: Yeah That's part of the gig gig economy.
+
+580
+00:41:13,568 --> 00:41:23,711
+Scott: granted the gig economy is a scam but that's a separate right and this is an exploitative Practice because basically the bug bounties don't pay enough right.
+
+581
+00:41:23,791 --> 00:41:38,840
+Scott: the effort required to find bugs that pay a lot of that are worth a lot and the time it takes to find them is like full-time job plus like it's not easy to find a Vulnerability that is worthy of a huge payout, right?
+
+582
+00:41:39,241 --> 00:41:45,480
+Scott: So if you spend all your time doing that the even if the companies pay you you won't be making what you're worth, right?
+
+583
+00:41:46,140 --> 00:41:56,900
+Scott: so people end up doing this because the system is created and it entices people to do it and encourages people to do it when That's not something anyone should be doing.
+
+584
+00:41:57,161 --> 00:41:57,883
+Rym: Well think it's very.
+
+585
+00:41:57,943 --> 00:42:10,820
+Rym: it's very similar to a lot of other exploitative practices in the gig economy like specifically You're basically outsourcing this work to people who are kind of desperate who will do it because that's the only work they can find.
+
+586
+00:42:10,940 --> 00:42:15,980
+Rym: Like they have these skills, but they can't make money doing anything because the economy is fucked and capitalism is a scam.
+
+587
+00:42:16,481 --> 00:42:17,464
+Rym: So they end up doing this.
+
+588
+00:42:17,865 --> 00:42:23,460
+Rym: but think about even if you're a cold heartless killer and you don't care about that person's plight at All.
+
+589
+00:42:24,062 --> 00:42:35,460
+Rym: think of it from a purely exploitative as an evil person standpoint if you're not Extremely skilled motivated and desperate to find those bugs.
+
+590
+00:42:36,182 --> 00:42:42,218
+Rym: But the black market is willing to pay those people to find bugs for them and they're paying more than you're paying.
+
+591
+00:42:42,539 --> 00:42:46,704
+Rym: you've actually weaponized this person against herself Exactly this person.
+
+592
+00:42:46,784 --> 00:42:51,800
+Scott: if you hadn't had this bounty program, maybe they wouldn't have learned your software so well, right?
+
+593
+00:42:51,940 --> 00:42:56,940
+Scott: You just created someone who knows your software really well and knows how to find vulnerabilities in it.
+
+594
+00:42:57,243 --> 00:42:58,560
+Scott: That person would not have existed.
+
+595
+00:42:58,660 --> 00:43:00,789
+Scott: No one would have cared enough about your software without you.
+
+596
+00:43:00,809 --> 00:43:01,954
+Scott: it had the opposite.
+
+597
+00:43:01,974 --> 00:43:03,420
+Scott: you were trying to make your software more secure.
+
+598
+00:43:03,824 --> 00:43:08,572
+Scott: You in fact just created People who are very good at hurting your software and now you have to.
+
+599
+00:43:08,612 --> 00:43:10,460
+Scott: basically they have the they're no longer.
+
+600
+00:43:10,560 --> 00:43:11,986
+Scott: Are you paying a bounty right?
+
+601
+00:43:12,267 --> 00:43:14,636
+Scott: They're now blackmailing you into paying.
+
+602
+00:43:14,817 --> 00:43:17,640
+Scott: Yep, right You should have paid them in the first place.
+
+603
+00:43:17,803 --> 00:43:24,920
+Rym: But you know I don't even blame the person who sells themselves out to the dark side of the web because that's their hustle.
+
+604
+00:43:24,920 --> 00:43:30,191
+Scott: They're they're fucked anyway Mm-hmm, it also creates a lot of situations.
+
+605
+00:43:30,653 --> 00:43:42,880
+Scott: even if you pay people or have a Consistent policy of when and what you'll pay for it creates a lot of bad press amongst the tech people Which I guess is not good because those are people you would want to hire.
+
+606
+00:43:43,381 --> 00:43:44,505
+Scott: Right possibly right.
+
+607
+00:43:44,586 --> 00:43:53,538
+Scott: and those people if you get bad press because you know, they see something like hey, you know I found these bugs in the software and they won't pay me and you have some legit reason like it's like.
+
+608
+00:43:53,678 --> 00:44:03,002
+Scott: actually We only pay for this and that and you know It has to be a vulnerability that does this and we don't consider that to be you know a Super.
+
+609
+00:44:03,383 --> 00:44:13,379
+Scott: we don't consider that to be as severe a security threat as that person who found it says it is because it would require You to have like pre-existing access to the machine or something like that.
+
+610
+00:44:13,560 --> 00:44:27,453
+Scott: So we consider that to only be worth this much money And you end up having to have all these PR fights and that ends up being the job of someone at your company to do all that Communications work right with the bug bounty finding community.
+
+611
+00:44:27,473 --> 00:44:28,235
+Rym: Oh, wow.
+
+612
+00:44:28,276 --> 00:44:29,540
+Scott: There's a really it's never.
+
+613
+00:44:30,642 --> 00:44:32,840
+Scott: It's pretty much never positive for your company.
+
+614
+00:44:32,920 --> 00:44:40,988
+Scott: I've not seen a lot of positive interactions where people are like, oh man company X is just really great about honoring and paying out Bounties, they're so great to work with.
+
+615
+00:44:41,068 --> 00:44:43,840
+Scott: I let you know, it's like no because it's an exploitative system.
+
+616
+00:44:43,920 --> 00:44:47,660
+Scott: No one's ever gonna be happy, you know being on the under the bounty finding.
+
+617
+00:44:47,700 --> 00:44:50,856
+Rym: There's some numbers in this verge article going to link to.
+
+618
+00:44:50,897 --> 00:44:55,132
+Rym: they surveyed 600,000 people on one of these bug bounty platforms and out of 600,000.
+
+619
+00:44:55,132 --> 00:45:04,820
+Rym: Let's see 146 of them have never made more than $100,000 and like annual income in their lifetime on the platform.
+
+620
+00:45:07,161 --> 00:45:12,540
+Scott: I think I think a lot of people on those platforms like sign up poke at something and go away, right?
+
+621
+00:45:12,700 --> 00:45:15,140
+Scott: How many how many of the users are like actual?
+
+622
+00:45:15,662 --> 00:45:23,207
+Scott: People who have decided to stay home and find vulnerabilities and have the technological skills Necessary to actually do so.
+
+623
+00:45:23,287 --> 00:45:29,490
+Rym: it points out that the starting salary for an entry-level Penetration tester is more than $100,000 a year.
+
+624
+00:45:29,510 --> 00:45:37,135
+Scott: That is correct But there are enough of those jobs To go around because it's like because the companies won't pay for it.
+
+625
+00:45:37,175 --> 00:45:41,146
+Rym: if they were gonna pay for it They wouldn't have these bug bounty programs Right.
+
+626
+00:45:41,186 --> 00:45:42,200
+Scott: Well, I mean that's what I'm saying.
+
+627
+00:45:42,260 --> 00:45:55,580
+Scott: The only legit purpose of them is what I said before which is to you know if there is the criminal out there to give them a second thought to do the Responsible disclosure and still get paid as opposed to going down the path of crime, right?
+
+628
+00:45:55,700 --> 00:46:00,980
+Scott: It shouldn't be a path where that's someone's job right through by a gig economy.
+
+629
+00:46:01,000 --> 00:46:03,960
+Scott: Yeah, it shouldn't be a replacement for employees.
+
+630
+00:46:04,662 --> 00:46:14,839
+Rym: I feel like every one of these gig gig economy type things should be heavily regulated in ways that Effectively force these platforms to pay a minimum wage or shut them down.
+
+631
+00:46:15,622 --> 00:46:17,428
+Scott: But also a minimum wage is not enough for this.
+
+632
+00:46:17,468 --> 00:46:20,257
+Rym: I said a minimum wage not the current minimum wage.
+
+633
+00:46:20,658 --> 00:46:25,193
+Rym: Yeah Anyway, like $25 an hour like modern minimum.
+
+634
+00:46:25,313 --> 00:46:26,116
+Rym: How many our eyes.
+
+635
+00:46:26,136 --> 00:46:26,838
+Scott: so I find a bug.
+
+636
+00:46:26,878 --> 00:46:29,739
+Scott: in five minutes I get lucky and I said I spent a week on it.
+
+637
+00:46:30,941 --> 00:46:41,939
+Rym: Well, you know how actually a lot of contracts handle that like generally the way that's handled in most industries is Any amount of work is rounded up to some large increment like four or eight hours.
+
+638
+00:46:42,695 --> 00:46:45,136
+Scott: Yeah But I think really what it is.
+
+639
+00:46:45,217 --> 00:46:45,620
+Rym: details.
+
+640
+00:46:46,202 --> 00:46:50,360
+Scott: Yeah is you know for me if I was a company and I wanted to do anything like this, right?
+
+641
+00:46:50,440 --> 00:47:02,580
+Scott: It's like I know the only people who are really using my software a lot right are It's the customers right and I'm only really going to be doing this if I have like an enterprise non free software.
+
+642
+00:47:03,262 --> 00:47:09,820
+Rym: If I was though an enterprise software I could consider like what I would do a discount program to my customers.
+
+643
+00:47:10,469 --> 00:47:11,200
+Scott: Right, I would do it.
+
+644
+00:47:11,280 --> 00:47:13,514
+Scott: I would do this with my customers because that would be.
+
+645
+00:47:13,534 --> 00:47:22,689
+Scott: it would basically be like hey Customers if you find something by accident because you're working so closely with my software Please don't crime us and ruin us, right?
+
+646
+00:47:22,709 --> 00:47:23,652
+Scott: Yeah, I'll pay you.
+
+647
+00:47:23,672 --> 00:47:28,372
+Scott: I wouldn't go out to the whole world and say hey Does anyone want an informal job?
+
+648
+00:47:28,392 --> 00:47:29,277
+Scott: or you know?
+
+649
+00:47:30,320 --> 00:47:33,320
+Scott: Criminals who are ignoring my software don't realize it even exists.
+
+650
+00:47:33,501 --> 00:47:36,613
+Scott: Please come and find things wrong with it that I don't have time to fix.
+
+651
+00:47:36,733 --> 00:47:38,059
+Scott: It's like I wouldn't do any of that, right?
+
+652
+00:47:39,940 --> 00:47:41,424
+Scott: So, yeah, that's that's what's up with those.
+
+653
+00:47:41,585 --> 00:47:45,536
+Scott: Yeah, so you do find something wrong in some software.
+
+654
+00:47:45,716 --> 00:47:47,770
+Rym: Yeah bounties notwithstanding What do you do?
+
+655
+00:47:48,860 --> 00:47:49,504
+Scott: Mm-hmm.
+
+656
+00:47:49,524 --> 00:47:53,241
+Rym: That's oh, I don't know what we are yet in 2009.
+
+657
+00:47:53,241 --> 00:47:56,334
+Scott: I don't know what we said in 2009, but you know, it really depends.
+
+658
+00:47:56,374 --> 00:47:57,699
+Scott: Maybe crime is the right answer.
+
+659
+00:47:58,081 --> 00:48:04,600
+Rym: Yeah, well, I mean, I guess there's always the argument to be made with any exploits that someone finds on their own.
+
+660
+00:48:04,640 --> 00:48:22,060
+Rym: We're not talking about someone who like hacked into a source code repository and like did crime to find this data but what about someone who is intelligent and Educated and had publicly information publicly available information and from all of that They find a serious exploit in some software
+
+661
+00:48:22,683 --> 00:48:24,531
+Scott: Yeah, and a good example of how to fight.
+
+662
+00:48:24,551 --> 00:48:26,640
+Scott: you might say oh well, you never find anything by accident.
+
+663
+00:48:26,720 --> 00:48:35,176
+Scott: but actually there have been a couple times in my life for real where I've been like using some software and I've Accidentally ended up logged in as a different user.
+
+664
+00:48:35,256 --> 00:48:40,780
+Scott: That wasn't me Yeah, and at least one of those times I figured out how to reproduce it, right?
+
+665
+00:48:40,840 --> 00:48:42,617
+Scott: I was like, oh that's how it happened.
+
+666
+00:48:42,638 --> 00:48:50,503
+Rym: now I was able to log into other people's scheduling during the hell day once Mm-hmm.
+
+667
+00:48:51,486 --> 00:48:53,593
+Scott: Yeah, it's like I. just it just happened right?
+
+668
+00:48:53,653 --> 00:48:54,095
+Scott: It wasn't like.
+
+669
+00:48:54,135 --> 00:48:55,680
+Scott: I was actively looking for it.
+
+670
+00:48:55,740 --> 00:49:01,600
+Scott: I wasn't like and mapping their server and trying to do all kinds of dirt, you know dirty biz, right?
+
+671
+00:49:01,700 --> 00:49:06,160
+Scott: It's just like a thing happened and then I just figured it out over the course of computer usage.
+
+672
+00:49:06,762 --> 00:49:16,420
+Rym: But even if you figure it out on purpose like figuring out how to pick a lock is not a crime It's only a crime when you pick someone else's lock that you don't own to go in and do something with it.
+
+673
+00:49:16,721 --> 00:49:18,859
+Rym: But describing how to pick a lock not a crime?
+
+674
+00:49:19,621 --> 00:49:20,606
+Scott: Nope, not at all.
+
+675
+00:49:20,867 --> 00:49:22,595
+Rym: So describing how an exploit works.
+
+676
+00:49:22,896 --> 00:49:23,580
+Rym: Is that a crime?
+
+677
+00:49:24,861 --> 00:49:32,680
+Scott: No, probably not all right, but almost all exploits so we see these days are some sort of like buffer overflow memory protection.
+
+678
+00:49:33,121 --> 00:49:34,887
+Scott: In a situation they're all.
+
+679
+00:49:35,007 --> 00:49:38,740
+Scott: it's like it's like you're seeing the same exploits types over and over again.
+
+680
+00:49:38,921 --> 00:49:40,940
+Scott: It's just where they exist, right?
+
+681
+00:49:41,040 --> 00:49:43,588
+Scott: It's oh they exist at this memory location in this program.
+
+682
+00:49:43,629 --> 00:49:51,220
+Scott: in this situation, right or oh this program in this situation Oh, there's an SQL injection in this form and this spot, right?
+
+683
+00:49:51,541 --> 00:49:55,294
+Scott: It's like it's the same types of exploits in computer software over and over again.
+
+684
+00:49:55,315 --> 00:49:56,760
+Scott: There aren't a lot of new kinds.
+
+685
+00:49:57,444 --> 00:49:58,954
+Scott: It's just where are they?
+
+686
+00:49:59,054 --> 00:49:59,920
+Scott: in which programs?
+
+687
+00:50:00,280 --> 00:50:05,980
+Rym: Well, like we said most exploits are act like the real exploits in terms of just how do you exploit a company's software?
+
+688
+00:50:06,460 --> 00:50:09,014
+Rym: Most exploits are social engineering inside jobs anyway.
+
+689
+00:50:09,677 --> 00:50:19,598
+Scott: Yeah They're also, you know rumors of exploits that are like I think I read something recently about like fake Cisco routers that they they were.
+
+690
+00:50:19,678 --> 00:50:26,500
+Scott: you know Someone was selling bootleg Cisco routers and they found out when they tried to do like a firmware update It didn't work that it wasn't a legit route.
+
+691
+00:50:26,580 --> 00:50:31,800
+Rym: I have been on the receiving end of gray market routers before yeah, right and then it all made.
+
+692
+00:50:32,181 --> 00:50:37,760
+Scott: Oh, they heavily inspected those routers and they didn't find any backdoors in them that they found.
+
+693
+00:50:38,201 --> 00:50:52,346
+Scott: So we presume that it was just someone trying to make money selling bootlegs, but could have been yeah, right Kevin And that's not something you could like find and get a bounty on Yep, but I got like a software bug.
+
+694
+00:50:52,747 --> 00:50:57,220
+Rym: I think it really comes down to like especially in 2020. and what's going on right now?
+
+695
+00:50:58,341 --> 00:51:01,973
+Rym: What are the what will happen if you share this information?
+
+696
+00:51:02,394 --> 00:51:04,160
+Rym: and is that an outcome that you?
+
+697
+00:51:04,740 --> 00:51:07,239
+Rym: Personally believe in and would stand behind?
+
+698
+00:51:07,943 --> 00:51:12,606
+Rym: Case in point say you figure out a way to I don't know Like.
+
+699
+00:51:12,666 --> 00:51:25,057
+Rym: you find a police Server that's public with like public information and you find a way to dump out a ton of information that shows some malfeasance of the police department.
+
+700
+00:51:27,082 --> 00:51:30,880
+Rym: Maybe you feel comfortable sharing the details of that exploit in the wild.
+
+701
+00:51:31,910 --> 00:51:33,605
+Rym: maybe Maybe like.
+
+702
+00:51:33,987 --> 00:51:35,940
+Rym: maybe you just you feel comfortable doing that.
+
+703
+00:51:36,402 --> 00:51:36,644
+Rym: Is it?
+
+704
+00:51:36,765 --> 00:51:39,058
+Rym: is it not your right to share some?
+
+705
+00:51:40,080 --> 00:51:43,500
+Rym: Texts and opinions that you have on the internet without a specific call to action?
+
+706
+00:51:44,301 --> 00:51:48,256
+Scott: You'll have to do that in such a way as to remain anonymous, right?
+
+707
+00:51:48,276 --> 00:51:49,079
+Scott: They don't know who done it.
+
+708
+00:51:49,703 --> 00:51:50,853
+Scott: Otherwise you'd be in big trouble.
+
+709
+00:51:51,035 --> 00:51:55,040
+Scott: Yeah You know, but let's say, you know back in the day.
+
+710
+00:51:55,160 --> 00:51:57,108
+Scott: I feel like you know, it's like what would people do?
+
+711
+00:51:57,128 --> 00:52:06,960
+Scott: it feels like on the one hand back in the day The people who managed to find software exploits were simultaneously more malicious and also less, right?
+
+712
+00:52:07,661 --> 00:52:10,511
+Scott: Yeah, it's like what are you gonna do in 1990?
+
+713
+00:52:10,511 --> 00:52:12,258
+Scott: something with it with a software exploit?
+
+714
+00:52:12,298 --> 00:52:24,145
+Scott: It's like alright I'm gonna pirate some software I got pirate games or I'm gonna make someone's hard drive explode or delete all their data or make a funny skull bounce around their screen or Right.
+
+715
+00:52:24,507 --> 00:52:25,474
+Scott: Whereas nowadays.
+
+716
+00:52:25,514 --> 00:52:26,260
+Scott: It's like what are you gonna do?
+
+717
+00:52:26,460 --> 00:52:39,847
+Scott: I'm gonna take all this massive amount of data from a big company that that's very, you know, like Experian or whatever the credit bureaus a dark web and selling a dark web ruining a whole bunch of people Getting identity theft on them.
+
+718
+00:52:39,867 --> 00:52:41,635
+Scott: I'm gonna you know ruin.
+
+719
+00:52:41,736 --> 00:52:42,560
+Scott: take people's money.
+
+720
+00:52:43,362 --> 00:52:45,851
+Scott: It's like actual crimes now, right?
+
+721
+00:52:45,891 --> 00:52:48,380
+Scott: It's like no one's computers are exploding, right?
+
+722
+00:52:48,500 --> 00:52:48,802
+Scott: It's like.
+
+723
+00:52:48,822 --> 00:52:55,177
+Scott: it's like less evil in that way, but it's more evil and like hey You're doing harmful crimes and not just pirate in some video game.
+
+724
+00:52:55,640 --> 00:52:56,162
+Rym: now It's interesting.
+
+725
+00:52:56,182 --> 00:52:59,860
+Rym: what I do remember especially in the 90s like one of this discourse was happening.
+
+726
+00:53:00,503 --> 00:53:08,634
+Rym: I remember a lot of stories of people who would Responsibly disclose directly to companies in general like.
+
+727
+00:53:08,654 --> 00:53:10,200
+Rym: that was the thing people would do and talk about.
+
+728
+00:53:10,762 --> 00:53:18,399
+Rym: But there was definitely a long-term set of chatter around the fact that companies Basically ignored these and never fix bugs like they.
+
+729
+00:53:18,459 --> 00:53:21,851
+Scott: yep That's that's exactly what the problem with the bug bounty thing is.
+
+730
+00:53:21,871 --> 00:53:30,996
+Scott: right is like it's only bad press for you even if you handle it perfectly because You know, you have to constantly be handling all these people who are sending in stuff, right?
+
+731
+00:53:32,901 --> 00:53:36,860
+Rym: Yeah, but also the person who finds the bug is a security researcher.
+
+732
+00:53:36,980 --> 00:53:40,694
+Rym: They want to write an article about this exploit because that's how they make their their living.
+
+733
+00:53:41,055 --> 00:53:46,360
+Rym: being an expert in this space They're gonna advise other people on this kind of exploit and they're gonna give you time.
+
+734
+00:53:46,360 --> 00:53:48,148
+Scott: They're gonna say hey, you know you.
+
+735
+00:53:48,188 --> 00:53:50,680
+Scott: let me know when you fix this so I can publish my article.
+
+736
+00:53:50,901 --> 00:53:52,739
+Scott: Yeah, right, you know you have all that you're right.
+
+737
+00:53:52,941 --> 00:53:55,089
+Scott: And so when you fixed it I can publish my article.
+
+738
+00:53:55,531 --> 00:54:00,287
+Scott: everyone can see and this you'll see articles like this Especially on sites like F secure or whatever, right?
+
+739
+00:54:00,307 --> 00:54:03,155
+Scott: They're like, hey, we found this security vulnerability.
+
+740
+00:54:03,435 --> 00:54:04,117
+Scott: We reported it.
+
+741
+00:54:04,398 --> 00:54:04,980
+Scott: They fixed it.
+
+742
+00:54:05,404 --> 00:54:06,599
+Scott: Here's an explanation of it.
+
+743
+00:54:06,660 --> 00:54:11,759
+Scott: So that way you can write your software better and not make the same mistake that they did and that's very valuable stuff.
+
+744
+00:54:12,801 --> 00:54:18,141
+Scott: but if they just don't fix it for a long time for whatever reason and there's a lot of reasons you worked at a Company.
+
+745
+00:54:18,162 --> 00:54:21,620
+Scott: how many bugs you got just sitting in the bug hopper never fixed, right?
+
+746
+00:54:21,760 --> 00:54:24,795
+Rym: I will say is that remember that anecdote about how I got my previous job.
+
+747
+00:54:24,815 --> 00:54:35,345
+Rym: I Was in the position where as a product manager I looked at a JIRA backlog and I saw a whole bunch of bugs raised by Some motherfucker named Rym to cost her.
+
+748
+00:54:35,365 --> 00:54:40,054
+Rym: Yeah, and I looked at all of them and chose not to fix most of them.
+
+749
+00:54:43,140 --> 00:54:52,313
+Rym: I Remember that day explicitly because the CEO was like wait, wait, wait Wait, wait, cuz he noticed and he asked me about it and it was.
+
+750
+00:54:52,453 --> 00:54:53,155
+Rym: it was a funny day.
+
+751
+00:54:53,175 --> 00:55:00,597
+Scott: It's funny stuff Right, but the point is if you had not been hired if you were still on the outside waiting, right?
+
+752
+00:55:00,617 --> 00:55:01,260
+Scott: You're getting mad.
+
+753
+00:55:01,581 --> 00:55:02,526
+Scott: Yeah, getting mad.
+
+754
+00:55:03,068 --> 00:55:04,696
+Rym: I mean all those stories in the 90s.
+
+755
+00:55:04,737 --> 00:55:12,404
+Rym: the Pattern seemed to be someone would end up posting anonymously on like one of the old Bulletin boards of the day.
+
+756
+00:55:12,424 --> 00:55:14,190
+Rym: Hey, here's an exploit.
+
+757
+00:55:14,411 --> 00:55:16,538
+Rym: I told Microsoft about this for like three years.
+
+758
+00:55:16,558 --> 00:55:17,240
+Rym: They didn't do shit.
+
+759
+00:55:17,340 --> 00:55:27,440
+Rym: Have fun because yep, even if there was no bounty or anything on the line if a lot of hackers I assume this mentality is still there you find something like that.
+
+760
+00:55:27,540 --> 00:55:28,884
+Rym: You feel like you did the right thing.
+
+761
+00:55:28,904 --> 00:55:33,176
+Rym: you get ignored you get aggrieved and eventually you take revenge.
+
+762
+00:55:33,297 --> 00:55:34,480
+Rym: That's a common pattern.
+
+763
+00:55:35,124 --> 00:55:37,980
+Scott: I mean, that's just a common pattern in all humanity, right?
+
+764
+00:55:38,280 --> 00:55:38,521
+Scott: Is it?
+
+765
+00:55:38,662 --> 00:55:43,820
+Scott: yeah people feel that some you know, they have been the victim of even a small injustice, right?
+
+766
+00:55:44,000 --> 00:55:45,146
+Scott: They get angry, right?
+
+767
+00:55:45,166 --> 00:55:47,880
+Scott: So it's like hey, I did the right thing and the thing nothing happened.
+
+768
+00:55:47,940 --> 00:55:49,226
+Scott: I expected a thing to happen.
+
+769
+00:55:49,266 --> 00:55:50,430
+Scott: It didn't happen now.
+
+770
+00:55:50,451 --> 00:55:52,700
+Scott: I'm mad a little bit mad at least maybe a lot.
+
+771
+00:55:53,243 --> 00:55:57,744
+Rym: Pending the mystically is like hey, we should build a navy and Athens is like no We don't need a navy.
+
+772
+00:55:57,764 --> 00:56:01,878
+Rym: and then a naval invasion comes and the mystically is like I fucking told you right?
+
+773
+00:56:01,898 --> 00:56:04,323
+Scott: He met You mad?
+
+774
+00:56:05,789 --> 00:56:08,660
+Rym: I am still mad on the mystic Lisa's behalf to this day.
+
+775
+00:56:13,140 --> 00:56:14,265
+Scott: Rightfully so mad right.
+
+776
+00:56:14,285 --> 00:56:24,060
+Scott: so and think about how mad you would be if you know you read some text Explaining some bug bounty program that said you should get a hundred thousand dollars and you ended up with zero dollars.
+
+777
+00:56:24,140 --> 00:56:24,883
+Scott: Yeah way mad.
+
+778
+00:56:25,204 --> 00:56:26,949
+Rym: They're like, no your exploit is good.
+
+779
+00:56:27,210 --> 00:56:29,056
+Rym: But here's a bunch of nonsense.
+
+780
+00:56:29,076 --> 00:56:30,180
+Rym: That doesn't actually make sense.
+
+781
+00:56:30,240 --> 00:56:31,344
+Rym: Anyway, we're not paying you right?
+
+782
+00:56:31,826 --> 00:56:32,488
+Scott: Yeah, I've seen.
+
+783
+00:56:32,528 --> 00:56:36,441
+Scott: I've seen recently someone be like, yeah, I got $100,000 of stuff I'm gonna.
+
+784
+00:56:36,562 --> 00:56:37,445
+Scott: I said they didn't pay me.
+
+785
+00:56:37,485 --> 00:56:38,228
+Scott: I'm gonna release it.
+
+786
+00:56:38,288 --> 00:56:41,399
+Scott: and then Microsoft Twitter was like, uh, let's talk.
+
+787
+00:56:43,123 --> 00:56:44,739
+Scott: It's like why did you talk earlier?
+
+788
+00:56:45,101 --> 00:56:49,012
+Rym: Yeah, but it comes down to that the public it's almost like this.
+
+789
+00:56:49,113 --> 00:56:50,557
+Rym: that example which we'll link to.
+
+790
+00:56:50,597 --> 00:56:51,520
+Rym: you can read the Twitter thread.
+
+791
+00:56:51,600 --> 00:56:52,203
+Rym: It's pretty funny.
+
+792
+00:56:52,524 --> 00:56:56,700
+Rym: That's an example of the company doesn't care until PR comes on the line.
+
+793
+00:56:57,061 --> 00:57:03,104
+Rym: But in this case the company made the PR problem in the first place by even having the bug bounty program Yep.
+
+794
+00:57:03,888 --> 00:57:06,199
+Scott: So yeah, so I guess the I'm hungry now.
+
+795
+00:57:07,323 --> 00:57:18,424
+Scott: If you're if you're a company don't make a bug bounty program unless you are sure it's the right thing that you actually need Right that it fits your situation Rarely, it rarely does.
+
+796
+00:57:18,624 --> 00:57:21,693
+Rym: if your rationale is we can't afford to pay pen testers.
+
+797
+00:57:22,054 --> 00:57:23,477
+Rym: That is not adequate.
+
+798
+00:57:24,219 --> 00:57:39,710
+Scott: No to do not go and try to find bugs as like in bug bounty programs to thinking that you'll make a living doing that even if you're good at it because a lot of companies won't pay out and you'll have to either crime or Blackmail the companies to get money and it's not worth it.
+
+799
+00:57:39,771 --> 00:57:40,895
+Scott: Just get you have those skills.
+
+800
+00:57:41,176 --> 00:57:43,346
+Scott: Just get a job You have the skills.
+
+801
+00:57:43,466 --> 00:57:45,415
+Scott: or open up a consultancy or something.
+
+802
+00:57:45,435 --> 00:57:46,580
+Scott: All right, you have the skills.
+
+803
+00:57:46,641 --> 00:57:47,959
+Scott: It's why I don't need to do this.
+
+804
+00:57:48,042 --> 00:57:54,720
+Rym: No It's still part of our capitalist hellscape to use those sites to find bugs to go after just to build your own resume.
+
+805
+00:57:55,282 --> 00:57:57,433
+Rym: But that is also exploitative.
+
+806
+00:57:57,493 --> 00:58:02,400
+Rym: just it's less exploitative Than the people who are forced to try to make a living with it, right?
+
+807
+00:58:02,561 --> 00:58:06,460
+Scott: And if you do find something by accident or on purpose, right, you know.
+
+808
+00:58:06,721 --> 00:58:25,180
+Scott: Try to follow your conscience and the best practices for revealing or not revealing that to the company That is responsible or and or the world and or criminals, you know based on the situation I hope that you're a good person and you'll do the the right thing and not some shady thing that hurts people.
+
+809
+00:58:25,442 --> 00:58:27,540
+Rym: Do the right thing if you disclose.
+
+810
+00:58:27,881 --> 00:58:37,360
+Rym: Disclose because it will help the right people and or harm the right people And if you don't disclose do that because it will help the right people.
+
+811
+00:58:39,640 --> 00:58:39,741
+Rym: It's.
+
+812
+00:58:39,922 --> 00:58:49,060
+Rym: it's interesting and I say that with a little bit of you know That most of these broad tech subjects like what should you do in X situation?
+
+813
+00:58:49,840 --> 00:58:50,964
+Rym: Actually come down to ethics.
+
+814
+00:58:51,145 --> 00:58:53,494
+Rym: One of the things that almost no tech school actually teaches.
+
+815
+00:58:53,514 --> 00:58:55,969
+Scott: I had ethics classes I waited to are.
+
+816
+00:58:55,989 --> 00:58:57,059
+Rym: we went to a great tech school.
+
+817
+00:58:58,006 --> 00:59:00,952
+Rym: Okay Alright, I am also hungry.
+
+818
+00:59:01,093 --> 00:59:01,800
+Scott: So I hunger.
+
+819
+00:59:03,543 --> 00:59:06,060
+Rym: This has been GeekNights with Rym and Scott.
+
+820
+00:59:06,140 --> 00:59:10,859
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+821
+00:59:11,181 --> 00:59:16,200
+Scott: Be sure to visit our website at front row crew comm for show notes discussion news and more.
+
+822
+00:59:16,480 --> 00:59:23,880
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+823
+00:59:24,241 --> 00:59:27,416
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+824
+00:59:28,661 --> 00:59:31,774
+Scott: GeekNights is recorded live with no studio and no audience.
+
+825
+00:59:31,954 --> 00:59:42,975
+Rym: But unlike those other late shows It's actually recorded at night and the patreon patrons for this episode of GeekNights are Alan Joyce I didn't nickel Marty green yet.
+
+826
+00:59:42,995 --> 00:59:43,758
+Rym: Just like a dude guy.
+
+827
+00:59:43,778 --> 00:59:46,430
+Rym: We make this bigger because I can't read all these names.
+
+828
+00:59:46,711 --> 00:59:47,214
+Rym: There we go.
+
+829
+00:59:47,535 --> 00:59:48,279
+Rym: He's our television.
+
+830
+00:59:48,781 --> 00:59:49,344
+Rym: Graham Finch.
+
+831
+00:59:49,485 --> 00:59:50,450
+Rym: You will the key to my heart.
+
+832
+00:59:50,772 --> 00:59:52,744
+Rym: She gave me a kiss and she gave me my ticket.
+
+833
+00:59:52,985 --> 00:59:58,685
+Rym: Clinton Walton J Banch from from New Zealand Ryan Perrin Nicholas Brando Chris mink if the thirst for hydrated Gannon dread.
+
+834
+00:59:58,785 --> 01:00:13,084
+Rym: Lily Tenebra Chris Reimer Finn Sean Klein Shervin Monroe and a bunch of people who do not want me to say their names might have noticed I uploaded the next Installation of me and Emily reviewing every Disney theatrical animated feature with Bambi.
+
+835
+01:00:13,465 --> 01:00:23,349
+Rym: Bambi is a hundred percent worth watching If you haven't seen it since you were a kid and we are moving right along with Salados amigos and the three Caballeros, so stay tuned for that.
+
+836
+01:00:24,630 --> 01:00:27,979
+Rym: otherwise we are like I said gonna be performing at all these online cons.
+
+837
+01:00:27,999 --> 01:00:53,440
+Rym: our Pre-production on some other internal shows got delayed a little bit partly because the logistics of recording the panels that we are going to present at these online cons is proving a challenge and We have to sort out that pipeline first because unlike the utenna show the next episode which we are working on There's a deadline for being able to perform a panel live at like the crunchyroll Expo.
+
+838
+01:00:53,520 --> 01:00:57,560
+Rym: So stay tuned for some brand new panel content.
+
+839
+01:00:57,641 --> 01:01:00,100
+Rym: We're doing pretty much brand new panels and all these things.
+
+840
+01:01:00,521 --> 01:01:05,600
+Rym: I'm pretty excited about what magfest is up to so stay tuned for them to announce what that's gonna look like.
+
+841
+01:01:06,081 --> 01:01:09,554
+Rym: But anyway for now for today this Monday.
+
+842
+01:01:09,574 --> 01:01:13,446
+Rym: I leave you With old gray man.
+
+843
+01:01:13,486 --> 01:01:18,279
+Rym: She ain't what she used to be ain't what she used to be ain't what she used to be.
+
+844
+01:01:19,440 --> 01:01:24,876
+Rym: Grandma she ain't what she used to be ain't what she used to be ain't what she used to be.
+
+845
+01:01:25,257 --> 01:01:27,798
+Scott: and now the crazy old man singers.
+
+846
+01:01:29,561 --> 01:01:32,839
+Rym: She ain't what she used to be ain't what she used to be.
+

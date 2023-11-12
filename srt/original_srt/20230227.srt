@@ -1,0 +1,4124 @@
+﻿1
+00:00:08,300 --> 00:00:10,167
+Speaker 0: It's Monday, February 27th, 2023.
+
+2
+00:00:10,167 --> 00:00:10,388
+Speaker 0: I'm Rym.
+
+3
+00:00:14,041 --> 00:00:14,456
+Speaker 1: I'm Scott.
+
+4
+00:00:15,000 --> 00:00:16,564
+Speaker 0: And this is Geek Nights!
+
+5
+00:00:16,604 --> 00:00:24,260
+Speaker 0: Tonight we're talking about GPT-3 and all those autoregressive language models that people are both over and underestimating lately.
+
+6
+00:00:24,300 --> 00:00:24,836
+Speaker 1: Let's do this!
+
+7
+00:00:31,800 --> 00:00:34,149
+Speaker 0: So for those of you who hang out at the Geek Nights!
+
+8
+00:00:34,169 --> 00:00:37,260
+Speaker 0: Discord, we did do the previous episode.
+
+9
+00:00:37,420 --> 00:00:41,020
+Speaker 0: We recorded it in a Discord stage to try that out while we were streaming to YouTube.
+
+10
+00:00:41,200 --> 00:00:51,140
+Speaker 0: And we did get several complaints that the audio quality was not great on the livestream for Scott because I was recording his audio there through the Discord.
+
+11
+00:00:51,340 --> 00:00:54,500
+Speaker 0: Of course, the podcast is fine because Scott records locally, you know, we got a whole pipeline.
+
+12
+00:00:55,200 --> 00:01:07,040
+Speaker 0: But also, for those of you who wouldn't be able to notice this, Scott's audio is delayed by about 2x over what it normally is when we record Geek Nights, which is also in Discord.
+
+13
+00:01:07,561 --> 00:01:16,278
+Speaker 0: Because we record Geek Nights in a regular old voice channel in Discord with high audio bitrates, and it looks like Discord-- Oh, it's the highest they allow.
+
+14
+00:01:17,465 --> 00:01:17,767
+Speaker 0: Yeah, 128.
+
+15
+00:01:17,767 --> 00:01:19,880
+Speaker 0: I think there's a way to pay to get it higher, but it doesn't matter.
+
+16
+00:01:20,500 --> 00:01:31,000
+Speaker 0: But the problem I've discovered is you can't increase the audio bitrate or the video bitrate of Discord stages.
+
+17
+00:01:31,541 --> 00:01:38,940
+Speaker 0: So Discord stages aren't super well documented by Discord yet, like their documentation doesn't actually explain everything.
+
+18
+00:01:39,460 --> 00:01:57,700
+Speaker 0: They recently just now added the ability to even have video or screen sharing, but they're definitely keeping the bandwidth usage of stages really, really low and limited compared to regular old Discord channels to the point that it's kind of useless for a podcast.
+
+19
+00:01:58,760 --> 00:01:59,762
+Speaker 1: Yeah, it's weird.
+
+20
+00:01:59,802 --> 00:02:11,298
+Speaker 1: On the one hand, I didn't realize this until we just discussed it earlier, but the main difference between the stages and the normal Discord voice chats is that the stage, you can get like 10,000 people in there, right?
+
+21
+00:02:13,581 --> 00:02:19,680
+Speaker 1: So it's almost like a Twitch livestream in that sense, where you can have tons and tons of people watching and then bring them in.
+
+22
+00:02:20,880 --> 00:02:25,239
+Speaker 1: Whereas the regular Discord voice channels, there's like a limit on how many people can get in there.
+
+23
+00:02:28,588 --> 00:02:33,760
+Speaker 1: But it's like, hey, Twitch, you can have unlimited people viewing.
+
+24
+00:02:34,200 --> 00:02:36,474
+Speaker 0: Of course, also, I have one question for you.
+
+25
+00:02:36,514 --> 00:02:37,500
+Speaker 0: Does Twitch make money?
+
+26
+00:02:38,820 --> 00:02:40,859
+Speaker 1: I mean, does Discord make money?
+
+27
+00:02:42,360 --> 00:02:45,680
+Speaker 0: Discord and Twitch and all these, a lot of tech.
+
+28
+00:02:45,760 --> 00:02:48,460
+Speaker 1: Twitch just spends Amazon's money, they don't need to make money.
+
+29
+00:02:49,302 --> 00:02:50,885
+Speaker 0: Well, that's kind of the problem.
+
+30
+00:02:50,945 --> 00:02:53,791
+Speaker 0: The whole tech industry suddenly has to make money for a lot of reasons.
+
+31
+00:02:53,851 --> 00:02:57,940
+Speaker 0: that will be an ongoing concern for a while that we'll be talking about on Geek Nights, I think.
+
+32
+00:02:58,720 --> 00:03:09,700
+Speaker 0: But Discord stages, like I hate to say it, but they're really cool, but they're kind of useless for literally everything we would use them for professionally, at least at their current stage.
+
+33
+00:03:10,161 --> 00:03:15,254
+Speaker 1: The concept is perfect, but it's just the implementation hasn't gotten up there yet.
+
+34
+00:03:18,761 --> 00:03:22,860
+Speaker 1: It's like, alright, we did what we said we would do, we just did it really poorly.
+
+35
+00:03:23,040 --> 00:03:26,300
+Speaker 1: It's like, well, it's not any good if you do it poorly, you have to do it well.
+
+36
+00:03:27,120 --> 00:03:33,700
+Speaker 1: It's like, I've always asked for, I don't know, the real Pokemon MMO, right?
+
+37
+00:03:35,226 --> 00:03:38,880
+Speaker 1: What if someone makes the real Pokemon MMO, but it just sucks?
+
+38
+00:03:39,240 --> 00:03:43,960
+Speaker 1: It's like, okay, you did what I asked for, but it has to actually be good.
+
+39
+00:03:44,720 --> 00:03:49,940
+Speaker 0: Well, there's a few things going on, because one thing I've noticed is that most people just don't care about quality of things like this.
+
+40
+00:03:50,241 --> 00:03:52,899
+Speaker 0: A lot of people are just using Discord stages constantly.
+
+41
+00:03:53,460 --> 00:03:54,278
+Speaker 1: Or aren't thinking about it.
+
+42
+00:03:54,962 --> 00:04:00,460
+Speaker 0: Despite the fact that the audio sounds bad, like, listen to the last Geek Nights on YouTube.
+
+43
+00:04:01,000 --> 00:04:02,117
+Speaker 0: That's what it sounds like.
+
+44
+00:04:03,862 --> 00:04:07,260
+Speaker 0: It is below the line of what I would consider usable for any professional context.
+
+45
+00:04:07,580 --> 00:04:09,460
+Speaker 0: And the worst thing is, I would pay.
+
+46
+00:04:10,220 --> 00:04:16,100
+Speaker 0: If I could pay even 20 bucks a month to just have high bandwidth Discord stage, I would do it in a second.
+
+47
+00:04:16,221 --> 00:04:17,459
+Speaker 0: But there's no option for that.
+
+48
+00:04:17,800 --> 00:04:21,820
+Speaker 0: You can't use server boost to increase that like you can with regular voice channels.
+
+49
+00:04:22,285 --> 00:04:23,639
+Speaker 0: They just have no option for that.
+
+50
+00:04:24,020 --> 00:04:31,319
+Speaker 0: So unless we decide to do a call-in show, which will have pretty low audio quality, we're really not going to use the Discord stages any time soon.
+
+51
+00:04:33,491 --> 00:04:33,638
+Speaker 1: Yup.
+
+52
+00:04:34,220 --> 00:04:44,280
+Speaker 0: Yup, which is just sort of a problem in general lately, that you can't... It's very hard to make money just selling things compared to monetizing in other either evil or unsustainable ways.
+
+53
+00:04:44,440 --> 00:04:48,559
+Speaker 0: And that's been a problem for a very long time, and we're definitely not going to solve it.
+
+54
+00:04:50,382 --> 00:04:54,179
+Speaker 1: I mean, we could just install something that does this.
+
+55
+00:04:54,500 --> 00:04:57,800
+Speaker 1: But then if there are a lot of viewers, we're going to pay the bandwidth.
+
+56
+00:04:58,520 --> 00:05:02,214
+Speaker 0: Well yeah, because bandwidth is still not actually free.
+
+57
+00:05:02,636 --> 00:05:03,560
+Speaker 0: Never mind transcoding.
+
+58
+00:05:04,060 --> 00:05:04,879
+Speaker 1: The quality would be great though.
+
+59
+00:05:06,762 --> 00:05:09,240
+Speaker 1: And it wouldn't require people to have a Discord account.
+
+60
+00:05:09,420 --> 00:05:11,319
+Speaker 1: They could just go to a URL and just, there it is.
+
+61
+00:05:12,281 --> 00:05:12,422
+Speaker 0: Yup.
+
+62
+00:05:12,442 --> 00:05:15,879
+Speaker 0: Of course, YouTube is still subsidizing it, so we have pretty high quality on YouTube right now.
+
+63
+00:05:16,623 --> 00:05:16,859
+Speaker 1: Yeah.
+
+64
+00:05:17,608 --> 00:05:18,659
+Speaker 0: We'll see how long that lasts.
+
+65
+00:05:20,183 --> 00:05:25,900
+Speaker 0: So yeah, in the news, you might have seen, this sadly is getting a lot of traction among bad people.
+
+66
+00:05:26,440 --> 00:05:34,900
+Speaker 0: And it's being grossly mischaracterized by pretty much everyone who is conservative or not paying attention in the world who read this news.
+
+67
+00:05:35,260 --> 00:05:47,100
+Speaker 0: So I want to preface this by saying that I'm going to tell you very specifically what this news is, regardless of what you might have seen, out in news sites everywhere.
+
+68
+00:05:47,940 --> 00:05:49,807
+Speaker 0: So, as you know, there was a pandemic.
+
+69
+00:05:50,370 --> 00:05:52,879
+Speaker 0: COVID-19 came around, you might have heard about that.
+
+70
+00:05:53,781 --> 00:05:59,560
+Speaker 0: And there were a lot of crazy conspiracy nut jobs for trying to say that this was some sort of Chinese bio-weapon.
+
+71
+00:06:00,483 --> 00:06:01,480
+Speaker 0: And that is not.
+
+72
+00:06:01,560 --> 00:06:03,494
+Speaker 1: Yes, they inflicted it upon themselves too.
+
+73
+00:06:03,595 --> 00:06:04,179
+Speaker 1: What geniuses.
+
+74
+00:06:04,745 --> 00:06:04,855
+Speaker 0: Yup.
+
+75
+00:06:06,101 --> 00:06:16,940
+Speaker 0: There was a plausible, but not really like credible in that there was any evidence of it, possibility that it was a lab leak of some kind.
+
+76
+00:06:17,060 --> 00:06:22,415
+Speaker 0: Not a, someone's making a bio-weapon and it got leaked from the secret bio-weapon lab.
+
+77
+00:06:22,456 --> 00:06:23,960
+Speaker 0: That is absolutely crazy.
+
+78
+00:06:24,320 --> 00:06:26,339
+Speaker 1: The lab had bad practices and messed up.
+
+79
+00:06:26,700 --> 00:06:26,769
+Speaker 1: Yup.
+
+80
+00:06:26,880 --> 00:06:27,580
+Speaker 1: That kind of leak.
+
+81
+00:06:27,760 --> 00:06:33,854
+Speaker 0: It is not out of the realm that in China a bio lab might have had lax protocols.
+
+82
+00:06:34,255 --> 00:06:36,460
+Speaker 0: That is a very plausible thing.
+
+83
+00:06:37,781 --> 00:06:45,140
+Speaker 1: You're also deluding yourself if you think that all the labs everywhere else in the world are always obeying the strict protocols perfectly.
+
+84
+00:06:45,620 --> 00:06:45,720
+Speaker 0: Oh no.
+
+85
+00:06:46,101 --> 00:06:56,960
+Speaker 0: Though the US and Europe in particular do have a very good track record, but that track record is not as good as you might think if you don't know anything about that industry.
+
+86
+00:06:57,585 --> 00:06:59,480
+Speaker 0: But it is a pretty good track record.
+
+87
+00:07:00,142 --> 00:07:03,760
+Speaker 1: It's not as secure and fancy as you see in the movies is what I'm trying to say.
+
+88
+00:07:04,140 --> 00:07:04,281
+Speaker 0: Yeah.
+
+89
+00:07:04,563 --> 00:07:06,760
+Speaker 0: I mean, our friends.
+
+90
+00:07:06,980 --> 00:07:14,298
+Speaker 1: Or maybe it is as secure as the movies where the spies always manage to steal, the bad guys and spies always manage to steal the bio-weapons.
+
+91
+00:07:14,338 --> 00:07:14,940
+Speaker 1: no problem.
+
+92
+00:07:16,200 --> 00:07:17,758
+Speaker 1: That's how good guys have to save the day.
+
+93
+00:07:18,441 --> 00:07:26,960
+Speaker 0: So the United States intelligence community and government from the beginning, the pandemic was doing something that was honestly important and necessary.
+
+94
+00:07:27,401 --> 00:07:35,040
+Speaker 0: They have been trying to determine where the fuck COVID-19 came from and exactly what caused it to appear like.
+
+95
+00:07:35,942 --> 00:07:37,090
+Speaker 0: No one would disagree.
+
+96
+00:07:37,110 --> 00:07:38,560
+Speaker 0: That is valuable research.
+
+97
+00:07:38,961 --> 00:07:44,260
+Speaker 0: It would be good for the entire world if we knew exactly what happened so we can try to prevent this in the future.
+
+98
+00:07:44,662 --> 00:07:47,439
+Speaker 0: No matter what, if it was a lab leak, well, we should deal with that.
+
+99
+00:07:47,801 --> 00:07:51,240
+Speaker 0: If it was transmission from like weird food markets, we should deal with that.
+
+100
+00:07:51,560 --> 00:07:55,980
+Speaker 0: If it is a consequence of modern agriculture, we need to understand that and deal with it.
+
+101
+00:07:58,300 --> 00:08:16,540
+Speaker 0: So the problem is this is very hard to research, partly because it did originate in a nation, China, that currently has a government that is extremely secretive and extremely averse to anything embarrassing that it could see as a threat to its sort of political agenda.
+
+102
+00:08:17,321 --> 00:08:29,500
+Speaker 0: So the Chinese government, and this is common knowledge, this has been widely reported by credible sources, has been extremely hesitant to share any information about what happened in the early days in China.
+
+103
+00:08:29,863 --> 00:08:30,900
+Speaker 1: They are uncooperative.
+
+104
+00:08:31,400 --> 00:08:31,480
+Speaker 0: Yep.
+
+105
+00:08:32,020 --> 00:08:40,539
+Speaker 0: So the United States has been researching this and many of our organizations have come to various conclusions.
+
+106
+00:08:40,840 --> 00:08:53,840
+Speaker 0: And basically, the United States FBI has concluded years ago, like in early 2021, so a year ago, with moderate confidence that it was a lab leak in China.
+
+107
+00:08:54,201 --> 00:08:55,244
+Speaker 0: But I want to point that out.
+
+108
+00:08:55,445 --> 00:08:56,628
+Speaker 0: Moderate confidence.
+
+109
+00:08:57,170 --> 00:09:00,420
+Speaker 0: People really don't understand what that means.
+
+110
+00:09:00,700 --> 00:09:01,882
+Speaker 0: And that is a big problem.
+
+111
+00:09:02,182 --> 00:09:18,780
+Speaker 0: When an agency like the FBI releases a report with findings where they say, here is what we think happened, as in of all the possibilities, this is currently to the best of our knowledge, the most likely one, then they will give it a confidence.
+
+112
+00:09:18,780 --> 00:09:20,680
+Speaker 0: And they said moderate confidence.
+
+113
+00:09:20,760 --> 00:09:31,860
+Speaker 0: So the FBI says based on current information with moderate confidence, we would say the most likely cause of this was a lab leak, not a bioweapon lab leak.
+
+114
+00:09:31,920 --> 00:09:32,999
+Speaker 0: They didn't say any of that shit.
+
+115
+00:09:33,320 --> 00:09:41,119
+Speaker 0: All they said was a lab, probably a benign lab doing very valuable research, had a leak for whatever reason.
+
+116
+00:09:43,160 --> 00:09:44,924
+Speaker 0: Other intelligence agencies in the U.S.
+
+117
+00:09:45,145 --> 00:09:49,094
+Speaker 0: have said we don't have any idea.
+
+118
+00:09:49,114 --> 00:09:52,020
+Speaker 0: that is high enough confidence for us to even make a finding.
+
+119
+00:09:53,080 --> 00:09:58,218
+Speaker 0: And the Department of Energy previously had said also, we don't have any evidence.
+
+120
+00:09:58,278 --> 00:09:58,679
+Speaker 0: We don't know.
+
+121
+00:09:59,621 --> 00:10:03,840
+Speaker 0: Now, you might be wondering, why is the Department of Energy involved in this at all?
+
+122
+00:10:04,080 --> 00:10:13,320
+Speaker 0: Well, so it turns out the Department of Energy also runs national laboratories for reasons that I don't want to get into right now.
+
+123
+00:10:13,480 --> 00:10:23,160
+Speaker 0: But national laboratories is basically where the United States does its most important strategic scientific direct research.
+
+124
+00:10:24,182 --> 00:10:26,478
+Speaker 0: Why is national laboratories under the DOE?
+
+125
+00:10:27,241 --> 00:10:33,680
+Speaker 0: Because most of that research, when we founded all this stuff and sorted out all these lines, was nuclear bullshit.
+
+126
+00:10:34,040 --> 00:10:38,520
+Speaker 0: And the Department of Energy is just a euphemism for the Department of Nuclear Bullshit.
+
+127
+00:10:39,080 --> 00:10:40,173
+Speaker 0: So that is why.
+
+128
+00:10:41,603 --> 00:10:42,900
+Speaker 0: But it is the legitimate wing.
+
+129
+00:10:44,163 --> 00:10:48,660
+Speaker 0: So a police agency says with moderate likelihood this was a lab leak in China.
+
+130
+00:10:48,921 --> 00:10:57,040
+Speaker 0: And now the science agency says it is a lab leak, but they say low confidence, not moderate confidence.
+
+131
+00:10:57,721 --> 00:11:01,140
+Speaker 0: That is the extent of the news that came out.
+
+132
+00:11:01,421 --> 00:11:02,996
+Speaker 0: Everything I said, that is it.
+
+133
+00:11:03,945 --> 00:11:05,140
+Speaker 0: That is all that was announced.
+
+134
+00:11:05,420 --> 00:11:12,260
+Speaker 0: So anyone who is making that announcement out to be more than what I just said has ulterior motives and an agenda.
+
+135
+00:11:12,560 --> 00:11:18,040
+Speaker 0: And I will point out, it is entirely conservative media making this ulterior motive agenda.
+
+136
+00:11:18,881 --> 00:11:23,320
+Speaker 1: I mean, I'm sure that no Geek Nights listener was listening to any conservative media in the first place.
+
+137
+00:11:23,540 --> 00:11:24,077
+Speaker 0: I hope not.
+
+138
+00:11:24,903 --> 00:11:25,939
+Speaker 1: So what's the problem?
+
+139
+00:11:26,180 --> 00:11:27,540
+Speaker 0: But you probably have a conservative relative.
+
+140
+00:11:27,540 --> 00:11:30,700
+Speaker 1: You're warned against something you never are going to encounter anyway.
+
+141
+00:11:31,200 --> 00:11:40,216
+Speaker 0: But it is important to understand this news because a common question that people who aren't evil but just don't know things will ask is, "Why did China have those labs in Wuhan in the first
+
+142
+00:11:40,256 --> 00:11:40,538
+Speaker 0: place?".
+
+143
+00:11:40,900 --> 00:11:42,012
+Speaker 0: And you know what the answer is?
+
+144
+00:11:42,072 --> 00:11:42,739
+Speaker 0: The answer is real simple.
+
+145
+00:11:42,800 --> 00:11:43,185
+Speaker 1: Why does the U.S.
+
+146
+00:11:43,225 --> 00:11:44,380
+Speaker 1: have labs in Atlanta?
+
+147
+00:11:45,562 --> 00:11:54,200
+Speaker 0: But also, that area is a place where coronaviruses commonly evolve and things like that do happen.
+
+148
+00:11:54,721 --> 00:12:00,980
+Speaker 0: So it does make sense to have the labs that are directly researching those problems to be near the places where those problems tend to arrive.
+
+149
+00:12:01,583 --> 00:12:04,000
+Speaker 0: It makes even more sense than you might expect.
+
+150
+00:12:06,501 --> 00:12:14,920
+Speaker 0: So yeah, don't read anything more into that news than what the actual non-conservative news said because that's all that was announced.
+
+151
+00:12:17,351 --> 00:12:17,999
+Speaker 0: You got any news?
+
+152
+00:12:18,680 --> 00:12:22,499
+Speaker 1: Well, in the UK, right, there's some other nonsense going on.
+
+153
+00:12:23,001 --> 00:12:25,854
+Speaker 1: They've had this, I guess, I don't know how their government works.
+
+154
+00:12:25,914 --> 00:12:27,200
+Speaker 1: I just know they got lords and shit.
+
+155
+00:12:28,040 --> 00:12:32,380
+Speaker 1: And a parliament or whatever with, you know, wizards running for parliament.
+
+156
+00:12:34,721 --> 00:12:37,840
+Speaker 1: Anyway, they've had this online safety bill they're working on, right?
+
+157
+00:12:37,980 --> 00:12:41,820
+Speaker 1: And it's one of those "think of the children" kind of bills that's always problematic.
+
+158
+00:12:42,541 --> 00:12:44,300
+Speaker 1: You know, the UK loves to do this, right?
+
+159
+00:12:44,340 --> 00:12:50,520
+Speaker 1: They're famous for in the olden days when they had Teenage Mutant Hero Turtles because Ninja was not appropriate for the children, right?
+
+160
+00:12:50,921 --> 00:12:59,100
+Speaker 1: And the attitude of that country from the perspective of an outsider who only sees news about stupid laws they make, that's sort of their MO, right?
+
+161
+00:12:59,240 --> 00:13:01,717
+Speaker 1: It's like, "Do stupid shit in the name of protecting the
+
+162
+00:13:01,737 --> 00:13:02,059
+Speaker 1: children.".
+
+163
+00:13:02,240 --> 00:13:16,780
+Speaker 1: They have this online safety bill which, as you would expect, has some amounts of good intentions to protect the children and lots and lots of very bad, right, consequences to negatively impact them.
+
+164
+00:13:16,960 --> 00:13:20,720
+Speaker 1: I mean, this country Brexited, so it's like they're already, you know, shooting themselves in the foot.
+
+165
+00:13:20,740 --> 00:13:25,720
+Speaker 0: Yeah, like as dumb and broken as you think America is, like, look at what the UK did to itself.
+
+166
+00:13:26,381 --> 00:13:26,581
+Speaker 1: Right.
+
+167
+00:13:26,962 --> 00:13:40,200
+Speaker 1: So the idea of this law, I obviously haven't read the whole law, I read some summaries, so I did get the PDF of the whole law, but I'm not going to read British law, because who knows, I can barely read US laws.
+
+168
+00:13:40,640 --> 00:13:49,440
+Speaker 1: You can find out about it yourself, but the gist is that they will hold internet service providers of various kinds, right?
+
+169
+00:13:49,500 --> 00:13:54,040
+Speaker 1: Not just ISPs, but also, you know, company providers like Google.
+
+170
+00:13:54,040 --> 00:13:59,479
+Speaker 0: With what appears to be a terrifyingly broad definition of what that is.
+
+171
+00:14:00,220 --> 00:14:16,780
+Speaker 1: Right, so they're basically, you will now, if you are providing internet services in certain, they made some exceptions for things that they could think of, like they don't want to squash the news companies, right, from publishing news, and they don't want to squash people from, you know, making political statements, right?
+
+172
+00:14:16,800 --> 00:14:36,040
+Speaker 1: Because, you know, they don't have a First Amendment over there, right, but they did some carve outs, right, anyway, but they're going to be responsible, right, for, you know, doing certain things to protect the safety of the UK citizens, especially the children on their services.
+
+173
+00:14:36,200 --> 00:14:55,920
+Speaker 1: For example, they have to, right, get rid of, you know, illegal contents, like CSAM, right, they, you know, other illegal contents, they have to make sure that no children can see the prong, like real age verification, however they're going to implement that, who the fuck knows.
+
+174
+00:14:56,160 --> 00:14:57,859
+Speaker 0: It's impossible, there's literally no way.
+
+175
+00:14:58,620 --> 00:15:02,840
+Speaker 1: So that the children can't see the prong, right, making sure that that doesn't happen, right?
+
+176
+00:15:02,920 --> 00:15:13,200
+Speaker 1: And if some, one of these service, and there's a whole list of things, but if one of these services are making sure that underage children don't get on social media accounts, right, this sort of stuff.
+
+177
+00:15:14,940 --> 00:15:18,860
+Speaker 1: And, you know, which is a good idea, because social media is harmful for the children.
+
+178
+00:15:19,580 --> 00:15:22,540
+Speaker 1: But at the same time, for the adults too, but the adults can send it to.
+
+179
+00:15:22,700 --> 00:15:31,820
+Speaker 0: So when I was a kid, of course, I just used every online service, and I just lied, and if I was a kid today, I would definitely have an account on every social media, nobody could fucking stop me.
+
+180
+00:15:32,481 --> 00:15:42,920
+Speaker 1: That's right, but the point is, they're going to, they have this group Ofcom, I guess I've gathered, Ofcom is sort of like the FCC of the UK, kind of, right?
+
+181
+00:15:44,501 --> 00:15:50,800
+Speaker 1: And Ofcom is basically going to be responsible for monitoring, right, what's happening.
+
+182
+00:15:51,300 --> 00:16:06,262
+Speaker 1: And if a service, you know, an internet access provider doesn't do, right, what they're supposed to do, or fails, then Ofcom is going to have the power to, I guess they have to ask a court or some magistrate or some guy Fines
+
+183
+00:16:06,282 --> 00:16:11,920
+Speaker 0: of up to 10% of your annual turnover, or 18 million pounds, very similar to GDPR stuff.
+
+184
+00:16:11,960 --> 00:16:13,883
+Speaker 1: Or just shutting you off, right?
+
+185
+00:16:13,904 --> 00:16:23,200
+Speaker 1: So like, let's say Apple is like, yeah, you know what, we're not going to prevent the children from getting Instagram or whatever, right?
+
+186
+00:16:23,520 --> 00:16:27,459
+Speaker 1: Or YouTube's like, we're not going to prevent the children from watching ninjas.
+
+187
+00:16:28,060 --> 00:16:35,380
+Speaker 0: And whatever, because they Brexited, this isn't an EU thing, so the rest of the world could just say fuck you, UK, and cut them off from their services.
+
+188
+00:16:35,640 --> 00:16:39,620
+Speaker 1: But anyway, so then the UK will say fine, we'll just block YouTube in the UK, right?
+
+189
+00:16:39,902 --> 00:16:41,000
+Speaker 0: I'm sure that'll go over great.
+
+190
+00:16:41,360 --> 00:16:55,300
+Speaker 1: Ofcom would go to the court, and then the court would say yes or no, and if they then, so part of this, and the really the worst part, really, is that, you know, we have a technology called encryption, right?
+
+191
+00:16:55,880 --> 00:16:56,341
+Speaker 0: Yup.
+
+192
+00:16:56,461 --> 00:17:05,319
+Speaker 0: Encryption, I would remind you, is the underpinning of all modern society, and without encryption, everything breaks, like literally everything breaks.
+
+193
+00:17:05,981 --> 00:17:15,440
+Speaker 1: Yeah, so you have end-to-end encryption, where it's like, hey, I message rim, and even though that message goes, I'm using, I don't know, some kind of messenger, right?
+
+194
+00:17:16,260 --> 00:17:23,680
+Speaker 1: Software, and even though that message goes through my phone, which Apple makes, right?
+
+195
+00:17:24,040 --> 00:17:30,640
+Speaker 1: And the service that I'm using to send the message may be like signal or something, which is relevant for this story.
+
+196
+00:17:31,041 --> 00:17:41,120
+Speaker 1: And then it goes through my ISP, right, Verizon, and then it goes through who knows who else on the internet when it's getting routed around, and then it ends up back at rim's house, right?
+
+197
+00:17:41,420 --> 00:17:54,020
+Speaker 1: It goes to his phone, and it's like so many different companies have touched that message that I sent rim, but I encrypted it in such a way that none of them in between me and rim can decrypt that message.
+
+198
+00:17:54,401 --> 00:18:00,060
+Speaker 1: It's mathematically impossible without, you know, lots and lots of effort or luck, it's just not gonna happen.
+
+199
+00:18:00,120 --> 00:18:16,640
+Speaker 0: Because the way you're gonna get a message like that is either rim and scott have insanely high levels of operational security or a government with a warrant and punishment for not turning over known documents or someone with a crowbar will get it.
+
+200
+00:18:19,166 --> 00:18:24,500
+Speaker 1: The point is is that if you send someone a message, it's like iMessage, it's end to end encrypted, right?
+
+201
+00:18:24,940 --> 00:18:30,360
+Speaker 1: Apple can't see the message, it's like they even fixed the loophole of the iCloud backups, right?
+
+202
+00:18:30,500 --> 00:18:44,140
+Speaker 1: So it's like even that loophole is gone, no one's gonna see that message except the person who sent it and the person who received it, and if someone can find a way to access those devices, like get the person to unlock their phone for you or something.
+
+203
+00:18:46,020 --> 00:18:58,051
+Speaker 1: There's no way to see it, which means because that technology exists, right, and is essential for security and privacy of all online interactions, like buying something,
+
+204
+00:18:58,371 --> 00:18:59,272
+Speaker 0: you
+
+205
+00:18:59,852 --> 00:19:08,260
+Speaker 1: know, for, you know, using your VPN to connect to your office at work, to do work, all kinds, using SSH to connect to your server to administer it.
+
+206
+00:19:08,660 --> 00:19:10,560
+Speaker 0: Yep, using your credit card literally anywhere.
+
+207
+00:19:10,580 --> 00:19:10,640
+Speaker 0: All
+
+208
+00:19:11,100 --> 00:19:40,260
+Speaker 1: right, because of that, what happens is that, well, how can Ofcom possibly enforce this child online law, right, if people could just make secure connections and now they can't see what's going on, and so it's like there could be child porns going back and forth, some CSAMs, and the people who are supposed to police it can't police it, and no one can tell whether or not they're policing it, and the whole law becomes moot.
+
+209
+00:19:40,921 --> 00:19:54,420
+Speaker 1: So the law contains provisions to basically say, hey, if you're providing service, internet service of some kind, you can't have end-to-end encryption, you have to have some way for Ofcom to see what's going on.
+
+210
+00:19:54,660 --> 00:20:01,340
+Speaker 0: Wait, I gotta translate what you just said, you have to have some way for hackers all over the world and foreign governments and fucking anyone to get that data.
+
+211
+00:20:01,780 --> 00:20:27,680
+Speaker 1: Yeah, basically you have to make your shit unsecure, right, and so if they do that, it'll basically be open season on all UK citizens because all their communications won't be properly encrypted and someone will figure out the back door, whatever they implement, or companies will simply choose not to operate and serve the UK, and then you got all kinds of issues there, they're just gonna, right?
+
+212
+00:20:28,880 --> 00:20:36,190
+Speaker 1: You might have, like Signal, that's the big news, that Signal is like, if you do this, we just won't operate there, but there's also some disagreement, right?
+
+213
+00:20:36,290 --> 00:20:42,538
+Speaker 1: Some people in the UK are saying, actually, this doesn't, you know, ban the end-to-end encryption, and others say it does.
+
+214
+00:20:42,558 --> 00:20:43,780
+Speaker 1: They don't even know what their own law says.
+
+215
+00:20:43,800 --> 00:20:43,960
+Speaker 1: Well,
+
+216
+00:20:44,000 --> 00:21:08,880
+Speaker 0: the funniest thing is, we've been down this road before, if there's two things that we have talked about online and even on Geek Nights our entire lives, like these are topics from Geek Nights back in 2005, the two fights that we have been dealing with for, I guess the three fights are one, just free speech on the internet, like fighting things like the CBDTPA, which, if you don't know what that is, well, that's because we won a fight a long time ago, and two, governments keep trying to ban encryption.
+
+217
+00:21:09,821 --> 00:21:17,913
+Speaker 0: You may, when I was younger, it was illegal to tell people outside of the US how to use basic, simple encryption.
+
+218
+00:21:18,254 --> 00:21:19,536
+Speaker 0: Like, it was literally illegal.
+
+219
+00:21:19,836 --> 00:21:22,300
+Speaker 0: There were export controls on things like PGP.
+
+220
+00:21:24,840 --> 00:21:50,080
+Speaker 0: So, uh, we've been fighting this fight forever, and every time governments of the world try to legislate this stuff, regardless of intent, and even if they actually came up with really good lines of, like, what is covered and what isn't, what they intend, it is impossible for them, being old and out of touch and broken and mostly white people, who are at least over the age of 60, to in any way write a law that achieves what they intend.
+
+221
+00:21:50,720 --> 00:21:52,302
+Speaker 0: Like, they cannot describe this stuff.
+
+222
+00:21:52,362 --> 00:22:15,480
+Speaker 0: I was just listening to an NPR thing this morning that was talking about an unrelated but similar bill in the US, uh, can't be written because Congress literally doesn't have anyone who understands enough to write it, and how the Supreme Court literally even admitted it has no idea how to even debate that court case that's happening right now around content providers because none of them understand anything about the internet.
+
+223
+00:22:17,041 --> 00:22:24,160
+Speaker 0: Like, governments of the world cannot deal with technology and have never been able to deal with technology, and I don't know what to do about that.
+
+224
+00:22:26,341 --> 00:22:26,502
+Speaker 1: Nope.
+
+225
+00:22:27,004 --> 00:22:30,180
+Speaker 1: So, I hope the UK does this, not because, you know, on the one hand, I hope they don't do it.
+
+226
+00:22:30,180 --> 00:22:30,624
+Speaker 0: Of course, the issue.
+
+227
+00:22:30,785 --> 00:22:32,560
+Speaker 0: I love this kind of accelerationism.
+
+228
+00:22:32,580 --> 00:22:32,760
+Speaker 0: On the
+
+229
+00:22:32,840 --> 00:22:48,840
+Speaker 1: one hand, I hope they don't do it, because obviously that would be very bad, especially for the innocent people in the UK who would suffer, but, on the other hand, it would be very good, because it would, you know, the disaster that occurred, if they did this, would hopefully serve as an example to everyone else, right?
+
+230
+00:22:48,840 --> 00:22:55,920
+Speaker 1: Because it's like, this has been attempted in the US and other places many times and never gone through, right, due to wisdom, I guess.
+
+231
+00:22:56,540 --> 00:23:03,400
+Speaker 0: Well, also, us, like, people like us online making an extreme ruckus, despite the fact that most people don't even know that ruckus is happening.
+
+232
+00:23:04,300 --> 00:23:17,640
+Speaker 1: Yeah, but, uh, if they do this, I hope that it becomes an unmitigated disaster, just like Brexit would, and that everyone else would be warned away, and that would be, you know, hopefully the last time anyone tries to do something stupid like this.
+
+233
+00:23:17,740 --> 00:23:19,426
+Speaker 0: I mean, Brexit is already a disaster.
+
+234
+00:23:19,446 --> 00:23:24,760
+Speaker 0: There's, like, no tomatoes in the UK right now, and, uh, I got a warning from my-- Yeah, I guess they don't grow those there.
+
+235
+00:23:25,000 --> 00:23:39,557
+Speaker 0: Well, I'm gonna be in London next week, uh, for work, and I got a warning from our work security team that basically said, "Be prepared for mass, like, industrial protest actions and Brexit-related dislike, chaos, strikes everywhere,".
+
+236
+00:23:39,617 --> 00:23:42,540
+Speaker 0: all sorts of stuff, so, things are going swimmingly there.
+
+237
+00:23:42,560 --> 00:23:50,299
+Speaker 1: Well, maybe that-- maybe then the government will turn its attention toward those immediate concerns and not push this through, or did it get pushed through already?
+
+238
+00:23:50,359 --> 00:23:50,820
+Speaker 1: I don't even know.
+
+239
+00:23:51,180 --> 00:23:57,535
+Speaker 0: I don't know either, but, uh, I just-- it's kind of like-- so, Madison Square Garden in New York, there's a big fight going on.
+
+240
+00:23:57,555 --> 00:23:58,117
+Speaker 0: that's stupid.
+
+241
+00:23:58,177 --> 00:23:59,520
+Speaker 0: We'll talk about it on the Future Geek guys maybe.
+
+242
+00:23:59,520 --> 00:24:03,640
+Speaker 1: Well, there's a couple stupid-- there's, like, several stupid fights about Madison Square Garden simultaneously.
+
+243
+00:24:04,341 --> 00:24:11,971
+Speaker 0: But if the disaster scenario comes to pass-- I'll share this because it's similar to what would happen in the UK if this bill got passed.
+
+244
+00:24:12,452 --> 00:24:18,160
+Speaker 0: Imagine if a hockey arena, uh, suddenly was not allowed to serve alcohol, like, suddenly.
+
+245
+00:24:19,521 --> 00:24:30,138
+Speaker 0: And what would happen when people arrived at that hockey arena, 10,000-plus-- I guess 18,000-whatever, because it's MSG-- 18,006, at least if it's hockey, but it's basketball more.
+
+246
+00:24:30,138 --> 00:24:36,520
+Speaker 0: 17,000 of which expect to consume a bunch of alcohol, and they go in, and there ain't no alcohol.
+
+247
+00:24:37,241 --> 00:24:39,648
+Speaker 1: Most of the people would know in advance and would pregame.
+
+248
+00:24:39,709 --> 00:24:43,140
+Speaker 1: People pregame-- people pregame anyway to save money.
+
+249
+00:24:43,521 --> 00:24:49,920
+Speaker 0: I would argue people would pregame, but that makes it worse, because pregame people forget how much they drank and try to buy more anyway.
+
+250
+00:24:50,160 --> 00:24:57,600
+Speaker 0: And two, the kinds of people who would pregame and be really mad about this are also the kinds of people who would have no idea this was about to happen.
+
+251
+00:25:00,407 --> 00:25:01,558
+Speaker 0: And I look forward to it.
+
+252
+00:25:02,481 --> 00:25:03,262
+Speaker 0: One last little news.
+
+253
+00:25:04,263 --> 00:25:16,800
+Speaker 0: Climate change is getting extra terrifying, but I want to point your attention to this, because it's weird and moderately alarming to be living through an era that echoes a previous era in so many ways.
+
+254
+00:25:16,880 --> 00:25:31,440
+Speaker 0: So right now, we've got the largest land war in, like, information age history going on in Europe, simultaneous to an axis forming between that country and a power in Asia that's claiming it's feeling encircled by other powers and is getting increasingly bellicose toward its neighbors.
+
+255
+00:25:31,801 --> 00:25:40,960
+Speaker 0: Well, simultaneously, we have the rise of fascism in the US, and a dust bowl is now forming in the Midwest and west of the United States.
+
+256
+00:25:41,920 --> 00:25:43,042
+Speaker 0: So that is the news.
+
+257
+00:25:43,724 --> 00:25:50,860
+Speaker 0: The Great Salt Lake is evaporating so fast that it is going to disappear, like, soon.
+
+258
+00:25:51,661 --> 00:25:53,020
+Speaker 1: So it's just going to be a pile of salt?
+
+259
+00:25:53,521 --> 00:26:06,160
+Speaker 0: It's going to be a pile of toxic dust that is going to spread across at least two or three million people's worth of homes and cause an absolute and permanent catastrophe.
+
+260
+00:26:06,581 --> 00:26:07,551
+Speaker 1: Why is it toxic?
+
+261
+00:26:07,572 --> 00:26:08,380
+Speaker 1: Shouldn't it just be salt?
+
+262
+00:26:09,220 --> 00:26:11,580
+Speaker 1: And what about all the, I guess, the fish don't live in it?
+
+263
+00:26:11,620 --> 00:26:12,481
+Speaker 1: So
+
+264
+00:26:12,541 --> 00:26:29,440
+Speaker 0: basically, any time a lake dries up, that shit's toxic, even if there's no pollution in the lake, because a lot of things in the earth are toxic, like the bottom of a lake or the bottom of an ocean is not really, like, commonly suddenly just exposed to the world.
+
+265
+00:26:30,221 --> 00:26:32,080
+Speaker 1: Heavy metals, they fall to the bottom, right?
+
+266
+00:26:32,120 --> 00:26:33,382
+Speaker 0: Yeah, but it's heavy metals.
+
+267
+00:26:33,462 --> 00:26:34,844
+Speaker 0: It's also just things like silt.
+
+268
+00:26:35,565 --> 00:26:44,960
+Speaker 0: That's very fine dust, so if a lake dries up, very fine particulates that normally don't enter an ecosystem suddenly enter an ecosystem en masse.
+
+269
+00:26:45,320 --> 00:26:49,260
+Speaker 1: Oh, so even if they're not, like, lead particulates, it's still particulates, right?
+
+270
+00:26:49,341 --> 00:26:51,760
+Speaker 1: Like, remember that the dust bowl- So you get air pollution.
+
+271
+00:26:51,920 --> 00:26:56,840
+Speaker 0: The dust bowl during the Great Depression leading up to World War II was basically that happening all over the US.
+
+272
+00:26:57,281 --> 00:26:59,724
+Speaker 0: And it's happening again alongside all those other things.
+
+273
+00:27:00,425 --> 00:27:04,650
+Speaker 0: And this, like, it is shocking how little people are talking about this.
+
+274
+00:27:05,191 --> 00:27:11,900
+Speaker 0: It is drying up really, really fast, and scientists are flipping the fuck out about this right now.
+
+275
+00:27:12,561 --> 00:27:15,265
+Speaker 0: Like, this is not a 50 years from now situation.
+
+276
+00:27:15,326 --> 00:27:19,253
+Speaker 0: This is a, like, in our near-term lifetime situation.
+
+277
+00:27:19,914 --> 00:27:23,380
+Speaker 0: This could lead to things like Salt Lake City might have to be evacuated.
+
+278
+00:27:24,480 --> 00:27:24,761
+Speaker 1: Maybe.
+
+279
+00:27:24,821 --> 00:27:33,196
+Speaker 1: Could they, you know, if you want to get all super villainy, I guess, or superhero-y, it's like, obviously, filling it with water isn't gonna work.
+
+280
+00:27:33,978 --> 00:27:35,260
+Speaker 1: That's not gonna work, right?
+
+281
+00:27:36,602 --> 00:27:40,220
+Speaker 1: Is there some sort of solution, like a giant tarp to cover it?
+
+282
+00:27:40,480 --> 00:27:41,090
+Speaker 0: It's too big.
+
+283
+00:27:41,192 --> 00:27:45,660
+Speaker 0: This is a lake- It's real big, I know, but it's like- It's a lake more like real lakes, like those Michigan lakes.
+
+284
+00:27:45,981 --> 00:27:49,000
+Speaker 0: I know how big it is, but it's like- Well, it's not that big anymore.
+
+285
+00:27:49,000 --> 00:27:53,320
+Speaker 1: It's literally all the tarps, like, just, like, a super emergency tarp situation.
+
+286
+00:27:53,500 --> 00:27:59,090
+Speaker 0: So, basically, there is no known way to mitigate this kind of thing.
+
+287
+00:27:59,390 --> 00:28:05,140
+Speaker 0: This even happens on a small scale, like, when a mine gets shut down, and, like, those toxic lakes form and dry up.
+
+288
+00:28:05,140 --> 00:28:05,860
+Speaker 0: Well, which kind of mine?
+
+289
+00:28:06,060 --> 00:28:06,503
+Speaker 0: Any mine.
+
+290
+00:28:06,866 --> 00:28:08,920
+Speaker 0: Any kind of mine that forms those toxic lakes.
+
+291
+00:28:08,940 --> 00:28:12,940
+Speaker 1: Well, there's the kind where it's tunnels with carts, and there's also the big hole in the ground.
+
+292
+00:28:13,120 --> 00:28:13,301
+Speaker 0: Yep.
+
+293
+00:28:13,582 --> 00:28:19,660
+Speaker 0: Both kinds cause similar types of problems, despite those things being extremely tiny compared to the Great Salt Lake.
+
+294
+00:28:21,062 --> 00:28:23,519
+Speaker 1: Well, good thing I don't live over there.
+
+295
+00:28:24,080 --> 00:28:26,607
+Speaker 0: Yep, but this does not- The food lives over there.
+
+296
+00:28:26,628 --> 00:28:27,375
+Speaker 1: Some of it, I guess.
+
+297
+00:28:27,416 --> 00:28:27,739
+Speaker 1: I don't know.
+
+298
+00:28:28,060 --> 00:28:39,236
+Speaker 0: I guess the broader point is that this kind of problem could be addressed, but it would require massive acts of the US government and governments around the world.
+
+299
+00:28:39,516 --> 00:28:50,360
+Speaker 0: that would require the mass redirection of resources and very hard decisions, like, forcing people who live in watersheds that we need to redirect to refill these lakes to move.
+
+300
+00:28:50,820 --> 00:28:58,480
+Speaker 0: Like, this is gonna be- we're gonna see this crisis in our lifetime if governments don't start acting ten years ago, so I guess we're kind of just fucked.
+
+301
+00:28:59,600 --> 00:28:59,690
+Speaker 1: Well.
+
+302
+00:29:00,300 --> 00:29:00,369
+Speaker 0: Yep.
+
+303
+00:29:02,201 --> 00:29:13,720
+Speaker 1: I mean, my advice would be don't live in Utah, but I guess anyone who agrees with that advice already doesn't live there, and anyone who does live there, it's like, you're not gonna move.
+
+304
+00:29:14,500 --> 00:29:14,741
+Speaker 0: Yep.
+
+305
+00:29:14,761 --> 00:29:25,540
+Speaker 0: Or there are a lot of people, you know, the big problem with America is we have blue states and red states, and at least 40% of the people living in red states don't want their states to be shitty, but they have no political power there.
+
+306
+00:29:26,281 --> 00:29:27,439
+Speaker 0: And they can't even leave if they want to.
+
+307
+00:29:27,721 --> 00:29:30,010
+Speaker 1: Even in Utah, a state of Mormons, right?
+
+308
+00:29:30,150 --> 00:29:32,540
+Speaker 1: It's like, you know, what's the percentage?
+
+309
+00:29:33,160 --> 00:29:53,620
+Speaker 0: Well, I was looking at this for an unrelated argument and a thread in a Discord that you never read, but only about 20 of the red states in America are irrevocably red, meaning, like, they are so red that even if you fix everything with voting and let every single person in those states vote, they're still, like, deep red, conservative, fascist forever.
+
+310
+00:29:53,800 --> 00:29:54,902
+Speaker 0: But that's only 20.
+
+311
+00:29:54,902 --> 00:30:01,971
+Speaker 0: The other half-plus of the red states, they're more like only 40 to 60% fascist.
+
+312
+00:30:02,031 --> 00:30:06,217
+Speaker 0: Like, 40-ish percent of the people there, even 50% are totally fine.
+
+313
+00:30:06,277 --> 00:30:08,480
+Speaker 0: Those states are purple if we fix voting.
+
+314
+00:30:08,740 --> 00:30:22,491
+Speaker 1: According to the Pew Research Center on the internet, the state of Utah, as of, I can't find a year on this page, but we're talking about voter registrations, it's obviously not the same as voting, but voter registrations, 54% Nazis, 16% independent voters, right?
+
+315
+00:30:22,511 --> 00:30:23,812
+Speaker 1: They didn't choose one.
+
+316
+00:30:23,912 --> 00:30:25,333
+Speaker 1: And 30% of Utah is normal people.
+
+317
+00:30:34,420 --> 00:30:43,861
+Speaker 0: Alright, so we could get 46% versus the 50-ish percent Nazis, and if we had voting rights acts, that would become more like 50/50.
+
+318
+00:30:43,861 --> 00:30:46,167
+Speaker 1: I mean, look, 76% Mormons.
+
+319
+00:30:46,227 --> 00:30:50,640
+Speaker 1: It's like, there's still, like, 25, you know, a quarter of the people in Utah aren't Mormons.
+
+320
+00:30:51,120 --> 00:31:00,999
+Speaker 0: And also, while that state is extremely conservative and fucked up in a lot of ways, there are a handful of scruples that the Mormon voting bloc has that the other Republicans don't.
+
+321
+00:31:01,039 --> 00:31:01,360
+Speaker 0: Not many!
+
+322
+00:31:01,360 --> 00:31:04,140
+Speaker 1: By the way, I was reading that table wrong, that was a different table, but anyway.
+
+323
+00:31:05,660 --> 00:31:07,920
+Speaker 0: Alright, disregard every number Scott just said, but anyway.
+
+324
+00:31:08,260 --> 00:31:09,900
+Speaker 1: Only the Mormon number was wrong.
+
+325
+00:31:10,400 --> 00:31:11,058
+Speaker 0: Okay, okay.
+
+326
+00:31:14,140 --> 00:31:17,365
+Speaker 0: But anyway, things of the day.
+
+327
+00:31:17,465 --> 00:31:24,795
+Speaker 0: So, trains, like a diesel train, big fan of those, they have gigantic diesel engines.
+
+328
+00:31:25,416 --> 00:31:28,100
+Speaker 0: And, uh, you ever wonder why, when there's a freight train?
+
+329
+00:31:28,100 --> 00:31:31,854
+Speaker 1: Bigger, but, you know, like boat-sized ones, but train is big.
+
+330
+00:31:32,095 --> 00:31:33,480
+Speaker 1: Bigger than car, bigger than truck.
+
+331
+00:31:33,620 --> 00:31:35,830
+Speaker 0: Well, boat engines usually don't run on diesel.
+
+332
+00:31:35,931 --> 00:31:37,780
+Speaker 0: Boat engines usually run on jeweler.
+
+333
+00:31:37,900 --> 00:31:40,600
+Speaker 1: There are and have been diesel boats, diesel submarines.
+
+334
+00:31:40,780 --> 00:31:41,589
+Speaker 0: Oh, there have been.
+
+335
+00:31:41,791 --> 00:31:42,499
+Speaker 0: There have been.
+
+336
+00:31:44,263 --> 00:31:45,914
+Speaker 1: They have a bigger engine than a train.
+
+337
+00:31:45,934 --> 00:31:46,860
+Speaker 1: That's all I'm saying.
+
+338
+00:31:47,320 --> 00:31:48,883
+Speaker 0: Well, not often.
+
+339
+00:31:48,904 --> 00:31:56,440
+Speaker 0: I think, anyway, I don't want to get into this right now, but yeah, most of the big engines you're thinking of are fuel oil engines, not diesel engines.
+
+340
+00:31:57,874 --> 00:31:58,020
+Speaker 1: Anyway.
+
+341
+00:31:58,961 --> 00:32:02,126
+Speaker 0: But, diesel engines are finicky and hard to start.
+
+342
+00:32:02,987 --> 00:32:10,820
+Speaker 0: You might not know that if you have like a regular car, because a regular diesel car will just start, but like a gigantic truck needs some fiddling to start.
+
+343
+00:32:11,400 --> 00:32:18,020
+Speaker 0: But a big diesel engine, like a train or a factory, they have a process called a cold start.
+
+344
+00:32:18,681 --> 00:32:29,280
+Speaker 0: So basically, once you've got a big diesel engine going, it is better for the environment and better for the engine and better for basically everyone involved to never turn it off ever.
+
+345
+00:32:30,141 --> 00:32:37,100
+Speaker 0: Gotta keep it idling, because the moment it shuts down, it is like a gigantic fucking hassle to get it going again.
+
+346
+00:32:37,220 --> 00:32:51,220
+Speaker 0: And I'm talking like an army of people standing around it, hitting it with hammers, and like trying to get fire to go into the intakes to try to like kickstart reactions, black smoke billowing everywhere.
+
+347
+00:32:52,020 --> 00:32:57,280
+Speaker 0: Wow, weird knowledge that like old people know that like young people don't really know about unless they work in these industries.
+
+348
+00:32:58,063 --> 00:33:01,900
+Speaker 0: So, the big revolutions in this space are around things called APUs.
+
+349
+00:33:02,360 --> 00:33:03,919
+Speaker 0: Same thing happened with tanks, actually.
+
+350
+00:33:04,380 --> 00:33:10,100
+Speaker 0: Auxiliary power units, meaning you got a big diesel engine, and you got a little tiny diesel engine.
+
+351
+00:33:10,641 --> 00:33:17,080
+Speaker 0: And if you need to shut down the big one, you keep the tiny one running so the tiny one can be used to start the big one again.
+
+352
+00:33:17,300 --> 00:33:22,420
+Speaker 0: But, that doesn't exist in most diesel infrastructure, and there's a lot of complications there.
+
+353
+00:33:22,861 --> 00:33:36,060
+Speaker 0: So, my thing of the day is a six minute video showing you what it looks like with a ton of examples to cold start a diesel train that does not have an APU.
+
+354
+00:33:38,002 --> 00:33:38,042
+Speaker 1: No.
+
+355
+00:33:38,082 --> 00:33:52,000
+Speaker 1: See, the only information I knew, which I fully admit might be false information, but the main thing that I was told in the past was that a gas engine in a car has spark plugs, right?
+
+356
+00:33:52,020 --> 00:33:58,420
+Speaker 1: You know, the piston goes up, the spark plug sets the gasoline on fire, and that explodes and pushes the piston back down.
+
+357
+00:33:58,540 --> 00:33:59,040
+Speaker 0: That is correct.
+
+358
+00:33:59,581 --> 00:34:03,108
+Speaker 1: And what I was told was that in a diesel engine, there is no spark plug.
+
+359
+00:34:03,409 --> 00:34:08,960
+Speaker 1: The pressure of the piston going up and squishing it is enough to ignite the diesel.
+
+360
+00:34:09,139 --> 00:34:09,760
+Speaker 0: That is correct.
+
+361
+00:34:10,460 --> 00:34:10,784
+Speaker 1: Oh, okay.
+
+362
+00:34:10,804 --> 00:34:11,815
+Speaker 1: So, I was not lied to.
+
+363
+00:34:12,280 --> 00:34:12,355
+Speaker 1: Yup.
+
+364
+00:34:13,041 --> 00:34:21,280
+Speaker 1: But that is why the diesel is harder to start because you need to get the pressure there, and you can't just like hit a spark plug and be like zap, start it, right?
+
+365
+00:34:21,721 --> 00:34:29,500
+Speaker 0: And cars, like even diesel trucks, they have a big ass battery, and there is a starter, and it basically has to crank everything enough to get it going.
+
+366
+00:34:30,040 --> 00:34:39,560
+Speaker 1: But, you have to, right, the way to start it, if it is just pressure, is that you have to turn it as hard as it would turn if it was going to get it, to make it continue, you know, going.
+
+367
+00:34:40,300 --> 00:34:50,239
+Speaker 0: So, this video is, this video is my kind of jam, but I will admit, I know a lot more about tanks and this stuff than I know about trains and this stuff.
+
+368
+00:34:52,940 --> 00:34:56,833
+Speaker 1: Anyway, so, I read this article here, and it was really fascinating.
+
+369
+00:34:56,873 --> 00:34:58,660
+Speaker 1: It is one of those very New York-y kind of things.
+
+370
+00:34:58,920 --> 00:35:01,526
+Speaker 1: It is a magazine I have never heard of called Interview Magazine.
+
+371
+00:35:01,546 --> 00:35:07,020
+Speaker 1: You can guess what kind of content that magazine has on this website, interviewmagazine.com.
+
+372
+00:35:07,220 --> 00:35:21,240
+Speaker 1: And they went around New York City to fancy restaurants that you have heard of, right, and fancy bars like, you know, the Balthazar and the Rock and, you know, these, you know, really fancy places that you are never going to go, probably, right?
+
+373
+00:35:21,801 --> 00:35:25,248
+Speaker 1: And they interviewed the maitre d's at these places, right?
+
+374
+00:35:26,129 --> 00:35:28,995
+Speaker 1: And they were like, you know, hey, you know, where do you come from?
+
+375
+00:35:29,015 --> 00:35:31,220
+Speaker 1: How do you handle the, you know, what do you do?
+
+376
+00:35:31,841 --> 00:35:37,431
+Speaker 1: And it's like, you know, you think, you know, I think, like, the job of maitre d, it's not a job I've thought about, right?
+
+377
+00:35:37,551 --> 00:35:42,620
+Speaker 1: It's like, you know, oh, people come to the front, you see if you have a table open, if not, right?
+
+378
+00:35:42,940 --> 00:35:47,740
+Speaker 1: You know, and you say, okay, there are four people, we got a booth, you know, it's like, they, you know, how hard is that job, right?
+
+379
+00:35:48,121 --> 00:35:51,033
+Speaker 1: And I guess at a normal restaurant, how hard is that job?
+
+380
+00:35:51,415 --> 00:35:52,600
+Speaker 1: Probably, you know, at an Applebee's.
+
+381
+00:35:52,620 --> 00:36:03,240
+Speaker 0: Well, at a normal restaurant, usually a server does that or like there's, everyone's very fungible, but the fancier restaurants get, the more responsibilities and the more separation of responsibilities there is.
+
+382
+00:36:03,500 --> 00:36:13,600
+Speaker 1: Well, at the fancy restaurant, that job apparently entails a lot more and entails a lot of, you know, people management, a lot of service and a lot of thought going into things, right?
+
+383
+00:36:13,881 --> 00:36:17,668
+Speaker 1: That, you know, the people at other restaurants aren't caring about, right?
+
+384
+00:36:17,708 --> 00:36:23,820
+Speaker 1: It's like, they're trying to work hard, it's like, maintain the atmosphere at the place and the vibe and these other, right?
+
+385
+00:36:23,880 --> 00:36:25,299
+Speaker 1: They have all this other stuff going on.
+
+386
+00:36:25,480 --> 00:36:30,159
+Speaker 0: Like, ever see the Blues Brothers when they come into the restaurant and the maitre d is like, you're not coming in here?
+
+387
+00:36:30,901 --> 00:36:32,519
+Speaker 1: Or this person even tells us.
+
+388
+00:36:33,160 --> 00:36:39,620
+Speaker 0: My favorite line in The Simpsons where the maitre d of the restaurant sees Homer and just says, sir, would you kindly leave without making a fuss?
+
+389
+00:36:40,500 --> 00:36:40,701
+Speaker 1: Right.
+
+390
+00:36:40,721 --> 00:36:52,040
+Speaker 1: But it's like some of these places in the city also, they're such high demand fancy places that you sort of end up, you know, you're not just going to always be, you know, first come first serve here, right?
+
+391
+00:36:52,120 --> 00:36:54,694
+Speaker 1: Like you would, you know, like you would expect to be fair.
+
+392
+00:36:54,715 --> 00:36:55,640
+Speaker 1: It's not fair.
+
+393
+00:36:55,841 --> 00:36:56,878
+Speaker 1: They might just say no.
+
+394
+00:36:57,901 --> 00:36:58,061
+Speaker 1: Yeah.
+
+395
+00:36:58,121 --> 00:37:00,890
+Speaker 1: It's like they're thinking about like, who are they going to let in?
+
+396
+00:37:01,131 --> 00:37:02,335
+Speaker 1: Who are they not going to let in?
+
+397
+00:37:02,595 --> 00:37:04,020
+Speaker 1: Who are they going to let sit where?
+
+398
+00:37:04,220 --> 00:37:12,240
+Speaker 0: I have been told by places in London before, like dressed up in a fancy suit with fancy people and we're all rich and doing company stuff.
+
+399
+00:37:12,600 --> 00:37:14,978
+Speaker 0: And we've just been told, nope, you're not coming in.
+
+400
+00:37:15,900 --> 00:37:15,960
+Speaker 0: Yep.
+
+401
+00:37:16,441 --> 00:37:25,320
+Speaker 1: You know, and so you've got stories here of it's like, you know, Paul McCartney comes in and they deal, you know, it's like it's a regular thing and they, you know, they deal with it in a certain way.
+
+402
+00:37:25,521 --> 00:37:30,000
+Speaker 1: Or there were some tourists who wanted to come in and they really wanted to seat the tourists, right?
+
+403
+00:37:30,381 --> 00:37:33,030
+Speaker 1: To get, you know, to really, cause it's a service thing, right?
+
+404
+00:37:33,090 --> 00:37:35,980
+Speaker 1: It's like, oh, they could have such this great experience, these tourists, right?
+
+405
+00:37:36,520 --> 00:37:40,920
+Speaker 1: And then, but they were actually full, so they had to say no, but then a cancellation.
+
+406
+00:37:41,080 --> 00:37:44,029
+Speaker 1: So they ran down the street to go get the tourists, right?
+
+407
+00:37:44,129 --> 00:37:45,614
+Speaker 1: And the tourists were so happy, right?
+
+408
+00:37:45,634 --> 00:37:47,740
+Speaker 1: It's that kind of thing that happens with this kind of job.
+
+409
+00:37:47,840 --> 00:37:50,625
+Speaker 1: So it was just a really fascinating interviews.
+
+410
+00:37:50,665 --> 00:37:58,940
+Speaker 1: These people are just telling all, and it was also interesting to see how many of them had like come from the same place in the industry.
+
+411
+00:37:59,442 --> 00:38:03,876
+Speaker 1: Like they all like, you know, learned or worked for, you know, similar owners, right?
+
+412
+00:38:03,937 --> 00:38:04,820
+Speaker 1: And, you know.
+
+413
+00:38:05,300 --> 00:38:07,464
+Speaker 0: You know, most industries are like that.
+
+414
+00:38:07,544 --> 00:38:17,200
+Speaker 0: Like all the alumni of that first company I worked for in capital markets, like actually a lot of them are at my company now, like a lot of my coworkers from over a decade ago.
+
+415
+00:38:18,100 --> 00:38:18,241
+Speaker 1: Yep.
+
+416
+00:38:18,983 --> 00:38:25,540
+Speaker 1: So yeah, it's just like, you know, I'd never in my entire life thought about, you know, what a maitre d would be thinking about, right?
+
+417
+00:38:26,122 --> 00:38:30,660
+Speaker 1: So it's like, it's an insight into a whole new dimension of whatever.
+
+418
+00:38:31,440 --> 00:38:36,720
+Speaker 0: In the meta moment, the Geek Guys Book Club book is Simon Rushdie's The Satanic Versus.
+
+419
+00:38:38,581 --> 00:38:49,900
+Speaker 0: I bought it, and I'm going to London next week, so I imagine I'm going to read a significant bit of it, but it is a much longer and denser book than previous recent book clubs.
+
+420
+00:38:50,260 --> 00:38:50,867
+Speaker 1: How long is it?
+
+421
+00:38:50,907 --> 00:38:52,080
+Speaker 1: I had no idea how long it was.
+
+422
+00:38:52,180 --> 00:38:56,840
+Speaker 0: I mean, it's like a longer than average novel with dense allegorical text.
+
+423
+00:38:57,640 --> 00:38:59,500
+Speaker 1: So is it like prints of nothing long or like how long?
+
+424
+00:38:59,700 --> 00:39:00,705
+Speaker 0: I don't know how many pages it is.
+
+425
+00:39:00,725 --> 00:39:03,158
+Speaker 0: I just know it's pretty thick because I have a physical copy of it.
+
+426
+00:39:04,260 --> 00:39:04,991
+Speaker 1: Oh, physical one.
+
+427
+00:39:05,072 --> 00:39:05,133
+Speaker 1: Ooh.
+
+428
+00:39:06,102 --> 00:39:06,888
+Speaker 0: I'm going to read an e-book.
+
+429
+00:39:06,948 --> 00:39:08,319
+Speaker 0: I just happen to have an old physical copy.
+
+430
+00:39:08,580 --> 00:39:09,540
+Speaker 1: Oh, you just happen to have a book.
+
+431
+00:39:11,900 --> 00:39:19,519
+Speaker 0: But this is a book that I'm excited to read because I've never read it, and they've tried to assassinate the author so many times that it's got to be good.
+
+432
+00:39:20,580 --> 00:39:20,959
+Speaker 1: That's right.
+
+433
+00:39:22,941 --> 00:39:31,040
+Speaker 1: In other meta news, a significant, not even shit talk, significant tremendous progress has been made on the Geek Nights website.
+
+434
+00:39:31,341 --> 00:39:31,697
+Speaker 1: Oh, hell yeah.
+
+435
+00:39:32,440 --> 00:39:44,538
+Speaker 1: The new website, which is not live yet, but I have developed a process for loading all of the data from the old website to the new website that is like 99% correct and complete.
+
+436
+00:39:47,323 --> 00:39:50,860
+Speaker 1: There could always be more polishing, but we can always polish later in the future as well.
+
+437
+00:39:51,660 --> 00:40:00,599
+Speaker 1: So now the only steps remaining are getting all the redirects correct and then finishing up the front end bits and a few other things.
+
+438
+00:40:01,620 --> 00:40:08,140
+Speaker 1: And then we could actually maybe launch this website this year, but it's got to be this year.
+
+439
+00:40:08,840 --> 00:40:19,620
+Speaker 1: There's a lot of year left, and we're most of the way to the... A lot of the stuff in the to-do list is post-launch, so the pre-launch checklist is much, much shorter now.
+
+440
+00:40:20,080 --> 00:40:26,700
+Speaker 1: And all the items that are still on that list are much, much smaller than all the large items have been completed.
+
+441
+00:40:27,120 --> 00:40:34,880
+Speaker 0: I did have some fun, though, because as part of this, I was seeing if I could find the forum thread for a bunch of really old episodes of Geek Nights.
+
+442
+00:40:35,221 --> 00:40:46,399
+Speaker 0: So on a lark, I skimmed through the first several hundred threads that were made in the original Geek Nights forum, which was launched about the same time that Reddit was launched.
+
+443
+00:40:48,242 --> 00:40:49,200
+Speaker 1: It's older than iPhones.
+
+444
+00:40:50,321 --> 00:40:50,883
+Speaker 0: And you know what?
+
+445
+00:40:51,405 --> 00:40:54,275
+Speaker 0: There is a lot of fucking content in that forum.
+
+446
+00:40:54,576 --> 00:40:55,620
+Speaker 0: God damn.
+
+447
+00:40:55,680 --> 00:41:07,041
+Speaker 0: And yeah, it was a ride seeing posts from all of us and Geek Nights listeners back in 2005, 2006, 2007.
+
+448
+00:41:07,041 --> 00:41:13,580
+Speaker 0: There were, in the end, well over 10,000 threads in that forum before we archived it and launched the new forum.
+
+449
+00:41:15,682 --> 00:41:23,200
+Speaker 1: So yeah, once that actually comes, shit's gonna get really fancy in terms of our capabilities, publishing-wise.
+
+450
+00:41:26,122 --> 00:41:38,160
+Speaker 0: And also, we will be live at PAX East on Thursday, March 23rd at 2.30pm Eastern Time at the Bumblebee Theater with Can Competitive and Casual Coexist, a panel that we did once as a trial run at a magfest.
+
+451
+00:41:38,661 --> 00:41:48,040
+Speaker 0: As the cold guy Pat shared with us, there is a medium-quality recording of it from that panel room available on YouTube on the Magfest channel.
+
+452
+00:41:49,360 --> 00:41:52,573
+Speaker 1: I would say it's bad quality, but better than I thought quality.
+
+453
+00:41:52,594 --> 00:41:54,160
+Speaker 1: So medium, I guess, is okay.
+
+454
+00:41:54,680 --> 00:42:03,260
+Speaker 0: And I'm already rewriting big chunks of it based on, you know, lots happened in the intervening years and Marvel Snap was illustrative of some points here.
+
+455
+00:42:03,440 --> 00:42:06,026
+Speaker 0: So it's gonna be a pretty fun panel, but it'll be on Thursday.
+
+456
+00:42:06,387 --> 00:42:12,380
+Speaker 0: We're only gonna be at the con Thursday and Friday, so if you're looking to see us, like, we will not be around Saturday and Sunday.
+
+457
+00:42:12,701 --> 00:42:19,660
+Speaker 0: We're only going for a couple days, not enforcing, it's still a mass con, and yeah, but maybe we'll see you there.
+
+458
+00:42:19,780 --> 00:42:27,640
+Speaker 1: We're probably gonna spend Saturday, you know, since not all our people are going, we're probably gonna spend Saturday, you know, making some videos and other contents, right?
+
+459
+00:42:28,401 --> 00:42:30,660
+Speaker 1: Make our trip worthwhile so you can look forward to those.
+
+460
+00:42:31,000 --> 00:42:32,339
+Speaker 0: Yeah, so stay tuned, it'll be fun.
+
+461
+00:42:33,341 --> 00:42:43,760
+Speaker 0: All right, so way back, long time ago, when I was working at the hospital, which, if you listen to old geek nights, didn't have a lot of work to do.
+
+462
+00:42:43,920 --> 00:42:47,250
+Speaker 0: Like, I had a job where literally I had no work to do, like none.
+
+463
+00:42:47,711 --> 00:42:50,760
+Speaker 0: I went over a month at one point with zero tasks.
+
+464
+00:42:51,361 --> 00:42:58,980
+Speaker 0: Even when I went to my boss and my boss's boss and my boss's boss's boss and asked them for work, they gave me nothing and no one complained that I was doing nothing.
+
+465
+00:42:59,782 --> 00:43:09,020
+Speaker 1: I had that job several times, you know, even at my current job, it's like, you know, this pet, don't tell, I hope my coworkers are listening, right?
+
+466
+00:43:09,140 --> 00:43:15,320
+Speaker 1: But even at my current job, it's like, you know, they told me, like, oh, productive sprint you just had.
+
+467
+00:43:15,440 --> 00:43:18,980
+Speaker 1: I didn't feel like I was that productive, that sprint, I feel like I could have done more.
+
+468
+00:43:19,040 --> 00:43:22,440
+Speaker 0: You know, I will say, and this might just be, I don't want to say, because we're two white guys.
+
+469
+00:43:22,660 --> 00:43:25,240
+Speaker 1: I'm not doing nothing, like I was at some jobs.
+
+470
+00:43:25,380 --> 00:43:30,180
+Speaker 0: You and I are two white guys who came from middle class backgrounds in tech, who went to a tech school.
+
+471
+00:43:30,820 --> 00:43:40,160
+Speaker 0: So there's a lot of bias here, but I find we both always have jobs where people act like we're doing a crazy good job, but it feels like we're barely doing any work.
+
+472
+00:43:40,603 --> 00:43:42,099
+Speaker 0: And that has been my entire career.
+
+473
+00:43:43,520 --> 00:43:44,338
+Speaker 1: The privilege, whatever.
+
+474
+00:43:45,060 --> 00:43:50,780
+Speaker 0: But, so this job was boring to the point that I was like, why am I even in tech?
+
+475
+00:43:50,880 --> 00:43:54,860
+Speaker 0: So I took the LSAT because it was really easy and I was like, maybe I should be a lawyer.
+
+476
+00:43:54,981 --> 00:43:57,240
+Speaker 0: And then every lawyer I know was like, don't be a lawyer.
+
+477
+00:43:57,840 --> 00:44:08,880
+Speaker 0: And at one point I interviewed at, I forget the name of the site, but I have all the old articles, like I have all the archives of this, a site that was like a tech news site that would review like technology hardware.
+
+478
+00:44:09,403 --> 00:44:12,860
+Speaker 0: And I applied to a job there that paid more than an IT job at the hospital.
+
+479
+00:44:13,401 --> 00:44:24,740
+Speaker 0: And all the job was is basically review every laptop, smartphone and PDA that comes out on this website, like write the review articles for them.
+
+480
+00:44:25,720 --> 00:44:28,140
+Speaker 0: So the interview process, like the interview went great.
+
+481
+00:44:28,300 --> 00:44:33,920
+Speaker 0: And then the second part of the interview, which I know now was a trap, was to get me to do some spec work.
+
+482
+00:44:34,001 --> 00:44:35,399
+Speaker 0: And they asked me to write three articles.
+
+483
+00:44:36,010 --> 00:44:36,379
+Speaker 0: So I did.
+
+484
+00:44:36,766 --> 00:44:37,240
+Speaker 0: It was trivial.
+
+485
+00:44:37,321 --> 00:44:38,420
+Speaker 0: Like it took me no time at all.
+
+486
+00:44:38,461 --> 00:44:39,440
+Speaker 0: I wrote these three articles.
+
+487
+00:44:39,921 --> 00:44:45,800
+Speaker 0: They were the trashiest, like superficial garbage copypasta reviews in the world.
+
+488
+00:44:46,224 --> 00:44:47,399
+Speaker 0: And they were like, yeah, these are great.
+
+489
+00:44:48,301 --> 00:44:52,240
+Speaker 0: And then they ghosted me, despite the fact that everyone said it was great.
+
+490
+00:44:52,962 --> 00:44:55,118
+Speaker 0: I then saw at least one.
+
+491
+00:44:55,520 --> 00:44:55,777
+Speaker 1: They posted.
+
+492
+00:44:55,900 --> 00:44:57,278
+Speaker 0: Oh yeah, they published all three of those.
+
+493
+00:44:57,869 --> 00:44:58,057
+Speaker 1: Yeah.
+
+494
+00:44:58,461 --> 00:45:00,079
+Speaker 0: So yeah, I learned that was a scam.
+
+495
+00:45:00,621 --> 00:45:18,340
+Speaker 0: But also those articles today could be written by an autoregressive language model like GPT-3 pretty much automatically with zero human intervention, because the moral of everything we're about to talk about is that the bottom tier of the Internet just got automated.
+
+496
+00:45:19,560 --> 00:45:20,496
+Speaker 1: So here's it.
+
+497
+00:45:20,940 --> 00:45:25,760
+Speaker 1: You know, people have probably seen lots and lots of news about all the A.I.s and the machine learnings and all this stuff.
+
+498
+00:45:25,880 --> 00:45:26,060
+Speaker 1: Right.
+
+499
+00:45:26,120 --> 00:45:27,459
+Speaker 1: So here's is the real deal.
+
+500
+00:45:27,648 --> 00:45:27,840
+Speaker 1: Right.
+
+501
+00:45:28,381 --> 00:45:36,520
+Speaker 1: We even as far back as when I was when we were in college and even earlier than that, there were things like, you know, genetic algorithms, the Bayesian algorithm.
+
+502
+00:45:36,790 --> 00:45:37,019
+Speaker 1: Right.
+
+503
+00:45:37,462 --> 00:45:38,639
+Speaker 1: All sorts of stuff like that.
+
+504
+00:45:38,981 --> 00:45:43,860
+Speaker 1: You know, machine learning wasn't clearly as advanced as it was now, but the ideas existed.
+
+505
+00:45:44,681 --> 00:45:51,200
+Speaker 1: And the basic concept here is that pattern recognition is a thing a computer can do.
+
+506
+00:45:51,922 --> 00:45:53,839
+Speaker 1: That's that's pretty much what the concept is.
+
+507
+00:45:53,944 --> 00:45:54,120
+Speaker 1: Right.
+
+508
+00:45:54,462 --> 00:45:57,600
+Speaker 1: And at first we started seeing this as consumers.
+
+509
+00:45:58,350 --> 00:45:58,579
+Speaker 1: Right.
+
+510
+00:45:59,201 --> 00:46:02,100
+Speaker 1: By computers identifying something.
+
+511
+00:46:02,829 --> 00:46:03,000
+Speaker 1: Right.
+
+512
+00:46:03,060 --> 00:46:09,620
+Speaker 1: You would give it a picture and you would say, hey, computer, does this picture, this is JPEG, have any cats in it?
+
+513
+00:46:10,023 --> 00:46:11,579
+Speaker 1: And it would say yes or no.
+
+514
+00:46:12,223 --> 00:46:14,700
+Speaker 1: And then it made, you know, the advanced ones would be like, yes.
+
+515
+00:46:15,004 --> 00:46:16,140
+Speaker 1: And here are the cats.
+
+516
+00:46:16,201 --> 00:46:17,198
+Speaker 1: They're here, here and here.
+
+517
+00:46:17,704 --> 00:46:19,080
+Speaker 1: And we had the facial recognition.
+
+518
+00:46:19,289 --> 00:46:19,500
+Speaker 1: Right.
+
+519
+00:46:19,601 --> 00:46:20,660
+Speaker 1: That's the same technology.
+
+520
+00:46:20,820 --> 00:46:22,359
+Speaker 1: It's like here is a picture.
+
+521
+00:46:23,305 --> 00:46:24,319
+Speaker 1: Are there faces in it?
+
+522
+00:46:24,680 --> 00:46:24,834
+Speaker 1: Yes.
+
+523
+00:46:25,260 --> 00:46:26,220
+Speaker 1: I have found the faces.
+
+524
+00:46:26,500 --> 00:46:27,137
+Speaker 1: Here they are.
+
+525
+00:46:28,300 --> 00:46:32,040
+Speaker 1: And then it's like, OK, well, now do a look up in your database of many photos.
+
+526
+00:46:32,561 --> 00:46:37,300
+Speaker 1: Can you identify who those faces belong to if they're in your database of photos or not?
+
+527
+00:46:37,460 --> 00:46:37,620
+Speaker 1: Right.
+
+528
+00:46:37,900 --> 00:46:39,680
+Speaker 1: Sort of like a Google search for the picture.
+
+529
+00:46:39,852 --> 00:46:39,960
+Speaker 1: Right.
+
+530
+00:46:40,001 --> 00:46:41,499
+Speaker 1: You can do a Google image search of the picture.
+
+531
+00:46:41,540 --> 00:46:41,624
+Speaker 1: Yeah.
+
+532
+00:46:41,960 --> 00:46:42,093
+Speaker 1: Right.
+
+533
+00:46:42,200 --> 00:46:47,700
+Speaker 1: You can just drag a JPEG into Google image search and it'll search for similar images or the website that has that image.
+
+534
+00:46:48,171 --> 00:46:48,360
+Speaker 1: Right.
+
+535
+00:46:48,741 --> 00:46:49,940
+Speaker 1: This technology is around.
+
+536
+00:46:50,120 --> 00:46:51,780
+Speaker 0: And it's been around for a while.
+
+537
+00:46:51,800 --> 00:46:52,571
+Speaker 0: Quite a while.
+
+538
+00:46:53,580 --> 00:47:00,360
+Speaker 0: The old camcorder we used to use for gig nights panels had facial recognition of like people you loaded into it.
+
+539
+00:47:00,703 --> 00:47:02,119
+Speaker 0: That worked really well.
+
+540
+00:47:02,940 --> 00:47:03,012
+Speaker 1: Yep.
+
+541
+00:47:03,660 --> 00:47:06,220
+Speaker 1: But, you know, this technology advanced.
+
+542
+00:47:06,380 --> 00:47:16,240
+Speaker 1: And what's happened over the past few years that is only recently exploded as it's become more accessible to normal people is that the data behind these things.
+
+543
+00:47:16,732 --> 00:47:16,980
+Speaker 1: Right.
+
+544
+00:47:17,240 --> 00:47:18,620
+Speaker 1: Has gotten really big.
+
+545
+00:47:18,740 --> 00:47:22,860
+Speaker 1: People who are running these systems have gathered huge, huge sets of training data.
+
+546
+00:47:23,560 --> 00:47:33,900
+Speaker 1: It's really that the AlphaGo thing really kicked this off to write with the, you know, getting people to see that this sort of, you know, algorithm, this model is going to work.
+
+547
+00:47:34,363 --> 00:47:36,519
+Speaker 1: And then people have taken off with it since then.
+
+548
+00:47:37,181 --> 00:47:43,932
+Speaker 1: But what they've done is they've taken the same fundamental ideas and flipped them on their head to now.
+
+549
+00:47:44,013 --> 00:47:45,796
+Speaker 1: no longer are you saying computer.
+
+550
+00:47:46,397 --> 00:47:47,980
+Speaker 1: does this picture have cats in it?
+
+551
+00:47:48,561 --> 00:47:52,580
+Speaker 1: You're saying computer, you have so many pictures of cats in your database.
+
+552
+00:47:54,180 --> 00:47:58,000
+Speaker 1: Draw me a new picture of an orange cat.
+
+553
+00:47:58,140 --> 00:48:01,920
+Speaker 1: You know what a cat picture looks like computer because you have so many already available.
+
+554
+00:48:02,082 --> 00:48:02,168
+Speaker 1: Yeah.
+
+555
+00:48:02,548 --> 00:48:02,680
+Speaker 1: Right.
+
+556
+00:48:03,080 --> 00:48:05,039
+Speaker 1: Just make something close to that.
+
+557
+00:48:05,541 --> 00:48:10,240
+Speaker 1: But also, you know, you also know what orange means is you have a database full of orange things.
+
+558
+00:48:10,750 --> 00:48:11,020
+Speaker 1: Right.
+
+559
+00:48:11,500 --> 00:48:13,060
+Speaker 1: Make me an orange cat picture.
+
+560
+00:48:13,260 --> 00:48:14,259
+Speaker 0: And you know what a table is.
+
+561
+00:48:14,380 --> 00:48:17,500
+Speaker 0: So put it on a table and you know what Tahiti is.
+
+562
+00:48:17,601 --> 00:48:18,659
+Speaker 0: So put it in Tahiti.
+
+563
+00:48:19,412 --> 00:48:19,600
+Speaker 1: Right.
+
+564
+00:48:19,980 --> 00:48:21,365
+Speaker 1: And it's like you can give.
+
+565
+00:48:21,386 --> 00:48:25,080
+Speaker 1: it is and it's like it basically combines all this data.
+
+566
+00:48:25,320 --> 00:48:29,920
+Speaker 1: It has been trained upon and gives you an actual generative result.
+
+567
+00:48:30,060 --> 00:48:33,240
+Speaker 1: It makes something new ish like a remake.
+
+568
+00:48:33,341 --> 00:48:35,020
+Speaker 1: It's like an automatic remix, basically.
+
+569
+00:48:35,040 --> 00:48:35,146
+Speaker 1: Right.
+
+570
+00:48:35,520 --> 00:48:38,609
+Speaker 1: It's like and people call this an A.I.
+
+571
+00:48:39,130 --> 00:48:41,937
+Speaker 1: because there's nothing A.I.
+
+572
+00:48:41,998 --> 00:48:42,920
+Speaker 1: about this whatsoever.
+
+573
+00:48:43,080 --> 00:48:43,848
+Speaker 1: This is not even.
+
+574
+00:48:43,909 --> 00:48:45,000
+Speaker 1: this is not Skynet.
+
+575
+00:48:45,343 --> 00:48:47,623
+Speaker 1: This is not Tal 9000.
+
+576
+00:48:47,623 --> 00:48:49,896
+Speaker 1: It's not even remotely an A.I.
+
+577
+00:48:49,956 --> 00:48:50,520
+Speaker 1: of any sort.
+
+578
+00:48:51,160 --> 00:48:58,100
+Speaker 1: What it is is sort of a question of like, well, we can get to that.
+
+579
+00:48:58,260 --> 00:49:00,759
+Speaker 1: But, you know, if you apply it to text.
+
+580
+00:49:01,351 --> 00:49:01,599
+Speaker 1: Right.
+
+581
+00:49:01,841 --> 00:49:05,220
+Speaker 1: Because it has so much human text to call upon.
+
+582
+00:49:05,833 --> 00:49:06,040
+Speaker 1: Right.
+
+583
+00:49:06,440 --> 00:49:11,920
+Speaker 1: It can generate text and then you read it and it's text.
+
+584
+00:49:12,322 --> 00:49:14,680
+Speaker 1: So it seems like someone's talking.
+
+585
+00:49:15,487 --> 00:49:16,899
+Speaker 1: Because it generated text.
+
+586
+00:49:17,300 --> 00:49:19,000
+Speaker 0: This has been used for a while.
+
+587
+00:49:19,240 --> 00:49:19,700
+Speaker 1: It's not talking.
+
+588
+00:49:19,920 --> 00:49:25,060
+Speaker 1: It's just generating text based on it taking text and remixing it and showing it to you.
+
+589
+00:49:25,500 --> 00:49:26,198
+Speaker 1: That's all that's happening.
+
+590
+00:49:26,620 --> 00:49:45,380
+Speaker 0: Eight years ago, I encountered people who were using early language, auto-aggressive language models, not GPT-3, but like older stuff to generate the kinds of reviews and the kinds of bottom tier journalism that someone tricked me into writing for them once a long time ago.
+
+591
+00:49:45,640 --> 00:49:53,660
+Speaker 0: Like the bottom is bottom is tier of shovel garbage, literally worthless content could be generated pretty well.
+
+592
+00:49:53,900 --> 00:50:01,880
+Speaker 0: And people who worked in those kinds of outlets, what they were doing is they would use these models to write like the 10 articles they had to do for that week.
+
+593
+00:50:02,281 --> 00:50:09,640
+Speaker 0: And then the human would skim through each article and clean it up and fix the errors and just make it like a little bit better.
+
+594
+00:50:09,800 --> 00:50:11,059
+Speaker 0: They take a human pass at it.
+
+595
+00:50:11,682 --> 00:50:18,458
+Speaker 0: The real change now is that the new models that we're talking about and the reason everyone's flipping out, well, there's two reasons people are flipping out.
+
+596
+00:50:19,000 --> 00:50:32,140
+Speaker 0: The new models don't really need that human pass anymore to be plausible and to effectively for a certain type of person who's seeking a certain type of content, pass the Turing test.
+
+597
+00:50:32,280 --> 00:50:37,080
+Speaker 0: Like they pass a certain kind of Turing test that a certain kind of person would apply.
+
+598
+00:50:38,982 --> 00:50:49,100
+Speaker 0: And I'd say the reasons being talked about now is that coupled with the fact that the tech industry suddenly has to show profits and all the avenues they've been pursuing kind of failed and there's mass layoffs everywhere.
+
+599
+00:50:49,601 --> 00:50:55,060
+Speaker 0: And you notice that every tech company kind of simultaneously was like, hey, we're doing stuff with language models.
+
+600
+00:50:55,220 --> 00:50:55,601
+Speaker 0: Holy shit.
+
+601
+00:50:55,641 --> 00:51:01,200
+Speaker 0: Because the entire world sees that is an area they think they can make money and there's nowhere else left.
+
+602
+00:51:01,200 --> 00:51:06,940
+Speaker 1: Because there hasn't been a significant technological development noticeable to the public in quite a while.
+
+603
+00:51:07,481 --> 00:51:11,280
+Speaker 1: This literally is significant and it's not like frickin coins.
+
+604
+00:51:11,521 --> 00:51:11,702
+Speaker 1: Right.
+
+605
+00:51:11,742 --> 00:51:13,049
+Speaker 1: This is actually useful.
+
+606
+00:51:13,511 --> 00:51:13,773
+Speaker 1: Right.
+
+607
+00:51:14,175 --> 00:51:15,180
+Speaker 1: It's significantly useful.
+
+608
+00:51:15,400 --> 00:51:19,360
+Speaker 1: You know, these algorithms and data models for many real applications.
+
+609
+00:51:19,541 --> 00:51:19,722
+Speaker 1: Right.
+
+610
+00:51:19,802 --> 00:51:23,280
+Speaker 1: You know, you don't have to use it for, you know, cheating in high school essays.
+
+611
+00:51:23,742 --> 00:51:23,943
+Speaker 1: Right.
+
+612
+00:51:24,265 --> 00:51:26,980
+Speaker 1: You can use this same if your data set is good.
+
+613
+00:51:27,381 --> 00:51:27,642
+Speaker 1: Right.
+
+614
+00:51:28,103 --> 00:51:33,400
+Speaker 1: You can actually use this for like recognition of patterns that humans can't detect.
+
+615
+00:51:33,720 --> 00:51:33,900
+Speaker 1: Right.
+
+616
+00:51:34,181 --> 00:51:43,720
+Speaker 1: Medical stuff, industrial stuff like, you know, hey, you know, here's a huge training set of blueprints for houses.
+
+617
+00:51:44,162 --> 00:51:44,444
+Speaker 1: Right.
+
+618
+00:51:44,786 --> 00:51:46,839
+Speaker 1: Here's a blueprint for a house that I just made.
+
+619
+00:51:47,462 --> 00:51:47,724
+Speaker 1: Right.
+
+620
+00:51:48,650 --> 00:51:50,199
+Speaker 1: Is this house going to fall down?
+
+621
+00:51:50,541 --> 00:51:50,923
+Speaker 1: Right.
+
+622
+00:51:51,245 --> 00:51:53,979
+Speaker 1: Or generate me a new blueprint for a new house.
+
+623
+00:51:54,501 --> 00:51:54,742
+Speaker 1: Right.
+
+624
+00:51:54,963 --> 00:51:56,528
+Speaker 1: That would work well in this area.
+
+625
+00:51:56,609 --> 00:51:59,840
+Speaker 1: And suddenly, you know, it can come up with ideas that humans haven't had.
+
+626
+00:52:00,200 --> 00:52:01,665
+Speaker 1: Well, come with ideas humans haven't had.
+
+627
+00:52:01,705 --> 00:52:06,900
+Speaker 1: But it will remix ideas humans have already had into perhaps new combinations.
+
+628
+00:52:07,424 --> 00:52:07,626
+Speaker 1: Right.
+
+629
+00:52:07,647 --> 00:52:08,820
+Speaker 1: That humans didn't consider.
+
+630
+00:52:09,120 --> 00:52:21,500
+Speaker 0: And these text models are fascinating partly because on one hand, you know, you said like this isn't an artificial intelligence like what we often talk about in science circles and science fiction circles.
+
+631
+00:52:22,681 --> 00:52:29,249
+Speaker 0: This is not as powerful as a lot of people, especially people with a profit motive, are saying.
+
+632
+00:52:29,289 --> 00:52:37,400
+Speaker 0: it is in terms of, for example, if you tell it to write a novel, they're not writing particularly good novels.
+
+633
+00:52:38,500 --> 00:52:38,553
+Speaker 1: No.
+
+634
+00:52:39,560 --> 00:52:43,928
+Speaker 0: But if you're writing a bad novel, they kind of just crank them out.
+
+635
+00:52:43,988 --> 00:52:50,540
+Speaker 0: And we already saw one of the major sci fi like publishing places that would accept submissions.
+
+636
+00:52:51,400 --> 00:52:52,502
+Speaker 0: I forget which one it was.
+
+637
+00:52:53,063 --> 00:52:54,065
+Speaker 0: They just had an article.
+
+638
+00:52:54,125 --> 00:53:01,600
+Speaker 0: I don't have it handy where they basically said we have to shut down submissions because we're getting flooded with thousands and thousands and thousands of short stories.
+
+639
+00:53:02,081 --> 00:53:03,888
+Speaker 0: Just so many we can't even sort through them.
+
+640
+00:53:04,752 --> 00:53:06,739
+Speaker 0: And they're clearly all being written by us.
+
+641
+00:53:07,542 --> 00:53:07,703
+Speaker 1: Yep.
+
+642
+00:53:08,185 --> 00:53:12,180
+Speaker 1: So here's the thing, right, is that, OK, you know, it's not an A.I.
+
+643
+00:53:12,200 --> 00:53:13,003
+Speaker 1: It's not intelligent.
+
+644
+00:53:13,023 --> 00:53:13,967
+Speaker 1: It's not self-aware.
+
+645
+00:53:13,987 --> 00:53:17,500
+Speaker 1: It's just pattern recognition and generating something that follows a pattern.
+
+646
+00:53:17,700 --> 00:53:17,860
+Speaker 1: Right.
+
+647
+00:53:18,382 --> 00:53:25,558
+Speaker 1: So the first the first question is like, hey, you know, there's sort of a plagiarism thing going on here.
+
+648
+00:53:25,658 --> 00:53:26,560
+Speaker 0: because though.
+
+649
+00:53:27,302 --> 00:53:27,482
+Speaker 1: Right.
+
+650
+00:53:27,743 --> 00:53:35,000
+Speaker 1: That training data contains basically like chat GPT, the biggest one that everyone's making the biggest fuss over.
+
+651
+00:53:35,603 --> 00:53:36,693
+Speaker 1: It's trained on the Internet.
+
+652
+00:53:37,198 --> 00:53:37,360
+Speaker 1: Right.
+
+653
+00:53:37,560 --> 00:53:37,680
+Speaker 1: Yeah.
+
+654
+00:53:37,861 --> 00:53:43,200
+Speaker 1: So it's like, you know, do they have you know, that data was publicly available on the Internet.
+
+655
+00:53:43,361 --> 00:53:45,307
+Speaker 1: All that text that is trained upon.
+
+656
+00:53:45,969 --> 00:53:49,260
+Speaker 1: But did they have the rights to reuse that text?
+
+657
+00:53:49,520 --> 00:53:57,514
+Speaker 1: If someone tells it to write a sci fi novel and it incorporates one of my blog posts was part of the training data.
+
+658
+00:53:57,534 --> 00:54:01,400
+Speaker 1: that was part of what ended up, you know, ending up in that sci fi novel somehow.
+
+659
+00:54:02,340 --> 00:54:03,226
+Speaker 1: Am I a co-author?
+
+660
+00:54:03,267 --> 00:54:05,040
+Speaker 1: Does that book have like ten thousand co-authors?
+
+661
+00:54:06,101 --> 00:54:07,003
+Speaker 0: So here's the monkey wrench.
+
+662
+00:54:07,083 --> 00:54:15,720
+Speaker 0: Let's say I am writing that novel and I read a bunch of the Internet and I am inspired by your blog post as part of writing my novel.
+
+663
+00:54:16,281 --> 00:54:19,467
+Speaker 0: And I use that in my human training data for what I'm writing.
+
+664
+00:54:20,068 --> 00:54:25,639
+Speaker 0: That is definitely not covered by copyright or royalties or anything unless I directly quote you.
+
+665
+00:54:27,042 --> 00:54:30,940
+Speaker 0: So legally, nobody knows because what did we just say in the beginning of the show?
+
+666
+00:54:31,520 --> 00:54:32,082
+Speaker 0: It's going to.
+
+667
+00:54:32,163 --> 00:54:36,320
+Speaker 0: none of us will be alive by the time any government in the world sorts this out.
+
+668
+00:54:36,760 --> 00:54:39,576
+Speaker 1: So long as I think we'll figure it out within some decades.
+
+669
+00:54:39,898 --> 00:54:40,220
+Speaker 0: I don't know.
+
+670
+00:54:40,520 --> 00:54:57,480
+Speaker 0: I don't know if they're going to, because the second question is the difference between training a model that generates output versus a human synthesizing information they read that other people made and then writing something new, having trained their brain on that data.
+
+671
+00:54:58,221 --> 00:54:58,442
+Speaker 1: Yep.
+
+672
+00:54:58,462 --> 00:55:07,360
+Speaker 1: So let's say there's some visual artist who has a, you know, they draw in a particular style that's really unique, like you can tell it's their painting right away.
+
+673
+00:55:07,861 --> 00:55:08,101
+Speaker 0: Right.
+
+674
+00:55:08,302 --> 00:55:11,512
+Speaker 1: You can tell that they drew it immediately because they're so distinctive.
+
+675
+00:55:11,572 --> 00:55:11,712
+Speaker 1: Right.
+
+676
+00:55:11,753 --> 00:55:14,160
+Speaker 1: Maybe it's a Makoto Shinkai clouds.
+
+677
+00:55:14,441 --> 00:55:14,661
+Speaker 1: Right.
+
+678
+00:55:15,203 --> 00:55:22,020
+Speaker 1: And I, and the Makoto, you know, all the Makoto Shinkai movies and, and animated works and mangas have been incorporated into the training set.
+
+679
+00:55:22,701 --> 00:55:29,959
+Speaker 1: And I go and I ask it, Hey, draw some beautiful anime clouds, or maybe I even ask it for some Makoto Shinkai cloud drawing.
+
+680
+00:55:30,139 --> 00:55:30,340
+Speaker 1: Right.
+
+681
+00:55:30,681 --> 00:55:31,822
+Speaker 1: And it makes a new drawing.
+
+682
+00:55:32,143 --> 00:55:42,440
+Speaker 1: It is not, it was, you will not, if you search all of Makoto Shinkai's works, you will not find that exact cloud drawing, but it is unmistakably right.
+
+683
+00:55:43,840 --> 00:55:46,385
+Speaker 1: A Makoto Shinkai cloud drawing.
+
+684
+00:55:46,605 --> 00:55:51,976
+Speaker 1: And it would not have been possible if it were not for his copyrighted owned works, right.
+
+685
+00:55:52,276 --> 00:55:54,180
+Speaker 1: Being loaded in on the input side.
+
+686
+00:55:55,903 --> 00:55:59,410
+Speaker 1: The only input that I contributed was like a line of text asking for it.
+
+687
+00:55:59,831 --> 00:56:04,860
+Speaker 1: The most of the input into the computer was his actual works, actual drawings.
+
+688
+00:56:05,100 --> 00:56:06,345
+Speaker 0: To throw a monkey wrench in again.
+
+689
+00:56:06,506 --> 00:56:07,650
+Speaker 1: Who owns the output?
+
+690
+00:56:07,831 --> 00:56:08,815
+Speaker 1: Is it plagiarism?
+
+691
+00:56:08,895 --> 00:56:10,140
+Speaker 1: Is it copyright infringement?
+
+692
+00:56:10,340 --> 00:56:11,502
+Speaker 0: So here's the monkey wrench again.
+
+693
+00:56:11,783 --> 00:56:21,200
+Speaker 0: If a painter or an author, they're both the same, deeply studies an existing published author or painter and perfectly mirrors their style.
+
+694
+00:56:21,621 --> 00:56:32,320
+Speaker 0: Like think about how many people write books that are directly and deeply and unmistakably in the style of Hemingway, or they just copy the exact style of a famous painter.
+
+695
+00:56:32,680 --> 00:56:34,370
+Speaker 0: That is 100% legal and 100% protected by copyright.
+
+696
+00:56:36,941 --> 00:56:38,684
+Speaker 1: But here we go.
+
+697
+00:56:39,104 --> 00:56:49,500
+Speaker 1: Those copyrighted works that were loaded into this training data are on the servers of the chat GPT or the whatever companies that are running these things.
+
+698
+00:56:50,822 --> 00:56:59,020
+Speaker 1: Those works are on their servers, which are running a commercial operation that they're charging people access for.
+
+699
+00:56:59,320 --> 00:57:15,339
+Speaker 0: But if I go to the museum and take a photo of every painting by a certain painter and store those in my production studio and then commercially make paintings based on their study of those in their exact style, that is 100% OK by all current law.
+
+700
+00:57:17,201 --> 00:57:20,566
+Speaker 1: You know, there's some question there, but it's still.
+
+701
+00:57:20,867 --> 00:57:21,007
+Speaker 1: it's.
+
+702
+00:57:21,287 --> 00:57:23,010
+Speaker 1: this is a. this is a big question, right?
+
+703
+00:57:23,050 --> 00:57:29,200
+Speaker 1: Because artists are mad, right, that, you know, they sort of had, you know, a style that they would sell.
+
+704
+00:57:29,401 --> 00:57:34,540
+Speaker 1: And it's like, well, now people can access their style without having to a learn art.
+
+705
+00:57:35,043 --> 00:57:35,889
+Speaker 0: Yeah, right.
+
+706
+00:57:36,433 --> 00:57:37,319
+Speaker 1: Be good at drawing.
+
+707
+00:57:38,760 --> 00:57:42,092
+Speaker 0: But and it's like, you know, well, short term, they won't do it.
+
+708
+00:57:42,173 --> 00:57:43,959
+Speaker 0: well, because the thing is, nothing they make.
+
+709
+00:57:44,800 --> 00:57:45,525
+Speaker 1: There is some.
+
+710
+00:57:45,605 --> 00:57:47,780
+Speaker 1: there is some wellness going on, right?
+
+711
+00:57:47,880 --> 00:57:48,842
+Speaker 0: Well, so that's the thing.
+
+712
+00:57:48,942 --> 00:57:58,300
+Speaker 0: Short term, I think we let's let's end the show because already on long on short term, mid term, long term, like because long term is like plagiarism is only the first of many top.
+
+713
+00:57:58,620 --> 00:58:07,020
+Speaker 1: I know that we could do a whole series on like this topic because I want to talk about the fact that it's like, oh, well, you know, you say that these are just pattern recognition, right?
+
+714
+00:58:07,080 --> 00:58:08,791
+Speaker 1: You know, they they take things in.
+
+715
+00:58:09,154 --> 00:58:09,315
+Speaker 1: Right.
+
+716
+00:58:09,335 --> 00:58:10,020
+Speaker 1: They look at it.
+
+717
+00:58:10,241 --> 00:58:12,318
+Speaker 0: And then what do you do with this fusiform virus?
+
+718
+00:58:13,162 --> 00:58:14,715
+Speaker 1: Yeah, it's like that's what people do, too.
+
+719
+00:58:15,118 --> 00:58:15,300
+Speaker 1: Right.
+
+720
+00:58:16,602 --> 00:58:22,120
+Speaker 1: If you want to argue, you know, maybe these are eyes, if you say that they're just pattern recognition, mimicry machines.
+
+721
+00:58:22,180 --> 00:58:23,304
+Speaker 1: Well, it's like, what are you?
+
+722
+00:58:23,324 --> 00:58:24,728
+Speaker 1: I know you have to think about yourself.
+
+723
+00:58:25,029 --> 00:58:25,230
+Speaker 1: Right.
+
+724
+00:58:25,792 --> 00:58:26,594
+Speaker 1: Are you just?
+
+725
+00:58:26,955 --> 00:58:28,460
+Speaker 1: are you actually creative?
+
+726
+00:58:28,701 --> 00:58:30,169
+Speaker 1: Is there any human creativity?
+
+727
+00:58:30,310 --> 00:58:32,199
+Speaker 1: or are you also just this?
+
+728
+00:58:32,721 --> 00:58:32,922
+Speaker 1: Right.
+
+729
+00:58:33,063 --> 00:58:35,696
+Speaker 1: Are you just looking at things and mimicking them the same way?
+
+730
+00:58:35,736 --> 00:58:36,420
+Speaker 1: the machine learning?
+
+731
+00:58:36,520 --> 00:58:45,100
+Speaker 0: I mean, as I'm recording, I have Wikipedia on GPT three in front of me open and I'm reading it actively while we're talking all our panels.
+
+732
+00:58:45,802 --> 00:58:52,180
+Speaker 0: We Scott and I read the same books and played the same games and we just merged all that together into our creative ideas.
+
+733
+00:58:53,380 --> 00:58:53,541
+Speaker 1: Right.
+
+734
+00:58:53,642 --> 00:58:56,298
+Speaker 1: It's like, you know, you might people say, oh, it's not an A.I.
+
+735
+00:58:56,740 --> 00:58:59,388
+Speaker 1: It doesn't have its own initiative or it's all right.
+
+736
+00:58:59,469 --> 00:59:03,100
+Speaker 0: It's like take a human in a skitter by just training data.
+
+737
+00:59:03,220 --> 00:59:05,410
+Speaker 1: And then and then it generates the training data.
+
+738
+00:59:05,430 --> 00:59:07,640
+Speaker 1: And it's like that's what a person does.
+
+739
+00:59:07,980 --> 00:59:08,140
+Speaker 0: Yeah.
+
+740
+00:59:08,361 --> 00:59:10,046
+Speaker 0: So if you take a human, are you?
+
+741
+00:59:10,106 --> 00:59:14,740
+Speaker 1: you look at you look down on this and you think that you have something special and it's like, do you?
+
+742
+00:59:15,284 --> 00:59:16,050
+Speaker 0: Here's an argument.
+
+743
+00:59:16,090 --> 00:59:17,219
+Speaker 1: You have something special.
+
+744
+00:59:17,560 --> 00:59:18,423
+Speaker 0: Two thousand five.
+
+745
+00:59:18,705 --> 00:59:19,929
+Speaker 0: Two thousand six hour gig nights.
+
+746
+00:59:19,970 --> 00:59:20,552
+Speaker 0: Take a baby.
+
+747
+00:59:20,733 --> 00:59:21,375
+Speaker 0: Freshly born.
+
+748
+00:59:21,676 --> 00:59:22,560
+Speaker 0: Put it in a Skinner box.
+
+749
+00:59:23,200 --> 00:59:25,109
+Speaker 0: Never let it experience any sensory input.
+
+750
+00:59:25,491 --> 00:59:27,220
+Speaker 0: Could it ever create anything?
+
+751
+00:59:29,781 --> 00:59:31,686
+Speaker 0: That's a question that a lot of people don't want to answer.
+
+752
+00:59:31,727 --> 00:59:34,977
+Speaker 1: And I'm also you should not try to find that's what makes people the most.
+
+753
+00:59:34,997 --> 00:59:35,940
+Speaker 0: don't put a baby in a box.
+
+754
+00:59:36,321 --> 00:59:37,102
+Speaker 1: Deep down.
+
+755
+00:59:37,122 --> 00:59:37,823
+Speaker 1: Right.
+
+756
+00:59:37,964 --> 00:59:38,966
+Speaker 1: Is like this.
+
+757
+00:59:39,407 --> 00:59:46,420
+Speaker 1: You know, the fact that this method of just taking lots and lots of input and then generating new things based on that input.
+
+758
+00:59:46,821 --> 00:59:47,001
+Speaker 1: Right.
+
+759
+00:59:47,061 --> 00:59:48,164
+Speaker 1: Is so successful.
+
+760
+00:59:48,846 --> 00:59:50,952
+Speaker 1: Is it you know, and you're like, hey, stop doing that.
+
+761
+00:59:51,072 --> 00:59:53,860
+Speaker 1: And it's like, you know, that's supposed to be the realm of people.
+
+762
+00:59:54,021 --> 00:59:58,660
+Speaker 1: And it's like, you know, people you know, people think that there's something separate and special about them.
+
+763
+00:59:58,720 --> 01:00:03,019
+Speaker 1: And it's like makes you confront the fact that maybe you are less than you thought you were.
+
+764
+01:00:03,601 --> 01:00:03,842
+Speaker 1: Right.
+
+765
+01:00:04,324 --> 01:00:07,936
+Speaker 1: And it's like the computer doesn't have some of the flaws that you have.
+
+766
+01:00:07,996 --> 01:00:08,197
+Speaker 1: Right.
+
+767
+01:00:08,318 --> 01:00:08,900
+Speaker 1: It can hold.
+
+768
+01:00:09,381 --> 01:00:09,501
+Speaker 1: Right.
+
+769
+01:00:09,561 --> 01:00:15,820
+Speaker 1: If you want to you know, if you're a really good painter and you want a copy of Van Gogh, you know, make a new a new painting that is in the Van Gogh style.
+
+770
+01:00:15,961 --> 01:00:20,000
+Speaker 1: It's like you've studied all the Van Gogh's or whatever, all the sunflowers and the starry nights.
+
+771
+01:00:20,120 --> 01:00:24,831
+Speaker 1: But it's like the training model can have every Van Gogh ever in its.
+
+772
+01:00:24,931 --> 01:00:28,640
+Speaker 1: you know, I guess whatever counts in RAM all simultaneously.
+
+773
+01:00:29,421 --> 01:00:29,641
+Speaker 1: Right.
+
+774
+01:00:29,902 --> 01:00:31,827
+Speaker 1: And it's not going to forget details of them.
+
+775
+01:00:31,867 --> 01:00:33,631
+Speaker 1: It has them all in high resolution.
+
+776
+01:00:33,672 --> 01:00:36,960
+Speaker 0: You can hold like six or seven numbers in your brain simultaneously.
+
+777
+01:00:37,280 --> 01:00:38,382
+Speaker 0: Even chips are better than that.
+
+778
+01:00:39,083 --> 01:00:39,424
+Speaker 1: Right.
+
+779
+01:00:39,544 --> 01:00:40,005
+Speaker 1: And it's like.
+
+780
+01:00:40,145 --> 01:00:48,060
+Speaker 1: and so if it does the same thing you do, which is think about all these other things and try to make something new that's similar and it's successful at it.
+
+781
+01:00:48,240 --> 01:00:51,350
+Speaker 1: It's like and you're upset that maybe it will do a better job.
+
+782
+01:00:52,012 --> 01:00:52,815
+Speaker 1: Well, it's like.
+
+783
+01:00:52,955 --> 01:00:53,698
+Speaker 1: that's what people do.
+
+784
+01:00:54,680 --> 01:01:09,620
+Speaker 0: I kind of legit for real want to take the collected transcripts of every Geek Nights episode, Geek Nights podcast and the Geek Nights forum and try to generate a model that would generate a brand new script for a Geek Nights panel and just see what the fuck comes out of it.
+
+785
+01:01:10,240 --> 01:01:10,501
+Speaker 1: Oh, yeah.
+
+786
+01:01:10,561 --> 01:01:11,324
+Speaker 1: It could make.
+
+787
+01:01:11,364 --> 01:01:13,633
+Speaker 1: it should be able to take the audio and make a whole Geek Nights.
+
+788
+01:01:13,794 --> 01:01:15,320
+Speaker 0: It'll talk a lot about heuristics.
+
+789
+01:01:16,201 --> 01:01:18,869
+Speaker 1: I wonder if we asked it to make a Geek Nights podcast about
+
+790
+01:01:18,969 --> 01:01:19,351
+Speaker 1: A.I.,
+
+791
+01:01:19,411 --> 01:01:19,651
+Speaker 1: would it?
+
+792
+01:01:19,852 --> 01:01:21,417
+Speaker 1: how similar would it be to this episode?
+
+793
+01:01:21,477 --> 01:01:22,520
+Speaker 0: That would be extra fascinating.
+
+794
+01:01:23,600 --> 01:01:25,544
+Speaker 1: So, yeah, I actually, you know, people are.
+
+795
+01:01:25,804 --> 01:01:34,540
+Speaker 1: it's like on the one hand right now, if you ask it to make a Pulitzer Prize winning novel, Chat GPT will not make you a novel that could win the Pulitzer Prize.
+
+796
+01:01:34,620 --> 01:01:41,839
+Speaker 0: But if you ask it to make a novel that you see for sale for twenty five cents on Amazon by an author you've never heard of is only publish one thing, probably going to do OK.
+
+797
+01:01:42,561 --> 01:01:46,613
+Speaker 0: You want to write one bucket at the bottom of a shitty website.
+
+798
+01:01:47,275 --> 01:01:49,060
+Speaker 0: No humans ever going to write a chump bucket again.
+
+799
+01:01:50,260 --> 01:01:57,460
+Speaker 1: But one day, what if right it had you know, we'd ask it to make a Pulitzer Prize winning novel and it does.
+
+800
+01:01:58,140 --> 01:02:01,780
+Speaker 1: It makes a novel that is as good as the best novels.
+
+801
+01:02:02,260 --> 01:02:05,395
+Speaker 1: Then we've got the Dreaming Machine is a brand new novel.
+
+802
+01:02:05,556 --> 01:02:06,420
+Speaker 1: that is not right.
+
+803
+01:02:06,660 --> 01:02:06,841
+Speaker 0: All right.
+
+804
+01:02:06,861 --> 01:02:09,115
+Speaker 0: Instead of short term, medium term, long term, let's do the opposite.
+
+805
+01:02:09,175 --> 01:02:09,920
+Speaker 0: That's long term.
+
+806
+01:02:10,282 --> 01:02:12,660
+Speaker 0: The long term and resolve that long.
+
+807
+01:02:13,160 --> 01:02:14,543
+Speaker 0: Well, I'm saying long term isn't?
+
+808
+01:02:14,603 --> 01:02:23,800
+Speaker 0: that's an end state where I like to say end states or terminal states is long term, because beyond that is a entirely new paradigm and a different kind of transition.
+
+809
+01:02:23,860 --> 01:02:25,065
+Speaker 0: That's almost impossible to predict.
+
+810
+01:02:25,085 --> 01:02:29,120
+Speaker 0: Like you can predict to the logical conclusion of a technology you're looking at now.
+
+811
+01:02:29,561 --> 01:02:34,340
+Speaker 0: It's very hard to figure out what is the logical conclusion of the next revolution after that.
+
+812
+01:02:35,501 --> 01:02:45,920
+Speaker 1: What I see after that, at least in the art realm, just one example of something that will happen is right now, today, you open up like Netflix or some shit.
+
+813
+01:02:46,000 --> 01:02:46,241
+Speaker 1: Right.
+
+814
+01:02:46,642 --> 01:02:54,820
+Speaker 1: And you look for something you want to watch and you spend a bunch of time scrolling and, you know, you're looking at ratings and you're looking at, you know, all kinds of stuff.
+
+815
+01:02:56,063 --> 01:02:58,210
+Speaker 0: I think is saying the exact same thing you're about to say.
+
+816
+01:02:58,411 --> 01:02:59,093
+Speaker 0: So, yeah.
+
+817
+01:02:59,555 --> 01:03:01,140
+Speaker 1: And then maybe you pick something.
+
+818
+01:03:01,220 --> 01:03:01,781
+Speaker 1: Maybe you don't.
+
+819
+01:03:02,403 --> 01:03:04,648
+Speaker 1: Imagine if you open up Netflix.
+
+820
+01:03:04,949 --> 01:03:05,209
+Speaker 1: Right.
+
+821
+01:03:05,670 --> 01:03:09,820
+Speaker 1: And there was data about you and your current mood or right.
+
+822
+01:03:10,040 --> 01:03:11,163
+Speaker 1: It just knows about you.
+
+823
+01:03:11,524 --> 01:03:11,785
+Speaker 1: Right.
+
+824
+01:03:12,366 --> 01:03:17,720
+Speaker 1: And it knows about every movie and TV show that's ever been created in the history of humanity.
+
+825
+01:03:18,981 --> 01:03:29,600
+Speaker 1: And it generates every time you turn it on a brand new movie TV episode that is absolutely perfect for what you need in that moment.
+
+826
+01:03:30,261 --> 01:03:30,461
+Speaker 1: Right.
+
+827
+01:03:31,002 --> 01:03:33,747
+Speaker 1: And I guess you can maybe save something and watch it later.
+
+828
+01:03:33,847 --> 01:03:35,490
+Speaker 1: But it's like, why would you?
+
+829
+01:03:35,550 --> 01:03:41,660
+Speaker 1: Because whenever you want to watch something next, you tell it, show me some the perfect thing for me to watch right now.
+
+830
+01:03:41,800 --> 01:03:45,267
+Speaker 1: And it just makes it a handcrafted automatic.
+
+831
+01:03:45,287 --> 01:03:45,447
+Speaker 1: Right.
+
+832
+01:03:45,648 --> 01:03:51,700
+Speaker 1: It'd be like having a personal shit like, you know, someone paints something brand new for you every fucking time.
+
+833
+01:03:52,141 --> 01:03:52,342
+Speaker 1: Right.
+
+834
+01:03:52,402 --> 01:03:53,928
+Speaker 1: And it's perfect every time.
+
+835
+01:03:53,948 --> 01:03:54,389
+Speaker 0: Yeah.
+
+836
+01:03:54,429 --> 01:03:56,416
+Speaker 0: Or even imagine the Dreaming Machine.
+
+837
+01:03:56,457 --> 01:03:57,400
+Speaker 0: Netflix is a prop.
+
+838
+01:03:57,480 --> 01:04:01,672
+Speaker 0: You just walk up to your TV and you say, I want to see a heist movie.
+
+839
+01:04:02,394 --> 01:04:04,720
+Speaker 0: And you just describe like, I want to see a movie where this and this.
+
+840
+01:04:05,160 --> 01:04:07,609
+Speaker 1: I'm saying beyond that, it just knows you want to see a heist movie.
+
+841
+01:04:07,850 --> 01:04:08,111
+Speaker 1: Right.
+
+842
+01:04:08,171 --> 01:04:08,452
+Speaker 1: Yeah.
+
+843
+01:04:08,472 --> 01:04:10,440
+Speaker 1: We got to say nothing at that point.
+
+844
+01:04:10,600 --> 01:04:12,546
+Speaker 0: And people just get trapped in front of screens forever.
+
+845
+01:04:12,767 --> 01:04:17,180
+Speaker 1: Like, I mean, you could apply this to all other things, you know, goods and services that people need.
+
+846
+01:04:17,280 --> 01:04:19,224
+Speaker 1: Like you don't even go to a store.
+
+847
+01:04:19,244 --> 01:04:19,805
+Speaker 1: Right.
+
+848
+01:04:19,825 --> 01:04:26,900
+Speaker 1: You know, it's like you need a particular tool and it's like maybe, you know, it's like it makes a tool perfect for the task you needed.
+
+849
+01:04:27,201 --> 01:04:30,126
+Speaker 1: And it shows up at your house like at the moment you were going.
+
+850
+01:04:30,146 --> 01:04:37,900
+Speaker 0: Well, I just hung a bunch of things on the wall and, you know, lining up for paintings in a way where they are symmetric and, you know, doing that on a.
+
+851
+01:04:38,100 --> 01:04:42,478
+Speaker 1: We have a bunch of things to hang up and we haven't hung them up yet because that is a hard problem to solve.
+
+852
+01:04:42,659 --> 01:04:42,880
+Speaker 0: Oh, yeah.
+
+853
+01:04:43,080 --> 01:04:43,983
+Speaker 0: If you want a yardstick.
+
+854
+01:04:44,283 --> 01:04:44,744
+Speaker 0: So get this.
+
+855
+01:04:44,785 --> 01:04:46,148
+Speaker 0: We needed a yardstick.
+
+856
+01:04:46,208 --> 01:04:51,240
+Speaker 0: I needed a yardstick to do this because like without all the yardstick, it's kind of hard to like line up a bunch of stuff on a wall.
+
+857
+01:04:51,561 --> 01:04:54,505
+Speaker 0: I don't want to buy a laser level just to hang up like one set of things.
+
+858
+01:04:55,507 --> 01:04:57,410
+Speaker 0: There's a hardware store that's kind of bougie near us.
+
+859
+01:04:57,490 --> 01:04:58,011
+Speaker 0: We go to it.
+
+860
+01:04:58,572 --> 01:04:59,734
+Speaker 0: They don't fucking have yardsticks.
+
+861
+01:04:59,754 --> 01:05:00,916
+Speaker 0: They don't have any hardware.
+
+862
+01:05:00,976 --> 01:05:03,240
+Speaker 0: They just sell like nothing, basically.
+
+863
+01:05:03,520 --> 01:05:04,809
+Speaker 1: Is that the place that's half kitchen stuff?
+
+864
+01:05:04,910 --> 01:05:06,360
+Speaker 0: Yeah, it's just kitchen stuff and nothing.
+
+865
+01:05:06,640 --> 01:05:07,101
+Speaker 1: I went there.
+
+866
+01:05:07,121 --> 01:05:08,565
+Speaker 1: I was very disappointed with that place.
+
+867
+01:05:08,605 --> 01:05:12,676
+Speaker 0: I went to a hardware store in Midtown and I walk in and a guy doesn't even let me walk into the store.
+
+868
+01:05:12,696 --> 01:05:14,360
+Speaker 0: He just steps in front of me and blocks my entry.
+
+869
+01:05:14,400 --> 01:05:15,722
+Speaker 0: He's like, what are you looking for?
+
+870
+01:05:16,023 --> 01:05:16,984
+Speaker 0: And I'm like, a yardstick.
+
+871
+01:05:17,265 --> 01:05:18,286
+Speaker 0: And he just says, one second.
+
+872
+01:05:18,326 --> 01:05:22,373
+Speaker 0: And he comes and then he yells from across the place, wood or metal?
+
+873
+01:05:23,074 --> 01:05:23,976
+Speaker 0: And I'm like, wood.
+
+874
+01:05:24,296 --> 01:05:26,700
+Speaker 0: And he just walks back over and he's like, it's ten cents.
+
+875
+01:05:28,020 --> 01:05:28,441
+Speaker 1: Yep.
+
+876
+01:05:28,521 --> 01:05:30,805
+Speaker 1: I mean, that's how the hardware store is on Broadway in a story.
+
+877
+01:05:31,146 --> 01:05:32,969
+Speaker 1: What do you need, tax?
+
+878
+01:05:33,049 --> 01:05:34,131
+Speaker 1: And he's like, tax are right here.
+
+879
+01:05:34,572 --> 01:05:35,915
+Speaker 1: They don't want you walking around the store.
+
+880
+01:05:35,935 --> 01:05:38,119
+Speaker 1: They want you to, you know, you tell them what you need.
+
+881
+01:05:38,159 --> 01:05:38,640
+Speaker 1: Like, here it is.
+
+882
+01:05:38,820 --> 01:05:39,040
+Speaker 0: Yep.
+
+883
+01:05:39,100 --> 01:05:41,784
+Speaker 0: That's why you go to a real hardware store, not like a Home Depot or whatever.
+
+884
+01:05:42,145 --> 01:05:48,414
+Speaker 0: But long term, yeah, like this is yet another existential technology crisis for humans.
+
+885
+01:05:48,834 --> 01:05:52,460
+Speaker 0: And honestly, it's a very exciting time because a lot of...
+
+886
+01:05:52,780 --> 01:05:55,867
+Speaker 1: It's literally the only exciting technology going on right now.
+
+887
+01:05:55,947 --> 01:05:58,713
+Speaker 1: But obviously, much, much danger.
+
+888
+01:05:59,975 --> 01:06:02,220
+Speaker 1: As with all technologies, much, much danger.
+
+889
+01:06:02,320 --> 01:06:14,311
+Speaker 0: So middle term, I think what's going to happen is this is going to destroy a lot of like, I hate to say low tier, but like low tier work.
+
+890
+01:06:14,351 --> 01:06:18,075
+Speaker 0: And there's a big difference between low skill versus high skill.
+
+891
+01:06:18,095 --> 01:06:23,900
+Speaker 0: Like there are jobs that are hard and time consuming, but they don't require you to learn a lot of skills.
+
+892
+01:06:24,280 --> 01:06:26,784
+Speaker 0: But that's not to say that that labors without value.
+
+893
+01:06:27,104 --> 01:06:30,608
+Speaker 0: Like it is really easy to learn how to follow the McDonald's process.
+
+894
+01:06:30,689 --> 01:06:33,372
+Speaker 0: If you work in a McDonald's to make McDonald's stuff like.
+
+895
+01:06:33,792 --> 01:06:39,680
+Speaker 0: it's not high skill once you learn it, but it is high effort and like it takes a lot out of you to do it.
+
+896
+01:06:40,000 --> 01:06:41,441
+Speaker 0: The execution still has value.
+
+897
+01:06:41,461 --> 01:06:42,682
+Speaker 0: There's still value in that labor.
+
+898
+01:06:43,403 --> 01:06:47,486
+Speaker 0: But if you can automate that entirely, you don't need a human at all.
+
+899
+01:06:47,827 --> 01:06:49,088
+Speaker 0: Just like Adobe podcast did.
+
+900
+01:06:49,508 --> 01:07:03,920
+Speaker 0: Adobe podcast does audio engineering better than I could as a professional audio engineer, so much faster to where I don't think many people will bother learning how to set up a complex chain of audio processing filters to make a podcast.
+
+901
+01:07:04,200 --> 01:07:06,082
+Speaker 0: There's no reason to the is just going to do it better.
+
+902
+01:07:06,383 --> 01:07:08,665
+Speaker 0: The is cleaning better on animation.
+
+903
+01:07:09,086 --> 01:07:14,832
+Speaker 0: It's going to do like remixing cleanup of audio like music better than it's going to do.
+
+904
+01:07:14,872 --> 01:07:22,500
+Speaker 0: all that kind of low tier high effort, but easy to teach skills are just going to be worthless in the short term or the midterm.
+
+905
+01:07:22,560 --> 01:07:30,454
+Speaker 1: Yeah, I mean, there's a lot of things in our society like we've already seen it start to happen, like you said, with that sci fi competition, the short story competition.
+
+906
+01:07:30,854 --> 01:07:30,995
+Speaker 1: Right.
+
+907
+01:07:31,035 --> 01:07:34,040
+Speaker 1: And kids in school having to do essays like we're going to change.
+
+908
+01:07:34,140 --> 01:07:44,770
+Speaker 0: Oh, I just read a fart post from a guy who is a teacher and he was like, yeah, I'm 100 percent sure that everyone in this class wrote their essay and GPT three is so sure.
+
+909
+01:07:44,810 --> 01:07:45,670
+Speaker 0: And he's like, you know what?
+
+910
+01:07:46,271 --> 01:07:51,916
+Speaker 0: I can consider and give them an all A's because their goal is to get A's in this class to get into college.
+
+911
+01:07:51,936 --> 01:07:52,437
+Speaker 0: And you know what?
+
+912
+01:07:52,837 --> 01:07:54,438
+Speaker 0: They're actually kind of achieving their goal.
+
+913
+01:07:54,819 --> 01:07:56,180
+Speaker 0: They used a tool to do the job.
+
+914
+01:07:56,600 --> 01:07:57,021
+Speaker 1: I used to.
+
+915
+01:07:57,081 --> 01:07:59,423
+Speaker 1: I used to get mad when they let me use a calculator math class.
+
+916
+01:07:59,463 --> 01:08:01,425
+Speaker 1: And I was like, when am I going to have a calculator?
+
+917
+01:08:01,525 --> 01:08:01,785
+Speaker 1: Yeah.
+
+918
+01:08:01,966 --> 01:08:02,947
+Speaker 1: Society collapses.
+
+919
+01:08:03,027 --> 01:08:03,227
+Speaker 1: Right.
+
+920
+01:08:03,447 --> 01:08:04,868
+Speaker 1: Then I don't need math, really.
+
+921
+01:08:05,109 --> 01:08:16,700
+Speaker 1: But, you know, it's like you're going to have to if you want kids to actually if your goal is not to get them into college, but for them to actually be good at writing and expressing themselves in the English language, which that's a deeper problem.
+
+922
+01:08:18,180 --> 01:08:20,684
+Speaker 1: And you insist on evaluating them somehow.
+
+923
+01:08:20,863 --> 01:08:21,084
+Speaker 1: Right.
+
+924
+01:08:21,104 --> 01:08:25,149
+Speaker 1: With tests and grades and all that you're going to need to think of a different way to do it.
+
+925
+01:08:25,629 --> 01:08:25,810
+Speaker 0: Right.
+
+926
+01:08:26,029 --> 01:08:26,250
+Speaker 0: Yeah.
+
+927
+01:08:26,310 --> 01:08:34,880
+Speaker 0: Or maybe schools need to be focused more on teaching people things like empathy, problem solving, knowledge that is necessary about the world.
+
+928
+01:08:35,000 --> 01:08:43,247
+Speaker 1: The point is how to use tools is as long as these tools remain available to everybody and the data sets are large and whatever.
+
+929
+01:08:43,728 --> 01:08:43,988
+Speaker 1: Right.
+
+930
+01:08:44,348 --> 01:08:50,474
+Speaker 1: As even though they're going to give wrong answers and bad answers and cause problems and all sorts of things.
+
+931
+01:08:50,874 --> 01:08:51,113
+Speaker 1: Right.
+
+932
+01:08:52,035 --> 01:08:57,800
+Speaker 1: Portions of our society are going to have to restructure themselves to deal with the fact that these systems exist.
+
+933
+01:08:57,939 --> 01:08:58,140
+Speaker 1: Yep.
+
+934
+01:08:58,501 --> 01:09:04,286
+Speaker 0: And short term, this is going to be an absolute fucking shit show because these are not that good yet.
+
+935
+01:09:04,406 --> 01:09:05,947
+Speaker 0: So what these text models are going to do?
+
+936
+01:09:06,067 --> 01:09:19,720
+Speaker 0: right now, mark my words, every social media network is going to be absolutely flooded with entirely fake people who will not pass the Turing test for people who pay attention or care about curating the social media.
+
+937
+01:09:20,321 --> 01:09:23,544
+Speaker 0: But people who don't pay that much attention, they're just going to be fooled.
+
+938
+01:09:23,925 --> 01:09:25,326
+Speaker 0: I think we're going to run into situate.
+
+939
+01:09:25,346 --> 01:09:29,551
+Speaker 0: We're going to run into people who discover that all their online friends are just ads.
+
+940
+01:09:29,832 --> 01:09:30,993
+Speaker 0: It's that South Park episode.
+
+941
+01:09:31,273 --> 01:09:36,840
+Speaker 0: People are going to make friends with literal ads on social media communities that are low signal.
+
+942
+01:09:37,321 --> 01:09:44,828
+Speaker 0: Like imagine a discord community or a forum community or an online community that's mostly online, but high signal.
+
+943
+01:09:45,090 --> 01:09:47,591
+Speaker 0: people who know each other speak intimately.
+
+944
+01:09:48,053 --> 01:09:54,060
+Speaker 0: It'll be hard for current tier and even near term tier chat models to infiltrate those communities.
+
+945
+01:09:54,681 --> 01:10:05,394
+Speaker 0: But a discord about like a topic like Star Wars, that's a little more generic, a little higher level, lower signal to noise ratio.
+
+946
+01:10:05,915 --> 01:10:10,320
+Speaker 0: I think the majority of the people in all those communities are going to be bots that convince humans they're real.
+
+947
+01:10:13,250 --> 01:10:25,463
+Speaker 0: I don't know what the ramifications of that are, but I think it's going to drive anyone who curates content and anyone for whom these models do not pass the Turing test away from the places these models exist.
+
+948
+01:10:25,583 --> 01:10:28,887
+Speaker 0: And we're going to see a rapid dichotomy in online spaces.
+
+949
+01:10:28,947 --> 01:10:30,268
+Speaker 0: Like I'm talking to the next two years.
+
+950
+01:10:30,729 --> 01:10:31,710
+Speaker 0: This is going to be so fast.
+
+951
+01:10:32,751 --> 01:10:39,960
+Speaker 0: I also think pretty much all content on all websites is going to turn into absolute GPT-3 trash to drive ads.
+
+952
+01:10:40,641 --> 01:10:45,247
+Speaker 0: And I don't know what to do about that, except maybe avoid low tier content.
+
+953
+01:10:45,488 --> 01:10:47,230
+Speaker 0: like is going to be the only way to escape this stuff.
+
+954
+01:10:48,350 --> 01:10:48,551
+Speaker 1: Yeah.
+
+955
+01:10:48,631 --> 01:10:56,741
+Speaker 1: I mean, as you know, on the one hand, as long as this these systems are generating low quality works, right, you're going to have to learn to avoid those low quality works.
+
+956
+01:10:56,801 --> 01:11:03,188
+Speaker 1: But that shouldn't be hard because the sites that already there are already sites with human generated low quality works and avoided all those.
+
+957
+01:11:03,369 --> 01:11:04,470
+Speaker 1: So it's not going to be any different.
+
+958
+01:11:05,591 --> 01:11:09,393
+Speaker 0: Comments on a regular mass popular Reddit like don't go there.
+
+959
+01:11:09,433 --> 01:11:10,814
+Speaker 0: There is nothing for you there.
+
+960
+01:11:11,054 --> 01:11:11,275
+Speaker 0: Right.
+
+961
+01:11:11,715 --> 01:11:19,280
+Speaker 1: But the Wendy's work machine, you know, machines start generating high quality works right eventually.
+
+962
+01:11:20,461 --> 01:11:22,983
+Speaker 1: It's like, why would I want to filter them out?
+
+963
+01:11:23,143 --> 01:11:27,206
+Speaker 1: If it make if it writes a book, it makes a movie that's legitimately S tier.
+
+964
+01:11:27,526 --> 01:11:28,687
+Speaker 1: Why wouldn't I watch it?
+
+965
+01:11:28,827 --> 01:11:33,610
+Speaker 1: What do I care if it was made by the human or by the remix of all movies ever?
+
+966
+01:11:34,031 --> 01:11:43,730
+Speaker 1: It's like if that's a new S tier movie that, you know, is legendary, why would I skip it just because it wasn't handcrafted by, you know, no one to work on a movie set?
+
+967
+01:11:43,990 --> 01:11:54,001
+Speaker 0: Let's say an advanced form of one of these bots like gets into your private discord with like your 30 friends who hang out and it's really entertaining and funny and everyone loves it.
+
+968
+01:11:54,041 --> 01:11:54,682
+Speaker 0: Well, guess what?
+
+969
+01:11:55,322 --> 01:11:57,565
+Speaker 0: It legit passed the Turing test at that point.
+
+970
+01:11:58,005 --> 01:12:02,470
+Speaker 0: Is it different than your friends in the manner in which you communicate on that discord?
+
+971
+01:12:05,591 --> 01:12:07,993
+Speaker 0: But I don't think we're going to be there for a while.
+
+972
+01:12:08,053 --> 01:12:10,296
+Speaker 0: What worries me, what honestly worries me?
+
+973
+01:12:10,336 --> 01:12:22,010
+Speaker 0: the most dangerous consequence is going to be using these models to spin up mass disinformation or influence campaigns primarily by governments and nefarious powers.
+
+974
+01:12:22,450 --> 01:12:22,771
+Speaker 1: Case in point.
+
+975
+01:12:22,791 --> 01:12:23,411
+Speaker 1: That's a bad one.
+
+976
+01:12:23,712 --> 01:12:30,879
+Speaker 0: Because people who have a filter and filter out low signal content are already not fooled by that kind of shit.
+
+977
+01:12:31,440 --> 01:12:41,430
+Speaker 0: But think about the kinds of people who look at Twitter and look at stuff more generically and are easily influenced by like what they think the zeitgeist is, the people they follow online.
+
+978
+01:12:42,691 --> 01:12:59,128
+Speaker 0: These models will make it easy to dramatically weaponize disinformation in a way that could convince huge percentages of the like American population, just as a very like small example in the world of very bad and wrong things.
+
+979
+01:12:59,508 --> 01:13:01,350
+Speaker 0: And it will be impossible to counter that.
+
+980
+01:13:02,730 --> 01:13:05,554
+Speaker 1: I think the thing I'm most I mean, that is something I am worried about.
+
+981
+01:13:05,774 --> 01:13:14,605
+Speaker 1: But the thing I'm most worried about is the fact that these all these systems, they decided to fill their training data with the whole Internet and the whole Internet is full of trash.
+
+982
+01:13:14,665 --> 01:13:18,730
+Speaker 1: And a lot of these eyes are racist and misogynist.
+
+983
+01:13:18,790 --> 01:13:33,801
+Speaker 0: I think it's going to be worse when they fill these models with extremely crafted, because remember, the 2012 election in America was one of the first elections where data was used to directly target individual voters in a way that was extremely effective.
+
+984
+01:13:34,361 --> 01:13:46,550
+Speaker 0: We're going to get to the point where you can have a GPT model aimed at each of 10,000 individual voters in a key state, in a key county, in a key part of the country that could swing a major election.
+
+985
+01:13:47,231 --> 01:13:51,998
+Speaker 0: And though the people who would be targeted by this kind of thing have zero defenses against this.
+
+986
+01:13:53,621 --> 01:13:57,426
+Speaker 0: This is really dangerous tech in the short term in the wrong hands.
+
+987
+01:13:57,847 --> 01:13:59,570
+Speaker 0: And it is in everyone's hands now.
+
+988
+01:14:00,290 --> 01:14:02,312
+Speaker 1: Yeah, it's like you could send a huge like.
+
+989
+01:14:02,352 --> 01:14:09,958
+Speaker 1: if you find, you know, let's say you need 10,000 votes to swing to get elected, you could have someone call each of those people.
+
+990
+01:14:10,178 --> 01:14:10,458
+Speaker 1: Right.
+
+991
+01:14:10,878 --> 01:14:14,721
+Speaker 1: It's like to get through 10,000 people, you can't spend too much time with each person.
+
+992
+01:14:15,082 --> 01:14:16,302
+Speaker 1: Are you really going to convince them?
+
+993
+01:14:16,663 --> 01:14:16,903
+Speaker 1: Right.
+
+994
+01:14:17,283 --> 01:14:17,864
+Speaker 1: With the
+
+995
+01:14:18,104 --> 01:14:18,224
+Speaker 1: A.I.,
+
+996
+01:14:18,304 --> 01:14:25,329
+Speaker 1: it's like you could just have a fake, you know, voice call everybody, give them personalized voice.
+
+997
+01:14:26,850 --> 01:14:29,372
+Speaker 0: It's going to like comment on their Facebook posts.
+
+998
+01:14:29,653 --> 01:14:30,693
+Speaker 0: It's going to DM them.
+
+999
+01:14:30,994 --> 01:14:33,656
+Speaker 0: It's going to like like their tweets and then reply to them.
+
+1000
+01:14:33,916 --> 01:14:34,997
+Speaker 0: You can hit someone.
+
+1001
+01:14:35,037 --> 01:14:40,901
+Speaker 1: You can generate a fake imitation friend who convinces each person to vote a certain way.
+
+1002
+01:14:40,981 --> 01:14:46,925
+Speaker 0: Hell, you could hit each of those 10,000 people with 10,000 fake friends that manufacture consensus.
+
+1003
+01:14:48,206 --> 01:14:53,130
+Speaker 0: And if you think this is far fetched, this is already happening and is accelerating rapidly.
+
+1004
+01:14:54,771 --> 01:14:58,637
+Speaker 1: Anyway, just just remember that it's all it is is pattern recognition.
+
+1005
+01:14:58,717 --> 01:15:04,207
+Speaker 1: It just looks at what already exists, what humans have already made and says make more like that.
+
+1006
+01:15:04,427 --> 01:15:05,389
+Speaker 1: And it makes more like that.
+
+1007
+01:15:05,409 --> 01:15:05,990
+Speaker 1: That's all it does.
+
+1008
+01:15:12,020 --> 01:15:14,126
+Speaker 0: This has been Geek Nights with Rim and Scott.
+
+1009
+01:15:14,186 --> 01:15:19,160
+Speaker 0: Special thanks to DJ Pretzel for the opening music, Kat Lee for web design and Brando K for the logos.
+
+1010
+01:15:19,560 --> 01:15:24,580
+Speaker 1: Be sure to visit our Web site at FrontRowCrew.com for show notes, discussion news and more.
+
+1011
+01:15:24,821 --> 01:15:27,508
+Speaker 0: Remember, Geek Nights is not one, but four different shows.
+
+1012
+01:15:27,648 --> 01:15:31,720
+Speaker 0: SciTech Mondays, Gaming Tuesdays, Anime Comic Wednesdays and Indiscriminate Thursdays.
+
+1013
+01:15:32,600 --> 01:15:36,608
+Speaker 1: Geek Nights is distributed under a Creative Commons Attribution 3.0 license.
+
+1014
+01:15:37,028 --> 01:15:40,114
+Speaker 1: Geek Nights is recorded live with no studio and no audience.
+
+1015
+01:15:40,315 --> 01:15:43,180
+Speaker 1: But unlike those other late shows, it's actually recorded at night.
+
+1016
+01:15:43,440 --> 01:16:06,120
+Speaker 0: And the Patreon patrons for this episode of Geek Nights are Alan Joyce, Link E, G, Dread, Lily, Tenebrae, Kace, Care, Makes, Music, Chris, Adad, Clinton, Walton, Dex, Finn, Joel Hayes, Penny Reimer, Rebecca Dunn, Sam Erickson, Sherwin von Holl, and many, many people who have dropped it down to an appropriate $1 per month or at least less than $5 because that's the arbitrary threshold they set for saying your name.
+
+1017
+01:16:06,701 --> 01:16:09,889
+Speaker 0: I'll keep doing this for as long as we keep doing Patreon.
+
+1018
+01:16:10,391 --> 01:16:13,980
+Speaker 0: But for now, I simply leave you with...
+
+1019
+01:16:14,760 --> 01:16:16,931
+Speaker 1: Donald, have you ever been to Bahia?
+
+1020
+01:16:17,353 --> 01:16:17,554
+Speaker 0: No?
+
+1021
+01:16:17,996 --> 01:16:18,659
+Speaker 0: No, I haven't.
+
+1022
+01:16:19,220 --> 01:16:22,434
+Speaker 0: But tell me, Donald, have you ever been to Bahia?
+
+1023
+01:16:22,474 --> 01:16:23,278
+Speaker 0: No, I haven't.
+
+1024
+01:16:23,539 --> 01:16:23,699
+Speaker 0: No?
+
+1025
+01:16:26,240 --> 01:16:29,776
+Speaker 0: Oh, forgive me, but have you been to Bahia, Donald?
+
+1026
+01:16:29,816 --> 01:16:30,158
+Speaker 0: No.
+
+1027
+01:16:30,419 --> 01:16:30,559
+Speaker 0: No?
+
+1028
+01:16:30,941 --> 01:16:32,215
+Speaker 0: Have you been to Bahia, Donald?
+
+1029
+01:16:32,256 --> 01:16:32,337
+Speaker 0: No.
+
+1030
+01:16:34,080 --> 01:16:35,456
+Speaker 0: Have you been to Bahia, Donald?
+
+1031
+01:16:35,476 --> 01:16:35,557
+Speaker 0: No.
+

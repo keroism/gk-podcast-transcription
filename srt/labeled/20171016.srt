@@ -1,0 +1,4492 @@
+1
+00:00:08,780 --> 00:00:10,658
+Rym: It's Monday, October 16th, 2017.
+
+2
+00:00:10,658 --> 00:00:11,019
+Rym: I'm Rym.
+
+3
+00:00:14,214 --> 00:00:14,750
+Scott: I'm Scott.
+
+4
+00:00:14,950 --> 00:00:18,179
+Rym: And this is Spooky October GeekNights.
+
+5
+00:00:18,219 --> 00:00:23,770
+Rym: Tonight, we're talking about a terrifying vulnerability in WPA2.
+
+6
+00:00:25,651 --> 00:00:26,608
+Scott: Oh my God, so scary.
+
+7
+00:00:29,692 --> 00:00:30,608
+Rym: Let's do this.
+
+8
+00:00:31,551 --> 00:00:33,886
+Rym: Yeah, I'm keeping with the horror theme because we've committed to it.
+
+9
+00:00:33,926 --> 00:00:34,449
+Rym: I'm doing it.
+
+10
+00:00:34,831 --> 00:00:35,949
+Scott: Did we remember to do it last time?
+
+11
+00:00:36,151 --> 00:00:38,341
+Rym: Yeah, I've actually been changing the music too.
+
+12
+00:00:38,381 --> 00:00:40,250
+Rym: I'm using spooky versions of our theme.
+
+13
+00:00:40,810 --> 00:00:42,060
+Rym: I'm saying the bits at the end.
+
+14
+00:00:42,080 --> 00:00:43,229
+Rym: I'm going all out this year.
+
+15
+00:00:45,210 --> 00:00:49,529
+Rym: I don't think so, except the days we just skipped entirely because we watched a horror show with MSG instead.
+
+16
+00:00:53,472 --> 00:00:54,697
+Rym: So yeah, we did a thing.
+
+17
+00:00:54,717 --> 00:00:57,769
+Rym: We have the open-y bit in the show for the main stuff.
+
+18
+00:00:57,789 --> 00:00:58,452
+Rym: It's not spooky.
+
+19
+00:00:58,472 --> 00:01:01,970
+Rym: We went over to our friend's house and we did... It wasn't really a convention.
+
+20
+00:01:02,150 --> 00:01:04,110
+Rym: We're just calling it ReviewCon because that's cool.
+
+21
+00:01:05,711 --> 00:01:08,109
+Scott: Anytime nerds get together, it's now called a con for some reason.
+
+22
+00:01:08,430 --> 00:01:08,953
+Rym: So we did something.
+
+23
+00:01:08,973 --> 00:01:21,250
+Rym: we called ReviewCon because a problem with GeekNights is that in the old, old days, we had played a lot of games and we started a podcast and we just started reviewing every game we'd ever played.
+
+24
+00:01:21,590 --> 00:01:21,690
+Scott: Right.
+
+25
+00:01:21,710 --> 00:01:26,769
+Scott: Well, I mean, since the year 2000, we played games, a lot of them, right?
+
+26
+00:01:26,789 --> 00:01:28,375
+Scott: In college and otherwise.
+
+27
+00:01:28,395 --> 00:01:35,850
+Scott: And we started the podcast in 2005, late 2005, and we already had all these games played, five years worth of games to talk about.
+
+28
+00:01:36,010 --> 00:01:38,249
+Rym: Not just played, but like played the fuck out of.
+
+29
+00:01:38,570 --> 00:01:38,671
+Scott: Right.
+
+30
+00:01:38,812 --> 00:01:42,292
+Scott: And then, even then, we were living in Beacon with all the fucking free time in the world.
+
+31
+00:01:42,353 --> 00:01:44,810
+Scott: We played a lot of more games all the time.
+
+32
+00:01:44,910 --> 00:01:49,788
+Scott: And now when you have all the monies of New York to buy a lot of games, you live in New York, you have no time to play games.
+
+33
+00:01:51,051 --> 00:01:53,310
+Rym: So we just got pros only.
+
+34
+00:01:53,510 --> 00:01:54,113
+Rym: We sat down.
+
+35
+00:01:54,194 --> 00:01:57,694
+Scott: Also, I started playing Netrunner instead of going to the Nerd NYC, which we gave up on.
+
+36
+00:01:57,714 --> 00:01:59,069
+Rym: I'm going to start going back to the Nerd NYC.
+
+37
+00:01:59,350 --> 00:01:59,839
+Scott: Go for it.
+
+38
+00:01:59,879 --> 00:02:00,429
+Scott: See what's going on.
+
+39
+00:02:00,530 --> 00:02:01,118
+Rym: I'll see if it's good.
+
+40
+00:02:01,361 --> 00:02:01,949
+Rym: Check it out.
+
+41
+00:02:02,050 --> 00:02:02,692
+Rym: Because if it's good.
+
+42
+00:02:04,138 --> 00:02:15,070
+Rym: But anyway, so we did this thing and basically we got pros together and we just played tabletop games over and over and over again for as long as we could over the weekend for the primary purpose.
+
+43
+00:02:15,451 --> 00:02:28,850
+Rym: Not like we had fun, but the goal was to make sure that at least me and Scott played enough mutual new games together and generated enough like photographs and video of it to do real full reviews of these games on game nights.
+
+44
+00:02:29,031 --> 00:02:33,729
+Scott: And is also Matt because he does his little, you know, his little video on YouTube.
+
+45
+00:02:34,350 --> 00:02:35,349
+Rym: And we got some vague ideas now.
+
+46
+00:02:35,630 --> 00:02:36,470
+Scott: What's he called it again?
+
+47
+00:02:36,630 --> 00:02:45,329
+Rym: I don't remember, but we're going to start possibly pooling board game related content creation more than just the two of us trying to do stuff completely on our own.
+
+48
+00:02:45,490 --> 00:02:47,069
+Scott: We also live streamed the whole thing.
+
+49
+00:02:47,410 --> 00:02:51,857
+Rym: So which we was great until we undermined it by playing two different games at the same time.
+
+50
+00:02:52,203 --> 00:02:52,609
+Scott: That's fine.
+
+51
+00:02:53,652 --> 00:02:54,789
+Rym: I think it might get a little chaotic.
+
+52
+00:02:54,950 --> 00:02:55,131
+Rym: We'll see.
+
+53
+00:02:55,151 --> 00:02:55,473
+Rym: I'm going to.
+
+54
+00:02:55,876 --> 00:03:00,749
+Rym: I got to get those sorts of videos and mess around, but that's the thing we did and expect some content from that.
+
+55
+00:03:01,610 --> 00:03:11,050
+Rym: So in the news, before we get to the news you all want to talk about, there's actually much more important and amazing news that neither one of us is qualified to talk about.
+
+56
+00:03:11,250 --> 00:03:11,531
+Rym: No.
+
+57
+00:03:11,592 --> 00:03:21,070
+Scott: So basically what happened was is earlier in the year, there was well, not this year, I guess in the time of the dinosaurs, somewhere out.
+
+58
+00:03:21,411 --> 00:03:23,570
+Scott: So literally in the time of the dinosaurs earlier.
+
+59
+00:03:23,811 --> 00:03:31,430
+Scott: Yes, there were these two neutron stars out in space, somewhere far away, and they smashed the fuck into each other.
+
+60
+00:03:33,198 --> 00:03:34,370
+Rym: I think there's a great animation.
+
+61
+00:03:34,570 --> 00:03:34,753
+Rym: Yeah.
+
+62
+00:03:34,814 --> 00:03:35,629
+Rym: Them hitting each other.
+
+63
+00:03:35,950 --> 00:03:42,228
+Scott: And of course, the light from the energy from this explosion did not reach the earth until earlier this year.
+
+64
+00:03:42,592 --> 00:03:42,793
+Scott: Yep.
+
+65
+00:03:43,055 --> 00:03:44,850
+Scott: Because that's how time and space works.
+
+66
+00:03:45,912 --> 00:04:00,708
+Scott: And when it did, which is the first anyone knew that it happened, of course, pretty much it was detected by all the telescopes on earth and they started calling each other and pretty much everyone who had a telescope that could detect anything pointed it right at the fucking thing like, oh, shit.
+
+67
+00:04:01,651 --> 00:04:09,187
+Scott: And all the space astronomers and astrophysicists and everybody, they all teamed up and they said, oh, my God, we collect all the data on this whole issue.
+
+68
+00:04:10,630 --> 00:04:19,050
+Rym: So what basically, you know, if you don't know about gravity waves, they were only recently something we could start to explore as humans.
+
+69
+00:04:19,351 --> 00:04:21,389
+Scott: And now they detected a whole fucking bunch of.
+
+70
+00:04:21,991 --> 00:04:28,290
+Rym: So we detected gravitational waves from this event that they're calling a killa nova.
+
+71
+00:04:28,750 --> 00:04:29,220
+Scott: Yeah, why not?
+
+72
+00:04:29,444 --> 00:04:29,648
+Scott: Yeah.
+
+73
+00:04:30,410 --> 00:04:32,510
+Rym: Astronomy, when something new happens, they're still nerds.
+
+74
+00:04:32,891 --> 00:04:34,950
+Scott: Still, why wouldn't they make it an awesome name?
+
+75
+00:04:35,110 --> 00:04:37,182
+Scott: Well, I think we're not going to make it some lame ass name.
+
+76
+00:04:37,242 --> 00:04:41,310
+Rym: when black holes like the theoretical concept of a black hole was discovered.
+
+77
+00:04:41,430 --> 00:04:42,370
+Rym: They could have named it anything.
+
+78
+00:04:42,753 --> 00:04:44,450
+Rym: They named it Black Hole.
+
+79
+00:04:44,751 --> 00:04:47,010
+Rym: Yeah, because it is literally a black hole.
+
+80
+00:04:47,210 --> 00:04:48,289
+Scott: And also that's an awesome name.
+
+81
+00:04:48,391 --> 00:04:49,529
+Rym: That is a pretty awesome name.
+
+82
+00:04:50,370 --> 00:04:55,750
+Rym: So, yeah, the gravity wave detectors that we have built detected this.
+
+83
+00:04:56,472 --> 00:05:02,048
+Rym: And because we knew where it happened, because we detected it, we pointed all sorts of other sensors at it.
+
+84
+00:05:02,631 --> 00:05:23,530
+Rym: And this might be this is the first time in history, human history, that we have gathered this much information across these different spectra of data from an event like this, an event that on its own, like you said before we did the show, the fact that we know the thing that we call a neutron star even could exist is crazy.
+
+85
+00:05:23,770 --> 00:05:23,951
+Rym: Yeah.
+
+86
+00:05:24,774 --> 00:05:28,470
+Rym: So I'm not going to try to summarize all the details of this because I don't know.
+
+87
+00:05:28,630 --> 00:05:30,109
+Scott: And I'm going to say a bunch of wrong, useless shit.
+
+88
+00:05:30,311 --> 00:05:31,989
+Scott: Yeah, I know you can read it on your own.
+
+89
+00:05:32,050 --> 00:05:34,350
+Scott: You have Internet, you have this podcast, therefore you have Internet.
+
+90
+00:05:34,510 --> 00:05:41,890
+Rym: Even worse, most of the like big astronomy stuff I know is from the original cosmos as a kid and like high school.
+
+91
+00:05:42,551 --> 00:05:44,429
+Rym: So it's probably way different by now.
+
+92
+00:05:45,092 --> 00:05:49,530
+Rym: And I don't know much more about gravity waves than what I already said just now.
+
+93
+00:05:50,070 --> 00:05:50,171
+Scott: Yeah.
+
+94
+00:05:50,954 --> 00:05:57,910
+Scott: One thing I do know that I read in one article is that, you know, of course, the actual neutron stars hitting each other is amazing and gravity waves are amazing.
+
+95
+00:05:57,950 --> 00:06:07,170
+Scott: But the other amazing thing is that pretty much this is like the nail in the coffin in the end of like the days of single person scientific discovery.
+
+96
+00:06:07,370 --> 00:06:07,772
+Scott: Oh, yeah.
+
+97
+00:06:07,792 --> 00:06:17,290
+Scott: There's a lot in this article about because like the LHC like papers or about the Higgs and whatever had like five thousand plus contributors written on them.
+
+98
+00:06:17,752 --> 00:06:21,630
+Scott: And the paper for this is like three to four thousand contributors written on it.
+
+99
+00:06:21,830 --> 00:06:34,210
+Scott: And it's partly it's not just because of new big science from now forever is a team effort where pretty much everyone on Earth who is a specialist in the thing has to team up to be able to make big discoveries like this.
+
+100
+00:06:34,350 --> 00:06:41,149
+Scott: There's no way there's no low hanging fruits anymore for an Einstein or a Newton or the guy who was actually new in what's his name.
+
+101
+00:06:42,451 --> 00:06:44,950
+Scott: You actually invented the calculus first, whatever.
+
+102
+00:06:45,210 --> 00:06:50,197
+Scott: Yeah, it's basically no room for those people anymore because no fruit low enough that one brain can get it.
+
+103
+00:06:50,318 --> 00:06:51,790
+Scott: You got to have a thousand brains.
+
+104
+00:06:51,970 --> 00:07:03,190
+Rym: And this was a trend that was happening because we got from the point of visual observations and then just theory to like computer programming and signals processing is a big part of how astronomy is done.
+
+105
+00:07:03,371 --> 00:07:03,653
+Scott: Yeah.
+
+106
+00:07:03,875 --> 00:07:05,930
+Rym: And now gravity waves you need.
+
+107
+00:07:06,090 --> 00:07:11,330
+Scott: So any any big discoveries from now until forever are going to be accomplished by enormous teams of people.
+
+108
+00:07:11,390 --> 00:07:25,630
+Scott: Therefore, even if you're not in science, whatever your endeavor is, you if you want to do something big, you should team up because, you know, it's getting harder for individuals to make great accomplishments in the world anyway in any field.
+
+109
+00:07:25,850 --> 00:07:31,202
+Rym: Like there's one guy, Charlie Kilpatrick, because he was noted in this article, they were all trying to look at this thing.
+
+110
+00:07:31,303 --> 00:07:32,892
+Rym: now that, you know, they knew something was happening.
+
+111
+00:07:33,675 --> 00:07:45,169
+Rym: And the relevant quote from this article is, quote, Charlie is the first person, as far as far as we know, the first human to have ever seen optical photons from a gravitational wave event.
+
+112
+00:07:46,652 --> 00:08:00,973
+Rym: This is cool stuff and kind of like how the like electro telescopes, like electromagnetic analysis and background radiation, all those things that revolutionized astronomy and made everything we knew up to that point kind of obsolete.
+
+113
+00:08:01,053 --> 00:08:03,630
+Rym: I feel like this might be a similar turning point.
+
+114
+00:08:04,131 --> 00:08:16,310
+Scott: Also, this is apparently such a crazy explosion, this Nova, that if you had a normal amateur telescope, obviously, maybe not a really crap one, but like, you know, the kind that you can buy at the store, you could have seen.
+
+115
+00:08:16,470 --> 00:08:22,889
+Rym: So in other spooky news, we're going to talk about the WPA vulnerability as the main bit, because that's the big one.
+
+116
+00:08:22,950 --> 00:08:28,070
+Rym: But a similarly big thing also appears to have happened today.
+
+117
+00:08:28,410 --> 00:08:28,571
+Scott: Right.
+
+118
+00:08:28,591 --> 00:08:40,470
+Scott: So we it's weird how we always talk about things that we want governments to do like, hey, you should make public private keys to your citizens that like security number, you should get a private key at birth from the government.
+
+119
+00:08:41,073 --> 00:08:42,549
+Scott: Oh, we should make digital monies.
+
+120
+00:08:42,751 --> 00:08:43,789
+Scott: Oh, we should do all these things.
+
+121
+00:08:43,850 --> 00:08:51,310
+Scott: But then it turns out when those things actually get implemented in the real world, they're always sort of sort of dystopian and evil form that we don't want.
+
+122
+00:08:51,490 --> 00:08:53,029
+Scott: No one does things in the good way.
+
+123
+00:08:53,573 --> 00:08:54,930
+Scott: It's like, please make this.
+
+124
+00:08:55,130 --> 00:08:55,736
+Scott: All right, I made it.
+
+125
+00:08:55,858 --> 00:08:57,030
+Scott: Why did you make it evil?
+
+126
+00:08:57,911 --> 00:08:58,870
+Scott: So please make me a cake.
+
+127
+00:08:58,971 --> 00:09:00,349
+Scott: Why did you put poop in the cake?
+
+128
+00:09:00,651 --> 00:09:05,850
+Rym: There's a lot of reasons why Estonia, in many regards, is way ahead of the curve in terms of technology.
+
+129
+00:09:06,331 --> 00:09:16,270
+Scott: This was the news when they first did it, because we were like, oh, a government is making cool technological ID cards like all modern and science and Internet offering Internet citizenship and stuff.
+
+130
+00:09:16,491 --> 00:09:17,970
+Rym: It was literally the thing I always wanted.
+
+131
+00:09:18,090 --> 00:09:18,311
+Rym: Right.
+
+132
+00:09:18,351 --> 00:09:21,424
+Scott: The basic concept of it was great, but it turns out.
+
+133
+00:09:21,444 --> 00:09:24,530
+Scott: the actual implementation is not great and Estonia is not great.
+
+134
+00:09:24,710 --> 00:09:32,949
+Rym: So as far as I can tell, they use RSA and every citizen is given a card with a twenty forty eight bit RSA key.
+
+135
+00:09:34,051 --> 00:09:34,858
+Rym: That's great.
+
+136
+00:09:34,979 --> 00:09:36,310
+Rym: That's fantastic encryption.
+
+137
+00:09:36,410 --> 00:09:41,109
+Scott: That's not going to be broken as long as they're doing evil things like denying the cards to poor people and whatnot.
+
+138
+00:09:41,470 --> 00:09:45,671
+Rym: Yeah, you know, well, about all those concerns aside, requiring the cards in order to vote.
+
+139
+00:09:46,012 --> 00:09:52,190
+Rym: Apparently, what happened is an RSA library that this company Infineon developed.
+
+140
+00:09:52,812 --> 00:10:05,430
+Rym: And I don't know if they developed it for this or it was just used for this, but the algorithm to generate the prime numbers used by RSA for these keys was vulnerable to factorization attacks.
+
+141
+00:10:05,790 --> 00:10:19,491
+Rym: Also that from the public key alone and within a matter of days, a computer can attempt factor look for factors that will generate the prime numbers that will match that public key.
+
+142
+00:10:19,813 --> 00:10:25,869
+Rym: So from your public key, someone can derive your private key, making this encryption fucking useless.
+
+143
+00:10:26,151 --> 00:10:35,890
+Rym: Yeah, because if someone gets a private key and this is relevant to the later discussion, if someone compromises like symmetric keys or whatever, there's lots of ways to get around that in terms of encryption.
+
+144
+00:10:35,970 --> 00:10:46,750
+Rym: But if someone gets your private key, you are just fucked because your private key can be used to pretend to be you and encrypt anything as you and decrypt anything as effective.
+
+145
+00:10:46,891 --> 00:10:57,689
+Scott: also, even though they generated the keys stupidly and they could have just generated good keys with like open SSH, however, that your open SSL is they could have made perfectly good keys with that.
+
+146
+00:10:57,910 --> 00:10:59,416
+Scott: They chose not to.
+
+147
+00:11:00,118 --> 00:11:03,330
+Scott: The government was making both keys and then giving you both keys.
+
+148
+00:11:03,531 --> 00:11:04,408
+Scott: It's like, no, no, no, no, no.
+
+149
+00:11:05,391 --> 00:11:08,856
+Scott: How do you know the government of Estonia wasn't just keeping copies of all the private keys?
+
+150
+00:11:08,896 --> 00:11:09,468
+Scott: That doesn't work.
+
+151
+00:11:09,810 --> 00:11:14,529
+Scott: You actually have to make the keys on your own or else it's already useless, regardless of what method is used.
+
+152
+00:11:14,771 --> 00:11:21,370
+Rym: Or you set it up where the government makes a key, but you input a passphrase for that key in a means that they cannot get.
+
+153
+00:11:22,254 --> 00:11:24,166
+Scott: No, you have to make that on your own.
+
+154
+00:11:24,870 --> 00:11:26,848
+Rym: You need the card with the crypto key in it.
+
+155
+00:11:27,371 --> 00:11:28,689
+Scott: Maybe you don't make your own key.
+
+156
+00:11:28,850 --> 00:11:29,554
+Scott: Then it doesn't work.
+
+157
+00:11:30,056 --> 00:11:33,155
+Scott: No, the government cannot have the private key or ever see it ever.
+
+158
+00:11:33,276 --> 00:11:34,109
+Scott: Otherwise, fuck it.
+
+159
+00:11:34,170 --> 00:11:38,649
+Rym: But even the government having the private key in some fashion is not as bad as this.
+
+160
+00:11:38,870 --> 00:11:39,515
+Scott: Yeah, it is.
+
+161
+00:11:40,524 --> 00:11:41,210
+Scott: They have the key.
+
+162
+00:11:41,330 --> 00:11:42,301
+Scott: They don't even need to factor it.
+
+163
+00:11:42,322 --> 00:11:42,908
+Scott: They just have it.
+
+164
+00:11:43,592 --> 00:11:49,150
+Rym: Well, so here anyone with your public key can make your private key.
+
+165
+00:11:49,390 --> 00:11:50,770
+Scott: Yes, it's also a bad quote.
+
+166
+00:11:51,130 --> 00:11:56,149
+Rym: It means that if you have a document digitally signed with someone's private key, you can't prove is really them who signed it.
+
+167
+00:11:56,591 --> 00:12:01,873
+Rym: Or if you send sensitive data encrypted under someone's public key, you can't be sure that only they read it.
+
+168
+00:12:02,636 --> 00:12:11,613
+Rym: It's literally a disaster like this is as big a disaster, if not more so than the fact that like all of America's Social Security numbers just got released.
+
+169
+00:12:11,633 --> 00:12:14,190
+Scott: You got to make all new keys for everybody, just like the U.S.
+
+170
+00:12:14,310 --> 00:12:21,390
+Rym: needs to make all new Social Security numbers for everybody or get rid of Social Security numbers because that private company just released them all anyway.
+
+171
+00:12:21,610 --> 00:12:22,590
+Rym: That's a separate discussion.
+
+172
+00:12:23,192 --> 00:12:25,310
+Rym: So you can read this article if you want to know the details.
+
+173
+00:12:25,450 --> 00:12:32,250
+Rym: But the fundamental moral here, if you take nothing else away from this article, don't roll your own fucking encryption.
+
+174
+00:12:32,330 --> 00:12:33,269
+Rym: You're going to do it wrong.
+
+175
+00:12:34,010 --> 00:12:35,038
+Rym: Do not write.
+
+176
+00:12:35,058 --> 00:12:36,630
+Scott: There's already open source encryption.
+
+177
+00:12:36,770 --> 00:12:37,441
+Scott: That's just fine.
+
+178
+00:12:37,461 --> 00:12:37,888
+Scott: Just use it.
+
+179
+00:12:38,253 --> 00:12:39,489
+Scott: Why would you do anything else?
+
+180
+00:12:39,732 --> 00:12:40,382
+Scott: It's already out there.
+
+181
+00:12:40,402 --> 00:12:40,808
+Scott: Just use it.
+
+182
+00:12:46,421 --> 00:12:50,280
+Rym: But anyway, things of the day, because we have a lot to say in the main bit.
+
+183
+00:12:50,400 --> 00:12:51,626
+Rym: So what do you got?
+
+184
+00:12:51,646 --> 00:12:54,440
+Scott: So apparently I had this game as a kid.
+
+185
+00:12:54,580 --> 00:12:59,420
+Scott: It wasn't a very good game, but it wasn't a so awful game that you couldn't play.
+
+186
+00:12:59,560 --> 00:13:02,620
+Scott: It is Sonic 3D blast for the Sega Genesis.
+
+187
+00:13:02,820 --> 00:13:03,404
+Rym: It's one of the.
+
+188
+00:13:03,605 --> 00:13:06,240
+Scott: it's a really interesting and unique kind of game.
+
+189
+00:13:06,462 --> 00:13:09,100
+Scott: If you've ever played it, it's a little frustrating.
+
+190
+00:13:09,460 --> 00:13:13,980
+Scott: I wouldn't like recommend you spend that much time on it other than like investigate and see what the deal is.
+
+191
+00:13:14,121 --> 00:13:17,860
+Scott: Anyway, it's interesting because apparently I didn't know this as a kid.
+
+192
+00:13:19,022 --> 00:13:32,802
+Scott: If you have the game and you sort of bump it like the cartridge, like you bump it a little bit, like physically like the cartridges in the Genesis and you like bump it, you might and are actually quite likely to end up at like a cheating stage select screen.
+
+193
+00:13:34,129 --> 00:13:36,160
+Scott: I had to like enter codes to get to that screen.
+
+194
+00:13:36,622 --> 00:13:39,440
+Scott: But apparently you can just get to that screen by bumping the cartridge around.
+
+195
+00:13:39,780 --> 00:13:40,720
+Scott: Yeah, it's like, what the hell?
+
+196
+00:13:40,800 --> 00:13:49,720
+Scott: So a guy who programmed the damn game made a YouTube video explaining how why this happens and the gist of it is that is really funny.
+
+197
+00:13:50,101 --> 00:13:53,220
+Scott: Yeah, you submit games for testing, right?
+
+198
+00:13:53,982 --> 00:14:01,746
+Scott: You know, it had to be approved before they could be put on cartridges like, you know, Sega or Nintendo would do their own testing before they applied the seal of quality, right?
+
+199
+00:14:01,807 --> 00:14:02,900
+Scott: Be it Nintendo or Sega.
+
+200
+00:14:03,801 --> 00:14:08,385
+Scott: And if you had your game crashed, you obviously got rejected and that cost you a lot of time and money.
+
+201
+00:14:08,405 --> 00:14:10,419
+Scott: You wanted to get passed on the first try.
+
+202
+00:14:11,262 --> 00:14:14,359
+Scott: And even if you didn't get passed, you wanted to know what the hell the error was.
+
+203
+00:14:15,361 --> 00:14:15,542
+Scott: Right.
+
+204
+00:14:15,562 --> 00:14:23,240
+Scott: So they would put code in the game, you know, to like send them, you know, so that they would see what the errors were when, you know, testing happened.
+
+205
+00:14:23,661 --> 00:14:30,460
+Scott: But then when they actually submitted and they wanted the game to get passed, you replace the exception handling code with stage select screens.
+
+206
+00:14:30,600 --> 00:14:33,080
+Scott: Basically, if any, you know, they reduce the errors a whole bunch.
+
+207
+00:14:33,220 --> 00:14:33,913
+Scott: There's almost none.
+
+208
+00:14:34,015 --> 00:14:34,198
+Rym: Yep.
+
+209
+00:14:35,123 --> 00:14:36,579
+Scott: And they figure out this game can pass.
+
+210
+00:14:37,082 --> 00:14:42,539
+Scott: And then it's like, well, in case there is an error of some kind, just go to the stage select screen instead of the error page.
+
+211
+00:14:42,982 --> 00:14:46,980
+Scott: And that way, Nintendo or Sega will approve the game because it never graduations.
+
+212
+00:14:47,120 --> 00:14:49,980
+Rym: You have found the secret levels like screen in blue.
+
+213
+00:14:50,281 --> 00:14:53,680
+Scott: It never goes to any sort of crashing screen.
+
+214
+00:14:54,222 --> 00:14:54,423
+Scott: Right.
+
+215
+00:14:54,483 --> 00:14:57,100
+Scott: If there's any kind of freaky error, it goes to the stage select screen.
+
+216
+00:14:57,100 --> 00:15:01,581
+Rym: I think if the tester complained, you could just be like, yeah, you found the secret code.
+
+217
+00:15:01,802 --> 00:15:02,304
+Rym: Yeah.
+
+218
+00:15:02,585 --> 00:15:07,829
+Scott: So when you played the game, it was it was solid enough that I never got to the screen accidentally.
+
+219
+00:15:07,849 --> 00:15:09,039
+Scott: The game never crashed on me.
+
+220
+00:15:09,420 --> 00:15:09,520
+Scott: Right.
+
+221
+00:15:10,002 --> 00:15:17,879
+Scott: But if you bump the cartridge, that may just cause an exception when some data gets mangled or whatever, and thus you end up at the stage select screen.
+
+222
+00:15:18,081 --> 00:15:18,384
+Scott: Yeah.
+
+223
+00:15:19,153 --> 00:15:19,699
+Scott: So it's pretty cool.
+
+224
+00:15:20,200 --> 00:15:22,899
+Rym: So, Scott, do you what is a fractal?
+
+225
+00:15:23,441 --> 00:15:26,620
+Scott: So a fractal is you basically make a grid.
+
+226
+00:15:26,942 --> 00:15:27,184
+Scott: Right.
+
+227
+00:15:27,386 --> 00:15:29,000
+Scott: But not well, I guess a plane.
+
+228
+00:15:29,422 --> 00:15:35,840
+Scott: And instead of going X, Y, which is real numbers, you go real numbers, then use complex numbers on the vertical axis.
+
+229
+00:15:36,041 --> 00:15:36,382
+Scott: Right.
+
+230
+00:15:36,924 --> 00:15:42,460
+Scott: And then so you got you know, you got, you know, infinity to negative infinity on the on the horizontal.
+
+231
+00:15:42,741 --> 00:15:49,338
+Scott: And you got, I guess, complex infinity and complex negative infinity on the on the vertical where the Y would normally be.
+
+232
+00:15:50,002 --> 00:15:56,560
+Scott: And then you make a little function and you input a number into this function, like starting with, say, one or something or, you know, negative one.
+
+233
+00:15:56,620 --> 00:16:06,824
+Scott: Who knows what you start with and you input into the function and number comes out and you plot that on, you know, you put the real number in and the complex number comes out and you plot it on the thing
+
+234
+00:16:07,447 --> 00:16:12,598
+Rym: that is a very computer science person who had to implement an algorithm to make these.
+
+235
+00:16:13,080 --> 00:16:13,643
+Scott: Then you take.
+
+236
+00:16:13,763 --> 00:16:17,784
+Scott: then you take the output, you know, the answer you just got and that's your new input.
+
+237
+00:16:18,187 --> 00:16:19,959
+Scott: And you put that in the input and you plot that.
+
+238
+00:16:20,361 --> 00:16:24,560
+Scott: And then, you know, if it's in the set, it's, you know, give you a nice color.
+
+239
+00:16:24,922 --> 00:16:28,000
+Scott: If it's not in the set, then it's black or vice versa.
+
+240
+00:16:28,503 --> 00:16:30,119
+Scott: And now you draw cool fractal.
+
+241
+00:16:30,300 --> 00:16:30,987
+Rym: What if it's 3D or 4D?
+
+242
+00:16:32,923 --> 00:16:34,719
+Scott: Then it's hard to look at, but you can still do it.
+
+243
+00:16:35,125 --> 00:16:35,409
+Rym: All right.
+
+244
+00:16:35,430 --> 00:16:35,755
+Rym: Can it be 1D?
+
+245
+00:16:36,961 --> 00:16:38,180
+Scott: I don't know, but maybe.
+
+246
+00:16:38,761 --> 00:16:40,250
+Rym: So does it.
+
+247
+00:16:40,351 --> 00:16:40,552
+Rym: is it?
+
+248
+00:16:41,075 --> 00:16:41,900
+Rym: is it self-similar?
+
+249
+00:16:42,745 --> 00:16:43,638
+Scott: I don't know what that means.
+
+250
+00:16:43,982 --> 00:16:45,700
+Rym: Meaning if you zoom in, it's the same.
+
+251
+00:16:45,940 --> 00:16:53,260
+Scott: Yeah, you can zoom in forever because you can just keep using, you know, smaller and smaller or, you know, greater precision and much more decimal points.
+
+252
+00:16:53,682 --> 00:16:57,340
+Scott: And you can zoom in forever and you'll see the same pattern again eventually.
+
+253
+00:16:58,060 --> 00:17:01,640
+Rym: So fractals do not actually have to be self-similar to be fractals.
+
+254
+00:17:01,961 --> 00:17:03,839
+Scott: OK, that's a semantic thing, but OK.
+
+255
+00:17:04,305 --> 00:17:05,300
+Rym: It matters a lot, actually.
+
+256
+00:17:05,540 --> 00:17:06,919
+Rym: So I didn't know a lot about this.
+
+257
+00:17:07,401 --> 00:17:09,920
+Rym: I had a pretty superficial understanding of fractals more.
+
+258
+00:17:10,540 --> 00:17:12,799
+Rym: And, you know, most people think of like Mandelbrot sets.
+
+259
+00:17:13,180 --> 00:17:16,020
+Scott: Yeah, Mandelbrot sets, Sierpinski triangles, Julia sets.
+
+260
+00:17:16,280 --> 00:17:18,176
+Rym: Sierpinski triangle is like probably the easiest.
+
+261
+00:17:18,599 --> 00:17:19,500
+Scott: Yes, the babies first.
+
+262
+00:17:19,619 --> 00:17:21,779
+Rym: Well, because you can just draw it yourself, like if you really want to.
+
+263
+00:17:21,920 --> 00:17:23,299
+Scott: And then you get Mandelbrot set, Julia set.
+
+264
+00:17:23,401 --> 00:17:25,540
+Scott: And then there's a whole bunch of other ones that don't have famous names.
+
+265
+00:17:26,040 --> 00:17:31,200
+Rym: So the real key that defines fractals and fractal math is the dimensionality.
+
+266
+00:17:31,561 --> 00:17:42,520
+Rym: Like and I guess as far as I can tell from this video, because this video pushes significantly beyond the math that I know without having to look a bunch of stuff up.
+
+267
+00:17:44,640 --> 00:17:48,840
+Rym: Fractals are basically shapes where the dimensionality is not a counting number.
+
+268
+00:17:49,301 --> 00:17:54,579
+Rym: So they're like they have a dimensionality of like one point two as opposed to one or two or three.
+
+269
+00:17:55,483 --> 00:17:57,720
+Scott: So it's something that has one and a half dimensions.
+
+270
+00:17:58,181 --> 00:17:58,525
+Rym: Yeah.
+
+271
+00:17:58,545 --> 00:17:59,920
+Scott: How does that even fucking work?
+
+272
+00:18:00,141 --> 00:18:00,383
+Rym: Yeah.
+
+273
+00:18:00,403 --> 00:18:03,080
+Rym: So this video and they use the coastline of Britain.
+
+274
+00:18:03,340 --> 00:18:05,960
+Scott: I can imagine zero, one, two and three dimensions.
+
+275
+00:18:06,101 --> 00:18:08,049
+Scott: And I can sort of imagine four dimensions.
+
+276
+00:18:08,090 --> 00:18:12,520
+Scott: poorly because I can know that I've seen three dimensional shadows of four dimensional objects.
+
+277
+00:18:12,800 --> 00:18:16,180
+Rym: So it's basically as far as I can tell, I can't even imagine like anything.
+
+278
+00:18:16,440 --> 00:18:17,839
+Scott: Point five, anything deep.
+
+279
+00:18:18,341 --> 00:18:25,900
+Rym: So the fractals that most of us think about, like the ones that you mentioned, are the ones that are pretty or interesting and they're usually self-similar.
+
+280
+00:18:26,641 --> 00:18:35,640
+Rym: But the whole point of fractal math is to be able to model things that are not smooth and self-similar, but that are rough and complicated.
+
+281
+00:18:36,221 --> 00:18:36,342
+Scott: Yes.
+
+282
+00:18:36,363 --> 00:18:37,880
+Scott: Fractals are really rough and complicated.
+
+283
+00:18:38,360 --> 00:18:46,820
+Rym: So the idea to add roughness, like the example I give in this video is that calculus likes to say that if you zoom in enough, something is smooth and simple and easy to understand.
+
+284
+00:18:47,520 --> 00:18:51,280
+Rym: Fractal is the idea that no matter how long you zoom in, it's still rough and complicated.
+
+285
+00:18:52,180 --> 00:18:57,913
+Rym: So this video, and this is why I'm not going to say anything more about it, because I've probably already said like 10 things that Dr.
+
+286
+00:18:57,953 --> 00:18:59,280
+Rym: Hazard is going to yell at me about.
+
+287
+00:19:00,060 --> 00:19:07,760
+Rym: But this video, if you watch those Numberphile videos that we've linked to often, Numberphile videos are comprehensible to me.
+
+288
+00:19:08,020 --> 00:19:11,380
+Scott: I understand everything and every Numberphile video I've watched and paid attention to.
+
+289
+00:19:11,660 --> 00:19:28,600
+Rym: Numberphile seems to increasingly reference this channel, 3Blue1Brown, which I just realized is called that because the conceit is that there's one brown pi symbol and three blue pi symbols, and the three blue ones ask the dumb questions that we ask.
+
+290
+00:19:29,101 --> 00:19:30,066
+Scott: It's like Passover.
+
+291
+00:19:30,167 --> 00:19:34,303
+Scott: There's the the evil child, the I guess.
+
+292
+00:19:34,343 --> 00:19:37,779
+Scott: in Passover, there's four questions, the wise son, the wicked son.
+
+293
+00:19:37,980 --> 00:19:38,281
+Rym: Oh, my God.
+
+294
+00:19:38,322 --> 00:19:44,240
+Rym: Tracy just gave yet another example of what he thinks the fractal is, but they don't have to be self-similar.
+
+295
+00:19:44,841 --> 00:19:49,680
+Scott: So Numberphile will, I guess, is baby's first version of this.
+
+296
+00:19:49,921 --> 00:19:51,660
+Scott: Well, I'm baby's first, obviously.
+
+297
+00:19:51,980 --> 00:19:54,519
+Rym: Numberphile will basically say things like three times.
+
+298
+00:19:54,742 --> 00:19:56,180
+Rym: Here's a cool Numberphile thing.
+
+299
+00:19:56,920 --> 00:19:59,180
+Rym: By the way, this definition is actually simplified.
+
+300
+00:19:59,380 --> 00:20:02,680
+Rym: If you want to know the real story, go to this 3Blue1Brown channel.
+
+301
+00:20:02,980 --> 00:20:05,640
+Scott: Yeah, see, Numberphile makes me think like, hey, I could be a mathematician.
+
+302
+00:20:05,780 --> 00:20:06,831
+Scott: No, you can't.
+
+303
+00:20:07,093 --> 00:20:07,679
+Scott: No, you can't.
+
+304
+00:20:08,340 --> 00:20:13,100
+Scott: 3Blue1Brown says, all the people talking on Numberphile understand 3Blue1Brown easily.
+
+305
+00:20:13,681 --> 00:20:15,099
+Scott: So 3Blue1Brown, I can't do that.
+
+306
+00:20:15,360 --> 00:20:20,420
+Rym: If you watch these videos like I grasp the concepts, barely.
+
+307
+00:20:20,701 --> 00:20:22,948
+Rym: Yeah, and the maths are.
+
+308
+00:20:23,630 --> 00:20:30,860
+Rym: if I applied myself in college and didn't just give up on maths once I got to college, I could probably partially understand them.
+
+309
+00:20:31,100 --> 00:20:32,089
+Scott: I was right to give up on math.
+
+310
+00:20:32,130 --> 00:20:33,179
+Scott: That's what this video tells me.
+
+311
+00:20:33,440 --> 00:20:34,400
+Rym: You know what the problem is, though?
+
+312
+00:20:34,420 --> 00:20:36,639
+Rym: In high school, that was the thing I was the best at.
+
+313
+00:20:36,780 --> 00:20:41,300
+Rym: And the only reason I didn't continue with it is that I was great at math until calculus.
+
+314
+00:20:41,522 --> 00:20:42,732
+Scott: All the other kinds of math.
+
+315
+00:20:42,874 --> 00:20:43,519
+Scott: I was way good.
+
+316
+00:20:43,800 --> 00:20:44,571
+Rym: See, no calculus.
+
+317
+00:20:44,713 --> 00:20:45,240
+Rym: I did fucking ace.
+
+318
+00:20:45,260 --> 00:20:46,353
+Scott: I could have been a statistician.
+
+319
+00:20:46,394 --> 00:20:46,819
+Scott: I'm good at that.
+
+320
+00:20:47,261 --> 00:20:55,160
+Rym: I got into complex 3D nonsense and like the like multiple derivatives and all this weird crap and Gaussian services.
+
+321
+00:20:55,580 --> 00:20:56,818
+Rym: And it was awesome and I loved it.
+
+322
+00:20:57,260 --> 00:21:01,160
+Rym: But then when I went to go to college, Al Biles was like, don't do anything hard.
+
+323
+00:21:01,320 --> 00:21:02,024
+Rym: Just be IT.
+
+324
+00:21:02,045 --> 00:21:03,453
+Rym: You'll make money to play my trumpet.
+
+325
+00:21:05,362 --> 00:21:07,200
+Rym: I wrote a program that's playing along with me.
+
+326
+00:21:07,281 --> 00:21:08,192
+Rym: You can do stuff like that.
+
+327
+00:21:08,273 --> 00:21:08,820
+Rym: It's great.
+
+328
+00:21:09,141 --> 00:21:09,343
+Rym: Yep.
+
+329
+00:21:10,090 --> 00:21:11,020
+Rym: And I was like, you know what?
+
+330
+00:21:11,120 --> 00:21:11,827
+Rym: I'm done with math.
+
+331
+00:21:11,948 --> 00:21:13,280
+Scott: I'm convinced by the trumpet man.
+
+332
+00:21:13,400 --> 00:21:15,740
+Scott: This Pied Piper has taken me to computer and money land.
+
+333
+00:21:16,223 --> 00:21:16,867
+Scott: And he was right.
+
+334
+00:21:17,309 --> 00:21:18,960
+Scott: And it was a wise trumpet man.
+
+335
+00:21:19,120 --> 00:21:21,120
+Scott: So he didn't Pied Piper the rats out of town.
+
+336
+00:21:21,340 --> 00:21:23,080
+Scott: He Pied Piper the rats right in the Fortnite.
+
+337
+00:21:23,120 --> 00:21:25,218
+Rym: I had to take like one calculus class at RIT.
+
+338
+00:21:25,940 --> 00:21:26,342
+Scott: Rym's the rat.
+
+339
+00:21:26,543 --> 00:21:31,900
+Rym: Compared to what I did in high school, that calculus two, three stuff at RIT was like baby calculus.
+
+340
+00:21:32,723 --> 00:21:33,880
+Scott: I've got to see a calculus.
+
+341
+00:21:34,181 --> 00:21:35,480
+Scott: One was baby calculus.
+
+342
+00:21:35,740 --> 00:21:40,403
+Scott: What I did in high school, I watched the what's the integral of two X. Yeah.
+
+343
+00:21:40,423 --> 00:21:44,200
+Scott: Then calculus two, half of it was babies first and half of it I didn't learn.
+
+344
+00:21:44,481 --> 00:21:54,680
+Rym: But luckily Rym's TI 89 was able to help me get a C because I forgot I had that TI 89 can integrate kind of because I bought it and I only used it in one class.
+
+345
+00:21:54,720 --> 00:21:56,520
+Scott: I only had 86 that couldn't do calculus.
+
+346
+00:21:56,760 --> 00:21:58,681
+Scott: And then I had 85.
+
+347
+00:21:58,681 --> 00:21:59,528
+Scott: Yeah.
+
+348
+00:21:59,850 --> 00:22:00,495
+Scott: You also had 89 that I bought.
+
+349
+00:22:01,320 --> 00:22:07,334
+Rym: I bought the 89 at RIT because I had to take one like fucking stupid calculus class because RIT wouldn't eat food.
+
+350
+00:22:08,163 --> 00:22:09,201
+Scott: But you bought a TI 89.
+
+351
+00:22:09,201 --> 00:22:09,402
+Rym: Yeah.
+
+352
+00:22:09,422 --> 00:22:09,825
+Rym: You know what?
+
+353
+00:22:09,986 --> 00:22:12,360
+Rym: Because in that stats class, I was not doing that shit by hand.
+
+354
+00:22:12,581 --> 00:22:16,541
+Scott: Anyway, this for stats, I was finally 86.
+
+355
+00:22:16,541 --> 00:22:19,980
+Scott: And then calculus three, I just failed two times, three times.
+
+356
+00:22:20,061 --> 00:22:21,009
+Scott: Maybe I don't remember.
+
+357
+00:22:21,130 --> 00:22:22,300
+Rym: What was your calculus three?
+
+358
+00:22:22,400 --> 00:22:23,319
+Rym: Like what was in that class?
+
+359
+00:22:24,121 --> 00:22:27,880
+Scott: It was like, you know, some of stuff over a series.
+
+360
+00:22:28,340 --> 00:22:32,080
+Scott: Now, does it converge or not and not remember anything else?
+
+361
+00:22:32,160 --> 00:22:34,038
+Scott: Because obviously if I did, I wouldn't have failed.
+
+362
+00:22:34,300 --> 00:22:34,642
+Scott: Yeah.
+
+363
+00:22:34,722 --> 00:22:40,039
+Scott: And then I took it in the summer and got to see, because when you take a class in the summer with only like 10 people, everyone gets to see.
+
+364
+00:22:42,960 --> 00:22:47,378
+Rym: Discrete math was probably, and like Diffie Q were like the most fun things I remember doing in high school.
+
+365
+00:22:47,480 --> 00:22:47,621
+Scott: Oh yeah.
+
+366
+00:22:47,642 --> 00:22:47,985
+Scott: I'm way good.
+
+367
+00:22:48,147 --> 00:22:49,440
+Scott: I'm way good at discrete math.
+
+368
+00:22:49,660 --> 00:22:50,939
+Scott: Not Diffie Q that much.
+
+369
+00:22:51,280 --> 00:22:53,019
+Rym: Diffie Q I enjoyed the most, I think.
+
+370
+00:22:54,520 --> 00:22:57,600
+Scott: But I'm good at math that use normal numbers and not weird shit.
+
+371
+00:22:57,700 --> 00:23:01,465
+Rym: So when I was a kid taking those classes, I go to my parents like, here's what I'm doing in high school.
+
+372
+00:23:01,506 --> 00:23:02,659
+Rym: They didn't know what the fuck it was.
+
+373
+00:23:03,221 --> 00:23:13,720
+Rym: But now, if Rym from like 1998 came to Rym today and showed Rym today the math Rym in 1998 was doing, Rym today doesn't know what the fuck that is.
+
+374
+00:23:13,880 --> 00:23:14,200
+Scott: No, I don't know.
+
+375
+00:23:14,220 --> 00:23:14,860
+Scott: It's all gone.
+
+376
+00:23:15,020 --> 00:23:15,113
+Rym: Nope.
+
+377
+00:23:15,321 --> 00:23:15,878
+Rym: I lost it.
+
+378
+00:23:16,164 --> 00:23:16,840
+Rym: It's gone forever.
+
+379
+00:23:17,060 --> 00:23:17,708
+Scott: Let's do the meta moment.
+
+380
+00:23:18,700 --> 00:23:18,801
+Rym: Yeah.
+
+381
+00:23:18,841 --> 00:23:20,798
+Rym: This video is great and you should watch it.
+
+382
+00:23:21,500 --> 00:23:30,020
+Rym: And I'm curious what you think of it, because I know a lot more about fractals now, more the practical applications of fractals as opposed to cool Mandelbrot sets.
+
+383
+00:23:31,022 --> 00:23:33,160
+Rym: So, yeah, in the meta moment, the Book Club book is the fifth season.
+
+384
+00:23:33,522 --> 00:23:34,318
+Rym: I'm almost done with it.
+
+385
+00:23:34,540 --> 00:23:37,119
+Scott: So the next Thursday episode, we're probably going to discuss this book.
+
+386
+00:23:37,440 --> 00:23:39,280
+Scott: So if you read it, I hope you read it.
+
+387
+00:23:39,360 --> 00:23:46,800
+Rym: And you know what, if you haven't read the second one, so I don't mess up that episode of GeekNights, I'm going to read the other two books based on what I've read so far.
+
+388
+00:23:47,180 --> 00:23:53,640
+Scott: I mean, people are telling me, some people are telling me at least that the other books are not good, but the second book did win the Hugo Award, just like the first one.
+
+389
+00:23:53,900 --> 00:23:55,835
+Rym: And I really want to know some stuff.
+
+390
+00:23:56,880 --> 00:23:59,680
+Scott: How bad is it really going to hurt me to read the at least the second one?
+
+391
+00:23:59,741 --> 00:24:00,520
+Scott: I'll see for myself.
+
+392
+00:24:00,660 --> 00:24:02,480
+Scott: I don't know if I can trust everybody.
+
+393
+00:24:02,720 --> 00:24:09,920
+Rym: So takeaways so far is I'm curious if you're at what point different people figure out who different characters are in relation to all these stories.
+
+394
+00:24:10,544 --> 00:24:12,120
+Rym: You know, the timeline situation.
+
+395
+00:24:12,380 --> 00:24:13,144
+Rym: Yeah.
+
+396
+00:24:13,386 --> 00:24:15,920
+Rym: Number two, how hot is that pirate captain?
+
+397
+00:24:16,741 --> 00:24:17,323
+Rym: So hot.
+
+398
+00:24:17,645 --> 00:24:21,999
+Rym: That guy is the hottest guy in any media so far.
+
+399
+00:24:22,661 --> 00:24:23,456
+Scott: Any media ever.
+
+400
+00:24:24,221 --> 00:24:25,319
+Scott: He's Akio hot.
+
+401
+00:24:25,580 --> 00:24:32,180
+Rym: Well, because he's vaguely described into like certain like details of the world are often vaguely described to get these impressions of things.
+
+402
+00:24:32,680 --> 00:24:38,259
+Rym: The impression of him that he might be the hottest human being to have ever been crafted by man or beast.
+
+403
+00:24:38,560 --> 00:24:39,205
+Rym: Yeah.
+
+404
+00:24:39,225 --> 00:24:41,160
+Rym: And it's real hard to dissuade me from that opinion.
+
+405
+00:24:44,052 --> 00:24:44,380
+Rym: And what else?
+
+406
+00:24:44,520 --> 00:24:45,066
+Rym: I want to know what.
+
+407
+00:24:45,086 --> 00:24:46,440
+Rym: I want to know what the deal is with that socket.
+
+408
+00:24:46,900 --> 00:24:47,284
+Scott: Yeah.
+
+409
+00:24:47,304 --> 00:24:48,880
+Scott: I mean, of course, I was one of the terrible secrets.
+
+410
+00:24:48,960 --> 00:24:51,640
+Rym: I have a feeling that the socket is not revealed by the end of this case.
+
+411
+00:24:51,800 --> 00:24:52,718
+Scott: The terrible secret of Earth.
+
+412
+00:24:53,041 --> 00:24:53,261
+Rym: Yeah.
+
+413
+00:24:53,542 --> 00:24:58,140
+Rym: I want to know more about that implant, too, especially because them guardians.
+
+414
+00:24:58,320 --> 00:24:59,079
+Scott: They're the coolest ninjas.
+
+415
+00:24:59,281 --> 00:24:59,482
+Scott: Yeah.
+
+416
+00:24:59,522 --> 00:25:03,080
+Rym: But at the same time, I feel like half the guardians go insane.
+
+417
+00:25:03,960 --> 00:25:05,240
+Rym: Like there's an implication.
+
+418
+00:25:05,441 --> 00:25:06,839
+Rym: And I want to know what's going on.
+
+419
+00:25:07,120 --> 00:25:09,520
+Rym: There's also some Hokuto no Ken with the guardians.
+
+420
+00:25:10,300 --> 00:25:11,699
+Rym: The tap tap on the back of the skull.
+
+421
+00:25:11,940 --> 00:25:13,088
+Scott: I said they're ninjas.
+
+422
+00:25:13,108 --> 00:25:14,860
+Rym: Yeah, he's not a ninja.
+
+423
+00:25:15,000 --> 00:25:17,359
+Rym: He's just a. he's a grandpa ninja.
+
+424
+00:25:19,486 --> 00:25:20,320
+Scott: Any other meta thing?
+
+425
+00:25:20,580 --> 00:25:23,520
+Scott: So the next convention we are going to is Pax Unplugged.
+
+426
+00:25:23,660 --> 00:25:24,306
+Scott: Oh my God.
+
+427
+00:25:24,326 --> 00:25:26,020
+Scott: It's the week before Thanksgiving.
+
+428
+00:25:26,220 --> 00:25:27,339
+Rym: It is a month away.
+
+429
+00:25:27,681 --> 00:25:33,240
+Scott: Also, the first week of Thanksgiving, the first week of November, that weekend has too much shit going on.
+
+430
+00:25:33,360 --> 00:25:34,164
+Scott: Here's all my God.
+
+431
+00:25:34,225 --> 00:25:37,100
+Scott: Here's all the shit that is going on in the first weekend of November.
+
+432
+00:25:37,220 --> 00:25:37,725
+Scott: Are you ready?
+
+433
+00:25:38,270 --> 00:25:39,260
+Scott: Gamer X East.
+
+434
+00:25:39,340 --> 00:25:39,930
+Scott: Are we going to that?
+
+435
+00:25:40,215 --> 00:25:40,499
+Rym: I don't know.
+
+436
+00:25:40,680 --> 00:25:43,540
+Rym: So they're having trouble scheduling their panels, as far as I can tell.
+
+437
+00:25:43,620 --> 00:25:51,080
+Rym: So I got an email from them and they were like, you are one of the panels we want to schedule, but we're having a hard time deciding.
+
+438
+00:25:51,181 --> 00:25:54,720
+Rym: So they asked me to, like, explain a lot more detail about what we're going to present.
+
+439
+00:25:55,002 --> 00:25:57,500
+Rym: And I gave them a ton of stuff and then they didn't get back to me.
+
+440
+00:25:57,760 --> 00:25:57,941
+Scott: All right.
+
+441
+00:25:57,962 --> 00:26:00,400
+Scott: Anyway, so we might go to that one day.
+
+442
+00:26:00,620 --> 00:26:05,380
+Scott: Probably, you know, we went to it last year, actually saw last year at Gamer X East.
+
+443
+00:26:05,481 --> 00:26:06,408
+Scott: I saw N.K.
+
+444
+00:26:06,429 --> 00:26:07,820
+Scott: Jemisin, author of Fifth Season.
+
+445
+00:26:08,000 --> 00:26:08,322
+Scott: Oh, yeah.
+
+446
+00:26:08,804 --> 00:26:11,960
+Scott: Anyway, and she was totally nerding out about Dragon Age stuff.
+
+447
+00:26:12,981 --> 00:26:13,062
+Scott: OK.
+
+448
+00:26:13,364 --> 00:26:15,560
+Scott: Also happening that weekend, New York City Marathon.
+
+449
+00:26:15,700 --> 00:26:20,340
+Scott: I don't know if anyone cares, but if I'm not doing anything else on that Sunday, I could do the thing we did last year.
+
+450
+00:26:20,500 --> 00:26:22,800
+Scott: We bike the marathon route before they close it.
+
+451
+00:26:23,000 --> 00:26:23,779
+Rym: Oh, yeah, I'll do that again.
+
+452
+00:26:23,940 --> 00:26:24,221
+Rym: Maybe.
+
+453
+00:26:25,285 --> 00:26:25,506
+Scott: OK.
+
+454
+00:26:25,526 --> 00:26:28,636
+Scott: The other thing that is happening that weekend is the BlizzCon.
+
+455
+00:26:30,367 --> 00:26:30,878
+Rym: Oh, yeah.
+
+456
+00:26:31,780 --> 00:26:34,459
+Scott: Championships of Hearthstone, Overwatch, et cetera, et cetera.
+
+457
+00:26:34,780 --> 00:26:36,300
+Scott: It's the BlizzCon Friday and Saturday.
+
+458
+00:26:36,400 --> 00:26:37,380
+Scott: BlizzCon is not Sunday.
+
+459
+00:26:37,903 --> 00:26:39,339
+Rym: So last year I didn't really watch a lot.
+
+460
+00:26:39,420 --> 00:26:43,940
+Rym: But this year, now that I've gone from being steeped in Overwatch to being fucking steeped in Overwatch.
+
+461
+00:26:44,500 --> 00:26:45,846
+Scott: So I usually I like.
+
+462
+00:26:45,866 --> 00:26:49,140
+Scott: I never planned to like watch BlizzCon or anything.
+
+463
+00:26:49,240 --> 00:26:56,500
+Scott: But what happened is, is not only is the for the past few years, the first weekend of November has always been BlizzCon.
+
+464
+00:26:57,060 --> 00:27:01,200
+Scott: It is also always been the Fantasy Flight Games World Championship.
+
+465
+00:27:01,340 --> 00:27:12,320
+Scott: So what end up happening inevitably is I would go to Twitch to watch the Netrunner World Championships, which are, again, the first weekend of November and end up seeing, oh, Hearthstone World Championship.
+
+466
+00:27:13,083 --> 00:27:16,819
+Scott: Also, let me spend my whole weekend watching card game world championships.
+
+467
+00:27:17,921 --> 00:27:20,659
+Scott: So as you got four things for your first weekend of November there.
+
+468
+00:27:21,921 --> 00:27:24,160
+Rym: And then other cons coming up, we're going to be at PAX South.
+
+469
+00:27:24,820 --> 00:27:29,679
+Rym: We're going to be at Magfest and et cetera.
+
+470
+00:27:30,281 --> 00:27:32,880
+Scott: But at PAX East tickets are going to go on sale.
+
+471
+00:27:33,602 --> 00:27:37,100
+Scott: Not before PAX South, but right after not PAX South.
+
+472
+00:27:37,340 --> 00:27:39,680
+Scott: OSS, PAX OSS is real soon, like a few weeks away.
+
+473
+00:27:40,082 --> 00:27:40,825
+Scott: It's in October.
+
+474
+00:27:40,885 --> 00:27:44,060
+Scott: It's currently October right after PAX OSS.
+
+475
+00:27:44,421 --> 00:27:48,860
+Scott: You got to be on the PAX East alarm for tickets if you need to buy them and you're not enforcing or something.
+
+476
+00:27:50,088 --> 00:27:50,352
+Scott: Yeah.
+
+477
+00:27:50,433 --> 00:27:51,020
+Scott: Pay attention.
+
+478
+00:27:51,980 --> 00:27:57,520
+Rym: So at PAX Unplugged on Saturday, we are doing the kind of thing we did at old PAX's.
+
+479
+00:27:57,940 --> 00:28:05,740
+Rym: We're going to do this two hour event where we're going to teach everybody the like super pro dick moves of Carcassonne.
+
+480
+00:28:05,820 --> 00:28:08,659
+Scott: We're going to teach you how to play Carcassonne, even if you never played it.
+
+481
+00:28:08,820 --> 00:28:13,920
+Scott: Then we're going to teach you how to win at Carcassonne and be the best, all the best Carcassonne strategies.
+
+482
+00:28:14,323 --> 00:28:16,240
+Scott: So there'll be nothing you don't know about Carcassonne.
+
+483
+00:28:16,360 --> 00:28:19,980
+Scott: And then there'll be a Carcassonne tournament, a single elimination.
+
+484
+00:28:20,180 --> 00:28:20,840
+Rym: We can unleash.
+
+485
+00:28:21,180 --> 00:28:25,940
+Scott: I want to see what happens when a bunch of people who have just been given expert knowledge unleash that upon each other.
+
+486
+00:28:25,940 --> 00:28:28,600
+Scott: Yeah, we're going to make monster can be only one winner.
+
+487
+00:28:28,660 --> 00:28:29,364
+Scott: It's a tournament.
+
+488
+00:28:29,666 --> 00:28:31,798
+Rym: We're making monsters and having them fight for us.
+
+489
+00:28:32,320 --> 00:28:33,212
+Scott: It's going to be amazing.
+
+490
+00:28:33,232 --> 00:28:33,780
+Scott: It's going to be awesome.
+
+491
+00:28:34,461 --> 00:28:37,579
+Rym: So that's going to be on Saturday for two hours in tabletop tourney.
+
+492
+00:28:39,081 --> 00:28:43,520
+Rym: So I was at work like in a bunch of, you know, Monday is when I have a bunch of meetings, every job I've ever had.
+
+493
+00:28:43,660 --> 00:28:48,200
+Rym: Monday is like all the status meetings and the sprint meetings and the stand ups and everything.
+
+494
+00:28:49,962 --> 00:28:54,500
+Rym: So Scott like messaged me a bunch and he's like something, something, something WPA vulnerability.
+
+495
+00:28:55,202 --> 00:28:58,840
+Rym: And I think in the back of my head, all right, that'll be an interesting thing to go read about.
+
+496
+00:28:59,100 --> 00:28:59,683
+Scott: Apparently not.
+
+497
+00:28:59,703 --> 00:29:02,780
+Scott: When I woke up, there was a news WPA is completely broken.
+
+498
+00:29:02,780 --> 00:29:03,402
+Scott: And then it was.
+
+499
+00:29:03,783 --> 00:29:10,320
+Scott: and then 10 minutes when I like actually left the house and read the Internet a second time on the subway, it was on every single site.
+
+500
+00:29:10,460 --> 00:29:11,589
+Scott: It was in the feed like 20 times.
+
+501
+00:29:13,080 --> 00:29:20,500
+Rym: Usually when there's a news like important thing has vulnerability, you do zoom in and people were kind of trumping up how bad it was.
+
+502
+00:29:20,640 --> 00:29:22,519
+Scott: Or there's something on just tech sites for nerds.
+
+503
+00:29:22,700 --> 00:29:33,515
+Rym: This is on every website and rightfully so, because this one affects everyone, everybody, you know, it doesn't affect people still using WEP because they're just still as fucked as they were.
+
+504
+00:29:33,556 --> 00:29:33,719
+Rym: Right.
+
+505
+00:29:34,060 --> 00:29:36,020
+Scott: So we're going to not just talk about this vulnerability.
+
+506
+00:29:36,281 --> 00:29:38,940
+Scott: I also want to talk about the security of Wi-Fi in general.
+
+507
+00:29:39,220 --> 00:29:39,321
+Scott: Right.
+
+508
+00:29:39,341 --> 00:29:42,233
+Rym: We're not going to go into the details because we're not.
+
+509
+00:29:42,253 --> 00:29:43,760
+Scott: we're just going to get the concepts here.
+
+510
+00:29:44,402 --> 00:29:47,900
+Scott: So you have what you need to know to make it through this world safely.
+
+511
+00:29:48,120 --> 00:29:52,720
+Rym: So ostensibly, we do know a lot about like the details of WEP and WPA and everything.
+
+512
+00:29:53,061 --> 00:30:00,600
+Rym: But the reality is, I don't remember a lot of those details because the last time I actually cared was when I had to take tests on it at RIT.
+
+513
+00:30:00,960 --> 00:30:01,061
+Scott: Right.
+
+514
+00:30:01,082 --> 00:30:02,520
+Scott: So now here's the fundamental thing.
+
+515
+00:30:02,540 --> 00:30:06,060
+Scott: You start at the beginning here, right at the bottom of the layer, the hardware layer.
+
+516
+00:30:06,200 --> 00:30:10,633
+Scott: If you're using a wire and someone wants to spy on your shit, they have to.
+
+517
+00:30:10,693 --> 00:30:13,040
+Scott: either they need physical access to that wire.
+
+518
+00:30:13,100 --> 00:30:16,000
+Scott: They got to cut it and put computers in between it or who knows.
+
+519
+00:30:16,582 --> 00:30:18,940
+Scott: And that already provides you with physical security.
+
+520
+00:30:19,021 --> 00:30:22,000
+Scott: For Wi-Fi, there is no physical security.
+
+521
+00:30:22,260 --> 00:30:24,880
+Scott: Your computer, all the bits that your computer is sending.
+
+522
+00:30:25,301 --> 00:30:29,020
+Scott: So, you know, the password that you just typed in that you then push submit.
+
+523
+00:30:29,321 --> 00:30:35,360
+Rym: They're going out in a three dimensional sphere of electromagnetic radiation.
+
+524
+00:30:35,946 --> 00:30:36,959
+Rym: That is just the bits.
+
+525
+00:30:37,180 --> 00:30:37,300
+Scott: Yeah.
+
+526
+00:30:37,320 --> 00:30:44,160
+Scott: Your computer turns that into bits and broadcast it out into the air where anyone can touch it with their antenna if they're close enough.
+
+527
+00:30:44,521 --> 00:30:57,480
+Scott: And likewise, all the shit you're downloading, you know, all the porn you're watching, the GeekNights you're listening to is being broadcast by the router near you into the air and everyone can look at it.
+
+528
+00:30:57,600 --> 00:31:00,160
+Scott: So how the fuck do we deal with that?
+
+529
+00:31:00,280 --> 00:31:02,360
+Scott: And the answer is lots of encryption.
+
+530
+00:31:02,840 --> 00:31:07,360
+Rym: So it's interesting because there are unencrypted wireless protocols.
+
+531
+00:31:07,580 --> 00:31:07,903
+Scott: Yeah, you could.
+
+532
+00:31:07,923 --> 00:31:09,839
+Scott: you don't have to use encryption if you don't want to.
+
+533
+00:31:10,080 --> 00:31:11,959
+Scott: And maybe there are cases where you don't want to.
+
+534
+00:31:12,180 --> 00:31:13,085
+Rym: Now, think of it like just what.
+
+535
+00:31:13,145 --> 00:31:16,140
+Rym: it's the same concerns as with wired in that regard.
+
+536
+00:31:16,502 --> 00:31:19,820
+Rym: Like in the old days, networks were one big open network.
+
+537
+00:31:20,020 --> 00:31:23,719
+Rym: So wired networks were a lot like modern day wireless networks.
+
+538
+00:31:24,543 --> 00:31:27,100
+Rym: And if someone had a packet sniffer, they could literally see anything.
+
+539
+00:31:27,161 --> 00:31:29,299
+Rym: So packet sniffers were a big security deal.
+
+540
+00:31:29,862 --> 00:31:32,920
+Rym: But the practical reality is that in the modern world, everyone switched.
+
+541
+00:31:33,120 --> 00:31:33,815
+Scott: There's no hubs anymore.
+
+542
+00:31:33,856 --> 00:31:33,958
+Rym: Yep.
+
+543
+00:31:34,140 --> 00:31:47,260
+Rym: As we move to bridge and then switched ethernet, effectively, every device is communicating with one other device in a single point to point bidirectional link that is not shared by anyone else.
+
+544
+00:31:47,420 --> 00:31:47,520
+Scott: Right.
+
+545
+00:31:47,540 --> 00:31:57,080
+Scott: So if you wanted to see other people's traffic on a wired ethernet network, at least you would have to like physically mess with something to get the router, the switch to send you their bits.
+
+546
+00:31:57,543 --> 00:31:57,785
+Rym: Yep.
+
+547
+00:31:58,308 --> 00:32:00,000
+Scott: And before this, everyone sees everyone bits.
+
+548
+00:32:00,140 --> 00:32:00,481
+Scott: I'm a guy.
+
+549
+00:32:00,722 --> 00:32:05,080
+Rym: And before any of the vampire tabs, because someone mentioned vampire taps to me recently one.
+
+550
+00:32:05,584 --> 00:32:06,980
+Rym: No, that's not a thing anymore.
+
+551
+00:32:07,341 --> 00:32:07,622
+Rym: No.
+
+552
+00:32:07,783 --> 00:32:11,120
+Rym: In fact, that was barely a thing when I was still in college.
+
+553
+00:32:11,282 --> 00:32:12,218
+Rym: Yeah, I've used them.
+
+554
+00:32:12,721 --> 00:32:14,979
+Rym: I've used 10 base five and 10 base two.
+
+555
+00:32:15,341 --> 00:32:15,724
+Rym: Guess what?
+
+556
+00:32:15,724 --> 00:32:17,517
+Rym: 10 base five and 10 base two are gone.
+
+557
+00:32:18,220 --> 00:32:18,363
+Scott: Yep.
+
+558
+00:32:18,935 --> 00:32:19,200
+Rym: Anyway.
+
+559
+00:32:19,540 --> 00:32:19,741
+Rym: Yeah.
+
+560
+00:32:20,342 --> 00:32:26,160
+Rym: So wireless networks need to ostensibly encrypt the data so people can't just sniff on it.
+
+561
+00:32:26,240 --> 00:32:41,340
+Rym: So the earliest ways to encrypt data on a wireless network was to use something called, well, effectively, a group key group symmetric encryption of some kind, meaning there is a encryption key that can be used for that network and everyone on the network shares that key.
+
+562
+00:32:42,041 --> 00:32:47,900
+Rym: So if you're connected to the network, you can see everyone else's bits who is also connected to the network.
+
+563
+00:32:48,322 --> 00:32:51,880
+Rym: But someone who doesn't have that key can't connect and can't see anything right now.
+
+564
+00:32:51,920 --> 00:33:09,740
+Scott: This could be considered to be OK, because if you have permission, you know, as long as everyone trustworthy has the key and no one shares it, you know, wrongly and it's a well generated key in a well and cryptographically secure key, you know, it's like, well, listen, you're all allowed in this company network and you're allowed in the wired part of it.
+
+565
+00:33:09,820 --> 00:33:11,760
+Scott: And you could see everything on the wired part anyway.
+
+566
+00:33:12,162 --> 00:33:14,519
+Scott: So you may as well let you see everything in the wireless part, too.
+
+567
+00:33:15,041 --> 00:33:17,780
+Scott: It's not like anyone can sit outside our company and spy on us.
+
+568
+00:33:17,861 --> 00:33:18,519
+Scott: It's all encrypted.
+
+569
+00:33:19,322 --> 00:33:25,700
+Rym: Now, the main reason this wasn't a concern is that for a long time, not many people used wireless ethernet.
+
+570
+00:33:25,860 --> 00:33:32,180
+Scott: Yeah, it's not like people in those days, these olden days had Wi-Fi and every single device they own and were using it for everything.
+
+571
+00:33:32,420 --> 00:33:35,460
+Scott: It was only, you know, certain people who could afford specialized equipment.
+
+572
+00:33:35,580 --> 00:33:40,300
+Rym: It was usually corporate environments where that kind of trust environment existed.
+
+573
+00:33:41,460 --> 00:33:42,780
+Scott: So that's not the way.
+
+574
+00:33:42,920 --> 00:33:45,939
+Scott: Companies had laptops with Wi-Fi and schools had it before people had it.
+
+575
+00:33:46,160 --> 00:33:46,362
+Scott: Yep.
+
+576
+00:33:46,825 --> 00:33:48,860
+Rym: So nowadays that is not the case.
+
+577
+00:33:49,040 --> 00:33:50,419
+Scott: Everyone has Wi-Fi for everything now.
+
+578
+00:33:51,201 --> 00:33:56,860
+Rym: Not only is Wi-Fi ubiquitous, but Wi-Fi is used on untrusted networks.
+
+579
+00:33:57,300 --> 00:33:59,340
+Rym: Wi-Fi is used in public places.
+
+580
+00:33:59,520 --> 00:34:01,040
+Scott: It's used everywhere on earth.
+
+581
+00:34:01,409 --> 00:34:01,620
+Rym: Yep.
+
+582
+00:34:01,781 --> 00:34:03,620
+Scott: Not just in one particular place.
+
+583
+00:34:03,920 --> 00:34:07,700
+Rym: It's also used in environments that need high security.
+
+584
+00:34:08,260 --> 00:34:11,779
+Rym: Like, for example, POS's point of sale systems.
+
+585
+00:34:12,221 --> 00:34:17,080
+Rym: So like a cash register in the modern era pretty much has to be connected to the Internet or it won't work.
+
+586
+00:34:17,600 --> 00:34:21,060
+Rym: And it's not like you're connected to and a network of some kind.
+
+587
+00:34:21,120 --> 00:34:21,219
+Scott: Right.
+
+588
+00:34:21,241 --> 00:34:25,440
+Scott: I mean, think about any place that's like a place of business, a store, a restaurant.
+
+589
+00:34:25,801 --> 00:34:25,942
+Scott: Right.
+
+590
+00:34:25,962 --> 00:34:30,500
+Scott: It's like people aren't wiring places up with ethernet in every place that there's a computer.
+
+591
+00:34:30,661 --> 00:34:30,860
+Scott: Right.
+
+592
+00:34:31,081 --> 00:34:35,280
+Scott: You got these like restaurants now where there's like an iPad on every table for you to order food with.
+
+593
+00:34:35,561 --> 00:34:38,620
+Scott: You go to the airport, there's iPads like lined up on everything, right?
+
+594
+00:34:38,801 --> 00:34:39,022
+Scott: Yeah.
+
+595
+00:34:39,103 --> 00:34:41,880
+Scott: All these no one's wiring ethernet to all these things.
+
+596
+00:34:41,980 --> 00:34:43,757
+Scott: And a lot of these devices don't even have ethernet.
+
+597
+00:34:44,000 --> 00:34:45,699
+Scott: They're just all Wi-Fi only.
+
+598
+00:34:45,841 --> 00:34:46,163
+Scott: Yeah.
+
+599
+00:34:46,204 --> 00:34:48,280
+Scott: So there's Wi-Fi everywhere to support these things.
+
+600
+00:34:48,360 --> 00:34:50,717
+Scott: Any place you go, hotels or anywhere.
+
+601
+00:34:51,639 --> 00:34:58,420
+Scott: Usually you'll be able to see an SSID for the public Wi-Fi for you to use to get your Internet and a whole bunch of other secured ones.
+
+602
+00:34:58,902 --> 00:35:00,920
+Scott: And those are for like the business to operate.
+
+603
+00:35:01,443 --> 00:35:03,280
+Rym: You know, oh, my God, I found this simple website.
+
+604
+00:35:03,300 --> 00:35:05,780
+Rym: I was just looking for like a cheat sheet of all the different protocols.
+
+605
+00:35:06,561 --> 00:35:08,220
+Rym: And there's one here that lists all of them.
+
+606
+00:35:08,360 --> 00:35:09,970
+Rym: And it has a fast facts, how it works.
+
+607
+00:35:10,071 --> 00:35:11,459
+Rym: and should I use it?
+
+608
+00:35:11,960 --> 00:35:14,359
+Rym: And for WEP, it's just no, no, no, no.
+
+609
+00:35:14,840 --> 00:35:19,200
+Rym: So WEP was the first one that really existed as far as any of you will care.
+
+610
+00:35:19,400 --> 00:35:19,480
+Scott: Yeah.
+
+611
+00:35:19,500 --> 00:35:23,620
+Scott: This is the first one that like normal consumer people were using, whatever.
+
+612
+00:35:23,780 --> 00:35:27,600
+Rym: Like in the old days, if you said of wireless router, your choices were WEP or nothing.
+
+613
+00:35:27,960 --> 00:35:28,062
+Scott: Yeah.
+
+614
+00:35:28,103 --> 00:35:28,778
+Scott: So we used WEP.
+
+615
+00:35:29,120 --> 00:35:29,853
+Rym: And you know what WEP stands for?
+
+616
+00:35:30,502 --> 00:35:31,539
+Rym: I never knew until now.
+
+617
+00:35:31,760 --> 00:35:32,760
+Scott: Wireless encryption protocol.
+
+618
+00:35:33,240 --> 00:35:34,780
+Rym: Wireless equivalency privacy.
+
+619
+00:35:35,081 --> 00:35:41,520
+Rym: Really meaning is equivalently as private as a wired network, wired equivalency privacy.
+
+620
+00:35:41,540 --> 00:35:41,825
+Rym: Oh, WEP.
+
+621
+00:35:42,980 --> 00:35:43,462
+Scott: But it's not.
+
+622
+00:35:44,046 --> 00:35:46,820
+Rym: Well, so it ostensibly was the problem.
+
+623
+00:35:47,421 --> 00:35:52,947
+Scott: Well, the first the first the practical problem with with WEP is that the keys could only contain hex values.
+
+624
+00:35:53,088 --> 00:35:57,579
+Scott: So zero through nine and eight through F. And you can make them kind of long, which you should.
+
+625
+00:35:58,022 --> 00:35:59,500
+Scott: And we made our as long as possible.
+
+626
+00:35:59,600 --> 00:36:06,600
+Scott: So ours was dead beef, dead beef, because you can spell that using only the letters A through F, followed by the number sixty nine, nine times.
+
+627
+00:36:06,800 --> 00:36:07,043
+Scott: Nice.
+
+628
+00:36:07,893 --> 00:36:08,459
+Rym: Nine times.
+
+629
+00:36:08,660 --> 00:36:09,599
+Rym: So it was dead beef.
+
+630
+00:36:09,881 --> 00:36:10,223
+Rym: Nice.
+
+631
+00:36:10,908 --> 00:36:12,459
+Rym: X nine is how you could remember that.
+
+632
+00:36:12,701 --> 00:36:13,004
+Rym: Right.
+
+633
+00:36:13,267 --> 00:36:14,540
+Rym: And that was what we came up with.
+
+634
+00:36:14,560 --> 00:36:16,880
+Scott: And we used it because that's all there was in those days.
+
+635
+00:36:17,061 --> 00:36:28,659
+Scott: And the problem and the other reason we used WEP, even after we knew WEP was dead, is that certain devices, for example, the original Nintendo DS only supported WEP and WEP is still better than nothing.
+
+636
+00:36:29,741 --> 00:36:34,823
+Scott: So even after the days where I knew we shouldn't have WEP, I made a separate subnetwork.
+
+637
+00:36:34,863 --> 00:36:35,768
+Scott: that was WEP only.
+
+638
+00:36:35,828 --> 00:36:38,180
+Scott: that was separated from everything else.
+
+639
+00:36:38,300 --> 00:36:42,320
+Scott: Couldn't get to the internal biz just so our DSS could still connect to the Internet.
+
+640
+00:36:43,040 --> 00:36:47,540
+Rym: So of all the issues with WEP, they're they're all kind of moot.
+
+641
+00:36:47,680 --> 00:36:49,539
+Rym: So we don't need to talk about like the pros and cons.
+
+642
+00:36:49,880 --> 00:36:51,429
+Scott: You use WEP and someone wants to.
+
+643
+00:36:51,489 --> 00:36:53,540
+Scott: they can just break it and see everything and do it.
+
+644
+00:36:53,600 --> 00:36:54,343
+Rym: That's it.
+
+645
+00:36:54,664 --> 00:37:00,640
+Rym: In like 2001, I want to say someone was just like, oh, here is a method to reliably attack WEP and gain access.
+
+646
+00:37:00,741 --> 00:37:01,143
+Rym: The end.
+
+647
+00:37:01,283 --> 00:37:06,200
+Scott: You can just get software for free from the Internet and put it on your laptop and walk around that you find a web network.
+
+648
+00:37:06,280 --> 00:37:11,020
+Scott: You can not only connect to it, but spy on everything everyone's doing on it wirelessly.
+
+649
+00:37:11,221 --> 00:37:11,482
+Rym: Yeah.
+
+650
+00:37:11,563 --> 00:37:14,820
+Scott: So don't use WEP unless you are making a honeypot.
+
+651
+00:37:15,021 --> 00:37:16,046
+Rym: So WEP had problems.
+
+652
+00:37:16,146 --> 00:37:19,120
+Scott: And independently of that, you really want to get your DS online.
+
+653
+00:37:19,280 --> 00:37:19,683
+Scott: Yeah.
+
+654
+00:37:19,784 --> 00:37:24,519
+Scott: And in which case, you better know what you're doing to make sure you don't accidentally have any important data going over that web.
+
+655
+00:37:24,880 --> 00:37:24,981
+Rym: Yeah.
+
+656
+00:37:25,001 --> 00:37:25,524
+Rym: It's very funny.
+
+657
+00:37:25,564 --> 00:37:28,503
+Rym: All these sites I'm going to don't actually describe how WEP works anywhere.
+
+658
+00:37:28,544 --> 00:37:30,240
+Rym: They just described that it was broken.
+
+659
+00:37:30,442 --> 00:37:31,899
+Scott: Yes, it's super broken, isn't it?
+
+660
+00:37:32,080 --> 00:37:42,792
+Scott: But the other thing is that not only are these security things used for encrypting the data going over the air so that no one can spy on you, they're also controlling access to the access point.
+
+661
+00:37:43,318 --> 00:37:43,460
+Scott: Right.
+
+662
+00:37:43,521 --> 00:37:45,580
+Scott: Like you type your password in to connect to the router.
+
+663
+00:37:46,044 --> 00:37:47,640
+Scott: You go, oh, what's the Wi-Fi password?
+
+664
+00:37:48,082 --> 00:37:48,303
+Scott: Right.
+
+665
+00:37:48,464 --> 00:37:50,960
+Scott: That's also part of WEP or WPA.
+
+666
+00:37:51,501 --> 00:37:51,722
+Scott: Right.
+
+667
+00:37:51,762 --> 00:38:02,159
+Scott: So, yeah, WEP is not only broken, meaning, hey, you can get spied on, but also WEP being broken means if you enable WEP on your router, someone can come and use your Internet and use all your bandwidth.
+
+668
+00:38:02,380 --> 00:38:02,581
+Scott: Yep.
+
+669
+00:38:03,003 --> 00:38:08,019
+Scott: So matters if you have limited bandwidth or someone's going to download stuff and your Internet is going to be all slow.
+
+670
+00:38:08,661 --> 00:38:13,162
+Rym: So WPA version one was an interim protocol because WEP was fucked and we needed something.
+
+671
+00:38:13,342 --> 00:38:13,523
+Rym: Right.
+
+672
+00:38:13,543 --> 00:38:18,560
+Rym: So WPA2 is just the final modern version of WPA effectively.
+
+673
+00:38:19,242 --> 00:38:23,440
+Rym: So as far as you're concerned, WPA2 is the only one that is used right.
+
+674
+00:38:23,521 --> 00:38:25,216
+Scott: There's no reason to use WPA1.
+
+675
+00:38:25,760 --> 00:38:29,500
+Scott: I've never seen a device in my life that only supports WPA1 and not two.
+
+676
+00:38:30,080 --> 00:38:32,617
+Scott: I see things that support WEP only, mainly the Nintendo DS.
+
+677
+00:38:33,340 --> 00:38:36,840
+Scott: Yeah, but I've never seen anything that supports WPA1 and not two.
+
+678
+00:38:36,980 --> 00:38:40,040
+Scott: So there's no reason to use one or enable one or whatever.
+
+679
+00:38:40,140 --> 00:38:40,988
+Scott: Just use two only.
+
+680
+00:38:41,230 --> 00:38:42,220
+Scott: Pretend one doesn't exist.
+
+681
+00:38:42,300 --> 00:38:43,278
+Scott: I don't even know why it's there.
+
+682
+00:38:44,060 --> 00:38:44,381
+Scott: I don't know.
+
+683
+00:38:45,624 --> 00:38:49,816
+Scott: Anyway, so what does WPA2 do that WEP does wrong?
+
+684
+00:38:52,101 --> 00:38:52,838
+Scott: It fucking works.
+
+685
+00:38:55,464 --> 00:38:59,060
+Rym: So WPA2 has a fundamental vulnerability.
+
+686
+00:38:59,600 --> 00:39:01,500
+Scott: Well, that we only discovered today.
+
+687
+00:39:02,180 --> 00:39:14,042
+Rym: And this is shocking because the vulnerability is so simple that it like one, I'm sure that there are a lot of people who've been exploiting this for a long time and we didn't know.
+
+688
+00:39:14,204 --> 00:39:15,579
+Scott: Well, it was discovered months ago.
+
+689
+00:39:16,760 --> 00:39:22,579
+Rym: No, I am confident that at least some state actors have probably been using this vulnerability for a long time.
+
+690
+00:39:22,780 --> 00:39:23,260
+Scott: Quite possibly.
+
+691
+00:39:23,340 --> 00:39:27,040
+Rym: Because this vulnerability has existed for as long as WPA2 is existing.
+
+692
+00:39:27,240 --> 00:39:27,361
+Scott: Right.
+
+693
+00:39:27,381 --> 00:39:33,040
+Scott: It's not something that's like wrong with some routers or some software, some OS's, although some are worse than others.
+
+694
+00:39:33,160 --> 00:39:36,180
+Rym: Yeah, like Linux is extra fucked compared to Windows.
+
+695
+00:39:36,240 --> 00:39:38,740
+Scott: I got an Ubuntu patch WPA supplicant today.
+
+696
+00:39:39,060 --> 00:39:39,261
+Rym: So, yep.
+
+697
+00:39:39,543 --> 00:39:42,740
+Rym: But like Linux is just way worse affected than Windows.
+
+698
+00:39:43,520 --> 00:39:45,720
+Scott: Well, it wasn't a problem actually in the Linux kernel.
+
+699
+00:39:45,820 --> 00:39:49,940
+Scott: It's a problem with WPA supplicant, which is the open source WPA thing.
+
+700
+00:39:50,060 --> 00:39:50,281
+Rym: Yep.
+
+701
+00:39:50,984 --> 00:39:55,700
+Scott: Anyway, anyway, so here's the is the vulnerability that was discovered.
+
+702
+00:39:55,780 --> 00:39:55,921
+Scott: Right.
+
+703
+00:39:55,961 --> 00:39:59,780
+Scott: So the way WPA2 works is that this is four way handshake.
+
+704
+00:39:59,942 --> 00:40:00,125
+Scott: Right.
+
+705
+00:40:00,145 --> 00:40:01,260
+Scott: Because you want to do this encryption.
+
+706
+00:40:01,380 --> 00:40:02,083
+Scott: That's really good.
+
+707
+00:40:02,103 --> 00:40:16,559
+Scott: And it's actually the encryption that it uses has mathematical proofs guaranteeing that it's not going to get broken except by brute force, which is, you know, pretty impossible because by the time they brute force it, your Wi-Fi session is done and you're going to somewhere else with a different key.
+
+708
+00:40:16,660 --> 00:40:16,881
+Scott: Right.
+
+709
+00:40:16,901 --> 00:40:17,062
+Scott: Yep.
+
+710
+00:40:17,924 --> 00:40:18,125
+Scott: So
+
+711
+00:40:18,406 --> 00:40:31,240
+Rym: the an important point to kind of bring up is that pretty much all encryption in a practical sense, like all the data that's actually being encrypted and almost every protocol you'll ever use uses symmetric keys, meaning both sides have the same key, which
+
+712
+00:40:31,624 --> 00:40:32,940
+Scott: so basically you do this handshake.
+
+713
+00:40:33,140 --> 00:40:42,480
+Scott: And what happens during the handshake is you and the router cooperate to make a key and you end up making the same key and you encrypt and decrypt everything using that key.
+
+714
+00:40:42,801 --> 00:40:50,040
+Scott: The reason for that, no one else using the same Wi-Fi or is using the same key and they probably won't because every time you connect, you make a new key.
+
+715
+00:40:50,220 --> 00:40:59,299
+Rym: Now, the reason for this is that public private key not only provides a way to encrypt data transfer, but it proves who you are.
+
+716
+00:40:59,883 --> 00:41:01,919
+Rym: You can prove that you are the person you say you are.
+
+717
+00:41:03,181 --> 00:41:15,522
+Rym: So the drawback is that asymmetric encryption like that takes a relatively huge amount of computing resources to actually transmit encrypted data and then decode that data and vice versa.
+
+718
+00:41:15,904 --> 00:41:20,642
+Scott: And also you have to somehow get your public key onto the router and vice versa.
+
+719
+00:41:20,782 --> 00:41:27,320
+Rym: You can like a key exchange, but you can send your public key in the clear because by definition, public keys are not secret.
+
+720
+00:41:27,702 --> 00:41:27,923
+Rym: Right.
+
+721
+00:41:28,063 --> 00:41:31,100
+Rym: The whole point is that I can give you a public key in the clear.
+
+722
+00:41:31,443 --> 00:41:32,739
+Rym: I can broadcast it to the world.
+
+723
+00:41:33,140 --> 00:41:37,762
+Rym: You give me the same broadcast to the world and anyone who got both those keys can't do shit with them.
+
+724
+00:41:39,327 --> 00:41:43,580
+Rym: But because this is so computationally expensive, you only use that.
+
+725
+00:41:43,800 --> 00:41:47,382
+Scott: Your Wi-Fi would be kind of slow because your CPU would have to work overtime to do that encryption.
+
+726
+00:41:47,502 --> 00:41:51,700
+Scott: So we need easier encryption so Wi-Fi doesn't get ridiculously slow.
+
+727
+00:41:51,980 --> 00:41:52,101
+Rym: Yep.
+
+728
+00:41:52,161 --> 00:41:53,487
+Rym: So the problem is symmetric key.
+
+729
+00:41:53,808 --> 00:41:57,123
+Rym: is that the key that we share, we both have to agree on the same key.
+
+730
+00:41:57,987 --> 00:42:01,100
+Rym: And if anyone else finds out that key, we're hosed.
+
+731
+00:42:01,481 --> 00:42:07,724
+Rym: So you use the asymmetric encryption to generate and share the key that you'll then actually use.
+
+732
+00:42:07,985 --> 00:42:12,403
+Rym: You never actually send that key any other time except during that handshake.
+
+733
+00:42:12,484 --> 00:42:12,665
+Scott: Right.
+
+734
+00:42:12,685 --> 00:42:27,460
+Scott: But anyway, so here's what happens, right, is this is handshaking process that we're not going to explain the details of in which your computer or phone or iPad and the router that your access point you're connecting to negotiate the shared key you're going to use for this session only.
+
+735
+00:42:28,181 --> 00:42:31,799
+Scott: And then all the further data you send between each other is going to use that key.
+
+736
+00:42:32,202 --> 00:42:36,104
+Scott: And now no one else using that access point or anyone else around is going to read any of that data.
+
+737
+00:42:36,165 --> 00:42:37,639
+Scott: But here's the thing.
+
+738
+00:42:38,281 --> 00:42:44,820
+Scott: That handshake part, you're not sending anything during the handshake part that will allow anyone to break the encryption.
+
+739
+00:42:44,960 --> 00:42:47,060
+Scott: The encryption itself cannot be broken.
+
+740
+00:42:47,821 --> 00:42:55,798
+Scott: What can be done is tricking one or both sides into using a different key is basically one part of the handshake.
+
+741
+00:42:56,524 --> 00:42:57,152
+Scott: It's wireless.
+
+742
+00:42:57,192 --> 00:42:57,840
+Scott: It's not reliable.
+
+743
+00:42:58,002 --> 00:42:58,224
+Scott: Right.
+
+744
+00:42:58,568 --> 00:42:59,620
+Scott: So they're writing the protocol.
+
+745
+00:42:59,680 --> 00:43:05,460
+Scott: They're like, oh, yeah, if this doesn't get sent or whatever, just send it again because, you know, it might mess up.
+
+746
+00:43:05,580 --> 00:43:07,240
+Scott: You had to send it multiple times just in case.
+
+747
+00:43:08,163 --> 00:43:08,404
+Scott: Right.
+
+748
+00:43:08,424 --> 00:43:15,139
+Scott: So the third part of the handshake, it's a four way handshake, is the part where it sends basically this nonce key thing.
+
+749
+00:43:15,641 --> 00:43:17,960
+Rym: A nonce is a actually random number.
+
+750
+00:43:18,180 --> 00:43:23,800
+Rym: This is the simple way to think about it that you use to initialize or sort of set a key.
+
+751
+00:43:24,000 --> 00:43:24,677
+Rym: It's not the key.
+
+752
+00:43:25,141 --> 00:43:30,146
+Rym: It is a component to generate a key such that the key is unlikely to be able to be reverse engineered.
+
+753
+00:43:30,267 --> 00:43:31,499
+Rym: There's a lot of reasons why you use nonce.
+
+754
+00:43:31,661 --> 00:43:32,867
+Scott: Regardless, you can.
+
+755
+00:43:32,967 --> 00:43:36,252
+Scott: what you can do is first you establish a man in the middle relationship.
+
+756
+00:43:36,557 --> 00:43:36,740
+Scott: Right.
+
+757
+00:43:37,040 --> 00:43:43,082
+Scott: So the way one way you can do this would be to set up an identical Wi-Fi access point on a different channel.
+
+758
+00:43:44,006 --> 00:43:49,480
+Scott: And then you trick, say, someone's iPad and connecting to you and you forward their traffic to the router.
+
+759
+00:43:50,303 --> 00:43:51,680
+Scott: Big deal if you do this right.
+
+760
+00:43:51,800 --> 00:44:00,644
+Scott: Nobody cares because what you're getting encrypted data from an iPad, sending it to where it's supposed to go and then receiving encrypted data from the router and sending it back to the iPad.
+
+761
+00:44:00,967 --> 00:44:02,700
+Scott: The iPad thinks the Internet's working fine.
+
+762
+00:44:03,003 --> 00:44:04,439
+Scott: You're not stealing any info.
+
+763
+00:44:04,805 --> 00:44:05,596
+Scott: Who gives a shit?
+
+764
+00:44:05,678 --> 00:44:05,840
+Scott: Right.
+
+765
+00:44:05,901 --> 00:44:07,880
+Scott: So we don't care if someone does that, whatever.
+
+766
+00:44:09,001 --> 00:44:09,603
+Scott: But here's the thing.
+
+767
+00:44:10,326 --> 00:44:19,708
+Scott: I'm intercepting the handshaky part and the handshaky part just to change a little bit here and resend the handshaky part a few times after it already happened.
+
+768
+00:44:20,196 --> 00:44:20,420
+Scott: Right.
+
+769
+00:44:20,820 --> 00:44:25,120
+Rym: Because then what is it forces you to use a known nonce, I believe is the vulnerability.
+
+770
+00:44:25,520 --> 00:44:25,681
+Scott: Exactly.
+
+771
+00:44:25,721 --> 00:44:31,939
+Scott: So now I know what your nonce is and I've made you use my nonce and I already know what the key is going to be and such.
+
+772
+00:44:32,460 --> 00:44:36,980
+Rym: Now, I think it's that this is where it's worse with Linux, because in Linux it always goes to all zeros.
+
+773
+00:44:37,240 --> 00:44:40,677
+Scott: Yeah, there was the bug in WPA supplicant that was just fixed because I got the.
+
+774
+00:44:41,059 --> 00:44:42,084
+Scott: I saw the patch today.
+
+775
+00:44:43,169 --> 00:44:45,640
+Scott: It already got deployed on a lot of Linux distros.
+
+776
+00:44:45,820 --> 00:44:46,719
+Scott: Yeah, fixes that.
+
+777
+00:44:47,001 --> 00:44:52,673
+Scott: But yeah, without that patch, including other Linux devices like your Android phones, it's going to be all zeros.
+
+778
+00:44:53,801 --> 00:44:54,932
+Scott: So dirt better better.
+
+779
+00:44:56,781 --> 00:45:03,063
+Scott: Anyway, once you do this, you can now decrypt all the Wi-Fi traffic between the device and the router.
+
+780
+00:45:03,103 --> 00:45:07,600
+Scott: So that might not be too bad, actually, because they're just sniffing.
+
+781
+00:45:07,801 --> 00:45:10,340
+Scott: How much stuff are you sending that's not encrypted?
+
+782
+00:45:10,502 --> 00:45:11,540
+Rym: For example, let's see.
+
+783
+00:45:11,680 --> 00:45:11,882
+Rym: I'm on.
+
+784
+00:45:11,963 --> 00:45:13,356
+Rym: every site I'm on right now is HTTPS.
+
+785
+00:45:14,180 --> 00:45:17,520
+Scott: So they're going to see a bunch of HTTPS traffic and graduations.
+
+786
+00:45:17,660 --> 00:45:18,286
+Scott: You see nothing.
+
+787
+00:45:18,347 --> 00:45:19,519
+Scott: It's already encrypted again.
+
+788
+00:45:19,821 --> 00:45:27,880
+Rym: And remember, even if they see the handshake, because HTTPS also uses symmetric keys, it only uses the asymmetric keys to initially change the keys.
+
+789
+00:45:28,820 --> 00:45:30,360
+Rym: Everything that piece is also encrypted.
+
+790
+00:45:30,560 --> 00:45:30,661
+Scott: Right.
+
+791
+00:45:30,681 --> 00:45:36,939
+Scott: So they can see anything that you're sending that's not encrypted, which they could already see anyway if they're out on the Internet because it's not encrypted.
+
+792
+00:45:37,524 --> 00:45:38,899
+Scott: But what else could they do?
+
+793
+00:45:39,300 --> 00:45:46,700
+Rym: Well, well, this is where it gets complicated, because what they can do depends on what specific handshake algorithm you're using.
+
+794
+00:45:46,921 --> 00:45:47,162
+Scott: Right.
+
+795
+00:45:47,463 --> 00:45:52,542
+Scott: Also, what you can do depends on how clever you are, what other settings are on the network.
+
+796
+00:45:52,643 --> 00:45:54,780
+Rym: So I believe most people use AES.
+
+797
+00:45:55,380 --> 00:45:55,641
+Scott: Yes.
+
+798
+00:45:56,344 --> 00:45:58,070
+Rym: So that's the one that we should probably talk about.
+
+799
+00:45:58,131 --> 00:46:02,320
+Scott: is that WPA2 can be used with different encryption mechanisms.
+
+800
+00:46:02,540 --> 00:46:04,177
+Rym: And there's one one you're using is AES.
+
+801
+00:46:04,680 --> 00:46:06,400
+Scott: Don't use the TKIP, but don't use the other one.
+
+802
+00:46:06,620 --> 00:46:08,491
+Rym: So apparently there's a GCMP.
+
+803
+00:46:08,531 --> 00:46:10,060
+Rym: is the one I didn't actually know anything about.
+
+804
+00:46:10,240 --> 00:46:11,120
+Scott: I never heard of it before today.
+
+805
+00:46:11,380 --> 00:46:12,499
+Rym: Galois counter mode protocol.
+
+806
+00:46:12,722 --> 00:46:14,380
+Rym: And I just learned a lot about it.
+
+807
+00:46:14,440 --> 00:46:15,169
+Rym: It's kind of fascinating.
+
+808
+00:46:15,210 --> 00:46:15,899
+Rym: We'll get back to that.
+
+809
+00:46:16,101 --> 00:46:17,808
+Rym: Because that one you're super fucked.
+
+810
+00:46:18,672 --> 00:46:21,063
+Rym: as opposed to a yes, we're just kind of regular fucked.
+
+811
+00:46:21,725 --> 00:46:24,214
+Rym: So with a yes, they can definitely snoop all your.
+
+812
+00:46:24,736 --> 00:46:27,859
+Rym: I'll quote this article because this is much better research than what I'm doing.
+
+813
+00:46:28,540 --> 00:46:38,180
+Rym: An attacker can decrypt network packets, making it possible to read their contents, and they can inject malicious content into TCP packet streams.
+
+814
+00:46:38,480 --> 00:46:40,200
+Scott: Yeah, because I mean, they're man in the middle now.
+
+815
+00:46:40,280 --> 00:46:40,663
+Scott: So they can.
+
+816
+00:46:40,764 --> 00:46:43,120
+Scott: you know, you're visiting a website and the JPEG comes along.
+
+817
+00:46:43,260 --> 00:46:44,240
+Rym: Well, they're not a full man in the middle.
+
+818
+00:46:44,280 --> 00:46:51,702
+Rym: They can not forge messages, so they cannot pretend to be the person that they attack.
+
+819
+00:46:51,742 --> 00:46:55,868
+Scott: No, but if you're if you're receiving a JPEG from a website, I'll just replace that JPEG.
+
+820
+00:46:55,909 --> 00:46:56,195
+Scott: Go see.
+
+821
+00:46:57,385 --> 00:46:57,773
+Scott: And I'll go.
+
+822
+00:46:58,240 --> 00:47:00,239
+Scott: He shows up on Google.com instead of the Google logo.
+
+823
+00:47:00,841 --> 00:47:05,120
+Rym: Yeah, but they so basically quote the key itself cannot be broken or forged.
+
+824
+00:47:05,522 --> 00:47:08,040
+Rym: So the attacker cannot forge a key and join the network.
+
+825
+00:47:08,380 --> 00:47:10,760
+Rym: Instead, they have to use the cloned access point.
+
+826
+00:47:10,900 --> 00:47:13,899
+Rym: They use the same MAC address as the access point of the targeted network.
+
+827
+00:47:14,121 --> 00:47:14,302
+Rym: Right.
+
+828
+00:47:14,342 --> 00:47:15,146
+Scott: You don't know what.
+
+829
+00:47:15,206 --> 00:47:17,820
+Scott: you still don't know what like what the WPA password is.
+
+830
+00:47:17,940 --> 00:47:19,240
+Scott: You can't connect to the router.
+
+831
+00:47:19,702 --> 00:47:22,600
+Scott: All you're doing is looking at all the data that's going back and forth.
+
+832
+00:47:22,680 --> 00:47:30,079
+Rym: That is why my news about Estonia is so devastating, because in that one, you can derive the actual key.
+
+833
+00:47:30,381 --> 00:47:30,522
+Scott: Right.
+
+834
+00:47:30,582 --> 00:47:32,880
+Scott: This isn't a case where the encryption itself is broken.
+
+835
+00:47:33,341 --> 00:47:39,464
+Scott: It's a case where somebody forced you to use a shitty key so that they can see what they get.
+
+836
+00:47:39,484 --> 00:47:42,960
+Rym: The handshake is broken, compromising the session key.
+
+837
+00:47:43,101 --> 00:47:45,700
+Rym: The symmetric key used for just that conversation.
+
+838
+00:47:45,921 --> 00:47:46,486
+Scott: Yeah, I didn't.
+
+839
+00:47:46,547 --> 00:47:47,860
+Scott: I didn't unlock your lock.
+
+840
+00:47:48,341 --> 00:47:51,719
+Scott: I made it so that the key to your house is now a flat key with no bumps on it.
+
+841
+00:47:51,921 --> 00:47:52,063
+Rym: Yeah.
+
+842
+00:47:52,346 --> 00:47:53,318
+Scott: And then I opened the door.
+
+843
+00:47:54,202 --> 00:47:55,640
+Scott: It's still a perfectly secure lock.
+
+844
+00:47:55,861 --> 00:47:56,979
+Scott: Your key is just really stupid.
+
+845
+00:47:57,380 --> 00:48:01,282
+Rym: So if you're using TKIP, which if you're in a corporate environment, they might have like set it up.
+
+846
+00:48:01,504 --> 00:48:07,060
+Rym: There's a lot of reasons why people use TKIP, but I don't I don't want to get into the details of TKIP because I don't know them offhand anymore.
+
+847
+00:48:08,600 --> 00:48:12,360
+Rym: The message integrity code can actually be recovered.
+
+848
+00:48:13,141 --> 00:48:16,320
+Rym: This allows them to replay captured packets to the network.
+
+849
+00:48:16,720 --> 00:48:23,462
+Rym: They can also forge and transmit entirely new packets to the targeted client from the access point.
+
+850
+00:48:23,482 --> 00:48:27,865
+Rym: So they cannot pretend to be you, but they can pretend to be the person you're talking to.
+
+851
+00:48:28,669 --> 00:48:30,700
+Rym: Now, they can't break the HTTPS.
+
+852
+00:48:32,220 --> 00:48:38,463
+Rym: However, you can't inject legitimate data into an HTTPS stream because you don't know the encryption.
+
+853
+00:48:38,523 --> 00:48:38,764
+Rym: Right.
+
+854
+00:48:38,784 --> 00:48:43,940
+Scott: If you're using a VPN, let's say that would is still on another level, be another layer of encryption.
+
+855
+00:48:44,340 --> 00:48:46,000
+Scott: They wouldn't see anything you're doing.
+
+856
+00:48:46,060 --> 00:48:48,879
+Scott: They'd see just a VPN connection and they'd have to break that, too.
+
+857
+00:48:49,360 --> 00:48:50,184
+Scott: Well, they probably couldn't.
+
+858
+00:48:50,244 --> 00:48:55,695
+Scott: However, some things don't go over the VPN, like, say, the DHCP negotiation.
+
+859
+00:48:55,735 --> 00:48:56,179
+Scott: that happens.
+
+860
+00:48:56,881 --> 00:49:04,343
+Scott: So what they can do is you could during the DHCP process, you forge some packets or inject.
+
+861
+00:49:04,785 --> 00:49:08,160
+Scott: You could trick someone's computer into using a different DNS server.
+
+862
+00:49:08,642 --> 00:49:12,733
+Scott: And now suddenly you send in all sorts of weird websites instead of the ones you're trying to go to.
+
+863
+00:49:13,521 --> 00:49:13,802
+Rym: Yeah.
+
+864
+00:49:13,822 --> 00:49:19,760
+Rym: Or you can do just like force them off the network and then try to reconnect as them, depending on what mode, like what to reconnect is them.
+
+865
+00:49:19,820 --> 00:49:21,499
+Scott: You would need to get the WPA password.
+
+866
+00:49:21,800 --> 00:49:31,259
+Rym: So let's go down one layer more because GCMP, which I didn't know a lot about until just now, is not commonly used, but I've never seen a route that has it.
+
+867
+00:49:31,701 --> 00:49:42,119
+Rym: So I'm going to read a quote from the article, given that GCMP is expected to be adopted at a high rate in the next few years under the WIGIG name, W-I-G-I-G.
+
+868
+00:49:43,164 --> 00:49:44,620
+Rym: This is a worrying situation.
+
+869
+00:49:44,860 --> 00:49:59,119
+Rym: So apparently GCMP, the Galois counter mode protocol, the benefit of using it over AES is that it has the same level of cryptographic reliability, meaning it is just as mathematically secure.
+
+870
+00:49:59,240 --> 00:49:59,619
+Rym: That's good.
+
+871
+00:49:59,860 --> 00:50:04,380
+Rym: This exchange, but it is way less computationally intensive.
+
+872
+00:50:04,481 --> 00:50:06,960
+Rym: It is super efficient and super fast.
+
+873
+00:50:08,562 --> 00:50:16,358
+Rym: And for reasons I don't want to get into, it allows parallel encryption and decryption because one one block of data is not.
+
+874
+00:50:16,740 --> 00:50:18,919
+Scott: So you can basically do it better when you have more cores.
+
+875
+00:50:19,404 --> 00:50:19,606
+Rym: Yeah.
+
+876
+00:50:19,747 --> 00:50:20,919
+Scott: Or modern computers do.
+
+877
+00:50:21,080 --> 00:50:30,020
+Rym: Or if you have an access point or some piece of hardware, you can have a hardware chip that does encryption in parallel and save power, save CPU cycles.
+
+878
+00:50:30,141 --> 00:50:30,566
+Rym: That's good.
+
+879
+00:50:30,931 --> 00:50:31,640
+Rym: Yeah, it's great.
+
+880
+00:50:32,163 --> 00:50:35,139
+Rym: The problem is it's for now, this is what I don't understand.
+
+881
+00:50:36,021 --> 00:50:45,859
+Rym: Something about the way the GCMP system works means that if the nonce is known, GCMP gets extra fucked.
+
+882
+00:50:46,300 --> 00:50:50,600
+Rym: So, quote, it is possible to replay and decrypt packets.
+
+883
+00:50:51,160 --> 00:50:56,060
+Rym: Additionally, it is possible to recover the authentication key, which is GCMPs.
+
+884
+00:50:56,782 --> 00:51:00,580
+Rym: Connect to your Wi-Fi is used to protect communications in both directions.
+
+885
+00:51:01,361 --> 00:51:06,499
+Scott: So you can actually find out if someone connects to your Wi-Fi, they can now access your private network resources.
+
+886
+00:51:06,840 --> 00:51:09,615
+Rym: They can forge packets to you and from you.
+
+887
+00:51:10,680 --> 00:51:18,459
+Scott: Like if you connected to my Wi-Fi, got my Wi-Fi password, you can start deleting stuff off my NAS or I could connect or you're connected to your Wi-Fi.
+
+888
+00:51:19,200 --> 00:51:23,000
+Rym: I can connect to your Wi-Fi and pretend to be you connecting to websites.
+
+889
+00:51:24,220 --> 00:51:30,107
+Rym: So, yeah, this is horrifying and it's probably not going to be fixed in a lot of places.
+
+890
+00:51:30,168 --> 00:51:30,840
+Scott: A lot of route.
+
+891
+00:51:30,940 --> 00:51:37,660
+Scott: You basically have to update router firmwares and also, you know, device firmwares, devices and routers that are not maintained by the manufacturer.
+
+892
+00:51:38,060 --> 00:51:43,079
+Scott: Anything with Wi-Fi, anything, every single Wi-Fi device you own needs a patch to its software or firmware.
+
+893
+00:51:43,302 --> 00:51:45,420
+Scott: And a lot of them are just never going to be patched.
+
+894
+00:51:45,521 --> 00:51:46,740
+Scott: Even ones that have patches.
+
+895
+00:51:46,960 --> 00:51:50,663
+Scott: What it's like, you think your local restaurant is going to update its router firmware?
+
+896
+00:51:50,683 --> 00:51:53,720
+Scott: No, they don't even know about this, even though it's all over the news.
+
+897
+00:51:54,061 --> 00:52:02,040
+Scott: And then what's going to happen is, I guess, until they buy a new point of sale system, every credit card they swipe, somebody could sit in that restaurant and look at all of them.
+
+898
+00:52:02,301 --> 00:52:02,582
+Rym: Yep.
+
+899
+00:52:02,903 --> 00:52:08,860
+Rym: Internet of Things devices, point of sale devices, internal network devices that are used by companies.
+
+900
+00:52:09,080 --> 00:52:12,320
+Scott: Now, the bad the bad news is that it's affecting every Wi-Fi everywhere.
+
+901
+00:52:12,780 --> 00:52:14,680
+Scott: The good news is that you have to do it.
+
+902
+00:52:14,760 --> 00:52:17,220
+Scott: You can't just suddenly do attack everywhere.
+
+903
+00:52:17,320 --> 00:52:31,638
+Scott: You have to do specific attacks on a specific access points and specific devices, meaning if you run a network, you got to worry about this a lot physically be close enough to the place you're attacking within Wi-Fi range with your computer, specifically trying to do this.
+
+904
+00:52:31,860 --> 00:52:32,202
+Scott: Yeah.
+
+905
+00:52:32,222 --> 00:52:32,564
+Scott: Right.
+
+906
+00:52:32,644 --> 00:52:36,023
+Scott: So it's not like I can just suddenly, you know, fuck everyone on the whole Internet.
+
+907
+00:52:36,043 --> 00:52:39,199
+Scott: Right now, with SSL, there is an interesting thing.
+
+908
+00:52:39,881 --> 00:52:41,033
+Scott: Most if you can.
+
+909
+00:52:41,275 --> 00:52:41,700
+Rym: Oh, yeah.
+
+910
+00:52:41,760 --> 00:52:42,604
+Rym: I forgot about that part.
+
+911
+00:52:42,624 --> 00:52:50,440
+Scott: If you properly configure your SSL website with a thing called HSTS, that means let's say you visit Google dot com.
+
+912
+00:52:50,561 --> 00:52:50,742
+Scott: Right.
+
+913
+00:52:51,025 --> 00:52:52,820
+Scott: And you visit Google dot com with HTTPS.
+
+914
+00:52:53,900 --> 00:52:59,383
+Scott: The HSTS will tell your Web browser, yo, you see this Google dot com you just visited?
+
+915
+00:52:59,685 --> 00:53:01,516
+Scott: Yeah, I just visited Google dot com with the SSL.
+
+916
+00:53:02,241 --> 00:53:03,170
+Scott: It's all encrypted and shit.
+
+917
+00:53:03,191 --> 00:53:03,413
+Scott: It's like.
+
+918
+00:53:03,473 --> 00:53:03,918
+Scott: I know, bro.
+
+919
+00:53:04,820 --> 00:53:11,641
+Scott: But but the thing is, we know you and me that this Google right has HTTPS working, right?
+
+920
+00:53:11,843 --> 00:53:12,106
+Scott: Yeah.
+
+921
+00:53:12,186 --> 00:53:12,348
+Scott: Yeah.
+
+922
+00:53:12,368 --> 00:53:13,559
+Scott: We know we're using it right now.
+
+923
+00:53:13,760 --> 00:53:17,020
+Scott: That's why we're having this encrypted conversation to be safe.
+
+924
+00:53:17,901 --> 00:53:20,378
+Scott: Never talk to Google again unless it's HTTPS.
+
+925
+00:53:20,901 --> 00:53:23,720
+Scott: Do not talk to Google again with HTTP ever.
+
+926
+00:53:24,000 --> 00:53:24,542
+Scott: Don't do it.
+
+927
+00:53:24,743 --> 00:53:32,160
+Rym: Now, a lot of websites, for good reasons, will gracefully fail to non encrypted traffic if SSL that will TLS doesn't work.
+
+928
+00:53:32,301 --> 00:53:33,516
+Scott: No, that's not what happens at all.
+
+929
+00:53:34,580 --> 00:53:36,040
+Rym: Are you talking about the vulnerability specifically?
+
+930
+00:53:36,340 --> 00:53:36,480
+Scott: No.
+
+931
+00:53:36,721 --> 00:53:43,900
+Scott: So the what HSTS is, is that is that thing which says, yo, Web browser never talked to me unencrypted ever again.
+
+932
+00:53:43,960 --> 00:53:51,900
+Scott: And the Web browser says, OK, I promise I will never talk to this domain again without SSL because I know that that domain has SSL that works.
+
+933
+00:53:52,481 --> 00:53:56,340
+Scott: And it sent me the HSTS thing, which told me never talk to it again.
+
+934
+00:53:56,480 --> 00:54:10,120
+Scott: But meaning if it tries to talk to you unencrypted, right, if your Web browser, if you then go into your Web browser and type in HTTP, Google dot com without an S, it'll just switch to S. because HSTS said never use you never use non S with me.
+
+935
+00:54:10,260 --> 00:54:13,440
+Rym: And if S is really blocked or broken in some way, it just won't let you connect.
+
+936
+00:54:13,640 --> 00:54:17,842
+Scott: It won't let you connect to that website because because the Web server configured HSTS.
+
+937
+00:54:17,923 --> 00:54:24,364
+Rym: Now, it'd be like if every time I came to Scott's house, I said, don't open the door for me unless I say this magic code right now and then I come and don't say the code.
+
+938
+00:54:24,526 --> 00:54:25,680
+Rym: You ain't opening the door right now.
+
+939
+00:54:25,740 --> 00:54:29,839
+Scott: Let's say that this website, you know, doesn't use HSTS.
+
+940
+00:54:30,280 --> 00:54:32,200
+Scott: They configured their SSL wrong.
+
+941
+00:54:32,641 --> 00:54:43,519
+Scott: That means you can visit that website with us or without us, whichever one you like and your Web browser won't refuse, even though it once visited with us and they have us set up and you think you're encrypted.
+
+942
+00:54:44,062 --> 00:54:49,888
+Scott: You know, when you visit the next time, you could not use S and the website will still work and your browser doesn't care because it doesn't have HSTS turned on.
+
+943
+00:54:53,360 --> 00:54:57,262
+Rym: There were a lot of reasons why that was common, but there's no need for that in the modern era.
+
+944
+00:54:57,342 --> 00:55:03,100
+Scott: So the person who configured that website, the Web, you know, that company right, say Twitter, Twitter has it correct.
+
+945
+00:55:03,200 --> 00:55:04,679
+Scott: But let's say Twitter didn't have it correct.
+
+946
+00:55:05,121 --> 00:55:09,262
+Scott: You visit Twitter of HTTPS one day and then your browser lets you visit without the next day.
+
+947
+00:55:09,282 --> 00:55:10,879
+Scott: And you're not paying attention to the green lock.
+
+948
+00:55:11,403 --> 00:55:11,604
+Scott: Right.
+
+949
+00:55:11,966 --> 00:55:14,400
+Scott: So here's what can happen with this Wi-Fi vulnerability.
+
+950
+00:55:14,940 --> 00:55:19,600
+Scott: Someone does this Wi-Fi attack to the WPA and they get in between you and the router.
+
+951
+00:55:20,221 --> 00:55:28,160
+Scott: And then what they do is they visit the Twitter or the Google and they handle all the SSL between them and the Google.
+
+952
+00:55:28,320 --> 00:55:31,640
+Rym: So as far as Twitter is concerned, you're a perfectly valid client, right?
+
+953
+00:55:31,700 --> 00:55:33,860
+Scott: Because this other person is the Twitter client.
+
+954
+00:55:34,261 --> 00:55:39,560
+Scott: But then in between you and the evil person, you're not using SSL, right?
+
+955
+00:55:39,781 --> 00:55:44,722
+Scott: You're sending unencrypted stuff to the attacker and they're using SSL to talk to the website.
+
+956
+00:55:45,203 --> 00:55:51,204
+Scott: And now, because there's no HSTS, your browser is perfectly OK, not using HTTPS.
+
+957
+00:55:51,667 --> 00:55:54,964
+Scott: And you weren't paying attention that you're visiting Twitter and there's no green lock.
+
+958
+00:55:55,547 --> 00:55:57,859
+Scott: So you didn't realize it because you weren't looking it up there.
+
+959
+00:55:58,061 --> 00:55:58,404
+Scott: Yeah.
+
+960
+00:55:58,444 --> 00:55:58,707
+Scott: Right.
+
+961
+00:55:58,969 --> 00:56:00,140
+Scott: The green lock would be gone.
+
+962
+00:56:00,422 --> 00:56:00,604
+Scott: Right.
+
+963
+00:56:00,624 --> 00:56:02,340
+Scott: So if you pay attention, you can protect yourself.
+
+964
+00:56:02,680 --> 00:56:04,060
+Rym: But Twitter would otherwise work fine.
+
+965
+00:56:04,340 --> 00:56:05,799
+Scott: But Twitter would otherwise work fine.
+
+966
+00:56:06,302 --> 00:56:11,420
+Scott: So now the reason I notice the green lock missing and now they got you.
+
+967
+00:56:12,281 --> 00:56:19,598
+Rym: And the broader reason why this works is that you can use asymmetric encryption to prove who both sides are.
+
+968
+00:56:20,161 --> 00:56:28,760
+Rym: But in the way that the way that is used in the Web is me as a client or a browser use it to prove that the website I'm connecting to is who they say they are.
+
+969
+00:56:29,200 --> 00:56:31,798
+Rym: The website does not use it to prove that I am rimmed.
+
+970
+00:56:32,120 --> 00:56:36,020
+Rym: The website uses it to prove that I am still the same person who said hello earlier.
+
+971
+00:56:36,780 --> 00:56:39,239
+Rym: It doesn't care who I am and only cares that I'm still the same person.
+
+972
+00:56:40,061 --> 00:56:52,180
+Rym: So as a result, it doesn't have any way to verify the real person on the other end, because if you tried to make every person on the Internet use a public key to prove who they are when they connect to websites, that would be a very bad situation.
+
+973
+00:56:53,160 --> 00:57:06,500
+Scott: Anyway, so, yeah, this is if anyone wants to commit a targeted attack against Wi-Fi, you know, sit in a Starbucks and collect credit card numbers, you know, anything like that, it is very possible now.
+
+974
+00:57:06,640 --> 00:57:13,723
+Scott: So I recommend use a VPN and I recommend that you not try not to connect to any shady Wi-Fi.
+
+975
+00:57:13,844 --> 00:57:14,066
+Scott: Yep.
+
+976
+00:57:14,428 --> 00:57:16,300
+Scott: And use a VPN anyway.
+
+977
+00:57:17,121 --> 00:57:28,279
+Scott: More importantly, and there is one piece of good news to your DNS and make it so that it always uses Google DNS and never the DNS the DTP server tells you to at least for your Wi-Fi, iPhone, iPad devices.
+
+978
+00:57:28,503 --> 00:57:29,560
+Rym: But there is some good news.
+
+979
+00:57:29,900 --> 00:57:40,700
+Rym: If your device, your client device, like your phone, all your devices, but if your phone is patched, even if a Wi-Fi router is not patched, they cannot attack your session.
+
+980
+00:57:41,823 --> 00:57:42,044
+Scott: Right.
+
+981
+00:57:42,064 --> 00:57:45,619
+Scott: So make sure you patch everything you own, your phone, anything that has Wi-Fi.
+
+982
+00:57:46,400 --> 00:57:48,860
+Scott: Try to get a patch for it if you can, especially your router.
+
+983
+00:57:49,921 --> 00:57:50,102
+Rym: Yep.
+
+984
+00:57:51,046 --> 00:57:54,260
+Rym: The broader question is that people are really freaking out about this.
+
+985
+00:57:54,340 --> 00:57:56,774
+Rym: But I saw a great quote on Twitter from a security researcher.
+
+986
+00:57:56,795 --> 00:57:57,720
+Rym: that really is important.
+
+987
+00:57:58,402 --> 00:58:05,319
+Rym: If you are the kind of organization or person where security matters and you're freaking out about the zero day, you have Wi-Fi on.
+
+988
+00:58:05,640 --> 00:58:05,965
+Rym: No, no, no.
+
+989
+00:58:06,006 --> 00:58:06,980
+Rym: There's a much broader question.
+
+990
+00:58:08,020 --> 00:58:15,460
+Rym: The idea that any given day a zero day could appear and you got to figure out what to do about it should be a standard operating procedure.
+
+991
+00:58:15,740 --> 00:58:16,062
+Scott: That's also.
+
+992
+00:58:16,082 --> 00:58:18,599
+Rym: your meeting this morning should not have been, oh, God, what do I do?
+
+993
+00:58:19,161 --> 00:58:21,700
+Rym: It should have been a crazy zero day happened.
+
+994
+00:58:21,961 --> 00:58:23,160
+Rym: Let's do the procedure.
+
+995
+00:58:24,221 --> 00:58:30,342
+Rym: So if you're blindsided and panicking about this, that's going to happen to you a lot in the future.
+
+996
+00:58:30,423 --> 00:58:33,380
+Scott: I think the procedure would be turn off Wi-Fi until we patch everything.
+
+997
+00:58:33,820 --> 00:58:34,182
+Scott: Yeah.
+
+998
+00:58:34,202 --> 00:58:39,698
+Scott: And if your data is that important, your Equifax or something, you should turn off all your Wi-Fi until you fix it.
+
+999
+00:58:39,980 --> 00:58:40,202
+Rym: Yup.
+
+1000
+00:58:40,404 --> 00:58:42,079
+Scott: Because Equifax didn't do shit.
+
+1001
+00:58:42,600 --> 00:58:47,382
+Rym: But the other broad point that is terrifying to me is that this attack is baby's first attack.
+
+1002
+00:58:47,422 --> 00:58:51,320
+Rym: Like, oh, yeah, if I went like RIT, I took a class with Katsu.
+
+1003
+00:58:51,521 --> 00:58:52,385
+Rym: We had to hack people like.
+
+1004
+00:58:52,666 --> 00:58:56,720
+Rym: it was the hack people class, and we actually hacked against the computer security class.
+
+1005
+00:58:56,881 --> 00:58:57,737
+Rym: That's how RIT did it.
+
+1006
+00:58:58,761 --> 00:59:07,740
+Rym: The first thing I will do if I ever want to, like, break encryption on a protocol is try replaying handshakes to see if anything works.
+
+1007
+00:59:08,461 --> 00:59:13,200
+Rym: The fact that it's a handshake replay problem is ridiculous.
+
+1008
+00:59:13,340 --> 00:59:15,620
+Rym: Did no one test this in all these years?
+
+1009
+00:59:15,940 --> 00:59:16,779
+Rym: No one noticed this.
+
+1010
+00:59:17,102 --> 00:59:18,019
+Rym: I cannot believe that.
+
+1011
+00:59:18,140 --> 00:59:23,418
+Rym: I'm so confident that intelligence organizations around the world have been using this for attacks for a long time.
+
+1012
+00:59:24,940 --> 00:59:27,199
+Rym: And I wonder who dropped the ball.
+
+1013
+00:59:28,320 --> 00:59:28,601
+Rym: Like, it's just.
+
+1014
+00:59:28,641 --> 00:59:33,677
+Scott: it's crazy to me that the whole world and all the people who made WPA to know and notice this.
+
+1015
+00:59:33,941 --> 00:59:34,162
+Rym: Yep.
+
+1016
+00:59:34,525 --> 00:59:36,600
+Rym: No one ever, every router ever.
+
+1017
+00:59:36,800 --> 00:59:39,959
+Scott: Anyone who ever wrote a WPA to implementation ever.
+
+1018
+00:59:40,364 --> 00:59:40,587
+Rym: Yeah.
+
+1019
+00:59:40,608 --> 00:59:41,299
+Rym: Like no one knows.
+
+1020
+00:59:41,420 --> 00:59:47,640
+Scott: Like, hey, if I replay it like some one guy noticed and now the whole world freaks out.
+
+1021
+00:59:47,800 --> 00:59:48,082
+Scott: Yeah.
+
+1022
+00:59:48,343 --> 00:59:51,399
+Rym: I mean, someone noticed the thing about how you can play.
+
+1023
+00:59:51,860 --> 00:59:52,182
+Scott: No, it's not.
+
+1024
+00:59:52,222 --> 00:59:54,739
+Scott: I've never I've never written a WPA to stack.
+
+1025
+00:59:54,961 --> 00:59:58,039
+Rym: Dude, at this point, I barely remember how WPA to actually work.
+
+1026
+00:59:58,280 --> 00:59:58,745
+Rym: Right.
+
+1027
+00:59:58,806 --> 01:00:00,080
+Scott: So, you know, it's not my fault.
+
+1028
+01:00:00,280 --> 01:00:02,230
+Scott: But I guess is that most people are we develop?
+
+1029
+01:00:02,270 --> 01:00:06,378
+Scott: are we having a few people make technologies that are widely used without being looked at?
+
+1030
+01:00:06,721 --> 01:00:06,983
+Rym: Yeah.
+
+1031
+01:00:07,164 --> 01:00:09,340
+Scott: What are what things should I look at when I get home?
+
+1032
+01:00:09,780 --> 01:00:09,861
+Rym: Yeah.
+
+1033
+01:00:09,921 --> 01:00:10,163
+Rym: Is it?
+
+1034
+01:00:10,203 --> 01:00:12,198
+Rym: we're going to find some terrifying T.L.S.
+
+1035
+01:00:12,620 --> 01:00:13,993
+Rym: vulnerability like real soon.
+
+1036
+01:00:14,013 --> 01:00:14,719
+Rym: that just ruins it.
+
+1037
+01:00:14,940 --> 01:00:16,219
+Scott: They've had a bunch of them and fixed them.
+
+1038
+01:00:16,320 --> 01:00:16,884
+Rym: Yeah, they have.
+
+1039
+01:00:17,648 --> 01:00:19,620
+Rym: This one's hard to fix because it affects hardware.
+
+1040
+01:00:20,180 --> 01:00:25,604
+Rym: Yeah, I think that's the big the reason why people are so so many devices of companies that go out of business.
+
+1041
+01:00:25,705 --> 01:00:30,819
+Rym: That's why I think people are so afraid of the GMP problem, because GMP is super vulnerable to it.
+
+1042
+01:00:31,281 --> 01:00:43,800
+Rym: And because GMP has the capability to be greatly enhanced by a hardware device, there are probably chips that hardware implement GMP with WPA to and that are now worthless.
+
+1043
+01:00:44,641 --> 01:00:45,207
+Scott: Worthless chips.
+
+1044
+01:00:45,328 --> 01:00:46,460
+Rym: That is probably the problem.
+
+1045
+01:00:46,620 --> 01:00:48,919
+Scott: I'll bet those chips should have made FPGAs, bro.
+
+1046
+01:00:49,440 --> 01:00:50,136
+Scott: Yeah, patch them.
+
+1047
+01:00:51,300 --> 01:00:53,740
+Rym: FPGAs generate a lot of heat and are slow and expensive, though.
+
+1048
+01:00:53,960 --> 01:00:54,647
+Scott: But you can patch them.
+
+1049
+01:00:54,889 --> 01:00:55,819
+Rym: Yeah, you can patch them.
+
+1050
+01:00:56,560 --> 01:01:01,407
+Rym: But that also means theoretically you can patch them, meaning a virus rewrites of what they're doing.
+
+1051
+01:01:01,428 --> 01:01:01,733
+Rym: Yeah.
+
+1052
+01:01:02,420 --> 01:01:02,621
+Scott: Yeah.
+
+1053
+01:01:02,822 --> 01:01:03,023
+Scott: Yeah.
+
+1054
+01:01:03,987 --> 01:01:06,560
+Scott: You can patch it and then flip a little switch on them to lock.
+
+1055
+01:01:07,922 --> 01:01:08,323
+Rym: Oh, my God.
+
+1056
+01:01:08,343 --> 01:01:19,680
+Rym: I remember a story when I was a kid on this where there was a gas station in Michigan and they were ripping off their customers by charging them Superman style, Superman three, like extra cents per dollar.
+
+1057
+01:01:19,961 --> 01:01:22,920
+Scott: I saw a YouTube video recently where somebody was at a gas station.
+
+1058
+01:01:23,202 --> 01:01:23,426
+Rym: Oh, yeah.
+
+1059
+01:01:23,446 --> 01:01:24,319
+Rym: They stopped pumping.
+
+1060
+01:01:24,660 --> 01:01:25,980
+Scott: They took they stopped pumping.
+
+1061
+01:01:26,181 --> 01:01:31,479
+Scott: And usually when you stop pumping gas, you take the handle off and you put it back in the pump and then you look at the numbers.
+
+1062
+01:01:31,681 --> 01:01:31,901
+Scott: Right.
+
+1063
+01:01:32,283 --> 01:01:37,965
+Scott: What was happening was this gas was charging you about a penny per second, even if you weren't pumping.
+
+1064
+01:01:38,226 --> 01:01:44,800
+Scott: So the time between when you took the handle off and put it in the car and took it out of the car and put it back on the pump, you were losing money.
+
+1065
+01:01:45,241 --> 01:01:48,380
+Scott: And it was they were dizzy, stealing a few cents from every customer.
+
+1066
+01:01:48,460 --> 01:01:51,740
+Scott: And you would never notice, which is genius, but also evil.
+
+1067
+01:01:51,840 --> 01:01:52,063
+Rym: Yep.
+
+1068
+01:01:52,124 --> 01:01:53,440
+Scott: So and worthy of jail.
+
+1069
+01:01:53,661 --> 01:01:58,122
+Rym: The gas station, I remember because it made all the news when I was a kid, it went one step further.
+
+1070
+01:01:58,424 --> 01:02:02,641
+Rym: There was a light switch that turned on a lamp in the gas station like it really worked.
+
+1071
+01:02:03,123 --> 01:02:11,243
+Rym: But if that lamp was on, it also instructed some of the pumps to charge people extra money.
+
+1072
+01:02:12,327 --> 01:02:17,240
+Rym: And they would turn it on much of the time, but they turn it off if an inspector was coming.
+
+1073
+01:02:17,780 --> 01:02:20,600
+Rym: They turn it off sometimes just to obscure the pattern.
+
+1074
+01:02:21,102 --> 01:02:25,639
+Rym: And they made a lot of money off of that, apparently for a long time until some investigative reporter like figured it out.
+
+1075
+01:02:26,544 --> 01:02:27,740
+Scott: Good job, investigative reporter.
+
+1076
+01:02:27,880 --> 01:02:32,160
+Rym: Yeah, I just still can't believe that this vulnerability was only discovered today.
+
+1077
+01:02:32,600 --> 01:02:34,398
+Rym: Well, released today, discovered a few months ago.
+
+1078
+01:02:39,941 --> 01:02:42,100
+Rym: This has been GeekNights with Rym and Scott.
+
+1079
+01:02:42,261 --> 01:02:47,239
+Rym: Special thanks to DJ Pretzel for the opening music, Kat Lee for web design and Brando K for the logos.
+
+1080
+01:02:47,680 --> 01:02:52,640
+Scott: Be sure to visit our website at frontrowcrew.com for show notes, discussion news and more.
+
+1081
+01:02:52,980 --> 01:02:55,580
+Rym: Remember, GeekNights is not one, but four different shows.
+
+1082
+01:02:55,840 --> 01:03:00,299
+Rym: Sci-Tech Mondays, Gaming Tuesdays, Anime Comic Wednesdays and Indiscriminate Thursdays.
+
+1083
+01:03:00,720 --> 01:03:03,836
+Scott: GeekNights is distributed under a Creative Commons Attribution 3.0 license.
+
+1084
+01:03:05,140 --> 01:03:08,160
+Scott: GeekNights is recorded live with no studio and no audience.
+
+1085
+01:03:08,380 --> 01:03:11,280
+Scott: But unlike those other late shows, it's actually recorded at night.
+
+1086
+01:03:27,484 --> 01:03:58,336
+Rym: And the Patreon Patrons for this episode of GeekNights are... Whoop-de-fucking-doo.
+
+1087
+01:03:59,280 --> 01:04:00,277
+Rym: Shervin Von Horn.
+
+1088
+01:04:01,141 --> 01:04:01,594
+Rym: Rare Laval.
+
+1089
+01:04:02,580 --> 01:04:04,020
+Rym: James David White.
+
+1090
+01:04:04,680 --> 01:04:06,239
+Rym: Rochelle Montanona.
+
+1091
+01:04:07,000 --> 01:04:07,537
+Rym: Superboy.
+
+1092
+01:04:08,380 --> 01:04:10,358
+Rym: Rym says something funny here.
+
+1093
+01:04:11,062 --> 01:04:11,979
+Rym: Sailor Vista.
+
+1094
+01:04:12,820 --> 01:04:13,518
+Rym: Don Schleich.
+
+1095
+01:04:14,140 --> 01:04:15,317
+Rym: Kajar Taveshev.
+
+1096
+01:04:15,940 --> 01:04:16,999
+Rym: Joshiro Joestar.
+
+1097
+01:04:18,146 --> 01:04:18,698
+Rym: Sam Cordery.
+
+1098
+01:04:19,382 --> 01:04:20,158
+Rym: Clinton Walton.
+
+1099
+01:04:21,100 --> 01:04:22,340
+Rym: Ren from New Zealand.
+
+1100
+01:04:22,981 --> 01:04:23,840
+Rym: Brian Perry.
+
+1101
+01:04:24,480 --> 01:04:25,678
+Rym: Drew Openlander.
+
+1102
+01:04:26,320 --> 01:04:27,555
+Rym: Brian Sidrovia.
+
+1103
+01:04:28,242 --> 01:04:28,393
+Rym: Finn.
+
+1104
+01:04:29,220 --> 01:04:30,179
+Rym: Chris Midkip.
+
+1105
+01:04:31,000 --> 01:04:31,598
+Rym: Chris Knox.
+
+1106
+01:04:32,623 --> 01:04:33,418
+Rym: Daniel Redman.
+
+1107
+01:04:34,280 --> 01:04:35,139
+Rym: Sean Klein.
+
+1108
+01:04:36,000 --> 01:04:37,080
+Rym: Chris Reimer.
+
+1109
+01:04:38,284 --> 01:04:39,479
+Rym: And Thomas Hahn.
+
+1110
+01:04:40,682 --> 01:04:43,560
+Rym: We are planning a number of convention appearances.
+
+1111
+01:04:44,361 --> 01:04:45,680
+Rym: It is a very busy season.
+
+1112
+01:04:46,280 --> 01:04:48,940
+Rym: But stay tuned for increasing YouTube content.
+
+1113
+01:04:49,760 --> 01:04:55,698
+Rym: But now I leave you with... Please don't kill me.
+
+1114
+01:05:07,053 --> 01:05:09,449
+Rym: I'll let you go if you can tell me which game first.
+
+1115
+01:05:10,390 --> 01:05:12,169
+Rym: Ranch or Cool Ranch.
+
+1116
+01:05:17,223 --> 01:05:17,360
+Rym: What?
+
+1117
+01:05:22,507 --> 01:05:24,099
+Scott: Ranch or Cool Ranch.
+
+1118
+01:05:26,692 --> 01:05:26,779
+Scott: Rant?
+
+1119
+01:05:28,353 --> 01:05:29,068
+Rym: On the count of three.
+
+1120
+01:05:30,710 --> 01:05:30,778
+Rym: One.
+
+1121
+01:05:32,200 --> 01:05:32,346
+Rym: Two.
+
+1122
+01:05:33,763 --> 01:05:33,887
+Rym: Three.
+
+1123
+01:05:37,541 --> 01:05:39,979
+Rym: Oh yeah, I forgot to tell you I always loved you.
+

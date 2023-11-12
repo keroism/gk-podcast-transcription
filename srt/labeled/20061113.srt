@@ -1,0 +1,2640 @@
+1
+00:00:09,420 --> 00:00:11,549
+Rym: It's Monday November 13th.
+
+2
+00:00:12,111 --> 00:00:14,480
+Rym: I'm Rym and I'm Scott and this is GeekNights.
+
+3
+00:00:15,223 --> 00:00:24,859
+Rym: tonight we continue our series on how computers work with a new set of episodes on Hard drives and storage beginning with how to partition your hard drives.
+
+4
+00:00:26,262 --> 00:00:34,955
+Rym: Let's do this You know for the last several weeks every weekend We go out and then we come back and we do this show and we say something like man.
+
+5
+00:00:35,036 --> 00:00:39,491
+Scott: What a crazy weekend You know, well, I always say why can't we do nothing next weekend?
+
+6
+00:00:39,651 --> 00:00:43,124
+Rym: And you know what we did this past weekend almost nothing Really?
+
+7
+00:00:43,204 --> 00:00:43,526
+Rym: Nothing.
+
+8
+00:00:43,566 --> 00:00:45,336
+Rym: I mean Emily and Alex came over.
+
+9
+00:00:45,356 --> 00:00:49,269
+Rym: we Played some video games and some board games.
+
+10
+00:00:49,430 --> 00:00:52,180
+Scott: I put a lot of Resident Evil 4. zombies roll up in the hell, right?
+
+11
+00:00:52,380 --> 00:00:53,325
+Rym: Hey, it's on fire.
+
+12
+00:00:53,345 --> 00:00:55,356
+Scott: You know, I haven't seen an axe on fire.
+
+13
+00:00:55,416 --> 00:01:03,115
+Rym: the whole time We watched some Harold and Kumar go to White Castle Which was 50% a good movie and 50% not so much a good movie.
+
+14
+00:01:03,376 --> 00:01:04,260
+Scott: It was a stoner movie.
+
+15
+00:01:04,501 --> 00:01:06,307
+Rym: Yeah, we'll probably talk about that someday.
+
+16
+00:01:06,347 --> 00:01:07,852
+Rym: But it was the first half was really funny.
+
+17
+00:01:08,113 --> 00:01:09,558
+Scott: Yeah, kinda wasn't bad.
+
+18
+00:01:09,859 --> 00:01:12,377
+Rym: Yeah Scott and I played a lot of Dig Dug.
+
+19
+00:01:12,397 --> 00:01:13,882
+Scott: Oh Dig Dug.
+
+20
+00:01:14,604 --> 00:01:15,668
+Rym: we played some Puerto Rico.
+
+21
+00:01:15,809 --> 00:01:17,756
+Scott: I was what didn't I do that?
+
+22
+00:01:17,776 --> 00:01:18,820
+Scott: I wanted to do laundry.
+
+23
+00:01:19,941 --> 00:01:20,965
+Rym: Yeah, I didn't do laundry.
+
+24
+00:01:21,045 --> 00:01:22,210
+Scott: I clean my room.
+
+25
+00:01:22,290 --> 00:01:23,234
+Rym: I didn't clean my room.
+
+26
+00:01:23,856 --> 00:01:26,594
+Rym: clean the bathroom Yeah, you need to do that.
+
+27
+00:01:26,614 --> 00:01:32,617
+Scott: Yeah Meanwhile, I've cleaned the bathroom more times than you ever cleaned it the bathrooms filthier than it's ever been.
+
+28
+00:01:32,698 --> 00:01:33,340
+Scott: Oh, it's not.
+
+29
+00:01:34,843 --> 00:01:35,867
+Scott: Yes, it is.
+
+30
+00:01:35,887 --> 00:01:45,420
+Rym: You can't clean ten bathrooms, whatever Whatever and of course, we're not going to have it anytime in the nearest near future.
+
+31
+00:01:45,922 --> 00:01:50,359
+Rym: But coming with you know, the beginning of season two, we're working on a season one DVD.
+
+32
+00:01:50,680 --> 00:01:52,486
+Scott: Yeah, among other things.
+
+33
+00:01:52,727 --> 00:01:54,292
+Scott: I'm probably gonna build up.
+
+34
+00:01:54,312 --> 00:01:55,536
+Scott: we're gonna get swag.
+
+35
+00:01:55,657 --> 00:02:00,340
+Scott: We're gonna get the DVDs We're gonna get the promo CDs and a new website and everything.
+
+36
+00:02:00,621 --> 00:02:05,880
+Scott: We're gonna pile it all up in a buffer and then we're gonna release it all at once in a giant GeekNights orgasm.
+
+37
+00:02:06,261 --> 00:02:07,305
+Rym: It's gonna be crazy.
+
+38
+00:02:07,485 --> 00:02:18,080
+Rym: Yeah, so watch out for that in some months probably next year early next year Yep, and also all this week because we haven't done it in a while other than you know making jokes about other podcasts.
+
+39
+00:02:18,181 --> 00:02:22,020
+Rym: But I'm gonna be playing promos all week because there are a lot of good podcasts out there that I listen to now.
+
+40
+00:02:22,502 --> 00:02:31,911
+Rym: Yeah, now that I've weeded the chaff from the weed missile Yeah Yeah, yeah, all right, so what do we got in the news?
+
+41
+00:02:31,971 --> 00:02:32,734
+Rym: we'll get right to it.
+
+42
+00:02:33,175 --> 00:02:34,340
+Rym: we didn't do much this weekend.
+
+43
+00:02:34,622 --> 00:02:36,320
+Scott: No, we didn't apparently Java.
+
+44
+00:02:36,481 --> 00:02:43,575
+Scott: Well people have been rumouring this for a long time But Sun finally took Java and they made it open source.
+
+45
+00:02:43,635 --> 00:02:53,726
+Scott: Not only did they make it open source They put it out under the GPL as opposed to one of those other licenses that Sun usually uses like the C Whatever whatever.
+
+46
+00:02:54,067 --> 00:02:56,560
+Rym: you might not care, but this is kind of a big deal.
+
+47
+00:02:56,701 --> 00:02:58,679
+Scott: This is a pretty giant deal.
+
+48
+00:02:58,820 --> 00:02:59,261
+Rym: I mean this.
+
+49
+00:02:59,843 --> 00:03:11,660
+Rym: this has implications to the point that work I did at previous employers is now no longer Necessary because it has been replaced by the fact that you don't have to work around this Java stuff anymore.
+
+50
+00:03:11,961 --> 00:03:15,650
+Scott: Yep, see Sun is a company that's been around for a long time.
+
+51
+00:03:15,670 --> 00:03:16,653
+Scott: And what does Sun make?
+
+52
+00:03:16,713 --> 00:03:31,499
+Scott: they make Java and they make servers and they make Solaris, which is an operator a Unix operating system and They recently took Solaris and made open Solaris because Solaris is not Linux it is Unix it it.
+
+53
+00:03:31,539 --> 00:03:44,860
+Scott: you know it might seem the same to if you don't know what the hell you're doing, but no it is very different and You know It was everyone who bought Sun machines for their big company server farms was using Solaris and you know is important.
+
+54
+00:03:45,423 --> 00:03:48,379
+Scott: But they put out open Solaris, which wasn't GPL.
+
+55
+00:03:48,786 --> 00:03:50,102
+Scott: It was you know Open.
+
+56
+00:03:50,162 --> 00:03:54,194
+Scott: you could get Solaris for kind of free kind of and it wasn't.
+
+57
+00:03:54,275 --> 00:03:57,184
+Scott: you couldn't just take all the source code and do whatever You wanted and whatever.
+
+58
+00:03:57,947 --> 00:04:01,660
+Scott: and for a long time people have been saying why don't they open source Java?
+
+59
+00:04:02,100 --> 00:04:11,289
+Scott: Hey and all those people who are the Linux crazies the people who refuse to use anything if it's not a hundred percent free Wouldn't use Sun Java.
+
+60
+00:04:11,329 --> 00:04:14,420
+Scott: That's why you would download Linux and it wouldn't come with Java installed.
+
+61
+00:04:14,480 --> 00:04:19,000
+Scott: You'd have to go out, you know and get Java and usually you wouldn't get the real Java.
+
+62
+00:04:19,301 --> 00:04:24,040
+Scott: You would get something like cafe or black down JRE or something like that.
+
+63
+00:04:24,100 --> 00:04:38,700
+Rym: Yeah That was a big deal at IBM because among other things we weren't allowed to use Actual Sun Java because as a developer some of the things in Sun's licenses from before Would in IBM's eyes kind of taint you to where if you worked on IBM stuff.
+
+64
+00:04:39,586 --> 00:04:41,579
+Rym: They were worried that Sun can make claims against it.
+
+65
+00:04:42,121 --> 00:04:48,480
+Rym: So they really had kind of this quarantine and I had to implement a lot of things using black down instead of using real Java.
+
+66
+00:04:48,761 --> 00:04:56,852
+Scott: Yeah, now when you think of Java, you might just be thinking of applets in the web browser because that's you know Most of the way normal people see Java is.
+
+67
+00:04:56,872 --> 00:04:58,760
+Scott: they just see Java applets and web browsers.
+
+68
+00:04:59,202 --> 00:05:03,985
+Scott: Java is a lot of places that you don't see it Like you go to your bank's website.
+
+69
+00:05:04,626 --> 00:05:09,740
+Scott: is I say a 90% chance that bank's website is actually Java running on a server somewhere?
+
+70
+00:05:09,901 --> 00:05:11,374
+Rym: I know a lot of you use a serious.
+
+71
+00:05:11,818 --> 00:05:13,879
+Rym: Yes That's all Java.
+
+72
+00:05:13,920 --> 00:05:18,289
+Scott: Um Your cell phone all those games on your cell phone.
+
+73
+00:05:18,489 --> 00:05:22,640
+Scott: Those are all Java pretty much unless you have a Windows mobile phone.
+
+74
+00:05:22,760 --> 00:05:24,709
+Rym: Yeah, in which case they're just Windows program.
+
+75
+00:05:24,749 --> 00:05:25,854
+Scott: Well, they might also be.
+
+76
+00:05:25,894 --> 00:05:35,700
+Rym: there's sometimes Java but Yeah, Java is freaking everywhere and it's super important now in addition to you know being awesome because this really opens up Java.
+
+77
+00:05:35,941 --> 00:05:40,320
+Rym: You know Java can just come with Linux distros now Mm-hmm and all sorts of fun things.
+
+78
+00:05:40,460 --> 00:05:46,402
+Rym: But also now if Sun does well with this which I'm sure they will they're generating a lot of good Press.
+
+79
+00:05:46,442 --> 00:05:47,912
+Rym: a lot of people are just gonna use Java.
+
+80
+00:05:47,952 --> 00:05:49,240
+Rym: Java is gonna have a better reputation.
+
+81
+00:05:49,781 --> 00:05:51,205
+Rym: Maybe other companies will see that.
+
+82
+00:05:51,245 --> 00:05:56,540
+Rym: Hey, you know what open sourcing something like that can only be good for our company.
+
+83
+00:05:57,084 --> 00:05:59,400
+Scott: Well, I think the point of it is is Java is really old.
+
+84
+00:05:59,460 --> 00:06:04,975
+Scott: It's like 10 plus years old and it's gotten to a point where people are not so interested anymore.
+
+85
+00:06:05,035 --> 00:06:12,520
+Scott: big enterprise people who are already Using Java are gonna continue using Java but new people aren't too into it.
+
+86
+00:06:12,720 --> 00:06:23,780
+Scott: Yeah, someone who's starting something new isn't likely to choose Java, you know, even though a lot of people out there know it It's they're better choices that are more specific to your task.
+
+87
+00:06:23,921 --> 00:06:27,140
+Scott: Java is sort of like this big clunky do-it-all type of thing.
+
+88
+00:06:27,521 --> 00:06:29,625
+Rym: I mean Java is one of the few programming language.
+
+89
+00:06:29,726 --> 00:06:32,271
+Rym: I actually learned it all and I hated it.
+
+90
+00:06:32,291 --> 00:06:40,060
+Rym: I Really especially gooey stuff which is really kind of not what I wanted.
+
+91
+00:06:40,221 --> 00:06:44,180
+Scott: The other thing about Java is that it's not really making Sun money anymore.
+
+92
+00:06:44,401 --> 00:06:58,160
+Scott: the people making money off of Java are companies like IBM, IBM with their web sphere and There's open source programs like Tomcat on Apache where you don't need Sun and all kinds of stuff like that.
+
+93
+00:06:58,381 --> 00:07:01,353
+Scott: Yeah, so they weren't making money off of it, but they owned it.
+
+94
+00:07:01,554 --> 00:07:04,605
+Rym: So they're not losing anything Monetarily by opening it.
+
+95
+00:07:04,986 --> 00:07:06,149
+Rym: all they're doing is gaining.
+
+96
+00:07:06,630 --> 00:07:09,760
+Rym: one industry standard disk is now for that sort of thing.
+
+97
+00:07:10,463 --> 00:07:13,679
+Rym: No one has any argument for using non-standard Java at all.
+
+98
+00:07:14,040 --> 00:07:19,800
+Rym: Mm-hmm and to a whole bunch of good press the Linux community is lauding them for being awesome.
+
+99
+00:07:20,502 --> 00:07:25,055
+Scott: Not only that, but I think now that it's open source and it's not you know, this weird thing.
+
+100
+00:07:25,617 --> 00:07:34,309
+Scott: You're gonna see Java included in a lot of places that before it was not included and therefore More people are gonna write in Java.
+
+101
+00:07:34,671 --> 00:07:37,040
+Scott: It'll probably get more popular before you know.
+
+102
+00:07:37,160 --> 00:07:38,605
+Scott: instead it is basically.
+
+103
+00:07:38,625 --> 00:07:52,916
+Scott: Java was on a downhill slope and by open sourcing it and allowing it to Propagate itself to wherever and also allowing open source people to improve Java and make it more awesome Because Sun hasn't really been doing anything to make it more awesome besides giving away for free.
+
+104
+00:07:53,117 --> 00:08:02,490
+Scott: Yeah You're gonna start seeing it show up in a lot more places and having Java skills is gonna be a lot more important and There's gonna be a lot of awesome stuff made in Java.
+
+105
+00:08:02,932 --> 00:08:03,213
+Rym: Yeah.
+
+106
+00:08:03,534 --> 00:08:04,940
+Scott: Yeah, it's gonna be all good.
+
+107
+00:08:05,081 --> 00:08:06,474
+Scott: There's gonna be crazy shit happening.
+
+108
+00:08:06,494 --> 00:08:06,817
+Scott: Watch out.
+
+109
+00:08:07,180 --> 00:08:13,078
+Rym: So speaking of coding and programming and all that and actually this time my segue is kind of relevant.
+
+110
+00:08:13,500 --> 00:08:16,484
+Rym: now There's been a lot of talk about Voting machines and how they're.
+
+111
+00:08:16,725 --> 00:08:20,997
+Rym: the new electronic ones are kind of either evil or poorly written or something.
+
+112
+00:08:21,037 --> 00:08:22,040
+Scott: pretty sure they're just poor.
+
+113
+00:08:22,447 --> 00:08:22,916
+Rym: Yeah, yeah.
+
+114
+00:08:23,280 --> 00:08:30,920
+Rym: Well in one of the recent elections a guy ran for mayor in a town that has 80 people in it.
+
+115
+00:08:31,302 --> 00:08:32,933
+Scott: That's a small town 80.
+
+116
+00:08:32,933 --> 00:08:34,924
+Scott: I thought it was a town 100 people.
+
+117
+00:08:35,225 --> 00:08:36,227
+Scott: only 80 people voted.
+
+118
+00:08:36,289 --> 00:08:38,235
+Rym: No, the town has 80 people in it.
+
+119
+00:08:38,436 --> 00:08:45,398
+Rym: Okay, according to this article Okay, quote Randy Wooten figured he'd get at least one vote in his bid for mayor in this town of 80 people.
+
+120
+00:08:46,503 --> 00:08:49,483
+Rym: Okay, so he voted for himself Obviously.
+
+121
+00:08:49,503 --> 00:08:52,517
+Rym: and then you know the election is over and he lost.
+
+122
+00:08:52,537 --> 00:08:53,280
+Rym: he expected to lose.
+
+123
+00:08:53,320 --> 00:08:54,918
+Rym: He had no illusion that he was going to win.
+
+124
+00:08:55,622 --> 00:09:00,178
+Rym: the official count was that no one voted for him that his count was zero.
+
+125
+00:09:00,218 --> 00:09:02,927
+Rym: now if Out of a town of 80 people.
+
+126
+00:09:03,550 --> 00:09:05,840
+Rym: I'm sure that not 80 people voted.
+
+127
+00:09:06,002 --> 00:09:07,559
+Rym: So it's even less than 80 votes.
+
+128
+00:09:08,442 --> 00:09:14,780
+Rym: If a vote goes missing in a sample that small something is fucking wrong with your voting system.
+
+129
+00:09:15,225 --> 00:09:16,418
+Rym: That can't happen.
+
+130
+00:09:17,062 --> 00:09:17,846
+Scott: Well, it could.
+
+131
+00:09:17,987 --> 00:09:25,160
+Rym: if your voting machine is a shitty ass electronic voting You know how broken it would have to be for one just a number to not get count.
+
+132
+00:09:25,240 --> 00:09:38,809
+Scott: That could be like not even cs1 like an elementary school elementary school programming class a middle school kid you could teach him like The bare basics after I got bad eggs cue basic.
+
+133
+00:09:38,970 --> 00:09:42,578
+Scott: after yeah in basic you could write a program that could count 80 votes.
+
+134
+00:09:43,780 --> 00:09:46,510
+Scott: Easily, yeah with no problems whatsoever.
+
+135
+00:09:46,530 --> 00:09:51,336
+Scott: a middle school guy would write a bulletproof Vote counting program in basic.
+
+136
+00:09:51,699 --> 00:09:58,100
+Rym: now The best part is he says that from people he's talked to in town at least eight or nine people claim to have voted for him.
+
+137
+00:09:58,261 --> 00:09:59,550
+Rym: So it's not just as one vote.
+
+138
+00:09:59,610 --> 00:10:05,960
+Rym: maybe I mean It's hard to say because one of the tenants of American democracy is that votes are secret.
+
+139
+00:10:06,362 --> 00:10:09,659
+Rym: So you can say you voted for whoever but you have no way to prove it.
+
+140
+00:10:09,940 --> 00:10:14,680
+Rym: So there is a tiny chance that everyone involved is just lying.
+
+141
+00:10:15,126 --> 00:10:16,219
+Scott: That's what I was gonna say.
+
+142
+00:10:16,562 --> 00:10:30,460
+Scott: It could be that these people are just so smart that they want to you know Really nail this bullshit about the electronic voting machines that suck that they all voted One guy and they said they voted something else just to get the machines inspected and to start a fear.
+
+143
+00:10:30,560 --> 00:10:32,570
+Rym: The thing is I I don't know.
+
+144
+00:10:32,670 --> 00:10:34,077
+Rym: I give that maybe a 5% chance.
+
+145
+00:10:34,760 --> 00:10:36,168
+Scott: Yeah, I don't give it a strong chance.
+
+146
+00:10:36,229 --> 00:10:38,200
+Scott: and just pointing out the interesting possibility
+
+147
+00:10:38,361 --> 00:10:58,529
+Rym: yeah, but really this this really shakes my faith in American democracy a little bit because While I may disagree with people who get elected I think that the process of elections and the process of democracy is more important than the result in a lot of cases because at least if the democracy works people have a chance to change things.
+
+148
+00:10:58,549 --> 00:11:06,121
+Rym: if Something happens and the Pete no one was involved other than a programmer who didn't pass CS 101.
+
+149
+00:11:06,121 --> 00:11:08,520
+Rym: Yep, that's not cool at all.
+
+150
+00:11:09,135 --> 00:11:10,303
+Scott: I mean It's one thing.
+
+151
+00:11:10,464 --> 00:11:17,707
+Scott: if your vote if you yell about your vote not counting because it counts so little like if you live in California your vote barely matters.
+
+152
+00:11:18,148 --> 00:11:21,700
+Scott: and if you live in Wyoming your vote matters a lot more at least in a presidential race.
+
+153
+00:11:21,800 --> 00:11:26,133
+Scott: Yep, but it's another thing entirely to say my vote really doesn't matter.
+
+154
+00:11:26,574 --> 00:11:32,151
+Scott: It's all up to some computer program That UFO hovering over your house getting annoying.
+
+155
+00:11:32,592 --> 00:11:34,300
+Rym: the impending apocalypse got you down.
+
+156
+00:11:34,743 --> 00:11:36,759
+Rym: Did your horoscope tell you it's your unlucky day?
+
+157
+00:11:37,161 --> 00:11:41,179
+Rym: Well, don't worry skepticality is here to remind you that sanity is only a mouse click away.
+
+158
+00:11:41,702 --> 00:11:48,582
+Rym: skeptical discussion rational thought and odd, but interesting news all here at Www.skepticality.com.
+
+159
+00:11:48,742 --> 00:11:58,230
+Rym: truth in podcasting things of the day.
+
+160
+00:12:00,614 --> 00:12:03,710
+Scott: So at first I watched this thing of the day and I said to myself.
+
+161
+00:12:04,092 --> 00:12:07,870
+Scott: The same thing that Rym said when he saw the thing of the day was that you can't do that.
+
+162
+00:12:08,352 --> 00:12:11,830
+Rym: Yeah, cuz I made the same error that Scott made when watching it.
+
+163
+00:12:11,870 --> 00:12:16,024
+Scott: Yeah, but then I watched it again and I realized you you definitely can do that.
+
+164
+00:12:16,586 --> 00:12:17,630
+Scott: some guys their bump.
+
+165
+00:12:17,831 --> 00:12:19,298
+Scott: It's a professional soccer game.
+
+166
+00:12:19,619 --> 00:12:21,749
+Scott: Someone kicks the ball really high in the air.
+
+167
+00:12:22,251 --> 00:12:23,495
+Scott: It goes near the goalie.
+
+168
+00:12:23,676 --> 00:12:27,748
+Scott: the goalie runs way away from the goal jumps up in the air and catches the ball.
+
+169
+00:12:27,788 --> 00:12:29,013
+Scott: because he's a goalie He can do that.
+
+170
+00:12:29,475 --> 00:12:33,718
+Scott: He does like a flip in the air and he lands and he's on his feet, you know He's standing there.
+
+171
+00:12:33,819 --> 00:12:34,910
+Scott: He's looking out at the field.
+
+172
+00:12:34,970 --> 00:12:39,525
+Scott: He's got the ball in his hands as a guy from the other team behind the goalie.
+
+173
+00:12:39,585 --> 00:12:41,150
+Scott: now play has not stopped.
+
+174
+00:12:41,210 --> 00:12:43,137
+Scott: This is this is play, you know, they're.
+
+175
+00:12:43,318 --> 00:12:44,462
+Scott: the game is in motion.
+
+176
+00:12:44,923 --> 00:12:46,469
+Scott: Everything is cool right now.
+
+177
+00:12:46,991 --> 00:12:48,340
+Scott: You know people could do whatever they want.
+
+178
+00:12:48,420 --> 00:12:49,970
+Scott: It's uh, it's just a game of soccer.
+
+179
+00:12:50,030 --> 00:12:52,820
+Scott: It's not like a throw in or anything like that.
+
+180
+00:12:53,141 --> 00:12:54,406
+Rym: See I wasn't paying attention.
+
+181
+00:12:54,466 --> 00:12:59,750
+Rym: So it's not a goal kick Yeah, but when I watched it, I just wasn't paying attention and it looked like a throw in because I wasn't watching.
+
+182
+00:12:59,931 --> 00:13:00,453
+Scott: Yeah, you got.
+
+183
+00:13:00,695 --> 00:13:02,182
+Scott: it's not a throw in or a goal kick.
+
+184
+00:13:02,242 --> 00:13:08,810
+Scott: It's the goalie caught the ball and He's standing there holding the ball and someone from the other team is standing behind him and the goal.
+
+185
+00:13:08,850 --> 00:13:10,187
+Scott: He's far away from the goal.
+
+186
+00:13:10,248 --> 00:13:19,730
+Scott: now He could have run back over to the goal with the ball But instead of doing that he puts it on the ground Like and then he's you know He's gonna size it up and then kick it all the way down the field.
+
+187
+00:13:20,273 --> 00:13:27,349
+Scott: The guy on the other team who is hiding behind the goalie runs up in front of the goalie and kicks the ball into the wide open goal.
+
+188
+00:13:27,369 --> 00:13:33,550
+Rym: and I can just imagine what's going through that goaltender's head because that's the kind of thing that happens in a cheesy soccer movie.
+
+189
+00:13:34,192 --> 00:13:36,282
+Scott: Yeah, it's like or football.
+
+190
+00:13:36,342 --> 00:13:38,070
+Rym: to the majority of our listeners.
+
+191
+00:13:38,431 --> 00:13:42,087
+Scott: It's like the old Statue of Liberty play or something like that actually working.
+
+192
+00:13:42,268 --> 00:13:43,793
+Scott: Yeah It's like.
+
+193
+00:13:44,014 --> 00:13:47,044
+Scott: it's like you watch a game a little league baseball and you'll never.
+
+194
+00:13:47,064 --> 00:13:48,750
+Scott: you'll never see this in the major leagues.
+
+195
+00:13:49,151 --> 00:13:59,609
+Scott: but in little league baseball when someone gets walked they will always run to first base and Because there's you're perfectly allowed to continue to running to second base after a walk.
+
+196
+00:14:00,654 --> 00:14:01,601
+Scott: Just no one ever does.
+
+197
+00:14:01,621 --> 00:14:03,090
+Rym: yeah, it's the same as stealing a base.
+
+198
+00:14:03,112 --> 00:14:09,470
+Scott: Yes so in little league Kids will run to first base as always as fast as they can even if they got a walk.
+
+199
+00:14:09,711 --> 00:14:12,910
+Scott: They won't just walk, you know, just because then they might steal second.
+
+200
+00:14:12,971 --> 00:14:13,498
+Scott: It's like a trick.
+
+201
+00:14:13,945 --> 00:14:20,252
+Rym: see now I got to say I'd be a lot more interested in Major League Baseball if people still tried to pull shenanigans like that all the Time.
+
+202
+00:14:20,333 --> 00:14:23,070
+Scott: I'd be a lot worse than any sport if people actually tried to pull shenanigans.
+
+203
+00:14:23,251 --> 00:14:36,099
+Scott: the problem is every shenanigan has been pulled and Nowadays Since everyone has such a high level of athletic ability in professional sports shenanigans don't work because athletic ability beats shenanigans.
+
+204
+00:14:36,159 --> 00:14:41,536
+Rym: if a guy runs to first no matter how fast he is after a walk if he Turns and tries to go to second.
+
+205
+00:14:41,817 --> 00:14:44,807
+Rym: There's no way he'll get there before they throw the ball to second base.
+
+206
+00:14:45,088 --> 00:14:50,556
+Scott: Yep Pull a little league kid, but you can't fool, you know, yeah It's too bad really.
+
+207
+00:14:50,576 --> 00:14:52,725
+Scott: yeah, it's like, you know what would bring baseball back.
+
+208
+00:14:52,745 --> 00:14:53,649
+Scott: That's another reason.
+
+209
+00:14:53,729 --> 00:14:55,559
+Scott: hockey You can't really pull shenanigans in hockey.
+
+210
+00:14:55,579 --> 00:14:57,590
+Rym: The thing is hockey doesn't matter cuz hockey is awesome.
+
+211
+00:14:57,650 --> 00:15:03,230
+Rym: Anyway, I know but you know what would make baseball awesome if you set it up where if you were good they kicked you out.
+
+212
+00:15:03,680 --> 00:15:08,310
+Rym: Yeah Like you have to be missing at least four fingers to be able to play baseball.
+
+213
+00:15:09,891 --> 00:15:16,690
+Rym: Anyway, all right, so when I found this like four days ago, it was awesome and it suddenly exploded around the internet.
+
+214
+00:15:16,811 --> 00:15:20,370
+Rym: so if you've seen it before me, I Don't care.
+
+215
+00:15:21,711 --> 00:15:27,549
+Rym: But this is a little video that someone did for their master's thesis in animation and it's about a little Kiwi.
+
+216
+00:15:28,171 --> 00:15:30,422
+Rym: I saw this now for those of you don't know what a Kiwi is.
+
+217
+00:15:30,502 --> 00:15:34,938
+Rym: It's a small flightless bird That's really really cute with a long long beak.
+
+218
+00:15:35,580 --> 00:15:36,282
+Scott: It's a funny bird.
+
+219
+00:15:36,423 --> 00:15:37,566
+Rym: It's a really awesome bird.
+
+220
+00:15:37,626 --> 00:15:38,790
+Rym: I'd like to have a pet Kiwi.
+
+221
+00:15:39,071 --> 00:15:39,673
+Scott: No, not really.
+
+222
+00:15:39,714 --> 00:15:41,200
+Rym: They're not that smart from what I get.
+
+223
+00:15:41,462 --> 00:15:43,210
+Scott: They're not pleasant, but they they look cool.
+
+224
+00:15:43,551 --> 00:15:45,058
+Rym: Well, I think they're cute whatever.
+
+225
+00:15:45,279 --> 00:15:47,489
+Rym: but yeah this video I don't want to ruin it.
+
+226
+00:15:47,850 --> 00:15:58,746
+Rym: You should figure out what's going on as you watch this video if you have any amount of intelligence and you'll figure it out at The end or you'll figure it out at the end end at some point.
+
+227
+00:15:58,967 --> 00:15:59,770
+Rym: You'll figure it out.
+
+228
+00:16:00,291 --> 00:16:06,550
+Rym: It's a very cute charming video, but I'll warn you it's kind of sad, but it also says a lot.
+
+229
+00:16:06,691 --> 00:16:08,097
+Rym: I think it's a very well done movie.
+
+230
+00:16:08,499 --> 00:16:10,589
+Scott: Yeah, I think there's not much more to say about.
+
+231
+00:16:10,609 --> 00:16:13,430
+Rym: yeah I mean, I can't say what it means because that kind of ruins it.
+
+232
+00:16:13,490 --> 00:16:15,781
+Rym: But just watch it and you'll feel that feeling.
+
+233
+00:16:16,384 --> 00:16:20,200
+Rym: and unless you're a cold-hearted Yeah, you have to be really cold-hearted tonight.
+
+234
+00:16:20,462 --> 00:16:22,390
+Rym: Like if you get to the end of this you just start laughing.
+
+235
+00:16:23,373 --> 00:16:24,018
+Rym: Not a good, dude.
+
+236
+00:16:24,038 --> 00:16:26,408
+Scott: I Think that should be the test.
+
+237
+00:16:27,210 --> 00:16:31,568
+Scott: It's like you just show someone the video and you're like, alright, is he Cartman?
+
+238
+00:16:33,852 --> 00:16:34,574
+Rym: Or is he butters?
+
+239
+00:16:34,614 --> 00:16:35,798
+Scott: Yeah, it's like.
+
+240
+00:16:35,818 --> 00:16:38,144
+Scott: what does he say when he watches this video?
+
+241
+00:16:38,164 --> 00:16:40,150
+Scott: Ah good person Oh evil person.
+
+242
+00:16:40,752 --> 00:16:46,630
+Scott: We just have every person in the world watch the video we do this video and execute the people in and the laughing test.
+
+243
+00:16:50,871 --> 00:16:54,455
+Rym: All right I keep doing that all night.
+
+244
+00:16:54,957 --> 00:16:55,819
+Scott: No, let's not.
+
+245
+00:16:56,160 --> 00:16:56,381
+Rym: Yeah.
+
+246
+00:16:56,401 --> 00:17:04,270
+Rym: So tonight we in the vein of many things We've been doing with Mondays are going to go kind of back to our how computers work thing.
+
+247
+00:17:04,390 --> 00:17:15,912
+Rym: But we're gonna do a bunch of episodes about a kind of specific topic Which is hard drive partitioning formatting file systems all that jazz how to store data on Computers.
+
+248
+00:17:15,972 --> 00:17:30,430
+Rym: because not only is there a lot of confusion about this and not only has it changed a lot in recent years But one of the most common sets of questions we get in our forums and in our email are either Help this file is locked and I can't unlock it or help.
+
+249
+00:17:30,550 --> 00:17:34,003
+Rym: I tried to install Linux and I deleted all my files or help.
+
+250
+00:17:34,083 --> 00:17:35,508
+Rym: I can't make a fifth partition.
+
+251
+00:17:35,568 --> 00:17:35,970
+Rym: Why not?
+
+252
+00:17:36,371 --> 00:17:40,004
+Scott: I think what it is really is if you're gonna even use.
+
+253
+00:17:40,104 --> 00:17:44,479
+Scott: if you just buy a computer and use it Windows is already installed and you never have to know this stuff.
+
+254
+00:17:45,001 --> 00:17:54,223
+Scott: if you're gonna tinker with your computer at all the first thing that usually comes up is that you need to learn about Partitioning and file systems and formatting and all that jazz.
+
+255
+00:17:54,264 --> 00:17:55,610
+Scott: the first thing you have to learn.
+
+256
+00:17:55,750 --> 00:17:57,759
+Scott: It's the first thing that jumps into your face.
+
+257
+00:17:57,799 --> 00:18:01,769
+Scott: I mean if you install Windows on a computer Let's say you're just reinstalling Windows.
+
+258
+00:18:02,432 --> 00:18:12,610
+Scott: The only thing you have to know about besides press enter press enter press enter is Stuff dealing with hard drives and partitioning and the question has come a lot up a lot lately.
+
+259
+00:18:13,052 --> 00:18:20,084
+Scott: So we decided we're gonna do podcasts on it so that all you People who don't know what the hell's going on can hopefully be informed.
+
+260
+00:18:20,425 --> 00:18:20,566
+Rym: now.
+
+261
+00:18:20,706 --> 00:18:23,476
+Rym: one of the main Barriers that people have is that
+
+262
+00:18:23,998 --> 00:18:24,379
+Scott: while
+
+263
+00:18:24,640 --> 00:18:41,790
+Rym: technology has advanced a lot in a lot of ways two things That for the vast majority of computers have not changed very much or very significantly are The way hard drives work and the way you interface with them on the low levels and the way the BIOS works.
+
+264
+00:18:42,471 --> 00:18:50,150
+Rym: Yep, those two things are kind of archaic and they're really second nature to a lot of geeks in our generation.
+
+265
+00:18:50,170 --> 00:18:59,256
+Rym: doesn't mean Scott specifically just because we grew up in the era where computers had progressed beyond the Apple to kind of days and But they weren't easy yet.
+
+266
+00:18:59,537 --> 00:19:02,890
+Rym: So we had to deal with all this stuff on a regular basis.
+
+267
+00:19:03,452 --> 00:19:09,870
+Scott: Yeah, well a computer with a penny on one has significantly less features than a modern like I don't know quad core.
+
+268
+00:19:09,950 --> 00:19:10,733
+Scott: Whatever the fuck.
+
+269
+00:19:10,973 --> 00:19:11,616
+Scott: but you had to do.
+
+270
+00:19:11,656 --> 00:19:16,190
+Scott: BIOS is essentially the same max recently have done different things.
+
+271
+00:19:16,230 --> 00:19:18,357
+Scott: They have open firmware instead of BIOS.
+
+272
+00:19:18,538 --> 00:19:20,845
+Scott: Yeah, and they have a different partitioning system.
+
+273
+00:19:20,885 --> 00:19:22,270
+Scott: that it is just weird.
+
+274
+00:19:22,330 --> 00:19:23,200
+Rym: We're not talking about that.
+
+275
+00:19:23,221 --> 00:19:24,030
+Scott: We're not talking about that.
+
+276
+00:19:24,050 --> 00:19:25,115
+Scott: We're talking about this.
+
+277
+00:19:25,295 --> 00:19:32,524
+Scott: the PC BIOS way of doing things that has been around For at least over a decade pretty much and it's still the stand.
+
+278
+00:19:32,584 --> 00:19:40,676
+Rym: any non Mac computer You'll ever touch in your lifetime works the way we're about to describe and I'll warn you This is some archaic stuff.
+
+279
+00:19:41,098 --> 00:19:48,425
+Rym: The reasons things are the way they are is Arbitrary and due to the fact that there's been no reason to change this for many years.
+
+280
+00:19:48,806 --> 00:19:51,638
+Rym: and don't feel bad If you don't know about this stuff.
+
+281
+00:19:51,940 --> 00:19:54,030
+Rym: a lot of times we make fun of people who don't know about things.
+
+282
+00:19:54,734 --> 00:20:01,909
+Rym: Unless you grew up in our generation and you were a computer nerd There was really no reason for you to learn this stuff and I really don't blame you.
+
+283
+00:20:02,391 --> 00:20:10,330
+Scott: Yeah, if you'd ever try to install an operating system or anything You're never gonna encounter this ever if you're just a computer user.
+
+284
+00:20:10,491 --> 00:20:11,776
+Scott: So it's not.
+
+285
+00:20:12,459 --> 00:20:13,122
+Scott: I mean, I didn't.
+
+286
+00:20:13,142 --> 00:20:16,189
+Scott: even when the first time I encountered it I don't know what the hell was going on.
+
+287
+00:20:16,591 --> 00:20:21,010
+Scott: I had to freakin learn it on my own with huge chances of fucking up computers.
+
+288
+00:20:21,071 --> 00:20:27,023
+Rym: Luckily the first time I really had to do this I built a computer from scratch and I had one hard drive and there was nothing on it.
+
+289
+00:20:27,344 --> 00:20:27,525
+Scott: Yep.
+
+290
+00:20:27,826 --> 00:20:29,572
+Rym: So no trouble there Mm-hmm.
+
+291
+00:20:29,973 --> 00:20:31,659
+Scott: All right, so a hard drive.
+
+292
+00:20:31,719 --> 00:20:32,663
+Scott: What is a hard drive?
+
+293
+00:20:32,763 --> 00:20:33,285
+Rym: Well, we're gonna.
+
+294
+00:20:33,486 --> 00:20:35,896
+Rym: we're not gonna go into great detail We're not gonna go into detail.
+
+295
+00:20:35,937 --> 00:20:37,063
+Scott: But you know, all right.
+
+296
+00:20:37,123 --> 00:20:37,364
+Rym: All right.
+
+297
+00:20:37,425 --> 00:20:40,199
+Rym: a hard drive is To skip all of the.
+
+298
+00:20:40,340 --> 00:20:41,749
+Rym: it's a thing you start data on.
+
+299
+00:20:42,694 --> 00:20:55,170
+Rym: It's a bunch of platters magnetic platters that spin really fast and there's a little head and it can Put a magnetic field there or take a magnetic field away in a very controlled manner.
+
+300
+00:20:55,311 --> 00:20:58,643
+Rym: It's more complicated than that and that's not exactly how it works.
+
+301
+00:20:58,744 --> 00:21:01,495
+Rym: But as far as you're all concerned That's all you really need to know.
+
+302
+00:21:01,856 --> 00:21:05,170
+Rym: it stores zeros and ones in magnetic fields on a spinning disk.
+
+303
+00:21:05,350 --> 00:21:12,050
+Scott: It's a magic little box that can hold like millions upon millions of zeros and ones now without letting go of them.
+
+304
+00:21:12,150 --> 00:21:14,561
+Scott: even if you turn it off those zeros and ones are still in there.
+
+305
+00:21:14,582 --> 00:21:23,555
+Rym: a lot of different people make hard drives and Every hard drive the actual physical how it puts the data there is Actually a lot different.
+
+306
+00:21:23,635 --> 00:21:25,562
+Rym: I mean every hard drive kind of works differently.
+
+307
+00:21:25,622 --> 00:21:28,010
+Rym: different manufacturers sometimes do completely different things.
+
+308
+00:21:28,391 --> 00:21:31,504
+Rym: But you know when you buy a hard drive on the outside of it or sometimes hidden inside.
+
+309
+00:21:31,545 --> 00:21:41,976
+Rym: There's this big circuit board In there, it translates whatever stuff the hard drive manufacturer made into a standard that all Computers can understand.
+
+310
+00:21:42,680 --> 00:21:46,370
+Rym: So no matter what goes on inside the hard drive It all comes out the same.
+
+311
+00:21:46,490 --> 00:21:49,300
+Rym: So as far as you're concerned the hard drives are all the same.
+
+312
+00:21:49,320 --> 00:21:52,491
+Rym: you plug it in to whatever connector it uses and it just Works.
+
+313
+00:21:52,631 --> 00:22:02,065
+Scott: Yeah, if you have a freaking hard drive for that fancy new perpendicular native command queuing all that jazz Those are just fancy words that say this hard drive is more awesome.
+
+314
+00:22:02,125 --> 00:22:07,010
+Scott: Yeah, you they're right Those hard drives are more awesome, but it doesn't actually change what you have to do.
+
+315
+00:22:07,130 --> 00:22:09,485
+Rym: Yeah, the connectors the same as far as you're concerned.
+
+316
+00:22:09,625 --> 00:22:10,350
+Rym: Everything's the same.
+
+317
+00:22:11,052 --> 00:22:15,508
+Scott: If there's a serial ATA hard drive you might need a driver on Windows XP, but that's about it.
+
+318
+00:22:15,829 --> 00:22:19,569
+Rym: Yeah Yeah, sometimes Linux with old motherboards with serial ATA.
+
+319
+00:22:19,690 --> 00:22:33,060
+Scott: Well, no if you're building the Linux kernel by hand you got to remember to include the stuff for your particular serial ATA Controller, but if you're using Ubuntu or any other Distribution that comes
+
+320
+00:22:33,100 --> 00:22:33,542
+Rym: with a
+
+321
+00:22:33,562 --> 00:22:39,045
+Scott: pre-compiled kernel for you You don't have to worry because your serial ATA hard drive will 99.9% of the time just work.
+
+322
+00:22:40,590 --> 00:22:45,629
+Rym: Yep, so we're not even going to talk about, you know ATA or you know SCSI or any of that.
+
+323
+00:22:45,809 --> 00:22:47,438
+Scott: Nope That's not what we're talking about.
+
+324
+00:22:47,579 --> 00:22:49,650
+Rym: We're talking about you've already got the hard drive.
+
+325
+00:22:49,730 --> 00:22:50,915
+Rym: You plug it into your computer.
+
+326
+00:22:51,196 --> 00:22:55,050
+Rym: You flip whatever jumpers on it and go into your BIOS and you make it work.
+
+327
+00:22:55,594 --> 00:22:56,159
+Rym: Now what?
+
+328
+00:22:56,280 --> 00:22:57,490
+Scott: It's a blank hard drive.
+
+329
+00:22:57,590 --> 00:22:58,655
+Scott: You turn your computer on.
+
+330
+00:22:58,675 --> 00:23:03,613
+Scott: when you turn a computer on the first thing it does is it says, okay Let's turn on.
+
+331
+00:23:03,774 --> 00:23:09,513
+Scott: and what it does is it looks for the first hard drive it can find or it looks for whatever you tell It to look for.
+
+332
+00:23:09,533 --> 00:23:09,734
+Scott: you know.
+
+333
+00:23:09,754 --> 00:23:13,450
+Scott: in the BIOS you say boot off the floppy boot off the CD, you know.
+
+334
+00:23:13,613 --> 00:23:14,468
+Scott: And it goes there.
+
+335
+00:23:14,771 --> 00:23:23,575
+Scott: It goes to the CD or the floppy or a USB thumb drive or usually the very first hard drive and it says Where's the data?
+
+336
+00:23:23,635 --> 00:23:24,881
+Scott: that tells me what to do next?
+
+337
+00:23:25,464 --> 00:23:29,580
+Scott: and if there's nothing there it goes Non-system disk or disk error.
+
+338
+00:23:29,862 --> 00:23:34,250
+Scott: I'm sure you've seen that at least once in your life Especially if you were back in the DOS days.
+
+339
+00:23:34,491 --> 00:23:35,133
+Scott: You've seen that a lot.
+
+340
+00:23:35,233 --> 00:23:35,856
+Rym: Oh god.
+
+341
+00:23:35,996 --> 00:23:39,910
+Scott: In the DOS days you would see non-system disk or disk error all the time.
+
+342
+00:23:40,111 --> 00:23:46,210
+Rym: I over wrote my MBR before I knew what an MBR was and I cried because I thought I'd broken my family computer.
+
+343
+00:23:46,350 --> 00:23:55,670
+Scott: Yep, non-system disk or disk error was a classic error from back in the day when you couldn't change the boot order on computers You'd put a floppy in there that you were using just to store some pictures.
+
+344
+00:23:55,751 --> 00:23:57,442
+Scott: Yeah, and you turn the computer on.
+
+345
+00:23:57,462 --> 00:23:58,630
+Scott: it would try to boot off the floppy.
+
+346
+00:23:58,710 --> 00:24:03,349
+Scott: They just had pictures on it and you'd be like say no non-system disk or disk error.
+
+347
+00:24:04,433 --> 00:24:06,225
+Rym: Anyway, so you got this hard drive.
+
+348
+00:24:06,265 --> 00:24:06,708
+Rym: you plug it in.
+
+349
+00:24:07,151 --> 00:24:13,590
+Rym: There are a number of things in a very specific order that must be done to a raw hard drive to make it usable.
+
+350
+00:24:14,114 --> 00:24:23,337
+Rym: the very first step aside from you know manufacturing the hard drive and putting it in a box and giving it electricity is Low level formatting.
+
+351
+00:24:23,377 --> 00:24:26,010
+Rym: you might hear people use the term low level formatting.
+
+352
+00:24:26,572 --> 00:24:31,830
+Rym: I will tell you right now you will never need to low level format a hard drive.
+
+353
+00:24:32,132 --> 00:24:36,468
+Scott: There is one or two instances where you'll need to low level format a hard drive But they are rare.
+
+354
+00:24:36,891 --> 00:24:39,201
+Rym: You'll probably sell that hard drive on eBay.
+
+355
+00:24:39,342 --> 00:24:46,570
+Scott: if you were going to sell a hard drive on eBay You should probably low level format it so that no one scoops your data off of it that you left behind.
+
+356
+00:24:46,860 --> 00:24:53,029
+Rym: Yep But low level formatting is a thing that is done by the manufacturer to prepare the disk for data to be put on it.
+
+357
+00:24:53,411 --> 00:24:56,570
+Rym: It is nothing to do with the formatting that you know and love.
+
+358
+00:24:56,711 --> 00:25:02,358
+Scott: No, all they do is basically fill the drive zero with zeros And a couple other things like sometimes drives.
+
+359
+00:25:02,459 --> 00:25:03,583
+Rym: it calibrates everything.
+
+360
+00:25:03,603 --> 00:25:05,169
+Rym: the heads make sure they're all lined up.
+
+361
+00:25:05,390 --> 00:25:07,677
+Rym: Yeah, some drives do like an internal diagnostic thing.
+
+362
+00:25:07,978 --> 00:25:08,720
+Rym: none of that matters.
+
+363
+00:25:09,081 --> 00:25:10,645
+Rym: low-level formatting pretend.
+
+364
+00:25:10,665 --> 00:25:11,528
+Rym: It doesn't even exist.
+
+365
+00:25:11,708 --> 00:25:13,949
+Scott: yep So what do you do after that huh?
+
+366
+00:25:14,310 --> 00:25:21,165
+Rym: Well, you know a drive can act like a whole bunch of different drives like you can have CD and e drive all on the same disk.
+
+367
+00:25:22,100 --> 00:25:22,870
+Scott: How do you do that?
+
+368
+00:25:23,030 --> 00:25:29,013
+Scott: See you only have one Actual physical hard drive in the computer, but your computer You know most computers.
+
+369
+00:25:29,073 --> 00:25:33,907
+Scott: you have one physical hard drive desktop computers and on it'll say C Drive.
+
+370
+00:25:33,967 --> 00:25:34,970
+Scott: you have one hard drive.
+
+371
+00:25:35,431 --> 00:25:39,904
+Scott: Well some people they have one hard drive in the computer, but it says CD EFG.
+
+372
+00:25:40,566 --> 00:25:41,188
+Scott: How do they do that?
+
+373
+00:25:41,228 --> 00:25:41,428
+Scott: Well?
+
+374
+00:25:41,489 --> 00:25:44,632
+Rym: It's called partitioning Partitioning.
+
+375
+00:25:44,933 --> 00:25:46,158
+Rym: it sounds like Sesame Street.
+
+376
+00:25:46,299 --> 00:25:46,680
+Scott: as you know.
+
+377
+00:25:46,700 --> 00:25:49,070
+Scott: you put up partitions in a room to split it up.
+
+378
+00:25:49,491 --> 00:25:50,615
+Scott: That's what partitions are.
+
+379
+00:25:50,895 --> 00:25:55,630
+Scott: you split up the hard drive into pieces that all act as separate pieces?
+
+380
+00:25:56,292 --> 00:26:04,390
+Scott: You know instead of having to go out and buy four hard drives that are 20 gigs each you can get 180 gig hard drive And split it into four 20 gig pieces.
+
+381
+00:26:04,631 --> 00:26:09,578
+Scott: And it's essentially as far as the computer is the operating system is concerned It's sort of the same.
+
+382
+00:26:09,861 --> 00:26:12,296
+Rym: now you might wonder Why would anyone do that?
+
+383
+00:26:12,677 --> 00:26:15,990
+Rym: and the easy answer is that nobody does it anymore?
+
+384
+00:26:16,770 --> 00:26:18,997
+Rym: I mean unless you're dual booting these days.
+
+385
+00:26:19,458 --> 00:26:22,126
+Rym: There is almost no reason to partition a hard drive.
+
+386
+00:26:22,327 --> 00:26:26,270
+Scott: well with Windows There's almost no reason to partition a hard drive.
+
+387
+00:26:26,732 --> 00:26:36,068
+Scott: I mean if you're running Windows you just say and you're not doing anything else And you have one hard drive in your computer you say Windows take up the whole hard drive And you're done, and you don't do anything.
+
+388
+00:26:36,108 --> 00:26:37,501
+Rym: yep You see part of the history here.
+
+389
+00:26:37,521 --> 00:26:38,409
+Rym: is that back in the day?
+
+390
+00:26:38,930 --> 00:26:39,151
+Rym: There were.
+
+391
+00:26:39,252 --> 00:26:46,000
+Rym: I mean even now there are limits as to how big a hard drive can be Because of how much you know space a computer can address.
+
+392
+00:26:46,521 --> 00:26:48,066
+Rym: and there are a whole bunch of factors there.
+
+393
+00:26:48,507 --> 00:26:52,109
+Rym: and a long time ago It used to be that a drive couldn't be very big at all.
+
+394
+00:26:52,632 --> 00:27:02,290
+Rym: So if you had you know a four gigabyte drive you had to break it into two gigabyte Partitions because your computer could only see two gigabytes of a drive at a time.
+
+395
+00:27:02,931 --> 00:27:10,830
+Scott: Mm-hmm also back in the day a lot of people you know would have a computer And they needed to have more than one operating system on the computer.
+
+396
+00:27:10,890 --> 00:27:14,448
+Scott: They needed you know a Unix and a DOS or something like that.
+
+397
+00:27:14,468 --> 00:27:16,195
+Scott: it What how could you get?
+
+398
+00:27:16,376 --> 00:27:17,862
+Scott: you couldn't afford another hard drive.
+
+399
+00:27:17,902 --> 00:27:18,444
+Scott: god damn it.
+
+400
+00:27:18,484 --> 00:27:19,870
+Scott: those things were expensive not like today.
+
+401
+00:27:20,051 --> 00:27:23,310
+Scott: Hard drives are cheap as shit, and you can just get boxes full of these things.
+
+402
+00:27:23,751 --> 00:27:29,089
+Scott: so people had to split those hard drives up into different pieces because you couldn't put two operating systems in the same piece.
+
+403
+00:27:29,109 --> 00:27:33,030
+Scott: because Like I said before your computer turns on it looks at that hard drive.
+
+404
+00:27:33,131 --> 00:27:33,779
+Scott: It wants to boot.
+
+405
+00:27:34,305 --> 00:27:34,730
+Scott: so it's good.
+
+406
+00:27:34,911 --> 00:27:43,030
+Scott: It you know it looks for the first partition of the master boot record Which is even before it's like the zeroth partition on a hard drive is the master boot record.
+
+407
+00:27:43,372 --> 00:27:46,989
+Rym: It's kind of a hidden thing that you have to do special things to interact with.
+
+408
+00:27:47,069 --> 00:27:50,601
+Scott: yeah And the master boot record doesn't exist on every hard drive in the universe.
+
+409
+00:27:50,962 --> 00:28:00,381
+Scott: it can actually exist even on a CD or a floppy Drive, but it's sort of like on every and every storage Medium a CD of a hard drive a floppy.
+
+410
+00:28:00,541 --> 00:28:04,232
+Scott: there is space for a master boot record to go And it's either there Or it's not.
+
+411
+00:28:04,573 --> 00:28:16,583
+Scott: and if it is if you put it there if you put a master boot record in the area where it belongs Which is like sort of the zeroth partition before everything else Then your computer can boot from that and it will be a system disk.
+
+412
+00:28:17,044 --> 00:28:20,709
+Scott: if you do not put a master boot record there Then the computer will say I don't know how to boot from that.
+
+413
+00:28:20,770 --> 00:28:22,416
+Scott: What do you want me to do now?
+
+414
+00:28:22,457 --> 00:28:42,570
+Rym: the other reasons that you'll want to partition nowadays is one Linux But I'll get to that in a minute But to a lot of people when they install Windows And this is pretty much been standard practice for me for as long as I've used Windows Which I've stopped using Windows, so it's kind of a moot point now I'd always install Windows on like a five or six gigabyte C Drive, and it would be just Windows.
+
+415
+00:28:42,692 --> 00:28:43,929
+Rym: I would never put anything else there.
+
+416
+00:28:44,493 --> 00:28:49,222
+Rym: Then I'd make another partition D Drive And that would be where all my applications would go.
+
+417
+00:28:49,382 --> 00:28:50,407
+Rym: all my mp3s would go.
+
+418
+00:28:50,548 --> 00:28:58,542
+Rym: everything else I own would go that way if I had to reinstall Windows because you know you had to do that periodically Because the way Windows was still do.
+
+419
+00:28:58,582 --> 00:29:07,979
+Rym: we'll see if you had to do that with Vista I could just reinstall Windows wipe out the C Drive put a new Windows on and not have to deal with Backing up all my stuff or anything you know.
+
+420
+00:29:07,999 --> 00:29:08,180
+Rym: because
+
+421
+00:29:08,200 --> 00:29:08,421
+Scott: when you
+
+422
+00:29:08,481 --> 00:29:10,228
+Scott: install Windows on a partition
+
+423
+00:29:10,248 --> 00:29:11,594
+Scott: it Demands
+
+424
+00:29:11,654 --> 00:29:12,277
+Scott: to completely
+
+425
+00:29:12,337 --> 00:29:13,381
+Scott: erase that partition,
+
+426
+00:29:13,803 --> 00:29:15,290
+Scott: so if you have important data there
+
+427
+00:29:15,551 --> 00:29:18,365
+Scott: You have to back it up before you install Windows,
+
+428
+00:29:18,425 --> 00:29:19,410
+Rym: and that's always a pain.
+
+429
+00:29:19,490 --> 00:29:22,923
+Scott: It's always a pain, so if you have that data on a different partition.
+
+430
+00:29:23,003 --> 00:29:24,890
+Scott: You can just not have to erase it.
+
+431
+00:29:25,090 --> 00:29:25,512
+Scott: It's all good.
+
+432
+00:29:25,954 --> 00:29:27,720
+Rym: now on Linux a lot of you.
+
+433
+00:29:27,740 --> 00:29:27,941
+Rym: You know.
+
+434
+00:29:28,001 --> 00:29:30,290
+Scott: and Unix and any other Nix Solaris?
+
+435
+00:29:30,652 --> 00:29:31,437
+Rym: Yeah, you know.
+
+436
+00:29:31,518 --> 00:29:33,490
+Rym: you have in Windows your C Drive your D Drive.
+
+437
+00:29:33,591 --> 00:29:36,063
+Rym: It's organized by drives or partitions.
+
+438
+00:29:36,284 --> 00:29:39,635
+Rym: hmm in Linux There's a bet it's the same.
+
+439
+00:29:39,676 --> 00:29:43,024
+Rym: it's there, but you don't interact with it directly.
+
+440
+00:29:43,425 --> 00:29:45,310
+Rym: you don't interact per drive.
+
+441
+00:29:45,551 --> 00:29:48,141
+Rym: You don't care what hard drive something is.
+
+442
+00:29:48,221 --> 00:29:49,947
+Scott: well sometimes you do, but not as a user.
+
+443
+00:29:50,751 --> 00:29:53,250
+Rym: You don't care as an administrator unless your drives are filling up.
+
+444
+00:29:53,290 --> 00:29:53,512
+Scott: Yeah,
+
+445
+00:29:53,854 --> 00:30:09,443
+Rym: yeah, but as a user when you're using a Linux Unix Whatever you will have a file system that starts at roots and then there are folders in root and then there are folders in those folders and Instead of having a drive like you know in Windows C Drive D Drive.
+
+446
+00:30:09,483 --> 00:30:10,206
+Rym: That's the bottom.
+
+447
+00:30:10,226 --> 00:30:11,149
+Rym: the drive starts there.
+
+448
+00:30:12,252 --> 00:30:17,029
+Rym: Root doesn't really exist anywhere because the all the fault folders are in it.
+
+449
+00:30:17,511 --> 00:30:24,190
+Rym: And then you can mount a drive like it was a C Drive anywhere you want hanging off of any other folder.
+
+450
+00:30:24,592 --> 00:30:26,060
+Rym: I'm trying to be really non-technical here.
+
+451
+00:30:26,141 --> 00:30:27,710
+Scott: so in Linux you have slash.
+
+452
+00:30:27,971 --> 00:30:29,254
+Scott: Slash is the top your.
+
+453
+00:30:29,274 --> 00:30:32,604
+Scott: when you're at slash you see everything and in slash.
+
+454
+00:30:32,644 --> 00:30:41,090
+Scott: There's some folders like home user Var at C at you know bin and in those folders or other files now.
+
+455
+00:30:41,752 --> 00:30:43,399
+Scott: Well, how do you know which hard drive it is?
+
+456
+00:30:43,439 --> 00:30:46,010
+Scott: well slash needs to be on a partition somewhere?
+
+457
+00:30:46,410 --> 00:30:51,386
+Scott: So one of your partitions is slash and that contains everything now.
+
+458
+00:30:51,526 --> 00:30:52,750
+Scott: What if you have another partition?
+
+459
+00:30:53,030 --> 00:30:56,176
+Scott: Well for example on my computer I have two hard drives.
+
+460
+00:30:56,417 --> 00:31:01,357
+Scott: one computer is an 80. one of them is an 80 gig hard drive and one of them is 160 gig hard drive.
+
+461
+00:31:02,020 --> 00:31:06,217
+Scott: the 80 gig hard drive contains slash And it contains everything.
+
+462
+00:31:06,699 --> 00:31:21,697
+Scott: everything that you know belong all those files at C. Everything is on that 80 gig hard drive except the hundred and sixty gig hard drive is Mounted to slash home, so if I go to the home folder Which is where all the user stuff is.
+
+463
+00:31:21,737 --> 00:31:25,470
+Scott: you know the users personal files and my mp3s, and you know everything.
+
+464
+00:31:26,232 --> 00:31:27,676
+Scott: That's actually a different hard drive.
+
+465
+00:31:27,716 --> 00:31:30,344
+Scott: now if I just used one hard drive.
+
+466
+00:31:30,885 --> 00:31:36,530
+Scott: It would look no different to the user It's it would go to slash home slash their username and their files would be there.
+
+467
+00:31:36,912 --> 00:31:39,769
+Scott: It would just all be on one hard drive the same hard drive as everything else.
+
+468
+00:31:40,452 --> 00:31:46,751
+Scott: But what I did is I put slash home on a different hard drive which means Anything.
+
+469
+00:31:46,992 --> 00:31:52,350
+Scott: files that happen to be in the slash home folder are actually on this other drive somewhere on a different partition.
+
+470
+00:31:52,695 --> 00:31:53,569
+Scott: No different file system.
+
+471
+00:31:53,751 --> 00:31:56,119
+Rym: There are a lot of benefits to doing this sort of thing.
+
+472
+00:31:56,300 --> 00:31:59,070
+Rym: and because you're not we're not doing this for system administrators.
+
+473
+00:31:59,291 --> 00:32:01,884
+Rym: You all know the other reasons to partition and all this.
+
+474
+00:32:02,446 --> 00:32:06,350
+Rym: but as a user Here's the kind of the best example as to why this is a good thing.
+
+475
+00:32:06,852 --> 00:32:11,309
+Rym: And then I've got something kind of enlightening that a lot of people don't know about Windows that you might be happy about.
+
+476
+00:32:11,329 --> 00:32:12,544
+Rym: you might Want to play with mm-hmm?
+
+477
+00:32:13,311 --> 00:32:19,170
+Rym: Let's say I have a whole bunch of mp3s, and I have one hard drive and my whole slash is my whole hard drive.
+
+478
+00:32:19,230 --> 00:32:21,563
+Rym: I just got this whole big hard drive and all my stuff is in it.
+
+479
+00:32:22,106 --> 00:32:30,577
+Rym: one big partition You know being simple here and all my mp3s are in slash user slash media slash share Which is where you would never put them.
+
+480
+00:32:30,678 --> 00:32:38,858
+Rym: no no, but you could you could I guess yeah bad move yeah, but let's say they're there and Suddenly, I'm running out of hard drive space.
+
+481
+00:32:38,878 --> 00:32:40,483
+Rym: my mp3s have filled up the whole drive.
+
+482
+00:32:41,125 --> 00:32:44,790
+Rym: say I buy a brand new 5000 gigabyte hard drive.
+
+483
+00:32:45,372 --> 00:32:57,949
+Rym: So what I can do is mount that hard drive copy all my mp3s to it and then mount The unmount it from wherever I stuck it and then mount that hard drive at usershare media where all my mp3s were.
+
+484
+00:32:58,812 --> 00:33:06,950
+Scott: So now all the programs like you know your music playing program And you're all your playlists that say the music isn't you as our share media.
+
+485
+00:33:07,070 --> 00:33:09,281
+Scott: You know they're used to looking there for music.
+
+486
+00:33:09,321 --> 00:33:10,587
+Scott: They don't have to look somewhere else.
+
+487
+00:33:10,607 --> 00:33:11,170
+Scott: You know Windows.
+
+488
+00:33:11,612 --> 00:33:16,779
+Scott: Let's say you had all your music and C colon something and then you got a new hard drive And you move all your music to it.
+
+489
+00:33:17,182 --> 00:33:24,350
+Scott: now your music is on D Colon something and you have to tell all your programs to look somewhere else to find your music and Linux not the case.
+
+490
+00:33:24,813 --> 00:33:27,816
+Rym: Yep, so now you've upgraded your space But you haven't had to.
+
+491
+00:33:27,837 --> 00:33:38,941
+Rym: I mean I see a lot of people have a Windows computer and they have a drive f drive because they keep buying new computer or new hard drives and sticking them in and They don't realize that you can do the same thing in Windows.
+
+492
+00:33:38,981 --> 00:33:46,869
+Rym: starting with Windows 2000 you can go to the disk manager Take a new hard drive or a partition and just mount it somewhere pretty much just like you do in Linux.
+
+493
+00:33:47,532 --> 00:33:49,099
+Scott: Yeah, only if you use NTFS.
+
+494
+00:33:49,140 --> 00:33:49,622
+Scott: It's called.
+
+495
+00:33:50,104 --> 00:33:51,390
+Scott: What is it called virtual directories?
+
+496
+00:33:52,951 --> 00:33:55,170
+Rym: Yeah, you can look up how to actually do it.
+
+497
+00:33:55,331 --> 00:33:58,230
+Scott: I mean in Linux and Unix.
+
+498
+00:33:58,371 --> 00:34:00,819
+Scott: That's the way things work in Windows.
+
+499
+00:34:00,880 --> 00:34:03,549
+Scott: that's sort of like a hack thrown in but it does work.
+
+500
+00:34:03,831 --> 00:34:08,126
+Scott: Mostly mostly not a hundred percent, but yeah, it'll work if you're just using Windows.
+
+501
+00:34:08,187 --> 00:34:11,157
+Scott: It'll work just fine You won't care makes no difference to you.
+
+502
+00:34:11,739 --> 00:34:19,650
+Rym: now all this partitioning sounds great, but a lot of people have problems Especially if they try to make more than four partitions on a drive.
+
+503
+00:34:20,812 --> 00:34:22,178
+Rym: This is the archaic part.
+
+504
+00:34:22,239 --> 00:34:29,204
+Rym: you see you can only have four Primary partitions on a drive period.
+
+505
+00:34:29,545 --> 00:34:30,350
+Scott: yep, that is it.
+
+506
+00:34:30,409 --> 00:34:31,762
+Scott: That's the limit you can partition.
+
+507
+00:34:31,822 --> 00:34:32,750
+Scott: you see you have a hard drive.
+
+508
+00:34:32,971 --> 00:34:35,327
+Scott: You can split it up into four pieces no more.
+
+509
+00:34:36,272 --> 00:34:39,764
+Rym: This hearkens back to a long time ago for reasons you don't care about.
+
+510
+00:34:39,784 --> 00:34:41,753
+Scott: yep now What?
+
+511
+00:34:42,255 --> 00:34:44,710
+Scott: but people split up hard drives into more than four pieces?
+
+512
+00:34:45,070 --> 00:34:47,121
+Rym: Yeah, you can put a lot of partitions on a hard drive.
+
+513
+00:34:47,504 --> 00:34:48,610
+Scott: Oh, but how do they do that?
+
+514
+00:34:48,650 --> 00:34:50,036
+Scott: We just said it could only be four.
+
+515
+00:34:50,378 --> 00:34:50,739
+Rym: Yeah, well.
+
+516
+00:34:50,840 --> 00:34:53,170
+Rym: I said four primary partitions.
+
+517
+00:34:54,810 --> 00:35:01,508
+Rym: Yeah, you see there are other kinds of partitions, but really there's only two kinds of partitions primary and logical.
+
+518
+00:35:01,949 --> 00:35:05,630
+Rym: now To make it real simple a primary partition is a partition.
+
+519
+00:35:06,274 --> 00:35:16,672
+Rym: If you if you make three primary partitions And you need more than four you make your fourth primary partition and then inside of that you break it up into logical Partitions.
+
+520
+00:35:17,014 --> 00:35:21,390
+Rym: as far as your computer is concerned the operating system and all that they're just more partitions.
+
+521
+00:35:21,951 --> 00:35:28,327
+Rym: Whether a partition is primary or logical has no bearing on anything other than making the partition.
+
+522
+00:35:28,367 --> 00:35:42,090
+Scott: the only time you have to pay Attention to the primary and logical partitions is when you're actually making the partitions and configuring them because if you don't Understand the difference in primary and logical you're not going to set it up right and it's going to be all weird?
+
+523
+00:35:42,351 --> 00:35:47,050
+Rym: Yeah, because if you screw up partitioning your computer is going to have trouble down the road.
+
+524
+00:35:47,392 --> 00:35:50,269
+Rym: You're gonna run into problems that you are not going to expect.
+
+525
+00:35:50,771 --> 00:35:51,795
+Scott: Here's the problem.
+
+526
+00:35:51,835 --> 00:35:58,880
+Scott: a lot of people have a partitioning is you know they have a computer and it's already set up with a certain partition scheme and they want to change it.
+
+527
+00:35:59,241 --> 00:36:16,730
+Scott: and rather than just erase it and You know figure out how they want their system to be and then choosing the correct partition scheme They try to shrink a partition and then put some new ones in there And they basically keep modifying the current setup and trying to turn it into something that works.
+
+528
+00:36:17,152 --> 00:36:17,854
+Scott: You can't do that.
+
+529
+00:36:18,156 --> 00:36:19,160
+Scott: It really doesn't work out.
+
+530
+00:36:19,200 --> 00:36:19,361
+Scott: Well.
+
+531
+00:36:19,421 --> 00:36:21,570
+Scott: You have to say what drives do I have?
+
+532
+00:36:22,150 --> 00:36:23,210
+Scott: What do I want to install?
+
+533
+00:36:23,890 --> 00:36:28,330
+Scott: How do I want to configure it and then choose the correct partition scheme?
+
+534
+00:36:28,750 --> 00:36:32,104
+Scott: For your needs and set it up that way from scratch.
+
+535
+00:36:32,144 --> 00:36:33,430
+Scott: don't go modifying me.
+
+536
+00:36:33,731 --> 00:36:34,313
+Scott: You can.
+
+537
+00:36:34,614 --> 00:36:43,050
+Scott: you can shrink and resize and chop up partitions and with all sorts of partition magic tools But you're only asking for trouble in the long run if you do that.
+
+538
+00:36:43,250 --> 00:36:52,769
+Rym: Yeah, not only is that dangerous because that's those sorts of operations will not often, but a non-trivial amount of the time fail Wiping out your data.
+
+539
+00:36:52,971 --> 00:36:54,797
+Scott: I can't tell you how many times they get a story.
+
+540
+00:36:54,837 --> 00:36:58,330
+Scott: some guys like I was trying to modify some partitions something something.
+
+541
+00:36:58,431 --> 00:37:07,098
+Scott: No, you back up your data You could you erase all the partitions you figure out how you want the partitions set up and you make it from scratch In the correct method.
+
+542
+00:37:07,299 --> 00:37:09,369
+Scott: that is the safe and good way to do it.
+
+543
+00:37:09,932 --> 00:37:13,905
+Scott: So, how do you decide what partition scheme is the best for you?
+
+544
+00:37:14,206 --> 00:37:18,149
+Rym: Well if you're using Windows There are a lot of ways you can go about it.
+
+545
+00:37:18,511 --> 00:37:25,930
+Rym: What I recommend very generally is make a partition to install Windows on and then make other partitions for everything else.
+
+546
+00:37:26,493 --> 00:37:26,694
+Scott: Mm-hmm.
+
+547
+00:37:27,017 --> 00:37:27,682
+Rym: That's really it.
+
+548
+00:37:27,722 --> 00:37:28,670
+Rym: You can do whatever you want.
+
+549
+00:37:29,292 --> 00:37:38,670
+Rym: I would recommend that you mount new hard drives in the file system like in you would in Linux Instead of making you know e drive f drive g drive z drive.
+
+550
+00:37:39,352 --> 00:37:42,690
+Scott: My suggestion for Windows would be you have a hard drive.
+
+551
+00:37:43,071 --> 00:37:48,027
+Scott: You want to give like 10 to 20 gigs for your Windows part because that's gonna grow it.
+
+552
+00:37:48,248 --> 00:37:48,990
+Scott: That's where your registry.
+
+553
+00:37:48,990 --> 00:37:49,572
+Scott: Yeah, stuff.
+
+554
+00:37:49,833 --> 00:37:52,260
+Rym: I usually gave six gigs, but that was with Windows 2000.
+
+555
+00:37:52,260 --> 00:37:55,530
+Rym: Yeah, and that was really pushing the line.
+
+556
+00:37:55,530 --> 00:37:56,995
+Scott: 15 is probably good.
+
+557
+00:37:57,035 --> 00:37:59,545
+Scott: Yeah, cuz hard drive especially hard drives are so big nowadays.
+
+558
+00:37:59,565 --> 00:38:00,167
+Scott: It won't hurt.
+
+559
+00:38:00,328 --> 00:38:04,810
+Rym: you can buy a 350 gigabyte drive for very little money less than a hundred bucks.
+
+560
+00:38:05,351 --> 00:38:31,230
+Scott: Then you're probably gonna want to have another drive and you want to mount that at the documents and settings folder because that way You can keep all your music and all your movies and your all your photos in the my pictures my videos my Music folders in your my documents folder, you know, you know where that is Yeah and that it'll be on that documents and settings partition that You want to make that as big as you can because that's where you're gonna put all your multimedia.
+
+561
+00:38:31,350 --> 00:38:32,553
+Scott: So now your computer
+
+562
+00:38:32,574 --> 00:38:32,754
+Scott: won't
+
+563
+00:38:32,794 --> 00:38:48,420
+Scott: be confused because you're not storing your music and like C colon backslash music or some other weird-ass place You're storing it in my documents my music, but if the documents and settings folder is actually another partition That's a really big and that works out really really well.
+
+564
+00:38:48,901 --> 00:38:51,770
+Scott: that way, you know, if you lose your music you reinstall Windows.
+
+565
+00:38:52,353 --> 00:38:55,630
+Scott: You just say hey, yeah make that the documents and settings folder again.
+
+566
+00:38:55,971 --> 00:38:59,306
+Scott: All of a sudden all your settings and all your music are back where they were like nothing's happened.
+
+567
+00:38:59,707 --> 00:39:00,230
+Scott: It's a good move.
+
+568
+00:39:00,604 --> 00:39:03,458
+Rym: Yep Though sometimes that sort of thing will give you trouble.
+
+569
+00:39:03,699 --> 00:39:09,810
+Rym: if because Windows applications tend to not deal with a lot of things Well, yeah, it depends on the application.
+
+570
+00:39:10,031 --> 00:39:16,021
+Rym: So if you have applications that are dodgy or that'll cause trouble, you know Applications that like to save their data in places like that.
+
+571
+00:39:16,041 --> 00:39:17,488
+Rym: You have to make sure it's not there.
+
+572
+00:39:17,950 --> 00:39:22,406
+Scott: Yeah, if you're using say Firefox iTunes G aim that kind of stuff.
+
+573
+00:39:22,486 --> 00:39:23,430
+Scott: It'll be happy as a clam.
+
+574
+00:39:23,590 --> 00:39:32,619
+Rym: Yeah, but or if you're just not comfortable doing that whole mounting drives where they're not a drive letter thing Mm-hmm, just make you know, I'll see.
+
+575
+00:39:32,660 --> 00:39:34,609
+Rym: I'll partition a C partition for Windows.
+
+576
+00:39:34,689 --> 00:39:42,253
+Rym: make it You know 10 15 20 gigs by 20. make the rest of that drive your D drive and then every new hard drive make it One big partition.
+
+577
+00:39:42,634 --> 00:39:44,739
+Rym: Yep, and let NTFS do its thing.
+
+578
+00:39:45,040 --> 00:39:45,161
+Scott: Yep.
+
+579
+00:39:45,662 --> 00:39:48,570
+Scott: Now if you're using Linux, there's a bunch of different ways to go about it.
+
+580
+00:39:48,610 --> 00:39:56,435
+Scott: You're gonna have to first this the you can either make slash boot a separate partition or not And it depends.
+
+581
+00:39:56,455 --> 00:39:58,721
+Scott: if you're using gen 2 it's probably a good idea.
+
+582
+00:39:58,741 --> 00:40:02,530
+Scott: if using Ubuntu you won't have you really Really?
+
+583
+00:40:02,790 --> 00:40:08,930
+Rym: I think we'd have to do a whole separate Episode on Linux stuff because yeah, there are different ways to go about it and there's no right way.
+
+584
+00:40:09,113 --> 00:40:09,950
+Scott: There is no right way.
+
+585
+00:40:09,990 --> 00:40:11,843
+Scott: You really have to know what you're using it for.
+
+586
+00:40:11,964 --> 00:40:28,250
+Scott: if you have a server You really want to make /var a separate partition because if a log file gets out of control Which it happens often it could fill up your entire Partition and then nothing will be able to write to log files and your server applications will stop working.
+
+587
+00:40:28,411 --> 00:40:33,410
+Rym: Yep, and then there's also the issue of you need a swap partition which Windows does swapping very differently.
+
+588
+00:40:33,490 --> 00:40:36,281
+Rym: You'll make a swap file on a drive.
+
+589
+00:40:36,401 --> 00:40:36,622
+Rym: Mm-hmm.
+
+590
+00:40:36,763 --> 00:40:38,650
+Rym: And in fact, you could have multiple swap files.
+
+591
+00:40:38,973 --> 00:40:53,045
+Rym: So if you have multiple physical hard drives you want to have a swap file on every hard drive so that Windows can be more efficient and access these drives simultaneously or Alternate access the swap from one while it's accessing the data from another.
+
+592
+00:40:53,467 --> 00:40:54,089
+Rym: that sort of thing.
+
+593
+00:40:54,390 --> 00:41:02,350
+Rym: Yep, Linux you make entire swap partitions and there's all sorts of neat stuff Like say you have you can also make swap files, but you want to make a swap partition.
+
+594
+00:41:02,410 --> 00:41:03,514
+Rym: But let's say you have multiple.
+
+595
+00:41:03,555 --> 00:41:05,582
+Rym: Linux is installed on one computer.
+
+596
+00:41:06,064 --> 00:41:07,510
+Rym: They can all share swap files.
+
+597
+00:41:07,771 --> 00:41:08,714
+Scott: Yeah, you can just have.
+
+598
+00:41:08,834 --> 00:41:13,270
+Scott: if yeah, let's say I have three different Linuxes on the same computer on the first three primary partitions.
+
+599
+00:41:13,370 --> 00:41:19,550
+Scott: Well, the fourth primary partition is gonna be a swap and all the different Linuxes can use that same swap.
+
+600
+00:41:20,273 --> 00:41:24,150
+Rym: It doesn't really matter because once you turn off a computer, whatever was in the swap doesn't matter anymore.
+
+601
+00:41:24,411 --> 00:41:28,250
+Rym: Yeah, because if it mattered it was written out to disk in the real part of the disk where it mattered.
+
+602
+00:41:28,833 --> 00:41:32,450
+Scott: Now you generally want your swap partition to be twice as much as you have RAM.
+
+603
+00:41:32,591 --> 00:41:35,606
+Scott: So if you have a gig of RAM you want a 2 gig swap partition?
+
+604
+00:41:35,626 --> 00:41:38,129
+Rym: Yeah now again There's all sorts of different things you could do.
+
+605
+00:41:38,552 --> 00:41:42,330
+Rym: Like there are people who have like a solid-state drive and they put their swap there.
+
+606
+00:41:42,390 --> 00:41:46,254
+Rym: So it's just like more RAM and all sorts of crazy A lot of you'll put get.
+
+607
+00:41:46,294 --> 00:41:49,885
+Scott: they get more RAM and they put the swap partition at a RAM Drive.
+
+608
+00:41:49,925 --> 00:41:53,114
+Rym: Yeah, but that kind of It does.
+
+609
+00:41:53,275 --> 00:41:55,023
+Scott: you're better off just having that be RAM.
+
+610
+00:41:55,284 --> 00:41:56,269
+Rym: Yeah, you really are.
+
+611
+00:41:57,032 --> 00:42:09,698
+Scott: Yeah, the way the Linux kernel handles swapping versus the way the windows handles It is 10,000 times more intelligent and if you have enough RAM and you never use up all your RAM Linux will almost never use the swap.
+
+612
+00:42:09,818 --> 00:42:12,910
+Scott: ever windows use the swap even if you don't do anything.
+
+613
+00:42:14,251 --> 00:42:18,569
+Rym: Yeah, there's also neat stuff like say you have a not pic CD or something a live CD and you want to boot it.
+
+614
+00:42:18,589 --> 00:42:19,011
+Rym: use It.
+
+615
+00:42:19,414 --> 00:42:25,421
+Rym: a lot of them will look and if they see a swap partition They'll just use it and your live CD will work a lot faster.
+
+616
+00:42:26,003 --> 00:42:26,825
+Scott: Oh, it sure will.
+
+617
+00:42:26,886 --> 00:42:28,129
+Rym: That's a big deal.
+
+618
+00:42:29,032 --> 00:42:33,584
+Rym: Granted you shouldn't be using live CDs on a regular basis for computing.
+
+619
+00:42:33,764 --> 00:42:45,188
+Scott: No use live CDs for oh I'm going to install an operating system or oh, I need to diagnose this computer or oh I'm in someone's house with scary spy word windows and I want to check my email exactly.
+
+620
+00:42:45,509 --> 00:42:49,350
+Rym: Yeah Now we could go on and we'll probably have to break this up.
+
+621
+00:42:49,410 --> 00:42:55,508
+Rym: But the next show we do though There's a lot of confusion especially due to the way Windows works about file systems.
+
+622
+00:42:55,669 --> 00:42:55,910
+Rym: and what?
+
+623
+00:42:56,050 --> 00:43:07,470
+Rym: Formatting a drive means because in Windows when you format a drive it actually does two different things And in Linux and the red Unix and the rest of the world you do those two different things separately.
+
+624
+00:43:07,771 --> 00:43:14,670
+Scott: Well, I think the reason that this confusion occurred is because back in the day, you know with DOS and whatever You would just format floppy drives.
+
+625
+00:43:14,791 --> 00:43:18,516
+Scott: you format floppy disks and You just format them and you knew that.
+
+626
+00:43:18,537 --> 00:43:22,550
+Scott: that meant you would completely erase the floppy disk and get it ready for being used.
+
+627
+00:43:22,951 --> 00:43:24,616
+Scott: And that's all you knew about formatting.
+
+628
+00:43:25,037 --> 00:43:29,168
+Scott: now the details of that are much more important and we'll get into that the next time.
+
+629
+00:43:29,209 --> 00:43:30,415
+Rym: we continue This series.
+
+630
+00:43:30,495 --> 00:43:35,420
+Scott: on hard drives if you have questions Ask them in the forum and ask Google.
+
+631
+00:43:35,742 --> 00:43:36,666
+Scott: Yeah, Google knows all.
+
+632
+00:43:37,169 --> 00:43:43,510
+Rym: yeah Probably you don't want to email us with a hard drive question because we probably won't get a chance to answer you.
+
+633
+00:43:43,590 --> 00:43:45,961
+Rym: But if you post in the forums, there's a good chance.
+
+634
+00:43:46,021 --> 00:43:47,187
+Rym: Even if we don't get to you right away.
+
+635
+00:43:47,227 --> 00:43:47,910
+Rym: Someone else will.
+
+636
+00:43:48,211 --> 00:43:53,064
+Rym: Yeah, the people in our forums are pretty smart and except for one of you out there You know who you are.
+
+637
+00:43:53,145 --> 00:43:56,389
+Rym: Yeah And to be honest ruins all isn't me?
+
+638
+00:43:56,651 --> 00:44:00,804
+Scott: I get asked a lot of questions every day through Q new and and other places.
+
+639
+00:44:00,904 --> 00:44:02,630
+Rym: you mean like the GeekNights email address?
+
+640
+00:44:02,911 --> 00:44:11,223
+Scott: Well, no mostly Q new only occasionally with the GeekNights email address, but most of those questions I just go to Google find the answer and tell it to the person.
+
+641
+00:44:11,444 --> 00:44:12,830
+Rym: Yeah, we should start charging money.
+
+642
+00:44:12,850 --> 00:44:18,170
+Rym: We'll have a service where you pay us and you ask us anything and we'll answer it by going to Google and Wikipedia.
+
+643
+00:44:18,611 --> 00:44:22,321
+Scott: Yes, so before you open your mouth ask Google first.
+
+644
+00:44:22,843 --> 00:44:26,942
+Rym: if Google doesn't know the answer the odds are We don't either.
+
+645
+00:44:26,962 --> 00:44:37,142
+Rym: Yeah This has been GeekNights with Rym and Scott.
+
+646
+00:44:37,162 --> 00:44:39,290
+Rym: Special thanks to DJ pretzel for the opening music.
+
+647
+00:44:39,996 --> 00:44:51,148
+Scott: Be sure to visit our website at www.frontroadcrew.com where you'll find show notes links our awesome forum a link to our frapper map and Links to all the RSS feeds.
+
+648
+00:44:51,771 --> 00:44:57,410
+Rym: We say feeds plural because GeekNights airs four nights a week covering four different brands of geekery.
+
+649
+00:44:57,972 --> 00:45:00,142
+Rym: Mondays are science and technology Tuesdays.
+
+650
+00:45:00,182 --> 00:45:01,950
+Rym: We have video games board games and RPGs.
+
+651
+00:45:02,651 --> 00:45:08,070
+Rym: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+652
+00:45:08,511 --> 00:45:20,245
+Scott: You can send us feedback by email to GeekNights at front row crew calm or you can send audio feedback via Just click the link that says send me an audio on the right side of our website.
+
+653
+00:45:20,526 --> 00:45:21,429
+Rym: if you like what you hear.
+
+654
+00:45:21,509 --> 00:45:25,661
+Rym: you can Catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+655
+00:45:25,901 --> 00:45:29,010
+Rym: for the complete archives visit the website which has everything.
+
+656
+00:45:29,572 --> 00:45:35,574
+Scott: GeekNights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+657
+00:45:36,075 --> 00:45:37,900
+Scott: this means you can do whatever you want with it.
+
+658
+00:45:38,221 --> 00:45:42,144
+Scott: As long as you give us credit don't make money and share it in kind.
+
+659
+00:45:42,932 --> 00:45:48,366
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+660
+00:45:48,647 --> 00:45:49,970
+Scott: It's actually recorded at night.
+

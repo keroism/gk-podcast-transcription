@@ -1,0 +1,3020 @@
+﻿1
+00:00:09,500 --> 00:00:12,164
+Speaker 1: It's Monday February 11th.
+
+2
+00:00:12,464 --> 00:00:12,964
+Speaker 1: I'm rim.
+
+3
+00:00:13,165 --> 00:00:15,968
+Speaker 0: I'm Scott, and this is geek nights tonight.
+
+4
+00:00:15,988 --> 00:00:19,899
+Speaker 1: wiki wiki wiki Patangs.
+
+5
+00:00:24,752 --> 00:00:25,767
+Speaker 1: Let's do this.
+
+6
+00:00:27,792 --> 00:00:31,270
+Speaker 1: So at work right I'm in charge of this big wiki project.
+
+7
+00:00:31,350 --> 00:00:36,068
+Speaker 1: I'm trying to get all our data into some wiki's for documentation purposes and all that business.
+
+8
+00:00:36,088 --> 00:00:38,499
+Speaker 1: the thing that I've pretty much told every company.
+
+9
+00:00:38,540 --> 00:00:40,248
+Speaker 1: I've ever worked at would be a good idea.
+
+10
+00:00:40,268 --> 00:00:43,144
+Speaker 1: and finally I'm at a company that they're like yes do this.
+
+11
+00:00:43,224 --> 00:00:43,848
+Speaker 1: It sounds great.
+
+12
+00:00:43,888 --> 00:00:44,250
+Speaker 1: Go ahead.
+
+13
+00:00:45,451 --> 00:00:53,160
+Speaker 1: So uh one of the problems I ran into was that media wiki and every other wiki is okay But they're all also kind of crappy.
+
+14
+00:00:53,502 --> 00:00:56,416
+Speaker 0: well the thing is they They have probably.
+
+15
+00:00:56,436 --> 00:01:05,850
+Speaker 0: you know media wiki is probably the best wiki But they all have problems and none of them really have sort of these big features that people need if they're using them seriously.
+
+16
+00:01:07,571 --> 00:01:09,881
+Speaker 1: And the thing is though the real problem is that right now.
+
+17
+00:01:09,941 --> 00:01:12,150
+Speaker 1: I'm using Twiki which is a pretty good wiki.
+
+18
+00:01:12,250 --> 00:01:21,850
+Speaker 1: I'd say that Twiki and media wiki are some of the best and most useful ones, but Twiki is based on flat files as many wiki systems are and media wiki is based on databases.
+
+19
+00:01:22,872 --> 00:01:29,762
+Speaker 1: I will submit that the latter is a much better way of handling things But regardless I got Twiki's all right.
+
+20
+00:01:30,545 --> 00:01:34,570
+Speaker 1: if it's in a corporate environment I can't just have one Twiki or one wiki.
+
+21
+00:01:34,690 --> 00:01:38,670
+Speaker 1: I should have two you know like the main one and then kind of the backup one the disaster recovery one.
+
+22
+00:01:38,750 --> 00:01:40,939
+Speaker 0: They couldn't use have a wiki cluster that way.
+
+23
+00:01:41,200 --> 00:01:42,646
+Speaker 1: Oh, yes a wiki cluster.
+
+24
+00:01:42,666 --> 00:01:43,650
+Speaker 1: That would be fantastic.
+
+25
+00:01:44,351 --> 00:01:45,958
+Speaker 1: How am I going to do that?
+
+26
+00:01:46,339 --> 00:01:48,730
+Speaker 0: you just have you know you know what?
+
+27
+00:01:49,070 --> 00:01:49,750
+Speaker 0: What do you what do you do?
+
+28
+00:01:49,950 --> 00:01:52,160
+Speaker 0: You know you don't cluster the wiki software itself.
+
+29
+00:01:52,200 --> 00:01:58,253
+Speaker 0: you use the cluster with the underlying Apache MySQL stack and then you put the wiki on top of it And it just works.
+
+30
+00:01:58,716 --> 00:02:01,270
+Speaker 1: now because the wiki is not in any way based on the database.
+
+31
+00:02:01,350 --> 00:02:06,490
+Speaker 1: So I'd have to make a database interface instead of the flat files, and it's complicated.
+
+32
+00:02:07,134 --> 00:02:09,570
+Speaker 1: Not that good of an idea especially for my implementation.
+
+33
+00:02:09,690 --> 00:02:15,647
+Speaker 1: So found this plug-in this thing that will synchronize two wikis, and it'll be offline online.
+
+34
+00:02:15,687 --> 00:02:16,530
+Speaker 1: It's like this beautiful thing.
+
+35
+00:02:16,591 --> 00:02:17,349
+Speaker 1: So I'm testing it.
+
+36
+00:02:17,431 --> 00:02:30,700
+Speaker 1: I set up my old test environment and I make a change on one Twiki and I hit replicate and the change is put in the other wiki and vice versa and it uses the actual wiki API's Instead of using some sort of file system level thing.
+
+37
+00:02:30,741 --> 00:02:33,050
+Speaker 1: so it reconciles changes properly.
+
+38
+00:02:33,131 --> 00:02:36,190
+Speaker 1: It's a pretty good deal, but the point is disaster recovery.
+
+39
+00:02:36,250 --> 00:02:39,723
+Speaker 1: So if one server is down right then if people are making changes to the other one.
+
+40
+00:02:39,743 --> 00:02:41,927
+Speaker 1: because if I use an r-sync all right Great.
+
+41
+00:02:42,433 --> 00:02:51,070
+Speaker 1: But if one server is down and people use the other server As soon as the first server comes back up it starts r-syncing those files right back in and it doesn't really I lose stuff.
+
+42
+00:02:52,031 --> 00:02:57,550
+Speaker 1: So uh I turn off one of the servers and I hit replicate and it's it sits there for a while.
+
+43
+00:02:57,610 --> 00:03:03,329
+Speaker 1: I think all right great, and then I go to uh use my wiki and Everything's gone.
+
+44
+00:03:03,711 --> 00:03:07,770
+Speaker 1: So I look through the log and it had basically connected to my down wiki.
+
+45
+00:03:08,171 --> 00:03:11,421
+Speaker 1: Saw it wasn't there and the logic wasn't so great on this thing.
+
+46
+00:03:11,441 --> 00:03:15,253
+Speaker 1: so it said well that page is gone from the main server So I'll delete it.
+
+47
+00:03:15,615 --> 00:03:18,750
+Speaker 1: well that page is gone, so I'll delete it and every page was gone.
+
+48
+00:03:18,830 --> 00:03:20,034
+Speaker 1: So it deleted my entire wiki.
+
+49
+00:03:20,395 --> 00:03:20,736
+Speaker 0: awesome.
+
+50
+00:03:20,776 --> 00:03:21,458
+Speaker 1: God damn it.
+
+51
+00:03:22,060 --> 00:03:22,742
+Speaker 1: so alright.
+
+52
+00:03:23,525 --> 00:03:25,170
+Speaker 1: I bring the other server back out like fuck.
+
+53
+00:03:25,170 --> 00:03:27,770
+Speaker 1: I'm gonna restore this thing I'm gonna start working again.
+
+54
+00:03:27,830 --> 00:03:31,788
+Speaker 1: So I hit synchronize on the main server again to sync it back up to do some more testing.
+
+55
+00:03:31,808 --> 00:03:38,889
+Speaker 1: see if I can Maybe have the script at least I don't know paying the other server first or see if the main wiki page is up or something before it synchronizes.
+
+56
+00:03:38,909 --> 00:03:43,004
+Speaker 1: and I had synchronized and then as soon as I had synchronized.
+
+57
+00:03:43,044 --> 00:03:43,768
+Speaker 1: I think wait a minute.
+
+58
+00:03:44,571 --> 00:03:49,007
+Speaker 1: So I start tailing the Twiggy log right and I see it going.
+
+59
+00:03:49,649 --> 00:03:52,663
+Speaker 1: hey I see that you deleted this page.
+
+60
+00:03:53,005 --> 00:03:54,150
+Speaker 1: Oh replication slave.
+
+61
+00:03:54,492 --> 00:03:56,161
+Speaker 1: So I'm gonna delete my copy.
+
+62
+00:03:56,362 --> 00:04:06,020
+Speaker 1: Oh, I see you deleted that page So I'm gonna delete the I copy of that too and all the other Twickeys in this whole cluster Systematically deleted one another and themselves.
+
+63
+00:04:06,965 --> 00:04:08,150
+Speaker 0: Oh, that's some good programming.
+
+64
+00:04:08,230 --> 00:04:10,481
+Speaker 1: That was yeah, and at that point.
+
+65
+00:04:10,521 --> 00:04:20,367
+Speaker 1: I knew it was happening and instead of stopping it I just kind of let it go to see how long it would take A while and took about 30 seconds to wipe out the rest of the wiki's from that point.
+
+66
+00:04:20,688 --> 00:04:23,470
+Speaker 0: awesome Yeah.
+
+67
+00:04:23,914 --> 00:04:25,588
+Speaker 1: So that is my wiki story.
+
+68
+00:04:26,433 --> 00:04:32,964
+Speaker 0: Yeah, you know I was sitting around today, and I was thinking you know hey I haven't heard any news about that spectrum auction.
+
+69
+00:04:32,985 --> 00:04:37,350
+Speaker 0: there was news about it But then everyone shut up, and then just now that was what I thought earlier in the day.
+
+70
+00:04:37,550 --> 00:04:40,861
+Speaker 1: Yeah, because the last news I saw was no one bid enough money.
+
+71
+00:04:41,002 --> 00:04:42,486
+Speaker 0: Huh there was news after that.
+
+72
+00:04:42,526 --> 00:04:45,479
+Speaker 0: that I did see but Just that just today.
+
+73
+00:04:45,519 --> 00:04:50,504
+Speaker 0: I realized when I got home And I went to go look at my Google Reader to find a news.
+
+74
+00:04:51,048 --> 00:04:55,036
+Speaker 0: all right I stopped sort of reading Google Reader And there's a thousand tech news's.
+
+75
+00:04:55,156 --> 00:04:57,185
+Speaker 0: and oh look a bunch of them are at the spectrum auction.
+
+76
+00:04:57,245 --> 00:04:58,049
+Speaker 0: I just didn't read them.
+
+77
+00:04:59,152 --> 00:04:59,956
+Speaker 0: There are plenty of them.
+
+78
+00:05:00,278 --> 00:05:01,344
+Speaker 1: so that gonna be your news?
+
+79
+00:05:01,625 --> 00:05:02,450
+Speaker 0: no not at all.
+
+80
+00:05:03,052 --> 00:05:08,974
+Speaker 0: I'm just pointing out that it took me a long time to find a news because there are a thousand tech news items I had to go through.
+
+81
+00:05:09,014 --> 00:05:15,699
+Speaker 1: well you see Scott lately has been doing something that I've done in my life before and it seems like Maybe this would be a PSA for all of you geeks out there.
+
+82
+00:05:16,441 --> 00:05:28,669
+Speaker 1: if you read the internet all the time if you stop Obsessively reading the internet for like a week and only read it when you need to look something up You might suddenly have a different outlook on life for a couple days.
+
+83
+00:05:30,311 --> 00:05:35,037
+Speaker 0: It's weird because every time I think I'm like you know you know or like Especially.
+
+84
+00:05:35,118 --> 00:05:46,950
+Speaker 0: it's not that I think I'm hooked on anything But like other people I can understand from their perspective that they would think I would be hooked on something You know like because I do certain things a lot, and I recognize I do them a lot.
+
+85
+00:05:46,950 --> 00:05:55,548
+Speaker 0: It'd be understandable if someone thought I was addicted to them in some way, but every time I say no I'm just gonna stop doing that I pretty much stopped doing it immediately and don't.
+
+86
+00:05:56,594 --> 00:05:59,750
+Speaker 0: What I've noticed is that I never have any withdrawal symptoms there.
+
+87
+00:05:59,971 --> 00:06:07,402
+Speaker 1: Well what I've noticed and I this happened to me a couple times in my life is if I stop reading the internet especially stop reading the internet for no point.
+
+88
+00:06:07,443 --> 00:06:17,348
+Speaker 1: if I stop the Just generic novelty seeking like let's go to FARC and see what the headlines are Let's go to FARC again, and see what the new headlines are I?
+
+89
+00:06:18,970 --> 00:06:26,485
+Speaker 1: Generally feel a lot more awake and happy and better after I stopped And it might have to do with elevated serotonin levels or whatever.
+
+90
+00:06:26,546 --> 00:06:27,290
+Speaker 1: not gonna get into that.
+
+91
+00:06:27,370 --> 00:06:28,436
+Speaker 0: I don't have any problem with that.
+
+92
+00:06:28,496 --> 00:06:31,330
+Speaker 0: I feel the same as I did before you say that, but I've noticed something.
+
+93
+00:06:31,491 --> 00:06:34,385
+Speaker 1: It's been a lot easier to do the show since you stopped reading internet.
+
+94
+00:06:34,425 --> 00:06:35,330
+Speaker 0: We haven't done the show.
+
+95
+00:06:36,834 --> 00:06:37,417
+Speaker 1: Yeah, you know what.
+
+96
+00:06:37,437 --> 00:06:40,370
+Speaker 1: it's a lot easier to do right now whatever but not last week.
+
+97
+00:06:40,390 --> 00:06:41,959
+Speaker 1: You weren't reading the internet either so much.
+
+98
+00:06:42,562 --> 00:06:44,010
+Speaker 0: We didn't really do the show last week.
+
+99
+00:06:44,030 --> 00:06:44,472
+Speaker 0: We did.
+
+100
+00:06:44,833 --> 00:06:50,214
+Speaker 0: we only skipped one anyway, but uh you want me to do the news that I did find I don't know.
+
+101
+00:06:50,254 --> 00:06:52,784
+Speaker 1: I got another kind of life anecdote.
+
+102
+00:06:52,804 --> 00:06:53,748
+Speaker 1: this related to tech.
+
+103
+00:06:53,768 --> 00:06:55,790
+Speaker 1: all right I could tell this one because it's kind of important.
+
+104
+00:06:55,830 --> 00:06:59,743
+Speaker 1: We're going to a katsu khan next weekend this weekend actually.
+
+105
+00:06:59,784 --> 00:07:04,669
+Speaker 1: so if you live in the DC area And you want to meet us We're gonna be in DC.
+
+106
+00:07:05,052 --> 00:07:11,346
+Speaker 1: So if you don't want to pay to get into katsu khan because you're not an anime fan one You probably should anyway because katsu khan is not like most anime khan's.
+
+107
+00:07:11,366 --> 00:07:12,210
+Speaker 1: you probably have a good time.
+
+108
+00:07:12,290 --> 00:07:17,446
+Speaker 1: But that aside give us a line, and maybe we'll see you for lunch or something.
+
+109
+00:07:17,466 --> 00:07:17,787
+Speaker 1: I don't know.
+
+110
+00:07:17,827 --> 00:07:18,710
+Speaker 1: we'll sign an autograph.
+
+111
+00:07:18,991 --> 00:07:19,814
+Speaker 1: We'll be in DC.
+
+112
+00:07:19,854 --> 00:07:21,319
+Speaker 0: This is Chipotle right outside.
+
+113
+00:07:21,360 --> 00:07:22,243
+Speaker 0: We'll be eating there.
+
+114
+00:07:22,263 --> 00:07:25,455
+Speaker 0: We'll be there three times a day Not three times.
+
+115
+00:07:25,535 --> 00:07:27,444
+Speaker 1: God I almost ate at Chipotle today too.
+
+116
+00:07:27,464 --> 00:07:28,930
+Speaker 0: We'll probably eat lunch there every day though.
+
+117
+00:07:29,211 --> 00:07:38,364
+Speaker 1: I walked past two Chipotle's today, and I stopped if I thought about getting it But then I decided to eat the chicken drumsticks that were in the fridge I stopped in front of both of them and thought oh, man.
+
+118
+00:07:38,464 --> 00:07:39,430
+Speaker 1: I should eat some Chipotle.
+
+119
+00:07:39,631 --> 00:07:45,690
+Speaker 1: Yeah, but the reason I passed too is I was we need audio stuff because we you know we're going to this katsu khan.
+
+120
+00:07:45,730 --> 00:07:46,373
+Speaker 1: We went last year.
+
+121
+00:07:46,394 --> 00:07:58,865
+Speaker 1: We kind of run the audio for the game room and last year It was a sad sight with our little piss ant mixer and our like Crappy little compressor in the Mac and we didn't know much about what we were doing.
+
+122
+00:07:58,885 --> 00:08:00,390
+Speaker 1: so we had this gigantic mess of.
+
+123
+00:08:00,771 --> 00:08:04,504
+Speaker 1: If you see pictures of our setup at katsu khan, and you know anything about audio.
+
+124
+00:08:04,785 --> 00:08:06,110
+Speaker 1: You'll probably kill yourself.
+
+125
+00:08:06,271 --> 00:08:07,342
+Speaker 1: It was like the worst thing ever.
+
+126
+00:08:07,402 --> 00:08:07,927
+Speaker 0: it's pretty sad.
+
+127
+00:08:08,692 --> 00:08:10,359
+Speaker 1: So now we have real equipment.
+
+128
+00:08:10,439 --> 00:08:11,484
+Speaker 1: so to finish that off.
+
+129
+00:08:11,524 --> 00:08:16,167
+Speaker 1: I bought this big oh more real Yeah, but I bought this big case like we're done now.
+
+130
+00:08:16,207 --> 00:08:17,272
+Speaker 1: I got all the stuff I need.
+
+131
+00:08:17,492 --> 00:08:20,583
+Speaker 1: we can bring the whole geek nights rig anywhere trivially.
+
+132
+00:08:20,643 --> 00:08:26,630
+Speaker 1: It's ready to go and I Realized that I need right-angle cables as opposed to straight-in cables.
+
+133
+00:08:26,670 --> 00:08:28,680
+Speaker 1: There's not so much room in the back, so I thought all right.
+
+134
+00:08:29,404 --> 00:08:33,799
+Speaker 0: I could order these online But which you should have done like I told you to.
+
+135
+00:08:34,142 --> 00:08:35,970
+Speaker 1: well the thing is even if I've ordered them online.
+
+136
+00:08:36,336 --> 00:08:39,724
+Speaker 1: There's a good chance They would not have come but you would order them when I told you to.
+
+137
+00:08:39,784 --> 00:08:40,789
+Speaker 0: it would have been just fine.
+
+138
+00:08:40,931 --> 00:08:41,333
+Speaker 1: What then?
+
+139
+00:08:41,434 --> 00:08:43,429
+Speaker 1: they would have shipped Monday evening?
+
+140
+00:08:43,850 --> 00:08:48,046
+Speaker 0: They might have showed up Wednesday evening if I every time they've ever shipped anything to us.
+
+141
+00:08:48,067 --> 00:08:48,870
+Speaker 0: They shut up the next day.
+
+142
+00:08:49,771 --> 00:08:50,756
+Speaker 1: Actually no, that's not true.
+
+143
+00:08:50,796 --> 00:08:55,830
+Speaker 1: that was only true the second time we ordered from them and that time I actually paid a lot for expedited shipping.
+
+144
+00:08:56,511 --> 00:09:03,106
+Speaker 1: Anyway, if you don't pay for expedited shipping it comes in three to five days And it ships pretty much the evening of like at eleven fifty nine.
+
+145
+00:09:03,126 --> 00:09:08,769
+Speaker 1: They say well the shift Yeah, I'm not worried about it, but anyway, so I figure all right, New York City.
+
+146
+00:09:09,653 --> 00:09:13,350
+Speaker 1: There's a million audio like professional audio stores.
+
+147
+00:09:14,114 --> 00:09:18,295
+Speaker 1: I can just go to one and buy everything I need duh And there's.
+
+148
+00:09:18,416 --> 00:09:26,652
+Speaker 1: they're right by my work, so I walk over there You know to like 48th Street and 6th and 7th Avenue where there's a Sam Ash and Manny's music And there's.
+
+149
+00:09:26,672 --> 00:09:31,046
+Speaker 1: there's like five audio stores and like ones air one area and down the block.
+
+150
+00:09:31,066 --> 00:09:31,729
+Speaker 1: There's a couple more.
+
+151
+00:09:32,774 --> 00:09:34,365
+Speaker 1: So I go to Sam Ash like the big one.
+
+152
+00:09:34,385 --> 00:09:35,130
+Speaker 1: It's pretty well known.
+
+153
+00:09:35,211 --> 00:09:37,510
+Speaker 0: It's like a Sam Ash is mostly an instrument store.
+
+154
+00:09:38,012 --> 00:09:43,250
+Speaker 1: No, it's not Scott Sam Ash as like five different kinds of stores, and they have one of all of them over there.
+
+155
+00:09:43,270 --> 00:09:52,502
+Speaker 0: That's only over there around the country like Sam Ash is like a big chain and most of their stores Just like you know music It's sort of like a Guitar Center kind of kind of place.
+
+156
+00:09:52,803 --> 00:10:06,405
+Speaker 1: so but they have a recording one like the professional recording equipment they have like thousands of different mixers and compressors and audio cables and microphones and DJ equipment and like everything you need for recording studio foam everything.
+
+157
+00:10:06,927 --> 00:10:07,710
+Speaker 1: so I go in I'm looking.
+
+158
+00:10:07,710 --> 00:10:08,557
+Speaker 1: I don't see what I need.
+
+159
+00:10:08,617 --> 00:10:19,129
+Speaker 1: so I go up to the Proprietor of the store like standing behind the counter, and I ask sir I need some right-angle quarter-inch insert cables, and he says oh, they're right over there.
+
+160
+00:10:19,792 --> 00:10:24,909
+Speaker 1: And he points at the area where they sell raw cable making equipment.
+
+161
+00:10:26,332 --> 00:10:41,970
+Speaker 1: So I walk over there, and I walk back and say ah no there's nothing like that over there I need an insert cable and already made insert cable, and he says oh I mean they're over there, so I look where he's pointing and he's pointing at the mono guitar cables.
+
+162
+00:10:43,174 --> 00:10:52,467
+Speaker 1: There is nothing but monster $40 like 30-foot mono guitar cables there all right, so I say could you show me where they are?
+
+163
+00:10:52,487 --> 00:10:53,810
+Speaker 1: and at this point?
+
+164
+00:10:53,890 --> 00:10:57,349
+Speaker 1: I'm suspecting perhaps this gentleman does not in fact know what an insert cable is.
+
+165
+00:10:58,830 --> 00:11:05,694
+Speaker 1: And I talked to him further, and I discovered that he doesn't know Anything About audio.
+
+166
+00:11:05,954 --> 00:11:10,489
+Speaker 1: he does not know I. he could not even tell me what the cables he pointed at do.
+
+167
+00:11:12,152 --> 00:11:13,377
+Speaker 1: So I asked him to see the manager.
+
+168
+00:11:13,397 --> 00:11:13,939
+Speaker 1: the manager comes.
+
+169
+00:11:13,979 --> 00:11:25,215
+Speaker 1: I said look I need some right-angle insert cables, and he says and he kind of looks at the other guy and the other guy gives him this look of us and After about 20 minutes.
+
+170
+00:11:25,295 --> 00:11:26,981
+Speaker 1: I explained what an insert cable was.
+
+171
+00:11:27,021 --> 00:11:29,570
+Speaker 1: he says oh, sorry sorry you were saying insert cable.
+
+172
+00:11:29,610 --> 00:11:30,412
+Speaker 1: I thought you meant something else.
+
+173
+00:11:30,433 --> 00:11:42,038
+Speaker 1: they're right over here, and he takes me to the not quarter inch, but eighth inch monster Y splitters Which are not what I want.
+
+174
+00:11:42,058 --> 00:11:46,965
+Speaker 1: so I explained to him what an insert cable does and he says oh We wouldn't carry anything weird like that.
+
+175
+00:11:47,650 --> 00:11:52,426
+Speaker 1: So I point behind him at the insert cables and say no they're exactly that.
+
+176
+00:11:52,707 --> 00:11:53,490
+Speaker 1: that is what I want.
+
+177
+00:11:53,591 --> 00:11:57,470
+Speaker 1: I just want that with that right angle connector on the instead of a straight in connector.
+
+178
+00:11:57,912 --> 00:11:58,153
+Speaker 1: He's like.
+
+179
+00:11:58,173 --> 00:12:00,041
+Speaker 1: I don't think anyone makes anything like that, and I'm like.
+
+180
+00:12:00,724 --> 00:12:02,270
+Speaker 1: I just saw them online.
+
+181
+00:12:02,491 --> 00:12:04,840
+Speaker 1: I just wanted to buy them here instead of ordering them online.
+
+182
+00:12:04,860 --> 00:12:05,282
+Speaker 1: They exist.
+
+183
+00:12:05,482 --> 00:12:12,304
+Speaker 1: in fact the same company makes them And the guy was like uh and I was like god damn it never mind.
+
+184
+00:12:12,364 --> 00:12:12,765
+Speaker 1: I left.
+
+185
+00:12:12,785 --> 00:12:18,303
+Speaker 1: yep, so You know how geeks like we always complain about if you go to a computer store.
+
+186
+00:12:18,644 --> 00:12:23,661
+Speaker 1: none of the employees know anything about computers But they act like they know and they rip off people who don't know anything.
+
+187
+00:12:24,063 --> 00:12:24,263
+Speaker 1: Yep.
+
+188
+00:12:25,046 --> 00:12:26,310
+Speaker 1: I've learned something important.
+
+189
+00:12:26,410 --> 00:12:35,670
+Speaker 1: It's true for all stores period if you know anything about a product and you go to a store that sells that product You're going to learn that no one in that store knows jack for shit about that technology.
+
+190
+00:12:36,452 --> 00:12:38,923
+Speaker 0: Someone who actually knows something about something?
+
+191
+00:12:39,023 --> 00:12:43,430
+Speaker 0: unless they're a college student You know where they're not gonna be working retail.
+
+192
+00:12:43,992 --> 00:12:47,265
+Speaker 0: So if you actually know what the fuck you want you buy it online.
+
+193
+00:12:47,285 --> 00:12:49,235
+Speaker 0: if you don't know what the fuck you want you go To a store.
+
+194
+00:12:49,255 --> 00:12:54,610
+Speaker 0: and because you don't know what the fuck you want Someone else tells you to buy expensive monster cable, and that's how the world works.
+
+195
+00:12:55,011 --> 00:12:55,733
+Speaker 1: It was amazing.
+
+196
+00:12:55,773 --> 00:13:03,609
+Speaker 0: the days of intelligent people in retail stores being able to help you out are over because as someone actually knows They can make more money somewhere else.
+
+197
+00:13:03,670 --> 00:13:05,565
+Speaker 0: They're not gonna work in a shit retail store, but every
+
+198
+00:13:05,586 --> 00:13:14,097
+Speaker 1: single store I went to it wasn't like like no one at any point said I don't know what an insert cable is or I'm sorry I'm not because
+
+199
+00:13:14,117 --> 00:13:14,849
+Speaker 0: they don't expect
+
+200
+00:13:15,432 --> 00:13:15,652
+Speaker 1: You
+
+201
+00:13:15,672 --> 00:13:22,496
+Speaker 0: to actually know what the hell you're that you want because anyone who comes in the store doesn't know because all the people do Buy it online like I told you to.
+
+202
+00:13:22,817 --> 00:13:27,333
+Speaker 1: so I. well we couldn't have gotten it in time unless I paid for like $20 Express shipping.
+
+203
+00:13:27,373 --> 00:13:29,118
+Speaker 0: now we would have gotten it now.
+
+204
+00:13:29,299 --> 00:13:32,910
+Speaker 1: Yeah, you realize that it wouldn't come in time would have been fine.
+
+205
+00:13:32,970 --> 00:13:35,265
+Speaker 0: Well, we're not having any time anyway, so what's the difference?
+
+206
+00:13:35,305 --> 00:13:37,449
+Speaker 1: cuz I didn't need it I have everything to do for the show.
+
+207
+00:13:37,570 --> 00:13:39,681
+Speaker 1: I just needed better cable, so I don't know I can leave the.
+
+208
+00:13:39,701 --> 00:13:41,289
+Speaker 1: I don't have to leave the back off of this thing.
+
+209
+00:13:42,072 --> 00:13:52,625
+Speaker 1: So what annoys me is that the people they pretty much every single person at every single audio store every single one on 48th Street in New York City or anywhere nearby there.
+
+210
+00:13:52,685 --> 00:14:02,503
+Speaker 1: I stopped at several Lied and tried to tell me to buy a thing that had nothing to do with what I asked for But was $40 or so and had the word monster on it.
+
+211
+00:14:02,884 --> 00:14:09,264
+Speaker 0: Yep, so All right, why don't you try going to the the B&H over by the mad square garden?
+
+212
+00:14:09,686 --> 00:14:13,410
+Speaker 0: That's kind of out of my way I know, but it's a really fancy store.
+
+213
+00:14:13,932 --> 00:14:19,752
+Speaker 1: They um I went to five other news nice stores, and this isn't really a music store But it's a.
+
+214
+00:14:19,772 --> 00:14:22,343
+Speaker 0: it's like a photo store, but oh yeah, they're gonna have.
+
+215
+00:14:22,403 --> 00:14:22,784
+Speaker 0: they do.
+
+216
+00:14:22,824 --> 00:14:24,190
+Speaker 0: they have crazy equipment there.
+
+217
+00:14:24,371 --> 00:14:26,810
+Speaker 1: Yeah, and you know what the same as you want to know.
+
+218
+00:14:26,910 --> 00:14:31,630
+Speaker 0: But this is the store where all they like the TV and radio people go to shop to get stuff for work.
+
+219
+00:14:31,971 --> 00:14:37,273
+Speaker 1: Yeah, and you know what people do that at these Sam ashes too because it's right next to like the the Fox News thing and Everything.
+
+220
+00:14:37,414 --> 00:14:37,776
+Speaker 0: no.
+
+221
+00:14:37,957 --> 00:14:39,044
+Speaker 1: It's just they did.
+
+222
+00:14:39,064 --> 00:14:40,050
+Speaker 1: they had other equipment.
+
+223
+00:14:40,110 --> 00:14:43,449
+Speaker 1: They didn't have exactly what I wanted, and they didn't know what anything was.
+
+224
+00:14:44,012 --> 00:14:46,162
+Speaker 0: I think it's worth your shot to go to the B&H.
+
+225
+00:14:46,705 --> 00:14:47,730
+Speaker 1: I highly doubt it.
+
+226
+00:14:47,951 --> 00:14:53,010
+Speaker 1: I could not find a single audio store even around beacon that sells what I want nothing around beacon.
+
+227
+00:14:53,610 --> 00:14:55,258
+Speaker 0: I'm betting that store will have what you want.
+
+228
+00:14:55,559 --> 00:14:56,403
+Speaker 1: I'll bet you 50 bucks.
+
+229
+00:14:56,423 --> 00:14:57,548
+Speaker 0: They don't and I've been 50 bucks.
+
+230
+00:14:58,051 --> 00:14:59,907
+Speaker 1: Uh-huh well you go check tomorrow.
+
+231
+00:15:01,790 --> 00:15:06,370
+Speaker 0: It's farther away from me than it is from you so you're suggesting that I go over there way out of my way.
+
+232
+00:15:06,694 --> 00:15:08,049
+Speaker 0: It's like a 10-minute walk.
+
+233
+00:15:08,771 --> 00:15:09,699
+Speaker 1: Actually, it's more than that.
+
+234
+00:15:09,719 --> 00:15:10,728
+Speaker 1: I don't have time for that.
+
+235
+00:15:11,751 --> 00:15:17,537
+Speaker 1: No, whatever it took me an hour to go up to the other music stores and argue with the people who own them until I Discovered that they're all incompetent.
+
+236
+00:15:18,100 --> 00:15:18,724
+Speaker 1: Yeah, so anyway.
+
+237
+00:15:19,146 --> 00:15:21,710
+Speaker 1: I just said all right well I got to get some printing done on foam boards.
+
+238
+00:15:22,071 --> 00:15:25,082
+Speaker 1: I didn't want to order that online just because I didn't really need it that badly.
+
+239
+00:15:25,123 --> 00:15:27,874
+Speaker 1: and I know it's super cheap to print stuff On foam board.
+
+240
+00:15:28,236 --> 00:15:29,924
+Speaker 1: so I go to the printer in my building like all right.
+
+241
+00:15:29,944 --> 00:15:30,889
+Speaker 1: I got a USB stick here.
+
+242
+00:15:31,647 --> 00:15:36,150
+Speaker 1: I Can I print some like two foot by three foot two foot by one foot foam boards black and white?
+
+243
+00:15:36,576 --> 00:15:36,820
+Speaker 1: He's like.
+
+244
+00:15:36,861 --> 00:15:37,450
+Speaker 1: Oh, yeah, that's easy.
+
+245
+00:15:37,450 --> 00:15:38,129
+Speaker 1: I look for you tomorrow.
+
+246
+00:15:38,531 --> 00:15:39,334
+Speaker 1: So I give him the things.
+
+247
+00:15:39,394 --> 00:15:44,250
+Speaker 1: and the first sign of trouble was he looks in the directory, and he's like all right.
+
+248
+00:15:44,310 --> 00:15:50,349
+Speaker 1: So what's here, and I'm like There's only two image files there.
+
+249
+00:15:50,833 --> 00:15:53,230
+Speaker 1: I want both of them printed, and he's like how big you want.
+
+250
+00:15:53,230 --> 00:15:53,551
+Speaker 1: I'm like.
+
+251
+00:15:53,852 --> 00:16:00,298
+Speaker 1: well their actual size in the image files their pings like oh, okay, and he starts he's getting And he figures it out.
+
+252
+00:16:00,358 --> 00:16:01,384
+Speaker 1: I show him how to do everything.
+
+253
+00:16:01,404 --> 00:16:03,929
+Speaker 1: He's like all right all right I'll print these on for you tomorrow.
+
+254
+00:16:04,532 --> 00:16:05,696
+Speaker 1: You want to put down a deposit.
+
+255
+00:16:05,756 --> 00:16:07,020
+Speaker 1: I'm thinking deposit.
+
+256
+00:16:07,441 --> 00:16:09,669
+Speaker 1: it cost like 20 bucks to print something on poster boards.
+
+257
+00:16:09,709 --> 00:16:12,675
+Speaker 1: I'm like How much is it gonna be for all this?
+
+258
+00:16:13,137 --> 00:16:15,383
+Speaker 1: and he says a hundred something bucks plus tax.
+
+259
+00:16:15,805 --> 00:16:18,235
+Speaker 1: yeah, and I'm like all right Never mind.
+
+260
+00:16:18,276 --> 00:16:18,599
+Speaker 1: He's like what.
+
+261
+00:16:18,619 --> 00:16:19,063
+Speaker 1: what do you mean?
+
+262
+00:16:19,083 --> 00:16:19,770
+Speaker 1: That's a pretty good deal.
+
+263
+00:16:19,870 --> 00:16:20,111
+Speaker 1: I'm like.
+
+264
+00:16:20,252 --> 00:16:24,510
+Speaker 1: I can get this for like 20 bucks online plus shipping and he didn't believe me.
+
+265
+00:16:24,610 --> 00:16:26,116
+Speaker 1: He honestly did not believe.
+
+266
+00:16:26,156 --> 00:16:26,959
+Speaker 0: you show my website.
+
+267
+00:16:27,019 --> 00:16:27,180
+Speaker 0: Well.
+
+268
+00:16:27,340 --> 00:16:27,902
+Speaker 1: I'll get to that.
+
+269
+00:16:28,143 --> 00:16:29,327
+Speaker 1: He's like sir.
+
+270
+00:16:29,388 --> 00:16:30,050
+Speaker 1: That's not true.
+
+271
+00:16:30,090 --> 00:16:30,981
+Speaker 1: You're just trying to scam me.
+
+272
+00:16:31,001 --> 00:16:31,770
+Speaker 1: This is a pretty good deal.
+
+273
+00:16:31,991 --> 00:16:33,839
+Speaker 1: I'll print these things for you, but that's what it cost.
+
+274
+00:16:34,321 --> 00:16:34,702
+Speaker 1: I was like.
+
+275
+00:16:34,984 --> 00:16:38,116
+Speaker 1: I named like four places Mmm online.
+
+276
+00:16:38,176 --> 00:16:46,554
+Speaker 1: he's like yeah, and I'm like come on go to him go to him And he won't go to him, and I'm like all right whatever dude give me my USB stick back And I left.
+
+277
+00:16:46,835 --> 00:16:47,557
+Speaker 0: yeah, I would.
+
+278
+00:16:47,577 --> 00:16:50,828
+Speaker 0: I would actually gone to the websites on his computer and showed him
+
+279
+00:16:51,410 --> 00:17:02,744
+Speaker 1: see He wouldn't let me behind his little counter And he was obviously getting very irate partly because I think there were other customers standing there And they were giving each other this look of whoa wait a minute I think this guy's been ripping us
+
+280
+00:17:03,067 --> 00:17:03,188
+Speaker 0: off.
+
+281
+00:17:05,011 --> 00:17:14,050
+Speaker 1: So uh I was starting to think all right I think I'm gonna swear off buying anything at a brick-and-mortar store ever again except groceries.
+
+282
+00:17:14,271 --> 00:17:15,015
+Speaker 0: Congratulations.
+
+283
+00:17:15,035 --> 00:17:17,710
+Speaker 0: Did you join the Scott Club, but then learn something?
+
+284
+00:17:17,849 --> 00:17:28,319
+Speaker 1: I learned many long ago, but I went to one other store, and I realized that now There is one thing that I'm probably better off buying it in person other than food And I went to a strong thing to try it on.
+
+285
+00:17:28,581 --> 00:17:30,770
+Speaker 1: actually no I ordered a bunch of clothes from Amazon.
+
+286
+00:17:30,810 --> 00:17:40,448
+Speaker 1: They should be here tomorrow all right, but I there's one thing that if you order from Amazon It's really not as good as getting it in person, and that is a haircut all right.
+
+287
+00:17:40,488 --> 00:17:42,310
+Speaker 1: so today I went got a haircut in Grand Central.
+
+288
+00:17:42,370 --> 00:17:44,518
+Speaker 1: It was like the best goddamn haircut I've ever got.
+
+289
+00:17:44,539 --> 00:17:45,542
+Speaker 0: well you went to that place.
+
+290
+00:17:45,603 --> 00:17:47,470
+Speaker 0: that was right next to the hot and crusty.
+
+291
+00:17:47,530 --> 00:17:48,876
+Speaker 1: Yes, I did Francesco's.
+
+292
+00:17:48,936 --> 00:17:49,398
+Speaker 0: yeah, I went.
+
+293
+00:17:49,438 --> 00:17:51,065
+Speaker 0: there was 30 bucks, but I'm pretty good.
+
+294
+00:17:51,165 --> 00:17:54,178
+Speaker 0: mine was 60 bucks Mine was 30, but it was not bad.
+
+295
+00:17:54,218 --> 00:17:54,459
+Speaker 0: It was.
+
+296
+00:17:54,741 --> 00:18:00,745
+Speaker 0: the thing is I don't know if I'd pay 30 bucks again But it was not only a good haircut, but it was very convenient.
+
+297
+00:18:00,886 --> 00:18:01,930
+Speaker 0: being right the fuck there.
+
+298
+00:18:02,353 --> 00:18:05,015
+Speaker 1: Well you see I paid the $60 But that's cuz.
+
+299
+00:18:05,035 --> 00:18:09,279
+Speaker 1: I got like the head massage and the wash And I just had my hair washed and then cut.
+
+300
+00:18:09,319 --> 00:18:09,961
+Speaker 0: I didn't like.
+
+301
+00:18:10,022 --> 00:18:16,249
+Speaker 1: I got the styling and the full deal and let me tell You that was like the best haircut of my life, man, and I don't think Amazon's gonna cut it.
+
+302
+00:18:16,711 --> 00:18:18,480
+Speaker 0: No, you sure I don't think so.
+
+303
+00:18:18,822 --> 00:18:19,947
+Speaker 0: actually I'm gonna check right now.
+
+304
+00:18:22,032 --> 00:18:27,184
+Speaker 1: God if I was Amazon I would sell haircut And if anyone ever bought it, I don't know what I do, but I'd sell it.
+
+305
+00:18:27,625 --> 00:18:28,650
+Speaker 0: hold on haircut.
+
+306
+00:18:29,432 --> 00:18:30,358
+Speaker 1: I don't think you're gonna find it.
+
+307
+00:18:31,003 --> 00:18:33,714
+Speaker 0: Oh, but you can get a hair clipper And you get.
+
+308
+00:18:33,774 --> 00:18:36,589
+Speaker 0: you can get hair cutting for dummies, so there you go.
+
+309
+00:18:37,111 --> 00:18:38,175
+Speaker 1: I know what that looks like.
+
+310
+00:18:38,215 --> 00:18:42,350
+Speaker 1: that looks like search for a home haircut on YouTube or Google video.
+
+311
+00:18:43,351 --> 00:18:44,474
+Speaker 1: Anyway, what do you got in the news?
+
+312
+00:18:44,936 --> 00:18:53,835
+Speaker 0: I got four cell phone news is I'm gonna combine and I'm maybe arrive at a point I haven't arrived at a point in my brain yet, but maybe by the time I'm done talking about these newses.
+
+313
+00:18:54,176 --> 00:18:55,641
+Speaker 0: I will figure something out to say this.
+
+314
+00:18:55,681 --> 00:18:58,150
+Speaker 0: insightful alright, so first news ready.
+
+315
+00:18:59,055 --> 00:19:00,382
+Speaker 0: These are all from Engadget by the way.
+
+316
+00:19:01,045 --> 00:19:01,970
+Speaker 0: What's an iPhone?
+
+317
+00:19:01,970 --> 00:19:07,209
+Speaker 0: 14.3 million Windows mobile phones were sold in the past six months alone.
+
+318
+00:19:08,491 --> 00:19:13,949
+Speaker 0: Yeah, not so not nearly that many iPhones are sold in it the iPhones entire life.
+
+319
+00:19:15,052 --> 00:19:16,517
+Speaker 1: It is a pretty new product.
+
+320
+00:19:16,898 --> 00:19:19,084
+Speaker 0: Yeah, but this is we're talking about the lady.
+
+321
+00:19:19,325 --> 00:19:24,109
+Speaker 0: in the last just the last six months 14.3 Windows mobile phone sold worldwide.
+
+322
+00:19:24,129 --> 00:19:27,584
+Speaker 1: well I think the reason is that the primary of 40 more three million not 14.3.
+
+323
+00:19:27,584 --> 00:19:28,126
+Speaker 0: That'd be yeah.
+
+324
+00:19:29,331 --> 00:19:32,704
+Speaker 0: I said yeah, I got the point three of a Windows mobile phone.
+
+325
+00:19:32,724 --> 00:19:34,310
+Speaker 0: the other point seven fell in the trash.
+
+326
+00:19:35,391 --> 00:19:40,830
+Speaker 1: But I think part of that is that the primary market for smartphones are businessmen.
+
+327
+00:19:41,192 --> 00:19:42,116
+Speaker 0: That's what I was gonna say.
+
+328
+00:19:42,257 --> 00:19:49,210
+Speaker 1: really this man like I have a blackberry for work And that's because all there's no business enterprise stuff for the iPhone.
+
+329
+00:19:49,331 --> 00:19:51,462
+Speaker 1: I can't use an iPhone at work for any of my stuff.
+
+330
+00:19:51,502 --> 00:19:52,930
+Speaker 1: I gotta use a blackberry or something.
+
+331
+00:19:53,111 --> 00:20:00,643
+Speaker 0: I think what that shows us is that even though the iPhone is way cool You know relatively speaking I think is that the market for phones.
+
+332
+00:20:00,703 --> 00:20:02,790
+Speaker 0: the vast majority of people still want a phone.
+
+333
+00:20:02,810 --> 00:20:04,470
+Speaker 0: They're just fucking at least in the u.s.
+
+334
+00:20:04,750 --> 00:20:05,593
+Speaker 1: I know what I think.
+
+335
+00:20:05,693 --> 00:20:11,959
+Speaker 1: I think it's really just that iPhone doesn't support the enterprise business II stuff that these people Yeah, so businessmen won't get it.
+
+336
+00:20:12,020 --> 00:20:13,790
+Speaker 0: and normal people don't want a smartphone.
+
+337
+00:20:13,870 --> 00:20:18,677
+Speaker 1: they want a regular phone, but I think Apple is still doing a smart thing with the iPhone because There is that.
+
+338
+00:20:18,717 --> 00:20:28,818
+Speaker 1: I think it's kind of like the blue ocean Strategy of there are people who they can sell an iPhone to who do not need the enterprise business phone But yet they would like to have something cool from Apple.
+
+339
+00:20:29,340 --> 00:20:41,970
+Speaker 0: Yeah, I think slowly but surely they're gonna have to just try to Get try to change people's minds because the a lot of people in the USA I just want to make calls and they don't really and even me who you know wants fancy features.
+
+340
+00:20:42,512 --> 00:20:54,028
+Speaker 0: I got a phone that's got a lot of fancy features, and I think I said this on the show before yeah But I'd soon as I got the phone I was like ooh And I started you know hacking it and unlocking it and using all the fancy features and stuff.
+
+341
+00:20:54,068 --> 00:20:55,294
+Speaker 1: right now You make holes.
+
+342
+00:20:55,555 --> 00:20:57,062
+Speaker 0: I'd like within a day.
+
+343
+00:20:57,183 --> 00:20:58,670
+Speaker 0: I just stopped using all that shit.
+
+344
+00:20:58,730 --> 00:20:59,655
+Speaker 0: I just made calls.
+
+345
+00:21:00,097 --> 00:21:02,810
+Speaker 1: you know like people always say oh rim doesn't buy technology.
+
+346
+00:21:02,850 --> 00:21:03,376
+Speaker 1: That's just cuz.
+
+347
+00:21:03,416 --> 00:21:04,850
+Speaker 1: you know I'm cheap and I'm lazy.
+
+348
+00:21:04,850 --> 00:21:07,550
+Speaker 1: No, there's all sorts of reasons why I don't buy a lot of fancy technology.
+
+349
+00:21:07,630 --> 00:21:09,017
+Speaker 1: But I was given cuz.
+
+350
+00:21:09,358 --> 00:21:10,644
+Speaker 1: I always wanted a smartphone.
+
+351
+00:21:10,685 --> 00:21:11,810
+Speaker 1: I'd love to have something like that.
+
+352
+00:21:11,870 --> 00:21:17,839
+Speaker 1: I just wasn't willing to spend a bunch of money and my work gave me one and it's I Got it and for like two or three days right.
+
+353
+00:21:18,322 --> 00:21:20,190
+Speaker 1: I was like installing every freaking application.
+
+354
+00:21:20,310 --> 00:21:21,294
+Speaker 1: I got the opera browser.
+
+355
+00:21:21,314 --> 00:21:36,589
+Speaker 1: I set up all my RSS feeds got the Google Maps the GPS and now every now, and then I look at my work email, and then I work at my home look at my home email and Then I look and say oh wow there's nothing new cuz I just checked it on my computer an hour ago
+
+356
+00:21:36,931 --> 00:21:37,192
+Speaker 0: Yeah,
+
+357
+00:21:37,533 --> 00:21:38,817
+Speaker 1: and then I go oh Google Maps.
+
+358
+00:21:39,139 --> 00:21:44,253
+Speaker 1: That'd be great with the GPS if I still drove anywhere, but oh Google Reader.
+
+359
+00:21:44,334 --> 00:21:48,849
+Speaker 1: oh, I already read my Google Reader and edge is a lot slower than my computer at home.
+
+360
+00:21:48,869 --> 00:21:50,713
+Speaker 1: and Oh great.
+
+361
+00:21:50,793 --> 00:21:55,450
+Speaker 0: Yeah, this is why despite the fact that the iPhone is not unlocked and is sort of evil.
+
+362
+00:21:55,953 --> 00:22:07,980
+Speaker 0: I might consider getting one next year when my Contract runs out because in all reality the only things I'll use are like the Google stuff And it'll replace my iPod and I carry one less device.
+
+363
+00:22:08,000 --> 00:22:11,229
+Speaker 0: if I didn't have I wouldn't actually use that other stuff that often.
+
+364
+00:22:11,249 --> 00:22:11,289
+Speaker 0: if
+
+365
+00:22:11,470 --> 00:22:25,219
+Speaker 1: I Didn't have a blackberry for work and need a blackberry for work I would probably also get an iPhone soon because you know what it replaces my iPod And I can see myself watching videos and stuff and all the stuff It does is the stuff that I do like.
+
+366
+00:22:25,239 --> 00:22:27,990
+Speaker 1: the thing I use my blackberry for the most is the Google Maps.
+
+367
+00:22:28,090 --> 00:22:29,556
+Speaker 1: Just cuz I could need to look for a business.
+
+368
+00:22:29,636 --> 00:22:32,969
+Speaker 1: You know what that works really really well on the iPhone works, okay?
+
+369
+00:22:33,951 --> 00:22:34,954
+Speaker 0: Speaking of the iPhone.
+
+370
+00:22:35,155 --> 00:22:39,067
+Speaker 0: There's a new 16 gig iPhone and the iPod touch is now 32 gigs.
+
+371
+00:22:40,513 --> 00:22:45,989
+Speaker 1: My nano is two gigs mines for I don't know why you got the two Because it was a lot cheaper.
+
+372
+00:22:46,791 --> 00:22:48,458
+Speaker 1: You know what it's never filled up.
+
+373
+00:22:48,900 --> 00:22:49,101
+Speaker 0: No.
+
+374
+00:22:49,141 --> 00:22:51,069
+Speaker 0: I filled up my I've gone over to before.
+
+375
+00:22:51,089 --> 00:22:58,084
+Speaker 1: well You know what it's gonna go over to now because I haven't listened to podcasts and months And I'm gonna sync up before we go to katsu khan so great.
+
+376
+00:22:58,165 --> 00:23:03,300
+Speaker 0: Okay, it's also You know the Nokia n95 which is pretty much the phone that does everything right?
+
+377
+00:23:05,262 --> 00:23:11,913
+Speaker 0: Nokia n96 we're talking like $800 here, but this is one ludicrous motherfucking phone.
+
+378
+00:23:11,933 --> 00:23:18,112
+Speaker 0: Let me tell you it's got like a TV tuner and that is what I need.
+
+379
+00:23:18,172 --> 00:23:24,130
+Speaker 0: it's got an engage action in there, and oh Wi-Fi GPS, that's cool.
+
+380
+00:23:24,472 --> 00:23:26,540
+Speaker 0: It's guy pretty much anything you could imagine.
+
+381
+00:23:26,641 --> 00:23:28,230
+Speaker 0: This is the kitchen sink of phones.
+
+382
+00:23:28,290 --> 00:23:32,912
+Speaker 0: if I was stupidly rich I would get it, but really I wouldn't use 90% of that stuff.
+
+383
+00:23:32,932 --> 00:23:34,559
+Speaker 0: so maybe even that I wouldn't got.
+
+384
+00:23:34,579 --> 00:23:37,360
+Speaker 1: you know It's it's a pipe dream, and it's not even a pipe dream.
+
+385
+00:23:37,420 --> 00:23:46,640
+Speaker 1: This is like fantasy talk, but what I really want like like the perfect phone for me Is something the size of this blackberry like the size and shape of this blackberry?
+
+386
+00:23:47,461 --> 00:23:59,023
+Speaker 1: No, no I got a scratch that the perfect phone just connects to my brain and I can just talk and do whatever my brain so never Mind yeah, and the one last bit of phone news here the Android.
+
+387
+00:23:59,043 --> 00:24:00,389
+Speaker 0: you know the Google Android thing.
+
+388
+00:24:00,711 --> 00:24:08,492
+Speaker 0: they put out the SDK a while back And they had a little contest that was like hey whoever makes the best stuff you'll get ten million dollars And you know whatever.
+
+389
+00:24:08,572 --> 00:24:12,660
+Speaker 0: right well You know the SDK they put out had some problems.
+
+390
+00:24:12,780 --> 00:24:18,580
+Speaker 0: I tried to use it and it did have some problems like you couldn't do certain things and you couldn't test certain features properly.
+
+391
+00:24:19,226 --> 00:24:27,889
+Speaker 0: So now they've said all right all right We're gonna update the SDK in a few weeks, and we're gonna delay the contest until April, and I'm like oh Uh-huh.
+
+392
+00:24:28,193 --> 00:24:31,269
+Speaker 0: so it seems I don't know how much confidence I have in this Android.
+
+393
+00:24:31,329 --> 00:24:36,400
+Speaker 0: now there seems to be some slip-ups going on with it and such you Know even though it has some promise.
+
+394
+00:24:36,881 --> 00:24:42,580
+Speaker 0: But luckily all this will be sorted out by January oh nine when my phone contract runs out, and I'll be okay.
+
+395
+00:24:43,463 --> 00:24:52,156
+Speaker 1: So uh I actually got some news too despite all my anecdotal Talking about walking around in New York City and failing at buying consumer services.
+
+396
+00:24:52,176 --> 00:24:57,923
+Speaker 1: right now There's a lot of talk in our forums and the rest of the internet about Anonymous.
+
+397
+00:24:58,324 --> 00:25:01,013
+Speaker 1: I'm not gonna get into all that but theoretically.
+
+398
+00:25:01,033 --> 00:25:13,893
+Speaker 1: I'm sure you all know you're all internet people that Anonymous had planned and that's interesting to say because anonymous is not a person or a group supposedly But some sort of second-order simulacra, but I'll get to that now.
+
+399
+00:25:14,676 --> 00:25:18,231
+Speaker 0: well you're getting to a lot of things here But not really saying much I'm getting.
+
+400
+00:25:18,271 --> 00:25:19,080
+Speaker 1: I'm getting to that.
+
+401
+00:25:19,948 --> 00:25:23,668
+Speaker 1: So they'd planned this Protest of Scientology, and there was.
+
+402
+00:25:23,688 --> 00:25:25,895
+Speaker 1: there's a lot of talk on the internet about.
+
+403
+00:25:26,196 --> 00:25:26,838
+Speaker 1: this is the like.
+
+404
+00:25:26,858 --> 00:25:27,159
+Speaker 1: This is it.
+
+405
+00:25:27,400 --> 00:25:30,160
+Speaker 1: This is the emergence of behavior on the internet.
+
+406
+00:25:30,261 --> 00:25:41,615
+Speaker 1: This is anonymity and there's this cult of anonymity speaking out And we'd seen glimmers of this in a as yet unaired documentary that our friends Pete and James filmed at Otacon that they're still working on.
+
+407
+00:25:41,676 --> 00:25:45,728
+Speaker 0: but oh Wait a way to call someone a shit talker.
+
+408
+00:25:46,029 --> 00:25:49,120
+Speaker 1: no the thing is we knew they need more footage name in more time.
+
+409
+00:25:49,200 --> 00:26:16,716
+Speaker 1: I don't I don't call him anything because I didn't do anything much beyond geek nights lately, but They this happened on Sunday You know people were saying oh there's gonna be these thousands of it's gonna be this crazy protest and worried about the police and all That and I'm not gonna talk about the whole thing but it looks like maybe 200 people showed up to the New York City protest of Scientology and If this had been more successful now these people say oh, it was a great success.
+
+410
+00:26:16,736 --> 00:26:17,760
+Speaker 1: look at all the people we got.
+
+411
+00:26:18,222 --> 00:26:28,120
+Speaker 1: we got like 200 people in New York City and like 500 people in London and like One person in Tokyo and like 40 people here and 50 people here and all over the world all these Scientology in Tokyo.
+
+412
+00:26:29,321 --> 00:26:31,127
+Speaker 1: Well, they only had one guy protesting it.
+
+413
+00:26:31,167 --> 00:26:33,213
+Speaker 1: so maybe there's only one Scientologist.
+
+414
+00:26:33,474 --> 00:26:33,976
+Speaker 1: Yeah, I walked up.
+
+415
+00:26:33,996 --> 00:26:34,197
+Speaker 1: He's like.
+
+416
+00:26:34,217 --> 00:26:51,659
+Speaker 1: Yeah, you're dumb I was like hey whatever but All right This is this is like the emergence of the internet like Future the zeitgeist of the internet that at power of anonymity to rise up, and we're among you were everywhere blah blah blah.
+
+417
+00:26:52,382 --> 00:26:55,372
+Speaker 1: They only got 200 people despite all this talk.
+
+418
+00:26:55,794 --> 00:26:57,440
+Speaker 1: in the New York City metropolitan area.
+
+419
+00:26:57,460 --> 00:27:04,723
+Speaker 1: now That's 200 out of to estimate conservatively 17 million people Mm-hmm.
+
+420
+00:27:04,783 --> 00:27:15,274
+Speaker 1: so out of 17 million people in a generally representative of Geekery, and you know the kind of affluent technorati of America.
+
+421
+00:27:15,896 --> 00:27:16,458
+Speaker 1: You've got 200 people.
+
+422
+00:27:16,980 --> 00:27:18,787
+Speaker 1: There are 200 people in your little organization.
+
+423
+00:27:18,827 --> 00:27:20,714
+Speaker 0: I've seen flash mobs with more people than that.
+
+424
+00:27:20,734 --> 00:27:27,394
+Speaker 1: I don't want to call anonymous shit talkers, but If this has been more successful, I would have.
+
+425
+00:27:27,635 --> 00:27:29,888
+Speaker 1: I have this whole thing I want to talk about about someday.
+
+426
+00:27:29,928 --> 00:27:32,200
+Speaker 1: We're gonna have second-order simulacra.
+
+427
+00:27:32,240 --> 00:27:34,960
+Speaker 1: We're gonna have like these entities on the internet.
+
+428
+00:27:35,060 --> 00:27:37,788
+Speaker 1: But I'm not gonna talk about that because that didn't happen.
+
+429
+00:27:38,249 --> 00:27:41,960
+Speaker 1: the anonymous uprising was not this great event.
+
+430
+00:27:42,020 --> 00:27:52,740
+Speaker 1: It was basically just nothing more than what could have been done with BBS is ten years ago And it was just 4chan people and it wasn't anything special, and I I almost feel bad about that.
+
+431
+00:27:52,980 --> 00:27:56,290
+Speaker 0: You know I think this proves the what I what I we think.
+
+432
+00:27:56,571 --> 00:27:59,540
+Speaker 0: what does it prove that a lot of those people are?
+
+433
+00:28:00,500 --> 00:28:15,880
+Speaker 0: Miners who aren't just allowed to go to a protest they're probably in school and such and Those are probably shows you what a small percentage of the people are actually Independent free adult individuals who can get up and go somewhere when they want to without mommy.
+
+434
+00:28:15,940 --> 00:28:19,231
+Speaker 0: Can I go protest a Scientologist keep driving, New York City?
+
+435
+00:28:19,292 --> 00:28:20,897
+Speaker 0: I need some money for a train ticket.
+
+436
+00:28:20,937 --> 00:28:23,166
+Speaker 0: I have a job I'm in high school.
+
+437
+00:28:23,709 --> 00:28:29,658
+Speaker 1: I mean I think when I go on 4chan look at hentai's I think what it comes down to ever seen a real boob.
+
+438
+00:28:30,641 --> 00:28:31,826
+Speaker 1: Wow, that was harsh.
+
+439
+00:28:31,846 --> 00:28:32,771
+Speaker 1: Yeah, see.
+
+440
+00:28:33,012 --> 00:28:35,021
+Speaker 1: I think what it really gives you real boobs They do.
+
+441
+00:28:35,422 --> 00:28:37,008
+Speaker 1: how many boobs that are in 4chan?
+
+442
+00:28:37,529 --> 00:28:40,700
+Speaker 0: not live in person, but I'm not since their mama had him.
+
+443
+00:28:41,420 --> 00:28:42,525
+Speaker 1: That's that's pretty harsh.
+
+444
+00:28:42,565 --> 00:28:43,990
+Speaker 1: I wasn't gonna go that low, but
+
+445
+00:28:44,391 --> 00:28:44,933
+Speaker 0: what I want to go
+
+446
+00:28:44,954 --> 00:29:00,475
+Speaker 1: is that someday we're going to see the emergent behavior of the internet and if like 10,000 people had just showed up in vmasks outside and walked by Scientology I would have talked about the revolution of the internet now.
+
+447
+00:29:00,515 --> 00:29:03,487
+Speaker 1: This is the future but Maybe in ten years.
+
+448
+00:29:03,527 --> 00:29:04,612
+Speaker 1: We're not at that point yet.
+
+449
+00:29:04,934 --> 00:29:05,959
+Speaker 1: 4chan is not the future.
+
+450
+00:29:06,421 --> 00:29:09,712
+Speaker 1: Anonymous is not a second-order simulacra.
+
+451
+00:29:09,772 --> 00:29:14,551
+Speaker 1: It is not the emergence of the stuff Undirected intelligent behavior on the internet.
+
+452
+00:29:15,013 --> 00:29:16,500
+Speaker 1: It's just one website.
+
+453
+00:29:16,923 --> 00:29:17,929
+Speaker 1: I mean something awful.
+
+454
+00:29:17,989 --> 00:29:19,820
+Speaker 0: problems is kind of a lame flash from a hub.
+
+455
+00:29:19,900 --> 00:29:24,336
+Speaker 1: But not even a flash from something awful could have probably pulled off something better than what you guys pulled off.
+
+456
+00:29:24,858 --> 00:29:25,400
+Speaker 1: I'm sorry.
+
+457
+00:29:26,121 --> 00:29:28,693
+Speaker 0: Yeah, it didn't impress me as much as I hate Scientology.
+
+458
+00:29:28,693 --> 00:29:30,220
+Speaker 1: 200 people is all you can get.
+
+459
+00:29:30,601 --> 00:29:35,967
+Speaker 1: I think I had more of an impact on Scientology when I argued with one of them for like 10 minutes in Grand Central one day.
+
+460
+00:29:36,152 --> 00:29:37,790
+Speaker 1: yeah all right.
+
+461
+00:29:44,970 --> 00:29:46,696
+Speaker 1: Anyway things of the day now.
+
+462
+00:29:47,318 --> 00:29:50,630
+Speaker 1: This is a much more impressive flash mob than what Scientology put off.
+
+463
+00:29:50,690 --> 00:29:53,070
+Speaker 1: I'm sure you're all familiar with improv everywhere.
+
+464
+00:29:53,231 --> 00:29:58,014
+Speaker 1: These people get a lot of respect for me because nothing in the best one They did is the.
+
+465
+00:29:58,657 --> 00:30:01,130
+Speaker 0: I think it was like meet an actual black man or something.
+
+466
+00:30:01,352 --> 00:30:10,401
+Speaker 0: I had this black guy and was that like Must've been like a ski resort or something like that and you just had a sign like, you know Like meet a black person and all these people came up.
+
+467
+00:30:10,421 --> 00:30:12,570
+Speaker 1: We're like, hey, I like the one in Union Square.
+
+468
+00:30:12,590 --> 00:30:16,250
+Speaker 1: We did all the dancing but Talk about a real flash mob.
+
+469
+00:30:16,330 --> 00:30:23,742
+Speaker 1: I have so much respect for these people because nothing in the world is greater to me Than people who go out with one thing in mind.
+
+470
+00:30:23,782 --> 00:30:25,910
+Speaker 1: that thing in mind is freakin squares.
+
+471
+00:30:26,191 --> 00:30:32,230
+Speaker 0: Freakin squares the the oldest form of entertainment known to geek and so this video.
+
+472
+00:30:32,732 --> 00:30:35,706
+Speaker 1: I mean the hippies were almost like proto geeks in terms of freakin squares.
+
+473
+00:30:35,747 --> 00:30:36,390
+Speaker 1: That's what they did.
+
+474
+00:30:36,852 --> 00:30:45,469
+Speaker 1: I learned that from The Simpsons and my mom who was a hippie for a number of years But ever bored just try to freak the squares freakin squares.
+
+475
+00:30:45,610 --> 00:30:49,570
+Speaker 1: But basically all these people gathered in Grand Central.
+
+476
+00:30:49,610 --> 00:31:00,058
+Speaker 1: They're walking about doing their business and then suddenly for five minutes they all froze like in a sci-fi movie where time stops for some people but not other people and One.
+
+477
+00:31:00,119 --> 00:31:05,070
+Speaker 1: this was executed Masterfully, like this is so well done.
+
+478
+00:31:05,338 --> 00:31:09,788
+Speaker 1: Yeah The people tried real hard and the best part is apparently the cameraman who were filming it.
+
+479
+00:31:10,331 --> 00:31:13,625
+Speaker 1: We're acting as though they were just walking around and they're like Jesus.
+
+480
+00:31:13,665 --> 00:31:14,689
+Speaker 1: check this out, dude.
+
+481
+00:31:15,393 --> 00:31:20,313
+Speaker 1: so they were acting like they were part of the crowd even though they're actually part of the flash mob, but There's one.
+
+482
+00:31:20,333 --> 00:31:24,792
+Speaker 1: there's a couple of people whose reaction borders on the This.
+
+483
+00:31:24,872 --> 00:31:26,458
+Speaker 1: is it sci-fi something like?
+
+484
+00:31:26,478 --> 00:31:28,265
+Speaker 1: they're kind of freaking out like they're not.
+
+485
+00:31:28,647 --> 00:31:29,530
+Speaker 1: they don't get that.
+
+486
+00:31:29,590 --> 00:31:31,276
+Speaker 1: It's just that you can tell that they're.
+
+487
+00:31:31,678 --> 00:31:33,323
+Speaker 1: they're not quite a hundred percent.
+
+488
+00:31:33,484 --> 00:31:35,110
+Speaker 0: mean you mean they're squares.
+
+489
+00:31:35,990 --> 00:31:37,809
+Speaker 0: Possibly possibly they might be squares.
+
+490
+00:31:38,191 --> 00:31:43,210
+Speaker 1: I think the best part though is the guy driving that garbage truck who's like he's on this radio is like man.
+
+491
+00:31:43,290 --> 00:31:43,592
+Speaker 1: I don't know.
+
+492
+00:31:43,612 --> 00:31:45,020
+Speaker 1: All these people are just frozen everywhere.
+
+493
+00:31:45,040 --> 00:31:45,885
+Speaker 1: I can't move my truck.
+
+494
+00:31:45,945 --> 00:31:46,609
+Speaker 1: I don't know what to do.
+
+495
+00:31:47,270 --> 00:31:49,159
+Speaker 0: Obviously, they're not hip and nobody.
+
+496
+00:31:49,179 --> 00:31:50,002
+Speaker 1: the guy's taking the strike.
+
+497
+00:31:50,022 --> 00:31:51,308
+Speaker 1: He's like, he just calls his boss.
+
+498
+00:31:51,348 --> 00:31:51,690
+Speaker 1: He's like man.
+
+499
+00:31:51,750 --> 00:31:52,493
+Speaker 1: I'm stuck here all these.
+
+500
+00:31:52,513 --> 00:31:54,180
+Speaker 1: there's like hundreds of people frozen everywhere.
+
+501
+00:31:54,260 --> 00:31:54,722
+Speaker 1: I don't know.
+
+502
+00:31:55,526 --> 00:31:56,570
+Speaker 1: and they all start moving again.
+
+503
+00:31:56,570 --> 00:31:57,818
+Speaker 1: He's like never mind.
+
+504
+00:31:57,858 --> 00:31:58,502
+Speaker 1: They're all moving.
+
+505
+00:31:58,683 --> 00:31:59,649
+Speaker 1: I don't know what just happened.
+
+506
+00:32:00,252 --> 00:32:04,430
+Speaker 1: Yeah, but the fact that everyone applauds at the end really that was cool.
+
+507
+00:32:05,311 --> 00:32:09,703
+Speaker 1: man, check this video out and Anonymous you could learn something.
+
+508
+00:32:10,227 --> 00:32:16,373
+Speaker 0: Yeah All right, so I since I haven't been looking like Google Reader I had too many things of the day going on But rim found one.
+
+509
+00:32:17,075 --> 00:32:18,499
+Speaker 0: It's a pretty okay site here.
+
+510
+00:32:18,539 --> 00:32:31,610
+Speaker 0: He got it shows you a bunch of companies that you might know like Apple Canon, which I apparently was originally named a quenin or qua non Ibom one of my favorites Ibom googly, right?
+
+511
+00:32:33,150 --> 00:32:43,217
+Speaker 0: LG which is originally apparently lucky chemical and then was gold star and then was LG and It shows you their company logos and how they change over time.
+
+512
+00:32:43,277 --> 00:32:44,342
+Speaker 0: and well I got.
+
+513
+00:32:44,363 --> 00:32:50,970
+Speaker 0: the things I had to say about this is first of all They don't go all the way back with the Firefox logos.
+
+514
+00:32:51,190 --> 00:32:54,480
+Speaker 0: I used Firefox when it was called Phoenix, right?
+
+515
+00:32:54,780 --> 00:32:59,457
+Speaker 1: They have ibm's logo from 1888 and they don't have the first Firefox low.
+
+516
+00:32:59,517 --> 00:33:01,464
+Speaker 0: I used Phoenix 0.5.
+
+517
+00:33:01,464 --> 00:33:06,680
+Speaker 1: that was back when I said that browser crashes all that Phoenix Firebird logo.
+
+518
+00:33:06,780 --> 00:33:08,305
+Speaker 0: They have theirs from like 0.8.
+
+519
+00:33:08,305 --> 00:33:09,851
+Speaker 0: All right, so they don't.
+
+520
+00:33:09,911 --> 00:33:12,460
+Speaker 0: they didn't go all the way back in time with the logos there.
+
+521
+00:33:12,865 --> 00:33:13,799
+Speaker 0: All right, which they should have.
+
+522
+00:33:14,615 --> 00:33:17,007
+Speaker 0: but Yeah, this is pretty cool.
+
+523
+00:33:17,469 --> 00:33:23,671
+Speaker 0: And the other thing I learned from this right is All these companies big companies right with big trademarks.
+
+524
+00:33:24,113 --> 00:33:28,426
+Speaker 0: They changed their logos over time pretty significantly Except Google.
+
+525
+00:33:28,486 --> 00:33:31,140
+Speaker 0: So Google still changes just not so significantly.
+
+526
+00:33:31,220 --> 00:33:34,392
+Speaker 1: They changed the color of like one letter.
+
+527
+00:33:34,453 --> 00:33:38,147
+Speaker 0: they change the colors around and they also There's an exclamation point.
+
+528
+00:33:38,167 --> 00:33:39,913
+Speaker 0: They got rid of and yeah, cuz it didn't look so.
+
+529
+00:33:39,974 --> 00:33:44,734
+Speaker 1: and they on JPEG a fight it Yeah, but anyway the head of that drop shadow.
+
+530
+00:33:44,995 --> 00:33:48,810
+Speaker 0: Yeah, but change the font Not that much.
+
+531
+00:33:49,132 --> 00:33:51,785
+Speaker 0: No, they It's okay.
+
+532
+00:33:52,006 --> 00:33:56,065
+Speaker 0: These companies change their logos and it worked out Like I've always been kind of worried.
+
+533
+00:33:56,085 --> 00:34:00,040
+Speaker 0: that like, you know, we're gonna we're gonna change our look.
+
+534
+00:34:00,583 --> 00:34:02,814
+Speaker 0: If we pick a logo we had to stick with it forever.
+
+535
+00:34:02,854 --> 00:34:03,960
+Speaker 0: if we ever change it, we're fucked.
+
+536
+00:34:03,980 --> 00:34:06,459
+Speaker 0: I'm like no, you know what, you know, we got this logo.
+
+537
+00:34:06,499 --> 00:34:09,536
+Speaker 0: now We'll use it and then if we change it we can do that.
+
+538
+00:34:09,636 --> 00:34:10,340
+Speaker 0: It's it's okay.
+
+539
+00:34:10,925 --> 00:34:12,540
+Speaker 1: The cool thing is I just feel bad.
+
+540
+00:34:12,641 --> 00:34:14,820
+Speaker 0: you know for whoever made it cuz it's like.
+
+541
+00:34:14,900 --> 00:34:21,460
+Speaker 0: You know when it's like you had someone design a logo for you use it and then when you stop using it It's like no not disrespecting you.
+
+542
+00:34:21,620 --> 00:34:27,223
+Speaker 1: Well, at least IBM got away with that because I'm pretty sure when they change the logos people who had made previous logos weren't alive Anymore.
+
+543
+00:34:27,686 --> 00:34:33,775
+Speaker 0: yeah, but I don't think we'll change ours soon But one day when you know a few years down the road if we ever have to.
+
+544
+00:34:33,835 --> 00:34:34,820
+Speaker 0: I won't feel too bad now.
+
+545
+00:34:34,880 --> 00:34:35,344
+Speaker 1: But the 1924 IBM logo.
+
+546
+00:34:36,900 --> 00:34:42,208
+Speaker 1: there's actually a really really big like poster thing of that at IBM.
+
+547
+00:34:42,228 --> 00:34:45,900
+Speaker 1: when I worked there and I so I was familiar with that logo and I always that was cool thing.
+
+548
+00:34:45,980 --> 00:34:52,295
+Speaker 1: But the ones before that before the merger I might have seen him before but I can't recall those.
+
+549
+00:34:52,315 --> 00:34:54,022
+Speaker 1: and I actually really like the first One.
+
+550
+00:34:54,062 --> 00:34:58,225
+Speaker 1: it's really got this kind of old School coolness to it.
+
+551
+00:34:58,707 --> 00:34:59,089
+Speaker 1: I don't know.
+
+552
+00:34:59,109 --> 00:34:59,913
+Speaker 1: I just really like that.
+
+553
+00:34:59,933 --> 00:35:02,002
+Speaker 0: I like that third one from 1911.
+
+554
+00:35:02,002 --> 00:35:02,804
+Speaker 1: Oh, yeah, that one though.
+
+555
+00:35:02,885 --> 00:35:06,498
+Speaker 1: I like the dot and like the O inside that C or whatever it is.
+
+556
+00:35:06,518 --> 00:35:09,387
+Speaker 1: Yeah Computer tabulating recording company.
+
+557
+00:35:09,688 --> 00:35:09,848
+Speaker 1: Yeah.
+
+558
+00:35:10,029 --> 00:35:10,390
+Speaker 0: Okay.
+
+559
+00:35:10,410 --> 00:35:11,614
+Speaker 0: We're gonna do new main bit now.
+
+560
+00:35:11,995 --> 00:35:13,380
+Speaker 1: wiki wiki wiki wiki.
+
+561
+00:35:13,620 --> 00:35:15,185
+Speaker 1: Yeah, I had my Twiki story.
+
+562
+00:35:15,205 --> 00:35:20,060
+Speaker 0: It was kind of relevant shall we say maybe all right, so say we talk about some wikis, right?
+
+563
+00:35:20,440 --> 00:35:22,480
+Speaker 0: Yeah, I'm sure everyone here knows about the Wikipedia.
+
+564
+00:35:23,620 --> 00:35:24,123
+Speaker 1: Wikipedia.
+
+565
+00:35:24,203 --> 00:35:30,535
+Speaker 1: we don't don't let Scott fool you with his mispronouncing ways Intentionally mispronouncing ways intentionally as it is.
+
+566
+00:35:30,555 --> 00:35:31,240
+Speaker 1: I don't know.
+
+567
+00:35:31,260 --> 00:35:33,989
+Speaker 1: I don't think Wikipedia is gonna catch on as some sort of internet meme.
+
+568
+00:35:34,110 --> 00:35:35,614
+Speaker 1: No, it's no pockner.
+
+569
+00:35:35,775 --> 00:35:36,859
+Speaker 0: It's caught on in my office.
+
+570
+00:35:38,821 --> 00:35:39,604
+Speaker 0: It's an office joke.
+
+571
+00:35:39,805 --> 00:35:43,038
+Speaker 1: have you ever seen the office because it's kind of along those lines.
+
+572
+00:35:43,078 --> 00:35:45,829
+Speaker 0: I think No, not quite but it's worth seeing.
+
+573
+00:35:45,909 --> 00:35:49,605
+Speaker 0: actually I seen it but I'm saying not quite as in that along those lines I don't know.
+
+574
+00:35:49,625 --> 00:35:51,820
+Speaker 1: I don't think it's got the staying power anyway.
+
+575
+00:35:53,304 --> 00:35:54,687
+Speaker 0: Okay, what is a wiki?
+
+576
+00:35:54,707 --> 00:35:59,860
+Speaker 1: a wiki is is a fast thing because in the in the Hawaiian language the word wiki means fast.
+
+577
+00:36:00,192 --> 00:36:12,414
+Speaker 1: Yeah There was the see actually was funny because I remember there was a point a while ago when I think Emily said that yeah Wiki was named after this Hawaiian words like wiki wiki the wiki wiki bus And I think Scott was the one who baulked and said that can't be true.
+
+578
+00:36:12,474 --> 00:36:13,117
+Speaker 0: I didn't say that.
+
+579
+00:36:13,177 --> 00:36:17,994
+Speaker 0: I said, I don't know Cuz I thought I heard something else, but I don't remember what I heard.
+
+580
+00:36:18,114 --> 00:36:24,873
+Speaker 1: Yeah, you usually do that Someone says something you go And then we look it up and oh, yeah, it was yeah and it was the wiki.
+
+581
+00:36:24,894 --> 00:36:30,274
+Speaker 1: wiki bus is the original Inspiration for the wiki wiki web which became wikis.
+
+582
+00:36:31,743 --> 00:36:34,964
+Speaker 1: Yes, so, uh, you're all familiar with Wikipedia But what act like?
+
+583
+00:36:35,346 --> 00:36:38,280
+Speaker 1: you hear the word wiki and most people think Wikipedia.
+
+584
+00:36:38,460 --> 00:36:48,020
+Speaker 1: But I mean wiki actually means something broader than Wikipedia is a wiki just as hypertext Markup language is a standard general markup language.
+
+585
+00:36:51,701 --> 00:36:53,927
+Speaker 1: God anyway, so what Scott is a wiki?
+
+586
+00:36:54,509 --> 00:36:55,752
+Speaker 0: Well, it's.
+
+587
+00:36:55,913 --> 00:36:59,746
+Speaker 0: I don't know if I haven't looked up an actual Perfect definition of it.
+
+588
+00:36:59,787 --> 00:37:00,350
+Speaker 0: Basically.
+
+589
+00:37:01,013 --> 00:37:15,377
+Speaker 0: It's it's a web application typically a web application, you know and you have these pages and every page has a title and You each page within the page has these as these sort of wiki links that go to the other pages.
+
+590
+00:37:15,457 --> 00:37:19,006
+Speaker 0: so it's this big Interlinked thing with all these different.
+
+591
+00:37:19,026 --> 00:37:19,909
+Speaker 1: so the internet.
+
+592
+00:37:19,970 --> 00:37:32,993
+Speaker 0: I can just link to things right right because the difference is that Unlike, you know each page is just a web page, but unlike regular web pages Anyone who visits the web page you can just edit it all they want.
+
+593
+00:37:33,295 --> 00:37:37,480
+Speaker 0: Oh See originally, that's what the web was supposed to be.
+
+594
+00:37:37,540 --> 00:37:44,380
+Speaker 0: The whole web was supposed to be like that, but it was not really the kind of not really sorta not at all.
+
+595
+00:37:44,400 --> 00:37:46,610
+Speaker 0: Yeah, if you look at the original HTTP there were.
+
+596
+00:37:46,770 --> 00:37:50,084
+Speaker 0: there were verbs to do those sorts of things But now no one uses them.
+
+597
+00:37:50,566 --> 00:37:51,831
+Speaker 1: people didn't even use them back then.
+
+598
+00:37:51,872 --> 00:37:52,494
+Speaker 1: so much.
+
+599
+00:37:52,514 --> 00:37:53,619
+Speaker 0: I know but they were there.
+
+600
+00:37:54,562 --> 00:37:56,469
+Speaker 0: They sort ever gonna do it and then they didn't.
+
+601
+00:37:56,910 --> 00:37:57,853
+Speaker 1: the key to a wiki.
+
+602
+00:37:57,893 --> 00:38:07,122
+Speaker 1: What a wiki really is is it's a collaborative platform of content publication and basically the idea here is that wikis.
+
+603
+00:38:07,303 --> 00:38:17,815
+Speaker 1: what I want to get across to all of you because I don't want to go into like the history of Well a wiki was come up with by this guy in like 1995 and then in 1994 was like the seed of the idea.
+
+604
+00:38:17,835 --> 00:38:20,839
+Speaker 1: and then in this year in this year They cuz no one cares about that.
+
+605
+00:38:21,101 --> 00:38:21,884
+Speaker 1: Most people don't know who.
+
+606
+00:38:21,944 --> 00:38:23,871
+Speaker 1: any of those people who came up with the internet were like.
+
+607
+00:38:24,172 --> 00:38:25,939
+Speaker 1: how many you even know who Tim Berners-Lee is?
+
+608
+00:38:26,861 --> 00:38:28,609
+Speaker 1: Yeah, how many of you out there?
+
+609
+00:38:28,810 --> 00:38:29,272
+Speaker 1: You should.
+
+610
+00:38:29,292 --> 00:38:31,079
+Speaker 1: I did take classes on that at RIT.
+
+611
+00:38:33,900 --> 00:38:48,840
+Speaker 1: Anyway what a wiki is and what makes Wikipedia so great like Scott said is that Anyone and now anyone is has an asterisk after it But anyone can edit it and the power of that is like look at a company a corporation, right?
+
+612
+00:38:49,280 --> 00:38:54,012
+Speaker 1: You got a small company and you have documents, you know, you you you share emails you.
+
+613
+00:38:54,353 --> 00:39:12,492
+Speaker 1: maybe there's the procedure for filling out a TPS Report or the procedure for invoking weeaboo, but whatever you're doing Either you have solved like a department that manages your documentation or like Bob from finances all the finance documentation and anytime you need to do something with finance.
+
+614
+00:39:12,532 --> 00:39:23,213
+Speaker 1: gotta call Bob or you got to go to like Bob's desk and root through his crap and find the piece of paper that he wrote it on five years ago or Joey Jojo dies and no one knows how to do his job anymore.
+
+615
+00:39:23,233 --> 00:39:29,480
+Speaker 1: There's no documentation for it or The finance department has all their documentation, but it's on their own little web server.
+
+616
+00:39:29,922 --> 00:39:38,793
+Speaker 1: That's running like some proprietary thing and no one else has access to it or someone else finds a problem And they ask Joe from finance to change it, but Joan from finance doesn't care.
+
+617
+00:39:38,934 --> 00:39:39,957
+Speaker 1: He's dead or something.
+
+618
+00:39:39,997 --> 00:39:40,880
+Speaker 1: It never gets updated.
+
+619
+00:39:41,563 --> 00:39:42,145
+Speaker 1: So a wiki.
+
+620
+00:39:42,627 --> 00:39:54,567
+Speaker 1: I'm Sam looking through the documentation for I don't know Joey Jojo's weeaboo procedure and I see that he spelled a couple words wrong and he left out the last important step Actually performing the weeaboo.
+
+621
+00:39:55,109 --> 00:39:57,660
+Speaker 1: So I just log in and I edit his page.
+
+622
+00:39:58,583 --> 00:40:03,220
+Speaker 1: So now everything's correct and I edited it and it has a record that oh, I'll rim edited it.
+
+623
+00:40:03,320 --> 00:40:10,688
+Speaker 1: So if I added penis penis penis way Howard Stern Howard Stern baba bowie The CEO can say I'll rim.
+
+624
+00:40:11,271 --> 00:40:13,320
+Speaker 1: Why did you deface my documentation?
+
+625
+00:40:14,840 --> 00:40:20,692
+Speaker 0: See there are other ways to accomplish the same task Like you could have a bunch of Word documents that everyone shares.
+
+626
+00:40:20,832 --> 00:40:22,980
+Speaker 0: or you know, you could do all sorts of collaborative.
+
+627
+00:40:23,483 --> 00:40:28,493
+Speaker 0: You know document editing sorts of things, you know It's not just for company documentation.
+
+628
+00:40:28,533 --> 00:40:29,860
+Speaker 0: You can use this for a lot of things.
+
+629
+00:40:29,920 --> 00:40:31,766
+Speaker 0: I mean look at dwarf fortress with their wiki.
+
+630
+00:40:31,786 --> 00:40:35,436
+Speaker 0: that's basically, you know has all the instructions on how to play the game.
+
+631
+00:40:35,496 --> 00:40:42,876
+Speaker 0: and look at Some other wiki's that like, you know have all the information about all the memes on 4chan and stuff like that.
+
+632
+00:40:42,896 --> 00:40:48,520
+Speaker 0: Yep, you know, but Got nothing now my brain.
+
+633
+00:40:49,742 --> 00:40:53,039
+Speaker 0: if I got my brain stored in a wiki, so it's hard for me to.
+
+634
+00:40:54,100 --> 00:41:04,624
+Speaker 1: But the idea here the philosophy of wiki's because I mean there are a lot of ways you can You can restrict wiki's in different ways and you can make them to the point that they're barely even a wiki anymore and they just you.
+
+635
+00:41:04,685 --> 00:41:05,568
+Speaker 1: it's kind of like how you might.
+
+636
+00:41:05,608 --> 00:41:14,560
+Speaker 1: someone might use a WordPress to accomplish something very specific and You're not blogging but you're using blogging software to kind of do something else and you can do that with a wiki.
+
+637
+00:41:14,681 --> 00:41:22,260
+Speaker 1: but the sort of wiki philosophy is to tap the Collective knowledge of a body of people like at a company.
+
+638
+00:41:22,781 --> 00:41:25,991
+Speaker 1: everyone in your company knows a little bit of information or on the internet.
+
+639
+00:41:26,333 --> 00:41:31,990
+Speaker 1: people know stuff like I know stuff about audio and Someone else knows stuff about video and someone else knows stuff about weeaboo.
+
+640
+00:41:32,030 --> 00:41:35,019
+Speaker 1: So say I want to learn about weeaboo.
+
+641
+00:41:35,381 --> 00:41:39,796
+Speaker 1: Well, someone else can write an article about it on the wiki or I need someone.
+
+642
+00:41:39,897 --> 00:41:40,780
+Speaker 1: just thinks one day.
+
+643
+00:41:41,203 --> 00:41:42,900
+Speaker 1: Hey, I know a lot about TPS reports.
+
+644
+00:41:43,301 --> 00:41:54,080
+Speaker 1: I'm gonna write a procedure how to deal with the TPS report instead of having to find a web server in the company and and Get someone to host it and learn HTML and build this thing and get other people to go to it.
+
+645
+00:41:54,080 --> 00:42:03,800
+Speaker 1: And now that person's got to maintain it you can you can kind of Get the information of the collective body of everyone in your company with the philosophy that everyone has something to contribute.
+
+646
+00:42:04,243 --> 00:42:05,371
+Speaker 1: Or else why are they working there?
+
+647
+00:42:05,492 --> 00:42:06,680
+Speaker 1: Why are they part of your community?
+
+648
+00:42:07,241 --> 00:42:11,035
+Speaker 1: And then you can tap all of that kind of unobtrusively.
+
+649
+00:42:11,115 --> 00:42:18,141
+Speaker 1: once everyone knows how to deal with the wiki You have to train them in wiki and that's it because then everyone can contribute everything they know.
+
+650
+00:42:18,202 --> 00:42:28,465
+Speaker 1: you have this knowledge base and if put out correctly having a documentation and procedural wiki is like the best thing a Corporation can do is then
+
+651
+00:42:28,485 --> 00:42:33,288
+Speaker 0: you can inspire everyone and hire people who can work for cheap and if they don't know something they look It up in the wiki.
+
+652
+00:42:33,369 --> 00:42:36,330
+Speaker 1: Yeah That is that is one philosophy.
+
+653
+00:42:36,351 --> 00:42:42,071
+Speaker 1: I think that's why I received a lot of resistance to Documentation and wikis and some other jobs.
+
+654
+00:42:42,111 --> 00:42:42,916
+Speaker 1: I've had before yeah
+
+655
+00:42:44,482 --> 00:42:57,341
+Speaker 0: The group I think the only other thing for wiki is you know is of course the collaborative and the editing and whatnot and the You know harvesting the knowledge the little bit of knowledge for many people's to create a large body of knowledge in the in the database Or whatever.
+
+656
+00:42:58,084 --> 00:43:03,680
+Speaker 0: is the the hyper text ness of it all where you're reading a page in saying encyclopedia, right?
+
+657
+00:43:03,900 --> 00:43:08,559
+Speaker 0: Then you're learning about something and it says oh, yeah, there's a fancy word that you don't know.
+
+658
+00:43:09,003 --> 00:43:10,980
+Speaker 0: Well, you know you look at that fancy word.
+
+659
+00:43:11,000 --> 00:43:21,897
+Speaker 0: you got to go get a dictionary or something and even then that might not help you and you got to do a google search in a wiki if There's a fancy word there odds are there might be an entire page about that fancy word.
+
+660
+00:43:21,977 --> 00:43:27,840
+Speaker 0: like for example At my company if I'm writing some documentation about this one web application, right?
+
+661
+00:43:28,640 --> 00:43:30,428
+Speaker 0: And that web application uses a library.
+
+662
+00:43:30,468 --> 00:43:38,660
+Speaker 0: we made well when I mentioned the name of the library That will be a link to the page that talks about the library and this I think really helped.
+
+663
+00:43:38,801 --> 00:43:57,660
+Speaker 0: when you're trying to learn from a wiki and that You don't end up getting partial knowledge and having to infer figure things out You can actually if you spend the time to open up all the links and go deep down and and you know follow through on Everything you don't know you can learn in the fullness everything that there is to to be known.
+
+664
+00:43:57,941 --> 00:43:59,868
+Speaker 1: Yep, and that very much ease.
+
+665
+00:44:00,229 --> 00:44:16,817
+Speaker 1: and in that regard Scott was right about how wikis if If they follow the wiki philosophy are a lot like the early web not so much in the collaborativeness but in the sense that there's a it's just a Page of information and there are links to other information from that information.
+
+666
+00:44:16,837 --> 00:44:22,996
+Speaker 1: because remember the original Worldwide web was a bunch of pages with links to other pages and people used to follow those links.
+
+667
+00:44:23,377 --> 00:44:26,480
+Speaker 1: that that's almost a dying Phenomenon now except on Wikipedia.
+
+668
+00:44:26,922 --> 00:44:33,334
+Speaker 0: Yeah, no, but the actually what I was trying to get at before was nowadays and you browse the web You're mostly doing get and post.
+
+669
+00:44:33,354 --> 00:44:34,120
+Speaker 0: that's pretty much it.
+
+670
+00:44:34,220 --> 00:44:38,300
+Speaker 0: But originally there in fact many, you know, if you set your web server up, right?
+
+671
+00:44:38,560 --> 00:44:40,046
+Speaker 0: There's a bunch of other things you can do.
+
+672
+00:44:40,086 --> 00:44:44,246
+Speaker 0: you can put you can delete you can trace you can connect you can options You can.
+
+673
+00:44:44,266 --> 00:44:46,131
+Speaker 1: so little of that is used at all I know.
+
+674
+00:44:46,152 --> 00:44:52,200
+Speaker 0: but Originally, the reason that those things are in there was they had the idea that people would put and delete you would upload.
+
+675
+00:44:52,260 --> 00:44:56,171
+Speaker 0: You know new things on top of the thing you were looking at, you know It would be.
+
+676
+00:44:56,191 --> 00:45:00,697
+Speaker 0: you know The original idea for the web was they would be more like what a wiki is now.
+
+677
+00:45:00,737 --> 00:45:04,858
+Speaker 0: the whole web Didn't turn out to be it's but we have wiki now, so it's okay.
+
+678
+00:45:05,199 --> 00:45:08,360
+Speaker 0: Yep I think it's better this way to the whole web was a big wiki would be in trouble.
+
+679
+00:45:08,480 --> 00:45:21,229
+Speaker 1: Yeah, and I mean from technological standpoint and I said this a little bit before but learning how to deal with a wiki is a lot easier for a lot of people than learning how to deal with HTML and webpages and maintaining them.
+
+680
+00:45:21,310 --> 00:45:38,319
+Speaker 1: and and we could talk about I mean we should probably do a show someday on like the hot it like the best practice of how to actually use a wiki because I While I said, yeah, this is the best thing a company can do is to have a wiki at the same time and Improperly set up wiki or a wiki that is set up.
+
+681
+00:45:38,460 --> 00:45:44,284
+Speaker 1: It's just not in a way that is good or that is set up poorly or that is used by people who don't really understand What's going on?
+
+682
+00:45:44,888 --> 00:45:52,060
+Speaker 1: We'll probably do a lot more harm than good And I could talk for hours because I'm actually doing that in my company right now.
+
+683
+00:45:52,140 --> 00:45:57,332
+Speaker 1: but in terms of how to set up a wiki or what's good or bad about wiki is not a set of workflows and all that stuff.
+
+684
+00:45:57,373 --> 00:46:00,560
+Speaker 1: but The moral is geek nights episode.
+
+685
+00:46:00,580 --> 00:46:01,218
+Speaker 1: It's just a little.
+
+686
+00:46:01,782 --> 00:46:10,875
+Speaker 1: we went along in the front partly because I'd have a lot to say without going into technical detail about wiki's is simply that Anytime you have to collaborate with more than a few people about something.
+
+687
+00:46:10,895 --> 00:46:17,360
+Speaker 1: I Believe that a wiki is probably even a temporary wiki is one of the best ways to do that.
+
+688
+00:46:18,321 --> 00:46:34,649
+Speaker 1: Yeah, I mean if you think about all the possibilities say you play D&D with all your friends Have the DM or someone run a wiki and you all just update your character information in there and you know say the DM posts a summary of the most recent session and then you go in and you you Remember one thing in more detail than he did.
+
+689
+00:46:34,689 --> 00:46:44,227
+Speaker 1: so you add to it and then someone else says oh Well, I remember and they add to that and then oh, I'm gonna write a backstory and they add like this whole bit Anything you do you with other people.
+
+690
+00:46:44,267 --> 00:46:50,828
+Speaker 1: you can use a wiki to kind of get all the information you all have out in Such an easy and simple way.
+
+691
+00:46:50,848 --> 00:46:56,136
+Speaker 1: and it's trivial to set up wiki's you can use like quickie wiki or Twickie and just set them up and they just work.
+
+692
+00:46:58,205 --> 00:47:01,609
+Speaker 0: mmm, yet the I'm having a problem today.
+
+693
+00:47:01,871 --> 00:47:02,959
+Speaker 1: It's it's already late.
+
+694
+00:47:03,301 --> 00:47:07,417
+Speaker 1: We got we both though still I stayed in the city late to eat dinner and try to buy stuff.
+
+695
+00:47:07,918 --> 00:47:12,642
+Speaker 1: Yeah Yeah, and get an hour and a half long haircut, but Good.
+
+696
+00:47:12,682 --> 00:47:13,547
+Speaker 1: Well, I got the massage.
+
+697
+00:47:13,587 --> 00:47:14,090
+Speaker 1: you go with it.
+
+698
+00:47:14,130 --> 00:47:15,920
+Speaker 1: And then the lady kept playing with my hair afterward.
+
+699
+00:47:16,622 --> 00:47:25,880
+Speaker 0: The only other thing I got to say about wiki's is that the the main problem I see with them today Is that they require anyone to edit it to sort of learn the wiki language and the wiki?
+
+700
+00:47:26,682 --> 00:47:33,958
+Speaker 0: Well, the wiki language is not super complicated But it's not just you know, it's not so obvious to just you know, you can't.
+
+701
+00:47:33,978 --> 00:47:36,790
+Speaker 1: you can't Funny you because that's one of the concerns.
+
+702
+00:47:36,850 --> 00:47:39,120
+Speaker 1: I mean, I'm gonna talk someday about like Enterprise wiki.
+
+703
+00:47:39,261 --> 00:48:01,940
+Speaker 1: I think that's definitely show we have to do now, but I I've been experimenting a lot with how to Make like one how to teach people who aren't super technological about this sort of thing How to deal with a wiki and how to make a wiki like in terms of setting up the initial like seeding the data That's already there and the data structures that are already there to make it intuitive for people to add to it.
+
+704
+00:48:02,543 --> 00:48:13,320
+Speaker 1: and also I've been looking a lot into different kind of WYSIWYG editing solutions and it's not that difficult to make a wiki that is very accessible to people who are not technological.
+
+705
+00:48:14,262 --> 00:48:15,329
+Speaker 0: No, it's not that difficult.
+
+706
+00:48:15,349 --> 00:48:23,000
+Speaker 0: but like a lot of the WYSIWYG things I've seen are basically just like a string of buttons and then the buttons will put the wiki language in there.
+
+707
+00:48:23,100 --> 00:48:26,170
+Speaker 0: It's like it's no more helpful than like a button that puts in a P tag.
+
+708
+00:48:26,190 --> 00:48:27,715
+Speaker 1: Because that's not WYSIWYG.
+
+709
+00:48:28,317 --> 00:48:28,638
+Speaker 1: I know.
+
+710
+00:48:28,678 --> 00:48:30,326
+Speaker 1: By definition That's not WYSIWYG.
+
+711
+00:48:30,367 --> 00:48:32,440
+Speaker 0: I know but that's sort of you know, that's what I've seen.
+
+712
+00:48:32,521 --> 00:48:36,395
+Speaker 1: Yeah But I actually say WYSIWYG because I found that actually the new version of Twiggy.
+
+713
+00:48:36,416 --> 00:48:43,300
+Speaker 1: just because this is like if you want to See it the newest version of Twiggy comes by default with a WYSIWYG editor on and it's pretty slick.
+
+714
+00:48:43,300 --> 00:48:44,278
+Speaker 1: I gotta say
+
+715
+00:48:45,103 --> 00:48:46,207
+Speaker 0: Mm-hmm interesting,
+
+716
+00:48:46,810 --> 00:49:03,899
+Speaker 1: but yeah next time you have to collaborate with people consider using a wiki and Someday, we'll do a show on the best practices of using wikis and kind of high-powered corporate enterprise, you know big-deal environments But let me know if you're interested in that and we might do that show sooner rather than much later.
+
+717
+00:49:04,322 --> 00:49:09,471
+Speaker 0: Yeah, it's the big the one big problem I think with wikis other than me having to learn the language thingies having
+
+718
+00:49:09,531 --> 00:49:17,194
+Speaker 1: the indigo children article on Wikipedia that I gave up on Fixing no after like two years of constantly editing that all
+
+719
+00:49:17,595 --> 00:49:26,580
+Speaker 0: all the web server stuff behind Wikis setting them up making them work all that sort of stuff is actually not very polished even for media wiki.
+
+720
+00:49:26,680 --> 00:49:27,427
+Speaker 1: I'll say one thing.
+
+721
+00:49:27,447 --> 00:49:28,778
+Speaker 1: there's two things I can say about that.
+
+722
+00:49:28,979 --> 00:49:41,691
+Speaker 1: one What someone needs to make and I think that the VMware player and that sort of thing is making an opportunity for people to People who are altruistic to make Appliances that will just make the world a better place real quick.
+
+723
+00:49:41,751 --> 00:49:46,523
+Speaker 1: and one of those things I think would be a fully functional Wiki appliance.
+
+724
+00:49:46,783 --> 00:49:47,525
+Speaker 1: hit play.
+
+725
+00:49:47,845 --> 00:49:49,849
+Speaker 1: you've got a wiki ready to go.
+
+726
+00:49:49,949 --> 00:49:55,080
+Speaker 1: just run it And those exist but a lot of them are not so great.
+
+727
+00:49:55,441 --> 00:50:00,580
+Speaker 1: I was playing around with the Twiki one and it was okay, but it was depth by far not an optimal solution.
+
+728
+00:50:00,901 --> 00:50:02,689
+Speaker 1: No, someone should do it better.
+
+729
+00:50:02,749 --> 00:50:03,071
+Speaker 1: Not me.
+
+730
+00:50:03,091 --> 00:50:04,778
+Speaker 1: I don't have time, but one of you out there.
+
+731
+00:50:05,964 --> 00:50:06,849
+Speaker 0: All right, we're out.
+
+732
+00:50:07,311 --> 00:50:08,116
+Speaker 1: yeah, we're done.
+
+733
+00:50:08,136 --> 00:50:08,538
+Speaker 1: stay tuned.
+
+734
+00:50:08,578 --> 00:50:09,522
+Speaker 1: tomorrow We'll talk.
+
+735
+00:50:09,783 --> 00:50:12,392
+Speaker 1: we'll be a little bit less tired probably and Wednesday.
+
+736
+00:50:12,412 --> 00:50:13,636
+Speaker 1: We got a good show prepared.
+
+737
+00:50:14,117 --> 00:50:14,860
+Speaker 1: There's no way in hell.
+
+738
+00:50:14,900 --> 00:50:17,848
+Speaker 1: there's gonna be show on Thursday because Forget about it.
+
+739
+00:50:17,888 --> 00:50:19,195
+Speaker 1: Katsu khan deadlines.
+
+740
+00:50:19,295 --> 00:50:20,099
+Speaker 1: They is a lumen.
+
+741
+00:50:26,961 --> 00:50:29,548
+Speaker 1: This has been geek nights with rim and Scott special.
+
+742
+00:50:29,568 --> 00:50:31,734
+Speaker 1: Thanks to DJ pretzel for the opening music.
+
+743
+00:50:32,436 --> 00:50:43,746
+Speaker 0: Be sure to visit our website at www.frontroadcrew.com where you'll find show notes links our awesome forum a link to our frapper map and Links to all the RSS feeds.
+
+744
+00:50:44,187 --> 00:50:49,884
+Speaker 1: we say feeds plural because geek nights airs four nights a week covering four different Brands of geekery.
+
+745
+00:50:50,386 --> 00:50:52,553
+Speaker 1: Mondays are science and technology Tuesdays.
+
+746
+00:50:52,594 --> 00:50:54,360
+Speaker 1: We have video games board games and RPGs.
+
+747
+00:50:55,061 --> 00:51:00,500
+Speaker 1: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+748
+00:51:00,921 --> 00:51:12,600
+Speaker 0: You can send us feedback by email to geek nights at front row crew comm or you can send audio feedback via Audio, just click the link that says send me an audio on the right side of our website.
+
+749
+00:51:12,923 --> 00:51:13,831
+Speaker 1: If you like what you hear.
+
+750
+00:51:13,912 --> 00:51:18,071
+Speaker 1: you can catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+751
+00:51:18,312 --> 00:51:21,442
+Speaker 1: for the complete archives visit the website which has Everything.
+
+752
+00:51:21,462 --> 00:51:26,917
+Speaker 0: geek nights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+753
+00:51:28,481 --> 00:51:34,539
+Speaker 0: This means you can do whatever you want with it as long as you give us credit don't make money and share it in kind.
+
+754
+00:51:35,342 --> 00:51:40,776
+Speaker 0: Geek nights is recorded live with no studio and no audience, but unlike those other late shows.
+
+755
+00:51:41,077 --> 00:51:42,380
+Speaker 0: It's actually recorded at night.
+

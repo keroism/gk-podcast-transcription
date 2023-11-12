@@ -1,0 +1,2900 @@
+1
+00:00:09,580 --> 00:00:11,399
+Rym: It's Thursday, November 16th.
+
+2
+00:00:11,801 --> 00:00:12,203
+Rym: I'm Rym.
+
+3
+00:00:12,383 --> 00:00:12,966
+Scott: And I'm Scott.
+
+4
+00:00:13,086 --> 00:00:14,090
+Rym: And this is GeekNights.
+
+5
+00:00:15,010 --> 00:00:16,846
+Rym: Tonight we talk a bit about standing in line.
+
+6
+00:00:19,030 --> 00:00:19,969
+Rym: Let's do this.
+
+7
+00:00:21,310 --> 00:00:27,510
+Rym: So we came home today to a somewhat startling and disheartening situation with the computers in our house.
+
+8
+00:00:28,190 --> 00:00:32,728
+Scott: Apparently we have a server in our house, and this server does a few things.
+
+9
+00:00:32,788 --> 00:00:39,930
+Scott: Number one, it has a web server on it so that we can, you know, make websites for pretend before putting them on our real hosting.
+
+10
+00:00:40,290 --> 00:00:42,843
+Scott: You know, it's where we're designing the new frontrowcrew.com and all that.
+
+11
+00:00:43,285 --> 00:00:46,950
+Scott: It's got DNS, so it turns domain names into IP addresses.
+
+12
+00:00:46,970 --> 00:00:49,401
+Rym: I don't think we need to explain what all those things are.
+
+13
+00:00:49,461 --> 00:00:52,689
+Scott: Right, and it gives all the computers in the rest of the house IP addresses with DHCP.
+
+14
+00:00:53,470 --> 00:00:59,635
+Scott: We got home, and my computer wasn't connected to the internets, and the cable modem while the lights were on, which means it's a problem.
+
+15
+00:00:59,996 --> 00:01:00,679
+Scott: A big problem.
+
+16
+00:01:01,061 --> 00:01:04,634
+Scott: I checked the server, and of course, it's broken.
+
+17
+00:01:05,194 --> 00:01:05,917
+Scott: Totally broken.
+
+18
+00:01:05,917 --> 00:01:07,341
+Scott: 100% broken.
+
+19
+00:01:07,662 --> 00:01:10,610
+Rym: So pretty much the moment we got an extra computer.
+
+20
+00:01:10,730 --> 00:01:13,923
+Rym: We had more computers than we had uses for computers.
+
+21
+00:01:14,445 --> 00:01:15,450
+Rym: One of the computers died.
+
+22
+00:01:15,470 --> 00:01:24,863
+Rym: Now, I note that the computer that died is not my going on seven years old computer that I built in high school that I'm still using to record this podcast.
+
+23
+00:01:25,024 --> 00:01:26,690
+Scott: No, it's a computer that Pete gave to us.
+
+24
+00:01:27,030 --> 00:01:29,642
+Rym: Yeah, way to go Pete, building that computer.
+
+25
+00:01:30,265 --> 00:01:31,089
+Scott: It is dead now.
+
+26
+00:01:32,053 --> 00:01:33,710
+Scott: I'll bet these parts of it is still good.
+
+27
+00:01:33,850 --> 00:01:36,922
+Rym: I'll bet there was some sort of cooling failure because well, I think there was.
+
+28
+00:01:37,083 --> 00:01:46,210
+Rym: Well after Scott had unplugged it, turned it off and everything, I was poking around at it, and the CPU and the heat sink around the CPU were hot enough to hurt when I touched them.
+
+29
+00:01:46,330 --> 00:01:57,183
+Scott: It definitely seemed like there was a heating failure, but at the same time, that was the first thing I suspected, and it looked inside the case while the computer was on, and all the fans are working just fine, so I really have no clue.
+
+30
+00:01:57,745 --> 00:01:58,408
+Rym: Yeah, whatever.
+
+31
+00:01:58,649 --> 00:01:58,890
+Scott: Whatever.
+
+32
+00:01:59,050 --> 00:01:59,552
+Scott: It's dead.
+
+33
+00:01:59,953 --> 00:02:04,850
+Rym: We ordered a very large hard drive, and we're gonna be cobbling something together in short order.
+
+34
+00:02:05,470 --> 00:02:08,723
+Scott: Yeah, in the meantime, we don't have DHCP or DNS in our house.
+
+35
+00:02:08,764 --> 00:02:12,073
+Scott: We're using the ISP services.
+
+36
+00:02:12,354 --> 00:02:14,841
+Rym: Yeah, so we still have DHCP in the house at least.
+
+37
+00:02:15,102 --> 00:02:16,385
+Scott: Yeah, in the router though.
+
+38
+00:02:16,626 --> 00:02:18,110
+Rym: So, works just fine.
+
+39
+00:02:18,510 --> 00:02:22,926
+Scott: Yeah, it's a little harder to do DNS in the house, you know, the local DNS.
+
+40
+00:02:23,407 --> 00:02:25,795
+Rym: Well, it's not harder, it's just there's no local DNS.
+
+41
+00:02:25,835 --> 00:02:26,537
+Scott: Yeah, it sucks.
+
+42
+00:02:26,758 --> 00:02:30,610
+Scott: I had to do SSH space IP address instead of SSH space name.
+
+43
+00:02:31,070 --> 00:02:33,182
+Rym: Oh, no, saving extra characters.
+
+44
+00:02:33,283 --> 00:02:34,489
+Scott: It is, it's a lot of extra effort.
+
+45
+00:02:35,970 --> 00:02:41,770
+Rym: Yeah, though also, I drove home during a giant thunderstorm that was going for the last several hours.
+
+46
+00:02:41,790 --> 00:02:43,999
+Scott: I got home just before the giant thunderstorm.
+
+47
+00:02:44,099 --> 00:02:46,850
+Rym: A semi-truck was almost blown over my car.
+
+48
+00:02:47,591 --> 00:02:48,052
+Rym: Awesome.
+
+49
+00:02:48,193 --> 00:02:54,616
+Rym: As I was driving, and I was next to the semi, and I decided that in light of all the wind, I would not sit next to the semi.
+
+50
+00:02:54,656 --> 00:02:56,262
+Rym: So I, you know, slowed down and pulled back.
+
+51
+00:02:56,643 --> 00:03:06,650
+Rym: And not 20 or 30 seconds later, a big gust of wind blew my car half out of its lane, suddenly, and blew the semi two lanes across.
+
+52
+00:03:07,652 --> 00:03:08,778
+Scott: Whoa, did the semi hit anything?
+
+53
+00:03:08,959 --> 00:03:09,784
+Rym: No, it didn't hit anything.
+
+54
+00:03:09,824 --> 00:03:10,427
+Rym: It just kind of went,
+
+55
+00:03:10,487 --> 00:03:10,709
+Rym: "Roo."
+
+56
+00:03:11,010 --> 00:03:16,030
+Rym: It did like, I thought it was gonna jackknife, but it just kind of got back straight and kept going.
+
+57
+00:03:16,290 --> 00:03:17,735
+Scott: Way to go, semi-driver.
+
+58
+00:03:17,816 --> 00:03:18,860
+Rym: No one even reacted.
+
+59
+00:03:19,382 --> 00:03:19,843
+Scott: Way to go.
+
+60
+00:03:20,225 --> 00:03:21,550
+Scott: Yeah, good driving skills.
+
+61
+00:03:21,973 --> 00:03:23,342
+Rym: I actually also got pulled over.
+
+62
+00:03:23,383 --> 00:03:24,370
+Rym: I didn't get a ticket or anything.
+
+63
+00:03:24,910 --> 00:03:25,689
+Scott: Why'd you get pulled over?
+
+64
+00:03:25,990 --> 00:03:27,070
+Rym: I was going like a hundred.
+
+65
+00:03:27,630 --> 00:03:28,368
+Scott: And what did he say?
+
+66
+00:03:28,830 --> 00:03:32,889
+Rym: It wasn't even a, it was a, like, it was a cop dressed up really nice, like in a suit.
+
+67
+00:03:33,410 --> 00:03:34,938
+Rym: And he was in an undercover cop car.
+
+68
+00:03:35,259 --> 00:03:37,329
+Rym: And he was like, "Eh, slow it down a
+
+69
+00:03:37,369 --> 00:03:37,530
+Rym: bit.".
+
+70
+00:03:37,550 --> 00:03:38,208
+Rym: And he just let me go.
+
+71
+00:03:38,390 --> 00:03:41,530
+Scott: So if he's in an undercover car in the state of New York, he can't give you a ticket.
+
+72
+00:03:41,996 --> 00:03:42,209
+Scott: Yeah.
+
+73
+00:03:42,490 --> 00:03:46,290
+Scott: And can only in a marked car in New York state can someone give you a ticket.
+
+74
+00:03:46,310 --> 00:03:49,310
+Rym: See, I grew up in Michigan where cops can pull you over from anything.
+
+75
+00:03:49,551 --> 00:03:51,016
+Scott: That totally got me in Jersey.
+
+76
+00:03:51,036 --> 00:03:52,381
+Scott: They had an undercover car.
+
+77
+00:03:52,562 --> 00:03:54,890
+Scott: In New York state, only marked cars.
+
+78
+00:03:54,930 --> 00:04:01,009
+Rym: Remember, New York state, though, has those pseudo undercover cars where they look like a normal car, but they have a little logo on the side.
+
+79
+00:04:01,270 --> 00:04:03,304
+Scott: As long as it's marked, they can get you.
+
+80
+00:04:03,505 --> 00:04:04,190
+Scott: That's the law.
+
+81
+00:04:04,390 --> 00:04:12,629
+Rym: So they got these special cars, right, that have this logo that's like a shade darker than the car itself, and hidden lights and no lights on top.
+
+82
+00:04:12,830 --> 00:04:18,390
+Scott: Yeah, I'm not sure what the exact requirements for marking are, but yes, I have seen cars like that.
+
+83
+00:04:18,451 --> 00:04:20,790
+Rym: I've seen those pull people over, but never on the commute.
+
+84
+00:04:21,310 --> 00:04:24,210
+Scott: Actually, the cops, they're getting way intense lately.
+
+85
+00:04:24,530 --> 00:04:29,150
+Rym: Oh, I've seen more cops on the road in the last two weeks than I've seen in the rest of my life.
+
+86
+00:04:29,170 --> 00:04:35,350
+Scott: There was a guy hiding on 84 in a hiding spot I didn't even know existed, even though I drive down that road every day almost.
+
+87
+00:04:35,550 --> 00:04:56,330
+Rym: Well, I'm not going to use this as my news, because I'm saving it for a much longer episode, but recently, Congress did a study about traffic tickets and speeding and revenue and all that, and the overwhelming evidence is that the majority of states in the US specifically use traffic enforcement as a way to pad out their budget.
+
+88
+00:04:56,790 --> 00:05:04,030
+Rym: And in fact, there's a direct correlation between financial difficulty in a state and increased traffic enforcement or lowered speed limits.
+
+89
+00:05:04,530 --> 00:05:08,450
+Scott: It's really just highway robbery and has more to do with money and less to do with safety.
+
+90
+00:05:09,350 --> 00:05:11,829
+Scott: Wait for into the future, we'll do an entire episode on it.
+
+91
+00:05:12,151 --> 00:05:17,110
+Rym: Yeah, at least, I guess luckily, for all the times I've been pulled over, I've gotten very few tickets.
+
+92
+00:05:17,830 --> 00:05:25,050
+Rym: I mean, I got one in high school, and I got one a while ago, but compared to how many times I've sped and how many times I've been pulled over and not been given a ticket.
+
+93
+00:05:25,210 --> 00:05:28,030
+Scott: Yeah, I'm just going to play it safe for the next few weeks, I think.
+
+94
+00:05:28,110 --> 00:05:28,756
+Rym: Well, yeah.
+
+95
+00:05:29,421 --> 00:05:30,349
+Scott: At least till the new year.
+
+96
+00:05:30,691 --> 00:05:31,862
+Scott: Yeah, that's what I'm saying.
+
+97
+00:05:31,882 --> 00:05:32,649
+Scott: That's a few weeks.
+
+98
+00:05:32,970 --> 00:05:36,190
+Rym: I mean, the best thing is, a lot of states lately are admitting straight up that they have quotas.
+
+99
+00:05:36,570 --> 00:05:39,849
+Scott: Yeah, it's at least they say what they're doing, but... It's not cool.
+
+100
+00:05:40,012 --> 00:05:41,649
+Scott: It's not cool, but hey.
+
+101
+00:05:42,470 --> 00:05:43,310
+Scott: Yeah, oh well, anyway.
+
+102
+00:05:43,753 --> 00:05:44,090
+Scott: Anyway.
+
+103
+00:05:44,310 --> 00:05:45,565
+Rym: We could talk about the PS3.
+
+104
+00:05:46,190 --> 00:05:46,506
+Scott: We could.
+
+105
+00:05:46,690 --> 00:05:47,947
+Rym: There's all this news about the PS3.
+
+106
+00:05:48,211 --> 00:05:48,769
+Scott: Oh, we're not gonna.
+
+107
+00:05:49,071 --> 00:05:49,870
+Rym: I don't even care anymore.
+
+108
+00:05:49,870 --> 00:05:53,930
+Scott: It comes out tomorrow, so if you really want a PS3, tomorrow's the day.
+
+109
+00:05:54,050 --> 00:05:56,650
+Rym: If you really want a PS3, tomorrow's the day you should look on eBay.
+
+110
+00:05:57,171 --> 00:05:59,309
+Rym: Because all the people in line are homeless bums in the US.
+
+111
+00:06:00,311 --> 00:06:00,479
+Scott: Okay.
+
+112
+00:06:01,531 --> 00:06:06,130
+Rym: Alright, so I got a nice, happy, warm, human interest kind of news today.
+
+113
+00:06:06,394 --> 00:06:06,689
+Scott: Great.
+
+114
+00:06:07,031 --> 00:06:12,330
+Rym: Mostly because I saw this news, and it reminded me that this sort of thing went on a lot back where I grew up in Michigan.
+
+115
+00:06:12,510 --> 00:06:17,210
+Rym: You see, there are two problems in a lot of the Midwest and Northeastern United States.
+
+116
+00:06:17,710 --> 00:06:23,730
+Rym: One, there are too many deer, to the point that deer will starve to death, and there are a lot of traffic accidents involving deer.
+
+117
+00:06:23,830 --> 00:06:24,609
+Rym: They're overpopulated.
+
+118
+00:06:24,790 --> 00:06:27,430
+Scott: I see deer all over the roads every single day.
+
+119
+00:06:27,832 --> 00:06:28,318
+Rym: Remember RIT?
+
+120
+00:06:28,338 --> 00:06:29,229
+Rym: There are more deer than students.
+
+121
+00:06:29,310 --> 00:06:39,410
+Scott: And the other problem is that in the Northeast, the population of hunters, you know, hunting people, there's not too many of them, as there are in other parts of the country, so they need people to hunt the deer, but there aren't enough hunters.
+
+122
+00:06:40,051 --> 00:06:41,530
+Rym: Well, there's a lot more to it than that.
+
+123
+00:06:41,610 --> 00:06:43,690
+Scott: Yeah, there's more to it, but I'm just saying it's another factor.
+
+124
+00:06:43,870 --> 00:06:49,950
+Rym: Now, number two, there are a lot of hungry people, a lot of poor people who can't afford food, a lot of homeless shelters that need meat.
+
+125
+00:06:51,130 --> 00:06:53,179
+Rym: Now, I used to go on a lot in Michigan.
+
+126
+00:06:53,200 --> 00:06:55,370
+Rym: I had relatives who took part in all this.
+
+127
+00:06:56,191 --> 00:07:02,790
+Rym: But hunters would go out, and you'd get a special license that let you hunt as much as you wanted, or they were much more lax into how many deer you could get.
+
+128
+00:07:03,512 --> 00:07:15,530
+Rym: And the catch was, you had to either dress the meat yourself and bring it to a shelter and donate it, or drop it off at these special volunteer places that would then dress the meat and donate it to the poor.
+
+129
+00:07:16,391 --> 00:07:18,728
+Scott: Poor people eating plentiful deer makes sense to me.
+
+130
+00:07:19,710 --> 00:07:22,310
+Scott: Better than eating grains and things to get some meat.
+
+131
+00:07:22,671 --> 00:07:24,370
+Rym: Indiana is going one step further.
+
+132
+00:07:24,770 --> 00:07:28,070
+Rym: Hunters are volunteering to hunt and give the meat to the government.
+
+133
+00:07:28,471 --> 00:07:33,630
+Rym: The government then takes the meat, puts it in prisons, and has prisoners prepare the meat.
+
+134
+00:07:34,650 --> 00:07:36,910
+Rym: It then gives that meat to the homeless.
+
+135
+00:07:37,490 --> 00:07:38,629
+Scott: Do the prisoners also eat it?
+
+136
+00:07:39,511 --> 00:07:39,952
+Rym: You know what?
+
+137
+00:07:40,193 --> 00:07:47,070
+Rym: I would imagine, unless the people running the prison are the biggest assholes in the world, that the prisoners get at least some venison.
+
+138
+00:07:48,030 --> 00:07:54,049
+Scott: The only way I could see of making it better is if you had a chain gang of hunters, but I don't think you want to give guns to prisoners.
+
+139
+00:07:57,039 --> 00:07:58,390
+Scott: You would think that would be the best way.
+
+140
+00:07:58,750 --> 00:08:00,450
+Scott: You'd just have chain gangs do the hunting.
+
+141
+00:08:00,770 --> 00:08:01,382
+Scott: Wait a minute.
+
+142
+00:08:01,443 --> 00:08:01,709
+Scott: Oops.
+
+143
+00:08:03,550 --> 00:08:04,889
+Rym: Cool Hand Luke says no.
+
+144
+00:08:06,090 --> 00:08:11,870
+Scott: It would almost be the perfect idea if it weren't for giving guns to crazy jail people.
+
+145
+00:08:12,530 --> 00:08:14,425
+Rym: So what's your non-PS3 news?
+
+146
+00:08:15,350 --> 00:08:21,710
+Scott: So a while ago, I think we were in Wildwood a couple years ago, and we were standing around an ATM machine as someone was getting money.
+
+147
+00:08:23,275 --> 00:08:25,084
+Rym: I was about to kick your ass.
+
+148
+00:08:25,506 --> 00:08:26,270
+Rym: I was getting up.
+
+149
+00:08:26,530 --> 00:08:27,210
+Scott: I did it on purpose.
+
+150
+00:08:27,570 --> 00:08:27,950
+Rym: I'm sure.
+
+151
+00:08:29,290 --> 00:08:32,166
+Scott: Actually, I got pissed off some other podcasts at ATM Machine recently.
+
+152
+00:08:32,186 --> 00:08:33,010
+Scott: I don't remember which one.
+
+153
+00:08:33,049 --> 00:08:33,312
+Rym: You know what?
+
+154
+00:08:33,474 --> 00:08:34,241
+Rym: That's a bit shit.
+
+155
+00:08:34,402 --> 00:08:35,149
+Rym: That's what that is.
+
+156
+00:08:35,470 --> 00:08:47,030
+Scott: So if you look, most ATMs, ones that are in banks are hooked up by a LAN, but ones that are out in the middle of nowhere or on boardwalks and all sorts of places have dial-up modems.
+
+157
+00:08:47,752 --> 00:08:55,430
+Scott: Now, on this particular ATM, the phone line that connected the ATM to the world was exposed.
+
+158
+00:08:55,791 --> 00:09:01,230
+Scott: I could have unplugged the ATM phone line from the wall, and the ATM would have not been able to contact the internet.
+
+159
+00:09:02,292 --> 00:09:03,410
+Scott: I thought, hey, wait a minute.
+
+160
+00:09:03,930 --> 00:09:10,770
+Scott: What if I put something in there between the ATM and the wall and recorded the ATM's conversation with the server?
+
+161
+00:09:11,391 --> 00:09:22,902
+Scott: I should then be able to duplicate the server's side of the conversation and trick the ATM into spitting out money by making a device that the ATM thinks is the server.
+
+162
+00:09:23,203 --> 00:09:24,950
+Scott: that is actually a device in my pocket.
+
+163
+00:09:25,211 --> 00:09:28,190
+Scott: And then the ATM spits out a bunch of money, and the bank never finds out.
+
+164
+00:09:28,450 --> 00:09:34,530
+Rym: Now, in keeping with the front row crew way of living, this turned into a multi-hour argument.
+
+165
+00:09:34,992 --> 00:09:36,029
+Scott: Over whether it would work.
+
+166
+00:09:36,150 --> 00:09:39,710
+Scott: Some people were saying, oh no, there's a challenge response security mechanism.
+
+167
+00:09:39,890 --> 00:09:40,507
+Scott: It'll never work.
+
+168
+00:09:40,990 --> 00:09:49,570
+Scott: You can't do it because you would introduce some sort of noise onto it with the device and the ATM.
+
+169
+00:09:49,930 --> 00:09:50,446
+Scott: It wouldn't work.
+
+170
+00:09:51,010 --> 00:10:00,549
+Rym: What it basically came down to is that Scott's News, the people who did this, some ATMs are really shitty and didn't do this in a secure way at all.
+
+171
+00:10:00,910 --> 00:10:01,910
+Scott: I argued that it would work.
+
+172
+00:10:02,150 --> 00:10:03,369
+Scott: Other people argued that it didn't.
+
+173
+00:10:03,490 --> 00:10:19,890
+Scott: And this guy went and he took a digital audio player, basically an iPod, a digital audio player, and he recorded the ATM's conversation with the server, and he did some hacking to it, and he played it back, and he got all sorts of ATMs to spit out money.
+
+174
+00:10:20,150 --> 00:10:21,050
+Scott: Just ching ching ching ching.
+
+175
+00:10:21,691 --> 00:10:22,106
+Scott: Badasses.
+
+176
+00:10:22,730 --> 00:10:23,510
+Scott: Super badass.
+
+177
+00:10:24,371 --> 00:10:26,250
+Scott: Evil, stealing, but badass.
+
+178
+00:10:26,770 --> 00:10:28,590
+Rym: Yeah, I'm all for hacking in general.
+
+179
+00:10:29,652 --> 00:10:35,430
+Rym: See, the thing is, this would be so easy to defeat by including a time-based checksum.
+
+180
+00:10:35,830 --> 00:10:35,921
+Rym: Yeah.
+
+181
+00:10:36,193 --> 00:10:36,450
+Scott: That's it.
+
+182
+00:10:36,591 --> 00:10:37,129
+Scott: Something like that.
+
+183
+00:10:37,310 --> 00:10:37,562
+Rym: Solved.
+
+184
+00:10:38,291 --> 00:10:40,490
+Scott: Or some sort of encryption.
+
+185
+00:10:42,544 --> 00:10:43,210
+Scott: Oh my god.
+
+186
+00:10:43,530 --> 00:10:53,110
+Rym: Unless it used the exact same encryption every time per whatever the kind of transaction was, so if you played back the same recording, it would just do the same thing anyway.
+
+187
+00:10:53,130 --> 00:10:57,730
+Scott: Well, if you have encryption on top of a challenge response mechanism, you're all set.
+
+188
+00:10:58,213 --> 00:11:00,730
+Rym: Yeah, but they didn't think of that apparently, or they didn't care.
+
+189
+00:11:01,250 --> 00:11:04,990
+Scott: The other thing is, this guy got money out of a bunch of different ATMs.
+
+190
+00:11:05,610 --> 00:11:12,168
+Scott: The security should be at least good enough that it only works on one ATM, and then you have to redo your whole hack for the next ATM.
+
+191
+00:11:12,830 --> 00:11:13,866
+Rym: See, I assumed...
+
+192
+00:11:14,090 --> 00:11:19,990
+Scott: Like, give each ATM a unique ID of some sort, or a private key of something inside the machine.
+
+193
+00:11:20,231 --> 00:11:22,870
+Rym: I assumed that ATMs were a lot better secured than that.
+
+194
+00:11:23,452 --> 00:11:28,630
+Scott: I guess they assumed that people aren't going to unplug them from the wall and snoop on the phone conversation.
+
+195
+00:11:29,550 --> 00:11:43,350
+Rym: Yeah, well, the basic tenet of security in IT, when it comes to networks and data communication, is basically that you must never, ever trust the actual wires that your information is going over.
+
+196
+00:11:43,710 --> 00:11:50,650
+Rym: You have to, when you're securing something, assume that any packet you send to anyone else can be read by everyone in the world and act accordingly.
+
+197
+00:11:51,513 --> 00:11:52,989
+Scott: That's why I don't use regular old FTP.
+
+198
+00:11:53,570 --> 00:11:57,670
+Rym: That's why you use SSH, or SSL secured FTP, or all sorts of fun things.
+
+199
+00:11:58,030 --> 00:11:58,163
+Rym: Yes.
+
+200
+00:11:59,110 --> 00:12:05,330
+Rym: When it comes to movie reviews, what you want is intelligent, grown-up conversation.
+
+201
+00:12:06,892 --> 00:12:08,348
+Rym: If we hear any, we'll let you know.
+
+202
+00:12:08,970 --> 00:12:10,929
+Scott: Hey, Carstner, your Mac belongs to me.
+
+203
+00:12:15,351 --> 00:12:18,030
+Rym: Movies you should see from Simply Syndicated.
+
+204
+00:12:18,773 --> 00:12:23,630
+Rym: Find us at www.simplysyndicated.com/movies-you-should-see.
+
+205
+00:12:33,270 --> 00:12:47,730
+Rym: Normally this would be time for Things of the Day, but we have some breaking PlayStation 3 news that just has to get out there, because if you've been following what's been going on at all, there are some people lined up for PS3s, and some funny shit has been happening as a result.
+
+206
+00:12:47,930 --> 00:12:51,110
+Scott: There have been stoned guys robbing people in line.
+
+207
+00:12:51,370 --> 00:12:53,349
+Scott: There have been fights breaking out in the streets.
+
+208
+00:12:53,790 --> 00:12:55,710
+Scott: There are pregnant women waiting in line.
+
+209
+00:12:55,892 --> 00:12:57,648
+Rym: Some guy was shooting BBs at people.
+
+210
+00:12:58,030 --> 00:13:03,050
+Scott: A guy was driving by a line of PS3 people, shooting a BB gun at them.
+
+211
+00:13:03,430 --> 00:13:09,130
+Scott: There is crazy shit going down all across the country, as people wait in line to get their PS3s tomorrow.
+
+212
+00:13:09,790 --> 00:13:14,769
+Scott: But one thing that happened just now takes the cake, and I must say, these are the smartest guys yet.
+
+213
+00:13:16,871 --> 00:13:21,389
+Scott: At a GameStop in Elk Grove, I don't know what state, Doesn't matter.
+
+214
+00:13:22,093 --> 00:13:36,846
+Scott: Two gunmen went into the GameStop, held up the people at the store employees, and told them to bring out the PS3s, which are obviously in the back room, and they also took some Xbox 360s.
+
+215
+00:13:37,510 --> 00:13:39,929
+Scott: They got four of each, and they ran away.
+
+216
+00:13:40,510 --> 00:13:43,369
+Scott: Now, four people waiting in line killed themselves.
+
+217
+00:13:44,030 --> 00:13:46,410
+Rym: I just imagine you're standing in line.
+
+218
+00:13:46,791 --> 00:13:52,490
+Rym: You and me and Alex and Scott Johnson are standing in line at this thing.
+
+219
+00:13:52,590 --> 00:13:55,110
+Rym: We're all going to get our PS3 each, and we're standing there.
+
+220
+00:13:55,230 --> 00:14:07,866
+Rym: We've been there for two days, and while we're standing there, these guys look like they're on a snatch walk-up, and they kick in the door and rush in, and then we're standing there, and five minutes later, they run out with the four PS3s.
+
+221
+00:14:08,896 --> 00:14:09,387
+Rym: What do you do?
+
+222
+00:14:10,152 --> 00:14:11,624
+Scott: You say, "Goddamn it, I'm stupid,".
+
+223
+00:14:11,644 --> 00:14:12,310
+Scott: and they're smart.
+
+224
+00:14:12,490 --> 00:14:12,968
+Scott: Crime page.
+
+225
+00:14:14,672 --> 00:14:16,606
+Rym: Yeah, I'd probably be thinking, "That could have been
+
+226
+00:14:16,647 --> 00:14:16,768
+Rym: me.".
+
+227
+00:14:17,170 --> 00:14:21,210
+Scott: Here's the thing, is you have basically mobs standing outside of stores.
+
+228
+00:14:21,770 --> 00:14:22,750
+Scott: I'm really surprised.
+
+229
+00:14:23,412 --> 00:14:34,730
+Scott: It's pretty crazy what people are doing out in these lines, but it's obviously under control, because if it was out of control, these mobs would just rush the stores, beat up the employees, take the PS3s and the Wiis, and run away.
+
+230
+00:14:34,970 --> 00:14:36,970
+Rym: You mean like what kind of happened at that Walmart?
+
+231
+00:14:37,710 --> 00:14:55,950
+Scott: Well, what happened at the Walmart is that people were waiting in line, and they were told to leave after they had waited in line, so basically it meant that all their effort was for naught, so they got pissed, so they rushed the Walmart, and they pushed everything over, and they made a mess in the store, and the Walmart had to close, fix everything up, restore order, call the police, and then open again.
+
+232
+00:14:56,170 --> 00:14:57,501
+Rym: I love gamer fanboys.
+
+233
+00:14:57,743 --> 00:14:58,670
+Rym: That's your response?
+
+234
+00:14:58,950 --> 00:15:02,370
+Rym: You're going to run into some guy's store and push over his shelf?
+
+235
+00:15:02,790 --> 00:15:08,970
+Scott: I think the real problem is that the managers of these stores do not know how to handle these lines.
+
+236
+00:15:09,130 --> 00:15:11,330
+Rym: Well, one, I know exactly how to handle lines.
+
+237
+00:15:12,651 --> 00:15:23,510
+Rym: But more importantly, if I were the manager of a game store, one, I would have totally already done a scam with my employees I trusted to sell all the PS3s we got on the gray market.
+
+238
+00:15:23,733 --> 00:15:24,569
+Scott: That's what I would also do.
+
+239
+00:15:24,630 --> 00:15:34,370
+Rym: Make a giant pile of money, and then, and then, not only would I have hidden video cameras to tape what I would do, but I would absolutely torture the people in line.
+
+240
+00:15:34,731 --> 00:15:37,086
+Rym: I'd lie and say I had ten PS3s.
+
+241
+00:15:38,091 --> 00:15:40,190
+Rym: I'd let people line up weeks in advance.
+
+242
+00:15:40,592 --> 00:15:43,650
+Rym: I'd bring them food and everything and act like it was all cool.
+
+243
+00:15:44,250 --> 00:15:49,149
+Rym: Then, the day of the PS3 release, I'd open the door and let a bunch of other people in.
+
+244
+00:15:49,230 --> 00:15:50,488
+Rym: I wouldn't let the people in line in.
+
+245
+00:15:51,330 --> 00:15:57,190
+Scott: See, what I would do is, first of all, I would try to do a scam to sell the PS3s and make a lot of money.
+
+246
+00:15:57,590 --> 00:16:07,150
+Scott: And then, if people came to wait in line, I'd let anyone who came to wait wait a little while, and I'd torture them, and then I would tell them the truth so that they didn't ruin their lives.
+
+247
+00:16:07,552 --> 00:16:12,984
+Scott: And I would also teach them a lesson, like, wait, you know, like, don't be stupid and wait in line.
+
+248
+00:16:13,004 --> 00:16:13,669
+Scott: Go get a job.
+
+249
+00:16:14,791 --> 00:16:24,350
+Scott: And then, also, if I couldn't pull a scam and get all the PS3s for myself and make money off of them, I would do is I would torture the line for days and days and days to teach them all a lesson.
+
+250
+00:16:24,912 --> 00:16:27,209
+Scott: And then, at the very last minute, I would tell them the real deal.
+
+251
+00:16:28,274 --> 00:16:29,069
+Rym: Well, what real deal?
+
+252
+00:16:29,430 --> 00:16:31,649
+Scott: That I have this many PS3s, everyone else go home.
+
+253
+00:16:32,213 --> 00:16:33,250
+Rym: I'd do something crazy.
+
+254
+00:16:34,430 --> 00:16:36,890
+Rym: See, these managers, they're really not creative enough.
+
+255
+00:16:36,950 --> 00:16:41,150
+Rym: The most creative thing I saw is one guy made all the customers stay really far away.
+
+256
+00:16:41,570 --> 00:16:42,930
+Rym: You know, they wouldn't let him stand on the property.
+
+257
+00:16:43,030 --> 00:16:45,210
+Rym: They were standing just off the property on the sidewalk.
+
+258
+00:16:45,632 --> 00:16:48,710
+Rym: And they organized themselves into a line, which, that's BS.
+
+259
+00:16:50,093 --> 00:16:57,750
+Rym: If I had a line and I said, "You can't line up before X time," and I saw people just making a line 100 feet away, not one of those people would be allowed into my event.
+
+260
+00:16:58,161 --> 00:16:58,310
+Scott: Nope.
+
+261
+00:16:58,690 --> 00:16:59,729
+Rym: But that's beside the point.
+
+262
+00:17:00,130 --> 00:17:07,546
+Rym: He set up 10 chairs in front of his store, then he walked over and said, "Whoever's sitting in those 10 chairs when I get back gets a
+
+263
+00:17:07,566 --> 00:17:07,607
+Rym: PS3.".
+
+264
+00:17:09,893 --> 00:17:10,665
+Rym: And, yeah.
+
+265
+00:17:12,034 --> 00:17:13,249
+Scott: See, there's two ways that could go.
+
+266
+00:17:13,410 --> 00:17:19,289
+Scott: Number one, if the guy actually thought that was seriously going to be an intelligent policy, he's a dumbass.
+
+267
+00:17:19,911 --> 00:17:24,969
+Scott: If the guy was looking to make the most entertaining thing possible happen, he's a genius and a hero.
+
+268
+00:17:25,290 --> 00:17:25,988
+Rym: Well, here's the thing.
+
+269
+00:17:26,612 --> 00:17:32,510
+Rym: It's genius even as a line control thing, because these are all gamers who've been standing immobile for like a day already.
+
+270
+00:17:32,570 --> 00:17:40,130
+Rym: If the chairs are far enough away, most of them aren't going to be able to run that far fast enough for there to be a fight by the time they get to the chairs.
+
+271
+00:17:40,550 --> 00:17:46,570
+Scott: I think what might happen, that would be hilarious, if a fat guy was waiting in line and then filed the discrimination suit.
+
+272
+00:17:48,578 --> 00:17:48,768
+Rym: Yeah.
+
+273
+00:17:49,150 --> 00:17:54,630
+Rym: See, what I would have done is I would have put up a cardboard picture so from the distance it looked like there were a bunch of chairs.
+
+274
+00:17:55,514 --> 00:17:55,924
+Rym: Oh, man.
+
+275
+00:17:56,410 --> 00:18:00,589
+Rym: And then while they all ran over, I'd set up chairs back where they were originally sitting.
+
+276
+00:18:02,176 --> 00:18:02,870
+Rym: That would be beautiful.
+
+277
+00:18:02,970 --> 00:18:05,390
+Rym: That would be like a beautiful ballet.
+
+278
+00:18:07,671 --> 00:18:09,050
+Scott: You're thinking way too much of this.
+
+279
+00:18:09,330 --> 00:18:10,910
+Scott: We should become best buy managers.
+
+280
+00:18:11,310 --> 00:18:12,869
+Rym: We should just become professional pranksters.
+
+281
+00:18:13,473 --> 00:18:14,910
+Rym: We'll just go around causing trouble.
+
+282
+00:18:15,430 --> 00:18:19,950
+Scott: It's just hilarious that you have these groups of people all over the country making entertainment for me.
+
+283
+00:18:20,350 --> 00:18:20,668
+Scott: You know what?
+
+284
+00:18:20,750 --> 00:18:27,970
+Scott: I think these lines waiting for the PS3, just the stories about them are more entertaining than owning a PS3 ever could possibly be.
+
+285
+00:18:28,130 --> 00:18:30,070
+Rym: Well, they did give us the idea for the show tonight.
+
+286
+00:18:30,235 --> 00:18:30,649
+Scott: They did.
+
+287
+00:18:31,852 --> 00:18:33,949
+Scott: Let's do things of the day and then talk about what our show is.
+
+288
+00:18:34,090 --> 00:18:36,069
+Rym: All right, I'll be quick because there's not much to say about this.
+
+289
+00:18:36,410 --> 00:18:40,470
+Rym: Guy made a robot that plays air hockey and it plays air hockey kind of like a human.
+
+290
+00:18:40,991 --> 00:18:41,829
+Scott: It's kind of freaky.
+
+291
+00:18:42,130 --> 00:18:45,807
+Rym: It's a little startling to watch because you can tell that it's.
+
+292
+00:18:45,968 --> 00:18:53,470
+Rym: obviously, the way it moves is a byproduct of the way it was coded, but at the same time, it moves a lot like a human who plays air hockey.
+
+293
+00:18:53,910 --> 00:18:59,621
+Scott: Well, because the only things you really need to play air hockey is an elbow and a shoulder, which is only two movement joints.
+
+294
+00:19:01,710 --> 00:19:02,870
+Rym: You're discounting the wrists.
+
+295
+00:19:03,590 --> 00:19:06,470
+Scott: Yeah, but this robot doesn't use wrists, which is the problem.
+
+296
+00:19:06,572 --> 00:19:07,189
+Rym: I use wrists.
+
+297
+00:19:07,291 --> 00:19:08,889
+Scott: I know, that's why this robot won't beat us.
+
+298
+00:19:09,290 --> 00:19:10,650
+Rym: Yeah, the robot was really good, though.
+
+299
+00:19:10,690 --> 00:19:11,990
+Rym: He could defend against a six-year-old.
+
+300
+00:19:12,010 --> 00:19:15,470
+Scott: The robot was really good at detecting the puck and hitting it every single time.
+
+301
+00:19:15,811 --> 00:19:17,969
+Rym: And it was a lot more humanoid than it needed to be.
+
+302
+00:19:18,371 --> 00:19:19,649
+Scott: Yeah, it was kind of cool.
+
+303
+00:19:19,890 --> 00:19:31,870
+Rym: I mean, I kind of expected a servo arm that just had, like, sitting over the air hockey table, and it just had the pad stuck down, the paddle, and it just moved it left and right, and all it would do is block the goal.
+
+304
+00:19:32,070 --> 00:19:33,350
+Rym: But no, it was crazy.
+
+305
+00:19:33,731 --> 00:19:34,489
+Scott: Yeah, very crazy.
+
+306
+00:19:35,071 --> 00:19:36,849
+Rym: And yeah, I don't know, it's not controversial.
+
+307
+00:19:37,230 --> 00:19:38,288
+Rym: I can't make a joke about it.
+
+308
+00:19:39,131 --> 00:19:45,090
+Scott: All right, my thing of the day is, if you don't know, Charles Martinet is the voice actor of Mario.
+
+309
+00:19:45,512 --> 00:19:46,550
+Scott: It's-a me, Mario!
+
+310
+00:19:47,690 --> 00:19:50,810
+Scott: Luigi, Waluigi, all kinds of Nintendo characters.
+
+311
+00:19:51,110 --> 00:19:52,510
+Scott: Wario, everyone.
+
+312
+00:19:52,632 --> 00:19:53,948
+Rym: He's looking not so good.
+
+313
+00:19:54,430 --> 00:19:57,390
+Scott: He was even the voice actor, apparently, for some reader rabbit or anything.
+
+314
+00:19:57,610 --> 00:19:57,706
+Scott: Dude!
+
+315
+00:19:59,351 --> 00:20:04,650
+Scott: What he does is, they have this thing called M-I-R-T, Mario in Real Time.
+
+316
+00:20:04,770 --> 00:20:08,490
+Scott: They've had this system for a long time, and they continue to use it to this day.
+
+317
+00:20:09,010 --> 00:20:17,069
+Scott: So what they do is, they set it up, and Charles Martinet will appear at a convention, or a promotion in a store, or something like that.
+
+318
+00:20:17,570 --> 00:20:21,670
+Scott: And on the TV screen, you'll see Mario's head, and maybe Mario's hands.
+
+319
+00:20:21,813 --> 00:20:22,530
+Scott: I don't remember.
+
+320
+00:20:22,630 --> 00:20:23,308
+Scott: They've upgraded it.
+
+321
+00:20:23,710 --> 00:20:24,349
+Scott: And he talks.
+
+322
+00:20:24,530 --> 00:20:27,930
+Scott: He's sitting in a back room, talking into a microphone, and he has a control panel.
+
+323
+00:20:28,090 --> 00:20:29,130
+Rym: You know, Wizard of Oz style.
+
+324
+00:20:29,510 --> 00:20:29,929
+Scott: Exactly.
+
+325
+00:20:30,050 --> 00:20:35,030
+Scott: It's just like he's the frickin', you know, wizard, whatever it is, in the Wizard of Oz.
+
+326
+00:20:35,531 --> 00:20:42,749
+Scott: And he's in the Emerald Palace, and he talks into a microphone somewhere behind the screen, and Mario on the screen moves around and does stuff.
+
+327
+00:20:43,270 --> 00:20:45,710
+Scott: And this is a video of that system in action.
+
+328
+00:20:46,050 --> 00:20:47,109
+Scott: Now, they've used this system.
+
+329
+00:20:47,250 --> 00:20:51,350
+Scott: They never actually released this system just to people, but it's appeared in many games.
+
+330
+00:20:51,511 --> 00:20:56,644
+Scott: Like, if you see Mario's head talking, you know, you'll... Let's see, which ones... I don't know.
+
+331
+00:20:56,970 --> 00:21:01,869
+Scott: Different games have code from this system included in them to make Mario talk and move his head around.
+
+332
+00:21:02,191 --> 00:21:02,840
+Scott: Like, Mario 64 and shit.
+
+333
+00:21:03,810 --> 00:21:03,900
+Rym: Yeah.
+
+334
+00:21:04,570 --> 00:21:10,350
+Scott: Anyway, this is a video of Charles Martinet using this system to do a bunch of movie impressions.
+
+335
+00:21:10,872 --> 00:21:13,930
+Scott: And they're pretty hilarious, because he starts out with, like, Gone with the Wind.
+
+336
+00:21:15,652 --> 00:21:18,608
+Scott: No, he starts off by saying, "Sony is
+
+337
+00:21:18,668 --> 00:21:19,010
+Scott: great!"
+
+338
+00:21:19,171 --> 00:21:21,309
+Scott: And then he makes Mario's nose grow really long.
+
+339
+00:21:23,132 --> 00:21:27,269
+Scott: And then he does a Gone with the Wind, and he pushes a button to make a noise instead of saying bad words.
+
+340
+00:21:28,050 --> 00:21:29,376
+Rym: The only really okay one.
+
+341
+00:21:29,477 --> 00:21:52,130
+Rym: to me, and I didn't like this that much, it was definitely that kind of self-referential humor that's not actually funny to me so much as it's funny because the people who are watching it are really into the thing it's about, and it's the kind of humor that, just the way it's presented and the thing it's about is a lot more important than the actual content of the humor to these people.
+
+342
+00:21:52,830 --> 00:21:53,870
+Rym: 'Cause the jokes were pretty lame.
+
+343
+00:21:53,950 --> 00:21:57,250
+Rym: You can't deny that it was kind of a lame overplayed joke.
+
+344
+00:21:57,651 --> 00:22:00,510
+Scott: It's not the most funniest thing ever, but it's pretty cool.
+
+345
+00:22:00,550 --> 00:22:02,528
+Rym: Frankly, my dear, I don't give a doo-dee-doo-dee!
+
+346
+00:22:03,312 --> 00:22:03,628
+Scott: Exactly.
+
+347
+00:22:04,290 --> 00:22:04,377
+Rym: Yeah.
+
+348
+00:22:04,790 --> 00:22:05,989
+Scott: The Star Wars one was pretty good, though.
+
+349
+00:22:06,050 --> 00:22:07,110
+Rym: The Star Wars one was pretty good.
+
+350
+00:22:07,110 --> 00:22:08,824
+Scott: 'Cause he's like, "I'm-a your
+
+351
+00:22:08,865 --> 00:22:09,288
+Scott: papa.".
+
+352
+00:22:09,511 --> 00:22:10,127
+Rym: "You're not-a my
+
+353
+00:22:10,147 --> 00:22:10,229
+Rym: papa.".
+
+354
+00:22:11,133 --> 00:22:11,579
+Scott: "I'm-a your
+
+355
+00:22:11,640 --> 00:22:12,269
+Scott: papa.".
+
+356
+00:22:12,350 --> 00:22:12,843
+Scott: "You're not-a my
+
+357
+00:22:12,864 --> 00:22:13,090
+Scott: papa.".
+
+358
+00:22:13,914 --> 00:22:14,649
+Scott: It's pretty funny.
+
+359
+00:22:15,253 --> 00:22:18,809
+Scott: Just watch the video, and then you'll never actually have to go and see this system.
+
+360
+00:22:18,830 --> 00:22:24,309
+Scott: when they're using it at the local store, and he takes a... Well, actually, you kind of do want to go see it so you can meet this dude, 'cause he's way cool.
+
+361
+00:22:24,550 --> 00:22:24,643
+Scott: Yeah.
+
+362
+00:22:24,910 --> 00:22:28,068
+Rym: Imagine seeing a normal human being talking like Mario.
+
+363
+00:22:28,269 --> 00:22:28,430
+Rym: well.
+
+364
+00:22:29,074 --> 00:22:30,069
+Scott: Basically, you're seeing Mario.
+
+365
+00:22:30,310 --> 00:22:31,589
+Rym: Yeah, but you'll probably see the guy later.
+
+366
+00:22:31,814 --> 00:22:31,901
+Rym: Yeah.
+
+367
+00:22:32,050 --> 00:22:32,789
+Rym: He'll be around.
+
+368
+00:22:33,092 --> 00:22:33,182
+Rym: Yeah.
+
+369
+00:22:33,371 --> 00:22:34,070
+Rym: Get his autograph.
+
+370
+00:22:34,791 --> 00:22:36,290
+Scott: Maybe he'll be at the Nintendo store on Sunday.
+
+371
+00:22:36,559 --> 00:22:36,730
+Scott: Maybe.
+
+372
+00:22:37,032 --> 00:22:37,547
+Scott: I don't think so.
+
+373
+00:22:38,092 --> 00:22:38,180
+Rym: Yeah.
+
+374
+00:22:38,731 --> 00:22:42,070
+Rym: Well, maybe we'll talk about the last time we went to the Nintendo store.
+
+375
+00:22:42,231 --> 00:22:43,010
+Scott: We probably will.
+
+376
+00:22:43,332 --> 00:22:45,870
+Scott: Well, it was like three times ago, but that's not the point.
+
+377
+00:22:46,630 --> 00:22:58,959
+Rym: Well, the point is, because of all these PS3 things, we realized that in the course of our lives, we've stood in a lot of lines, and what better way to make a short, quick, easy-to-do Thursday episode before I go to bed
+
+378
+00:22:59,441 --> 00:23:02,809
+Scott: than to talk about times we have stood in line.
+
+379
+00:23:03,912 --> 00:23:10,009
+Rym: I think I've stood in more lines than Scott throughout my life just because I went to Cedar Point on a regular basis since I was two years old.
+
+380
+00:23:10,170 --> 00:23:13,470
+Scott: We went to a lot of freaking amusement parks and waited in lines there.
+
+381
+00:23:13,550 --> 00:23:22,670
+Rym: I went to Cedar Point with one exception for every year of my life from the age of two until I graduated high school for multiple days every year.
+
+382
+00:23:22,870 --> 00:23:24,130
+Scott: Actually, you want to hear a pretty good story?
+
+383
+00:23:24,532 --> 00:23:26,490
+Scott: Is a time where I didn't wait in lines at all.
+
+384
+00:23:27,110 --> 00:23:36,009
+Scott: We went to ... I was in summer camp, and if you went to the summer camp I went to, you could choose one of the local amusement parks, and you would get to go there once on a trip on a bus.
+
+385
+00:23:37,236 --> 00:23:39,688
+Scott: I chose Dorney Park because it was the one I hadn't been to.
+
+386
+00:23:40,870 --> 00:23:46,149
+Scott: I'd already been to Hershey Park and the nearby Six Flags or whatever, so I went to Dorney because it was new.
+
+387
+00:23:46,830 --> 00:23:54,410
+Scott: We went there, and it was sort of raining, so the park wasn't open yet, and basically no one was going to the park on a weekday when it was raining.
+
+388
+00:23:54,890 --> 00:23:58,969
+Scott: Then they finally opened the park, and there were no lines for anything, and it was pretty cool.
+
+389
+00:23:59,110 --> 00:24:01,029
+Rym: It's like Cartman and his personal amusement park.
+
+390
+00:24:01,512 --> 00:24:01,929
+Scott: Pretty much.
+
+391
+00:24:02,010 --> 00:24:02,909
+Scott: We went to arcades.
+
+392
+00:24:03,050 --> 00:24:04,329
+Scott: No one was playing any games.
+
+393
+00:24:04,694 --> 00:24:05,969
+Scott: We would ride rides alone.
+
+394
+00:24:07,391 --> 00:24:12,310
+Scott: The Hercules roller coaster, which I don't think exists anymore, which is actually a pretty good wooden coaster.
+
+395
+00:24:12,550 --> 00:24:13,429
+Scott: It's sad that it's gone.
+
+396
+00:24:13,930 --> 00:24:18,030
+Scott: We freaking just got on it, rode it, got off, got on it, rode it again.
+
+397
+00:24:18,653 --> 00:24:19,329
+Scott: It was pretty great.
+
+398
+00:24:20,150 --> 00:24:20,608
+Scott: Good times.
+
+399
+00:24:21,210 --> 00:24:24,590
+Rym: See, it's weird how lines have kind of changed for me in my life.
+
+400
+00:24:24,630 --> 00:24:30,430
+Rym: When I was a kid, I had a Game Boy and a Game Gear and all those things, but I never brought them to amusement parks.
+
+401
+00:24:30,791 --> 00:24:31,769
+Rym: I never really brought them with me.
+
+402
+00:24:31,870 --> 00:24:33,610
+Scott: Well, you couldn't because you had to carry that shit on rides.
+
+403
+00:24:33,670 --> 00:24:35,690
+Scott: What if you went to the water park and they had to buy a locker?
+
+404
+00:24:36,550 --> 00:24:38,669
+Rym: You had to buy a locker anyway because I had a wallet and stuff.
+
+405
+00:24:39,250 --> 00:24:44,150
+Scott: I would use the rope with the little tube on it so I didn't have to use the locker.
+
+406
+00:24:44,811 --> 00:24:49,810
+Rym: See, when I was in the park for roller coaster stuff, I didn't ride the two water rides.
+
+407
+00:24:50,833 --> 00:24:55,810
+Rym: If I wanted to get wet, I went to the other park, which was a water park, and I'd put on my swimsuit.
+
+408
+00:24:56,130 --> 00:25:05,990
+Scott: Yeah, I often went to parks that were either totally water parks or were combined like half and half, so the water park part was actually big enough to justify what I do.
+
+409
+00:25:06,512 --> 00:25:10,750
+Rym: Yeah, it was basically a separate park that cost a lot of money to get into separately from Cedar Point.
+
+410
+00:25:11,030 --> 00:25:11,810
+Scott: Yeah, anyway.
+
+411
+00:25:12,170 --> 00:25:23,190
+Rym: Yeah, but when I was a kid, I remember standing in line with my family for roller coasters, and especially if it was a really popular roller coaster on a really bad day, you could wait two hours in line in the heat.
+
+412
+00:25:24,191 --> 00:25:33,710
+Rym: What I remember is that no one ever brought any form of entertainment whatsoever, and most people stood completely silent, looking miserable.
+
+413
+00:25:34,450 --> 00:25:39,169
+Scott: Well, I think that's part of what Disney actually does right, and Universal also to some extent.
+
+414
+00:25:39,670 --> 00:25:47,290
+Scott: Basically all the Orlando, Florida parks is that the lines themselves have some sort of distracting animatronic entertainment.
+
+415
+00:25:47,770 --> 00:25:53,130
+Rym: Yeah, that's funny for about a second, and then you've already seen everything Mickey Mouse has to say, and now you're still in line.
+
+416
+00:25:53,312 --> 00:25:53,528
+Scott: I know.
+
+417
+00:25:53,670 --> 00:25:56,989
+Scott: The one I remember the most was the Terminator 2 3D movie.
+
+418
+00:25:57,430 --> 00:25:57,520
+Scott: Yeah!
+
+419
+00:25:57,610 --> 00:26:00,587
+Scott: Because when you were in the waiting room, there was that video going on.
+
+420
+00:26:00,627 --> 00:26:03,390
+Scott: that was the prequel to the ride, and that was pretty cool.
+
+421
+00:26:03,651 --> 00:26:10,869
+Rym: Not only that, but they had this ... When I was a little kid when I saw this, and for a second it was so awesome because I'm in line, right?
+
+422
+00:26:11,971 --> 00:26:17,370
+Rym: Like a security thing happened, because there's these cameras all around, and you see TVs with monitors in the line.
+
+423
+00:26:17,530 --> 00:26:33,589
+Rym: There's the main prequel movie, but there's also TV monitors that show what you think is the line, and then you'll hear an alarm, and you look up at the TV, and you see these guards rushing up and grabbing some guy out of the line and pulling him away, and there's a fight and robots and stuff.
+
+424
+00:26:34,451 --> 00:26:43,870
+Rym: My little kid, mine, it took a while to realize that that was obviously some prerecorded movie that they play every hour, but when I was a kid, that was awesome.
+
+425
+00:26:44,370 --> 00:26:44,949
+Scott: Very awesome.
+
+426
+00:26:45,270 --> 00:26:50,309
+Rym: Of course, then there were ... Sometimes that whole idea of making the line entertaining falls on its face.
+
+427
+00:26:50,850 --> 00:26:58,109
+Rym: Cedar Point had this old ride called Avalanche Run, and one year, because they had a policy at least they used to, of making a rollercoaster every year.
+
+428
+00:26:58,770 --> 00:27:05,188
+Rym: They took this old ride Avalanche Run, enclosed it, and basically turned it into a Space Mountain-like ride instead.
+
+429
+00:27:05,700 --> 00:27:05,990
+Rym: All right.
+
+430
+00:27:06,050 --> 00:27:07,109
+Rym: But it was the same rollercoaster.
+
+431
+00:27:07,551 --> 00:27:11,012
+Rym: It just seemed a lot better because it was enclosed, so you didn't realize how slow it actually was,
+
+432
+00:27:12,015 --> 00:27:12,497
+Scott: and they had this
+
+433
+00:27:12,618 --> 00:27:23,730
+Rym: crazy animatronic thing, like five different rooms for the line with all this cool stuff everywhere and these robots yelling at you and little shipping containers flying all around, and it was awesome.
+
+434
+00:27:24,591 --> 00:27:35,910
+Rym: They, as far as I can tell, never once sent a single maintenance person into that building because every year it got a little bit more dilapidated and a little bit more dilapidated.
+
+435
+00:27:36,330 --> 00:27:44,650
+Rym: Like one year the robot didn't talk anymore, but it still kind of moved, but in this kind of creepy half-ass death twitch- That's something that always bothered me.
+
+436
+00:27:46,174 --> 00:27:52,268
+Scott: As I was a little kid, animatronic stuff seemed to work really, really well wherever I went, and there was a lot of it.
+
+437
+00:27:52,731 --> 00:27:58,690
+Scott: And over time, animatronic stuff seemed to work less well, and it didn't seem like anyone was fixing it anywhere.
+
+438
+00:27:59,291 --> 00:28:02,030
+Scott: Like Stu Leonard's used to have animatronic shit all over the place.
+
+439
+00:28:02,150 --> 00:28:07,070
+Scott: Now they've really, really reduced it down to a few really, really simple things.
+
+440
+00:28:09,051 --> 00:28:13,490
+Scott: And freaking Disney stores used to have all that animatronic shit everywhere.
+
+441
+00:28:13,570 --> 00:28:15,010
+Scott: Now they don't have it so much anymore.
+
+442
+00:28:15,851 --> 00:28:21,089
+Scott: It was everywhere, and then it didn't work, no one repaired it, and they stopped putting up new stuff.
+
+443
+00:28:21,392 --> 00:28:23,690
+Rym: Because it was probably really expensive to keep that stuff working.
+
+444
+00:28:23,810 --> 00:28:27,150
+Scott: I know, and nowadays you hardly ever see new animatronic shit anywhere.
+
+445
+00:28:27,770 --> 00:28:30,667
+Rym: The kicker was eventually this building, because that was the rollercoaster.
+
+446
+00:28:30,688 --> 00:28:33,588
+Rym: everyone tried to ride when it was raining, because it was in a building so you could just ride it.
+
+447
+00:28:34,390 --> 00:28:39,145
+Rym: Eventually one year, I remember I went in, because the other reason you'd go there is that the building was air-conditioned.
+
+448
+00:28:40,110 --> 00:28:49,030
+Rym: So when it's 95 degrees and it's 4 o'clock, and you just stood in line for two hours to ride the Raptor, and you need to cool off, you go ride that ride, disaster transport.
+
+449
+00:28:49,670 --> 00:28:57,363
+Rym: One year I go in there, and it's really warm, and the air-conditioning's not working, and I just walked out of the line, I was like, "Fuck
+
+450
+00:28:57,403 --> 00:28:57,644
+Rym: this!".
+
+451
+00:28:58,590 --> 00:29:08,290
+Scott: Before Six Flags New England was Six Flags New England, it was still called Riverside, what they would do is they would air-condition all the gift shops and nothing else.
+
+452
+00:29:09,331 --> 00:29:14,530
+Scott: It was the most genius move that I recognized, even as a middle school kid, what the hell they were doing.
+
+453
+00:29:14,930 --> 00:29:18,049
+Scott: So we hung out in this gift shop, and we didn't move for like 10 minutes.
+
+454
+00:29:18,772 --> 00:29:19,889
+Scott: We didn't buy anything either.
+
+455
+00:29:20,590 --> 00:29:21,189
+Scott: It was a good move.
+
+456
+00:29:21,630 --> 00:29:42,390
+Rym: See, my trick when I wanted to cool off at a park like that, once I was older and wiser and I wasn't with my family anymore, I'd totally just leave the park and go over to the Breakers Hotel next door, which is an old, awesome, historic hotel, and go to the fancy upper balcony that looks out over the lake, and sit down in a restaurant or in one of the bars or something, and enjoy the air-conditioning and have a soda.
+
+457
+00:29:43,410 --> 00:29:46,290
+Scott: Yeah, that's what we did, we got milkshakes and then we went into the gift shop.
+
+458
+00:29:47,811 --> 00:29:55,290
+Rym: Of course, also in the gift shop, as a young kid, I would always often buy one of those two AA battery fans that you hold in front of your face.
+
+459
+00:29:55,491 --> 00:29:56,029
+Scott: Those are good.
+
+460
+00:29:56,390 --> 00:30:02,750
+Rym: And then they last about 10 minutes because not only are they inefficient, but it's 95 degrees anyway and the batteries overheat.
+
+461
+00:30:04,290 --> 00:30:06,830
+Scott: So what other fun times have we had in line?
+
+462
+00:30:07,110 --> 00:30:16,570
+Rym: Well, we actually got in line a while ago, actually a long time ago, to see Miyamoto at the Nintendo store, and we made a tactical error.
+
+463
+00:30:17,310 --> 00:30:20,410
+Rym: This experience actually changed our lives in a small way.
+
+464
+00:30:20,591 --> 00:30:21,490
+Scott: In a very small way.
+
+465
+00:30:21,610 --> 00:30:25,544
+Scott: It changed our policy about line waiting, because line waiting has changed over the years.
+
+466
+00:30:26,571 --> 00:30:34,070
+Scott: It used to be that you would wait in a line, and if you knew what the line was for, you were going to get whatever you were waiting for, it was just a matter of time.
+
+467
+00:30:34,230 --> 00:30:35,389
+Scott: Nowadays, this is not true.
+
+468
+00:30:35,750 --> 00:30:35,819
+Rym: Yep.
+
+469
+00:30:36,371 --> 00:30:39,970
+Rym: There's also the fact that when I was a kid, I had infinite free time and I didn't care.
+
+470
+00:30:40,292 --> 00:30:43,970
+Rym: If I wanted something, I would get in line at any point in my life and it didn't matter.
+
+471
+00:30:44,930 --> 00:30:51,030
+Rym: Now, you know, I have a job, I have a podcast, I have friends, I do things, I need sleep.
+
+472
+00:30:51,630 --> 00:31:03,129
+Rym: So when we heard that Miyamoto was going to be at the Nintendo store signing autographs and I could get my Zelda 2 gold cartridge, because I like it more than Zelda 1, signed by him, I was all about that and Scott was all about that.
+
+473
+00:31:03,670 --> 00:31:08,509
+Rym: And we thought, "Hey, why don't we go now, tonight, and get in line and stay all
+
+474
+00:31:08,569 --> 00:31:08,830
+Rym: night?".
+
+475
+00:31:09,191 --> 00:31:19,528
+Rym: And we convinced ourselves not to, because it would be a waste of time, we need our sleep, it would suck, we'll just take the 5 AM train, get there at 6, the event was at 1, we'll be fine.
+
+476
+00:31:20,772 --> 00:31:21,870
+Rym: That was a mistake.
+
+477
+00:31:22,510 --> 00:31:25,909
+Rym: We got there, what, at like 6.30 in the morning?
+
+478
+00:31:26,910 --> 00:31:28,160
+Rym: There were already like 150 people lined up.
+
+479
+00:31:29,610 --> 00:31:31,170
+Scott: Yeah, it was too late, we were done.
+
+480
+00:31:31,410 --> 00:31:38,748
+Rym: The worst thing is, the number of people that got autographs from Miyamoto ended a stone's throw from us.
+
+481
+00:31:39,370 --> 00:31:52,450
+Scott: Not only that, but when we got there, the line was pretty short in front of us, but people who were friends of the people in front of us were like joining up with them in there, It's like, the people managing the line did not do anything to prevent the cutting.
+
+482
+00:31:53,070 --> 00:32:07,370
+Scott: It's like, if you have a line of limited people, it's really not fair, like, I'm all for torturing people out in the line, as we were talking about before, but at the same time, when it's a serious line and the serious stuff going on.
+
+483
+00:32:07,410 --> 00:32:09,010
+Rym: Yeah, it's so serious to meet Miyamoto.
+
+484
+00:32:09,250 --> 00:32:18,708
+Scott: I know, but you have to kind of, you know, make people not feel like they're wasting their time and effort, you know, and frickin' treat them like human beings, be like,
+
+485
+00:32:18,728 --> 00:32:18,929
+Scott: "Hey.".
+
+486
+00:32:19,110 --> 00:32:19,648
+Rym: Well, you know what?
+
+487
+00:32:19,971 --> 00:32:20,548
+Rym: They did, though.
+
+488
+00:32:20,910 --> 00:32:31,430
+Rym: Nintendo not only brought out pizza and water for free for everyone in line, and bear in mind that there were thousands of people by the end of this.
+
+489
+00:32:32,512 --> 00:32:35,730
+Rym: This turned into a far larger event than Nintendo expected.
+
+490
+00:32:35,941 --> 00:32:36,110
+Rym: Yeah.
+
+491
+00:32:36,550 --> 00:32:38,950
+Scott: I mean, they did an okay job, but they didn't do a perfect job.
+
+492
+00:32:39,070 --> 00:32:42,290
+Rym: They brought free pizza, and then they brought free pizza again.
+
+493
+00:32:44,019 --> 00:32:44,190
+Rym: Awesome.
+
+494
+00:32:44,290 --> 00:32:56,490
+Rym: That was fantastic, but other than that, we stood in line with all these punk kids, because the section of the line we were in happened to be punk kid land, and it was fun hanging out with punk kids, but at the same time, I remember why I hate punk kids.
+
+495
+00:32:56,670 --> 00:33:00,190
+Scott: Yeah, there was one punk kid who was smarter than all the other punk kids, and we talked to him a lot.
+
+496
+00:33:00,370 --> 00:33:02,209
+Rym: Yeah, but the rest of them were just spastic.
+
+497
+00:33:02,692 --> 00:33:08,529
+Rym: I couldn't understand what they would try to say to me, because in the middle of a sentence, they'd be on a new topic already.
+
+498
+00:33:09,671 --> 00:33:14,909
+Scott: We played a lot of DS games with everybody, as you are wont to do in a line outside of the Nintendo store.
+
+499
+00:33:15,190 --> 00:33:18,450
+Rym: Well, in general, when I was a kid, this is the thing I was going to get to way before.
+
+500
+00:33:18,890 --> 00:33:28,330
+Rym: Everyone would just stand in line kind of quiet, or maybe people would talk in small groups, and now, if I stand in any line, anywhere, I have my DS- Except at the water park.
+
+501
+00:33:28,610 --> 00:33:32,070
+Rym: Or a manga or something, and if I'm at a water park, I don't go alone.
+
+502
+00:33:32,432 --> 00:33:34,570
+Rym: I stand in line with all my friends, and we're loud.
+
+503
+00:33:35,172 --> 00:33:35,949
+Rym: Real loud.
+
+504
+00:33:37,673 --> 00:33:39,349
+Scott: What are the good lines that we stood in?
+
+505
+00:33:39,690 --> 00:33:43,230
+Scott: A lot of Otakon pre-reg lines, but those are all technically the same.
+
+506
+00:33:43,430 --> 00:33:45,569
+Rym: You stood in a lot of Otakon pre-reg lines.
+
+507
+00:33:46,151 --> 00:33:47,209
+Scott: You've stood in quite a few.
+
+508
+00:33:47,471 --> 00:33:47,969
+Rym: Not as many.
+
+509
+00:33:48,170 --> 00:33:57,270
+Rym: The thing is, Otakon took away the one privilege the panelists and associates used to get, where we could pick up our badges from someone else, and we didn't have to stand in line.
+
+510
+00:33:57,691 --> 00:33:59,609
+Scott: The lines actually move really quickly now.
+
+511
+00:33:59,871 --> 00:34:06,750
+Scott: You don't have to wait in the heat so long, but there are less podcasters, cosplayers out in line than there used to be.
+
+512
+00:34:06,790 --> 00:34:08,337
+Rym: I think that was just because it was 100,000 degrees this year.
+
+513
+00:34:11,650 --> 00:34:16,409
+Scott: Basically, we've learned to turn that line from a boring wait into an awesome party.
+
+514
+00:34:16,550 --> 00:34:17,429
+Rym: Well, let me put it this way.
+
+515
+00:34:18,030 --> 00:34:26,987
+Rym: That line is easily avoidable if you're not stupid, and it amazes me that people will stand in the line to get into Otakon for the Thursday pre-reg for more than 20 minutes.
+
+516
+00:34:28,154 --> 00:34:29,449
+Rym: They line up hours before.
+
+517
+00:34:29,590 --> 00:34:41,188
+Rym: They stand there for hours complaining about the heat, and it's miserable, when if they just wait until, I don't know, 20 minutes after the line starts moving, the line moves so fast that you'll be in and out before you know it.
+
+518
+00:34:41,590 --> 00:34:45,547
+Scott: Yeah, I mean, we got in the line at, like, I think we said nine, and we... Was it nine?
+
+519
+00:34:45,752 --> 00:34:46,630
+Rym: No, it wasn't nine.
+
+520
+00:34:46,750 --> 00:34:49,949
+Rym: We waited until exactly an hour and a half after the line opened.
+
+521
+00:34:50,070 --> 00:34:51,370
+Scott: Yeah, I think it was like 6.30.
+
+522
+00:34:51,370 --> 00:34:54,330
+Scott: We just got in the line, and 20 minutes later, we had our badges.
+
+523
+00:34:54,656 --> 00:34:54,742
+Rym: Yeah.
+
+524
+00:34:55,170 --> 00:34:56,330
+Rym: I don't know what these people were thinking.
+
+525
+00:34:56,753 --> 00:34:59,130
+Scott: They could have been doing something else besides sitting outside in the heat.
+
+526
+00:34:59,630 --> 00:35:02,950
+Rym: Yeah, and it wasn't like a normal fun line where everyone's really yelling and having a good time.
+
+527
+00:35:03,090 --> 00:35:04,863
+Rym: It was people just miserable going,
+
+528
+00:35:04,883 --> 00:35:04,924
+Rym: "Oh.".
+
+529
+00:35:07,140 --> 00:35:14,540
+Scott: Yeah, that's another thing is we've learned to take lines and turn them into fun parties as opposed to just being boring waiting in line.
+
+530
+00:35:14,720 --> 00:35:24,820
+Scott: I mean, I think that's part of the reason why a lot of people are lining up more and more for pre-orders and pre-regs and things is because even if they don't... I mean, there are people standing in line.
+
+531
+00:35:25,101 --> 00:35:32,179
+Scott: They know a store is going to get like 10 PS3s, and they're like the 30th guy in line, and they're sitting out there anyway, and I think that's because lines have become fun.
+
+532
+00:35:32,660 --> 00:35:40,020
+Scott: They're like this cultural event where even if you're not going to get whatever you're waiting in line for, there's still a chance.
+
+533
+00:35:40,180 --> 00:35:45,140
+Scott: You still have a little bit of hope, even if you know you don't secretly deep inside.
+
+534
+00:35:45,385 --> 00:35:45,678
+Scott: Yeah.
+
+535
+00:35:45,981 --> 00:35:47,219
+Scott: But you're standing out there.
+
+536
+00:35:47,641 --> 00:35:54,020
+Scott: You're with a bunch of like-minded people and all your comrades, and it's like a little party.
+
+537
+00:35:54,420 --> 00:35:54,505
+Rym: Yeah.
+
+538
+00:35:55,060 --> 00:35:58,700
+Rym: Granted, I don't really get into lines for events like that, and I never really have.
+
+539
+00:35:59,060 --> 00:36:00,980
+Rym: The Miyamoto thing was pretty much the only one.
+
+540
+00:36:01,180 --> 00:36:01,269
+Rym: Yeah.
+
+541
+00:36:01,720 --> 00:36:01,940
+Scott: Yeah.
+
+542
+00:36:02,160 --> 00:36:05,800
+Rym: Because I have better things to do, and also like the video game consoles.
+
+543
+00:36:06,041 --> 00:36:09,020
+Rym: One, I haven't bought one since the DS, and I didn't have to wait in line for that.
+
+544
+00:36:09,100 --> 00:36:20,880
+Scott: Yeah, I don't think I have to wait in line for my Wii either because I pre-ordered it at the Nintendo store, which didn't have a wait in line, and I'm supposedly guaranteed to get one on Sunday, so I probably won't have to wait in line then either.
+
+545
+00:36:21,246 --> 00:36:21,439
+Scott: Yeah.
+
+546
+00:36:21,661 --> 00:36:25,919
+Scott: I imagine I'll just walk in, maybe I'll wait in a little bit of a line because it'll be crowded.
+
+547
+00:36:26,180 --> 00:36:30,072
+Scott: I'll just have to wait for the crowd in front of me to get their Wiis, and then I'll get one.
+
+548
+00:36:30,741 --> 00:36:32,838
+Scott: It's not going to be a line of, "Am I going to get
+
+549
+00:36:32,959 --> 00:36:33,040
+Scott: one?".
+
+550
+00:36:33,081 --> 00:36:34,579
+Scott: It's a line of, "Here's your Wii.
+
+551
+00:36:35,023 --> 00:36:35,518
+Scott: Here's your Wii.
+
+552
+00:36:35,921 --> 00:36:36,437
+Scott: Here's your Wii.
+
+553
+00:36:36,682 --> 00:36:37,480
+Scott: What games do you want?
+
+554
+00:36:37,540 --> 00:36:38,057
+Scott: Here's your Wii.
+
+555
+00:36:38,820 --> 00:36:42,220
+Rym: See, most of the lines I've stood in were really just amusement park lines.
+
+556
+00:36:42,903 --> 00:36:44,560
+Rym: I used to practically grow up at Cedar Point.
+
+557
+00:36:44,640 --> 00:36:45,820
+Rym: I'd go there so many times.
+
+558
+00:36:46,180 --> 00:36:53,398
+Rym: I used to skip high school when I was a senior on a semi-regular basis and just be like, "Hey, guys, you want to go to Cedar Point instead of going to
+
+559
+00:36:53,438 --> 00:36:53,640
+Rym: school?".
+
+560
+00:36:53,680 --> 00:36:56,780
+Rym: Then we'd all go to Cedar Point because it's like a two-hour drive away.
+
+561
+00:36:57,761 --> 00:37:01,620
+Rym: If you have a year of ... It's like one day of Cedar Point, 50 bucks.
+
+562
+00:37:02,602 --> 00:37:03,974
+Rym: A season pass, 100 bucks.
+
+563
+00:37:05,846 --> 00:37:06,337
+Rym: There you go.
+
+564
+00:37:07,421 --> 00:37:09,060
+Scott: I think most amusement parks have that.
+
+565
+00:37:10,121 --> 00:37:15,740
+Scott: If you go there more than two times in a season, the season pass ends up being a better deal.
+
+566
+00:37:16,842 --> 00:37:25,840
+Scott: They trick a lot of people who only go there once or twice into getting the season pass, and those people don't actually come back often enough to make the season pass unprofitable.
+
+567
+00:37:26,121 --> 00:37:27,920
+Rym: Even if they do, the locals will come back.
+
+568
+00:37:28,200 --> 00:37:34,819
+Rym: The real way they make their money is the fact that a Coke is $4.50 and it's nine bucks to get a burger and fries.
+
+569
+00:37:35,647 --> 00:37:36,260
+Scott: Yep, yep, yep.
+
+570
+00:37:36,961 --> 00:37:49,698
+Rym: God, I remember when I was in high school, and one day we noticed that the vending machines all around Cedar Point only took dollar bills, and everything from a vending machine was three bucks.
+
+571
+00:37:50,603 --> 00:37:50,877
+Scott: Wow.
+
+572
+00:37:51,400 --> 00:37:52,179
+Rym: Three bucks.
+
+573
+00:37:53,163 --> 00:37:53,377
+Rym: Yeah.
+
+574
+00:37:54,241 --> 00:37:54,537
+Scott: Wow.
+
+575
+00:37:55,180 --> 00:38:07,700
+Rym: Yeah, and I remember there was an art to waiting in line at amusement parks, because a lot of parks have different tricks, but usually when an amusement park closes, they have some kind of policy like how they cut off the end of the line at the end of the night.
+
+576
+00:38:08,301 --> 00:38:11,192
+Rym: I remember that Cedar Point, the way they did it was at 11
+
+577
+00:38:11,192 --> 00:38:11,694
+Rym: p.m.,
+
+578
+00:38:12,076 --> 00:38:17,205
+Rym: D-Day, the end of the line, the last moment, they would just go to the end of the line and say, "No one else gets in
+
+579
+00:38:17,246 --> 00:38:17,510
+Rym: line.".
+
+580
+00:38:18,240 --> 00:38:34,201
+Rym: So what the cool thing to do, and we did this all the time, is we'd get all our friends together, we'd hang out, we'd go grab a whole bunch of food that we could carry, like chicken fingers or something, and we'd run and we'd get in line for the baddest ass rollercoaster whatever was up that year at 10.59.
+
+581
+00:38:34,201 --> 00:38:46,600
+Rym: We'd try to be the absolute last people in line with all this food, and it'd be like a three hour crazy party, they'd be playing music, people would often buy the food off of us because they didn't plan ahead and they were hungry.
+
+582
+00:38:48,161 --> 00:38:53,419
+Rym: Then we realized that we didn't have enough drinks, and now we're thirsty, or we had too many drinks and now we have to pee.
+
+583
+00:38:54,140 --> 00:38:57,200
+Scott: I think they count on that, hoping that people will leave the line.
+
+584
+00:38:57,480 --> 00:38:58,500
+Rym: Oh goddamn, we didn't.
+
+585
+00:38:58,580 --> 00:39:03,940
+Rym: If we weren't last in line, we'd let people cut ahead, because it was the coolest thing to ride a rollercoaster.
+
+586
+00:39:04,300 --> 00:39:07,180
+Rym: You're pretty much the only ones on the train because it's the last ride of the night.
+
+587
+00:39:07,240 --> 00:39:12,160
+Rym: Maybe there's one employee sitting in the back, and then you walk out of the amusement park and it's completely empty.
+
+588
+00:39:13,222 --> 00:39:16,600
+Rym: As a kid, I always wanted to just stay there, just don't leave.
+
+589
+00:39:17,721 --> 00:39:46,720
+Scott: Actually, I remember another time when my family went to Universal or whatever, we actually got there when the park opened in the morning, and you kind of had to stand there and wait for the park to open before it opens, and then when they open it, this employee guy basically opens the thing and lets you all come through, and then he runs down the street in the park, and as he runs down the street, they open all the different rides as he passes by them, and then you have all these people running after him to try to get to the ride.
+
+590
+00:39:46,760 --> 00:39:48,500
+Scott: that's going to be super crowded later in the day.
+
+591
+00:39:48,720 --> 00:39:51,500
+Rym: God, I remember that at Cedar Point so often in my life.
+
+592
+00:39:51,580 --> 00:39:53,580
+Rym: We never got to Cedar Point after it opened.
+
+593
+00:39:53,680 --> 00:39:57,420
+Rym: We'd always get there an hour before it opened and stand in the line to get into the line.
+
+594
+00:39:57,460 --> 00:39:59,000
+Scott: I wouldn't wait an hour before it opened.
+
+595
+00:39:59,163 --> 00:39:59,656
+Rym: You had to.
+
+596
+00:40:00,021 --> 00:40:00,959
+Scott: I wouldn't wait a half hour.
+
+597
+00:40:01,721 --> 00:40:08,020
+Rym: The gate would open, and they'd open the three different gates at the same time, and it would be a mad freaking rush.
+
+598
+00:40:08,201 --> 00:40:13,440
+Rym: People would just be running at top speed, and no matter how fast I ran, there was always.
+
+599
+00:40:13,800 --> 00:40:14,260
+Scott: See, that's the thing.
+
+600
+00:40:14,340 --> 00:40:18,580
+Scott: It's like they run to get to the first ride, but you don't see them running from ride to ride.
+
+601
+00:40:18,720 --> 00:40:20,459
+Scott: Very few people are smart enough to do that.
+
+602
+00:40:21,662 --> 00:40:24,220
+Scott: It's like once they've ridden one ride, now they walk from ride to ride.
+
+603
+00:40:24,262 --> 00:40:24,617
+Rym: I didn't.
+
+604
+00:40:25,020 --> 00:40:30,000
+Rym: I remember we had a policy, just like the front row crew, a policy of drop anyone who sucks and leave them behind.
+
+605
+00:40:30,761 --> 00:40:34,698
+Rym: I'd usually go to Cedar Point with people, and a lot of times people who I didn't go with often would go.
+
+606
+00:40:35,700 --> 00:40:40,934
+Rym: There'd be me and the four friends who know my policy on Cedar Point and are right there with me.
+
+607
+00:40:41,580 --> 00:40:44,140
+Rym: Then there'd be all the people who were like, "Hey, I want to hang out with Rym.
+
+608
+00:40:44,300 --> 00:40:45,011
+Rym: We'll just ...
+
+609
+00:40:45,011 --> 00:40:45,093
+Rym: ah.".
+
+610
+00:40:45,962 --> 00:40:49,040
+Rym: They'd learn real quick that Cedar Point was all business.
+
+611
+00:40:49,442 --> 00:40:49,960
+Scott: That's right.
+
+612
+00:40:50,040 --> 00:40:52,837
+Rym: When we got out of line, it was like, "We are going to this ride now.
+
+613
+00:40:53,746 --> 00:40:53,852
+Rym: Go.
+
+614
+00:40:54,560 --> 00:40:54,687
+Rym: Run.".
+
+615
+00:40:55,163 --> 00:40:56,320
+Rym: People would get left behind.
+
+616
+00:40:56,480 --> 00:40:57,699
+Rym: People would be like, "This sucks," and leave.
+
+617
+00:40:58,341 --> 00:41:00,579
+Rym: Every now and then, they'd be the new cool person and be like, "Wow.
+
+618
+00:41:01,162 --> 00:41:05,196
+Rym: I rode four times more rides than I've ever ridden in a day by hanging out with you
+
+619
+00:41:05,236 --> 00:41:05,598
+Rym: guys.".
+
+620
+00:41:06,700 --> 00:41:08,380
+Scott: Amusement parks, I was totally all business.
+
+621
+00:41:08,800 --> 00:41:20,360
+Scott: I'm so sad they closed Action Park, but I'm glad I got to go to it once or twice, because that park, there were so many water slides, and you had to carry a tube around with you for half the slides, so it was pretty much, "Go down a slide.
+
+622
+00:41:20,460 --> 00:41:20,959
+Scott: Grab the tube.
+
+623
+00:41:21,140 --> 00:41:21,760
+Scott: Go run up the stairs.
+
+624
+00:41:21,860 --> 00:41:22,259
+Scott: Run up the stairs.
+
+625
+00:41:22,605 --> 00:41:23,240
+Scott: Go down the slide.
+
+626
+00:41:23,380 --> 00:41:23,840
+Scott: Grab the tube.
+
+627
+00:41:23,920 --> 00:41:24,360
+Scott: Run up the stairs.
+
+628
+00:41:24,900 --> 00:41:25,172
+Scott: Run up the
+
+629
+00:41:25,193 --> 00:41:25,340
+Scott: stairs.".
+
+630
+00:41:25,647 --> 00:41:26,180
+Rym: Yeah, you know what?
+
+631
+00:41:26,260 --> 00:41:28,820
+Rym: I got such a burning desire to go to a water park.
+
+632
+00:41:28,942 --> 00:41:29,840
+Rym: I haven't been on a water slide.
+
+633
+00:41:29,860 --> 00:41:31,412
+Scott: My burning desire for water park is years old.
+
+634
+00:41:32,620 --> 00:41:35,000
+Scott: It's been like ... It's like this festering infection.
+
+635
+00:41:35,560 --> 00:41:36,380
+Rym: I can't remember.
+
+636
+00:41:36,900 --> 00:41:41,100
+Rym: I think it was in high school, was the last time that I was on a water slide.
+
+637
+00:41:41,962 --> 00:41:42,658
+Rym: That's not cool.
+
+638
+00:41:43,280 --> 00:41:43,344
+Rym: Wow.
+
+639
+00:41:44,160 --> 00:41:44,224
+Rym: Why?
+
+640
+00:41:45,246 --> 00:41:45,677
+Scott: No, no, no.
+
+641
+00:41:45,940 --> 00:41:48,840
+Scott: I went on a water slide between freshman and sophomore year.
+
+642
+00:41:49,224 --> 00:41:49,838
+Rym: I did not.
+
+643
+00:41:50,660 --> 00:41:50,872
+Scott: Ha ha.
+
+644
+00:41:51,641 --> 00:41:52,960
+Rym: Wait, I might have gone to Cedar Point.
+
+645
+00:41:53,860 --> 00:41:54,680
+Rym: I might have gone to Cedar Point.
+
+646
+00:41:54,700 --> 00:41:56,020
+Scott: But did you go on a water slide, though?
+
+647
+00:41:56,122 --> 00:41:56,938
+Rym: I don't know.
+
+648
+00:41:57,401 --> 00:41:57,938
+Scott: Dun, dun, dun.
+
+649
+00:41:58,122 --> 00:41:59,058
+Rym: I don't think I did.
+
+650
+00:41:59,361 --> 00:41:59,718
+Scott: Dun, dun, dun.
+
+651
+00:42:00,122 --> 00:42:01,300
+Rym: Ah, I need a water slide.
+
+652
+00:42:01,420 --> 00:42:02,220
+Scott: We need a water slide.
+
+653
+00:42:02,420 --> 00:42:02,778
+Scott: You know what?
+
+654
+00:42:03,000 --> 00:42:06,565
+Scott: We should get one of those big-ass boats that has a water slide that goes right into the sea.
+
+655
+00:42:07,240 --> 00:42:09,660
+Rym: Next summer, we're going to a water park no matter what.
+
+656
+00:42:09,780 --> 00:42:10,520
+Rym: We'll fly out to Texas.
+
+657
+00:42:10,540 --> 00:42:11,639
+Scott: Let's go to a water park right now.
+
+658
+00:42:11,800 --> 00:42:13,900
+Rym: Go to the ... There's no water parks to go to.
+
+659
+00:42:13,900 --> 00:42:14,699
+Scott: There's one right there.
+
+660
+00:42:15,301 --> 00:42:18,849
+Rym: Yeah, if we break in ... It's been raining, so ...
+
+661
+00:42:18,849 --> 00:42:19,057
+Scott: Yeah.
+
+662
+00:42:19,722 --> 00:42:20,479
+Rym: That's a great idea.
+
+663
+00:42:20,722 --> 00:42:20,978
+Scott: It is.
+
+664
+00:42:21,660 --> 00:42:23,560
+Rym: So yeah, there's not much else we can really say.
+
+665
+00:42:23,620 --> 00:42:25,060
+Rym: We didn't plan this episode out.
+
+666
+00:42:25,181 --> 00:42:28,900
+Scott: No, I figured there'd be a bunch of stories about lines, but most of them aren't too exciting.
+
+667
+00:42:29,121 --> 00:42:31,700
+Scott: The GameCube line that I waded in, not too exciting.
+
+668
+00:42:32,060 --> 00:42:35,300
+Rym: Yeah, well, it was two people, and I dropped you off at the media play at six in the morning.
+
+669
+00:42:35,700 --> 00:42:39,556
+Scott: And then a bunch of other people showed up behind us, and we all got GameCubes, and it was a happy time.
+
+670
+00:42:39,721 --> 00:42:40,239
+Rym: Well, behind you.
+
+671
+00:42:40,501 --> 00:42:42,340
+Rym: I slept in my car in my pajamas.
+
+672
+00:42:42,880 --> 00:42:42,976
+Rym: Yeah?
+
+673
+00:42:43,260 --> 00:42:44,319
+Rym: I didn't even get out of the car.
+
+674
+00:42:44,760 --> 00:42:46,960
+Scott: But you didn't get a GameCube, so you didn't need to wait in line.
+
+675
+00:42:47,020 --> 00:42:47,999
+Rym: Because I didn't need a GameCube.
+
+676
+00:42:48,563 --> 00:42:49,360
+Rym: You got a GameCube.
+
+677
+00:42:49,700 --> 00:42:50,960
+Rym: Effectively, I got a GameCube.
+
+678
+00:42:52,262 --> 00:42:56,140
+Rym: I went and dutifully bought one controller, which I use to this day.
+
+679
+00:42:57,201 --> 00:43:02,663
+Rym: I'm going to go out and buy, sometime this week probably, or next week, a Wiimote for me.
+
+680
+00:43:03,101 --> 00:43:03,699
+Scott: That's a good idea.
+
+681
+00:43:03,800 --> 00:43:04,597
+Rym: Probably a green one.
+
+682
+00:43:05,661 --> 00:43:06,900
+Scott: I don't think they have different colors.
+
+683
+00:43:07,080 --> 00:43:10,120
+Scott: I think you have to buy these plastic things you put on the Wiimote.
+
+684
+00:43:10,120 --> 00:43:10,960
+Rym: That's even better.
+
+685
+00:43:11,580 --> 00:43:11,673
+Rym: Yeah.
+
+686
+00:43:12,020 --> 00:43:14,059
+Rym: Because then someone will make some awesome custom ones.
+
+687
+00:43:14,260 --> 00:43:16,952
+Scott: I'm going to buy a three-pack, I think, of the things that cover the Wiimotes.
+
+688
+00:43:19,041 --> 00:43:22,640
+Rym: All I got to say to all of our friends out there, you're on your own for Wiimotes.
+
+689
+00:43:23,220 --> 00:43:23,307
+Scott: Yeah.
+
+690
+00:43:23,661 --> 00:43:25,219
+Rym: I'm not buying one for any of you.
+
+691
+00:43:25,600 --> 00:43:30,660
+Scott: I'm buying one extra one, just because there's bound to be a game that requires the use of two Wiimotes.
+
+692
+00:43:30,920 --> 00:43:31,020
+Rym: Yeah.
+
+693
+00:43:31,120 --> 00:43:33,940
+Rym: I just assume that everyone I know will own their own Wiimote.
+
+694
+00:43:34,200 --> 00:43:35,140
+Rym: You'll bring it in a case.
+
+695
+00:43:35,220 --> 00:43:36,600
+Rym: It'll be like your prize golf club.
+
+696
+00:43:36,720 --> 00:43:38,558
+Rym: You bring it out before the game, like shh.
+
+697
+00:43:39,080 --> 00:43:39,176
+Scott: Yeah.
+
+698
+00:43:39,320 --> 00:43:43,957
+Scott: Plus, your Wiimote stores things like your Mii, supposedly, so you're going to want to have your own.
+
+699
+00:43:44,520 --> 00:43:44,613
+Rym: Yeah.
+
+700
+00:43:44,700 --> 00:43:45,579
+Rym: We'll see how that all works.
+
+701
+00:43:45,740 --> 00:43:50,313
+Scott: Yeah, I got to figure out exactly how that works, because most of it's just rumors and hearsay.
+
+702
+00:43:50,860 --> 00:43:51,639
+Scott: We'll know on Sunday.
+
+703
+00:43:52,040 --> 00:43:52,200
+Rym: Yep.
+
+704
+00:43:52,660 --> 00:43:56,420
+Rym: So I guess this is the end of Throwaway Thursday, standing in line.
+
+705
+00:43:56,860 --> 00:43:57,839
+Scott: Throwaway Thursday.
+
+706
+00:43:58,181 --> 00:44:01,579
+Rym: Stay tuned for next week, when we'll talk about the Wii.
+
+707
+00:44:02,364 --> 00:44:03,079
+Scott: Next week.
+
+708
+00:44:04,300 --> 00:44:04,366
+Rym: Wii.
+
+709
+00:44:04,541 --> 00:44:04,627
+Rym: Yeah.
+
+710
+00:44:05,141 --> 00:44:13,191
+Rym: So much for Resident Evil 4.
+
+711
+00:44:13,191 --> 00:44:15,270
+Rym: This has been GeekNights with Rym and Scott.
+
+712
+00:44:15,470 --> 00:44:17,870
+Rym: Special thanks to DJ Pretzel for the opening music.
+
+713
+00:44:18,630 --> 00:44:29,810
+Scott: Be sure to visit our website at www.frontroadcrew.com, where you'll find show notes, links, our awesome forum, a link to our Frapper map, and links to all the RSS feeds.
+
+714
+00:44:30,410 --> 00:44:35,988
+Rym: We say feeds plural because GeekNights airs four nights a week, covering four different brands of geekery.
+
+715
+00:44:36,610 --> 00:44:38,129
+Rym: Mondays are science and technology.
+
+716
+00:44:38,290 --> 00:44:40,670
+Rym: Tuesdays we have video games, board games, and RPGs.
+
+717
+00:44:41,290 --> 00:44:46,629
+Rym: Wednesdays are anime, manga, comic nights, and Thursdays are the catch-alls for various rants and tomfoolery.
+
+718
+00:44:47,131 --> 00:44:55,190
+Scott: You can send us feedback by email to geeknights@frontroadcrew.com, or you can send audio feedback via Odeo.
+
+719
+00:44:55,590 --> 00:44:58,770
+Scott: Just click the link that says "send me an Odeo" on the right side of our website.
+
+720
+00:44:59,190 --> 00:45:04,249
+Rym: If you like what you hear, you can catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+721
+00:45:04,530 --> 00:45:07,590
+Rym: For the complete archives, visit the website, which has everything.
+
+722
+00:45:08,270 --> 00:45:13,115
+Scott: GeekNights is distributed under a Creative Commons Attribution Non-Commercial Share-A-Like 2.5 license.
+
+723
+00:45:14,700 --> 00:45:20,769
+Scott: This means you can do whatever you want with it, as long as you give us credit, don't make money, and share it in kind.
+
+724
+00:45:21,630 --> 00:45:25,030
+Scott: GeekNights is recorded live with no studio and no audience.
+
+725
+00:45:25,510 --> 00:45:28,590
+Scott: But unlike those other late shows, it's actually recorded at night.
+

@@ -1,0 +1,2644 @@
+1
+00:00:09,660 --> 00:00:11,718
+Rym: It's Monday November 27th.
+
+2
+00:00:12,220 --> 00:00:14,608
+Rym: I'm Rym and I'm Scott and this is GeekNights.
+
+3
+00:00:15,169 --> 00:00:20,930
+Rym: tonight We're back from the holidays to continue our ongoing series on how computers work with the second part of hard drives.
+
+4
+00:00:23,171 --> 00:00:24,187
+Scott: Let's do this.
+
+5
+00:00:25,193 --> 00:00:28,342
+Rym: Well after an unseasonably short hiatus, we're back.
+
+6
+00:00:28,543 --> 00:00:29,285
+Rym: We're bad.
+
+7
+00:00:29,305 --> 00:00:30,790
+Scott: That wasn't a short hiatus.
+
+8
+00:00:30,911 --> 00:00:33,004
+Scott: That was like the longest hiatus in a long time.
+
+9
+00:00:33,125 --> 00:00:40,026
+Scott: It was two episodes But there are many days that we wouldn't have made an episode so it felt long.
+
+10
+00:00:40,046 --> 00:00:41,050
+Rym: it wasn't long at all.
+
+11
+00:00:41,591 --> 00:00:43,677
+Rym: I only took a couple days off work.
+
+12
+00:00:44,199 --> 00:00:45,122
+Rym: We didn't really miss much.
+
+13
+00:00:46,084 --> 00:00:47,849
+Scott: I felt like a big long time.
+
+14
+00:00:48,472 --> 00:00:49,256
+Rym: Well, it really was.
+
+15
+00:00:49,296 --> 00:00:50,181
+Scott: I forget how to make a show.
+
+16
+00:00:50,201 --> 00:00:50,844
+Scott: What do we say now?
+
+17
+00:00:51,206 --> 00:00:51,628
+Rym: I don't know.
+
+18
+00:00:52,271 --> 00:00:56,430
+Rym: Maybe we should pull all fast karate style and just kind of ramble for a while with a lot of pauses.
+
+19
+00:00:56,972 --> 00:00:59,361
+Scott: Screw that if we're not gonna do something important up here.
+
+20
+00:00:59,381 --> 00:01:00,385
+Scott: I'm going to play some Zelda.
+
+21
+00:01:01,770 --> 00:01:03,143
+Rym: I Haven't even played Zelda yet.
+
+22
+00:01:03,264 --> 00:01:03,890
+Rym: I haven't had time.
+
+23
+00:01:04,293 --> 00:01:05,140
+Scott: You shouldn't know.
+
+24
+00:01:05,160 --> 00:01:06,450
+Scott: I gotta say I can play more.
+
+25
+00:01:06,610 --> 00:01:11,590
+Rym: I gotta say I've gotten all the tiredness out of my veins by going out of town for those four days.
+
+26
+00:01:11,811 --> 00:01:13,480
+Scott: Yeah, I definitely do not have tiredness.
+
+27
+00:01:13,501 --> 00:01:17,116
+Scott: Thanks to much sleeping Man, did I sleep?
+
+28
+00:01:17,176 --> 00:01:17,799
+Scott: Holy crap.
+
+29
+00:01:18,261 --> 00:01:19,265
+Rym: I didn't sleep so much.
+
+30
+00:01:19,346 --> 00:01:20,169
+Rym: I did stuff.
+
+31
+00:01:20,711 --> 00:01:23,318
+Scott: Yeah, I also did stuff like play Zelda.
+
+32
+00:01:23,359 --> 00:01:25,986
+Scott: I think I clocked 16 hours now.
+
+33
+00:01:26,026 --> 00:01:26,427
+Scott: I don't know.
+
+34
+00:01:26,628 --> 00:01:31,030
+Rym: Whoa I haven't clocked 16 hours in a game since Advance Wars DS.
+
+35
+00:01:31,271 --> 00:01:36,476
+Scott: But think about this 16 hours not even halfway done Badasses.
+
+36
+00:01:36,758 --> 00:01:37,505
+Scott: Oh, right.
+
+37
+00:01:37,545 --> 00:01:38,070
+Rym: Think about that.
+
+38
+00:01:38,130 --> 00:01:39,535
+Rym: You're already on track.
+
+39
+00:01:39,956 --> 00:01:46,730
+Rym: if the game is only twice as long if you've played so far that's still Final Fantasy 4 worth of content.
+
+40
+00:01:46,971 --> 00:01:47,874
+Scott: Well think about this.
+
+41
+00:01:47,994 --> 00:02:00,048
+Scott: if this game is the same size as Wind Waker and I know it's much larger than Wind Waker was Then at this point I would be Like slightly less than half done with Wind Waker.
+
+42
+00:02:00,329 --> 00:02:04,430
+Scott: So I'm probably slightly less than a third done with this game.
+
+43
+00:02:04,490 --> 00:02:08,902
+Scott: I'm guessing it could be even bigger than I think though and thus it'll be huge.
+
+44
+00:02:09,264 --> 00:02:11,769
+Scott: take me days to win anyway Yep.
+
+45
+00:02:11,891 --> 00:02:13,119
+Rym: So what do we got in the news?
+
+46
+00:02:13,179 --> 00:02:22,774
+Rym: since we'll skip right past all the fun Anecdotes from the weekend and save them for I don't know a special maybe a Thursday about Halloween or Thanksgiving or Christmas or holidays Or something.
+
+47
+00:02:22,874 --> 00:02:26,490
+Scott: most of it was we related except for a few other things.
+
+48
+00:02:27,150 --> 00:02:29,337
+Scott: We'll probably talk about a lot about it tomorrow.
+
+49
+00:02:29,558 --> 00:02:31,585
+Rym: I had a bunch of interesting fun in Rochester.
+
+50
+00:02:31,906 --> 00:02:32,227
+Scott: Yeah.
+
+51
+00:02:32,488 --> 00:02:33,190
+Scott: Yeah, I'm sure you did.
+
+52
+00:02:34,192 --> 00:02:35,698
+Scott: So technology it's Monday, right?
+
+53
+00:02:36,040 --> 00:02:36,663
+Scott: Yeah, cool.
+
+54
+00:02:37,145 --> 00:02:43,568
+Scott: So Mark shuttle worth He's that super rich guy who South African and he runs Ubuntu.
+
+55
+00:02:44,690 --> 00:02:48,670
+Scott: Well, the company that runs Ubuntu is canonical, right?
+
+56
+00:02:50,125 --> 00:02:54,689
+Scott: So Novell has that deal with Microsoft that recently went down.
+
+57
+00:02:55,011 --> 00:02:59,727
+Rym: Yeah, the one that there is a lot of uproar over for various reasons that we won't really get into.
+
+58
+00:02:59,747 --> 00:03:06,430
+Scott: Yeah, basically Novell got a bunch of money from Microsoft and an exchange for that.
+
+59
+00:03:06,772 --> 00:03:19,169
+Scott: They got some sort of Linux deal because Novell owns SUSE Linux and stuff and it's crazy and There's issues in that this might violate the GPL and such and such and such.
+
+60
+00:03:20,012 --> 00:03:28,108
+Scott: So that means that SUSE might be like a dead distribution because Microsoft has got all their fingers in it and whatnot.
+
+61
+00:03:28,128 --> 00:03:38,230
+Rym: supposedly I hope we don't have too many listeners out there who use it, but I've considered it to be not dead But really unnecessary for a long time anyway.
+
+62
+00:03:38,832 --> 00:03:47,670
+Scott: Well, SUSE has classically been sort of like this corporate desktop type of distribution and you know Recently, it's actually got some good stuff.
+
+63
+00:03:47,830 --> 00:03:58,016
+Scott: It was one of the first distributions to have like the XGL stuff going on because that was developed by Novell and has other Few nice things, you know It still has that Yast thing going on.
+
+64
+00:03:58,036 --> 00:04:06,479
+Scott: that makes a lot of things easy to configure like connecting to Outlook exchange servers Yeah, but I mean those share in terms of a corporate desktop.
+
+65
+00:04:06,881 --> 00:04:11,477
+Rym: most corporations I've seen if they use Linux at all They've been using Red Hat Enterprise.
+
+66
+00:04:11,617 --> 00:04:20,089
+Rym: Yeah, or now a lot of people are actually looking at Ubuntu Ubuntu yeah, but it you know, it's classically been that distribution anyway, yeah like in the 90s.
+
+67
+00:04:21,310 --> 00:04:23,197
+Scott: No, it's gotten a lot of play recently.
+
+68
+00:04:23,298 --> 00:04:28,786
+Scott: Anyway, the point is because of this deal with Microsoft There's a stigma around SUSE.
+
+69
+00:04:28,886 --> 00:04:41,070
+Scott: So shuttleworth Put out an email on the open SUSE Developer mailing list and he says, you know, I read the email most of it and it says, you know, there's this issue.
+
+70
+00:04:41,991 --> 00:04:50,276
+Scott: You I know this is probably be a little controversial whatever but if any of you you know Don't want to develop for open SUSE anymore.
+
+71
+00:04:50,717 --> 00:04:58,640
+Scott: We're having some meetings over at Ubuntu to you know, get new developers on board Feel free, you know, it was.
+
+72
+00:04:58,780 --> 00:05:01,850
+Scott: it was a really nice professional well-written email.
+
+73
+00:05:02,031 --> 00:05:07,030
+Scott: We'd read the email on the air, but it's really long and boring and you can go read it yourself.
+
+74
+00:05:07,271 --> 00:05:09,761
+Scott: But it didn't seem you know bad to me.
+
+75
+00:05:09,922 --> 00:05:11,790
+Rym: now, in fact, let's try a little thought experiment.
+
+76
+00:05:11,870 --> 00:05:16,830
+Rym: Hey Scott, if you want to develop for Ubuntu, I think you should if you might be a cool thing.
+
+77
+00:05:19,153 --> 00:05:19,474
+Scott: I don't know.
+
+78
+00:05:19,494 --> 00:05:20,497
+Rym: busy, huh?
+
+79
+00:05:20,939 --> 00:05:24,130
+Rym: That was easy enough and Scott didn't have any sort of outrage.
+
+80
+00:05:24,251 --> 00:05:31,967
+Rym: There's the Linux community isn't beating down my door Pissed off about the fact that I asked Scott that if he wanted to I'd like him to do stuff for Ubuntu.
+
+81
+00:05:31,987 --> 00:05:34,977
+Rym: now What did the Linux community do?
+
+82
+00:05:34,997 --> 00:05:39,694
+Scott: well, first of all, the open SUSE people were like, yeah What the hell.
+
+83
+00:05:39,714 --> 00:05:41,888
+Scott: you poaching developers bla bla bla.
+
+84
+00:05:42,451 --> 00:05:47,230
+Scott: It's interesting how everyone in the community seems intent on dividing it committing suicide by infighting.
+
+85
+00:05:47,770 --> 00:05:48,633
+Scott: Congratulations, Mr.
+
+86
+00:05:48,653 --> 00:05:49,135
+Scott: Shutterworth.
+
+87
+00:05:49,396 --> 00:05:52,567
+Scott: You're doing a fine job of doing Microsoft's FUD work for them.
+
+88
+00:05:52,748 --> 00:05:53,350
+Rym: Wait a minute now.
+
+89
+00:05:53,751 --> 00:05:58,270
+Rym: They're mad about dividing it by infighting and their response is infighting exactly.
+
+90
+00:05:58,531 --> 00:06:06,430
+Scott: Not only that but Ubuntu developers were pissed off, dude They said stuff like what mark did is simply not done.
+
+91
+00:06:08,332 --> 00:06:12,828
+Rym: Bob I didn't know there were unwritten rules as to what you're allowed to email to people.
+
+92
+00:06:12,848 --> 00:06:13,751
+Scott: Yeah All right.
+
+93
+00:06:13,872 --> 00:06:17,302
+Scott: I think the problem here is clearly that Mark Shutterworth.
+
+94
+00:06:17,683 --> 00:06:21,493
+Scott: He thinks like we do he's a normal smart Intelligent guy.
+
+95
+00:06:21,513 --> 00:06:25,969
+Scott: that's why he has lots and lots of money and he went to outer space and he made Ubuntu.
+
+96
+00:06:27,111 --> 00:06:31,044
+Rym: Now note that one does not necessarily form the other.
+
+97
+00:06:31,064 --> 00:06:40,683
+Rym: no, not necessarily Pointing out some interesting correlation here, but he didn't find Ubuntu on the moon.
+
+98
+00:06:41,144 --> 00:06:47,200
+Scott: No, he did not find Ubuntu on the moon Although I wouldn't be surprised if he told us that he did.
+
+99
+00:06:48,712 --> 00:06:49,817
+Rym: But yeah, he does.
+
+100
+00:06:49,877 --> 00:06:57,378
+Rym: the kind of things like if we were dealing with Linux distros We'd make a lot of the decisions like he makes in terms of you know Make it actually easy to use.
+
+101
+00:06:57,739 --> 00:06:59,930
+Rym: hide the stuff that people don't give a shit about.
+
+102
+00:07:00,351 --> 00:07:03,343
+Rym: Make it so that humans can use it not just Linux nerds.
+
+103
+00:07:03,444 --> 00:07:04,628
+Scott: who cares about?
+
+104
+00:07:04,729 --> 00:07:07,661
+Scott: you know Including crap that Linux nerds might not like.
+
+105
+00:07:07,722 --> 00:07:13,161
+Scott: make a deal with Firefox Like you can keep the Firefox icon instead of going to ice weasel.
+
+106
+00:07:13,502 --> 00:07:15,046
+Scott: make deal with Nvidia.
+
+107
+00:07:15,066 --> 00:07:16,310
+Scott: to you include the driver.
+
+108
+00:07:16,531 --> 00:07:23,510
+Rym: I mean your pure Linux that doesn't have a tainted kernel and can't play back MP3s is fine and dandy in your Linux world.
+
+109
+00:07:23,610 --> 00:07:36,810
+Rym: But real people and I include most people who use Linux who are not Linux zealots in that Don't care if the fact that technically having the thing to decode mp3s violates intellectual property somewhere.
+
+110
+00:07:37,081 --> 00:07:37,187
+Rym: Yeah.
+
+111
+00:07:37,912 --> 00:07:48,790
+Scott: So it seems like more and more that the people who are hurting Linux the most these days are the crazy zealot Developers who insist on everything being free and they turn
+
+112
+00:07:49,492 --> 00:07:50,010
+Scott: normal
+
+113
+00:07:50,631 --> 00:07:51,069
+Scott: perfectly
+
+114
+00:07:53,310 --> 00:07:53,612
+Rym: Chromulant
+
+115
+00:07:53,894 --> 00:07:58,800
+Scott: chromulant happenings into huge Controversies and flame wars and blah
+
+116
+00:07:58,981 --> 00:07:59,563
+Scott: like they still
+
+117
+00:07:59,965 --> 00:08:01,331
+Scott: think that it's 1995.
+
+118
+00:08:01,331 --> 00:08:05,002
+Rym: It's like with the whole GPL v2 versus GPL v3 issue.
+
+119
+00:08:05,423 --> 00:08:11,010
+Rym: where it's there is I mean there's reasonable debate But all you ever see people arguing about is crazy.
+
+120
+00:08:11,774 --> 00:08:17,163
+Rym: I won't use the version 3 because it's the end of the world and it's the most horrible thing I've ever seen and it violates everything.
+
+121
+00:08:17,223 --> 00:08:17,767
+Rym: I believe it.
+
+122
+00:08:18,290 --> 00:08:25,497
+Scott: Yeah, actually the crazy people are usually on the side of the three and I won't use 2 because it violates everything.
+
+123
+00:08:25,537 --> 00:08:26,219
+Rym: I believe it.
+
+124
+00:08:26,299 --> 00:08:26,720
+Scott: Yeah.
+
+125
+00:08:27,061 --> 00:08:27,382
+Scott: Yeah.
+
+126
+00:08:27,583 --> 00:08:36,350
+Rym: Well, I'm actually for version 3 But that was after hearing smart people talk about it for I heard smart people talk about it and I used to be against it.
+
+127
+00:08:36,470 --> 00:08:38,717
+Scott: Just a version 3 blue, you know sucks.
+
+128
+00:08:39,320 --> 00:08:41,025
+Scott: after hearing smart people talk about it.
+
+129
+00:08:41,145 --> 00:08:46,470
+Scott: I'm kind of like alright I understand it now and I'm not as against it as I was before.
+
+130
+00:08:47,052 --> 00:08:52,470
+Scott: But at the same time I'm against like a couple parts of it, you know, but the rest of it is great.
+
+131
+00:08:52,874 --> 00:08:54,469
+Scott: They should make one doesn't have those two parts.
+
+132
+00:08:54,791 --> 00:08:56,780
+Rym: Well, you could make one that doesn't have those two parts.
+
+133
+00:08:56,901 --> 00:09:00,229
+Scott: I could fairly easily very easily But that's besides the point.
+
+134
+00:09:00,611 --> 00:09:11,829
+Scott: The point is here's an example of crazy Linux zealots hurting Linux and making a ruckus for no reason and Mark Shutterworth is awesome and Novelles and Microsoft not so good.
+
+135
+00:09:12,312 --> 00:09:16,275
+Scott: Ubuntu very very good - very very good Right.
+
+136
+00:09:16,517 --> 00:09:21,590
+Rym: So the news I've dredged up here I bring it up because it's on dig and it's all over the internet again.
+
+137
+00:09:21,710 --> 00:09:29,319
+Rym: But I've seen this before and I'm sure many of our older listeners may have seen it before too And in fact, it might not actually be true.
+
+138
+00:09:29,440 --> 00:09:33,070
+Rym: There's really a decent chance that this is entirely fabricated.
+
+139
+00:09:33,556 --> 00:09:41,490
+Rym: The reason I bring it up 80% chance of being fake whether or not this is this specific incident is fabricated.
+
+140
+00:09:42,112 --> 00:09:59,330
+Rym: it's a good talking point because this is happening all over the United States of America and aside from all the recent stories and anecdotes and examples of it that I could think of I Actually have had this happen to me and my brother numerous times throughout primary and secondary school.
+
+141
+00:10:00,013 --> 00:10:02,507
+Rym: Mm-hmm, and I believe Scott is that it happened to him too.
+
+142
+00:10:02,749 --> 00:10:21,236
+Rym: Yes The basic story here is it's a note from a teacher explaining why a student was given detention And the reason was that the student Insisted that the teacher was wrong in claiming that a kilometer is longer than a mile Which is patently untrue.
+
+143
+00:10:21,376 --> 00:10:27,130
+Rym: a mile is much longer than a kilometer now because the student had the audacity to question the teacher.
+
+144
+00:10:27,451 --> 00:10:31,470
+Rym: The student was given a detention because you shouldn't resist what you're being taught.
+
+145
+00:10:31,550 --> 00:10:36,470
+Rym: You should just follow whatever the teacher says and not bring up dissent because it's disruptive.
+
+146
+00:10:38,190 --> 00:10:46,019
+Scott: now that's a horrible thing, but Intelligent person can see obviously why it is horrible.
+
+147
+00:10:46,360 --> 00:10:48,506
+Scott: if you don't see why that's obviously horrible.
+
+148
+00:10:48,947 --> 00:10:50,815
+Scott: You're not intelligent Now.
+
+149
+00:10:50,896 --> 00:11:03,424
+Rym: I wouldn't care if this was an isolated incident But it seems that this happens on a semi regular basis and that there are a lot of people out there teaching children Who are either not qualified to teach children because they don't actually know what they're teaching
+
+150
+00:11:03,725 --> 00:11:04,347
+Scott: or they don't care
+
+151
+00:11:04,367 --> 00:11:11,950
+Rym: or even worse They may know enough to teach but when they make a mistake They refuse to admit it and instead take it out on the children.
+
+152
+00:11:12,612 --> 00:11:16,925
+Scott: The problem is is there aren't enough good teachers in total.
+
+153
+00:11:17,125 --> 00:11:29,410
+Scott: if you took everyone on in the whole country even the whole world who had the Abilities and skills to teach well without these kind of stupid problems you would not have enough people to teach all the children.
+
+154
+00:11:30,312 --> 00:11:32,787
+Scott: So there's gonna be bad teachers and shit like this is gonna happen.
+
+155
+00:11:32,928 --> 00:11:33,250
+Rym: I don't know.
+
+156
+00:11:33,451 --> 00:11:39,671
+Rym: I think I could be a pretty good teacher as long as with the subject I know stuff about and the kids were at least over the age of 14.
+
+157
+00:11:39,671 --> 00:11:41,358
+Scott: I could do but I can't do this.
+
+158
+00:11:41,398 --> 00:11:43,325
+Scott: I think I could I ever tried.
+
+159
+00:11:43,425 --> 00:11:44,730
+Scott: I've done some summer camp action.
+
+160
+00:11:44,921 --> 00:11:55,290
+Rym: Yeah I've taught like one day session but IBM used to do a lot of stuff where kids would come in and I've taught like one Day sessions about you know, babe basic basic computer things and I think I did a good job.
+
+161
+00:11:55,531 --> 00:12:00,690
+Scott: Yeah, but I think the point is if I saw we might be able to there aren't enough people.
+
+162
+00:12:00,961 --> 00:12:06,168
+Scott: Yeah well and and a lot of the people who can Aren't going to because they have better things to be doing.
+
+163
+00:12:06,531 --> 00:12:10,090
+Rym: See it just this really hit close to home because when I was a kid, I was in elementary school.
+
+164
+00:12:10,211 --> 00:12:11,958
+Rym: My brother was also in elementary school.
+
+165
+00:12:12,460 --> 00:12:22,590
+Rym: He came home from school one day crying about class and apparently what had happened was he was in a class and They were talking about you know time hours of the day.
+
+166
+00:12:22,630 --> 00:12:28,251
+Rym: it was like first or second grade and the textbook had a typo in it stating that 12 a.m.
+
+167
+00:12:30,030 --> 00:12:31,398
+Rym: Was noon and 12 p.m.
+
+168
+00:12:31,418 --> 00:12:31,961
+Rym: Was midnight.
+
+169
+00:12:35,951 --> 00:12:39,229
+Scott: Now it should just go somewhere with this 24-hour o'clock wouldn't have this problem.
+
+170
+00:12:39,369 --> 00:12:42,569
+Rym: now My brother, you know raised his hand and said but that's not true.
+
+171
+00:12:42,569 --> 00:12:43,914
+Rym: 12 p.m.
+
+172
+00:12:43,954 --> 00:12:46,122
+Rym: Is when I go eat lunch and 1201 p.m.
+
+173
+00:12:46,162 --> 00:12:59,637
+Rym: Is in the afternoon and the teacher berated him in front of the class for contradicting the textbook that he could see right in front of him that everyone knew was right and he was pretty much ridiculed for The rest of the day by everyone in his class mmm, and then he comes home.
+
+174
+00:12:59,657 --> 00:13:11,170
+Rym: now, my mother was furious and she went back to the school and The teacher was actually angry and defended her position to my mother not the position of ridiculing my brother.
+
+175
+00:13:11,250 --> 00:13:14,524
+Rym: Not even that she defended the fact that 12 noon was 12 a.m.
+
+176
+00:13:16,392 --> 00:13:25,409
+Rym: Yeah, my mother went and found other teachers that were in the school working dragged them into the room Got them to explain it to her and she still wouldn't relent.
+
+177
+00:13:26,453 --> 00:13:28,996
+Scott: See, this is the time now I could.
+
+178
+00:13:29,318 --> 00:13:31,150
+Scott: I think I'm correct in saying there aren't enough teachers.
+
+179
+00:13:31,592 --> 00:13:40,950
+Scott: so we obviously if we want every kid to have a teacher and not to have Giant giant classrooms with thousands of kids or to teach every kid with some sort of matrix like machine.
+
+180
+00:13:41,653 --> 00:13:47,490
+Scott: We're gonna need to let people like this teach at some point, but they're not a problem If we keep them in line.
+
+181
+00:13:47,891 --> 00:13:59,229
+Scott: We have enough people to be principals of every school and those principals need to not only fire these teachers Not only public humiliate these teachers not only to make sure they're never allowed to teach again.
+
+182
+00:13:59,873 --> 00:14:10,230
+Scott: make sure they I don't know end up homeless or Put them in jail or insane asylums or make sure they're never allowed near children ever or I don't know something really really horrible.
+
+183
+00:14:10,954 --> 00:14:11,859
+Scott: Send them back to school.
+
+184
+00:14:11,879 --> 00:14:13,910
+Scott: They go back to kindergarten so they can learn it all again.
+
+185
+00:14:14,050 --> 00:14:21,990
+Scott: I mean if you're like 34 years old and a first-grade teacher and you can't teach first grade properly Obviously you need to go back to first grade now.
+
+186
+00:14:22,070 --> 00:14:27,667
+Rym: There's a difference between not being able to teach first grade because you have trouble dealing with children.
+
+187
+00:14:27,687 --> 00:14:32,462
+Rym: I Generally do not like being around small children.
+
+188
+00:14:33,305 --> 00:14:34,690
+Scott: It depends on the small children.
+
+189
+00:14:35,811 --> 00:14:37,782
+Rym: Well, you're an individual small child.
+
+190
+00:14:37,843 --> 00:14:39,110
+Rym: I'm fine with a small group of them.
+
+191
+00:14:39,130 --> 00:14:58,327
+Rym: I'm fine with a large group of well-behaved ones I'm fine with but a large group of semi unruly to feral children I cannot deal with and when when Lisa and I back at RIT anime had to put on a little presentation for like 20 of these feral children from some local elementary school.
+
+192
+00:14:58,347 --> 00:15:01,017
+Rym: I Wanted to snap all their little necks.
+
+193
+00:15:01,539 --> 00:15:02,342
+Rym: Yeah, just it was.
+
+194
+00:15:02,764 --> 00:15:04,490
+Rym: what do you do when you tell a kid be quiet?
+
+195
+00:15:04,670 --> 00:15:07,142
+Rym: He says you can't do anything to me and runs out of the room screaming.
+
+196
+00:15:07,545 --> 00:15:10,845
+Rym: you say alright, let him go I had to go get him.
+
+197
+00:15:11,471 --> 00:15:13,479
+Scott: That's the thing from being a camp counselor.
+
+198
+00:15:13,539 --> 00:15:19,990
+Scott: many many times like four or five times, you know It's pretty awesome and most of the kids are also awesome.
+
+199
+00:15:20,151 --> 00:15:23,773
+Scott: But there's always one or two kids in the cabin or group or whatever You've got.
+
+200
+00:15:24,034 --> 00:15:25,923
+Scott: that are the trouble-making bad kids.
+
+201
+00:15:25,963 --> 00:15:27,270
+Scott: then they they ruin your day.
+
+202
+00:15:27,712 --> 00:15:33,930
+Scott: And if you got rid of those kids like really I know for a fact if those kids are out of the equation Everything is awesome.
+
+203
+00:15:34,471 --> 00:15:43,138
+Scott: because there would be days like at a day camp where the one trouble-making kid out of ten wouldn't show up and you would just Relax, and it would be like hang with your friends.
+
+204
+00:15:43,218 --> 00:15:55,269
+Scott: only all your friends were really small and couldn't talk about adult topics And they could play a really bad game of Red Rover and you had to go easy on him, but other than that Everything was cool.
+
+205
+00:15:55,952 --> 00:16:00,026
+Scott: So I think the trick is we just had to weed those bad kids out of society.
+
+206
+00:16:00,086 --> 00:16:01,150
+Scott: put them with the teachers.
+
+207
+00:16:01,190 --> 00:16:01,672
+Scott: You don't know.
+
+208
+00:16:01,672 --> 00:16:02,536
+Scott: 12 a.m.
+
+209
+00:16:02,556 --> 00:16:03,300
+Scott: For 12 p.m.
+
+210
+00:16:03,561 --> 00:16:04,384
+Scott: All in the same room.
+
+211
+00:16:04,485 --> 00:16:05,610
+Scott: Just on the other side of the country.
+
+212
+00:16:05,972 --> 00:16:08,330
+Scott: Maybe we'll make a state for those people called, Texas.
+
+213
+00:16:08,652 --> 00:16:15,001
+Rym: Yeah, but the thing is if you can't teach because you just can't deal with kids That's one thing and that's something you can learn or try or get help with.
+
+214
+00:16:15,503 --> 00:16:21,230
+Rym: if you can't teach first grade because you don't know The material well, how the hell did you become an adult?
+
+215
+00:16:22,050 --> 00:16:25,329
+Rym: How did you live your life not knowing those things?
+
+216
+00:16:25,955 --> 00:16:34,427
+Scott: You know There are people out there on the street probably living really close to us who don't know things like that Well considering their living considering the median income of our area.
+
+217
+00:16:34,808 --> 00:16:45,940
+Rym: Mm-hmm Yeah, I mean I remember once in seventh grade when a teacher was teaching some bullshit about how to do graphs and x and y-axis And coordinates and she didn't know what she was talking about.
+
+218
+00:16:45,980 --> 00:16:48,028
+Rym: and I kept interrupting her like that's not hot.
+
+219
+00:16:48,068 --> 00:16:49,736
+Rym: That's not right That's not right.
+
+220
+00:16:49,756 --> 00:16:52,390
+Rym: I was correcting her and finally she lost it.
+
+221
+00:16:52,491 --> 00:16:56,034
+Rym: She says well if you are so smart Then you can teach the class.
+
+222
+00:16:56,075 --> 00:17:06,901
+Rym: and she stormed out and I got up and I taught the goddamn class and she came back in like a minute later saw what I was doing and Sent me to the principal's office to try to get me expelled.
+
+223
+00:17:07,202 --> 00:17:08,849
+Rym: and she's yelling and yelling and she leaves.
+
+224
+00:17:08,849 --> 00:17:13,164
+Rym: I'm sitting there with the principal and he basically says I'm not gonna punish you.
+
+225
+00:17:13,184 --> 00:17:15,030
+Rym: I can't believe this happened.
+
+226
+00:17:15,851 --> 00:17:16,736
+Rym: I don't know what to say.
+
+227
+00:17:16,836 --> 00:17:17,982
+Rym: Just try not to tick her off.
+
+228
+00:17:18,021 --> 00:17:19,609
+Rym: I'll see if I can get you into a better class.
+
+229
+00:17:21,351 --> 00:17:24,281
+Scott: Yeah, yeah, I see that's my kind of problem with it.
+
+230
+00:17:24,923 --> 00:17:25,565
+Scott: Well, I'm Taylor.
+
+231
+00:17:25,606 --> 00:17:26,849
+Scott: God so knows all about this shit.
+
+232
+00:17:27,473 --> 00:17:28,277
+Rym: I mean, what was he gonna do?
+
+233
+00:17:28,317 --> 00:17:28,679
+Rym: It's not like.
+
+234
+00:17:28,699 --> 00:17:30,146
+Rym: there was an advanced class.
+
+235
+00:17:30,206 --> 00:17:31,010
+Rym: It was middle school.
+
+236
+00:17:31,111 --> 00:17:33,450
+Rym: There was that class and the class for slow kids.
+
+237
+00:17:33,510 --> 00:17:40,474
+Scott: Yeah This all goes back to a giant discussion about tenure and all that jazz how there needs to be some more Competition among teachers.
+
+238
+00:17:40,535 --> 00:17:40,836
+Scott: you should.
+
+239
+00:17:40,856 --> 00:17:45,250
+Scott: you need to be able to fire them and hire them willy-nilly like it can every other profession.
+
+240
+00:17:45,692 --> 00:17:47,740
+Scott: They need to be held to a higher standard etc.
+
+241
+00:17:47,860 --> 00:17:50,450
+Rym: Yeah, but that's tough to do because how do you set a stand?
+
+242
+00:17:50,850 --> 00:17:51,092
+Scott: Yeah, yeah.
+
+243
+00:17:51,133 --> 00:17:55,539
+Scott: Yeah, I know it goes into a big thing Like police where you need police.
+
+244
+00:17:55,619 --> 00:17:58,870
+Scott: police are good, but there's a few bad police and it makes all the police look bad.
+
+245
+00:17:59,412 --> 00:18:02,145
+Scott: You know, of course, I think there's actually a lot of bad police like.
+
+246
+00:18:02,185 --> 00:18:03,270
+Scott: there's a lot of bad teachers.
+
+247
+00:18:03,450 --> 00:18:04,634
+Scott: I say 50% maybe.
+
+248
+00:18:04,694 --> 00:18:06,841
+Rym: well, you know the old saying it's 99% of cops.
+
+249
+00:18:06,861 --> 00:18:07,543
+Rym: They give 1% of bad name.
+
+250
+00:18:07,563 --> 00:18:14,330
+Rym: Yep Yeah, no offense to any police officers listening, but you're part of the problem.
+
+251
+00:18:15,332 --> 00:18:20,662
+Rym: Yeah, I mean Sorry, I that this kind of an inside joke over the weekend.
+
+252
+00:18:20,683 --> 00:18:28,603
+Rym: I got in a whole bunch of fun arguments and some one thing that came up was United States traffic law and traffic enforcement.
+
+253
+00:18:28,865 --> 00:18:30,150
+Rym: Yeah, which is kind of a hot button.
+
+254
+00:18:30,230 --> 00:18:43,096
+Scott: That's really the only time I hate police is either if you know, they're stepping over the line in when they're doing you know something involving civil rights, like when they electro they Taser that kid at UCLA.
+
+255
+00:18:43,337 --> 00:18:52,370
+Scott: Yeah, or like a Rodney King beating type thing or if they're Enforcing laws that I don't think are just it's alright.
+
+256
+00:18:52,450 --> 00:18:59,750
+Rym: We got jury nullification jury nullification and we also would probably be better off doing an episode about this instead of just a news.
+
+257
+00:18:59,951 --> 00:19:12,288
+Scott: Yeah, so let's go to things today things of the day My thing of the day is hot.
+
+258
+00:19:12,671 --> 00:19:14,039
+Rym: Well, you want to start with that then?
+
+259
+00:19:15,582 --> 00:19:19,060
+Scott: So it was Thanksgiving weekend, you know, I don't watch television.
+
+260
+00:19:19,200 --> 00:19:33,225
+Scott: We don't have cable television and one of the few few things I miss from not having that television is watching live Sporting events and I watched a little bit of footballs and I went to a minor league hockey game and such over the weekend But I came back.
+
+261
+00:19:33,386 --> 00:19:37,820
+Scott: I found this football video on YouTube now for our international listeners.
+
+262
+00:19:37,920 --> 00:19:41,373
+Scott: We're not talking about soccer or football.
+
+263
+00:19:41,453 --> 00:19:49,085
+Scott: We're talking about the football American Yes, the football that we enjoy on Thanksgiving Day, which is a holiday You do not celebrate at least.
+
+264
+00:19:49,105 --> 00:19:49,727
+Scott: I don't think you do.
+
+265
+00:19:49,807 --> 00:19:51,614
+Rym: a lot of people celebrate Thanksgiving.
+
+266
+00:19:51,654 --> 00:20:01,300
+Scott: In fact outside the United States Yes, really they celebrate very similar holidays around the same time and a lot of those usually just like harvest whatever festival or whatever.
+
+267
+00:20:01,500 --> 00:20:06,456
+Rym: So I know some of them are kind of just based not really based on but just concurrent to the American holiday.
+
+268
+00:20:06,476 --> 00:20:17,660
+Scott: Yeah Anyway, this is a 1994 high school football I assume championship game because they're playing in Texas Stadium, which is where the Dallas Cowboys play.
+
+269
+00:20:17,680 --> 00:20:22,820
+Scott: So if you're a high school team playing in the NFL field, this has to be an important game of some sort.
+
+270
+00:20:23,461 --> 00:20:29,743
+Scott: At least I think that's the field because there's a whole lot of empty seats and there's a big Dallas Cowboy star on the field And it's huh.
+
+271
+00:20:30,004 --> 00:20:31,190
+Scott: It's a really nice field.
+
+272
+00:20:31,752 --> 00:20:35,986
+Rym: No, they're the Iowa Wiccans, yeah.
+
+273
+00:20:36,046 --> 00:20:54,964
+Scott: So anyway, it's a game versus Plano East Against John Tyler two high schools and the score is 41 to 17 And Plano East is losing and Plano East is the team with the darker colored Uniforms.
+
+274
+00:20:55,145 --> 00:20:56,852
+Rym: now how many minutes are left to play?
+
+275
+00:20:57,154 --> 00:20:58,480
+Scott: three minutes to go?
+
+276
+00:20:58,920 --> 00:21:01,620
+Scott: There are three minutes left on the clock in this game.
+
+277
+00:21:01,660 --> 00:21:22,900
+Scott: Now if you know football American football one of the key factors in American football is clock Management and it's very important, you know, if you leave like, you know, ten seconds on the clock here 20 seconds to the clock there It's enough time for someone to make a play, you know, someone will you know, they'll do a play They'll throw the ball out of bounds to get the clock stopped all kinds of stuff like that.
+
+278
+00:21:23,067 --> 00:21:29,420
+Rym: Yep And by the same token you might be behind and you got to make that clock stop whenever possible to leave time.
+
+279
+00:21:29,801 --> 00:21:31,547
+Scott: You only have a certain number of timeouts.
+
+280
+00:21:31,587 --> 00:21:32,972
+Scott: You can use all kinds of stuff.
+
+281
+00:21:33,012 --> 00:21:35,019
+Scott: So with three minutes left to go.
+
+282
+00:21:35,581 --> 00:21:37,567
+Scott: Plano East is down 41 to 17.
+
+283
+00:21:37,567 --> 00:21:43,707
+Scott: So with three touchdowns Let's see one touchdown is 21 to touch.
+
+284
+00:21:43,727 --> 00:21:47,720
+Scott: the four touchdowns would be needed for them to win and get ahead.
+
+285
+00:21:49,483 --> 00:21:50,832
+Scott: A field goal is three points.
+
+286
+00:21:50,912 --> 00:21:52,100
+Scott: a touchdown is six points.
+
+287
+00:21:52,140 --> 00:21:54,937
+Scott: But if you get a touchdown, you're pretty much guaranteed to get an extra point.
+
+288
+00:21:54,977 --> 00:21:55,460
+Scott: So it's seven.
+
+289
+00:21:55,902 --> 00:21:58,055
+Scott: So yeah, seven times four be thirty six.
+
+290
+00:21:58,095 --> 00:22:03,534
+Scott: Yeah, okay No, seven fourteen twenty seven times four is twenty eight and seventeen is more than forty one.
+
+291
+00:22:03,595 --> 00:22:10,880
+Rym: now much like a lot of FARC headlines We wouldn't be giving you this thing of the day if there weren't a reason for it to be a thing of the day.
+
+292
+00:22:11,000 --> 00:22:17,560
+Scott: Yes, as you watch these four minutes of American football, you will see perhaps the greatest comeback in all of football history.
+
+293
+00:22:18,162 --> 00:22:22,880
+Scott: Mostly obviously this happens because it's amateur high school football players.
+
+294
+00:22:22,960 --> 00:22:26,739
+Rym: Yeah, I mean they give the onside kick more than one so that never works.
+
+295
+00:22:26,860 --> 00:22:34,279
+Scott: Yeah, you hardly ever see an onside kick in the NFL and when someone tries it it's like a crazy emergency in the playoffs Or they have no other choice.
+
+296
+00:22:35,061 --> 00:22:43,800
+Rym: Hardly ever work an onside kick in American real Professional football is like seeing one of those fake outs try to happen in like a Major League Baseball game.
+
+297
+00:22:43,841 --> 00:22:44,478
+Rym: It just doesn't happen.
+
+298
+00:22:44,830 --> 00:22:52,328
+Scott: Yeah The reason a lot of the the fake trick plays don't happen in the NFL is actually because a lot of those Formations are illegal now.
+
+299
+00:22:52,689 --> 00:22:59,540
+Scott: I've got opinions on that that are separate, you know I think that any formation where all your guys are on your side of the line of scrimmage should be okay.
+
+300
+00:23:00,322 --> 00:23:02,008
+Scott: But that's besides the point.
+
+301
+00:23:02,048 --> 00:23:05,860
+Scott: the point is this is an amazing four minutes of football.
+
+302
+00:23:06,543 --> 00:23:11,743
+Scott: I think that this might actually be above the level of that hockey game of RIT.
+
+303
+00:23:11,863 --> 00:23:15,500
+Rym: it might be and that was one of the greatest sporting event experiences of my life.
+
+304
+00:23:15,781 --> 00:23:22,100
+Scott: Yeah, so watch this and even if you don't understand American football you'll understand what's going on.
+
+305
+00:23:22,140 --> 00:23:25,812
+Rym: There's two commentators pretty much just yelling and screaming and they're there.
+
+306
+00:23:25,933 --> 00:23:31,615
+Scott: half the video half the entertainment of this video Is those two guys good gosh almighty good God Almighty.
+
+307
+00:23:31,635 --> 00:23:35,352
+Rym: I think he says gosh Oh, he says God near the end when he gets really excited.
+
+308
+00:23:35,593 --> 00:23:37,160
+Rym: He says I think I wet myself.
+
+309
+00:23:38,522 --> 00:23:41,362
+Rym: Yeah, watch it all the way to the end It is.
+
+310
+00:23:41,442 --> 00:23:46,496
+Scott: don't stop watching this because it amazes you like three or four times.
+
+311
+00:23:46,537 --> 00:23:46,878
+Scott: You'll go.
+
+312
+00:23:46,978 --> 00:23:47,620
+Scott: Whoa.
+
+313
+00:23:48,365 --> 00:23:50,139
+Rym: But then at the end you'll go whoa again.
+
+314
+00:23:50,260 --> 00:23:51,878
+Scott: Yeah There's one final whoa.
+
+315
+00:23:52,100 --> 00:23:55,880
+Rym: So let the video play to the end and don't worry about it being boring or anything.
+
+316
+00:23:55,920 --> 00:23:58,420
+Rym: They cut out everything but the pertinent action.
+
+317
+00:23:58,681 --> 00:24:01,351
+Scott: Yeah, you all you see are basically the big plays.
+
+318
+00:24:01,713 --> 00:24:04,827
+Scott: if there are any small plays we might miss them But I don't think there were small plays.
+
+319
+00:24:04,887 --> 00:24:06,195
+Scott: I think it's every play is huge.
+
+320
+00:24:06,336 --> 00:24:10,536
+Rym: Yeah, they just cut out You know the setup time between the hikes and all that.
+
+321
+00:24:10,617 --> 00:24:12,686
+Scott: Yeah Between the dance.
+
+322
+00:24:12,968 --> 00:24:13,150
+Rym: Yeah.
+
+323
+00:24:13,351 --> 00:24:14,298
+Rym: Well, you know when they hike it.
+
+324
+00:24:14,720 --> 00:24:20,138
+Rym: Yeah, because when I was a little kid and we played football for the Intellivision -
+
+325
+00:24:20,158 --> 00:24:20,679
+Scott: yeah
+
+326
+00:24:21,423 --> 00:24:29,720
+Rym: We would always say it's your turn to hike and then you hit the button And they had this little wave of a guide it would go like and then the game would start.
+
+327
+00:24:30,942 --> 00:24:32,068
+Scott: And now I have Madden Wii.
+
+328
+00:24:32,088 --> 00:24:33,375
+Rym: Yeah Madden Wii.
+
+329
+00:24:33,456 --> 00:24:34,220
+Rym: I still gotta play that.
+
+330
+00:24:34,240 --> 00:24:36,991
+Rym: I haven't had a chance to really play the Wii except excite truck.
+
+331
+00:24:37,372 --> 00:24:39,300
+Scott: It's kind of complicated Madden Wii.
+
+332
+00:24:39,661 --> 00:24:41,066
+Scott: Let's go play Wii after you do the show.
+
+333
+00:24:41,427 --> 00:24:41,628
+Rym: Yeah.
+
+334
+00:24:41,668 --> 00:24:41,969
+Rym: All right.
+
+335
+00:24:42,431 --> 00:24:43,013
+Scott: I never mind.
+
+336
+00:24:43,053 --> 00:24:44,157
+Scott: It's like almost 11.
+
+337
+00:24:44,157 --> 00:24:44,478
+Scott: Damn it.
+
+338
+00:24:44,939 --> 00:24:47,306
+Rym: Yeah Yeah, I got a Ubuntu this box.
+
+339
+00:24:47,387 --> 00:24:49,112
+Rym: Anyway, yep, but all right.
+
+340
+00:24:49,152 --> 00:24:51,880
+Rym: my thing of the day, this is old news.
+
+341
+00:24:52,322 --> 00:24:57,611
+Rym: I assume a lot of people have seen it, but I'll bet a lot of you haven't and again It's been all over dig.
+
+342
+00:24:57,631 --> 00:25:02,196
+Rym: So someone must have rediscovered it so I might as well use it and there have been things like this before.
+
+343
+00:25:02,217 --> 00:25:07,054
+Rym: but a Lot of people aren't so hip to this internet thing.
+
+344
+00:25:07,175 --> 00:25:15,529
+Rym: They really don't get it especially older people with non technical jobs and Children who don't pay attention to the world outside of.
+
+345
+00:25:16,031 --> 00:25:18,780
+Rym: I don't know the newspaper TV news and what people tell them at work.
+
+346
+00:25:19,123 --> 00:25:20,700
+Scott: Thank You captain obvious.
+
+347
+00:25:21,381 --> 00:25:25,867
+Rym: So a lot of these people things that they do not understand they tend to fear.
+
+348
+00:25:26,248 --> 00:25:30,554
+Rym: and one of these things is Leet speak there now to us.
+
+349
+00:25:31,016 --> 00:25:36,996
+Rym: leet speak Back in the day was something that wasn't like a thing people did.
+
+350
+00:25:37,297 --> 00:25:45,801
+Rym: just occasionally You'd make a joke or you'd spell something funnily or a lot of people spoke like type that way to be funny like check it Out.
+
+351
+00:25:45,881 --> 00:25:48,289
+Rym: I'm elite hacks or ha ha ha a few.
+
+352
+00:25:48,349 --> 00:25:51,620
+Scott: where's people would type that way so you couldn't find their sites on Google.
+
+353
+00:25:52,082 --> 00:25:54,491
+Rym: Yep, and some people took it seriously.
+
+354
+00:25:54,531 --> 00:26:04,459
+Rym: There were you know hacker types mostly Thirteen-year-old stupid kids who thought it was actually cool and actually the way things were done to type that way.
+
+355
+00:26:04,921 --> 00:26:14,420
+Scott: Yeah, real hackers of you know The Kevin Mitnick level weren't talking in leet no or even proto leet where you just capitalized every other letter.
+
+356
+00:26:14,903 --> 00:26:21,334
+Rym: Yeah, yeah, that was awesome Super awesome double bonus awesome fair it was leet.
+
+357
+00:26:21,735 --> 00:26:27,816
+Rym: so when mega Tokyo Started getting popular, and they made a lot of leet jokes early on you know back when the comic was funny.
+
+358
+00:26:27,836 --> 00:26:43,077
+Rym: Oh burn And All of us own zor and people in our generation of geek Started saying all the stuff from mega Tokyo all this kind of retro leet speak as a joke.
+
+359
+00:26:43,117 --> 00:26:44,220
+Rym: It was totally ironic.
+
+360
+00:26:44,320 --> 00:26:47,045
+Rym: We'd say things like ha ha ha fear.
+
+361
+00:26:47,526 --> 00:26:48,247
+Rym: Oh, haha.
+
+362
+00:26:48,287 --> 00:26:56,540
+Rym: That was funny fear and Fast forward about two years, and it was no longer ironic, and we were saying it in all seriousness.
+
+363
+00:26:57,250 --> 00:27:06,687
+Rym: Damn you Come to today where I say the word teh not as a joke but to emphasize something as opposed to the yeah Teh awesome.
+
+364
+00:27:07,049 --> 00:27:08,440
+Rym: Teh leet speak.
+
+365
+00:27:08,901 --> 00:27:19,339
+Rym: So people who don't understand all of what I just said will see their child typing these strange Glyphs on the computer things that they don't understand and it frightens them.
+
+366
+00:27:19,761 --> 00:27:20,787
+Rym: So then they turn on the new.
+
+367
+00:27:20,807 --> 00:27:23,260
+Scott: they're obviously trying to conceal something for their parents.
+
+368
+00:27:23,340 --> 00:27:34,609
+Scott: And if they're trying to conceal something from their parents obviously they're up to no good and their child bird Predators typing in secret codes that are going to molest your children and take them away Gypsies in the night one.
+
+369
+00:27:34,689 --> 00:27:36,539
+Rym: no kid is not up to no good.
+
+370
+00:27:37,023 --> 00:27:38,475
+Rym: Just a matter of what degree.
+
+371
+00:27:38,495 --> 00:27:40,930
+Rym: if no good They're up to it could be.
+
+372
+00:27:40,950 --> 00:27:45,740
+Rym: I was always up to no good And I remember very distinctly my father and my mother too.
+
+373
+00:27:45,760 --> 00:27:49,260
+Rym: But they what they basically told me as a kid was that I had unlimited freedom.
+
+374
+00:27:49,641 --> 00:27:56,445
+Rym: I could do whatever I wanted because they trusted me not be stupid and my mom said don't do anything bad And we'll continue to trust you.
+
+375
+00:27:56,846 --> 00:28:00,139
+Rym: my dad said don't get caught do anything bad, and we'll continue to trust you.
+
+376
+00:28:01,873 --> 00:28:06,180
+Rym: So These people will turn on the news and they'll see my thing of the day.
+
+377
+00:28:06,561 --> 00:28:23,460
+Rym: This is a bunch of complete tools and a bunch of people who think they're a lot smarter than they are Explaining the sinister world of leet speak these secret codes that kids use to hide Information from the police and their parents in order to be molested by horrible people.
+
+378
+00:28:23,942 --> 00:28:32,598
+Scott: Yes, because when I was a kid and as soon as I was smart enough to type leet You know in a useful fashion all I wanted to do was get molested by 35 year old guys.
+
+379
+00:28:33,120 --> 00:28:36,095
+Rym: No, not only is this this is utterly hilarious.
+
+380
+00:28:36,116 --> 00:28:40,313
+Rym: It's kind of like that Don't smoke weed commercial and Harold and Kumar go to White Castle.
+
+381
+00:28:40,714 --> 00:28:42,019
+Rym: Hey, is this your dad's gun?
+
+382
+00:28:44,781 --> 00:28:45,102
+Rym: It's just.
+
+383
+00:28:45,665 --> 00:28:47,211
+Rym: it's totally crazy.
+
+384
+00:28:47,231 --> 00:28:49,018
+Scott: it's more like that bicycle safety video.
+
+385
+00:28:52,481 --> 00:28:54,047
+Rym: It's just and every like.
+
+386
+00:28:54,168 --> 00:28:54,569
+Rym: you know how?
+
+387
+00:28:54,649 --> 00:29:00,793
+Rym: in whatever Fox News or anyone does one of these special reports They always kind of have these something could be harming your children.
+
+388
+00:29:00,813 --> 00:29:01,415
+Scott: Yep.
+
+389
+00:29:01,857 --> 00:29:02,540
+Rym: Stay tuned.
+
+390
+00:29:03,961 --> 00:29:06,369
+Rym: Simpsons did a joke like they're like and stay.
+
+391
+00:29:06,409 --> 00:29:09,760
+Rym: come back after the break to find out which popular soda may kill you.
+
+392
+00:29:11,841 --> 00:29:15,633
+Rym: But every graphic they use is subtle fear-mongering.
+
+393
+00:29:15,693 --> 00:29:20,131
+Rym: every time they show a kid typing something in leet It's always something like be quiet.
+
+394
+00:29:20,171 --> 00:29:24,459
+Rym: My parents are here or Or are you home alone?
+
+395
+00:29:25,601 --> 00:29:32,876
+Rym: Yeah, yeah This would be really funny except that I think a lot of people take it really seriously.
+
+396
+00:29:32,896 --> 00:29:34,080
+Scott: I think they do.
+
+397
+00:29:34,321 --> 00:29:36,539
+Rym: I mean Internet's serious business.
+
+398
+00:29:39,720 --> 00:29:48,880
+Scott: Okay, can we go on to the main bit all right last time we talked about hard drives and partitions and all that kind of Cool stuff and people seem to be really interested.
+
+399
+00:29:49,060 --> 00:29:53,334
+Scott: They weren't interested when we had our previous episodes about how computers work, but all of a sudden.
+
+400
+00:29:54,097 --> 00:29:55,080
+Scott: Oh now they care.
+
+401
+00:29:55,723 --> 00:29:57,813
+Scott: So we're gonna continue and please the fans.
+
+402
+00:29:57,833 --> 00:30:09,706
+Rym: and we're good to talk today about File systems because remember you partition the drive you set up all these different You know virtual drives on it or whatever and now you want to put your stuff on it But you still can't do that.
+
+403
+00:30:09,726 --> 00:30:14,320
+Rym: yet in Windows you got to right-click on the drive and say format And it asks you some questions.
+
+404
+00:30:14,441 --> 00:30:16,111
+Rym: You probably don't know what those questions means.
+
+405
+00:30:16,171 --> 00:30:22,600
+Rym: you just hit ok a bunch of times And then your computer has a little percentage bar that takes about four hours to complete and then you go about your business.
+
+406
+00:30:23,063 --> 00:30:41,466
+Scott: Yep, and Linux, you know you make a bunch of partitions But some of them had to be swap partitions and some of them have to be Data partitions and some of them you also want Windows to be able to read data from and you have to choose something different and some Of the partitions might have Windows on it, and you want Linux to be able to read it And it gets all really confusing.
+
+407
+00:30:41,907 --> 00:30:46,240
+Scott: well that is because all these partitions are formatted with different file systems.
+
+408
+00:30:46,581 --> 00:30:50,394
+Rym: You see you don't just put data raw on the hard drive.
+
+409
+00:30:50,414 --> 00:30:51,859
+Scott: Well you do basically.
+
+410
+00:30:51,879 --> 00:30:53,185
+Rym: well No, you don't direct.
+
+411
+00:30:53,226 --> 00:30:53,889
+Rym: I mean think about it.
+
+412
+00:30:54,110 --> 00:30:55,778
+Rym: You did you want to put data on the hard drive?
+
+413
+00:30:55,819 --> 00:31:02,820
+Rym: alright So you write all the bits and bytes from an mp3 on the hard drive in the first whatever space is on the hard drive.
+
+414
+00:31:03,402 --> 00:31:14,980
+Rym: Now say you then put more mp3s just right next to it in a row, so you've got this hard drive that's ones and zeros and There's all the ones and zeros from mp3 number one and then all the ones zeros from mp3 number two.
+
+415
+00:31:15,741 --> 00:31:19,200
+Rym: How do you know when you want to read that mp3 back?
+
+416
+00:31:19,880 --> 00:31:24,460
+Rym: Where one file begins and one file ends because there's no markings on the hard drive.
+
+417
+00:31:24,460 --> 00:31:25,687
+Rym: It's just ones and zeros.
+
+418
+00:31:26,049 --> 00:31:27,920
+Scott: Yeah, you just got a row ones and zeros.
+
+419
+00:31:27,960 --> 00:31:28,522
+Scott: How do you know?
+
+420
+00:31:28,884 --> 00:31:32,980
+Scott: which set of ones and zeros is this file and had which set is the other file?
+
+421
+00:31:33,500 --> 00:31:39,671
+Scott: I mean you might try to open up an mp3 with the text editor And you know it'll look like text.
+
+422
+00:31:39,691 --> 00:31:46,980
+Scott: or you know you might load You know the wrong zeros and ones off the drive into the wrong program, then who knows what the hell's gonna happen?
+
+423
+00:31:47,120 --> 00:31:47,682
+Scott: It's crazy.
+
+424
+00:31:47,923 --> 00:31:50,612
+Rym: now one thing you could do is say you put you.
+
+425
+00:31:50,632 --> 00:31:57,995
+Rym: have you come up with a standard where in the beginning of Any set of data that I put on the hard drive any discrete single file.
+
+426
+00:31:58,496 --> 00:32:05,508
+Rym: Let's say I'll say to myself I'll make the first number of bytes a Number that will tell me how big this file is.
+
+427
+00:32:05,850 --> 00:32:10,559
+Rym: so I know from whenever I read how many bytes I have to read to get the whole file.
+
+428
+00:32:11,042 --> 00:32:19,457
+Rym: And then I'll also know that the next byte after that Starts the next file, and it'll start with my little thing that tells me how big that file is.
+
+429
+00:32:20,160 --> 00:32:22,426
+Rym: now That's kind of the beginning of a file system it.
+
+430
+00:32:22,507 --> 00:32:41,280
+Rym: now you have an ordered method of knowing how to find files on the drive But at the same token, it's really slow because you have to basically read the drive Straight through file by file until you get to the file you want And you really have no way of jumping around because you have no way of knowing where an individual file begins and ends.
+
+431
+00:32:42,167 --> 00:33:00,220
+Rym: I could continue this whole thing But at the end of it you get a file system where instead of your program having to do this or you having to do It manually or your anything having to do it you use a standard method that someone else has come up with To put data on the hard drive know where that data is and optimize access to it.
+
+432
+00:33:00,420 --> 00:33:09,786
+Scott: Yes, there are very simple methods such as fat or fat 32 which you may have heard of which is like the lowest common denominator In modern PC file systems.
+
+433
+00:33:09,887 --> 00:33:17,492
+Rym: there are much more fancy methods like riser FS or XFS JFS or NTFS or HPFS or HFS.
+
+434
+00:33:18,013 --> 00:33:20,140
+Scott: HFS plus is what max use yeah?
+
+435
+00:33:20,240 --> 00:33:32,916
+Scott: Yes, there are many many fancy file systems out there, and they all have different purposes and different complicated ways of storing data on drives and arranging data on drives and remembering where files are.
+
+436
+00:33:32,996 --> 00:33:34,901
+Scott: and you know Optimizing.
+
+437
+00:33:35,443 --> 00:33:42,559
+Scott: you know ways to get files faster or read and write files to the drive more quickly and more slowly And it gets crazy.
+
+438
+00:33:42,841 --> 00:33:44,207
+Scott: But you don't have to know any of that.
+
+439
+00:33:44,307 --> 00:33:48,924
+Scott: unless you want to make a file system or write a file system Handler or anything like that
+
+440
+00:33:49,065 --> 00:33:53,840
+Rym: or if you want to make a computer that really really needs extremely optimized performance
+
+441
+00:33:54,362 --> 00:33:59,800
+Scott: Yeah, like a super enterprise thing, but all then all you really have to know is which file system to choose.
+
+442
+00:33:59,841 --> 00:34:02,428
+Scott: You don't really have to know how they work You just have to know about them.
+
+443
+00:34:02,489 --> 00:34:11,396
+Rym: and also luckily for all of you needing to know about file systems the level of importance in this started out kind of low because there weren't that many to choose from.
+
+444
+00:34:11,818 --> 00:34:19,860
+Rym: and then it kind of got high because there were a lot of options and nothing like old Linux's didn't really do a lot for you automatically and Windows.
+
+445
+00:34:19,902 --> 00:34:24,255
+Rym: you had to choose between NTFS and fat 32 and there were pros and cons of using either.
+
+446
+00:34:25,098 --> 00:34:32,539
+Rym: and now luckily It's going back down again because with things like Ubuntu and modern windows You don't need to care again because a lot of it just happens.
+
+447
+00:34:33,255 --> 00:34:43,387
+Scott: Yeah It used to be that file systems as they tried to as technology improved the file systems didn't couldn't handle large hard drives They couldn't handle large files.
+
+448
+00:34:43,768 --> 00:34:46,820
+Scott: They couldn't handle a lot of things that tech new technology brought.
+
+449
+00:34:47,342 --> 00:34:53,996
+Scott: So because the limitations of file systems you had to know a lot about them so that you could manage them in a way to Get your stuff to work.
+
+450
+00:34:54,541 --> 00:35:00,579
+Scott: But then the file system is eventually caught up with the technology and now you just pick one and you won't know.
+
+451
+00:35:00,599 --> 00:35:03,628
+Scott: you can't Even tell which one you're using unless you're doing something crazy.
+
+452
+00:35:03,789 --> 00:35:07,280
+Rym: Well, I guess if you're using the xt2, you'll drive some performance issues.
+
+453
+00:35:09,341 --> 00:35:11,210
+Scott: Xt2 works pretty good for your boot partition.
+
+454
+00:35:11,491 --> 00:35:11,753
+Rym: Yeah.
+
+455
+00:35:11,793 --> 00:35:12,115
+Rym: Yeah.
+
+456
+00:35:12,275 --> 00:35:15,496
+Rym: Yeah Maybe xt3 with old journaling.
+
+457
+00:35:15,758 --> 00:35:21,160
+Scott: Yes Let's talk about a few of the important things you do have to know about choosing a file system.
+
+458
+00:35:21,602 --> 00:35:25,659
+Scott: The first important thing you have to know is journaled versus not journal.
+
+459
+00:35:25,859 --> 00:35:35,800
+Rym: now I'll say very simply that the general trend is that almost all modern robust file systems are in some way Journalized as the only non-journalized file systems.
+
+460
+00:35:35,840 --> 00:35:40,955
+Scott: You're probably going to run into our xt2 and fat 32 any other file system.
+
+461
+00:35:41,416 --> 00:35:42,940
+Rym: fat 16 fat 12.
+
+462
+00:35:42,940 --> 00:35:46,412
+Scott: You're not using those you're not gonna run into those and that's using an old DOS computer.
+
+463
+00:35:46,452 --> 00:35:48,480
+Scott: You might have fat six the one on CD-ROMs.
+
+464
+00:35:49,941 --> 00:35:53,880
+Scott: Okay, yes a CD-ROM has a non journaled file system on it.
+
+465
+00:35:54,000 --> 00:35:56,917
+Scott: Yes for some floppy disk has a non journaled file system.
+
+466
+00:35:56,937 --> 00:36:00,860
+Rym: now You might wonder what this means and it's kind of complicated.
+
+467
+00:36:00,981 --> 00:36:03,714
+Rym: I'll try to do this as non technically as possible.
+
+468
+00:36:03,834 --> 00:36:05,000
+Scott: I could do it pretty non technically.
+
+469
+00:36:05,100 --> 00:36:05,824
+Rym: I think I can too.
+
+470
+00:36:05,844 --> 00:36:06,668
+Rym: We'll kind of play it.
+
+471
+00:36:06,748 --> 00:36:12,209
+Scott: All right, and a journaled file system is Anytime you want to do something to the hard drive.
+
+472
+00:36:12,229 --> 00:36:15,160
+Scott: Let's say write a file delete a file read.
+
+473
+00:36:15,260 --> 00:36:22,048
+Scott: Well, not read a file anytime you want to make a change to the data on the drive you have this journal and what you do.
+
+474
+00:36:22,068 --> 00:36:33,660
+Scott: the journals another space on the drive in the file system and Before the file system does something to the drive it writes down what it's about to do and this sort of rotates.
+
+475
+00:36:33,700 --> 00:36:42,057
+Scott: You know in this big log, you know journal and you know something that you did a long time ago We'll drop off the end of the journal and something you just did we'll get on top of the journal.
+
+476
+00:36:42,540 --> 00:36:51,143
+Scott: now What happens here is let's say the computer's in the middle of doing something to the hard drive, you know, it's writing a file down and What do you know?
+
+477
+00:36:51,163 --> 00:36:54,072
+Scott: the power gets cut as it's writing the file.
+
+478
+00:36:54,513 --> 00:36:56,780
+Scott: this used to fuck you a long time ago.
+
+479
+00:36:56,900 --> 00:36:58,185
+Scott: This would fuck you royally.
+
+480
+00:36:58,767 --> 00:36:59,811
+Rym: Well, it depends because it.
+
+481
+00:37:00,293 --> 00:37:11,029
+Rym: there were times when a hard drive I mean nowadays for performance reasons a lot of systems would do things where they would say something is written to the drive But it wouldn't really be.
+
+482
+00:37:11,049 --> 00:37:25,259
+Rym: it'd be queued up to be written later But it would be held in RAM Not written to the drive in order to let the computer get on with its business while it waited for the slow hard drive to Be ready which meant you stood to lose a lot of data if suddenly a computer got turned
+
+483
+00:37:25,399 --> 00:37:37,798
+Scott: off Yeah, there's also race conditions involved or if one thing happens before another thing which is possible Then you know You might lose data or data might not actually be written to the drive the way you think it is.
+
+484
+00:37:37,878 --> 00:37:40,829
+Scott: and then power goes out or something else happens.
+
+485
+00:37:40,889 --> 00:37:46,572
+Scott: and then you know you the computer comes back up and The data isn't like you thought it was and something got lost.
+
+486
+00:37:46,632 --> 00:37:47,275
+Scott: and that's not good
+
+487
+00:37:47,576 --> 00:38:04,260
+Rym: now in pure Write transaction file systems and kernels where it's set so that you can't write to the drive indirectly You can't write to the drive and not have it actually write to the drive where the computer will sit there and not let you Do anything until every bit of data needs to be written to the drive.
+
+488
+00:38:04,882 --> 00:38:11,928
+Rym: It wouldn't be that big of an issue because whatever file you were modifying at the time would be fucked but the file system would be consistent still mm-hmm.
+
+489
+00:38:12,389 --> 00:38:17,403
+Rym: as you started off loading this and letting the computer think things were written to the Drive when they really weren't.
+
+490
+00:38:17,965 --> 00:38:27,119
+Rym: and let's say the computer updated its table in the file system saying how big a file was and Just before it actually writes to the file the next step the power goes out.
+
+491
+00:38:27,621 --> 00:38:31,160
+Rym: Now when the computer turns back on the file system is in an inconsistent state.
+
+492
+00:38:31,823 --> 00:38:40,274
+Rym: One part of the file system says one thing but that part of the file system It's talking about is not that way and that doesn't just screw the file you're working with.
+
+493
+00:38:40,315 --> 00:38:41,980
+Rym: that can screw up everything.
+
+494
+00:38:42,443 --> 00:38:43,773
+Scott: Yep, now back in the day.
+
+495
+00:38:43,793 --> 00:38:45,081
+Scott: There were a few ways You know.
+
+496
+00:38:45,362 --> 00:38:50,857
+Scott: if this happened it could either screw you or you could run a program like scan disk or would.
+
+497
+00:38:51,037 --> 00:38:52,000
+Scott: there are all those?
+
+498
+00:38:52,160 --> 00:39:04,561
+Scott: Programs these back in the day this check disk this all these kinds of little programs that would check your file system to make sure It wasn't screwed up and it would attempt to fix it if something like this happened Nowadays.
+
+499
+00:39:04,702 --> 00:39:09,215
+Scott: because every time a file system is about to make a change it writes something to the journal.
+
+500
+00:39:09,496 --> 00:39:15,877
+Scott: if it's a journaled file system This is much easier because it just looks at the journal and says that's everything.
+
+501
+00:39:15,938 --> 00:39:17,022
+Scott: I said it was gonna Do.
+
+502
+00:39:17,303 --> 00:39:19,392
+Scott: let's look and see what it actually looks like now.
+
+503
+00:39:19,814 --> 00:39:20,979
+Scott: Let's look at that journal again.
+
+504
+00:39:21,441 --> 00:39:24,560
+Scott: Aha, and everything's fixed really quickly with no problems.
+
+505
+00:39:24,801 --> 00:39:33,120
+Rym: Yep, it'll step through what was supposed to be done and kind of redo it all so that everything is consistent And you might still lose data depending on what happened.
+
+506
+00:39:33,200 --> 00:39:42,600
+Rym: But you're very very very very unlikely and in some cases It's almost impossible in fact to have an inconsistent state or an actually broken file system.
+
+507
+00:39:42,780 --> 00:39:49,200
+Scott: Yeah, so while you might lose a file or two at the most something like that your file system will not be incorrect.
+
+508
+00:39:49,401 --> 00:39:56,640
+Scott: It will accurately and correctly know which files are where on your hard drive will not report report to you false information.
+
+509
+00:39:57,142 --> 00:40:06,820
+Rym: But again, you don't really need to worry about that because you're probably going to install something like Ubuntu Where it just works, it'll just use a file system.
+
+510
+00:40:07,081 --> 00:40:11,220
+Rym: It's gonna be journalized because you're not really gonna see a non-journalized file system anymore.
+
+511
+00:40:11,421 --> 00:40:14,220
+Rym: Yep, and you'll never even care what file system is on the drive.
+
+512
+00:40:14,341 --> 00:40:14,924
+Scott: No, you won't.
+
+513
+00:40:14,964 --> 00:40:22,193
+Rym: you won't even know if even if someone asks you now in Windows It used to be you used to really have a choice between fat 32 and NTFS.
+
+514
+00:40:22,575 --> 00:40:25,337
+Rym: before that there were other things But don't worry about that.
+
+515
+00:40:25,649 --> 00:40:32,445
+Scott: Yeah the only file systems windows actually really supports are fat 32 at NTFS and this is a Problem for a few reasons.
+
+516
+00:40:32,505 --> 00:40:39,650
+Scott: is that if you put Linux on some partitions in a hard drive in your computer Windows can't really access those partitions now.
+
+517
+00:40:39,670 --> 00:40:42,759
+Rym: There are ways to make windows be able to read ext3.
+
+518
+00:40:43,240 --> 00:40:44,126
+Scott: It's not easy.
+
+519
+00:40:44,387 --> 00:40:46,560
+Rym: It's a pain in the ass and you can break things.
+
+520
+00:40:46,661 --> 00:40:53,336
+Scott: Yeah Also You notice you know how you'll get an iPod and it'll say formatted for Windows formatted for Mac.
+
+521
+00:40:53,777 --> 00:41:00,160
+Scott: if it's formatted for Mac That's because it has an HFS+ file system on the storage space in the iPod.
+
+522
+00:41:00,787 --> 00:41:06,080
+Scott: If it's formatted for Windows It has a fat 32 file system on the storage space in the iPod.
+
+523
+00:41:06,702 --> 00:41:09,251
+Scott: Now a Mac can read a 532 file system.
+
+524
+00:41:09,532 --> 00:41:15,639
+Scott: a Linux computer could read just about any file system You've got but Windows can only read a couple of them.
+
+525
+00:41:15,941 --> 00:41:21,880
+Scott: So that's the reason that iPods, you know have the two different formatings when you plug it into a Windows computer or a Mac.
+
+526
+00:41:22,522 --> 00:41:29,419
+Rym: Now one thing that people particularly in Windows used to have to worry about is the block size And they might have called it something different.
+
+527
+00:41:29,901 --> 00:41:41,020
+Rym: But when you to put it very simply when you address files on a hard drive when you're looking for them when you're writing them The block size is how big of a chunk you write at a time.
+
+528
+00:41:41,583 --> 00:41:44,497
+Rym: So let's say you make the block size one megabyte.
+
+529
+00:41:44,537 --> 00:41:45,120
+Rym: That's huge.
+
+530
+00:41:45,300 --> 00:41:50,540
+Rym: But let's just say if you write a file that's 1.5 megabytes worth of data.
+
+531
+00:41:50,660 --> 00:41:52,608
+Rym: It takes up two blocks worth.
+
+532
+00:41:52,648 --> 00:41:55,760
+Rym: so it ends up taking up two megabytes worth of space on your disk.
+
+533
+00:41:56,402 --> 00:42:04,020
+Rym: This was a problem back when hard drives were small and you really have to fiddle with your block size To do the trade-off between space wasted and performance.
+
+534
+00:42:04,126 --> 00:42:11,611
+Scott: Yes because if you had bigger block sizes you had better performance and that you could actually Address all those different blocks.
+
+535
+00:42:11,672 --> 00:42:12,980
+Scott: Yeah, there were too many blocks.
+
+536
+00:42:13,682 --> 00:42:17,193
+Scott: Old computers weren't powerful enough to handle so many different blocks.
+
+537
+00:42:17,233 --> 00:42:17,594
+Scott: They couldn't.
+
+538
+00:42:17,714 --> 00:42:19,500
+Scott: they didn't have enough room to address them all.
+
+539
+00:42:19,885 --> 00:42:25,120
+Scott: you know if you have Like two bits that's enough to address four blocks.
+
+540
+00:42:26,180 --> 00:42:30,400
+Scott: So if you've got five blocks, well, you don't have enough address space.
+
+541
+00:42:30,902 --> 00:42:32,006
+Rym: Yep, and you just have.
+
+542
+00:42:32,046 --> 00:42:35,740
+Rym: there are a lot of debates over how big they could be and how small they should be and blah blah.
+
+543
+00:42:36,061 --> 00:42:38,450
+Rym: Now doesn't matter all automatic.
+
+544
+00:42:38,530 --> 00:42:39,534
+Rym: don't even worry about it.
+
+545
+00:42:39,594 --> 00:42:41,180
+Scott: Don't even worry about that shit anymore.
+
+546
+00:42:41,401 --> 00:42:47,420
+Rym: So what do you have to worry about with file systems aside from picking one if you even have that option with whatever you're installing?
+
+547
+00:42:47,660 --> 00:42:55,852
+Scott: So there are two things you really have to worry about and both of them involve Windows and NTFS because on Linux and Mac file systems just work nicely.
+
+548
+00:42:55,913 --> 00:43:04,556
+Scott: The first thing is something you may have heard of defragmenting or Fragmentation and defragmentation would be the cure for fragmentation.
+
+549
+00:43:04,857 --> 00:43:14,580
+Rym: Yeah, it's basically You know in old file systems like, you know NTFS and fat 32 and all that if you had files would be written to the disk all over the place.
+
+550
+00:43:15,042 --> 00:43:23,360
+Rym: Parts of a file might be in all different places depending on how it was written to the drive because it might have been written In a hurry, it might have been faster to write different parts in different places.
+
+551
+00:43:23,622 --> 00:43:26,884
+Scott: That's just the way those file systems work Is that they don't?
+
+552
+00:43:27,025 --> 00:43:27,225
+Scott: you know?
+
+553
+00:43:27,426 --> 00:43:34,239
+Scott: always make sure that all the files and the driver arranged in a nice way They write them to the drive according to a different method.
+
+554
+00:43:34,279 --> 00:43:43,600
+Rym: Yep So whenever you had to read them back a lot of times if they were in weird places It would slow down as the hard drive had to scan all over the place to get all the bits and put them together.
+
+555
+00:43:43,701 --> 00:43:50,160
+Scott: Yeah, let's say you had a video file That was a hundred megabytes, you know, and it looks at your hard drive and it finds 50 megabytes of free space.
+
+556
+00:43:50,180 --> 00:43:54,923
+Scott: So it puts the first half of the video file there and then it goes to the end of the drive where there's more empty Space.
+
+557
+00:43:54,984 --> 00:43:56,819
+Scott: it puts the second 50 megabytes over there.
+
+558
+00:43:57,181 --> 00:43:58,225
+Scott: Well now you've got.
+
+559
+00:43:58,386 --> 00:44:02,020
+Scott: you know trying to read that video file isn't gonna be so fast.
+
+560
+00:44:02,161 --> 00:44:05,100
+Scott: I mean, you're not really gonna notice the slowdown big-time.
+
+561
+00:44:05,521 --> 00:44:14,567
+Scott: But after a while use the computer a lot you move files around a lot you delete files you install programs your move programs You download videos you delete videos.
+
+562
+00:44:14,929 --> 00:44:18,240
+Scott: You're gonna have a lot of files and a lot of pieces all over your hard drive.
+
+563
+00:44:18,802 --> 00:44:19,825
+Scott: It's gonna be a big mess.
+
+564
+00:44:20,447 --> 00:44:26,486
+Scott: So you have to run defrag in Windows and that will fix Mostly this problem.
+
+565
+00:44:26,586 --> 00:44:28,775
+Scott: and now first all the files can take you.
+
+566
+00:44:28,836 --> 00:44:32,480
+Rym: real quick tip Defragging in Windows is slow as hell.
+
+567
+00:44:32,985 --> 00:44:42,960
+Rym: And if you want to do it real quickly The fastest way to do it is to take all the files you want to defrag men Copy them to another drive and then copy them back because they'll be rewritten sequentially.
+
+568
+00:44:43,402 --> 00:44:45,088
+Scott: Yeah, that that's a good method.
+
+569
+00:44:45,108 --> 00:44:51,940
+Scott: if you have like a bunch of video files and like a media drive Just copy them all to some other media drive and copy them back.
+
+570
+00:44:51,980 --> 00:44:53,148
+Scott: But that's not always possible.
+
+571
+00:44:53,188 --> 00:44:54,840
+Scott: if you know, you got a really big drive.
+
+572
+00:44:55,622 --> 00:44:58,420
+Scott: So the only other way to do it is to run the defrag program.
+
+573
+00:44:58,621 --> 00:44:59,966
+Scott: I recommend running it overnight.
+
+574
+00:45:00,568 --> 00:45:03,660
+Scott: If you have really big hard drives, it might take a really long time.
+
+575
+00:45:03,704 --> 00:45:05,808
+Rym: Yeah And don't run it while you're using the computer.
+
+576
+00:45:05,828 --> 00:45:10,288
+Rym: that just makes it slow and it won't be able to do anything to files you're Working with and it'll make a mess.
+
+577
+00:45:10,730 --> 00:45:12,700
+Scott: Yeah, it generally it's not effective.
+
+578
+00:45:12,760 --> 00:45:17,256
+Rym: You also can't really run it if you don't have enough free space on the drive.
+
+579
+00:45:17,316 --> 00:45:20,888
+Rym: if your drive is almost full Don't even bother trying to defrag men it.
+
+580
+00:45:20,989 --> 00:45:22,293
+Rym: it might not even work.
+
+581
+00:45:22,574 --> 00:45:24,100
+Rym: if it does it's gonna take days.
+
+582
+00:45:24,561 --> 00:45:31,600
+Scott: Yeah, cuz I mean imagine if you're trying to defragment like this 200 megabyte file and you've got 50 megabytes of free space.
+
+583
+00:45:32,001 --> 00:45:37,720
+Scott: Well, it's gotta try to get that file into one piece and it's only got this small amount of free space to work with.
+
+584
+00:45:37,760 --> 00:45:41,815
+Scott: It's like one of those sliding puzzles where yeah, you know, you're trying to slide everything.
+
+585
+00:45:41,855 --> 00:45:43,240
+Scott: You only have one empty space.
+
+586
+00:45:43,341 --> 00:45:45,280
+Scott: So you're trying to it really sucks.
+
+587
+00:45:45,421 --> 00:45:49,280
+Rym: I can't just put it all in RAM or anything because then if anything happens you lose that data.
+
+588
+00:45:49,704 --> 00:45:51,460
+Scott: Yeah, it's it's really a big man.
+
+589
+00:45:51,480 --> 00:45:52,043
+Scott: I shouldn't.
+
+590
+00:45:52,063 --> 00:45:55,400
+Rym: people ask us a lot is well, how do I defrag in Linux?
+
+591
+00:45:55,620 --> 00:46:00,980
+Rym: And the answer is very simply you don't need to anymore modern Linux file systems.
+
+592
+00:46:01,162 --> 00:46:02,780
+Rym: Take care of that shit for you.
+
+593
+00:46:02,820 --> 00:46:10,213
+Scott: but Linux file systems have been taking care of that shit for you since ext2 and early 90s, so Don't worry about it.
+
+594
+00:46:10,274 --> 00:46:10,939
+Rym: It's fine.
+
+595
+00:46:11,341 --> 00:46:21,158
+Scott: If you're not using NTFS or fat 32 you do not need to defragment the file system because it is intelligently designed If I may say so.
+
+596
+00:46:21,987 --> 00:46:23,120
+Scott: There is a great article.
+
+597
+00:46:23,622 --> 00:46:27,334
+Scott: I'll see if I could find the link to it and maybe we'll put it in the post about.
+
+598
+00:46:27,394 --> 00:46:36,147
+Scott: that shows you pictures and diagrams of why Linux file systems don't need to be defragmented but Windows ones do and That should explain it for you.
+
+599
+00:46:36,207 --> 00:46:38,220
+Scott: But all you need to know is that in Linux?
+
+600
+00:46:38,420 --> 00:46:41,699
+Scott: There's no such thing as defragmenting because because the file systems don't suck.
+
+601
+00:46:42,520 --> 00:46:48,120
+Scott: Now the other thing you need to know about file systems besides fragmentation is how do you read and write?
+
+602
+00:46:48,401 --> 00:46:51,480
+Scott: NTFS and Windows file systems from Linux and Mac.
+
+603
+00:46:51,741 --> 00:46:54,699
+Rym: Well, the first part reading is very easy.
+
+604
+00:46:55,101 --> 00:46:57,750
+Rym: Linux can pretty much just read NTFS.
+
+605
+00:46:57,810 --> 00:46:59,195
+Rym: fine with no trouble at all.
+
+606
+00:46:59,315 --> 00:47:00,499
+Scott: modern Linux is can.
+
+607
+00:47:00,519 --> 00:47:05,136
+Rym: yeah If you boot in Ubuntu CD Ubuntu Ubuntu, it'll just read NTFS.
+
+608
+00:47:05,176 --> 00:47:06,160
+Scott: Well, you have to mount it.
+
+609
+00:47:06,381 --> 00:47:10,079
+Rym: Yeah, but if you mount a drive you have a hard drive and you mount it, it'll just read the NTFS.
+
+610
+00:47:10,099 --> 00:47:10,942
+Rym: fine No trouble.
+
+611
+00:47:11,142 --> 00:47:11,584
+Scott: No trouble.
+
+612
+00:47:12,286 --> 00:47:15,455
+Scott: But if you want to write data to it, that's another story.
+
+613
+00:47:15,856 --> 00:47:16,096
+Scott: now.
+
+614
+00:47:16,658 --> 00:47:22,514
+Scott: right now I would recommend if you're using Linux do not write data to an NTFS file system.
+
+615
+00:47:22,534 --> 00:47:23,216
+Scott: Don't even try.
+
+616
+00:47:23,457 --> 00:47:24,520
+Scott: it's not worth the effort.
+
+617
+00:47:24,821 --> 00:47:43,367
+Scott: I mean if you really need to put data on to an NTFS file system that you have in a Linux file system Just like drop in a live CD copy that data to some other thing like a DVD or another hard drive with a fat 30 Or thumb drive or something something like that Reboot to Windows and then write it.
+
+618
+00:47:43,929 --> 00:47:47,180
+Scott: It'll save you a lot of hassle and it'll be nice and easy.
+
+619
+00:47:47,561 --> 00:47:58,040
+Scott: I mean it won't be as slick and stylish and as time and time-saving as it could be But it'll work guaranteed if you're adventurous.
+
+620
+00:47:58,301 --> 00:47:59,506
+Scott: there are a few things you could try.
+
+621
+00:47:59,887 --> 00:48:11,060
+Scott: first thing you could try is you could enable NTFS writing in the kernel and That's complicated and it actually has limitation in that you can't change the sizes of any files or delete any files.
+
+622
+00:48:11,723 --> 00:48:20,140
+Scott: So if you have a text file with a hundred words in it You can pretty much you can edit it but in the end you can't add any letters or remove any letters.
+
+623
+00:48:20,865 --> 00:48:22,176
+Scott: So it's not useful at all.
+
+624
+00:48:23,285 --> 00:48:28,672
+Scott: and the only other thing you can do is There's a way that people are talking about now.
+
+625
+00:48:28,752 --> 00:48:30,520
+Scott: You can find some how-tos on forums.
+
+626
+00:48:30,700 --> 00:48:38,080
+Scott: I haven't tried it or you can actually take the NTFS driver from Windows and run it in Linux to read and write to file systems.
+
+627
+00:48:38,763 --> 00:48:40,330
+Scott: You can try it if you really want to.
+
+628
+00:48:40,410 --> 00:48:42,640
+Scott: maybe is like on a test file system or something.
+
+629
+00:48:42,821 --> 00:48:44,388
+Rym: I've seen people say it works just fine.
+
+630
+00:48:44,609 --> 00:48:45,896
+Scott: Yeah, I'm sure it does.
+
+631
+00:48:46,056 --> 00:48:46,780
+Scott: I just haven't tried.
+
+632
+00:48:46,840 --> 00:48:47,867
+Scott: No, the only reason I don't.
+
+633
+00:48:47,947 --> 00:48:49,939
+Scott: I'm pretty sure it's not easy to set up.
+
+634
+00:48:50,180 --> 00:48:51,666
+Scott: No, it's not as easy as doing nothing.
+
+635
+00:48:51,726 --> 00:48:57,245
+Rym: The only reason I don't try is simply that for all that dual booting trouble Just buy more hard drives.
+
+636
+00:48:57,265 --> 00:48:58,208
+Rym: They're so cheap.
+
+637
+00:48:58,650 --> 00:49:01,780
+Rym: I just bought a 320 gigabyte hard drive for less than a hundred bucks.
+
+638
+00:49:03,620 --> 00:49:05,886
+Scott: Yeah, well it depends what you want to transfer.
+
+639
+00:49:05,926 --> 00:49:10,700
+Scott: for, you know, there are different reasons to be transferring data between NTFS and Linux.
+
+640
+00:49:11,502 --> 00:49:20,512
+Scott: I mean, let's say you got you're using wine to read some programs off of an NTFS drive But then you want wine to be able to say write some data to that drive.
+
+641
+00:49:20,552 --> 00:49:21,175
+Scott: You never know.
+
+642
+00:49:21,696 --> 00:49:25,394
+Rym: there people have their reasons Yeah, and I found ways around almost all of those reasons.
+
+643
+00:49:25,535 --> 00:49:25,776
+Scott: Yeah.
+
+644
+00:49:25,917 --> 00:49:26,138
+Scott: Yep.
+
+645
+00:49:26,239 --> 00:49:31,095
+Rym: Yep Anyway, we're gonna stop now because we went on long and there's not much we can say.
+
+646
+00:49:31,155 --> 00:49:32,580
+Rym: without going into technical details.
+
+647
+00:49:32,743 --> 00:49:43,039
+Scott: We kind of rambled a bit Yep But all you have to know is that you put zeros and ones in the hard drive and you need some way to figure out Which zeros and ones are what and that is what a file system is.
+
+648
+00:49:49,562 --> 00:49:52,148
+Rym: This has been GeekNights with Rym and Scott.
+
+649
+00:49:52,168 --> 00:49:54,334
+Rym: Special thanks to DJ pretzel for the opening music.
+
+650
+00:49:55,016 --> 00:50:06,346
+Scott: Be sure to visit our website at www.frontroadcrew.com where you'll find show notes links our awesome forum a link to our crapper map and Links to all the RSS feeds.
+
+651
+00:50:06,787 --> 00:50:12,506
+Rym: we say feeds plural because GeekNights airs four nights a week covering four different Brands of geekery.
+
+652
+00:50:12,988 --> 00:50:17,306
+Rym: Mondays are science and technology Tuesdays We have video games board games and RPGs.
+
+653
+00:50:17,667 --> 00:50:22,660
+Rym: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+654
+00:50:23,521 --> 00:50:31,540
+Scott: You can send us feedback by email to GeekNights at frontrowcrew.com Or you can send audio feedback via audio.
+
+655
+00:50:31,962 --> 00:50:36,431
+Scott: Just click the link that says send me an audio on the right side of our website If you like what you hear.
+
+656
+00:50:36,512 --> 00:50:40,670
+Rym: you can catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+657
+00:50:40,910 --> 00:50:44,000
+Rym: for the complete archives visit the website which has everything.
+
+658
+00:50:44,582 --> 00:50:50,607
+Scott: GeekNights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+659
+00:50:51,090 --> 00:50:57,139
+Scott: this means you can do whatever you want with it As long as you give us credit don't make money and share it in kind.
+
+660
+00:50:57,941 --> 00:51:03,376
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+661
+00:51:03,677 --> 00:51:04,980
+Scott: It's actually recorded at night.
+

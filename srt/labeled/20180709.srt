@@ -1,0 +1,3444 @@
+1
+00:00:08,620 --> 00:00:11,568
+Rym: It's Monday July 9th 2018.
+
+2
+00:00:11,568 --> 00:00:14,836
+Rym: I'm Rym, I'm Scott and this is GeekNights tonight.
+
+3
+00:00:15,257 --> 00:00:16,440
+Rym: micro services.
+
+4
+00:00:18,642 --> 00:00:19,658
+Rym: Let's do this.
+
+5
+00:00:23,721 --> 00:00:32,192
+Scott: So, you know bike at home like you do like you do the source of all opening bits the bike home Yep, in the subway ride home in the summer.
+
+6
+00:00:32,272 --> 00:00:41,340
+Scott: It's us traveling through the city and in the winter It's me skiing and because I live at the center of the universe I bike past the United Nations on the way home Which is often a problem.
+
+7
+00:00:42,060 --> 00:00:51,366
+Scott: So, you know is that like they really need to make a bike path behind the UN they're gonna event 2030 whatever anyway And I passed by.
+
+8
+00:00:51,386 --> 00:00:56,834
+Scott: you know, there's the Japan Society and there's the park across the street But one of the nice places you can hang out there.
+
+9
+00:00:56,895 --> 00:00:57,498
+Scott: Well, what's her name?
+
+10
+00:00:59,060 --> 00:00:59,201
+Rym: That's.
+
+11
+00:00:59,221 --> 00:01:00,547
+Rym: I know that I know the place you're talking about.
+
+12
+00:01:00,688 --> 00:01:01,170
+Scott: What's her name?
+
+13
+00:01:01,391 --> 00:01:06,330
+Scott: I can't remember her name the actress Hepburn, there's the Hepburn Park with the flowers.
+
+14
+00:01:06,350 --> 00:01:12,595
+Scott: You can walk through anyway, so That particular spot next to that little outdoor snacky restaurant place.
+
+15
+00:01:12,615 --> 00:01:14,060
+Rym: There's usually people protesting.
+
+16
+00:01:14,221 --> 00:01:15,685
+Scott: There's usually people protesting there.
+
+17
+00:01:15,745 --> 00:01:18,755
+Rym: It's usually anti following or it's pro Falun Gong.
+
+18
+00:01:18,855 --> 00:01:20,683
+Scott: No, I haven't seen them in all year Really?
+
+19
+00:01:20,823 --> 00:01:23,280
+Rym: No, so I haven't biked past there yet this year.
+
+20
+00:01:23,420 --> 00:01:23,922
+Scott: Okay, but
+
+21
+00:01:23,962 --> 00:01:25,789
+Rym: last year was always that fellow my
+
+22
+00:01:25,810 --> 00:01:38,140
+Scott: favorite guy that I see who I didn't haven't seen in a few weeks I've only seen him maybe three times and that was like last month is a Very Orthodox Jew guy who is protesting against Israel because they are doing inhuman things to Palestinian people.
+
+23
+00:01:38,421 --> 00:01:39,164
+Scott: That's my guy.
+
+24
+00:01:39,766 --> 00:01:40,729
+Rym: I'm with them.
+
+25
+00:01:41,171 --> 00:01:43,580
+Scott: I saw some people protesting something last week.
+
+26
+00:01:43,620 --> 00:01:47,177
+Scott: I didn't know if it was you know, what they were doing was good or bad.
+
+27
+00:01:47,197 --> 00:01:47,659
+Scott: I couldn't tell.
+
+28
+00:01:48,061 --> 00:01:51,240
+Scott: Yeah, it was in some other language and I don't know enough about it.
+
+29
+00:01:51,521 --> 00:02:00,994
+Rym: I have multiple times just recently like in the last couple years run into protests in the city where I Can't tell if they're for or anti whatever like scub like whatever.
+
+30
+00:02:01,034 --> 00:02:02,540
+Rym: I don't know what their position is.
+
+31
+00:02:02,843 --> 00:02:04,380
+Rym: I know they care about scub, but I cannot.
+
+32
+00:02:04,460 --> 00:02:16,000
+Scott: So not at the UN but last week outside of your apartment building because the yeah The Ecuadorian consulate is right outside Rym's apartment and there are people protesting and I figured out what they're protesting.
+
+33
+00:02:16,261 --> 00:02:23,580
+Scott: All right, the former president of Ecuador Correa, right was arrested or was at least I think a court ordered his arrest.
+
+34
+00:02:23,580 --> 00:02:38,260
+Scott: I don't know if he was actually arrested yet but a court ordered his arrest because they were claiming he was involved with a failed kidnapping of an Political opponent and I don't know if Correa was a good guy or a bad guy or if he kidnapped anyone or not.
+
+35
+00:02:38,300 --> 00:02:39,839
+Scott: So, I don't know which side of this is right.
+
+36
+00:02:40,482 --> 00:02:43,310
+Scott: But the people who were protesting outside they were.
+
+37
+00:02:43,510 --> 00:02:45,957
+Scott: they had signs that were like I am Correa.
+
+38
+00:02:45,997 --> 00:02:46,900
+Scott: They were pro-correa.
+
+39
+00:02:47,904 --> 00:02:53,708
+Scott: They were upset that he was being attacked by the current Government of Ecuador in some way.
+
+40
+00:02:54,209 --> 00:02:57,820
+Scott: but today outside the UN was a very easy to understand protest.
+
+41
+00:02:58,001 --> 00:03:01,070
+Scott: It was a pro-immigrant stop locking up children protests.
+
+42
+00:03:01,091 --> 00:03:04,000
+Scott: All right, and as I'm biking past I give them a high low.
+
+43
+00:03:04,200 --> 00:03:05,404
+Scott: Bring my bow ding ding ding.
+
+44
+00:03:05,604 --> 00:03:06,246
+Rym: Yeah.
+
+45
+00:03:06,346 --> 00:03:11,320
+Scott: Yeah, I keep going and I'm just biking and behind the guy biking behind me.
+
+46
+00:03:11,441 --> 00:03:12,130
+Scott: So it's a guy.
+
+47
+00:03:12,150 --> 00:03:14,238
+Scott: Oh progressive enough to bike.
+
+48
+00:03:15,181 --> 00:03:19,000
+Rym: I'm assuming that the where this story is going is that this dude is a piece of shit.
+
+49
+00:03:19,261 --> 00:03:20,406
+Scott: It is a piece of shit.
+
+50
+00:03:20,606 --> 00:03:21,952
+Rym: All right, does he punch him in the dick?
+
+51
+00:03:22,274 --> 00:03:23,700
+Scott: No, okay, I was bike.
+
+52
+00:03:25,162 --> 00:03:26,206
+Scott: I feel like punching someone.
+
+53
+00:03:26,307 --> 00:03:26,528
+Scott: I was.
+
+54
+00:03:26,688 --> 00:03:30,632
+Scott: I tried to goad him into punching me in the dick hoping then he would end up in Jail, but that did not happen.
+
+55
+00:03:30,855 --> 00:03:30,997
+Scott: anyway.
+
+56
+00:03:32,601 --> 00:03:34,205
+Scott: He just I hear behind me.
+
+57
+00:03:34,225 --> 00:03:39,420
+Scott: Yeah, why don't you come here legally and I say hey Wow shut the fuck up asshole.
+
+58
+00:03:39,621 --> 00:03:42,798
+Scott: Yeah, you know I should take your children lock him up.
+
+59
+00:03:43,321 --> 00:03:45,069
+Scott: Concentration camp right.
+
+60
+00:03:45,712 --> 00:03:47,540
+Scott: so, you know, we're just doing some yelling.
+
+61
+00:03:47,842 --> 00:03:50,559
+Scott: But then here's the part where I failed.
+
+62
+00:03:50,599 --> 00:03:58,271
+Rym: yet I also learned because I remember my similar story where I told that Nazi guy shut up Because basically I'm busy biking right on First Avenue.
+
+63
+00:03:58,451 --> 00:04:00,358
+Scott: try most of my concentration is on.
+
+64
+00:04:00,418 --> 00:04:04,936
+Rym: don't die Right up and first Avenue ain't the most dangerous, but it ain't that low.
+
+65
+00:04:04,976 --> 00:04:05,740
+Scott: We're in a bike lane.
+
+66
+00:04:05,840 --> 00:04:07,348
+Scott: Anyway, my concentration is on.
+
+67
+00:04:07,368 --> 00:04:07,770
+Scott: don't die.
+
+68
+00:04:07,851 --> 00:04:11,248
+Scott: First of all, right from cars Not from this guy.
+
+69
+00:04:11,268 --> 00:04:19,040
+Scott: I'm not worried about this guy killing me and Basically, you know, he his argument was right.
+
+70
+00:04:19,402 --> 00:04:22,539
+Scott: He was obviously skilled in these the art of street arguing.
+
+71
+00:04:26,984 --> 00:04:29,719
+Scott: He said do you leave your doors unlocked at night?
+
+72
+00:04:30,261 --> 00:04:31,987
+Scott: Right trying to imply that?
+
+73
+00:04:32,167 --> 00:04:36,020
+Scott: uh letting people into America from other countries is like leaving our doors on.
+
+74
+00:04:36,080 --> 00:04:45,247
+Rym: No what really amazes me the most about these piece of shit people is that it's like they all go to the same website and Memorize like the same six talking.
+
+75
+00:04:45,347 --> 00:04:49,700
+Scott: So since I'm just trying not to die my I just yell some things like let them all in.
+
+76
+00:04:49,760 --> 00:04:50,727
+Scott: I don't believe in countries.
+
+77
+00:04:50,767 --> 00:04:52,116
+Scott: Yeah, you want to go over to my apartment.
+
+78
+00:04:52,137 --> 00:04:52,620
+Rym: I'm like this.
+
+79
+00:04:52,720 --> 00:04:57,588
+Scott: I've learned that's the right way to go because I'm like, I'm like, oh you're I'm sure your grandparents They're from America.
+
+80
+00:04:57,629 --> 00:05:04,720
+Rym: you Native American, bro You know that kind of realize long ago that pretty much anyone who has this kind of opinion is already beyond reason debate.
+
+81
+00:05:05,082 --> 00:05:08,720
+Rym: So you might as well just double down on a position that's abhorrent to them and go.
+
+82
+00:05:08,841 --> 00:05:18,399
+Scott: This guy did not continue Following me to continue the argument and it's a good thing He did not because when I was on the bridge, of course, then you think of the best rebuttal.
+
+83
+00:05:18,621 --> 00:05:19,959
+Scott: No when you're on the bridge.
+
+84
+00:05:20,281 --> 00:05:27,600
+Scott: So if anyone encounters anyone who uses the argument do when you're talking about immigration of do you leave your doors?
+
+85
+00:05:27,680 --> 00:05:30,013
+Scott: Locked at night if anyone uses that argument.
+
+86
+00:05:30,234 --> 00:05:31,240
+Scott: Here's what you say, right?
+
+87
+00:05:31,440 --> 00:05:32,170
+Scott: Here's what you say.
+
+88
+00:05:32,190 --> 00:05:39,920
+Scott: you say yes But if someone knocks on my door Because they're the victim of domestic violence and they need help and you're trying to rescue them you open the fucking door.
+
+89
+00:05:40,161 --> 00:05:41,265
+Scott: Yeah, that's your argument.
+
+90
+00:05:41,325 --> 00:05:52,007
+Scott: Yeah, so if anybody runs into that asshole making the same argument now You can say that right away and not think of it when you're on the bridge and the assholes far gone Considering where that asshole roams.
+
+91
+00:05:52,047 --> 00:05:54,916
+Rym: I feel like we're both likely to encounter him again.
+
+92
+00:05:55,177 --> 00:05:56,422
+Rym: I might encounter him I don't.
+
+93
+00:05:56,442 --> 00:05:59,259
+Scott: I didn't really look at him cuz he's behind me and he didn't catch up.
+
+94
+00:05:59,841 --> 00:06:07,791
+Rym: Can only catch me with his yell that that Nazi piece-of-shit guy that I yelled at a while ago Never saw him again after the cops showed up.
+
+95
+00:06:07,912 --> 00:06:09,560
+Scott: Oh, so also a side story.
+
+96
+00:06:09,700 --> 00:06:15,500
+Scott: I saw a tweet of a photo from anime Expo of a Deadpool Nazi cosplay.
+
+97
+00:06:16,222 --> 00:06:18,950
+Scott: Why is there no video of Deadpool Nazi being punched?
+
+98
+00:06:19,311 --> 00:06:20,676
+Scott: Yeah, this is a problem.
+
+99
+00:06:20,756 --> 00:06:23,329
+Scott: anime Expo get your shit together At least kick him out.
+
+100
+00:06:23,349 --> 00:06:24,598
+Scott: I don't fucking know.
+
+101
+00:06:25,496 --> 00:06:35,233
+Scott: But If you are wearing a day a Nazi cosplay at a convention that I go to right You are not going to be punched by me and everyone.
+
+102
+00:06:35,274 --> 00:06:36,480
+Scott: I know who's at the convention.
+
+103
+00:06:36,641 --> 00:06:37,244
+Scott: I mean, I'm at.
+
+104
+00:06:37,324 --> 00:06:39,496
+Scott: I'll even punch you at PAX and get kicked out of packs.
+
+105
+00:06:39,617 --> 00:06:40,099
+Rym: It'd be worth it.
+
+106
+00:06:40,320 --> 00:06:42,026
+Rym: Yeah, I would sacrifice that.
+
+107
+00:06:42,287 --> 00:06:49,220
+Scott: so I guess even though one of the rules of packs is no punching and kicking But they're breaking the rule of don't harass anyone exact.
+
+108
+00:06:49,320 --> 00:06:50,566
+Scott: So it is okay to punch you kick.
+
+109
+00:06:50,586 --> 00:06:55,845
+Rym: more importantly one could argue that the advocacy of far-right positions Is effectively violent.
+
+110
+00:06:55,865 --> 00:07:00,658
+Scott: I'm sure packs will love to when there is a video of an enforcer punching the lights out of a Nazi.
+
+111
+00:07:00,758 --> 00:07:06,885
+Scott: Yeah I'm just very Attempting to impossible failing.
+
+112
+00:07:07,186 --> 00:07:08,069
+Rym: I'm very much.
+
+113
+00:07:08,209 --> 00:07:12,705
+Rym: Okay with the current stance of basically everyone reasonable I might like going.
+
+114
+00:07:12,765 --> 00:07:13,027
+Scott: I might.
+
+115
+00:07:13,147 --> 00:07:15,320
+Scott: I might go take my enforcer shirt off and then go punch them.
+
+116
+00:07:15,782 --> 00:07:17,168
+Rym: Yeah, that would pack doesn't get in trouble.
+
+117
+00:07:17,208 --> 00:07:17,871
+Rym: That was just our.
+
+118
+00:07:17,891 --> 00:07:19,720
+Scott: take the enforcer shirt off and strangle them with it.
+
+119
+00:07:20,422 --> 00:07:23,900
+Rym: Yeah Well, or you just you just make a note of him.
+
+120
+00:07:23,960 --> 00:07:24,743
+Rym: You'll see him around the counter.
+
+121
+00:07:24,763 --> 00:07:29,720
+Scott: If anyone knows any defense lawyers that will let me go to court admit guilt and ask for nullification.
+
+122
+00:07:30,265 --> 00:07:31,919
+Scott: Let me know their number because that's my plan.
+
+123
+00:07:32,515 --> 00:07:36,552
+Rym: Yep Important point in the era where we have to fight fascists.
+
+124
+00:07:36,612 --> 00:07:40,797
+Rym: we used to talk about this a lot on GeekNights back in like 2006. bring it up again right now.
+
+125
+00:07:41,341 --> 00:07:42,545
+Scott: Jury nullification.
+
+126
+00:07:42,565 --> 00:07:44,551
+Scott: There's an episode on GeekNights about jury nullification.
+
+127
+00:07:44,571 --> 00:07:47,140
+Scott: that is probably stupid wrong and we are not lawyers.
+
+128
+00:07:48,081 --> 00:07:53,537
+Rym: However, if you have the opportunity to be on a jury Because I just got a jury questionnaire.
+
+129
+00:07:53,879 --> 00:08:05,352
+Rym: Oh Because there are not you can fill it out online now and the Nazis are being bold If you happen to be on a case where someone punched a Nazi You're perfectly within your rights to just say not guilty.
+
+130
+00:08:05,392 --> 00:08:07,400
+Scott: doesn't matter what the judges instructions are.
+
+131
+00:08:07,661 --> 00:08:12,380
+Scott: It doesn't matter if the person actually punched the Nazi in this video of it and you do know you're on a jury.
+
+132
+00:08:12,862 --> 00:08:15,780
+Scott: Why would they send you into the room with the 12 angry people?
+
+133
+00:08:16,262 --> 00:08:17,968
+Scott: Yep, all right to deliberate.
+
+134
+00:08:18,450 --> 00:08:22,740
+Scott: if the evidence and everything is beyond a reasonable doubt Why would they still send you into that room?
+
+135
+00:08:22,900 --> 00:08:27,900
+Scott: It's because you have the right as a juror to say guilty or not guilty as you fucking please.
+
+136
+00:08:27,980 --> 00:08:38,498
+Scott: so if somebody just you do the video of someone just mowing down a KKK rally with an assault rifle and you can see that they didn't murder any innocence Then you can say not guilty whatever the fuck.
+
+137
+00:08:38,618 --> 00:08:42,453
+Rym: Yep Now what you can't eat really do is say why you said not guilty.
+
+138
+00:08:42,754 --> 00:08:44,520
+Scott: just say just go be on the jury.
+
+139
+00:08:45,082 --> 00:08:53,778
+Scott: And then when it comes to just sit there quietly and watch the case and then when it comes time to be on the jury Go into the other room and say not guilty and maybe you'll hang them the jury.
+
+140
+00:08:53,878 --> 00:08:58,906
+Scott: Not the Hang them - The only salute cure for Nazism.
+
+141
+00:08:58,926 --> 00:09:00,713
+Scott: We know it worked one time.
+
+142
+00:09:02,480 --> 00:09:07,854
+Rym: so in news that's less fascist related, uh-huh, you might have noticed that.
+
+143
+00:09:08,115 --> 00:09:14,019
+Rym: so Europe has a lot of pros like generally European government is better than our American government, etc.
+
+144
+00:09:14,421 --> 00:09:18,170
+Rym: Kinda the one thing has always been in some ways.
+
+145
+00:09:18,391 --> 00:09:25,880
+Scott: Yeah, but if I had to choose between the internet and healthcare But anyway, it's not the EU that gives people health care.
+
+146
+00:09:26,101 --> 00:09:32,207
+Rym: Yeah, but every and every individual European state does it to a better degree than us, but I digress I don't know me.
+
+147
+00:09:32,227 --> 00:09:32,972
+Scott: There's a lot of them me.
+
+148
+00:09:33,013 --> 00:09:33,758
+Scott: I don't know about all of them.
+
+149
+00:09:35,220 --> 00:09:38,096
+Scott: I mean, it's probable but I can't definitively say that.
+
+150
+00:09:38,217 --> 00:09:38,840
+Rym: Yeah our health care.
+
+151
+00:09:38,920 --> 00:09:42,420
+Scott: I don't know about the health care systems of every single European nation.
+
+152
+00:09:42,520 --> 00:09:50,408
+Rym: But I can only say this the one thing that all European nations and the EU have been bad at for as long as I've been Alive is regulating the internet.
+
+153
+00:09:50,649 --> 00:09:50,890
+Rym: Mm-hmm.
+
+154
+00:09:50,971 --> 00:09:52,095
+Scott: Well, this is not theirs.
+
+155
+00:09:52,135 --> 00:09:53,420
+Scott: That's why they want to mess with it, right?
+
+156
+00:09:53,580 --> 00:09:53,861
+Scott: They were all.
+
+157
+00:09:53,901 --> 00:09:57,617
+Scott: they constantly want to bring in American tech companies and beat them up because they're trying to.
+
+158
+00:09:57,637 --> 00:10:04,520
+Scott: that's the way they can attack America economically and The vast majority of the time they didn't invent the internet.
+
+159
+00:10:04,640 --> 00:10:08,796
+Rym: But European legislation and regulation around the internet tends to be really really bad.
+
+160
+00:10:10,263 --> 00:10:12,960
+Rym: Yeah, really poorly designed has lots of adverse consequences.
+
+161
+00:10:12,960 --> 00:10:18,320
+Scott: Well, that's because the internet was actually made with you know American sensibilities right earlier.
+
+162
+00:10:19,623 --> 00:10:23,260
+Scott: Well, even even cart internet was is architecturally American.
+
+163
+00:10:23,441 --> 00:10:33,700
+Scott: Yeah, it's it's designed around, you know freedom of speech and such and such at least for now, which is turning into corporate Except in China where they built a digital wall.
+
+164
+00:10:34,462 --> 00:10:39,319
+Rym: But if you didn't notice this is the kind of thing we would have talked about a lot more on GeekNights a decade ago.
+
+165
+00:10:39,901 --> 00:10:54,340
+Rym: But there was basically this European copyright law that was going through like the European Parliament and basically this law Was utterly ridiculous and most people have framed it phrased it as this would literally ban memes forever
+
+166
+00:10:54,642 --> 00:10:54,863
+Scott: Yep,
+
+167
+00:10:55,246 --> 00:11:03,740
+Rym: and it basically required ridiculous overbearing pre-filtering of content like to the point that the GeekNights forum.
+
+168
+00:11:04,403 --> 00:11:07,980
+Rym: We would probably have had to say that no one from Europe is allowed to visit our forum.
+
+169
+00:11:08,321 --> 00:11:10,751
+Scott: Okay, or in the very least we don't even have the cookie warning.
+
+170
+00:11:11,092 --> 00:11:11,775
+Rym: No, we don't we're not.
+
+171
+00:11:11,935 --> 00:11:13,140
+Rym: we're not GDPR compliant.
+
+172
+00:11:14,041 --> 00:11:15,105
+Scott: I'm not doing fucking shit.
+
+173
+00:11:15,125 --> 00:11:19,660
+Scott: I'm just using the software for the forum as it's delivered auto updating it and that's it.
+
+174
+00:11:19,860 --> 00:11:23,220
+Rym: Yeah, we have no presence in Europe and we never will unless we flee this country.
+
+175
+00:11:23,260 --> 00:11:24,387
+Scott: My server is not in Europe.
+
+176
+00:11:24,507 --> 00:11:26,700
+Scott: European people visit our site and that's okay.
+
+177
+00:11:26,820 --> 00:11:30,858
+Rym: But if you're European visiting our site and it turns out that our site is illegal.
+
+178
+00:11:30,878 --> 00:11:32,504
+Scott: That's on you I will obey.
+
+179
+00:11:32,524 --> 00:11:35,536
+Scott: I will keep the website and all of our technology in the country.
+
+180
+00:11:35,898 --> 00:11:41,179
+Scott: That is most I guess convenient And that is where it always shall be.
+
+181
+00:11:41,481 --> 00:11:46,180
+Rym: So the reason I'm talking about this today is because you'll notice that I have two articles here.
+
+182
+00:11:46,220 --> 00:11:54,941
+Rym: They're the exact same image And one of them is new EU copyright filtering law threatens the internet as we know it from June 19th Mm-hmm.
+
+183
+00:11:54,961 --> 00:11:55,685
+Rym: Let's fast forward.
+
+184
+00:11:55,766 --> 00:12:02,432
+Rym: less than a month to three days ago EU sends controversial internet copyright reform back to the drawing board.
+
+185
+00:12:02,653 --> 00:12:04,840
+Rym: good for the first goddamn time ever.
+
+186
+00:12:05,584 --> 00:12:08,960
+Rym: They actually voted no on one of these ridiculous internet law.
+
+187
+00:12:09,101 --> 00:12:14,440
+Scott: There was I think a big push in the EU and also by even European tech companies against this.
+
+188
+00:12:14,681 --> 00:12:21,794
+Scott: so I looked into it a little more and it seems like sort of how we managed to make some sort of push against the CBD tPA type things.
+
+189
+00:12:21,834 --> 00:12:34,160
+Scott: Yep, or so tPA and I saw exactly what it stands surface and the pippas and all those things We all managed to defeat every time somehow except net neutrality, which we couldn't defeat because that wasn't a matter of Congress.
+
+190
+00:12:34,541 --> 00:12:43,020
+Scott: Yep, but it's easy because all those times that we beat those things in the US It was a matter of making Congress not do something which is surprisingly easy.
+
+191
+00:12:43,381 --> 00:12:48,000
+Scott: But now in order to fix net neutrality, we have to make Congress do something and that is very difficult.
+
+192
+00:12:48,603 --> 00:12:52,220
+Rym: So basically this was at least temporarily shot down.
+
+193
+00:12:52,361 --> 00:12:58,959
+Rym: So if it comes back and left to come back in a very different form best I can tell tech companies were pretty much entirely against it.
+
+194
+00:13:00,406 --> 00:13:12,599
+Rym: The general populace once they heard about it were generally against it and the only people I can seem to find that are for it are major content producers like publishing firms.
+
+195
+00:13:12,952 --> 00:13:20,187
+Rym: Yeah But specifically there's all these articles that seem like they're astroturfed that are basically What was it?
+
+196
+00:13:20,207 --> 00:13:30,087
+Rym: I found one specific one this article it was The National Book Council is Really really mad that this failed.
+
+197
+00:13:30,107 --> 00:13:37,632
+Rym: Mmm, and I can't real they don't make an argument as to how this one I guess the National Silent Film Council is upset too.
+
+198
+00:13:38,054 --> 00:13:49,120
+Rym: Yep, perhaps the Their article is making the rounds as unsuccessful EU copyright vote inflicted irreparable damage.
+
+199
+00:13:49,502 --> 00:13:53,560
+Scott: You're not any worse than you were and using the argument that they make for getting rid of net neutrality.
+
+200
+00:13:53,661 --> 00:13:55,311
+Scott: You're not any worse off than you were yesterday.
+
+201
+00:13:55,632 --> 00:14:02,440
+Rym: Yep, but We actually won one in Europe and I'm kind of happy about that for now because we do their needs.
+
+202
+00:14:02,440 --> 00:14:03,707
+Scott: I'll probably edit it and bring it back.
+
+203
+00:14:03,888 --> 00:14:16,920
+Rym: there needs to be massive copyright reform But this law in particular would have made basic things that any layperson using the internet expects to be able to do Owners to the point that they just would not happen in Europe.
+
+204
+00:14:18,064 --> 00:14:33,779
+Rym: Hmm, and I think a big part of how this was shot down was that this is one of the first times that like even GDPR a lot of Western tech companies the smaller ones cut off their Service in Europe or shut down services, but the big ones generally complied with it.
+
+205
+00:14:33,980 --> 00:14:40,804
+Rym: Hmm the big ones in this case seemed to be implying that they would just literally cut off Europe rather than Comply with this ridiculous lies.
+
+206
+00:14:40,824 --> 00:14:41,767
+Scott: Here's the news ready.
+
+207
+00:14:42,148 --> 00:14:44,696
+Scott: So valve the steam valve, right?
+
+208
+00:14:44,756 --> 00:14:52,097
+Scott: It's not a gaming news the tech news Right, so, you know on the if you go on steam There's a little chart that shows you like current remote game with the most players right now.
+
+209
+00:14:52,137 --> 00:14:57,040
+Scott: stuff like that Right, and they used to be steam spy which used the steam API to get various data about games.
+
+210
+00:14:57,120 --> 00:15:00,009
+Scott: That was invaluable, especially to developers to see what was popular.
+
+211
+00:15:00,050 --> 00:15:00,391
+Scott: Oh god.
+
+212
+00:15:00,631 --> 00:15:03,320
+Rym: I suddenly remember I found I was looking for slides for a panel.
+
+213
+00:15:03,380 --> 00:15:05,830
+Rym: I'm gonna write for packs and I found an old panel.
+
+214
+00:15:05,850 --> 00:15:06,231
+Rym: we did.
+
+215
+00:15:06,513 --> 00:15:10,796
+Rym: we have all these screenshots of Player like the top ten games on steam.
+
+216
+00:15:10,816 --> 00:15:14,089
+Rym: Those are so old I know because it was literally counter-strike.
+
+217
+00:15:14,109 --> 00:15:16,698
+Rym: go counter-strike one six for number one and number two.
+
+218
+00:15:16,878 --> 00:15:18,558
+Scott: Not anymore It's still up there though.
+
+219
+00:15:19,001 --> 00:15:29,060
+Scott: Anyway, so because if you don't know recently like maybe months ago Valve got rid of the API's that use steam spy and I think there were rumors they were gonna do something different.
+
+220
+00:15:29,181 --> 00:15:30,856
+Scott: They were trying to protect privacy or something.
+
+221
+00:15:30,917 --> 00:15:31,240
+Scott: I don't know.
+
+222
+00:15:31,280 --> 00:15:37,400
+Scott: There's a brute brouhaha, but people are upset because now steam spy will be much less accurate or perhaps so inaccurate.
+
+223
+00:15:37,400 --> 00:15:38,800
+Scott: It's useless or whatever.
+
+224
+00:15:38,820 --> 00:15:44,760
+Scott: So you can't get accurate data now about which games are selling how much if you're just like a developer?
+
+225
+00:15:44,920 --> 00:15:46,920
+Scott: Who's gonna do market research or stuff like that, right?
+
+226
+00:15:47,140 --> 00:15:53,160
+Scott: I'm sure the big players are still paying market research firms to get that kind of info but little indie devs don't know anymore.
+
+227
+00:15:53,361 --> 00:15:53,724
+Scott: Yeah, I need.
+
+228
+00:15:53,744 --> 00:15:54,771
+Scott: they needed steam spy.
+
+229
+00:15:54,792 --> 00:15:55,718
+Scott: It was valuable to them.
+
+230
+00:15:56,665 --> 00:15:58,719
+Scott: Anyway, so here's a new news.
+
+231
+00:15:59,241 --> 00:16:13,680
+Scott: Somebody went on the steam API and it tells you in the steam API to a show or at least it did until just now It tells you to an extremely precise degree as in 16 decimal places.
+
+232
+00:16:13,700 --> 00:16:17,555
+Rym: I want to point out that is way more than almost anything.
+
+233
+00:16:17,695 --> 00:16:20,680
+Rym: I interact with in Wall Street, that's right.
+
+234
+00:16:20,981 --> 00:16:23,169
+Scott: It tells you it did at least until recently.
+
+235
+00:16:23,249 --> 00:16:30,900
+Scott: tell you to 16 decimal place accuracy How many players of the game have achieved a particular achievement?
+
+236
+00:16:31,540 --> 00:16:40,146
+Scott: So you could look at any game on Steam that has achievements and you can say oh, here's this really hard achievement Like beat the game and it'll say X dot dah, dah, dah, dah.
+
+237
+00:16:40,146 --> 00:16:41,068
+Scott: 16 places.
+
+238
+00:16:41,308 --> 00:16:44,778
+Scott: percent of players have Reached that beat in the game.
+
+239
+00:16:45,643 --> 00:16:47,490
+Scott: You look at that number and you say well, wait a minute.
+
+240
+00:16:48,052 --> 00:16:52,851
+Scott: the number of people who bought the game Right must be an integer.
+
+241
+00:16:53,272 --> 00:16:53,854
+Scott: It must be.
+
+242
+00:16:54,457 --> 00:16:57,767
+Scott: it cannot be a non It can't sell half a can't be.
+
+243
+00:16:57,928 --> 00:16:58,831
+Scott: it can't be negative.
+
+244
+00:16:59,051 --> 00:16:59,894
+Scott: It can't be zero.
+
+245
+00:17:00,536 --> 00:17:01,900
+Scott: It cannot be a fraction.
+
+246
+00:17:02,061 --> 00:17:16,540
+Scott: it must be a positive integer, right and Therefore we can deduce right by looking at this very very precise percentage and just sort of doing some math and also accounting for you know The way computers calculate floating-point numbers you got.
+
+247
+00:17:16,560 --> 00:17:20,195
+Scott: maybe got to add one or subtract one or you know One decimal place at the end or something.
+
+248
+00:17:20,215 --> 00:17:20,498
+Rym: Oh my god.
+
+249
+00:17:20,538 --> 00:17:25,536
+Rym: I love a Counter-Strike go and Counter-Strike source Right are still there.
+
+250
+00:17:25,556 --> 00:17:31,934
+Scott: so you can tell by extrapolating from those percentages What is that number like?
+
+251
+00:17:31,994 --> 00:17:34,180
+Scott: how many total people got that achievement?
+
+252
+00:17:34,220 --> 00:17:39,234
+Scott: because you just keep saying well if this is the percentage what integers Would there be?
+
+253
+00:17:39,555 --> 00:17:44,309
+Scott: this percentage of that would break evenly because you know, the number of people who achieved it must also be integer, right?
+
+254
+00:17:45,150 --> 00:17:45,820
+Rym: So it's like right.
+
+255
+00:17:46,610 --> 00:17:53,350
+Scott: It's like what pot what big integer divided by what smaller integer will equal this nut or what bigger in it right equal this number?
+
+256
+00:17:53,883 --> 00:18:06,264
+Scott: so Then from that you can say well if that's eight percent of this total people who bought the game then the number of total people who bought the game is X. and you get a shockingly accurate number of people who owned the game at the time that the person did this.
+
+257
+00:18:06,666 --> 00:18:13,009
+Scott: and as soon as they Collected all the info and all the top games on Steam and published it then valve removed this info from steam.
+
+258
+00:18:13,572 --> 00:18:16,066
+Scott: But we have the info which is what's important.
+
+259
+00:18:16,127 --> 00:18:19,470
+Rym: but bear in mind This is not saying how many people are playing the game.
+
+260
+00:18:19,631 --> 00:18:23,409
+Scott: No, it's how many people have owned the game and have it in their steam account.
+
+261
+00:18:23,771 --> 00:18:26,910
+Rym: So yeah, 50 million people own Team Fortress 2, right?
+
+262
+00:18:26,930 --> 00:18:30,324
+Scott: You've got to take into account that a lot of these games are like free games.
+
+263
+00:18:30,746 --> 00:18:37,165
+Scott: You've also got to take into account There's only counts games with achievements games that don't have achievements aren't counted at all because there's no info.
+
+264
+00:18:37,546 --> 00:18:43,876
+Scott: and also notice like one Of the biggest games on Steam which is Dota 2 is not even there Right, which is I don't know.
+
+265
+00:18:43,896 --> 00:18:45,462
+Scott: does Dota 2 not have achievements on Steam?
+
+266
+00:18:45,483 --> 00:18:47,350
+Rym: I have no idea why Dota 2 wouldn't be there.
+
+267
+00:18:47,390 --> 00:18:48,235
+Scott: Yeah, so there's there's.
+
+268
+00:18:48,316 --> 00:18:57,831
+Scott: there's a lot of ifs and ands and whatnot but once you even with all those sort of you know ifs I guess and Whatever.
+
+269
+00:18:58,132 --> 00:19:00,218
+Scott: This is still shockingly accurate if you're interested.
+
+270
+00:19:00,980 --> 00:19:04,730
+Scott: I find it interesting that Slay the Spire and NecroDancer are like right next to each other.
+
+271
+00:19:04,830 --> 00:19:11,215
+Rym: Yeah, well there I feel like they target the exact same demographic and I feel like we should just look at games with that number Of sales figures.
+
+272
+00:19:12,160 --> 00:19:12,603
+Scott: Yeah, like those.
+
+273
+00:19:12,643 --> 00:19:13,789
+Scott: that's where the good games are gonna be.
+
+274
+00:19:14,371 --> 00:19:25,830
+Rym: But I guess the the interesting part of this from a Monday perspective is when you're doing data security Micro services, you know all the techie stuff we do and you're worried about data leakage.
+
+275
+00:19:27,230 --> 00:19:34,290
+Scott: Metadata can leak very complex information without you realizing you can figure one thing out from another thing.
+
+276
+00:19:34,370 --> 00:19:35,778
+Scott: Yeah, right, you know.
+
+277
+00:19:36,019 --> 00:19:41,950
+Scott: or even if you can't completely figure out This is a case where you can almost completely figure out one thing from a seemingly unrelated thing.
+
+278
+00:19:42,472 --> 00:19:46,646
+Scott: But there are times where it's like you can just guess and be very accurate if people know.
+
+279
+00:19:46,747 --> 00:19:53,010
+Scott: it's like for example Everyone knows the percentage of English names on average that start with whatever whatever letter.
+
+280
+00:19:53,511 --> 00:19:57,960
+Scott: So it's like you can sort of get really good guesses about things like public information like that.
+
+281
+00:20:05,874 --> 00:20:09,629
+Rym: So we learned a decent amount about Ned Kelly some time ago, I don't know who that is.
+
+282
+00:20:11,591 --> 00:20:16,770
+Rym: We've talked about Ned Kelly multiple times on GeekNights, why would I remember that you have no idea who Ned Kelly is?
+
+283
+00:20:16,991 --> 00:20:19,180
+Scott: I mean, I probably will as soon as you start saying who it is.
+
+284
+00:20:19,481 --> 00:20:21,590
+Rym: So I will say I'll give you a clue.
+
+285
+00:20:22,111 --> 00:20:25,099
+Rym: He is orthogonally distantly related to far.
+
+286
+00:20:25,140 --> 00:20:27,023
+Scott: lap The horse.
+
+287
+00:20:27,324 --> 00:20:28,911
+Scott: yeah, Ned Kelly's a horse.
+
+288
+00:20:29,172 --> 00:20:31,240
+Scott: No Ned Kelly's a person who rides a horse.
+
+289
+00:20:32,860 --> 00:20:35,689
+Scott: Technically Ned Kelly is the Australian gangster guy.
+
+290
+00:20:35,730 --> 00:20:38,158
+Rym: Ned Kelly is the Australian weeaboo gangster.
+
+291
+00:20:38,318 --> 00:20:38,760
+Scott: That's right.
+
+292
+00:20:39,041 --> 00:20:40,672
+Scott: So I remember now we do.
+
+293
+00:20:40,712 --> 00:20:46,107
+Rym: we went to a Ned Kelly Museum And we saw his fucking armor.
+
+294
+00:20:46,148 --> 00:20:49,379
+Rym: I remember who it is now the guy who made the armor that guy.
+
+295
+00:20:49,419 --> 00:20:50,537
+Scott: yes I know who it is now.
+
+296
+00:20:50,961 --> 00:20:59,474
+Rym: So even then I really only had a superficial understanding and basically in my mind He was just like an Australian Billy the Kid.
+
+297
+00:20:59,494 --> 00:21:05,600
+Scott: All I remember about him is yeah He's like a. he's like a you know, a Western gangster who was a weeaboo who had armor in Australia.
+
+298
+00:21:05,620 --> 00:21:12,214
+Scott: The weeaboo part is very important and very hilarious But he was much closer, you know, you could to be a weeaboo in those days.
+
+299
+00:21:12,234 --> 00:21:13,820
+Scott: You had to live much closer to Japan.
+
+300
+00:21:18,841 --> 00:21:20,646
+Rym: but I Pretty good show on history.
+
+301
+00:21:20,686 --> 00:21:27,956
+Rym: They did a good one on Catherine the Great and I watched these occasionally But I never noticed that they have one on Ned Kelly and it goes into.
+
+302
+00:21:27,976 --> 00:21:28,879
+Scott: are you sure it's accurate?
+
+303
+00:21:28,999 --> 00:21:30,419
+Rym: Yes It looks pretty accurate.
+
+304
+00:21:31,341 --> 00:21:35,924
+Scott: Please go to like a prison where they kept Ned Kelly or like Fucking museum.
+
+305
+00:21:35,944 --> 00:21:37,208
+Scott: I had his gold or something there.
+
+306
+00:21:37,369 --> 00:21:38,734
+Rym: We saw like I remember.
+
+307
+00:21:38,915 --> 00:21:40,200
+Rym: we learned a lot about Ned Kelly.
+
+308
+00:21:40,864 --> 00:21:43,100
+Scott: I'm well forgot most a legend of Curly's gold.
+
+309
+00:21:43,243 --> 00:21:43,999
+Scott: I forgot most of it.
+
+310
+00:21:44,941 --> 00:21:52,308
+Rym: This video series is fascinating because I the one thing I mistook is I thought Ned Kelly Was in it for the money.
+
+311
+00:21:52,689 --> 00:21:54,315
+Scott: No, he was in it for the weeb.
+
+312
+00:21:54,616 --> 00:21:55,500
+Rym: He was in it for revenge.
+
+313
+00:21:56,404 --> 00:21:57,138
+Scott: revenge against who?
+
+314
+00:21:58,366 --> 00:22:05,636
+Rym: It's complicated Basically against the squatters and as far I don't know a lot about Australian history because it's not doesn't really.
+
+315
+00:22:05,656 --> 00:22:11,820
+Rym: it's not relevant to my life but Basically as best I can tell I'm probably really wrong about this.
+
+316
+00:22:12,361 --> 00:22:15,408
+Rym: The squatters were basically this like land-owning gentry.
+
+317
+00:22:15,428 --> 00:22:18,475
+Rym: They were the McCoy's that like squatters like he was a Hatfield.
+
+318
+00:22:18,495 --> 00:22:24,408
+Scott: He was a Basically, he was a sovereign citizen.
+
+319
+00:22:24,589 --> 00:22:27,359
+Rym: He was a present a peasant farmer who got fucked over by the squatters.
+
+320
+00:22:27,580 --> 00:22:33,420
+Rym: He was dedicated the rest of his life to getting revenge on those squatters and the cops that were in their pay.
+
+321
+00:22:34,162 --> 00:22:37,011
+Rym: Mm-hmm, so kind of good guy.
+
+322
+00:22:37,232 --> 00:22:39,600
+Rym: also a murderer didn't want to be a murderer.
+
+323
+00:22:39,942 --> 00:22:42,298
+Rym: The first copy shot kind of made him shoot him.
+
+324
+00:22:43,902 --> 00:22:47,180
+Rym: It's just a really fascinating story and this will tell it to you in excruciating detail.
+
+325
+00:22:48,088 --> 00:22:48,553
+Rym: So what do you got?
+
+326
+00:22:49,219 --> 00:22:53,138
+Scott: Oh So they told you from What's happening right now?
+
+327
+00:22:54,887 --> 00:22:58,925
+Scott: And it's not the easiest thing to watch Even though it's like.
+
+328
+00:22:58,945 --> 00:23:09,375
+Scott: I kind of want to care about bicycle racing because they care about bicycling but it's still so tainted with drugs and also still so Not that exciting to watch.
+
+329
+00:23:09,777 --> 00:23:12,465
+Rym: most of the time I like to watch highlights.
+
+330
+00:23:12,746 --> 00:23:13,990
+Scott: Yeah anyway.
+
+331
+00:23:15,198 --> 00:23:18,969
+Scott: so In honor of that here is a video of it.
+
+332
+00:23:19,110 --> 00:23:23,350
+Scott: It's actually a series of like the most ex legendary cycling accidents.
+
+333
+00:23:24,054 --> 00:23:33,610
+Scott: But this is the first in that series and basically this dude He's in first place during this race and he goes over the edge Oh boy, and it's like it's not the kind of cliff where it's straight down and he dies.
+
+334
+00:23:33,710 --> 00:23:34,132
+Scott: So it's not.
+
+335
+00:23:34,193 --> 00:23:35,720
+Scott: it's not an unwatchable video.
+
+336
+00:23:35,760 --> 00:23:36,986
+Scott: It's not squeamish or anything.
+
+337
+00:23:37,126 --> 00:23:37,910
+Rym: that guy's fine.
+
+338
+00:23:38,312 --> 00:23:41,090
+Scott: I wouldn't post it if it was like that because I would also probably vomit.
+
+339
+00:23:42,871 --> 00:23:48,790
+Scott: But he it's so steep though that he has a hard time crawling back up and his bike just keeps on.
+
+340
+00:23:49,672 --> 00:23:50,317
+Rym: He starts sliding.
+
+341
+00:23:50,337 --> 00:23:51,465
+Rym: You're like that doesn't look that steep?
+
+342
+00:23:51,485 --> 00:23:52,170
+Rym: and then you see his bike.
+
+343
+00:23:56,810 --> 00:24:06,104
+Scott: Nobody's going down to get the bike so he has to wait for his replacement bike to come which is way in the back Which means he went to from first to Finishing like many minutes back.
+
+344
+00:24:06,205 --> 00:24:11,805
+Scott: Yeah So there's like a legendary moment from the I guess the past.
+
+345
+00:24:11,886 --> 00:24:16,708
+Scott: but if you go through the series There are many other bicycle accidents, but I can't guarantee that none of those are squeamish.
+
+346
+00:24:16,728 --> 00:24:19,719
+Scott: So Continued is video number two at your own risk.
+
+347
+00:24:19,940 --> 00:24:22,770
+Rym: I guess bike sports are kind of for me.
+
+348
+00:24:22,830 --> 00:24:25,439
+Rym: They're kind of like baseball and that I like doing them.
+
+349
+00:24:26,041 --> 00:24:27,927
+Rym: don't really care about watching them.
+
+350
+00:24:28,048 --> 00:24:28,750
+Scott: Yeah, like basketball.
+
+351
+00:24:29,072 --> 00:24:32,310
+Scott: Yeah, also, you know bicycle racing is way scary.
+
+352
+00:24:32,551 --> 00:24:33,113
+Scott: It's like.
+
+353
+00:24:33,354 --> 00:24:34,539
+Scott: it's like bicycling is fine.
+
+354
+00:24:34,600 --> 00:24:36,889
+Scott: bicycle racing is gets closer to skiing which I don't do.
+
+355
+00:24:37,971 --> 00:24:38,494
+Scott: These guys go.
+
+356
+00:24:38,655 --> 00:24:40,786
+Scott: these guys are going 40 miles an hour if I get to 30.
+
+357
+00:24:40,786 --> 00:24:49,699
+Rym: I'm like, oh The fastest I've ever gone on a bike at least based on my bike computer was About 48.
+
+358
+00:24:49,699 --> 00:24:50,081
+Scott: Okay.
+
+359
+00:24:50,362 --> 00:24:54,589
+Scott: That was when I was in high school I think I maybe got to 38 going down a hill and was like, oh shit.
+
+360
+00:24:54,971 --> 00:24:55,312
+Rym: So that was.
+
+361
+00:24:55,332 --> 00:25:18,336
+Rym: we were in high school and I was like with my family doing this like Jeep Jamboree and we were going around doing like mountain biking and off-roading and all this nonsense and I just took my mountain bike and My family stopped the car because there was that we're gonna take an exit ramp that goes way down the mountain and I just rode down on my bike and my family caught up in the car and It was terrifying.
+
+362
+00:25:18,376 --> 00:25:20,705
+Rym: I'm not gonna pretend it wasn't but I bike like.
+
+363
+00:25:20,765 --> 00:25:22,110
+Rym: I bike pretty fast on a regular basis.
+
+364
+00:25:22,392 --> 00:25:27,710
+Scott: I really got a fight to put some effort in maybe tonight and find this chart I saw once that showed the elevations of the Tour de France.
+
+365
+00:25:28,511 --> 00:25:29,655
+Scott: And it's like you.
+
+366
+00:25:29,715 --> 00:25:30,819
+Scott: it's like you bike.
+
+367
+00:25:30,859 --> 00:25:35,113
+Scott: we bike over hills here and it's like you over the Queensborough Bridge and it's like It's easy.
+
+368
+00:25:35,133 --> 00:25:36,398
+Scott: It's still it's a hill.
+
+369
+00:25:36,458 --> 00:25:37,602
+Scott: It's like you notice it right?
+
+370
+00:25:37,662 --> 00:25:38,465
+Rym: I slow down.
+
+371
+00:25:38,565 --> 00:25:39,890
+Scott: Yeah, it's like it's a hill.
+
+372
+00:25:39,950 --> 00:25:42,903
+Scott: I gear down right these guys on the Tour de France.
+
+373
+00:25:42,923 --> 00:25:44,128
+Scott: They wouldn't even know it's flat to them.
+
+374
+00:25:45,812 --> 00:25:50,350
+Scott: They don't even notice that they their elevations that they climb to steep the grades that they go up.
+
+375
+00:25:50,851 --> 00:25:52,035
+Scott: It's like the.
+
+376
+00:25:52,095 --> 00:25:56,990
+Scott: the the bridge here would be like a speck like you would look flat compared to the the mountains They're climbing.
+
+377
+00:25:57,137 --> 00:25:57,409
+Scott: That's it.
+
+378
+00:25:57,470 --> 00:26:08,350
+Rym: So and this is why they're all on fucking drugs because no human would be Poking at my Strava the other day because I noticed something I have like the hundredth best time ever going across the Queensborough Bridge.
+
+379
+00:26:08,711 --> 00:26:09,716
+Rym: No, like anyone was Strava.
+
+380
+00:26:10,218 --> 00:26:12,970
+Scott: Maybe I should did you like Huff and Puff and try it all the time.
+
+381
+00:26:13,360 --> 00:26:13,649
+Rym: Oh, okay.
+
+382
+00:26:13,770 --> 00:26:16,100
+Scott: So maybe I should Huff and Puff just one time to see.
+
+383
+00:26:16,140 --> 00:26:17,344
+Scott: if I can I could probably be you.
+
+384
+00:26:17,726 --> 00:26:19,273
+Scott: so I don't have a puff One time.
+
+385
+00:26:19,293 --> 00:26:20,823
+Scott: I don't think you could beat me one time.
+
+386
+00:26:20,863 --> 00:26:21,366
+Scott: Huff and Puff.
+
+387
+00:26:21,386 --> 00:26:22,010
+Rym: a better way to do it.
+
+388
+00:26:22,030 --> 00:26:22,737
+Rym: We should just race.
+
+389
+00:26:23,283 --> 00:26:23,849
+Scott: that's dangerous.
+
+390
+00:26:24,751 --> 00:26:26,461
+Scott: It's I have to do it at night when no one's there.
+
+391
+00:26:26,481 --> 00:26:26,984
+Rym: So yeah, we do.
+
+392
+00:26:27,025 --> 00:26:28,134
+Rym: we do the race at night There's.
+
+393
+00:26:28,175 --> 00:26:28,928
+Scott: no I have to do.
+
+394
+00:26:28,968 --> 00:26:32,070
+Scott: no I just do it on myself and then you do it by yourself and then we look at the time.
+
+395
+00:26:32,150 --> 00:26:33,038
+Rym: I'm just go next to each other.
+
+396
+00:26:33,078 --> 00:26:34,046
+Rym: No, that's dangerous.
+
+397
+00:26:34,066 --> 00:26:36,074
+Scott: So go Someone will fall over the edge.
+
+398
+00:26:36,255 --> 00:26:36,898
+Rym: That is not.
+
+399
+00:26:37,018 --> 00:26:39,087
+Rym: it's a straight bridge there at no point.
+
+400
+00:26:39,107 --> 00:26:39,650
+Rym: Does it turn?
+
+401
+00:26:40,050 --> 00:26:42,487
+Scott: No, there is no way we could have an accident one at a time.
+
+402
+00:26:43,532 --> 00:26:52,635
+Rym: Anyway, so I looked at what the difference was and the difference between like my set like top hundred and the top 20 Wasn't that much.
+
+403
+00:26:53,037 --> 00:27:01,350
+Rym: but then I looked at the like the runs of all the top people, you know The difference is I go crazy fast on the downhill and pretty fast on the uphill.
+
+404
+00:27:01,791 --> 00:27:04,279
+Rym: They're going the same goddamn speed up and down.
+
+405
+00:27:04,660 --> 00:27:06,185
+Scott: I could probably go up real fast.
+
+406
+00:27:06,205 --> 00:27:07,830
+Scott: I actually probably be slow on the down.
+
+407
+00:27:07,910 --> 00:27:11,490
+Scott: I probably like fast on the up and slow on the job was the fact is going up.
+
+408
+00:27:11,570 --> 00:27:12,596
+Scott: I have no fear right?
+
+409
+00:27:12,656 --> 00:27:15,839
+Scott: I could just put in the full huff and puff and then going down I hit the brakes.
+
+410
+00:27:15,879 --> 00:27:16,509
+Scott: cuz I'm afraid.
+
+411
+00:27:17,452 --> 00:27:20,190
+Rym: Yeah, I never hit the brakes down a lot of especially on the very end.
+
+412
+00:27:20,290 --> 00:27:25,469
+Scott: I wonder where it's like it wonder where Strava stops timing you right cuz like is that super steep part of the Manhattan side?
+
+413
+00:27:25,930 --> 00:27:27,870
+Scott: Where it's like you got to hit the brakes, but like when do I hit?
+
+414
+00:27:28,792 --> 00:27:36,850
+Rym: So if we're doing a race, we would definitely race into Queens Because the eggs the output of the bridge is a lot safer there, I think but that feels too easy.
+
+415
+00:27:36,910 --> 00:27:40,450
+Scott: It feels like the good race would be with a long uphill going out of Queens.
+
+416
+00:27:40,811 --> 00:27:43,585
+Rym: Yeah, the problem is you gotta add both times together.
+
+417
+00:27:43,907 --> 00:27:47,927
+Rym: We could do that Yeah, if we had to figure out which Strava route to use to track it.
+
+418
+00:27:48,168 --> 00:27:49,112
+Rym: detail I don't know.
+
+419
+00:27:49,293 --> 00:27:50,438
+Rym: or you just do it next to each other.
+
+420
+00:27:50,558 --> 00:27:53,350
+Scott: Maybe maybe you just have someone stand there with a stopwatch.
+
+421
+00:27:53,772 --> 00:27:55,419
+Scott: Yeah, oh wait.
+
+422
+00:27:55,439 --> 00:27:56,404
+Scott: We need two people.
+
+423
+00:27:56,424 --> 00:27:57,710
+Scott: I'm wait one on each side.
+
+424
+00:27:59,092 --> 00:28:01,446
+Rym: We need we need all those all those side characters.
+
+425
+00:28:01,506 --> 00:28:05,181
+Rym: initial D Or is standing there with the stopwatches and the walkie-talkies.
+
+426
+00:28:05,201 --> 00:28:06,766
+Scott: I don't know we can do that.
+
+427
+00:28:06,786 --> 00:28:11,285
+Rym: We could live stream it Does have a boat mount our phones on our bikes and live stream our race.
+
+428
+00:28:11,527 --> 00:28:13,558
+Scott: hmm That's what we could do.
+
+429
+00:28:13,598 --> 00:28:20,814
+Scott: is you just put a GoPro on Ride and then you put the GoPro on and ride and then we can use the GoPro's to get perfect timing By comparing the video.
+
+430
+00:28:21,296 --> 00:28:25,770
+Rym: that is possible, but that seems much more work than just biking up and over at the same time.
+
+431
+00:28:26,591 --> 00:28:27,173
+Scott: That's dangerous.
+
+432
+00:28:27,294 --> 00:28:28,198
+Rym: How is it dangerous?
+
+433
+00:28:28,378 --> 00:28:28,499
+Rym: How?
+
+434
+00:28:28,599 --> 00:28:30,146
+Rym: it's not like you're gonna move left and right.
+
+435
+00:28:30,186 --> 00:28:31,090
+Rym: you just take one line.
+
+436
+00:28:31,130 --> 00:28:32,155
+Scott: What if someone's coming at us?
+
+437
+00:28:32,939 --> 00:28:34,626
+Rym: if we do it like 3 a.m.. No one's coming at us.
+
+438
+00:28:34,687 --> 00:28:35,350
+Scott: someone will become it.
+
+439
+00:28:36,553 --> 00:28:41,239
+Rym: Then we stationed someone at the other side of the bridge and They'll like toot a horn.
+
+440
+00:28:41,279 --> 00:28:41,843
+Scott: We'll get in trouble.
+
+441
+00:28:41,883 --> 00:28:42,286
+Rym: It's coming.
+
+442
+00:28:42,306 --> 00:28:42,810
+Scott: We'll get in trouble.
+
+443
+00:28:44,713 --> 00:28:46,163
+Rym: I think you're just afraid you're gonna lose real fast.
+
+444
+00:28:46,184 --> 00:28:52,939
+Rym: I Think the downhill is what would kill you though because that's where I get my most speed And I feel like you would touch your brakes.
+
+445
+00:28:53,181 --> 00:28:54,428
+Rym: Oh definitely touch your brakes.
+
+446
+00:28:54,469 --> 00:28:54,670
+Rym: It's over.
+
+447
+00:28:54,710 --> 00:28:58,894
+Scott: I never touch my brakes on a downhill, but even about when you're coming to the end You're gonna just crash into the wall.
+
+448
+00:28:59,035 --> 00:29:02,670
+Rym: I just stopped really, but there's a reason why I keep popping spokes.
+
+449
+00:29:02,871 --> 00:29:03,956
+Scott: Then your rear wheel will go.
+
+450
+00:29:03,996 --> 00:29:05,101
+Scott: We need to go over the top.
+
+451
+00:29:05,804 --> 00:29:05,965
+Rym: No.
+
+452
+00:29:06,005 --> 00:29:07,654
+Rym: I don't touch my rear brake I'm.
+
+453
+00:29:07,674 --> 00:29:07,815
+Scott: no.
+
+454
+00:29:07,835 --> 00:29:09,890
+Scott: I'm saying if you hit your front brake your rear wheel would just go.
+
+455
+00:29:10,413 --> 00:29:14,402
+Rym: Now I hit my front brake the right way and my rear wheel lifts up by about an inch And then I just come to a really fast.
+
+456
+00:29:14,422 --> 00:29:15,089
+Scott: Yeah, that's too much.
+
+457
+00:29:18,215 --> 00:29:20,787
+Scott: I must accelerate and decelerate smoothly.
+
+458
+00:29:20,807 --> 00:29:23,820
+Rym: I Very often let my rear wheel come off the ground.
+
+459
+00:29:23,860 --> 00:29:24,705
+Rym: That's how I stop.
+
+460
+00:29:24,946 --> 00:29:26,997
+Scott: I do not do that I smooth I'm always smooth.
+
+461
+00:29:27,017 --> 00:29:31,040
+Rym: You know I think the real difference is it's not just like I'm not afraid I think it's literally just that.
+
+462
+00:29:31,563 --> 00:29:32,530
+Rym: I mountain bike my whole life.
+
+463
+00:29:32,591 --> 00:29:34,029
+Rym: So I learned a very different kind of biking.
+
+464
+00:29:34,512 --> 00:29:35,174
+Scott: I must.
+
+465
+00:29:35,194 --> 00:29:39,390
+Scott: I also drive smooth and you drive you hit the brakes at the last second whereas I break them year in advance.
+
+466
+00:29:39,430 --> 00:29:40,454
+Scott: So it stops smooth.
+
+467
+00:29:41,016 --> 00:29:42,561
+Scott: No we we gotta be smooth.
+
+468
+00:29:42,802 --> 00:29:44,046
+Scott: We both know comfortable.
+
+469
+00:29:44,126 --> 00:29:57,030
+Scott: No rapid accelerate See high velocity isn't really the problem It's rapid acceleration or deceleration is yeah on a bike accelerate as fast as possible Maybe if I use maybe if I get up to speed on the bike path and then get and then get on the bridge.
+
+470
+00:29:57,070 --> 00:29:58,200
+Scott: I'll already be going fast.
+
+471
+00:29:58,241 --> 00:29:59,270
+Scott: I won't need to accelerate.
+
+472
+00:29:59,752 --> 00:30:00,475
+Rym: Yeah, you think about that.
+
+473
+00:30:00,495 --> 00:30:04,070
+Rym: the problem is that bridge has a u-turn to get on the uphill.
+
+474
+00:30:04,851 --> 00:30:07,886
+Rym: Mmm got that hard u-turn to actually get to the uphill side a u-turn.
+
+475
+00:30:07,906 --> 00:30:08,670
+Scott: It's more like a chicane.
+
+476
+00:30:09,430 --> 00:30:15,448
+Rym: Yeah, you do a you you go around once like a s. I guess it's arguably a really long chicane.
+
+477
+00:30:15,769 --> 00:30:20,354
+Rym: anyway In the meta moment the book club book is The Odyssey.
+
+478
+00:30:20,615 --> 00:30:21,820
+Scott: oh crap like.
+
+479
+00:30:21,960 --> 00:30:23,326
+Rym: I think we can finish it by Thursday.
+
+480
+00:30:23,366 --> 00:30:24,190
+Scott: I'm gonna read it this weekend.
+
+481
+00:30:25,716 --> 00:30:27,048
+Rym: If we miss it we'll have to do it.
+
+482
+00:30:27,651 --> 00:30:28,013
+Rym: What should we?
+
+483
+00:30:28,334 --> 00:30:32,530
+Rym: what should we do the Thursday show on if we don't finish the Odyssey the part we read already?
+
+484
+00:30:33,490 --> 00:30:34,255
+Scott: I read more than half.
+
+485
+00:30:34,880 --> 00:30:38,665
+Rym: we could do a Thursday show on reading.
+
+486
+00:30:38,726 --> 00:30:41,310
+Rym: I Don't think we remember the show just reading.
+
+487
+00:30:42,111 --> 00:30:43,397
+Scott: Every book club is about reading.
+
+488
+00:30:43,457 --> 00:30:46,872
+Rym: yeah, but like favorite books least favorite books We already did.
+
+489
+00:30:46,912 --> 00:30:48,359
+Scott: all my favorite books is the book.
+
+490
+00:30:49,182 --> 00:30:51,170
+Scott: oh except for one I Got.
+
+491
+00:30:51,191 --> 00:30:52,655
+Rym: so did we ever?
+
+492
+00:30:52,675 --> 00:30:55,243
+Scott: maybe I should make my favorite book my second stone.
+
+493
+00:30:55,885 --> 00:30:56,688
+Scott: no no certain.
+
+494
+00:30:56,708 --> 00:30:59,034
+Scott: the stone isn't a book That's a Disney movie.
+
+495
+00:30:59,155 --> 00:31:02,590
+Rym: Oh, yeah, but the book that the sword the stone is loosely but once in future King.
+
+496
+00:31:02,670 --> 00:31:03,856
+Scott: Yeah, no you don't want to read that.
+
+497
+00:31:04,117 --> 00:31:06,006
+Rym: no I read it the last time.
+
+498
+00:31:06,066 --> 00:31:06,870
+Rym: I read it was ninth grade.
+
+499
+00:31:06,991 --> 00:31:08,848
+Scott: I read it also in the ninth grade.
+
+500
+00:31:08,889 --> 00:31:11,164
+Rym: ish All right, what's your favorite book?
+
+501
+00:31:13,272 --> 00:31:14,200
+Rym: Just the prince of nothing again.
+
+502
+00:31:14,220 --> 00:31:16,417
+Scott: Oh I didn't think about that.
+
+503
+00:31:16,719 --> 00:31:18,330
+Rym: yeah, it's a problem anyway.
+
+504
+00:31:19,131 --> 00:31:21,063
+Rym: Anyway, we'll probably do it soon.
+
+505
+00:31:21,124 --> 00:31:21,506
+Rym: read the book.
+
+506
+00:31:21,546 --> 00:31:21,828
+Rym: It's good.
+
+507
+00:31:23,031 --> 00:31:27,530
+Rym: We will unfortunately not be a ConnectiCon which is this coming weekend.
+
+508
+00:31:27,972 --> 00:31:29,418
+Scott: Oh, oh well go to ConnectiCon.
+
+509
+00:31:29,438 --> 00:31:32,250
+Scott: if you're anywhere near ConnectiCon it's probably still worth your time.
+
+510
+00:31:32,310 --> 00:31:33,475
+Scott: You can play mad board games there.
+
+511
+00:31:33,515 --> 00:31:37,270
+Rym: yep, so if you didn't notice we we are no longer the heads of the panels department.
+
+512
+00:31:37,350 --> 00:31:39,544
+Rym: We just do not have time to deal with it.
+
+513
+00:31:39,584 --> 00:31:41,755
+Scott: I don't want to go to kinetic I do.
+
+514
+00:31:41,775 --> 00:31:52,806
+Rym: I actually kind of wish I was going to ConnectiCon but this Weekend is the game developers of color conference in Manhattan which is also a very important connection that we will be doing.
+
+515
+00:31:52,826 --> 00:31:53,570
+Scott: Schomburg Center.
+
+516
+00:31:53,671 --> 00:31:55,410
+Scott: I'm gonna go there for like an hour or two in the afternoon.
+
+517
+00:31:55,410 --> 00:31:56,595
+Rym: Yep I will do the same cuz.
+
+518
+00:31:56,615 --> 00:31:58,484
+Scott: we went there last year and we saw some awesome games.
+
+519
+00:31:58,504 --> 00:31:59,630
+Rym: there were real good games.
+
+520
+00:31:59,690 --> 00:32:07,755
+Rym: They're like the average quality of games at game devs of color is well above the average quality of games at most other indie game Conventions I've ever been to.
+
+521
+00:32:07,936 --> 00:32:09,824
+Scott: I agree like legit fact.
+
+522
+00:32:09,844 --> 00:32:11,130
+Scott: That's what I said, and you stole it from me.
+
+523
+00:32:11,230 --> 00:32:19,530
+Rym: Yeah, but I'm saying it again cuz it's it's shockingly true And that says a lot about the inherent problems in the game industry.
+
+524
+00:32:21,130 --> 00:32:33,670
+Rym: But Connecticut if you live nearby like if you can drive to Hartford, Connecticut Despite the fact that we are not there and thus there will probably be a learning curve year for the people who have taken over.
+
+525
+00:32:33,750 --> 00:32:41,818
+Scott: for us as happens in these situations you don't need to go to any panels just go and do the other stuff, but uh The con is a lot of stuff going on.
+
+526
+00:32:41,939 --> 00:32:44,970
+Rym: it's a bigger gaming convention than most gaming conventions.
+
+527
+00:32:45,131 --> 00:32:46,174
+Scott: It's an everything con.
+
+528
+00:32:46,455 --> 00:32:48,923
+Scott: It doesn't pretend to be a not everything con.
+
+529
+00:32:48,943 --> 00:32:50,287
+Scott: It says we aren't everything con.
+
+530
+00:32:50,508 --> 00:32:52,394
+Scott: They got sci-fi They got superheroes.
+
+531
+00:32:52,454 --> 00:32:53,438
+Scott: They got animes.
+
+532
+00:32:53,739 --> 00:32:55,746
+Scott: They got every much everything nerdy.
+
+533
+00:32:56,107 --> 00:32:56,890
+Scott: They got it there.
+
+534
+00:32:57,111 --> 00:32:59,323
+Scott: Yeah, if you're a nerdy person you will have a good time.
+
+535
+00:32:59,383 --> 00:33:00,510
+Scott: You can play video games.
+
+536
+00:33:00,570 --> 00:33:01,393
+Scott: They got lands.
+
+537
+00:33:01,413 --> 00:33:01,955
+Scott: they get everything.
+
+538
+00:33:02,216 --> 00:33:12,448
+Scott: and also I'm pretty sure whether you're whether you're a grognard who wants to play a war game Or a kid who wants to get hype on the furry parade or whatever is a good time Yep.
+
+539
+00:33:12,590 --> 00:33:22,249
+Rym: And also if you've all you hear us talking about conventions a lot and you want to like join a convention Pretty sure the department we left behind is gonna be needing chill people.
+
+540
+00:33:22,511 --> 00:33:34,415
+Rym: Yeah, if you want to be a convention staff person and you live anywhere near, Connecticut Yep, especially if you want to be like you want to be a force or someday But you can't get to Paxis yet like and you live in Connecticut Connecticut will never sell out.
+
+541
+00:33:34,455 --> 00:33:43,288
+Scott: you can go there real easy and this is a card where you could learn like how to staff because Full disclosure also, even if you just attend you get so much bonus shit for attending.
+
+542
+00:33:43,308 --> 00:33:45,377
+Scott: hit icon There's like free movie screenings.
+
+543
+00:33:45,397 --> 00:33:48,549
+Scott: Like yeah, like you actually Connecticut is actually a ridiculously good deal.
+
+544
+00:33:49,375 --> 00:33:52,374
+Scott: content wise yeah and Rest assured.
+
+545
+00:33:52,454 --> 00:33:58,544
+Rym: There's a good chance gig knives will be returning to future Connecticut's to do panels Just not to be running the show anymore.
+
+546
+00:33:58,564 --> 00:34:04,278
+Rym: closing one day Yeah, then I would easily go like sleeve like In the summer.
+
+547
+00:34:04,319 --> 00:34:05,710
+Scott: if it was in winter, I would not hesitate it.
+
+548
+00:34:05,811 --> 00:34:07,030
+Rym: Oh, but I'll probably do this.
+
+549
+00:34:07,090 --> 00:34:13,210
+Rym: I'll start doing the thing like a new zinc account where I roll in like Friday night Do the count all day Saturday and leave pretty early on Sunday.
+
+550
+00:34:13,290 --> 00:34:15,966
+Rym: So I get like the con experience but also still have my weekend.
+
+551
+00:34:16,449 --> 00:34:20,045
+Scott: Mmm It's not really worth it to go all the way to Hartford for just that unless I could do.
+
+552
+00:34:20,106 --> 00:34:20,850
+Scott: maybe I visit my mommy.
+
+553
+00:34:21,730 --> 00:34:22,594
+Rym: Do it just for that.
+
+554
+00:34:22,975 --> 00:34:23,275
+Rym: We'll see.
+
+555
+00:34:23,577 --> 00:34:28,829
+Rym: also Connecticut is one of the only cons I can do some of the content All right, we got any other.
+
+556
+00:34:30,431 --> 00:34:34,647
+Rym: Otherwise the next cons will be at are gonna be the real packs packs real.
+
+557
+00:34:34,967 --> 00:34:35,530
+Scott: It's letting stone.
+
+558
+00:34:35,610 --> 00:34:36,196
+Scott: I got the hotel.
+
+559
+00:34:36,255 --> 00:34:39,594
+Scott: I got the plane and I got Did our.
+
+560
+00:34:39,715 --> 00:34:40,639
+Scott: oh we got back up ahead.
+
+561
+00:34:40,679 --> 00:34:41,925
+Scott: Okay, so nothing can fail.
+
+562
+00:34:41,985 --> 00:34:42,527
+Scott: We'll be there.
+
+563
+00:34:42,708 --> 00:34:44,931
+Scott: Yep We don't know if I have a panel yet We've done.
+
+564
+00:34:44,951 --> 00:34:47,925
+Scott: we've done panels literally every every single pack since.
+
+565
+00:34:48,045 --> 00:34:49,030
+Scott: oh wait, we've had a panel.
+
+566
+00:34:49,190 --> 00:34:52,129
+Scott: I can't imagine they wouldn't give us one but it could have just in case.
+
+567
+00:34:52,772 --> 00:34:56,850
+Rym: Yeah, looking forward to this packs in a big way I'm skipping PAX dev.
+
+568
+00:34:57,110 --> 00:35:00,041
+Rym: I don't want to but I got a lot of shit going on.
+
+569
+00:35:00,061 --> 00:35:02,510
+Rym: It's one of the best kind of need those vacation days.
+
+570
+00:35:02,891 --> 00:35:04,860
+Rym: I'll probably go to PAX dev next year.
+
+571
+00:35:04,880 --> 00:35:12,227
+Rym: Mmm, but the thing that sucks is this year We actually had a really good panel I wanted to do at dev and I had to back out of it because I'm not going.
+
+572
+00:35:12,549 --> 00:35:16,901
+Rym: so There's a chance I'll do that panel at regular packs.
+
+573
+00:35:17,182 --> 00:35:19,550
+Rym: That panel does not involve Scott it involves other people.
+
+574
+00:35:20,398 --> 00:35:26,687
+Rym: So if that panel happens Then you'll be able to see it at regular packs without having to buy like a $400 badge to go see it.
+
+575
+00:35:26,908 --> 00:35:29,494
+Scott: Mm-hmm All right Let's go.
+
+576
+00:35:29,895 --> 00:35:30,216
+Rym: Let's go.
+
+577
+00:35:30,256 --> 00:35:30,718
+Rym: Let's do it.
+
+578
+00:35:31,280 --> 00:35:34,090
+Scott: So micro services is uh, it's a fad.
+
+579
+00:35:34,552 --> 00:35:37,164
+Scott: It's a fad but it's also somewhat legit sort of.
+
+580
+00:35:37,345 --> 00:35:38,370
+Rym: it's a good idea.
+
+581
+00:35:38,533 --> 00:35:46,115
+Rym: but like you know the more I've realized there's a fundamental theme and all this kind of show that gig nights does and the theme is Here is a design pattern.
+
+582
+00:35:46,717 --> 00:35:51,230
+Rym: it is useful when it's useful and it is a bad idea when it's not a bad idea.
+
+583
+00:35:51,351 --> 00:35:53,341
+Scott: I think the main problem is that it's actually.
+
+584
+00:35:53,502 --> 00:36:00,490
+Scott: it's one of those things where like You know, you look at something like other fads like containers or no SQL, right?
+
+585
+00:36:00,550 --> 00:36:02,709
+Scott: And those are things that became fads or blockchains.
+
+586
+00:36:04,732 --> 00:36:14,609
+Scott: They're fads Technological fads that are really only useful for a small number of applications like machine learning only useful for a small number At least now right there.
+
+587
+00:36:14,730 --> 00:36:22,090
+Scott: it doesn't have this wide application but like everyone starts trying to use it because it's a fad and then it backs off to the Point where only the people who need to use it use it.
+
+588
+00:36:22,130 --> 00:36:30,469
+Scott: But actually most companies that have software development where they're building tools and systems for the company to use Which is the kind of places that I work.
+
+589
+00:36:31,531 --> 00:36:32,878
+Scott: You know, I don't work for tech companies.
+
+590
+00:36:32,918 --> 00:36:35,785
+Scott: I work for companies as an engineer building software the company needs.
+
+591
+00:36:36,471 --> 00:36:58,808
+Scott: Micro services are actually usually a pretty good pattern for most places because a lot of people make the accident of they build One custom system that's like for their biggest application Right, like the thing that does the core of their business and then they start building more stuff and rather than build separate new systems they just keep putting all the code in the same code base on the same platform on the same hardware on the same.
+
+592
+00:36:59,129 --> 00:37:07,716
+Scott: and is They get this one giant monolithic application that does everything and that's usually a bad idea for any software architecture No matter what your application is.
+
+593
+00:37:08,097 --> 00:37:17,567
+Scott: and micro services which means in general Splitting things up and do separate programs So you don't have just one program that does everything is usually a good idea.
+
+594
+00:37:17,587 --> 00:37:18,230
+Scott: to some extent.
+
+595
+00:37:18,591 --> 00:37:23,090
+Scott: The problem is not that everyone's doing this fad, which is usually the problem.
+
+596
+00:37:23,511 --> 00:37:28,566
+Scott: The problem is is that people are very very bad because they've never built micro services before.
+
+597
+00:37:28,686 --> 00:37:39,577
+Scott: usually they don't know How to design systems make the splits in the wrong day They cut the services in the wrong places and they end up Making a lot of work for themselves.
+
+598
+00:37:39,597 --> 00:37:43,696
+Scott: because now maybe you've got two services or more that should have been part of the same Service.
+
+599
+00:37:43,716 --> 00:37:44,529
+Scott: they went to micro.
+
+600
+00:37:44,863 --> 00:37:52,162
+Scott: Yeah And now you have to build a lot of glue because those services are constantly talking to each other When if you just had put them in the same service, they would have been fine.
+
+601
+00:37:52,282 --> 00:37:54,110
+Scott: Yep, or they don't.
+
+602
+00:37:54,190 --> 00:37:59,550
+Scott: They don't cut enough to get enough of the benefit and they've got still things that could be cut down more.
+
+603
+00:37:59,824 --> 00:37:59,930
+Scott: Yeah.
+
+604
+00:37:59,930 --> 00:38:16,710
+Scott: So it's like you have to actually be very intelligent have a big understanding of your systems and have a really strong understanding of technology to be able to cut and Separate your systems into the right pieces that make sense to gain the advantages without causing yourself more problems.
+
+605
+00:38:16,871 --> 00:38:19,890
+Rym: I think the real source of a lot of the problems that's really the whole show.
+
+606
+00:38:19,910 --> 00:38:21,396
+Scott: There's a but people.
+
+607
+00:38:21,496 --> 00:38:23,183
+Rym: I guess we can get a lot of examples.
+
+608
+00:38:23,203 --> 00:38:26,019
+Scott: I got I got the best example in the world Oh the one you told me before.
+
+609
+00:38:26,120 --> 00:38:26,321
+Rym: Yeah.
+
+610
+00:38:26,422 --> 00:38:27,310
+Rym: Yeah, that's a pretty good one.
+
+611
+00:38:27,370 --> 00:38:29,524
+Scott: I don't know if it's true, but it's good enough whether it's true or not.
+
+612
+00:38:29,846 --> 00:38:34,230
+Rym: But like my There's many, you know, I have a very different job of what I had before.
+
+613
+00:38:34,713 --> 00:38:43,150
+Rym: But so I'm in the position of managing like Many different engineering teams and areas that are working on different things like a bunch of different silos.
+
+614
+00:38:43,572 --> 00:39:02,790
+Rym: And because you can't have if you ever unless you're a tiny company You cannot expect every engineer in your company to know about everything your company does like that That design pattern like that management design pattern seems to happen when small engineering startup gets big and it's not managed.
+
+615
+00:39:03,334 --> 00:39:13,585
+Rym: Yep, but so in that situation microservices are a very good way to Be able to maintain silos of expertise without having the opposite IBM problem of.
+
+616
+00:39:13,926 --> 00:39:15,170
+Rym: you've got a bunch of silos.
+
+617
+00:39:15,210 --> 00:39:19,730
+Rym: They're basically independent development teams that literally know nothing about it.
+
+618
+00:39:19,790 --> 00:39:28,650
+Scott: Yeah, not only does it help technologically because you can separate all these systems, you know hardware wise and software wise But you can also separate your employees, right?
+
+619
+00:39:28,710 --> 00:39:32,404
+Scott: It's like someone can work on one service and not have to know about other services.
+
+620
+00:39:32,484 --> 00:39:45,450
+Scott: if all your code isn't together in one Big system then that means you have to get all your employees no matter what they're working on all Coordinated in perfect unison to be able to deliver a product and put out a release and you'll never release anything.
+
+621
+00:39:45,450 --> 00:39:55,930
+Rym: but instead you can have a designer or a product manager on each one of those silos and then have a Separate person or a separate group whose job is to do things that combine all those services.
+
+622
+00:39:56,191 --> 00:40:03,170
+Scott: And if your services are designed well and you made the cuts in the right places Then there isn't going to be a lot of communication between those services.
+
+623
+00:40:03,210 --> 00:40:12,982
+Scott: They're gonna be so independent of each other that it will be super rare where any one of those Services actually needs to like do something because another service did something.
+
+624
+00:40:13,002 --> 00:40:15,810
+Scott: Yeah, that should really happen all like a super rare case.
+
+625
+00:40:17,131 --> 00:40:27,770
+Scott: So the best example of microservices that I ever seen and I'm not sure how true this is Because this was told to me by an Amazon engineer over five years ago, so it could be that's ancient history.
+
+626
+00:40:28,032 --> 00:40:35,050
+Scott: Yeah, it could be completely not true now as far as I know But it doesn't matter how true it is as to the reality of what Amazon does.
+
+627
+00:40:35,574 --> 00:40:37,410
+Scott: What matters is that if it is true?
+
+628
+00:40:37,590 --> 00:40:40,558
+Scott: It's still a really good Architecture and it's still a good example to follow.
+
+629
+00:40:40,598 --> 00:40:41,060
+Scott: true or not?
+
+630
+00:40:41,301 --> 00:40:44,271
+Rym: that is it is a very good example of the right way to Do this.
+
+631
+00:40:44,291 --> 00:40:46,759
+Scott: so go to amazon.com and shop for something.
+
+632
+00:40:46,799 --> 00:40:47,922
+Scott: go to a product page.
+
+633
+00:40:48,083 --> 00:40:50,450
+Scott: Yeah, pick a product go Rym go buy something.
+
+634
+00:40:50,490 --> 00:40:51,554
+Scott: How about a unique nice t-shirt?
+
+635
+00:40:51,895 --> 00:40:55,850
+Rym: Oh, yeah, actually, that's probably a bad example because no there is one and you can actually buy.
+
+636
+00:40:55,970 --> 00:40:59,125
+Rym: In fact, I actually have two more t-shirt designs and I can now make hoodies.
+
+637
+00:40:59,146 --> 00:41:00,211
+Rym: I'm gonna make a GeekNights hoodie Right.
+
+638
+00:41:00,251 --> 00:41:01,598
+Scott: The point is that nobody's buying this.
+
+639
+00:41:01,618 --> 00:41:03,950
+Scott: go to a popular product like got four stars.
+
+640
+00:41:04,291 --> 00:41:05,697
+Scott: Yeah, what's something that we would recommend?
+
+641
+00:41:05,737 --> 00:41:09,170
+Rym: people buy an Amazon this fancy gig night t-shirt that comes in two different colors.
+
+642
+00:41:09,250 --> 00:41:11,403
+Scott: How about something that's actually popular and I'm too late.
+
+643
+00:41:11,464 --> 00:41:12,067
+Rym: I'm on the t-shirt.
+
+644
+00:41:12,088 --> 00:41:12,490
+Rym: I'm not moving.
+
+645
+00:41:12,510 --> 00:41:14,259
+Scott: There's not enough stuff there for me to tell you.
+
+646
+00:41:14,279 --> 00:41:16,309
+Rym: there is product description reviews, right?
+
+647
+00:41:16,671 --> 00:41:27,858
+Scott: So if you look at an Amazon product page and you scroll down this page Like if you don't think about it when you're just shopping, but there's a lot of fucking stuff on this There's the photos this product info.
+
+648
+00:41:27,979 --> 00:41:30,487
+Scott: There's the actual e-commerce part where you buy the product.
+
+649
+00:41:30,647 --> 00:41:33,940
+Scott: There's the reviews There's the Q&A there's related products.
+
+650
+00:41:34,141 --> 00:41:36,170
+Scott: There's people who bought this also bought this.
+
+651
+00:41:36,531 --> 00:41:40,649
+Scott: There's like you just keep scrolling and the page keeps loading new shit.
+
+652
+00:41:41,191 --> 00:41:48,390
+Scott: It's like there's so many features on this product page it is insane If you try to think about it, like if you're a software engineer.
+
+653
+00:41:48,751 --> 00:41:50,136
+Scott: How do I make this like?
+
+654
+00:41:50,236 --> 00:41:54,670
+Scott: try to fucking make this even just like as a WordPress plug-in or just as a Django?
+
+655
+00:41:55,010 --> 00:41:57,026
+Rym: Just try to make it as hard coding the CSS.
+
+656
+00:41:57,107 --> 00:41:58,832
+Scott: try to make Like.
+
+657
+00:41:58,953 --> 00:42:00,098
+Scott: this would be so red.
+
+658
+00:42:00,138 --> 00:42:01,524
+Scott: How many databases queries?
+
+659
+00:42:01,544 --> 00:42:02,870
+Scott: Do you need to make this page?
+
+660
+00:42:03,271 --> 00:42:13,324
+Scott: It would like if even if you had no visitors to your site if you tried to make an e-commerce site that did all of This it would load slow as fucking hell even though you have no better example.
+
+661
+00:42:13,365 --> 00:42:14,288
+Rym: This is a camcorder.
+
+662
+00:42:14,328 --> 00:42:14,990
+Rym: I'm looking at by.
+
+663
+00:42:15,010 --> 00:42:15,673
+Scott: That's a good one.
+
+664
+00:42:15,693 --> 00:42:16,356
+Rym: So like you got like.
+
+665
+00:42:16,396 --> 00:42:17,280
+Rym: oh, yeah, so let's see.
+
+666
+00:42:17,320 --> 00:42:19,490
+Rym: We got the images which is like their area.
+
+667
+00:42:19,591 --> 00:42:20,341
+Rym: There's videos.
+
+668
+00:42:20,382 --> 00:42:27,690
+Rym: they got video features Scroll down after the frequently bought together and customers reviewed this also viewed this.
+
+669
+00:42:28,251 --> 00:42:34,310
+Rym: Here's just a whole bunch of fucking like product information from the manufacturer like images and their own design.
+
+670
+00:42:34,471 --> 00:42:38,828
+Scott: This some system somewhere where the manufacturers and sellers go in and put that in there.
+
+671
+00:42:38,848 --> 00:42:41,215
+Scott: Yeah Look how many features.
+
+672
+00:42:41,255 --> 00:42:49,479
+Scott: so the secret is is that each part as far as I've been told each part of this product page is A completely separate microservice right date.
+
+673
+00:42:49,579 --> 00:42:53,370
+Scott: somewhere at Amazon are a bunch of computers that are just the Q&A system.
+
+674
+00:42:53,714 --> 00:42:57,825
+Scott: That's all they do is Q&A Right, and there's another system that just the review system.
+
+675
+00:42:57,905 --> 00:42:58,690
+Scott: all it does is reviews.
+
+676
+00:42:58,791 --> 00:42:59,700
+Scott: It doesn't do anything else.
+
+677
+00:42:59,821 --> 00:43:05,090
+Scott: all it is reviews Right and that review system that Q&A system that frequently bought together system.
+
+678
+00:43:05,614 --> 00:43:07,730
+Scott: They have absolutely nothing to do with any of the other systems.
+
+679
+00:43:07,971 --> 00:43:20,110
+Scott: you can take that Q&A system from Amazon if they gave you the source code which they won't and you could install it on your Own hardware and instead of attaching the only attachment it has to Amazon should be as far as I can tell the product IDs.
+
+680
+00:43:20,671 --> 00:43:30,950
+Scott: You could attach that review system to the GeekNights episode IDs and we can suddenly just have reviews of GeekNights Episodes instead of reviews of em and we wouldn't have to change a single line of code.
+
+681
+00:43:31,271 --> 00:43:36,450
+Scott: There is no dependency of that Q&A system on actual Amazon products other than that.
+
+682
+00:43:36,751 --> 00:43:41,410
+Scott: You know the separate sets of cues and A's are together based on the product IDs.
+
+683
+00:43:41,751 --> 00:43:43,055
+Scott: All right, and how that.
+
+684
+00:43:43,095 --> 00:43:47,890
+Scott: but wait if these are all separate systems, how do they all load them together on this one product page?
+
+685
+00:43:48,110 --> 00:44:07,931
+Scott: Well, there's a system the amazon.com system that runs the website and what it does is There's somewhere as a bucket an s3 bucket and in that bucket for every single product at Amazon There's a file and in that file is the HTML of the Q&A section and the name of the file is the product ID of The product.
+
+686
+00:44:08,352 --> 00:44:20,268
+Scott: so this amazon.com system as I was told six years ago goes to these buckets pulls together these already rendered HTMLs right of all these different sections of the site and just paste them all together.
+
+687
+00:44:20,529 --> 00:44:25,504
+Scott: now That's the only glue they have is go to a bunch of buckets get HTML and paste together.
+
+688
+00:44:25,625 --> 00:44:27,350
+Rym: now that part the specifics.
+
+689
+00:44:28,071 --> 00:44:30,864
+Rym: The specifics of that aren't really relevant to microservices.
+
+690
+00:44:30,884 --> 00:44:31,286
+Rym: You could do it.
+
+691
+00:44:31,387 --> 00:44:34,970
+Scott: Anyway, no What's relevant is the fact that they have done it in such a way?
+
+692
+00:44:35,191 --> 00:44:35,492
+Scott: It's not.
+
+693
+00:44:35,512 --> 00:44:39,045
+Scott: that that way is the best way or the right way or whatever for a website.
+
+694
+00:44:39,065 --> 00:44:40,490
+Rym: That's a highly scalable way.
+
+695
+00:44:40,611 --> 00:44:44,070
+Scott: It's that not only is highly scalable But it means that the Q&A system can do it.
+
+696
+00:44:44,110 --> 00:44:46,250
+Scott: Just if you're working on it, you can do whatever the fuck you want.
+
+697
+00:44:46,290 --> 00:44:48,120
+Scott: You don't have to worry about what Amazon that comes doing.
+
+698
+00:44:48,461 --> 00:44:52,462
+Scott: if you're doing the review system You can just do anything you want in the review system.
+
+699
+00:44:52,523 --> 00:44:55,918
+Scott: change it up mix it up change Yeah And it won't matter because you're.
+
+700
+00:44:56,219 --> 00:45:01,810
+Scott: the way it's integrated together with the other stuff is Like as long as the visuals are together, right?
+
+701
+00:45:02,270 --> 00:45:02,913
+Scott: You're all good.
+
+702
+00:45:02,933 --> 00:45:10,662
+Rym: now one sort of I don't want to say an anti-pattern but a problem I see with this micro this microservice architecture with this website as an example.
+
+703
+00:45:11,204 --> 00:45:28,330
+Rym: a lot of people will have this page Basically hit 20 different micro services to generate all these things and those services all have varying SLA's varying quality or One of them loads slowly and then the page like starts rendering and weird chunks.
+
+704
+00:45:28,601 --> 00:45:31,118
+Rym: Yeah and there's actually a really easy solution to that.
+
+705
+00:45:31,580 --> 00:45:36,459
+Rym: you have some sort of middle tier or some sort of Buffer like in between your services.
+
+706
+00:45:36,981 --> 00:45:41,578
+Rym: like if you have a web page just gonna hit 10 micro services Have a mid tier of some kind.
+
+707
+00:45:41,598 --> 00:45:45,470
+Rym: that'll hit the micro services and interleave the data into your rendered HTML.
+
+708
+00:45:45,631 --> 00:45:49,630
+Scott: I mean the two hardest problems in programming are naming things and caching validation, right?
+
+709
+00:45:49,690 --> 00:45:53,283
+Scott: So you basically when you have micro services, that's one of the benefits actually.
+
+710
+00:45:53,343 --> 00:45:55,430
+Scott: It's not it's not a it's not a gotcha, right?
+
+711
+00:45:55,490 --> 00:45:56,195
+Scott: It's like a benefit.
+
+712
+00:45:56,235 --> 00:46:04,966
+Scott: It's like oh because they've separated these services I can actually introduce IT solutions like caching layers and proxy layers and load balancing layers like
+
+713
+00:46:05,007 --> 00:46:07,115
+Rym: that pre-rendered HTML Brilliant
+
+714
+00:46:07,276 --> 00:46:24,727
+Scott: in between all of these different services Whereas if everything is part of one application running in the same processes and threads in the same CPU and you want a load balance You now have to code that inside your application Whereas if now if you've got, you know, they're separated there on physically separate computers running separate services.
+
+715
+00:46:25,028 --> 00:46:33,793
+Scott: You can now introduce Varnish or Amazon load balancers or any other kinds all kinds of routers network, you know Firewalls.
+
+716
+00:46:33,813 --> 00:46:40,610
+Scott: you can put any kind of nonsense you want in between to solve these other problems Whereas otherwise those tools would be unavailable.
+
+717
+00:46:40,650 --> 00:46:44,742
+Rym: Because look at this nothing on this page needs to be stateful in any way.
+
+718
+00:46:45,384 --> 00:46:53,798
+Scott: if I refresh the page if you do a different Service if you go to the Q&A section to actually answer like if you go to do reviews It'll often bring you to a separate page.
+
+719
+00:46:53,838 --> 00:46:55,444
+Scott: That's just reviews and nothing else on it.
+
+720
+00:46:55,525 --> 00:46:57,598
+Scott: Yep, when you go to check out It's just check out.
+
+721
+00:46:57,618 --> 00:46:58,690
+Scott: There's nothing else there, right?
+
+722
+00:46:58,690 --> 00:47:07,070
+Scott: You've gone and now you're at when you're actually real-time accessing a system It's like you're only looking at stuff from that one system other than like the navbar or whatever, right?
+
+723
+00:47:08,470 --> 00:47:15,152
+Scott: You know, so it's like you can sort of tell from the interface of Amazon a little bit about the architecture behind the scenes of Amazon.com.
+
+724
+00:47:15,293 --> 00:47:17,361
+Rym: So how do you figure out where to draw the lines?
+
+725
+00:47:17,382 --> 00:47:19,350
+Rym: Can we come up with generic guidance, right?
+
+726
+00:47:19,570 --> 00:47:20,815
+Rym: It seems like so many people already
+
+727
+00:47:20,855 --> 00:47:32,230
+Scott: talked about is a little bit right but if you want as little talking as possible Right, so if you were to say do the Q&A system You wouldn't have a Q system and an A system because they would have to talk to each other too much, right?
+
+728
+00:47:32,750 --> 00:47:35,304
+Scott: These things are sharing the same database, right?
+
+729
+00:47:35,385 --> 00:47:36,290
+Scott: It's it's sort of obvious.
+
+730
+00:47:36,431 --> 00:47:38,070
+Scott: This is a really obvious case here, right?
+
+731
+00:47:38,210 --> 00:47:44,410
+Scott: But when you actually get to your real business Becomes harder to draw the lines because you want to have a lot of talking between systems, right?
+
+732
+00:47:44,690 --> 00:47:48,643
+Scott: So one thing is that you got to say, okay, you know, there's probably.
+
+733
+00:47:48,824 --> 00:47:50,630
+Scott: you have a monolithic application already.
+
+734
+00:47:51,275 --> 00:47:54,416
+Scott: Look at what's already Sort of going across.
+
+735
+00:47:54,476 --> 00:47:58,814
+Scott: draw the lines where you feel they belong first and then look and say, okay When would be?
+
+736
+00:47:58,875 --> 00:48:01,090
+Scott: when would something need to cross the lines, right?
+
+737
+00:48:01,430 --> 00:48:01,551
+Scott: When?
+
+738
+00:48:01,732 --> 00:48:08,348
+Scott: when I need to join tables in these two databases together, even though I drew a line between them when would this need to make an API call to that?
+
+739
+00:48:08,368 --> 00:48:13,210
+Scott: and You know if you can minimize that as much as possible, you're probably drawing lines in a good place.
+
+740
+00:48:14,872 --> 00:48:26,722
+Scott: The other thing you want to do is that a lot of times I notice the times the lines are crossed will be for Reporting or for Notification or for some certain use cases.
+
+741
+00:48:26,822 --> 00:48:28,589
+Rym: reporting in particular, right?
+
+742
+00:48:29,150 --> 00:48:33,090
+Scott: Red reporting is usually something that's like everyone has and will go across all systems.
+
+743
+00:48:33,251 --> 00:48:36,329
+Scott: right because you and you want to join all your data together to report and everything.
+
+744
+00:48:36,349 --> 00:48:51,686
+Scott: and What you really got to do in those cases is like hey you know instead of having this reporting and you know instead of keeping things together to make reporting easier or Separating them to make you know and then making reporting difficult make reporting its own service.
+
+745
+00:48:52,068 --> 00:48:53,756
+Scott: Yep, right That's all over by itself.
+
+746
+00:48:54,159 --> 00:48:55,950
+Rym: and then and then the query all the things right.
+
+747
+00:48:57,276 --> 00:49:00,350
+Scott: You can't join these two tables together because they're from separate services.
+
+748
+00:49:00,651 --> 00:49:09,864
+Scott: But now the reporting system can once or once per report query all the microservices one at a time that all right Collect all the data from them and then mix it together.
+
+749
+00:49:09,964 --> 00:49:10,970
+Scott: and now that's its own thing.
+
+750
+00:49:11,452 --> 00:49:14,970
+Scott: And now you don't have reporting code mixed in with all your stuff, right?
+
+751
+00:49:15,293 --> 00:49:17,893
+Scott: So you got to think about those sort of Like.
+
+752
+00:49:17,994 --> 00:49:21,810
+Scott: there's almost like even now you've separated the different parts of your application.
+
+753
+00:49:21,950 --> 00:49:29,292
+Scott: There are some features that they all have in common and those features need to sort of come off of everything and become their own Service.
+
+754
+00:49:29,534 --> 00:49:29,735
+Rym: Yep.
+
+755
+00:49:30,177 --> 00:49:32,570
+Rym: Now you also don't want to get too small with these services.
+
+756
+00:49:33,192 --> 00:49:34,116
+Rym: I'm looking at the Wikipedia.
+
+757
+00:49:34,136 --> 00:49:37,430
+Rym: they even call that anti pattern nano services, right?
+
+758
+00:49:37,450 --> 00:49:48,050
+Rym: That's when you cut too much and now things have to talk a lot and basically comes down to if you split a service out And you can't come up with any reason for anyone to query that service by itself.
+
+759
+00:49:48,491 --> 00:49:54,127
+Rym: Mm-hmm, like is is there literally no one who would ever hit that API without also hitting another API?
+
+760
+00:49:54,368 --> 00:49:55,250
+Rym: then you've gone too far.
+
+761
+00:49:55,290 --> 00:50:01,090
+Scott: Imagine yourself being a developer and you're working on one of the services and think about how often when you're coding a feature for that.
+
+762
+00:50:01,150 --> 00:50:02,577
+Scott: New sir, like imagine like, okay.
+
+763
+00:50:02,618 --> 00:50:03,462
+Scott: I'll draw the cut here.
+
+764
+00:50:03,884 --> 00:50:05,030
+Scott: pick one of the sides of the cut.
+
+765
+00:50:05,272 --> 00:50:05,799
+Scott: Yeah, I'll say all right.
+
+766
+00:50:05,819 --> 00:50:07,180
+Scott: This is my microservice All right.
+
+767
+00:50:07,731 --> 00:50:12,007
+Scott: Now imagine a feature you want to add to that microservice and then imagine how you would code it.
+
+768
+00:50:12,468 --> 00:50:23,690
+Scott: theoretically if you think that encoding that migrus encoding that feature for that microservice say Would I be able to code that feature for this service without touching any of the other services?
+
+769
+00:50:24,430 --> 00:50:27,744
+Scott: Right or would I have to make commits to two services in order to get this feature built?
+
+770
+00:50:28,347 --> 00:50:36,724
+Scott: if you have to make commits to two services to get that feature built you either a Cut too small and made a nano service and you should combine those two things.
+
+771
+00:50:36,784 --> 00:50:43,094
+Scott: that you can make one commit to add that feature or That feature that you're adding is Something like reporting.
+
+772
+00:50:43,114 --> 00:50:47,590
+Scott: that should be its own service and it should be somewhat common sense to figure out which of the two it is.
+
+773
+00:50:47,755 --> 00:50:47,865
+Rym: Yep.
+
+774
+00:50:48,373 --> 00:51:00,279
+Rym: so if you want like if your career path as a someone who cares about technology is listening to GeekNights if your goal is to be like a chief architect or a CTO or a product manager.
+
+775
+00:51:00,720 --> 00:51:01,783
+Rym: This is this kind of stuff.
+
+776
+00:51:01,803 --> 00:51:03,448
+Rym: You need to understand like.
+
+777
+00:51:03,528 --> 00:51:13,730
+Rym: this is The architecture side that makes you very valuable to a company Even potentially irrespective of your actual raw computer science coding ability
+
+778
+00:51:14,132 --> 00:51:22,710
+Scott: Yep, but having computer science coding ability will make it easier for you to you know Implement techniques and know where to you know separate services and things
+
+779
+00:51:22,830 --> 00:51:24,957
+Rym: Yep, which again comes down to how big is your cut.
+
+780
+00:51:24,977 --> 00:51:28,829
+Rym: like some companies will have functional programmers separate from like.
+
+781
+00:51:28,889 --> 00:51:36,450
+Scott: also You also have to really have to understand the application architecture of the different services like oh this one has database This one has some sort of caching mechanism.
+
+782
+00:51:36,534 --> 00:51:38,194
+Scott: Yes how the network is arranged.
+
+783
+00:51:38,455 --> 00:51:51,190
+Scott: you have to have this sort of holistic understanding of well someone has to write of how the You know the hardware and the software works right on a not granular level but on you know broad level so that you can know.
+
+784
+00:51:51,471 --> 00:52:06,510
+Scott: Ah, well, actually I know that this application is constantly writing over here You know to these to this storage thing, which means it should probably be its own deal Right and just provide that data out with an API and nothing else should be part of that, right?
+
+785
+00:52:06,850 --> 00:52:16,866
+Rym: But again, it also it means that someone like me I need to know what micro services are available in my whole like infrastructure But I literally don't need to know what's behind those API's?
+
+786
+00:52:16,907 --> 00:52:17,469
+Rym: I can trust them.
+
+787
+00:52:17,971 --> 00:52:22,968
+Rym: They'll do what they say they do and I can use them as a menu of services to build the thing.
+
+788
+00:52:23,028 --> 00:52:23,570
+Rym: I want to build.
+
+789
+00:52:25,912 --> 00:52:26,758
+Rym: Yeah, that's probably it.
+
+790
+00:52:26,919 --> 00:52:31,461
+Scott: there's not much else to say but you know I mean you can read this Wikipedia article though as I'm serious a lot of.
+
+791
+00:52:31,501 --> 00:52:36,793
+Scott: there's been a lot of literature about micro services and it's one of those things sort of like It's not.
+
+792
+00:52:36,873 --> 00:52:39,907
+Scott: you know testing is one of those things where people like preach it, but they don't.
+
+793
+00:52:40,027 --> 00:52:51,750
+Scott: they don't do it Yeah and it's a lot of the things they preach are actually not practical and like you can't actually do all those things realistically and you Maybe shouldn't unless you're unless you're doing medical stuff, then you should yeah, but that's a whole different ballgame.
+
+794
+00:52:51,790 --> 00:52:54,470
+Scott: But micro services is the thing you can do, right?
+
+795
+00:52:54,731 --> 00:52:58,347
+Scott: And it's like you probably should do right and a lot of the literature is actually right.
+
+796
+00:52:58,507 --> 00:53:02,000
+Scott: most of it Here's a better but most people fail at it.
+
+797
+00:53:02,081 --> 00:53:03,867
+Scott: Despite that even though they're trying.
+
+798
+00:53:04,028 --> 00:53:04,670
+Rym: here's the last bit.
+
+799
+00:53:05,031 --> 00:53:07,159
+Rym: what are the situations where you definitely should not?
+
+800
+00:53:08,223 --> 00:53:12,429
+Rym: and I think it comes down to Are you all making literally only one thing?
+
+801
+00:53:13,070 --> 00:53:17,786
+Rym: Yeah, like you're literally this simple website is all your outputting like.
+
+802
+00:53:17,866 --> 00:53:27,370
+Scott: don't over engineer it Yeah, I mean well even sometimes where even if you you know You look at something like a WordPress blog right and somebody will get all these plugins on the WordPress blog.
+
+803
+00:53:27,552 --> 00:53:28,286
+Scott: Yeah, and it's like.
+
+804
+00:53:28,307 --> 00:53:37,018
+Scott: well Yes if you were gonna make the ideal application architecture that would be microservices and not a whole bunch of plugins on one WordPress installation, but You aren't big enough.
+
+805
+00:53:37,038 --> 00:53:38,083
+Scott: You're a tiny blog.
+
+806
+00:53:38,504 --> 00:53:39,991
+Scott: So just fucking use the plugins It does.
+
+807
+00:53:40,052 --> 00:53:43,930
+Scott: it's not worth you because microservices increases your engineering effort.
+
+808
+00:53:43,990 --> 00:53:49,950
+Scott: You need teams and you need you need to be a certain size to build all these separate systems because it adds overhead.
+
+809
+00:53:50,373 --> 00:53:52,750
+Scott: Right when you make more systems rather than have one system.
+
+810
+00:53:52,979 --> 00:53:58,283
+Scott: Yeah So don't go doing it Even if it's the right thing to make that system the best it can be.
+
+811
+00:53:58,424 --> 00:54:11,273
+Scott: if you can get away with a shitty system Yeah, and you don't have incredible resources to build a fancy system, which also applies don't do this for prototypes experiments proofs of concepts Like the.
+
+812
+00:54:11,755 --> 00:54:16,230
+Rym: but I think this is more generally good advice of don't over engineer things that don't need the over engineer.
+
+813
+00:54:16,593 --> 00:54:18,126
+Scott: Don't preemptively optimize.
+
+814
+00:54:18,347 --> 00:54:26,815
+Scott: Yeah Yeah, cuz if you ever find yourself saying I'm doing this because in the future me white we might want to know No, dude, that means do not do.
+
+815
+00:54:26,855 --> 00:54:28,802
+Scott: that is not a supporting reason to do that thing.
+
+816
+00:54:28,943 --> 00:54:29,364
+Rym: That is the.
+
+817
+00:54:29,424 --> 00:54:31,678
+Rym: that is the novice mistake That's right.
+
+818
+00:54:31,779 --> 00:54:32,529
+Rym: That's freshman year.
+
+819
+00:54:32,891 --> 00:54:34,377
+Rym: If you know that sophomore year the future.
+
+820
+00:54:34,417 --> 00:54:36,304
+Scott: don't worry about what could be possible in the future.
+
+821
+00:54:36,364 --> 00:54:41,548
+Scott: do what is best for the now What is known to be true things you definitely are going to do for sure?
+
+822
+00:54:42,131 --> 00:54:47,009
+Scott: Design for that and if in the future it does happen that you might want to then change it.
+
+823
+00:54:47,318 --> 00:54:48,633
+Rym: Yeah Cuz it's.
+
+824
+00:54:48,853 --> 00:54:50,317
+Rym: if you're gonna like the time.
+
+825
+00:54:50,357 --> 00:55:00,950
+Rym: it'll take you the opportunity cost of doing heavy over engineering very early on Compared to what it would take to when you've grown and have twice as many engineers to rewrite something old you built.
+
+826
+00:55:01,912 --> 00:55:05,070
+Rym: Also, the technology landscape might change in those couple years.
+
+827
+00:55:05,753 --> 00:55:09,650
+Rym: I mean look at how much databases have changed in the last five years.
+
+828
+00:55:09,831 --> 00:55:11,666
+Scott: That's another great thing about microservices.
+
+829
+00:55:11,686 --> 00:55:16,150
+Scott: is that you know You can even when new technologies come around one service can like that.
+
+830
+00:55:16,230 --> 00:55:25,902
+Scott: Maybe you know has time the developers have time to work on something concern updating to newer technologies and start messing around Microservices backed by some old postgres, you know, say there's some new hotness.
+
+831
+00:55:25,922 --> 00:55:27,930
+Scott: I give you like an Amazon product page, right?
+
+832
+00:55:28,030 --> 00:55:28,613
+Scott: It's like okay.
+
+833
+00:55:28,653 --> 00:55:30,179
+Scott: How much do people really care about?
+
+834
+00:55:30,240 --> 00:55:32,630
+Scott: the people who bought this also bought this right?
+
+835
+00:55:32,730 --> 00:55:33,956
+Scott: That's probably semi important.
+
+836
+00:55:34,238 --> 00:55:40,349
+Scott: Whatever is working on that and don't kid yourself There is someone whose job is I work on the something who bought this also bought this.
+
+837
+00:55:40,510 --> 00:55:49,288
+Scott: Yeah, like there's someone whose only job is I'm the owner of that part of the page That whoever's working on that can probably have time to experiment and really improve.
+
+838
+00:55:49,328 --> 00:55:55,362
+Scott: and you know Work on machine learning type stuff and get some fanciness going on in there Right, whereas the people working on say the photos part.
+
+839
+00:55:55,683 --> 00:55:56,910
+Scott: They probably can't fuck around.
+
+840
+00:55:57,798 --> 00:56:04,510
+Scott: You cannot fuck that up Yep, so, you know, they can probably had to wait and see and you can have different systems running different technologies.
+
+841
+00:56:05,196 --> 00:56:15,250
+Rym: I guess one other concern is it does Mean that you need because usually depending I mean if it's how big you are But you might have people doing QA in each one of those silos like for each microservice.
+
+842
+00:56:16,272 --> 00:56:21,510
+Rym: If you have something that's written by microservices, you need a holistic quality assurance solution.
+
+843
+00:56:22,092 --> 00:56:34,506
+Rym: You need something or someone that is testing the integrated final page irrespective You Usually the services that integrate the other services and call their API.
+
+844
+00:56:34,787 --> 00:56:36,633
+Rym: that's where that QA They're usually.
+
+845
+00:56:36,653 --> 00:56:39,924
+Scott: that usually is also a service and usually has its own QA.
+
+846
+00:56:39,984 --> 00:56:41,208
+Scott: So that's where that happens.
+
+847
+00:56:41,249 --> 00:56:51,950
+Scott: Yep, right You know, it's like if you know a lot of times even if your own QA will say that your own service is all good You know the other the consumers of your service might be like you guys just mess something up and then you.
+
+848
+00:56:57,216 --> 00:56:59,760
+Rym: This has been GeekNights with Rym and Scott.
+
+849
+00:56:59,800 --> 00:57:04,559
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+850
+00:57:04,861 --> 00:57:09,880
+Scott: Be sure to visit our website at front row crew comm for show notes discussion news and more.
+
+851
+00:57:10,160 --> 00:57:17,320
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+852
+00:57:17,920 --> 00:57:21,096
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+853
+00:57:22,341 --> 00:57:25,454
+Scott: GeekNights is recorded live with no studio and no audience.
+
+854
+00:57:25,634 --> 00:57:28,561
+Scott: But unlike those other late shows It's actually recorded at night
+
+855
+00:57:42,095 --> 00:58:04,041
+Rym: and the patreon patrons for this particular episode of GeekNights are Craig Oliver Allen Joyce Rebecca Dunn Heidi McNichol a shimmering ruby obelisk hanging in the sky chart a vision my stady calm Jeremy minor link eg scoot alone Lee Roberto Kingsley Kelly Snyder cold guy Amanda Duchette Shawn Yeager Matthew Smith Nicholas Brando Mr.
+
+856
+00:58:04,101 --> 00:58:08,419
+Rym: Strong stretch in four to one creations Chris Reimer and Thomas on.
+
+857
+00:58:08,820 --> 00:58:15,179
+Rym: Sherman von Horl Rory James David White Rochelle, Montanona Superboy tripwire sailor Vista downslide.
+
+858
+00:58:15,239 --> 00:58:21,305
+Rym: Joe Shero Joe star Clinton Walton Ren from New Zealand Ryan Perrin drew open lander Finn Chris mid gift.
+
+859
+00:58:21,325 --> 00:58:25,854
+Rym: Daniel Redmond Shawn Klein Chris Reimer and Thomas on.
+
+860
+00:58:38,902 --> 00:58:40,637
+Scott: Make me make me make me make me make me.
+
+861
+00:58:52,993 --> 00:58:55,149
+Scott: Aren't you glad you got your?
+

@@ -1,0 +1,3020 @@
+1
+00:00:09,500 --> 00:00:13,277
+Rym: It's Monday April 7th, and this is GeekNights.
+
+2
+00:00:13,679 --> 00:00:18,820
+Rym: tonight We finish out the IT CS alternating bits with network monitoring.
+
+3
+00:00:25,901 --> 00:00:26,917
+Rym: Let's do this.
+
+4
+00:00:31,044 --> 00:00:37,660
+Rym: So for various reasons today, this isn't my opening vid my anecdote It's Emily's but I think it was good because you know she stayed home.
+
+5
+00:00:37,740 --> 00:00:48,000
+Rym: So she wanted some food and instead of driving to the nearest grocery store, which is actually pretty far away She went to the local grocery store, which is the one that's the bullshit grocery store.
+
+6
+00:00:48,080 --> 00:00:59,073
+Rym: That's the problem because it has all the great kind of hippie food that I like but interspersed with all that nice hippie food is Homeopathy and fake medicine and just Randy bullshit left and right.
+
+7
+00:00:59,113 --> 00:01:01,040
+Scott: Why do they have to have the two things associated?
+
+8
+00:01:01,200 --> 00:01:06,980
+Scott: We should just open up a grocery store, right and we don't say like Organic or whatever or any bullshit like that.
+
+9
+00:01:07,000 --> 00:01:12,840
+Scott: We just say look this food is exactly the same as that of the food except because it was grown somewhere near here.
+
+10
+00:01:12,940 --> 00:01:13,583
+Scott: It tastes better.
+
+11
+00:01:13,864 --> 00:01:14,266
+Scott: That's all.
+
+12
+00:01:14,366 --> 00:01:15,491
+Scott: that's the only advantage.
+
+13
+00:01:15,552 --> 00:01:17,500
+Rym: really well also they can't just in general.
+
+14
+00:01:17,540 --> 00:01:19,771
+Rym: They carry things like real root beer.
+
+15
+00:01:19,872 --> 00:01:27,686
+Rym: No grocery store here has real root beer But that place has like ten different kinds of say like, you know Organic fancy pants.
+
+16
+00:01:27,746 --> 00:01:29,193
+Scott: make your life healthier root beer.
+
+17
+00:01:29,213 --> 00:01:30,480
+Scott: We'll say look, this is root beer.
+
+18
+00:01:30,922 --> 00:01:33,820
+Scott: It costs more but it's made with real sugar and it tastes better.
+
+19
+00:01:33,860 --> 00:01:36,180
+Rym: I don't think they make any claims about the root beer at that place.
+
+20
+00:01:36,863 --> 00:01:40,840
+Scott: It's not so much exact claims written in text, but it's the marketing of it.
+
+21
+00:01:40,940 --> 00:01:42,044
+Scott: You know, it's.
+
+22
+00:01:42,084 --> 00:01:45,537
+Rym: I don't think root beer has ever been marketed as good for you in any way.
+
+23
+00:01:45,557 --> 00:01:47,607
+Scott: Oh That's a root beer.
+
+24
+00:01:47,627 --> 00:01:48,794
+Scott: people have something to say to you.
+
+25
+00:01:49,317 --> 00:01:49,740
+Rym: Yeah, you know what?
+
+26
+00:01:49,900 --> 00:01:52,295
+Rym: I am a root beer person as much as I like my dr.
+
+27
+00:01:52,315 --> 00:01:52,657
+Rym: Pepper.
+
+28
+00:01:52,717 --> 00:02:00,246
+Rym: deep down I'm a root beer man, and I can tell you next time we have the Visigoths over to play some burning wheel I have a root beer keg.
+
+29
+00:02:00,426 --> 00:02:07,880
+Scott: Yeah, you know, I don't drink sodas and carbonated things But I've had root beer dum-dums and those are actually my favorite dum-dums.
+
+30
+00:02:08,041 --> 00:02:12,440
+Scott: You know, you might really like if I were to drink a a a beverage like that.
+
+31
+00:02:12,460 --> 00:02:13,799
+Scott: I think root beer might be my thing.
+
+32
+00:02:13,961 --> 00:02:19,715
+Rym: You could always get the root beer and put it on ice and then it won't be carbonated anymore And then it just tastes like a dum-dum.
+
+33
+00:02:21,544 --> 00:02:22,447
+Scott: But they would be flat.
+
+34
+00:02:22,487 --> 00:02:24,352
+Scott: then wanna be bleh if it's flat.
+
+35
+00:02:24,734 --> 00:02:27,885
+Rym: Well, it's flat, but you don't like the don flat Yeah, but ugly.
+
+36
+00:02:28,046 --> 00:02:30,860
+Scott: but at the same time if you take away the bubbles, doesn't that alter the flavor?
+
+37
+00:02:31,280 --> 00:02:32,788
+Rym: No, it's more than we like the bubbles.
+
+38
+00:02:33,331 --> 00:02:34,920
+Rym: That's just people like the bubbles.
+
+39
+00:02:35,384 --> 00:02:39,312
+Scott: I mean, that's sort of like, you know If you like stale bread better than like.
+
+40
+00:02:39,353 --> 00:02:41,987
+Scott: if I don't like a loaf of bread I'm not gonna let it go stale.
+
+41
+00:02:42,027 --> 00:02:46,147
+Rym: and then you might because a dum-dum is just stale root beer I know but I'm saying is like.
+
+42
+00:02:46,187 --> 00:02:48,760
+Scott: let's say there's a loaf of bread, right and it's a kind of bread.
+
+43
+00:02:48,820 --> 00:02:54,772
+Scott: I don't like some weird like bread with all sorts of like fish in it or something I don't know sort of fish bread.
+
+44
+00:02:54,812 --> 00:02:55,215
+Rym: You know what?
+
+45
+00:02:55,235 --> 00:02:56,100
+Rym: I wouldn't mind a fish bread.
+
+46
+00:02:56,100 --> 00:02:59,755
+Scott: I'm just kind of good and that you know, and then the bread goes stale.
+
+47
+00:02:59,775 --> 00:03:01,542
+Scott: I'm not suddenly gonna like it It's got.
+
+48
+00:03:01,582 --> 00:03:02,325
+Rym: it's the opposite.
+
+49
+00:03:02,586 --> 00:03:05,577
+Rym: You're one of those people who ate some stale fish fish bread.
+
+50
+00:03:05,597 --> 00:03:06,079
+Rym: You're like hot.
+
+51
+00:03:06,099 --> 00:03:07,520
+Rym: damn I like the stale fish bread.
+
+52
+00:03:08,103 --> 00:03:09,107
+Rym: Hey, I wonder if I can.
+
+53
+00:03:09,148 --> 00:03:11,539
+Rym: if I like the real fish bread then you try it, you know like it.
+
+54
+00:03:11,942 --> 00:03:12,792
+Rym: That's what happened to you.
+
+55
+00:03:14,465 --> 00:03:15,560
+Rym: We can do some experiment.
+
+56
+00:03:15,640 --> 00:03:21,291
+Rym: Well, you can take a sip of root beer and then you can take a sip of flat root beer and then you can eat a dum-dum.
+
+57
+00:03:21,901 --> 00:03:27,220
+Scott: Yeah, I think I'm actually just gonna avoid drinking the sugar water and keep my teeth high quality.
+
+58
+00:03:27,300 --> 00:03:29,186
+Rym: You know sugar water isn't what kills teeth.
+
+59
+00:03:29,366 --> 00:03:31,533
+Rym: not brushing them is what kills teeth.
+
+60
+00:03:31,794 --> 00:03:32,556
+Rym: also lemonade.
+
+61
+00:03:32,877 --> 00:03:36,706
+Scott: Yes It's just another form of sugar water.
+
+62
+00:03:36,927 --> 00:03:39,696
+Rym: no lemonade is the worst possible thing you can drink.
+
+63
+00:03:39,756 --> 00:03:44,891
+Rym: every dentist will tell you that Yeah destroys teeth faster than anything except maybe hydrofluoric acid.
+
+64
+00:03:45,052 --> 00:03:45,252
+Scott: Yeah.
+
+65
+00:03:45,312 --> 00:03:47,599
+Scott: Well, I mean lemonade's the worst but so it is bad.
+
+66
+00:03:48,142 --> 00:03:49,620
+Scott: Also, it's just not as bad.
+
+67
+00:03:49,700 --> 00:03:58,619
+Rym: But anyway, I have a love-hate relationship with this store as you might guess because I like half the stuff in there But I'm morally opposed to the other half of the stuff in there.
+
+68
+00:03:59,001 --> 00:04:00,225
+Rym: But there's a third factor.
+
+69
+00:04:00,426 --> 00:04:03,578
+Rym: the employees are all jackasses at least the ones I've interacted with.
+
+70
+00:04:03,879 --> 00:04:04,240
+Scott: Oh, really?
+
+71
+00:04:04,500 --> 00:04:06,020
+Scott: Yeah, ever interacted with the employees there?
+
+72
+00:04:06,040 --> 00:04:10,640
+Scott: I think only thing ever bought there was a head of lettuce and then I discovered the homeopathies.
+
+73
+00:04:10,741 --> 00:04:18,159
+Rym: but anyway Emily went there and she was buying some stuff and she saw in line in front of her Someone who was Randy times two.
+
+74
+00:04:18,862 --> 00:04:25,400
+Rym: So they had in their basket homeopathy and they even had asked some questions about like which homeopathy is better.
+
+75
+00:04:26,102 --> 00:04:30,276
+Rym: But they also had in their basket Ronnie book Ronnie Brooke Farms,
+
+76
+00:04:31,259 --> 00:04:35,961
+Scott: oh Now that the the farm that our friend warned us is not good That
+
+77
+00:04:36,021 --> 00:04:43,037
+Rym: is the farm Ronnie Brooke Farms that we've been warned by people in the know is like the most health violating farm out there and
+
+78
+00:04:44,806 --> 00:04:45,999
+Scott: I hope this doesn't get him in trouble.
+
+79
+00:04:46,461 --> 00:04:48,629
+Rym: Emily was thinking about saying something to this woman.
+
+80
+00:04:48,669 --> 00:04:51,760
+Rym: then she realized that perhaps one will punish the other.
+
+81
+00:04:56,181 --> 00:05:01,756
+Rym: That's all I got because you have something much more interesting something the listeners are very very looking forward to.
+
+82
+00:05:01,836 --> 00:05:02,578
+Rym: I don't know why.
+
+83
+00:05:02,598 --> 00:05:04,524
+Scott: yes Uh, yeah, I don't know either.
+
+84
+00:05:04,544 --> 00:05:08,335
+Rym: Yeah, wait, we're gonna do what some sort of inside gig nights.
+
+85
+00:05:08,436 --> 00:05:09,719
+Rym: how gig nights is done?
+
+86
+00:05:10,201 --> 00:05:15,520
+Rym: Reminisce boxers Scott laying upside down on a chair mumbling now, so it's the audio podcasts.
+
+87
+00:05:16,002 --> 00:05:20,280
+Scott: You obviously like them you're listening to them, but they don't catch on so much.
+
+88
+00:05:20,420 --> 00:05:22,990
+Scott: Right, the big thing on the internet now is videos.
+
+89
+00:05:23,111 --> 00:05:31,819
+Scott: people like them videos and we thought about doing the videos But we didn't have video skills or equipment or the time because gig nights used to take a lot of time for us to do.
+
+90
+00:05:32,141 --> 00:05:33,290
+Rym: Yeah, not so much anymore.
+
+91
+00:05:33,532 --> 00:05:34,520
+Scott: So we didn't have a camera.
+
+92
+00:05:34,580 --> 00:05:39,818
+Scott: I mean I had my normal photo digital camera that could take videos, but that's that's not gonna cut it.
+
+93
+00:05:40,803 --> 00:05:44,380
+Scott: So we've been thinking about a video camera, you know, we're like, oh which one do we get?
+
+94
+00:05:45,242 --> 00:05:54,287
+Scott: And I discovered this one that's coming out in a month or two And I thought we would go get it because it has like internal flash memory But also takes extra flash memory.
+
+95
+00:05:54,327 --> 00:05:56,454
+Scott: and I was like, oh that that sounds good to me.
+
+96
+00:05:56,675 --> 00:05:57,819
+Scott: that seems like it'll work for us.
+
+97
+00:05:58,980 --> 00:06:06,380
+Scott: But I also got a new credit card the second credit card I ever had in my life and I the old one is the Sony one right with all the points.
+
+98
+00:06:06,902 --> 00:06:11,520
+Scott: So I was like I need to get rid of these points, but absolutely nothing Sony makes is something I want.
+
+99
+00:06:11,982 --> 00:06:16,501
+Scott: I mean, I could have got a free ps2 or we could have gotten a GPS 3.
+
+100
+00:06:16,501 --> 00:06:21,060
+Scott: Yeah, but if I would have got a ps3, I wouldn't need an HDTV, which I wasn't gonna get.
+
+101
+00:06:21,261 --> 00:06:24,150
+Scott: Yeah, at least not until I get new house also at least one game.
+
+102
+00:06:24,411 --> 00:06:32,580
+Scott: Yeah, so it's like, uh now I'm thinking well I just get a Sony camera that was like, uh, but is the Sony camera gonna work with Linux and whatnot?
+
+103
+00:06:32,701 --> 00:06:32,922
+Scott: Is it?
+
+104
+00:06:33,305 --> 00:06:34,414
+Scott: you know, there are all these questions.
+
+105
+00:06:34,495 --> 00:06:35,099
+Scott: I said, you know what?
+
+106
+00:06:35,881 --> 00:06:44,720
+Scott: I looked I went to the Best Buy and I just got the cheapest Hard drive based Sony camera they had and I use the points on it.
+
+107
+00:06:44,740 --> 00:06:46,328
+Scott: So it's gonna cost almost nothing.
+
+108
+00:06:46,429 --> 00:06:58,959
+Rym: now our philosophy here is the same thing We did with GeekNights and if any of you ever have a creative endeavor in front of you This is what you should do when there's a capital purchase involved buy the cheapest whatever that works and use it.
+
+109
+00:06:59,661 --> 00:07:04,918
+Rym: You'll learn what things you need and don't need on the real one and you'll know what to buy later.
+
+110
+00:07:05,380 --> 00:07:11,000
+Rym: I mean we bought a crappy little mixer and then after a year of GeekNights like alright, I need another bus.
+
+111
+00:07:11,860 --> 00:07:13,287
+Rym: Goddamnit, do I need another bus?
+
+112
+00:07:13,769 --> 00:07:15,457
+Rym: So we bought a mixer with another bus.
+
+113
+00:07:15,859 --> 00:07:20,260
+Scott: Yep So I'm gonna use this cheap-ass camera, it's actually not too bad.
+
+114
+00:07:20,340 --> 00:07:23,772
+Scott: I mean, it's not HD, but it has a 30 gig hard drive in it.
+
+115
+00:07:23,812 --> 00:07:24,495
+Rym: YouTube's.
+
+116
+00:07:24,816 --> 00:07:25,799
+Rym: Yeah, we don't need HD.
+
+117
+00:07:26,341 --> 00:07:34,976
+Scott: So we're gonna make YouTube's and things and learn the video skills and hopefully our YouTube's will be good in some way I don't know.
+
+118
+00:07:35,772 --> 00:07:38,951
+Scott: also You know, I read that first prince of nothing book.
+
+119
+00:07:38,971 --> 00:07:40,155
+Scott: So I was trying to get the second one.
+
+120
+00:07:40,557 --> 00:07:43,540
+Scott: our Scott backer Amazon only has the third one.
+
+121
+00:07:43,560 --> 00:07:47,060
+Scott: They don't have the first of the second one, at least not in paperback and I have buy no hardback.
+
+122
+00:07:47,704 --> 00:07:50,339
+Scott: So I went to some bookstores and I couldn't find it.
+
+123
+00:07:50,901 --> 00:07:53,450
+Scott: You know what bookstore had all three of them in paperback?
+
+124
+00:07:53,570 --> 00:08:01,820
+Rym: the one in Grand Central the shitty one in Grand Central, you know I gotta admit as that place isn't actually nearly as overpriced as I expected it to be.
+
+125
+00:08:01,900 --> 00:08:04,634
+Scott: Well, no, it was cover price, but it was still that bookstore.
+
+126
+00:08:04,714 --> 00:08:05,900
+Scott: Usually I was like the worst election.
+
+127
+00:08:05,940 --> 00:08:11,360
+Scott: Meanwhile, I went to the sort of highbrow bookstore near my work and Soho, you know, it's all fancy.
+
+128
+00:08:12,621 --> 00:08:25,265
+Scott: They didn't have that book but they if you went to the graphic novel section it like every highbrow graphic novel like every single one like every will Eisner and everything vertical publishes and everything and I was like Ah, look at that.
+
+129
+00:08:25,285 --> 00:08:26,311
+Scott: I have all those books.
+
+130
+00:08:26,351 --> 00:08:27,739
+Scott: I don't need to buy any of the mirror, huh?
+
+131
+00:08:28,241 --> 00:08:29,226
+Rym: So I gotta ask one thing.
+
+132
+00:08:29,266 --> 00:08:32,020
+Rym: we'll talk about this in much more detail someday in the future.
+
+133
+00:08:32,100 --> 00:08:41,342
+Rym: but I've been kind of raving about the prince of nothing the darkness that comes before and Pretty much everyone has been trying to get Scott to read this book for a while They finally read it.
+
+134
+00:08:41,845 --> 00:08:44,073
+Rym: All I want to ask you Scott is is it a good book?
+
+135
+00:08:44,273 --> 00:08:44,976
+Scott: It's a good book.
+
+136
+00:08:45,839 --> 00:08:48,500
+Rym: I You should all read it seriously.
+
+137
+00:08:50,384 --> 00:08:55,936
+Scott: It wasn't like, you know So great that I should have dropped everything I was doing in read it like I don't know.
+
+138
+00:08:56,198 --> 00:08:56,740
+Rym: I'm so far.
+
+139
+00:08:56,860 --> 00:08:58,406
+Rym: It's one of the best books I've ever written.
+
+140
+00:08:58,606 --> 00:09:00,232
+Rym: read read not written.
+
+141
+00:09:00,252 --> 00:09:01,316
+Rym: I did not write it.
+
+142
+00:09:01,617 --> 00:09:02,420
+Scott: I don't know about that.
+
+143
+00:09:02,500 --> 00:09:02,922
+Scott: I mean, it's a.
+
+144
+00:09:03,063 --> 00:09:05,694
+Rym: it's a good book if you read what.
+
+145
+00:09:05,774 --> 00:09:07,160
+Rym: what better book is have you read?
+
+146
+00:09:11,703 --> 00:09:13,760
+Rym: I like name one.
+
+147
+00:09:16,200 --> 00:09:17,585
+Scott: Ha there's so many.
+
+148
+00:09:17,726 --> 00:09:18,428
+Rym: yeah, I'm sure.
+
+149
+00:09:18,489 --> 00:09:21,259
+Rym: could you name one doesn't have to be the top one, huh?
+
+150
+00:09:21,760 --> 00:09:21,961
+Scott: It's just.
+
+151
+00:09:22,001 --> 00:09:22,583
+Scott: there's so many.
+
+152
+00:09:22,623 --> 00:09:24,350
+Scott: it's hard to share American gods.
+
+153
+00:09:24,390 --> 00:09:25,293
+Scott: I think it's a better book.
+
+154
+00:09:25,554 --> 00:09:27,000
+Rym: you American gods is up there.
+
+155
+00:09:27,745 --> 00:09:29,236
+Rym: I don't think American God said as much.
+
+156
+00:09:29,276 --> 00:09:33,113
+Scott: he was a amazing Cavalier and clay is a better book.
+
+157
+00:09:33,153 --> 00:09:34,000
+Rym: I got to read that first.
+
+158
+00:09:36,160 --> 00:09:41,295
+Rym: I Know that there's not so many classics coming out of you.
+
+159
+00:09:41,335 --> 00:09:45,183
+Rym: yet here Hamlet is.
+
+160
+00:09:45,304 --> 00:09:46,228
+Scott: it's not a book.
+
+161
+00:09:46,308 --> 00:09:47,112
+Scott: It's it's the book.
+
+162
+00:09:47,132 --> 00:09:48,760
+Rym: It's also not that good.
+
+163
+00:09:49,182 --> 00:09:51,978
+Rym: I'm just saying I like Hamlet, but everyone likes Hamlet.
+
+164
+00:09:53,161 --> 00:10:00,694
+Rym: Besides you know what I'm gonna say this reading Hamlet is all well and good But if you have not seen the Kenneth Branagh Hamlet, you do not know Hamlet.
+
+165
+00:10:00,734 --> 00:10:00,915
+Rym: Good.
+
+166
+00:10:00,935 --> 00:10:01,176
+Rym: God.
+
+167
+00:10:01,196 --> 00:10:02,259
+Rym: Is that the best Hamlet ever?
+
+168
+00:10:03,183 --> 00:10:03,831
+Scott: Cats cradles.
+
+169
+00:10:03,871 --> 00:10:10,019
+Rym: a better book All right all right anyway, so I got some news here.
+
+170
+00:10:10,421 --> 00:10:13,716
+Rym: This is news that was relevant to me back in the year 2000. give or take.
+
+171
+00:10:14,842 --> 00:10:19,506
+Rym: I don't think it'll be relevant to any of you, and if you think it's relevant well You're gonna learn why it's not.
+
+172
+00:10:20,028 --> 00:10:22,620
+Rym: so not everywhere in the United States does this.
+
+173
+00:10:22,680 --> 00:10:25,951
+Rym: But there's something called the Advanced Placement Board in the AP test.
+
+174
+00:10:26,252 --> 00:10:28,740
+Scott: Oh, I saw that news and the deal.
+
+175
+00:10:29,742 --> 00:10:32,319
+Rym: It amazes me how many people don't know that this is out there.
+
+176
+00:10:32,701 --> 00:10:41,466
+Rym: but basically what you can do in high school is you can pay like 70 bucks and take a test with these people and They give you a score from one to five.
+
+177
+00:10:41,947 --> 00:10:44,255
+Rym: one means you are dumbass.
+
+178
+00:10:44,556 --> 00:10:45,659
+Scott: really can you get lower than one?
+
+179
+00:10:46,521 --> 00:10:48,107
+Scott: No, everything wrong is a one.
+
+180
+00:10:48,609 --> 00:10:50,255
+Scott: Yes, the thing is I get one right.
+
+181
+00:10:50,275 --> 00:10:50,616
+Scott: do I get it?
+
+182
+00:10:50,877 --> 00:10:51,339
+Scott: do I get two?
+
+183
+00:10:52,081 --> 00:10:53,107
+Rym: I don't pretty much the way.
+
+184
+00:10:53,589 --> 00:10:55,340
+Rym: the way that I mean it's one through three four five.
+
+185
+00:10:55,902 --> 00:11:06,680
+Rym: The way it actually works is a five means you know your shit and a four is like okay And a three is like yeah, you barely made it and a lot of colleges will accept three fours or fives.
+
+186
+00:11:06,781 --> 00:11:26,003
+Rym: but I say colleges because the way this works is you take the test and You get a score and they keep track of all your scores and then you submit these scores to whatever college or university you attend and Most pretty much any university worth a damn will give you credit college credit based on What classes you took.
+
+187
+00:11:26,364 --> 00:11:33,530
+Scott: so if you get a four on the AP calculus test and then you go to college and they have you Know they say oh you're gonna need.
+
+188
+00:11:33,570 --> 00:11:37,353
+Scott: you're a computer science student You need to take calculus classes in order to graduate.
+
+189
+00:11:37,373 --> 00:11:37,976
+Scott: you say oh, no.
+
+190
+00:11:37,996 --> 00:11:42,339
+Scott: No you say oh, no No, I got a four on the AP calculus test you were going to make it.
+
+191
+00:11:42,641 --> 00:11:46,100
+Scott: You're going to give me credit for those calculus classes, so I don't have to pay you for them.
+
+192
+00:11:46,160 --> 00:11:49,960
+Rym: I already already know that now different colleges have different requirements.
+
+193
+00:11:50,081 --> 00:11:58,540
+Rym: I mean so like if you're going in like if you're going into say Biology like you want to go pre-med you better have gotten a four or five on that AP biology tester.
+
+194
+00:11:58,601 --> 00:11:59,416
+Rym: They're not gonna count it.
+
+195
+00:11:59,789 --> 00:12:08,755
+Rym: Yeah But if you're going into computer science they'll probably take the three and let you not have to take a class even though I don't think they should because the three basically means you didn't really know your stuff.
+
+196
+00:12:09,157 --> 00:12:09,338
+Scott: Well.
+
+197
+00:12:09,378 --> 00:12:22,586
+Rym: It's like a see It's like normal you knew, but you didn't know really well Yeah But I got a three on the AP music theory test And I I'll admit openly that I knew jack all about music theory And I guessed almost every quest.
+
+198
+00:12:22,606 --> 00:12:23,409
+Scott: but you're not a moron.
+
+199
+00:12:23,891 --> 00:12:26,840
+Rym: Yeah, it's anyway, so these things are great.
+
+200
+00:12:26,840 --> 00:12:28,560
+Scott: Well, I think that is in multiple choice.
+
+201
+00:12:29,126 --> 00:12:34,738
+Rym: It's usually multiple choice But unless they've changed it the way it worked was you get like a point for every one.
+
+202
+00:12:34,758 --> 00:12:35,280
+Rym: you get right?
+
+203
+00:12:35,660 --> 00:12:38,900
+Rym: But you lose points if you guess wrong as opposed to putting it black.
+
+204
+00:12:38,900 --> 00:12:43,096
+Scott: So guessing won't get dressing on the whole thing won't get you a three unless you're really good at guessing.
+
+205
+00:12:43,216 --> 00:12:46,919
+Rym: and they also usually have Fairly extensive essay components, okay, okay?
+
+206
+00:12:47,281 --> 00:12:48,604
+Rym: Like the AP bio test.
+
+207
+00:12:48,684 --> 00:12:55,439
+Rym: actually one of the essays was like describe the procedure and the lab procedures and things you would use to clone a frog.
+
+208
+00:12:56,423 --> 00:12:57,748
+Rym: It was it was hardcore like that.
+
+209
+00:12:57,768 --> 00:13:01,100
+Rym: Yeah, but I actually set the record at RIT.
+
+210
+00:13:01,221 --> 00:13:07,253
+Rym: It was broken two years ago But I had the most AP credits coming into RIT of any student ever before.
+
+211
+00:13:07,394 --> 00:13:08,196
+Scott: how do you know that?
+
+212
+00:13:08,256 --> 00:13:09,340
+Rym: because they told me that?
+
+213
+00:13:10,381 --> 00:13:13,493
+Rym: Straight up when I transferred him in Wow how do you know is broken?
+
+214
+00:13:13,854 --> 00:13:15,360
+Rym: because then al Biles came to me later?
+
+215
+00:13:15,380 --> 00:13:17,032
+Rym: He's like yeah, you broke the record.
+
+216
+00:13:17,072 --> 00:13:23,524
+Rym: the record was 38 Uh-huh, and I had 41, but some kid got more than me a couple years ago Uh-huh, but anyway.
+
+217
+00:13:23,544 --> 00:13:24,286
+Rym: Yeah think about that.
+
+218
+00:13:24,587 --> 00:13:30,308
+Rym: I went into RIT with 41 credits complete mmm You take AP classes.
+
+219
+00:13:30,328 --> 00:13:33,100
+Rym: the tests are stupidly easy as long as you read the goddamn books.
+
+220
+00:13:33,542 --> 00:13:38,103
+Rym: But here's the story the College Board who kind of Administers the?
+
+221
+00:13:38,164 --> 00:13:39,268
+Scott: isn't it the AP board?
+
+222
+00:13:39,550 --> 00:13:41,900
+Rym: well the College Board AP board same thing doesn't matter.
+
+223
+00:13:42,662 --> 00:13:46,253
+Rym: They have announced that they've gotten rid of the AP.
+
+224
+00:13:46,333 --> 00:13:49,262
+Rym: computer science a B Exam.
+
+225
+00:13:49,282 --> 00:13:50,345
+Scott: when you see you got a lot.
+
+226
+00:13:50,365 --> 00:13:51,529
+Scott: those letters are tricky.
+
+227
+00:13:51,569 --> 00:13:57,159
+Scott: those letters mean a lot cuz like in physics right this physics a physics B physics AB?
+
+228
+00:13:57,884 --> 00:14:03,394
+Rym: Well, there's no there's physics a a B There's also physics B, and there's physics BC, and then there's physics C.
+
+229
+00:14:03,555 --> 00:14:04,700
+Scott: All right that it goes up to C.
+
+230
+00:14:05,181 --> 00:14:05,864
+Rym: I'll break it down.
+
+231
+00:14:05,944 --> 00:14:10,059
+Rym: physics wise I know a lot about these because I actually got a lot of scholarships because of this.
+
+232
+00:14:10,621 --> 00:14:14,677
+Rym: Like I took all these classes, and I actually met with like representatives of the board and everything.
+
+233
+00:14:15,219 --> 00:14:17,810
+Rym: the way It works is pretty much a is high school level.
+
+234
+00:14:18,112 --> 00:14:19,940
+Rym: like if you take the physics a test.
+
+235
+00:14:20,342 --> 00:14:23,360
+Rym: No college is gonna accept that for crap, and it's well.
+
+236
+00:14:23,420 --> 00:14:23,983
+Scott: They'll let you.
+
+237
+00:14:24,304 --> 00:14:27,580
+Scott: they'll let you not have to take like basic physics.
+
+238
+00:14:27,640 --> 00:14:32,679
+Rym: Well, yeah, if high school physics is a requirement in your college program, then that will get you out of high school physics.
+
+239
+00:14:32,719 --> 00:14:36,252
+Rym: basically That's like the physics you take in 10th or 11th grade mm-hmm.
+
+240
+00:14:36,312 --> 00:14:43,535
+Rym: the B. Level would be like Introductory college class like the basic physics class you would take in college.
+
+241
+00:14:43,815 --> 00:14:45,019
+Rym: is what the B test would be.
+
+242
+00:14:45,944 --> 00:14:47,618
+Rym: the C test is.
+
+243
+00:14:48,981 --> 00:14:57,903
+Rym: The C test that I took for physics involved double integration calculating the charge distributions on Surfaces.
+
+244
+00:14:57,963 --> 00:14:59,689
+Scott: why is it's thumping around?
+
+245
+00:14:59,830 --> 00:15:01,195
+Rym: it's not hurting you in any way.
+
+246
+00:15:01,215 --> 00:15:02,339
+Scott: It's thumping the whole room.
+
+247
+00:15:03,262 --> 00:15:05,016
+Rym: Okay, I guess you don't like my thumping.
+
+248
+00:15:05,218 --> 00:15:16,640
+Rym: no Anyway, the C test was literally like you had to use double integrals and things and figure out Electron distribution on complex three-dimensional surfaces in order to figure out like how much?
+
+249
+00:15:16,900 --> 00:15:20,176
+Rym: Resistance upstream of some other kind of particle would be going over like.
+
+250
+00:15:20,196 --> 00:15:20,920
+Rym: it's crazy stuff.
+
+251
+00:15:21,322 --> 00:15:22,928
+Rym: It's more than most people ever bother with.
+
+252
+00:15:23,250 --> 00:15:28,080
+Scott: I got a two on that test and stuff you honey You probably won't even do in college unless you go into physics.
+
+253
+00:15:28,301 --> 00:15:29,424
+Rym: Yeah, like I actually.
+
+254
+00:15:29,485 --> 00:15:34,140
+Rym: and now when they say like an AB or a BC that even gets more complicated like with calculus.
+
+255
+00:15:34,566 --> 00:15:35,640
+Rym: The a test is like nothing.
+
+256
+00:15:35,660 --> 00:15:40,360
+Rym: I don't know if they have an a test for calculus, but the there's the B, or there's the BC.
+
+257
+00:15:40,683 --> 00:16:00,199
+Rym: I don't think there's a straight-up C. If you take the B You took the B. if you take the C You took the C. but they also look at all the B level questions within the test and they give you a Subscore of what you would have gotten if you taking the B. So if you think you're smart, and you want to go for it You can take the harder test and not be dicked by that.
+
+258
+00:16:01,044 --> 00:16:03,205
+Scott: So they don't let you take the B And then the C separately.
+
+259
+00:16:03,245 --> 00:16:04,169
+Scott: you can take the BC.
+
+260
+00:16:04,471 --> 00:16:11,840
+Scott: that way if you don't do well on the C But you didn't really well on the B. Then they're like okay Well, you know you got a four on the B and a two on the C. You're okay.
+
+261
+00:16:12,081 --> 00:16:13,728
+Rym: Yep, pretty much all right.
+
+262
+00:16:13,969 --> 00:16:18,427
+Rym: and but when it came to computer science I'm gonna tell you all straight up.
+
+263
+00:16:18,508 --> 00:16:22,485
+Rym: the AP computer science test was Absolutely worthless.
+
+264
+00:16:22,625 --> 00:16:23,187
+Rym: it didn't?
+
+265
+00:16:23,849 --> 00:16:27,700
+Rym: it didn't involve anything that mattered at all ever and you wouldn't learn crap from it.
+
+266
+00:16:27,800 --> 00:16:33,640
+Scott: Well the problem with the AP computer science test is really these tests are designed to go along with high school classes.
+
+267
+00:16:33,700 --> 00:16:42,420
+Scott: Like you would take AP biology as a class in in high school and then at the end of that class You would take the test and that class was designed to prepare you for the test.
+
+268
+00:16:42,500 --> 00:16:45,731
+Rym: There is usually would take the test without taking a class.
+
+269
+00:16:45,792 --> 00:16:49,080
+Scott: It was usually the hardest, you know class in school I mean in our school.
+
+270
+00:16:49,180 --> 00:16:53,660
+Scott: It was pretty much you could take honors or you could take AP and AP was like above honors.
+
+271
+00:16:53,928 --> 00:17:00,390
+Scott: You know it was like the hardest class you could take and the school would even tell you don't take more than one AP class at A time because it's so hard.
+
+272
+00:17:00,552 --> 00:17:03,108
+Rym: I took like Actually, yeah my junior year.
+
+273
+00:17:03,128 --> 00:17:04,414
+Rym: I took five at the same time.
+
+274
+00:17:04,555 --> 00:17:20,282
+Scott: Yeah, but Yeah, so that the computer science thing is really tricky because most schools don't have computer science class Especially not an AP level one and even worse if you look at what the AP test covered It was.
+
+275
+00:17:20,303 --> 00:17:22,231
+Rym: it was just useless crap.
+
+276
+00:17:22,271 --> 00:17:23,474
+Rym: Like it wasn't anything that mattered.
+
+277
+00:17:23,496 --> 00:17:24,660
+Scott: it was never seen the test.
+
+278
+00:17:24,660 --> 00:17:25,122
+Scott: So, I don't know.
+
+279
+00:17:25,162 --> 00:17:25,844
+Scott: I don't know about it.
+
+280
+00:17:26,045 --> 00:17:30,460
+Rym: It's useless theoretical crap and nothing practical or useful in any way.
+
+281
+00:17:30,500 --> 00:17:31,725
+Rym: I don't yeah, but
+
+282
+00:17:31,746 --> 00:17:46,527
+Scott: anyway, the point is is that you know having a computer science AP test without compute without worthwhile computer science classes in most of the schools Really never made a lot of sense and most of the people who would take it are people who learn Softer on their own, you know.
+
+283
+00:17:46,587 --> 00:17:50,440
+Scott: and then would you know go and take this test in order to like get into a like.
+
+284
+00:17:50,541 --> 00:17:53,079
+Scott: You know a better, you know college or something like that.
+
+285
+00:17:53,621 --> 00:18:02,951
+Rym: The reason the main reason if you need an example of why the test was worthless if you went into RIT and IT or CS No, maybe if you got a five they wouldn't give you crap for that.
+
+286
+00:18:03,333 --> 00:18:04,898
+Scott: RIT gave you something they wouldn't.
+
+287
+00:18:04,918 --> 00:18:07,330
+Scott: for IT They put you into basically.
+
+288
+00:18:07,350 --> 00:18:07,652
+Rym: Yeah.
+
+289
+00:18:07,692 --> 00:18:08,014
+Rym: Yeah.
+
+290
+00:18:08,054 --> 00:18:09,200
+Rym: Yeah, they didn't give you credit.
+
+291
+00:18:09,501 --> 00:18:16,111
+Scott: No, but instead of taking CS 1 2 3 4 you take like special CS 1 2 3 But you could take that anywhere if you wanted to no.
+
+292
+00:18:16,694 --> 00:18:17,720
+Scott: No, it was sort of like this.
+
+293
+00:18:17,780 --> 00:18:20,840
+Scott: Well, you could but you had to like be you know accepted.
+
+294
+00:18:20,940 --> 00:18:24,760
+Scott: It was like the sort of like the like the head start computer science program.
+
+295
+00:18:24,800 --> 00:18:25,767
+Scott: It's like the same as your.
+
+296
+00:18:25,928 --> 00:18:26,532
+Scott: it was no different.
+
+297
+00:18:26,552 --> 00:18:27,680
+Scott: the degree was no different.
+
+298
+00:18:27,981 --> 00:18:33,889
+Scott: They just sort of like you had to take like a class or two less because it's like, okay You already know basic CS.
+
+299
+00:18:33,949 --> 00:18:34,734
+Scott: take these instead.
+
+300
+00:18:34,815 --> 00:18:35,459
+Rym: Yeah, it's like an IT.
+
+301
+00:18:35,740 --> 00:18:43,021
+Rym: Some people needed the class on how to SSH and how to use like a Linux prompt and the people who didn't need that could Skip it.
+
+302
+00:18:43,242 --> 00:18:43,483
+Rym: Yep.
+
+303
+00:18:43,624 --> 00:18:48,020
+Rym: Yeah, but this test is going away and they're only gonna have the a-level test now.
+
+304
+00:18:48,481 --> 00:18:51,292
+Rym: And I'm not sure what curriculum changes they've had over the years.
+
+305
+00:18:51,352 --> 00:18:55,306
+Rym: but looking through slashed out comments No one was ever impressed with this thing.
+
+306
+00:18:55,507 --> 00:18:59,019
+Scott: Yeah, I think a lot of the problem is just there really isn't enough.
+
+307
+00:19:00,112 --> 00:19:11,442
+Scott: You know High school and below, you know computer science education in the country and I'm in the world actually and having it having such a high-level test is Really?
+
+308
+00:19:11,502 --> 00:19:15,060
+Scott: Not a lot of people are gonna take it and even fewer people are gonna do well on it.
+
+309
+00:19:15,100 --> 00:19:17,011
+Rym: The other problem is it's not like it's high-level.
+
+310
+00:19:17,031 --> 00:19:25,300
+Rym: Like if you study hard and learn it It'll be like a great boon to you because you'd be better off learning much more practical things before you get to school probably.
+
+311
+00:19:26,462 --> 00:19:30,840
+Rym: But I have a much larger rant about this that I'll save probably for a Thursday involving education.
+
+312
+00:19:30,941 --> 00:19:32,469
+Rym: But suffice to say this is the news.
+
+313
+00:19:32,630 --> 00:19:34,097
+Rym: and yes, I said suffice to say.
+
+314
+00:19:34,118 --> 00:19:36,185
+Scott: Yeah So check this out.
+
+315
+00:19:36,205 --> 00:19:37,249
+Scott: You probably heard this news.
+
+316
+00:19:37,309 --> 00:19:41,461
+Scott: I'm checking what this people are all talking about the windows 7.
+
+317
+00:19:41,461 --> 00:19:43,108
+Rym: What is windows 7?
+
+318
+00:19:43,108 --> 00:19:46,100
+Scott: Well, it's it's obviously the windows that's gonna come after Vista.
+
+319
+00:19:46,300 --> 00:19:48,687
+Rym: But what happened to window 6?
+
+320
+00:19:48,687 --> 00:19:49,228
+Scott: it was Vista.
+
+321
+00:19:49,690 --> 00:19:51,956
+Rym: So what was Windows 5 XP?
+
+322
+00:19:52,197 --> 00:19:54,102
+Rym: So what was Windows 4?
+
+323
+00:19:54,102 --> 00:19:55,688
+Scott: I guess me, right.
+
+324
+00:19:55,888 --> 00:19:56,671
+Rym: So what was Windows 3 98?
+
+325
+00:19:56,671 --> 00:20:01,242
+Rym: what happened to 2000?
+
+326
+00:20:01,242 --> 00:20:05,420
+Rym: Alright It doesn't matter I don't think anyone even really cares anymore.
+
+327
+00:20:05,540 --> 00:20:17,154
+Rym: But there was like the windows track but then there was the NT that was separate and then eventually they got rid of the original Windows, I think that died out on me Yeah, and then like Windows 2000 XP was kind of based on 2000.
+
+328
+00:20:17,154 --> 00:20:18,620
+Rym: Vista is kind of like the next step there.
+
+329
+00:20:19,102 --> 00:20:25,217
+Scott: Yeah, anyway, the thing is is it's you know It's weird because it's like Vista hasn't?
+
+330
+00:20:25,761 --> 00:20:30,140
+Scott: The news all seems to be portraying Vista as like everyone hates it in an epic failure.
+
+331
+00:20:30,442 --> 00:20:37,332
+Rym: well, a lot of people say they hate it ever in my work is like yeah Vista sucks, but I Don't see any justification to be honest.
+
+332
+00:20:37,433 --> 00:20:44,939
+Scott: yet in all honesty The thing with Vista is that you know, it is a little bit annoying in the way You'd have to say okay a bunch of times, you know.
+
+333
+00:20:45,040 --> 00:20:50,560
+Scott: But I mean, I guess it's easier to click Okay, then in Linux you to type in a whole password every time right plus.
+
+334
+00:20:50,680 --> 00:21:09,500
+Rym: I mean, it's a lot of the problems with Vista are not actually Vista's problems But they're the fact that most people who write software even professionals still write it incorrectly Like they don't even follow the rules that Microsoft puts forth to write good software Yeah, and everything needs to be run as administrator and all these problems and they're not really Vista's fault.
+
+335
+00:21:09,582 --> 00:21:16,640
+Rym: It's more that Microsoft has let people get away with writing crap for so long that people are still writing crap But now Vista doesn't deal with it so well.
+
+336
+00:21:16,840 --> 00:21:25,140
+Scott: Yeah, I mean Vista is you know, I've used it and really it's no better than XP But it's not really worse either.
+
+337
+00:21:25,281 --> 00:21:35,040
+Scott: It's just sort of the same with some flash and you know, not Adobe Flash But you know like polish, you know visual polish and some extra features here and there and some such like that.
+
+338
+00:21:35,120 --> 00:21:37,870
+Scott: And you know, it's like people like oh, it's terrible.
+
+339
+00:21:37,891 --> 00:21:40,280
+Scott: I don't really I mean it's the same.
+
+340
+00:21:40,582 --> 00:21:42,080
+Scott: It's like pick whichever one you want.
+
+341
+00:21:42,160 --> 00:21:47,200
+Rym: I think part of the reason for this is that a lot of people remember the ME thing and ME was an abortion.
+
+342
+00:21:47,342 --> 00:21:48,600
+Rym: That was just a disaster.
+
+343
+00:21:48,823 --> 00:21:50,060
+Scott: It was quite the disaster.
+
+344
+00:21:50,401 --> 00:21:56,560
+Rym: ME was an awful awful operating system and it nothing good came of it and everyone realized it right away.
+
+345
+00:21:56,660 --> 00:21:58,227
+Rym: It was pretty much maligned continuously.
+
+346
+00:21:58,870 --> 00:22:03,525
+Rym: I think a lot of people are free maturely ME-izing Windows Vista.
+
+347
+00:22:03,846 --> 00:22:05,209
+Scott: Yeah, I mean it.
+
+348
+00:22:05,851 --> 00:22:06,573
+Scott: I really you know.
+
+349
+00:22:06,633 --> 00:22:09,160
+Scott: Vista's not anything to you know, write home about.
+
+350
+00:22:09,160 --> 00:22:15,616
+Scott: It's not fantastic or great But you know, the media is really portraying it as like an epic failure when it's just sort of like a bleh.
+
+351
+00:22:16,800 --> 00:22:29,280
+Rym: I mean, I think part of the problem though, is that because computing is just advancing and evolving XP if you look at purely a technological Standpoint is not obsolete yet and works just fine.
+
+352
+00:22:29,881 --> 00:22:38,584
+Rym: It's not like before where Windows 98 didn't work and Windows 2000 was clearly better to the point that you could not Not upgrade.
+
+353
+00:22:38,604 --> 00:22:42,620
+Rym: you needed Windows 2000 same with between Windows 95 and Windows 98.
+
+354
+00:22:42,620 --> 00:22:47,694
+Rym: I mean 95 didn't deal well with USB let alone a million other things.
+
+355
+00:22:47,694 --> 00:22:49,719
+Rym: 98 was a thousand times better.
+
+356
+00:22:50,503 --> 00:22:52,538
+Rym: XP is a thousand times better.
+
+357
+00:22:53,081 --> 00:22:59,520
+Rym: Vista is just the same thing and the only reason you'd have to upgrade is because they're not going to support XP anymore.
+
+358
+00:22:59,861 --> 00:23:12,628
+Scott: Yep, but they you know, I guess because of all the you know, the bad press about Vista, you know Microsoft seems to be in sort of a rush to get out Windows 7 and I don't know what's gonna cover this.
+
+359
+00:23:12,869 --> 00:23:20,680
+Scott: it is it you know, because they still have all these issues the Antitrust and they're you know, really as much as the antitrust was appropriate back in the day.
+
+360
+00:23:21,325 --> 00:23:23,100
+Scott: I really don't think it's appropriate anymore.
+
+361
+00:23:23,742 --> 00:23:36,920
+Scott: I mean with Apple and Linux are very viable software wise and if Microsoft manages to stay on top With that kind of competition, I don't think it's because of any sort of monopoly that needs to be you know regulated.
+
+362
+00:23:37,000 --> 00:23:39,110
+Scott: It's because they're you know doing something.
+
+363
+00:23:39,773 --> 00:23:41,320
+Rym: Yeah, but everyone likes to hate Microsoft.
+
+364
+00:23:41,440 --> 00:23:46,340
+Scott: They just they still love to hate Microsoft even though really I'm starting to see more and more.
+
+365
+00:23:46,400 --> 00:23:56,402
+Rym: I mean, I remember I don't really remember this too much but there was a time when Microsoft was the awesome guy the underdog the guy who's doing all the awesome and IBM was the Evil.
+
+366
+00:23:56,482 --> 00:23:56,983
+Rym: horrible.
+
+367
+00:23:57,324 --> 00:24:00,132
+Rym: fuck IBM those bastards with their bla bla bla.
+
+368
+00:24:00,733 --> 00:24:06,640
+Rym: and then as Microsoft became successful everyone decided Microsoft blah and yay Google and now a lot.
+
+369
+00:24:06,921 --> 00:24:13,979
+Rym: I'm starting to see this slow trend where a lot of people are really really sour on Google Despite the fact that Google's making the same Austin they've always made.
+
+370
+00:24:14,181 --> 00:24:17,438
+Scott: Yeah, and you start you're seeing lots of Apple hate going around too.
+
+371
+00:24:17,499 --> 00:24:20,335
+Scott: Of course It's just still the Apple fanboys haven't gone anywhere either.
+
+372
+00:24:20,355 --> 00:24:25,740
+Rym: Yeah Apple fanboys are unique because there aren't Google fanboys like there are Apple fanboys.
+
+373
+00:24:26,122 --> 00:24:27,873
+Rym: Apple did that very well.
+
+374
+00:24:27,973 --> 00:24:28,194
+Scott: Yeah.
+
+375
+00:24:28,215 --> 00:24:29,943
+Scott: Oh This is just.
+
+376
+00:24:30,687 --> 00:24:32,856
+Scott: you should be aware of it because it's like.
+
+377
+00:24:32,896 --> 00:24:38,657
+Scott: well, you know I don't think it's worth it to go and buy Vista now if there's gonna be a Windows 7 next year.
+
+378
+00:24:39,640 --> 00:24:43,454
+Rym: I'll put it this way if you buy a new computer and it comes with Vista great.
+
+379
+00:24:43,515 --> 00:24:45,944
+Rym: Don't bother downgrading XP There's no reason to.
+
+380
+00:24:46,566 --> 00:24:55,620
+Rym: but don't pay unless you have shit that doesn't work with Vista Which could could happen but almost everything works with Vista except anything computer associates wrote because they can't program with the dam.
+
+381
+00:24:56,207 --> 00:24:57,118
+Rym: But I digress.
+
+382
+00:24:58,425 --> 00:25:09,440
+Rym: But anyway, yeah don't pay to upgrade because Windows 7 is gonna come out and then you're probably gonna want that because it's probably Going to have a lot of the stuff that was supposed to be in Vista except they rushed it out the door.
+
+383
+00:25:09,741 --> 00:25:21,380
+Scott: I think really Microsoft problem as a whole is they've had this, you know this plan of you know, okay Well upgrade Windows every so many years and then there's you know, mostly security fixes not really feature updates.
+
+384
+00:25:21,701 --> 00:25:27,018
+Rym: Windows 2000 is still largely usable except for the fact that you can't get updates to it anymore.
+
+385
+00:25:27,038 --> 00:25:32,173
+Scott: for security Yeah, I mean and like XP what features have they added to XP since it started?
+
+386
+00:25:32,233 --> 00:25:34,319
+Scott: not much except for security updates and ie7.
+
+387
+00:25:34,841 --> 00:25:39,880
+Rym: Yeah, I mean it's still mostly as far as anyone can tell the same kernel the same basic functionality.
+
+388
+00:25:40,162 --> 00:25:47,415
+Scott: Yeah, I mean they you know, they might have had some performance tweaks and security tweaks But they haven't changed, you know the features for the users that much at all.
+
+389
+00:25:47,897 --> 00:25:57,798
+Scott: So it's like You know that you look at Linux and look at OS X and they're just sort of constantly or at least more Constantly updating the features at least for the user.
+
+390
+00:25:57,858 --> 00:26:02,740
+Scott: I mean New OS X is in terms of how long it there was between XP and Vista.
+
+391
+00:26:02,861 --> 00:26:11,280
+Scott: There were like two or three new OS X versions that had a significant You know the apples all like check out our leopard over a bajillion new features, you know.
+
+392
+00:26:11,542 --> 00:26:20,494
+Scott: And while a lot of those features are just sort of nothing There are a lot of new features in the leopard versus the tiger New features in the Vista versus the XP.
+
+393
+00:26:20,514 --> 00:26:26,500
+Scott: Oh It's shiny Sidebar.
+
+394
+00:26:27,781 --> 00:26:28,906
+Scott: It's a little more secure.
+
+395
+00:26:28,926 --> 00:26:32,600
+Rym: I'll admit I like the sidebar, but there's no reason they couldn't have put that in XP.
+
+396
+00:26:32,720 --> 00:26:34,872
+Rym: Yeah, you could run that as an application.
+
+397
+00:26:35,073 --> 00:26:35,777
+Scott: Yeah, I know right?
+
+398
+00:26:35,797 --> 00:26:38,184
+Scott: So it's like What are the new features?
+
+399
+00:26:38,284 --> 00:26:39,046
+Scott: but you know Linux.
+
+400
+00:26:39,347 --> 00:26:46,270
+Scott: new features every week new features every hour as people are constantly writing new software And as soon as they write it, it's open source.
+
+401
+00:26:46,290 --> 00:26:48,520
+Scott: So as soon as they write the feature you have the feature.
+
+402
+00:26:48,601 --> 00:26:49,860
+Scott: No waiting, you know.
+
+403
+00:26:49,920 --> 00:26:57,343
+Scott: It's just you get if using the Ubuntu hearty beta you're getting daily updates like constantly with all sorts of crazy shit That's going on.
+
+404
+00:26:57,764 --> 00:27:05,600
+Scott: It's and there's new buttons every six months, you know, we're talking about, you know Vista took how many years five six seven years forever?
+
+405
+00:27:06,580 --> 00:27:19,780
+Scott: So yeah Well see maybe I think if they come out with Windows 7 next year and they do pull it off somehow Maybe it'll start like a you know, sort of an annual Windows update thing, you know And I think that would actually be a much better strategy for them.
+
+406
+00:27:19,820 --> 00:27:27,382
+Scott: It's like, you know, it's like we're gonna actually update the features of Windows every year Windows 7 8 9 10, you know Something like that.
+
+407
+00:27:28,386 --> 00:27:29,089
+Scott: I think that would do them.
+
+408
+00:27:29,129 --> 00:27:31,919
+Rym: Well, yeah, I mean, it's it's just it's really tricky.
+
+409
+00:27:32,523 --> 00:27:35,019
+Scott: Can I think well look Linux Unix etc?
+
+410
+00:27:35,280 --> 00:27:41,744
+Scott: I've had virtual desktops right for how many years since like the 70s almost even in XP I gotta end Vista.
+
+411
+00:27:41,764 --> 00:27:43,288
+Rym: I got to use a power tool or something.
+
+412
+00:27:43,509 --> 00:27:44,091
+Rym: multiple desktop.
+
+413
+00:27:44,171 --> 00:27:55,518
+Scott: OS X just added virtual desktops Aka spaces in the newest version that came out less than a year ago something which Linux Unix Etc has had for at least a decade if not two, right?
+
+414
+00:27:56,420 --> 00:27:57,586
+Scott: Windows still doesn't have it.
+
+415
+00:27:57,647 --> 00:28:00,140
+Scott: Vista still does not have this basic feature.
+
+416
+00:28:00,702 --> 00:28:03,109
+Scott: It's like a mandatory feature still not in this.
+
+417
+00:28:03,169 --> 00:28:05,396
+Rym: how long did it take for IE to get tabs?
+
+418
+00:28:06,078 --> 00:28:06,640
+Scott: I know right?
+
+419
+00:28:13,133 --> 00:28:14,901
+Rym: But things of the day.
+
+420
+00:28:15,424 --> 00:28:16,810
+Rym: I'm gonna try something again.
+
+421
+00:28:16,910 --> 00:28:22,045
+Rym: I did this a while ago where I had my own personal kind of theme week with things of the day.
+
+422
+00:28:22,065 --> 00:28:28,206
+Rym: You might remember I had Hitler was born to be alive week, which was kind of awesome.
+
+423
+00:28:28,266 --> 00:28:29,049
+Rym: I thought yeah.
+
+424
+00:28:30,131 --> 00:28:37,146
+Rym: But anyway, this one is much more coherent and I actually kind of have something relevant and poignant to say at the end But I got to get through all of it.
+
+425
+00:28:37,631 --> 00:28:47,969
+Rym: So all of my things of the day this week will be related to something that you've probably heard many times But like most people you probably didn't actually know what it was.
+
+426
+00:28:48,835 --> 00:28:51,130
+Scott: There's a song or at least all the full history.
+
+427
+00:28:51,331 --> 00:28:54,230
+Rym: Yeah, or in the very least you didn't know the name of the song or anything.
+
+428
+00:28:54,551 --> 00:28:57,247
+Rym: But as soon as you hear it you go, oh that song.
+
+429
+00:28:57,307 --> 00:28:57,790
+Rym: I remember that.
+
+430
+00:28:57,810 --> 00:28:58,493
+Rym: I know that song.
+
+431
+00:28:58,534 --> 00:29:02,872
+Scott: you did a really bad job of trying to portray what song it was Sing.
+
+432
+00:29:02,912 --> 00:29:04,017
+Rym: what do you want from me?
+
+433
+00:29:04,398 --> 00:29:07,150
+Rym: besides those were the days my friend?
+
+434
+00:29:07,450 --> 00:29:10,240
+Rym: We thought they'd never and that see that's totally off.
+
+435
+00:29:10,782 --> 00:29:13,030
+Rym: That's kind of how it's sung by a lot of people.
+
+436
+00:29:13,171 --> 00:29:15,822
+Scott: Yeah, but that's not the way you sang it.
+
+437
+00:29:15,862 --> 00:29:17,650
+Scott: there did not, you know did not help me.
+
+438
+00:29:17,710 --> 00:29:19,899
+Scott: But as soon as I saw the video I was like, oh that song.
+
+439
+00:29:19,960 --> 00:29:22,330
+Rym: How would you sing it a lot slower?
+
+440
+00:29:22,870 --> 00:29:23,071
+Rym: Try it.
+
+441
+00:29:23,111 --> 00:29:23,674
+Rym: I'm curious.
+
+442
+00:29:24,096 --> 00:29:24,799
+Scott: I don't say do it.
+
+443
+00:29:24,819 --> 00:29:25,101
+Scott: Do it.
+
+444
+00:29:25,161 --> 00:29:25,904
+Scott: That's not gonna happen.
+
+445
+00:29:26,085 --> 00:29:26,969
+Rym: Ah, you're a shit talker.
+
+446
+00:29:27,533 --> 00:29:28,520
+Scott: I didn't say I could do it.
+
+447
+00:29:28,560 --> 00:29:29,305
+Scott: I just said you couldn't.
+
+448
+00:29:29,547 --> 00:29:29,869
+Scott: yeah.
+
+449
+00:29:30,652 --> 00:29:34,227
+Rym: Anyways when you hear some of the other things of the day I've got.
+
+450
+00:29:34,267 --> 00:29:35,030
+Rym: you'll see what I was doing.
+
+451
+00:29:35,050 --> 00:29:49,160
+Rym: But anyway, so this song those were the days Once upon a time there was a time where we used to raise a glass or two.
+
+452
+00:29:51,780 --> 00:29:56,125
+Scott: Remember how we laughed away the hour.
+
+453
+00:29:57,546 --> 00:30:00,510
+Scott: think of all the great things we would do.
+
+454
+00:30:04,421 --> 00:30:14,625
+Rym: Those were the days my friend we thought they'd never And we'd sing and dance forever.
+
+455
+00:30:14,906 --> 00:30:27,040
+Rym: and a day We'd live the life we choose we'd fight and never lose For we were young and sure to have our way.
+
+456
+00:30:28,481 --> 00:30:30,528
+Rym: Now you're probably thinking oh, yeah that song.
+
+457
+00:30:30,990 --> 00:30:34,180
+Rym: well the history of this song is actually kind of interesting.
+
+458
+00:30:34,280 --> 00:30:37,310
+Rym: I stumbled upon a music video to it that I'm not.
+
+459
+00:30:37,330 --> 00:30:38,855
+Rym: this is what I'm saving for the end.
+
+460
+00:30:38,916 --> 00:30:43,389
+Rym: that the reason I'm doing this Week, but I look like oh, yeah that song.
+
+461
+00:30:43,510 --> 00:30:44,713
+Rym: Oh those people performed it.
+
+462
+00:30:45,255 --> 00:30:46,278
+Rym: Oh, so do these people?
+
+463
+00:30:46,298 --> 00:30:46,980
+Rym: I wondered about us.
+
+464
+00:30:47,020 --> 00:30:52,499
+Rym: I did a little research and There's kind of a really interesting thread that almost comes full circle here.
+
+465
+00:30:53,021 --> 00:31:08,486
+Rym: So this song those were the days was written by Gene Raskin a long time ago and While it was first played by some band called the Limelighters who also apparently played another fairly famous song first well before Anyone else was playing it.
+
+466
+00:31:08,506 --> 00:31:25,740
+Rym: It was performed by a woman named Mary Hopkin in 1968. now Mary Hopkin and her little single album was produced by none other than Paul McCartney and Funnily enough the b-side of this album was actually turn turn turn which was made famous by the birds.
+
+467
+00:31:25,840 --> 00:31:27,144
+Rym: It was actually a really great song
+
+468
+00:31:27,324 --> 00:31:27,545
+Scott: yep,
+
+469
+00:31:27,966 --> 00:31:42,858
+Rym: but this song which became super popular worldwide especially in Britain My first thing of the day I'm linking here is actually the the first kind of music video to this song by Mary Hopkin Which is back when music videos were a lot different from what they are now.
+
+470
+00:31:44,181 --> 00:31:50,929
+Rym: but the cool thing is the song was actually a Translation of a much older song.
+
+471
+00:31:51,311 --> 00:32:00,539
+Rym: I'm gonna butcher this Cyrillic here, but Dorogoy Delignoyu that yeah Russian Russian Russian Delignoyu Delignoyu.
+
+472
+00:32:00,840 --> 00:32:08,173
+Rym: There's oh, I can't say an O and then a U without anyway But this was written by Boris Foreman.
+
+473
+00:32:08,254 --> 00:32:12,589
+Rym: I can say that in the bodies Boris Foreman in the kind of...
+
+474
+00:32:12,609 --> 00:32:13,973
+Scott: watch out for the moose and squirrel...
+
+475
+00:32:14,174 --> 00:32:23,897
+Rym: in early 1900s, but That song was actually based on a poem by Konstantin Podrevsky.
+
+476
+00:32:24,283 --> 00:32:25,319
+Rym: Alright, alright.
+
+477
+00:32:25,420 --> 00:32:43,460
+Rym: I don't know if he actually wrote the lyrics to it or if it was based on the song based on the poem directly But anyway, so this old Russian folk song or poem was turned into a very popular song in the late 60s by someone who also on their b-side happened to have turn turn turn.
+
+478
+00:32:44,002 --> 00:32:57,959
+Rym: So my things of the day are the original 1968 Mary Hopkin rendition and The best video I could find of the actual Russian version Mm-hmm, and I guarantee that this will get much more interesting later in the week.
+
+479
+00:32:58,924 --> 00:33:08,380
+Scott: Alright, so there's this artist right in Canada I think and I think it's Canada anyway, and he took an old Buick, right?
+
+480
+00:33:08,860 --> 00:33:15,573
+Scott: but he took all this shit out of it like the engine and all that the stuff right and He changed it into a car.
+
+481
+00:33:15,613 --> 00:33:24,188
+Scott: That's you know, it's like, you know You got a Wildwood or some vacation place and they have those sort of multiple like people bicycle things But it's not like a bicycle.
+
+482
+00:33:24,208 --> 00:33:25,979
+Scott: It's like a little car, but everyone pedals.
+
+483
+00:33:26,763 --> 00:33:29,960
+Scott: He sort of turned this real car into a pedal car like the Flintstones.
+
+484
+00:33:30,542 --> 00:33:33,114
+Scott: So four people sit in the car two in the front two in the back.
+
+485
+00:33:33,375 --> 00:33:36,727
+Scott: the driver steers this brakes like little you know hand brakes.
+
+486
+00:33:36,887 --> 00:33:44,084
+Scott: one brake does the left two tires and the right brake does the right two tires and it's got drums and It's a pedal car.
+
+487
+00:33:44,124 --> 00:33:48,020
+Scott: It's a full-size Buick frame, but it's a pedal car, right?
+
+488
+00:33:48,481 --> 00:33:51,058
+Scott: And it's you know, it's sort of like this great, you know work of art.
+
+489
+00:33:51,118 --> 00:33:54,802
+Scott: in a way it was actually in like a gallery and stuff because it's like The.
+
+490
+00:33:55,023 --> 00:34:01,080
+Scott: we have the contrast of the giant monstrosity of a Buick with the you know, the pedaling, you know.
+
+491
+00:34:01,160 --> 00:34:02,411
+Scott: It's kind of like aha, right?
+
+492
+00:34:03,158 --> 00:34:08,656
+Scott: So These four people are hanging out with the artist or something and they they borrowed the car.
+
+493
+00:34:08,676 --> 00:34:11,692
+Scott: Oh They drove around Toronto with it.
+
+494
+00:34:12,094 --> 00:34:14,648
+Rym: That's kind of awesome right, you know I used to.
+
+495
+00:34:14,708 --> 00:34:19,998
+Scott: it can go like 15 miles an hour and It's it's you know, the brakes work and whatever.
+
+496
+00:34:20,742 --> 00:34:29,574
+Scott: Hey, the thing is they the car is actually was driven around Manhattan at one point I believe but they drove it around Toronto and they got pulled over.
+
+497
+00:34:29,594 --> 00:34:30,900
+Scott: they got pulled over and they got a ticket.
+
+498
+00:34:31,400 --> 00:34:32,284
+Rym: What was the ticket for?
+
+499
+00:34:32,304 --> 00:34:36,074
+Scott: I think like driving an unsafe vehicle or something bullshit.
+
+500
+00:34:36,496 --> 00:34:37,800
+Scott: operating an unsafe vehicle.
+
+501
+00:34:38,061 --> 00:34:41,219
+Rym: I have a feeling that that vehicle is perfectly safe for all involved.
+
+502
+00:34:41,460 --> 00:34:42,043
+Scott: So they went.
+
+503
+00:34:42,063 --> 00:34:45,418
+Scott: they also had no license plates or anything, but okay that I can understand why they're.
+
+504
+00:34:45,458 --> 00:34:46,424
+Rym: no But it's a bite.
+
+505
+00:34:46,464 --> 00:34:47,670
+Scott: It's basically a bicycle.
+
+506
+00:34:47,731 --> 00:34:49,079
+Scott: bicycles need license plates.
+
+507
+00:34:50,380 --> 00:34:59,120
+Scott: ha right, so they went to court and They won but if this is the thing of the day because of all the funny things that made them win.
+
+508
+00:34:59,240 --> 00:35:04,235
+Scott: For example instead of headlights they had two little tea lights, you know, the little little candles.
+
+509
+00:35:04,335 --> 00:35:05,217
+Scott: Ooh, right?
+
+510
+00:35:05,619 --> 00:35:16,099
+Scott: So I Think there was an argument that was like the guy in courts that he said What would happen if a lit candle hit another car?
+
+511
+00:35:16,780 --> 00:35:18,902
+Rym: nothing They're.
+
+512
+00:35:18,942 --> 00:35:22,411
+Scott: also there were also such funny lines as oh, yes.
+
+513
+00:35:22,491 --> 00:35:24,858
+Scott: The car is so dangerous going 15 miles an hour.
+
+514
+00:35:25,902 --> 00:35:26,689
+Scott: Oh good lord.
+
+515
+00:35:26,750 --> 00:35:27,799
+Scott: What if it hit somebody?
+
+516
+00:35:29,861 --> 00:35:30,724
+Scott: You know, they're like.
+
+517
+00:35:30,925 --> 00:35:32,128
+Scott: this car isn't dangerous.
+
+518
+00:35:32,188 --> 00:35:39,540
+Scott: all the other cars are dangerous and that's sort of like the artistic message Of it is like, you know, but yeah, you should check this out.
+
+519
+00:35:39,560 --> 00:35:44,520
+Scott: There's a video of them being pulled over and and all sorts of funny lines from court and such.
+
+520
+00:35:44,640 --> 00:35:46,206
+Scott: But I think they won.
+
+521
+00:35:46,768 --> 00:35:48,695
+Scott: it's it's a it's a victory for all.
+
+522
+00:35:49,076 --> 00:35:54,115
+Rym: but moving on to the main bit We're getting kind of bored with doing this kind of alternating ITC s thing.
+
+523
+00:35:54,155 --> 00:35:55,099
+Rym: at least for the time being.
+
+524
+00:35:56,126 --> 00:35:59,913
+Rym: We haven't gotten any Feedback at all from you people.
+
+525
+00:35:59,933 --> 00:36:00,899
+Rym: if you like this or not.
+
+526
+00:36:01,341 --> 00:36:03,388
+Rym: So, I guess we're gonna stop it temporarily.
+
+527
+00:36:03,408 --> 00:36:05,414
+Rym: if you liked it say something.
+
+528
+00:36:06,257 --> 00:36:10,169
+Rym: if you didn't like it Say you didn't like it and we won't do it again anytime soon.
+
+529
+00:36:10,189 --> 00:36:11,152
+Scott: Yeah, I know.
+
+530
+00:36:11,192 --> 00:36:14,060
+Scott: It's like Scott's box got so much feedback.
+
+531
+00:36:14,222 --> 00:36:21,616
+Scott: well because your box is so Anyway, which means I think I got to keep doing it or change it maybe but this is getting no feedback.
+
+532
+00:36:21,656 --> 00:36:25,107
+Rym: the ITC s Alternating and we know you're all listening.
+
+533
+00:36:25,268 --> 00:36:26,232
+Rym: So I don't know.
+
+534
+00:36:26,353 --> 00:36:26,654
+Rym: I don't know.
+
+535
+00:36:26,674 --> 00:36:27,457
+Rym: Is this useful to you?
+
+536
+00:36:27,497 --> 00:36:28,040
+Rym: Do you care?
+
+537
+00:36:28,890 --> 00:36:29,620
+Scott: I have no idea.
+
+538
+00:36:29,941 --> 00:36:37,500
+Rym: I was debating what to talk about tonight because a lot of the topics I have are very very specific or very very esoteric.
+
+539
+00:36:38,085 --> 00:36:41,706
+Scott: Mmm, you got to find the the in-between So I think I'm just gonna.
+
+540
+00:36:41,806 --> 00:36:45,740
+Rym: I kind of want to talk a little bit about the overview of not really IT security.
+
+541
+00:36:45,860 --> 00:36:52,680
+Rym: But you know how you see like on TV or in a movie like hackers movie where Penn Jillette was actually in there.
+
+542
+00:36:53,081 --> 00:37:06,317
+Rym: You see like this big data center full of computers and there's like that guy Who's sitting at a console surrounded by a hundred monitors with colors and everything and he's watching the network And when the hackers come in, this is skulls
+
+543
+00:37:06,417 --> 00:37:06,780
+Scott: everywhere
+
+544
+00:37:07,081 --> 00:37:12,390
+Rym: He's the one fighting the hackers and yelling and screaming and calling people on the phone and be like Did you get those firewalls up?
+
+545
+00:37:12,430 --> 00:37:14,020
+Rym: Cuz the cookie monsters breaking through?
+
+546
+00:37:16,941 --> 00:37:20,780
+Scott: And meanwhile, there's like a skull coming across his monitor and that it explodes.
+
+547
+00:37:20,901 --> 00:37:28,840
+Rym: Ah Man, I've said this before but hackers the movie and the craft were the exact same movie.
+
+548
+00:37:29,181 --> 00:37:34,340
+Rym: The craft was what a Wicca wish Wicca was and hackers was what hackers wish hacking was.
+
+549
+00:37:35,042 --> 00:37:37,228
+Rym: Yeah, man, if hacking was like that.
+
+550
+00:37:37,368 --> 00:37:40,156
+Scott: Well, it's what hacker wannabes wish hacking.
+
+551
+00:37:40,236 --> 00:37:41,420
+Rym: I wish hacking was that way.
+
+552
+00:37:41,662 --> 00:37:42,369
+Scott: Well, you're a wannabe.
+
+553
+00:37:42,390 --> 00:37:43,017
+Scott: You're not a hacker.
+
+554
+00:37:44,068 --> 00:37:44,654
+Rym: I've had what.
+
+555
+00:37:44,674 --> 00:37:45,159
+Scott: have you had?
+
+556
+00:37:46,141 --> 00:37:47,551
+Rym: When I was in the kitty wannabe?
+
+557
+00:37:50,402 --> 00:37:51,708
+Rym: I'm talking more about the common.
+
+558
+00:37:51,728 --> 00:37:52,612
+Rym: Look at that culture.
+
+559
+00:37:52,773 --> 00:37:54,320
+Scott: Could you own anyone at Def Con?
+
+560
+00:37:54,600 --> 00:37:55,403
+Scott: No, you could not own.
+
+561
+00:37:55,523 --> 00:37:57,992
+Rym: could you get own anyone at Def Con?
+
+562
+00:37:58,294 --> 00:38:00,060
+Scott: It would take me a lot longer than those guys.
+
+563
+00:38:00,241 --> 00:38:10,880
+Rym: I'm talking more about what if I could actually Hack the sprinkler system at my school to go off whenever I wanted to without using the simple method of lighting a fire under it?
+
+564
+00:38:11,120 --> 00:38:14,350
+Scott: That's that's the the that's actually hacking.
+
+565
+00:38:14,771 --> 00:38:17,460
+Rym: Yeah, I know but I wish it were like the movies.
+
+566
+00:38:17,703 --> 00:38:25,472
+Rym: Anyway Of course the matrix got it right when she SSH You know, that's all we saw and everyone lost their shit about.
+
+567
+00:38:25,813 --> 00:38:26,636
+Rym: she typed SSH.
+
+568
+00:38:26,696 --> 00:38:27,379
+Rym: It's real hacking.
+
+569
+00:38:27,459 --> 00:38:29,167
+Scott: OMG not really, but what?
+
+570
+00:38:29,188 --> 00:38:38,301
+Rym: yeah, but anyway, so Those things the kind of console of the guy sitting there yelling and screaming with a million monitors Don't?
+
+571
+00:38:38,742 --> 00:38:41,131
+Rym: they exist more than you might realize.
+
+572
+00:38:41,211 --> 00:38:43,900
+Rym: but I think I need to say that they're not quite like that.
+
+573
+00:38:44,281 --> 00:38:53,180
+Scott: They're not like the movies but there are places where there are people with lots of screens Monitoring what's going on on the internets and other networks?
+
+574
+00:38:53,600 --> 00:39:09,660
+Rym: So I'm gonna talk about kind of a few levels of network monitoring because the easiest one the biggest one is kind of the big iron knock the Network Operations Center like the kind of thing that the super gigantic company has and They actually do look a lot like what you saw in hackers.
+
+575
+00:39:09,780 --> 00:39:11,546
+Rym: The only real difference is that one.
+
+576
+00:39:12,068 --> 00:39:15,480
+Rym: usually the people paid to watch those screens are not super technical people.
+
+577
+00:39:15,580 --> 00:39:19,815
+Rym: They're basically just people hired to watch the screens and call someone else if something changes color.
+
+578
+00:39:20,156 --> 00:39:20,397
+Scott: Yep.
+
+579
+00:39:20,678 --> 00:39:27,960
+Scott: They're also You know, so they can be pretty impressive, but they usually have less fancy graphics and more boring information.
+
+580
+00:39:28,181 --> 00:39:30,108
+Rym: But they look like in terms of setup.
+
+581
+00:39:30,128 --> 00:39:32,558
+Rym: They're often the same like you'll have this wall of monitors.
+
+582
+00:39:32,638 --> 00:39:35,855
+Rym: at IBM we actually had a wall of monitors.
+
+583
+00:39:36,097 --> 00:39:42,384
+Rym: there were like 20 monitors and each one had a different thing on it and all these statuses and things everywhere.
+
+584
+00:39:42,645 --> 00:39:51,453
+Rym: and we had these more centralized monitors and then we had in the back a full replica of like the setup in one of the remote sites and then another replica of the setup locally.
+
+585
+00:39:51,754 --> 00:39:59,920
+Rym: so we could like go there to diagnose problems without having to go out to sites and all this crazy stuff, but We there were no 3d skulls.
+
+586
+00:40:00,221 --> 00:40:05,560
+Rym: There were green boxes that turned orange or yellow or red depending on if something was going wrong.
+
+587
+00:40:05,961 --> 00:40:16,740
+Rym: After possibly paging someone yep, and if if you knew about a problem you turned it dark green to say yes I'm working on it and other people could look and say oh, yeah, that's dark green Rym must be working on it.
+
+588
+00:40:16,981 --> 00:40:18,867
+Scott: I mean a lot of those operation centers.
+
+589
+00:40:18,927 --> 00:40:23,020
+Scott: Well, you know, they have their uses most places right for monitoring.
+
+590
+00:40:23,381 --> 00:40:24,926
+Scott: They basically just have all the tech.
+
+591
+00:40:24,946 --> 00:40:29,560
+Scott: people have blackberries or whatever and if something goes wrong the computers are.
+
+592
+00:40:29,580 --> 00:40:31,867
+Scott: You know There are other computers that watch.
+
+593
+00:40:32,128 --> 00:40:36,182
+Scott: so it's like their computers watching the other computers and if they see something Go wrong.
+
+594
+00:40:36,423 --> 00:40:39,151
+Scott: They send someone an email that says hey something went wrong.
+
+595
+00:40:39,272 --> 00:40:40,897
+Rym: Well, see the tricky part there.
+
+596
+00:40:40,937 --> 00:40:41,238
+Rym: Is that in?
+
+597
+00:40:42,980 --> 00:40:51,749
+Rym: As far as I have seen the vast majority of companies in the United States have effectively no network monitoring Whatsoever or very little.
+
+598
+00:40:52,010 --> 00:40:59,360
+Rym: I'm talking not think the vast majority That think about all the businesses and beacon that have some computers networks and an internet connection.
+
+599
+00:40:59,988 --> 00:41:02,397
+Rym: They have Nothing watching their.
+
+600
+00:41:02,438 --> 00:41:03,363
+Scott: no They got nothing.
+
+601
+00:41:03,705 --> 00:41:07,220
+Rym: and think about even most like mechanics and like higher up like the car dealerships there.
+
+602
+00:41:07,821 --> 00:41:11,030
+Rym: It's doubtful that they have much watching their network.
+
+603
+00:41:11,090 --> 00:41:12,734
+Rym: If anything, they don't think they really need.
+
+604
+00:41:12,774 --> 00:41:14,820
+Scott: they pretty much care working or not working there.
+
+605
+00:41:15,781 --> 00:41:17,285
+Rym: Well that then does brings up.
+
+606
+00:41:17,366 --> 00:41:19,933
+Rym: there are two basic kinds of network monitoring.
+
+607
+00:41:20,334 --> 00:41:24,910
+Rym: and see I'm really gonna try to only talk about the Overview and I'm I'm not gonna talk about SNMP.
+
+608
+00:41:24,991 --> 00:41:26,437
+Rym: Oh IDs or anything scary.
+
+609
+00:41:26,979 --> 00:41:33,288
+Rym: So Basically you can break down network monitoring into two categories proactive and reactive.
+
+610
+00:41:33,631 --> 00:41:36,849
+Rym: now you might think oh Well, obviously everyone should have proactive like.
+
+611
+00:41:36,889 --> 00:41:37,772
+Rym: that's the right solution.
+
+612
+00:41:37,812 --> 00:41:41,246
+Rym: and reactive is kind of like what you do If you don't know better or you're poor.
+
+613
+00:41:41,286 --> 00:41:44,800
+Scott: No, no proactive is more like only for really serious business.
+
+614
+00:41:45,181 --> 00:41:47,911
+Rym: Well, it's more that it's a matter of cause-benefit like.
+
+615
+00:41:47,951 --> 00:41:50,179
+Rym: take the example of the people watching the system.
+
+616
+00:41:51,586 --> 00:42:03,960
+Rym: if you look at the money at cost to set up a Sophisticated smart system that will monitor other systems Determine what's wrong determine who to page and only page those people and apply logic.
+
+617
+00:42:04,885 --> 00:42:11,991
+Rym: It's actually a lot cheaper to set up a much cheaper reactive solution and then hire someone at near minimum wage to watch it.
+
+618
+00:42:12,312 --> 00:42:16,164
+Rym: and then they have a book that says if this turns red call this person.
+
+619
+00:42:16,567 --> 00:42:21,175
+Rym: if this turns red call this person and As a result and even beyond that.
+
+620
+00:42:22,224 --> 00:42:24,016
+Rym: Well, maybe I should clarify a little bit.
+
+621
+00:42:24,036 --> 00:42:30,058
+Rym: actually explain Proactive means I have systems that are monitoring my systems polling.
+
+622
+00:42:30,098 --> 00:42:30,700
+Rym: They're active.
+
+623
+00:42:30,941 --> 00:42:32,266
+Rym: It's kind of like the active sonar.
+
+624
+00:42:32,587 --> 00:42:37,825
+Rym: I ping all my servers and I have a system that looks and says well I pinged the production server.
+
+625
+00:42:37,925 --> 00:42:38,507
+Rym: It's still up.
+
+626
+00:42:38,908 --> 00:42:40,252
+Rym: Well, I pinged the backup server.
+
+627
+00:42:40,332 --> 00:42:40,874
+Rym: It's still up.
+
+628
+00:42:41,215 --> 00:42:42,880
+Rym: Well, I pinged the development box.
+
+629
+00:42:43,764 --> 00:42:44,568
+Rym: I pinged it again.
+
+630
+00:42:44,588 --> 00:42:45,714
+Rym: Ah shit.
+
+631
+00:42:45,754 --> 00:42:46,980
+Rym: The development box is down.
+
+632
+00:42:48,180 --> 00:42:50,715
+Rym: Better page Rym to come fix it.
+
+633
+00:42:50,735 --> 00:42:53,267
+Rym: Oh Rym didn't respond to the page.
+
+634
+00:42:53,327 --> 00:42:54,071
+Rym: I'll page him again.
+
+635
+00:42:54,272 --> 00:42:55,899
+Rym: Oh, he didn't respond to the page.
+
+636
+00:42:55,939 --> 00:42:59,539
+Rym: still I'm paging his manager and telling him that Rym didn't respond to the page.
+
+637
+00:43:00,842 --> 00:43:03,455
+Scott: We must be in the shitter possibly or I don't care.
+
+638
+00:43:03,475 --> 00:43:05,584
+Rym: No it depends.
+
+639
+00:43:05,885 --> 00:43:21,760
+Rym: it's tricky because there's a fine line with proactive monitoring between monitoring effectively and knowing when things go down and Information overload where I get paged when someone visits my website and I get paged.
+
+640
+00:43:21,983 --> 00:43:34,626
+Rym: someone leaves my website and I get paged when I get an email and I get paged when Bob gets an email and I get paged when an Email bounces and I get paged when a bit comes in in a page when another bit comes in Page when that bit finishes coming in.
+
+641
+00:43:35,188 --> 00:43:52,051
+Rym: you can go way overboard with monitoring and it'll get to the point where Even if you're monitoring everything in the world So much information is coming in that even if you have very smart people in your knock if you get a thousand traps You know in an hour How are you gonna know which ones matter and which ones don't?
+
+642
+00:43:52,673 --> 00:43:54,380
+Rym: and if you're getting traps that don't matter?
+
+643
+00:43:55,180 --> 00:43:56,464
+Rym: Why even send the traps?
+
+644
+00:43:56,765 --> 00:43:57,206
+Rym: you're doing it.
+
+645
+00:43:57,226 --> 00:43:58,249
+Rym: You're not gaining anything.
+
+646
+00:43:58,289 --> 00:44:00,155
+Rym: that level of monitoring is not helping you.
+
+647
+00:44:00,175 --> 00:44:01,780
+Rym: No, not really now.
+
+648
+00:44:02,660 --> 00:44:11,839
+Rym: reactive monitoring is what most people use where Basically you don't so much monitor the systems but at the highest end you wait for traps.
+
+649
+00:44:11,879 --> 00:44:25,700
+Rym: now I'm not gonna explain that in detail but there is a way with something called SNMP the simple network management protocol where a Computer or a device can send out a trap if something goes wrong like say I've got a router.
+
+650
+00:44:25,780 --> 00:44:44,615
+Rym: You know like your links this router and say I want it'll I set it up So that if it loses a connection on one of the ports the port that I know goes out to the internet It'll send a trap to my monitoring machine that says hey I lost ten internet and if the internet comes back, it'll send another trap saying hey
+
+651
+00:44:44,796 --> 00:44:45,418
+Scott: I has
+
+652
+00:44:45,518 --> 00:44:50,917
+Rym: an internet Mm-hmm, so then I could set it up to where the system receives that trap and it goes.
+
+653
+00:44:51,319 --> 00:44:52,885
+Rym: All right The internet is down.
+
+654
+00:44:53,186 --> 00:44:53,709
+Rym: I know this.
+
+655
+00:44:53,970 --> 00:44:58,313
+Rym: I'm gonna wait five minutes if in those five minutes I have not received a trap saying it's back up.
+
+656
+00:44:58,394 --> 00:44:59,260
+Rym: I'm gonna pay trim.
+
+657
+00:45:00,263 --> 00:45:01,631
+Rym: Now that's a reactive solution.
+
+658
+00:45:01,711 --> 00:45:03,200
+Rym: I'm not pulling actively.
+
+659
+00:45:03,602 --> 00:45:07,400
+Rym: I'm getting the divine of relying on the device to tell me something's wrong.
+
+660
+00:45:07,862 --> 00:45:08,506
+Scott: If this what if the?
+
+661
+00:45:08,606 --> 00:45:10,578
+Scott: what if the router breaks and it loses the Internet's?
+
+662
+00:45:10,759 --> 00:45:18,990
+Rym: yes If the if I don't get the trap because both interfaces went down or the router caught fire Unless I have a fire trap that comes in.
+
+663
+00:45:19,010 --> 00:45:21,300
+Rym: and there's actually a funny story about that.
+
+664
+00:45:21,400 --> 00:45:27,600
+Rym: I got a trap once at IBM from an old device that effectively said the device is on fire.
+
+665
+00:45:27,941 --> 00:45:36,280
+Rym: Yeah, it did not actually mean that but that is what it said And much hilarity ensued as we tried to figure out if that was actually what was happening.
+
+666
+00:45:37,381 --> 00:45:41,150
+Rym: But anyway, so at its highest level that is reactive monitoring.
+
+667
+00:45:41,471 --> 00:45:45,140
+Rym: on its lowest level is you kind of you don't monitor at all.
+
+668
+00:45:45,641 --> 00:45:49,955
+Rym: But you might have kind of a system status thing that says like it's up.
+
+669
+00:45:50,015 --> 00:45:50,356
+Rym: It's down.
+
+670
+00:45:50,416 --> 00:45:52,184
+Rym: It doesn't page doesn't do anything It's just there.
+
+671
+00:45:52,687 --> 00:45:54,480
+Rym: Maybe it's on a big screen in the knock.
+
+672
+00:45:54,902 --> 00:46:02,170
+Rym: maybe you have a system where you can just SSH in and see if it's up and You don't care until a customer calls and says hey Rym.
+
+673
+00:46:02,190 --> 00:46:04,358
+Rym: I can't get to your website you go.
+
+674
+00:46:04,538 --> 00:46:06,346
+Rym: Oh Let me look into that.
+
+675
+00:46:06,647 --> 00:46:06,888
+Rym: Yep.
+
+676
+00:46:06,928 --> 00:46:08,636
+Rym: The website's down up.
+
+677
+00:46:08,756 --> 00:46:09,600
+Rym: I see why it's down.
+
+678
+00:46:09,640 --> 00:46:11,326
+Rym: I'm gonna fix it and that's.
+
+679
+00:46:11,386 --> 00:46:12,831
+Rym: that's the kind of monitoring gig nights has.
+
+680
+00:46:12,871 --> 00:46:15,440
+Rym: we have purely customer based reactive monitoring.
+
+681
+00:46:15,983 --> 00:46:18,560
+Rym: We don't know if front row crew comm is down.
+
+682
+00:46:18,640 --> 00:46:27,638
+Rym: We don't care if it's and as we are the customers which we are occasionally Yes, but if it goes down pretty much within a couple minutes all of you bastards email us.
+
+683
+00:46:27,779 --> 00:46:28,220
+Rym: Hey, it's down.
+
+684
+00:46:28,280 --> 00:46:29,346
+Rym: Hey, it's down is coming back up.
+
+685
+00:46:29,507 --> 00:46:30,351
+Rym: I can't get to the forum.
+
+686
+00:46:30,532 --> 00:46:30,874
+Rym: Are you guys?
+
+687
+00:46:30,935 --> 00:46:31,337
+Rym: Okay?
+
+688
+00:46:31,498 --> 00:46:31,900
+Rym: Are you dead?
+
+689
+00:46:33,761 --> 00:46:38,044
+Rym: so in a way you guys kind of act as our Reactive monitoring.
+
+690
+00:46:38,668 --> 00:46:40,920
+Scott: that's good because I don't have an extra computer to devote to that.
+
+691
+00:46:41,161 --> 00:46:46,780
+Rym: Yeah, and I mean beyond that really the idea of network monitoring much like the idea of any kind of monitor.
+
+692
+00:46:46,880 --> 00:46:50,723
+Rym: You know terrorist monitoring if you're the government or intelligence monitoring The.
+
+693
+00:46:51,044 --> 00:46:55,240
+Rym: the thing you really need to think about is that and the thing that IT people are paid to think about.
+
+694
+00:46:55,981 --> 00:46:57,379
+Rym: What information do I need?
+
+695
+00:46:58,163 --> 00:47:00,633
+Rym: What business impact am I trying to avert?
+
+696
+00:47:00,714 --> 00:47:17,080
+Rym: I mean, yeah Rym It's great that you're monitoring the mp3 server for the office and you get a priority one critical page if the mp3 server goes Down, but it'd really be nice if you notice that the database server that our production database is on went down like five times yesterday.
+
+697
+00:47:17,684 --> 00:47:19,539
+Rym: I'm glad that you didn't pay attention to that.
+
+698
+00:47:20,001 --> 00:47:25,057
+Rym: Yeah, so you kind of have to think about your core business and I talked about this before.
+
+699
+00:47:25,097 --> 00:47:30,413
+Rym: but IT Unless you are an IT company is not your business.
+
+700
+00:47:30,433 --> 00:47:31,757
+Rym: IT makes the business go.
+
+701
+00:47:31,778 --> 00:47:42,380
+Rym: so monitoring if the switches are at 80% or 90% efficiency is not nearly as important as Monitoring if you're a production web server database is up or not.
+
+702
+00:47:42,440 --> 00:47:44,580
+Scott: Yeah It's like if your company sells apples.
+
+703
+00:47:45,102 --> 00:47:49,460
+Scott: The number one thing is you want to make sure that apples are always able to be bought and sold.
+
+704
+00:47:49,821 --> 00:48:03,865
+Scott: You might you know have some monitoring that tells you that you know some Apple, you know, it has Apple computers a bad way That some computer over somewhere is going slower than it could be or something else is kind of funky over to the left or to the right.
+
+705
+00:48:03,926 --> 00:48:09,859
+Scott: but if Apples if the buying and selling of apples is in danger that is priority number one.
+
+706
+00:48:10,982 --> 00:48:11,925
+Rym: And then you can't see.
+
+707
+00:48:12,427 --> 00:48:18,369
+Rym: you think about what you need for your business to continue going How much money you could lose if it's not running?
+
+708
+00:48:18,830 --> 00:48:22,040
+Rym: and then how long would you be willing to wait before someone fixes it?
+
+709
+00:48:22,521 --> 00:48:27,100
+Rym: And depending on the answers to all those questions You have a much better idea of all right?
+
+710
+00:48:27,301 --> 00:48:32,557
+Rym: Well, I need we need all of our engineers to be paged 24/7 if this goes down because we're screwed.
+
+711
+00:48:32,577 --> 00:48:35,611
+Rym: if that goes down Everything else can wait until the morning.
+
+712
+00:48:35,631 --> 00:48:36,980
+Rym: We don't even need to page.
+
+713
+00:48:37,201 --> 00:48:42,479
+Rym: We'll just have a status page that everyone checks in the morning to see if hey, it's all pay It's not up and we can fix it whenever.
+
+714
+00:48:43,023 --> 00:48:55,916
+Rym: Mm-hmm, and I don't want to go in any more detail because SNMP and network monitoring solutions and all those things are incredibly complicated, but I guess suffice to say I think you get the gist of it.
+
+715
+00:48:56,158 --> 00:48:57,865
+Rym: and Starting next week.
+
+716
+00:48:57,885 --> 00:49:01,000
+Rym: We're gonna go back to our normal regularly scheduled Monday GeekNights.
+
+717
+00:49:01,421 --> 00:49:04,430
+Rym: Maybe we'll do a tech news roundup or something to start it off again.
+
+718
+00:49:04,450 --> 00:49:05,814
+Scott: No, that's not.
+
+719
+00:49:05,995 --> 00:49:06,376
+Rym: we'll see.
+
+720
+00:49:06,436 --> 00:49:07,580
+Rym: if anyone has a suggestion.
+
+721
+00:49:08,540 --> 00:49:10,388
+Rym: Monday calendars pretty much open.
+
+722
+00:49:10,710 --> 00:49:12,377
+Rym: the first good suggestion we get will do.
+
+723
+00:49:12,397 --> 00:49:34,522
+Rym: yeah I'm kind of thinking I wanted because I was reminded again because periodically people find old internet things for myself and Scott and I kind of want to do a show about The old stuff on the internet that comes back to haunt people and funny websites you put up when you were 14 that are now funny in a different way when you're 25 Plus.
+
+724
+00:49:34,602 --> 00:49:36,567
+Rym: actually, I think there's a lot of interesting things about that.
+
+725
+00:49:36,587 --> 00:49:39,836
+Rym: because think about it where the first generations are coming up.
+
+726
+00:49:40,036 --> 00:49:44,817
+Rym: imagine political elections and political issues 20 years from now.
+
+727
+00:49:45,341 --> 00:49:55,899
+Rym: The only way to have a candidate who didn't do something embarrassing on the internet at some point is to groom Political candidates from birth on and make sure that they never have a myspace ever.
+
+728
+00:49:56,424 --> 00:50:03,163
+Rym: Yep, and in that case maybe we'll have some sort of case system where there are people who are born to be politicians and no one else can ever be one.
+
+729
+00:50:03,204 --> 00:50:06,045
+Rym: or maybe our Expectations of politicians will.
+
+730
+00:50:06,165 --> 00:50:07,850
+Scott: maybe you should save it for an episode.
+
+731
+00:50:07,890 --> 00:50:08,031
+Scott: That's.
+
+732
+00:50:08,051 --> 00:50:08,893
+Rym: maybe I will.
+
+733
+00:50:08,913 --> 00:50:10,017
+Rym: does that sound interesting?
+
+734
+00:50:10,077 --> 00:50:11,060
+Rym: should we do it next week?
+
+735
+00:50:11,520 --> 00:50:12,358
+Scott: It's better than nothing?
+
+736
+00:50:13,161 --> 00:50:13,744
+Rym: Yeah, nothing.
+
+737
+00:50:14,306 --> 00:50:16,114
+Scott: if someone did someone doesn't go on something better.
+
+738
+00:50:16,134 --> 00:50:17,038
+Scott: Why not all right?
+
+739
+00:50:17,118 --> 00:50:17,480
+Scott: whatever?
+
+740
+00:50:24,452 --> 00:50:27,059
+Rym: This has been GeekNights with Rym and Scott.
+
+741
+00:50:27,079 --> 00:50:29,244
+Rym: Special thanks to DJ pretzel for the opening music.
+
+742
+00:50:29,926 --> 00:50:41,130
+Scott: be sure to visit our website at www.frontroadcrew.com Where you'll find show notes links our awesome forum a link to our frapper map and links to all the RSS feeds.
+
+743
+00:50:41,691 --> 00:50:47,329
+Rym: We say feeds plural because GeekNights airs four nights a week covering four different brands of geekery.
+
+744
+00:50:47,892 --> 00:50:52,216
+Rym: Mondays are science and technology Tuesdays We have video games board games and RPGs.
+
+745
+00:50:52,577 --> 00:50:57,570
+Rym: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+746
+00:50:58,431 --> 00:51:03,470
+Scott: You can send us feedback by email to GeekNights at front row crew calm.
+
+747
+00:51:04,174 --> 00:51:06,470
+Scott: Or you can send audio feedback via audio.
+
+748
+00:51:06,871 --> 00:51:10,164
+Scott: Just click the link that says send me an audio on the right side of our website.
+
+749
+00:51:10,445 --> 00:51:15,581
+Rym: if you like what you hear you can Catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+750
+00:51:15,821 --> 00:51:18,910
+Rym: for the complete archives visit the website which has everything.
+
+751
+00:51:19,492 --> 00:51:25,515
+Scott: GeekNights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+752
+00:51:25,997 --> 00:51:29,370
+Scott: this means you can do whatever you want with it as long as you give us credit.
+
+753
+00:51:29,833 --> 00:51:32,049
+Scott: Don't make money and share it in time.
+
+754
+00:51:32,852 --> 00:51:38,286
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+755
+00:51:38,567 --> 00:51:39,890
+Scott: It's actually recorded at night.
+

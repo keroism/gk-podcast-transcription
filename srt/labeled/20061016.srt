@@ -1,0 +1,2896 @@
+1
+00:00:09,260 --> 00:00:12,451
+Scott: It's Monday October 16th, and this is GeekNights.
+
+2
+00:00:13,093 --> 00:00:24,700
+Scott: Tonight, we have a really boring conversation Well, if you can call it a conversation where we read about image file formats from Wikipedia Because we didn't do research and we were lazy.
+
+3
+00:00:25,563 --> 00:00:33,459
+Scott: So if you really care about image file formats listen beyond the things of the day, but if not Yeah, get ready for some boring times.
+
+4
+00:00:34,922 --> 00:00:35,958
+Scott: Let's do this.
+
+5
+00:00:37,381 --> 00:00:46,385
+Rym: Well, it's Monday so obviously what I'm about to say is the thing I've said every Monday for the past couple months We're back from somewhere And you know what?
+
+6
+00:00:46,546 --> 00:00:47,653
+Scott: I was a little tired earlier.
+
+7
+00:00:47,693 --> 00:00:48,619
+Scott: I'm not so tired right now.
+
+8
+00:00:49,081 --> 00:00:54,859
+Rym: Yeah, I got a little bit of an adrenaline rush from eating food and moving around, but I think I'm gonna crash in a little bit.
+
+9
+00:00:55,681 --> 00:00:57,286
+Scott: Yeah, as soon as it shows over.
+
+10
+00:00:57,427 --> 00:00:59,093
+Scott: I'm hitting some hay.
+
+11
+00:00:59,234 --> 00:01:00,980
+Rym: I almost fell asleep with a big mallet.
+
+12
+00:01:01,281 --> 00:01:06,080
+Rym: I almost fell asleep driving to work and I almost fell asleep driving home from work and I took an hour nap at work.
+
+13
+00:01:06,482 --> 00:01:14,920
+Scott: I remember driving to and home from work and on Monday, you know I kind of like Monday at work because time just freakin flies like whoosh.
+
+14
+00:01:16,182 --> 00:01:24,379
+Rym: Though of course we spent the weekend at the northern geek house Which is very similar to our geek house only it's in Albany and it's got a lot more crap in it.
+
+15
+00:01:24,700 --> 00:01:26,847
+Scott: Yeah, and it's you know newer.
+
+16
+00:01:27,369 --> 00:01:31,060
+Rym: Well, there's some stories from it that are all going to be saved for various geek fables.
+
+17
+00:01:32,021 --> 00:01:39,740
+Rym: Good good, and of course, I think tomorrow we're going to have to tell the tale of perhaps my favorite video game character ever Scrote's.
+
+18
+00:01:40,340 --> 00:01:41,987
+Rym: Scrote's growth is a hero.
+
+19
+00:01:42,067 --> 00:01:42,931
+Scott: Yeah, what the hell.
+
+20
+00:01:42,991 --> 00:01:44,417
+Scott: who cares about freaking Mario?
+
+21
+00:01:44,437 --> 00:01:45,240
+Scott: It's all about screw.
+
+22
+00:01:45,482 --> 00:01:46,630
+Rym: I gotta say scrote's.
+
+23
+00:01:46,932 --> 00:01:48,080
+Scott: he needs to be in Smash Brothers.
+
+24
+00:01:48,281 --> 00:01:51,070
+Rym: I think scrote's is gonna be the the mascot of GeekNights.
+
+25
+00:01:51,511 --> 00:01:52,113
+Scott: That's not good.
+
+26
+00:01:52,334 --> 00:01:52,695
+Rym: Why not?
+
+27
+00:01:52,796 --> 00:01:54,020
+Rym: I would wear a scrote's t-shirt.
+
+28
+00:01:54,201 --> 00:01:55,849
+Scott: Okay, you can wear the scrote's t-shirt.
+
+29
+00:01:56,251 --> 00:01:58,000
+Rym: who would not wear a scrote's t-shirt?
+
+30
+00:01:59,402 --> 00:02:02,760
+Scott: Someone who wouldn't wear a goat's e t-shirt, it's nothing like goat's e.
+
+31
+00:02:02,900 --> 00:02:06,151
+Rym: It's just a cute little fighting thing from a ps2 game.
+
+32
+00:02:06,392 --> 00:02:08,138
+Scott: Yeah called screw.
+
+33
+00:02:08,419 --> 00:02:20,350
+Rym: Yeah Yeah names can be unfortunately ironic But it's not ironic because it is what you expect not the opposite a cute funny Monster that fights by swinging its little tail.
+
+34
+00:02:20,371 --> 00:02:22,860
+Scott: I thought you wanted to save the story of scrote's to for tomorrow.
+
+35
+00:02:22,961 --> 00:02:24,589
+Rym: I'm not gonna actually tell the story of scrote's.
+
+36
+00:02:24,670 --> 00:02:26,499
+Rym: All right, I just you know led up to it.
+
+37
+00:02:27,202 --> 00:02:28,526
+Rym: Uh-huh create a bit of buzz.
+
+38
+00:02:28,967 --> 00:02:30,452
+Scott: I'm sure all right fine.
+
+39
+00:02:30,472 --> 00:02:31,234
+Rym: Then what are you on the news?
+
+40
+00:02:32,097 --> 00:02:32,619
+Scott: Oh the news.
+
+41
+00:02:32,679 --> 00:02:36,079
+Scott: well McDonald's in Japan.
+
+42
+00:02:37,662 --> 00:02:50,012
+Scott: they gave away mp3 players as Prizes in a coca-cola promotion or something and it was like this little tiny USB Stick that you could also put headphones in and play mp3s.
+
+43
+00:02:50,373 --> 00:02:52,100
+Scott: Mm-hmm, which is not you know, so bad.
+
+44
+00:02:53,227 --> 00:03:07,256
+Scott: but Apparently when you put this thing in your computer It has ten songs on it, which is cool but it also has horrible horrible Trojan on it called QQ pass.
+
+45
+00:03:07,538 --> 00:03:07,920
+Rym: Wait a minute.
+
+46
+00:03:08,000 --> 00:03:13,359
+Rym: So McDonald's gave away an mp3 player that already had a virus on it.
+
+47
+00:03:13,943 --> 00:03:15,030
+Scott: Yeah, so you plug it in.
+
+48
+00:03:15,110 --> 00:03:29,520
+Scott: if you take this USB stick That's also an mp3 player that has ten songs on it already and plug it into any Windows computer It gives that Windows computer the QQ pass Trojan, which is intended to steal login data.
+
+49
+00:03:30,783 --> 00:03:31,166
+Rym: You know what?
+
+50
+00:03:31,266 --> 00:03:33,460
+Rym: It's a great type of DRM there.
+
+51
+00:03:33,520 --> 00:03:42,432
+Rym: I mean if you try to get those songs off of this mp3 player, oh you get a virus it punishes you know I guess it is it's.
+
+52
+00:03:42,512 --> 00:03:42,613
+Scott: it's.
+
+53
+00:03:44,661 --> 00:03:50,649
+Scott: Wow, if you want to call it DRM because it doesn't actually stop you from sharing the music You know what.
+
+54
+00:03:50,790 --> 00:04:08,900
+Scott: neither does DRM oh No, but the point is is that you know in Windows it's really hard to be secure from USB stick vert What I call it vector the USB vector of virus and Trojan infection.
+
+55
+00:04:09,161 --> 00:04:16,119
+Rym: Well considering that Windows will pretty much if it sees a USB device Probe it open it and execute anything it sees.
+
+56
+00:04:16,721 --> 00:04:32,100
+Scott: Yeah, I know Linux does the same thing but only for users in certain groups and only in certain, you know, you can actually easily Secure a Linux system against USB devices, you know It's trivial to make a Linux system that won't even have support any USB whatsoever.
+
+57
+00:04:32,221 --> 00:04:34,495
+Scott: You just recompile the kernel without USB.
+
+58
+00:04:34,777 --> 00:04:35,159
+Scott: There you go.
+
+59
+00:04:35,641 --> 00:04:37,206
+Rym: Well furthermore, I mean you really can't.
+
+60
+00:04:37,386 --> 00:04:46,838
+Scott: Trojans don't work in Linux unless you're running as root, which you're not Yeah, but I mean even in Windows if you weren't running as root this Trojan would still get you.
+
+61
+00:04:47,099 --> 00:04:48,203
+Rym: oh, yeah That's the way Windows is.
+
+62
+00:04:48,343 --> 00:04:53,060
+Rym: Yeah, because there's really no you have to run as root in Windows or things don't work.
+
+63
+00:04:54,201 --> 00:04:59,300
+Rym: Even in the newest version of Windows XP run as another you know, I wonder if they'll fix that shit in Vista.
+
+64
+00:04:59,682 --> 00:05:00,526
+Rym: I highly doubt it.
+
+65
+00:05:00,748 --> 00:05:09,536
+Scott: Yeah, it just reminds me at that time that the The the company was a security consultant and they were testing the company to see how secure their systems were.
+
+66
+00:05:09,696 --> 00:05:10,258
+Rym: what company?
+
+67
+00:05:10,639 --> 00:05:11,562
+Scott: I forget It was a story.
+
+68
+00:05:11,623 --> 00:05:16,180
+Scott: I was at news a long time ago when and they left USB sticks like lying outside the company.
+
+69
+00:05:16,241 --> 00:05:17,639
+Rym: Oh, yeah, I think we talked about on the show.
+
+70
+00:05:18,563 --> 00:05:20,751
+Scott: Like I just said half the employees picked him up.
+
+71
+00:05:20,791 --> 00:05:21,393
+Rym: Yes.
+
+72
+00:05:21,433 --> 00:05:23,300
+Scott: They just picked him up and stuck him in their computers.
+
+73
+00:05:24,060 --> 00:05:28,015
+Rym: Yeah, people just security has nothing to do with the pcs at this point.
+
+74
+00:05:28,035 --> 00:05:29,179
+Rym: It just has to do with the users.
+
+75
+00:05:29,822 --> 00:05:33,679
+Scott: Yeah, but here's a case where you know, it's not even someone trying to hack.
+
+76
+00:05:34,482 --> 00:05:36,360
+Scott: Maybe someone did try to put these on there.
+
+77
+00:05:36,520 --> 00:05:38,747
+Rym: No, you can't get a Trojan by accident.
+
+78
+00:05:38,867 --> 00:05:49,100
+Rym: either someone at the place where they were making them was evil or got paid off or Someone was really stupid and left the system that was flashing all these things insecure.
+
+79
+00:05:49,220 --> 00:05:51,799
+Scott: That I think that might make sense.
+
+80
+00:05:52,181 --> 00:05:54,851
+Scott: You know someone who was make said it putting all the music on here.
+
+81
+00:05:54,871 --> 00:05:56,980
+Rym: probably had he had a compromised box.
+
+82
+00:05:57,201 --> 00:06:01,160
+Rym: Yeah, of course, even then it had to be set as auto executable on the USB.
+
+83
+00:06:01,481 --> 00:06:05,120
+Rym: So it really I'm pretty sure it was intentional by someone in the chain.
+
+84
+00:06:05,882 --> 00:06:12,100
+Scott: It could have been but you know, it won't be hard to find out who it was, you know McDonald's subcontracted that out.
+
+85
+00:06:12,481 --> 00:06:13,386
+Scott: Oh, definitely.
+
+86
+00:06:13,546 --> 00:06:14,451
+Scott: Well, it's coca-cola.
+
+87
+00:06:14,471 --> 00:06:15,978
+Scott: Maybe also it was a team-up.
+
+88
+00:06:16,279 --> 00:06:21,456
+Rym: Yeah Yeah, they contracted out to somewhere in India probably maybe China and the just people didn't care.
+
+89
+00:06:21,536 --> 00:06:22,559
+Rym: They weren't being paid much.
+
+90
+00:06:23,643 --> 00:06:29,319
+Rym: I mean I can tell you right now the amount of care I put into work I do is directly proportional to how much money I'm paid to do it.
+
+91
+00:06:29,722 --> 00:06:38,005
+Scott: Well anyone who wants to get a lot of credit card data, here's what you do Give out free mp3 players that are also USB sticks and Don't even give them out.
+
+92
+00:06:38,025 --> 00:06:39,795
+Rym: Just leave them laying around in a Starbucks.
+
+93
+00:06:40,358 --> 00:06:40,800
+Scott: even better.
+
+94
+00:06:41,021 --> 00:06:42,284
+Rym: Not even just flash drives.
+
+95
+00:06:42,325 --> 00:06:52,679
+Rym: just buy 32 megabyte flash drives and just leave them lying around with a funny Embarrassing sounding love letter on them and some random mp3s and a bunch of Trojans.
+
+96
+00:06:53,663 --> 00:06:54,225
+Rym: It's foolproof.
+
+97
+00:06:54,325 --> 00:07:01,060
+Rym: No, no one with a Windows computer can protect against that except, you know Not putting a USB device in your computer.
+
+98
+00:07:02,261 --> 00:07:08,600
+Scott: Yeah, there isn't even a crazy news story going around on the normal news saying don't put random USB drives in your computer.
+
+99
+00:07:09,262 --> 00:07:14,240
+Scott: I think this hell, you know, we could probably leave like floppy disks and CDs lying around and people will do it.
+
+100
+00:07:14,563 --> 00:07:16,441
+Rym: Oh, yeah, that was a big thing back in the day I used.
+
+101
+00:07:16,481 --> 00:07:22,240
+Rym: in fact, I used to leave floppy disks around my middle school that had various Trojans and viruses on them.
+
+102
+00:07:22,643 --> 00:07:34,148
+Rym: Awesome in addition to games Yeah, in fact, I made a version of LHX a special disk where you put it in and you start it up Right, and it'll act like it's installing LHX.
+
+103
+00:07:34,610 --> 00:07:53,759
+Rym: But while that little status bar I made in the batch script is going along It's also searching your computer for dot doc files dot text files in certain directories based on where people would very likely have them Compressing them copying them to the disk over writing the game files to make up more space as it puts the game files on the PC
+
+104
+00:07:54,781 --> 00:07:54,983
+Scott: Yeah,
+
+105
+00:07:55,284 --> 00:07:57,557
+Rym: then making them hidden and then they give the disk back to me.
+
+106
+00:07:58,322 --> 00:08:01,920
+Rym: Yeah, I used it on a few people and I got nothing interesting.
+
+107
+00:08:04,682 --> 00:08:11,805
+Rym: All right, all right, so in the news a while ago this French study and I wanted to talk about it for a while I just never really got the chance today.
+
+108
+00:08:11,825 --> 00:08:12,608
+Rym: I can finally bring it up.
+
+109
+00:08:13,511 --> 00:08:22,903
+Rym: the study basically tried to correlate cognitive ability intelligence a form of intelligence with Obesity.
+
+110
+00:08:23,365 --> 00:08:25,232
+Scott: Well, it's really easy to measure obesity.
+
+111
+00:08:25,252 --> 00:08:26,216
+Scott: I mean you look at someone.
+
+112
+00:08:26,557 --> 00:08:31,920
+Rym: well, not really No, what they used is the BMI which is not the best metric in the world.
+
+113
+00:08:32,020 --> 00:08:33,606
+Rym: But here's the thing that bothers me.
+
+114
+00:08:34,087 --> 00:08:38,785
+Rym: every time BMI comes up on like Fark it's like Farks the worst place.
+
+115
+00:08:38,806 --> 00:08:39,932
+Rym: but slash dot and dig to.
+
+116
+00:08:39,952 --> 00:08:53,880
+Rym: a Whole bunch of really really fat people will come in and say BMI is crap It breaks down if you're actually really really strong or you're actually super super super in shape or you're really really really really really.
+
+117
+00:08:54,161 --> 00:08:55,749
+Scott: These are really really really fat people.
+
+118
+00:08:55,769 --> 00:08:57,035
+Scott: So what do you care if it's wrong?
+
+119
+00:08:57,096 --> 00:08:57,719
+Scott: It's right for you?
+
+120
+00:08:58,281 --> 00:09:02,373
+Rym: Well, the thing is a lot of people say oh BMI is worthless.
+
+121
+00:09:02,413 --> 00:09:14,659
+Rym: Therefore, even though it says I'm obese I know that I'm healthy when the truth is most people if you are above the line for obesity Under BMI, you're probably obese.
+
+122
+00:09:15,662 --> 00:09:22,779
+Scott: Yeah, it's like uh that measurement there, you know that that measurement doesn't work on some other group of people that aren't me.
+
+123
+00:09:22,859 --> 00:09:25,426
+Scott: therefore I don't get measured by it.
+
+124
+00:09:25,627 --> 00:09:29,302
+Rym: Well, the thing is bodybuilders always say yeah BMI is crap, too But that's just.
+
+125
+00:09:29,363 --> 00:09:30,487
+Rym: I don't know why they even care.
+
+126
+00:09:30,507 --> 00:09:33,560
+Scott: Yeah, why if you're a bodybuilder, what do you care?
+
+127
+00:09:33,800 --> 00:09:38,705
+Scott: If you know a measurement for fat people isn't correct about the other fat You're a mad muscle man.
+
+128
+00:09:38,825 --> 00:09:43,300
+Rym: The other point is that BMI is not really useful for an individual.
+
+129
+00:09:43,400 --> 00:09:56,664
+Rym: It's more of a statistical thing to track obesity and track trends because while it'll pull in, you know Really really fit people they're the minority and it's a very good metric for determining how obese a population is or Correlating things.
+
+130
+00:09:56,925 --> 00:10:00,618
+Scott: but alright, let's say that really really in shape people weren't the minority.
+
+131
+00:10:00,638 --> 00:10:01,180
+Scott: then what we do?
+
+132
+00:10:01,602 --> 00:10:02,648
+Rym: We'd use other metrics.
+
+133
+00:10:02,668 --> 00:10:03,413
+Rym: There are other metrics.
+
+134
+00:10:03,453 --> 00:10:04,941
+Rym: BMI is just the simplest Uh-huh.
+
+135
+00:10:05,162 --> 00:10:10,658
+Rym: All it really is is a ratio between height and weight and age is an agent.
+
+136
+00:10:10,839 --> 00:10:12,706
+Rym: Oh, no No, it's really simple.
+
+137
+00:10:12,867 --> 00:10:14,132
+Scott: All right, there was another one with age.
+
+138
+00:10:14,172 --> 00:10:15,980
+Rym: I thought there are hundreds of them Scott.
+
+139
+00:10:16,161 --> 00:10:19,275
+Rym: Anyway, now the study here just had a court.
+
+140
+00:10:19,315 --> 00:10:20,400
+Rym: They did a bunch of study.
+
+141
+00:10:20,420 --> 00:10:25,623
+Rym: I think they studied two thousand three thousand people and they gave him tests and then they followed up I think five years later.
+
+142
+00:10:25,924 --> 00:10:39,420
+Rym: I don't have the article in front of me, but I read it last week and they found a Fairly significant though not directly applicable correlation between lack of intelligence and obesity.
+
+143
+00:10:41,761 --> 00:10:45,111
+Scott: Now I could have told you that that alone wouldn't have really been news.
+
+144
+00:10:45,171 --> 00:11:01,731
+Rym: cuz alright one study where it found a slight correlation but apparently there have been a whole bunch of studies and all of them point to the fact that either people who are obese are made less intelligent by it or People who are less intelligent are more likely to become obese.
+
+145
+00:11:02,373 --> 00:11:04,180
+Rym: or there might be a third confounding factor.
+
+146
+00:11:04,701 --> 00:11:11,200
+Scott: Yeah, it's tough to say, you know, but you look around and I it seems like you think about it you go.
+
+147
+00:11:11,300 --> 00:11:21,178
+Scott: Yeah, all the stupid people seem to be fat, you know, it's like you see a stupid guy usually also a fat guy But at the same time a lot of some smart people seem to be fat, too.
+
+148
+00:11:21,761 --> 00:11:23,910
+Scott: So, I don't know if it's the.
+
+149
+00:11:24,252 --> 00:11:26,160
+Scott: if the fat actually causes the stupid.
+
+150
+00:11:26,220 --> 00:11:27,813
+Scott: I think it might be more.
+
+151
+00:11:27,873 --> 00:11:28,740
+Scott: the stupid is the fat.
+
+152
+00:11:28,840 --> 00:11:33,940
+Rym: I'm pretty sure stupid causes fat because the things that cause fat are pretty much as ignorant stupid or lazy.
+
+153
+00:11:34,603 --> 00:11:36,190
+Rym: Yeah, those three will cause fat.
+
+154
+00:11:36,270 --> 00:11:38,500
+Rym: or or you know, the very rare medical condition.
+
+155
+00:11:39,463 --> 00:11:44,180
+Scott: It seems like fat can invades all groups, you know from the dumbest to the smartest.
+
+156
+00:11:44,662 --> 00:11:48,220
+Scott: It's just that the dumber you are the more likely you are to be fat.
+
+157
+00:11:48,360 --> 00:11:56,547
+Scott: Like I'd say just shoot numbers like of stupid people like 80% are also fat and of smart people Maybe like 40%.
+
+158
+00:11:56,547 --> 00:12:05,940
+Rym: course relatedly there's been a lot of talk lately about how this whole obesity thing is overrated and we shouldn't worry about it because a lot of People are just a little overweight and that won't hurt him.
+
+159
+00:12:06,000 --> 00:12:13,440
+Rym: But there was a study that I just listened to on BBC News Where they basically found a correlation that now this is a very specific study.
+
+160
+00:12:14,182 --> 00:12:21,007
+Rym: It was women who got pregnant and then at some point in the future got pregnant again And they followed this them for a while.
+
+161
+00:12:21,669 --> 00:12:34,660
+Rym: and if you now they're not counting weight gain by pregnancy itself But a weight gain of as little as seven pounds between two pregnancies Greatly greatly greatly greatly enhances your chances of getting diabetes and all sorts of other diseases.
+
+162
+00:12:35,463 --> 00:12:38,756
+Scott: Wow, yes seven only in between pregnancies though.
+
+163
+00:12:38,816 --> 00:12:39,840
+Rym: Well, that was just the study.
+
+164
+00:12:39,920 --> 00:12:48,198
+Rym: They were testing a bunch of other things and then they found this very clear correlation between small weight gain and massive chances of disease later on.
+
+165
+00:12:49,046 --> 00:12:50,820
+Scott: Wow, but only between pregnancies.
+
+166
+00:12:51,021 --> 00:12:57,520
+Scott: So like it did not has anything to do with men or women with just one pregnancy or it's kind of it was one study.
+
+167
+00:12:57,560 --> 00:12:57,881
+Rym: It just.
+
+168
+00:12:57,962 --> 00:12:59,045
+Rym: they found this correlation.
+
+169
+00:12:59,086 --> 00:12:59,728
+Rym: That's all I said.
+
+170
+00:12:59,748 --> 00:13:00,230
+Rym: Yeah.
+
+171
+00:13:00,410 --> 00:13:03,080
+Scott: I'm just wondering like about the in-between pregnancy part of it.
+
+172
+00:13:03,241 --> 00:13:04,024
+Scott: It's kind of weird.
+
+173
+00:13:04,245 --> 00:13:04,948
+Rym: Well, they were.
+
+174
+00:13:05,310 --> 00:13:06,837
+Rym: they were testing a lot of things about.
+
+175
+00:13:07,198 --> 00:13:15,973
+Rym: you know Lifestyle changes between pregnancies or does pregnancy have an effect on the body things like that Tricky stuff, you know science.
+
+176
+00:13:16,154 --> 00:13:16,696
+Rym: Yeah.
+
+177
+00:13:17,038 --> 00:13:18,925
+Scott: Yeah No, but it's it's.
+
+178
+00:13:19,307 --> 00:13:23,946
+Scott: the thing is if people want to say oh, it's okay to be fat blah blah blah blah blah I'm like, all right fine.
+
+179
+00:13:24,026 --> 00:13:25,960
+Scott: You can all be fat, but you don't get health care.
+
+180
+00:13:26,363 --> 00:13:28,099
+Rym: Well, no, they should be able to pay for their own health care.
+
+181
+00:13:28,473 --> 00:13:31,756
+Scott: Yeah and they should charge them out the ass and they should be allowed to charge them out the ass.
+
+182
+00:13:31,836 --> 00:13:32,258
+Scott: and it's not.
+
+183
+00:13:32,278 --> 00:13:36,338
+Scott: it shouldn't be Against the law to discriminate against fat people in situations.
+
+184
+00:13:36,358 --> 00:13:36,699
+Scott: It's not.
+
+185
+00:13:37,664 --> 00:13:38,388
+Scott: Well, it is some.
+
+186
+00:13:38,408 --> 00:13:39,031
+Scott: no it isn't.
+
+187
+00:13:39,132 --> 00:13:41,482
+Scott: they always complain and make a deal It is not.
+
+188
+00:13:41,562 --> 00:13:48,423
+Rym: it is only illegal to discriminate for for certain things like housing employment There's a few things.
+
+189
+00:13:48,483 --> 00:13:50,570
+Rym: it varies a little bit state-by-state in the United States.
+
+190
+00:13:51,051 --> 00:13:54,080
+Rym: You cannot discriminate based on age race gender.
+
+191
+00:13:55,802 --> 00:14:02,513
+Rym: Hmm pretty much anything else is open game Including sexual orientation because of the way the laws are stupidly written.
+
+192
+00:14:02,533 --> 00:14:03,055
+Rym: Yeah.
+
+193
+00:14:03,557 --> 00:14:04,359
+Rym: Yeah, that's not cool.
+
+194
+00:14:05,582 --> 00:14:09,480
+Scott: But I mean there needs to be a lot more obesity discrimination, I think there isn't enough.
+
+195
+00:14:09,849 --> 00:14:10,239
+Rym: You know what?
+
+196
+00:14:10,580 --> 00:14:12,347
+Rym: There is a lot of Cedar Point there.
+
+197
+00:14:12,387 --> 00:14:15,097
+Rym: there is because the thing is the hunter.
+
+198
+00:14:15,137 --> 00:14:15,940
+Rym: how much they argue.
+
+199
+00:14:16,041 --> 00:14:18,500
+Rym: I remember I saw this first hand.
+
+200
+00:14:18,580 --> 00:14:30,225
+Rym: We were in line for the Raptor at Cedar Point and this really really really fat woman gets up there with her kid And she they won't let her on and she's screaming like you can't discriminate against me This is discriminatory.
+
+201
+00:14:30,265 --> 00:14:41,538
+Rym: and she she wasn't using the word discriminatory because I don't think that word was in her vocabulary But she was saying but slightly yet another example of stupid fact slightly less syllabic words.
+
+202
+00:14:41,778 --> 00:14:52,147
+Rym: and finally Yeah Anyway, the Cedar Point employer walks over and he says all right You can ride and she's you know, huff-puff.
+
+203
+00:14:52,729 --> 00:14:56,920
+Rym: and she's tries to squeeze herself into the little seat and pull the thing down and she can't.
+
+204
+00:14:58,502 --> 00:14:59,528
+Rym: And no one said anything.
+
+205
+00:14:59,548 --> 00:15:04,630
+Rym: the Cedar Point guy just stood there and watched her and She's trying and pulling it down and it won't go.
+
+206
+00:15:04,650 --> 00:15:08,946
+Rym: and she asked for help and he pulls it up And then he says wow, you just don't fit.
+
+207
+00:15:09,368 --> 00:15:10,872
+Rym: I can't close the latch.
+
+208
+00:15:11,313 --> 00:15:13,620
+Rym: if I run the rollercoaster, you'll fall out and die.
+
+209
+00:15:14,062 --> 00:15:15,712
+Rym: I'm sorry, but you can't ride.
+
+210
+00:15:16,255 --> 00:15:24,780
+Rym: and she just looked so Angry, but she didn't say a word because there was nothing she could say and she dragged her son out of the park.
+
+211
+00:15:25,161 --> 00:15:29,220
+Rym: Yeah, I just feel bad for the kid cuz he wasn't fat and he didn't get to ride a rollercoaster.
+
+212
+00:15:30,242 --> 00:15:39,180
+Scott: poor kid They really should just take the kid away from a parent like that Just to let him ride the rollercoaster, you know, there's a chance it was his grandma or an aunt or something.
+
+213
+00:15:39,582 --> 00:15:39,803
+Scott: I'm not.
+
+214
+00:15:39,863 --> 00:15:40,887
+Scott: I'm done saying that I'm just.
+
+215
+00:15:41,088 --> 00:15:43,740
+Scott: you know, yeah, they should get the kid to roll the rollercoaster.
+
+216
+00:15:43,880 --> 00:15:44,623
+Scott: You shouldn't be allowed to.
+
+217
+00:15:44,824 --> 00:15:45,768
+Scott: you know, that's child abuse.
+
+218
+00:15:45,808 --> 00:15:48,679
+Scott: taking a kid out of amusement park like that without riding any rides.
+
+219
+00:15:55,930 --> 00:16:00,540
+Scott: things of the day Man I changed my thing today up at the last second.
+
+220
+00:16:00,842 --> 00:16:02,910
+Rym: Yeah, because you found something mildly amusing.
+
+221
+00:16:03,372 --> 00:16:05,700
+Scott: Well, the thing before was not amusing at all.
+
+222
+00:16:05,740 --> 00:16:06,764
+Rym: What was the thing before?
+
+223
+00:16:07,326 --> 00:16:11,057
+Scott: it was it was a DS flash cart home.
+
+224
+00:16:11,197 --> 00:16:13,445
+Rym: Oh, yeah, we could just do an episode on DS homebrew.
+
+225
+00:16:13,626 --> 00:16:15,654
+Scott: as soon as I get one of these things I'm gonna cuz.
+
+226
+00:16:15,956 --> 00:16:17,303
+Scott: it's a really crazy world.
+
+227
+00:16:17,323 --> 00:16:17,947
+Scott: Let me tell you.
+
+228
+00:16:18,309 --> 00:16:21,722
+Rym: Yeah I want scrotch to be my thing of the day, but I don't have a picture of him.
+
+229
+00:16:21,943 --> 00:16:23,710
+Scott: No, too bad too bad.
+
+230
+00:16:23,810 --> 00:16:27,889
+Scott: You and your obsession with scrotch may know how obsessed Rym is with scrotch.
+
+231
+00:16:28,411 --> 00:16:49,482
+Rym: Um, I would just like to point out and I have a lot of people to back me up that when scrotch was finally unveiled after the final important bit was added to scrotch the first person in the room to react was Scott who said the words, ah, Yeah If anyone is a fan of scrotch, it's my friend Scott here.
+
+232
+00:16:49,502 --> 00:16:51,610
+Scott: Well, let me tell you I did not obsess about screw.
+
+233
+00:16:51,630 --> 00:16:53,254
+Scott: It's long after his demise.
+
+234
+00:16:53,495 --> 00:16:57,286
+Rym: like you I'm sure you're saving that for tonight.
+
+235
+00:16:57,687 --> 00:16:57,847
+Scott: Yeah.
+
+236
+00:16:58,228 --> 00:17:04,424
+Scott: Yeah anyway, so my new thing of the day is a crazy Japanese TV show.
+
+237
+00:17:04,523 --> 00:17:09,569
+Scott: OMG Ha who knows what's going on with this crazy Japanese TV shows?
+
+238
+00:17:10,190 --> 00:17:19,474
+Rym: Like they'll bring a girl out and they'll strap some meat to her head and sticker it stick it in a cage with a iguana Or something that was only the one famous Morning Musume show.
+
+239
+00:17:19,797 --> 00:17:23,589
+Rym: Yeah, but I have a feeling somehow become the stereotype of Japanese television.
+
+240
+00:17:24,092 --> 00:17:29,890
+Rym: The thing is I decided when I saw that the first time all I could think seeing I've seen crazier Japanese stuff than this.
+
+241
+00:17:30,211 --> 00:17:34,665
+Scott: Yeah for me the stereotype of Japanese television is Takeshi's castle.
+
+242
+00:17:35,247 --> 00:17:39,008
+Scott: No, it's Tokyo breakfast.
+
+243
+00:17:40,552 --> 00:17:41,295
+Scott: Is that what it's called?
+
+244
+00:17:41,736 --> 00:17:49,730
+Rym: Yeah Tokyo breakfast the thing we almost got kicked out of the anime club for yep That's search for Tokyo breakfast, but anyway, we'll make that a thing of the day.
+
+245
+00:17:49,939 --> 00:17:52,096
+Scott: Yeah Today's thing of the day a classic thing of the day.
+
+246
+00:17:52,538 --> 00:18:00,969
+Scott: today's thing of the day is a guy flying a helicopter a real Helicopter, you know the kind that they use to check on traffic and weather and all that crap.
+
+247
+00:18:01,771 --> 00:18:07,769
+Scott: but this helicopter has a camera and a bottle opener attached to one of the.
+
+248
+00:18:08,453 --> 00:18:09,660
+Scott: What are the little things called that?
+
+249
+00:18:09,700 --> 00:18:11,209
+Scott: it lands on the landing bit the ski?
+
+250
+00:18:12,230 --> 00:18:15,650
+Scott: So the front of one of the skis the technical term is landing bit.
+
+251
+00:18:16,371 --> 00:18:17,756
+Scott: Yeah, I don't know what.
+
+252
+00:18:17,776 --> 00:18:19,361
+Scott: I don't know the parts of a helicopter are.
+
+253
+00:18:19,381 --> 00:18:19,742
+Scott: do you know?
+
+254
+00:18:19,762 --> 00:18:21,507
+Rym: you can't name ten helicopter parts.
+
+255
+00:18:22,009 --> 00:18:22,350
+Scott: rotor?
+
+256
+00:18:23,731 --> 00:18:24,148
+Scott: cockpit.
+
+257
+00:18:27,071 --> 00:18:27,572
+Rym: I'm waiting.
+
+258
+00:18:27,632 --> 00:18:28,474
+Scott: rear wing-a-ling.
+
+259
+00:18:28,494 --> 00:18:30,479
+Rym: Yeah rear wing-a-ling.
+
+260
+00:18:30,499 --> 00:18:31,141
+Scott: rear wing-a-ling.
+
+261
+00:18:31,161 --> 00:18:32,444
+Rym: front wing-a-ling fan.
+
+262
+00:18:32,644 --> 00:18:36,134
+Scott: in there's a fan in the rear wing-a-ling Spinning bit.
+
+263
+00:18:36,314 --> 00:18:41,249
+Scott: Yeah, yeah staring so on the front right ski at the front of the front right ski.
+
+264
+00:18:42,411 --> 00:18:45,125
+Scott: Someone's gonna yell at us with who knows about helicopters.
+
+265
+00:18:45,346 --> 00:18:47,055
+Rym: watch finally We'll talk about something.
+
+266
+00:18:47,075 --> 00:18:48,221
+Rym: None of our listeners know about.
+
+267
+00:18:48,281 --> 00:18:50,030
+Scott: he don't know about helicopters.
+
+268
+00:18:50,672 --> 00:18:51,314
+Rym: I know a little bit.
+
+269
+00:18:51,595 --> 00:18:52,017
+Rym: I know the.
+
+270
+00:18:52,739 --> 00:18:57,297
+Rym: I know the how to pilot one, but let me qualify that I know how to pilot.
+
+271
+00:18:57,377 --> 00:18:57,699
+Rym: Wow.
+
+272
+00:18:57,759 --> 00:18:57,980
+Rym: I did.
+
+273
+00:18:58,261 --> 00:19:00,170
+Rym: I do not have the ability to pilot.
+
+274
+00:19:00,330 --> 00:19:02,818
+Scott: I just realized I know less about helicopters than I thought.
+
+275
+00:19:02,858 --> 00:19:06,590
+Scott: maybe we should buy the $30 remote-control Pico Z remote control.
+
+276
+00:19:06,812 --> 00:19:08,690
+Rym: That's gonna end with one of us losing an eye.
+
+277
+00:19:09,032 --> 00:19:11,546
+Scott: I think I'm gonna get it now just so I could learn about how I got.
+
+278
+00:19:11,566 --> 00:19:11,948
+Rym: well buy him.
+
+279
+00:19:11,968 --> 00:19:13,136
+Rym: tomorrow We're going to Radio Shack.
+
+280
+00:19:13,197 --> 00:19:14,144
+Rym: Anyway, okay, cool.
+
+281
+00:19:14,628 --> 00:19:17,187
+Scott: So On the front right ski, right?
+
+282
+00:19:18,091 --> 00:19:18,916
+Rym: I gotta warn you all.
+
+283
+00:19:18,956 --> 00:19:21,450
+Rym: now Scott and I are buying remote-controlled helicopters.
+
+284
+00:19:21,811 --> 00:19:25,242
+Rym: There might not be a show tomorrow because we might be dead anyway.
+
+285
+00:19:25,664 --> 00:19:36,082
+Scott: on the front of the right ski He's got a camera and a bottle opener and they've got these two platforms and on each platform are like six or seven bottles of beer.
+
+286
+00:19:36,644 --> 00:19:41,740
+Scott: and he flies a real helicopter and Opens up all these bottles of beer.
+
+287
+00:19:42,163 --> 00:19:55,286
+Scott: It's quite impressive like wow, he's controlling a large device a large piece of flying equipment with the precision of Not a scalpel of a surgeon.
+
+288
+00:19:55,306 --> 00:19:57,096
+Scott: but No, you don't be more.
+
+289
+00:19:57,116 --> 00:20:00,410
+Rym: maybe the hammer of a carpenter if there was a scalpel stuck to the end of that.
+
+290
+00:20:00,530 --> 00:20:02,601
+Scott: Then he did a surgery did a surgery.
+
+291
+00:20:02,621 --> 00:20:04,089
+Scott: He removed an appendix.
+
+292
+00:20:05,252 --> 00:20:08,570
+Scott: See, you know you do attach a wiimote to the helicopter, right?
+
+293
+00:20:09,071 --> 00:20:12,444
+Scott: And then he plays duck hunt or trauma center with it.
+
+294
+00:20:13,207 --> 00:20:22,148
+Rym: back when I was growing up I knew a couple of helicopter pilots and then in high school My stepdad got a remote-controlled helicopter from my mom as a gift and he was learning how to fly it.
+
+295
+00:20:22,993 --> 00:20:25,250
+Rym: Helicopters are freaking hard to fly.
+
+296
+00:20:26,151 --> 00:20:28,898
+Rym: Yeah, so this is especially amazing.
+
+297
+00:20:29,199 --> 00:20:31,846
+Rym: Don't think that helicopters are easy because they're not.
+
+298
+00:20:32,067 --> 00:20:33,190
+Scott: the airplanes are easy.
+
+299
+00:20:33,471 --> 00:20:36,023
+Scott: Yeah, airplanes are really and that's yet to fly by instruments.
+
+300
+00:20:36,083 --> 00:20:37,268
+Scott: That's what most airplane training.
+
+301
+00:20:37,328 --> 00:20:40,662
+Rym: honestly You know, it's the first time I actually flew a plane.
+
+302
+00:20:40,682 --> 00:20:42,530
+Rym: I was really short because I was a kid.
+
+303
+00:20:42,911 --> 00:20:50,858
+Rym: So I'm up there and I'm flying and after about 20 minutes the guy who was teaching me turns and says You can't see out the front window.
+
+304
+00:20:50,958 --> 00:20:51,680
+Rym: Can you?
+
+305
+00:20:52,282 --> 00:20:54,327
+Rym: and I said, nope, I'm short.
+
+306
+00:20:54,628 --> 00:20:55,150
+Rym: I'm a kid.
+
+307
+00:20:55,732 --> 00:20:58,670
+Rym: Yeah, I didn't actually say that but I said something to that effect.
+
+308
+00:21:00,312 --> 00:21:03,890
+Scott: Yeah, I mean it's not really that hard to fly by instruments.
+
+309
+00:21:03,890 --> 00:21:09,443
+Scott: You know, you got the one that shows how much the plane is tilting this way in that way and the other one We don't know anything about planes either.
+
+310
+00:21:09,463 --> 00:21:15,650
+Scott: Yeah But you know, it's when you can't see anything and you try to look out the window and it's just gray.
+
+311
+00:21:16,096 --> 00:21:23,027
+Scott: That's when there could be trouble From what I understand from listening because apparently a lot of the big-time podcasters are pilots.
+
+312
+00:21:23,207 --> 00:21:24,010
+Scott: They all like to fly.
+
+313
+00:21:24,130 --> 00:21:25,596
+Rym: Well, I was taking flying lessons.
+
+314
+00:21:25,656 --> 00:21:26,097
+Rym: I was young.
+
+315
+00:21:26,117 --> 00:21:31,438
+Rym: the problem was it costs a lot of money And we are poor.
+
+316
+00:21:31,498 --> 00:21:33,390
+Scott: Well, we're not poor but we're not that rich.
+
+317
+00:21:33,972 --> 00:21:41,301
+Rym: Yeah, I mean if we didn't do geek not what we don't have time we didn't do GeekNights We could take flying lessons, I guess but we couldn't afford them.
+
+318
+00:21:41,461 --> 00:21:44,150
+Scott: Yeah, we could maybe yeah, I'd have to give something up.
+
+319
+00:21:44,855 --> 00:21:48,317
+Rym: Yeah, give up podcasting All right.
+
+320
+00:21:48,499 --> 00:21:51,196
+Scott: Yeah Who do you have a thing today?
+
+321
+00:21:51,437 --> 00:21:51,658
+Scott: Why?
+
+322
+00:21:51,778 --> 00:21:54,870
+Rym: I do indeed and it's very much related to science and technology.
+
+323
+00:21:54,890 --> 00:22:08,590
+Rym: I mean I worked at IBM for many years and one of the areas I had to manage and deal with was a raised floor room Which is you'll have servers, right and they'll be in big racks and the floor is a fake floor and it's these tiles.
+
+324
+00:22:08,731 --> 00:22:09,817
+Scott: Well, it's not a fake floor.
+
+325
+00:22:09,838 --> 00:22:10,824
+Scott: I mean you could stand on it.
+
+326
+00:22:11,568 --> 00:22:15,106
+Rym: Yeah It is a floor but there is another floor under.
+
+327
+00:22:15,166 --> 00:22:15,890
+Scott: it's a trick floor.
+
+328
+00:22:15,971 --> 00:22:16,796
+Scott: It's not really there.
+
+329
+00:22:16,837 --> 00:22:18,730
+Scott: you step into the room and you fall down and kill yourself.
+
+330
+00:22:18,850 --> 00:22:30,109
+Rym: It's comprised of basically two foot by two foot tiles and you have a little suction thing You can use to pull them up and you put all the wires between all the computers and the networking stuff under there.
+
+331
+00:22:31,030 --> 00:22:44,810
+Rym: Also, you'll usually have big refrigerator things or the H vacuums be plugged into it and that will force cold air under there And then the high pressure will force the cold air through holes in these tiles into the racks to cool down the servers.
+
+332
+00:22:45,671 --> 00:22:47,677
+Rym: That is how big data centers work.
+
+333
+00:22:47,998 --> 00:22:53,189
+Rym: if you have data somewhere and it's real data and you're paying a lot of money for it It's probably in a raised floor.
+
+334
+00:22:54,651 --> 00:23:02,714
+Rym: Most raised floors have drains in this under floor area for such eventualities as Floods.
+
+335
+00:23:03,216 --> 00:23:06,429
+Rym: the data center you were about to see in my thing of the day did not.
+
+336
+00:23:06,449 --> 00:23:18,270
+Rym: Oh Water got in through a pipe that wasn't sealed properly and It's kind of like Venice only with a lot of people crying.
+
+337
+00:23:19,432 --> 00:23:24,150
+Scott: I'm trying to find out what the parts of a helicopter are on Wikipedia, and I'm not succeeding.
+
+338
+00:23:24,432 --> 00:23:24,875
+Rym: Well, you know what?
+
+339
+00:23:24,916 --> 00:23:26,789
+Rym: That's fine because it's time for the main bit.
+
+340
+00:23:29,493 --> 00:23:36,750
+Scott: All right, so today we are going to talk to you about image file codec compression formats.
+
+341
+00:23:38,253 --> 00:23:39,456
+Rym: That was a really lame opener.
+
+342
+00:23:39,536 --> 00:23:40,779
+Rym: Okay, let's try that again.
+
+343
+00:23:41,160 --> 00:23:43,825
+Rym: So in continuing our series on codecs.
+
+344
+00:23:43,906 --> 00:23:45,890
+Rym: We're going to talk about images.
+
+345
+00:23:47,372 --> 00:23:47,873
+Rym: Was that better?
+
+346
+00:23:48,314 --> 00:23:56,449
+Scott: I guess I'm gonna talk about all the different image file formats which are used raster image file form It's not vector image file formats.
+
+347
+00:23:57,192 --> 00:24:02,010
+Rym: Now the reason we're starting with images even though you probably don't care and it doesn't matter to anyone anymore.
+
+348
+00:24:02,732 --> 00:24:10,860
+Rym: It's very simple and easy to go into a lot of detail and all of the concepts we'll talk about today are pretty much the Same when it comes to audio and video.
+
+349
+00:24:10,921 --> 00:24:16,010
+Scott: Yeah, and before you listen to this episode You should probably listen to part one, which is last Monday.
+
+350
+00:24:16,856 --> 00:24:18,247
+Scott: Would you ever talk about you know?
+
+351
+00:24:18,950 --> 00:24:20,957
+Scott: Compression and digital compression.
+
+352
+00:24:20,977 --> 00:24:22,502
+Rym: Well, we talked about codecs.
+
+353
+00:24:22,923 --> 00:24:24,930
+Rym: Yeah and lossy and lossless and all that.
+
+354
+00:24:25,111 --> 00:24:28,110
+Scott: Yeah, we're not gonna re-explain lossy and lossless and other things like that.
+
+355
+00:24:28,170 --> 00:24:28,792
+Scott: You can forget that.
+
+356
+00:24:28,852 --> 00:24:39,422
+Rym: so for all you young kids out there the internet the world wide web specifically used to not have pictures Used to be text hypertext and nothing more.
+
+357
+00:24:39,442 --> 00:24:40,305
+Rym: there was you couldn't.
+
+358
+00:24:40,646 --> 00:24:47,530
+Rym: maybe there's an ASCII art But there weren't many pictures, you know computers used to not have pictures.
+
+359
+00:24:47,972 --> 00:24:56,990
+Scott: It used to just be you know an Apple - which would have green text And if you wanted you could you know, turn some pixels on and off to try to draw something.
+
+360
+00:24:57,473 --> 00:25:04,430
+Scott: But that was it, you know wasn't until Like the Macintosh computer that you could really have a picture.
+
+361
+00:25:05,093 --> 00:25:17,670
+Rym: Yeah, and then even then in the early days of the Internet, I mean nowadays It's just oh people use JPEGs gifs pangs But there really weren't a lot of useful widely available formats or image editing programs.
+
+362
+00:25:18,373 --> 00:25:25,103
+Scott: Yeah, I mean when my got my 486, you know It had OS 2 and it came with this picture of a parrot.
+
+363
+00:25:25,164 --> 00:25:26,730
+Scott: that was that I guess in those days.
+
+364
+00:25:26,772 --> 00:25:37,350
+Scott: You know I remember it looking really good because it was one of those multi colored parrots and it was this bitmap of a parrot and it Took up a lot of hard drive space and it was just there, you know to show off the computer.
+
+365
+00:25:37,430 --> 00:25:38,415
+Scott: Like look at this computer.
+
+366
+00:25:38,858 --> 00:25:41,189
+Scott: Look how cool a picture of a parrot it can show you.
+
+367
+00:25:42,372 --> 00:25:49,235
+Scott: and it was just a bitmap of a parrot and the only real image formats then were Bitmap and that was it.
+
+368
+00:25:49,596 --> 00:25:49,797
+Rym: Yep.
+
+369
+00:25:49,837 --> 00:25:51,282
+Rym: You might remember it as dot BMP.
+
+370
+00:25:51,322 --> 00:25:54,953
+Rym: now bitmap is very self-descriptive Bitmap, right?
+
+371
+00:25:55,435 --> 00:25:56,117
+Rym: What do you think it is?
+
+372
+00:25:56,177 --> 00:25:57,321
+Rym: It's a map of bits.
+
+373
+00:25:57,421 --> 00:26:03,889
+Rym: It's just a grid of bits of Pixels that it tells you what color the pixel is.
+
+374
+00:26:04,971 --> 00:26:11,970
+Scott: Yeah, I mean you have let's say you have three colors, right then you just start, you know, you have a hundred pixel picture.
+
+375
+00:26:12,394 --> 00:26:14,229
+Scott: It's just a hundred numbers.
+
+376
+00:26:14,953 --> 00:26:17,764
+Scott: Some of them will be one some of them will be two and some of them will be three.
+
+377
+00:26:17,784 --> 00:26:20,080
+Scott: and you just start drawing in The bottom left.
+
+378
+00:26:20,101 --> 00:26:20,689
+Scott: you go, right?
+
+379
+00:26:20,930 --> 00:26:21,787
+Scott: Then you go back up.
+
+380
+00:26:22,191 --> 00:26:35,970
+Scott: You go up one and all the way to the left like a typewriter and then all the way to the right again Drawing, you know red green blue blue blue red red, you know Depending on what the numbers are a bitmap works that way only it can have a lot more than three colors.
+
+381
+00:26:36,753 --> 00:26:39,023
+Rym: Well, I mean there are different ways to have a bitmap.
+
+382
+00:26:39,103 --> 00:26:40,650
+Rym: It's just it's more a generic concept.
+
+383
+00:26:40,971 --> 00:26:54,088
+Scott: Yes, but in terms of the actual bitmap file format, you know, the Microsoft Windows bitmap You know, it can have anywhere between 2-bit or 1-bit which is black and white all the way up to 24-bit color.
+
+384
+00:26:54,791 --> 00:27:00,690
+Scott: It can't really have alpha channel, which is what let you know, 32-bit color is where you can do transparency.
+
+385
+00:27:01,613 --> 00:27:06,750
+Scott: But there is a version with transparency that no one uses except for like the Windows startup screen.
+
+386
+00:27:07,011 --> 00:27:08,256
+Scott: That's where you're gonna see that now.
+
+387
+00:27:08,296 --> 00:27:09,561
+Rym: You might think hey, that would be fine.
+
+388
+00:27:09,622 --> 00:27:11,650
+Rym: Why bother using anything else?
+
+389
+00:27:11,770 --> 00:27:14,132
+Rym: I mean it describes an image Theoretically.
+
+390
+00:27:14,173 --> 00:27:21,629
+Rym: it could describe any image and in order to make the image more good or more precise or more accurate Just increase the number of bits.
+
+391
+00:27:22,592 --> 00:27:29,650
+Rym: It gets real big real fast large bitmaps that aren't compressed are very large and bitmaps really aren't compressed.
+
+392
+00:27:29,951 --> 00:27:34,830
+Rym: So you can't say you have a bitmap that is a million pixels by a million pixels and it's red.
+
+393
+00:27:35,231 --> 00:27:36,878
+Rym: The whole thing is red.
+
+394
+00:27:37,099 --> 00:27:38,525
+Rym: There's nothing but red pixels.
+
+395
+00:27:39,188 --> 00:27:39,750
+Rym: by default.
+
+396
+00:27:40,131 --> 00:27:44,829
+Rym: You can't take advantage of the fact that it's really simple to say what color all the pixels are.
+
+397
+00:27:45,170 --> 00:27:54,807
+Rym: So in the end the file ends up saying pixel 1 is red pixel 2 is red Pixel 3 is red until the 1 million times 1 millionth pixel.
+
+398
+00:27:55,288 --> 00:28:00,888
+Scott: Yep And if you really if you want to see how big a bitmap can be do some math.
+
+399
+00:28:01,189 --> 00:28:04,197
+Scott: take a 24 bits which is 3 bytes and then an 800 by 600 image is a 24,000 or 240,000.
+
+400
+00:28:04,197 --> 00:28:14,480
+Scott: I'm not Yeah 240,000 or 24 that I'm not sure.
+
+401
+00:28:14,861 --> 00:28:21,761
+Scott: I'm not doing it right now captain math captain math for the win But yeah times 3 bytes.
+
+402
+00:28:22,463 --> 00:28:23,407
+Scott: That's a lot of bytes.
+
+403
+00:28:23,608 --> 00:28:26,769
+Scott: That's like 60,000 but that's a lot of bytes.
+
+404
+00:28:27,731 --> 00:28:30,863
+Rym: Let's just not use examples with numbers Scott.
+
+405
+00:28:31,064 --> 00:28:31,505
+Scott: Okay.
+
+406
+00:28:32,027 --> 00:28:39,630
+Rym: Yeah, so Why do we have codecs same reason as with anything else to make things smaller?
+
+407
+00:28:40,550 --> 00:28:42,196
+Scott: Yeah, there's a reason that you know.
+
+408
+00:28:42,357 --> 00:28:45,429
+Scott: only MS paint really uses bitmap and nothing else.
+
+409
+00:28:46,573 --> 00:28:46,894
+Scott: All right.
+
+410
+00:28:46,934 --> 00:28:48,841
+Scott: So what did they come up with next?
+
+411
+00:28:49,303 --> 00:28:52,466
+Scott: they came up with the TIFF TIFF TIFF TIFF.
+
+412
+00:28:53,252 --> 00:28:59,030
+Scott: The TIFF is the tagged image file format and it's actually a lot more like a bitmap than you think.
+
+413
+00:28:59,752 --> 00:29:05,490
+Scott: What they were trying to do is they wanted to make a format of image file for scanning.
+
+414
+00:29:05,711 --> 00:29:10,949
+Scott: They're like anyone who would scan anything in would get a TIFF, you know, that way all the scanners would work together.
+
+415
+00:29:11,873 --> 00:29:14,462
+Scott: the thing is everyone decided to do something different with TIFF.
+
+416
+00:29:15,265 --> 00:29:19,797
+Scott: as the name implies it's The tagged image file format.
+
+417
+00:29:19,998 --> 00:29:31,330
+Scott: a TIFF can actually contain a whole bunch of different pictures and tags that Specify all sorts of different things and different people would make up new tags to do different things in the image file.
+
+418
+00:29:32,174 --> 00:29:41,710
+Scott: But in the end, you know, they decided okay This guy's using that tag and this software only supports these tags and that guy's ignoring that tag over there.
+
+419
+00:29:42,092 --> 00:29:44,769
+Scott: These are the only tags we're gonna use and no mother ones.
+
+420
+00:29:45,472 --> 00:29:52,494
+Scott: So TIFF doesn't do a lot of the amazing things it could do but it still does some pretty cool stuff in General.
+
+421
+00:29:52,596 --> 00:29:55,421
+Scott: TIFF doesn't is actually Non-compressed.
+
+422
+00:29:55,461 --> 00:29:56,469
+Scott: they're still really big.
+
+423
+00:29:57,372 --> 00:30:02,088
+Scott: But if you want you can apply what is known as the LZW lossless data compression.
+
+424
+00:30:02,108 --> 00:30:08,090
+Rym: now I mean there are compression methods for bitmap - don't get us wrong there are but no one really uses them so much.
+
+425
+00:30:08,110 --> 00:30:12,550
+Rym: Well, LZW is fairly widely used in a widely well-known way to compress data.
+
+426
+00:30:12,851 --> 00:30:19,730
+Scott: Yeah, LZW compression is the thing that made the gift patent and I don't know we can explain how LZW works.
+
+427
+00:30:19,951 --> 00:30:21,562
+Scott: You want to we could.
+
+428
+00:30:21,603 --> 00:30:28,070
+Scott: it's a little complicated You know what in a computer science way, it compresses things in a way that can now be done better.
+
+429
+00:30:28,491 --> 00:30:33,530
+Scott: Yeah, basically, I mean it makes it any any data you have no matter what the data is.
+
+430
+00:30:34,072 --> 00:30:39,430
+Scott: You can use LZW to turn it into less data without losing any information.
+
+431
+00:30:39,973 --> 00:30:46,337
+Scott: That and LZW is a specific way of doing it with a table and Matching things and it's kind of tricky.
+
+432
+00:30:46,678 --> 00:31:02,780
+Rym: Yeah, the way most compression format will lossless compression formats work is that they will figure out a pattern that is commonly occurring or a thing that commonly occurs and come up with a shorter way of expressing that a Simple one I could come with right now.
+
+433
+00:31:02,800 --> 00:31:04,069
+Rym: I'll make up a compression scheme.
+
+434
+00:31:04,934 --> 00:31:10,357
+Rym: Say you look at an image a bitmap and anytime Multiple pixels in a row.
+
+435
+00:31:10,397 --> 00:31:22,082
+Rym: anytime a whole line is the same color You have a special number and if you put that number as a pixel It says the whole line that this pixel is in is one color.
+
+436
+00:31:22,203 --> 00:31:26,938
+Rym: and skip to the next line and then the decoder that's reading This bitmap sees that bit and goes.
+
+437
+00:31:27,119 --> 00:31:28,686
+Rym: Oh, I know what to do when I see that bit.
+
+438
+00:31:29,107 --> 00:31:33,736
+Scott: Well that bite Yep Alright, so that's what TIFF is.
+
+439
+00:31:33,997 --> 00:31:42,410
+Scott: It's basically it's lossless but and it's fancy bitmaps And they're usually also used for like printing and scanning and all that sort of jazz.
+
+440
+00:31:43,350 --> 00:31:46,884
+Rym: Alright, here's the stuff you care about because this is what is on most of the internet.
+
+441
+00:31:46,964 --> 00:31:47,887
+Rym: gifts and JPEGs.
+
+442
+00:31:48,168 --> 00:31:53,130
+Scott: the gift Well, we'll talk about the gift the ping and then the JPEG because the get the ping is a lot more similar to the gift.
+
+443
+00:31:53,231 --> 00:31:54,849
+Rym: Yeah, but the ping is not widely used.
+
+444
+00:31:55,271 --> 00:32:00,245
+Scott: No, the ping is not as widely used as it should be but it is used very relatively.
+
+445
+00:32:00,285 --> 00:32:01,950
+Scott: what more widely now than before?
+
+446
+00:32:02,734 --> 00:32:07,890
+Scott: anyway The GIF which is technically the correct pronunciation of GIF is GIF.
+
+447
+00:32:08,151 --> 00:32:14,170
+Rym: However, that is according to the zealots who decided that sort of thing and the guy who made up the image file format.
+
+448
+00:32:14,331 --> 00:32:20,864
+Scott: Yeah, but I'm not gonna get into the argument not getting the army But in my opinion GIF is the name of a brand of peanut butter.
+
+449
+00:32:21,024 --> 00:32:24,915
+Scott: Therefore GIF graph Graphics not graphics.
+
+450
+00:32:25,336 --> 00:32:30,350
+Scott: if it was graphics interchange format, it would be GIF but it's graphics interchange format.
+
+451
+00:32:30,430 --> 00:32:32,561
+Rym: Therefore yeah, because it's not a word.
+
+452
+00:32:32,661 --> 00:32:33,606
+Rym: It's an acronym.
+
+453
+00:32:33,927 --> 00:32:34,249
+Scott: That's right.
+
+454
+00:32:34,590 --> 00:32:38,743
+Rym: Furthermore the vast majority of people in the world say GIF.
+
+455
+00:32:38,943 --> 00:32:40,227
+Rym: very few people say GIF.
+
+456
+00:32:40,247 --> 00:32:42,809
+Rym: there have been numerous surveys to this effect.
+
+457
+00:32:43,664 --> 00:32:49,550
+Scott: anyway What a GIF is is it's just like the other image file formats.
+
+458
+00:32:49,731 --> 00:32:53,586
+Scott: It's sort of a bitmap, but it saves space in a few ways.
+
+459
+00:32:53,747 --> 00:32:54,470
+Scott: It doesn't actually.
+
+460
+00:32:56,132 --> 00:32:58,903
+Scott: It's not a lossy compression it is lossless compression.
+
+461
+00:32:59,024 --> 00:33:00,490
+Scott: GIF does not lose data.
+
+462
+00:33:00,851 --> 00:33:02,697
+Scott: Whatever the GIF is is what the GIF is.
+
+463
+00:33:02,717 --> 00:33:06,390
+Scott: you're not you know, if you turn something into a GIF you don't lose anything.
+
+464
+00:33:07,276 --> 00:33:09,169
+Scott: But there's some limitations.
+
+465
+00:33:10,259 --> 00:33:12,635
+Scott: GIF Can use any.
+
+466
+00:33:12,735 --> 00:33:28,540
+Scott: you know, there are 24-bit color, which is 16.7 million possible colors You can use but in any one GIF file you can only use 256 colors, so if I were to say draw I don't know.
+
+467
+00:33:28,560 --> 00:33:36,526
+Scott: I take a picture of a flower right and there were 257 shades of green in the leaf of the flower.
+
+468
+00:33:37,206 --> 00:33:38,248
+Scott: one of them has to go.
+
+469
+00:33:38,268 --> 00:33:45,230
+Scott: that's not compression That's just a limitation of GIF saying you cannot use two more than 256 colors in one GIF picture.
+
+470
+00:33:45,451 --> 00:33:51,182
+Rym: Now what a lot of people would do is effectively compress an image themselves Like say I have an image that I want to make a GIF out of.
+
+471
+00:33:51,504 --> 00:33:58,508
+Rym: you can run various Algorithms that will take an image that has more colors figure out a way to express the image in less colors.
+
+472
+00:33:59,090 --> 00:34:04,830
+Rym: now It's lossy because you lose information in the picture, but then you can save it as a GIF which itself is lossless.
+
+473
+00:34:05,171 --> 00:34:11,815
+Rym: It makes a perfect copy of the lossy thing that you just made Exactly, so you know it.
+
+474
+00:34:12,137 --> 00:34:17,110
+Scott: it's like the GIF format itself is not lossy, but it can't hold a lot.
+
+475
+00:34:17,190 --> 00:34:21,630
+Scott: So you have to cut stuff off of whatever you're working with if you want to stuff it into a GIF.
+
+476
+00:34:22,690 --> 00:34:29,690
+Scott: Now the other thing GIF does is it implies the LZW that we just talked about to make it even smaller.
+
+477
+00:34:30,909 --> 00:34:34,924
+Scott: So you know that was the problem with the whole patent dispute that was going on.
+
+478
+00:34:34,964 --> 00:34:40,850
+Scott: remember how there was a news a little while ago about all the GIF patents finally expired and now no one cares anymore.
+
+479
+00:34:41,971 --> 00:34:45,746
+Scott: That was a patent on something in the LZW by the Unisys company.
+
+480
+00:34:45,806 --> 00:34:46,469
+Scott: blah blah blah blah.
+
+481
+00:34:46,469 --> 00:34:47,333
+Rym: Yeah, don't worry about it.
+
+482
+00:34:47,632 --> 00:34:48,155
+Rym: No one cares.
+
+483
+00:34:48,215 --> 00:34:48,877
+Rym: It's gone forever.
+
+484
+00:34:49,098 --> 00:34:49,379
+Rym: Yep.
+
+485
+00:34:49,960 --> 00:34:51,385
+Scott: It doesn't mean anything anymore.
+
+486
+00:34:51,826 --> 00:34:52,869
+Scott: use GIFs all you want.
+
+487
+00:34:53,953 --> 00:34:54,717
+Rym: Now JPEG.
+
+488
+00:34:55,118 --> 00:34:55,902
+Scott: well well ping.
+
+489
+00:34:55,962 --> 00:34:57,167
+Rym: Oh, yeah, you want to talk about ping.
+
+490
+00:34:57,207 --> 00:34:58,391
+Scott: just a little bit It's all you.
+
+491
+00:34:58,732 --> 00:35:02,462
+Scott: ping came about because of the patents on GIF.
+
+492
+00:35:02,743 --> 00:35:12,480
+Scott: all the open source people well a bunch of them Didn't want to use GIF because of those patents that you know wouldn't go away, so they made ping which is portable network graphics.
+
+493
+00:35:12,780 --> 00:35:22,092
+Scott: a Lot of people say PNG because they don't want you to think that they're talking about the program that goes ping ping but most people say ping.
+
+494
+00:35:22,132 --> 00:35:27,208
+Scott: most people say ping and It's also lossless just like GIF only.
+
+495
+00:35:27,368 --> 00:35:31,037
+Scott: it can hold any number of colors any number of colors.
+
+496
+00:35:31,819 --> 00:35:37,856
+Scott: it can also Do what is known as alpha transparency which is 32-bit color.
+
+497
+00:35:38,378 --> 00:35:39,040
+Scott: see normally?
+
+498
+00:35:39,883 --> 00:35:50,199
+Scott: When you want to show true color or what is known as true color is 24-bit color two bytes for red two bytes for blue and two bytes for green.
+
+499
+00:35:51,121 --> 00:35:56,760
+Scott: 32-bit color has two bytes for the alpha channel, which is the amount of transparency.
+
+500
+00:35:57,444 --> 00:36:03,839
+Scott: See in a GIF you can do transparency But all you can say is this pixel is transparent or it's not?
+
+501
+00:36:04,341 --> 00:36:11,068
+Rym: So basically what you usually do is just make the background of your GIF the transparent color And now you have a GIF that'll fit in with something.
+
+502
+00:36:11,108 --> 00:36:25,716
+Scott: yes, but for a ping file since you actually have 32-bit actual alpha you know blending going on you can make some pixels more or less transparent than others Which is really really cool and useful.
+
+503
+00:36:26,158 --> 00:36:33,127
+Scott: however Internet Explorer doesn't support this as it should so It's not as useful as it could be.
+
+504
+00:36:33,247 --> 00:36:36,637
+Scott: there was actually a problem like an Internet Explorer 6 and blower.
+
+505
+00:36:36,657 --> 00:36:42,184
+Scott: if you tried to Use a transparent ping it would just all the transparent parts to be gray And it would suck.
+
+506
+00:36:42,808 --> 00:36:58,501
+Scott: in Internet Explorer 7 it works better But still not correctly and it really just kind of sucks Because it would be cool if it worked and a lot more people would use ping because it is Technologically superior to GIF, but hey what you gonna Do?
+
+507
+00:36:59,003 --> 00:37:01,936
+Rym: a lot of things are technologically superior to other things.
+
+508
+00:37:01,976 --> 00:37:02,740
+Rym: that doesn't mean much.
+
+509
+00:37:02,941 --> 00:37:09,279
+Scott: I know it's sort of like yeah blu-ray is technologically superior So is the ps3 doesn't mean people are gonna use it.
+
+510
+00:37:10,082 --> 00:37:16,203
+Rym: So outside of pretty much 4chan at this point the gold standard of images on the internet is of course JPEG.
+
+511
+00:37:16,564 --> 00:37:20,855
+Scott: yes JPEG is actually useful for photos because it can have lots of colors.
+
+512
+00:37:21,176 --> 00:37:24,145
+Scott: however it is lossy Dun-dun-dun.
+
+513
+00:37:24,386 --> 00:37:28,640
+Rym: now lossy is a misnomer not really a misnomer, but a lot of people don't understand.
+
+514
+00:37:28,761 --> 00:37:30,390
+Rym: They hear lossy, and it freaks them out.
+
+515
+00:37:30,430 --> 00:37:35,127
+Rym: We talked about this last week, but Generally lossy compression formats.
+
+516
+00:37:35,408 --> 00:37:38,880
+Rym: one can't be applied to data because then you lose the data and the files useless.
+
+517
+00:37:39,181 --> 00:37:40,246
+Scott: Yeah, I mean you all.
+
+518
+00:37:40,286 --> 00:37:43,760
+Scott: let me lossy compress my executable for my game.
+
+519
+00:37:44,262 --> 00:37:47,714
+Scott: Oh the game doesn't work because I lost part of it oops.
+
+520
+00:37:48,115 --> 00:37:49,420
+Scott: That was a good job there.
+
+521
+00:37:49,580 --> 00:37:55,679
+Rym: Yeah, but what it'll usually do is you try to remove data that doesn't matter that you couldn't see.
+
+522
+00:37:57,041 --> 00:38:04,046
+Rym: So like in an mp3 file it removes the sounds that no human ear could hear anyway or sounds that would be covered up By other sounds and an image.
+
+523
+00:38:04,388 --> 00:38:07,219
+Rym: it gets rid of fine details that you would never see unless you zoomed in.
+
+524
+00:38:07,902 --> 00:38:12,404
+Scott: Yeah, if you zoom in on a JPEG it is pretty freakin horrendous Let me tell you.
+
+525
+00:38:12,484 --> 00:38:15,779
+Scott: but if you look at it just a normal zoom level looks pretty good.
+
+526
+00:38:16,402 --> 00:38:37,956
+Rym: Yeah, the method that JPEG uses is kind of complicated but the best way I can describe it without going into details that imagine you've got an image and you try to come up with like equations or things that can represent the image with less data required and at the same time you Modify the image slightly to better fit these equations.
+
+527
+00:38:37,976 --> 00:38:47,147
+Rym: you've come up with Yeah, you do a little mix of both and then you come up with something that you need very little information But yet it'll describe a very big thing.
+
+528
+00:38:47,829 --> 00:38:48,912
+Scott: Yeah, so let me try.
+
+529
+00:38:48,932 --> 00:38:51,580
+Scott: I'm gonna give you this isn't actually how it works exactly.
+
+530
+00:38:51,721 --> 00:38:56,980
+Scott: But let's say you've got a picture of a tree right and the tree has brown bark.
+
+531
+00:38:57,821 --> 00:39:02,360
+Scott: So if you zoom in on the picture of the tree, each pixel is gonna be like a slightly different shade of brown.
+
+532
+00:39:03,025 --> 00:39:15,200
+Scott: Well, let's say you take a whole bunch of those You take a big piece of the tree there and you average, you know Pick one shade of brown and apply that to the whole area.
+
+533
+00:39:15,782 --> 00:39:19,900
+Scott: So you're kind of cutting the resolution a bit, you know and getting rid of some of the colors.
+
+534
+00:39:20,522 --> 00:39:36,477
+Scott: But you change, you know different blocks next to each other so that in the end when you zoom out It looks mostly the same Even though you've you know removed a lot of little dots of different shades and replace them with you know Slightly bigger blocks of similar shades.
+
+535
+00:39:36,919 --> 00:39:44,240
+Rym: now We talked way before about you know container formats or a format that isn't itself a thing and JPEGs kind of the same way.
+
+536
+00:39:44,340 --> 00:39:48,030
+Rym: The method JPEG uses to do all this isn't actually JPEG.
+
+537
+00:39:48,050 --> 00:39:49,113
+Rym: It's called what like J fifth.
+
+538
+00:39:49,755 --> 00:39:51,540
+Scott: I'm not sure it's all crazy.
+
+539
+00:39:52,241 --> 00:39:52,783
+Rym: Yeah, you know what?
+
+540
+00:39:52,803 --> 00:39:57,342
+Rym: The thing is I'll tell we'll talk about that a lot more when it comes to video because it matters a lot More.
+
+541
+00:39:57,663 --> 00:39:59,512
+Scott: yeah container formats don't really matter.
+
+542
+00:39:59,552 --> 00:40:00,718
+Rym: I mean well for images.
+
+543
+00:40:00,758 --> 00:40:08,719
+Rym: It doesn't matter I'll know JPEGs just work and there are different ways to make JPEGs different kinds of JPEGs But the truth is they all work.
+
+544
+00:40:09,001 --> 00:40:15,479
+Rym: You don't have to worry about it pretty much ever unless you're you know in an industry where it matters and then you'll already know.
+
+545
+00:40:16,607 --> 00:40:25,260
+Scott: the thing is is that JPEG doesn't support, you know, the transparency and stuff that gif does and that's why they still use gifs on the internet.
+
+546
+00:40:25,360 --> 00:40:34,299
+Scott: You know because for a photograph a gif is awesome because in a photograph you've got way too much data that no one could possibly handle and you've got a whole mess of colors.
+
+547
+00:40:34,399 --> 00:40:39,226
+Scott: and The colors aren't always in stark contrast They're usually really close to each other.
+
+548
+00:40:39,527 --> 00:40:42,739
+Scott: so a JPEG can save you a lot of space while having it still look good.
+
+549
+00:40:43,882 --> 00:40:51,260
+Scott: But for say images to make up the design of your web page are usually lots of solid colors and different colors and straight lines.
+
+550
+00:40:51,541 --> 00:40:56,160
+Rym: Yeah, I wasn't really listening to you because I'm poking around on my desk, but I think you said gif and then JPEG.
+
+551
+00:40:56,562 --> 00:40:56,925
+Scott: Did I?
+
+552
+00:40:56,945 --> 00:40:59,260
+Rym: I think I'm not gonna stop recording and look back.
+
+553
+00:40:59,360 --> 00:41:03,059
+Scott: JPEG is for photos and gif is for web page design whatever.
+
+554
+00:41:03,741 --> 00:41:10,919
+Rym: Gif has had a huge resurgence because gif has one thing that JPEG doesn't have you can make animated gifs.
+
+555
+00:41:11,322 --> 00:41:12,080
+Scott: That's right.
+
+556
+00:41:12,261 --> 00:41:20,666
+Scott: The one advantage of gif is that you can animate it and there is some types of animated pings But no one uses them and nothing supports them.
+
+557
+00:41:21,007 --> 00:41:23,756
+Rym: And if you want animated JPEG, that's called MPEG.
+
+558
+00:41:24,237 --> 00:41:28,670
+Rym: Yeah, basically basically We'll get into that in the video days.
+
+559
+00:41:28,871 --> 00:41:30,480
+Scott: We will get into that in the video days.
+
+560
+00:41:31,343 --> 00:41:38,307
+Scott: But yeah, there is one new thing called JPEG 2000, which is a new kind of JPEG They came out with in 2000.
+
+561
+00:41:38,307 --> 00:41:39,310
+Rym: It uses wavelets.
+
+562
+00:41:39,371 --> 00:41:42,200
+Rym: If you want to sound smart just say a wavelet based compression.
+
+563
+00:41:42,421 --> 00:41:44,128
+Scott: yeah, it's really fancy.
+
+564
+00:41:44,329 --> 00:41:53,971
+Scott: like you can look at pictures all over the internet and Technically on paper JPEG 2000 is the hot shit Like if we actually use this.
+
+565
+00:41:54,272 --> 00:41:56,160
+Scott: pictures on the internet would look way better.
+
+566
+00:41:56,607 --> 00:42:01,119
+Scott: the thing is No one really supports it and no one uses it.
+
+567
+00:42:01,601 --> 00:42:03,807
+Scott: So it's just sitting around waiting to be used.
+
+568
+00:42:04,589 --> 00:42:08,579
+Scott: if you want to experiment with it you can but you're on your own.
+
+569
+00:42:09,504 --> 00:42:10,127
+Rym: I guess the moral.
+
+570
+00:42:10,148 --> 00:42:11,475
+Rym: I mean we could have skipped this episode.
+
+571
+00:42:11,595 --> 00:42:12,199
+Rym: Here's the moral.
+
+572
+00:42:13,141 --> 00:42:18,920
+Rym: Image formats and images on computers are actually kind of complex and there's a lot of different formats.
+
+573
+00:42:18,980 --> 00:42:20,669
+Rym: I mean, there's a lot of things we didn't even talk about.
+
+574
+00:42:20,991 --> 00:42:26,449
+Scott: like Photoshop has its own internal PSDs gift the GIMP has one.
+
+575
+00:42:26,831 --> 00:42:27,593
+Scott: What do they call those?
+
+576
+00:42:27,654 --> 00:42:28,115
+Scott: I forget.
+
+577
+00:42:28,135 --> 00:42:34,860
+Rym: Yeah, but there's p.m And there's all these different types and there's container formats and some things are used some way and some are used the other ways.
+
+578
+00:42:35,121 --> 00:42:38,480
+Rym: Sometimes files have the same extension, but they're actually different inside.
+
+579
+00:42:39,262 --> 00:42:43,593
+Rym: The thing is because images are really mature technology.
+
+580
+00:42:43,613 --> 00:42:46,100
+Rym: They've been around a long time and the industry is converged.
+
+581
+00:42:46,723 --> 00:42:48,915
+Rym: They all just work and you don't have to worry about it.
+
+582
+00:42:48,955 --> 00:42:53,291
+Rym: for the most part We're not there yet when it comes to video.
+
+583
+00:42:53,552 --> 00:42:55,600
+Rym: we're almost there when it comes to audio.
+
+584
+00:42:56,921 --> 00:43:09,473
+Rym: So a lot of people now are running into a lot of trouble with video because new codecs come out all the time and things are changing a lot and I Guess someday video might be the way images are.
+
+585
+00:43:09,895 --> 00:43:18,702
+Rym: but there's also the problem that codecs for video were coming out a lot more frequently than image things did because a lot of us stopped caring about images getting better or Compressed.
+
+586
+00:43:19,103 --> 00:43:24,661
+Scott: Yeah, that's why if people actually still cared about images that'd be a JPEG 2000 would be used a lot more I think.
+
+587
+00:43:24,922 --> 00:43:30,160
+Rym: see it's kind of the problem of once things are good enough for them the 85th percentile of people.
+
+588
+00:43:30,722 --> 00:43:33,370
+Rym: There's not enough pressure to ever go better than that.
+
+589
+00:43:33,731 --> 00:43:36,780
+Rym: That's part of the reason why I think HDTV is gonna do so poorly.
+
+590
+00:43:37,921 --> 00:43:41,373
+Scott: Yeah, I mean people are pretty satisfied with their regular old TVs.
+
+591
+00:43:41,413 --> 00:43:46,140
+Scott: how people are satisfied with like, you know If they get a 720p going on they're excited.
+
+592
+00:43:46,461 --> 00:43:51,178
+Rym: Well, the video store near us has a lot of VHS is they sure do?
+
+593
+00:43:51,278 --> 00:43:54,348
+Rym: yeah Yeah, I mean VHS is still around.
+
+594
+00:43:54,649 --> 00:44:00,715
+Rym: DVD is universal blu-ray and HD DVD Aren't selling at all because I mean they're better.
+
+595
+00:44:00,816 --> 00:44:01,620
+Rym: They're clearly better.
+
+596
+00:44:01,640 --> 00:44:10,453
+Rym: I'll say right now that they're better technology than DVD in many ways just like JPEG 2000 is better than JPEG, but no one cares.
+
+597
+00:44:10,513 --> 00:44:13,766
+Rym: It's not better enough to change Video codecs.
+
+598
+00:44:13,946 --> 00:44:16,539
+Rym: everyone that comes out is better enough and people all jump ship.
+
+599
+00:44:16,921 --> 00:44:26,526
+Scott: Yep, but I think the other thing that support and understand is you know, the major image file formats BMP TIFF gif ping and JPEG.
+
+600
+00:44:26,967 --> 00:44:42,120
+Scott: you have to understand how each of those is used and how they you know represent images in data and how if they you know Decrease or the amount of data that is stored in order to represent the same image how they do that.
+
+601
+00:44:42,180 --> 00:44:47,740
+Scott: So, you know which format is right for your purpose and the particular image you are handling, you know.
+
+602
+00:44:47,760 --> 00:44:52,900
+Scott: And whether you want to you know, maybe you have a picture you took and you don't want to lose any resolution.
+
+603
+00:44:53,121 --> 00:44:58,160
+Scott: Well, you might want to save it as a bitmap and not put it in a JPEG and lose a bunch of your resolution.
+
+604
+00:44:58,683 --> 00:45:10,280
+Rym: Well, I mean what most people do and I do this with audio too like I do GeekNights and I save the Original edited file that was all waves as a flack which is a lossless thing and I have this flack archive.
+
+605
+00:45:11,123 --> 00:45:19,580
+Rym: And then the if the ones I give to people or put online I can press lossily with mp3 But I keep my master lossless around in case I want to do something someday.
+
+606
+00:45:19,932 --> 00:45:23,792
+Scott: Yep It's important to understand the uses of these different formats and how they work.
+
+607
+00:45:24,073 --> 00:45:34,400
+Scott: if you plan on doing anything with images on Computers or else you're gonna have some troubles along the way now if you found that boring at all That's probably because we stretched it into a longer episode.
+
+608
+00:45:35,341 --> 00:45:37,469
+Rym: Then we otherwise would have had we sure did.
+
+609
+00:45:37,549 --> 00:45:44,314
+Scott: the other thing is we know a lot more about video and audio than we know About images partly because images stop being an issue in the 90s.
+
+610
+00:45:44,495 --> 00:45:54,914
+Scott: Yeah, so I stopped paying attention I stopped learning about them because it was just sort of this obvious duh kind of thing I mean, I remember like reading about JPEG and using JPEG and I was amazed by it.
+
+611
+00:45:54,955 --> 00:45:56,499
+Rym: and now I just don't give a shit.
+
+612
+00:45:56,900 --> 00:46:06,099
+Scott: Yeah now it's like back in the days that when I was trying to make web pages with geocities I would have to pay attention to like how big my gifts were and make them smaller because they wouldn't fit.
+
+613
+00:46:06,462 --> 00:46:07,880
+Scott: Yeah, two megabytes of space.
+
+614
+00:46:07,960 --> 00:46:15,604
+Rym: I'd sit there for five minutes saving a picture and all these different levels of JPEG compression until it was just good enough to Get the smallest picture.
+
+615
+00:46:15,624 --> 00:46:18,734
+Scott: I could trying to upload my 500k JPEG up there.
+
+616
+00:46:18,754 --> 00:46:23,778
+Scott: I'd be like, holy crap I'm wasting a quarter of my space just so I can have one photo on the page.
+
+617
+00:46:23,939 --> 00:46:27,135
+Rym: yet Now I upload 50 megabyte mp3 files and don't even blink.
+
+618
+00:46:27,617 --> 00:46:33,160
+Scott: Yeah, so It's just something that people stop caring about but it's still important to know.
+
+619
+00:46:33,240 --> 00:46:35,007
+Scott: I mean, I don't even pay attention anymore.
+
+620
+00:46:35,067 --> 00:46:36,773
+Scott: Like hey, are they using gifs?
+
+621
+00:46:36,854 --> 00:46:37,636
+Scott: Are they using JPEGs?
+
+622
+00:46:38,620 --> 00:46:41,594
+Scott: I don't know, but it used to be an image used to be an image.
+
+623
+00:46:41,876 --> 00:46:45,068
+Scott: It used to be Important he used to be an issue.
+
+624
+00:46:45,369 --> 00:46:46,493
+Scott: It's just not an issue anymore.
+
+625
+00:46:46,754 --> 00:46:50,386
+Rym: Yeah, it also doesn't help that we're Absolutely exhausted.
+
+626
+00:46:50,787 --> 00:46:52,874
+Scott: Yeah, we kind of you know, whatever.
+
+627
+00:46:52,914 --> 00:46:54,680
+Rym: I think this episode was boring as shit.
+
+628
+00:46:55,081 --> 00:46:55,784
+Scott: Yeah, it was.
+
+629
+00:46:55,904 --> 00:46:57,730
+Scott: it wasn't exciting as it could have been.
+
+630
+00:46:58,051 --> 00:46:59,557
+Rym: so I guess what do you guys want on Mondays?
+
+631
+00:46:59,597 --> 00:47:00,500
+Rym: informative or funny?
+
+632
+00:47:00,680 --> 00:47:02,829
+Rym: Cuz I'm fine with just skipping this whole Kodak business.
+
+633
+00:47:03,311 --> 00:47:03,612
+Scott: I don't know.
+
+634
+00:47:03,652 --> 00:47:05,540
+Scott: I still think we should the audio in the video.
+
+635
+00:47:05,600 --> 00:47:06,968
+Scott: I think we have better stuff to say.
+
+636
+00:47:07,088 --> 00:47:09,199
+Rym: I don't have anything interesting to say about the audio.
+
+637
+00:47:09,962 --> 00:47:18,947
+Rym: I could either talk and because I actually know a lot about the audio I could talk in stupid mathematical detail about mp3s or I can just not talk about it.
+
+638
+00:47:19,007 --> 00:47:19,911
+Rym: There's really nothing.
+
+639
+00:47:20,654 --> 00:47:22,080
+Rym: I don't think any of you'll be interested in.
+
+640
+00:47:22,160 --> 00:47:24,091
+Rym: I mean are you do you want to know a lot about how mp3 works?
+
+641
+00:47:24,111 --> 00:47:26,325
+Scott: I Think people are.
+
+642
+00:47:26,365 --> 00:47:27,674
+Scott: they seem to be interested before.
+
+643
+00:47:27,695 --> 00:47:28,420
+Rym: I don't know.
+
+644
+00:47:28,480 --> 00:47:31,700
+Scott: I just think it's like I don't want to think of something else to talk about on Monday.
+
+645
+00:47:31,821 --> 00:47:35,240
+Rym: Well, just tell geeky stories or something about computers.
+
+646
+00:47:35,980 --> 00:47:37,687
+Scott: geeky story where I think I just.
+
+647
+00:47:38,029 --> 00:47:44,230
+Rym: I just think and I want to hear what our listeners think that today's episode was Incredibly boring and not at all entertaining, but that's just me.
+
+648
+00:47:44,451 --> 00:47:45,373
+Scott: Yeah, I think it was.
+
+649
+00:47:45,393 --> 00:47:49,586
+Scott: I mean, but I don't think it's because It's about codex.
+
+650
+00:47:49,606 --> 00:47:52,200
+Scott: I think it's about you know, just the image ones in particular.
+
+651
+00:47:52,280 --> 00:47:54,990
+Rym: We know because I don't think we'll be any better with audio or video.
+
+652
+00:47:55,291 --> 00:47:55,893
+Scott: I think we will.
+
+653
+00:47:56,094 --> 00:48:05,700
+Scott: I definitely won't be with video Yeah, it'll just be informative Yeah, but that's something people really want to know about the video that's that's what they all have problems with.
+
+654
+00:48:06,001 --> 00:48:09,596
+Rym: Yeah, except whenever people ask you for help with codex you just say yeah, you're stupid.
+
+655
+00:48:09,696 --> 00:48:10,520
+Rym: You don't actually help them.
+
+656
+00:48:10,901 --> 00:48:15,760
+Scott: That's because the answer is it's going to be a problem unless you use Linux or something.
+
+657
+00:48:16,425 --> 00:48:18,300
+Rym: That's then our episode is gonna be useless.
+
+658
+00:48:18,320 --> 00:48:20,280
+Scott: Well, I'm not gonna tell them how to get codex.
+
+659
+00:48:20,300 --> 00:48:21,685
+Rym: I think that's the only thing people want to know.
+
+660
+00:48:22,067 --> 00:48:24,616
+Rym: you realize that most people couldn't give a shit.
+
+661
+00:48:24,938 --> 00:48:26,583
+Rym: what any Codec out there is.
+
+662
+00:48:26,603 --> 00:48:27,527
+Rym: they only care about.
+
+663
+00:48:27,807 --> 00:48:29,914
+Rym: how come the MKV file I have won't play?
+
+664
+00:48:30,195 --> 00:48:31,620
+Rym: how come the subtitles won't play?
+
+665
+00:48:31,841 --> 00:48:33,066
+Rym: How come this is?
+
+666
+00:48:33,106 --> 00:48:34,794
+Scott: but this isn't a show for most people.
+
+667
+00:48:34,814 --> 00:48:35,457
+Scott: This is Monday.
+
+668
+00:48:35,517 --> 00:48:36,260
+Scott: This is GeekNights.
+
+669
+00:48:36,320 --> 00:48:38,870
+Scott: It's a science technology or you teach you about science technology.
+
+670
+00:48:39,131 --> 00:48:41,160
+Scott: No the stuff that nerds and geeks care about.
+
+671
+00:48:41,783 --> 00:48:44,859
+Rym: Yeah, except I don't think people want to hear us be informative about stuff like that.
+
+672
+00:48:45,801 --> 00:48:47,269
+Scott: So do you want to not have Monday?
+
+673
+00:48:47,290 --> 00:48:49,140
+Rym: No, I'm saying I don't think cuz I don't know.
+
+674
+00:48:49,200 --> 00:48:50,509
+Rym: I want to hear what our listeners have to say.
+
+675
+00:48:50,529 --> 00:48:56,700
+Rym: Yeah, Monday is fine But being dry and informative and not even that informative about a topic that's really boring.
+
+676
+00:48:57,365 --> 00:48:58,857
+Scott: Well, this this is a you know images.
+
+677
+00:48:59,220 --> 00:49:01,490
+Scott: I think we is pretty boring because we didn't know.
+
+678
+00:49:01,510 --> 00:49:03,660
+Rym: I think if we knew more then why do we even do it?
+
+679
+00:49:03,860 --> 00:49:09,220
+Scott: This is all you because that we had to do, you know, try it was a trifecta the whole episode.
+
+680
+00:49:09,341 --> 00:49:13,160
+Rym: All I was trying to do is rationalize the fact that we were doing this boring ass episode.
+
+681
+00:49:13,220 --> 00:49:16,137
+Scott: Well, I think also part of the episode was that you weren't paying attention you were.
+
+682
+00:49:16,217 --> 00:49:16,559
+Scott: I am in.
+
+683
+00:49:16,599 --> 00:49:18,527
+Rym: people Say I didn't read anything.
+
+684
+00:49:18,567 --> 00:49:19,471
+Rym: I was working all day.
+
+685
+00:49:19,591 --> 00:49:21,660
+Rym: I don't care about these formats at all.
+
+686
+00:49:22,001 --> 00:49:25,313
+Scott: So you're like, oh this episode is boring because I didn't put any effort in.
+
+687
+00:49:25,333 --> 00:49:26,095
+Rym: Yeah, but here's the thing.
+
+688
+00:49:26,196 --> 00:49:31,420
+Rym: even if it was informative I like if I was listening to it because I really didn't know I wouldn't have been I wouldn't have cared.
+
+689
+00:49:31,440 --> 00:49:32,270
+Rym: It's kind of podcast.
+
+690
+00:49:32,331 --> 00:49:32,978
+Rym: I would have turned off.
+
+691
+00:49:33,441 --> 00:49:35,186
+Scott: Maybe if you know you would have put.
+
+692
+00:49:35,266 --> 00:49:39,719
+Scott: you're complaining about an episode that you didn't put any effort into or contribute anything to.
+
+693
+00:49:39,739 --> 00:49:42,788
+Scott: yeah You're like, hey, I didn't do anything for this episode.
+
+694
+00:49:42,809 --> 00:49:46,219
+Rym: therefore it sucks now cuz if I contributed more would have been just as boring.
+
+695
+00:49:47,981 --> 00:49:50,512
+Rym: Yeah, okay, whatever cuz we would have said the same stuff.
+
+696
+00:49:50,532 --> 00:49:51,597
+Rym: just I would have said half of it.
+
+697
+00:49:52,079 --> 00:49:55,640
+Rym: Yeah anyway Tell us what you think about this episode.
+
+698
+00:49:55,760 --> 00:50:00,440
+Rym: And if you want us to keep going with this codec thing that I think is kind of boring we need Monday ideas.
+
+699
+00:50:01,020 --> 00:50:05,926
+Scott: And I'm I think that when you talk about audio and video It won't be as boring.
+
+700
+00:50:06,067 --> 00:50:13,637
+Scott: only if we talk about how to get the codecs and install them You go and download them and install them from where from any number of websites.
+
+701
+00:50:13,657 --> 00:50:14,400
+Scott: No people don't know.
+
+702
+00:50:15,662 --> 00:50:18,193
+Rym: You know how many people have trouble playing MKV files?
+
+703
+00:50:18,213 --> 00:50:20,886
+Scott: I Don't know what their problem is.
+
+704
+00:50:21,026 --> 00:50:22,313
+Rym: Yeah, but Scott the thing is use it.
+
+705
+00:50:22,353 --> 00:50:25,670
+Scott: don't use Windows Media Player Don't use QuickTime player.
+
+706
+00:50:25,952 --> 00:50:27,360
+Scott: Don't use real player.
+
+707
+00:50:27,460 --> 00:50:29,586
+Scott: Use VLC or M player.
+
+708
+00:50:29,867 --> 00:50:31,491
+Scott: There you go the end.
+
+709
+00:50:32,032 --> 00:50:32,434
+Scott: Okay.
+
+710
+00:50:32,855 --> 00:50:34,740
+Rym: Anyway, anyway, just tell us what you think.
+
+711
+00:50:35,522 --> 00:50:36,204
+Rym: I'm curious.
+
+712
+00:50:36,264 --> 00:50:38,109
+Scott: lots of Monday and Thursday ideas.
+
+713
+00:50:38,149 --> 00:50:39,754
+Scott: We don't need Tuesday and Wednesday ideas.
+
+714
+00:50:39,794 --> 00:50:40,616
+Scott: that seems to be all.
+
+715
+00:50:40,696 --> 00:50:41,739
+Scott: anyone can provide us.
+
+716
+00:50:43,180 --> 00:50:54,528
+Rym: Monday ideas and that was GeekNights with Rym and Scott.
+
+717
+00:50:54,548 --> 00:50:56,590
+Rym: Special thanks to DJ pretzel for our opening theme.
+
+718
+00:50:57,053 --> 00:51:01,477
+Scott: Be sure to visit our website at www.frontrowcrew.com.
+
+719
+00:51:02,119 --> 00:51:04,587
+Scott: if you like our podcast you'll love our forums.
+
+720
+00:51:04,667 --> 00:51:05,389
+Scott: make sure you visit them.
+
+721
+00:51:05,952 --> 00:51:12,038
+Scott: You can send your email feedback to GeekNights at gmail.com And if you want you can leave us a voicemail at 206-333-1537.
+
+722
+00:51:16,773 --> 00:51:19,510
+Rym: GeekNights airs every weeknight Monday through Thursday.
+
+723
+00:51:20,172 --> 00:51:25,686
+Scott: GeekNights is recorded with absolutely no studio and no audience, but unlike those other talk shows.
+
+724
+00:51:26,067 --> 00:51:27,330
+Scott: It's actually recorded at night.
+

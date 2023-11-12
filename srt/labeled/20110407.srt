@@ -1,0 +1,3440 @@
+1
+00:00:09,100 --> 00:00:18,470
+Rym: It's Thursday April 7th 2011 I'm Rym and this is GeekNights tonight MichioKaku's hyperspace on the GeekNights book club.
+
+2
+00:00:22,292 --> 00:00:23,023
+Scott: Let's do this.
+
+3
+00:00:27,254 --> 00:00:35,509
+Rym: It was kind of amazing at work that and I'm sitting there do working on some code or something and suddenly Suddenly I noticed that that didn't really matter.
+
+4
+00:00:35,990 --> 00:00:38,257
+Rym: the market dropped like point six percent.
+
+5
+00:00:38,818 --> 00:00:39,300
+Scott: Is that a lot?
+
+6
+00:00:40,182 --> 00:00:41,567
+Scott: The whole market almost 1%.
+
+7
+00:00:41,567 --> 00:00:42,830
+Scott: yeah, there's one almost at six.
+
+8
+00:00:49,142 --> 00:00:57,320
+Rym: So basically think about this the market dips six Suddenly and I see all these alarms like ah, and I wonder alright what happened?
+
+9
+00:00:57,460 --> 00:01:00,730
+Rym: I have CNBC and everything on and all the news feeds and there's nothing.
+
+10
+00:01:01,332 --> 00:01:02,836
+Rym: I go to FARC and there's nothing.
+
+11
+00:01:03,378 --> 00:01:13,700
+Rym: I go to Twitter And I just start to see a couple of tweets Coming in about aftershock and then minutes later the news is like oh shit and aftershock hit Japan.
+
+12
+00:01:14,405 --> 00:01:16,460
+Rym: Everything's mostly okay, you know and all the news after that.
+
+13
+00:01:16,540 --> 00:01:24,689
+Rym: But the fact that the market reacted before I think any human on the at least in the United States Knew that there was an aftershock was amazing.
+
+14
+00:01:24,709 --> 00:01:26,295
+Scott: Well, this is something I wonder about right?
+
+15
+00:01:26,315 --> 00:01:27,319
+Scott: It's like where did that?
+
+16
+00:01:27,940 --> 00:01:29,214
+Scott: movement come from right.
+
+17
+00:01:29,234 --> 00:01:38,233
+Scott: so I We know that there are people out there who have trading systems hooked up to news feeds But they wouldn't be able to react for minutes.
+
+18
+00:01:38,313 --> 00:01:41,307
+Rym: also little-known fact you think you know there are different ways to do news feeds.
+
+19
+00:01:41,447 --> 00:01:48,358
+Rym: one way is to just consume a feed of like text news and Do some sort of you know algorithm to parse out words or whatever.
+
+20
+00:01:48,439 --> 00:01:53,739
+Scott: Yes There could have been someone on the AP wire which may have been fast But most could have been a human doing it.
+
+21
+00:01:54,081 --> 00:01:55,869
+Rym: But most people respond.
+
+22
+00:01:56,150 --> 00:01:59,263
+Rym: the news feeds that you hear about are actually Scores.
+
+23
+00:01:59,364 --> 00:02:03,540
+Rym: someone else does all the work for you with proprietary whatevers and they send you a score.
+
+24
+00:02:03,681 --> 00:02:07,280
+Rym: That's like good or bad for this sector or this stuff, right?
+
+25
+00:02:07,360 --> 00:02:10,937
+Scott: But that person is analyzing the same internet news that we're analyzing.
+
+26
+00:02:10,979 --> 00:02:17,256
+Rym: Yes So my guess as to what happened and obviously I'm not speaking to any particular stock.
+
+27
+00:02:17,316 --> 00:02:18,760
+Rym: Nor am I giving investment advice?
+
+28
+00:02:19,784 --> 00:02:20,128
+Scott: Is that?
+
+29
+00:02:20,451 --> 00:02:21,098
+Scott: let me call the SEC?
+
+30
+00:02:21,501 --> 00:02:22,387
+Scott: I'll see what they think about.
+
+31
+00:02:22,407 --> 00:02:24,259
+Rym: is that because it happened in Japan, right?
+
+32
+00:02:24,861 --> 00:02:31,980
+Rym: So there were reactions in the financial sector in Japan which triggered things in the u.s Almost immediately.
+
+33
+00:02:32,744 --> 00:02:36,200
+Scott: So the Japanese people clicked on, you know manually trade.
+
+34
+00:02:36,240 --> 00:02:43,903
+Scott: Oh, no Because the market was open and then those movements were automatically detected by computer systems in the u.s That automatically trade.
+
+35
+00:02:43,923 --> 00:02:51,487
+Rym: my other guess is that or Japanese people traded on the American exchanges now There's a latency back to the u.s.
+
+36
+00:02:51,527 --> 00:02:52,209
+Rym: And then to Japan.
+
+37
+00:02:52,229 --> 00:02:53,112
+Rym: again is pretty high.
+
+38
+00:02:53,433 --> 00:02:54,496
+Rym: the market react, but it's not.
+
+39
+00:02:54,877 --> 00:02:55,760
+Scott: it's not minutes.
+
+40
+00:02:56,443 --> 00:02:59,400
+Rym: No, it's not minutes, but it was just kind of amazing.
+
+41
+00:02:59,601 --> 00:03:04,360
+Rym: Remember when people were pointing out that the tweets are far faster than actual earthquakes.
+
+42
+00:03:04,903 --> 00:03:06,411
+Scott: Yeah, so here's it.
+
+43
+00:03:06,612 --> 00:03:08,020
+Scott: This gave me an idea actually.
+
+44
+00:03:09,142 --> 00:03:18,800
+Scott: So these people are trading based on news right from the news, you know And they're trying to parse things that journalists have written or the AP is written in English to make trades.
+
+45
+00:03:19,141 --> 00:03:22,310
+Rym: Well, most people are parsing more complex data feeds.
+
+46
+00:03:22,371 --> 00:03:25,420
+Rym: that score the news based, right?
+
+47
+00:03:25,440 --> 00:03:29,440
+Scott: But it's based on looking at news written in English, which is then turned into a score.
+
+48
+00:03:29,962 --> 00:03:30,926
+Rym: Oh, yes to a degree though.
+
+49
+00:03:30,946 --> 00:03:38,050
+Rym: I just want to qualify that some of that news is actually Formatted in kind of reliable ways like it's normalized data.
+
+50
+00:03:38,170 --> 00:03:41,179
+Rym: Like I don't know corporate actions that happen.
+
+51
+00:03:41,259 --> 00:03:42,045
+Scott: Oh, yeah Yeah, I'm sure.
+
+52
+00:03:42,348 --> 00:03:43,559
+Scott: so here's an idea I had.
+
+53
+00:03:43,740 --> 00:03:50,020
+Scott: What if we put sensors all over the world of different varieties, for example detected disaster in cell, right?
+
+54
+00:03:50,060 --> 00:03:57,464
+Scott: We have a size a seismograph in Japan and if we can program it to put it connected to a computer Or it is a computer.
+
+55
+00:03:57,966 --> 00:04:06,373
+Scott: if the earth if there's too much earthquake in this area cell You could be way faster than the guy parsing the news and we would get out.
+
+56
+00:04:06,733 --> 00:04:08,338
+Rym: There's no guy parsing the news.
+
+57
+00:04:08,418 --> 00:04:09,200
+Rym: It's algos.
+
+58
+00:04:09,300 --> 00:04:16,558
+Scott: I'm just saying is it would be faster than the news algorithm because those few seconds where someone types in that news story We're beating them.
+
+59
+00:04:16,779 --> 00:04:17,944
+Rym: Well, the news I'll see.
+
+60
+00:04:18,505 --> 00:04:23,640
+Rym: the way to use a news feed like that is more to prime other decision-making systems.
+
+61
+00:04:23,861 --> 00:04:25,890
+Scott: It doesn't matter we can make money because it'd be faster.
+
+62
+00:04:25,910 --> 00:04:28,220
+Scott: You're saying milliseconds usually count this work.
+
+63
+00:04:28,301 --> 00:04:29,398
+Scott: This is on the order of seconds.
+
+64
+00:04:29,801 --> 00:04:30,523
+Rym: So here's the trouble.
+
+65
+00:04:30,784 --> 00:04:33,091
+Rym: you can't guarantee that the market will drop or not.
+
+66
+00:04:33,151 --> 00:04:39,880
+Rym: a similar earthquake in a different place in a different time Wouldn't have had this reaction and the market recovered almost all the way.
+
+67
+00:04:39,940 --> 00:04:43,760
+Scott: Well, this is why you have to have you know, it's not just a simple decision hooked up to the data.
+
+68
+00:04:43,860 --> 00:04:49,600
+Scott: It's you have the algo hooked up to this raw data of and not just a site one seismograph in Japan, right?
+
+69
+00:04:49,660 --> 00:04:51,267
+Scott: I'm talking about get all kinds of data.
+
+70
+00:04:51,528 --> 00:04:53,556
+Scott: hook it up to weather stations around the world.
+
+71
+00:04:53,697 --> 00:04:56,243
+Rym: I can guarantee Seismographs.
+
+72
+00:04:56,504 --> 00:05:08,275
+Rym: I can guarantee taking photos in Scott Scott I can guarantee to you that there are small outfits out there that are looking at the goddamn weather and trying to see how it Correlates to stocks, but I'm saying not just whether right.
+
+73
+00:05:08,335 --> 00:05:09,320
+Scott: that's just one example.
+
+74
+00:05:10,561 --> 00:05:18,000
+Scott: Everything they're looking at anything they can get sudden the checks like radio active radio wave activity, you know and stuff like that.
+
+75
+00:05:18,322 --> 00:05:26,681
+Scott: Yeah, if there's any Possible link so increase we can detects increased cell phone and Wi-Fi activity in localized areas We got.
+
+76
+00:05:26,742 --> 00:05:29,874
+Rym: if there's any possible link to anything people are doing it.
+
+77
+00:05:29,894 --> 00:05:35,765
+Scott: I don't know I haven't heard about anyone doing these sorts of things Anything about how it even works.
+
+78
+00:05:36,447 --> 00:05:43,208
+Scott: we can hook it sign up to you know, detecting tides and ocean movements and Yeah, you could yeah.
+
+79
+00:05:43,712 --> 00:05:46,245
+Rym: Yeah Okay, you got any news?
+
+80
+00:05:46,325 --> 00:05:46,807
+Rym: It's Thursday.
+
+81
+00:05:46,827 --> 00:05:47,971
+Rym: We can talk about whatever we want.
+
+82
+00:05:48,393 --> 00:05:55,060
+Scott: You know, we often give Government a hard time because you know, it doesn't usually do stuff that makes us happy.
+
+83
+00:05:55,302 --> 00:05:58,665
+Scott: Yeah, especially when it's making laws We usually does a bad job.
+
+84
+00:05:58,725 --> 00:06:04,655
+Rym: the worst thing is we're getting to getting better pretty much constantly except The years and Bush was in office.
+
+85
+00:06:04,938 --> 00:06:12,438
+Rym: Oh But it's getting better just because we're smarter and we have more access to information than previous generations.
+
+86
+00:06:12,539 --> 00:06:16,891
+Rym: as a whole We're very aware of the glacial pace of change.
+
+87
+00:06:17,312 --> 00:06:23,932
+Scott: But anyway, I just wanted to you know Highlight a good law and what I consider to be a good law.
+
+88
+00:06:23,952 --> 00:06:24,915
+Rym: a good law.
+
+89
+00:06:24,935 --> 00:06:25,637
+Scott: You might disagree.
+
+90
+00:06:25,657 --> 00:06:26,820
+Scott: It's a new good law.
+
+91
+00:06:26,920 --> 00:06:27,905
+Scott: It's a New York law.
+
+92
+00:06:28,246 --> 00:06:31,140
+Scott: It's just a few weeks old right, but it's really good.
+
+93
+00:06:31,601 --> 00:06:42,393
+Scott: so basically there was this problem and the problem was is that you know, the vast majority of Crimes and especially assaults and batteries and those sorts of things are domestic disturbances.
+
+94
+00:06:42,433 --> 00:06:44,498
+Rym: Yep closed-door versus open-door crimes.
+
+95
+00:06:44,578 --> 00:06:59,540
+Scott: Yes now The fact is I wasn't aware of this problem right that a lot of people when they get mad You know instead of punching and kicking or beating with a frying pan or whatever They do some strangling activity and maybe they don't strangle someone to death.
+
+96
+00:06:59,740 --> 00:07:02,269
+Scott: But you know, they give someone a nice choke, right?
+
+97
+00:07:02,469 --> 00:07:03,734
+Scott: Yeah, and what happened?
+
+98
+00:07:03,754 --> 00:07:04,115
+Rym: I mean, what?
+
+99
+00:07:04,135 --> 00:07:05,680
+Rym: what's the phrase choke a motherfucker?
+
+100
+00:07:06,060 --> 00:07:06,402
+Rym: That's right.
+
+101
+00:07:06,442 --> 00:07:07,045
+Rym: Choke a bitch.
+
+102
+00:07:07,367 --> 00:07:19,468
+Scott: Apparently what was happening for a very long time Is that when you choke somebody there wasn't a whole lot of evidence because by the time anyone gets there You're done gasping for air, right?
+
+103
+00:07:19,548 --> 00:07:21,214
+Scott: You didn't really leave any bruises.
+
+104
+00:07:21,234 --> 00:07:29,387
+Scott: Yeah, cuz if you choked him enough to bruise him There's probably enough permanent injury, you know, and you know, there might have been red marks around your neck But they fade.
+
+105
+00:07:29,589 --> 00:07:29,992
+Rym: so Scott.
+
+106
+00:07:30,033 --> 00:07:34,480
+Rym: I just want to point out We're gonna have to have a second follow-up law now or follow-up forensic evidence.
+
+107
+00:07:34,600 --> 00:07:38,474
+Rym: We need a way to handle the sack full of doorknobs problem.
+
+108
+00:07:38,554 --> 00:07:50,520
+Scott: I know but anyway anyway The point is is that a lot of people who strangled somebody We're getting away with it or getting very reduced sentences because of the lack of evidence of the lack of quality evidence.
+
+109
+00:07:51,142 --> 00:07:52,667
+Scott: There is a new law in New York.
+
+110
+00:07:52,727 --> 00:07:53,890
+Scott: It's just a few weeks old.
+
+111
+00:07:54,171 --> 00:07:55,856
+Scott: That's basically like it's an.
+
+112
+00:07:56,077 --> 00:07:57,060
+Scott: it's a strangling law.
+
+113
+00:07:57,221 --> 00:08:00,434
+Scott: It's like strangling is illegal and this is what you do if there's a strangling.
+
+114
+00:08:00,454 --> 00:08:01,137
+Scott: All right.
+
+115
+00:08:01,158 --> 00:08:04,266
+Scott: All right, and So far how many people?
+
+116
+00:08:04,547 --> 00:08:07,075
+Scott: how many times do you think they have used the strangling law?
+
+117
+00:08:07,135 --> 00:08:08,600
+Scott: in just a few weeks now?
+
+118
+00:08:08,800 --> 00:08:10,267
+Scott: You won't even a month.
+
+119
+00:08:10,548 --> 00:08:12,175
+Scott: How many times do you think this law has been used?
+
+120
+00:08:12,195 --> 00:08:13,200
+Rym: to quote Futurama?
+
+121
+00:08:13,380 --> 00:08:15,876
+Rym: You wouldn't ask unless it was either really high or really low.
+
+122
+00:08:15,937 --> 00:08:22,054
+Scott: I'm gonna say So far in just less than a month, right?
+
+123
+00:08:22,295 --> 00:08:26,064
+Scott: They have arrested Two Thousand people.
+
+124
+00:08:26,084 --> 00:08:30,500
+Scott: how many bitches need choking first strangling with this new law?
+
+125
+00:08:31,143 --> 00:08:34,720
+Scott: So there you go a quality new law that seems to be working.
+
+126
+00:08:36,525 --> 00:08:41,068
+Scott: Government did a good thing for once in How do you know?
+
+127
+00:08:41,087 --> 00:08:43,659
+Rym: they're not arresting people who didn't actually strangle?
+
+128
+00:08:45,180 --> 00:08:50,540
+Scott: There's actually some interesting things in this law about like if there was a strangling then you got it.
+
+129
+00:08:50,620 --> 00:08:57,034
+Scott: Then that means that you have to investigate DNA evidence Which previously they would not investigate in such a case and such and such.
+
+130
+00:08:57,536 --> 00:08:58,559
+Scott: so there's actually here.
+
+131
+00:08:58,964 --> 00:08:59,433
+Scott: Here's what it is.
+
+132
+00:09:00,221 --> 00:09:06,720
+Scott: The new law recognized the serious in the offense and has teeth sharp enough to keep a convicted offender behind bars or under scrutiny.
+
+133
+00:09:07,302 --> 00:09:13,020
+Scott: Under the new strangulation law anyone convicted of either felony or misdemeanor counts must submit a DNA sample to authorities.
+
+134
+00:09:13,682 --> 00:09:14,746
+Scott: So yeah, yada yada.
+
+135
+00:09:15,027 --> 00:09:18,760
+Scott: So basically if you're if there's a strangling involved, right?
+
+136
+00:09:18,901 --> 00:09:28,720
+Scott: There's gonna be a whole bunch more Evidence right to actually make sure that that the you know It sticks as opposed to getting away with it because there wasn't any bruising or whatever.
+
+137
+00:09:28,760 --> 00:09:38,307
+Scott: Yeah, well the and since most of these strangling people are people who've had run-ins with the law previously They've got DNA on them so they can look at the person's neck and say yeah This dude is strangled.
+
+138
+00:09:38,890 --> 00:09:40,259
+Scott: and then what are you gonna do about it?
+
+139
+00:09:40,600 --> 00:09:41,242
+Rym: What now?
+
+140
+00:09:41,362 --> 00:09:43,388
+Rym: the next step of course is what do we do about this?
+
+141
+00:09:43,429 --> 00:09:56,828
+Rym: because all domestic violence and you know crimes of passion like that in general are Usually driven by poor impulse control which is correlated with all sorts of things ranging from bad Nutrition to bad upbringing.
+
+142
+00:09:56,848 --> 00:09:57,410
+Scott: it says here.
+
+143
+00:09:57,450 --> 00:10:03,612
+Scott: domestic abusers aren't usually first-time offenders And we're expecting to see that as people get convicted of these offenses.
+
+144
+00:10:03,994 --> 00:10:05,640
+Scott: It will lead to solving other crimes.
+
+145
+00:10:05,981 --> 00:10:07,207
+Scott: Ah, but what you find?
+
+146
+00:10:07,227 --> 00:10:10,140
+Scott: a guy who's strangling somebody he's probably done something else.
+
+147
+00:10:10,201 --> 00:10:13,729
+Scott: You found him and you look and you say oh, yeah This is the guy who did the whatever.
+
+148
+00:10:14,011 --> 00:10:17,170
+Rym: so you find a guy who's guilty of I don't know some computer a crime.
+
+149
+00:10:17,351 --> 00:10:18,640
+Rym: Oh, he might be doing weed.
+
+150
+00:10:19,361 --> 00:10:21,967
+Rym: maybe That's a bad path.
+
+151
+00:10:22,027 --> 00:10:23,678
+Scott: That is well, but you know, but that's just.
+
+152
+00:10:23,698 --> 00:10:26,192
+Scott: you know There's nothing you can do about that as long as the weeds illegal.
+
+153
+00:10:26,212 --> 00:10:30,758
+Scott: There's a separate issue from the strangling Yeah, and plus, you know now the Boston Strangler will get him.
+
+154
+00:10:32,263 --> 00:10:33,579
+Rym: Yeah, because he totally wouldn't have done it.
+
+155
+00:10:34,245 --> 00:10:48,944
+Scott: I know he was getting away with it all those years But now finally it you know, the glacial pace of government after how many centuries we finally made it illegal to strangle Luckily just hit the Boston Strang just in time for the government to shut itself down Whatever.
+
+156
+00:10:49,448 --> 00:10:51,060
+Scott: It's the New York government at the federal government.
+
+157
+00:10:51,060 --> 00:10:52,110
+Rym: Well, you know, it's kind of this thing where?
+
+158
+00:10:52,130 --> 00:10:56,398
+Rym: because we argue I the thing is we were just arguing in the forum about the problem.
+
+159
+00:10:56,438 --> 00:10:56,619
+Rym: where?
+
+160
+00:10:57,480 --> 00:11:03,780
+Rym: Laws are often passed with a supposed deterrent effect, even though the punishments are shown to not actually deter.
+
+161
+00:11:04,522 --> 00:11:12,640
+Rym: But in a case like this where there's clear evidence of recidivism and linked crimes It seems like this is a case where it will be a deterrent.
+
+162
+00:11:12,660 --> 00:11:13,163
+Scott: Well, this is.
+
+163
+00:11:13,284 --> 00:11:15,175
+Scott: this is basically a case of law.
+
+164
+00:11:15,215 --> 00:11:16,080
+Scott: was no good, right?
+
+165
+00:11:16,160 --> 00:11:19,396
+Scott: It's we had laws against a certain thing, but there was a loophole.
+
+166
+00:11:19,416 --> 00:11:23,160
+Scott: you can get away with it If you strangled instead of punching someone in the face, so people were strangling.
+
+167
+00:11:23,583 --> 00:11:26,120
+Scott: So now you can't get away with it just cuz you're strangling now.
+
+168
+00:11:26,341 --> 00:11:26,904
+Rym: That's perfect.
+
+169
+00:11:26,924 --> 00:11:28,693
+Rym: That does imply a secondary thing.
+
+170
+00:11:29,136 --> 00:11:42,620
+Rym: if this is true it implies that there is a significant number of people or are who Wanted to punch someone and then had they had that moment of restraint where they thought oh shit I might get caught if I punch them.
+
+171
+00:11:42,740 --> 00:11:46,959
+Scott: I think it was more than they happen to strangle and then they happen to get away with it because they did.
+
+172
+00:11:47,059 --> 00:11:54,593
+Rym: or Maybe strength is choking a bitch Requires far more dedication to your choking cause.
+
+173
+00:11:54,633 --> 00:11:56,340
+Rym: I mean if you want, but they weren't choking him to death.
+
+174
+00:11:56,360 --> 00:11:57,310
+Scott: You're not gonna get away with that.
+
+175
+00:11:57,391 --> 00:11:58,280
+Rym: Oh, yeah, but even a little bit.
+
+176
+00:11:58,300 --> 00:12:01,577
+Rym: I mean I punch someone like say I get mad I go BAM and I punch someone.
+
+177
+00:12:01,838 --> 00:12:12,820
+Rym: All right Maybe I'm not mad three seconds later, but it only took me a half a second to punch But to start to even reach out and start strangling by the time you're proper choking.
+
+178
+00:12:13,206 --> 00:12:25,245
+Rym: It's been some seconds And if you want to maintain that joke for any reasonable amount of time, you gotta really want it because they're gonna fight back Unless you're just way bigger than Fighting back.
+
+179
+00:12:25,647 --> 00:12:26,430
+Rym: So you had a good law.
+
+180
+00:12:26,451 --> 00:12:28,300
+Rym: Let's talk about a bad law.
+
+181
+00:12:29,343 --> 00:12:37,003
+Rym: I learned recently that kuya hoga which is the name of the guy who accidentally caused dude, bro My shit is fucked up.
+
+182
+00:12:37,044 --> 00:12:38,569
+Scott: It's his internet name is cool.
+
+183
+00:12:38,589 --> 00:12:43,389
+Rym: So I got to shoot slash slice you it's straight-up dog - no It's dude, bro.
+
+184
+00:12:43,752 --> 00:12:44,597
+Scott: My shit is fucked up.
+
+185
+00:12:44,638 --> 00:12:47,298
+Rym: So I got It's straight.
+
+186
+00:12:49,142 --> 00:12:52,375
+Rym: Well kuya hoga is also the name of a town kuya hoga Falls.
+
+187
+00:12:52,556 --> 00:12:53,380
+Scott: I've heard of this town.
+
+188
+00:12:53,662 --> 00:12:54,146
+Rym: I've heard of it.
+
+189
+00:12:54,206 --> 00:12:57,391
+Scott: now that I think about that I knew if you said what's kuya hoga Falls.
+
+190
+00:12:57,431 --> 00:12:58,660
+Scott: I would have said a town in the Midwest.
+
+191
+00:12:58,760 --> 00:13:00,907
+Rym: Yeah, but before we're like yeah, and this guy?
+
+192
+00:13:00,927 --> 00:13:01,309
+Scott: where is it?
+
+193
+00:13:01,329 --> 00:13:02,613
+Scott: in the Midwest, Ohio?
+
+194
+00:13:02,633 --> 00:13:03,676
+Scott: Oh, it makes sense.
+
+195
+00:13:03,737 --> 00:13:10,187
+Rym: Yeah, kuya hoga kuya hoga Falls has a Really white mare.
+
+196
+00:13:10,648 --> 00:13:30,220
+Rym: No, and this really white mare is afraid of those goth kids with their piercings and those gangbangers hanging out on the riverfront Intimidating everybody else and these dangerous kids listening to their quote hippity-hop music hanging out under bridges.
+
+197
+00:13:31,563 --> 00:13:39,940
+Scott: So the old people voted for an old guy And the old guy got nowhere to hang out in town except for the old cool bridges down by the boardwalk.
+
+198
+00:13:39,980 --> 00:13:43,800
+Rym: So this story is great because the what he's done.
+
+199
+00:13:43,961 --> 00:13:47,440
+Scott: Why does he make a park for the kids to hang out and so they don't hang out in the riverfront because they got nowhere?
+
+200
+00:13:48,047 --> 00:13:49,119
+Rym: Oh, so maybe they were.
+
+201
+00:13:50,901 --> 00:13:59,861
+Rym: But his town much like my town when I was a kid after I moved out of Detroit He has passed or proposed to pass a curfew for anyone under 18.
+
+202
+00:13:59,861 --> 00:14:01,928
+Scott: The other under 18, that's the law we can do.
+
+203
+00:14:02,109 --> 00:14:04,657
+Rym: Yeah, unless maybe we signed the Human Rights Accord.
+
+204
+00:14:04,677 --> 00:14:05,340
+Scott: Yeah, right.
+
+205
+00:14:07,181 --> 00:14:12,480
+Rym: So I have many things to say about this article and it's just funny that it happened to take place in kuya hoga Falls.
+
+206
+00:14:12,621 --> 00:14:16,741
+Scott: Of course, I greatly disagree with this idea of a curfew, but they're under 18.
+
+207
+00:14:16,741 --> 00:14:21,220
+Scott: That's law and you know, I want to change that law a great deal, but nothing I could do.
+
+208
+00:14:21,361 --> 00:14:21,903
+Rym: No, but I still did.
+
+209
+00:14:22,084 --> 00:14:27,511
+Rym: you can disagree with the law independent of the realities of voting But here's my reality.
+
+210
+00:14:27,531 --> 00:14:28,760
+Rym: is the Constitution point the one?
+
+211
+00:14:29,402 --> 00:14:30,224
+Scott: Alright, maybe
+
+212
+00:14:30,785 --> 00:14:48,985
+Rym: if this guy just had a generic statement and a generic law like we're gonna have a curfew because of rising crime Rising youth related crime something like that The fact that he earnestly is afraid of people with piercings and goth style clothing and spiky hair and Hanging out under bridges.
+
+213
+00:14:49,668 --> 00:14:52,580
+Rym: It's like he's afraid of the opening montage from the Lost Boys.
+
+214
+00:14:53,581 --> 00:14:56,430
+Rym: Now I recently watched the Lost Boys again.
+
+215
+00:14:56,450 --> 00:14:59,540
+Rym: You know what it really holds up as a vampire movie.
+
+216
+00:14:59,560 --> 00:15:03,025
+Rym: It's got Corey Haim Corey Feldman Kiefer Sutherland like.
+
+217
+00:15:03,447 --> 00:15:05,173
+Rym: it's a great movie about vampires.
+
+218
+00:15:05,455 --> 00:15:10,788
+Rym: before vampires were cool 80s movie and It's set in the 80s, right?
+
+219
+00:15:10,808 --> 00:15:12,417
+Rym: But you know a lot of movies that are made in the 80s.
+
+220
+00:15:13,060 --> 00:15:14,267
+Rym: They're not set in the 80s.
+
+221
+00:15:14,307 --> 00:15:16,077
+Rym: They're just made in the 80s.
+
+222
+00:15:16,760 --> 00:15:19,878
+Scott: So they lose all this 80s stuff, even though they weren't trying to set it in the 80s.
+
+223
+00:15:20,280 --> 00:15:30,033
+Scott: Yeah, like they have that crappy synthy music and the montage Especially if it's try if they try to set it in the future, but they made it in the 80s There'll be stuff like key tars and shit like that.
+
+224
+00:15:30,053 --> 00:15:34,755
+Scott: It'll look like You know, what's the name of the the teacher in ponies?
+
+225
+00:15:35,479 --> 00:15:46,173
+Rym: Oh, Charlie yeah, I look like, you know Charlie's, uh, you know Charlie's high school that was more like early 90s Even so early to midnight that was that was that solos punky Brewster.
+
+226
+00:15:46,334 --> 00:15:47,478
+Scott: even so right?
+
+227
+00:15:47,598 --> 00:15:47,980
+Scott: It's like.
+
+228
+00:15:48,921 --> 00:15:50,970
+Scott: You know it looked that they made in the 80s.
+
+229
+00:15:50,990 --> 00:15:52,638
+Scott: the future looked like the future 80s.
+
+230
+00:15:53,180 --> 00:15:56,478
+Rym: But you know that like that like there's movies that happen to have been made in the 80s.
+
+231
+00:15:56,820 --> 00:15:57,919
+Rym: So they look like shit today.
+
+232
+00:15:58,262 --> 00:16:06,305
+Rym: But then there are movies that even if they were made in the 80s or not They were set in the 80s, but they didn't have the meta Constructs of the 80s.
+
+233
+00:16:06,586 --> 00:16:08,674
+Rym: like the music isn't shitty 80s synth.
+
+234
+00:16:08,914 --> 00:16:10,139
+Rym: It's just music from the 80s.
+
+235
+00:16:11,301 --> 00:16:12,630
+Rym: So the lost boys is like that.
+
+236
+00:16:13,416 --> 00:16:14,040
+Rym: It's a great movie.
+
+237
+00:16:14,100 --> 00:16:15,665
+Rym: You should watch it, but I digress.
+
+238
+00:16:16,027 --> 00:16:23,251
+Rym: the opening montage of lost boys shows all the scary Weirdos on the boardwalk while it plays the cover of the doors.
+
+239
+00:16:23,291 --> 00:16:27,205
+Rym: people are strange and it's just like yeah Look at that scary guy.
+
+240
+00:16:27,265 --> 00:16:28,489
+Rym: He's wearing all black.
+
+241
+00:16:28,770 --> 00:16:31,660
+Rym: Oh my god, that guy's got a mohawk and he's on a motorcycle.
+
+242
+00:16:31,882 --> 00:16:44,233
+Rym: Watch the fuck out And It seems like this guy from Ohio is afraid of that, but I see people like that every day Just like walking around in Midtown, and they're usually not scary at all.
+
+243
+00:16:44,293 --> 00:16:54,939
+Rym: in fact people who dress the way People were afraid of scary people in the 80s like the people that 80s people were afraid of in the 80s are the nerds.
+
+244
+00:16:55,019 --> 00:16:58,492
+Rym: today The guy with the mohawk is the gamer nerd.
+
+245
+00:16:58,532 --> 00:17:00,219
+Rym: more often than not that's true.
+
+246
+00:17:02,601 --> 00:17:06,031
+Scott: He's playing that dangerous Dungeons and Dragons, it's like this.
+
+247
+00:17:06,071 --> 00:17:15,339
+Rym: guy just came here out of 1981 and passed a curfew and I have more to say because I you know curfews suck and there was a curfew.
+
+248
+00:17:15,540 --> 00:17:23,821
+Rym: I ran away from the police at least every other night as a kid because of the fucking curfew and you know I just be out at night getting into trouble, but That's it.
+
+249
+00:17:24,042 --> 00:17:25,347
+Rym: I just kind of ran it for a while.
+
+250
+00:17:25,769 --> 00:17:27,635
+Rym: There's no news that I want to talk about yet.
+
+251
+00:17:27,955 --> 00:17:37,370
+Rym: Yeah, all right Because it's time for things of the day.
+
+252
+00:17:39,572 --> 00:17:40,517
+Rym: Got a thing of the day.
+
+253
+00:17:40,537 --> 00:17:45,578
+Scott: Yeah, so there is a little meme quick meme I guess it's on reddit or something.
+
+254
+00:17:45,658 --> 00:17:47,205
+Rym: This is pretty great right.
+
+255
+00:17:47,285 --> 00:17:49,294
+Scott: it says if you are religious Don't look at this.
+
+256
+00:17:49,395 --> 00:17:51,868
+Scott: if not enjoy, so it's a meme and every all it is.
+
+257
+00:17:52,531 --> 00:18:01,244
+Scott: It's one of those you know head in the middle picture of someone's head in the middle of a square With sort of a starburst and some text on the top and the bottom and the impact font.
+
+258
+00:18:01,284 --> 00:18:02,970
+Scott: you know that and there's a lot.
+
+259
+00:18:03,191 --> 00:18:06,609
+Rym: I believe the what the kids used to call that is a macro right.
+
+260
+00:18:06,649 --> 00:18:09,241
+Scott: so Let me just read the first few of these.
+
+261
+00:18:09,261 --> 00:18:11,090
+Scott: there's many many pages of them ready.
+
+262
+00:18:12,531 --> 00:18:13,877
+Scott: It's a picture of God's face.
+
+263
+00:18:14,118 --> 00:18:17,150
+Scott: You know from you know the the roof of the Sistine Chapel.
+
+264
+00:18:17,231 --> 00:18:18,158
+Scott: At least that's what it looks like.
+
+265
+00:18:18,279 --> 00:18:19,186
+Scott: it might be a different God.
+
+266
+00:18:19,307 --> 00:18:19,710
+Scott: It doesn't matter.
+
+267
+00:18:19,710 --> 00:18:26,849
+Scott: It's God's face, and he says I hurricane cities because that are gay people usually in hurricane prone areas during hurricane season.
+
+268
+00:18:28,331 --> 00:18:32,709
+Scott: Libyans being slaughtered too busy helping millionaires win golden statuettes.
+
+269
+00:18:33,872 --> 00:18:35,702
+Scott: Make sex really awesome.
+
+270
+00:18:35,883 --> 00:18:36,647
+Scott: forbid it.
+
+271
+00:18:36,949 --> 00:18:43,829
+Scott: I Gave you free will so use it exactly as I command you to create world for humans.
+
+272
+00:18:43,829 --> 00:18:48,055
+Scott: 70% salt water Day one.
+
+273
+00:18:48,135 --> 00:18:49,703
+Scott: create light day for.
+
+274
+00:18:49,824 --> 00:18:50,909
+Scott: create light source.
+
+275
+00:18:51,775 --> 00:18:53,569
+Scott: ban sex before marriage.
+
+276
+00:18:54,230 --> 00:18:56,049
+Scott: impregnate unmarried virgin.
+
+277
+00:18:57,451 --> 00:18:58,594
+Scott: demand Adam and Eve.
+
+278
+00:18:58,654 --> 00:18:59,376
+Scott: follow a rule.
+
+279
+00:18:59,416 --> 00:19:01,342
+Scott: that requires the understanding of right and wrong.
+
+280
+00:19:01,623 --> 00:19:06,235
+Scott: don't give Adam and Eve the knowledge of right and wrong and It keeps going.
+
+281
+00:19:06,315 --> 00:19:08,323
+Scott: but there there are big day eating a pork.
+
+282
+00:19:08,845 --> 00:19:09,990
+Scott: make pork delicious.
+
+283
+00:19:10,712 --> 00:19:11,796
+Rym: I think that's the best one.
+
+284
+00:19:12,458 --> 00:19:14,283
+Scott: create mechanical and scientific universe.
+
+285
+00:19:14,384 --> 00:19:18,522
+Scott: punish those who don't believe in the supernatural Great man with foreskin.
+
+286
+00:19:18,542 --> 00:19:19,530
+Scott: command him to cut it off.
+
+287
+00:19:22,610 --> 00:19:27,950
+Rym: I Love that those sorts of things like the courage wolf or the courage bridge.
+
+288
+00:19:28,191 --> 00:19:33,110
+Rym: There's something about that style of meme of statement statement that has just never worn thin with me.
+
+289
+00:19:33,431 --> 00:19:37,870
+Scott: Yeah, this is this many six pages of this stuff, so there's plenty for you to read back.
+
+290
+00:19:37,990 --> 00:19:45,189
+Rym: There's only one meme of this style that I enjoy more than this particular one, and that is the haha guy haha.
+
+291
+00:19:46,913 --> 00:19:51,073
+Scott: So I'm making fun of God's Inconsistency.
+
+292
+00:19:51,695 --> 00:19:53,922
+Rym: my thing of the day here is just not.
+
+293
+00:19:54,002 --> 00:20:02,590
+Rym: it's a complaint, but I can't really justify Complaining because I do not willing to step up and do something better.
+
+294
+00:20:03,332 --> 00:20:18,876
+Rym: but you know we're into the ponies as all men are and the only place you can really go to get your pony business is Either randomly searching YouTube which doesn't work Or going to equestria daily, which is 90% fanfiction.
+
+295
+00:20:20,702 --> 00:20:22,069
+Scott: You can just ignore the fanfiction.
+
+296
+00:20:22,110 --> 00:20:22,612
+Scott: you know that you can.
+
+297
+00:20:22,793 --> 00:20:28,016
+Scott: you can look at all the other sections Individually yeah, and not look at the fanfiction, but it's not really a filter.
+
+298
+00:20:28,056 --> 00:20:29,060
+Rym: It's more like a sin.
+
+299
+00:20:29,562 --> 00:20:33,260
+Rym: It's just every pony thing and not all of it.
+
+300
+00:20:33,360 --> 00:20:35,609
+Scott: Well is equestria daily not a crest here weekly?
+
+301
+00:20:35,649 --> 00:20:38,400
+Rym: so they need something yeah, but College humor is daily, and you know what?
+
+302
+00:20:39,160 --> 00:20:41,149
+Rym: Mostly gold or at least bronze.
+
+303
+00:20:41,531 --> 00:20:43,640
+Scott: well cuz they got a lot more stuff coming in the filters.
+
+304
+00:20:43,700 --> 00:20:45,433
+Scott: They could be more selective the pony stuff.
+
+305
+00:20:45,473 --> 00:20:46,399
+Scott: That's pretty much all of it.
+
+306
+00:20:46,480 --> 00:20:47,001
+Rym: Yeah But you've.
+
+307
+00:20:47,423 --> 00:20:52,380
+Rym: the way to make a successful internet filter is to you have the slider like the line of how much do you let?
+
+308
+00:20:52,801 --> 00:20:54,148
+Rym: Through you have to set it.
+
+309
+00:20:54,188 --> 00:20:56,660
+Scott: problem with the question is they've already let so much through.
+
+310
+00:20:56,760 --> 00:20:57,422
+Scott: It's like will you let?
+
+311
+00:20:57,523 --> 00:21:04,748
+Scott: if they if they start being filtering more harshly before you know the the source material Quantity increases well.
+
+312
+00:21:04,768 --> 00:21:06,619
+Rym: This is it will create drama.
+
+313
+00:21:07,343 --> 00:21:15,996
+Rym: This is why someone needs to make the Ponyville Street Journal That is the like erudite version that only posts and has no fanfiction whatsoever.
+
+314
+00:21:16,297 --> 00:21:20,938
+Rym: No fanfiction whatsoever Except comics which while technically fanfiction I?
+
+315
+00:21:22,360 --> 00:21:22,962
+Rym: Think you agree.
+
+316
+00:21:22,983 --> 00:21:27,258
+Rym: Yeah, they're fanfiction, but they're okay because they're short yeah, and they're drawn.
+
+317
+00:21:27,459 --> 00:21:27,600
+Rym: yeah.
+
+318
+00:21:28,082 --> 00:21:30,612
+Rym: There's a barrier to entry a higher barrier to entry.
+
+319
+00:21:30,853 --> 00:21:35,858
+Scott: so because there's a lot Still deny comics that weren't funny, or we're poorly drawn yep.
+
+320
+00:21:36,360 --> 00:21:44,300
+Rym: But because there is not a lot of great pony stuff and a lot of it's actually kind of hard to find My thing of the day is just a really awesome pony video notice.
+
+321
+00:21:44,420 --> 00:21:47,715
+Scott: I've been laying off the ponies entirely in the podcast since the let.
+
+322
+00:21:47,735 --> 00:21:48,820
+Scott: we actually had a pony episode.
+
+323
+00:21:48,921 --> 00:21:50,052
+Scott: We him cannot hold back.
+
+324
+00:21:50,112 --> 00:21:50,859
+Scott: He can't help himself.
+
+325
+00:21:51,422 --> 00:21:54,534
+Rym: Yeah, we were talking about ponies for a while before the episode.
+
+326
+00:21:54,634 --> 00:21:54,956
+Scott: I didn't.
+
+327
+00:21:55,016 --> 00:21:55,960
+Scott: I just said not in the show.
+
+328
+00:21:56,382 --> 00:21:59,639
+Scott: Yeah, not only restrained myself so much Oh my god.
+
+329
+00:22:00,904 --> 00:22:02,076
+Rym: So yeah ponies ponies.
+
+330
+00:22:04,001 --> 00:22:16,786
+Rym: And very briefly in the meta moment we will be this weekend at Saturday pretty much all day Or at least most of it at the mocha festival in New York starts at 11 a.m.. Yeah, whatever it starts We'll be there around that time.
+
+331
+00:22:16,806 --> 00:22:20,640
+Rym: Yeah, I plan to talk to pretty much everyone at every table.
+
+332
+00:22:21,760 --> 00:22:28,200
+Rym: Yep, yep, yep, yep, I thought no more ponies no more ponies accidental pony accidental pony.
+
+333
+00:22:28,200 --> 00:22:28,945
+Rym: You can't hold it in.
+
+334
+00:22:29,005 --> 00:22:30,133
+Scott: stop make it stop extending it.
+
+335
+00:22:30,717 --> 00:22:31,200
+Rym: wait a minute.
+
+336
+00:22:31,822 --> 00:22:35,796
+Rym: I just noticed that because I'm looking at our con schedule because I was about to announce that.
+
+337
+00:22:35,836 --> 00:22:37,322
+Rym: don't forget anime Boston.
+
+338
+00:22:37,503 --> 00:22:40,899
+Rym: April 22nd through 24th in Boston at the hiney.
+
+339
+00:22:41,120 --> 00:22:44,174
+Rym: We will be at anime Boston doing a shit ton of panels.
+
+340
+00:22:44,375 --> 00:22:45,440
+Scott: Are we really doing a shit ton?
+
+341
+00:22:45,540 --> 00:22:47,238
+Scott: I thought we're only doing like four really like four.
+
+342
+00:22:47,922 --> 00:22:51,076
+Rym: We've really cut down from our days of seven or eight panels at con.
+
+343
+00:22:51,096 --> 00:22:51,820
+Scott: forget those days.
+
+344
+00:22:54,584 --> 00:23:00,271
+Rym: But I just noticed I think someone might have told us before and I forgot that There's a band playing Saturday night called stereo pony.
+
+345
+00:23:00,431 --> 00:23:02,820
+Scott: I don't think that band acts has anything to do with my little pony.
+
+346
+00:23:03,900 --> 00:23:05,907
+Rym: No, but it's nomen.
+
+347
+00:23:06,549 --> 00:23:08,656
+Scott: some people are planning a brony meetup at Otakon.
+
+348
+00:23:08,676 --> 00:23:10,924
+Rym: Oh We should.
+
+349
+00:23:11,145 --> 00:23:15,100
+Rym: uh we should be the ones who force the impromptu brony meetup at anime Boston.
+
+350
+00:23:15,221 --> 00:23:16,748
+Scott: I'm sure there will be a brony meetup.
+
+351
+00:23:16,768 --> 00:23:18,859
+Rym: Yeah, well has Daryl Surratt seen it?
+
+352
+00:23:18,899 --> 00:23:19,100
+Rym: yet?
+
+353
+00:23:19,381 --> 00:23:24,139
+Rym: I don't know cuz the last I heard he had not actually watched an episode yet.
+
+354
+00:23:25,064 --> 00:23:27,138
+Rym: Yeah, whatever if that is true I'll make him watch.
+
+355
+00:23:27,219 --> 00:23:31,453
+Rym: anyway We will be at anime Boston doing panels like anime openers from around the world.
+
+356
+00:23:31,733 --> 00:23:33,238
+Rym: and who is hot today?
+
+357
+00:23:33,278 --> 00:23:37,230
+Scott: Miku Yep, high quality panels that have been rarely seen.
+
+358
+00:23:37,350 --> 00:23:39,015
+Rym: Yeah, I've done anime openers.
+
+359
+00:23:39,095 --> 00:23:40,800
+Rym: I think one at anime Boston.
+
+360
+00:23:41,061 --> 00:23:43,350
+Rym: Yeah, and it was a way different panel.
+
+361
+00:23:43,370 --> 00:23:46,040
+Scott: I did miko one Miku once at Kinetic Con.
+
+362
+00:23:46,100 --> 00:23:58,258
+Scott: It was the best panel ever but there was hardly anyone in there because it was late at night and now it's gonna be the Awesomest panel you ever seen yep, and of course the book club book was Michio Kaku's hyperspace, which we're now gonna talk about.
+
+363
+00:23:58,458 --> 00:24:00,952
+Rym: yep Are you gonna announce the next book?
+
+364
+00:24:01,194 --> 00:24:02,060
+Scott: well actually?
+
+365
+00:24:03,020 --> 00:24:06,315
+Scott: Actually, I had a book in mind my favoritest book of ever.
+
+366
+00:24:06,335 --> 00:24:07,360
+Rym: yeah a little prince.
+
+367
+00:24:07,661 --> 00:24:10,170
+Scott: No, that was my second favorite book ever.
+
+368
+00:24:10,190 --> 00:24:12,357
+Scott: That's probably my third favorite book ever.
+
+369
+00:24:12,518 --> 00:24:15,187
+Scott: Oh wow But anyway, I was gonna pick that book.
+
+370
+00:24:15,227 --> 00:24:18,879
+Scott: my Claire Bibble might now my favorite is book ever, but you know what I?
+
+371
+00:24:19,781 --> 00:24:21,448
+Scott: Changed my mind like yesterday.
+
+372
+00:24:21,508 --> 00:24:24,180
+Scott: god damn it, so I'm glad I didn't say anything.
+
+373
+00:24:24,341 --> 00:24:25,589
+Scott: And you know why I changed my mind.
+
+374
+00:24:25,851 --> 00:24:26,596
+Rym: you want to read something.
+
+375
+00:24:26,616 --> 00:24:30,514
+Scott: You've never read That's right, and also because I read hyperspace, and it gave me an idea.
+
+376
+00:24:30,876 --> 00:24:35,980
+Rym: well whatever it is You're gonna have to wait because a book I've been waiting for for a long time is gonna be delivered to my door any day.
+
+377
+00:24:36,186 --> 00:24:36,580
+Scott: It's all right.
+
+378
+00:24:36,580 --> 00:24:39,300
+Scott: We waited a long time to do hyperspace, and I think that was worthwhile.
+
+379
+00:24:39,400 --> 00:24:45,931
+Scott: But hyperspace gave me the idea of the book that I should choose and then after that I will go and choose my favoritest book ever.
+
+380
+00:24:45,991 --> 00:24:47,420
+Rym: so what brief history of the universe.
+
+381
+00:24:47,982 --> 00:24:48,986
+Rym: No, we're gonna read.
+
+382
+00:24:49,086 --> 00:24:55,628
+Scott: you know we're gonna read fucking foundation bitches, that's right Foundation that's right foundation number one.
+
+383
+00:24:55,648 --> 00:24:59,820
+Rym: Yeah, I should actually read that bought all three on am?
+
+384
+00:24:59,840 --> 00:25:01,487
+Scott: I see there's more than three, but I bought that.
+
+385
+00:25:01,527 --> 00:25:03,695
+Scott: the read that the original three on Amazon.
+
+386
+00:25:03,716 --> 00:25:04,780
+Rym: That's all we're doing.
+
+387
+00:25:05,282 --> 00:25:06,447
+Scott: Yep, yeah one.
+
+388
+00:25:06,487 --> 00:25:06,909
+Scott: We're not.
+
+389
+00:25:07,110 --> 00:25:08,134
+Scott: we're not doing the all three.
+
+390
+00:25:08,154 --> 00:25:09,199
+Scott: We're doing just the first one.
+
+391
+00:25:09,219 --> 00:25:11,526
+Scott: yeah Otherwise we'll be here all night.
+
+392
+00:25:11,867 --> 00:25:12,531
+Rym: It's about time.
+
+393
+00:25:12,611 --> 00:25:14,058
+Rym: I actually did read foundation.
+
+394
+00:25:14,078 --> 00:25:14,520
+Scott: That's right.
+
+395
+00:25:15,363 --> 00:25:16,526
+Rym: As much as I know about it.
+
+396
+00:25:16,567 --> 00:25:18,011
+Rym: I've never actually read it.
+
+397
+00:25:18,573 --> 00:25:19,938
+Scott: I started to read it one time.
+
+398
+00:25:21,145 --> 00:25:22,480
+Scott: I think my parents have like a hardcover.
+
+399
+00:25:22,500 --> 00:25:26,239
+Scott: That's like a three in one, but I bought the three separate ones, so we're gonna read.
+
+400
+00:25:26,561 --> 00:25:31,820
+Scott: We're just gonna read the first foundation and by Asimov, and that's it all right.
+
+401
+00:25:31,960 --> 00:25:34,873
+Scott: So there you go done, and then next time it is my turn.
+
+402
+00:25:35,295 --> 00:25:36,400
+Scott: I'll read my favorite his book every.
+
+403
+00:25:37,461 --> 00:25:49,640
+Rym: So when I was a kid this was a long time ago, and I didn't realize how long ago Was until I read hyperspace again, I read hyperspace a scientific Odyssey through parallel universes time warps and the 10th dimension.
+
+404
+00:25:49,802 --> 00:25:52,665
+Rym: I don't even know Why I read hyperspace like.
+
+405
+00:25:52,685 --> 00:25:58,446
+Rym: I don't know if someone gave it to me if I just found it in the bookstore like I can't I don't remember.
+
+406
+00:25:58,527 --> 00:26:02,907
+Rym: all I know was that when I was really young Something like 1995 or 1996.
+
+407
+00:26:02,907 --> 00:26:04,130
+Scott: well the book came out in like 93 94 94.
+
+408
+00:26:04,130 --> 00:26:13,118
+Rym: I read it and it seemed really profound to me and I forgot about it.
+
+409
+00:26:13,562 --> 00:26:18,446
+Rym: And then you know I was kind of reminded of it recently cuz I read that Bryson book and a bunch of other books on science I was like oh hyperspace.
+
+410
+00:26:18,990 --> 00:26:19,775
+Rym: I could read that again.
+
+411
+00:26:19,795 --> 00:26:20,580
+Rym: I think it's a good book.
+
+412
+00:26:20,781 --> 00:26:21,685
+Rym: We just did cosmos.
+
+413
+00:26:21,745 --> 00:26:24,698
+Rym: it fits with my theme, and you know we'll see how it stands up.
+
+414
+00:26:25,901 --> 00:26:30,839
+Rym: It amazes me how little I remembered from that book from reading it as a kid.
+
+415
+00:26:31,662 --> 00:26:38,200
+Rym: But at the same time it amazes me how much I realize now that hyperspace affected my worldview.
+
+416
+00:26:39,062 --> 00:26:39,503
+Scott: I'm reading
+
+417
+00:26:39,543 --> 00:27:09,892
+Rym: this book as a kid and thinking about the things I cared about as I got older and the things I was interested in and What I understood didn't understand and thought I understood, but didn't about particle physics And even like what I got into in high school like when I really started gravitating toward physics and away from biology and away from chemistry and toward math and the fact that I got really really really fucking into math toward the end of high school and actually Considered for a while going into math like as a career.
+
+418
+00:27:09,972 --> 00:27:13,964
+Rym: obviously that would have been maybe a mistake, but Definitely, I don't know.
+
+419
+00:27:14,044 --> 00:27:19,230
+Rym: actually my co-workers a lot of them on the research side are trying to convince me to go back and get Like a master's in mathematics.
+
+420
+00:27:19,250 --> 00:27:25,658
+Rym: Uh-huh sure I Would if I didn't have to pay for it if I had a full ride to go back to college and learn math.
+
+421
+00:27:25,698 --> 00:27:28,932
+Scott: hell's Fuck yeah, math was great up until calculus.
+
+422
+00:27:29,273 --> 00:27:30,860
+Rym: Ah calculus was my favorite thing.
+
+423
+00:27:31,262 --> 00:27:32,953
+Scott: I do not like calculus see in high school.
+
+424
+00:27:32,993 --> 00:27:34,120
+Rym: We used to have calculus parties.
+
+425
+00:27:34,220 --> 00:27:34,903
+Rym: We'd get together.
+
+426
+00:27:34,923 --> 00:27:36,368
+Rym: This is like when I was a senior.
+
+427
+00:27:36,388 --> 00:27:37,211
+Rym: We'd watch The Simpsons.
+
+428
+00:27:37,231 --> 00:27:39,720
+Scott: How many people at this party - like eight, okay?
+
+429
+00:27:40,360 --> 00:27:43,792
+Rym: I mean look like my AP bio class was I don't know 12 people total.
+
+430
+00:27:43,933 --> 00:27:44,776
+Rym: so anyway.
+
+431
+00:27:44,936 --> 00:27:45,619
+Scott: Let's talk about this book.
+
+432
+00:27:45,739 --> 00:27:50,951
+Rym: so hyperspace like I The analogies, I think that's where it really shows.
+
+433
+00:27:50,991 --> 00:27:58,660
+Rym: like whenever up until I reread this book I you I would make an analogy for anything related to physics or time or space or math or anything.
+
+434
+00:27:59,721 --> 00:28:06,019
+Rym: Almost all of those analogies I realized came out of hyperspace, and I just forgotten that that's where they came from.
+
+435
+00:28:06,039 --> 00:28:15,159
+Scott: yeah I mean, I never read the book, but I've always also been an analogy person and when it comes to science I'm obviously weak very weak in the math department right, but I'm very strong.
+
+436
+00:28:15,239 --> 00:28:17,960
+Scott: at least I think I'm very strong in the conceptual department.
+
+437
+00:28:18,561 --> 00:28:25,358
+Rym: So words that were said by one of my favorite physics teachers in high school were that and I quote as well.
+
+438
+00:28:25,398 --> 00:28:31,013
+Rym: as I can remember Everybody likes the conceptual side of physics because you don't need to know fucking anything.
+
+439
+00:28:31,053 --> 00:28:31,715
+Scott: That's right.
+
+440
+00:28:31,735 --> 00:28:36,580
+Rym: That's exactly right Because I said the same thing to him.
+
+441
+00:28:36,761 --> 00:28:38,130
+Scott: We even says so in this book.
+
+442
+00:28:38,170 --> 00:28:39,580
+Scott: there's a part pretty close to the end.
+
+443
+00:28:39,620 --> 00:28:44,655
+Scott: He's like look if you just want to describe you know conceptually what we've learned in physics.
+
+444
+00:28:44,696 --> 00:28:46,140
+Scott: It's actually pretty simple, right?
+
+445
+00:28:46,340 --> 00:28:46,562
+Scott: It's like.
+
+446
+00:28:46,643 --> 00:28:54,338
+Scott: it's like you could say in a few sentences You know it's it's you know, but to actually describe why we know that and how we know that metric tensors.
+
+447
+00:28:54,459 --> 00:29:02,297
+Scott: Yeah But thing is even though this book talks about a lot of math it doesn't actually do any math right.
+
+448
+00:29:02,598 --> 00:29:05,971
+Scott: he names Equations and he describes what you know he's like.
+
+449
+00:29:06,232 --> 00:29:11,733
+Scott: so there's an equation called of this You know a metric tensor and a metric tensor means this.
+
+450
+00:29:11,753 --> 00:29:12,154
+Rym: well.
+
+451
+00:29:12,215 --> 00:29:13,700
+Rym: He showed you like a matrix.
+
+452
+00:29:13,820 --> 00:29:16,991
+Rym: He's like all right, and then he shows those boxes where he's like.
+
+453
+00:29:17,372 --> 00:29:19,017
+Rym: here's where Einstein's theory fits in.
+
+454
+00:29:19,379 --> 00:29:19,800
+Rym: here's this.
+
+455
+00:29:19,880 --> 00:29:21,789
+Rym: You see them like growing out like when he does so.
+
+456
+00:29:21,849 --> 00:29:23,114
+Scott: it's like I couldn't.
+
+457
+00:29:23,536 --> 00:29:23,797
+Scott: you know.
+
+458
+00:29:23,817 --> 00:29:36,976
+Scott: based on this I couldn't actually do any of this math, but obviously but if You so if you showed me an equation and said what the name of the equation was I'd be like oh That's the equation that does this thing right and you know it's like.
+
+459
+00:29:37,036 --> 00:29:37,859
+Scott: I could match the.
+
+460
+00:29:38,000 --> 00:29:49,402
+Scott: now I can match the conceptual ideas with the names of the mathematical equations and actually if I understood and knew how to read those Mathematical equations I could probably say oh, that's the one that matches up with that idea You know.
+
+461
+00:29:49,443 --> 00:29:58,777
+Scott: so it's like you can't think about the math directly But it gives you sort of this idea of You know which maths are used for what.
+
+462
+00:29:59,099 --> 00:29:59,220
+Rym: well?
+
+463
+00:29:59,360 --> 00:30:04,400
+Rym: I think for as a kid though what this book did what is a cosmos is very different?
+
+464
+00:30:04,580 --> 00:30:06,084
+Rym: But they both serve the same purpose.
+
+465
+00:30:06,104 --> 00:30:10,959
+Rym: They're like hey you guys realize that science is actually the most awesome thing right?
+
+466
+00:30:11,260 --> 00:30:14,600
+Scott: yeah It's very similar to cosmos a lot of ways because you know he talks about the history.
+
+467
+00:30:14,821 --> 00:30:16,612
+Scott: Yeah, he's talking about all the old sigh.
+
+468
+00:30:16,652 --> 00:30:27,589
+Rym: You know he does a lot of storytelling Like second style of getting people excited about science is more of a awe and like oh my god You know how many anythings there are anywhere.
+
+469
+00:30:27,991 --> 00:30:28,954
+Rym: just think about that.
+
+470
+00:30:29,054 --> 00:30:30,720
+Scott: whoa he doesn't do a lot of that here.
+
+471
+00:30:30,760 --> 00:30:33,527
+Rym: He'd know cock who does more this thing of?
+
+472
+00:30:34,149 --> 00:30:35,212
+Rym: yeah fucking wormholes.
+
+473
+00:30:35,332 --> 00:30:35,954
+Rym: Holy shit.
+
+474
+00:30:36,154 --> 00:30:37,117
+Rym: Yeah, they might be real.
+
+475
+00:30:37,457 --> 00:30:38,280
+Rym: Oh, here's the math.
+
+476
+00:30:39,966 --> 00:30:45,771
+Scott: Instead of being like you know trying to awe you with the wonders of the universe He does a lot more practical stuff like he's like.
+
+477
+00:30:46,152 --> 00:30:47,438
+Scott: so what does this mean for you?
+
+478
+00:30:47,458 --> 00:30:47,518
+Scott: Yep?
+
+479
+00:30:48,141 --> 00:30:48,462
+Scott: You know.
+
+480
+00:30:48,582 --> 00:30:50,369
+Scott: and oh this discovery.
+
+481
+00:30:50,389 --> 00:30:51,312
+Scott: Well, what did that mean?
+
+482
+00:30:51,332 --> 00:30:53,340
+Rym: Yeah, I'm like all right the universe is gonna end.
+
+483
+00:30:53,621 --> 00:30:54,764
+Rym: Can we do anything about that?
+
+484
+00:30:55,206 --> 00:30:59,299
+Rym: Yeah, huh, and he actually poses like hey, maybe maybe we can.
+
+485
+00:31:00,481 --> 00:31:03,879
+Scott: He's like there's a chance that we can do this and there's a chance that we can do that.
+
+486
+00:31:04,181 --> 00:31:06,911
+Scott: You know he doesn't really you know have any definitive things cuz.
+
+487
+00:31:06,971 --> 00:31:12,891
+Scott: well at the site then except for where the science is definitive Yeah, it's like he's directly in line with whatever the science says.
+
+488
+00:31:13,353 --> 00:31:13,935
+Scott: you know he's like.
+
+489
+00:31:13,975 --> 00:31:15,884
+Scott: could there be a God and as you read Through the book.
+
+490
+00:31:15,924 --> 00:31:16,389
+Scott: It's like yes.
+
+491
+00:31:16,873 --> 00:31:17,035
+Scott: Nope
+
+492
+00:31:17,418 --> 00:31:17,560
+Rym: yes
+
+493
+00:31:19,003 --> 00:31:27,697
+Scott: No, maybe yes, no, but oh, but then you know towards the end He's like well you can you can't have the God of miracles But you have the God of order, and it's like make
+
+494
+00:31:27,737 --> 00:31:28,820
+Rym: up your mind Yep
+
+495
+00:31:29,562 --> 00:31:38,015
+Scott: Because as you learn more sciences throughout the book the answers to the clay keeps asking the same questions again And you keeps answering them differently because you learned a new thing.
+
+496
+00:31:38,035 --> 00:31:39,060
+Scott: so now the answer has changed.
+
+497
+00:31:39,281 --> 00:31:44,040
+Rym: I do enjoy how he went through and I had with with like light as a particle in different different aspects.
+
+498
+00:31:44,702 --> 00:31:55,537
+Rym: Well based on what everything we've talked about so far it seems like this is true the next chapter is basically yeah That's a bunch of horseshit, and here's why yeah, I mean you know he also does a lot of concentration on.
+
+499
+00:31:55,818 --> 00:32:00,210
+Scott: you know Theoretic the theoretical versus the experimental is like experimentally.
+
+500
+00:32:00,531 --> 00:32:02,656
+Scott: standard model is the king right?
+
+501
+00:32:02,676 --> 00:32:04,120
+Scott: There's just so much evidence.
+
+502
+00:32:04,341 --> 00:32:04,984
+Scott: It's unbelievable.
+
+503
+00:32:05,024 --> 00:32:09,146
+Scott: it always works, but it doesn't work 100%.
+
+504
+00:32:09,146 --> 00:32:10,339
+Scott: So we got to go to this.
+
+505
+00:32:10,842 --> 00:32:18,479
+Scott: But we can't actually use the string theory because we would need the energy of a hajillion And we don't have that and we're not gonna have that for a long time.
+
+506
+00:32:18,961 --> 00:32:21,311
+Rym: I also think about remember how when we're at RIT.
+
+507
+00:32:21,351 --> 00:32:23,740
+Rym: We'd argue about physics or causality or whatever.
+
+508
+00:32:24,101 --> 00:32:26,912
+Rym: I'd always be like yeah the Planck constant the Planck limit.
+
+509
+00:32:27,314 --> 00:32:28,900
+Rym: That's because I read hyperspace as a kid.
+
+510
+00:32:29,140 --> 00:32:32,210
+Rym: Yeah, Planck didn't come up that much in my physics classes.
+
+511
+00:32:32,430 --> 00:32:32,631
+Rym: No.
+
+512
+00:32:32,711 --> 00:32:34,075
+Scott: I still have.
+
+513
+00:32:34,135 --> 00:32:34,456
+Scott: I still.
+
+514
+00:32:34,516 --> 00:32:39,034
+Scott: that is one thing That I you know a lot of the things he describes in this book.
+
+515
+00:32:39,114 --> 00:32:43,931
+Scott: right I can have a much better Conceptual understanding of after reading it obviously like strings and such.
+
+516
+00:32:44,031 --> 00:32:51,840
+Scott: yeah, but one thing I do have a better understanding of it But I still have a hard time understanding it right is the idea that there's these other dimensions.
+
+517
+00:32:51,962 --> 00:32:53,080
+Scott: I understand that other dimensions.
+
+518
+00:32:53,562 --> 00:32:58,620
+Scott: I can't picture them in my brain, but I can I can you know understand more multiple spatial dimensions.
+
+519
+00:32:59,081 --> 00:33:03,817
+Scott: But I still have a hard time thinking about is that the other spatial dimensions are collapsed.
+
+520
+00:33:04,078 --> 00:33:04,720
+Scott: It's like why?
+
+521
+00:33:05,406 --> 00:33:15,287
+Scott: Okay, I understand Mathematically they're collapsed and I can understand that the fact that they are collapsed But I can't actually well It's picture why they're collapsed.
+
+522
+00:33:15,307 --> 00:33:19,200
+Scott: like why can't they just be fully remember the part in cosmos?
+
+523
+00:33:20,020 --> 00:33:25,959
+Rym: Where Sagan talks about the the fact that we don't know for sure if our universe is open or closed.
+
+524
+00:33:26,563 --> 00:33:28,978
+Rym: mm-hmm a dimension can be the same thing.
+
+525
+00:33:28,998 --> 00:33:42,830
+Rym: a Spherical dimension would be closed and that you can go infinitely in any direction Along the surface, but yet there is a finite amount of space But yet infinite space depending on how you look at it.
+
+526
+00:33:43,191 --> 00:33:45,760
+Rym: that it's closed in on itself that there's like this discrete.
+
+527
+00:33:46,142 --> 00:33:50,180
+Scott: So this is basically there's an edge whether but there is no edge, okay?
+
+528
+00:33:50,440 --> 00:33:57,147
+Rym: So let me think about this there's no edge whether or not it's open or closed it either loops back on itself or goes off Or so it's either pac-man or its infinity.
+
+529
+00:33:57,368 --> 00:33:59,216
+Scott: Yeah, okay, so so what you're?
+
+530
+00:33:59,336 --> 00:34:10,679
+Scott: so the thing is Let's pretend that the third dimensions you have a cube right yeah What if the third dimension was collapsed resulting in two dimensions, but there's really three, but the third ones collapsed?
+
+531
+00:34:10,760 --> 00:34:11,563
+Scott: What would that be like?
+
+532
+00:34:11,583 --> 00:34:13,774
+Scott: because we can imagine that right same thing.
+
+533
+00:34:13,915 --> 00:34:14,980
+Scott: so what would that be like though?
+
+534
+00:34:15,060 --> 00:34:18,170
+Scott: Would it be like flat land, but you can go around the you can pac-man?
+
+535
+00:34:18,190 --> 00:34:19,556
+Scott: yeah, right so.
+
+536
+00:34:19,576 --> 00:34:20,659
+Scott: but then where's the third dimension?
+
+537
+00:34:20,780 --> 00:34:25,929
+Scott: Is it just the cube got flattened, but but there is a cube is just a really short cube the way I I think.
+
+538
+00:34:25,989 --> 00:34:31,300
+Scott: so there is an up and down But you can't actually go up and down because as soon as you go up you pac-man to the bottom.
+
+539
+00:34:31,380 --> 00:34:33,578
+Scott: I mean think of this you can't really tell there's nothing down.
+
+540
+00:34:33,619 --> 00:34:35,668
+Rym: the way I always envisioned is you know there is you can see me.
+
+541
+00:34:35,748 --> 00:34:46,300
+Rym: I'm savo tendering right now, but for all you know I'm moving back and forth all over the place in this fourth dimension, but because it's so small I'm just looping back around and there's no way to detect that.
+
+542
+00:34:46,702 --> 00:34:48,409
+Scott: So there is a fourth dimension, but it's so.
+
+543
+00:34:48,449 --> 00:34:51,100
+Scott: it's like if you squish a cube like a pancake right.
+
+544
+00:34:51,422 --> 00:34:52,628
+Scott: So there is a third dimension.
+
+545
+00:34:52,688 --> 00:34:56,737
+Scott: we can where even though we think we're in flat land We can actually jump up and down a little bit.
+
+546
+00:34:57,282 --> 00:35:05,997
+Scott: But because it's pac-man when you get to the top when you jump up and down It doesn't actually look like you're jumping up and down because you're hardly actually jumping because your head comes out the bottom.
+
+547
+00:35:06,037 --> 00:35:11,644
+Rym: another complication I don't know if this is in hyperspace or not because I read it again Long time ago.
+
+548
+00:35:11,664 --> 00:35:15,478
+Rym: it took a while for us to do this episode, but three to met.
+
+549
+00:35:15,498 --> 00:35:20,920
+Rym: the third Three-dimensional physical space is the only place where a knot can exist.
+
+550
+00:35:21,302 --> 00:35:22,331
+Scott: I know that's that's I want.
+
+551
+00:35:22,371 --> 00:35:26,499
+Scott: he didn't give me the math for that But it made me reminded me that thing of the day you had a long time ago.
+
+552
+00:35:27,242 --> 00:35:27,965
+Scott: What was that one?
+
+553
+00:35:28,105 --> 00:35:29,610
+Rym: Oh the four-dimensional knots?
+
+554
+00:35:29,831 --> 00:35:32,440
+Scott: Yeah, whatever that would think that it was the thing of the day you had.
+
+555
+00:35:32,500 --> 00:35:33,323
+Scott: It just reminded me of it.
+
+556
+00:35:33,363 --> 00:35:33,925
+Scott: I don't know.
+
+557
+00:35:34,467 --> 00:35:40,044
+Scott: I remember a four-dimensional game that no it was like he was like some like visualization of some.
+
+558
+00:35:40,466 --> 00:35:48,743
+Rym: oh, it's the one where you have you take it this three-dimensional shape and Cross it over itself without Breaking it.
+
+559
+00:35:48,823 --> 00:35:49,526
+Scott: Yeah, that's the one.
+
+560
+00:35:49,546 --> 00:35:52,660
+Rym: Yeah, but anyway, I'll try to find that that was amazing.
+
+561
+00:35:52,881 --> 00:35:56,320
+Scott: Yeah, so anyway, there were you know, of course reading a book like this, right?
+
+562
+00:35:56,520 --> 00:36:00,120
+Scott: Someone like me who doesn't know any math is gonna come up with crazy ideas, right?
+
+563
+00:36:00,400 --> 00:36:01,926
+Scott: Yeah, I came up with two crazy ideas.
+
+564
+00:36:01,946 --> 00:36:02,730
+Scott: I would like to discuss.
+
+565
+00:36:02,991 --> 00:36:03,613
+Rym: All right.
+
+566
+00:36:03,633 --> 00:36:05,942
+Scott: All right, so crazy idea number one You ready for this?
+
+567
+00:36:05,962 --> 00:36:06,704
+Scott: I'm ready.
+
+568
+00:36:06,764 --> 00:36:12,800
+Scott: So he at one point he talks about light actually being a vibration of the fourth dimension, right?
+
+569
+00:36:13,060 --> 00:36:14,465
+Scott: Yeah, so is that true or not?
+
+570
+00:36:14,525 --> 00:36:17,175
+Scott: Or is that just you know in progress kind of thing?
+
+571
+00:36:17,717 --> 00:36:18,500
+Rym: Ah, it makes sense.
+
+572
+00:36:18,821 --> 00:36:22,634
+Scott: Okay, so if we pretend that light is a vibration of the fourth dimension, right?
+
+573
+00:36:22,654 --> 00:36:27,318
+Scott: Yes, that means Let's combine it with another idea that we understand very well.
+
+574
+00:36:27,358 --> 00:36:31,660
+Scott: You're right Photosynthesis, so you got a plant Scott.
+
+575
+00:36:31,740 --> 00:36:37,880
+Rym: There was just an article on slashdot not that long ago talking about quantum effects and how important they are to photosynthesis.
+
+576
+00:36:37,960 --> 00:36:38,643
+Rym: They're really.
+
+577
+00:36:38,703 --> 00:36:39,948
+Scott: I don't read that anymore.
+
+578
+00:36:40,169 --> 00:36:44,939
+Scott: Well, maybe you should maybe I should because I was thinking wow There's a wave in the fourth dimension.
+
+579
+00:36:45,682 --> 00:36:50,796
+Scott: Shake some molecules and atoms or whatever inside a plant and then the plant eats it.
+
+580
+00:36:51,177 --> 00:36:52,280
+Scott: How crazy is that shit?
+
+581
+00:36:52,640 --> 00:36:53,565
+Scott: So that is crazy.
+
+582
+00:36:53,705 --> 00:36:55,152
+Rym: Think about it even one step further.
+
+583
+00:36:55,213 --> 00:36:56,700
+Rym: Imagine that we're in flatland, right?
+
+584
+00:36:56,840 --> 00:37:00,371
+Rym: All right, and say that light or whatever in some other dimension.
+
+585
+00:37:00,411 --> 00:37:03,200
+Rym: There's a sheet that's like a vibrating like waves.
+
+586
+00:37:03,682 --> 00:37:10,729
+Rym: So say a wave like a bulb pops up through flatland momentarily Depending on at what point we observe.
+
+587
+00:37:10,769 --> 00:37:11,754
+Rym: it say it's oscillating.
+
+588
+00:37:11,774 --> 00:37:12,940
+Rym: So it's a wave like a book.
+
+589
+00:37:13,142 --> 00:37:14,280
+Scott: So it appears and disappears.
+
+590
+00:37:14,360 --> 00:37:18,380
+Rym: So it's a bubble going up and down up and down up and down intersecting with our universe at some point.
+
+591
+00:37:18,670 --> 00:37:32,966
+Rym: Okay if the peak the absolute peak of that wave is the Exact point of our universe then it appears and it's a point an oscillating point that appears and disappears Infinitely and regularly.
+
+592
+00:37:32,986 --> 00:37:35,134
+Scott: Okay, but it's if it's only a point.
+
+593
+00:37:35,195 --> 00:37:38,072
+Scott: it's kind of hard to see though, but it's there All right, and we can interact with it.
+
+594
+00:37:38,092 --> 00:37:38,978
+Rym: Maybe it messes stuff up.
+
+595
+00:37:39,622 --> 00:37:44,500
+Scott: It might pop up like in just like the worst place in your brain or hurt if it's just a little bit taller.
+
+596
+00:37:45,062 --> 00:37:48,497
+Rym: It's a circle now instead a sphere a circle that keeps appearing.
+
+597
+00:37:48,517 --> 00:37:48,758
+Rym: it does.
+
+598
+00:37:48,818 --> 00:37:49,260
+Rym: that's correct.
+
+599
+00:37:49,982 --> 00:37:51,086
+Rym: so think about that.
+
+600
+00:37:51,146 --> 00:37:55,344
+Rym: in terms of electrons and the fact that they're not a point.
+
+601
+00:37:55,931 --> 00:37:57,324
+Rym: they're a particle.
+
+602
+00:37:57,344 --> 00:37:57,887
+Rym: they're not either.
+
+603
+00:37:57,987 --> 00:38:01,103
+Rym: they're like a wave of probability that They're.
+
+604
+00:38:01,264 --> 00:38:02,287
+Rym: we know they're like.
+
+605
+00:38:02,307 --> 00:38:10,486
+Rym: this is the area where it could be and we know it's somewhere in there but we can't know where it is specifically and Maybe that has something to do with.
+
+606
+00:38:10,566 --> 00:38:26,665
+Rym: imagine, you know that dimension something appearing in our universe Repeatedly in that manner that I described the bubble coming in through flatland Like the area where it's intersecting our universe is the probability wave but the actual structure of the electron.
+
+607
+00:38:26,686 --> 00:38:34,005
+Rym: the reason we can't really interact with it directly is because it is actually just of Oscillation on that other dimension.
+
+608
+00:38:34,387 --> 00:38:34,688
+Rym: Hmm.
+
+609
+00:38:35,089 --> 00:38:38,220
+Rym: It's not a thing but in our universe it manifests as a thing.
+
+610
+00:38:39,063 --> 00:38:43,238
+Rym: Mmm, that would also explain why there are so many different particles.
+
+611
+00:38:43,258 --> 00:38:49,377
+Scott: Yeah So my second crazy idea isn't really chemo is like just knocking that hoof against his.
+
+612
+00:38:49,457 --> 00:38:54,395
+Scott: I'm sure every every I'm sure every real physicist listening to us non-physicist is going crazy.
+
+613
+00:38:54,435 --> 00:38:55,580
+Scott: And for that we apologize.
+
+614
+00:38:55,801 --> 00:38:56,504
+Rym: Yeah, what if a computer?
+
+615
+00:38:56,524 --> 00:39:02,564
+Scott: but you should be glad that we are interested and we are not people who believe in Metaphysical or it's not?
+
+616
+00:39:02,584 --> 00:39:04,972
+Scott: you want to do scientific things Scott and all.
+
+617
+00:39:05,012 --> 00:39:12,295
+Scott: you are just curious and we know we are Unlearned and we do not believe the gods that are crazy you and all we just computer people can.
+
+618
+00:39:12,355 --> 00:39:13,900
+Rym: now I'm going to do something.
+
+619
+00:39:14,524 --> 00:39:21,151
+Rym: I will use magic to let you experience Exactly what all the physicists listening to this episode are right now.
+
+620
+00:39:21,171 --> 00:39:24,220
+Rym: All right, man, so computers use binary, right?
+
+621
+00:39:24,280 --> 00:39:25,223
+Rym: It's just like zeros and ones.
+
+622
+00:39:25,263 --> 00:39:28,032
+Rym: What if I had like a one two or five?
+
+623
+00:39:28,313 --> 00:39:30,380
+Rym: it'd be so much more powerful.
+
+624
+00:39:30,441 --> 00:39:31,159
+Scott: We could do that.
+
+625
+00:39:31,240 --> 00:39:41,160
+Scott: But in fact if they're physicists they will know that how a transistor works and a transistor is actually a quantum device Right, so they would know that you couldn't have a one two, three or five if they were physicists.
+
+626
+00:39:41,281 --> 00:39:45,578
+Scott: But if they were normal people they would think you could have one two, three or five which you can actually do.
+
+627
+00:39:46,822 --> 00:39:50,560
+Scott: There have been computers that use their own one and they just kind of suck and they're hard to program.
+
+628
+00:39:50,721 --> 00:39:52,126
+Rym: Yeah, there's a lot of reason.
+
+629
+00:39:52,367 --> 00:39:54,133
+Rym: also are the way we do.
+
+630
+00:39:54,214 --> 00:39:59,913
+Scott: logic is not as easy or useful No, but anyway, here's my second crazy idea, which isn't really that crazy.
+
+631
+00:39:59,953 --> 00:40:03,668
+Scott: It's actually just you know a Increased understanding right?
+
+632
+00:40:03,688 --> 00:40:08,720
+Scott: So I always since it was explained to me originally I always sort of understood Einstein's gravity, right?
+
+633
+00:40:08,860 --> 00:40:09,283
+Scott: You got a lot of.
+
+634
+00:40:09,303 --> 00:40:10,270
+Scott: you got a lot of mass.
+
+635
+00:40:10,593 --> 00:40:20,920
+Scott: when you have a lot of mass You know, if you have a two-dimensional universe and you have a heavy thing It's gonna put a big dent in it, you know And that dent is actually a dent three a three-dimensional dent in the two-dimensional universe.
+
+636
+00:40:21,163 --> 00:40:25,580
+Scott: So things seem to be falling into it Even though you can't see why they're falling into it because you're a two-dimensional person.
+
+637
+00:40:25,881 --> 00:40:32,709
+Scott: Yeah, and likewise in three dimensions when there's a heavy thing right with a lot of mass It makes a big dent, but it's a four-dimensional dent.
+
+638
+00:40:32,930 --> 00:40:35,720
+Scott: So things fall into it right and gravity, whatever.
+
+639
+00:40:36,743 --> 00:40:37,856
+Scott: But think about this, right?
+
+640
+00:40:37,936 --> 00:40:46,320
+Scott: So Well, if there was a four-dimensional thing and it you know Let's say I was a four-dimensional person and I was not touching the third dimension and then I punched it, right?
+
+641
+00:40:46,660 --> 00:40:47,685
+Scott: Yeah, so I put my fist into it.
+
+642
+00:40:47,725 --> 00:40:48,428
+Scott: What's gonna happen?
+
+643
+00:40:48,730 --> 00:40:50,820
+Scott: Well, they're gonna see three-dimensional people.
+
+644
+00:40:51,841 --> 00:40:59,312
+Rym: I'm gonna say that it's not that you're putting your fist into the third dimension It's that there is a thing in the third dimension that you can.
+
+645
+00:40:59,332 --> 00:41:00,436
+Rym: there's a three-dimensional thing.
+
+646
+00:41:00,737 --> 00:41:06,905
+Rym: It's the equivalent of me I'm holding say this piece of paper is actually totally flat and there's things living on it That are effectively two-dimensional.
+
+647
+00:41:07,206 --> 00:41:08,049
+Rym: I just start fucking with them.
+
+648
+00:41:08,371 --> 00:41:16,954
+Rym: Yeah, I'm not putting my hand into the second dimension I'm just interacting with a four-dimensional object that happens to have also.
+
+649
+00:41:16,974 --> 00:41:24,460
+Scott: you're saying that so we live in a third dimensional object That is floating in a fourth dimension and a lot of that fourth dimension isn't touching us only some of it is touching us.
+
+650
+00:41:24,722 --> 00:41:26,720
+Rym: I guess that's the best way we can say it anyway.
+
+651
+00:41:26,861 --> 00:41:31,500
+Scott: But the point is if something from the fourth dimension were to enter our dimension, right?
+
+652
+00:41:31,840 --> 00:41:35,040
+Scott: It would sort of appear out of a point and grow larger, right?
+
+653
+00:41:35,040 --> 00:41:38,197
+Scott: It would be like if a basketball came in a four-dimensional basketball.
+
+654
+00:41:38,217 --> 00:41:40,587
+Scott: So a Four-ball right would.
+
+655
+00:41:40,667 --> 00:41:42,032
+Scott: they threw it at us right?
+
+656
+00:41:42,072 --> 00:41:42,835
+Scott: They poked at us.
+
+657
+00:41:43,095 --> 00:41:44,360
+Scott: We would see this a basketball.
+
+658
+00:41:44,421 --> 00:41:45,439
+Scott: It would start out as like a dot.
+
+659
+00:41:45,540 --> 00:41:58,932
+Scott: It would grow to a full basketball and then it would shrink again into another dot Right or something like that something along those lines, but isn't that what you know, like, you know The Sun looks like right, you know, it's got.
+
+660
+00:41:59,052 --> 00:42:01,825
+Scott: you know, it's it gets bigger I get in.
+
+661
+00:42:01,866 --> 00:42:03,318
+Scott: gravity makes it smaller, right?
+
+662
+00:42:03,640 --> 00:42:04,864
+Scott: So it's like they.
+
+663
+00:42:05,065 --> 00:42:10,000
+Scott: you know that that lends itself your gravity versus things from the fourth to met.
+
+664
+00:42:10,020 --> 00:42:15,557
+Scott: You know things all matter being something from the fourth dimension protruding into the third dimension, right?
+
+665
+00:42:15,757 --> 00:42:16,219
+Rym: Well, it's not.
+
+666
+00:42:16,279 --> 00:42:20,009
+Rym: if Gravity is the distortion of space-time or something like that.
+
+667
+00:42:20,049 --> 00:42:23,060
+Rym: Then it's just that's a dip in another dimension effectively
+
+668
+00:42:23,582 --> 00:42:36,680
+Scott: No, but I'm saying is that it ever all if all matter is actually Something from the fourth dimension poking its way in Right, yeah, and then gravity is sort of it being sucked, you know back out to the fourth.
+
+669
+00:42:36,722 --> 00:42:39,610
+Rym: well that's exactly what I guess it would be.
+
+670
+00:42:39,630 --> 00:42:46,333
+Rym: and that if if all the individual particles are just the Manifestations of strings or waves or whatever in this multi-dimensional universe.
+
+671
+00:42:46,373 --> 00:42:57,299
+Rym: We can't really interact with then What we are is just kind of this meta structure that is manifest of all those other things That themselves are unrelated to their constituents.
+
+672
+00:42:58,481 --> 00:43:09,921
+Scott: Yeah, I was really struggling to have a sentence there but you see but that's the thing is you look at you look at You know a star and it's gravity and you look at the four-dimensional basketball just sort of passing by and it's the same sort of Thing.
+
+673
+00:43:10,061 --> 00:43:12,230
+Rym: I know the trouble we have is looks the same.
+
+674
+00:43:12,290 --> 00:43:17,562
+Rym: the trouble we have to watch out for is that we're definitely we can fall into the trap of the anthropic principle of We.
+
+675
+00:43:17,622 --> 00:43:22,100
+Rym: it's very easy for us to analogize things because they appear similar and they're complete bullshit in the math.
+
+676
+00:43:22,261 --> 00:43:31,696
+Scott: It doesn't even match at all Of course Sagan because I was ran but you know Like a star going into a black hole looks the same with our eyeballs as a bat.
+
+677
+00:43:31,776 --> 00:43:34,505
+Scott: a four-dimensional basketball Leaving our dimension.
+
+678
+00:43:34,565 --> 00:43:35,528
+Scott: remember in cos.
+
+679
+00:43:35,588 --> 00:43:36,912
+Scott: it shrinks to a point and goes away.
+
+680
+00:43:36,993 --> 00:43:53,540
+Rym: when Sagan points out that if our universe is closed It's as though we are our entire universe is contained within or it is effectively an electron But one in a greater universe and that every point particle in our universe is in fact a closed universe.
+
+681
+00:43:53,902 --> 00:43:56,459
+Rym: That itself, you know, and it's ad infinitum up and down.
+
+682
+00:43:56,620 --> 00:44:01,040
+Scott: Yeah, but I don't think that you know, you could fit a billion billion galaxies in in one of our electrons.
+
+683
+00:44:01,140 --> 00:44:02,245
+Scott: That's that's not in there.
+
+684
+00:44:02,747 --> 00:44:03,168
+Rym: Why not?
+
+685
+00:44:03,570 --> 00:44:05,036
+Scott: Yeah, I'm pretty sure it's not in there.
+
+686
+00:44:05,116 --> 00:44:05,578
+Rym: then how come?
+
+687
+00:44:05,759 --> 00:44:06,080
+Rym: how do you know?
+
+688
+00:44:06,140 --> 00:44:07,003
+Rym: We're not an electron.
+
+689
+00:44:07,645 --> 00:44:12,040
+Scott: I'm pretty sure that our universe of a billion billion galaxies is not an electron.
+
+690
+00:44:12,120 --> 00:44:12,945
+Scott: Maybe why not?
+
+691
+00:44:13,065 --> 00:44:13,789
+Scott: Maybe it's a proton.
+
+692
+00:44:13,890 --> 00:44:15,719
+Rym: I don't think you listen to Carl Sagan that much.
+
+693
+00:44:18,321 --> 00:44:19,205
+Scott: It's not it's not.
+
+694
+00:44:19,847 --> 00:44:21,334
+Scott: this isn't turtles all the way down.
+
+695
+00:44:21,695 --> 00:44:27,414
+Rym: so I did ask Timo our Non-resident expert on these man.
+
+696
+00:44:27,454 --> 00:44:28,376
+Scott: What did you ask him?
+
+697
+00:44:28,396 --> 00:44:30,820
+Rym: I was like, yeah, so I really know hyperspace.
+
+698
+00:44:30,961 --> 00:44:38,200
+Rym: I was talking a little bit and I gave me permission to read this But he gave a short like mini review of his feelings in the hyperspace.
+
+699
+00:44:38,280 --> 00:44:39,545
+Rym: My question was here.
+
+700
+00:44:39,585 --> 00:44:41,551
+Rym: Let me find the exact question that I asked him.
+
+701
+00:44:41,572 --> 00:44:45,926
+Rym: doo doo doo doo doo doo doo Doo doo doo doo doo I can't find it.
+
+702
+00:44:45,986 --> 00:44:47,953
+Rym: I was basically like hey you have the answer.
+
+703
+00:44:47,973 --> 00:44:52,406
+Scott: You know the question is hyperspace legit Did anything?
+
+704
+00:44:52,426 --> 00:44:54,133
+Scott: that is something I do want to comment on.
+
+705
+00:44:54,213 --> 00:44:55,700
+Scott: oh actually two things I want to comment on.
+
+706
+00:44:55,740 --> 00:45:07,560
+Scott: So one thing if you were not someone who understood science and math, you know, I mean and you read this book Just from the look like if you were not an educated person like if you were, you know, very uneducated.
+
+707
+00:45:07,701 --> 00:45:08,665
+Rym: Oh, it's rock-solid.
+
+708
+00:45:08,765 --> 00:45:11,236
+Scott: No, no, but this book even though it is rock-solid.
+
+709
+00:45:11,276 --> 00:45:11,818
+Scott: I agree, right?
+
+710
+00:45:12,880 --> 00:45:19,140
+Scott: The way it presents itself physically and with diagrams and lit, you know in its wording, right?
+
+711
+00:45:20,161 --> 00:45:25,757
+Scott: Easily and On a surface level very much resembles pretty much any time cube.
+
+712
+00:45:25,818 --> 00:45:26,340
+Scott: Randy book.
+
+713
+00:45:26,721 --> 00:45:34,409
+Scott: You know, you actually you have to have some sort of beginning knowledge or intelligence To be able to tell the difference between this.
+
+714
+00:45:34,429 --> 00:45:35,412
+Rym: you want to know why.
+
+715
+00:45:35,754 --> 00:45:36,376
+Rym: you want to know why.
+
+716
+00:45:36,396 --> 00:45:37,720
+Rym: two dimensional?
+
+717
+00:45:38,580 --> 00:45:50,338
+Rym: Simple drawings that illustrate very powerful analogies that directly relate to feelings people have look at the fourth way I know exactly so, you know, it's like What's what really does?
+
+718
+00:45:50,560 --> 00:45:52,126
+Scott: Separate this from time cube.
+
+719
+00:45:52,167 --> 00:45:55,159
+Scott: besides the fact that the math is right and as opposed to the math is not made up.
+
+720
+00:45:55,179 --> 00:46:00,860
+Scott: and if you're Not an expert who can tell you you whatever book you read first time cube or hyperspace is gonna get you know How?
+
+721
+00:46:00,921 --> 00:46:03,610
+Rym: you you know how you solve that if I read time cube?
+
+722
+00:46:03,690 --> 00:46:04,713
+Rym: Alright time cube.
+
+723
+00:46:05,396 --> 00:46:07,908
+Rym: I read a different book That isn't time cube.
+
+724
+00:46:07,968 --> 00:46:08,934
+Rym: They don't match up.
+
+725
+00:46:09,317 --> 00:46:09,739
+Scott: That's true.
+
+726
+00:46:10,161 --> 00:46:14,544
+Rym: If I read hyperspace and then some other quantum physics book, they're gonna match up quite a bit They are.
+
+727
+00:46:14,564 --> 00:46:18,728
+Scott: and as for the up-to-date ness, you know I was also thinking about that because this book is from 94.
+
+728
+00:46:18,728 --> 00:46:20,092
+Scott: Yeah there it's.
+
+729
+00:46:20,273 --> 00:46:22,300
+Scott: it's at least a lot of years later.
+
+730
+00:46:23,202 --> 00:46:25,460
+Scott: Right, there had to be some development since then.
+
+731
+00:46:25,540 --> 00:46:27,689
+Scott: So there are things in this book that are out of date.
+
+732
+00:46:27,749 --> 00:46:30,640
+Scott: For example, he talks about the superconducting supercollider.
+
+733
+00:46:30,720 --> 00:46:34,895
+Scott: We already know that we now have the hadron collider, right?
+
+734
+00:46:34,975 --> 00:46:36,400
+Scott: He didn't know about that when he wrote the book.
+
+735
+00:46:36,621 --> 00:46:39,636
+Scott: Yeah, but we haven't found anything huge there yet.
+
+736
+00:46:39,736 --> 00:46:39,978
+Scott: Yeah.
+
+737
+00:46:40,118 --> 00:46:44,529
+Scott: Yeah But anyway so that sort of thing is out of date.
+
+738
+00:46:44,670 --> 00:46:52,217
+Scott: but I thought about the out-of-date ness of this book when I was reading it and I was like 20 years whatever but reading the book most of the time.
+
+739
+00:46:52,277 --> 00:46:53,080
+Scott: what's he talking about?
+
+740
+00:46:53,180 --> 00:46:59,740
+Scott: He's talking about people like von Neumann or Riemann or Einstein or even Newton, right?
+
+741
+00:46:59,960 --> 00:47:03,378
+Scott: It's like those guys are centuries old.
+
+742
+00:47:03,438 --> 00:47:06,239
+Rym: Scott Who does Sagan talk about?
+
+743
+00:47:06,862 --> 00:47:08,288
+Scott: Ancient Greek, right?
+
+744
+00:47:08,369 --> 00:47:15,343
+Scott: So he's talking about these old old Scientists, right and even a lot of the ones, you know Even the more recent ones.
+
+745
+00:47:15,363 --> 00:47:20,560
+Scott: he talks about our 20th early 20th century guys and their shit still holds up.
+
+746
+00:47:20,620 --> 00:47:21,383
+Scott: You know, he's got like he'll.
+
+747
+00:47:21,424 --> 00:47:23,975
+Scott: you look at the matrix he's got and whose names are in there?
+
+748
+00:47:24,035 --> 00:47:25,100
+Scott: Maxwell and Einstein.
+
+749
+00:47:25,201 --> 00:47:27,763
+Scott: Those are not recent, dude right, I mean.
+
+750
+00:47:28,124 --> 00:47:47,416
+Scott: so if there was something, you know, and if their stuff is still legit after centuries then In the 20-something years since this book has been written You're I don't think you know the odds of there being something devastatingly Huge that changes this book completely and makes it invalid are pretty low.
+
+751
+00:47:47,537 --> 00:47:51,380
+Scott: if centuries Couldn't have invalidated these other guys, right?
+
+752
+00:47:51,741 --> 00:48:00,897
+Scott: If their stuff is still right Then the stuff in this book is still gonna be mostly right and right enough for a layman like myself Who's never going to do any sort of?
+
+753
+00:48:01,341 --> 00:48:02,969
+Scott: Scientific experiment in this department.
+
+754
+00:48:03,030 --> 00:48:05,060
+Rym: one thing that's really cool is that look at cosmos.
+
+755
+00:48:05,261 --> 00:48:09,939
+Rym: I was reading through all the errata like all the updates since cosmos came out.
+
+756
+00:48:11,220 --> 00:48:15,076
+Rym: Very few corrections very few outright.
+
+757
+00:48:15,096 --> 00:48:15,940
+Rym: This was wrong.
+
+758
+00:48:16,660 --> 00:48:23,120
+Rym: Mostly it's we confirmed this even more or we confirm something even crazier than we suspected.
+
+759
+00:48:23,481 --> 00:48:26,635
+Rym: Yeah, or you know, this science is happening things like that.
+
+760
+00:48:26,715 --> 00:48:27,800
+Scott: It was there was some article.
+
+761
+00:48:27,820 --> 00:48:29,453
+Scott: I don't remember what it was, but I read it.
+
+762
+00:48:29,514 --> 00:48:48,260
+Scott: I think yesterday I don't even I just read it really quickly I'd even bother but it was about a very similar hyperspace related topic on a real science blog and a lot of the stuff that was written in that post was like Totally just straight from this book and I was like I understood half that blog post because it was just out of this book.
+
+763
+00:48:48,842 --> 00:48:59,140
+Scott: So if it hasn't changed since a blog post from yesterday, I think this book is still Incredibly valuable to someone who wants to learn about this and is not yet so out of date.
+
+764
+00:48:59,201 --> 00:49:00,420
+Scott: It's not no longer worth reading.
+
+765
+00:49:00,621 --> 00:49:07,820
+Rym: So from Timo who is a physicist who actually does know what he's talking about, you know 10 billion times more than we do I read hyperspace over the weekend.
+
+766
+00:49:07,960 --> 00:49:14,818
+Rym: Here's the short of it too many boring anecdotes and strained analogies, but I like anecdotes and analogies, especially strained one.
+
+767
+00:49:14,919 --> 00:49:17,686
+Rym: Yes Longer, here's the long of it.
+
+768
+00:49:18,167 --> 00:49:25,320
+Rym: I am tempted to say that there are too many overly generalized explanations But in hindsight, I say that he doesn't actually explain anything.
+
+769
+00:49:25,761 --> 00:49:29,094
+Rym: The book is basically a dog and pony show.
+
+770
+00:49:29,114 --> 00:49:38,280
+Rym: Yep of neat ideas Yep, and that it doesn't fail completely Although there are parts where I get an interesting insight into his thoughts on some meaningful physical concepts.
+
+771
+00:49:38,662 --> 00:49:40,490
+Rym: There are few and far between hmm.
+
+772
+00:49:40,771 --> 00:49:45,591
+Rym: The book is scientifically sound Though mostly old news.
+
+773
+00:49:45,973 --> 00:49:50,740
+Scott: Yeah, well dots is 94 it's old news there has especially for someone who's a profession.
+
+774
+00:49:50,740 --> 00:49:52,206
+Rym: This is the part I want I get to learn more about.
+
+775
+00:49:52,488 --> 00:49:56,404
+Rym: there has been a second revolution in string theory in the early 2000s.
+
+776
+00:49:56,424 --> 00:49:57,510
+Scott: Oh, so that is that is the thing.
+
+777
+00:49:57,530 --> 00:49:59,040
+Scott: That is pretty the only thing that's not in this book.
+
+778
+00:49:59,080 --> 00:50:10,609
+Rym: probably also over the last decade Cosmology has become a precision science and added a lot of new opportunities for testing some of the ideas in the latter part of the Book that I'm really excited about.
+
+779
+00:50:11,051 --> 00:50:11,835
+Scott: I want to learn about that.
+
+780
+00:50:11,835 --> 00:50:17,291
+Rym: 17 years Even for the glacial pace that science advances.
+
+781
+00:50:17,311 --> 00:50:19,097
+Scott: Yeah, see glacial pace of science.
+
+782
+00:50:19,338 --> 00:50:23,480
+Rym: all in all It's not a bad popular science book, but I'm a scientist.
+
+783
+00:50:23,600 --> 00:50:28,800
+Rym: So I see all the ifs and buts no kidding and I want more meat on my explanation.
+
+784
+00:50:28,921 --> 00:50:33,519
+Scott: Of course if this if there's a computer science book that was written like this It would have no little to no value for me.
+
+785
+00:50:33,680 --> 00:50:38,217
+Rym: the thing is this is a book to where you could throw this at almost anyone and they can.
+
+786
+00:50:38,237 --> 00:50:45,164
+Scott: you could throw it at a Nerdy middle school student or a non fit or a beep or higher High school student.
+
+787
+00:50:45,224 --> 00:50:47,572
+Rym: I think that the best person to give this a
+
+788
+00:50:47,613 --> 00:50:48,556
+Scott: good high school is
+
+789
+00:50:48,636 --> 00:50:51,310
+Rym: someone who's a little nerdy Who but like
+
+790
+00:50:51,472 --> 00:51:04,274
+Scott: early on in there I think it's best if there's a kid who's starting to show who actually shows interest in science like if they're in science class at all and they go ooh, or if they watch Discovery Channel and they're like, oh And they go all even once you gotta give this book.
+
+791
+00:51:04,415 --> 00:51:07,294
+Scott: Yep, or Cosmos or any of those similar books.
+
+792
+00:51:07,455 --> 00:51:11,775
+Rym: Yes But it's I think middle school is the age because that you know.
+
+793
+00:51:11,895 --> 00:51:13,160
+Rym: end of middle school early high school.
+
+794
+00:51:13,180 --> 00:51:16,659
+Scott: It's like they'll get some of it, but they won't understand a lot of it as well.
+
+795
+00:51:16,921 --> 00:51:19,620
+Rym: And if they're like me, it'll influence them in surprising way.
+
+796
+00:51:19,660 --> 00:51:22,474
+Scott: I mean, I still can't even really understand how that dimension collapses.
+
+797
+00:51:22,876 --> 00:51:26,340
+Rym: besides pac-man Yeah, and I can talk out my ass for hours.
+
+798
+00:51:26,420 --> 00:51:30,480
+Scott: So in a third is in a three is actually in a three-dimensional space.
+
+799
+00:51:30,520 --> 00:51:33,518
+Scott: But the third dimension collapse actually pac-man because he can go.
+
+800
+00:51:34,061 --> 00:51:35,086
+Rym: Depends depends on the map.
+
+801
+00:51:35,187 --> 00:51:40,472
+Rym: Can you just call it the sides of the top didn't go at the sides and the top Okay, so come up with a shape that works.
+
+802
+00:51:40,492 --> 00:51:42,039
+Rym: You've got a shape that crosses over itself.
+
+803
+00:51:42,743 --> 00:51:43,345
+Scott: Oh, didn't he say?
+
+804
+00:51:43,365 --> 00:51:48,498
+Scott: there was one point where he said it was like pac-man's on a cylinder or no He's on a Taurus, right?
+
+805
+00:51:48,538 --> 00:51:51,294
+Scott: Yes But it's like how can pac-man be on a Taurus?
+
+806
+00:51:51,374 --> 00:51:57,275
+Scott: I don't know whatever But if he's on a Taurus then it's three-dimensional but but it's a collapsed Taurus.
+
+807
+00:51:57,736 --> 00:51:58,659
+Scott: I don't I still don't get it.
+
+808
+00:51:59,041 --> 00:52:00,752
+Rym: That's why we need a book with more meat on it now.
+
+809
+00:52:00,792 --> 00:52:02,000
+Rym: I think we've gotten past this point.
+
+810
+00:52:02,000 --> 00:52:06,900
+Scott: I want to see a picture of a three-dimensional universe where the third where the third dimension collapsed.
+
+811
+00:52:07,322 --> 00:52:08,105
+Rym: I guess it's only.
+
+812
+00:52:08,125 --> 00:52:14,029
+Rym: I'm glad I read this book when I was much younger because I think there are better books for someone Of my age to read on these topics.
+
+813
+00:52:14,471 --> 00:52:16,440
+Rym: I think I could do for a little more math.
+
+814
+00:52:17,403 --> 00:52:23,853
+Rym: Yeah, I could you know, I could Like the math is unimportant, but let's move on.
+
+815
+00:52:24,134 --> 00:52:25,620
+Scott: Yeah, the math is just kind of hard.
+
+816
+00:52:26,142 --> 00:52:30,117
+Rym: Yeah, I would least like more of the grounding of the math like more of the.
+
+817
+00:52:30,137 --> 00:52:33,997
+Rym: alright Here's what this implies Mathematically and here's why it implies that.
+
+818
+00:52:34,138 --> 00:52:45,560
+Scott: yeah The only thing that I sort of question and obviously I'm almost I'm actually I'm 100% sure I'm wrong Right is that you know, he keeps showing you the matrix of like Einstein in the top left then Maxwell then Yang Mills, right?
+
+819
+00:52:45,560 --> 00:52:46,739
+Scott: It's like now we have enough room.
+
+820
+00:52:46,800 --> 00:52:58,439
+Scott: It's like adding more dimensions increase the size of the matrix Which means you have more room to fit stuff in there Which means you could add these, you know Now we can add all these guys in and everything fits together, right and I understood that conceptually very well.
+
+821
+00:52:58,822 --> 00:53:00,640
+Rym: But it's like in taking stuff, right?
+
+822
+00:53:00,680 --> 00:53:02,405
+Rym: But it's like and other people.
+
+823
+00:53:02,425 --> 00:53:11,360
+Scott: but at the same time I was thinking obviously wrong and mathematically right obviously, but it's like Couldn't I just make any matrix bigger and fit in any kind of maths?
+
+824
+00:53:11,540 --> 00:53:14,656
+Scott: I wanted I could make a giant matrix and fit all the math in the world and it wouldn't.
+
+825
+00:53:14,696 --> 00:53:15,400
+Scott: it would totally work.
+
+826
+00:53:15,881 --> 00:53:16,825
+Scott: So what is so?
+
+827
+00:53:16,845 --> 00:53:18,069
+Scott: what does that even mean?
+
+828
+00:53:18,129 --> 00:53:18,370
+Scott: Right?
+
+829
+00:53:18,551 --> 00:53:19,394
+Rym: I guess the that was.
+
+830
+00:53:19,434 --> 00:53:21,020
+Scott: that was my stupid and incorrect thinking.
+
+831
+00:53:21,322 --> 00:53:25,627
+Scott: Well, I guess my way around that is it's like yeah I can take two completely unrelated things.
+
+832
+00:53:25,928 --> 00:53:28,999
+Scott: make a big enough matrix so that there's enough spots in there to put both of them.
+
+833
+00:53:29,360 --> 00:53:31,691
+Scott: But if you but if you make that does that make them related?
+
+834
+00:53:32,153 --> 00:53:36,653
+Rym: if you make it too much bigger Like bigger than it needs to be there's this extra space in there.
+
+835
+00:53:36,693 --> 00:53:38,179
+Rym: You don't have anything to put in that space.
+
+836
+00:53:38,981 --> 00:53:40,995
+Rym: So there's a hole that you can't fill.
+
+837
+00:53:41,015 --> 00:53:45,180
+Scott: that's meaning Well, there are some little holes that he said they do put something in there.
+
+838
+00:53:45,200 --> 00:53:47,899
+Scott: But he said yeah, we're not gonna talk about what they put in that corner bit.
+
+839
+00:53:49,801 --> 00:54:02,809
+Rym: Yeah, I about three times reading this book again I went to Wikipedia and tried to learn more about metric tensors and I even asked some of the mathematicians at work and one of them I was like so I'm interested in metric tensors.
+
+840
+00:54:02,869 --> 00:54:11,640
+Rym: and he looked at me and he said really and I said Yes And he said why reading some kaku?
+
+841
+00:54:18,400 --> 00:54:20,193
+Rym: So We've got our new book.
+
+842
+00:54:20,273 --> 00:54:20,980
+Rym: we had our old book.
+
+843
+00:54:21,181 --> 00:54:31,961
+Rym: I think it's a worthwhile read especially if you've got like a nerdy Cousin who's younger than you or something or like a nerdy nephew or niece and you need a book to give them like a science Book.
+
+844
+00:54:32,182 --> 00:54:33,066
+Rym: that'll get them thinking.
+
+845
+00:54:33,086 --> 00:54:35,879
+Scott: Yeah, also it's like I delayed starting of reading it.
+
+846
+00:54:36,081 --> 00:54:37,993
+Scott: You know by a lot of time just cuz mostly cuz.
+
+847
+00:54:38,013 --> 00:54:38,960
+Scott: I was busy with other things.
+
+848
+00:54:39,221 --> 00:54:48,040
+Scott: But once I started reading it, I not only did I have to finish it quickly to be in time for this episode I finished it yesterday last night, but I really wanted to finish it very quickly.
+
+849
+00:54:48,222 --> 00:54:50,160
+Scott: Yes, you kept wanting to read more.
+
+850
+00:54:50,301 --> 00:54:55,810
+Rym: I dragged through the first and that's kind of a good book because I remembered it pretty well But then after that it was like, oh, whoa.
+
+851
+00:54:55,851 --> 00:54:56,635
+Rym: Wait, what what?
+
+852
+00:54:57,118 --> 00:55:08,080
+Scott: Oh Yeah, so it's once you you know It's the kind of thing where it's like you won't want to start reading it because it's nonfiction and it's kind of like how no One wants to play a goddamn wooden cube game until I play it.
+
+853
+00:55:08,160 --> 00:55:12,040
+Scott: Then once you start reading it, you're not gonna stop just like my little phone.
+
+854
+00:55:17,053 --> 00:55:19,590
+Rym: This has been GeekNights with Rym and Scott.
+
+855
+00:55:19,650 --> 00:55:24,390
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+856
+00:55:24,691 --> 00:55:29,710
+Scott: Be sure to visit our website at front row crew comm for show notes discussion news and more.
+
+857
+00:55:29,990 --> 00:55:37,390
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+858
+00:55:37,751 --> 00:55:40,926
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+859
+00:55:42,191 --> 00:55:46,946
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+860
+00:55:47,066 --> 00:55:48,370
+Scott: It's actually recorded at night.
+

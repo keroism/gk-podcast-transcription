@@ -1,0 +1,4164 @@
+1
+00:00:08,380 --> 00:00:13,394
+Rym: It's Monday December 11th 2017.
+
+2
+00:00:13,394 --> 00:00:18,310
+Rym: I'm Rym, I'm Scott and this is the last Monday episode of GeekNights for 2017.
+
+3
+00:00:18,310 --> 00:00:23,265
+Rym: Yeah, and tonight we're talking about something that in almost 13 years.
+
+4
+00:00:23,305 --> 00:00:26,268
+Rym: We've somehow never talked about talking about headphones.
+
+5
+00:00:29,912 --> 00:00:30,947
+Scott: Let's do this.
+
+6
+00:00:32,692 --> 00:00:37,490
+Rym: So I kept talking about that NAS and if you follow me on Twitter in the forum, I did buy it.
+
+7
+00:00:37,751 --> 00:00:41,147
+Rym: I bought the five port like Synology 1517 plus whatever.
+
+8
+00:00:41,167 --> 00:00:41,870
+Scott: I'm sure it's fine.
+
+9
+00:00:42,211 --> 00:00:46,730
+Rym: I bought six eight terabyte NAS drives and it is just great.
+
+10
+00:00:46,930 --> 00:00:47,352
+Scott: I'm gonna get.
+
+11
+00:00:47,372 --> 00:00:57,589
+Rym: you got a spare one just in case I got a hot spare because with five drives with raid five I only have one drive redundancy and the deal with real.
+
+12
+00:00:57,750 --> 00:01:01,242
+Scott: I mean, you're not you're not super like it, you know corporate or whatever.
+
+13
+00:01:01,262 --> 00:01:14,249
+Rym: You don't need you know, one drive redundancy is just fine yes, however and Yeah The reason I bought the hot the cold you want to get the most space for your money here is The drive was cheap It was actually on sale and two.
+
+14
+00:01:14,792 --> 00:01:41,645
+Rym: I don't want to be in a situation where I don't think about it and then like four years from now the drives die and I got to like oh and like buy a drive on Amazon and hope I get same-day shipping and all that nonsense and also because it's a five drive array with raid five if one drive dies the chance of a second drive dying actually increases immensely because The rebuild process is actually pretty intensive across all the remaining drives.
+
+15
+00:01:42,166 --> 00:01:45,942
+Rym: So I want to start the rebuild Immediately like as quickly as possible.
+
+16
+00:01:46,023 --> 00:01:47,652
+Rym: if a drive actually dies Well, isn't?
+
+17
+00:01:47,732 --> 00:01:53,912
+Scott: people used to say you should buy a mix of drives that are the same capacity from different Manufacturers.
+
+18
+00:01:53,992 --> 00:01:55,800
+Rym: I used to do that in the old days.
+
+19
+00:01:55,881 --> 00:01:57,026
+Rym: I do not do that anymore.
+
+20
+00:01:57,146 --> 00:02:06,581
+Rym: It's a pain in the ass Yep, so instead I figured this plan is just have a cold spare laying around if you do Good enough for a person in a house.
+
+21
+00:02:06,621 --> 00:02:08,550
+Scott: It's beyond good enough for a person in a house.
+
+22
+00:02:08,590 --> 00:02:12,392
+Rym: Yeah, especially because I'm gonna put a monthly snapshot of the whole NAS on glacier Mm-hmm.
+
+23
+00:02:12,633 --> 00:02:15,890
+Rym: that'll cost me at most like a hundred bucks a month.
+
+24
+00:02:16,475 --> 00:02:22,380
+Scott: backup of all GeekNights on S3 not even glacier costs like less than two dollars.
+
+25
+00:02:22,440 --> 00:02:30,803
+Rym: Yeah, dude all GeekNights with the raw Like black slash wave like a lossless masters.
+
+26
+00:02:31,405 --> 00:02:33,289
+Rym: is it less than half a terabyte?
+
+27
+00:02:33,330 --> 00:02:35,718
+Rym: Yeah Anyway, yeah, this is great.
+
+28
+00:02:35,758 --> 00:02:37,403
+Rym: I have nothing but good things to say about it.
+
+29
+00:02:37,544 --> 00:02:37,785
+Rym: Mm-hmm.
+
+30
+00:02:38,467 --> 00:02:44,885
+Scott: So I watched Die Hard yesterday cuz it's the season right and you know, there's a Christmas movie.
+
+31
+00:02:44,925 --> 00:02:46,710
+Scott: Yeah, there's an ongoing argument on the internet.
+
+32
+00:02:46,791 --> 00:02:49,689
+Scott: Everybody knows it's been discussed before it'll be discussed again.
+
+33
+00:02:50,031 --> 00:02:54,005
+Scott: Right that whether it is or is not a Christmas movie, but I can see both sides of that debate.
+
+34
+00:02:54,025 --> 00:02:56,115
+Scott: whatever you want to say Right.
+
+35
+00:02:56,519 --> 00:02:57,530
+Scott: I got to tell you something.
+
+36
+00:02:57,650 --> 00:03:01,450
+Scott: All right, you know, I'm not gonna say, you know, we're not gonna have the argument.
+
+37
+00:03:01,551 --> 00:03:06,981
+Scott: But I want to say if you haven't seen that movie recently The movie doesn't just take place during Christmas.
+
+38
+00:03:07,001 --> 00:03:08,990
+Scott: There is a fuck ton of Christmas in that movie.
+
+39
+00:03:09,010 --> 00:03:11,790
+Scott: Yeah, the end the song during the credits is let it snow.
+
+40
+00:03:11,975 --> 00:03:15,924
+Scott: Yeah The opening song is Christmas and Hollis and Bruce Willis is like.
+
+41
+00:03:15,965 --> 00:03:17,089
+Scott: that is Willis is like.
+
+42
+00:03:17,471 --> 00:03:19,139
+Scott: I thought you plays in Christmas music.
+
+43
+00:03:19,200 --> 00:03:21,150
+Scott: I was like, this is Christmas music.
+
+44
+00:03:21,452 --> 00:03:24,650
+Rym: No, the fact that it is a Christmas party is actually important.
+
+45
+00:03:25,131 --> 00:03:30,688
+Scott: He takes the gun to his back with you know Christmas themed tape that he finds.
+
+46
+00:03:30,708 --> 00:03:34,501
+Rym: in a way He is a Kris Kringle with a machine gun coming through the chimney.
+
+47
+00:03:34,561 --> 00:03:35,945
+Scott: Hey, ho ho ho.
+
+48
+00:03:36,347 --> 00:03:37,129
+Scott: I have a machine.
+
+49
+00:03:37,190 --> 00:03:38,032
+Scott: now I have a machine.
+
+50
+00:03:38,213 --> 00:03:41,322
+Scott: right there is Christmas and almost like every shot in the movie.
+
+51
+00:03:41,843 --> 00:03:43,689
+Scott: use that for your argument pleasure.
+
+52
+00:03:43,990 --> 00:03:44,110
+Scott: now.
+
+53
+00:03:44,191 --> 00:03:52,525
+Rym: I would say however that gremlins Fits more into the template of a Christmas special than Die Hard does whatever.
+
+54
+00:03:52,545 --> 00:03:58,894
+Rym: I haven't seen gremlins in More than a decade, however Possibly two decades.
+
+55
+00:03:59,316 --> 00:04:02,166
+Rym: Yeah, I think we should watch gremlins what you tell you.
+
+56
+00:04:02,286 --> 00:04:03,410
+Scott: All right, let's let's move on.
+
+57
+00:04:03,490 --> 00:04:04,438
+Scott: Do you see some news?
+
+58
+00:04:04,459 --> 00:04:05,750
+Rym: So there's a bunch of tech news.
+
+59
+00:04:05,790 --> 00:04:07,620
+Rym: We're gonna skip over all the Bitcoin stuff.
+
+60
+00:04:07,661 --> 00:04:13,010
+Rym: cuz you know, funnily enough I looked at slash dot right here in the poll right now is do you own Bitcoin?
+
+61
+00:04:13,431 --> 00:04:18,795
+Rym: No say no because I don't own any and Most people do not own any.
+
+62
+00:04:18,815 --> 00:04:21,005
+Rym: but I digress don't care about Bitcoin.
+
+63
+00:04:21,024 --> 00:04:22,069
+Rym: I'm gonna talk about it right now.
+
+64
+00:04:22,851 --> 00:04:33,219
+Rym: the technology discussion of Bitcoin really only comes down to the power usage thing at this point and when you know the network itself all This value of it has nothing to do with technology.
+
+65
+00:04:33,259 --> 00:04:36,250
+Rym: That is purely a Thursday show if we even bothered.
+
+66
+00:04:37,139 --> 00:04:40,568
+Rym: So yeah Scott's news, I guess I'll just introduce it.
+
+67
+00:04:41,731 --> 00:04:44,321
+Rym: Another laptop manufacturer is dead to the world, right?
+
+68
+00:04:44,341 --> 00:04:55,746
+Scott: So we talked about this way back that Lenovo laptops at one point shipped with some spywares Already built into them and for us that means basically even though it's only some models.
+
+69
+00:04:55,867 --> 00:04:56,870
+Rym: that's burn notice, right?
+
+70
+00:04:56,990 --> 00:05:00,082
+Scott: We can basically never trust a Lenovo laptop ever again.
+
+71
+00:05:00,343 --> 00:05:02,030
+Scott: They it's like oh you do me wrong.
+
+72
+00:05:02,151 --> 00:05:03,783
+Scott: It's only one time you got to do me wrong.
+
+73
+00:05:03,803 --> 00:05:04,649
+Scott: You know, how do I know?
+
+74
+00:05:05,030 --> 00:05:12,485
+Rym: It's like if I do I know if I bought a gun and it had a malware in it Occasionally the bullet would run circular and hit me instead, right?
+
+75
+00:05:12,525 --> 00:05:13,770
+Scott: It's like you fucked up one time.
+
+76
+00:05:13,850 --> 00:05:18,550
+Scott: It's like sure there might be other manufacturers one time you fucked up in an egregious way, right?
+
+77
+00:05:18,630 --> 00:05:21,030
+Scott: And it's like people like well, how do you know you can trust Dell?
+
+78
+00:05:21,150 --> 00:05:23,670
+Scott: It's like I don't know but I know I can't trust Lenovo.
+
+79
+00:05:24,071 --> 00:05:28,530
+Rym: It's the difference between negligence and what I would term gross necklace, right?
+
+80
+00:05:28,630 --> 00:05:34,490
+Scott: Oh, it's like it's possible that every pot lab major laptop manufacturer is putting evil shit on their computers.
+
+81
+00:05:34,951 --> 00:05:35,513
+Scott: It was hard.
+
+82
+00:05:35,794 --> 00:05:42,109
+Scott: it was all the ones that definitely have been caught doing so in the past in favor of the ones who have Not been caught yet.
+
+83
+00:05:42,331 --> 00:05:47,930
+Rym: And frankly it is hard for me to have said never buy Lenovo again because my current life is probably still the best one.
+
+84
+00:05:48,150 --> 00:05:53,227
+Rym: Yeah, my current laptop is a Lenovo except for the spyware from before the spyware thing happened.
+
+85
+00:05:53,287 --> 00:05:54,853
+Rym: It's now 230.
+
+86
+00:05:54,853 --> 00:05:57,965
+Rym: It is such a great laptop that I bought in 2009 and it's still great.
+
+87
+00:05:59,270 --> 00:06:02,302
+Rym: It's my primary laptop today and I love it other than the spyware part.
+
+88
+00:06:02,322 --> 00:06:02,884
+Scott: They're just fine.
+
+89
+00:06:02,984 --> 00:06:03,245
+Scott: Yes.
+
+90
+00:06:03,346 --> 00:06:18,708
+Scott: Anyway, it's News is that HP has been caught with a key logger built into their like Synaptics keyboard driver or whatever which is extra funny because apparently this happened in May.
+
+91
+00:06:18,788 --> 00:06:22,264
+Scott: in May They got caught with a key logger built into the audio driver.
+
+92
+00:06:22,304 --> 00:06:26,370
+Scott: And basically they've said Crap, those were left in there accidentally.
+
+93
+00:06:26,511 --> 00:06:32,990
+Scott: We were supposed to know they were in there for debugging purposes and we were supposed to remove them Which is actually kind of believable.
+
+94
+00:06:33,472 --> 00:06:38,429
+Scott: Knowing how these industry works and how do you know the dev people who are in charge of making the stuff for the lattice?
+
+95
+00:06:38,449 --> 00:06:38,710
+Scott: probably?
+
+96
+00:06:38,870 --> 00:06:40,354
+Scott: Work, that's probably true.
+
+97
+00:06:40,414 --> 00:06:42,099
+Scott: It's a likely believable story.
+
+98
+00:06:42,119 --> 00:06:45,789
+Scott: Yeah, but you can't prove it, you know, I can't trust you.
+
+99
+00:06:45,830 --> 00:06:49,190
+Scott: now It doesn't matter whether you it's true or you put it out there maliciously.
+
+100
+00:06:51,051 --> 00:07:01,950
+Rym: Trust you now here is one of the most dangerous types of vulnerabilities right because it gets raw Credentials and if you don't have two factors set up on something your apps.
+
+101
+00:07:02,171 --> 00:07:03,698
+Rym: Yep, so type in a credit card.
+
+102
+00:07:03,738 --> 00:07:06,050
+Scott: do not buy any HP computer.
+
+103
+00:07:06,232 --> 00:07:08,168
+Scott: And again, you know, I'm sure we've said this enough.
+
+104
+00:07:08,632 --> 00:07:13,858
+Scott: Basically do not buy any pre-built computer that has the software pre-installed.
+
+105
+00:07:13,958 --> 00:07:19,754
+Scott: always get a computer and install the software yourself unless it is from an ultra ultra ultra Trustworthy place.
+
+106
+00:07:20,096 --> 00:07:21,442
+Scott: It's hard to do that with a laptop.
+
+107
+00:07:21,663 --> 00:07:29,526
+Rym: In fact, actually my Lenovo laptop I paid for a generic Windows license because that was the only way to install generic windows on it.
+
+108
+00:07:29,566 --> 00:07:34,229
+Rym: because the old OEM key nonsense Yeah, and I was willing to pay that money and I'm glad I did.
+
+109
+00:07:35,151 --> 00:07:39,190
+Rym: But at the same time the problem with laptops is that you can build your own computer.
+
+110
+00:07:39,733 --> 00:07:41,582
+Rym: You can't really build your own laptop.
+
+111
+00:07:41,602 --> 00:07:43,070
+Scott: You can but it won't be a good one.
+
+112
+00:07:43,130 --> 00:07:43,652
+Scott: Yeah, I did.
+
+113
+00:07:44,114 --> 00:07:46,262
+Rym: you can build your own laptop in the same way.
+
+114
+00:07:46,302 --> 00:07:47,446
+Rym: You can build your own phone.
+
+115
+00:07:47,527 --> 00:07:56,050
+Rym: if you want to make something that is Objectively inferior to even like the most crap Oh commercial option then yeah, you can build your own laptop.
+
+116
+00:07:56,473 --> 00:07:57,318
+Rym: It's gonna suck.
+
+117
+00:07:57,580 --> 00:07:58,990
+Rym: your battery is not gonna last that long.
+
+118
+00:07:59,030 --> 00:08:00,114
+Scott: I said, you know, I haven't.
+
+119
+00:08:00,134 --> 00:08:02,341
+Scott: I have the Lenovo somewhere in the closet.
+
+120
+00:08:02,362 --> 00:08:02,944
+Scott: haven't used it.
+
+121
+00:08:03,064 --> 00:08:04,188
+Scott: iPad has just been king.
+
+122
+00:08:05,291 --> 00:08:07,217
+Scott: Yeah, well, I got the pro iPad though.
+
+123
+00:08:07,317 --> 00:08:11,470
+Rym: I do things on my laptop regularly that require a real operating system.
+
+124
+00:08:12,032 --> 00:08:12,553
+Scott: I do not.
+
+125
+00:08:12,874 --> 00:08:13,697
+Rym: Yeah, I play games.
+
+126
+00:08:14,058 --> 00:08:15,723
+Rym: I run premiere like I play here.
+
+127
+00:08:15,743 --> 00:08:21,245
+Rym: I run the Adobe Premiere I plug a firewire mixer into audition.
+
+128
+00:08:21,426 --> 00:08:21,888
+Scott: I don't do that.
+
+129
+00:08:22,028 --> 00:08:32,270
+Rym: Yeah But I think I could run garage bin on here or the only laptop I think that I can say is pretty is guaranteed to have the least chance of this nonsense.
+
+130
+00:08:32,792 --> 00:08:36,246
+Rym: It's kind of like if you want an Android phone and you want it to be pure you gotta buy it from Google.
+
+131
+00:08:36,688 --> 00:08:39,096
+Rym: if you want A Windows laptop you want it to be pure.
+
+132
+00:08:39,116 --> 00:08:41,381
+Rym: You gotta buy the surface books.
+
+133
+00:08:41,804 --> 00:08:42,044
+Rym: Mm-hmm.
+
+134
+00:08:42,525 --> 00:08:45,415
+Rym: Cuz Emily has one and it's great Service.
+
+135
+00:08:45,455 --> 00:08:47,301
+Scott: yeah, I have a service pro at work is good.
+
+136
+00:08:47,442 --> 00:08:49,810
+Rym: She has the one with the performance base has a real video card.
+
+137
+00:08:49,870 --> 00:08:55,369
+Scott: It's also a Dell one is apparently super expensive, but you can even choose to not have IME on it when you buy.
+
+138
+00:08:55,489 --> 00:08:56,432
+Rym: Oh Interesting.
+
+139
+00:08:56,492 --> 00:09:02,349
+Scott: It's super expensive like super tough industrial meant for business corporate type, you know.
+
+140
+00:09:02,409 --> 00:09:09,988
+Rym: and If my laptop died, I'd either get an iPad Pro or more likely I'd get a Microsoft Surface device of some kind.
+
+141
+00:09:10,309 --> 00:09:23,609
+Scott: also You know, you know the Apple stuff I think is definitely trustworthy because you look at look at how much Apple goes on about protecting Your privacy and they do believe in that even though they charge you a fortune for it and even though our next news?
+
+142
+00:09:23,971 --> 00:09:26,923
+Scott: Yeah, but you may want to think twice because of our next news.
+
+143
+00:09:27,224 --> 00:09:30,513
+Rym: So there was a bug in OS X.
+
+144
+00:09:30,554 --> 00:09:32,040
+Scott: this is old news already a couple weeks.
+
+145
+00:09:32,261 --> 00:09:34,310
+Rym: Yeah, we just didn't talk about it because the schedule.
+
+146
+00:09:34,431 --> 00:09:42,068
+Rym: Yeah, I'm not gonna get into the technical details of it But the gist of it was there is a root account in your OS X devices that you never know about.
+
+147
+00:09:42,128 --> 00:09:42,670
+Rym: you don't use.
+
+148
+00:09:42,710 --> 00:09:43,817
+Rym: There's no password on it.
+
+149
+00:09:44,138 --> 00:09:52,809
+Rym: It's not something you're supposed to ever log in with Because it's still Unix even though it's OS X. but yeah, right like Ubuntu like I don't know if it's still that way.
+
+150
+00:09:53,791 --> 00:10:08,370
+Scott: Yeah, Ubuntu does something slightly different from other Linux distributions where there is a root account because it's Linux But they basically put a random password on that root account so that you're never using that account And instead your main account is given sudo access.
+
+151
+00:10:08,531 --> 00:10:12,169
+Scott: It's now in the sudo group and that's how you're supposed to do any root type thing.
+
+152
+00:10:12,270 --> 00:10:13,960
+Rym: I think that's the right way to do it.
+
+153
+00:10:14,001 --> 00:10:15,208
+Scott: I think it's not a bad idea.
+
+154
+00:10:15,228 --> 00:10:18,250
+Scott: It's great I you know, I do that intentionally to other Linux machines.
+
+155
+00:10:18,290 --> 00:10:19,536
+Scott: They do not have it set that way.
+
+156
+00:10:19,797 --> 00:10:26,544
+Rym: generally a server that's used by more than one person There is almost no reason any human should ever log in directly as root ever.
+
+157
+00:10:26,684 --> 00:10:28,270
+Scott: Yeah, just use the sudoers file.
+
+158
+00:10:28,531 --> 00:10:29,657
+Scott: Yeah, you want to know another.
+
+159
+00:10:29,677 --> 00:10:31,004
+Scott: here's another pro tip for you.
+
+160
+00:10:31,024 --> 00:10:31,788
+Rym: It's your sue?
+
+161
+00:10:31,808 --> 00:10:38,501
+Scott: no No, so imagine you're trying to edit a file that is owned by root and you are using sudo because you're not logged in as root.
+
+162
+00:10:39,032 --> 00:10:43,310
+Scott: Normally most people type in something sudo space vim space, right?
+
+163
+00:10:44,553 --> 00:10:46,142
+Scott: That is mostly just fine.
+
+164
+00:10:46,323 --> 00:10:46,846
+Scott: It will work.
+
+165
+00:10:46,967 --> 00:10:47,370
+Scott: Of course.
+
+166
+00:10:47,791 --> 00:10:52,570
+Scott: However, of course what will happen is you're basically running vim as root.
+
+167
+00:10:52,911 --> 00:10:59,990
+Scott: So vim has root permissions and now because it has root permissions it can edit the file Which is owned by root and save it and such.
+
+168
+00:11:00,070 --> 00:11:09,962
+Scott: However, this also means that vim or your other text editor of choice, but it should be vim is running as root Which means it could do other things with root permission.
+
+169
+00:11:09,982 --> 00:11:11,307
+Scott: Maybe got some vim plugins.
+
+170
+00:11:11,367 --> 00:11:12,170
+Scott: Who knows right?
+
+171
+00:11:12,611 --> 00:11:13,536
+Scott: You don't know what it can do.
+
+172
+00:11:13,576 --> 00:11:15,444
+Scott: Your text editor is not running as root.
+
+173
+00:11:15,786 --> 00:11:17,817
+Scott: There is a command sudo edit.
+
+174
+00:11:18,240 --> 00:11:28,546
+Scott: people don't know about this command But you type sudo edit space name a file and what that will do is launch your regular old text editor Whatever your default text editor is which is vim.
+
+175
+00:11:28,586 --> 00:11:41,399
+Scott: It should be And it will give it the sudo root permissions to edit the file but the text editor itself will run as your user and not as root and Thus will be much more secure.
+
+176
+00:11:41,439 --> 00:11:43,090
+Rym: So well, there's a similar thing.
+
+177
+00:11:43,110 --> 00:11:45,009
+Scott: You can learn to type sudo edits.
+
+178
+00:11:45,250 --> 00:11:52,678
+Scott: It was all one word sudo edit space file name instead of sudo space vim space file name and you will be Technically slightly more secure.
+
+179
+00:11:52,698 --> 00:11:53,684
+Scott: It'll probably never matter.
+
+180
+00:11:53,724 --> 00:11:54,347
+Scott: But hey, why not?
+
+181
+00:11:54,428 --> 00:11:54,790
+Scott: It's better.
+
+182
+00:11:54,950 --> 00:12:07,650
+Rym: So I will not get into the details of this because it is way too complex for this show let alone without showing you an Example, but another common example of where people think they need to be rude is when they're trying to do things like promiscuous packet capture.
+
+183
+00:12:08,792 --> 00:12:15,167
+Rym: And there are ways to set up permissions in your system such that a non Root user can do that sort of.
+
+184
+00:12:15,268 --> 00:12:16,337
+Scott: yes You need to give.
+
+185
+00:12:16,599 --> 00:12:28,019
+Scott: you need to take the necessary things and give them permissions on a group and then add your user to that group to give yourself the limited permission to access that Part, but anyway full root on Apple machines.
+
+186
+00:12:28,600 --> 00:12:32,070
+Scott: There's no password about running High Sierra the newest OS X.
+
+187
+00:12:32,331 --> 00:12:35,162
+Rym: There's no password on root because you should never log in as it.
+
+188
+00:12:35,222 --> 00:12:37,090
+Rym: it doesn't exist as far as most Apple users.
+
+189
+00:12:37,130 --> 00:12:39,963
+Scott: yeah, if you have a brand new OS X machine you type root and press enter.
+
+190
+00:12:39,983 --> 00:12:40,626
+Scott: you can't log in.
+
+191
+00:12:40,646 --> 00:12:54,184
+Rym: and Basically if you type root as the login on any of these Apple devices That's that was running the latest version of OS X and you try to log in with root With that with any password or no password, it'll fail.
+
+192
+00:12:54,224 --> 00:12:57,594
+Rym: if you click login as expected But what happens?
+
+193
+00:12:57,614 --> 00:12:59,661
+Rym: you click login a second time?
+
+194
+00:13:00,063 --> 00:13:01,287
+Scott: Well, no, it's actually.
+
+195
+00:13:01,388 --> 00:13:02,010
+Scott: that's not the case.
+
+196
+00:13:02,070 --> 00:13:08,350
+Scott: It's only in this one specific place and the system preferences menu where you try to unlock a specific screen.
+
+197
+00:13:08,410 --> 00:13:18,209
+Scott: Yeah and then Because of the way it works it sort of creates the root account with no password and makes it log in able whereas previously Wasn't there Yep.
+
+198
+00:13:18,311 --> 00:13:30,097
+Scott: So essentially once you see you basically go to the system preferences Right as a non root user type in some stuff push the button and now the account is created and now you can you know Fully created and now you can log in as it.
+
+199
+00:13:30,298 --> 00:13:33,790
+Scott: I found you can't just do it just immediately from the login screen.
+
+200
+00:13:34,092 --> 00:13:34,715
+Scott: You can only do.
+
+201
+00:13:34,735 --> 00:13:35,700
+Scott: you have to do this thing.
+
+202
+00:13:36,022 --> 00:13:37,510
+Scott: then you could do it from the login screen.
+
+203
+00:13:38,352 --> 00:13:38,837
+Rym: So there's.
+
+204
+00:13:39,161 --> 00:13:58,352
+Rym: I can't find the article again but I found one that actually went into a lot of interesting detail about like the background password files and like How this kind of bug could have been introduced because basically it's a logic error in that There's places in the back end to create accounts as a convenience for if an account doesn't exist It should.
+
+205
+00:13:58,633 --> 00:14:04,853
+Rym: there's places in the back end to check if an account exists and should be used and because of the order different things Were called.
+
+206
+00:14:05,476 --> 00:14:11,079
+Rym: if the account wasn't log in a bullet didn't have a password Some of the code would say oh, there's no password.
+
+207
+00:14:11,380 --> 00:14:12,665
+Rym: I guess this is a new account.
+
+208
+00:14:12,706 --> 00:14:13,689
+Rym: Let's get it all set up.
+
+209
+00:14:14,191 --> 00:14:14,292
+Scott: It's.
+
+210
+00:14:14,472 --> 00:14:15,375
+Scott: it's one of those.
+
+211
+00:14:15,717 --> 00:14:22,127
+Scott: it's one of those things that's really interesting and got a lot more press than other Vulnerabilities even though other vulnerabilities are actually much worse.
+
+212
+00:14:22,147 --> 00:14:25,842
+Scott: to do this You need physical access and a normal non root log into the machine, right?
+
+213
+00:14:26,203 --> 00:14:27,909
+Scott: So who has that right to your machine?
+
+214
+00:14:28,790 --> 00:14:31,021
+Scott: Unless you're in a corporate environments a little more serious, right?
+
+215
+00:14:31,042 --> 00:14:37,884
+Scott: Yeah, but the point is that It's notable and got a lot of press because it's something that literally anyone can do.
+
+216
+00:14:37,964 --> 00:14:39,490
+Scott: anyone go watch a video and do this.
+
+217
+00:14:39,571 --> 00:14:41,309
+Scott: No software required no coding.
+
+218
+00:14:41,349 --> 00:14:44,200
+Rym: no They were no terminals involved.
+
+219
+00:14:44,260 --> 00:14:45,444
+Scott: No, nothing you can able to do.
+
+220
+00:14:45,665 --> 00:14:46,387
+Scott: anybody can do.
+
+221
+00:14:46,428 --> 00:14:51,141
+Scott: a child can do it once they see the video from a completely logged out machine at any time.
+
+222
+00:14:51,402 --> 00:14:53,969
+Rym: and a lot of people run VNC.
+
+223
+00:14:54,210 --> 00:14:56,819
+Rym: Yep, and there were videos.
+
+224
+00:14:57,019 --> 00:14:59,848
+Rym: the day it broke a bunch of people just started randomly.
+
+225
+00:14:59,869 --> 00:15:01,013
+Scott: VNC You can remote.
+
+226
+00:15:01,093 --> 00:15:05,590
+Scott: if you can remote desktop to a Mac and connect you can and get to the system preferences screen.
+
+227
+00:15:05,630 --> 00:15:06,136
+Scott: You can do this.
+
+228
+00:15:06,520 --> 00:15:19,709
+Rym: Yep, so This was not the first Ridiculous vulnerability in High Sierra and apparently they even like the patch They released seems to have at one point undone their previous patch to fix this.
+
+229
+00:15:19,850 --> 00:15:26,890
+Scott: Yeah, so like while I do believe as I said before Apple believes about you know in protecting user privacy, right?
+
+230
+00:15:27,050 --> 00:15:30,930
+Scott: They're in the interest of selling devices not selling your data like Google and Facebook and whatnot.
+
+231
+00:15:32,752 --> 00:15:38,655
+Scott: Their software quality has been you know, not it's not just fanboys saying This like it's sort of.
+
+232
+00:15:38,755 --> 00:15:44,879
+Scott: it's somewhat objective that the software quality of Apple has been Decreasing ever so slightly as of late.
+
+233
+00:15:45,040 --> 00:16:00,921
+Rym: Well, I've seems I saw a great set of commentators UX people talking about how you can definitely see a point in the last several years where the UX of Apple devices has started to diverge more into Windows II Context menu II like the kinds of problems like.
+
+234
+00:16:01,242 --> 00:16:07,450
+Rym: they de-simplify the experience and they're starting to have Inconsistent experiences in a way that they wouldn't have say seven years ago.
+
+235
+00:16:07,490 --> 00:16:12,110
+Scott: You know in other Apple news Johnny I've the famous number one designer of Apple.
+
+236
+00:16:12,210 --> 00:16:19,577
+Scott: Oh, yeah, he is now back, you know sort of number one in charge of designing whereas for like a couple years He was taking a little backseat now.
+
+237
+00:16:19,617 --> 00:16:20,742
+Scott: He's back in the driver's seat.
+
+238
+00:16:20,822 --> 00:16:22,330
+Scott: So we'll see what comes of that.
+
+239
+00:16:22,611 --> 00:16:28,628
+Rym: Yep now on one hand if you have physical access to a computer you can compromise it.
+
+240
+00:16:28,728 --> 00:16:29,270
+Scott: That's correct.
+
+241
+00:16:30,112 --> 00:16:36,512
+Rym: You can protect the data by doing things like the true whatever the vault is in Microsoft like you can set up a window Drives.
+
+242
+00:16:36,553 --> 00:16:38,519
+Rym: Yeah, you can encrypt drives protect data.
+
+243
+00:16:38,880 --> 00:16:41,730
+Rym: You cannot protect like the system itself.
+
+244
+00:16:41,891 --> 00:16:47,030
+Rym: Someone could just mount volumes someone could just replace our physical security, right?
+
+245
+00:16:47,150 --> 00:16:47,543
+Scott: It's like you do.
+
+246
+00:16:47,750 --> 00:16:52,330
+Scott: Okay The computer is locked in a little vault and there's wires coming out to just a monitor as in keyboard.
+
+247
+00:16:52,551 --> 00:17:04,789
+Rym: but there is but there is definitely a line that is crossed when the only thing you need is The keyboard and mouse access to a screen that the system provides.
+
+248
+00:17:04,829 --> 00:17:16,790
+Rym: Yep So If you have an Apple device and you don't know anything about this if you have a Mac Yeah Go update your shit and generally just take updates because you don't really have a lot of control over these guys.
+
+249
+00:17:16,971 --> 00:17:20,230
+Scott: I think I also saw some people I guess before there was a fix.
+
+250
+00:17:20,369 --> 00:17:23,166
+Scott: They were like making a root account and setting a password on it to prevent.
+
+251
+00:17:23,469 --> 00:17:31,029
+Rym: Yep It's interesting because this is the kind of problem where if this occurred in say a Linux device I feel like it would have been caught a lot sooner.
+
+252
+00:17:31,851 --> 00:17:42,170
+Rym: But at the same time Linux people could like people who use a Linux device would be more capable of Recognizing the why with like the password files and doing what Scott just said just add a root.
+
+253
+00:17:42,250 --> 00:17:44,363
+Rym: I had a count and add a password and now it's good.
+
+254
+00:17:44,685 --> 00:17:45,328
+Rym: No one can log in.
+
+255
+00:17:46,132 --> 00:17:46,353
+Rym: It is.
+
+256
+00:17:46,493 --> 00:17:50,930
+Rym: you cannot expect someone who has this more streamlined Apple experience to be able to do something like that in a hurry.
+
+257
+00:17:51,772 --> 00:17:58,768
+Rym: And if Apple wants to be taken seriously as a Windows alternative They need to be able to stay ahead of these sorts of things.
+
+258
+00:18:04,913 --> 00:18:17,930
+Rym: But anyway things Of the day, so I found this pretty fascinating Documentary, it's not like the most high production value, but it was published pretty recently and it's the story of the Atari Jaguar.
+
+259
+00:18:19,172 --> 00:18:23,810
+Scott: I remember I was it must have been in like middle school and there was like a day camp or something.
+
+260
+00:18:24,012 --> 00:18:25,504
+Rym: Oh did some kids say and that's 64-bit.
+
+261
+00:18:26,291 --> 00:18:30,530
+Scott: Yeah, that's like when the game Pro came and I was like man Atari's making the 64-bit, you know.
+
+262
+00:18:30,871 --> 00:18:34,669
+Scott: And they're like, no one believe me, but I had the game Pro right there and they're holy shit.
+
+263
+00:18:35,152 --> 00:18:38,230
+Rym: I was at a not summer camp, but like this other thing.
+
+264
+00:18:38,331 --> 00:18:41,030
+Scott: But the thing is I looked at it and I immediately knew like that's no good.
+
+265
+00:18:41,271 --> 00:18:43,940
+Rym: Yeah, well because I was trained I was raised on Nintendo.
+
+266
+00:18:44,261 --> 00:18:45,365
+Rym: Sega was like tell.
+
+267
+00:18:45,405 --> 00:18:48,658
+Scott: looking at the console itself I didn't even see any games and I was like, that's no good.
+
+268
+00:18:48,738 --> 00:18:50,767
+Rym: I saw the controller and I was like what?
+
+269
+00:18:51,169 --> 00:18:55,705
+Scott: Yeah No, nope, but then I remember despite being a kid.
+
+270
+00:18:55,725 --> 00:18:57,210
+Scott: I had no desire.
+
+271
+00:18:57,311 --> 00:18:58,803
+Scott: It's like if someone bought me one.
+
+272
+00:18:58,844 --> 00:19:03,350
+Scott: I've been like, okay But like even as a middle school kid who fucking loved the shit out of video games.
+
+273
+00:19:03,430 --> 00:19:05,497
+Scott: I'm gonna play the same crappy video game all day.
+
+274
+00:19:05,517 --> 00:19:07,223
+Scott: I did not want one.
+
+275
+00:19:07,263 --> 00:19:09,110
+Scott: Like I had no desire for one whatsoever.
+
+276
+00:19:09,312 --> 00:19:10,425
+Rym: So I knew that the Annie.
+
+277
+00:19:10,486 --> 00:19:14,727
+Rym: as a kid I knew that the NES was an 8-bit system that the SNES was a 16-bit system.
+
+278
+00:19:15,993 --> 00:19:18,385
+Rym: I did not actually know what that meant.
+
+279
+00:19:18,787 --> 00:19:26,215
+Rym: when I was a child I sort of knew what it meant but not as much as I know now which is weird because I knew actually in detail how The MMC chips work.
+
+280
+00:19:26,255 --> 00:19:30,450
+Rym: the memory mappers that made NES game like it made real NES games possible.
+
+281
+00:19:30,490 --> 00:19:33,424
+Scott: The point is but I didn't know what to write the fuck over 32.
+
+282
+00:19:33,424 --> 00:19:35,452
+Scott: It went to 64.
+
+283
+00:19:35,452 --> 00:19:36,494
+Rym: But I remember.
+
+284
+00:19:36,575 --> 00:19:36,956
+Rym: you know what.
+
+285
+00:19:36,996 --> 00:19:39,242
+Scott: my computer my desktop computer, you know what.
+
+286
+00:19:39,282 --> 00:19:40,986
+Scott: this iPad Pro is a 64-bit computer.
+
+287
+00:19:43,351 --> 00:19:46,421
+Scott: So the Atari Jaguar also a 64-bit computer kind.
+
+288
+00:19:46,442 --> 00:19:46,622
+Rym: Yep.
+
+289
+00:19:46,963 --> 00:19:48,528
+Rym: So I remember big graph.
+
+290
+00:19:48,609 --> 00:20:11,770
+Rym: like you I said something something Jaguar is 64-bit because I was talking to all these nerds at the Starbase thing and One of the nerds who was my age, but who knew a lot more about computers like super nerd guy He was like actually it's not really 64-bit and explained in excruciating detail Why it was not actually a quote-unquote 64-bit system and I didn't know or care.
+
+291
+00:20:12,412 --> 00:20:13,034
+Rym: And it was just.
+
+292
+00:20:13,275 --> 00:20:13,958
+Rym: that's a memory.
+
+293
+00:20:13,998 --> 00:20:21,305
+Scott: the point is the graphics on the the Jaguar produces It's computing power are significantly less than that of the PlayStation.
+
+294
+00:20:21,426 --> 00:20:22,450
+Rym: It's you know what it's kind of like.
+
+295
+00:20:22,591 --> 00:20:35,530
+Rym: it's kind of like how the PlayStation 1 the Atari 7800 and the Nintendo Entertainment System are On a surface view actually very comparable in terms of performance game.
+
+296
+00:20:35,651 --> 00:20:41,796
+Scott: If you get an NES Donkey Kong cartridge and an Atari 7800 Donkey Kong cartridge They're pretty close and they could have.
+
+297
+00:20:42,398 --> 00:20:55,777
+Scott: and if you take an NES cartridge that does not use memory mappers Yeah, you can you take a Super Mario 3 or a Kirby's Adventure with the MMC 5 chip and compare that to a 7800. it looks like Elgar.
+
+298
+00:20:55,817 --> 00:21:00,250
+Rym: It looks like it just kills it right because all that all that's in the cartridge That's not in the console, right?
+
+299
+00:21:00,450 --> 00:21:11,816
+Scott: The but the NES console on its own with no cartridge help using the most basic cartridges is at the level of you know an Atari 7800 yeah baseball or Mario one at best.
+
+300
+00:21:11,876 --> 00:21:15,590
+Rym: look at any as games that before the MMC one ship.
+
+301
+00:21:15,690 --> 00:21:18,358
+Rym: That's not that far off from an Atari 7800.
+
+302
+00:21:18,358 --> 00:21:25,581
+Scott: the ones that have the classic label on them like gyro my yeah Balloon, but yeah those NES games.
+
+303
+00:21:25,641 --> 00:21:26,825
+Scott: That's what the Atari 7800 is equal to yep.
+
+304
+00:21:28,371 --> 00:21:31,867
+Rym: But the NES of course was actually as a platform way more capable.
+
+305
+00:21:31,927 --> 00:21:32,570
+Rym: similar story.
+
+306
+00:21:32,871 --> 00:21:39,490
+Rym: This is a 25-minute pretty fascinating documentary that gets into the entire story of the Atari Jaguar.
+
+307
+00:21:39,911 --> 00:21:43,100
+Rym: Okay, and it's actually pretty fascinating like there's some details.
+
+308
+00:21:43,140 --> 00:21:45,887
+Rym: I didn't know some of the people involved in the early days.
+
+309
+00:21:45,907 --> 00:21:51,110
+Rym: It's it's Terrifying that they were able to sell this as a good idea.
+
+310
+00:21:51,251 --> 00:21:54,510
+Scott: I'm guessing I know about half the story because I read game pros so much.
+
+311
+00:21:54,530 --> 00:21:56,529
+Scott: Yeah, then, but I don't know the whole story.
+
+312
+00:21:56,891 --> 00:21:57,795
+Rym: There's a similar one.
+
+313
+00:21:57,815 --> 00:22:00,868
+Rym: I thought about the 3do, but I wanted to go with this one because this one is 3do.
+
+314
+00:22:01,511 --> 00:22:03,569
+Scott: Yeah, I know a lot of 3do story also.
+
+315
+00:22:03,630 --> 00:22:09,668
+Rym: Yeah But the either taught our Jaguar was something that I wanted as a kid in the same way that I wanted an Atari.
+
+316
+00:22:09,728 --> 00:22:11,253
+Scott: links did Not want either one.
+
+317
+00:22:11,795 --> 00:22:14,564
+Scott: so the I got also a documentary.
+
+318
+00:22:14,604 --> 00:22:15,928
+Scott: someone posted this in the forum.
+
+319
+00:22:15,968 --> 00:22:16,490
+Scott: I forget who.
+
+320
+00:22:17,352 --> 00:22:19,688
+Scott: Good job posting the good thing right good job.
+
+321
+00:22:20,474 --> 00:22:23,798
+Scott: Anyway, so what this is is Something we are very familiar with.
+
+322
+00:22:23,838 --> 00:22:29,958
+Scott: I'm not sure how of all the listeners are familiar with it But there was a thing on the internet called time cube.
+
+323
+00:22:31,891 --> 00:22:34,827
+Rym: Time cube remember the internet used to be a much weirder place.
+
+324
+00:22:35,572 --> 00:22:38,319
+Rym: It still is a weird place But in that you'd like a zombie.
+
+325
+00:22:38,339 --> 00:22:42,076
+Rym: you go to a website that had something weird on it And that was not.
+
+326
+00:22:42,137 --> 00:22:44,486
+Rym: that would have been the equivalent of a thing of the day back then.
+
+327
+00:22:44,567 --> 00:22:45,979
+Scott: yeah like look Oh my god.
+
+328
+00:22:45,999 --> 00:22:46,729
+Rym: Look at this website.
+
+329
+00:22:46,931 --> 00:22:49,261
+Rym: It has an animation on it, and I don't know what it's for.
+
+330
+00:22:49,362 --> 00:22:55,249
+Scott: so time cube was his crazy website That was you know notable for its like large colorful text.
+
+331
+00:22:55,771 --> 00:23:02,350
+Scott: You know that looked like a really poorly made 90s website or dimensional time is a few right from Geo cities.
+
+332
+00:23:02,531 --> 00:23:04,457
+Scott: And basically it was clearly.
+
+333
+00:23:04,879 --> 00:23:05,381
+Scott: you know it's like.
+
+334
+00:23:05,401 --> 00:23:06,725
+Scott: did someone really believe this?
+
+335
+00:23:06,786 --> 00:23:08,050
+Scott: it was just a crazy website.
+
+336
+00:23:08,050 --> 00:23:14,874
+Rym: It had feelings of like an Illuminati type of thing like I used to think it was a joke because it read like Subgenius type stuff.
+
+337
+00:23:14,895 --> 00:23:15,757
+Scott: yeah, I read it.
+
+338
+00:23:16,018 --> 00:23:16,941
+Scott: You know subgenius.
+
+339
+00:23:17,021 --> 00:23:20,130
+Scott: actually recently the subgenius people have like revealed themselves.
+
+340
+00:23:20,250 --> 00:23:25,290
+Scott: Yeah, let everyone know it's a joke before it turns into a Scientology by accident before it's in a Scientology of accident.
+
+341
+00:23:25,375 --> 00:23:32,093
+Scott: But yeah It's like if you know this could have easily been another one of those like something someone made to be fake and the I did A fundamental idea.
+
+342
+00:23:32,534 --> 00:23:36,604
+Scott: you can sort of see why someone would think this completely wrong idea.
+
+343
+00:23:36,624 --> 00:23:42,943
+Scott: Is that there's four Simultaneous days in one day right which is like.
+
+344
+00:23:43,083 --> 00:23:45,150
+Scott: obviously not true, but you think about it.
+
+345
+00:23:45,170 --> 00:23:48,021
+Scott: well It's always midnight somewhere right.
+
+346
+00:23:48,362 --> 00:23:50,430
+Scott: and the earth you know you think about it.
+
+347
+00:23:50,510 --> 00:23:55,169
+Scott: You know the clock sort of has four quadrants because circle yeah, right?
+
+348
+00:23:55,570 --> 00:23:56,582
+Scott: Which is you know.
+
+349
+00:23:56,603 --> 00:23:57,170
+Scott: so it's like?
+
+350
+00:23:57,330 --> 00:24:04,788
+Scott: Oh, there's actually four days because when even though a quarter of a day has passed if we go from midnight to 6 a.m.
+
+351
+00:24:06,353 --> 00:24:08,924
+Scott: Some way somewhere else on earth has gone from 6 a.m..
+
+352
+00:24:08,944 --> 00:24:14,123
+Rym: To noon But Scott those cubes each have 16 quadrants within them.
+
+353
+00:24:14,204 --> 00:24:18,876
+Scott: No no it has four fours Don't say 16 you say four four.
+
+354
+00:24:18,936 --> 00:24:21,945
+Rym: no because four over 16 is cube divinity.
+
+355
+00:24:21,965 --> 00:24:30,050
+Scott: Yeah, anyway, so The rest of the site, it's basically some crazy nonsense idea right would not have stood out today.
+
+356
+00:24:30,251 --> 00:24:31,758
+Rym: But back then it was kind of like.
+
+357
+00:24:31,798 --> 00:24:34,150
+Rym: it was notable for being crazier.
+
+358
+00:24:34,611 --> 00:24:39,126
+Scott: Most other things you'd find on the internet and actually I can sort of see how people come to these ideas.
+
+359
+00:24:39,186 --> 00:24:50,531
+Scott: before I understood physics Or knew anything I had you know you have this very slim Understanding of the way things work like you see a model of an atom, and you're like hey that looks a lot like our solar System.
+
+360
+00:24:50,591 --> 00:24:51,674
+Rym: I get it right.
+
+361
+00:24:51,714 --> 00:24:52,898
+Rym: No you don't get it Rym.
+
+362
+00:24:53,239 --> 00:24:53,880
+Rym: You're six.
+
+363
+00:24:54,261 --> 00:24:57,370
+Scott: Yeah, I thought like when I was super young and stupid.
+
+364
+00:24:57,490 --> 00:24:58,494
+Scott: I thought well wait a minute.
+
+365
+00:24:58,856 --> 00:25:00,904
+Scott: You know things get more energy right.
+
+366
+00:25:01,185 --> 00:25:02,209
+Scott: temperature right.
+
+367
+00:25:02,229 --> 00:25:03,333
+Scott: yeah It's more energy.
+
+368
+00:25:03,916 --> 00:25:07,270
+Scott: the molecules move faster right if they get hot enough.
+
+369
+00:25:07,632 --> 00:25:10,345
+Scott: They approach the speed of light, but they can't go faster than the speed of light.
+
+370
+00:25:10,546 --> 00:25:13,076
+Scott: not allowed to write Oh, there's some rule that says you can't.
+
+371
+00:25:13,136 --> 00:25:16,328
+Scott: but my brain was like oh, I know why you can't.
+
+372
+00:25:16,589 --> 00:25:19,395
+Scott: because Obviously right you go faster.
+
+373
+00:25:19,777 --> 00:25:23,890
+Scott: if you go faster than the speed of light you go faster than time and you go forward in time.
+
+374
+00:25:23,950 --> 00:25:29,090
+Scott: That's why it looks like nothing can go faster than the speed of light because it just disappears when it gets too hot.
+
+375
+00:25:29,612 --> 00:25:35,632
+Rym: Logic where I was one sure that white holes exist on the other side of black holes and if you get too cold it slows Down.
+
+376
+00:25:35,793 --> 00:25:40,735
+Scott: if it goes below absolute zero it goes back it it gets stuck in time And it goes backwards in time.
+
+377
+00:25:40,755 --> 00:25:45,330
+Scott: if it gets even negative cold right net less than zero Kelvin's it goes backwards this time.
+
+378
+00:25:45,431 --> 00:25:51,910
+Scott: That's why we think nothing can get less than absolute zero And that's what I thought when I was a kid and you can see how that makes sense to someone who knows nothing.
+
+379
+00:25:51,971 --> 00:25:54,274
+Scott: I've noticed that I feel knows a little bit But knows nothing.
+
+380
+00:25:54,294 --> 00:26:03,187
+Rym: smart kids today like the like the couple generations after Millennials as soon as they think that first thing in these threads of our kid logic they immediately type it into Google.
+
+381
+00:26:03,427 --> 00:26:13,862
+Scott: yep, but anyway So you can see how someone with that kind of know a little bit But don't know enough, but has some sort of logic But is also mentally disturbed would think would believe in time cube.
+
+382
+00:26:14,123 --> 00:26:26,883
+Scott: and actually here's a documentary about The old man with mental problems who made time cube and believed in it and one other person who also may have Probably also believed in it and the only two people who ever believed in it.
+
+383
+00:26:27,003 --> 00:26:28,528
+Rym: actually I watched some of this.
+
+384
+00:26:28,548 --> 00:26:30,846
+Rym: it is terrifying and fascinating.
+
+385
+00:26:30,946 --> 00:26:41,589
+Scott: it is Fascinating but also a sad story of some mentally disturbed people but also a story of the internet culture and the nerd culture that surrounds these sort of things.
+
+386
+00:26:41,609 --> 00:26:43,923
+Scott: and You know it's it's.
+
+387
+00:26:44,368 --> 00:26:47,660
+Scott: uh It's a good story of 90s internet to know about.
+
+388
+00:26:48,262 --> 00:26:56,473
+Scott: and now you'll know if you if you don't know about time cube You should watch this so that you know what other people are talking about because very often people like us will say Ah time cube.
+
+389
+00:26:56,534 --> 00:27:00,367
+Scott: and just by saying time cube we can say a lot with very few words.
+
+390
+00:27:00,689 --> 00:27:01,050
+Rym: in fact.
+
+391
+00:27:01,191 --> 00:27:03,682
+Rym: I remember these specific instant way back.
+
+392
+00:27:03,742 --> 00:27:12,978
+Rym: This is earlier like old GeekNights We went to that open everything conference and the guy who gave the closing keynote the opening keynote Whatever whatever speech.
+
+393
+00:27:13,018 --> 00:27:19,228
+Rym: He gave the nut job was Great dangerously crazy and a dangerous bad person.
+
+394
+00:27:19,389 --> 00:27:25,569
+Rym: yes That dude like went on a crusade to remove our Wikipedia page because we talked about him.
+
+395
+00:27:25,993 --> 00:27:27,710
+Scott: I don't even know how he knew that we talked about him.
+
+396
+00:27:27,750 --> 00:27:31,250
+Rym: But these one of those people who I think Google's for himself like I'm just never gonna mention his name again.
+
+397
+00:27:31,250 --> 00:27:33,362
+Rym: Cuz I do not want to intersect with crazy again.
+
+398
+00:27:33,523 --> 00:27:33,985
+Scott: He's a crazy.
+
+399
+00:27:34,005 --> 00:27:34,850
+Scott: I wonder he's alive.
+
+400
+00:27:35,132 --> 00:27:35,939
+Scott: That's the kind of person.
+
+401
+00:27:35,979 --> 00:27:37,330
+Scott: I would not be surprised if they're dead.
+
+402
+00:27:37,350 --> 00:27:41,050
+Rym: He appears to be out there like aggressively going after people who have wronged him.
+
+403
+00:27:41,110 --> 00:27:45,446
+Rym: So I just don't even say but he starts giving this talk and everything dangerous nut.
+
+404
+00:27:45,627 --> 00:27:50,806
+Rym: we're all sitting here And we're being super quiet and everyone's just like sitting there like not saying anything.
+
+405
+00:27:50,826 --> 00:27:51,870
+Rym: cuz we were play crowd.
+
+406
+00:27:52,071 --> 00:27:59,783
+Scott: Well cuz the talk was supposed to be about something that was actually related to open and it started reasonable It started reasonably, but then I'm like he's not talking anything about openness.
+
+407
+00:27:59,823 --> 00:28:01,290
+Scott: and then the slides.
+
+408
+00:28:01,832 --> 00:28:05,147
+Scott: The the graphic design of the slides looked like he had a stroke.
+
+409
+00:28:05,469 --> 00:28:13,998
+Scott: yes They looked like slides that a crazy person would make in PowerPoint the kind of slides that what's-his-face made Secretary of Defense in the early 2000s.
+
+410
+00:28:14,380 --> 00:28:22,128
+Rym: I wrote time cube question mark on the piece of paper I had to take notes on and I kind of held it up because Scott was sitting behind me and some other people were.
+
+411
+00:28:22,148 --> 00:28:24,850
+Rym: and I hear Yeah, yeah.
+
+412
+00:28:25,332 --> 00:28:27,582
+Rym: And then everyone in the room started like it's time cube.
+
+413
+00:28:27,843 --> 00:28:29,390
+Rym: and then the dude left after his speech.
+
+414
+00:28:29,976 --> 00:28:31,390
+Rym: And I think I we Scott I stood up.
+
+415
+00:28:31,410 --> 00:28:33,741
+Rym: We're like so was that time cube?
+
+416
+00:28:33,781 --> 00:28:37,434
+Rym: and everyone's like that was time cube yeah So yeah, this.
+
+417
+00:28:38,017 --> 00:28:40,146
+Rym: this is interesting in the moment.
+
+418
+00:28:40,507 --> 00:28:41,170
+Rym: the book club book.
+
+419
+00:28:41,310 --> 00:28:43,437
+Rym: I think I have not a hundred percent decided.
+
+420
+00:28:43,457 --> 00:28:45,082
+Scott: I'm pretty sure are you so indecisive.
+
+421
+00:28:45,765 --> 00:28:46,708
+Rym: I'm calm 99% sure.
+
+422
+00:28:47,590 --> 00:28:48,916
+Rym: I'm going to make our next book club.
+
+423
+00:28:49,117 --> 00:28:49,921
+Scott: Why can't you just be 100% sure?
+
+424
+00:28:49,941 --> 00:28:50,081
+Scott: fine 100%.
+
+425
+00:28:50,081 --> 00:28:50,905
+Scott: it's there we go.
+
+426
+00:28:52,291 --> 00:28:53,476
+Rym: It's this new translation.
+
+427
+00:28:53,516 --> 00:28:54,500
+Scott: Why was that so hard?
+
+428
+00:28:54,540 --> 00:28:56,649
+Scott: What was what was the 1% you're holding out for uh?
+
+429
+00:28:58,691 --> 00:29:00,075
+Scott: Okay, that's 100%.
+
+430
+00:29:00,075 --> 00:29:09,744
+Rym: just give up the nature of the last decade of my career is to never Authoritatively promise anything ever because that is always a dangerous game.
+
+431
+00:29:09,764 --> 00:29:14,480
+Scott: you can promise a book that is published But anyway available on the kindle.
+
+432
+00:29:14,500 --> 00:29:20,043
+Rym: there's this new translation of the Odyssey And I've actually been meaning for a way the Odyssey is super old Rym.
+
+433
+00:29:20,104 --> 00:29:21,589
+Scott: It's ancient literally ancient.
+
+434
+00:29:21,931 --> 00:29:24,802
+Scott: Well, what could we possibly get from a new translation?
+
+435
+00:29:24,822 --> 00:29:26,670
+Scott: That would be different from in the previous translation.
+
+436
+00:29:26,730 --> 00:29:33,690
+Scott: So the thing what new thing is the humanity discovered that would somehow get the translation of the Odyssey to be more correct?
+
+437
+00:29:35,162 --> 00:29:38,849
+Rym: so This translation is done by a woman.
+
+438
+00:29:39,391 --> 00:29:43,582
+Rym: Okay, novel which already means that it may perhaps have a different perspective.
+
+439
+00:29:43,823 --> 00:29:46,590
+Scott: has any woman ever translated the Odyssey before?
+
+440
+00:29:47,554 --> 00:29:49,363
+Rym: This article right here says quote first woman.
+
+441
+00:29:49,403 --> 00:29:51,553
+Rym: to translate the Odyssey in English Don't don't.
+
+442
+00:29:51,593 --> 00:29:52,235
+Scott: the classes is.
+
+443
+00:29:52,295 --> 00:29:56,230
+Rym: Emily Wilson has given Homer's epic a radically contemporary voice, okay?
+
+444
+00:29:56,371 --> 00:29:57,075
+Scott: So is there some?
+
+445
+00:29:57,095 --> 00:29:59,450
+Scott: perhaps it's not a super.
+
+446
+00:30:00,552 --> 00:30:03,046
+Scott: You know direct translation that is literal.
+
+447
+00:30:03,087 --> 00:30:08,144
+Scott: there is perhaps You know a lot of a so a good writing added of our modern times.
+
+448
+00:30:08,204 --> 00:30:21,484
+Rym: the anecdote that made me extremely interested in this was around a particular the line in the beginning of the Odyssey where There is an unresolved debate as to what the word is.
+
+449
+00:30:21,504 --> 00:30:23,250
+Rym: Okay, like what does it mean?
+
+450
+00:30:23,410 --> 00:30:24,414
+Rym: How would it have been used in that?
+
+451
+00:30:24,454 --> 00:30:26,421
+Rym: like what does this sentence mean?
+
+452
+00:30:26,441 --> 00:30:28,910
+Rym: Mm-hmm sing to me of the man muse?
+
+453
+00:30:30,292 --> 00:30:42,025
+Rym: And it's basically tell me about a something man and people have debated apparently forever what the something is and Her translation is something no one has ever put forth before.
+
+454
+00:30:42,045 --> 00:30:44,032
+Rym: Yeah the word complicated.
+
+455
+00:30:44,052 --> 00:30:50,167
+Rym: hmm that intrigued me immensely because I have always had differing opinions as to whether or not.
+
+456
+00:30:50,227 --> 00:30:52,434
+Scott: what were the other few things people Said it was supposed to.
+
+457
+00:30:52,595 --> 00:30:53,961
+Rym: I'm not an expert on the Odyssey.
+
+458
+00:30:54,021 --> 00:30:56,010
+Scott: They just saw you why you made it your book club.
+
+459
+00:30:56,993 --> 00:31:00,388
+Scott: The last time I read the I only know about Cyclops isn't poking him in the eye.
+
+460
+00:31:00,428 --> 00:31:01,769
+Rym: last time I read the Odyssey
+
+461
+00:31:01,890 --> 00:31:02,976
+Scott: Sirens and not listening to him
+
+462
+00:31:03,378 --> 00:31:05,510
+Rym: was in my freshman year of high school
+
+463
+00:31:05,734 --> 00:31:07,654
+Scott: Not making him angry But also be him and
+
+464
+00:31:07,674 --> 00:31:25,718
+Rym: I read it for class and the other translation we read was like the stodgiest Translation on earth and I remember getting shit from my teacher Because I argued that Odysseus is kind of a shithead and kind of a jerk and that he is not Necessarily the hero that we're all making him out to be.
+
+465
+00:31:26,361 --> 00:31:29,110
+Rym: and my evidence was that when he gets away from the Cyclops.
+
+466
+00:31:29,150 --> 00:31:35,855
+Rym: he turns around starts taunting the dude and the Cyclops starts throwing rocks and kill some more of his men and I was told no shut up.
+
+467
+00:31:35,956 --> 00:31:40,313
+Rym: Odysseus is the hero and I want my vengeance Mm-hmm.
+
+468
+00:31:40,915 --> 00:31:41,136
+Rym: Also.
+
+469
+00:31:41,156 --> 00:31:44,690
+Rym: I've just been meaning to read the Odyssey again as an adult and this is a really good excuse.
+
+470
+00:31:44,710 --> 00:31:45,922
+Scott: Can I just read the pop-up book?
+
+471
+00:31:46,326 --> 00:31:46,729
+Scott: Do I have to?
+
+472
+00:31:47,431 --> 00:31:48,579
+Rym: We should do the pop-up book.
+
+473
+00:31:48,961 --> 00:31:50,229
+Scott: Can I just read the pop-up book?
+
+474
+00:31:50,872 --> 00:31:52,238
+Scott: I feel like you might miss out.
+
+475
+00:31:52,479 --> 00:31:55,210
+Rym: I feel like you might miss out on a complicated story.
+
+476
+00:31:55,491 --> 00:31:57,738
+Scott: Can I just watch the DuckTales episodes?
+
+477
+00:31:57,779 --> 00:32:01,010
+Scott: There's a two-parter of DuckTales that matches the Odyssey.
+
+478
+00:32:01,130 --> 00:32:01,753
+Scott: Can I watch that?
+
+479
+00:32:02,235 --> 00:32:05,910
+Rym: you could watch one of the many modern movies or read one of the many modern books?
+
+480
+00:32:06,070 --> 00:32:09,320
+Rym: That is actually just an analogy or allegory to the Odyssey.
+
+481
+00:32:09,340 --> 00:32:10,343
+Rym: Mm-hmm.
+
+482
+00:32:10,664 --> 00:32:11,647
+Rym: Yeah, I'm gonna make it that.
+
+483
+00:32:11,667 --> 00:32:12,770
+Rym: I think this will be interesting.
+
+484
+00:32:13,245 --> 00:32:21,742
+Rym: Okay And it'll be a salve to your wounds if you want to get away from people talking about ready player one Which will not be our book club book because I'm not willing to read it.
+
+485
+00:32:21,803 --> 00:32:23,690
+Scott: Wasn't it a book club book early on?
+
+486
+00:32:23,851 --> 00:32:24,427
+Scott: We didn't read it.
+
+487
+00:32:25,611 --> 00:32:26,536
+Scott: We definitely discussed it.
+
+488
+00:32:26,717 --> 00:32:27,721
+Rym: We discussed it at length.
+
+489
+00:32:27,802 --> 00:32:29,510
+Rym: I never read it because I know better.
+
+490
+00:32:30,431 --> 00:32:31,415
+Rym: You read it Emily read it.
+
+491
+00:32:31,455 --> 00:32:32,057
+Rym: I did not read it.
+
+492
+00:32:32,218 --> 00:32:32,700
+Scott: Not reading it.
+
+493
+00:32:33,061 --> 00:32:33,222
+Scott: Nope.
+
+494
+00:32:33,322 --> 00:32:35,819
+Scott: I mean, I'm not you're not talking about it I'm done with.
+
+495
+00:32:35,880 --> 00:32:39,395
+Rym: it Was the fifth season.
+
+496
+00:32:39,496 --> 00:32:40,580
+Rym: I've read the whole trilogy.
+
+497
+00:32:40,962 --> 00:32:41,464
+Rym: it's great.
+
+498
+00:32:41,644 --> 00:32:42,227
+Rym: You should read it.
+
+499
+00:32:42,267 --> 00:32:49,009
+Rym: You should read it all And like I it's Evangelion mixed with Ghost in the Shell at the end and that made me really happy.
+
+500
+00:32:50,330 --> 00:32:52,079
+Rym: Otherwise, we got a bunch of conventions coming up.
+
+501
+00:32:52,100 --> 00:33:00,237
+Rym: We're gonna be a packed south doing a panel we're gonna be at mag fest doing a bunch of panels and Yeah, we got nothing for the rest of the year.
+
+502
+00:33:00,257 --> 00:33:01,903
+Rym: and then in January there's a bunch of stuff.
+
+503
+00:33:01,924 --> 00:33:02,546
+Rym: Hmm.
+
+504
+00:33:02,807 --> 00:33:03,550
+Rym: Follow us on YouTube.
+
+505
+00:33:05,530 --> 00:33:06,436
+Rym: So headphones.
+
+506
+00:33:06,819 --> 00:33:08,289
+Rym: Yeah, so we're gonna be very clear here.
+
+507
+00:33:09,194 --> 00:33:12,230
+Rym: I guess earbuds have to be included in this conversation.
+
+508
+00:33:12,420 --> 00:33:13,633
+Scott: Okay So the thing is right.
+
+509
+00:33:13,733 --> 00:33:14,455
+Rym: here's do not.
+
+510
+00:33:14,516 --> 00:33:22,130
+Scott: for some reason even though headphones are something that just about everyone in You know has money even people who don't have a lot of money.
+
+511
+00:33:22,130 --> 00:33:28,170
+Scott: But anyone who lives in a modern society these days has most probably multiple pairs of headphones the thing everyone's got.
+
+512
+00:33:28,712 --> 00:33:31,829
+Scott: Yet people are always talking about them always buying them.
+
+513
+00:33:32,131 --> 00:33:37,672
+Scott: They're for sale like everywhere from the bodega to the fanciest stores pretty sure Place.
+
+514
+00:33:37,953 --> 00:33:42,570
+Rym: one of the first threads ever in the original gig nights forum was like what headphones should I buy?
+
+515
+00:33:42,810 --> 00:33:43,396
+Scott: Yeah, there was like what.
+
+516
+00:33:43,497 --> 00:33:47,602
+Scott: it's like a constant thing Like people are always talking about headphones as if they're.
+
+517
+00:33:47,722 --> 00:33:55,588
+Scott: it's almost like they're a disposable thing Even though you buy one and keep them for you hope like for a long time and it's like this thing.
+
+518
+00:33:55,648 --> 00:33:56,170
+Rym: Oh my god.
+
+519
+00:33:56,230 --> 00:33:57,394
+Rym: Yeah to July 2006.
+
+520
+00:33:57,394 --> 00:33:59,963
+Rym: This is one of the first threads in the forum.
+
+521
+00:34:00,083 --> 00:34:07,088
+Rym: the big headphones for his earbuds debate Yep, and I made the second comment and then you made the third comment cuz there weren't that many people back then.
+
+522
+00:34:07,188 --> 00:34:15,538
+Scott: anyway for some Reason my co-workers were like, you know The one of the things like my co-workers talk about is like they keep talking about headphones Like they can't get away from that discussion.
+
+523
+00:34:15,578 --> 00:34:16,181
+Scott: It's like why?
+
+524
+00:34:16,643 --> 00:34:18,050
+Scott: why is it that headphones?
+
+525
+00:34:18,570 --> 00:34:22,788
+Scott: There's one thing that should be so boring and has been like a solved problem since like the 70s or 80s.
+
+526
+00:34:24,431 --> 00:34:28,005
+Scott: Why is it such a constant thing that doesn't go away people?
+
+527
+00:34:28,025 --> 00:34:29,270
+Scott: there isn't like a final answer.
+
+528
+00:34:29,992 --> 00:34:31,558
+Scott: So many choices.
+
+529
+00:34:31,697 --> 00:34:38,806
+Rym: you might think the debate keeps going because of audiophiles and woo-woo but I found that that is the audiophile woo-woo side of the headphone.
+
+530
+00:34:38,827 --> 00:34:43,422
+Rym: debate is This whole other world that does not intersect with any of these conversations.
+
+531
+00:34:43,462 --> 00:34:44,063
+Rym: We've been having.
+
+532
+00:34:44,164 --> 00:34:44,344
+Scott: Nope.
+
+533
+00:34:44,606 --> 00:34:49,822
+Rym: Not at all and It really weirds me out because literally there are only two reasons.
+
+534
+00:34:49,944 --> 00:34:51,790
+Rym: I have ever bought headphones in my life.
+
+535
+00:34:52,551 --> 00:34:53,313
+Rym: Reason number one.
+
+536
+00:34:53,896 --> 00:34:55,542
+Rym: I do not currently own headphones.
+
+537
+00:34:55,723 --> 00:34:55,943
+Scott: Yeah.
+
+538
+00:34:56,204 --> 00:34:59,720
+Rym: reason number two the headphones I was using for something broke.
+
+539
+00:34:59,982 --> 00:35:00,203
+Scott: Mm-hmm.
+
+540
+00:35:01,088 --> 00:35:03,318
+Scott: I own The only other reason.
+
+541
+00:35:03,359 --> 00:35:05,936
+Rym: I own three pairs of headphones total.
+
+542
+00:35:06,322 --> 00:35:11,083
+Scott: I have Also three that I'm currently you have them are hanging right there.
+
+543
+00:35:11,103 --> 00:35:13,030
+Scott: I have three active pairs of headphones.
+
+544
+00:35:13,131 --> 00:35:15,390
+Scott: I might have some like free Apple one stuffed in a drawers.
+
+545
+00:35:15,430 --> 00:35:16,816
+Rym: Oh, yeah, I got a bunch of like shit.
+
+546
+00:35:16,856 --> 00:35:17,318
+Rym: Oh like I got.
+
+547
+00:35:17,459 --> 00:35:19,910
+Scott: I have three active pairs of headphones.
+
+548
+00:35:20,191 --> 00:35:21,536
+Rym: Yeah, two of mine are hanging right there.
+
+549
+00:35:21,576 --> 00:35:23,724
+Rym: The third ones are in this drawer right here because they're earbuds.
+
+550
+00:35:23,864 --> 00:35:27,355
+Rym: Yeah, so I Guess I'll start with that.
+
+551
+00:35:27,415 --> 00:35:39,770
+Rym: I have three use cases for the headphones and frankly I only wear Headphones that are big as opposed to headphones that are actually earbuds that go in my ear when I'm in my house.
+
+552
+00:35:40,392 --> 00:35:44,009
+Rym: I never ever bring those kinds of headphones anywhere.
+
+553
+00:35:44,209 --> 00:35:49,888
+Scott: now See, I would not mind wearing those around except the prop, you know, cuz I'm just wearing them.
+
+554
+00:35:49,928 --> 00:35:50,370
+Scott: It's fine.
+
+555
+00:35:51,072 --> 00:35:56,975
+Scott: the problem is you take them off and you've got these big-ass bulky headphones to carry around and that's Yep, right.
+
+556
+00:35:57,016 --> 00:35:59,310
+Scott: It's like standing on the subway with big headphones on.
+
+557
+00:35:59,671 --> 00:36:03,204
+Scott: Okay, as soon as I get off the subway and I take them off fuck.
+
+558
+00:36:03,485 --> 00:36:08,602
+Rym: but also big headphones Do not isolate sound as much as insertion.
+
+559
+00:36:08,822 --> 00:36:09,926
+Scott: We'll talk about that later.
+
+560
+00:36:09,946 --> 00:36:11,491
+Rym: All right, let's just talk about headphones then All right.
+
+561
+00:36:11,671 --> 00:36:15,024
+Scott: So the second headphone I got I also have you know a big.
+
+562
+00:36:15,044 --> 00:36:16,590
+Scott: I have a big headphone at home.
+
+563
+00:36:17,153 --> 00:36:20,270
+Scott: Right that goes over my ear, right and that is a you know.
+
+564
+00:36:21,532 --> 00:36:22,636
+Scott: And I have a big one at work.
+
+565
+00:36:22,716 --> 00:36:23,699
+Scott: and why do I have to?
+
+566
+00:36:24,121 --> 00:36:27,978
+Scott: because at work I need one that as I know It has noise canceling it at home.
+
+567
+00:36:28,018 --> 00:36:28,822
+Scott: I don't so at home.
+
+568
+00:36:28,842 --> 00:36:31,820
+Scott: I have one of better sound quality Yep, and I don't want to difference.
+
+569
+00:36:31,940 --> 00:36:33,570
+Scott: they're big so I don't want to carry them.
+
+570
+00:36:33,630 --> 00:36:37,950
+Scott: So I have one at work and one at home and then I have earbuds which I use for anywhere else.
+
+571
+00:36:38,010 --> 00:36:40,368
+Scott: That is not sitting at a desk that work or home.
+
+572
+00:36:40,489 --> 00:36:42,377
+Rym: Yep So here are my three use cases earbuds.
+
+573
+00:36:42,578 --> 00:36:43,723
+Rym: are that anytime?
+
+574
+00:36:43,763 --> 00:36:45,230
+Rym: I'm not at a desk at work or home.
+
+575
+00:36:45,350 --> 00:36:47,640
+Rym: Yeah at work work just provides a headset.
+
+576
+00:36:47,680 --> 00:36:48,263
+Rym: I just use that.
+
+577
+00:36:48,805 --> 00:36:49,910
+Rym: I don't really listen to music at work.
+
+578
+00:36:50,293 --> 00:36:51,383
+Scott: I listen to music a lot of work.
+
+579
+00:36:51,403 --> 00:36:52,190
+Rym: I used to but I'm too.
+
+580
+00:36:53,292 --> 00:36:55,509
+Scott: Most of my job is and I'll like watch YouTube at work.
+
+581
+00:36:55,770 --> 00:36:56,954
+Rym: Yeah, I'm.
+
+582
+00:36:56,994 --> 00:37:03,176
+Rym: so I'm thinking about bringing a nice set of headphones into listen to music like when I have more idle work But I'm still new at this job.
+
+583
+00:37:03,217 --> 00:37:04,402
+Rym: So I got too much like talking.
+
+584
+00:37:04,443 --> 00:37:06,412
+Scott: when you run Spotify in a Bloomberg term I can do it.
+
+585
+00:37:07,014 --> 00:37:10,144
+Rym: Well, my Bloomberg terminal is just like a regular computer.
+
+586
+00:37:10,646 --> 00:37:11,910
+Rym: I can just run the software on it.
+
+587
+00:37:11,970 --> 00:37:14,121
+Rym: Okay, I have rude I can do whatever I want.
+
+588
+00:37:14,201 --> 00:37:15,146
+Rym: I don't worry about that.
+
+589
+00:37:15,448 --> 00:37:18,578
+Rym: But uh Because I yeah, I got actually Amazon music.
+
+590
+00:37:18,598 --> 00:37:21,550
+Rym: like I do listen to music sometimes on the work headphones, which is not great.
+
+591
+00:37:22,294 --> 00:37:28,530
+Rym: so use case number two is Headset, it's not just that I want a headphone
+
+592
+00:37:28,792 --> 00:37:29,558
+Scott: It's a microphone,
+
+593
+00:37:29,639 --> 00:37:39,437
+Rym: but I want a microphone on it Because most there's a lot of use cases where I need to be able to listen to something and talk Usually in the context of gaming.
+
+594
+00:37:40,099 --> 00:37:42,610
+Rym: I don't particularly care about the quality of the talking.
+
+595
+00:37:42,670 --> 00:37:46,653
+Rym: It just has to be good enough right and I want it to be USB.
+
+596
+00:37:46,974 --> 00:37:59,181
+Rym: dumbest shit just works with any game and any Skype and anything and I really only use it for that purpose like it is my like normal Using a computer and I don't care that much about the quality.
+
+597
+00:37:59,221 --> 00:38:01,853
+Scott: Yeah, the thing is you don't care about the quality That's fine.
+
+598
+00:38:01,893 --> 00:38:05,710
+Scott: But the problem is even if you don't care about the quality, I've done a lot of research on this.
+
+599
+00:38:05,770 --> 00:38:11,526
+Rym: Oh, yeah, I think when I say I don't care about the quality I mean above a certain line that very things reach.
+
+600
+00:38:11,687 --> 00:38:20,926
+Scott: the research I've done on this is that even if you don't care about getting you know Low-quality audio and low-quality microphone if you buy a gaming headset out there 99% garbage.
+
+601
+00:38:22,530 --> 00:38:27,004
+Scott: Yeah, the price of them is always ridiculous compared to what you get.
+
+602
+00:38:27,144 --> 00:38:40,895
+Scott: even the expensive ones like they're good But for what you pay for them you could instead get Amazing headphones that are just headphones and a microphone and have money left over gaming headsets Pretty much or just a ripoff.
+
+603
+00:38:41,196 --> 00:38:47,769
+Scott: It's like sure you're not gonna be able to get a combined microphone and headphone in one unit You know.
+
+604
+00:38:47,890 --> 00:38:51,906
+Scott: But are you really gonna pay one or two hundred dollars extra just to combine the two things?
+
+605
+00:38:52,187 --> 00:38:52,970
+Scott: you can go a lot.
+
+606
+00:38:53,050 --> 00:38:56,830
+Scott: What a lot of people have been doing is going Amazon buy some great headphones.
+
+607
+00:38:56,971 --> 00:38:57,735
+Scott: They're like these people.
+
+608
+00:38:57,816 --> 00:39:04,050
+Scott: this headphone this Sony one is actually the one a lot of people A lot of great headphones you can buy of varying qualities and differences.
+
+609
+00:39:04,231 --> 00:39:12,696
+Scott: But I get ones that have a quarter regular old jack whatever but like for like a hundred less than a hundred bucks or maybe even less than 200 right that are great.
+
+610
+00:39:12,776 --> 00:39:14,321
+Scott: great for music great for everything.
+
+611
+00:39:14,642 --> 00:39:23,569
+Scott: and then get like a $10 clip-on microphone To clip to the wire of the headphone because the microphone that's on a gaming headset is a crappy $10 microphone.
+
+612
+00:39:24,070 --> 00:39:36,030
+Scott: Anyway, so you just clip that bad boy on there and now you get two wires go in your computer one for microphone one for Headphone and now you just saved a ton of money over the gaming headset and also improved on the quality of whole bun.
+
+613
+00:39:36,090 --> 00:39:46,890
+Rym: No, I think most people regardless of gaming headset or not Hey USB Headset that has a microphone and speakers is probably the best UX for almost anyone using computers.
+
+614
+00:39:47,412 --> 00:40:01,070
+Rym: Because the thing is they if they need a way to listen to sound they want they may listen to music but they're not gonna like freak out about the quality of the music and Head like the microphone built in most people do not have a mixer with a microphone boom.
+
+615
+00:40:01,230 --> 00:40:14,233
+Scott: well, there are what they do sell these days actually and a lot of people are actually way into these because You know you date even if you're not an audio file like the amps on like a sound card built into whatever your computer or Laptop is.
+
+616
+00:40:14,273 --> 00:40:16,145
+Scott: Oh, yeah, probably right crap.
+
+617
+00:40:16,226 --> 00:40:18,136
+Scott: Oh, right is They easily?
+
+618
+00:40:18,177 --> 00:40:19,224
+Scott: it's a USB stick.
+
+619
+00:40:19,345 --> 00:40:19,889
+Scott: That's tiny.
+
+620
+00:40:20,451 --> 00:40:27,235
+Scott: That's basically just an amp a USB port and one or at least one headphone hole and maybe Microphone hole or not.
+
+621
+00:40:27,355 --> 00:40:37,090
+Scott: and you know basically just turn your regular headphone and microphone or just headphone Into a USB one without needing some giant block of technology that comes with the gaming headset.
+
+622
+00:40:37,271 --> 00:40:41,704
+Scott: Yeah, and a lot of those actually make you know sound really terrific compared to.
+
+623
+00:40:41,724 --> 00:40:43,450
+Scott: you know, it's not audiophile nonsense.
+
+624
+00:40:43,610 --> 00:40:50,128
+Scott: It's just like oh an actual amp to drive real headphones that a sound card built into motherboard does not have.
+
+625
+00:40:50,329 --> 00:40:51,769
+Rym: yep Now I get away from that.
+
+626
+00:40:51,850 --> 00:40:55,552
+Rym: I'll skip my third use case but for that use like for now but at the summer.
+
+627
+00:40:55,592 --> 00:41:04,015
+Rym: for the third use case of my quality like headphones for the purposes of listening to music or Mastering audio or editing a video.
+
+628
+00:41:04,657 --> 00:41:08,827
+Rym: I have just like studio monitor headphones that I plug directly into a mixer.
+
+629
+00:41:08,847 --> 00:41:12,390
+Rym: Mm-hmm and I would not even don't have to do that.
+
+630
+00:41:12,430 --> 00:41:15,125
+Rym: Yes, if I if you do not have that use case if
+
+631
+00:41:15,145 --> 00:41:15,969
+Scott: you're not editing audio
+
+632
+00:41:16,331 --> 00:41:22,047
+Rym: Yes, or you're not the cat like if or listening to music is a specific hobby like
+
+633
+00:41:22,087 --> 00:41:24,536
+Scott: you're not doing anything else You're just laying there listening music
+
+634
+00:41:24,596 --> 00:41:31,249
+Rym: in which case you probably have some sort of like modern hi-fi system and you sit down Yeah in your chair close your eyes put your headphones on and listen to music for an hour.
+
+635
+00:41:32,030 --> 00:41:40,890
+Rym: but so I use this because I have a professional need to and I have a mixer that has all the right amps and drives and everything to where the computer has nothing to do with the quality.
+
+636
+00:41:41,690 --> 00:41:52,050
+Rym: But since that use case is weird the headset if you're gonna buy a headset the cheap Gaming ones are pretty much just as good as the expensive gaming ones might as well buy the cheap ones.
+
+637
+00:41:52,676 --> 00:41:59,507
+Rym: I did some research though And I tried cuz I bought that rig that Scott also bought and it was it had the rig it still.
+
+638
+00:41:59,547 --> 00:42:00,330
+Scott: I mean it kept working.
+
+639
+00:42:00,430 --> 00:42:01,073
+Scott: It didn't break.
+
+640
+00:42:01,394 --> 00:42:02,238
+Scott: mine had a broke.
+
+641
+00:42:02,579 --> 00:42:05,190
+Scott: Well, it had a bunch of good features, which is why I bought it.
+
+642
+00:42:05,230 --> 00:42:05,853
+Rym: So here's the deal.
+
+643
+00:42:05,893 --> 00:42:06,857
+Rym: that thing was expensive.
+
+644
+00:42:06,877 --> 00:42:09,930
+Scott: It wasn't that expensive, but it was definitely overpriced for what it was.
+
+645
+00:42:10,050 --> 00:42:13,185
+Rym: It was expensive compared to a like this gaming headset.
+
+646
+00:42:13,205 --> 00:42:14,330
+Scott: It was also really comfortable.
+
+647
+00:42:14,672 --> 00:42:17,610
+Rym: It was really one is really comfortable and I tried it at a pack.
+
+648
+00:42:17,690 --> 00:42:19,041
+Scott: So that's why I knew it was comfortable.
+
+649
+00:42:19,062 --> 00:42:19,445
+Scott: cuz I try.
+
+650
+00:42:19,465 --> 00:42:26,450
+Rym: yeah same It had a feature where you could plug it into your computer as two different sound cards.
+
+651
+00:42:26,651 --> 00:42:37,761
+Scott: Also the main the main feature I bought it for is you plugged your phone into it And now what you could do is you could hear your phone while you're gaming and let your phone could like interrupt your game which was actually a problem I had that it solved.
+
+652
+00:42:37,781 --> 00:42:42,064
+Scott: like I'm playing a game with headphones on and The phone rings or I get a text.
+
+653
+00:42:42,085 --> 00:42:42,649
+Scott: I don't know.
+
+654
+00:42:42,890 --> 00:42:44,495
+Rym: Oh, it was three way to a three way.
+
+655
+00:42:44,515 --> 00:42:49,350
+Scott: you can play music on the phone and listen to that music, right?
+
+656
+00:42:50,910 --> 00:42:51,433
+Scott: Music.
+
+657
+00:42:51,594 --> 00:43:02,126
+Rym: so I could like be on a discord server and Doing voice comms there and mixing that with the regular game Had a bunch of cool features in this little like volume puck.
+
+658
+00:43:02,146 --> 00:43:02,830
+Scott: It was really great.
+
+659
+00:43:02,950 --> 00:43:03,914
+Rym: It wasn't durable at all.
+
+660
+00:43:03,954 --> 00:43:04,737
+Rym: Like it fell apart.
+
+661
+00:43:04,778 --> 00:43:08,994
+Scott: Yeah, the ear the ear cup was all put, you know a nice squishy cushion Which is why it's so comfortable.
+
+662
+00:43:09,014 --> 00:43:12,910
+Scott: It just exploded in my proof mind the year and I snapped.
+
+663
+00:43:13,051 --> 00:43:17,945
+Scott: I couldn't get a replacement and when I went for warranty service They were like, oh you got to basically pay like a zillion dollars for a new one.
+
+664
+00:43:17,986 --> 00:43:20,390
+Rym: I was like screw you Yep, mine just snapped in to one day.
+
+665
+00:43:20,410 --> 00:43:22,621
+Rym: I literally put it on my head and it just so instead.
+
+666
+00:43:22,641 --> 00:43:26,378
+Scott: now what I have in my computer at home is I have like $10 Amazon speakers.
+
+667
+00:43:26,398 --> 00:43:34,010
+Scott: Yeah, and I have like a AKG headphone that I own really only use in streaming because otherwise you use the $10 Amazon speakers.
+
+668
+00:43:34,030 --> 00:43:34,097
+Rym: Yep.
+
+669
+00:43:34,270 --> 00:43:41,690
+Rym: so when I'm when I'm streaming I either use the I use the mixer with either the microphone boom or the countryman and I just either don't listen to the sound at all.
+
+670
+00:43:42,131 --> 00:43:47,930
+Scott: I used the microphone that's attached to the webcam or the microphone that I put on top of my camera.
+
+671
+00:43:48,312 --> 00:43:49,235
+Rym: Oh, I could use the way.
+
+672
+00:43:49,316 --> 00:43:51,244
+Rym: this webcam actually is a pretty good microphone.
+
+673
+00:43:51,264 --> 00:43:52,710
+Scott: Yeah webcam microphone just fine.
+
+674
+00:43:53,095 --> 00:43:54,010
+Rym: They used to not be good.
+
+675
+00:43:54,090 --> 00:44:02,250
+Scott: But now the problem is if your camera and microphone are not combined into one unit They may be out of sync when you stream if you're streaming, but otherwise, what do you care?
+
+676
+00:44:02,790 --> 00:44:10,492
+Rym: So I went out on a limb though And when I threw away my rig because it was kind of piece of garbage and also its microphone quality was like worse than cheap gaming.
+
+677
+00:44:10,512 --> 00:44:11,421
+Scott: Yeah, Oh way bad.
+
+678
+00:44:11,441 --> 00:44:15,302
+Rym: So Sennheiser makes pretty good general audio stuff.
+
+679
+00:44:15,342 --> 00:44:17,250
+Scott: Sennheiser headphones are very excellent.
+
+680
+00:44:17,532 --> 00:44:19,403
+Rym: Sennheiser makes a gaming headset.
+
+681
+00:44:19,443 --> 00:44:20,510
+Rym: That was actually pretty cheap.
+
+682
+00:44:21,431 --> 00:44:22,896
+Rym: So I bought it as what.
+
+683
+00:44:23,097 --> 00:44:24,080
+Rym: this was the literal.
+
+684
+00:44:24,421 --> 00:44:26,870
+Rym: last time I would try buying a quote-unquote gaming headset.
+
+685
+00:44:27,474 --> 00:44:28,339
+Rym: It actually works great.
+
+686
+00:44:28,460 --> 00:44:28,822
+Scott: It's fine.
+
+687
+00:44:29,004 --> 00:44:33,468
+Rym: And the microphone is Like ten times better than the rig.
+
+688
+00:44:33,529 --> 00:44:38,762
+Rym: sure It's not better than a real microphone But it's way better than any gaming heads that I've ever tried.
+
+689
+00:44:39,143 --> 00:44:40,990
+Rym: So I use it and it's fine.
+
+690
+00:44:40,990 --> 00:44:47,719
+Scott: Yeah, and if you're just like if you're just gaming and you're not streaming your face with a camera You don't care if it's a slight out-of-sync ness.
+
+691
+00:44:47,779 --> 00:44:53,518
+Scott: with your you know microphone you can have a separate microphone From the video that's on your face.
+
+692
+00:44:53,698 --> 00:44:56,690
+Rym: Oh, we got a mod mic user in the chat - it'll be totally anyway.
+
+693
+00:44:56,931 --> 00:44:57,615
+Scott: So let's talk.
+
+694
+00:44:57,655 --> 00:45:00,107
+Scott: Here's the main decisions you have to make when buying headphones.
+
+695
+00:45:00,147 --> 00:45:06,590
+Scott: Yeah Alright, so the first thing you got to decide is if you're gonna do some sort of noise cancelling or blocking or not?
+
+696
+00:45:06,750 --> 00:45:07,634
+Scott: Right, and there's there's.
+
+697
+00:45:07,674 --> 00:45:09,842
+Scott: many says right and it's like well, why would it?
+
+698
+00:45:09,962 --> 00:45:12,070
+Scott: why would you not do noise cancelling?
+
+699
+00:45:12,110 --> 00:45:17,227
+Scott: And the fact is if you don't have any kind of noise cancelling or blocking you're gonna get better audio quality.
+
+700
+00:45:17,287 --> 00:45:22,550
+Scott: the best the best Sounding headphones are what's known as open headphones the kinds that go over your ear in a big cup.
+
+701
+00:45:23,190 --> 00:45:29,117
+Scott: but people standing next to you can actually kind of hear what you're listening to because the headphones are open and You'll hear sound.
+
+702
+00:45:29,137 --> 00:45:31,070
+Rym: so like if I'm wearing my gaming headset playing overwatch.
+
+703
+00:45:31,170 --> 00:45:32,015
+Rym: It's open acoustics.
+
+704
+00:45:32,417 --> 00:45:38,130
+Rym: if Emily yells something from the other room or like the doorbell rings I'll hear it which is I wanted that in my gaming headset.
+
+705
+00:45:38,431 --> 00:45:42,447
+Rym: Yeah, I want to be able to hear the real world but other people can hear the music you're listening to.
+
+706
+00:45:42,527 --> 00:45:44,416
+Scott: but that's how you Get the best audio quality.
+
+707
+00:45:44,456 --> 00:45:45,722
+Scott: just that's the way acoustics work.
+
+708
+00:45:45,763 --> 00:45:47,290
+Scott: if you're in a studio, right?
+
+709
+00:45:47,551 --> 00:45:48,541
+Scott: You're using headphones.
+
+710
+00:45:48,602 --> 00:45:49,370
+Scott: people can you know?
+
+711
+00:45:49,410 --> 00:45:52,766
+Scott: If the volumes loud enough people sitting next to you can sort of hear what you're listening to.
+
+712
+00:45:52,786 --> 00:45:55,262
+Scott: but you're you know You're in a quiet studio room.
+
+713
+00:45:55,282 --> 00:45:58,677
+Scott: It doesn't really matter You know if there's no noises coming from out interrupting.
+
+714
+00:45:58,717 --> 00:46:03,190
+Rym: so closed acoustics physically block the sound to a reasonable degree.
+
+715
+00:46:03,672 --> 00:46:04,596
+Rym: Now it depends.
+
+716
+00:46:04,897 --> 00:46:09,014
+Rym: there's other factors, yes, they will block more sound yes But they won't sound.
+
+717
+00:46:09,054 --> 00:46:17,422
+Scott: the quality of the sound won't be as good and whatever you're listening to now in terms of Actual attempts to block outside sounds there are two technologies.
+
+718
+00:46:17,783 --> 00:46:21,256
+Scott: There is active noise cancelling and isolation.
+
+719
+00:46:21,276 --> 00:46:49,550
+Scott: so what active noise cancelling is is This actually you need power for the headphones a battery or some other source of power USB Something and Inside the headphones will be a microphone that you don't know about and that microphone will listen to the noises of the outside world And then it will see the sound waves because the microphone that's what it does It's these sound waves and it will generate exact opposite sound waves to create a cancelling like a wave in the ocean.
+
+720
+00:46:49,651 --> 00:46:51,848
+Scott: I just make the opposite wave and now the ocean is flat.
+
+721
+00:46:52,532 --> 00:46:55,222
+Scott: So basically this isn't block all noise.
+
+722
+00:46:55,503 --> 00:46:59,438
+Scott: if somebody says yell at you suddenly That's not sort of a constant wave.
+
+723
+00:46:59,498 --> 00:47:02,630
+Scott: it can't like predict that and make an opposite wave against someone talking.
+
+724
+00:47:03,131 --> 00:47:20,215
+Scott: But if there's a constant noise an air conditioner the engine in your car a lot of cars use this technology The sound of the tires against the road in your car Some sort of humming in the room, you know any sort of constant noise the sound of the the noise outside in the street in New York right that the wind.
+
+725
+00:47:20,556 --> 00:47:20,757
+Scott: right.
+
+726
+00:47:21,198 --> 00:47:24,730
+Scott: this will detect that noise make an opposite noise and cancel it.
+
+727
+00:47:25,011 --> 00:47:25,836
+Scott: So you don't hear that.
+
+728
+00:47:25,856 --> 00:47:28,470
+Scott: you only hear what you're listening to and that's active noise cancelling.
+
+729
+00:47:28,510 --> 00:47:33,683
+Rym: Oh, it's clever because it means that if a siren happens or someone yells at you You'll probably hear.
+
+730
+00:47:33,723 --> 00:47:35,234
+Scott: you can hear it Maybe a lot of times.
+
+731
+00:47:35,274 --> 00:47:38,990
+Scott: what will happen is we hear the beginning of the siren and then it'll slowly fade a little bit.
+
+732
+00:47:39,030 --> 00:47:41,298
+Scott: Yeah, it picks up on what's going on.
+
+733
+00:47:41,639 --> 00:47:41,900
+Scott: Yeah.
+
+734
+00:47:42,401 --> 00:47:44,769
+Rym: Now, of course the problem with these is one power and two.
+
+735
+00:47:45,535 --> 00:47:47,734
+Rym: They're not a hundred percent the power It's.
+
+736
+00:47:47,754 --> 00:47:48,449
+Scott: so I have a trip.
+
+737
+00:47:48,551 --> 00:47:50,090
+Scott: I have the like these Bose ones at work.
+
+738
+00:47:50,210 --> 00:47:57,109
+Scott: Everyone has them and it takes one triple-a battery and I'll have to change it like once a week and I'm listening a lot At work like eight hours a day, right?
+
+739
+00:47:57,491 --> 00:48:01,321
+Scott: So if you're not doing eight hours a day at work You're gonna change that battery even less than once a week.
+
+740
+00:48:01,602 --> 00:48:03,130
+Scott: pretty good one and love right?
+
+741
+00:48:04,034 --> 00:48:05,269
+Scott: So that's not a big problem.
+
+742
+00:48:05,953 --> 00:48:07,984
+Scott: Just bring one triple-a battery with you on your trip.
+
+743
+00:48:08,024 --> 00:48:08,466
+Scott: spare one.
+
+744
+00:48:08,486 --> 00:48:16,258
+Rym: You'll be good to go but also they're not that consistent like that really depends on the quality of the algorithms and the Hardware in the headphones themselves.
+
+745
+00:48:16,298 --> 00:48:22,749
+Scott: You can't stand next to the subway and like it'll still You'll still have to turn the volume up to be able to hear what you're listening to.
+
+746
+00:48:22,970 --> 00:48:24,615
+Scott: It's not super amazing.
+
+747
+00:48:24,655 --> 00:48:27,984
+Scott: And also it muddies the actual music you listen to a little bit.
+
+748
+00:48:28,144 --> 00:48:28,746
+Scott: Yep, right?
+
+749
+00:48:29,047 --> 00:48:31,498
+Scott: It's it's not huge It doesn't sound bad.
+
+750
+00:48:31,519 --> 00:48:33,050
+Scott: It's just it is noticeable.
+
+751
+00:48:33,231 --> 00:48:37,166
+Rym: This is why I prefer isolation because it physically blocks the outside.
+
+752
+00:48:37,206 --> 00:48:38,210
+Rym: sounds that you can't right.
+
+753
+00:48:38,250 --> 00:48:41,570
+Scott: So what isolation is is usually earbuds have isolation, right?
+
+754
+00:48:41,690 --> 00:48:43,960
+Scott: Do not get earbuds that are not isolating.
+
+755
+00:48:44,020 --> 00:48:51,727
+Scott: if you care about your hearing and you're in a loud place Because the way this works is you'd stick the earbuds in your ear and the earbuds are also earplugs.
+
+756
+00:48:52,249 --> 00:48:52,590
+Scott: That's it.
+
+757
+00:48:52,831 --> 00:48:54,198
+Scott: There's no technology.
+
+758
+00:48:54,258 --> 00:48:55,445
+Scott: It's literally just boop.
+
+759
+00:48:55,485 --> 00:48:56,330
+Scott: You plug up your ear.
+
+760
+00:48:56,390 --> 00:48:58,470
+Scott: So now all you can hear is what the headphones are doing.
+
+761
+00:48:58,731 --> 00:49:02,342
+Scott: You can't hear the outside world because you got fucking earplugs and I found that most.
+
+762
+00:49:02,462 --> 00:49:11,589
+Rym: it seems like I think these are the superior Solution but I found that there are I'd say like 20 to 30 percent of people just get freaked out by having something so deep In their ear and just can't wear them.
+
+763
+00:49:11,730 --> 00:49:13,117
+Scott: Well, I mean, it's not I mean in.
+
+764
+00:49:13,158 --> 00:49:16,374
+Scott: your doctor would basically tell you never stick anything in your ear But I think in.
+
+765
+00:49:16,414 --> 00:49:21,297
+Rym: your doctor would tell you to use these over loud earbuds Like yeah, here's the thing right.
+
+766
+00:49:21,357 --> 00:49:28,630
+Scott: if you go around using say the Apple default earbuds, which suck by the way Not the wireless ones, you know, and then you get the wireless one suck too.
+
+767
+00:49:28,730 --> 00:49:30,359
+Scott: But yeah, it's not the wireless part.
+
+768
+00:49:30,419 --> 00:49:32,490
+Rym: and then you go somewhere loud like a subway, right?
+
+769
+00:49:32,610 --> 00:49:35,681
+Scott: You go somewhere loud like a subway or some play any place.
+
+770
+00:49:36,283 --> 00:49:37,768
+Scott: a bus drives by you on the road.
+
+771
+00:49:37,808 --> 00:49:38,370
+Scott: You're in a city.
+
+772
+00:49:39,091 --> 00:49:43,110
+Scott: What's gonna happen is you're not gonna be able to hear what the audio coming from your headphones.
+
+773
+00:49:43,230 --> 00:49:45,256
+Scott: Your natural reaction is to turn up the volume.
+
+774
+00:49:45,738 --> 00:49:46,881
+Scott: But the fact is you're hearing.
+
+775
+00:49:46,921 --> 00:49:50,010
+Scott: damage right is determined by decibels over time.
+
+776
+00:49:50,412 --> 00:49:54,730
+Scott: So you're still hearing the bus and you're hearing the music you've made louder and it doesn't feel loud.
+
+777
+00:49:54,750 --> 00:50:00,598
+Scott: It doesn't feel like it's hurting but the amount of decibels you're putting into your ear over time is Damaging your hearing.
+
+778
+00:50:00,618 --> 00:50:06,326
+Scott: if you get isolation earbuds You know what as soon as I got them way back in the day like mid-2000s.
+
+779
+00:50:06,406 --> 00:50:07,230
+Rym: It was like night and day.
+
+780
+00:50:07,310 --> 00:50:08,074
+Rym: We got those edamote.
+
+781
+00:50:08,114 --> 00:50:14,903
+Scott: I went from putting my volume on my iPod iPod That's how long ago this was at like 75% now and like anything above 25% is too loud.
+
+782
+00:50:16,850 --> 00:50:18,236
+Scott: It hurts in fact isolation.
+
+783
+00:50:18,256 --> 00:50:21,910
+Rym: earbuds like I got some sure ones now because as much as the edamote ix are higher quality.
+
+784
+00:50:22,372 --> 00:50:26,370
+Rym: They're not that durable and I've had several break on me and they kept warranty replacing them.
+
+785
+00:50:26,430 --> 00:50:26,936
+Scott: They did keep.
+
+786
+00:50:26,977 --> 00:50:28,190
+Scott: so here's the thing my edamote ix.
+
+787
+00:50:28,210 --> 00:50:32,347
+Scott: They kept war plate replacing them for free with a warranty and they weren't very durable.
+
+788
+00:50:32,367 --> 00:50:32,950
+Scott: which upset me.
+
+789
+00:50:33,050 --> 00:50:39,772
+Scott: You know what happened the stupid Apple thing with the adapter to go in the lightning hole because my iPhone doesn't have a hood phone Hole anymore.
+
+790
+00:50:40,033 --> 00:50:46,930
+Scott: Yeah, thanks to that little adapter that little tiny wire the Etymotic jack doesn't go directly into my phone anymore.
+
+791
+00:50:47,031 --> 00:50:50,190
+Scott: It goes into a little wobbly white wire that then goes into a lightning hole.
+
+792
+00:50:50,871 --> 00:51:00,743
+Scott: since then the jack has not become damaged because it's not straining against this phone and The current pair of edamote ix that I have have lasted super long.
+
+793
+00:51:00,824 --> 00:51:02,730
+Scott: good to hear super long.
+
+794
+00:51:02,810 --> 00:51:07,950
+Scott: So if you have edamote ix and even if you have a phone that doesn't need a stupid lightning adapter.
+
+795
+00:51:08,231 --> 00:51:13,428
+Scott: Just get a tiny headphone extension cable and that will probably protect the jack on it from breaking.
+
+796
+00:51:13,689 --> 00:51:17,309
+Rym: now The it's not really a drawback is something you need to be aware of.
+
+797
+00:51:17,410 --> 00:51:23,930
+Scott: Ideally you get headphones with a replaceable cable and now they last forever because the shows always yours are like that I can replace every piece of them.
+
+798
+00:51:23,930 --> 00:51:25,999
+Scott: Yeah, the cable is the plate part that's gonna break.
+
+799
+00:51:26,180 --> 00:51:28,009
+Rym: the shares also have a little loop that goes over the top.
+
+800
+00:51:28,029 --> 00:51:30,678
+Rym: my ear That like holds them in better, but no whatever.
+
+801
+00:51:30,738 --> 00:51:31,521
+Rym: but there I mean it doesn't.
+
+802
+00:51:31,541 --> 00:51:34,190
+Rym: they're all use what's comfortable from a good brand.
+
+803
+00:51:34,390 --> 00:51:46,615
+Rym: Yeah, but what you're probably gonna want to buy if you get the those kinds of isolation earbuds is a little pass-through device that has speaker jacks on both ends and A little separate volume control.
+
+804
+00:51:47,076 --> 00:51:57,370
+Rym: because if you plug edamote ix or sure isolation earbuds into like an airplane's Jack to watch a movie the lowest volume setting is painful and loud.
+
+805
+00:51:57,510 --> 00:52:01,790
+Rym: Yeah, which think about how much to hearing damage you were getting if you were using regular headphones.
+
+806
+00:52:02,596 --> 00:52:03,463
+Rym: So you're gonna want to get these.
+
+807
+00:52:03,705 --> 00:52:12,750
+Rym: they're so cheap And you want to you I use these whenever I fly to be able to use my nice Insertion earbuds on the plane and not hear the plane noise all right, so we talked about noise cancelling.
+
+808
+00:52:12,991 --> 00:52:15,457
+Scott: We talked about open versus closed right.
+
+809
+00:52:15,497 --> 00:52:20,370
+Scott: the other main thing you got to decide these days in the year 2017 is wired verse wireless.
+
+810
+00:52:20,892 --> 00:52:22,859
+Rym: I am not a fan of wireless headphones.
+
+811
+00:52:22,919 --> 00:52:23,782
+Rym: I never have been.
+
+812
+00:52:23,802 --> 00:52:24,424
+Scott: why not?
+
+813
+00:52:24,886 --> 00:52:31,610
+Rym: because one When I listen to music or something I'm always next to the device that is generating the sound.
+
+814
+00:52:32,151 --> 00:52:35,526
+Rym: I don't have a use case of watch a movie on the TV with headphones on.
+
+815
+00:52:35,767 --> 00:52:37,238
+Scott: no definitely I don't have that use case.
+
+816
+00:52:37,258 --> 00:52:39,938
+Rym: some people do that thing But I don't especially.
+
+817
+00:52:39,958 --> 00:52:40,260
+Scott: you know.
+
+818
+00:52:40,300 --> 00:52:43,512
+Scott: that's good if you have like a family in a house And you want to watch a movie But not wake up.
+
+819
+00:52:43,553 --> 00:52:48,168
+Scott: people who are maybe upstairs the only devices might want to watch on the TV and not in your tablet.
+
+820
+00:52:48,449 --> 00:52:51,653
+Rym: my Headset is plugged directly into the only computer I'll ever use it on.
+
+821
+00:52:51,994 --> 00:52:56,690
+Rym: my nice studio monitor headphones are plugged directly into a real audio device.
+
+822
+00:52:57,316 --> 00:52:58,730
+Rym: So I have no reason to need a wireless.
+
+823
+00:52:59,472 --> 00:53:01,829
+Rym: Wireless is extra complication for no benefit for me.
+
+824
+00:53:02,111 --> 00:53:07,350
+Scott: So the reason I see is that the thing is I don't have any wireless headphones anymore, right?
+
+825
+00:53:07,770 --> 00:53:10,042
+Scott: I did have some Bluetooth ones that work for a while.
+
+826
+00:53:10,082 --> 00:53:16,610
+Scott: my previous work ones were Bluetooth And they were actually some weirdo brand no one ever heard of from on Amazon like there was like August or something.
+
+827
+00:53:17,413 --> 00:53:22,190
+Scott: But I got a Bluetooth adapter for the work laptop, and I and it totally worked and sounded great.
+
+828
+00:53:22,251 --> 00:53:23,790
+Scott: It was actually crazy comfortable.
+
+829
+00:53:24,472 --> 00:53:31,630
+Scott: The thing was is Bluetooth is just kind of flaky and yeah, but even with an iPhone I mean some people probably might not have that experience.
+
+830
+00:53:31,730 --> 00:53:36,170
+Scott: But my experience any Bluetooth using any the combination of devices is always flaky.
+
+831
+00:53:36,451 --> 00:53:41,750
+Scott: There's pairing and unpairing and repairing and it doesn't just always just work.
+
+832
+00:53:41,851 --> 00:53:42,575
+Scott: And that's annoying.
+
+833
+00:53:42,757 --> 00:53:52,793
+Scott: all right, and there was also used to be issues We're like well like as the Bluetooth profile has changed over time like the audio quality like you need compression because Bluetooth didn't have Bandwidth.
+
+834
+00:53:52,933 --> 00:53:56,270
+Scott: yeah, then there wasn't stereo, and then there was stereo, and now it's even better.
+
+835
+00:53:56,351 --> 00:54:01,286
+Scott: They added a different profile But you know the quality is not compared to wire.
+
+836
+00:54:01,346 --> 00:54:03,216
+Scott: the quality isn't there And there's a hassle to it.
+
+837
+00:54:03,599 --> 00:54:10,490
+Rym: and for my phone like the other use case I didn't mention I always have my phone in my pocket within cable distance of my ears.
+
+838
+00:54:10,510 --> 00:54:14,385
+Scott: Yeah, I've never had a problem with the cabling versus distance.
+
+839
+00:54:14,425 --> 00:54:15,610
+Scott: That's never been an issue for me.
+
+840
+00:54:16,031 --> 00:54:20,790
+Scott: It's just that even if I'm just sitting at my desk even if I'm just standing on the subway with my phone, right?
+
+841
+00:54:21,152 --> 00:54:22,258
+Scott: Wires are still annoying.
+
+842
+00:54:22,579 --> 00:54:24,510
+Scott: it would be nice for the wires to not be there.
+
+843
+00:54:24,550 --> 00:54:30,060
+Scott: It's like the my headphone wires in the way of my mouse wire and occasionally I got like swatted away or routed around something.
+
+844
+00:54:30,541 --> 00:54:31,003
+Scott: You know it's.
+
+845
+00:54:31,123 --> 00:54:38,770
+Scott: I would rather the wire not be there Yeah, but of course this means I got to bring in the other hassles like dealing with Bluetooth or recharging the headphones.
+
+846
+00:54:38,810 --> 00:54:41,459
+Scott: It's gonna be way more recharging than for the noise cancelling.
+
+847
+00:54:41,479 --> 00:54:44,829
+Scott: you can be charging that shit every day if you got wireless headphones, right?
+
+848
+00:54:45,730 --> 00:54:51,890
+Scott: however There is a new revolution in the wireless headphone, and that is the new Apple stuff.
+
+849
+00:54:52,191 --> 00:54:54,237
+Scott: I just called whatever they call it right.
+
+850
+00:54:54,377 --> 00:54:58,590
+Scott: Apple has a non bluetooth protocol for connecting headphones to Apple devices.
+
+851
+00:54:59,012 --> 00:55:02,109
+Scott: That just works doesn't have any of the hassle and the quality is way better.
+
+852
+00:55:03,073 --> 00:55:14,507
+Scott: But in order to use this I'd have to buy brand new headphones that use Apple stuff which are probably gonna be beats headphones because Apple owns beats now and Yeah, so I haven't bought those.
+
+853
+00:55:15,393 --> 00:55:19,190
+Rym: So the other two questions are if you need a microphone?
+
+854
+00:55:19,592 --> 00:55:20,897
+Rym: Does it need to be high quality?
+
+855
+00:55:20,937 --> 00:55:24,010
+Rym: and the answer is very simple if you don't care?
+
+856
+00:55:24,690 --> 00:55:25,734
+Rym: Any old headset will do.
+
+857
+00:55:26,156 --> 00:55:31,269
+Rym: if the microphone has to be high quality you're buying a separate microphone However, you do it.
+
+858
+00:55:31,310 --> 00:55:35,847
+Scott: So here's the thing is that I've noticed there's a lot of microphones on gaming headsets and stuff like that.
+
+859
+00:55:35,887 --> 00:55:39,158
+Scott: in my experience I've actually not been low quality.
+
+860
+00:55:39,559 --> 00:55:41,384
+Scott: They just been really fucking quiet.
+
+861
+00:55:41,605 --> 00:55:43,190
+Rym: That's partly because they're low quality.
+
+862
+00:55:43,290 --> 00:55:51,953
+Scott: So it's like even if you turn up the volume on the recording volume all the way turn the levels up all the way Bring that noise floor all the way up Nobody can hear you.
+
+863
+00:55:51,973 --> 00:55:54,561
+Scott: you use the decibel boost in your sound card settings.
+
+864
+00:55:54,802 --> 00:55:57,972
+Scott: people still can't hear you when you're talking on your counter Strike.
+
+865
+00:55:58,012 --> 00:56:00,729
+Rym: that's just because those are shitty microphone, right?
+
+866
+00:56:01,530 --> 00:56:03,799
+Scott: Really people don't need the greatest audio quality.
+
+867
+00:56:03,819 --> 00:56:06,629
+Scott: if you're not recording a radio show like GeekNights the quality doesn't matter.
+
+868
+00:56:06,649 --> 00:56:11,830
+Scott: as long As people can hear what you're saying you're just telling them go left or they set up us the bomb, right?
+
+869
+00:56:11,991 --> 00:56:12,838
+Scott: What do you need to say?
+
+870
+00:56:12,899 --> 00:56:14,149
+Scott: you just need to say what's going on?
+
+871
+00:56:14,410 --> 00:56:16,143
+Scott: Yep, but you need people to hear.
+
+872
+00:56:16,163 --> 00:56:17,150
+Scott: you need to be loud enough.
+
+873
+00:56:17,230 --> 00:56:25,161
+Scott: So that's the thing you're gonna be looking for and for most people who are not making Singing or performing or do making sure this way.
+
+874
+00:56:25,221 --> 00:56:26,806
+Rym: you want really good quality.
+
+875
+00:56:26,827 --> 00:56:28,794
+Scott: just need volume So people can hear you.
+
+876
+00:56:28,974 --> 00:56:32,327
+Rym: you're listen to our old episode on microphones and buy the best microphone.
+
+877
+00:56:32,428 --> 00:56:32,548
+Rym: like.
+
+878
+00:56:32,568 --> 00:56:32,890
+Rym: that's it.
+
+879
+00:56:33,090 --> 00:56:34,576
+Rym: Yeah, mod mics are pretty good.
+
+880
+00:56:34,957 --> 00:56:39,533
+Rym: If you want to like stick a microphone on some good headphones tons of microphones out there It'll be just fine.
+
+881
+00:56:39,914 --> 00:56:44,008
+Rym: So the other question is do you need fancy headphones or not?
+
+882
+00:56:44,048 --> 00:56:44,670
+Rym: And by fancy?
+
+883
+00:56:44,910 --> 00:56:45,753
+Rym: I mean people.
+
+884
+00:56:45,814 --> 00:56:49,750
+Rym: the audio people will often say studio headphones or monitor headphones.
+
+885
+00:56:50,232 --> 00:56:53,830
+Rym: That doesn't necessarily mean that's gonna make your music sound the best.
+
+886
+00:56:54,312 --> 00:56:57,627
+Rym: That means it's gonna sound the closest to the signal, right?
+
+887
+00:56:57,667 --> 00:57:02,303
+Rym: So basically Yes, that is I need these headphones these monitor headphones.
+
+888
+00:57:02,664 --> 00:57:04,310
+Rym: They will not make my music sound better.
+
+889
+00:57:04,671 --> 00:57:09,430
+Rym: They'll let me hear exactly whatever garbage I made in my signal processing pipeline.
+
+890
+00:57:09,772 --> 00:57:13,310
+Rym: So I know what to change in it to make it sound better across the board.
+
+891
+00:57:13,370 --> 00:57:18,230
+Scott: I see if you look at an equalizer right an equalizer You've probably seen an equalizer even if you didn't know what it is.
+
+892
+00:57:18,310 --> 00:57:22,396
+Scott: if you don't if you don't know what I'm talking about just Google for a picture of equalized and be like Oh that right.
+
+893
+00:57:22,678 --> 00:57:26,270
+Scott: and most people on their audio devices They're lucky if you have any equalizer.
+
+894
+00:57:26,350 --> 00:57:38,330
+Scott: But if you do a lot of times just a bass knob and a treble knob Sometimes you actually get a full equalizer and basically all you're doing is saying Okay, the low frequency sounds are louder or quieter the high frequency sounds are louder.
+
+895
+00:57:38,671 --> 00:57:41,622
+Rym: I've learned over the years that humans cannot be trusted with this power.
+
+896
+00:57:41,642 --> 00:57:44,010
+Rym: No, and they make terrible decisions.
+
+897
+00:57:44,150 --> 00:57:47,863
+Scott: Yes, so for example, you could take you're listening to some music.
+
+898
+00:57:48,124 --> 00:57:53,108
+Scott: You could make the low sounds louder Which would make the bass no bass is going doom doom doom doom.
+
+899
+00:57:53,430 --> 00:57:55,979
+Scott: You could make the bass go doom doom doom doom doom.
+
+900
+00:57:56,180 --> 00:57:59,050
+Scott: and now the sound where the person say there's like a little hi-hat going.
+
+901
+00:58:00,114 --> 00:58:01,163
+Scott: You could make that really quiet.
+
+902
+00:58:01,203 --> 00:58:01,910
+Scott: So you hear nothing like.
+
+903
+00:58:03,171 --> 00:58:04,014
+Rym: This is why the audio.
+
+904
+00:58:04,094 --> 00:58:07,285
+Rym: every rental car you ever rent has garbage because someone did that.
+
+905
+00:58:07,305 --> 00:58:08,229
+Scott: you could do the opposite.
+
+906
+00:58:08,289 --> 00:58:11,536
+Scott: and suddenly it's like doom doom doom and Right.
+
+907
+00:58:11,596 --> 00:58:12,849
+Scott: That's what you do with the equalizer.
+
+908
+00:58:13,050 --> 00:58:24,810
+Scott: So when you buy headphones a lot of headphones you buy these days if you buy monitors that are actually real studio monitors That's like and you don't do have any sort of equalizer between the music and the headphone.
+
+909
+00:58:25,111 --> 00:58:26,556
+Scott: That's like having an equalizer.
+
+910
+00:58:26,576 --> 00:58:27,539
+Scott: That is all at zero.
+
+911
+00:58:27,559 --> 00:58:28,803
+Rym: It's try to have a flat.
+
+912
+00:58:28,944 --> 00:58:29,947
+Scott: everything is zero.
+
+913
+00:58:30,288 --> 00:58:33,687
+Scott: all of the Frequencies of sound are being played equally.
+
+914
+00:58:33,707 --> 00:58:34,850
+Scott: now That's good.
+
+915
+00:58:34,890 --> 00:58:39,410
+Scott: If you're producing music because you need to be able to hear, you know, you want to hear a flat signal.
+
+916
+00:58:39,490 --> 00:58:43,465
+Scott: But if you're listening to music for enjoyment, you don't want a flat signal.
+
+917
+00:58:43,505 --> 00:58:44,850
+Scott: a flat signal has no energy.
+
+918
+00:58:44,930 --> 00:58:46,115
+Scott: It has no emotion.
+
+919
+00:58:46,215 --> 00:58:46,838
+Rym: It's not fun.
+
+920
+00:58:46,858 --> 00:58:47,962
+Rym: It depends on the original recording.
+
+921
+00:58:48,002 --> 00:58:49,267
+Rym: Let's be a little more nuanced there.
+
+922
+00:58:49,769 --> 00:58:58,370
+Rym: if you understand audio, but you don't and You listen to music a flat response is also probably what you want.
+
+923
+00:58:58,691 --> 00:59:09,706
+Rym: But if you Devon actually seriously for real studied and don't know like the ramifications of using an equalizer or Like what different sound ranges do in the human ear then?
+
+924
+00:59:10,910 --> 00:59:12,590
+Rym: You're only gonna make it sound worse for yourself.
+
+925
+00:59:12,590 --> 00:59:20,340
+Scott: It also depends on the kind of music you're listening to but basically modern headphones if you buy them at the store like beats Headphones or pretty much any kind of headphone that's meant for consumers.
+
+926
+00:59:20,861 --> 00:59:23,350
+Scott: It's probably got some bass boost, right?
+
+927
+00:59:23,450 --> 00:59:24,559
+Scott: You know, it's it.
+
+928
+00:59:24,639 --> 00:59:28,858
+Scott: you know what when you listen to that It's gonna make the music sound more enjoyable for you.
+
+929
+00:59:28,879 --> 00:59:29,801
+Scott: probably right.
+
+930
+00:59:30,182 --> 00:59:36,189
+Rym: so it comes down to trying out the headphones that make some Like listen to the same track on ten different headphones at some headphone store.
+
+931
+00:59:36,351 --> 00:59:38,570
+Rym: So I didn't go buy the ones that sounded best on Amazon.
+
+932
+00:59:38,771 --> 00:59:43,030
+Scott: So it is true that some headphones sound better than others and some headphones sound different than others.
+
+933
+00:59:43,291 --> 00:59:46,966
+Scott: What's not true is audiophile nonsense that the thousands out you need $1 headphones, you know.
+
+934
+00:59:48,392 --> 00:59:51,307
+Rym: Yeah, I mean the most expensive headphones I've ever bought.
+
+935
+00:59:51,327 --> 00:59:55,118
+Scott: you can get incredible Headphones on Amazon for like less than 100 bucks.
+
+936
+00:59:55,199 --> 00:59:56,543
+Scott: They're real just for listening.
+
+937
+00:59:56,583 --> 00:59:57,185
+Scott: They're terrific.
+
+938
+00:59:57,486 --> 01:00:04,350
+Scott: Yeah, I'd say like 250 is the Literal upper and no headphones more than two and fifty dollars that are worth buying.
+
+939
+01:00:04,450 --> 01:00:11,540
+Rym: I think like for anybody and if you think there are I Welcome you to try to explain to us what's better about them.
+
+940
+01:00:11,700 --> 01:00:15,591
+Scott: Yeah, like it's like some of the best headphones ever seen or 250.
+
+941
+01:00:15,591 --> 01:00:17,418
+Rym: Yeah, I mean right now what am I using?
+
+942
+01:00:17,438 --> 01:00:18,583
+Rym: Let me see how much these calling.
+
+943
+01:00:18,864 --> 01:00:20,430
+Rym: I forget what I even paid for these things.
+
+944
+01:00:20,571 --> 01:00:25,515
+Scott: Let me the ones I have at home are the are the ones that I guess they have this Sony MDR 75.
+
+945
+01:00:25,515 --> 01:00:30,534
+Rym: Oh sixes Mm-hmm, right.
+
+946
+01:00:30,554 --> 01:00:31,036
+Rym: Yeah, six.
+
+947
+01:00:31,578 --> 01:00:37,717
+Rym: Mm-hmm your orders on Amazon 80 bucks 80 bucks, they're great.
+
+948
+01:00:37,818 --> 01:00:40,145
+Rym: They're they're effectively studio monitors.
+
+949
+01:00:40,205 --> 01:00:41,208
+Rym: as far as I need there.
+
+950
+01:00:41,871 --> 01:00:45,247
+Rym: They have a flat response close enough to what we do to produce GeekNights.
+
+951
+01:00:45,428 --> 01:00:51,134
+Scott: Yeah ignites I guess sounds okay at home for streaming and for sitting at my You know desk.
+
+952
+01:00:51,194 --> 01:00:53,325
+Scott: if I don't want to use the $10 Amazon speakers.
+
+953
+01:00:53,405 --> 01:00:58,024
+Scott: I have a KG K240 semi open studio headphones.
+
+954
+01:00:58,426 --> 01:01:02,424
+Scott: they sound Terrific more terrific than any headphone you're ever gonna need in your life.
+
+955
+01:01:02,746 --> 01:01:05,994
+Scott: and there's $67 $68 whatever.
+
+956
+01:01:06,275 --> 01:01:07,640
+Rym: we paid about the same right?
+
+957
+01:01:07,780 --> 01:01:08,483
+Scott: It's like you.
+
+958
+01:01:08,643 --> 01:01:09,767
+Scott: you're not gonna need better than that.
+
+959
+01:01:09,787 --> 01:01:10,470
+Scott: I don't know who you are.
+
+960
+01:01:10,550 --> 01:01:11,256
+Scott: They're way comfortable.
+
+961
+01:01:11,276 --> 01:01:13,311
+Scott: They're like these two big giant circles They go.
+
+962
+01:01:13,512 --> 01:01:19,410
+Rym: ah, I guess the only other option is there are on ear headphones as opposed to like full-size surround the ear headphones.
+
+963
+01:01:19,471 --> 01:01:21,104
+Scott: Yeah, I don't like the on ear one.
+
+964
+01:01:21,145 --> 01:01:21,669
+Rym: No one does.
+
+965
+01:01:22,750 --> 01:01:24,360
+Scott: Surrounding the ear is so comfortable.
+
+966
+01:01:24,420 --> 01:01:26,070
+Scott: going on the ear is sort of awkward.
+
+967
+01:01:26,210 --> 01:01:33,418
+Scott: I've never here's where I found used to be that on the ear was all you could get like there were no earbuds back in The day on the air had.
+
+968
+01:01:33,478 --> 01:01:47,879
+Rym: the only uses I personally can think of are In like production rooms or in like media production where you're taking them out and putting them off a lot Or you have them on only one ear because you're listening to a feed But you're also interacting the real
+
+969
+01:01:47,900 --> 01:01:48,403
+Scott: world over.
+
+970
+01:01:48,463 --> 01:01:49,449
+Scott: the ear ones on one ear?
+
+971
+01:01:49,489 --> 01:01:51,774
+Rym: no Yeah, yeah, I've.
+
+972
+01:01:51,975 --> 01:01:52,837
+Rym: so I had.
+
+973
+01:01:53,299 --> 01:01:55,325
+Rym: I don't use these anymore because I don't need that kind of.
+
+974
+01:01:55,406 --> 01:02:11,089
+Rym: I used to have these headphones I used in like band stuff where it had one cup over that was on ear on just my right ear and Nothing on my left ear and it just mounted on my head so I could hear stuff coming from the system While I was interacting with other people in the real world.
+
+975
+01:02:11,391 --> 01:02:15,169
+Rym: Kind of like how you have one eye in a camera and then one eye looking at the world same thing.
+
+976
+01:02:16,552 --> 01:02:18,243
+Rym: But I don't think you want on here.
+
+977
+01:02:18,284 --> 01:02:21,950
+Rym: I feel like there's no Reasonable use case for on here in the modern era.
+
+978
+01:02:22,151 --> 01:02:22,974
+Scott: I mean some people.
+
+979
+01:02:23,034 --> 01:02:28,170
+Scott: if you're if you're just if you just like think on ear is more comfortable over here Then go for it, right?
+
+980
+01:02:28,310 --> 01:02:33,187
+Scott: But I personally think it's like over the ear when you're sitting down and you don't need earbud.
+
+981
+01:02:33,267 --> 01:02:37,259
+Scott: if you're on the go Traveling go moving around you want to carry the headphones.
+
+982
+01:02:37,540 --> 01:02:43,224
+Scott: you need earbud because they're small enough to just put in a pocket in Even though you might want to bring the big ones.
+
+983
+01:02:43,526 --> 01:02:44,210
+Scott: It's just a hassle.
+
+984
+01:02:44,270 --> 01:02:44,752
+Scott: Don't do it.
+
+985
+01:02:44,873 --> 01:02:46,560
+Scott: Even though I see tons of people doing it.
+
+986
+01:02:47,022 --> 01:02:49,050
+Rym: Oh and headphones that are really expensive.
+
+987
+01:02:49,151 --> 01:02:51,870
+Rym: That's claimed to have a much broader frequency response.
+
+988
+01:02:53,130 --> 01:02:57,167
+Rym: You probably can't hear those frequencies anyway.
+
+989
+01:02:57,529 --> 01:03:00,821
+Scott: Yes Congratulations, you got headphones.
+
+990
+01:03:00,862 --> 01:03:01,525
+Scott: That would be better.
+
+991
+01:03:01,646 --> 01:03:07,192
+Scott: if you're a dog Yeah, but you're a human and your ear is not golden despite What.
+
+992
+01:03:07,593 --> 01:03:10,263
+Rym: if you're young younger people can hear some higher frequencies.
+
+993
+01:03:10,283 --> 01:03:10,965
+Scott: that is true.
+
+994
+01:03:10,985 --> 01:03:16,383
+Rym: if you get above 2400 kilohertz let's say or 20 even a baby can't hear that shit.
+
+995
+01:03:16,383 --> 01:03:19,693
+Rym: 20 kilohertz 24 kilohertz above that You're not gonna hear anything.
+
+996
+01:03:19,773 --> 01:03:20,154
+Scott: That's right.
+
+997
+01:03:20,816 --> 01:03:21,358
+Rym: And don't get it.
+
+998
+01:03:21,719 --> 01:03:25,330
+Rym: Don't try to tell me about super sub harmonics or anything.
+
+999
+01:03:25,592 --> 01:03:26,946
+Rym: No, cuz I'm just gonna make fun of you.
+
+1000
+01:03:27,107 --> 01:03:27,289
+Scott: Yep.
+
+1001
+01:03:28,173 --> 01:03:31,866
+Scott: So yeah, you know and obviously, you know, you got to consider the price.
+
+1002
+01:03:31,886 --> 01:03:32,829
+Scott: right, you know.
+
+1003
+01:03:32,990 --> 01:03:34,274
+Scott: just consider those factors.
+
+1004
+01:03:34,354 --> 01:03:42,414
+Scott: wireless not wireless open close if it's closed and isolating or isolate or Canceling difference.
+
+1005
+01:03:42,494 --> 01:03:43,539
+Scott: isolating and canceling.
+
+1006
+01:03:43,560 --> 01:03:44,303
+Rym: Yep, right.
+
+1007
+01:03:44,384 --> 01:03:45,690
+Rym: What kind of connectors on the end?
+
+1008
+01:03:45,810 --> 01:03:48,050
+Rym: Are you gonna plug it into your phone that doesn't have a headphone jack?
+
+1009
+01:03:48,350 --> 01:03:50,610
+Rym: Are you gonna plug it into a real mixer with a quarter inch Jack?
+
+1010
+01:03:51,030 --> 01:03:51,412
+Scott: Durability?
+
+1011
+01:03:51,472 --> 01:03:55,370
+Scott: want to get one with like replaceable cables or placeable nubs this sort of thing.
+
+1012
+01:03:55,430 --> 01:03:58,270
+Scott: So if they wear out you don't got to make this decision again and buy new ones.
+
+1013
+01:03:58,290 --> 01:03:59,796
+Scott: You can just buy one and keep it forever.
+
+1014
+01:03:59,816 --> 01:04:02,990
+Scott: just replacing parts save a lot of money if they sit on your desk.
+
+1015
+01:04:03,070 --> 01:04:05,202
+Rym: I recommend having a hook or a stand of some kind.
+
+1016
+01:04:05,222 --> 01:04:06,690
+Rym: that'll really increase the durability.
+
+1017
+01:04:06,790 --> 01:04:08,538
+Scott: Yeah, there's actually one thing that happened to me.
+
+1018
+01:04:08,618 --> 01:04:13,947
+Scott: one time has had some black headphones that squishy pads and they were just sitting on a table.
+
+1019
+01:04:13,968 --> 01:04:16,435
+Scott: and Then you know I left.
+
+1020
+01:04:16,818 --> 01:04:20,036
+Scott: I came back home and The Sun the window was open.
+
+1021
+01:04:20,377 --> 01:04:27,966
+Scott: the Sun and hit the black headphones and slightly melted the leathery material Squishy pad and it was slightly stuck to the table.
+
+1022
+01:04:27,986 --> 01:04:28,730
+Scott: That's amazing.
+
+1023
+01:04:28,910 --> 01:04:32,142
+Scott: Yeah, so, you know, I guess that's not headphone specific.
+
+1024
+01:04:32,182 --> 01:04:34,450
+Scott: that could happen to any you know thing like that.
+
+1025
+01:04:34,611 --> 01:04:36,047
+Scott: But still something to be aware of.
+
+1026
+01:04:41,903 --> 01:04:44,440
+Rym: This has been GeekNights with Rym and Scott.
+
+1027
+01:04:44,500 --> 01:04:49,320
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+1028
+01:04:49,561 --> 01:04:54,560
+Scott: Be sure to visit our website at front row crew comm for show notes discussion news and more.
+
+1029
+01:04:54,840 --> 01:05:02,240
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+1030
+01:05:02,621 --> 01:05:05,776
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+1031
+01:05:07,041 --> 01:05:13,301
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows It's actually recorded at night.
+
+1032
+01:05:22,987 --> 01:05:34,164
+Rym: and the current patreon patreons for this episode of GeekNights are Alan Joyce Rebecca Dunn Heidi Nicole a shimmering Ruby obelisk hanging in the sky my stady calm.
+
+1033
+01:05:34,245 --> 01:05:43,810
+Rym: Jeremy minor a genuine bonafide electrified Six car monorail cold guy Amanda Duchette Sean Yeager Matthew Smith Nicholas Brando captain Chinguakasi.
+
+1034
+01:05:43,810 --> 01:05:44,398
+Rym: 421 creations.
+
+1035
+01:05:46,054 --> 01:05:48,085
+Rym: No, I never ever wonder why we're here.
+
+1036
+01:05:48,185 --> 01:05:56,281
+Rym: Semper Fi bitch Shervin van Horl rare Laval James David White Rochelle, Monta, Nona Superboy Rym says something funny here.
+
+1037
+01:05:56,762 --> 01:06:34,779
+Rym: sailor vista Don shlike shart Avishon Joe Shiro Joe star Sam Cordery Clinton Walton Ren from New Zealand Ryan Perrin drew open Lander Brian Sidroni Finn Chris midkiff Chris Knox Daniel Redmond Sean Klein Chris Reimer and Thomas Hahn Not sure hundred percent what I want to do about the patreon Dollar pledge change thing so we'll see how that all shakes down, but at least in the interim I do have a bunch of patreon episodes queued up and As you see we're continuing to do episodes all the way through the end of the year before the crazy stuff happening next year.
+
+1038
+01:06:34,799 --> 01:06:55,227
+Rym: we fixed the problem with Scott's microphone and Now I leave you with My little friends to talk about things of shoes and ships and ceiling wets Habages and King and why the sea is boiling hot and the weather.
+
+1039
+01:06:55,427 --> 01:06:56,250
+Scott: eggs are winged.
+
+1040
+01:06:57,590 --> 01:06:59,569
+Rym: Kalu Kelly come run away.
+
+1041
+01:07:00,693 --> 01:07:03,029
+Rym: Well the cabbages and the things.
+

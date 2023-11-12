@@ -1,0 +1,3320 @@
+1
+00:00:08,860 --> 00:00:11,727
+Rym: It's Monday August 20th 2018.
+
+2
+00:00:11,727 --> 00:00:14,474
+Rym: I'm Rym I'm Scott and this is GeekNights tonight.
+
+3
+00:00:14,795 --> 00:00:17,020
+Rym: Twitter API's and third-party clients.
+
+4
+00:00:18,920 --> 00:00:19,937
+Rym: Let's do this.
+
+5
+00:00:22,741 --> 00:00:26,815
+Rym: We hit up that old flame con this weekend, which I didn't get to go to last year.
+
+6
+00:00:26,836 --> 00:00:27,478
+Rym: I forget why.
+
+7
+00:00:27,518 --> 00:00:28,060
+Scott: why didn't you go?
+
+8
+00:00:28,640 --> 00:00:29,202
+Scott: I was there last.
+
+9
+00:00:29,303 --> 00:00:29,564
+Scott: I know.
+
+10
+00:00:29,624 --> 00:00:31,311
+Rym: I don't remember why I didn't go.
+
+11
+00:00:31,331 --> 00:00:33,580
+Rym: I just remember I had some reason why I didn't go.
+
+12
+00:00:33,660 --> 00:00:36,611
+Scott: I know it was in Brooklyn last year is in a worser place.
+
+13
+00:00:36,872 --> 00:00:38,820
+Rym: Yeah, it's definitely in a better place this year.
+
+14
+00:00:40,043 --> 00:00:44,891
+Scott: Well, I was in a more touristy place which is bad But the building was better and easier to get to because it was in a touristy place.
+
+15
+00:00:45,272 --> 00:00:47,461
+Scott: Yeah, but yeah, you know It's.
+
+16
+00:00:47,542 --> 00:00:55,408
+Scott: it's a room full of awesome Gay gay gay comics for you can go there and you could walk around for a couple hours buy a bunch of gayness and then Go home.
+
+17
+00:00:55,614 --> 00:00:56,503
+Rym: Yep It's kind of a like.
+
+18
+00:00:56,523 --> 00:01:07,360
+Rym: it was basically an artist alley like a really inclusive one with a really good set and it kind of Straddles the line between like old mocha fast and t-caf and an anime con artist alley like all mixed together.
+
+19
+00:01:08,002 --> 00:01:08,583
+Rym: It was good stuff.
+
+20
+00:01:08,964 --> 00:01:09,145
+Rym: Mm-hmm.
+
+21
+00:01:09,385 --> 00:01:11,932
+Rym: I got a pretty good pin and so did Emily.
+
+22
+00:01:12,253 --> 00:01:14,660
+Scott: I got a nice pin from our friends.
+
+23
+00:01:18,124 --> 00:01:18,708
+Scott: Very nice.
+
+24
+00:01:19,332 --> 00:01:24,129
+Rym: I also got the The smutty comic that you go in and off had.
+
+25
+00:01:24,169 --> 00:01:27,158
+Rym: that was about Reaper and soldier 76 in overwatch.
+
+26
+00:01:27,579 --> 00:01:28,766
+Rym: Okay It's pretty good.
+
+27
+00:01:29,068 --> 00:01:30,618
+Rym: Okay, it's actually pretty good.
+
+28
+00:01:31,663 --> 00:01:32,325
+Scott: I don't know who they are.
+
+29
+00:01:32,385 --> 00:01:34,253
+Scott: So it doesn't mean doesn't mean much.
+
+30
+00:01:34,735 --> 00:01:35,397
+Rym: Yeah, it's just.
+
+31
+00:01:35,457 --> 00:01:36,120
+Rym: it's very interesting.
+
+32
+00:01:36,321 --> 00:01:44,840
+Rym: Overwatch has half of its fandom is people who play the game and half of its fandom is people who will never play the game But are equally invested in it for some reason, right?
+
+33
+00:01:44,920 --> 00:01:45,886
+Scott: But it's like, you know your ship.
+
+34
+00:01:45,906 --> 00:01:47,979
+Scott: don't work on me if I don't know who the characters are.
+
+35
+00:01:48,921 --> 00:01:50,247
+Rym: It's basically the edge Lord.
+
+36
+00:01:50,307 --> 00:01:53,440
+Rym: like I am the Reaper guy and this like old soldier dad guy.
+
+37
+00:01:54,160 --> 00:01:57,215
+Rym: You may or may not have dated before they turned into what they are today.
+
+38
+00:01:57,235 --> 00:01:57,617
+Rym: Okay?
+
+39
+00:01:58,780 --> 00:02:07,717
+Rym: Seems like a lot of people our age are really invested in the soldier guy because his shik is basically He's the old man who used to play FPS is and now he's too old, but he still plays.
+
+40
+00:02:07,737 --> 00:02:08,419
+Rym: Mm-hmm.
+
+41
+00:02:08,702 --> 00:02:12,496
+Rym: Like he's basically our friend Adam transported directly into the game.
+
+42
+00:02:13,121 --> 00:02:16,774
+Rym: Mm-hmm, and his voice lines are things that Adam says on his own in game.
+
+43
+00:02:16,794 --> 00:02:17,396
+Rym: So it's pretty good.
+
+44
+00:02:17,416 --> 00:02:17,918
+Rym: Mm-hmm.
+
+45
+00:02:18,680 --> 00:02:26,663
+Rym: so anyway, there's a ton of news and some of it's actually relevant to technology and also Kind of worrying.
+
+46
+00:02:26,683 --> 00:02:30,273
+Rym: I guess we'll dive right in with this twitch prime nonsense.
+
+47
+00:02:30,494 --> 00:02:31,938
+Scott: Okay, so here's the deal right now.
+
+48
+00:02:32,078 --> 00:02:38,468
+Scott: if you are Amazon Prime person subscriber Yep You also for free.
+
+49
+00:02:38,689 --> 00:02:44,920
+Scott: as part of your many many things that you get with Amazon Prime You get a bunch of twitch shit because Amazon owns twitch.
+
+50
+00:02:45,602 --> 00:02:51,159
+Scott: So the things you got for having twitch for having an Amazon Prime account and also using twitch at all.
+
+51
+00:02:52,301 --> 00:02:57,060
+Scott: A you would get some discounts when you pre-ordered certain video games.
+
+52
+00:02:57,381 --> 00:03:01,739
+Scott: Yeah, you would get a bunch of free video games that you in order to install you have to install the twitch app.
+
+53
+00:03:02,982 --> 00:03:04,050
+Scott: But you get free video games.
+
+54
+00:03:04,070 --> 00:03:05,560
+Scott: you get free loot in a lot of games.
+
+55
+00:03:05,882 --> 00:03:12,320
+Rym: I actually haven't collected any of the free pub G loot, dude I'm up to three hundred and twenty loot boxes and overwatch alone that I haven't opened.
+
+56
+00:03:12,581 --> 00:03:15,379
+Scott: I just I'm just gonna stay with the normal default shit, whatever.
+
+57
+00:03:16,142 --> 00:03:20,114
+Rym: No in pub G. I did put on the belt because apparently it has a game effect.
+
+58
+00:03:20,154 --> 00:03:20,856
+Scott: Yeah, finally.
+
+59
+00:03:20,976 --> 00:03:24,245
+Scott: Yeah You get.
+
+60
+00:03:24,265 --> 00:03:31,835
+Scott: the one of the major features is that you Every month you can subscribe to one channel on twitch for free.
+
+61
+00:03:31,955 --> 00:03:33,540
+Scott: nor so normally that cost like $5.
+
+62
+00:03:33,540 --> 00:03:34,684
+Scott: So now you go.
+
+63
+00:03:34,704 --> 00:03:40,300
+Scott: you pick one twitch streamer every month that has a sponsorship that you can subscribe to push the subscribe button.
+
+64
+00:03:40,621 --> 00:03:47,842
+Scott: It costs you nothing and then that streamer actually gets money from Amazon as if you had subscribed with $5.
+
+65
+00:03:47,842 --> 00:03:50,430
+Scott: So actually twitch streamers really love this.
+
+66
+00:03:50,470 --> 00:03:56,080
+Scott: they constantly like harass their channels to subscribe for free And they make a lot of money on that.
+
+67
+00:03:56,944 --> 00:04:07,400
+Scott: So even if you don't watch twitch a lot if you have Amazon Prime You should go on twitch find someone you like and just once a month All you got to do is click one button and you'll be giving that person money.
+
+68
+00:04:07,681 --> 00:04:09,929
+Scott: Find a person who deserves money and do that someone not.
+
+69
+00:04:09,969 --> 00:04:11,073
+Scott: Rym now full disclosure.
+
+70
+00:04:11,173 --> 00:04:13,020
+Rym: I honestly I never streamed a twitch.
+
+71
+00:04:13,241 --> 00:04:15,738
+Rym: I actually don't watch twitch anymore pretty much ever.
+
+72
+00:04:16,503 --> 00:04:19,480
+Scott: I watch it when you know, there's a GDQ and I watch a hearthstone.
+
+73
+00:04:20,459 --> 00:04:25,276
+Rym: Usually I just time shift and I watch that content later on YouTube.
+
+74
+00:04:25,296 --> 00:04:28,331
+Rym: It's not all the contents on you Yeah, and the stuff that isn't on YouTube.
+
+75
+00:04:28,351 --> 00:04:29,216
+Rym: I kind of just don't watch it.
+
+76
+00:04:29,277 --> 00:04:31,607
+Scott: It was a ground I've been watching on the GDQ channel.
+
+77
+00:04:31,627 --> 00:04:32,892
+Scott: They have these mystery tournaments.
+
+78
+00:04:32,952 --> 00:04:33,735
+Scott: They started up again.
+
+79
+00:04:33,795 --> 00:04:34,839
+Scott: They're really anyway.
+
+80
+00:04:36,772 --> 00:04:42,300
+Scott: So, yeah The most important thing that you get if you have Amazon Prime and also happen to watch twitch is that you see no ads?
+
+81
+00:04:42,541 --> 00:04:43,926
+Scott: Yeah, you see no ads anywhere ever.
+
+82
+00:04:43,946 --> 00:04:46,457
+Rym: I'm not willing to see an ad for anything.
+
+83
+00:04:46,778 --> 00:04:51,137
+Scott: So Amazon Prime sent an email to everyone today saying alright, we're changing twitch prime.
+
+84
+00:04:51,177 --> 00:04:52,021
+Scott: Here's how it works Now.
+
+85
+00:04:52,081 --> 00:04:55,130
+Scott: number one the game pre-order thing is changing to where.
+
+86
+00:04:55,190 --> 00:05:04,240
+Scott: now instead of getting this discount on pre-ordering a bunch of games Certain games that if you pre-order you'll get a $10 credit, but the credit comes later.
+
+87
+00:05:04,340 --> 00:05:13,620
+Scott: So it's like you buy the game at full price and then later they send you $10 in credit that you can use to buy Something for a limited and you better use it because it'll expire after some months or whatever.
+
+88
+00:05:14,121 --> 00:05:16,949
+Scott: So it's basically slightly less good discounted pre-ordering games.
+
+89
+00:05:17,490 --> 00:05:20,499
+Scott: And the other thing they're changing is they're getting rid of the no ads.
+
+90
+00:05:20,659 --> 00:05:37,517
+Scott: so Basically, if you watch twitch and you have Amazon Prime you're gonna see ads But you're not gonna see them until I think your current Amazon Prime subscription runs out with switch from activated Blah-blah-blah will still get to enjoy ad free viewing until October 15th, right?
+
+91
+00:05:38,360 --> 00:05:48,980
+Rym: Then then basically that's when you like you renew your Amazon Prime and then they right after that The only way to get ad free viewing will be to subscribe to twitch turbo for which is separate and cost nine bucks a month.
+
+92
+00:05:49,120 --> 00:05:49,763
+Scott: Yeah, it's like fuck.
+
+93
+00:05:49,803 --> 00:05:52,193
+Scott: No, that's too much for just that one thing.
+
+94
+00:05:52,274 --> 00:05:53,700
+Scott: I mean that I used to get for free.
+
+95
+00:05:53,740 --> 00:05:55,405
+Rym: That's like what I pay for crunchyroll.
+
+96
+00:05:55,806 --> 00:05:59,036
+Rym: There's a lot better content on crunchyroll than twitch.
+
+97
+00:05:59,317 --> 00:06:00,683
+Scott: Well, it's not just the content It's like it's.
+
+98
+00:06:00,823 --> 00:06:03,860
+Scott: I'm just paying to remove ads and not even paying for the content, right?
+
+99
+00:06:05,281 --> 00:06:08,512
+Scott: And then you can still get your one free subscription a month.
+
+100
+00:06:08,833 --> 00:06:12,553
+Scott: and most channels on Twitch Do have a setting enabled.
+
+101
+00:06:12,593 --> 00:06:15,207
+Scott: they can turn it off But most of them enable it to where.
+
+102
+00:06:15,327 --> 00:06:18,620
+Scott: if you are a subscriber to the channel, you won't see ads on that channel.
+
+103
+00:06:18,740 --> 00:06:25,779
+Scott: So for example during the GDQ months, you could use your free subscription to the GDQ channel And you won't see ads on that channel.
+
+104
+00:06:26,343 --> 00:06:36,020
+Scott: But if you are someone who watches many channels on Twitch Then this ain't gonna help you that much because you're subscribing for free to one channel and you're gonna see ads on every other channel.
+
+105
+00:06:36,544 --> 00:06:37,027
+Rym: So what does it do?
+
+106
+00:06:37,047 --> 00:06:38,960
+Rym: because I don't use twitch that much anymore.
+
+107
+00:06:39,080 --> 00:06:44,660
+Rym: But how about if I'm hosting someone else's channel and someone subscribed to me?
+
+108
+00:06:45,685 --> 00:06:46,420
+Scott: That's a good question.
+
+109
+00:06:47,204 --> 00:06:50,700
+Scott: That works because until today I saw no ads on twitch.
+
+110
+00:06:50,720 --> 00:06:53,213
+Scott: So the result of this is gonna be the following number one.
+
+111
+00:06:53,394 --> 00:06:54,420
+Rym: I'm gonna watch a lot less twitch.
+
+112
+00:06:54,500 --> 00:06:58,560
+Rym: I'm gonna watch a lot less - well, I guess I can't watch less because I watch effectively zero already.
+
+113
+00:06:58,560 --> 00:06:59,945
+Scott: Well, I'm not going to.
+
+114
+00:06:59,965 --> 00:07:03,799
+Scott: I'm basically gonna be very careful of who I give my free subscription to.
+
+115
+00:07:03,859 --> 00:07:11,360
+Scott: now Think about which channel I'm gonna watch the most - if adblock doesn't work on Twitch, I'm gonna watch a lot less twitch.
+
+116
+00:07:11,741 --> 00:07:14,313
+Scott: Yeah, and be see whatever.
+
+117
+00:07:14,795 --> 00:07:20,740
+Scott: Well, I don't even know If I can't use adblock on twitch and say the twitch app on my iPad.
+
+118
+00:07:21,243 --> 00:07:23,738
+Scott: I can only use adblock obviously in a browser assuming it works.
+
+119
+00:07:23,879 --> 00:07:27,499
+Scott: Yeah I'm just not gonna be watching twitch on my iPad or my iPhone or you know.
+
+120
+00:07:27,681 --> 00:07:29,340
+Scott: It's interesting because unless it's that one channel.
+
+121
+00:07:29,801 --> 00:07:36,119
+Rym: It is interesting though because the in a browser like that aspect of this is very much relevant to our main bit today.
+
+122
+00:07:36,319 --> 00:07:45,940
+Scott: Yeah so the The one last thing is that twitch subscriptions to one channel one channel just one channel they cost $5 a month minimum.
+
+123
+00:07:46,321 --> 00:07:53,460
+Scott: Yeah, usually right and it's like bro, if they were $1, I would subscribe to like 10 channels a month.
+
+124
+00:07:54,100 --> 00:07:54,224
+Rym: right.
+
+125
+00:07:55,682 --> 00:08:00,159
+Scott: But because they're $5 you just subscribe to - I just subscribe to the one free one.
+
+126
+00:08:01,542 --> 00:08:07,518
+Scott: One time I accidentally used my one free one on the not GDQ channel in the GDQ month that and I paid the $5 one time.
+
+127
+00:08:09,084 --> 00:08:09,999
+Scott: But yeah, I'm not.
+
+128
+00:08:11,081 --> 00:08:13,811
+Scott: I'd have to watch your channel a lot to pay $5.
+
+129
+00:08:13,811 --> 00:08:14,253
+Rym: I guess it.
+
+130
+00:08:14,634 --> 00:08:16,180
+Rym: it worries me a little for a month.
+
+131
+00:08:16,887 --> 00:08:18,160
+Scott: It's like compared to what else you get.
+
+132
+00:08:18,221 --> 00:08:18,859
+Scott: It's like, you know.
+
+133
+00:08:18,940 --> 00:08:20,365
+Scott: But if you know the other thing is like.
+
+134
+00:08:20,426 --> 00:08:20,727
+Scott: I know.
+
+135
+00:08:20,847 --> 00:08:27,780
+Scott: people for example might subscribe to someone on patreon And that person they subscribe to on patreon happens to have a twitch channel.
+
+136
+00:08:27,800 --> 00:08:32,097
+Scott: So they're giving that person monthly money, but because they don't subscribe to them on twitch.
+
+137
+00:08:32,116 --> 00:08:33,895
+Scott: They have my patreon They're gonna see ads now.
+
+138
+00:08:34,461 --> 00:08:41,000
+Rym: Well, because I definitely all these platforms like twitch they definitely want to get an end run around services like patreon.
+
+139
+00:08:41,183 --> 00:08:48,681
+Scott: well because You're on your patreon is taking the cut if you do twitch Amazon's taking a cut and I think it's a bigger cut of the $5.
+
+140
+00:08:48,681 --> 00:08:51,216
+Scott: Yeah patreon takes of the $1 but it more there's.
+
+141
+00:08:51,417 --> 00:09:03,050
+Rym: the worry I really have is that this might be a harbinger of Another round of everyone realizing that the monetization streams of these services are not that robust And they're looking for more money.
+
+142
+00:09:03,191 --> 00:09:20,539
+Rym: and what we've always done on gig nights For many many years is that whenever you have a service that people pay for and people are paying for it primarily to not see ads Then the people who sell ads or want to buy ads Desperately want those eyeballs because those are the people they know have money.
+
+143
+00:09:21,444 --> 00:09:24,660
+Rym: So as a result, there's always this pressure paying for ads on twitch.
+
+144
+00:09:24,921 --> 00:09:27,453
+Scott: It's like a bunch of kids with no money are seeing your ads.
+
+145
+00:09:27,834 --> 00:09:28,397
+Scott: those ads are.
+
+146
+00:09:28,457 --> 00:09:29,461
+Scott: it's like, you know Do you go?
+
+147
+00:09:29,501 --> 00:09:35,160
+Scott: and it's like ad for fancy gamer chairs while the kids all the kids watching that either have fancy gamer chairs.
+
+148
+00:09:35,482 --> 00:09:40,600
+Scott: Maybe bother their parents for a fancy gamer chair Don't have money for to buy one.
+
+149
+00:09:40,700 --> 00:09:49,500
+Scott: Yeah, and meanwhile the people like me who have enough money to buy a gamer chair I would never buy one but other people like me who have money would because I see them sitting in them all the fucking time.
+
+150
+00:09:49,540 --> 00:09:51,006
+Rym: It doesn't matter if they would or not though.
+
+151
+00:09:51,026 --> 00:09:53,575
+Scott: They have twitch private aren't seeing this ad.
+
+152
+00:09:53,716 --> 00:09:59,880
+Rym: Yep, but the advertisers They want the eyeballs desperately of the people who have money and don't see ads.
+
+153
+00:10:00,565 --> 00:10:06,320
+Rym: They're so desperate for that money And my worry is that this is gonna be a problem because another news that snuck in just recently.
+
+154
+00:10:06,481 --> 00:10:24,363
+Scott: Yeah, also the other thing is that if you are twitch streamer or a twitch Itself, right and the money is coming from the advertisers and not from the viewers Then you're going to be changing your content to suit the advertiser and as opposed to changing your content to suit the viewer Right.
+
+155
+00:10:24,403 --> 00:10:33,420
+Scott: It's like imagine you're a twitch streamer right now wants lots of subs Right and they you know, they want people with Amazon Prime to watch their channel given the free.
+
+156
+00:10:33,440 --> 00:10:35,780
+Rym: So I guess that will change, you know, it'll change is they're good?
+
+157
+00:10:35,780 --> 00:10:39,780
+Rym: They're all gonna want people who want to subscribe if they want shave club or whatever, right?
+
+158
+00:10:39,940 --> 00:10:44,359
+Scott: But I guess if they want better ads to show up on their channel, then I don't know.
+
+159
+00:10:44,580 --> 00:10:50,360
+Rym: Well, I was playing around as an aside on the Twitter regular app because it'll like it'll show ads relevant to the main bit.
+
+160
+00:10:50,843 --> 00:10:55,626
+Rym: so what I did is I started blocking every account that showed an ad and Within about a week.
+
+161
+00:10:56,369 --> 00:11:00,605
+Rym: I started seeing the weirdest fucking ads Like it can't.
+
+162
+00:11:00,927 --> 00:11:03,660
+Rym: the accounts that are trying to sell me ads can't show up in my feed.
+
+163
+00:11:04,102 --> 00:11:06,191
+Rym: So I'm seeing really weird ads like.
+
+164
+00:11:06,231 --> 00:11:13,020
+Rym: I saw an ad that was literally like Some kid trying to get people to subscribe to his personal YouTube channel that has like 40 subscribers.
+
+165
+00:11:15,227 --> 00:11:17,985
+Rym: I blocked him of course But that's what I was seeing.
+
+166
+00:11:18,025 --> 00:11:31,780
+Rym: but my worry is that the Netflix news and you've probably seen this but Netflix is starting to try out They're sneaking back in Showing ads for other shows on Netflix between episodes of shows you're watching, right?
+
+167
+00:11:31,860 --> 00:11:32,562
+Scott: So at least it's not.
+
+168
+00:11:32,643 --> 00:11:35,914
+Scott: at least it's not ads for ads, but it's still not good.
+
+169
+00:11:36,015 --> 00:11:37,500
+Rym: Yeah, it's a chink in the armor.
+
+170
+00:11:37,540 --> 00:11:38,427
+Rym: It's a hole in the wall.
+
+171
+00:11:38,507 --> 00:11:48,639
+Rym: as soon as they sneak that in It's a worrying precedent because the only reason I ever subscribed to Netflix was that I want to see things And I don't want to see ads.
+
+172
+00:11:49,921 --> 00:11:55,180
+Rym: So if I mean I'm already considering canceling Netflix actually don't watch it that much anymore.
+
+173
+00:11:55,581 --> 00:11:58,330
+Scott: But yeah, I turned off Hulu and I got Netflix.
+
+174
+00:11:58,410 --> 00:12:01,965
+Scott: but actually, you know, I watched most of the things on Netflix I want to watch.
+
+175
+00:12:02,006 --> 00:12:03,340
+Scott: I don't watch it too often.
+
+176
+00:12:03,380 --> 00:12:08,000
+Rym: I believe it was a lot of the things I was watching or wanted to watch are no longer on Netflix.
+
+177
+00:12:08,160 --> 00:12:14,400
+Rym: Well, you know what I'm actually what Netflix is actually really starting to not have enough content that I actually care about.
+
+178
+00:12:14,400 --> 00:12:16,211
+Scott: Well, the other thing is a lot of the stuff I want.
+
+179
+00:12:16,251 --> 00:12:17,800
+Scott: I was thinking I'll watch that on Netflix.
+
+180
+00:12:17,900 --> 00:12:18,763
+Scott: I haven't actually watched.
+
+181
+00:12:19,105 --> 00:12:22,597
+Scott: Yeah, like I was like, oh, I'll watch that stranger things thing.
+
+182
+00:12:22,617 --> 00:12:23,159
+Scott: I haven't watched it.
+
+183
+00:12:23,581 --> 00:12:24,827
+Rym: It's actually real real good.
+
+184
+00:12:24,887 --> 00:12:27,600
+Scott: I'm sure if I really like it, but it's like I haven't watched it.
+
+185
+00:12:27,640 --> 00:12:28,463
+Scott: So why am I paying?
+
+186
+00:12:28,724 --> 00:12:32,520
+Scott: I'm paying dollars this month and not to not watch it, but entire shows.
+
+187
+00:12:32,580 --> 00:12:35,372
+Scott: I'll wait until the moment where I say I'm going to watch it now and then pay.
+
+188
+00:12:35,532 --> 00:12:40,700
+Rym: there are entire shows that I was watching Kind of idly on Netflix that are no longer licensed to not on Netflix.
+
+189
+00:12:40,802 --> 00:12:41,720
+Rym: So I had to pirate the rest.
+
+190
+00:12:41,760 --> 00:12:57,730
+Scott: I mean I was paying for this these Korean shows on this Korean streaming site on demand Korea and they keep putting all the shows Up there, but the shows that I was watching Specifically those shows happened to be honest one Korean cable network called JTBC Yeah, and they lost the license to subtitle those shows.
+
+191
+00:12:57,750 --> 00:13:00,180
+Scott: so they keep putting up new episodes of these shows without subtitles.
+
+192
+00:13:00,762 --> 00:13:02,288
+Scott: So and I cancel that.
+
+193
+00:13:02,851 --> 00:13:05,160
+Rym: but I guess be ready and be wary.
+
+194
+00:13:05,341 --> 00:13:19,196
+Rym: I really think that advertising is going to creep into a number of streaming platforms Coupled with the fact that streaming is starting to split out into a million different channels again Which I think is just gonna drive people back to piracy.
+
+195
+00:13:19,417 --> 00:13:24,180
+Scott: the thing that well Yes for me anything that I can't get legal streaming is no ads is pirated.
+
+196
+00:13:24,260 --> 00:13:41,920
+Scott: But one thing one channel I actually have been using is it's actually I'm surprised that the I was When he started showing up, I thought they wouldn't be successful But they actually seem to be more successful than I thought at first is that there's these Like niche streaming things that like only do one category of content.
+
+197
+00:13:42,201 --> 00:13:47,960
+Scott: Yeah, so there's one that I think I don't subscribe to it, but it's called shutter and it's like just hard.
+
+198
+00:13:48,542 --> 00:13:55,028
+Scott: So I know that like this I have heard of like some people who are way into hard Stuff and it's like you can subscribe to that and that's like.
+
+199
+00:13:55,048 --> 00:13:55,570
+Scott: that's all it is.
+
+200
+00:13:56,581 --> 00:14:01,222
+Scott: but actually one thing I do subscribe to that costs like 100 you pay for it yearly, which I like.
+
+201
+00:14:01,282 --> 00:14:16,390
+Scott: it's like $100 a year is Filmstruck and it's basically all old highbrow movies unlimited watching like every criterion collection movie all these AMC You know, oh, yeah, like Turner classic like every old movie ever is on there.
+
+202
+00:14:16,410 --> 00:14:20,042
+Rym: Well, cuz that's all the stuff that in the old days I would get from Netflix via DVD.
+
+203
+00:14:20,102 --> 00:14:21,330
+Rym: but a lot of that isn't even on right.
+
+204
+00:14:21,430 --> 00:14:21,751
+Scott: It's all.
+
+205
+00:14:21,851 --> 00:14:22,072
+Scott: it's like.
+
+206
+00:14:22,112 --> 00:14:25,000
+Scott: it's not everything ever but it's like it's a lot right.
+
+207
+00:14:25,060 --> 00:14:29,720
+Scott: It's so if you want to watch highbrow old movie It's pretty good.
+
+208
+00:14:30,044 --> 00:14:43,850
+Rym: now It definitely doesn't have ads cuz Netflix did say that they at least for now They've ruled out taking ads from external companies calling it a quote core differentiator Mm-hmm, but they will spend money to promote their own shows.
+
+209
+00:14:44,432 --> 00:14:48,447
+Rym: And if you didn't realize this they do also take product placement for their originals.
+
+210
+00:14:48,668 --> 00:14:49,953
+Scott: Yes Like.
+
+211
+00:14:49,973 --> 00:14:58,470
+Rym: actually there's an example here when the kids eat KFC in stranger things That's because someone paid probably half a million dollars for KFC to be in the episode.
+
+212
+00:14:58,631 --> 00:15:01,004
+Scott: What's really one thing from watching a lot of Korean TV?
+
+213
+00:15:01,125 --> 00:15:03,716
+Scott: It's actually great Like it was first of all.
+
+214
+00:15:03,736 --> 00:15:07,190
+Scott: when you watch Korean TV in America subtitled the ads are mostly gone, right?
+
+215
+00:15:07,570 --> 00:15:10,990
+Scott: Yeah, but you can tell how few commercial breaks they have.
+
+216
+00:15:11,130 --> 00:15:14,402
+Scott: I think the commercial breaks are long actually, but they're infrequent.
+
+217
+00:15:14,422 --> 00:15:16,169
+Scott: the big once or twice a show at most.
+
+218
+00:15:16,670 --> 00:15:22,230
+Rym: Oh my god watching any old American show like even The Simpsons like I've been watching that again recently like random old episodes.
+
+219
+00:15:22,693 --> 00:15:24,785
+Rym: You can just see where all the commercial breaks.
+
+220
+00:15:25,026 --> 00:15:25,127
+Scott: Yeah.
+
+221
+00:15:25,167 --> 00:15:25,348
+Scott: Yeah.
+
+222
+00:15:25,368 --> 00:15:30,870
+Scott: Yep So many in Korean shows the big maybe one or two even for like an hour super long show.
+
+223
+00:15:30,910 --> 00:15:32,056
+Scott: They'd be like hardly any breaks.
+
+224
+00:15:32,096 --> 00:15:33,262
+Scott: I feel like they're long breaks.
+
+225
+00:15:33,302 --> 00:15:34,689
+Scott: I don't know exactly how long they are.
+
+226
+00:15:34,830 --> 00:15:38,350
+Scott: Well, the other thing is that users tons of product placement.
+
+227
+00:15:38,812 --> 00:15:42,427
+Scott: But you can see how restricted the product placement is like.
+
+228
+00:15:42,447 --> 00:15:48,443
+Scott: if someone's wearing a shirt This is like McDonald's on it They'll have to you little put like black tape over it because you get in trouble.
+
+229
+00:15:48,663 --> 00:15:51,714
+Scott: McDonald's got to pay or they'll blur it out Or right.
+
+230
+00:15:51,754 --> 00:15:52,437
+Scott: It's like they'll have.
+
+231
+00:15:52,538 --> 00:15:53,140
+Scott: but it's not just.
+
+232
+00:15:53,501 --> 00:15:54,345
+Scott: it's like they'll be.
+
+233
+00:15:54,405 --> 00:16:02,801
+Scott: even when this product placement That obviously was paid for like everyone is wearing the same shirt a sponsor paid for them to wear the shirt It's all blurred out like you can.
+
+234
+00:16:02,922 --> 00:16:09,750
+Scott: the severe limitations By the Korean government which people in America will say is censorship or whatever.
+
+235
+00:16:09,911 --> 00:16:13,226
+Scott: But I guess it is censorship because the government is mandating it.
+
+236
+00:16:13,286 --> 00:16:21,110
+Scott: Yeah, but It's I don't see it as censorship because it's a restriction on commercial speech and not individual speech, right?
+
+237
+00:16:21,531 --> 00:16:25,570
+Scott: It's the same thing as like restricting people from printing certain things on their products, right?
+
+238
+00:16:25,710 --> 00:16:27,597
+Scott: So that are lies, you know, like is.
+
+239
+00:16:27,637 --> 00:16:31,070
+Rym: I wonder how that applies to low-tier commercial speech in Korea.
+
+240
+00:16:31,150 --> 00:16:34,081
+Rym: Like what if some kids twitch streaming and they drink a dr.
+
+241
+00:16:34,121 --> 00:16:34,984
+Rym: Pepper like can they get?
+
+242
+00:16:35,045 --> 00:16:38,556
+Scott: I don't know how it applies to stream To find out.
+
+243
+00:16:38,737 --> 00:16:39,740
+Rym: Yeah, I actually am cuz.
+
+244
+00:16:39,780 --> 00:16:45,065
+Rym: I feel like I feel like there's a lot of negative to that But I don't know enough about it to say for sure.
+
+245
+00:16:45,106 --> 00:16:50,470
+Scott: in Korean TV They're always that it's like you can tell what the product is, right because the sponsors wouldn't go.
+
+246
+00:16:50,834 --> 00:16:51,988
+Scott: You can always tell what it is.
+
+247
+00:16:52,291 --> 00:16:59,235
+Scott: Like you'll be watching a show where people are in a kitchen and like there's this really obvious machine and then they'll be like A five-minute scene where they go.
+
+248
+00:16:59,375 --> 00:17:02,124
+Scott: Oh, they all go over and use the carbonation machine.
+
+249
+00:17:02,405 --> 00:17:03,810
+Scott: Oh, what are you doing there?
+
+250
+00:17:04,150 --> 00:17:05,215
+Scott: It's like it's so obvious.
+
+251
+00:17:05,316 --> 00:17:06,321
+Scott: or they'll be a scene.
+
+252
+00:17:06,342 --> 00:17:07,749
+Scott: in a show like a show.
+
+253
+00:17:08,131 --> 00:17:14,390
+Scott: We're like all the idols suddenly all drink the same beverage And they're all talking about it and it's blurred out.
+
+254
+00:17:14,470 --> 00:17:16,661
+Scott: You can't see what it is, but you can tell what it is.
+
+255
+00:17:16,762 --> 00:17:26,068
+Rym: It's good when you go to the grocery store That one but I just suspect there's going to be a big pressure to push ads into spaces where they previously didn't exist.
+
+256
+00:17:26,469 --> 00:17:28,297
+Rym: again I think there's a wave of that coming.
+
+257
+00:17:28,318 --> 00:17:28,579
+Rym: Mm-hmm.
+
+258
+00:17:29,222 --> 00:17:33,650
+Rym: So in some other news that adds ever Yeah, I will I will I will do almost anything.
+
+259
+00:17:34,111 --> 00:17:39,710
+Scott: I mean, you know, this is also because they're gonna tell you the streamers are gonna make more money this way, right?
+
+260
+00:17:40,270 --> 00:17:41,775
+Rym: No, I'll just pay the streamers directly.
+
+261
+00:17:41,816 --> 00:17:49,001
+Scott: I sympathize with the streamer wanting to make more money, but I am unwilling to Subject myself to corporate brainwashing for that purpose.
+
+262
+00:17:49,041 --> 00:17:49,222
+Rym: Yep.
+
+263
+00:17:49,262 --> 00:17:51,210
+Rym: My time is more valuable than any dollar.
+
+264
+00:17:52,250 --> 00:17:59,385
+Rym: So in some news, that's interesting NVIDIA announced some crazy new GPUs when we knew these were coming.
+
+265
+00:17:59,405 --> 00:18:01,313
+Scott: I thought they would have come a few months ago But they're here.
+
+266
+00:18:02,018 --> 00:18:02,581
+Scott: They announced them.
+
+267
+00:18:02,622 --> 00:18:18,021
+Scott: now that at SIGGRAPH They announced the like the the the super quadro ones for you know, people who make movies and stuff Yeah, but now they announced the ones for gamers the RTX 2070 2080 TI good lord.
+
+268
+00:18:18,061 --> 00:18:19,950
+Rym: Are they a lot of money and very powerful?
+
+269
+00:18:20,310 --> 00:18:22,471
+Scott: Well, they're not actually that much more money than 1080.
+
+270
+00:18:22,471 --> 00:18:37,070
+Scott: Yeah And you know Assuming that coins die fully which they're close to it The prices in reality will be a hundred or two hundred dollars lower than the real real retail prices, right eventually You know some months or year out or whatever the main deal about these cards.
+
+271
+00:18:37,130 --> 00:18:43,435
+Rym: The reason why people are making such a big deal isn't so much that oh, they're just better geforce cards They are but 1080 is still gonna be just.
+
+272
+00:18:43,876 --> 00:18:45,441
+Scott: hopefully the 1080 price goes down.
+
+273
+00:18:45,481 --> 00:18:56,210
+Rym: because yeah, because frankly the 1080 I can stream Multiple streams at different bit rates while playing overwatch in epic epic settings at full framerate.
+
+274
+00:18:56,572 --> 00:18:59,269
+Rym: Totally fine with GPU to spare.
+
+275
+00:19:00,271 --> 00:19:02,237
+Scott: But 4k monitor though.
+
+276
+00:19:02,297 --> 00:19:03,200
+Rym: No, I do not.
+
+277
+00:19:03,601 --> 00:19:09,892
+Rym: I feel like if I had a 4k monitor and I was playing in 4k I might have to lock my 4k.
+
+278
+00:19:09,912 --> 00:19:10,615
+Rym: yeah, I don't know.
+
+279
+00:19:10,635 --> 00:19:11,197
+Rym: I haven't tried it.
+
+280
+00:19:11,438 --> 00:19:12,722
+Rym: Yeah, I could I could.
+
+281
+00:19:12,782 --> 00:19:14,127
+Rym: I could try streaming in 4k, right?
+
+282
+00:19:15,730 --> 00:19:16,733
+Rym: There's my limiter there.
+
+283
+00:19:17,435 --> 00:19:19,120
+Scott: I mean YouTube I think supports it.
+
+284
+00:19:19,140 --> 00:19:22,108
+Scott: I don't think twitch does no twitch which is anyway anyway.
+
+285
+00:19:23,291 --> 00:19:27,082
+Rym: But these cards offer real-time ray tracing.
+
+286
+00:19:27,122 --> 00:19:51,190
+Scott: So as someone who has written a ray tracer in C Ray tracing basically what you do is you have a camera you have your scene of objects and then you calculate Literally rays of light coming out of the light sources what color they are their intensity all that stuff Bouncing off of the objects in the in the scene and then hitting the camera right which is the screen, right?
+
+287
+00:19:51,310 --> 00:20:02,545
+Scott: So you're basically calculating the color of each pixel one at a time based on actual, you know photons Right bouncing off objects that are different colors to figure out what color they'll be when right.
+
+288
+00:20:02,766 --> 00:20:03,850
+Scott: and that's how you render a scene.
+
+289
+00:20:03,910 --> 00:20:17,655
+Scott: And when you render a scene in that way using that kind of math It looks stunning and if you do a really good job of it and use all sorts of modern techniques it you can look even Completely realistic like you wouldn't even know that it's not the real world, you know It really depends.
+
+290
+00:20:17,675 --> 00:20:19,670
+Scott: you got a model the scene to be realistic, right?
+
+291
+00:20:19,750 --> 00:20:24,090
+Scott: And then you also have to you know get the camera and lights to be you know set up, right?
+
+292
+00:20:24,330 --> 00:20:26,490
+Scott: But yeah, it's ray tracing is amazing.
+
+293
+00:20:26,571 --> 00:20:33,855
+Scott: And there's a reason you don't see ray tracing used In video games is because takes a fucking long ass time like the ray tracer I wrote when it would.
+
+294
+00:20:34,056 --> 00:20:34,759
+Scott: we knew to run it.
+
+295
+00:20:35,502 --> 00:20:37,069
+Scott: It would render one frame.
+
+296
+00:20:39,533 --> 00:20:42,450
+Scott: What was one of those machines they had in the computer science lab like spark?
+
+297
+00:20:42,872 --> 00:20:46,066
+Scott: Oh, yeah spark workstations hilarious spark ultra is it?
+
+298
+00:20:46,086 --> 00:20:50,510
+Scott: whatever god That was a long time ago and you would see it drawing from the top left of the screen.
+
+299
+00:20:50,651 --> 00:20:59,969
+Scott: It would draw a line of pixels across to the right Next line and draw row of pixels across to the right and it would look like somebody drawing very, you know It take up a few minutes to draw the one frame.
+
+300
+00:21:00,494 --> 00:21:07,915
+Scott: So in order to have it work in a video game You would have to be able to do that thing that my program did in minutes in 60 times a second.
+
+301
+00:21:07,975 --> 00:21:11,370
+Scott: now, obviously my program would run much faster today on a modern computer.
+
+302
+00:21:11,671 --> 00:21:15,610
+Rym: That wasn't a spark ultra but not fast enough to find a frame buffer in real time.
+
+303
+00:21:15,650 --> 00:21:21,723
+Scott: It would not render that scene 60 times a second, which this Video card can now do.
+
+304
+00:21:21,743 --> 00:21:26,515
+Scott: so according this article I'm sure it's not perfect and amazing But it's gonna be.
+
+305
+00:21:26,956 --> 00:21:28,521
+Scott: it's still amazing compared to what I got.
+
+306
+00:21:28,722 --> 00:21:32,734
+Rym: Nvidia is promising real-time ray tracing in Shadow of the Tomb Raider.
+
+307
+00:21:32,835 --> 00:21:35,061
+Scott: a real game a real game that you can buy.
+
+308
+00:21:35,603 --> 00:21:37,890
+Rym: Yep, and there's some demonstrations.
+
+309
+00:21:38,151 --> 00:21:39,234
+Rym: Apparently it looks pretty good.
+
+310
+00:21:39,795 --> 00:21:44,870
+Rym: So, uh in my if you were gonna buy a video card wait until these hit the street.
+
+311
+00:21:45,431 --> 00:21:57,117
+Scott: so I've seen what I think is pictures of the video cards and apparently I've seen some crazy things like fans on both sides or Cooling things Pre-attached custom whatever.
+
+312
+00:21:57,278 --> 00:22:01,230
+Rym: well, I mean already my 1080 like I have the one that has the fans on it.
+
+313
+00:22:01,611 --> 00:22:11,128
+Rym: But if I got a second one for SLI, which I'm not gonna do anytime soon I would probably have gotten the intrinsically liquid-cooled one because you don't want to video cards pumping heat into your case.
+
+314
+00:22:11,448 --> 00:22:13,936
+Scott: No So yeah, these are.
+
+315
+00:22:13,976 --> 00:22:16,809
+Scott: these are coming now in other news slightly related news.
+
+316
+00:22:17,532 --> 00:22:23,150
+Scott: Right before Nvidia made these announcements Intel announced that in 2020, so you called it.
+
+317
+00:22:23,270 --> 00:22:27,163
+Scott: We've been speculating on this which is actually like a year from now, right?
+
+318
+00:22:27,183 --> 00:22:29,470
+Scott: Cuz 2018 is almost over so like a year and change.
+
+319
+00:22:30,451 --> 00:22:36,830
+Scott: Of course Intel keeps fucking up their other CPU biz, so they might be in trouble, but they announced they're gonna make discrete GPUs.
+
+320
+00:22:36,930 --> 00:22:42,750
+Scott: You're gonna be able to buy an Intel GPU on a video card to go into your PCI Express slot.
+
+321
+00:22:43,092 --> 00:22:45,370
+Scott: That's not gonna be some integrated Intel GPU.
+
+322
+00:22:45,550 --> 00:22:49,083
+Scott: It's supposedly gonna go head-to-head with these 20 80s or 21 80s or whatever they got.
+
+323
+00:22:52,352 --> 00:22:58,430
+Scott: And that's gonna be interesting because if you listen to an old GeekNights I talked about how the real war is gonna be Intel versus Nvidia.
+
+324
+00:22:58,892 --> 00:23:04,632
+Scott: We're just waiting for the other shoe to drop the other shoe being the Nvidia CPU.
+
+325
+00:23:04,793 --> 00:23:05,777
+Scott: Nvidia CPU.
+
+326
+00:23:05,797 --> 00:23:08,470
+Scott: we're gonna see a computer that is a hundred percent Nvidia chips.
+
+327
+00:23:08,570 --> 00:23:10,849
+Scott: And you know what if it came down to it in?
+
+328
+00:23:10,849 --> 00:23:19,190
+Scott: 2022 or whatever where I've got a choice between the computer with all Intel chips and the computer with all Nvidia chips I'm buying the all Nvidia chip.
+
+329
+00:23:19,431 --> 00:23:20,554
+Rym: Well, we'll see.
+
+330
+00:23:20,574 --> 00:23:25,590
+Rym: cuz remember there was the era where Intel was basically overpriced and not getting that much faster.
+
+331
+00:23:25,670 --> 00:23:28,883
+Rym: And then AMD even though there's a lot of problems with their chips.
+
+332
+00:23:29,184 --> 00:23:30,670
+Rym: They forced a competition.
+
+333
+00:23:30,730 --> 00:23:34,150
+Scott: They AMD is actually doing some really good stuff right now.
+
+334
+00:23:34,270 --> 00:23:37,709
+Scott: But it's not good stuff where I would build a name a PC with a hell.
+
+335
+00:23:37,749 --> 00:23:41,670
+Scott: no It's stuff where like you know they've got like I think there's a Chinese game console.
+
+336
+00:23:41,670 --> 00:23:46,470
+Scott: There's gonna be a big somewhat of a big deal that is buying their chips from AMD and stuff like that.
+
+337
+00:23:46,490 --> 00:23:47,708
+Scott: It's like they're making good chips.
+
+338
+00:23:47,991 --> 00:23:57,830
+Rym: But you saw as soon as AMD became a credible credible competitor in like the early 2000s Intel started Just leaps and bounds and way better chips way faster.
+
+339
+00:23:57,890 --> 00:24:00,841
+Scott: So Intel is definitely having hard times right now for reals.
+
+340
+00:24:00,861 --> 00:24:03,190
+Scott: They cannot get those 10 nanometer chips out the fab.
+
+341
+00:24:03,511 --> 00:24:05,377
+Scott: Yeah, they just can't do it there.
+
+342
+00:24:05,397 --> 00:24:14,607
+Rym: and while I would recommend you wait until these Nvidia 2080s come out Like if you need a video card hold out a little bit, but the Intel there's according to this article.
+
+343
+00:24:14,687 --> 00:24:15,489
+Rym: This is all rumored.
+
+344
+00:24:16,830 --> 00:24:19,863
+Rym: Intel's first graphics card isn't gonna hit the street until 2020.
+
+345
+00:24:19,863 --> 00:24:20,506
+Rym: I said that yeah.
+
+346
+00:24:21,791 --> 00:24:25,081
+Rym: So don't wait for the Intel chips if you need.
+
+347
+00:24:25,162 --> 00:24:27,730
+Scott: if you need a gaming PC this games you got to play today.
+
+348
+00:24:28,612 --> 00:24:34,750
+Scott: Right it's like what good does waiting a year or two years to buy a different Intel video card do for you?
+
+349
+00:24:35,072 --> 00:24:36,690
+Scott: You just missed out on two years of gaming.
+
+350
+00:24:36,750 --> 00:24:39,508
+Scott: That's worth more than the ten extra frames you could have.
+
+351
+00:24:39,568 --> 00:24:43,890
+Rym: yeah The real question will be wait until the 2080 comes out and then make your choice.
+
+352
+00:24:44,151 --> 00:24:49,670
+Rym: Do you buy a discount 1080 which is probably still God tier or do you really need that ray tracing?
+
+353
+00:24:50,394 --> 00:24:56,250
+Scott: It's God tier versus Even greater God God of God's tear.
+
+354
+00:25:03,102 --> 00:25:05,576
+Rym: But anyway things of the day.
+
+355
+00:25:05,596 --> 00:25:12,060
+Rym: so Apparently there's a real big problem with levees in America like well in America.
+
+356
+00:25:12,080 --> 00:25:15,000
+Scott: Yeah, cuz you didn't pay enough money to make nice ones like they do in other parts of the world.
+
+357
+00:25:15,221 --> 00:25:17,689
+Rym: No, the problem is that we are paying to make nice ones.
+
+358
+00:25:17,730 --> 00:25:18,572
+Rym: That's the problem.
+
+359
+00:25:18,593 --> 00:25:31,958
+Rym: Oh finally now people won't get flooded great No, so it turns out that what is happening is that levees are being built Around neighborhoods that have money and towns that have money and not around places that don't.
+
+360
+00:25:32,319 --> 00:25:37,300
+Scott: yes But it's not just they just be defending the entire coastline that is threatened by flooding.
+
+361
+00:25:37,661 --> 00:25:40,669
+Scott: Regardless like the whole thing Scott all the way across.
+
+362
+00:25:40,950 --> 00:25:44,460
+Rym: how long is the coastline of like the Mississippi River?
+
+363
+00:25:45,520 --> 00:25:47,499
+Scott: I'm not saying the whole fucking river.
+
+364
+00:25:48,122 --> 00:25:49,145
+Rym: So what part then?
+
+365
+00:25:49,807 --> 00:25:52,597
+Rym: you should watch this video because the issue is way more complicated than you think.
+
+366
+00:25:52,637 --> 00:25:53,078
+Rym: but here's the way.
+
+367
+00:25:53,299 --> 00:25:54,141
+Rym: here's the way Goes down.
+
+368
+00:25:54,503 --> 00:25:56,910
+Rym: say you've got an area levees for the ocean.
+
+369
+00:25:57,452 --> 00:25:59,919
+Rym: No, okay levees just a pile of like.
+
+370
+00:26:01,460 --> 00:26:05,815
+Rym: Anyway, levees are used primarily around rivers not around oceans.
+
+371
+00:26:05,955 --> 00:26:07,320
+Rym: oceans tend to have seawalls.
+
+372
+00:26:08,042 --> 00:26:13,500
+Rym: They may also be levees involved or berms like Disney in Anaheim has a big berm around it.
+
+373
+00:26:13,741 --> 00:26:16,520
+Rym: So they can hide the fact that's in the middle of a city from all the people inside.
+
+374
+00:26:17,162 --> 00:26:23,560
+Rym: But the problem with levees is that say there's a bunch of towns in an area and that area is prone to flooding.
+
+375
+00:26:24,596 --> 00:26:31,908
+Rym: if One of those towns builds a levee around the entire town It not only protects that town from flooding.
+
+376
+00:26:32,349 --> 00:26:36,038
+Rym: It makes flooding more common and way worse in all the other towns.
+
+377
+00:26:36,419 --> 00:26:49,044
+Rym: Yeah, if All the other towns build levees of the same height Then it makes flooding in the next set of towns down there or up the river a million times worse And even worse.
+
+378
+00:26:49,545 --> 00:26:54,039
+Rym: if one of those towns makes a levee that's just like a foot taller that everyone else's levee.
+
+379
+00:26:54,501 --> 00:26:58,259
+Rym: It totally fucks over every other person who has a levee over there.
+
+380
+00:26:59,043 --> 00:27:07,638
+Rym: And the problem is because levees aren't really regulated in the u.s Or at least not very much and the Army Corps of Engineers does not have a lot of input into how they're built.
+
+381
+00:27:07,899 --> 00:27:22,340
+Rym: mostly There's a whole levee war going on all around the u.s And basically upper middle-class white towns are getting flood protection at the expense of literally everyone else around them And it's making flooding way way worse.
+
+382
+00:27:22,440 --> 00:27:32,540
+Rym: So while climate change is definitely contributing to the increase in flooding damage and flooding in the u.s A big part of this increase is actually due to all these levees that were built after the last set of floods.
+
+383
+00:27:32,560 --> 00:27:37,400
+Scott: Well, I still say if you live in a flood place the Army Corps of Engineers shouldn't be building you a levee.
+
+384
+00:27:37,460 --> 00:27:38,178
+Scott: You should fucking move.
+
+385
+00:27:38,503 --> 00:27:39,880
+Scott: Yeah, I do agree with that.
+
+386
+00:27:40,081 --> 00:27:44,558
+Scott: And if you can't afford to move then we should take the money we were gonna spend on a levee and build.
+
+387
+00:27:44,638 --> 00:27:54,629
+Scott: move your house Or build you a new house But this video... You shouldn't have to pay to move Right because in fact we should make the corporations that cause the global warming with their giant Smokestacks or whatever.
+
+388
+00:27:54,912 --> 00:27:55,840
+Scott: they should pay for you to move.
+
+389
+00:27:56,122 --> 00:27:56,950
+Rym: So anyway if you have a very...
+
+390
+00:27:56,970 --> 00:27:57,999
+Scott: Because they're the ones who flooded your house.
+
+391
+00:27:58,180 --> 00:28:08,200
+Rym: If you have a very simplistic view of this like Scott and you want to know the details and you want to know a little More this video actually goes into a lot of detail with a physical model about how this all works.
+
+392
+00:28:08,726 --> 00:28:10,040
+Rym: And it's also fascinating.
+
+393
+00:28:10,823 --> 00:28:13,814
+Scott: My house floods because your rich person levee is too big.
+
+394
+00:28:13,994 --> 00:28:15,400
+Scott: You should pay to fix my flooded house.
+
+395
+00:28:17,002 --> 00:28:19,794
+Rym: Yeah, you should watch this video and then you'll learn a lot about levees.
+
+396
+00:28:20,376 --> 00:28:21,220
+Rym: This is real good stuff.
+
+397
+00:28:21,421 --> 00:28:26,219
+Scott: Also, if you're poor and the next town over with the rich people who built the levee go sabotage that shit.
+
+398
+00:28:28,503 --> 00:28:29,808
+Scott: They think they all safe in their levee.
+
+399
+00:28:29,848 --> 00:28:30,130
+Scott: they go.
+
+400
+00:28:30,150 --> 00:28:30,812
+Scott: they don't leave town.
+
+401
+00:28:30,853 --> 00:28:34,100
+Scott: when the flood comes you leave town But meanwhile their levee leaking.
+
+402
+00:28:35,523 --> 00:28:36,552
+Scott: So what do you got?
+
+403
+00:28:36,572 --> 00:28:37,097
+Scott: What do I have?
+
+404
+00:28:37,117 --> 00:28:42,553
+Rym: I forget You have a map of wireless passwords.
+
+405
+00:28:42,633 --> 00:28:42,974
+Rym: Okay.
+
+406
+00:28:43,015 --> 00:28:46,640
+Scott: Yeah, we're gonna be flying soon to PAX West Yeah, and a lot of airports these days.
+
+407
+00:28:46,680 --> 00:28:47,644
+Scott: They got the free Wi-Fi.
+
+408
+00:28:47,724 --> 00:28:51,058
+Scott: now I always got to turn on a VPN because you can't trust no airport Wi-Fi now.
+
+409
+00:28:51,159 --> 00:28:56,600
+Rym: frankly I cared about this a lot more like five years ago But now I have broadband on my phone no matter where I go.
+
+410
+00:28:56,640 --> 00:29:02,013
+Scott: Yeah, you got LTE usually like I literally don't care about Wi-Fi anymore But you know what Wi-Fi still saves you.
+
+411
+00:29:02,054 --> 00:29:08,166
+Scott: on the data plan I've never I've never even come close to my basically unlimited data plan During months where I've traveled.
+
+412
+00:29:08,246 --> 00:29:12,060
+Scott: if I if I travel twice in the same month, that's what I get in trouble.
+
+413
+00:29:12,201 --> 00:29:14,153
+Scott: This is where I get the text from Verizon.
+
+414
+00:29:14,173 --> 00:29:15,199
+Scott: That's like you're getting close, bro.
+
+415
+00:29:15,521 --> 00:29:21,751
+Rym: Well, I run into the issue of if I'm not near a real city I have no signal because I'm on Teemo with the family plan.
+
+416
+00:29:21,771 --> 00:29:24,803
+Scott: I basically just have unlimited data also like this iPad I'm holding right here.
+
+417
+00:29:24,823 --> 00:29:27,034
+Scott: I did not pay extra to get the iPad with LTE.
+
+418
+00:29:27,094 --> 00:29:28,299
+Scott: It's a Wi-Fi only iPad.
+
+419
+00:29:28,460 --> 00:29:33,887
+Scott: No, you know, maybe you got your switch with you and you want to download a new game Tether to my phone.
+
+420
+00:29:34,149 --> 00:29:35,135
+Scott: you could you could do that.
+
+421
+00:29:35,155 --> 00:29:35,820
+Rym: That's just what I do.
+
+422
+00:29:36,021 --> 00:29:38,670
+Scott: I could do that with my iPad also, but anyway, the point is so.
+
+423
+00:29:39,453 --> 00:29:40,135
+Scott: you need Wi-Fi.
+
+424
+00:29:40,155 --> 00:29:41,360
+Scott: Sometimes it's good to have Wi-Fi.
+
+425
+00:29:41,580 --> 00:29:44,575
+Scott: Sometimes right, you know and you go to airport.
+
+426
+00:29:44,635 --> 00:29:51,451
+Scott: some of them got free Wi-Fi Some of them don't but most of the airports especially in the luxury Little clubs for the people in first class.
+
+427
+00:29:51,471 --> 00:29:53,560
+Rym: Usually you'll see a lot of access point.
+
+428
+00:29:53,600 --> 00:29:57,134
+Rym: That's like pay us money bullshit or free Wi-Fi.
+
+429
+00:29:57,154 --> 00:29:58,440
+Rym: That's so slow doesn't actually work.
+
+430
+00:29:59,162 --> 00:30:03,015
+Rym: Then you'll see one that's like something something - lounge like Emirates loud.
+
+431
+00:30:03,056 --> 00:30:03,316
+Rym: Yeah.
+
+432
+00:30:03,357 --> 00:30:04,320
+Scott: Well, here we go.
+
+433
+00:30:04,400 --> 00:30:13,769
+Scott: There's a website where people who are very generous who have access to those Wi-Fi passwords have collected and published those Wi-Fi Passwords which are unlikely to change.
+
+434
+00:30:13,789 --> 00:30:14,312
+Scott: Yep.
+
+435
+00:30:14,573 --> 00:30:14,995
+Rym: I've only.
+
+436
+00:30:15,035 --> 00:30:20,864
+Rym: there's only one lounge I've ever been in where literally every time I went into that lounge The password was different.
+
+437
+00:30:20,985 --> 00:30:30,464
+Scott: my favorite is when you go to a place and the password has the year in it and the year Is like 2014 like yeah, our password is our name of restaurant 2014.
+
+438
+00:30:30,464 --> 00:30:33,693
+Scott: It's like uh-huh I know when you bought your Wi-Fi access point and I could.
+
+439
+00:30:33,773 --> 00:30:38,764
+Scott: I could probably tell it only has 802 11 G because when you bought it I've had good luck using.
+
+440
+00:30:38,784 --> 00:30:48,215
+Rym: you don't got no an name of airline and whatever the letters are these days name of airline and pick random years or name of rewards club and random years.
+
+441
+00:30:48,235 --> 00:30:49,760
+Rym: Yeah, that's worked for me very well.
+
+442
+00:30:49,840 --> 00:30:56,620
+Scott: Anyway, if you go to an airport, you know And you find yourself needing some Wi-Fi and you're not liking the Wi-Fi that's available and you see some access points.
+
+443
+00:30:57,001 --> 00:31:04,163
+Scott: Just remember this URL visit this URL on you know, LTE or use this an app You can get.
+
+444
+00:31:04,204 --> 00:31:06,079
+Scott: they have Android and App Store apps.
+
+445
+00:31:06,381 --> 00:31:11,496
+Scott: You can get the database load it up before your trip and then look up the the passwords when.
+
+446
+00:31:11,576 --> 00:31:19,038
+Rym: this is the kind of project I love kind of like how I would love to see a project that did the same thing for The codes to bathrooms in public buildings.
+
+447
+00:31:19,119 --> 00:31:23,920
+Scott: Oh, yeah I think the people who use this the most are people who are like pilots and flight attendants.
+
+448
+00:31:23,981 --> 00:31:30,340
+Rym: Yeah, people who are trapped flight crews They're people who are or people who have a lot of business travel, but don't work for a fancy company, right?
+
+449
+00:31:30,420 --> 00:31:33,039
+Scott: But now you can take advantage and now, you know, you're in the club with them.
+
+450
+00:31:33,368 --> 00:31:44,180
+Scott: Yeah Find some pretty much sets a rule in life And generally if this if you're about to do something that you don't do often But other people do do often find those people who do it often and they tell you secrets.
+
+451
+00:31:44,743 --> 00:31:52,180
+Rym: Yeah, believe me like if you're if you're ever flying in weird countries I can tell you a lot of airport secrets and our friend Sherba has got a lot more secrets than I have.
+
+452
+00:31:53,162 --> 00:31:55,753
+Rym: In the moment, the book club book is no longer the Odyssey.
+
+453
+00:31:55,814 --> 00:32:01,834
+Rym: It's now the Space Odyssey We are going to be in not that many days.
+
+454
+00:32:01,894 --> 00:32:11,754
+Scott: in other book club news the as predicted the third book of the NK, Jefferson's trilogy won the Hugo Award for the trifecta.
+
+455
+00:32:11,774 --> 00:32:13,540
+Scott: Yeah, which has never been done before.
+
+456
+00:32:14,123 --> 00:32:15,188
+Rym: I can say why.
+
+457
+00:32:15,308 --> 00:32:17,740
+Rym: it's really really really fucking good, right?
+
+458
+00:32:17,880 --> 00:32:23,219
+Scott: So if you don't remember the first one was a book club selection, so you can read the other two.
+
+459
+00:32:23,641 --> 00:32:30,993
+Rym: It's as nuanced as the culture sci-fi with a good perspective And it also is as full as End of Evangelion.
+
+460
+00:32:31,033 --> 00:32:38,498
+Rym: in terms of you want to know what happens Let's go also see our previous discussion of Hugo Nonsense.
+
+461
+00:32:39,501 --> 00:32:42,150
+Rym: We will also be live at PAX West.
+
+462
+00:32:42,491 --> 00:32:43,695
+Scott: it's coming up too soon.
+
+463
+00:32:43,715 --> 00:32:44,798
+Scott: I got pax fever right now.
+
+464
+00:32:44,878 --> 00:32:48,991
+Rym: Oh my god It's real hard to do anything but think about packs.
+
+465
+00:32:49,071 --> 00:32:49,614
+Rym: It's coming.
+
+466
+00:32:49,774 --> 00:32:49,935
+Scott: Yep.
+
+467
+00:32:50,116 --> 00:32:50,819
+Rym: We're gonna be there.
+
+468
+00:32:51,100 --> 00:32:53,008
+Rym: You're gonna be in tabletop most of the packs.
+
+469
+00:32:53,229 --> 00:32:55,176
+Rym: Yep, and on Monday at 10 a.m.
+
+470
+00:32:55,256 --> 00:32:58,950
+Rym: Pacific time We were doing the updated 40 tabletop games.
+
+471
+00:32:58,990 --> 00:33:01,800
+Rym: You must play and it will stream live on twitch.
+
+472
+00:33:02,081 --> 00:33:03,085
+Scott: We don't know which twitch.
+
+473
+00:33:03,306 --> 00:33:06,980
+Rym: some packs twitch problem guessing either packs two or packs three.
+
+474
+00:33:07,060 --> 00:33:10,560
+Scott: So figure out which one it is and subscribe to it for five bucks for the one month.
+
+475
+00:33:10,680 --> 00:33:13,051
+Rym: Yes, I did not want you to have to watch an ad.
+
+476
+00:33:13,112 --> 00:33:14,900
+Rym: That's right to watch our pan.
+
+477
+00:33:14,920 --> 00:33:17,312
+Scott: They also shouldn't be showing any ad while well on twitch.
+
+478
+00:33:17,352 --> 00:33:18,940
+Scott: You can manually control when the ads play.
+
+479
+00:33:19,322 --> 00:33:23,139
+Scott: Oh, they play an ad in the middle of our panel as opposed to before and after it.
+
+480
+00:33:23,701 --> 00:33:25,207
+Scott: I assume they'll be doing it before and after.
+
+481
+00:33:25,287 --> 00:33:27,274
+Rym: so, uh all I can say.
+
+482
+00:33:27,294 --> 00:33:34,280
+Rym: I don't know if this is still their policy But when I did enforcing I there was the time when I was in charge of the ads.
+
+483
+00:33:34,845 --> 00:33:36,220
+Rym: I was actually making the ads play.
+
+484
+00:33:36,984 --> 00:33:40,179
+Rym: We had to make a lot of them play during panels like right in the middle of them.
+
+485
+00:33:40,460 --> 00:33:49,375
+Rym: Yeah to try to get people to subscribe to not miss parts of the panel Mm-hmm, like the med the the company whose panel it was was like, yep.
+
+486
+00:33:49,536 --> 00:33:50,680
+Rym: That is our strategy.
+
+487
+00:33:51,082 --> 00:33:55,563
+Scott: I mean, we thought I was like news, but honestly, I actually because of the twitch prime I actually forgot.
+
+488
+00:33:55,603 --> 00:33:56,688
+Scott: the twitch even had ads.
+
+489
+00:33:56,708 --> 00:33:57,149
+Rym: Yeah.
+
+490
+00:33:57,190 --> 00:34:03,032
+Scott: Yeah until I saw the news today then it was like, oh my god Clicked on a YouTube video at work like a few days.
+
+491
+00:34:03,072 --> 00:34:03,876
+Scott: Oh, you weren't logged in.
+
+492
+00:34:03,896 --> 00:34:05,780
+Rym: Yeah, I wasn't logged I wasn't even thinking about it.
+
+493
+00:34:05,840 --> 00:34:09,855
+Rym: I can't run ad block at work because ad block could leak data like ad blocks.
+
+494
+00:34:09,915 --> 00:34:13,100
+Rym: actually not that safe Depending on how it's implemented.
+
+495
+00:34:14,161 --> 00:34:17,540
+Rym: But anyway, so it's not like I'm just browsing random crap on my work computer.
+
+496
+00:34:17,620 --> 00:34:18,886
+Rym: I have a laptop I can use for that.
+
+497
+00:34:19,147 --> 00:34:23,386
+Rym: but I clicked on a YouTube video and an ad appeared and Literally, it took me a second to be like.
+
+498
+00:34:23,426 --> 00:34:23,607
+Rym: what?
+
+499
+00:34:23,667 --> 00:34:24,570
+Rym: what ads?
+
+500
+00:34:25,152 --> 00:34:29,302
+Rym: I haven't seen a YouTube ad Mm-hmm in Mm-hmm.
+
+501
+00:34:29,543 --> 00:34:36,348
+Rym: I can't remember the last time I saw a YouTube ad and I saw it and I couldn't even skip it for like a Minute and I didn't know what to do.
+
+502
+00:34:36,630 --> 00:34:37,475
+Scott: pay for YouTube red.
+
+503
+00:34:37,857 --> 00:34:38,219
+Scott: It's worth it.
+
+504
+00:34:38,481 --> 00:34:41,960
+Rym: No, I just closed the tab and whatever video is YouTube red is barely more.
+
+505
+00:34:42,302 --> 00:34:45,036
+Scott: I think it's around the cost of subscribing to one twitch channel.
+
+506
+00:34:45,118 --> 00:34:51,340
+Rym: So But also good ad block just works on YouTube like the HD PC is not logged into my YouTube red.
+
+507
+00:34:51,400 --> 00:34:52,188
+Scott: Yeah, I hope some.
+
+508
+00:34:52,208 --> 00:34:53,219
+Scott: I hope ad block works.
+
+509
+00:34:54,302 --> 00:35:02,102
+Rym: Yeah, so far ad block still works on YouTube, which I'm very Happy about and I'm curious if it'll ever stop working Like.
+
+510
+00:35:02,142 --> 00:35:06,312
+Rym: I really wonder Google could trivially make it stop working maybe and they haven't.
+
+511
+00:35:06,854 --> 00:35:15,267
+Rym: so there's a lot of issues with Twitter Lately if you didn't notice, but we're not gonna talk about the Nazis That we you know about the Nazis.
+
+512
+00:35:15,287 --> 00:35:20,180
+Rym: We're not gonna talk about how the leadership of Twitter seems pretty okay with Nazis.
+
+513
+00:35:20,562 --> 00:35:22,800
+Rym: That whole thing is a separate problem with Twitter.
+
+514
+00:35:23,081 --> 00:35:27,539
+Rym: no, we're gonna talk about something very specific because this actually affects a lot of people who use Twitter.
+
+515
+00:35:27,559 --> 00:35:37,900
+Rym: and The only other point I want to make that I don't want to address in this show is that we're not gonna talk about Leaving Twitter for something like mastodon because for most people that is not a viable option.
+
+516
+00:35:38,482 --> 00:35:42,278
+Scott: So Twitter's made a few changes to the way Twitter works recently.
+
+517
+00:35:42,298 --> 00:35:49,100
+Scott: Yeah And some of those changes were like, you know, whatever right not super big deal.
+
+518
+00:35:49,603 --> 00:35:52,080
+Scott: But then there were some changes they announced many months ago.
+
+519
+00:35:52,100 --> 00:36:01,080
+Scott: I don't know if we talked about them when they announced them way back But they finally happened and what they've done is they've changed the way that third-party Twitter clients work.
+
+520
+00:36:01,200 --> 00:36:03,527
+Scott: They limited the features that are available to them.
+
+521
+00:36:03,568 --> 00:36:05,253
+Scott: They cut off some legacy API's.
+
+522
+00:36:05,413 --> 00:36:07,560
+Rym: now things like this been happening for a long time.
+
+523
+00:36:07,620 --> 00:36:09,566
+Rym: Twitter, I believe they have multiple API platforms.
+
+524
+00:36:09,586 --> 00:36:16,560
+Rym: They basically never migrated any new functionality to the platform That was accessible to third-party apps, right?
+
+525
+00:36:16,580 --> 00:36:20,240
+Scott: So that the thing that they removed first that wasn't part of this, right?
+
+526
+00:36:20,300 --> 00:36:23,791
+Scott: It's a separate removal was the auto posting from Twitter to Facebook.
+
+527
+00:36:23,972 --> 00:36:26,520
+Scott: Yeah, but it's like you can actually code that yourself.
+
+528
+00:36:27,021 --> 00:36:27,583
+Scott: It's not hard.
+
+529
+00:36:27,964 --> 00:36:30,652
+Scott: You could also actually do an IFT.
+
+530
+00:36:30,672 --> 00:36:31,795
+Scott: TT I think can do that.
+
+531
+00:36:32,156 --> 00:36:33,440
+Scott: So it's not really a big deal.
+
+532
+00:36:33,621 --> 00:36:36,633
+Scott: I do know some people that used it, but it's like whatever right?
+
+533
+00:36:36,693 --> 00:36:48,340
+Scott: It's like, you know, you know And it's kind of weird to have you know, two competing companies and you have your thing automatically Send your content to the other company, right?
+
+534
+00:36:48,440 --> 00:36:50,066
+Scott: it was kind of weird that that existed to begin with.
+
+535
+00:36:50,608 --> 00:36:55,980
+Scott: but the thing that this separately the big deal is that They change the way third-party clients work.
+
+536
+00:36:56,141 --> 00:37:03,740
+Scott: So if you don't want to use the real Twitter client Which you shouldn't do not use the real legit Twitter client because it is full of ads and it's awful.
+
+537
+00:37:03,820 --> 00:37:05,005
+Scott: It doesn't show you tweets in order.
+
+538
+00:37:05,246 --> 00:37:06,330
+Scott: It shows you a bunch of bullshit.
+
+539
+00:37:06,611 --> 00:37:07,956
+Scott: You should not be using it.
+
+540
+00:37:08,197 --> 00:37:08,839
+Rym: Yep, right?
+
+541
+00:37:09,520 --> 00:37:12,840
+Rym: Increasingly, I think there won't be third-party apps that work.
+
+542
+00:37:12,980 --> 00:37:21,780
+Scott: Twitter acknowledged in fact in their sort of messaging about this that like hey You know third-party Twitter apps were there before legit ones were right?
+
+543
+00:37:23,102 --> 00:37:26,780
+Scott: And they invented like all the UI and everything that people are used to on Twitter.
+
+544
+00:37:27,563 --> 00:37:29,210
+Scott: So we're very thankful to them.
+
+545
+00:37:29,230 --> 00:37:29,472
+Scott: right?
+
+546
+00:37:29,552 --> 00:37:34,920
+Scott: because basically really, you know Usually what happens is you have the real client and then third-party ones come along later.
+
+547
+00:37:35,000 --> 00:37:37,107
+Scott: But like no the third-party ones actually came first.
+
+548
+00:37:37,408 --> 00:37:43,819
+Scott: the Twitter client the real the legit one could at the official one Could actually be seen as a clone of the third-party ones.
+
+549
+00:37:44,401 --> 00:37:46,266
+Scott: Alright, but anyway, so what they've?
+
+550
+00:37:46,286 --> 00:37:48,592
+Scott: they removed the following features right number one.
+
+551
+00:37:49,314 --> 00:37:51,820
+Scott: You can't get live feed update now.
+
+552
+00:37:51,820 --> 00:37:52,759
+Scott: What the hell is this mean?
+
+553
+00:37:53,020 --> 00:38:02,780
+Scott: It means that if you open up your Twitter and you put it in live mode like as people tweet They will just fucking appear like instantly and you could sit there watching the tweets flow in like a river.
+
+554
+00:38:02,821 --> 00:38:03,679
+Rym: That's really useful.
+
+555
+00:38:03,820 --> 00:38:16,860
+Scott: For example, if you're curating a convention and you're like monitoring the tweets and putting them up on a board or something It's supposedly useful if you are watching television or like a sport event and you want seeing the tweets come in as things happen.
+
+556
+00:38:16,880 --> 00:38:18,580
+Scott: Yeah, but I never use that feature.
+
+557
+00:38:18,620 --> 00:38:20,206
+Scott: So I don't shit and I don't really.
+
+558
+00:38:20,226 --> 00:38:22,454
+Scott: that's like if I was running a convention.
+
+559
+00:38:22,555 --> 00:38:25,264
+Scott: then actually you could you know Or you're putting up on a board.
+
+560
+00:38:25,284 --> 00:38:29,800
+Scott: then you could actually just use the legit Twitter client for that or write a special, right?
+
+561
+00:38:29,840 --> 00:38:33,708
+Scott: it's like you don't really need the Third-party client to do that feature.
+
+562
+00:38:33,769 --> 00:38:36,520
+Scott: right who sits there watching tweets coming live on their phone?
+
+563
+00:38:37,142 --> 00:38:39,530
+Scott: It's like I don't feel like that's a big deal that they remove that.
+
+564
+00:38:40,232 --> 00:38:44,568
+Scott: the second thing they removed which is somewhat of a bigger Deal is the push notification.
+
+565
+00:38:44,709 --> 00:38:47,800
+Scott: So you can't get push notifications anymore.
+
+566
+00:38:48,123 --> 00:38:54,920
+Scott: It's like it used to be like someone like your tweet And if you had enabled you'd immediately your third-party client could like ding Rym like your tweet.
+
+567
+00:38:55,161 --> 00:39:00,500
+Scott: Yeah, and if somebody tweeted at you or DM do you be like ding someone tweeted at you now?
+
+568
+00:39:01,001 --> 00:39:03,974
+Scott: You actually still get the notifications for ads and DMS.
+
+569
+00:39:04,276 --> 00:39:05,300
+Scott: They'll just be delayed.
+
+570
+00:39:05,420 --> 00:39:11,580
+Scott: They won't be real-time which is totally fine because those are the only two things I ever had notifications enabled for.
+
+571
+00:39:11,640 --> 00:39:16,931
+Scott: You know, I don't want to be notified about a like or a retweet My phone will be going ding ding ding ding ding.
+
+572
+00:39:17,193 --> 00:39:22,297
+Rym: It could be annoying for DMS But frankly you should not be using Twitter as a primary means of communication.
+
+573
+00:39:22,337 --> 00:39:22,679
+Scott: DMS.
+
+574
+00:39:22,699 --> 00:39:22,940
+Scott: You're right?
+
+575
+00:39:23,001 --> 00:39:24,300
+Scott: Well, yeah, but it's like yeah, okay.
+
+576
+00:39:24,380 --> 00:39:29,206
+Scott: So even if you don't get your DM notification instantly, which is slightly annoying It's like it's gonna.
+
+577
+00:39:29,386 --> 00:39:30,954
+Scott: you're gonna get the notification like a minute.
+
+578
+00:39:31,074 --> 00:39:32,340
+Scott: It's like what's your hurry, right?
+
+579
+00:39:32,441 --> 00:39:35,140
+Scott: So my Rym at me do I need to add in it on Twitter?
+
+580
+00:39:35,520 --> 00:39:37,594
+Scott: Do I need to know about it instantly or a minute later?
+
+581
+00:39:37,615 --> 00:39:38,360
+Scott: Is that a big deal?
+
+582
+00:39:39,543 --> 00:39:46,220
+Rym: You can use Google Hangout or I'm gonna use a more real-time direct protocol to communicate right?
+
+583
+00:39:46,520 --> 00:39:50,654
+Scott: So the features they removed have a lot of people mad, but honestly, I'm not.
+
+584
+00:39:51,035 --> 00:39:52,380
+Scott: why do you need any of those features?
+
+585
+00:39:53,020 --> 00:39:53,562
+Scott: The client.
+
+586
+00:39:53,602 --> 00:39:54,305
+Scott: I don't see why.
+
+587
+00:39:54,325 --> 00:40:02,240
+Scott: and as we said if you use the third-party client you see no ads and you see all the tweets from the people you follow in order like you're supposed to and you don't see any bullshit.
+
+588
+00:40:02,461 --> 00:40:03,143
+Scott: You don't see tweets.
+
+589
+00:40:03,163 --> 00:40:04,327
+Scott: You missed while you're away.
+
+590
+00:40:04,567 --> 00:40:08,440
+Scott: You don't see suggested whatever right some people mad that like.
+
+591
+00:40:08,581 --> 00:40:10,313
+Scott: Oh, you got to pay for these third-party clients.
+
+592
+00:40:10,414 --> 00:40:11,260
+Scott: I paid for tweet bot.
+
+593
+00:40:11,360 --> 00:40:15,675
+Scott: I think it might have even cost $10, but I use that app a lot.
+
+594
+00:40:15,835 --> 00:40:16,658
+Scott: I never had to pay $10 again.
+
+595
+00:40:17,360 --> 00:40:18,263
+Scott: It's not a subscription.
+
+596
+00:40:18,284 --> 00:40:21,214
+Scott: No, right you I'd pay more for Amazon.
+
+597
+00:40:21,254 --> 00:40:27,355
+Scott: literally every other subscription $10 once the cost of like five to breakfast sandwiches.
+
+598
+00:40:27,375 --> 00:40:28,980
+Scott: never see ads on Twitter again.
+
+599
+00:40:29,080 --> 00:40:33,277
+Scott: See all tweets in order right and I'm only missing out on the features that I just mentioned.
+
+600
+00:40:33,297 --> 00:40:33,960
+Scott: that I don't care about.
+
+601
+00:40:34,201 --> 00:40:37,454
+Rym: So does because it looks like polls don't work through the API.
+
+602
+00:40:37,474 --> 00:40:39,432
+Scott: They've never really worked through the API I don't care.
+
+603
+00:40:39,981 --> 00:40:46,440
+Rym: Well, so pretty much any new feature Twitter ever added for at least six years just isn't available to third-party clients.
+
+604
+00:40:46,440 --> 00:40:49,173
+Scott: Yeah, no tweet, but polls have never worked and I've never tried to use them.
+
+605
+00:40:49,214 --> 00:40:50,500
+Scott: I don't care who cares about polls?
+
+606
+00:40:50,701 --> 00:40:51,727
+Rym: No, do you just not see polls?
+
+607
+00:40:51,787 --> 00:40:52,632
+Rym: I've seen some good polls.
+
+608
+00:40:52,813 --> 00:40:53,436
+Scott: I don't use polls.
+
+609
+00:40:53,537 --> 00:40:54,020
+Rym: I use polls.
+
+610
+00:40:54,161 --> 00:40:56,499
+Rym: I think I guess you wouldn't know because you don't see them.
+
+611
+00:40:57,705 --> 00:40:57,886
+Scott: I can.
+
+612
+00:40:57,927 --> 00:41:04,253
+Scott: sometimes you can tell when a poll a tweet has a poll in it But you know, oh you're using the real Twitter client and seeing ads and bullshit now.
+
+613
+00:41:06,361 --> 00:41:08,980
+Rym: So actually I almost there's almost never ads.
+
+614
+00:41:09,341 --> 00:41:16,880
+Scott: uh-huh, like I literally like I use the real Twitter client which I have on my phone because my tweets are in order but I Don't use it and I have all notifications disabled.
+
+615
+00:41:17,382 --> 00:41:20,110
+Scott: But if I open it this mad bullshit in there see.
+
+616
+00:41:20,130 --> 00:41:25,610
+Rym: so the only bullshit that I see right now is I do see The likes of some of my friends.
+
+617
+00:41:25,651 --> 00:41:26,936
+Rym: that nonsense I don't see that.
+
+618
+00:41:27,137 --> 00:41:27,699
+Rym: Yeah, but that's it.
+
+619
+00:41:27,840 --> 00:41:29,520
+Scott: Otherwise, you don't see sponsored tweets.
+
+620
+00:41:29,841 --> 00:41:32,690
+Rym: So I see maybe one sponsored tweet a day.
+
+621
+00:41:32,710 --> 00:41:37,304
+Rym: because what I've been doing now that I started using the original Twitter app again I started using it a few weeks ago.
+
+622
+00:41:37,325 --> 00:41:37,746
+Rym: Uh-huh.
+
+623
+00:41:37,886 --> 00:41:41,800
+Rym: Partly because the third-party app I was using started not working that well.
+
+624
+00:41:41,820 --> 00:41:42,566
+Scott: Well, that's what you have.
+
+625
+00:41:42,647 --> 00:41:42,868
+Scott: Android.
+
+626
+00:41:42,889 --> 00:41:46,088
+Scott: it gets heat but on the iPhone is yeah I don't know which one's good on Android.
+
+627
+00:41:46,148 --> 00:41:47,012
+Rym: none of them as far as like.
+
+628
+00:41:47,032 --> 00:41:49,846
+Rym: they're all kind of shitty on Android and the biggest Problem is a lot of them.
+
+629
+00:41:50,370 --> 00:41:54,131
+Rym: if you're not connected to the internet They just don't really.
+
+630
+00:41:54,151 --> 00:41:55,880
+Scott: I went to my feet on the real Twitter app.
+
+631
+00:41:56,081 --> 00:41:58,129
+Scott: Yeah, the first tweet is from some anime.
+
+632
+00:41:58,189 --> 00:41:59,394
+Scott: The second one is an ad.
+
+633
+00:41:59,414 --> 00:42:00,056
+Scott: I don't.
+
+634
+00:42:01,361 --> 00:42:04,649
+Scott: Okay, how many more I'm gonna scroll down like the second?
+
+635
+00:42:04,709 --> 00:42:09,884
+Scott: the second tweet is a promoted tweet two three four All right.
+
+636
+00:42:09,904 --> 00:42:11,811
+Rym: I've just rolled past 30 tweets 40.
+
+637
+00:42:11,811 --> 00:42:14,160
+Rym: Hey, I still don't say any promoted tweets.
+
+638
+00:42:14,521 --> 00:42:18,294
+Scott: Oh, there's an 8. so 10 every 10th tweet down was a promoted tweet.
+
+639
+00:42:18,294 --> 00:42:21,749
+Scott: 11 12 13 See I'm not.
+
+640
+00:42:21,769 --> 00:42:28,860
+Scott: I don't see that 16 Every 10 tweets is a promoted tweet on the official Twitter.
+
+641
+00:42:28,860 --> 00:42:31,613
+Rym: So I've just scrolled past hundreds of tweets and I've seen one.
+
+642
+00:42:31,633 --> 00:42:34,706
+Scott: see that I don't believe you I Can't see from here.
+
+643
+00:42:34,726 --> 00:42:36,479
+Rym: I mean you can scroll through and look for one.
+
+644
+00:42:36,499 --> 00:42:36,580
+Rym: now.
+
+645
+00:42:37,322 --> 00:42:43,240
+Rym: difference is what I've been doing is Every time I see an ad I block the account.
+
+646
+00:42:43,360 --> 00:42:50,226
+Scott: So I tried to do that way back before I paid the $10 for the the third party And it didn't work.
+
+647
+00:42:50,347 --> 00:42:53,380
+Scott: actually even though I blocked promoted tweets wouldn't be blocked.
+
+648
+00:42:53,821 --> 00:42:55,086
+Rym: So I don't see.
+
+649
+00:42:55,206 --> 00:42:57,333
+Rym: I've not seen any promoted tweet from an account.
+
+650
+00:42:57,353 --> 00:42:59,240
+Rym: I've blocked since I started doing this.
+
+651
+00:42:59,462 --> 00:43:00,838
+Scott: Maybe they actually made that work.
+
+652
+00:43:01,381 --> 00:43:10,279
+Rym: But and more importantly also now that accounts blocked so I won't see it if anyone retweets it Which is fine because if someone's willing to buy an ad on Twitter, I don't want to see their tweets.
+
+653
+00:43:11,501 --> 00:43:14,452
+Scott: See the only annoying reason on Rym's Twitter app here.
+
+654
+00:43:14,492 --> 00:43:16,880
+Scott: I don't see nearly as many promoted to me as Ron mine.
+
+655
+00:43:16,960 --> 00:43:18,746
+Scott: I saw promoted tweets every 10th tweet.
+
+656
+00:43:18,906 --> 00:43:19,167
+Scott: Either.
+
+657
+00:43:19,287 --> 00:43:22,297
+Rym: You are a more lucrative potential eyeball.
+
+658
+00:43:22,357 --> 00:43:22,718
+Scott: I don't know.
+
+659
+00:43:22,738 --> 00:43:23,259
+Scott: take your phone back.
+
+660
+00:43:24,420 --> 00:43:27,796
+Rym: Or I've blocked so many accounts that no one can advertise to me.
+
+661
+00:43:28,238 --> 00:43:28,540
+Scott: I don't know.
+
+662
+00:43:29,022 --> 00:43:29,304
+Scott: I don't know.
+
+663
+00:43:29,506 --> 00:43:30,311
+Scott: But yeah, I was.
+
+664
+00:43:30,472 --> 00:43:34,900
+Scott: I mean, I haven't used the app So I mean like there was a brief period where I was using it and blocking all this.
+
+665
+00:43:35,742 --> 00:43:41,960
+Rym: Honestly, the only problem I have with the regular Twitter app today on Android is that I see the likes of other people.
+
+666
+00:43:42,604 --> 00:43:44,073
+Rym: I think that is a terrible feature.
+
+667
+00:43:44,093 --> 00:43:45,160
+Rym: I'm still really mad about it.
+
+668
+00:43:45,220 --> 00:43:53,448
+Scott: I think what I might do is since I have the real Twitter app like they're just not being used I might enable The notifications in it, right?
+
+669
+00:43:54,352 --> 00:43:55,355
+Rym: Oh, I see what you're doing.
+
+670
+00:43:55,536 --> 00:43:56,580
+Scott: Then I see notification.
+
+671
+00:43:56,660 --> 00:43:57,806
+Scott: That's like hey Rym added you.
+
+672
+00:43:57,846 --> 00:44:00,759
+Scott: I get it immediately and then I open up my other Twitter app.
+
+673
+00:44:01,181 --> 00:44:04,554
+Rym: But I think there's a much more fundamental issue here because I think this is going to get worse.
+
+674
+00:44:04,855 --> 00:44:10,771
+Rym: I would believe that Twitter will eventually just not provide API's to third parties at all.
+
+675
+00:44:10,791 --> 00:44:12,155
+Scott: They're definitely getting there gradually.
+
+676
+00:44:12,175 --> 00:44:28,820
+Rym: Yeah, they're going towards it and This is analogous to a fundamental issue that comes up time and time and time again on the internet the difference between a proprietary Client and a universal clients as in do you use a special app to connect to a service?
+
+677
+00:44:29,000 --> 00:44:30,926
+Scott: This is why everyone wants you to install their app.
+
+678
+00:44:31,086 --> 00:44:35,620
+Rym: So there's a web browser that can literally access everything everywhere forever, right?
+
+679
+00:44:35,840 --> 00:44:39,192
+Scott: It's like why does Twitter want you so badly to use the Twitter app?
+
+680
+00:44:39,353 --> 00:44:44,420
+Scott: because if you actually use twitter.com Why do they keep what is every website in the world when their app is free?
+
+681
+00:44:44,560 --> 00:44:45,062
+Scott: It doesn't cost.
+
+682
+00:44:45,343 --> 00:44:46,749
+Scott: they don't make any money when you use it.
+
+683
+00:44:46,769 --> 00:44:49,280
+Scott: Why are they pushing you so hard to install their app?
+
+684
+00:44:49,380 --> 00:44:49,902
+Rym: Oh, hey, look, it's.
+
+685
+00:44:49,963 --> 00:44:55,136
+Rym: I just went to Twitter on the web and I see one ad for Land Rover Which I'm gonna block right now.
+
+686
+00:44:56,400 --> 00:44:58,387
+Scott: Why are you giving advertising to somebody?
+
+687
+00:44:58,527 --> 00:44:58,969
+Scott: I just like.
+
+688
+00:44:59,009 --> 00:44:59,831
+Scott: they said their name though.
+
+689
+00:45:00,172 --> 00:45:00,393
+Rym: Yeah.
+
+690
+00:45:00,634 --> 00:45:01,356
+Rym: Yeah, you know what.
+
+691
+00:45:01,416 --> 00:45:02,580
+Rym: don't buy Land Rover cars.
+
+692
+00:45:02,620 --> 00:45:03,343
+Rym: They're garbage.
+
+693
+00:45:03,383 --> 00:45:04,086
+Scott: That's negative.
+
+694
+00:45:04,126 --> 00:45:05,130
+Scott: Attention is good attention.
+
+695
+00:45:05,271 --> 00:45:07,560
+Rym: You know, there's actually not a lot of evidence that that's true.
+
+696
+00:45:07,600 --> 00:45:08,225
+Scott: I'm just saying don't?
+
+697
+00:45:08,426 --> 00:45:08,788
+Scott: I don't like.
+
+698
+00:45:09,211 --> 00:45:13,435
+Scott: you didn't even said Yeah, you got blurred out like beep it out in the show.
+
+699
+00:45:13,455 --> 00:45:16,951
+Scott: I formally You should bleep it out in the show.
+
+700
+00:45:16,991 --> 00:45:17,855
+Scott: Just like it's Korean TV.
+
+701
+00:45:17,895 --> 00:45:23,394
+Rym: We officially Give the opposite of an endorsement for Land Rover.
+
+702
+00:45:23,435 --> 00:45:24,600
+Rym: do not buy a Land Rover.
+
+703
+00:45:24,781 --> 00:45:26,046
+Scott: I actually yeah, those are.
+
+704
+00:45:26,206 --> 00:45:30,901
+Scott: it's like it's a big car that guzzles a lot of gas like anyone who owns one even.
+
+705
+00:45:31,488 --> 00:45:47,700
+Rym: but the Fundamental contract on the web the World Wide Web, which is not the internet, you know We've done shows about this like a decade ago Is that you can use any client you want to access web content and the client has?
+
+706
+00:45:47,700 --> 00:45:52,300
+Rym: 100% control over how that content is rendered and displayed.
+
+707
+00:45:52,721 --> 00:45:55,909
+Rym: The content is marked up and the web browser can do whatever it wants.
+
+708
+00:45:56,210 --> 00:45:59,759
+Rym: That is why web browsers have adblock but apps don't.
+
+709
+00:46:00,562 --> 00:46:05,891
+Rym: That is why most apps that say they'll do app web blocking or ad blocking Usually just scams.
+
+710
+00:46:06,354 --> 00:46:07,180
+Rym: They're stealing your data.
+
+711
+00:46:07,300 --> 00:46:13,900
+Scott: They're way to block ads in an app is with a proxy server with like a VPN or something, right?
+
+712
+00:46:14,621 --> 00:46:16,298
+Scott: The VPN part isn't totally necessary.
+
+713
+00:46:16,580 --> 00:46:34,972
+Scott: But as you get a proxy so all the internet because even the apps are using HTTP requests in the background Right, so you just be software running on your phone or your computer Isn't you know, you can't put a plug-in in the app So you can't block the ads at that level of the of the transaction.
+
+714
+00:46:35,373 --> 00:46:44,780
+Scott: but a proxy will actually look at the rod You know tweet data coming in from you know on your router Right before it gets to your phone and then remove all the ads.
+
+715
+00:46:44,800 --> 00:46:52,012
+Scott: But then when you go to the airport and use the Wi-Fi password that you just got from that website So Scott you're gonna see ads again from a security and data leakage perspective.
+
+716
+00:46:52,052 --> 00:46:53,276
+Rym: How does that handle TLS?
+
+717
+00:46:53,336 --> 00:46:54,540
+Scott: That's what I'm saying.
+
+718
+00:46:54,580 --> 00:46:56,789
+Scott: That's why you got a. it's a little shady.
+
+719
+00:46:57,171 --> 00:47:01,058
+Scott: Yeah, this is the problem in your house But it's not gonna work at that, you know.
+
+720
+00:47:01,361 --> 00:47:10,963
+Rym: But so like Twitter on the web I Could just futz with the way my web browser renders and basically make a third-party client that just renders the Twitter page differently Mm-hmm.
+
+721
+00:47:11,265 --> 00:47:11,808
+Rym: That is like.
+
+722
+00:47:12,050 --> 00:47:21,020
+Rym: that is the core fundamental Contract of how the web is work does work and should work and anything that violates that is a very different thing, right?
+
+723
+00:47:21,080 --> 00:47:26,200
+Scott: Well, what's happened is people have gone from making web pages, right because mostly cuz everyone's using phones.
+
+724
+00:47:26,260 --> 00:47:27,124
+Rym: Yeah, what was that tweet?
+
+725
+00:47:27,144 --> 00:47:27,888
+Rym: I saw a while ago.
+
+726
+00:47:27,908 --> 00:47:30,380
+Rym: I feel like there used to be more web pages, right?
+
+727
+00:47:31,503 --> 00:47:41,778
+Scott: And now instead they make an API Right, and then what they do with that API is they have an authentication mechanism on it So that it's not just an open API that everyone can just hit all they want.
+
+728
+00:47:41,818 --> 00:47:43,419
+Scott: Yeah It's this wrist, you know.
+
+729
+00:47:43,540 --> 00:47:50,040
+Scott: And then they put limits and all sorts of other things on each user that is hitting the API.
+
+730
+00:47:50,240 --> 00:47:52,228
+Scott: So it's like alright your third-party app.
+
+731
+00:47:52,248 --> 00:47:53,894
+Scott: You got this one API user.
+
+732
+00:47:54,135 --> 00:47:55,420
+Scott: You can only make extra quests.
+
+733
+00:47:55,521 --> 00:47:57,319
+Scott: You can only hit these endpoints, right?
+
+734
+00:47:57,500 --> 00:48:02,597
+Scott: But meanwhile the website itself right when you go to use that it doesn't have any limits.
+
+735
+00:48:02,677 --> 00:48:04,985
+Scott: as an API user It could do all this fancy stuff.
+
+736
+00:48:05,066 --> 00:48:06,532
+Scott: If you use the official stuff.
+
+737
+00:48:06,652 --> 00:48:08,520
+Scott: Yeah, so that's that's how they get you.
+
+738
+00:48:08,641 --> 00:48:10,580
+Rym: So why are companies doing this?
+
+739
+00:48:10,720 --> 00:48:13,593
+Rym: Why are they trying to pull us back from the height of the web?
+
+740
+00:48:13,633 --> 00:48:15,140
+Rym: being an open platform can't make money.
+
+741
+00:48:16,103 --> 00:48:16,684
+Scott: They need cave.
+
+742
+00:48:16,724 --> 00:48:16,905
+Scott: they've.
+
+743
+00:48:17,306 --> 00:48:21,899
+Scott: since the web was made they've been trying to make it less like the web and more like cable TV.
+
+744
+00:48:22,307 --> 00:48:25,607
+Scott: Yeah they're trying to push content on you instead of you.
+
+745
+00:48:25,647 --> 00:48:34,651
+Rym: the idea that the web browser is the renderer of their content is Literally against their core ways to monetize.
+
+746
+00:48:35,133 --> 00:48:37,100
+Rym: like they the web browser is their enemy.
+
+747
+00:48:37,160 --> 00:48:47,319
+Rym: they want to get eyeballs off the web browser and onto their proprietary platforms and It's a bad trend and I think it's only going to accelerate and I don't know how much we can do about it.
+
+748
+00:48:48,244 --> 00:48:50,316
+Rym: I mean if Twitter didn't have a web client.
+
+749
+00:48:50,336 --> 00:48:50,899
+Rym: I wouldn't use it.
+
+750
+00:48:51,402 --> 00:48:55,180
+Rym: Yeah, I mean if I actually use the web browser is my primary Twitter client.
+
+751
+00:48:55,220 --> 00:48:59,562
+Rym: I look at Twitter on a computer in Chrome more often than I look at it on my phone I do.
+
+752
+00:48:59,623 --> 00:49:01,760
+Scott: I just use tweet deck so I don't see ads.
+
+753
+00:49:01,840 --> 00:49:03,953
+Rym: Oh, yeah, I use tweet deck, but I also use regular Twitter.
+
+754
+00:49:03,993 --> 00:49:05,080
+Scott: I don't go to twitter.com.
+
+755
+00:49:05,341 --> 00:49:05,784
+Rym: I do that.
+
+756
+00:49:05,885 --> 00:49:07,335
+Rym: I don't see ads apparently.
+
+757
+00:49:07,355 --> 00:49:09,562
+Rym: I don't know why you see Block.
+
+758
+00:49:09,603 --> 00:49:10,024
+Scott: you do that.
+
+759
+00:49:10,144 --> 00:49:12,673
+Scott: Well, you don't yeah, he's all promoted tweet.
+
+760
+00:49:13,034 --> 00:49:13,796
+Rym: Yeah, and I blocked it.
+
+761
+00:49:13,837 --> 00:49:17,993
+Scott: I see so few of them I don't know, but I just don't go to twitter.com.
+
+762
+00:49:18,033 --> 00:49:20,244
+Scott: I use a tweet deck so I don't see any ads.
+
+763
+00:49:20,305 --> 00:49:28,940
+Rym: but Twitter doesn't know how to make money and They're definitely not gonna try to charge us to use Twitter Even though I think that is literally the best possible solution.
+
+764
+00:49:29,666 --> 00:49:32,464
+Rym: Like I think charging money for Twitter would solve Every problem.
+
+765
+00:49:32,484 --> 00:49:34,792
+Rym: Twitter has it but it would not solve the problem.
+
+766
+00:49:34,812 --> 00:49:36,177
+Rym: The VCS are invested in Twitter.
+
+767
+00:49:36,498 --> 00:49:37,040
+Scott: Don't fuck them.
+
+768
+00:49:37,383 --> 00:49:41,858
+Rym: Yeah, I'm very much Indifferent to their concern shall we say.
+
+769
+00:49:43,401 --> 00:49:48,440
+Rym: But this is the opening salvo and what's going to become an increasingly desperate opening salvo.
+
+770
+00:49:48,601 --> 00:49:49,640
+Scott: This war has been going on.
+
+771
+00:49:49,841 --> 00:49:53,362
+Rym: This is the opening salvo as far as a lot of people have ever been aware Like there's.
+
+772
+00:49:53,382 --> 00:49:54,808
+Scott: this is an opening salvo.
+
+773
+00:49:54,949 --> 00:49:57,420
+Scott: and see it's a war that's been going on since the late night.
+
+774
+00:49:57,480 --> 00:49:57,762
+Scott: You know what?
+
+775
+00:49:57,782 --> 00:50:00,560
+Rym: I'll put it differently, but there's been going on for a long time.
+
+776
+00:50:00,560 --> 00:50:03,220
+Scott: There's a new battle a big battle that is starting up.
+
+777
+00:50:03,341 --> 00:50:04,979
+Scott: It was it was a little quiet for a while.
+
+778
+00:50:05,341 --> 00:50:09,960
+Rym: This war has been going on for a long time, but suddenly a battleship showed up on the horizon.
+
+779
+00:50:10,261 --> 00:50:15,740
+Rym: Oh, yeah, and it just fired a barrage into the land where up until this point the war had been invisible.
+
+780
+00:50:16,001 --> 00:50:20,798
+Rym: Yep, because now regular ass people are using regular ass third-party clients.
+
+781
+00:50:21,079 --> 00:50:23,373
+Rym: suddenly There are things not working and they want to know why.
+
+782
+00:50:23,675 --> 00:50:24,460
+Scott: This war hasn't ended.
+
+783
+00:50:24,540 --> 00:50:27,592
+Scott: I've been playing cards in the barracks, but yeah, we picked up the guns.
+
+784
+00:50:27,833 --> 00:50:32,403
+Rym: So welcome to the war I think about.
+
+785
+00:50:32,483 --> 00:51:03,886
+Rym: so from now on I mean the only real advice I can give you because we're running out of time on the show is that Wherever possible if you see a website that's trying to get you to use an app Try to figure out what the specific rationalization is for them to get you to use the app And if the app is actually a better user experience for you and wherever possible Resist the urge to use an app over a generic access website unless you personally have a self-invested reason to do so.
+
+786
+00:51:04,527 --> 00:51:17,101
+Rym: don't migrate because they tell you to or because they try to coerce you to have a good reason for it and be aware of all of these concerns could because if the web goes a lot of the things that make the internet good go away With it.
+
+787
+00:51:17,121 --> 00:51:18,185
+Rym: Hmm.
+
+788
+00:51:18,325 --> 00:51:28,675
+Scott: Also, I've said this many times but you know as for the perspective of the app developers Right whenever you make a product if your product depends on someone else's product.
+
+789
+00:51:28,695 --> 00:51:36,475
+Rym: Yeah, especially someone else's Barely documented API that has an updated in ten years then your business is at their whim.
+
+790
+00:51:36,536 --> 00:51:37,558
+Scott: they couldn't buy you.
+
+791
+00:51:37,759 --> 00:51:46,519
+Scott: they can duplicate the functionality that you have made and put you out of business or They can you know, so it's like you're just totally at their whim.
+
+792
+00:51:47,022 --> 00:51:49,513
+Scott: Make sure you know what you're getting into if you're entering that kind of business.
+
+793
+00:51:49,554 --> 00:51:52,730
+Scott: if your business is a Twitter client That is not official right?
+
+794
+00:51:52,771 --> 00:51:54,400
+Scott: It's like well tweet deck got bought by Twitter.
+
+795
+00:51:54,764 --> 00:51:56,160
+Rym: But in fact, here's an even better example.
+
+796
+00:51:56,280 --> 00:52:00,172
+Scott: But tweet bod did not just be shut down by Twitter at any moment.
+
+797
+00:52:00,492 --> 00:52:00,613
+Scott: the
+
+798
+00:52:00,713 --> 00:52:23,860
+Rym: true vision of the world wide web on the internet Like the true idea for what a web browser was supposed to be Was basically that web browsers are both web clients and web servers and the idea was that everyone is both Connecting to other people to consume their content and Being themselves a source of content to which someone could link and from which someone could consume.
+
+799
+00:52:24,041 --> 00:52:28,060
+Scott: Yeah, like every web page was basically gonna be like Wikipedia like you could edit it right in the page.
+
+800
+00:52:28,140 --> 00:52:29,008
+Scott: Yeah, all the pages.
+
+801
+00:52:29,230 --> 00:52:30,320
+Scott: so that didn't happen.
+
+802
+00:52:30,460 --> 00:53:04,479
+Rym: So imagine so let's use twitch as an analogy if twitch were or something if twitch streamers Acted the way the web was intended to work Then basically I'd run some software like OBS made by some neckbeards somewhere and an open-source community to this thriving and I Publish my content in a distributed fashion Directly to the people who consume it over the internet without any intermediaries or third parties and As a result I can control the experience and if I want to charge money for that or run ads It's a contract between me and my own clients.
+
+803
+00:53:05,182 --> 00:53:09,254
+Rym: But instead twitch streamers exists solely at the whim of twitch and YouTube.
+
+804
+00:53:09,855 --> 00:53:14,950
+Rym: they can't directly publish And they can't even even if they use like patreon.
+
+805
+00:53:14,970 --> 00:53:17,840
+Rym: to get around this they still have to publish through these platforms.
+
+806
+00:53:18,122 --> 00:53:26,942
+Rym: there isn't a good federated model for publishing and most of the large companies on the internet and the infrastructure as they vested interest in making sure there is no good way to Do this.
+
+807
+00:53:27,063 --> 00:53:32,088
+Scott: and even if you you know if you make a saw an OBS is open source Thankfully right and there's other places to stream to.
+
+808
+00:53:32,370 --> 00:53:37,237
+Scott: but like if you make X split and twitch decides We're gonna make it to X split doesn't work with twitch.
+
+809
+00:53:37,278 --> 00:53:37,500
+Scott: Guess what?
+
+810
+00:53:37,960 --> 00:53:39,224
+Scott: We're just gonna.
+
+811
+00:53:39,244 --> 00:53:40,568
+Rym: we won't support our TMP.
+
+812
+00:53:40,629 --> 00:53:42,514
+Scott: They won't do that, but they could yeah.
+
+813
+00:53:42,795 --> 00:53:46,119
+Rym: Well, they won't do that soon They won't do it now.
+
+814
+00:53:46,482 --> 00:53:47,447
+Scott: We made an app that you have.
+
+815
+00:53:47,467 --> 00:53:49,580
+Scott: you want to see the twitch you got to use the twitch streamer app.
+
+816
+00:53:49,660 --> 00:53:50,567
+Scott: No, there's nothing else will work.
+
+817
+00:53:50,588 --> 00:53:51,212
+Scott: We blocked them all.
+
+818
+00:53:51,374 --> 00:53:52,099
+Scott: Yeah, it could happen.
+
+819
+00:53:58,032 --> 00:54:00,570
+Rym: This has been GeekNights with Rym and Scott.
+
+820
+00:54:00,610 --> 00:54:05,450
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+821
+00:54:05,671 --> 00:54:10,690
+Scott: Be sure to visit our website at front row crew comm for show notes discussion news and more.
+
+822
+00:54:10,970 --> 00:54:18,370
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+823
+00:54:18,731 --> 00:54:21,906
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+824
+00:54:23,151 --> 00:54:26,264
+Scott: GeekNights is recorded live with no studio and no audience.
+
+825
+00:54:26,444 --> 00:54:29,372
+Scott: But unlike those other late shows It's actually recorded at night
+
+826
+00:54:39,426 --> 00:54:56,111
+Rym: and the patreon patrons for this episode of good nights are Greg Oliver Allen Joyce Rebecca Don Heidi McNicholas shimmering rubiobolus hanging in the sky jar topish in my state I'm Jeremy Mader link a GJ band scoot alone Lee Roberto Kingsley Kelly Snyder Amanda Duchette Sean Yeager Matthew Smith Nicholas Brando Mr.
+
+827
+00:54:56,131 --> 00:54:59,461
+Rym: Strong distraction for two one creations Chris Reimer and Thomas on.
+
+828
+00:54:59,822 --> 00:55:04,837
+Rym: Shervin von Horrell Rory James David White Rochelle Montanona Superboy tripwire sailor Vista Don.
+
+829
+00:55:04,857 --> 00:55:15,486
+Rym: she liked Jojo Joestar Clinton Walton run from New Zealand Ryan Perrin drew open Lander Finn Chrisman Kiff Daniel Redmond Sean Klein Chris Reimer and Thomas on.
+
+830
+00:56:09,015 --> 00:56:09,405
+Rym: Thank you.
+

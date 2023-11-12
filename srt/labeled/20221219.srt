@@ -1,0 +1,3636 @@
+1
+00:00:07,260 --> 00:00:10,530
+Rym: It's Monday, December 19th, 2022.
+
+2
+00:00:10,530 --> 00:00:11,031
+Rym: I'm Rym.
+
+3
+00:00:11,051 --> 00:00:13,919
+Rym: I'm Scott and this is GeekNights.
+
+4
+00:00:13,959 --> 00:00:17,198
+Rym: tonight We are talking about zero trust.
+
+5
+00:00:18,403 --> 00:00:19,397
+Scott: Let's do this.
+
+6
+00:00:20,541 --> 00:00:23,611
+Rym: So, uh didn't plan on going skiing this past weekend.
+
+7
+00:00:23,731 --> 00:00:27,444
+Rym: Like it's pretty early season climate change has Ravaged.
+
+8
+00:00:27,785 --> 00:00:36,880
+Rym: the Northeast like ski resorts generally have ice at this point Maybe like a thin line of man-made snow all the way down the mountain with a green grass on either side.
+
+9
+00:00:37,722 --> 00:00:43,500
+Rym: But and also remember our car blew up and I didn't actually expect to have a new car like that quickly.
+
+10
+00:00:43,581 --> 00:00:45,559
+Rym: I did expect it was gonna take longer than it did.
+
+11
+00:00:46,262 --> 00:01:02,097
+Rym: so a giant blizzard hit upstate and we went skiing on Saturday and That was literally one of the I'd say top 10 snow days I have ever experienced at Hunter Mountain in the like 15 years.
+
+12
+00:01:02,157 --> 00:01:04,083
+Rym: I've been skiing there Snow.
+
+13
+00:01:04,866 --> 00:01:05,689
+Scott: I didn't see any snow.
+
+14
+00:01:05,729 --> 00:01:07,174
+Scott: I haven't seen a snowflake all year.
+
+15
+00:01:07,214 --> 00:01:08,740
+Scott: Where did this just upstate?
+
+16
+00:01:09,341 --> 00:01:16,329
+Rym: So a giant snowstorm came across the country and then when it got to the middle of New York It kind of just went up and over New York.
+
+17
+00:01:16,750 --> 00:01:25,588
+Rym: So if you drive north of here once you get toward Exit 20 I want to say on the throughway Suddenly it was colder.
+
+18
+00:01:25,608 --> 00:01:32,820
+Rym: and then when you start driving up the mountain toward hunter, it's funny You're driving and it's just brown brown brown brown and then suddenly there's a foot of snow.
+
+19
+00:01:34,040 --> 00:01:37,180
+Scott: Okay, so the mountain has been a really sharp edge on that.
+
+20
+00:01:37,381 --> 00:01:39,120
+Rym: It was a shockingly sharp edge.
+
+21
+00:01:39,261 --> 00:01:42,420
+Rym: Like we're driving just driving not kind of not really paying attention to the road.
+
+22
+00:01:42,480 --> 00:01:47,036
+Rym: I get to that and then suddenly we're like fuck is all the snow come from right here.
+
+23
+00:01:47,377 --> 00:01:48,160
+Rym: Where was the line?
+
+24
+00:01:48,320 --> 00:01:49,069
+Rym: When did that appear?
+
+25
+00:01:49,130 --> 00:01:50,000
+Rym: It was he was kind of amazing.
+
+26
+00:01:51,981 --> 00:02:08,211
+Rym: So it's a good ski day, but this was the first time I ever drove that new car anywhere and it was the first time I've experienced Modern like safety technology in a car not that bullshit Tesla self-driving But like what is reasonable in self-driving in a car.
+
+27
+00:02:08,292 --> 00:02:10,419
+Rym: and this car actually has more than I thought it did.
+
+28
+00:02:11,287 --> 00:02:12,600
+Rym: So I'll give a little geek.
+
+29
+00:02:13,202 --> 00:02:24,460
+Scott: The thing the only thing that I've seen in cars that are you know newer than the last time that I drove regularly Yeah, right is the the rear camera for parking backwards.
+
+30
+00:02:24,701 --> 00:02:26,791
+Rym: Now that's old that's an old.
+
+31
+00:02:26,832 --> 00:02:27,435
+Rym: cars have that.
+
+32
+00:02:27,475 --> 00:02:31,230
+Rym: this car has that but Honestly, I don't find it that useful.
+
+33
+00:02:31,491 --> 00:02:36,531
+Scott: Maybe just cuz I'm you know old man I mean, I never failed to park backwards without it, but it's just.
+
+34
+00:02:36,852 --> 00:02:38,878
+Scott: you know, it helps you from craning your neck.
+
+35
+00:02:38,919 --> 00:02:40,404
+Scott: so much Cuz.
+
+36
+00:02:40,484 --> 00:02:43,514
+Rym: I can do it, you know the traditional way, but but I don't.
+
+37
+00:02:43,614 --> 00:02:47,662
+Scott: now I don't have to turn my neck around like Screen.
+
+38
+00:02:48,043 --> 00:03:14,279
+Rym: I remember in driver's ed as a kid one of the obstacle courses we had to do in high school was literally Driving backward at 15 to 20 miles an hour and like navigating around cones going backward and that technique of like Turning a hundred percent around in your seat and like looking over the top of your wheel or over the top of your seat Not comfortable when you're 40. that was way easier to do when I was 16, I guess 14 when I was in driver's ed.
+
+39
+00:03:16,001 --> 00:03:17,687
+Rym: But no, so what things this thing's got?
+
+40
+00:03:17,928 --> 00:03:21,680
+Rym: and I think it's worth talking about because cars are evil and are destroying the country.
+
+41
+00:03:21,863 --> 00:03:25,540
+Rym: but simultaneously We need to reduce car usage.
+
+42
+00:03:25,781 --> 00:03:29,179
+Rym: We also need to reduce how many people cars kill and there's a lot of ways to do that.
+
+43
+00:03:29,581 --> 00:03:33,619
+Rym: Most of them involve reducing travel lanes making cars more of a pain in the ass, etc.
+
+44
+00:03:34,461 --> 00:03:42,119
+Rym: but also we really trust humans to drive these vehicles way too much because we know humans are not generally capable of this.
+
+45
+00:03:42,139 --> 00:03:47,754
+Rym: and There are four safety systems in this car other than the backup camera.
+
+46
+00:03:48,316 --> 00:03:49,520
+Rym: that honestly impressed me.
+
+47
+00:03:49,620 --> 00:03:50,184
+Rym: They worked.
+
+48
+00:03:50,425 --> 00:03:52,297
+Scott: the backup camera is not a safety system.
+
+49
+00:03:52,317 --> 00:03:52,820
+Rym: Well, it is.
+
+50
+00:03:52,900 --> 00:03:58,040
+Rym: I mean that helps you avoid just running over a kid I guess which is a common form of accident or collision.
+
+51
+00:03:58,060 --> 00:04:12,271
+Rym: I guess that's maybe if you're stupid if you're a terrible driver sure, so number one, it's got this pre collision system with pedestrian detection and It's weird a LiDAR.
+
+52
+00:04:12,633 --> 00:04:13,740
+Rym: Yeah, so it's got a lot our thing.
+
+53
+00:04:13,800 --> 00:04:14,905
+Rym: but it looks for a few things.
+
+54
+00:04:15,407 --> 00:04:23,303
+Rym: if it detects an obstacle in the road, that's big enough and It decides that you're not likely to break in time It'll war.
+
+55
+00:04:23,343 --> 00:04:29,300
+Rym: it'll flash an alarm and warn you like upcoming collision and it'll also power up the break.
+
+56
+00:04:29,320 --> 00:04:30,224
+Scott: How did you test this?
+
+57
+00:04:31,008 --> 00:04:36,639
+Rym: Uh, because it triggered automatically once on The terrible part of New York City coming back in.
+
+58
+00:04:37,642 --> 00:04:39,738
+Rym: Okay, so I got to see what it does in real time.
+
+59
+00:04:40,341 --> 00:04:45,556
+Rym: traffic suddenly stopped because someone slammed on their brakes to try to cut across four lanes of traffic.
+
+60
+00:04:45,596 --> 00:04:47,669
+Rym: like it was almost a really bad situation.
+
+61
+00:04:48,418 --> 00:04:50,440
+Rym: and This car in front of me stopped suddenly.
+
+62
+00:04:50,861 --> 00:04:54,793
+Rym: I see it and I'm about to break right before I break.
+
+63
+00:04:55,033 --> 00:05:01,791
+Rym: the alarm comes on and The car starts breaking on its own Faster so it's faster than your foot.
+
+64
+00:05:01,871 --> 00:05:03,380
+Rym: It was slightly faster than my foot.
+
+65
+00:05:03,440 --> 00:05:11,799
+Rym: So while I definitely would have stopped in time Anyway, it probably stopped the car about five or six feet earlier than I could have at my best.
+
+66
+00:05:11,819 --> 00:05:14,460
+Scott: Okay So I thought this would be a matter of inches.
+
+67
+00:05:14,721 --> 00:05:15,984
+Scott: It stopped.
+
+68
+00:05:16,224 --> 00:05:18,169
+Rym: pretty this car can stop shockingly quick.
+
+69
+00:05:18,470 --> 00:05:18,771
+Scott: was it?
+
+70
+00:05:18,831 --> 00:05:24,080
+Rym: was it an uncomfortable stop like uh, it was a oh shit Stop because it was a no shit situation.
+
+71
+00:05:24,542 --> 00:05:31,580
+Rym: We're on the freeway going like 50 and out of nowhere a car Two cars in front of us slams on their brakes to a complete screeching stop.
+
+72
+00:05:32,562 --> 00:05:34,840
+Rym: Mm-hmm, which New York traffic that happens constantly.
+
+73
+00:05:36,401 --> 00:05:39,190
+Rym: But it has another thing which I did not test and have no way to test.
+
+74
+00:05:39,250 --> 00:06:06,760
+Rym: but supposedly what it does is it scans wide Looking specifically for cyclists and pedestrians that are approaching Perpendicular to my lane of travel and if it detects that their course would intersect with our course at the moment that they would pass the road it warns me and points and has an arrow pointing in the direction of Where the pedestrian or cyclist is to tell me yo make sure everyone Alec right away is sorted out.
+
+75
+00:06:07,881 --> 00:06:13,660
+Scott: Cool I guess I'm trying to imagine if there's a way that the fit of failure in these systems could cause a problem.
+
+76
+00:06:13,720 --> 00:06:18,820
+Scott: But I guess the worst thing it can do is stop your car and then you get hit from behind which is someone else's fault.
+
+77
+00:06:18,880 --> 00:06:20,084
+Rym: Exactly if you get hit from behind.
+
+78
+00:06:20,145 --> 00:06:21,268
+Rym: It's always the other person's fault.
+
+79
+00:06:21,289 --> 00:06:21,770
+Scott: It's like you.
+
+80
+00:06:21,871 --> 00:06:26,568
+Scott: it's like there's nothing that these can do To hurt anyone as long.
+
+81
+00:06:26,608 --> 00:06:27,712
+Scott: it's like it's only braking.
+
+82
+00:06:27,752 --> 00:06:28,555
+Scott: It's not steering.
+
+83
+00:06:28,716 --> 00:06:32,691
+Scott: It's not accelerating It's it's only braking and it's like it's never.
+
+84
+00:06:32,711 --> 00:06:35,200
+Scott: you're never unsafe to stop drive.
+
+85
+00:06:36,742 --> 00:06:37,545
+Rym: So it's pretty cool.
+
+86
+00:06:38,128 --> 00:06:39,855
+Rym: I actually like I applaud those features.
+
+87
+00:06:39,875 --> 00:06:50,253
+Scott: I would argue though Maybe if like you were towing something and it didn't know and then you just slammed on the brakes It might swing the toad trailer out to the you know side.
+
+88
+00:06:50,574 --> 00:06:52,220
+Rym: Ah, so this car is excluded.
+
+89
+00:06:52,300 --> 00:06:54,651
+Rym: You are not allowed to tow shit with it or every day.
+
+90
+00:06:54,671 --> 00:06:55,977
+Rym: Every contract is broken.
+
+91
+00:06:56,017 --> 00:06:57,122
+Rym: This is not a comment I'm sure.
+
+92
+00:06:57,163 --> 00:06:57,967
+Scott: it's clearly.
+
+93
+00:06:57,987 --> 00:07:00,120
+Scott: you didn't buy a large car that can tow things.
+
+94
+00:07:00,180 --> 00:07:04,820
+Scott: But I'm just trying to imagine scenarios with any vehicle where this system would be a bad idea.
+
+95
+00:07:05,746 --> 00:07:06,673
+Scott: There aren't many cuz.
+
+96
+00:07:06,733 --> 00:07:07,660
+Scott: all it's doing is braking.
+
+97
+00:07:07,912 --> 00:07:14,153
+Rym: Yeah I asked the guy at the dealership if I could put a hitch on for like cuz I wanted to put like a bike rack Or something back there and he was just like roof one roof one.
+
+98
+00:07:14,253 --> 00:07:15,318
+Rym: Yeah, well, we're looking at both.
+
+99
+00:07:15,419 --> 00:07:17,799
+Rym: actually They're both equally viable options.
+
+100
+00:07:18,181 --> 00:07:21,572
+Rym: But he thought I was asking because I wanted to tow something and he laughed.
+
+101
+00:07:21,612 --> 00:07:25,475
+Rym: it's like you think a Corolla hybrid can tow Anything and I was like no.
+
+102
+00:07:28,221 --> 00:07:31,799
+Rym: But so - it's got a lane Tracing assistant.
+
+103
+00:07:32,021 --> 00:07:42,439
+Rym: So what it'll do is it think if it can if it can figure out where the lanes are just from its own cameras and sensors then it'll have a little display and it'll warn you.
+
+104
+00:07:42,459 --> 00:07:50,604
+Rym: if You drift toward the end either side of your lane with your turn signal not on like it'll flash an alarm like yo dog You doing.
+
+105
+00:07:51,588 --> 00:07:54,904
+Rym: and if you wave a little bit and I tried it I got it to trigger.
+
+106
+00:07:55,366 --> 00:07:58,340
+Rym: if you're driving a little wavy it has pops of a warning.
+
+107
+00:07:58,400 --> 00:08:00,511
+Rym: That's like you are too tired to drive.
+
+108
+00:08:00,551 --> 00:08:02,220
+Rym: You should pull over right the fuck now.
+
+109
+00:08:03,520 --> 00:08:04,443
+Rym: Mmm, it's not bad.
+
+110
+00:08:04,604 --> 00:08:05,908
+Rym: those I also agree with.
+
+111
+00:08:06,590 --> 00:08:09,480
+Rym: this car is something fancier that most of these cars don't have.
+
+112
+00:08:10,104 --> 00:08:13,743
+Rym: I can turn on a further mode, which is Automated.
+
+113
+00:08:13,783 --> 00:08:14,146
+Scott: you got it.
+
+114
+00:08:14,167 --> 00:08:14,994
+Scott: You got to turn it on.
+
+115
+00:08:15,054 --> 00:08:15,740
+Scott: It's not just always.
+
+116
+00:08:15,740 --> 00:08:18,108
+Rym: Yeah, this is a turn on thing and it.
+
+117
+00:08:18,188 --> 00:08:22,355
+Scott: so if you if you just buy the car and start driving with everything factory reset It's not on.
+
+118
+00:08:22,821 --> 00:08:32,820
+Rym: Yeah, the the warnings are all on and the pre braking is on every what I'm about to describe is not on unless you turn It on actively while driving and it turns itself off if anything goes wrong.
+
+119
+00:08:32,919 --> 00:08:36,254
+Rym: And it won't let you turn it on in a lot of situations where it'd be dangerous.
+
+120
+00:08:36,313 --> 00:08:37,438
+Rym: It's pretty good about that.
+
+121
+00:08:38,123 --> 00:08:43,448
+Rym: So cruise control you can do normal cruise control But that's like the option of last resort.
+
+122
+00:08:43,469 --> 00:08:50,399
+Rym: the way cruise control works is you get you pick a speed Or you get behind a car and you just tell it follow the car in front of me.
+
+123
+00:08:51,062 --> 00:08:55,617
+Rym: It'll just follow that car at a set distance and you tell the car how far back you want to be.
+
+124
+00:08:55,637 --> 00:08:59,259
+Rym: if you set it To the closest setting it's still pretty far back.
+
+125
+00:08:59,882 --> 00:09:09,419
+Rym: And if you set it to the furthest setting it tries to keep that car like on the horizon in the distance And it just follows that car whatever speed it's going and it just works like it's just perfect.
+
+126
+00:09:10,102 --> 00:09:13,739
+Scott: What if that other car like suddenly accelerates or suddenly decelerates?
+
+127
+00:09:14,321 --> 00:09:24,457
+Rym: It'll if that car suddenly decelerates It'll slow down if it thinks it can to maintain speed and if it's decelerating too quickly It sounds an alert and triggers the same braking system.
+
+128
+00:09:24,477 --> 00:09:34,287
+Scott: I described before Hmm, but I mean it's like if you have enough space between you and the car in front of you and they decelerate quickly It's like you should decelerate smoothly.
+
+129
+00:09:34,307 --> 00:09:34,507
+Rym: Yep.
+
+130
+00:09:34,587 --> 00:09:39,300
+Rym: It doesn't that actually it does the deceleration to maximize one safety.
+
+131
+00:09:40,204 --> 00:09:44,350
+Rym: second Recharging the battery by braking in the best way possible for a hybrid.
+
+132
+00:09:44,712 --> 00:09:46,417
+Rym: and then three comfort for the passengers.
+
+133
+00:09:46,638 --> 00:09:54,600
+Scott: in that order According to the manual which I read entirely now What if the person in front of you is going a hundred and you tell it to follow them?
+
+134
+00:09:54,700 --> 00:09:55,342
+Scott: Will it go a hundred?
+
+135
+00:09:55,783 --> 00:09:56,285
+Rym: it will.
+
+136
+00:09:56,606 --> 00:10:01,360
+Rym: but the car warns you this because it's a hybrid and it's designed for efficiency.
+
+137
+00:10:01,962 --> 00:10:09,339
+Rym: If you drive the car over 85 for more than like a half hour, it starts warning you like Yeah, this car is not really designed for this dog.
+
+138
+00:10:10,062 --> 00:10:14,254
+Scott: Yeah, okay, so it's still an American car that will drive at unsafe speed.
+
+139
+00:10:14,314 --> 00:10:27,740
+Rym: I can get it up to like 130 if I want to But but basically if there's nothing in front of you or the car accelerates you tell it the maximum speed you're comfortable with and it'll Slowly very slowly accelerate to that speed.
+
+140
+00:10:29,142 --> 00:10:34,713
+Scott: hmm, it would be cool if you could be like Follow that car in front of me, but don't go fat.
+
+141
+00:10:34,833 --> 00:10:36,660
+Scott: Also don't go over this speed, right?
+
+142
+00:10:38,306 --> 00:10:38,527
+Rym: I can.
+
+143
+00:10:38,808 --> 00:10:42,220
+Rym: basically if you set the max speed, it'll never go above the max speed no matter.
+
+144
+00:10:42,220 --> 00:10:47,268
+Scott: Yeah, so I keep like look, you know, the speed limit here is 70 65 whatever.
+
+145
+00:10:47,388 --> 00:10:52,188
+Scott: Yeah, don't go over that because I don't want to take it right now and also Follow the car in front of me.
+
+146
+00:10:52,268 --> 00:10:58,174
+Scott: and if the car in front of you happens to slow down to 40 But 30 or you know, it'll slow down.
+
+147
+00:10:58,234 --> 00:11:08,195
+Scott: Yeah, but if the car 30 my car is not gonna be like, oh, let's go Yeah, and you just focus on the steering and you know, so about the accelerating.
+
+148
+00:11:08,516 --> 00:11:13,970
+Rym: I didn't intend to get this But because this was the only car in the lot it had the maximum set.
+
+149
+00:11:14,491 --> 00:11:19,740
+Rym: It also has the freeway only automatic driving That uses the radar.
+
+150
+00:11:20,101 --> 00:11:32,284
+Rym: So you tell it follow the car in front of you and it'll just stay in its lane and it'll turn all on its own and as long as you're on the freeway above like 35 40 miles an hour and There's and the land.
+
+151
+00:11:32,325 --> 00:11:33,650
+Rym: that lane thing is fully working.
+
+152
+00:11:34,112 --> 00:11:35,578
+Rym: it'll just drive itself perfectly.
+
+153
+00:11:36,821 --> 00:11:39,668
+Scott: You're depending though on really good lane markings.
+
+154
+00:11:39,829 --> 00:11:43,899
+Rym: Yep, if the lane markings are even slightly dodgy it warns you and disables itself.
+
+155
+00:11:44,921 --> 00:11:51,826
+Scott: Okay, so it and or it's like the other thing you got to watch out for is like you could have clear lane markings But you know where they're like.
+
+156
+00:11:52,307 --> 00:11:59,100
+Scott: good contrast, you know, the computer can pick them out and notice them But they're all fucked the fuck up because it's New Jersey or some shit, right?
+
+157
+00:11:59,160 --> 00:12:00,870
+Scott: And it's like suddenly you don't know where you're going.
+
+158
+00:12:00,890 --> 00:12:01,211
+Scott: You're on.
+
+159
+00:12:01,473 --> 00:12:02,780
+Scott: Is this a Lincoln Tunnel Lane?
+
+160
+00:12:04,441 --> 00:12:09,320
+Rym: So if the if the lanes get complicated or weird it warns you and turns itself off.
+
+161
+00:12:11,220 --> 00:12:18,639
+Rym: And also I tried it it if you just let go completely it just does fully drive itself and it drives Honestly as well as I would.
+
+162
+00:12:19,402 --> 00:12:26,239
+Rym: after about 15 seconds of that it does the very good thing that I applaud that people should not be disabling on their fucking cars.
+
+163
+00:12:26,560 --> 00:12:34,716
+Scott: where It starts warning you like yo touch the steering wheel asshole Does it let you to say does it actually let you disable the?
+
+164
+00:12:34,817 --> 00:12:35,420
+Scott: please touch this?
+
+165
+00:12:36,162 --> 00:12:40,020
+Rym: No, there's no way to disable that without doing illegal aftermarket mods.
+
+166
+00:12:40,783 --> 00:12:41,900
+Scott: Okay, I was just checking.
+
+167
+00:12:42,069 --> 00:12:43,220
+Rym: Yeah So, okay.
+
+168
+00:12:43,260 --> 00:12:43,903
+Rym: But what's cool?
+
+169
+00:12:43,963 --> 00:12:45,087
+Rym: it detects it two ways.
+
+170
+00:12:45,388 --> 00:12:52,739
+Rym: if you are gripping the steering wheel in the traditional like way You're taught in driver's ed and you're holding it hard Then it'll just drive forever.
+
+171
+00:12:53,302 --> 00:13:04,572
+Rym: If you're if you're not touching the wheel or you're barely touching it like you're doing the cruise control like I got two fingers in the bottom of the wheel thing as long as you're Kind of driving along with the car and inputting it'll just.
+
+172
+00:13:04,612 --> 00:13:06,379
+Rym: it'll trust that you it'll trust you and keep going.
+
+173
+00:13:08,001 --> 00:13:20,360
+Rym: But if you don't do any inputs or if you're not gripping the wheel one of those two, it'll eventually say hey I'm going to slowly decelerate to a stop and turn on the hazards and I'm gonna call 9-1-1 because something's wrong.
+
+174
+00:13:21,661 --> 00:13:23,768
+Scott: You know, that's actually not too bad of an idea.
+
+175
+00:13:23,928 --> 00:13:28,343
+Scott: right is to have with all this technology for what I'm about to suggest exists Today, right?
+
+176
+00:13:28,383 --> 00:13:33,964
+Scott: Yeah, you have a car that a if it detects any alcohol in the air It refuses to drive.
+
+177
+00:13:34,124 --> 00:13:37,920
+Rym: this car could easily detect a drunk driver because the input would be the same inputs.
+
+178
+00:13:38,582 --> 00:13:39,506
+Scott: Why why do we?
+
+179
+00:13:39,667 --> 00:13:42,740
+Scott: why does it even let people do the two fingers at the bottom of the wheel?
+
+180
+00:13:42,920 --> 00:13:48,391
+Scott: It should be like if you don't have both hands in the correct driving position at all times The car will pull over and stop.
+
+181
+00:13:48,773 --> 00:13:58,640
+Scott: Well, like I would That looks at your face and if your eyes are not open and on the road if you look away from the road it Pulls over and stops.
+
+182
+00:13:58,680 --> 00:14:10,260
+Rym: I did drive a car once that I rented like five years ago and it had a feature where it had a camera pointed at Your face and if it thought you were falling asleep, it would play noise and blast cold air at your face and it worked.
+
+183
+00:14:11,163 --> 00:14:12,540
+Scott: Yeah, I mean but that that's okay.
+
+184
+00:14:12,640 --> 00:14:24,035
+Scott: But I'm saying like the car basically forces you to if you are not fully paying if it sees you pull like a cell phone out yeah, the car turns off and doesn't turn back on period because you're not allowed to drive.
+
+185
+00:14:24,075 --> 00:14:30,314
+Rym: because now on the two things I have Definitely seen you driving a car with only one hand on the wheel that you have done that.
+
+186
+00:14:30,334 --> 00:14:34,806
+Rym: I'm just saying yeah, but I'll go one step further.
+
+187
+00:14:35,550 --> 00:14:36,494
+Rym: the technologies.
+
+188
+00:14:36,615 --> 00:14:38,621
+Rym: I just described Exists.
+
+189
+00:14:39,323 --> 00:14:42,254
+Rym: I only have them because I bought a new expensive car but they exist.
+
+190
+00:14:42,294 --> 00:14:46,949
+Rym: they could be put in any car That was built anywhere in the world if we wanted to.
+
+191
+00:14:47,350 --> 00:14:58,600
+Rym: so arguably if we're gonna have a society to use cars we should require that all cars have these features because they Absolutely objectively make it safer for everyone involved.
+
+192
+00:14:59,704 --> 00:15:04,269
+Rym: These should be like seatbelts Yeah, and they're not even expensive to install.
+
+193
+00:15:04,310 --> 00:15:05,995
+Rym: the lighter equipment is not that expensive.
+
+194
+00:15:06,215 --> 00:15:14,200
+Rym: the expensive part of the software Like the tuning and the data and all the stuff that frankly maybe we should just nationalize in some fashion.
+
+195
+00:15:14,622 --> 00:15:15,749
+Rym: But anyway, I digress.
+
+196
+00:15:15,789 --> 00:15:16,816
+Rym: that's enough talking about cars.
+
+197
+00:15:16,836 --> 00:15:17,419
+Rym: You got any news?
+
+198
+00:15:18,761 --> 00:15:19,523
+Scott: Do we have a news?
+
+199
+00:15:19,563 --> 00:15:25,000
+Scott: Yeah, so in California right where they are looking out for people with safety safety measures, right?
+
+200
+00:15:25,420 --> 00:15:30,600
+Scott: They got this new law that basically, you know, I go into the details of all the nitty-gritty on the law.
+
+201
+00:15:30,720 --> 00:15:35,120
+Rym: Yeah, there's a similar thing in Canada that I thought about using as a news, but I didn't read full.
+
+202
+00:15:35,421 --> 00:15:43,431
+Scott: Similar things in Europe also, but basically it's a it's an internet child protection law of sorts Which are all which have a mixed history of good and bad.
+
+203
+00:15:43,452 --> 00:15:46,060
+Scott: Yeah, there's all kinds of things going on with it, right?
+
+204
+00:15:46,100 --> 00:15:58,545
+Scott: You know, but basically it's like hey You have to evaluate your designs and see if they hurt the children and you know Don't design your software to exploit the children Etc, right You know, don't?
+
+205
+00:15:58,946 --> 00:16:00,312
+Scott: don't you know?
+
+206
+00:16:00,453 --> 00:16:01,879
+Scott: hurt the privacy of the children?
+
+207
+00:16:02,000 --> 00:16:07,540
+Scott: Yeah It's basically saying hey, you know internet companies, right?
+
+208
+00:16:07,780 --> 00:16:12,403
+Scott: You know stop just you know making apps that are like, you know Sort of like the same.
+
+209
+00:16:12,765 --> 00:16:19,692
+Rym: stop just making the YouTube hell that a kids were Subjected to via algorithms before YouTube clap down on that shit.
+
+210
+00:16:20,113 --> 00:16:27,137
+Scott: Yeah, so someone it There are actually companies that are tech companies that are in favor of this.
+
+211
+00:16:27,378 --> 00:16:35,072
+Scott: surprisingly Right, but one company in particular right is Not only against it, but they're so against it.
+
+212
+00:16:35,112 --> 00:16:38,865
+Scott: They're trying to sue, California Claiming it's a freedom of speech.
+
+213
+00:16:38,906 --> 00:16:40,672
+Rym: It's why it's net choice, isn't it?
+
+214
+00:16:41,254 --> 00:16:44,082
+Rym: Yeah net choice set in a statement Right.
+
+215
+00:16:44,544 --> 00:16:46,713
+Scott: So they're suing is like hey freedom of speech, right?
+
+216
+00:16:46,733 --> 00:16:52,170
+Scott: So their argument is basically Like hey, you know we make an we publish software.
+
+217
+00:16:52,832 --> 00:16:56,060
+Scott: that software is itself is like an expression, right?
+
+218
+00:16:56,060 --> 00:16:57,390
+Scott: It's like a you know, a piece of art.
+
+219
+00:16:57,572 --> 00:16:58,398
+Scott: Yeah, whatever.
+
+220
+00:16:58,418 --> 00:17:12,734
+Scott: and You telling us that hey, we can't make these certain design decisions in our software because it might hurt the children is Infringing upon our freedom of speech about what software we could make.
+
+221
+00:17:12,775 --> 00:17:17,940
+Scott: so well, you know And it is indeed the government is making these regulations.
+
+222
+00:17:18,342 --> 00:17:25,146
+Rym: So it is a freedom of speech argument and one could make the overly reductive Obviously ridiculous point.
+
+223
+00:17:25,548 --> 00:17:28,698
+Rym: but I put it out there because it is relevant kind of thing that we'll talk about on GeekNights.
+
+224
+00:17:29,019 --> 00:17:33,212
+Rym: that Software is just one giant number in the end.
+
+225
+00:17:33,553 --> 00:17:35,739
+Rym: It's just a giant number that you look at.
+
+226
+00:17:36,764 --> 00:17:38,493
+Scott: Well, you want to use your car, you know.
+
+227
+00:17:38,614 --> 00:17:39,499
+Scott: example I could be like.
+
+228
+00:17:39,539 --> 00:17:44,252
+Scott: well I'm making a car and the choice to put seatbelts is a design choice.
+
+229
+00:17:44,272 --> 00:17:46,558
+Scott: You're infringing upon my artistic expression.
+
+230
+00:17:46,578 --> 00:17:50,740
+Scott: Ah Nice right for the throat set of regulating the safety of the car.
+
+231
+00:17:50,860 --> 00:17:53,591
+Rym: I was gonna make more steps along the way because software is not.
+
+232
+00:17:53,652 --> 00:18:04,042
+Scott: just I don't like how my car looks when I had Seatbelts on you know, you're infringing upon my freedom of speech with my car design anyway, so The most.
+
+233
+00:18:04,082 --> 00:18:06,028
+Scott: the real reason that this is news, right?
+
+234
+00:18:06,108 --> 00:18:14,153
+Scott: It's just like okay, whatever a company fights against government regulation That harms the company right is because they made this preposterous argument.
+
+235
+00:18:14,433 --> 00:18:16,580
+Scott: That is just like a galling argument.
+
+236
+00:18:16,700 --> 00:18:16,901
+Scott: Yeah,
+
+237
+00:18:17,222 --> 00:18:39,866
+Rym: I can think of a lot of arguments to maybe have more nuanced approaches to protecting children from the fact that the internet exists without infringing upon the rights of adults to engage with whatever they want to engage with on the internet, but First Amendment in this specific context is the kind of right-wing reactionary Capitalist nonsense that got us into.
+
+238
+00:18:39,886 --> 00:18:41,811
+Scott: but that's not even the real problem.
+
+239
+00:18:41,831 --> 00:18:44,800
+Scott: The real problem is that in there in their complaint, right?
+
+240
+00:18:46,422 --> 00:18:51,879
+Scott: They basically argued like hey, you don't have real proof that this is actually gonna help the children yada yada yada.
+
+241
+00:18:52,281 --> 00:19:00,600
+Scott: And then they said quote guessing wrong about what these provisions prescribe is prohibitively expensive.
+
+242
+00:19:01,162 --> 00:19:05,518
+Scott: Penalties for even negligent errors could exceed 20 billion.
+
+243
+00:19:05,578 --> 00:19:08,352
+Rym: So oh You handle the previous one.
+
+244
+00:19:08,393 --> 00:19:09,098
+Rym: I'll handle this one.
+
+245
+00:19:10,263 --> 00:19:23,564
+Rym: If the danger of being wrong about actually causing harm is causing harm to children Then we should err on the side of being wrong about protecting the kids and loosening it up rather than the other way around Just like we're
+
+246
+00:19:23,604 --> 00:19:32,731
+Scott: basically saying hey if you're wrong if this law is wrong and it doesn't protect the children It's gonna cost 20 billion dollars to corporations and it's like so.
+
+247
+00:19:32,811 --> 00:19:39,350
+Scott: we should make sure that the corporation's 20 billion is protected and Not even try to protect the children.
+
+248
+00:19:39,371 --> 00:19:41,982
+Scott: that we guess wrong and we hurt the children That's fine.
+
+249
+00:19:42,043 --> 00:19:43,849
+Rym: the little mind is probably safe.
+
+250
+00:19:43,909 --> 00:19:48,622
+Rym: We could force everybody to test it or we could just say fuck it Right.
+
+251
+00:19:48,662 --> 00:19:51,372
+Scott: It's like what if we guess wrong and we hurt and we.
+
+252
+00:19:51,894 --> 00:19:53,560
+Scott: they don't care if the children are hurt, right?
+
+253
+00:19:53,600 --> 00:19:54,965
+Scott: They only care if the companies are hurt.
+
+254
+00:19:55,026 --> 00:20:07,655
+Rym: never mind the fact that software as it is used definitely feels like it falls more under the guise of a combination of commercial speech and Product or service as opposed to just speech.
+
+255
+00:20:07,936 --> 00:20:21,645
+Rym: the source code Unexecuted is probably pure free speech but executed it with a specific purpose especially considering every use case here is around profitable monetization of Software aimed at children.
+
+256
+00:20:22,027 --> 00:20:25,960
+Rym: It feels like there are plenty of guardrails on this type of legislation.
+
+257
+00:20:26,928 --> 00:20:28,480
+Scott: I mean this has been you know a problem.
+
+258
+00:20:28,665 --> 00:20:37,180
+Scott: I think you know It's probably something they learn about in law school right that People who've been to law school are probably like yeah Scott you sound like an idiot right not knowing this stuff, right?
+
+259
+00:20:37,320 --> 00:20:44,180
+Scott: But like, you know when you're talking about, you know categories of objects and how different laws apply to them and whatnot, right?
+
+260
+00:20:44,280 --> 00:20:45,668
+Scott: It's always contextual right?
+
+261
+00:20:45,708 --> 00:20:56,400
+Scott: It's like, you know, you can have a law regulating a Power tools to make sure they have safety features and then someone makes an art art installation that includes power tools.
+
+262
+00:20:56,942 --> 00:21:01,000
+Scott: It's like suddenly the same object which had these rules applied to it.
+
+263
+00:21:01,060 --> 00:21:04,497
+Scott: those rules no longer apply because the object is in a different context.
+
+264
+00:21:04,558 --> 00:21:07,444
+Scott: right and You know I guess that happens.
+
+265
+00:21:07,785 --> 00:21:13,181
+Scott: that kind of thing happens constantly because everything in our society can change, you know It's like.
+
+266
+00:21:13,683 --> 00:21:16,933
+Scott: ah that you know, you were regulating loud noise, but it's music.
+
+267
+00:21:16,974 --> 00:21:18,900
+Scott: So now it's speech but now it's clothing.
+
+268
+00:21:19,021 --> 00:21:20,750
+Scott: It's something that keeps me warm.
+
+269
+00:21:20,831 --> 00:21:21,595
+Scott: It's a shelter.
+
+270
+00:21:21,615 --> 00:21:24,737
+Scott: I Know that I live in its property.
+
+271
+00:21:24,797 --> 00:21:29,391
+Scott: property You know, my real estate law applies, but now it's a sculpture.
+
+272
+00:21:29,572 --> 00:21:34,104
+Rym: even it's whatever road is where sovereign citizens come from It's all admiralty law.
+
+273
+00:21:34,124 --> 00:21:45,920
+Scott: in the end anyway, and technically the point is those contextual things right apply Way more often, you know in the real world those situations exist, but they're somewhat rare, right?
+
+274
+00:21:45,920 --> 00:21:46,121
+Scott: It's like.
+
+275
+00:21:46,463 --> 00:21:48,533
+Scott: the most of the houses are houses people live in.
+
+276
+00:21:48,553 --> 00:21:49,940
+Scott: in real estate law applies.
+
+277
+00:21:50,302 --> 00:21:52,495
+Scott: Most of the power tools are power tools.
+
+278
+00:21:52,535 --> 00:22:03,940
+Rym: people used to like yeah There might be a crazy guy living on a houseboat that is floating in a private pond But is connected to the power grid and they're using a power tool on it.
+
+279
+00:22:03,980 --> 00:22:06,046
+Rym: Like there might be some crazy situation.
+
+280
+00:22:06,287 --> 00:22:15,699
+Scott: and it's between when it comes to us where it's like software is frequently right very frequently a tool and a work of art.
+
+281
+00:22:15,719 --> 00:22:29,438
+Scott: and You know, it's like yeah lots and lots of software in the world is frequently multiple things at once with multiple Sets of overlapping laws like applying to it in many different ways, right?
+
+282
+00:22:29,478 --> 00:22:41,050
+Rym: So yep And the root issue here is that our society I mean remember Scott and I are around 40 We grew up where basically with like the internet grew up with us.
+
+283
+00:22:42,771 --> 00:22:49,909
+Rym: So our childhood was a very weird world where we lived in a childhood where there wasn't an internet and now there's an internet and Now there's the modern internet.
+
+284
+00:22:50,453 --> 00:22:58,006
+Rym: so what our society is not figured out is How can the internet continue to exist so that any adult can do any fucking thing they want on there?
+
+285
+00:22:58,046 --> 00:23:10,135
+Rym: That isn't directly illegal or dangerous without harming children who also have access to this without putting undue burden on either entity to Manage that protection.
+
+286
+00:23:10,195 --> 00:23:12,483
+Rym: Like if I make a website and I say fuck on it.
+
+287
+00:23:13,005 --> 00:23:14,210
+Rym: I should be able to do that.
+
+288
+00:23:14,551 --> 00:23:32,984
+Rym: I shouldn't have to like age verify anyone who visits my site but if you make an app that you're selling that you expect kids to use because you're gonna datamine those kids and monetize it that is definitely over the line and this is a question that I don't think American or even human society is going to answer in our lifetime.
+
+289
+00:23:33,004 --> 00:23:35,537
+Rym: I Think we're gonna keep evolving it.
+
+290
+00:23:36,020 --> 00:23:45,896
+Rym: it took I mean it took hundred plus years to even sort out how to regulate like telegraphs and like phones and like the nuances of think about why.
+
+291
+00:23:45,916 --> 00:23:50,853
+Rym: imagine what happened the first time someone committed wire fraud using a Telegraph or a telephone.
+
+292
+00:23:51,094 --> 00:23:56,870
+Rym: the word the term wire fraud came into existence because suddenly fraud could happen over a wire and that was crazy.
+
+293
+00:23:58,622 --> 00:24:00,835
+Rym: Yep So some other news.
+
+294
+00:24:00,855 --> 00:24:04,670
+Rym: I just want to point this out briefly because it just happened today and it is.
+
+295
+00:24:05,376 --> 00:24:15,010
+Rym: It is not the end of the story It is a tiny step along the way But it is also the biggest step that has ever happened in bringing fascist to accountability in the United States.
+
+296
+00:24:15,961 --> 00:24:39,690
+Rym: the US House of Representatives the January 6 investigative committee today referred the former president of the United States to the Department of Justice for four criminal counts obstruction of an official proceeding conspiracy to defraud the United States Conspiracy to make a false statement and inciting assisting and aiding or comforting and insurrection.
+
+297
+00:24:40,397 --> 00:24:41,446
+Rym: That last one's a big one.
+
+298
+00:24:42,435 --> 00:24:44,006
+Scott: Yeah, I think I think there's a big penalty.
+
+299
+00:24:44,047 --> 00:24:45,172
+Scott: if you yeah It's like you're.
+
+300
+00:24:45,272 --> 00:24:45,573
+Rym: you're.
+
+301
+00:24:45,774 --> 00:24:53,620
+Rym: you're hereby accused of stealing a Snickers bar stealing some NECA wafers murdering someone and Breaking into a 7-eleven at night.
+
+302
+00:24:53,640 --> 00:24:54,505
+Rym: It's like wait a minute.
+
+303
+00:24:54,525 --> 00:24:54,827
+Rym: Wait a minute.
+
+304
+00:24:54,847 --> 00:24:55,330
+Rym: What was that third?
+
+305
+00:24:57,610 --> 00:25:12,030
+Rym: But it is easy, you know, it is easy to feel like bad people on that scale Never get held accountable Never face consequences for what they do and it is possible that that fucking guy is gonna get away with all this.
+
+306
+00:25:12,092 --> 00:25:15,471
+Scott: It is possible I mean if the Justice Department could just be like yeah So what?
+
+307
+00:25:15,913 --> 00:25:23,390
+Rym: or the Supreme Court could step into a final court case on an appeal and just be like, nope, fuck you We're unaccountable because the American Constitution didn't really think this through.
+
+308
+00:25:23,450 --> 00:25:28,370
+Rym: There's a lot of ways this could go badly and I'm not gonna say it's definitely gonna go the right way.
+
+309
+00:25:28,892 --> 00:25:35,435
+Rym: What I will say is this what just happened today is not a Light matter it.
+
+310
+00:25:35,475 --> 00:25:38,970
+Rym: that is a very very serious and real thing that happened.
+
+311
+00:25:40,091 --> 00:25:46,130
+Rym: The video of that committee hearing is gonna be something assuming the fascists don't win completely in the long run.
+
+312
+00:25:46,752 --> 00:25:49,159
+Rym: That is something kids are gonna watch in social studies class.
+
+313
+00:25:49,400 --> 00:25:52,329
+Rym: Just like you have that unit on Nixon when you're in like eighth grade.
+
+314
+00:25:53,431 --> 00:25:54,655
+Scott: Yeah, maybe it's.
+
+315
+00:25:54,695 --> 00:26:04,629
+Rym: this was a very big deal and it is the next step in the chain of events that could Actually lead to the former guy actually going to prison.
+
+316
+00:26:06,031 --> 00:26:06,734
+Scott: We'll see about that.
+
+317
+00:26:06,875 --> 00:26:07,617
+Rym: Yeah, it could it.
+
+318
+00:26:08,220 --> 00:26:09,023
+Rym: the chance is real.
+
+319
+00:26:09,063 --> 00:26:10,930
+Rym: This was the most important next step.
+
+320
+00:26:12,131 --> 00:26:13,558
+Scott: Yeah, I'll probably just run away instead.
+
+321
+00:26:13,980 --> 00:26:19,533
+Rym: Uh, I mean, yeah if he runs away to Russia Like all right Congratulations.
+
+322
+00:26:19,934 --> 00:26:20,636
+Rym: you escaped.
+
+323
+00:26:20,656 --> 00:26:22,240
+Rym: I'm sure it's great over there.
+
+324
+00:26:22,260 --> 00:26:24,527
+Scott: I mean will be for someone like him.
+
+325
+00:26:24,567 --> 00:26:25,610
+Rym: probably I don't know.
+
+326
+00:26:25,751 --> 00:26:28,569
+Rym: I mean other people who have defected over the years.
+
+327
+00:26:29,334 --> 00:26:30,984
+Rym: Never really goes so great for them.
+
+328
+00:26:31,285 --> 00:26:32,050
+Rym: Remember that thing of the day?
+
+329
+00:26:32,130 --> 00:26:36,170
+Rym: We talked about all the people who defected or fled to Cuba and how Castro was just like.
+
+330
+00:26:36,571 --> 00:26:39,640
+Rym: Yeah, it actually causes me more problems for you to have come here.
+
+331
+00:26:40,162 --> 00:26:42,730
+Rym: So it's not actually gonna work out for you, buddy.
+
+332
+00:26:42,851 --> 00:26:45,329
+Rym: You're gonna get one press release and then you're gone.
+
+333
+00:26:46,197 --> 00:26:46,742
+Scott: It depends.
+
+334
+00:26:46,762 --> 00:26:51,546
+Scott: Yeah Your people, you know if there's enough people over there who are who like you right?
+
+335
+00:26:51,727 --> 00:26:52,309
+Rym: Yeah with you.
+
+336
+00:26:52,972 --> 00:26:53,976
+Rym: So one little news.
+
+337
+00:26:54,478 --> 00:26:57,110
+Rym: This is not a big deal for regular consumer people.
+
+338
+00:26:57,534 --> 00:26:58,950
+Rym: It is not end-to-end encryption.
+
+339
+00:26:59,090 --> 00:27:08,550
+Rym: But Google is adding an option to have client-side encryption of emails If you have the paid version of Gmail.
+
+340
+00:27:09,856 --> 00:27:16,350
+Rym: This is a new feature And basically to sort of explain what this is and why you probably don't care about it.
+
+341
+00:27:16,815 --> 00:27:18,110
+Rym: This is not end-to-end encryption.
+
+342
+00:27:18,230 --> 00:27:24,370
+Rym: This is not like I sign my email with PGP and only Scott can read it and literally no one can intercept it.
+
+343
+00:27:24,774 --> 00:27:27,316
+Rym: this is more like My emails.
+
+344
+00:27:27,757 --> 00:27:37,450
+Rym: I can read them from the Google servers with a key But the emails that the copies of them if I send and receive emails They might still like be on Scott's server unencrypted.
+
+345
+00:27:37,510 --> 00:27:43,942
+Rym: They might be in all sorts of places unencrypted But my store that I interact with at Google is encrypted.
+
+346
+00:27:44,002 --> 00:27:48,033
+Rym: the files or the emails at rest is the term are Encrypted.
+
+347
+00:27:48,858 --> 00:27:49,763
+Rym: why would anyone care?
+
+348
+00:27:50,185 --> 00:27:51,030
+Rym: most people don't?
+
+349
+00:27:51,950 --> 00:28:07,273
+Rym: This is mostly for companies that have to deal with information security audits like SOC audits the SOC things like that where They basically have to sign a lot of papers and prove that they follow basic security practices for certain kinds of transactions And certain kinds of data.
+
+350
+00:28:07,634 --> 00:28:15,770
+Rym: you need to prove that you take reasonable efforts to store that data when it is stored at rest In an encrypted format to reduce the vector of attack.
+
+351
+00:28:16,211 --> 00:28:21,930
+Rym: So this is basically a feature for people who use Gmail in a professional setting and need to pass an audit like that.
+
+352
+00:28:22,291 --> 00:28:24,981
+Rym: This is an easy control to enable.
+
+353
+00:28:25,302 --> 00:28:32,289
+Rym: that will make it easier to pass that kind of audit But I don't think this does anything that a normal person would care about at this time.
+
+354
+00:28:32,993 --> 00:28:35,368
+Scott: There is a similar story coming from Apple.
+
+355
+00:28:35,509 --> 00:28:41,530
+Scott: the The latest updates to Apple's operating systems they have for iCloud.
+
+356
+00:28:41,771 --> 00:28:46,690
+Scott: They have added a feature called they call advanced data protection and all you do is you just turn it on.
+
+357
+00:28:46,910 --> 00:28:56,628
+Scott: It's just like a right and as long as all of your devices that interact with iCloud have updated software You can just turn it on or stop using those devices, right?
+
+358
+00:28:57,330 --> 00:28:59,889
+Scott: Yeah, kick kick, you know log out of iCloud on them and you're good.
+
+359
+00:29:00,475 --> 00:29:08,710
+Scott: And what this does is it will Encrypt basically everything that's on iCloud including things that were not previously encrypted on iCloud.
+
+360
+00:29:08,790 --> 00:29:18,420
+Scott: So for example, right I message right so you get an iPhone and you oh you you know Start I messaging someone someone else who has an iPhone.
+
+361
+00:29:18,821 --> 00:29:21,290
+Scott: I message itself is end-to-end encrypted.
+
+362
+00:29:21,410 --> 00:29:22,314
+Scott: It just is right.
+
+363
+00:29:22,374 --> 00:29:24,483
+Scott: So you type a message on your phone.
+
+364
+00:29:24,683 --> 00:29:26,330
+Scott: you push send it encrypts it.
+
+365
+00:29:26,491 --> 00:29:34,690
+Scott: It sends it over the internet from your phone to the phone company Wherever routers ends up on the other person's phone, then it's decrypted on their phone.
+
+366
+00:29:34,892 --> 00:29:36,229
+Scott: They see the message you sent them.
+
+367
+00:29:36,599 --> 00:29:45,689
+Scott: of course they could just copy paste it or Screenshot it or but no one in between you and the person your I'm messaging with can see that message, right?
+
+368
+00:29:46,410 --> 00:29:55,253
+Scott: So now you they send messages back to you And now this conversation is on two phones and nowhere else at least nowhere else Unencrypted.
+
+369
+00:29:55,273 --> 00:30:01,778
+Scott: now before or at least even today if you don't have the advanced data protection Let's say you back up your iPhone, right?
+
+370
+00:30:01,798 --> 00:30:04,747
+Scott: Well, you could back up your iPhone to like your computer using iTunes.
+
+371
+00:30:04,928 --> 00:30:06,999
+Scott: Okay, great It's not a file on your computer.
+
+372
+00:30:07,301 --> 00:30:08,569
+Scott: You could encrypt that it's up to you.
+
+373
+00:30:10,171 --> 00:30:16,090
+Scott: But you could also back it up to iCloud right in the cloud Apple's cloud, which is probably Amazon's cloud.
+
+374
+00:30:18,012 --> 00:30:28,134
+Scott: This app lot doesn't have their own cloud hardware not too much of it That anyone knows about and That would actually be un Encrypted.
+
+375
+00:30:28,435 --> 00:30:29,359
+Scott: it wasn't encrypted.
+
+376
+00:30:29,600 --> 00:30:31,890
+Scott: It still isn't unless you enable this feature, right?
+
+377
+00:30:32,230 --> 00:30:36,810
+Scott: So if you you it's good because you want to back up those iMessages, right?
+
+378
+00:30:36,930 --> 00:30:42,569
+Scott: That way if like your phone explodes and you get a new phone you can get all your text message conversations back.
+
+379
+00:30:43,653 --> 00:30:45,610
+Rym: Yeah, your phone just picks up where you left off effectively.
+
+380
+00:30:46,293 --> 00:30:52,843
+Scott: Yeah, otherwise if you didn't back that shit up and you got a new phone It's like you'd open up the messaging app and there's nothing in there.
+
+381
+00:30:53,165 --> 00:30:54,370
+Scott: You lost all your conversations.
+
+382
+00:30:54,491 --> 00:30:56,022
+Scott: You don't know what you're talking about with anybody.
+
+383
+00:30:56,425 --> 00:30:57,029
+Scott: That's not great.
+
+384
+00:30:58,531 --> 00:31:04,532
+Scott: So the new advanced data protection allows you to encrypt that stuff on iCloud.
+
+385
+00:31:04,833 --> 00:31:05,736
+Scott: it's like hooray.
+
+386
+00:31:05,776 --> 00:31:06,579
+Scott: That's that's great.
+
+387
+00:31:06,780 --> 00:31:12,001
+Scott: Obviously for something like a photo, you know You've got some photos up an iCloud that are encrypted.
+
+388
+00:31:12,523 --> 00:31:16,052
+Scott: if you then share the photo Guess what?
+
+389
+00:31:16,173 --> 00:31:16,554
+Scott: It's gonna.
+
+390
+00:31:16,875 --> 00:31:21,950
+Scott: now that photo that you shared is gonna be unencrypted because you're sharing it with people right, you know.
+
+391
+00:31:23,612 --> 00:31:26,864
+Scott: But yeah, I recommend it doesn't cost anything to enable this.
+
+392
+00:31:26,905 --> 00:31:28,169
+Scott: I don't think so.
+
+393
+00:31:29,112 --> 00:31:35,086
+Scott: If you know you are someone who uses Apple products and you have updated all your devices.
+
+394
+00:31:35,106 --> 00:31:38,158
+Scott: I Don't see any reason not to enable this.
+
+395
+00:31:38,198 --> 00:31:39,384
+Scott: It just seems like a good idea.
+
+396
+00:31:39,404 --> 00:31:40,469
+Scott: It can't hurt.
+
+397
+00:31:47,051 --> 00:31:49,197
+Rym: But anyway things of the day.
+
+398
+00:31:49,618 --> 00:31:58,050
+Rym: so back over in beacon there was a period where we were we watched a bunch of Translated monzai and then we kind of didn't do that a lot over the years because there's not a lot of it.
+
+399
+00:31:58,090 --> 00:32:00,850
+Rym: That is like subtitled in English at scale.
+
+400
+00:32:01,272 --> 00:32:11,143
+Rym: I remember I found that I'd seen almost everything on YouTube and I couldn't find more but There is a lot of translated monzai now on the internet in the year of our Lord 2022.
+
+401
+00:32:11,143 --> 00:32:11,784
+Rym: So my thing of the day.
+
+402
+00:32:15,171 --> 00:32:18,680
+Rym: There is a channel Jaru Jaru and it's a monzai duel.
+
+403
+00:32:18,981 --> 00:32:26,201
+Rym: this is their channel and they upload their own monzai skits Recorded on a stage with full subtitles.
+
+404
+00:32:26,623 --> 00:32:28,430
+Rym: these guys fucking hilarious.
+
+405
+00:32:28,811 --> 00:32:42,182
+Rym: so I present a six minute and 35 second monzai bit called push and pull and it is very much the same type of like Cyclic joke as korida.
+
+406
+00:32:42,443 --> 00:32:43,870
+Rym: korida korida three cocks
+
+407
+00:32:45,891 --> 00:32:59,566
+Scott: All right, so something I've noticed happening on the internet a lot lately which I'm very pleased to see is actually saw two instances of it today alone one of them being the thing of the day is You know people go on the internet and they search for stuff and they learn things.
+
+408
+00:32:59,627 --> 00:33:02,188
+Scott: and people, you know Some people still don't know how to do a search.
+
+409
+00:33:02,792 --> 00:33:20,249
+Scott: They still just keep posting questions on forums and discussion threads Answered with a search but some people are going the opposite direction to where they are looking for information and that information is simply not on the internet or not easily found with a search or Google search isn't good enough or whatever.
+
+410
+00:33:20,269 --> 00:33:30,614
+Scott: and people are going to great lengths to discover truths and then posting those truths on the internet and getting a lots of traffic and Interests and clicks.
+
+411
+00:33:30,674 --> 00:33:34,590
+Scott: and you know, right because it's like hey, no one knows the answer to this on the internet.
+
+412
+00:33:34,912 --> 00:33:37,790
+Scott: Let me go to the library and get an answer.
+
+413
+00:33:37,892 --> 00:33:40,113
+Scott: Let me go to a primary Answer.
+
+414
+00:33:40,254 --> 00:33:42,881
+Rym: that stood out a long time ago in this trend.
+
+415
+00:33:42,981 --> 00:33:51,083
+Rym: that like an earlier instance of it was when the entire internet tried to figure out Exactly, which LAN party that famous photo the kid duct tape up came from.
+
+416
+00:33:51,845 --> 00:33:53,330
+Scott: Yep, and we'll get the answer.
+
+417
+00:33:53,471 --> 00:33:55,119
+Scott: We'll post the answer on the internet.
+
+418
+00:33:55,139 --> 00:33:57,130
+Scott: So no one else has to go back to the library again.
+
+419
+00:33:57,250 --> 00:34:00,443
+Scott: And if we keep doing this eventually, we'll have all the info about.
+
+420
+00:34:00,463 --> 00:34:00,724
+Scott: we won't.
+
+421
+00:34:00,744 --> 00:34:01,688
+Scott: there's too much information.
+
+422
+00:34:01,728 --> 00:34:02,250
+Scott: It won't happen.
+
+423
+00:34:02,350 --> 00:34:02,711
+Scott: It'll take.
+
+424
+00:34:02,731 --> 00:34:04,377
+Rym: I mean, yeah, all right, huh?
+
+425
+00:34:04,637 --> 00:34:09,437
+Rym: I wonder what the deal was with that battle at that ancient bridge like exactly?
+
+426
+00:34:11,214 --> 00:34:14,056
+Scott: Anyway, so this guy Somebody asked him.
+
+427
+00:34:14,077 --> 00:34:15,284
+Scott: He's a tik-tok, dude.
+
+428
+00:34:15,786 --> 00:34:49,074
+Scott: I guess his name is npg and Someone named Alex Burton 1995 sent him a message and was like hey in the movie gremlins there's a scene in a bar and there's a gremlin hanging on the ceiling fan spinning around right and in the bar is one of those tiny CRT TVs up in the corner because it's gremlins from 1980 whatever right and on that TV is In the movie for just a few seconds of the movie is a blurry Game of ice hockey.
+
+429
+00:34:49,578 --> 00:34:55,918
+Rym: Oh, wow You get like one and a half seconds of even a focused view of this thing in the and it never.
+
+430
+00:34:56,018 --> 00:34:58,135
+Scott: it's not like it Takes up the whole frame, right?
+
+431
+00:34:58,216 --> 00:35:07,793
+Scott: It's like It's like they were shooting this movie on film on a probably a set of a bar With a TV playing a hockey game and they zoom.
+
+432
+00:35:07,874 --> 00:35:12,040
+Scott: if they pull away from this You you barely can see anything, right?
+
+433
+00:35:12,420 --> 00:35:12,824
+Rym: and you know what.
+
+434
+00:35:12,865 --> 00:35:17,894
+Rym: and they're like a thing where if you Say you like found somebody worked on the movie and you like made an official press inquiry.
+
+435
+00:35:17,934 --> 00:35:21,160
+Rym: Like what was the hockey game in the background of?
+
+436
+00:35:22,451 --> 00:35:25,576
+Scott: No, the answer they won't know because they probably just had the TV on.
+
+437
+00:35:25,616 --> 00:35:31,894
+Scott: it probably wasn't an intentional exactly Thing I feel like sometimes Sometimes a lot of times in movies.
+
+438
+00:35:31,995 --> 00:35:32,780
+Scott: It is intentional.
+
+439
+00:35:33,141 --> 00:35:38,300
+Scott: They specifically choose for artistic reasons something to be on the screen movie for 40 years ago.
+
+440
+00:35:38,521 --> 00:35:39,786
+Rym: I could imagine the answer would.
+
+441
+00:35:39,806 --> 00:35:42,840
+Scott: this really feels like they just had the TV on at the time.
+
+442
+00:35:43,102 --> 00:35:44,331
+Rym: They'd be like hockey game.
+
+443
+00:35:44,492 --> 00:35:44,694
+Rym: What?
+
+444
+00:35:44,815 --> 00:35:45,439
+Rym: what's gremlins?
+
+445
+00:35:47,167 --> 00:35:52,479
+Scott: and so They're like, hey, you know, I bet you can't figure out what hockey game that was.
+
+446
+00:35:53,102 --> 00:35:56,539
+Scott: And of course if you couldn't figure it out, it wouldn't be a thing of the day would it?
+
+447
+00:35:57,042 --> 00:36:00,999
+Scott: But the thing of the day is not which hockey game it turned out to be.
+
+448
+00:36:01,722 --> 00:36:11,777
+Scott: it is the fact you this guy goes through his full process of how he discovered and 100% guaranteed correctly identified what hockey game that is.
+
+449
+00:36:11,797 --> 00:36:14,167
+Scott: Oh, man Hey, that's like.
+
+450
+00:36:14,208 --> 00:36:16,579
+Scott: that is the ST or research skills.
+
+451
+00:36:17,727 --> 00:36:19,417
+Scott: great job Hahahaha.
+
+452
+00:36:21,462 --> 00:36:27,069
+Rym: You know as a total aside a friend of ours did find the Original full audio of the eight people.
+
+453
+00:36:27,089 --> 00:36:27,812
+Rym: a gaga thing.
+
+454
+00:36:28,073 --> 00:36:30,080
+Rym: not the cut down version, but the actual rent.
+
+455
+00:36:30,927 --> 00:36:32,238
+Scott: Yeah, but why won't the cut down one?
+
+456
+00:36:32,278 --> 00:36:39,360
+Rym: Yep I have started piecing together from my memory exactly what it so far everything I remembered from it.
+
+457
+00:36:39,421 --> 00:36:40,678
+Rym: I found that audio in it.
+
+458
+00:36:41,223 --> 00:36:47,979
+Rym: So I think our my memory was very close Because it was word for word where I could find every single word that I say when I say it.
+
+459
+00:36:48,571 --> 00:36:58,347
+Rym: so Maybe when I have a bunch of time off at the end of the year That'll be my end of year thing is I'll post what I think is the audio and then I should ask this guy We only know some part of it right?
+
+460
+00:36:58,367 --> 00:36:59,311
+Scott: There's a whole bunch of parts.
+
+461
+00:36:59,371 --> 00:37:02,825
+Scott: We didn't really care about yeah, but there was More difficult.
+
+462
+00:37:03,025 --> 00:37:06,900
+Rym: Yeah, so we'll see but my head is off to the sky to figure this out.
+
+463
+00:37:07,141 --> 00:37:19,944
+Rym: That is literally like one point five seconds of blurry hockey game in the distance on the CRT and then like two more seconds of Even blurrier because they were focused on the gremlin In the meta moment.
+
+464
+00:37:19,984 --> 00:37:25,360
+Rym: the geek guides book club book is Alif the so far still very much seen but not by the guy.
+
+465
+00:37:25,963 --> 00:37:26,928
+Scott: No, no, I'm.
+
+466
+00:37:27,289 --> 00:37:29,300
+Scott: I've gotten like 60% of the way through.
+
+467
+00:37:29,641 --> 00:37:32,130
+Rym: I'm like a third of the way through he got.
+
+468
+00:37:32,190 --> 00:37:33,314
+Scott: he got very seen.
+
+469
+00:37:33,414 --> 00:37:34,920
+Scott: a lot of seeing is happening.
+
+470
+00:37:35,120 --> 00:37:36,324
+Scott: Did you see?
+
+471
+00:37:36,505 --> 00:37:36,746
+Rym: so?
+
+472
+00:37:36,806 --> 00:37:41,180
+Rym: did I assume the the big bad government entity?
+
+473
+00:37:41,380 --> 00:37:44,831
+Rym: Whatever that is saw him and the chases on this.
+
+474
+00:37:44,851 --> 00:37:46,677
+Scott: my guess it made some moves.
+
+475
+00:37:46,718 --> 00:37:47,319
+Scott: That's for sure.
+
+476
+00:37:47,621 --> 00:37:57,869
+Rym: Yeah, I felt I felt like that thing with Whatever the antagonist ends up being specifically based on the first like third of the book that I've read It definitely feels like it will move.
+
+477
+00:37:57,929 --> 00:38:06,648
+Rym: it is moving from passive to active in relation to Alif speaking Somewhat securitously, but this book is good.
+
+478
+00:38:06,989 --> 00:38:07,631
+Rym: I'm enjoying it.
+
+479
+00:38:07,912 --> 00:38:10,200
+Rym: We will definitely do the book club show in January.
+
+480
+00:38:10,301 --> 00:38:12,517
+Rym: There is no chance we will miss that deadline.
+
+481
+00:38:15,025 --> 00:38:19,999
+Rym: What else we will Likely be doing a panel or two at PAX East, but that's a way out.
+
+482
+00:38:20,381 --> 00:38:24,180
+Rym: We're very very very unlikely to be at magfest.
+
+483
+00:38:24,923 --> 00:38:25,284
+Rym: It's just.
+
+484
+00:38:25,886 --> 00:38:28,053
+Rym: I don't feel like going full-on on a 24/7 con just yet.
+
+485
+00:38:28,073 --> 00:38:32,890
+Rym: in this environment I feel like magfest is the kind of con I'm gonna wait another year on.
+
+486
+00:38:33,452 --> 00:38:38,933
+Rym: so I'll probably see you at the next magfest and Otherwise, we'll see what we do.
+
+487
+00:38:38,953 --> 00:38:41,005
+Rym: I Got no more updates.
+
+488
+00:38:41,347 --> 00:38:42,896
+Rym: follow me on anywhere but Twitter.
+
+489
+00:38:43,117 --> 00:38:43,419
+Rym: Twitter.
+
+490
+00:38:43,861 --> 00:38:44,885
+Rym: We'll see how long that lasts.
+
+491
+00:38:45,286 --> 00:38:47,393
+Rym: things are moving pretty fast over there in the hell site.
+
+492
+00:38:47,413 --> 00:38:51,400
+Scott: I mean we have our own Our own domains, right?
+
+493
+00:38:51,700 --> 00:39:01,337
+Scott: So, you know no matter what platforms on the internet may come and go over the many decades to come I'm sure every platform that's in use today will be dead in a decade or a few.
+
+494
+00:39:01,558 --> 00:39:08,306
+Rym: right into long as DNS exists and Some trust or credit card pays.
+
+495
+00:39:08,407 --> 00:39:13,140
+Rym: the biannual renewal Rym dot social will continue to serve up something about me.
+
+496
+00:39:14,105 --> 00:39:22,062
+Scott: if DNS is no longer the main directory of Digital life there will be some other Thing.
+
+497
+00:39:22,162 --> 00:39:23,184
+Scott: yeah, right and you'll be.
+
+498
+00:39:23,204 --> 00:39:24,788
+Scott: you'll be able to find us there.
+
+499
+00:39:24,888 --> 00:39:28,540
+Scott: But you know front row crew calm right.
+
+500
+00:39:28,681 --> 00:39:31,373
+Rym: Yeah, ignite Rym and Scott type.
+
+501
+00:39:31,855 --> 00:39:32,418
+Rym: mash your face.
+
+502
+00:39:32,639 --> 00:39:37,780
+Rym: lately I found with YouTube especially you can't just mash your fingers on the keyboard and half type what you're looking for.
+
+503
+00:39:37,981 --> 00:39:38,686
+Rym: Usually finds it.
+
+504
+00:39:39,451 --> 00:39:43,947
+Rym: All right, so, uh Zero trust models or zero trust security.
+
+505
+00:39:44,288 --> 00:39:53,210
+Rym: There's actually a lot to talk about here because it's a relatively new term Relatively new meaning saying many years, right?
+
+506
+00:39:53,792 --> 00:40:03,058
+Rym: Yeah, but 90s is still like Yesterday if you look at epoch like the time of technology and the time of starting to connect things together.
+
+507
+00:40:03,119 --> 00:40:07,357
+Rym: the 90s Like I don't think you all understand if you're young.
+
+508
+00:40:07,377 --> 00:40:16,240
+Rym: that Networky type stuff and computers talking to each other Existed in a world where there basically wasn't any security on anything.
+
+509
+00:40:16,681 --> 00:40:22,440
+Rym: The security was you need a lot of dollars to even be able to get close to touching anything ever.
+
+510
+00:40:22,941 --> 00:40:24,185
+Rym: So nobody had any security.
+
+511
+00:40:24,426 --> 00:40:25,990
+Rym: computers didn't have passwords.
+
+512
+00:40:26,191 --> 00:40:26,832
+Rym: you turn them on.
+
+513
+00:40:27,173 --> 00:40:27,895
+Rym: They just work.
+
+514
+00:40:27,916 --> 00:40:29,340
+Rym: There's no such thing as an account.
+
+515
+00:40:30,542 --> 00:40:37,100
+Scott: Anyway, so lately meaning the past Several years right zero trust has be getting really hot lately.
+
+516
+00:40:37,220 --> 00:40:45,260
+Scott: Yeah, it's like a lot of companies are you know, even at this moment many companies are implementing zero trust models.
+
+517
+00:40:45,683 --> 00:40:47,798
+Scott: right, it's like it's a it's a it's a trend.
+
+518
+00:40:47,818 --> 00:40:50,879
+Scott: and So what the hell is a zero trust model?
+
+519
+00:40:51,500 --> 00:40:58,010
+Scott: Well, it's sort of a misnomer right because if you think about it literally Semantically zero trust means you don't trust anyone.
+
+520
+00:40:58,030 --> 00:40:58,973
+Scott: if you don't trust anyone.
+
+521
+00:40:59,354 --> 00:41:00,818
+Scott: No one can access any system.
+
+522
+00:41:00,839 --> 00:41:04,020
+Scott: the end That's clearly not what it means, right.
+
+523
+00:41:04,602 --> 00:41:22,451
+Scott: So what it means is that if you're not using a zero trust model right what a lot of people have and still have today is they have a model in which some clients can achieve a trusted status.
+
+524
+00:41:22,593 --> 00:41:27,979
+Scott: so for example you have a Internal website, right?
+
+525
+00:41:28,906 --> 00:41:40,029
+Scott: Maybe it's got some private information like it's a data has a data a user interface for a database and There's some private Company info in there some finance info.
+
+526
+00:41:40,109 --> 00:41:43,640
+Scott: Yeah, and so you don't want the whole world to see it.
+
+527
+00:41:43,700 --> 00:41:46,160
+Scott: So it's not a public website at all, right?
+
+528
+00:41:46,561 --> 00:41:47,043
+Scott: It is on your.
+
+529
+00:41:47,203 --> 00:41:51,000
+Scott: it's only accessible on your private network and there's network level security.
+
+530
+00:41:51,401 --> 00:41:54,110
+Scott: So no one on the internet could ever reach it, right?
+
+531
+00:41:54,130 --> 00:41:56,980
+Scott: There's like no way any packet would get routed there.
+
+532
+00:41:57,061 --> 00:41:58,519
+Scott: It's just on your company's network.
+
+533
+00:41:59,323 --> 00:42:16,339
+Scott: but somebody who comes to your company's office, right and Sits down at a company computer in an inner office in the building and logs in to the computer Would then be able to just freely access this this database, right?
+
+534
+00:42:17,121 --> 00:42:24,592
+Scott: the fact that their computer is on the same network is Basically enough to be like, okay.
+
+535
+00:42:24,833 --> 00:42:26,300
+Scott: They're in the same house as me.
+
+536
+00:42:26,742 --> 00:42:27,406
+Scott: I trust them.
+
+537
+00:42:27,446 --> 00:42:28,814
+Scott: they have their their trusted right.
+
+538
+00:42:28,915 --> 00:42:31,707
+Scott: Oh somebody Their cut that computer.
+
+539
+00:42:31,848 --> 00:42:32,490
+Scott: is that there?
+
+540
+00:42:32,630 --> 00:42:35,140
+Scott: and some other that their employee working from home.
+
+541
+00:42:35,962 --> 00:42:37,726
+Scott: But they logged into the VPN.
+
+542
+00:42:38,147 --> 00:42:41,756
+Scott: So now that computer is effectively speaking on the company network.
+
+543
+00:42:42,237 --> 00:42:43,200
+Scott: We're gonna trust them.
+
+544
+00:42:43,280 --> 00:42:49,140
+Scott: They have achieved a trusted status, right and will allow them to access our services.
+
+545
+00:42:49,842 --> 00:42:59,781
+Rym: Right because because they're good to go and this is how a lot of things were set up for a very long time and actually they still say a lot of most things are set up this way and right.
+
+546
+00:42:59,881 --> 00:43:13,979
+Scott: a lot of people will be like, you know, you'll go to Amazon web services and you'll make a VPC which is basically a. You know a VPS I mean, right which is basically a network and you'll have like your database in there.
+
+547
+00:43:14,483 --> 00:43:17,960
+Scott: right and you'll have your web server and You'll be like that.
+
+548
+00:43:18,020 --> 00:43:27,231
+Scott: You'll give the database some like nothing password like password password or maybe even no password at all Because no one can reach the database directly.
+
+549
+00:43:27,392 --> 00:43:29,800
+Scott: only the web server is accessible from the internet.
+
+550
+00:43:30,183 --> 00:43:32,820
+Scott: The database has no internet facing connections.
+
+551
+00:43:33,362 --> 00:43:37,000
+Scott: The only way anyone can connect to the database would be if they are on that network.
+
+552
+00:43:37,362 --> 00:43:40,519
+Scott: They are the web server or the SSH in or some shit like that.
+
+553
+00:43:41,141 --> 00:43:48,519
+Scott: So you don't really put any security between the web server and the database because there's just inherent trust Yep between them.
+
+554
+00:43:48,680 --> 00:43:58,314
+Rym: This is generally known as perimeter security and this is the dominant security model for all Technology and has been since the beginning of modern networking technology.
+
+555
+00:43:58,615 --> 00:44:00,040
+Rym: It remains the most common model.
+
+556
+00:44:00,544 --> 00:44:01,613
+Rym: I can give some at like to get.
+
+557
+00:44:01,673 --> 00:44:06,440
+Rym: to give an example I'm not talking about a current employer or even a recent employer.
+
+558
+00:44:06,881 --> 00:44:11,860
+Rym: Everything I'm about to say is when I worked for a company called pipeline financial so long enough ago.
+
+559
+00:44:12,322 --> 00:44:15,100
+Rym: They're not even around anymore so I can talk a little freely.
+
+560
+00:44:15,681 --> 00:44:31,183
+Rym: So basically a lot of capital markets like stock stuff and bank stuff has little to no security Inside of the private networks that banks and trading companies and all the people who interact in the space Mutually share.
+
+561
+00:44:31,824 --> 00:44:35,934
+Rym: so they kind of just trust that all their systems are secure within that perimeter.
+
+562
+00:44:36,476 --> 00:44:43,520
+Rym: and they trust that the perimeter Is so secure that no bad actor could ever break through that perimeter.
+
+563
+00:44:44,042 --> 00:44:54,996
+Rym: So, you know, I'm a fixed protocol guy, I basically always have been so in those old days Fixed connections like the connections that you would use to send trading information back and forth between entities.
+
+564
+00:44:55,578 --> 00:44:56,220
+Rym: They're plain text.
+
+565
+00:44:56,863 --> 00:44:58,372
+Rym: They don't have any authentication at all.
+
+566
+00:44:58,433 --> 00:45:01,447
+Rym: You log in with a string That's not even a username and password.
+
+567
+00:45:01,467 --> 00:45:04,520
+Rym: you log in and you say this is the string that identifies me.
+
+568
+00:45:04,660 --> 00:45:09,919
+Rym: the other side says hi, this is the string that identifies me and usually the only authentication was.
+
+569
+00:45:09,939 --> 00:45:15,857
+Rym: I Typed in those two strings on both sides and if they match on both sides, we're good to go.
+
+570
+00:45:15,877 --> 00:45:16,780
+Rym: hundred percent trust.
+
+571
+00:45:17,041 --> 00:45:17,323
+Rym: Good luck.
+
+572
+00:45:17,343 --> 00:45:17,745
+Rym: Have fun.
+
+573
+00:45:18,408 --> 00:45:26,840
+Rym: You could literally look at one packet and Compromise that but that actually pretty much almost never happens at any point.
+
+574
+00:45:26,920 --> 00:45:41,773
+Rym: no, no one ever had a security breach because of that lack of security because the networks that those services were on were so Absolutely hyper-secure air gap from the internet so separate like you couldn't get access to them.
+
+575
+00:45:42,174 --> 00:45:43,999
+Rym: to even log into those networks directly.
+
+576
+00:45:44,019 --> 00:45:53,918
+Rym: I had to do a two eyes or a four eyes turnkey system where two people put in a root special password and then one of them watches while the other person types shit and I on a command line like.
+
+577
+00:45:55,122 --> 00:45:57,620
+Rym: That's honestly how a lot of capital markets still works today.
+
+578
+00:45:59,302 --> 00:46:02,193
+Scott: The point is is that this perimeter security is like.
+
+579
+00:46:02,273 --> 00:46:16,640
+Scott: it's not always necessarily bad Like if a lot of places have really strong perimeters, right if you're doing a really simple Setup, you might have you know, two different services running on the same computer and they just trust each other, right?
+
+580
+00:46:16,780 --> 00:46:18,957
+Scott: It's like Oh postgres, right?
+
+581
+00:46:18,998 --> 00:46:24,237
+Rym: It's like Database has no security other than only loopback connections are accepted.
+
+582
+00:46:24,398 --> 00:46:25,060
+Rym: like right.
+
+583
+00:46:25,100 --> 00:46:38,940
+Scott: It's like if you're on if you're logged into a computer as the user whose name is Local postgres server without having to put in a separate postgres username and password is with the default configuration.
+
+584
+00:46:39,402 --> 00:46:46,026
+Rym: If you do figure out the past it just trusts you because you're on the same fucking computer My workstation.
+
+585
+00:46:46,046 --> 00:46:53,880
+Rym: if you somehow figure out the password to log into my account on my workstation Yeah, you get fucking everything like I try.
+
+586
+00:46:54,201 --> 00:47:01,729
+Scott: Yeah, if you log in if you log in if you take my phone and you unlock my phone It's like yeah, you know, you might.
+
+587
+00:47:02,070 --> 00:47:13,160
+Scott: my phone might not be logged into Gmail right now But if you unlock my phone It probably is locked it logged into Gmail and you can read my email Even though you don't have my Google password or any Google login.
+
+588
+00:47:13,562 --> 00:47:16,517
+Scott: You just unlock my phone and it was already logged into Google.
+
+589
+00:47:16,537 --> 00:47:22,079
+Scott: Yeah So that's you know, that's the basic security model that we all follow.
+
+590
+00:47:22,620 --> 00:47:25,811
+Scott: Zero-trust is basically saying fuck that shit.
+
+591
+00:47:26,112 --> 00:47:28,220
+Scott: Nobody is ever trusted, right?
+
+592
+00:47:28,524 --> 00:47:34,071
+Scott: You have to authenticate Every fucking thing all the time.
+
+593
+00:47:34,111 --> 00:47:35,535
+Rym: No, where is this important?
+
+594
+00:47:35,555 --> 00:47:37,420
+Rym: Like why before we get into how it works?
+
+595
+00:47:37,620 --> 00:47:39,791
+Rym: Why would you do it as opposed to everything we just described?
+
+596
+00:47:40,153 --> 00:47:50,940
+Rym: Well one any Sufficiently complex environment is going to especially like in a company in Enterprise is gonna have a lot of services and a lot of things all over the place.
+
+597
+00:47:51,542 --> 00:47:57,799
+Rym: So if you want to have perimeter security, you've got to assume that nobody inside is gonna fuck up.
+
+598
+00:47:58,925 --> 00:48:04,960
+Rym: Mm-hmm teams that don't talk to each other, especially Loosely coupled systems cannot fuck up.
+
+599
+00:48:06,561 --> 00:48:26,940
+Rym: They're like - you probably are working in a world where you have you need or have very strong identity Management which is kind of a separate topic where you want to be able to have very strong trust of what an entity is Before you give it access to things internally because some services might be more or less privileged than others.
+
+600
+00:48:27,040 --> 00:48:30,440
+Rym: Like yeah, this is the service that returns a GUID, whatever.
+
+601
+00:48:30,842 --> 00:48:34,779
+Rym: This is the service that returns personally identifying information and credit card numbers.
+
+602
+00:48:37,841 --> 00:48:40,929
+Scott: But yeah, so, you know if you have this the normal perimeter security.
+
+603
+00:48:41,130 --> 00:48:46,283
+Scott: you get into situations, especially at large corporations where the perimeter is Very large.
+
+604
+00:48:46,665 --> 00:48:49,315
+Scott: Yeah, there's many there's not just like this.
+
+605
+00:48:49,435 --> 00:48:49,998
+Scott: What is all?
+
+606
+00:48:50,038 --> 00:48:50,640
+Scott: it's not like God.
+
+607
+00:48:50,660 --> 00:48:53,660
+Scott: There's only one part that faces the world and everything else is protected.
+
+608
+00:48:53,761 --> 00:48:55,640
+Scott: So we just have to make sure that one thing is secure.
+
+609
+00:48:55,781 --> 00:48:56,284
+Scott: It's like no.
+
+610
+00:48:56,727 --> 00:48:58,700
+Scott: we have a giant service a giant network.
+
+611
+00:48:59,021 --> 00:49:12,855
+Scott: There's many many things facing the world right public facing this VPN that and if any one of those things fucks up if Someone can find a hole and any one of those things and they get inside they hit.
+
+612
+00:49:12,935 --> 00:49:14,299
+Scott: they hit the jackpot, right?
+
+613
+00:49:15,260 --> 00:49:17,448
+Scott: And our jackpot is very big because we're a big company.
+
+614
+00:49:18,091 --> 00:49:32,860
+Rym: and this is especially critical now that part of the reason why perimeter security was so Able to be used back in the day is in the old days anything sufficiently big enough Usually had everything running in one data center, maybe with a secondary backup data center.
+
+615
+00:49:33,221 --> 00:49:35,109
+Rym: So you basically built brick walls around that shit.
+
+616
+00:49:35,189 --> 00:49:41,960
+Rym: like you there was one egress and ingress point And as we expanded like a lot of people move stuff to the cloud.
+
+617
+00:49:42,442 --> 00:49:44,268
+Rym: So originally it was very similar.
+
+618
+00:49:44,550 --> 00:49:53,000
+Rym: you had primary data center backup data center Cloud environment that you trusted like it was your data center that was only connected to your data center.
+
+619
+00:49:53,663 --> 00:49:56,920
+Rym: But now we're in a world where people have distributed offices.
+
+620
+00:49:57,502 --> 00:50:02,840
+Rym: You have a lot of little offices people connecting to your infrastructure from all these sites working from home.
+
+621
+00:50:03,282 --> 00:50:05,451
+Rym: You've got maybe you got rid of your data center.
+
+622
+00:50:05,813 --> 00:50:08,744
+Rym: if you got rid of your data center Where's the perimeter now?
+
+623
+00:50:09,145 --> 00:50:10,810
+Rym: and your Amazon shit's got a perimeter.
+
+624
+00:50:10,830 --> 00:50:12,455
+Rym: your Azure stuffs got its own perimeter.
+
+625
+00:50:12,676 --> 00:50:14,020
+Rym: your offices have their own perimeter.
+
+626
+00:50:14,341 --> 00:50:21,720
+Rym: Get all these different boundaries and it is basically impossible to secure a complex perimeter like that with perimeter security.
+
+627
+00:50:24,021 --> 00:50:27,550
+Scott: Yeah, so what happens in zero trust is that any?
+
+628
+00:50:27,650 --> 00:50:35,993
+Scott: every time you know you okay you you VPN into the the work network From home and now you want to access the system you do to do your job.
+
+629
+00:50:36,595 --> 00:50:37,217
+Rym: You gotta log in.
+
+630
+00:50:37,537 --> 00:50:39,042
+Scott: Yeah, right Yeah, we got it.
+
+631
+00:50:39,303 --> 00:50:42,716
+Scott: It's like oh and it's like and it's not just logging in right?
+
+632
+00:50:43,097 --> 00:50:47,423
+Scott: It's basically like this total Authentication, right?
+
+633
+00:50:47,443 --> 00:50:49,089
+Scott: So if you look at Wikipedia, right?
+
+634
+00:50:49,109 --> 00:50:51,837
+Scott: I don't want to turn make a do a read Wikipedia show.
+
+635
+00:50:51,857 --> 00:50:52,439
+Scott: Yeah, right.
+
+636
+00:50:54,082 --> 00:51:03,583
+Scott: But the general model that people that I've seen happen a lot is where you have Basically this one like user authentication system.
+
+637
+00:51:03,744 --> 00:51:08,860
+Scott: right and that's your central and in some ways you could think of it as like.
+
+638
+00:51:09,582 --> 00:51:14,034
+Scott: You know, we're just gonna all wait, you know, it's like the perimeter is.
+
+639
+00:51:14,135 --> 00:51:16,382
+Scott: you're basically reducing the perimeter - well You know what?
+
+640
+00:51:16,422 --> 00:51:19,220
+Rym: It's a logical perimeter instead of a physical perimeter.
+
+641
+00:51:19,681 --> 00:51:31,240
+Rym: right the logical perimeter is we have users that authenticate in some fashion against the central server and All our servers trust that central servers decisions, right?
+
+642
+00:51:31,300 --> 00:51:33,047
+Scott: So this one you're still sort of.
+
+643
+00:51:33,147 --> 00:51:33,710
+Scott: you know, you're.
+
+644
+00:51:33,770 --> 00:51:39,793
+Scott: the attack surface is now this one off system But that all system is just getting used constantly.
+
+645
+00:51:39,813 --> 00:51:41,660
+Scott: you have to keep talking to it a lot, right?
+
+646
+00:51:41,900 --> 00:51:43,587
+Scott: So think of it like your Google login.
+
+647
+00:51:43,768 --> 00:51:44,812
+Scott: It's like you go to YouTube.
+
+648
+00:51:45,194 --> 00:51:46,680
+Scott: It checks the Google login, right?
+
+649
+00:51:46,940 --> 00:51:48,646
+Scott: You go to send a Gmail.
+
+650
+00:51:48,726 --> 00:51:50,834
+Scott: it checks the Google login your Google employee.
+
+651
+00:51:50,854 --> 00:51:51,456
+Scott: you get to work.
+
+652
+00:51:51,496 --> 00:51:52,480
+Scott: It checks the Google login.
+
+653
+00:51:54,123 --> 00:51:55,290
+Rym: You all use your.
+
+654
+00:51:55,370 --> 00:51:57,040
+Rym: are you looking at some social media platform?
+
+655
+00:51:57,080 --> 00:51:59,479
+Rym: It's stayed logged in forever because you check that box.
+
+656
+00:51:59,922 --> 00:52:04,835
+Rym: But then you want to edit your profile and it makes you type your password in again Even though you're already logged in BAM.
+
+657
+00:52:04,855 --> 00:52:05,239
+Rym: There you go.
+
+658
+00:52:06,023 --> 00:52:06,746
+Scott: It's like you got it.
+
+659
+00:52:06,766 --> 00:52:09,679
+Scott: You have a script that runs that does something with the Google API.
+
+660
+00:52:10,183 --> 00:52:11,658
+Scott: That's with like your Google Sheets.
+
+661
+00:52:12,141 --> 00:52:13,927
+Scott: It checks the Google login every time.
+
+662
+00:52:13,947 --> 00:52:18,240
+Scott: it is no case in which it wouldn't like check the login.
+
+663
+00:52:18,320 --> 00:52:21,773
+Scott: Yeah, right to verify every time you're doing some.
+
+664
+00:52:21,793 --> 00:52:37,560
+Rym: this is actually a NIST guideline and the guideline is called continuous verification meaning you Semi continuously verify and re-verify That any entity any of your systems are interacting with are who they say they are in your context.
+
+665
+00:52:38,464 --> 00:52:41,820
+Scott: Yep, and now you go even further right beyond this.
+
+666
+00:52:41,900 --> 00:52:45,534
+Scott: It's like okay you logged in you got your username and password you check you you check.
+
+667
+00:52:45,594 --> 00:52:47,140
+Scott: we have a central login system.
+
+668
+00:52:47,642 --> 00:52:51,213
+Scott: You check you the token you got or whatever checks out right?
+
+669
+00:52:51,494 --> 00:52:53,460
+Scott: You know, it's an old code, sir, right?
+
+670
+00:52:54,568 --> 00:52:55,177
+Scott: Let them through.
+
+671
+00:52:56,441 --> 00:52:59,452
+Scott: But we're not, you know, we're gonna add on to this right we're gonna.
+
+672
+00:52:59,512 --> 00:53:08,303
+Scott: we're gonna do as much as we can and go the Extra mile to verify, you know, we're not gonna trust anything you say We're gonna.
+
+673
+00:53:08,464 --> 00:53:15,880
+Scott: everyone is gonna verify for themselves that you know Whether we should really let you do whatever the thing is you're trying to do, right?
+
+674
+00:53:16,260 --> 00:53:20,476
+Scott: So we'll say okay one component of that might be what network are you on?
+
+675
+00:53:20,878 --> 00:53:29,580
+Rym: Yeah A lot of companies have the production network the DMZ the user network the printer network the guest Wi-Fi network.
+
+676
+00:53:29,862 --> 00:53:33,444
+Rym: I mean your apartment has two different Wi-Fi networks Like this is not uncommon.
+
+677
+00:53:34,106 --> 00:53:39,180
+Scott: another component might be like some way to prove like what hardware you are, right?
+
+678
+00:53:39,260 --> 00:53:43,773
+Scott: You know your company might have like registered every single company laptop in.
+
+679
+00:53:43,974 --> 00:53:55,706
+Scott: you know with the authentication system somehow I'll go further If you try to even if you have all the right usernames and passwords and you you get on the network if you're using some Your personal laptop you brought from home.
+
+680
+00:53:56,027 --> 00:53:59,498
+Scott: It's not gonna work cuz they detect that's not a company laptop.
+
+681
+00:53:59,539 --> 00:53:59,880
+Scott: Fuck you.
+
+682
+00:54:00,040 --> 00:54:13,240
+Rym: Well in capital markets, usually like the rooms where the switches are like the switch that is just for like Undrusted or whatever like desktops all over like printers everything to on the floor like that last cheapest switch on your network.
+
+683
+00:54:13,724 --> 00:54:15,020
+Rym: Usually they're set up to where?
+
+684
+00:54:16,200 --> 00:54:20,759
+Rym: Exactly one known device with a known MAC address is allowed to even connect to that thing.
+
+685
+00:54:22,921 --> 00:54:28,620
+Scott: We also got things like, you know, I've seen a lot of companies now for compliance and and whatever reasons, right?
+
+686
+00:54:28,760 --> 00:54:32,588
+Scott: They'll have all the employees install some weirdo monitoring software thing.
+
+687
+00:54:32,608 --> 00:54:41,040
+Scott: Yeah, right and You know, these will usually like, you know, look out for malware's, you know, look out for ransomware's those sorts of things, right?
+
+688
+00:54:41,120 --> 00:54:44,658
+Scott: But the other thing they do in a zero trust system is they'll be like.
+
+689
+00:54:45,882 --> 00:54:51,440
+Scott: They'll look at the computer and they'd be like, alright I'm looking at this computer and it's like is this computer messed up in any way?
+
+690
+00:54:51,640 --> 00:55:01,887
+Scott: I see some shady files on here, right and then when you try to do something, you know some company activity Even though your logins good Even though it's a company computer.
+
+691
+00:55:01,907 --> 00:55:08,467
+Scott: that little program that has to be running on the company computer Tells, you know the other systems like.
+
+692
+00:55:08,487 --> 00:55:13,925
+Scott: yeah, actually I think this laptop that this guy is using even though he's an employee And it's a company laptop.
+
+693
+00:55:14,246 --> 00:55:15,671
+Scott: I think there might be a malware on it.
+
+694
+00:55:16,013 --> 00:55:17,940
+Scott: Don't do anything that you know.
+
+695
+00:55:18,020 --> 00:55:19,539
+Scott: Don't trust this computer, right?
+
+696
+00:55:21,401 --> 00:55:26,180
+Scott: So the malware would have to do the extra step of like fooling that software, right?
+
+697
+00:55:27,600 --> 00:55:28,102
+Scott: So it's like you.
+
+698
+00:55:28,123 --> 00:55:30,594
+Scott: just you can add as many different kind.
+
+699
+00:55:30,635 --> 00:55:35,530
+Scott: you could add a biometric Authentications an author you could add just as many layers of.
+
+700
+00:55:36,071 --> 00:55:39,420
+Scott: let me look, you know, show me how many papers please.
+
+701
+00:55:39,540 --> 00:55:44,720
+Scott: Right, you know, I want to see a hundred papers, please from you before I let you do anything.
+
+702
+00:55:44,820 --> 00:55:50,415
+Scott: Yeah, and you have to show all 100 papers every fucking time to every system you interact with.
+
+703
+00:55:50,836 --> 00:55:53,727
+Scott: but you're not a year A computer showing a hundred papers.
+
+704
+00:55:53,988 --> 00:55:55,837
+Scott: So showing a hundred papers isn't really a big deal.
+
+705
+00:55:55,857 --> 00:55:57,243
+Rym: now Maybe it is.
+
+706
+00:55:57,604 --> 00:56:01,580
+Rym: maybe you're in a situation where this becomes prohibitive for performance reasons.
+
+707
+00:56:01,660 --> 00:56:12,752
+Rym: like that could happen in a complex environment like imagine if every single SQL query against your production database had a Very complex multi-step security protocol just to serve up a web page.
+
+708
+00:56:13,073 --> 00:56:19,440
+Rym: and that's where you'll often cache identity Even if you don't necessarily cache every aspect of the identity verification.
+
+709
+00:56:19,861 --> 00:56:25,660
+Rym: So a common workflow would be you have some sort of I am or like an identity and access management system.
+
+710
+00:56:26,061 --> 00:56:34,206
+Rym: That is that central system that verifies someone is who they say they are and knows what they're allowed to do Anywhere else in your company, so
+
+711
+00:56:34,627 --> 00:56:35,109
+Scott: you may
+
+712
+00:56:35,590 --> 00:56:45,360
+Rym: when they authenticate you give them a token you give them some Cryptographically secure identifier they can use that everyone will trust for a small amount of time.
+
+713
+00:56:45,721 --> 00:56:51,520
+Rym: Sometimes these things last seconds some things times the last hours days a number of requests.
+
+714
+00:56:51,842 --> 00:57:13,460
+Rym: These are these can be highly variable systems But that way it caches that you're who you say you are but often those systems Independent of that token saying hey, this is actually Scott They'll still do the background check of what is Scott allowed to do on the network in case someone revoked a permission Or Scott got funny with his permissions.
+
+715
+00:57:14,324 --> 00:57:16,011
+Scott: Yep, I mean that's that's another right.
+
+716
+00:57:16,071 --> 00:57:32,880
+Scott: a lot of the perimeter type securities Where they just where someone can enter a mode where they're inherently trusted don't have a lot of like, you know SU - and you type in the root password, right?
+
+717
+00:57:33,200 --> 00:57:33,762
+Rym: It's not gonna.
+
+718
+00:57:33,823 --> 00:57:37,940
+Rym: it's not gonna stop you from doing anything else past that point, right?
+
+719
+00:57:38,000 --> 00:57:38,644
+Scott: It's like your root.
+
+720
+00:57:38,745 --> 00:57:39,972
+Scott: You can just do everything right.
+
+721
+00:57:40,012 --> 00:57:41,220
+Scott: you've at your the postgres.
+
+722
+00:57:41,502 --> 00:57:49,760
+Scott: It's like it with a zero trust system Like there are no root users really other than the ones who created the system like every single, right?
+
+723
+00:57:50,080 --> 00:57:59,260
+Scott: You're like, you know using some sort of list of you know permitted behaviors or you know Maybe the opposite right a list of prohibited behaviors and everything.
+
+724
+00:57:59,320 --> 00:58:00,566
+Scott: Oh a simplistic example.
+
+725
+00:58:00,848 --> 00:58:08,567
+Rym: when I was at pipeline log ago doing DevOps I was one of the few people who had a root password to everything I was not allowed to using.
+
+726
+00:58:08,607 --> 00:58:13,443
+Rym: it was like a cop firing a gun in a just world where they actually do something about it Like they'd like.
+
+727
+00:58:13,503 --> 00:58:15,510
+Rym: why'd you log in with the root password?
+
+728
+00:58:15,770 --> 00:58:17,034
+Rym: the full audit log is there.
+
+729
+00:58:17,315 --> 00:58:22,132
+Rym: it set off an alarm and someone's in Compliance department came to like watch what the fuck you were up to.
+
+730
+00:58:22,654 --> 00:58:32,440
+Rym: but in normal operations I would have to sue do and there was a list of things My user was allowed to sue do and a list of things my user was not allowed to sue do.
+
+731
+00:58:32,762 --> 00:58:34,640
+Rym: It wouldn't just let me sue do sue and go nuts.
+
+732
+00:58:35,061 --> 00:58:38,473
+Rym: I had to be like sue do do the thing sue do do the other thing.
+
+733
+00:58:38,634 --> 00:58:41,654
+Rym: type in my password each time to prove It's still me sitting there.
+
+734
+00:58:42,675 --> 00:58:46,293
+Scott: Yep So, I mean, you know, it's it's not really it's.
+
+735
+00:58:46,353 --> 00:58:51,090
+Scott: you know, when someone says zero trust It's like it sounds like they're being fancy like it's some new paradigm.
+
+736
+00:58:51,171 --> 00:58:52,114
+Scott: It's like not really.
+
+737
+00:58:52,294 --> 00:58:57,345
+Scott: it's still the same basic principle authentication Authorization, right?
+
+738
+00:58:57,385 --> 00:59:00,000
+Scott: It's like you have to log in and prove you who you are.
+
+739
+00:59:00,281 --> 00:59:02,829
+Scott: You know, how many credentials do you have?
+
+740
+00:59:02,909 --> 00:59:06,360
+Scott: both, you know, not just for you, but the human but also the device.
+
+741
+00:59:06,460 --> 00:59:14,280
+Scott: We're gonna author, you know authenticate both of them and then you know We're gonna make sure these are the only things you're allowed to do and I'll have to do anything else.
+
+742
+00:59:14,822 --> 00:59:18,240
+Scott: And it's like that's all normal log any stuff, right?
+
+743
+00:59:18,583 --> 00:59:23,289
+Scott: You know security stuff common sense But it's actually a lot of people.
+
+744
+00:59:23,390 --> 00:59:31,626
+Scott: don't do those things for every single operation and every single behavior that occurs Everywhere in their entire system.
+
+745
+00:59:32,128 --> 00:59:36,340
+Scott: you because it's a pain in the ass and zero trust is basically saying now, you know what?
+
+746
+00:59:36,460 --> 00:59:39,703
+Scott: We're gonna do the full pain in the ass Every single thing.
+
+747
+00:59:39,723 --> 00:59:40,685
+Scott: we're gonna check again.
+
+748
+00:59:41,025 --> 00:59:48,816
+Scott: Yes to make sure I Capital S.
+
+749
+00:59:50,102 --> 01:00:00,657
+Rym: If you're doing something at scale with a lot of teams a lot of environments loosely coupled systems If you're a company that's bigger than like a few people you probably want to use this model in most cases.
+
+750
+01:00:01,138 --> 01:00:11,460
+Rym: if you're putting Services on public networks or in dangerous networks or networks that aren't just I don't know if I could trust them But networks where you like actively distrust them.
+
+751
+01:00:14,103 --> 01:00:23,603
+Rym: Because the final thing like the most important thing like if you think about what this protects you from Imagine you get a malware that's gonna do some sort of Ransomware like.
+
+752
+01:00:23,643 --> 01:00:28,520
+Rym: it's gonna encrypt all your data and then make you send it a Bitcoin to maybe unencrypt your data.
+
+753
+01:00:29,042 --> 01:00:36,425
+Rym: So if it compromises my computer right here right now, whatever I got backups on Amazon But let's say I didn't.
+
+754
+01:00:36,465 --> 01:00:37,610
+Rym: let's say I just have the NAS.
+
+755
+01:00:37,911 --> 01:00:43,545
+Rym: so I log into the NAS when I boot my computer and it Just stays logged in forever Malware gets on my computer.
+
+756
+01:00:43,886 --> 01:00:47,780
+Rym: that malware is gonna encrypt my disks and it's gonna encrypt my whole fucking NAS.
+
+757
+01:00:48,461 --> 01:00:50,407
+Rym: My now I already have my computer.
+
+758
+01:00:50,467 --> 01:00:51,891
+Scott: I'm not gonna lie in my house.
+
+759
+01:00:51,972 --> 01:00:54,419
+Scott: My NAS is just a drive on my computer name.
+
+760
+01:00:54,459 --> 01:00:55,423
+Rym: here I don't you know.
+
+761
+01:00:55,524 --> 01:00:58,480
+Rym: often I type that password in like once a month almost.
+
+762
+01:00:58,681 --> 01:01:02,018
+Scott: Yeah, when I go to the NAS web interface, I'd type it in Yep.
+
+763
+01:01:02,722 --> 01:01:10,946
+Rym: So, uh as a result if I got a male an actual ransomware on my PC if I fucked up that badly My NAS is also fucked.
+
+764
+01:01:11,248 --> 01:01:12,472
+Rym: every open network device.
+
+765
+01:01:12,512 --> 01:01:14,560
+Rym: I've logged into on my network is fucked.
+
+766
+01:01:15,061 --> 01:01:19,596
+Scott: So my HD PC has the NAS because I got to watch some you know videos over there and stuff, right?
+
+767
+01:01:19,636 --> 01:01:26,080
+Rym: Yeah, I Gave my HD PC read-only access to the to the irrelevant media directories on the NAS.
+
+768
+01:01:27,563 --> 01:01:34,840
+Scott: You also have to consider like on my computer, right if somebody becomes, you know It's like I turn on my computer and I have SSH keys on my drives.
+
+769
+01:01:34,920 --> 01:01:39,280
+Scott: Yeah, and they're encrypted and I have to type in passphrases and whatnot to unencrypt them.
+
+770
+01:01:39,781 --> 01:01:47,766
+Scott: But then they get added to the SSH agent and they stay there in the SSH agent until it gets turned off or something or I restart or who knows.
+
+771
+01:01:48,348 --> 01:01:53,686
+Scott: so if someone gets access to my computer and They can access the SSH agent.
+
+772
+01:01:54,007 --> 01:01:58,080
+Scott: They can access all the GeekNights servers and everything, right?
+
+773
+01:01:58,380 --> 01:02:00,828
+Scott: Whatever because they had access to my computer.
+
+774
+01:02:01,068 --> 01:02:04,740
+Scott: Yep, if I had zero trust that wouldn't be the case.
+
+775
+01:02:04,800 --> 01:02:08,300
+Scott: They'd have to you know, do that whole dance every single frickin time, right?
+
+776
+01:02:08,622 --> 01:02:12,465
+Scott: And I would be protected from that, you know The the blast radius right.
+
+777
+01:02:12,486 --> 01:02:17,720
+Scott: the amount of damage caused by simply accessing my desktop computer would be smaller.
+
+778
+01:02:17,780 --> 01:02:24,720
+Scott: It would be confined to my desktop computer instead of also all the other computers now because that's a pain in the ass.
+
+779
+01:02:24,841 --> 01:02:33,077
+Rym: like I have a I have postgres running on my desktop for some stuff and It's not does not have super strong security on my local network and the NAS thing.
+
+780
+01:02:33,097 --> 01:02:40,080
+Rym: I just described but An alternative to zero trust for that specific vector of what if ransomware gets in my PC.
+
+781
+01:02:41,104 --> 01:02:50,979
+Rym: My actual security against that is I have a cold backup Like that is way easier than zero trust on a personal workstation.
+
+782
+01:02:52,002 --> 01:02:52,183
+Scott: Yep,
+
+783
+01:02:52,383 --> 01:03:20,218
+Rym: so don't do zero trust everywhere for no reason, but if you're a company or doing anything real Zero trust really is the model because there is another benefit if you are doing micro service II Architecture and you have a zero trust model then you can kind of let people go nuts with the micro services because compromising one part of your of your company does not cause a cascade of increasing blast radii from a bunch of unsecured micro services that might do dangerous things.
+
+784
+01:03:20,238 --> 01:03:24,833
+Scott: I Guess the last thing with zero trust is some it's.
+
+785
+01:03:24,973 --> 01:03:28,465
+Scott: it's not necessarily a zero trust thing it's just something that happens more often.
+
+786
+01:03:28,505 --> 01:03:32,258
+Scott: with zero trust is the sort of mutual authentication right is?
+
+787
+01:03:32,278 --> 01:03:32,780
+Scott: you'll have.
+
+788
+01:03:33,502 --> 01:03:35,670
+Scott: You know, normally it's like I log into Google.
+
+789
+01:03:35,931 --> 01:03:38,260
+Scott: Google verifies that I'm me, right?
+
+790
+01:03:38,680 --> 01:03:41,168
+Scott: Do I verify that Google is Google?
+
+791
+01:03:41,268 --> 01:03:43,696
+Scott: Well, yes via TLS, right?
+
+792
+01:03:43,837 --> 01:03:44,780
+Scott: That's about it, right?
+
+793
+01:03:44,960 --> 01:03:46,307
+Scott: It's like, you know, that's something.
+
+794
+01:03:46,688 --> 01:03:48,960
+Scott: but although a lot of cases it's a one-way deal.
+
+795
+01:03:49,142 --> 01:03:49,792
+Scott: Yeah, it's.
+
+796
+01:03:49,833 --> 01:03:50,259
+Scott: you know.
+
+797
+01:03:50,521 --> 01:03:56,120
+Scott: You log in the sit the service that whatever is providing service verifies that you're allowed in.
+
+798
+01:03:56,641 --> 01:04:01,760
+Scott: But usually you're not verifying that the service isn't an imposter service, right?
+
+799
+01:04:03,401 --> 01:04:07,754
+Scott: So with zero trust, you know, you have this central authentication system.
+
+800
+01:04:08,476 --> 01:04:11,851
+Scott: very often you're Authenticating both ways, right?
+
+801
+01:04:12,112 --> 01:04:13,700
+Scott: It's like I access a service.
+
+802
+01:04:14,081 --> 01:04:17,872
+Scott: They verify that I'm who I say I am and I also.
+
+803
+01:04:18,253 --> 01:04:21,804
+Scott: they had to verify they are who they say they are You know like that.
+
+804
+01:04:21,824 --> 01:04:32,960
+Rym: I'm not accessing some who knows what when you SSH somewhere Especially if you're like not super technological or like it's an environment Important and then that warning pops up like hey the host key is different.
+
+805
+01:04:34,042 --> 01:04:34,987
+Rym: You should verify that.
+
+806
+01:04:35,007 --> 01:04:37,099
+Rym: this is the what you think it is that you're about to log into.
+
+807
+01:04:38,701 --> 01:04:45,958
+Rym: That's a form of verifying like you have a key that you know, yes This is the key that the thing I'm logging into will present when I come in.
+
+808
+01:04:46,420 --> 01:04:51,639
+Rym: Imagine if your apartment I don't know has a photo of a particular dog hanging in the window inside.
+
+809
+01:04:52,021 --> 01:04:53,419
+Rym: You can only see it from the inside.
+
+810
+01:04:53,801 --> 01:05:01,778
+Rym: So you walk into your house and if you see a different dog on that photo You know, you walked into the wrong house or something's wrong with your house.
+
+811
+01:05:03,002 --> 01:05:05,679
+Scott: Yep, it's like, you know, I have the key to this house.
+
+812
+01:05:05,820 --> 01:05:15,193
+Scott: Well, that's you know that you try to open the door and the how it's like, you know You verify the house verifies that you who say who you are just having a key isn't enough.
+
+813
+01:05:15,675 --> 01:05:18,476
+Scott: and then you verify the house Is your house?
+
+814
+01:05:18,720 --> 01:05:19,283
+Rym: You know, I can.
+
+815
+01:05:19,363 --> 01:05:20,307
+Scott: actually you can go in.
+
+816
+01:05:20,428 --> 01:05:29,074
+Rym: I can give with blurring out some details a practical current example from my current job about this specific model and an approach I took.
+
+817
+01:05:29,515 --> 01:05:38,780
+Rym: that I think is actually relevant here, so imagine a kind of Connection used for some capital markets thing and it doesn't matter who initiates the TCP connection.
+
+818
+01:05:38,860 --> 01:05:39,985
+Rym: The thing will work either way.
+
+819
+01:05:40,025 --> 01:05:43,980
+Rym: so I could connect to you via TCP or you could connect to me via TCP.
+
+820
+01:05:44,423 --> 01:05:46,540
+Rym: Doesn't matter because the thing will work the same either way.
+
+821
+01:05:47,445 --> 01:05:52,247
+Rym: So in an old day old times before I join These things are on 50/50.
+
+822
+01:05:52,247 --> 01:05:58,533
+Rym: about half of them people would connect to us and about half of them We would connect out to whatever IP address the customer gave us.
+
+823
+01:05:58,895 --> 01:05:59,779
+Rym: like so far so good.
+
+824
+01:06:00,501 --> 01:06:04,512
+Rym: So we decided to implement TLS security, you know, but TLS certificates like that's.
+
+825
+01:06:04,572 --> 01:06:07,880
+Rym: let's bring capital markets kicking and screaming into the modern era.
+
+826
+01:06:08,361 --> 01:06:10,709
+Rym: So we set this up decades ago era.
+
+827
+01:06:10,789 --> 01:06:16,827
+Rym: Yep, because perimeter security was so good that This was not actually a problem.
+
+828
+01:06:16,928 --> 01:06:27,340
+Rym: the number of times that something was compromised because of the lack of TLS in that space Over the last several decades could probably count on one hand like it was so rare because the perimeters were so good.
+
+829
+01:06:27,981 --> 01:06:34,177
+Rym: And but anyway, so I also made the decision at this time to say hey by default.
+
+830
+01:06:34,197 --> 01:06:51,139
+Rym: You got to connect into us We'll only connect out to you under explicit and specific Circumstances or if I personally me or my team Grant you an individual exception that says we'll connect out to you.
+
+831
+01:06:51,661 --> 01:06:51,942
+Rym: Why?
+
+832
+01:06:52,503 --> 01:07:05,045
+Rym: because if you connect into me and I give you the credential to use to connect into me So I give you a TLS certificate and I say this is the one I'm giving you if you share this or you lose this You got a fucking.
+
+833
+01:07:05,085 --> 01:07:06,253
+Rym: tell us it's all on you.
+
+834
+01:07:06,293 --> 01:07:12,999
+Rym: now then They I know that I'm running a server I know my own IP address I know how you connect to me.
+
+835
+01:07:13,582 --> 01:07:17,236
+Rym: so you prove that you're you by showing you showing me the key you gave me.
+
+836
+01:07:18,220 --> 01:07:23,960
+Rym: I Can trust that very cleanly and I can assume that the other side fucked up if they lose control of that credential.
+
+837
+01:07:24,625 --> 01:07:30,660
+Rym: But on the other hand if I connect out to you I'm now on the hook to verify that who I'm connecting to is legitimate.
+
+838
+01:07:31,661 --> 01:07:33,087
+Rym: Like you would give me an IP address.
+
+839
+01:07:33,429 --> 01:07:34,695
+Rym: What if something goes wrong in my network?
+
+840
+01:07:34,755 --> 01:07:35,920
+Rym: I connect to the wrong IP address.
+
+841
+01:07:36,181 --> 01:07:40,140
+Rym: What if you change IPs and don't tell me it gets a lot murkier in that situation.
+
+842
+01:07:40,581 --> 01:07:52,779
+Rym: So I basically banned connecting out to you and making you connect to me to reduce the number of things I am obligated to verify And it worked pretty well and it saved us a lot of hassle.
+
+843
+01:07:53,921 --> 01:07:58,554
+Scott: Well, so zero trust is is the hotness for the past while right?
+
+844
+01:07:58,594 --> 01:08:08,197
+Scott: So it did, you know, it's gonna be a thing it's not going away, so I guess what we talked about it and You know, we didn't go into you know, any ridiculous details.
+
+845
+01:08:08,257 --> 01:08:08,619
+Scott: just yeah.
+
+846
+01:08:08,960 --> 01:08:09,944
+Rym: Oh, you gotta talk about like.
+
+847
+01:08:10,185 --> 01:08:12,996
+Rym: here's a bunch of different I am solutions and here's how to.
+
+848
+01:08:13,056 --> 01:08:21,024
+Rym: here's how to do it with like RS service and all the different kinds of token exchange like that that there's a YouTube video that explains that in more detail than we would ever ever.
+
+849
+01:08:21,064 --> 01:08:27,520
+Scott: there's a. there's a lot of people selling a lot of tools and Frameworks and all sorts of things to help to make this happen, right?
+
+850
+01:08:28,100 --> 01:08:30,613
+Scott: Some of them good some of them just buzzwords trying to make money.
+
+851
+01:08:30,633 --> 01:08:35,241
+Scott: Yeah Yeah That's it.
+
+852
+01:08:35,281 --> 01:08:35,761
+Scott: That's life.
+
+853
+01:08:41,667 --> 01:08:44,210
+Rym: This has been GeekNights with Rym and Scott.
+
+854
+01:08:44,250 --> 01:08:49,069
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+855
+01:08:49,310 --> 01:08:51,298
+Scott: Be sure to visit our website at front row.
+
+856
+01:08:51,337 --> 01:08:54,330
+Scott: crew calm for show notes discussion news and more.
+
+857
+01:08:54,609 --> 01:09:01,649
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+858
+01:09:02,372 --> 01:09:05,546
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+859
+01:09:06,792 --> 01:09:09,870
+Scott: GeekNights is recorded live with no studio and no audience.
+
+860
+01:09:10,069 --> 01:09:12,997
+Scott: But unlike those other late shows it's actually recorded at night.
+
+861
+01:09:13,520 --> 01:09:24,149
+Rym: and the patreon patrons for this episode of GeekNights that was not made with an AI even though Scott and I just looked at Adobe podcast which apparently just had a big update today.
+
+862
+01:09:24,309 --> 01:09:28,127
+Rym: and Yeah, that's a pretty shockingly good AI.
+
+863
+01:09:28,611 --> 01:09:33,689
+Rym: I got to tell you based on the poking at it that I did between when we finished recording the show and I recorded this.
+
+864
+01:09:34,312 --> 01:09:37,441
+Rym: I expect we'll do a Monday episode on it in the near future.
+
+865
+01:09:37,862 --> 01:09:59,250
+Rym: But for now the patreon patrons are Yeah, Alan Joyce linkage you dread Lily Tenebrae Chris a dot Chris Reimer Clinton Walton Dex Finn Joel Hayes Rebecca Dunn Sam Erickson Shervin Von Harl stop all the downloading and many many people who give us like a dollar.
+
+866
+01:09:59,734 --> 01:10:01,469
+Rym: So, uh, yeah play with it.
+
+867
+01:10:01,610 --> 01:10:19,008
+Rym: You can drag any old cruddy audio up there in the trial and you can listen to Enhanced audio that you could pretty easily rerecord with OBS and you could use it as a poor man's audio cleanup tool without paying a dime At least for now, but for now I do simply leave you with.
+
+868
+01:10:19,557 --> 01:10:32,390
+Media: Several months ago You tasked several of our members in a subcommittee with bringing recommendations to the full committee about Potential referrals to the Department of Justice and other authorities based on evidence of criminal and civil offenses.
+
+869
+01:10:32,992 --> 01:10:36,241
+Media: That has come to our attention over the course of our investigation.
+
+870
+01:10:36,903 --> 01:10:39,510
+Media: We are now prepared to share those recommendations today.
+
+871
+01:10:40,892 --> 01:10:41,032
+Media: Mr.
+
+872
+01:10:41,052 --> 01:10:44,710
+Media: Chairman, let me begin with some relevant background considerations to our criminal referrals.
+
+873
+01:10:45,593 --> 01:10:55,409
+Media: The dangerous assault on American constitutional democracy that took place on January 6 2021 consists of hundreds of individual criminal offenses.
+
+874
+01:10:56,372 --> 01:11:00,470
+Media: Most such crimes are already being prosecuted by the Department of Justice.
+
+875
+01:11:01,512 --> 01:11:17,967
+Media: We proposed to the committee advancing referrals where the gravity of the specific offense the severity of its actual harm and the Centrality of the offender to the overall design of the unlawful scheme to overthrow the election Compel us to speak.
+
+876
+01:11:19,111 --> 01:11:27,567
+Media: Ours is not a system of justice where foot soldiers go to jail and the masterminds and ringleaders Get a free pass.
+
+877
+01:11:28,731 --> 01:11:28,931
+Media: Mr.
+
+878
+01:11:28,972 --> 01:11:35,310
+Media: Chairman, as you know, our committee had the opportunity last spring to present much of our evidence to a federal judge
+
+879
+01:11:35,793 --> 01:11:36,054
+Rym: Something
+
+880
+01:11:36,074 --> 01:11:40,890
+Media: that distinguishes our investigation from any other Congressional investigation I can recall
+
+881
+01:11:41,852 --> 01:11:41,913
+Scott: In
+
+882
+01:11:41,953 --> 01:11:59,030
+Media: the context of resolving evidentiary privilege issues related to the crime fraud doctrine in the Eastman case US District Court Judge David Carter examined just a small subset of our evidence to determine Whether it showed the likely commission of a federal offense.
+
+883
+01:11:59,933 --> 01:12:10,120
+Media: the judge concluded that both former President Donald Trump and John Eastman Likely violated two federal criminal statutes.
+
+884
+01:12:10,681 --> 01:12:14,230
+Media: This is the starting point for our analysis today.
+
+885
+01:12:15,491 --> 01:12:24,447
+Media: The first criminal statute we invoke for referral therefore is title 18 section 15 12 C Which makes it unlawful for anyone to?
+
+886
+01:12:25,751 --> 01:12:34,890
+Media: corruptly obstruct influence or impede Any official proceeding of the United States government.
+
+887
+01:12:35,833 --> 01:12:53,150
+Media: We believe that the evidence described by my colleagues today and assembled throughout our hearings warrants a criminal referral of former President Donald J Trump John Eastman and others for violations of this statute.
+
+888
+01:12:53,957 --> 01:13:10,446
+Media: the whole purpose an Obvious effect of Trump's scheme were to obstruct Influence and impede this official proceeding the central moment for the lawful transfer of power in the United States.
+
+889
+01:13:12,116 --> 01:13:25,871
+Media: Second We believe that there is more than sufficient evidence to refer former President Donald J. Trump John Eastman and others for violating title 18 section 371.
+
+890
+01:13:25,871 --> 01:13:44,248
+Media: This statute makes it a crime to conspire to defraud the United States In other words to make an agreement to impair Obstruct or defeat the lawful functions of the United States government by deceitful or dishonest means.
+
+891
+01:13:45,691 --> 01:13:49,710
+Media: Former President Trump did not engage in a plan to defraud the United States acting alone.
+
+892
+01:13:50,472 --> 01:13:57,530
+Media: He entered into agreements formal and informal with several other individuals who assisted him with his criminal objectives.
+
+893
+01:13:59,172 --> 01:14:14,168
+Media: Our report describes in detail the actions of numerous co-conspirators who agreed with and participated in Trump's plan to impair obstruct and defeat the certification of President Biden's electoral victory.
+
+894
+01:14:15,531 --> 01:14:21,648
+Media: That said the subcommittee does not attempt to determine all of the potential participants in this conspiracy.
+
+895
+01:14:22,189 --> 01:14:37,630
+Media: as our Understanding of the role of many individuals may be incomplete even today because they refuse to answer our questions We trust that the Department of Justice will be able to form a far more complete picture through its own investigation.
+
+896
+01:14:38,712 --> 01:14:51,850
+Media: Third we make a referral based on title 18 section 1001 which makes it unlawful to knowingly and willfully make materially false statements to the federal government.
+
+897
+01:14:52,452 --> 01:15:01,818
+Media: The evidence clearly suggests that President Trump conspired with others to submit slates of fake Electors to Congress and the National Archives.
+
+898
+01:15:02,439 --> 01:15:13,089
+Media: We believe that this evidence we set forth in our report is more than sufficient For a criminal referral of former President Donald J. Trump and others in connection with this offense.
+
+899
+01:15:13,109 --> 01:15:21,566
+Media: as Before we don't try to determine all of the participants in this conspiracy Many of whom refuse to answer our questions.
+
+900
+01:15:21,666 --> 01:15:29,312
+Media: while under up We trust that the Department of Justice will be able to form a more complete picture through its own investigation.
+
+901
+01:15:30,115 --> 01:15:49,923
+Media: the fourth and final statute we invoke for referral is title 18 section 2383. the statute applies to anyone who incites assists or engages an insurrection against the United States of America and Anyone who gives aid or comfort to an insurrection.
+
+902
+01:15:49,943 --> 01:15:55,582
+Media: an insurrection is a rebellion Against the authority of the United States.
+
+903
+01:15:56,365 --> 01:16:17,721
+Media: It is a grave federal offense Anchored in the Constitution itself, which repeatedly opposes insurrections and domestic violence and indeed uses participation in insurrection by office holders as automatic grounds for disqualification From ever holding public office again at the federal or state level.
+
+904
+01:16:18,322 --> 01:16:31,329
+Media: anyone who incites others to engage in rebelling Assists them in doing so or gives aid and comfort to those engaged in an insurrection is guilty of a federal crime.
+
+905
+01:16:32,072 --> 01:16:46,989
+Media: the committee believes that more than sufficient evidence exists for a criminal referral of former President Trump for Assisting or aiding and comforting those at the Capitol who engaged in a violent attack on the United States.
+
+906
+01:16:47,651 --> 01:16:56,162
+Media: The committee has developed significant evidence that President Trump intended to disrupt the peaceful transfer transition of power.
+
+907
+01:16:56,726 --> 01:17:07,310
+Media: under our Constitution the president has an affirmative and primary Constitutional duty to act to take care that the laws be faithfully executed.
+
+908
+01:17:08,031 --> 01:17:15,590
+Media: Nothing could be a greater betrayal of this duty than to assist in insurrection against the constitutional order.
+
+909
+01:17:16,152 --> 01:17:22,070
+Media: The complete factual basis for this referral is set forth in detail throughout our report.
+

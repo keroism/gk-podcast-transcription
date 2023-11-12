@@ -1,0 +1,3632 @@
+1
+00:00:10,060 --> 00:00:12,059
+Rym: It's Monday April 30th.
+
+2
+00:00:12,320 --> 00:00:12,801
+Rym: I'm Rym.
+
+3
+00:00:13,062 --> 00:00:17,174
+Rym: I'm Scott and this is GeekNights Tonight.
+
+4
+00:00:17,214 --> 00:00:18,402
+Rym: we talk about all those 802 11 AB G's.
+
+5
+00:00:22,051 --> 00:00:23,046
+Scott: Let's do this.
+
+6
+00:00:25,351 --> 00:00:29,050
+Rym: Well I'm back after an awesome weekend in Rochester going to Tara Khan.
+
+7
+00:00:29,673 --> 00:00:37,790
+Scott: I didn't go because I didn't want to drive 10 hours for a one-day con And I think I went out on that deal because I did a lot of cool stuff here.
+
+8
+00:00:38,071 --> 00:00:40,063
+Rym: Yeah, but you know what I did a lot of cool stuff there.
+
+9
+00:00:40,184 --> 00:00:41,130
+Rym: I also got to go to millennium.
+
+10
+00:00:41,473 --> 00:00:42,099
+Rym: I got to buy.
+
+11
+00:00:42,139 --> 00:00:46,150
+Scott: so that's the only cool thing I didn't do but I did play a bunch of board games, so I'm all right.
+
+12
+00:00:46,534 --> 00:00:48,050
+Rym: I also got to meet some people from the forums.
+
+13
+00:00:48,392 --> 00:00:56,430
+Rym: I'll talk more about all that on Wednesday when it's more relevant But everyone who met me at the con you guys were all awesome, and I had a good time all right.
+
+14
+00:00:56,854 --> 00:01:01,881
+Rym: But and more relevant Rym news I've been trying to build my new computers.
+
+15
+00:01:01,941 --> 00:01:08,473
+Rym: I've been talking about a lot for a while and It's starting to prove more and more Problematic.
+
+16
+00:01:09,035 --> 00:01:12,447
+Rym: it seems like this time around as opposed to the last times.
+
+17
+00:01:12,607 --> 00:01:13,430
+Rym: I've built computers.
+
+18
+00:01:14,072 --> 00:01:19,790
+Rym: It's ever increasingly difficult to figure out if something is actually supported by Linux or not.
+
+19
+00:01:20,773 --> 00:01:22,707
+Scott: Yeah, I I don't know.
+
+20
+00:01:22,727 --> 00:01:27,564
+Scott: man It's like any news stuff like if it's a new chip on a motherboard.
+
+21
+00:01:27,584 --> 00:01:36,850
+Scott: You know like they'll support the XP QRS Tu V 99 chip and then all of a sudden no motherboards will use that chip anymore.
+
+22
+00:01:36,910 --> 00:01:40,170
+Scott: They'll start using the XP something something a hundred and eleven chip.
+
+23
+00:01:40,370 --> 00:01:41,995
+Rym: But the 111 isn't supported.
+
+24
+00:01:42,056 --> 00:01:48,910
+Rym: unless you use this weird kernel patch or you use some development kernel that no one actually uses Or it's not supported at all.
+
+25
+00:01:49,030 --> 00:01:53,710
+Scott: You just wait for someone to write a kernel driver for it or you got to do something really funky.
+
+26
+00:01:53,790 --> 00:01:54,958
+Rym: I've had to do that more than one.
+
+27
+00:01:54,979 --> 00:01:59,409
+Scott: by the time they write the kernel driver There'll be another motherboard available that you could buy that instead.
+
+28
+00:01:59,972 --> 00:02:06,743
+Rym: Yeah, so I'm still not sure what I'm gonna do because Every single motherboard I have decided all right.
+
+29
+00:02:07,225 --> 00:02:08,389
+Rym: This is a good motherboard.
+
+30
+00:02:08,952 --> 00:02:18,106
+Rym: I search on various forums mostly the Gentoo and Ubuntu forums and Without fail a bunch of people tell me all the things that don't work on the motherboard in Linux.
+
+31
+00:02:18,587 --> 00:02:19,270
+Scott: Just use Windows.
+
+32
+00:02:20,155 --> 00:02:36,916
+Rym: Yeah You know if I was a super gamer and I plan to primarily PC game and not primarily podcast I probably would just run Windows But it's honestly much better and much faster and much more reliable all told to use Linux for podcasting Just the way we do it.
+
+33
+00:02:37,318 --> 00:02:42,109
+Rym: and considering that we do four shows a week I think I found the most efficient way to get the shows up.
+
+34
+00:02:42,912 --> 00:02:48,330
+Scott: Yeah, well, I mean, you know, you don't need every single part of the computer to work perfectly to be able to podcast.
+
+35
+00:02:48,394 --> 00:02:50,755
+Scott: Yeah But the things that don't work I sound card.
+
+36
+00:02:50,856 --> 00:02:56,690
+Rym: the things that don't work are the onboard ethernets usually and the onboard serial ATA controller.
+
+37
+00:02:57,512 --> 00:02:58,861
+Rym: Yeah, that's annoying.
+
+38
+00:02:59,022 --> 00:03:06,670
+Scott: the hard drives See throughout my Linux using years, you know, it's like the technology was always ahead of Linux, right?
+
+39
+00:03:06,830 --> 00:03:07,914
+Scott: So you would get like.
+
+40
+00:03:07,954 --> 00:03:11,990
+Scott: I had a Pentium 3450 and I had to use newer and newer versions of Linux.
+
+41
+00:03:12,090 --> 00:03:18,950
+Scott: I would switch distributions just because this distribution came with newer packages and therefore supported more of my hardware.
+
+42
+00:03:19,372 --> 00:03:23,730
+Scott: And then when I bought a new computer, I had to go again to the bleeding edge of Linux.
+
+43
+00:03:23,870 --> 00:03:29,771
+Scott: I couldn't just use Mandrake anymore had to use Gentoo because that was the most bleeding edge Linux that supported all the hardware I Had.
+
+44
+00:03:30,092 --> 00:03:34,832
+Scott: and then eventually, you know the bleeding edge of Linux got ahead of the hardware I had.
+
+45
+00:03:34,992 --> 00:03:42,009
+Scott: so I was able to use Ubuntu or some other distribution and all my hardware was still supported I didn't need to use the bleeding edge anymore.
+
+46
+00:03:42,451 --> 00:03:53,716
+Scott: but if I buy new hardware again all of a sudden my hardware will be ahead of Linux and I'll have to go back to the bleeding edge and use Gentoo or something in order to get all of it to work or as Much of it to work as possible.
+
+47
+00:03:53,997 --> 00:03:56,066
+Rym: I really don't want to use Gentoo again every time.
+
+48
+00:03:56,106 --> 00:04:04,510
+Rym: I think yeah It is faster and I learn a lot and then I remember oh, yeah It's a giant pain in the ass and every time I do a major system update something breaks.
+
+49
+00:04:05,271 --> 00:04:08,523
+Scott: Yeah, the thing with Gentoo Linux is it's sort of like it doesn't work.
+
+50
+00:04:08,563 --> 00:04:10,210
+Rym: Well, it does the thing with Gentoo Linux.
+
+51
+00:04:10,411 --> 00:04:11,475
+Scott: No, it works great.
+
+52
+00:04:11,876 --> 00:04:15,250
+Scott: Yeah, the thing about Gentoo Linux is a high effort high maintenance system.
+
+53
+00:04:15,713 --> 00:04:18,370
+Scott: You basically have to you know build this whole thing up.
+
+54
+00:04:18,471 --> 00:04:27,270
+Scott: It could take you a few days Even if you know what you're doing, if you don't know what you're doing You're just gonna fuck it up and in the end you get a really great product if you do it properly.
+
+55
+00:04:27,410 --> 00:04:29,236
+Scott: But it takes a lot of work.
+
+56
+00:04:29,516 --> 00:04:34,089
+Scott: Ubuntu takes no work and is almost as good but isn't as bleeding edge.
+
+57
+00:04:34,109 --> 00:04:35,973
+Scott: and Yeah, it's slower.
+
+58
+00:04:35,993 --> 00:04:39,144
+Rym: Well, see I only fucked up Gentoo once the very first time.
+
+59
+00:04:39,184 --> 00:04:40,890
+Rym: I didn't do my network stuff, right?
+
+60
+00:04:41,170 --> 00:04:47,308
+Rym: So when I rebooted into my new kernel and all my new stuff I couldn't get on the network and I'd mess the kernel up and I just started over.
+
+61
+00:04:47,328 --> 00:04:49,710
+Scott: Yeah See I only messed up Gentoo.
+
+62
+00:04:50,091 --> 00:05:01,490
+Scott: I messed it up a lot more than once but that's because I the first times I tried I was such a nub That like I would finish the install and little did I know that I had finished the install properly But there was no GUI.
+
+63
+00:05:01,831 --> 00:05:06,630
+Scott: So I thought I had not finished the install and I did it like three times perfectly fine.
+
+64
+00:05:06,730 --> 00:05:08,217
+Rym: Like why isn't there a mouse?
+
+65
+00:05:08,318 --> 00:05:10,970
+Scott: what's going on until eventually I learned something?
+
+66
+00:05:11,610 --> 00:05:15,387
+Rym: Yeah, and then you learned the other thing which is that it takes about forever to compile X.
+
+67
+00:05:15,749 --> 00:05:18,119
+Scott: Yes However, I imagine with the core to duo.
+
+68
+00:05:18,139 --> 00:05:23,903
+Scott: you see the amount of processor time It is taken to compile X has not increased.
+
+69
+00:05:24,083 --> 00:05:25,590
+Scott: X hasn't gotten that much more complex.
+
+70
+00:05:26,032 --> 00:05:30,330
+Scott: The compiler has only gotten more efficient and the chips have gotten a lot faster.
+
+71
+00:05:30,451 --> 00:05:32,588
+Scott: I imagine building Gentoo on a core to duo.
+
+72
+00:05:33,131 --> 00:05:39,110
+Rym: It might only take a day as long as the thing you're building it on fully is using your core to duo.
+
+73
+00:05:39,371 --> 00:05:43,030
+Scott: Well, that's why you have to change the options in the make.com to use the both cores.
+
+74
+00:05:43,190 --> 00:05:48,688
+Rym: No, I mean I'm seeing a lot of reports of people and I'm trying I'm still debating which motherboard to get where.
+
+75
+00:05:49,029 --> 00:05:53,530
+Rym: when they use The core twos they get seriously degraded performance in Linux depending.
+
+76
+00:05:53,630 --> 00:05:56,750
+Rym: It seems to be a motherboard issue and a chipset issue and not a chip issue.
+
+77
+00:05:56,810 --> 00:05:59,581
+Scott: Yeah, I can tell you that the Dell I have at work.
+
+78
+00:05:59,782 --> 00:06:01,610
+Scott: The core to duo is in full effect.
+
+79
+00:06:02,111 --> 00:06:03,356
+Scott: It's totally rocks the house.
+
+80
+00:06:03,637 --> 00:06:05,242
+Rym: Have you verified that with benchmarks?
+
+81
+00:06:05,302 --> 00:06:06,286
+Rym: Are you just going based on?
+
+82
+00:06:06,346 --> 00:06:07,189
+Rym: it seems fast to me?
+
+83
+00:06:08,093 --> 00:06:13,616
+Scott: It's the fastest computer I've ever used in my life by a lot and I can look at the CPU Percentage meter and it's.
+
+84
+00:06:13,797 --> 00:06:15,444
+Scott: I can never even see a speck on it.
+
+85
+00:06:15,504 --> 00:06:16,810
+Scott: and when I'm doing crazy stuff.
+
+86
+00:06:16,991 --> 00:06:18,898
+Rym: And what have you done on this go crazy stuff?
+
+87
+00:06:18,918 --> 00:06:21,870
+Scott: Have you done like watching three youtubes while playing a flash game?
+
+88
+00:06:22,170 --> 00:06:24,025
+Rym: That's not so much and playing an mp3?
+
+89
+00:06:24,711 --> 00:06:26,176
+Rym: Jameson can pretty much do that.
+
+90
+00:06:26,617 --> 00:06:29,347
+Scott: Yeah, my computer has a little hard time doing that.
+
+91
+00:06:29,829 --> 00:06:30,090
+Rym: Really?
+
+92
+00:06:30,730 --> 00:06:31,453
+Scott: Yeah, huh?
+
+93
+00:06:31,574 --> 00:06:33,844
+Scott: Mostly cuz my computer only has 512 megs of RAM.
+
+94
+00:06:34,749 --> 00:06:38,948
+Scott: Ah God even the computer laptop has a gig of RAM right here.
+
+95
+00:06:39,471 --> 00:06:46,690
+Rym: Did the computer the busted ass computer where the only moving part that still functions other than the hard drive is the barely spinning?
+
+96
+00:06:46,930 --> 00:06:49,243
+Rym: CPU fan has a gig and a half around it.
+
+97
+00:06:49,484 --> 00:06:53,204
+Rym: I know I know Granted, I think some of that RAM stopped working a while ago.
+
+98
+00:06:53,305 --> 00:06:53,446
+Rym: Yeah.
+
+99
+00:06:53,526 --> 00:06:56,118
+Scott: Well Rym You'll be the guinea pig for the new computer.
+
+100
+00:06:56,138 --> 00:06:56,981
+Scott: I will and I will.
+
+101
+00:06:57,102 --> 00:06:59,190
+Scott: I will not buy anything you buy that sucks.
+
+102
+00:06:59,292 --> 00:07:05,149
+Rym: Yeah, I hate to say it but I think I'm just gonna bite the bullet and buy the Motherboard that I want based on how good the motherboard is.
+
+103
+00:07:05,852 --> 00:07:10,890
+Rym: I just got to decide if I'm gonna go with n-force which is expensive or the Intel which is better.
+
+104
+00:07:11,030 --> 00:07:14,404
+Rym: But I don't know how well it'll work in Linux and I think I'll just bite the bullet.
+
+105
+00:07:14,425 --> 00:07:15,750
+Rym: in worst case Linux doesn't work.
+
+106
+00:07:15,850 --> 00:07:23,570
+Rym: So well, I'll run Windows until the Linux kernel catches up and I'll be stuck using Crapass audacity instead of awesome ReSound.
+
+107
+00:07:23,791 --> 00:07:30,290
+Scott: I think you'll be able to get Linux to work well enough to record an mp3 and use open a web browser.
+
+108
+00:07:30,732 --> 00:07:35,490
+Rym: The problem is if I'm gonna have to buy another network card just for Linux.
+
+109
+00:07:35,771 --> 00:07:43,290
+Scott: I don't think so because none of these motherboards everything If you get the n-force and the motherboard is actually using the n-force for the network card.
+
+110
+00:07:43,632 --> 00:07:50,749
+Scott: Then the network card will work and if you get a PCI sound card Which you were planning on doing anyway, or an external sound card or something then?
+
+111
+00:07:51,571 --> 00:07:54,970
+Rym: I'm assuming the onboard sound won't work because almost none of them work properly.
+
+112
+00:07:55,010 --> 00:07:56,944
+Scott: I mean the thing is the n-force ones work.
+
+113
+00:07:57,005 --> 00:08:02,770
+Rym: I got one that works Yeah, but there's a lot of issues with them because some of the drivers and windows let you set parameters.
+
+114
+00:08:02,912 --> 00:08:04,289
+Rym: They're not easy to set in Linux.
+
+115
+00:08:04,451 --> 00:08:23,730
+Scott: This is why I learned the lesson long ago that if you want Anything in Linux in terms of sound other than just playing stereo sound out of one hole Just use the optical out and get some speakers that do the rest for you because the computer your Linux is not going to be Able to get the sound card to do all the surround sound shit.
+
+116
+00:08:24,452 --> 00:08:34,065
+Scott: You just want Linux to send the audio out and have your speakers or your receiver or some sort of External hardware amplifier to take care of everything because Linux isn't gonna do it.
+
+117
+00:08:34,446 --> 00:08:35,350
+Scott: It's just not gonna happen.
+
+118
+00:08:35,812 --> 00:08:39,750
+Rym: I think I'm just gonna bite the bullet buy a motherboard and I might be stuck running.
+
+119
+00:08:40,032 --> 00:08:49,119
+Rym: The thing is if I get stuck running Windows You can bet that I'm probably gonna spend a few weeks trying to compile resound in Windows Which would be a great success for the world.
+
+120
+00:08:49,380 --> 00:08:51,329
+Scott: Yeah, I think also, you know.
+
+121
+00:08:51,711 --> 00:08:56,050
+Rym: Also if anyone out there successfully compiles resound for Windows I will pay you a small song.
+
+122
+00:08:56,111 --> 00:09:00,436
+Scott: I think if I do it in some sigma in action We'll see about or some VMware.
+
+123
+00:09:00,877 --> 00:09:02,082
+Rym: Yeah, I could do the VMware.
+
+124
+00:09:02,282 --> 00:09:04,550
+Rym: Yeah, but God maybe I'll do that.
+
+125
+00:09:04,570 --> 00:09:07,079
+Rym: I'll just run Windows and have an Ubuntu in a VMware.
+
+126
+00:09:07,120 --> 00:09:09,830
+Scott: The thing is we have legitimate copies of Windows XP.
+
+127
+00:09:10,050 --> 00:09:15,709
+Scott: I don't know if it's worth it to buy Vista upgrades at least not yet that I say.
+
+128
+00:09:15,789 --> 00:09:17,757
+Rym: no My reason is no.
+
+129
+00:09:17,818 --> 00:09:25,410
+Rym: game really takes advantage of DirectX 10. yet To DirectX 10. video cards are very expensive and not that much faster.
+
+130
+00:09:25,610 --> 00:09:33,289
+Rym: Yep, eventually games will take advantage of it and by then DirectX 10 will be cheaper card wise and by then I might as well just get Vista.
+
+131
+00:09:33,886 --> 00:09:42,379
+Scott: Yeah I think the point at which I'm gonna buy Vista is where like the moons have to align in such a way that a I'm Playing a lot of PC games which I can see.
+
+132
+00:09:42,580 --> 00:09:44,446
+Rym: I'm really feeling the PC game and coming back.
+
+133
+00:09:44,466 --> 00:09:48,454
+Scott: Yep be Not only The.
+
+134
+00:09:48,695 --> 00:09:59,930
+Scott: are there a lot of games that I'm playing that want the DirectX 10 But a lot of games that I want to play or I'm playing have to do pretty poorly in DirectX 9 in order for me to switch up.
+
+135
+00:10:00,010 --> 00:10:08,325
+Scott: I mean if the games you know would do better in DirectX 10 But are still perfectly playable with XP and DirectX 9 card, then I don't I'm not.
+
+136
+00:10:08,345 --> 00:10:09,950
+Scott: why bother I'm playing.
+
+137
+00:10:10,071 --> 00:10:11,339
+Scott: What do I care though?
+
+138
+00:10:11,359 --> 00:10:12,930
+Rym: I will say before we go on to the news.
+
+139
+00:10:12,950 --> 00:10:13,834
+Rym: I'll be quick on my news.
+
+140
+00:10:13,874 --> 00:10:24,969
+Rym: but a few tips for anyone out there who's thinking about building a computer now that we're at the kind of the Awesome plateau of super fast computers for relatively little money Which is gonna end around December when pen rid and all that starts coming out.
+
+141
+00:10:25,531 --> 00:10:32,310
+Rym: But one a lot of people buy RAM that has low cast latency and low refresh timing and things like that.
+
+142
+00:10:32,691 --> 00:10:34,199
+Rym: Now this isn't how fast the RAM is.
+
+143
+00:10:34,500 --> 00:10:35,405
+Rym: This is this other thing.
+
+144
+00:10:35,445 --> 00:10:36,389
+Rym: not gonna get into what it is.
+
+145
+00:10:36,936 --> 00:10:37,949
+Rym: I could do a whole show on it.
+
+146
+00:10:38,031 --> 00:10:49,581
+Rym: It's kind of complicated But the thing is if you read the reviews on Newegg or you go to most sites that talk about computers they say Exactly what it is how it works and they say how important it is for performance.
+
+147
+00:10:50,223 --> 00:11:02,047
+Rym: However, I was looking at benchmarks and Across the board without exception No one has demonstrated any difference in performance be whatsoever.
+
+148
+00:11:02,067 --> 00:11:08,810
+Rym: that was even close to statistically relevant in any difference in cast latency or memory timing.
+
+149
+00:11:09,331 --> 00:11:09,592
+Rym: Uh-huh.
+
+150
+00:11:09,672 --> 00:11:10,635
+Rym: It's total bullshit.
+
+151
+00:11:10,997 --> 00:11:12,461
+Rym: buy RAM that has high timing.
+
+152
+00:11:12,501 --> 00:11:13,545
+Rym: It'll be a hundred bucks less.
+
+153
+00:11:13,585 --> 00:11:14,969
+Rym: It'll perform exactly the same.
+
+154
+00:11:15,545 --> 00:11:17,115
+Scott: Yeah See I always bought what.
+
+155
+00:11:17,155 --> 00:11:23,134
+Scott: my policy for buying RAM has always been determined how much RAM I want across how many sticks Regardless of anything else.
+
+156
+00:11:23,676 --> 00:11:28,830
+Scott: then find the cheapest RAM that is matches that size and number of sticks.
+
+157
+00:11:29,211 --> 00:11:30,396
+Scott: That is a brand name.
+
+158
+00:11:30,476 --> 00:11:35,843
+Rym: I recognize and trust because but you're forgetting two factors Cast latency and RAM speed.
+
+159
+00:11:36,205 --> 00:11:36,467
+Rym: he's got.
+
+160
+00:11:36,527 --> 00:11:40,080
+Scott: oh, yeah Okay I always pick the RAM speed also in addition to the side.
+
+161
+00:11:40,101 --> 00:11:45,121
+Scott: remember now most motherboards accept multiple speeds of RAM But you pick the highest speed that goes with your processor.
+
+162
+00:11:45,202 --> 00:11:46,910
+Rym: Yeah, and there is a performance difference there.
+
+163
+00:11:47,070 --> 00:11:53,930
+Scott: Yes in most cases if you pick your CPU and your motherboard then by you and you combine those two things It's easy to figure out.
+
+164
+00:11:53,972 --> 00:12:01,215
+Scott: Oh This is the highest speed RAM I can get and then you get that speed no matter what but back in the day I paid Premium in fact on the computer.
+
+165
+00:12:01,235 --> 00:12:06,347
+Rym: I'm using here the old one for cast latency to ram which was ooh.
+
+166
+00:12:07,864 --> 00:12:10,660
+Rym: But Benchmarks show that there's no reason to care at all.
+
+167
+00:12:10,720 --> 00:12:13,350
+Rym: so don't listen to anyone who gives you computer advice on new egg.
+
+168
+00:12:13,370 --> 00:12:16,270
+Rym: They're all jackasses who don't know shit about Pokemon.
+
+169
+00:12:17,053 --> 00:12:21,770
+Scott: Yeah, if anyone knows more about gas latency and wants to dispute this oh go ahead.
+
+170
+00:12:22,112 --> 00:12:25,170
+Rym: I'd like to see you dispute it because I looked at a whole bunch of benchmarks.
+
+171
+00:12:25,932 --> 00:12:27,236
+Scott: I've never actually looked into it.
+
+172
+00:12:27,477 --> 00:12:36,790
+Rym: so because I had to see because the slightly better cast latency RAM was $115 more Wow and it was otherwise identical huh?
+
+173
+00:12:37,330 --> 00:12:44,969
+Scott: The only thing I really worry about with RAM is not how fast it is because you know if it's DDR 800 Is it really gonna get that much faster or whatever?
+
+174
+00:12:45,530 --> 00:12:48,582
+Scott: What I worry about is if the RAM is gonna go bad or not.
+
+175
+00:12:48,883 --> 00:12:50,690
+Scott: the worst thing is a bad stick of RAM.
+
+176
+00:12:50,891 --> 00:12:52,902
+Scott: I need a perfect stick of RAM that never breaks.
+
+177
+00:12:53,445 --> 00:12:54,390
+Scott: That's my number one worry.
+
+178
+00:12:54,631 --> 00:12:56,680
+Rym: Yeah, but all good RAM comes with a good warranty.
+
+179
+00:12:56,962 --> 00:12:57,203
+Scott: Yep.
+
+180
+00:12:57,283 --> 00:12:57,625
+Scott: That's true.
+
+181
+00:12:57,645 --> 00:13:00,210
+Scott: I Just hate having to deal with warranties.
+
+182
+00:13:01,532 --> 00:13:02,518
+Rym: It's not so bad with RAM.
+
+183
+00:13:02,538 --> 00:13:03,163
+Rym: It's a tiny thing.
+
+184
+00:13:03,183 --> 00:13:05,940
+Rym: you ship it back in an envelope Yeah, and while I'm shipping it back.
+
+185
+00:13:05,980 --> 00:13:07,710
+Scott: I've got not so much RAM.
+
+186
+00:13:08,051 --> 00:13:11,164
+Rym: That's fine cuz I'm buying two gigs to start and I'm probably gonna get more later.
+
+187
+00:13:11,485 --> 00:13:11,947
+Scott: Oh god.
+
+188
+00:13:11,987 --> 00:13:12,730
+Scott: That's a lot of RAM.
+
+189
+00:13:12,771 --> 00:13:12,877
+Scott: Yeah
+
+190
+00:13:13,352 --> 00:13:19,390
+Rym: I want to be able to have the whole show in RAM along with all the Undo iterations and all the filters and all the things I'm running
+
+191
+00:13:19,851 --> 00:13:20,112
+Scott: All
+
+192
+00:13:20,132 --> 00:13:26,489
+Rym: right, plus my youtubes and my things of the day and my gigantic Firefox that always takes up all my RAM on Jameson.
+
+193
+00:13:26,831 --> 00:13:30,009
+Scott: Yeah, just why are they gonna fix that Firefox man?
+
+194
+00:13:30,551 --> 00:13:33,330
+Scott: You got to close it like once a day or else you run out of memory.
+
+195
+00:13:33,431 --> 00:13:34,746
+Rym: See, I don't get that problem anymore.
+
+196
+00:13:34,807 --> 00:13:36,194
+Rym: on Linux I just get the problem of.
+
+197
+00:13:36,575 --> 00:13:39,746
+Rym: I have like 40 tabs open and they're all.
+
+198
+00:13:39,826 --> 00:13:40,950
+Rym: they all have long histories.
+
+199
+00:13:41,791 --> 00:13:44,090
+Rym: Yeah, oh well, but yeah in the news.
+
+200
+00:13:44,533 --> 00:14:03,881
+Rym: I think I've talked about this topic before but Basically a lot of court cases rely on eyewitness testimony in order to prosecute people and find them guilty and There have been a lot of stories recently pointing out the fact that in many cases Eyewitness testimony is often less reliable than physical evidence.
+
+201
+00:14:04,162 --> 00:14:07,030
+Scott: And I wait it's always a lesser liable than physical evidence.
+
+202
+00:14:07,635 --> 00:14:24,927
+Rym: Well get this there have been exonerations meaning people who were found guilty of a crime For various reasons and then later when they convince people to look at the DNA evidence They discover that it is 100% certain that the person did not commit the crime and that they were in fact innocent.
+
+203
+00:14:25,869 --> 00:14:32,490
+Rym: of these 277 percent were prosecuted and found guilty because of erroneous eyewitness identification.
+
+204
+00:14:33,810 --> 00:14:35,036
+Rym: Aha quote.
+
+205
+00:14:35,257 --> 00:14:38,129
+Rym: the vagaries of eyewitness identification are well known.
+
+206
+00:14:38,932 --> 00:14:43,344
+Rym: The Supreme Court even held that in in some old case about how quote.
+
+207
+00:14:43,384 --> 00:14:47,229
+Rym: the Annales of criminal law are rife with instances of mistaken identities.
+
+208
+00:14:48,375 --> 00:14:59,949
+Rym: Yeah, despite this Juries believe eyewitness testimony far more than they'll believe any other evidence including physical evidence DNA evidence Whatever stupid juries what the hell they know.
+
+209
+00:15:00,572 --> 00:15:10,023
+Rym: I can definitely see how that would be because you all remember my jury duty experience where I was basically told that My job was too important for me to ever serve on a jury.
+
+210
+00:15:10,746 --> 00:15:15,039
+Rym: and if my job My job is too important to ever serve on a jury.
+
+211
+00:15:15,119 --> 00:15:23,470
+Rym: I can't imagine what people are serving on juries in New York State people who Think eyewitness testimony is more reliable than physical evidence.
+
+212
+00:15:24,133 --> 00:15:36,238
+Rym: I also don't get the fact that judges and people seem to always Resist when someone's in jail and people are trying to get them to test DNA evidence that was never tested to see if the guy Was innocent, I just think two things.
+
+213
+00:15:36,278 --> 00:15:43,169
+Scott: number one if eyewitness testimony was enough to put someone in jail and how come aren't all these magicians locked up for cutting people in half?
+
+214
+00:15:43,269 --> 00:15:46,557
+Scott: and - That was dumb.
+
+215
+00:15:46,699 --> 00:15:47,326
+Scott: That wasn't dumb.
+
+216
+00:15:47,754 --> 00:15:53,806
+Scott: Okay Anyway, and - we seem to see a lot of cases lately where DNA evidence is like up we were wrong.
+
+217
+00:15:53,947 --> 00:15:55,515
+Scott: the DNA shows You're wrong up.
+
+218
+00:15:55,575 --> 00:15:56,019
+Scott: We were wrong.
+
+219
+00:15:56,039 --> 00:15:56,805
+Scott: DNA shows you're wrong.
+
+220
+00:15:57,490 --> 00:15:59,538
+Scott: I'm not saying this is likely but what if?
+
+221
+00:15:59,939 --> 00:16:02,589
+Scott: what if all these DNA tests we've been doing wrong?
+
+222
+00:16:04,151 --> 00:16:15,975
+Rym: Well, you know, I still to this day very strongly stand by the sentiment that it's better to let one guilty man Well a thousand a million every guilty man go free than to get one innocent, dude Yep I mean if there's a whole jail.
+
+223
+00:16:16,055 --> 00:16:24,590
+Scott: imagine if there's one jail with every criminal in the world and in that jail There's one innocent guy and the only way there was no way to get him out.
+
+224
+00:16:24,670 --> 00:16:28,750
+Scott: You only had two choices either let everyone stay in the jail or let everyone out of the jail.
+
+225
+00:16:29,352 --> 00:16:34,933
+Scott: I would let everyone out of the jail every time no matter what and then I would start putting the guys back in But that's that's separate.
+
+226
+00:16:34,973 --> 00:16:35,254
+Rym: Luckily.
+
+227
+00:16:35,294 --> 00:16:38,443
+Rym: They'll probably facilitate the being put back in fairly quickly.
+
+228
+00:16:38,724 --> 00:16:43,393
+Scott: Yes, because they're all crazy bad guys Alright, so what do you got?
+
+229
+00:16:44,136 --> 00:16:48,489
+Scott: Oh, so speaking of courts and things the Supreme Court is doing stuff.
+
+230
+00:16:48,971 --> 00:16:51,901
+Scott: Oh, really, but this time they're doing good stuff.
+
+231
+00:16:52,323 --> 00:16:53,166
+Scott: It's a it's a miracle.
+
+232
+00:16:53,206 --> 00:16:54,250
+Scott: I know it's it's kind of weird.
+
+233
+00:16:55,133 --> 00:17:00,630
+Scott: You know how we always complain about how patents are all bullshit and like oh some guy patented a free energy machine.
+
+234
+00:17:01,137 --> 00:17:04,077
+Scott: Some guy patented Adding one and one.
+
+235
+00:17:04,519 --> 00:17:07,349
+Rym: some guy some guy patented the thing that I just had did.
+
+236
+00:17:07,611 --> 00:17:11,339
+Scott: Yeah, some guy patented something that's already existed for like a hundred years.
+
+237
+00:17:11,481 --> 00:17:14,829
+Scott: Amazon patented buying something with one click, you know stuff like that.
+
+238
+00:17:14,950 --> 00:17:22,910
+Scott: well, the Supreme Court has decided that It is now easier to fight a patent for being obvious.
+
+239
+00:17:23,451 --> 00:17:34,286
+Scott: you see the rules that you had to follow for arguing that a patent was obvious were kind of Rigid and narrow according to the court and they've said, huh?
+
+240
+00:17:35,290 --> 00:17:36,877
+Scott: we're gonna get rid of that bullshit.
+
+241
+00:17:37,298 --> 00:17:37,519
+Scott: now.
+
+242
+00:17:37,600 --> 00:17:39,889
+Scott: if something's obvious, it's obvious.
+
+243
+00:17:39,909 --> 00:17:53,409
+Scott: and It's if you think that someone patented something that is obvious and you're infringing on that patent or have been accused of Infringing on that patent you have a much better chance of winning if their patent really is obvious and stupid.
+
+244
+00:17:53,650 --> 00:17:57,350
+Rym: now If this really comes to fruition the way it should I hate to say it.
+
+245
+00:17:57,550 --> 00:18:04,150
+Rym: I don't hate to say I'd love to say it but I think that almost every software patent ever will be overturned rapidly.
+
+246
+00:18:04,210 --> 00:18:08,190
+Rym: Yeah, I think it's just because the programmers they're all obvious.
+
+247
+00:18:08,310 --> 00:18:12,283
+Rym: It's very rarely to someone write a program and you would look at anything.
+
+248
+00:18:12,705 --> 00:18:14,270
+Rym: Wow, that's amazing.
+
+249
+00:18:14,351 --> 00:18:15,409
+Rym: I never would have thought of that.
+
+250
+00:18:15,651 --> 00:18:27,389
+Scott: Well, what it is is all the real inventions in software out, you know I'll computer algorithms and things are done by like professors and they were done long before Anyone was patenting software.
+
+251
+00:18:27,409 --> 00:18:33,805
+Scott: and When you write software nowadays 90% of the time you're not inventing some new algorithm or anything.
+
+252
+00:18:34,146 --> 00:18:35,490
+Scott: You're just piecing together.
+
+253
+00:18:36,000 --> 00:18:43,410
+Scott: You know Solutions to problems that already exist and you can go buy an algorithms book that has all these things like the shortest path algorithm.
+
+254
+00:18:43,751 --> 00:18:45,882
+Scott: You know Dykstra figured it out a long time ago.
+
+255
+00:18:45,902 --> 00:18:47,490
+Scott: No one patented it.
+
+256
+00:18:47,570 --> 00:18:48,474
+Scott: He didn't patent it.
+
+257
+00:18:48,735 --> 00:18:52,730
+Scott: and now if you write a program you need to find the shortest path between two things in a graph.
+
+258
+00:18:53,192 --> 00:18:54,839
+Scott: You just implement the algorithm.
+
+259
+00:18:55,280 --> 00:18:57,289
+Scott: It's it's a doing and not a inventing.
+
+260
+00:18:57,731 --> 00:19:06,210
+Scott: So if anyone tries to invent that stuff and patent it, sorry It's obvious because you can go to the bookstore buy a book that tells you how to do it.
+
+261
+00:19:07,052 --> 00:19:12,490
+Rym: But if someone like Dykstra existed today and did something like that, there'd be a patent and no one else could use it.
+
+262
+00:19:12,670 --> 00:19:15,098
+Scott: Yeah, I think that would be actually kind of fair though.
+
+263
+00:19:15,199 --> 00:19:23,930
+Scott: Like if there was no way of determining the shortest path No one knew how to do it efficiently and then someone actually came up with a brand new algorithm.
+
+264
+00:19:24,051 --> 00:19:27,088
+Scott: They did it and they didn't tell anyone and they patented it.
+
+265
+00:19:27,952 --> 00:19:33,410
+Scott: I would have a hard time arguing against that, you know, cuz plus in what like 14 years we can all use it anyway.
+
+266
+00:19:33,591 --> 00:19:35,258
+Scott: So it's not that big a deal.
+
+267
+00:19:35,579 --> 00:19:38,030
+Rym: Yeah, but the thing is how often does that happen?
+
+268
+00:19:38,130 --> 00:19:41,644
+Rym: I mean look at all the software patents or even a lot of technology patents.
+
+269
+00:19:42,367 --> 00:19:43,150
+Rym: They're obvious.
+
+270
+00:19:43,451 --> 00:19:44,395
+Rym: They're at one click.
+
+271
+00:19:44,777 --> 00:19:51,619
+Rym: you patent the idea of buying something with one click instead of two clicks Yeah, or four clicks the kind of stuff that's patentable.
+
+272
+00:19:51,659 --> 00:19:57,132
+Scott: and technology nowadays is like the design of the core to do a Processor.
+
+273
+00:19:57,273 --> 00:19:59,761
+Scott: or you know certain aspects of the design that are.
+
+274
+00:19:59,781 --> 00:20:04,868
+Scott: you know new ways of getting more efficient Transistors and less heat and all that.
+
+275
+00:20:04,908 --> 00:20:08,604
+Rym: Yeah Like if I design a new way of doing an old CMOS chip where it doesn't use.
+
+276
+00:20:08,684 --> 00:20:10,732
+Rym: it uses half as much power and is Fast.
+
+277
+00:20:11,153 --> 00:20:17,852
+Rym: that's a lot different from I don't know clicking on something once and then writing a bunch of legalese around that Yeah.
+
+278
+00:20:18,635 --> 00:20:19,718
+Scott: Oh, well, it's good news.
+
+279
+00:20:19,859 --> 00:20:28,458
+Rym: Hooray things of the day.
+
+280
+00:20:29,554 --> 00:20:33,953
+Scott: All right I was in the mood to see some funniness and I found me some college pranks.
+
+281
+00:20:34,475 --> 00:20:38,259
+Scott: now when I was in college It was something that would happen every year.
+
+282
+00:20:38,440 --> 00:20:50,380
+Scott: Invariably is that they would drop off a giant stack of phone books like a whole like three or four Pallets of phone books at the dorms and they wouldn't bother handing them out or putting one in every dorm room.
+
+283
+00:20:50,420 --> 00:20:52,739
+Scott: They would just leave the pallet of phone books sitting there.
+
+284
+00:20:53,161 --> 00:20:58,520
+Rym: Yeah, so you'd go into Gracie's like the big central place where people ate basically garbage every day.
+
+285
+00:20:58,620 --> 00:21:05,094
+Rym: We won't get into all the stories we have about that place But it was like the main common area where everyone every freshman would always meet.
+
+286
+00:21:05,114 --> 00:21:06,198
+Scott: it was for the freshman.
+
+287
+00:21:06,238 --> 00:21:08,860
+Rym: It was the common area Yeah, even though there was nothing in that building.
+
+288
+00:21:09,202 --> 00:21:11,760
+Rym: Yeah, it was just this big empty useless building other than the cafeteria.
+
+289
+00:21:12,061 --> 00:21:19,480
+Scott: But they leave multiple pallets stacked high with phone books like a thousand phone books on a pallet something ridiculous like that.
+
+290
+00:21:19,982 --> 00:21:21,974
+Scott: And if you wanted a phone book you took one.
+
+291
+00:21:21,994 --> 00:21:24,043
+Scott: if you didn't want one you didn't take one.
+
+292
+00:21:24,083 --> 00:21:33,340
+Scott: and for the most part people didn't want phone books because we had the Internet's and The phone company didn't seem to realize that no one used phone books anymore.
+
+293
+00:21:33,781 --> 00:21:36,509
+Rym: God, when was the last time I used a phone book for anything?
+
+294
+00:21:36,810 --> 00:21:44,962
+Scott: I actually kind of used the ones around here only because Dumbass local businesses don't put have websites so you had to say it.
+
+295
+00:21:45,362 --> 00:21:51,765
+Rym: but if a local business if I can't if I don't see them when I wander around and They don't have a website.
+
+296
+00:21:52,126 --> 00:21:55,700
+Rym: I'll probably never find out they exist and I'm not even gonna bother looking for them.
+
+297
+00:21:55,780 --> 00:22:02,560
+Scott: Yeah, I generally what I'll do is if I've seen a place around You know and they don't have a website then I can get their phone number in the yellow pages.
+
+298
+00:22:02,640 --> 00:22:04,891
+Scott: That's pretty much the only circumstances which I'll use it.
+
+299
+00:22:05,072 --> 00:22:06,860
+Rym: How often do you really call so a business?
+
+300
+00:22:07,020 --> 00:22:09,448
+Rym: I mean if I mostly restaurants, that's it.
+
+301
+00:22:09,829 --> 00:22:12,136
+Rym: Well, we don't even call restaurants only takeout places.
+
+302
+00:22:12,617 --> 00:22:13,099
+Scott: Yeah, that's it.
+
+303
+00:22:13,480 --> 00:22:14,909
+Scott: Yeah, that's all I'm talking about man.
+
+304
+00:22:14,949 --> 00:22:15,774
+Rym: I miss RIT.
+
+305
+00:22:15,834 --> 00:22:22,980
+Scott: We just order pizza in a college town Everything has a website because the college town people are smart.
+
+306
+00:22:23,241 --> 00:22:25,497
+Rym: Yeah, we really got small especially when your college ends.
+
+307
+00:22:25,557 --> 00:22:30,360
+Rym: in IT I mean if we wanted food we could get the menus to every restaurant we cared about online.
+
+308
+00:22:30,642 --> 00:22:35,292
+Scott: I just had a website where we could in a few clicks Someone would be at our door with food.
+
+309
+00:22:35,815 --> 00:22:39,516
+Scott: even it was so good They would have been paid with a credit card, so we wouldn't have to give them anything.
+
+310
+00:22:39,636 --> 00:22:40,704
+Rym: Yeah, no tip No nothing.
+
+311
+00:22:40,724 --> 00:22:49,752
+Rym: we could even save like Common meals that we were to order like the list of pizzas or the list of pitas or the list of whatever and just hit The button and then it would show up a half hour later.
+
+312
+00:22:49,772 --> 00:22:51,200
+Rym: There are IRC channels.
+
+313
+00:22:51,220 --> 00:22:53,650
+Scott: You could type slash pizza and then pizza would show up.
+
+314
+00:22:54,353 --> 00:22:56,040
+Rym: I really miss RIT sometimes.
+
+315
+00:22:56,282 --> 00:23:06,519
+Scott: oh, yeah, so I was missing that too and Apparently kids at other colleges have a similar situation where they get a bunch of phone books that they don't need.
+
+316
+00:23:06,539 --> 00:23:11,372
+Scott: and What the thing is kids at other colleges were smarter than we were.
+
+317
+00:23:11,593 --> 00:23:14,120
+Rym: see we spent all of our time gaming.
+
+318
+00:23:14,481 --> 00:23:22,740
+Rym: In fact, we spent the majority of our waking hours at RIT as a group the front row crew Gaming or watching anime gaming or watching anime mostly gaming.
+
+319
+00:23:23,121 --> 00:23:38,760
+Rym: So as a result while we would often late at night after we'd finished gaming and watching anime before we all went to bed So that we could get up early and skip class to play more games Yep, we would often talk about how we should pull a prank when we came up with some pretty grand pranks.
+
+320
+00:23:38,820 --> 00:23:45,560
+Rym: But the thing is we never implemented or even thought about actually implementing a single one of them because we didn't have time.
+
+321
+00:23:45,841 --> 00:23:49,899
+Scott: No, it wasn't because you didn't have time is because it was so much easier to just sit there and play a game.
+
+322
+00:23:51,623 --> 00:23:53,913
+Scott: It was fun enough that we didn't need to go pull a prank.
+
+323
+00:23:53,973 --> 00:23:57,964
+Scott: if we did if we would have ran out of games to Play I'm sure pranks would have been imminent.
+
+324
+00:23:58,365 --> 00:24:05,999
+Rym: and the thing is most of the pranks that happen on RIT because pretty much everyone else on Campus was either a lot like us or they were frat people who drank all the time.
+
+325
+00:24:06,462 --> 00:24:10,260
+Rym: So as a result, the pranks were always lame and or non-existent.
+
+326
+00:24:10,702 --> 00:24:13,755
+Scott: Yeah, all righty is certainly no MIT when it comes to pranks granted.
+
+327
+00:24:13,795 --> 00:24:14,478
+Rym: I'm still proud.
+
+328
+00:24:14,498 --> 00:24:20,620
+Rym: the one prank I wish I could have pulled off Giant clock tower on campus and you can see the clock all the way down the quarter mile.
+
+329
+00:24:20,620 --> 00:24:23,859
+Rym: There's a big thing the sundial know the actual clock not the sundial.
+
+330
+00:24:24,401 --> 00:24:27,373
+Scott: Oh the Ellington not the Ellington clock the.
+
+331
+00:24:27,493 --> 00:24:29,099
+Rym: I already forget the names of all the dorms.
+
+332
+00:24:29,722 --> 00:24:30,787
+Scott: I forget the name of the building.
+
+333
+00:24:30,827 --> 00:24:33,560
+Scott: But yes that building the a building a giant dorm, right?
+
+334
+00:24:33,700 --> 00:24:40,280
+Rym: Yeah, there's a big clock on it and it was white hands with white little pips and then it was the RIT red brick background.
+
+335
+00:24:40,863 --> 00:24:49,079
+Rym: I wanted to get up there because it wasn't hard to get up there and Paint the end of the minute hand so that it disappeared and there were just two hour hands.
+
+336
+00:24:50,782 --> 00:24:53,550
+Rym: That was my genius prank that I obviously never pulled off.
+
+337
+00:24:53,711 --> 00:25:02,840
+Rym: obviously meanwhile the frat boys in their infinite wisdom I think the best prank they ever pulled off was they took a condom and they put it on top of the sundial.
+
+338
+00:25:03,081 --> 00:25:05,328
+Scott: Yeah, I think that was there before when I got to RIT.
+
+339
+00:25:05,529 --> 00:25:06,211
+Rym: I got refreshed.
+
+340
+00:25:06,291 --> 00:25:06,934
+Scott: I was there.
+
+341
+00:25:07,275 --> 00:25:12,851
+Rym: really there were like five Condom ends around the bottom Tradition.
+
+342
+00:25:12,891 --> 00:25:18,800
+Scott: like you know Everyone has to put a condom on the sundial and if it blows away or gets taken off someone else's to replace it.
+
+343
+00:25:18,880 --> 00:25:20,205
+Rym: But you got to admit that's pretty sad.
+
+344
+00:25:20,225 --> 00:25:22,413
+Rym: That's barely even a press not even a prank.
+
+345
+00:25:22,433 --> 00:25:23,015
+Rym: That's nothing.
+
+346
+00:25:23,056 --> 00:25:24,240
+Scott: That's just it's basically nothing.
+
+347
+00:25:24,260 --> 00:25:28,276
+Scott: Yeah, so these guys I guess one of these is at Tufts, right?
+
+348
+00:25:28,296 --> 00:25:29,080
+Scott: These guys are Tufts.
+
+349
+00:25:29,844 --> 00:25:32,800
+Scott: They got these phone books and they said hey, what do we do with these phone books?
+
+350
+00:25:32,940 --> 00:25:33,382
+Scott: I don't know.
+
+351
+00:25:33,783 --> 00:25:43,092
+Scott: and then one of their friends went away on a ski trip and he left his door Unlocked.
+
+352
+00:25:43,112 --> 00:25:46,402
+Scott: that's an invitation for some guys in white sheets to come along.
+
+353
+00:25:46,883 --> 00:25:47,826
+Rym: That's all I'm saying.
+
+354
+00:25:48,087 --> 00:25:48,990
+Rym: Oh the white sheets.
+
+355
+00:25:49,334 --> 00:25:50,508
+Rym: I forgot about ghosting.
+
+356
+00:25:51,531 --> 00:25:53,276
+Rym: There was one good prank at RIT.
+
+357
+00:25:53,537 --> 00:25:56,826
+Rym: Yeah, there was in fact now that I think about it.
+
+358
+00:25:56,866 --> 00:25:58,070
+Rym: That's one of my favorite pranks.
+
+359
+00:25:58,391 --> 00:26:00,380
+Scott: Hey, we got to get a video of that.
+
+360
+00:26:00,782 --> 00:26:01,767
+Rym: I don't know if there are any.
+
+361
+00:26:01,787 --> 00:26:02,189
+Rym: I don't know.
+
+362
+00:26:02,912 --> 00:26:04,721
+Rym: That might just be an RIT prank.
+
+363
+00:26:04,881 --> 00:26:05,364
+Scott: It might be.
+
+364
+00:26:05,404 --> 00:26:06,730
+Rym: I totally forgot about that.
+
+365
+00:26:07,890 --> 00:26:19,139
+Scott: So these guys took these phone books and they went into their friend's room because he was away for the weekend skiing and they developed techniques for Tearing pages at a phone books at a rapid pace.
+
+366
+00:26:19,219 --> 00:26:22,310
+Rym: see this is brilliant because Scott had watched the video and he makes me watch.
+
+367
+00:26:22,350 --> 00:26:22,431
+Rym: It's.
+
+368
+00:26:22,471 --> 00:26:24,830
+Rym: I'm sitting there watching and I see they've got these phone books.
+
+369
+00:26:24,830 --> 00:26:27,510
+Rym: They're starting to like put them up on the walls hanging from the ceiling like pages.
+
+370
+00:26:27,550 --> 00:26:30,930
+Rym: They've ripped out and I get the impression they're gonna try to fill the room or something.
+
+371
+00:26:31,372 --> 00:26:40,150
+Rym: So I say to Scott so I says to him man if that was us We'd obviously have to come up with some sort of advanced technique to rip the phone pages.
+
+372
+00:26:40,250 --> 00:26:42,420
+Rym: And I say I say hold on hold on.
+
+373
+00:26:42,943 --> 00:26:48,370
+Rym: and then the guy explains the technique They came up with after some trial and error to rip the pages out and it was a really good method.
+
+374
+00:26:48,452 --> 00:26:59,868
+Scott: Yeah They had a high quality technique for tearing lots and lots of pages out of the phone book Individually one at a time and they filled this kid's room above the waist level with phone book pages.
+
+375
+00:27:00,249 --> 00:27:01,648
+Rym: now Think about that.
+
+376
+00:27:02,412 --> 00:27:08,090
+Scott: It's like 60 phone books each individual page torn out filling your entire dorm room.
+
+377
+00:27:08,692 --> 00:27:17,115
+Rym: I kind of feel for the kid when he shows up cuz he opens the door and he's just like We think of that.
+
+378
+00:27:17,336 --> 00:27:18,742
+Rym: you spent a whole weekend skiing.
+
+379
+00:27:18,943 --> 00:27:21,716
+Rym: you're tired you get back home You just want to go to bed.
+
+380
+00:27:21,756 --> 00:27:23,145
+Rym: You got class the next day.
+
+381
+00:27:23,165 --> 00:27:23,990
+Rym: You probably got some homework.
+
+382
+00:27:24,030 --> 00:27:24,636
+Rym: You didn't finish.
+
+383
+00:27:24,938 --> 00:27:26,330
+Rym: all you want to do is go to sleep.
+
+384
+00:27:27,496 --> 00:27:29,324
+Rym: Maybe play some counter-strike and masturbate.
+
+385
+00:27:29,365 --> 00:27:31,456
+Scott: No, I didn't want to play counter-strike I don't want to play Pokemon.
+
+386
+00:27:31,496 --> 00:27:31,919
+Scott: at this point.
+
+387
+00:27:31,939 --> 00:27:33,650
+Scott: at the most it's gonna be Tetris in bed.
+
+388
+00:27:33,791 --> 00:27:37,844
+Rym: See if I were this guy in bed I would have just gone into the room and gone to sleep in the paper.
+
+389
+00:27:37,884 --> 00:27:38,990
+Rym: That might have been really comfortable.
+
+390
+00:27:39,111 --> 00:27:40,457
+Scott: That's what I would have done as well.
+
+391
+00:27:40,497 --> 00:27:43,872
+Rym: And then the next day I would have killed every single person I knew.
+
+392
+00:27:43,932 --> 00:27:51,928
+Scott: now the next day I would have just waited for the time to be right and moved all the paper into someone else's and Then locked my door.
+
+393
+00:27:53,102 --> 00:27:53,350
+Scott: All right.
+
+394
+00:27:54,192 --> 00:28:01,530
+Rym: So in the spirit of that it's just so happens that linked along in the related videos was yet another phone book prank.
+
+395
+00:28:01,954 --> 00:28:03,830
+Rym: Now this one was at some engineering school.
+
+396
+00:28:03,830 --> 00:28:04,523
+Scott: It was at VCU
+
+397
+00:28:05,231 --> 00:28:25,990
+Rym: and these were obviously some engineering students because they went the extra mile and they went about this in such a Methodical and precise way and they put such thought into it that while it's a pretty mean prank at the same time I would have paid a decent amount of money to see the aftermath of the prank, which unfortunately the video does not provide.
+
+398
+00:28:26,383 --> 00:28:37,561
+Rym: Yeah Basically, they took the phone books and they put them together into like big Tetris block kind of things and they made segments that when put Together form a fairly thick wall wrapped in saran wrap.
+
+399
+00:28:38,082 --> 00:28:40,489
+Scott: So they made basically a wall of phone book.
+
+400
+00:28:40,549 --> 00:28:41,797
+Scott: Yes All right, what'd they do with it?
+
+401
+00:28:41,898 --> 00:28:45,548
+Rym: And it was in segments now also inside of.
+
+402
+00:28:45,932 --> 00:28:49,350
+Rym: One side of these segments was horrible pornography.
+
+403
+00:28:49,992 --> 00:28:56,938
+Scott: I see you make a wall with porn on one side so you can you hide on the side without porn and then the other side Has porn and that's what the people you're pranking are.
+
+404
+00:28:57,219 --> 00:28:58,584
+Rym: So some kids in his dorm room.
+
+405
+00:28:58,966 --> 00:29:09,650
+Rym: Uh-huh, and they Secretly like obviously they're doing this very quietly They place the segments on the door like in the door frame outside the room and then seal it entirely with duct tape.
+
+406
+00:29:10,354 --> 00:29:11,724
+Scott: Oh, so he can't get.
+
+407
+00:29:11,764 --> 00:29:12,530
+Scott: he opens his door.
+
+408
+00:29:12,630 --> 00:29:15,970
+Scott: He's just gonna see porn and a wall that he can't get out of his room.
+
+409
+00:29:16,151 --> 00:29:20,990
+Rym: Yes a wall that will require a lot of body slamming if that's even going to do it to get out.
+
+410
+00:29:21,238 --> 00:29:26,206
+Scott: Yeah Basically, they covered the thing with duct tape like a lot of pieces of duct tape from top to bottom.
+
+411
+00:29:26,507 --> 00:29:31,627
+Scott: from the outside It looked like just a wall of duct tape, but there were actually phone books and then a door.
+
+412
+00:29:31,667 --> 00:29:33,657
+Rym: now How smart are these kids?
+
+413
+00:29:33,898 --> 00:29:35,870
+Rym: they actually and Scott pointed this out in the video?
+
+414
+00:29:36,350 --> 00:29:45,770
+Rym: They tore the duct tape at the proper lengths ahead of time in another room and walked over with him So you wouldn't have any hearing of the prank being set up from the people inside.
+
+415
+00:29:45,790 --> 00:29:46,112
+Rym: Yeah, cuz.
+
+416
+00:29:46,132 --> 00:29:48,322
+Scott: I mean if you're inside here rip rip rip.
+
+417
+00:29:48,362 --> 00:29:49,889
+Scott: It's like who's duct-taping something out there.
+
+418
+00:29:50,150 --> 00:29:50,452
+Scott: Yeah, cuz.
+
+419
+00:29:50,512 --> 00:30:03,842
+Scott: if he opened that door even once while they were doing this one body slam would have taken that thing off But as soon as they had all the duct tape on it would have taken multiple body slams perhaps perhaps two people kicking Rapidly and strongly man.
+
+420
+00:30:03,902 --> 00:30:10,050
+Rym: I just remember when I was there I maybe even a ram of some sort if I heard the slightest commotion in the hallway.
+
+421
+00:30:10,891 --> 00:30:28,590
+Rym: I've jumped out the door and I remember the one time I opened the door because I heard someone sound like someone's trying to crowbar a door open and sure enough Everyone else on the floor had gotten together and they decided for some reason that this one door that was near my room Had to be where the cable was and they wanted to get themselves free cable.
+
+422
+00:30:28,951 --> 00:30:32,265
+Rym: So they were crowbar and open the door to try to give themselves free cable.
+
+423
+00:30:32,566 --> 00:30:33,309
+Scott: Ah your dorm.
+
+424
+00:30:33,892 --> 00:30:36,322
+Scott: Oh, that's why I stayed in the drug-free dorm God.
+
+425
+00:30:36,362 --> 00:30:38,170
+Rym: We got to do a show about our different dorms.
+
+426
+00:30:38,812 --> 00:30:41,240
+Rym: I lived in fish and Scott lived in Peterson.
+
+427
+00:30:41,561 --> 00:30:42,444
+Scott: I lived in the good door.
+
+428
+00:30:42,986 --> 00:30:44,050
+Rym: I everyone hung out.
+
+429
+00:30:44,292 --> 00:30:48,319
+Rym: I lived in the interesting dorm The interesting door.
+
+430
+00:30:48,480 --> 00:30:59,308
+Rym: Yes the much more entertaining dorm But the much less entertaining dorm to be in so alright in and of itself a good prank But a prank that's been done before with other implements not like a super original prank.
+
+431
+00:30:59,489 --> 00:31:04,550
+Rym: Yep They went one step further and they covered the inside of this wall.
+
+432
+00:31:04,791 --> 00:31:06,441
+Scott: This is the kind of thing I wouldn't have thought of.
+
+433
+00:31:06,783 --> 00:31:07,890
+Scott: we would have thought of the porn.
+
+434
+00:31:07,970 --> 00:31:10,363
+Scott: I wouldn't have thought of the next step with honey.
+
+435
+00:31:10,383 --> 00:31:17,909
+Rym: Oh Now not only do you have to body slam this thing repeatedly and continually because there's no other way you're gonna get out.
+
+436
+00:31:17,969 --> 00:31:21,130
+Scott: if you Had a battering ram you'd be alright, but you don't have a battering ram.
+
+437
+00:31:21,210 --> 00:31:21,612
+Rym: I don't know.
+
+438
+00:31:21,752 --> 00:31:23,759
+Rym: Frank had that didgeridoo a bit.
+
+439
+00:31:23,779 --> 00:31:25,686
+Scott: didgeridoo is not a battering ram.
+
+440
+00:31:25,746 --> 00:31:26,710
+Scott: I think not even close.
+
+441
+00:31:26,810 --> 00:31:30,242
+Rym: I think a didgeridoo applied properly might just shatter.
+
+442
+00:31:30,282 --> 00:31:31,205
+Scott: What's wrong with you?
+
+443
+00:31:31,225 --> 00:31:32,690
+Rym: Didgeridoos are solid wood.
+
+444
+00:31:32,750 --> 00:31:33,455
+Rym: They don't shatter.
+
+445
+00:31:33,495 --> 00:31:34,865
+Rym: you can kill a man with the didgeridoo.
+
+446
+00:31:34,905 --> 00:31:35,590
+Rym: I used to play one.
+
+447
+00:31:35,690 --> 00:31:38,338
+Scott: Alright you try to didgeridoo open our door.
+
+448
+00:31:38,438 --> 00:31:42,270
+Scott: I'll didgeridoo you and see if the which breaks first our front door.
+
+449
+00:31:45,037 --> 00:31:51,168
+Scott: I can't really do it with my hands But a battering ram is big and usually requires at least two people to operate.
+
+450
+00:31:51,489 --> 00:32:12,230
+Rym: now I have a hunch cuz I. lately I've been watching a lot of pranks on YouTube and so is Scott and A lot of other things are appearing on YouTube that used to be isolated incidents in the world And I think that we're seeing the beginning of kind of a standalone cyclical self-fulfilling prophecy feedback loop kind of situation where YouTube exists.
+
+451
+00:32:12,954 --> 00:32:15,410
+Rym: People do things to try to appear on YouTube.
+
+452
+00:32:15,852 --> 00:32:21,110
+Rym: People see these things get ideas and try to do more elaborate things in order to appear on YouTube.
+
+453
+00:32:21,912 --> 00:32:32,219
+Rym: I think that prank technology is going to increase at a startling rate until eventually we're going to have the prank cold war Either that or like a prank arms race.
+
+454
+00:32:32,299 --> 00:32:35,730
+Scott: either that or pranks are just as prevalent as they have always been.
+
+455
+00:32:36,111 --> 00:32:41,989
+Scott: But now since more people can be aware of them you it feels like there are more pranks than they used to be.
+
+456
+00:32:42,431 --> 00:32:45,010
+Rym: See, but at the same time I mean how many people?
+
+457
+00:32:45,430 --> 00:32:48,641
+Rym: Reinvented the wheel over and over again coming up with pranks.
+
+458
+00:32:49,002 --> 00:32:51,190
+Rym: how many pranks exist only at one?
+
+459
+00:32:51,350 --> 00:32:53,745
+Rym: University because it's passed down from year to year.
+
+460
+00:32:53,766 --> 00:32:55,693
+Rym: now We're seeing all of that.
+
+461
+00:32:55,994 --> 00:33:01,046
+Rym: pranks are unifying and I think pranks are going to start becoming very very intricate.
+
+462
+00:33:01,508 --> 00:33:08,849
+Scott: I can tell you this If anyone needs to know phone book page tearing technique, they will never have to reinvent that ever again.
+
+463
+00:33:09,611 --> 00:33:13,970
+Rym: However now I feel it's my duty at some point to spread ghosting around the world.
+
+464
+00:33:14,573 --> 00:33:16,041
+Scott: Are you gonna tell people what ghosting is?
+
+465
+00:33:16,081 --> 00:33:17,047
+Scott: you're gonna let him hang?
+
+466
+00:33:17,770 --> 00:33:25,686
+Rym: I'm gonna let him hang partly because if anyone else out there who didn't go to RIT Knows what ghosting is and it is a dorm room prank.
+
+467
+00:33:25,706 --> 00:33:26,450
+Rym: I'll give you that hint.
+
+468
+00:33:26,915 --> 00:33:33,378
+Rym: I'm not gonna give you a prize or anything But then I'll know that at least someone else invented it Independently of whoever came up with it at RIT.
+
+469
+00:33:33,518 --> 00:33:36,226
+Scott: and it does involve white sheets, which we talked about.
+
+470
+00:33:36,287 --> 00:33:36,788
+Rym: of course.
+
+471
+00:33:36,868 --> 00:33:38,117
+Rym: ghosting Yes, boo boo.
+
+472
+00:33:40,691 --> 00:33:41,856
+Scott: So I'm talking about today.
+
+473
+00:33:42,037 --> 00:33:45,350
+Rym: Well, we had a bunch of things in the calendar, but it seems like Mondays and Thursdays.
+
+474
+00:33:45,431 --> 00:33:47,849
+Rym: We tend to ignore what's in the calendar and do something else.
+
+475
+00:33:48,714 --> 00:33:54,156
+Scott: We also have the hardest time filling up the calendar on Monday and Thursday Tuesday and Wednesday.
+
+476
+00:33:54,457 --> 00:33:56,445
+Scott: the calendar is quite full.
+
+477
+00:33:56,747 --> 00:34:02,890
+Rym: Oh, yeah I mean cuz we don't watch anime every day and we don't constantly play video games and board games.
+
+478
+00:34:03,394 --> 00:34:05,249
+Rym: We don't constantly buy board games.
+
+479
+00:34:06,351 --> 00:34:09,380
+Rym: God, we're probably gonna get to Twilight Struggle like next year at this point.
+
+480
+00:34:09,400 --> 00:34:09,902
+Rym: Probably.
+
+481
+00:34:10,382 --> 00:34:16,686
+Rym: All right, so Monday tech day We were gonna talk about CPU architectures, but that is a very dry topic.
+
+482
+00:34:17,007 --> 00:34:17,630
+Scott: It's real dry.
+
+483
+00:34:17,730 --> 00:34:28,509
+Rym: It's like freaking bone dry and I wasn't sure I mean if you do that in layman's terms It becomes very simply there's x86 and there's power PC.
+
+484
+00:34:29,351 --> 00:34:30,135
+Scott: They're different.
+
+485
+00:34:30,516 --> 00:34:31,079
+Scott: That's it.
+
+486
+00:34:31,440 --> 00:34:32,324
+Rym: Oh, Oh alpha.
+
+487
+00:34:33,350 --> 00:34:37,389
+Rym: Oh I can say what risk stands for as opposed to sisk and how it doesn't matter anymore.
+
+488
+00:34:37,571 --> 00:34:40,284
+Scott: I could talk about pipelining but that might be too complicated.
+
+489
+00:34:40,324 --> 00:34:41,310
+Rym: It is too complicated.
+
+490
+00:34:42,810 --> 00:34:54,730
+Rym: So we realized a lot of people have been asking about security and internet stuff and you really seem to like our layman series on Various things related to computers and we've wanted to do one on wireless security for a long time.
+
+491
+00:34:54,790 --> 00:35:01,735
+Scott: In fact, that's been requested several times by different people because it's something a lot of people need to know nowadays And not too many people know.
+
+492
+00:35:02,055 --> 00:35:12,182
+Rym: however nowadays talking about wireless security in and of itself is kind of difficult without You knowing at least basically how different wireless protocols work.
+
+493
+00:35:12,604 --> 00:35:14,890
+Rym: So tonight we're kind of gonna do this.
+
+494
+00:35:15,050 --> 00:35:16,313
+Rym: We're not gonna go into like.
+
+495
+00:35:16,654 --> 00:35:23,112
+Rym: well 802 11a uses the 5 gigahertz band area while B is the 2.5 gigahertz and all those Things.
+
+496
+00:35:23,212 --> 00:35:26,730
+Rym: but it's kind of a who's who and what's what in the wireless world?
+
+497
+00:35:27,670 --> 00:35:37,729
+Rym: Mmm, because you know if you hear 802 11a to 211 B Bluetooth Y max and All these Apple Airport things but you don't really know what they do.
+
+498
+00:35:38,091 --> 00:35:43,498
+Rym: At least I know a lot of you don't know what they do or you just know that G's the new one and is the fancy one.
+
+499
+00:35:43,518 --> 00:35:48,516
+Rym: a is the one that was expensive and that might be all you ever heard Or you might not even know that much.
+
+500
+00:35:48,537 --> 00:35:51,710
+Scott: You just might be like guys a bunch of letters and I buy stuff and it works.
+
+501
+00:35:51,810 --> 00:35:52,253
+Scott: I don't care.
+
+502
+00:35:52,273 --> 00:35:54,223
+Scott: Yep, or I buy stuff and it doesn't work.
+
+503
+00:35:54,344 --> 00:35:54,866
+Scott: Why why?
+
+504
+00:35:56,370 --> 00:36:01,490
+Rym: Well, the other thing is that wireless internet is a relatively recent invention.
+
+505
+00:36:01,550 --> 00:36:02,575
+Scott: It's stupidly new.
+
+506
+00:36:02,796 --> 00:36:10,869
+Rym: in fact when I when we were at RIT I took a class on wireless networking now 802 11 G didn't even exist.
+
+507
+00:36:10,929 --> 00:36:14,049
+Rym: yet It was barely a pie-in-the-sky idea.
+
+508
+00:36:14,049 --> 00:36:19,189
+Rym: 802 11 B worked and was okay, but still had not reached its peak.
+
+509
+00:36:19,229 --> 00:36:21,737
+Rym: yet 802 11 a was still used.
+
+510
+00:36:22,158 --> 00:36:31,050
+Scott: think about in the past, but six or so years we've gone from Wireless being this really you can get the internet without wires.
+
+511
+00:36:31,151 --> 00:36:38,390
+Scott: You can connect computers together without wires or without Sitting them right next to each other and using infrared and actually get decent bandwidth.
+
+512
+00:36:38,611 --> 00:36:42,869
+Rym: God, if I just remember trying to send shit over infrared like that's insane.
+
+513
+00:36:42,889 --> 00:36:45,619
+Scott: and Now every laptop has it.
+
+514
+00:36:45,639 --> 00:36:46,804
+Scott: if your laptop doesn't have it.
+
+515
+00:36:46,844 --> 00:36:50,036
+Scott: It's worthless and there's Wireless access everywhere.
+
+516
+00:36:50,137 --> 00:36:51,020
+Rym: every router has it.
+
+517
+00:36:51,201 --> 00:36:59,369
+Rym: In fact, I was driving on the throughway and Interstate 86 over the weekend to get to torque on and almost every rest stop had Wi-Fi.
+
+518
+00:36:59,912 --> 00:37:00,598
+Scott: That's pretty cool.
+
+519
+00:37:00,638 --> 00:37:02,030
+Rym: In fact, you know those blue sign?
+
+520
+00:37:02,090 --> 00:37:08,370
+Rym: Well in America, there's big blue signs on any major interstate that says what's at this exit or what's at this rest stop.
+
+521
+00:37:08,450 --> 00:37:12,747
+Rym: So, you know exactly where you can get gas where you can sleep or you can get a prostitute all those things.
+
+522
+00:37:12,887 --> 00:37:16,902
+Rym: Yeah, so Now I was because I haven't gone down the throughway in a while.
+
+523
+00:37:17,083 --> 00:37:18,650
+Scott: I haven't gone down there in a longer while.
+
+524
+00:37:19,031 --> 00:37:23,470
+Rym: They have a Wi-Fi sign on many of the exits and many of the rest stops do this.
+
+525
+00:37:24,030 --> 00:37:27,493
+Rym: Yeah It's a good time to be alive That way.
+
+526
+00:37:27,734 --> 00:37:36,290
+Scott: that's actually really helpful because how many times you've been driving on the road and then You know, you need to check something and you can't and you basically have to wait till you get where you're going.
+
+527
+00:37:36,531 --> 00:37:40,224
+Rym: Well only if you're a Visigoth, I mean remember when we drove to a penguin con.
+
+528
+00:37:40,505 --> 00:37:41,428
+Scott: Well, that's that's.
+
+529
+00:37:41,829 --> 00:37:43,235
+Scott: yeah It's still beyond what we had.
+
+530
+00:37:43,316 --> 00:37:45,265
+Rym: We drove to penguin con through Canada.
+
+531
+00:37:45,546 --> 00:37:46,410
+Rym: It was as Linux con.
+
+532
+00:37:46,932 --> 00:37:54,338
+Rym: We had someone in the car who had a cell modem and they connected to the internet with their cell phone Then from his laptop.
+
+533
+00:37:54,398 --> 00:37:56,907
+Scott: well from his cell phone to his laptop with Bluetooth.
+
+534
+00:37:56,927 --> 00:38:05,010
+Scott: with Bluetooth He connected his cell phone to his laptop and thus allowing his laptop to go on the internet Through Bluetooth through his cell phone to the cell network.
+
+535
+00:38:05,070 --> 00:38:08,099
+Rym: Now he set up an ad-hoc wireless network.
+
+536
+00:38:08,420 --> 00:38:20,710
+Scott: in the claim of 802 11 B on his wireless card He allowed another person's laptop to connect to his laptop With the 802 11 then to the Bluetooth then to the cell phone then to the internet.
+
+537
+00:38:20,872 --> 00:38:33,989
+Scott: So we had an internet access point Laptops in a car driving internet with one cell phone driving through the wilds of Canada and Anyone driving nearby us could do the same thing.
+
+538
+00:38:34,351 --> 00:38:38,245
+Rym: Yeah, we even made a sign shoddily out a piece of paper that said free Wi-Fi.
+
+539
+00:38:38,285 --> 00:38:39,168
+Rym: Here's the SSID.
+
+540
+00:38:39,369 --> 00:38:42,260
+Scott: Yep We had a little picture of tux - yeah granted.
+
+541
+00:38:42,320 --> 00:38:44,869
+Rym: We passed like one car in Canada.
+
+542
+00:38:44,930 --> 00:38:47,730
+Scott: So It was still pretty awesome.
+
+543
+00:38:48,851 --> 00:38:57,437
+Rym: So we say 802 11 a lot and you always hear 802 11 a b g 802 11 very simply Think of it as the catch-all.
+
+544
+00:38:57,557 --> 00:39:00,485
+Rym: like 802 11 means wireless Ethernet.
+
+545
+00:39:00,786 --> 00:39:00,987
+Scott: Yep.
+
+546
+00:39:01,247 --> 00:39:02,110
+Rym: Think of it like that.
+
+547
+00:39:02,290 --> 00:39:05,240
+Rym: It doesn't matter because it's actually kind of complicated.
+
+548
+00:39:05,280 --> 00:39:06,685
+Rym: how these I triple-e standards work.
+
+549
+00:39:06,765 --> 00:39:08,149
+Rym: Yeah, and you really don't care.
+
+550
+00:39:10,712 --> 00:39:13,903
+Rym: You care so much less than you might ever think you care.
+
+551
+00:39:14,425 --> 00:39:15,810
+Rym: I learned about this shit in college.
+
+552
+00:39:16,653 --> 00:39:20,970
+Scott: All you got to know is that in a long time ago they invented something called 802 11.
+
+553
+00:39:20,970 --> 00:39:23,139
+Scott: It was a standard for wireless communications.
+
+554
+00:39:23,239 --> 00:39:25,990
+Scott: It was works like Ethernet kind of but it's wireless.
+
+555
+00:39:26,030 --> 00:39:28,850
+Scott: There's no wires and it was kind of crummy.
+
+556
+00:39:29,391 --> 00:39:30,073
+Scott: But it worked.
+
+557
+00:39:30,675 --> 00:39:40,240
+Scott: and since then they improved upon it and they improved upon it in ways that it was still 802 11 But it was actually useful and actually fast and actually awesome.
+
+558
+00:39:40,420 --> 00:39:40,641
+Rym: Yep.
+
+559
+00:39:40,681 --> 00:39:41,302
+Rym: Now think of this.
+
+560
+00:39:41,683 --> 00:39:43,007
+Rym: When do you think this was developed?
+
+561
+00:39:44,390 --> 00:39:46,543
+Scott: Ah 1997 or 98.
+
+562
+00:39:46,543 --> 00:39:52,310
+Rym: Well, it was in fact 1997. that is when the legacy call it legacy now and basically no one uses it.
+
+563
+00:39:52,410 --> 00:39:53,235
+Scott: No one ever used.
+
+564
+00:39:53,275 --> 00:39:55,025
+Rym: it was like one megabit per second.
+
+565
+00:39:55,045 --> 00:40:02,871
+Scott: If you were lucky it No one used it except for like stupidly rich companies who desperately needed some wireless and that was the only option in 1997.
+
+566
+00:40:02,871 --> 00:40:07,089
+Rym: In fact, the primary use of it was people who were working on the standard and companies who were interested in it.
+
+567
+00:40:07,510 --> 00:40:23,278
+Rym: Yeah, so around 1999 which is right before Scott and I and the whole front row crew just about went to college 802 11 a and 802 11 B appeared now, they were both very different and generally 802 11 a had Stupidly more bandwidth.
+
+568
+00:40:23,639 --> 00:40:26,150
+Rym: It was like 25 to 50 megabits per second.
+
+569
+00:40:26,391 --> 00:40:31,748
+Scott: It was really really fast, but in pretty much every other respect a sucked.
+
+570
+00:40:32,189 --> 00:40:33,836
+Rym: Yep Now there's a lot of reasons for that.
+
+571
+00:40:34,137 --> 00:40:37,390
+Rym: and then there's 802 11 B which had a lot less bandwidth.
+
+572
+00:40:37,471 --> 00:40:39,310
+Rym: It was like 5 or 10 megabits at most.
+
+573
+00:40:39,310 --> 00:40:43,687
+Scott: 802 11 B is slow, but in every other respect compared to 802 11 a it's awesome.
+
+574
+00:40:44,753 --> 00:41:00,210
+Rym: now real briefly 802 11 a Probably would have done well because it was super high bandwidth and then B would have worked as and they kind of would have shared the the upon because they both had their different uses, but Basically 802 11 a because it used such higher gigahertz.
+
+575
+00:41:00,250 --> 00:41:10,150
+Rym: It was in the 5 gigahertz range give or take instead of the 2.5 gigahertz range So one you needed much faster chips to make signals in those ranges.
+
+576
+00:41:10,472 --> 00:41:13,330
+Rym: Those chips were a lot more expensive and a lot less efficient.
+
+577
+00:41:13,751 --> 00:41:21,076
+Rym: Thus 802 11 a equipment cost a crazy amount of money used a crazy amount of power So you couldn't even use it in a laptop.
+
+578
+00:41:21,117 --> 00:41:21,860
+Rym: it drain the battery.
+
+579
+00:41:22,041 --> 00:41:28,564
+Scott: Yep, the 802 11 B sure It was slower, but you didn't have to use so much electricity to make the radio work.
+
+580
+00:41:28,604 --> 00:41:29,146
+Scott: cuz think about it.
+
+581
+00:41:29,267 --> 00:41:31,579
+Scott: all wireless stuff It's just radios.
+
+582
+00:41:31,962 --> 00:41:33,110
+Scott: they're different radios.
+
+583
+00:41:33,210 --> 00:41:34,858
+Scott: They're not talking on the same frequencies.
+
+584
+00:41:34,918 --> 00:41:39,895
+Scott: your FM radio and your AM radio or your PM radio But they're all just radios.
+
+585
+00:41:40,115 --> 00:41:42,261
+Scott: I mean Bluetooth is just a radio.
+
+586
+00:41:42,482 --> 00:41:43,905
+Scott: your cell phone is just a radio.
+
+587
+00:41:44,106 --> 00:41:45,690
+Scott: It's all radios everything.
+
+588
+00:41:45,952 --> 00:41:59,518
+Scott: Yeah, some radios take a lot of electricity like oh I don't know the radio that sends TV signals that you can pick up with your antenna and watch and some radios are kind of weak like I don't know a Bluetooth radio, that's a weak-ass radio.
+
+589
+00:41:59,779 --> 00:42:06,890
+Rym: and also remember because a lot of people don't seem to realize this But pretty much when you're sending data over some sort of wireless thing you're sending digital data.
+
+590
+00:42:07,392 --> 00:42:12,070
+Rym: But the data while it is digital data is being sent in an analog form.
+
+591
+00:42:12,421 --> 00:42:18,270
+Scott: Yep Gotta convert it to analog send the analog radio signal and then convert it back to digital on the other end.
+
+592
+00:42:18,631 --> 00:42:21,870
+Rym: The ways you do that are kind of cool and really technical, but maybe we'll get into that someday.
+
+593
+00:42:22,031 --> 00:42:24,090
+Scott: Yeah, it's not really necessary to talk about that.
+
+594
+00:42:24,351 --> 00:42:24,773
+Rym: I want to talk.
+
+595
+00:42:24,853 --> 00:42:31,870
+Rym: I took a whole class on it that I've never I've never in my life been able to apply the things I learned in that class because there's useless knowledge unless you're making radios.
+
+596
+00:42:32,331 --> 00:42:42,930
+Scott: So if you have a high-powered radio to you can get high-powered bandwidth speed lots of range all sorts of good stuff But you're gonna drain your laptop battery in like five minutes.
+
+597
+00:42:43,171 --> 00:42:50,880
+Rym: The other issue was that while 802.11a used so much more power even though that was mostly due to inefficiency It actually had substantially less range.
+
+598
+00:42:51,441 --> 00:42:57,310
+Rym: In fact, not only did it have fairly short range But it couldn't actually usually shoot through anything.
+
+599
+00:42:57,371 --> 00:42:59,792
+Rym: So it was basically a line of sight It sucks.
+
+600
+00:42:59,993 --> 00:43:07,616
+Rym: that has to do with the fact that the higher frequency a radio signal is the more likely it is to bump into things While it's going through matter.
+
+601
+00:43:07,877 --> 00:43:10,769
+Rym: That's the simplest way I can explain it without getting technical.
+
+602
+00:43:11,573 --> 00:43:15,649
+Rym: So higher frequency signals are more likely to be blocked by things in the way.
+
+603
+00:43:16,031 --> 00:43:23,268
+Rym: Thus 802.11a won't even make it through your door or won't even make it Into the bathroom or through the floor or through your desk sometimes.
+
+604
+00:43:23,388 --> 00:43:35,568
+Scott: Yep Every other 802.11 that you're ever gonna deal with is the 2.4 to 2.5 gigahertz range Which is also where microwaves, cell phones, a lot of other consumer electronics are.
+
+605
+00:43:35,708 --> 00:43:38,437
+Rym: Cordless phones Man, you must make me feel old.
+
+606
+00:43:38,497 --> 00:43:45,550
+Rym: The last cordless phone I owned was 900 megahertz Yeah, and in fact, it screwed up a 900 megahertz computer.
+
+607
+00:43:46,253 --> 00:43:55,790
+Scott: Awesome So awesome Yeah, but generally when it the 2.4 gigahertz stuff has a much longer range it can go through a lot of things.
+
+608
+00:43:55,810 --> 00:43:56,961
+Scott: It can't go through everything.
+
+609
+00:43:57,001 --> 00:43:59,576
+Scott: It can't go through lead It can't go through water.
+
+610
+00:43:59,897 --> 00:44:03,389
+Scott: very well at all, but it can go through a cinder block or two.
+
+611
+00:44:03,650 --> 00:44:05,899
+Scott: Yeah, it can go through your walls in your house.
+
+612
+00:44:06,160 --> 00:44:10,216
+Scott: Well enough, you know, it's not gonna go through three houses But it goes.
+
+613
+00:44:10,337 --> 00:44:13,150
+Scott: you can put it upstairs and be downstairs and still get some access.
+
+614
+00:44:13,491 --> 00:44:22,089
+Rym: Yep, well considering that 802.11b tends to get a lot of places you didn't expect it or want it to get Even though sometimes it often doesn't get to the one place you wanted it to go.
+
+615
+00:44:22,231 --> 00:44:27,810
+Scott: Yeah It's kind of that's as do the pointing the antennas and positioning the access point in the correct way.
+
+616
+00:44:27,890 --> 00:44:29,638
+Rym: Now Scott said that water blocks it now.
+
+617
+00:44:30,040 --> 00:44:32,350
+Rym: I just want to point out because this this is something you know.
+
+618
+00:44:32,471 --> 00:44:33,274
+Rym: Think about these things.
+
+619
+00:44:33,314 --> 00:44:35,063
+Rym: This is how you can seem really smart.
+
+620
+00:44:35,143 --> 00:44:37,854
+Rym: Even if you don't know a lot about something You're not that technical.
+
+621
+00:44:37,894 --> 00:44:40,704
+Rym: but alright 2.4 2.5 gigahertz.
+
+622
+00:44:40,745 --> 00:44:42,089
+Rym: That's the range we're talking about here.
+
+623
+00:44:42,591 --> 00:44:49,677
+Rym: Scott said that water blocks and absorbs these signals a lot and I said that Microwaves work in that frequency range.
+
+624
+00:44:50,038 --> 00:44:50,781
+Rym: now think about it.
+
+625
+00:44:51,223 --> 00:44:53,130
+Rym: Why do microwaves work in that frequency range?
+
+626
+00:44:53,970 --> 00:45:00,490
+Rym: Because water absorbs those frequencies and when they absorb anything you take the energy out of it and you get hot.
+
+627
+00:45:01,056 --> 00:45:02,148
+Rym: That's how microwaves work.
+
+628
+00:45:02,581 --> 00:45:09,650
+Scott: Yeah They make the water go hot and that's why sometimes microwave food is mushy and sometimes microwave food is all dried out and bland.
+
+629
+00:45:10,023 --> 00:45:12,660
+Rym: Yeah Sadly, we don't actually own a microwave.
+
+630
+00:45:12,820 --> 00:45:13,947
+Scott: We don't want to own a microwave.
+
+631
+00:45:13,987 --> 00:45:14,409
+Scott: We don't need it.
+
+632
+00:45:14,650 --> 00:45:19,880
+Rym: Well, there's been a few times I've wanted it mostly when we have old Chinese food, but we've learned Yeah, and it works.
+
+633
+00:45:19,900 --> 00:45:29,390
+Scott: Okay also Microwaves, that's why they fry your brain because they zap all the water in your brain Whereas like cosmic ray from outer space just goes right through you and doesn't do anything.
+
+634
+00:45:29,570 --> 00:45:37,414
+Rym: Well, there is often the chance that I mean there are odds that a cosmic ray will hit the DNA in a cell and screw It up and make a cancer.
+
+635
+00:45:37,595 --> 00:45:40,765
+Scott: Yeah, it could happen but most of the time pass right through you.
+
+636
+00:45:41,427 --> 00:45:43,816
+Rym: Anyway, yeah That was an interesting tangent.
+
+637
+00:45:43,856 --> 00:45:47,410
+Rym: Yes, we we actually we actually know very little beyond what we just said.
+
+638
+00:45:47,550 --> 00:45:49,461
+Scott: That's pretty much all we know about cosmic rays.
+
+639
+00:45:49,923 --> 00:45:58,910
+Scott: So 802 11 B slower than 802 11 B. But I mean a B is slower than a but B doesn't take too much energy.
+
+640
+00:45:59,272 --> 00:46:01,690
+Scott: Yeah, you can run it with like a cordless phone battery.
+
+641
+00:46:01,710 --> 00:46:03,155
+Scott: You can run it with a laptop battery.
+
+642
+00:46:03,577 --> 00:46:07,430
+Scott: The range is a little better than a. you can get like a hundred meters.
+
+643
+00:46:07,712 --> 00:46:08,296
+Scott: It's pretty good.
+
+644
+00:46:08,437 --> 00:46:10,330
+Rym: Yeah, as long as nothing is in the way and it's not humid.
+
+645
+00:46:10,611 --> 00:46:20,150
+Scott: Yep, and you know people when 802 left B came around It was actually fast enough that you could browse the web on it and you could get it on your laptop.
+
+646
+00:46:20,451 --> 00:46:27,470
+Rym: Hell you realize 802 11 B is much faster than many networking technologies were until relatively recently.
+
+647
+00:46:27,731 --> 00:46:33,610
+Scott: Yeah, I mean every old Ethernet used to be 10 megabits per second until they get T 100 which is 100 megabits per second.
+
+648
+00:46:33,610 --> 00:46:39,774
+Scott: 802 11 B was like 11 megabits per second if you're in got really good signal And it was all.
+
+649
+00:46:39,834 --> 00:46:40,918
+Scott: it was five and a half.
+
+650
+00:46:40,978 --> 00:46:43,970
+Scott: if you had a shitty signal that still worked actually would keep dropping.
+
+651
+00:46:44,291 --> 00:46:46,543
+Rym: The reason 802 11 B would still work.
+
+652
+00:46:46,904 --> 00:46:48,030
+Rym: just it would always slow down.
+
+653
+00:46:48,070 --> 00:46:56,415
+Rym: Whatever conditions were bad is that the protocol would generally add redundancy and do things where it would lower the overall bandwidth But increase the reliability.
+
+654
+00:46:56,696 --> 00:46:59,364
+Rym: So the more interference you have the more the bandwidth drops.
+
+655
+00:46:59,866 --> 00:47:00,147
+Scott: Mm-hmm.
+
+656
+00:47:00,448 --> 00:47:01,010
+Scott: That's good stuff.
+
+657
+00:47:01,211 --> 00:47:09,217
+Rym: Yeah, however, 802 11 B while it's great is actually in terms of internet time Extremely ancient technology.
+
+658
+00:47:09,558 --> 00:47:11,144
+Rym: It was adopted almost immediately.
+
+659
+00:47:11,485 --> 00:47:15,508
+Rym: It caught on like wildfire and It's kind of obsolete now.
+
+660
+00:47:15,924 --> 00:47:26,030
+Scott: Yeah I mean pretty much every wireless card and wireless access point supports 802 11 B because that was the first Wireless internet that people used all over the place and coffee house and everything.
+
+661
+00:47:26,572 --> 00:47:34,598
+Scott: but people stopped using it because they invented G which is Just like B in every possible fashion.
+
+662
+00:47:34,959 --> 00:47:35,822
+Scott: only it's better.
+
+663
+00:47:36,323 --> 00:47:36,544
+Rym: Yep.
+
+664
+00:47:36,885 --> 00:47:50,498
+Rym: It has more range more bandwidth It's backward compatible with B. Now sadly older 802 11 BG networks if there was any B in the traffic the whole network would slow down Because let's say you had a BG router.
+
+665
+00:47:50,558 --> 00:47:57,490
+Scott: right it can handle Pete laptops with B and it can handle laptops with G. Right someone comes along with G. They connect to G speeds.
+
+666
+00:47:58,177 --> 00:48:00,735
+Scott: Someone else comes along with G. They connect to G speeds.
+
+667
+00:48:01,277 --> 00:48:04,730
+Scott: a third guy comes along and he's only got B because his laptop is old.
+
+668
+00:48:05,174 --> 00:48:13,874
+Scott: He brings everyone down to B. So now the 2g guys have to suffer at the B speed and because there's one B guy ruining the party that that was the way It was.
+
+669
+00:48:13,894 --> 00:48:15,346
+Rym: yeah, it's gotten better.
+
+670
+00:48:15,386 --> 00:48:15,769
+Rym: since then.
+
+671
+00:48:15,930 --> 00:48:17,016
+Rym: G is well.
+
+672
+00:48:17,096 --> 00:48:25,084
+Rym: one more things are using G instead of B and that Backwards compatibility issue has been mostly resolved except in old networks or old access points.
+
+673
+00:48:25,385 --> 00:48:27,250
+Scott: Yeah, it's still not so great though.
+
+674
+00:48:27,290 --> 00:48:32,369
+Scott: You generally want to have everything BG and you want to keep the bees out as much as you possibly can.
+
+675
+00:48:32,409 --> 00:48:33,937
+Rym: of course That's how I live my life.
+
+676
+00:48:34,339 --> 00:48:39,800
+Rym: I keep bees out of my house as much as possible Yeah But the like things like your DS or your.
+
+677
+00:48:39,840 --> 00:48:42,990
+Scott: we are still using B and there's not much you can do about it.
+
+678
+00:48:43,331 --> 00:48:51,543
+Rym: The only real problem with G is that it operates in the exact same frequency band as B. So the same interference problems apply.
+
+679
+00:48:51,663 --> 00:48:56,995
+Scott: you can't go through water microwaves Bluetooth Some telephones.
+
+680
+00:48:57,336 --> 00:48:57,617
+Scott: Yep.
+
+681
+00:48:58,159 --> 00:49:00,626
+Scott: So G is what everyone uses nowadays.
+
+682
+00:49:00,987 --> 00:49:01,830
+Scott: It's pretty fast.
+
+683
+00:49:01,930 --> 00:49:06,243
+Scott: It's not stupid fast, but it's fast enough to do nice web browsing action.
+
+684
+00:49:06,424 --> 00:49:13,150
+Scott: G is as fast as a wanted to be Yep, but now everyone's talking about N and is gonna be the new hotness.
+
+685
+00:49:13,231 --> 00:49:17,700
+Scott: It's not here yet But it's coming soon and it's gonna be pretty sweet now.
+
+686
+00:49:18,061 --> 00:49:19,866
+Scott: N is a little bit different.
+
+687
+00:49:19,886 --> 00:49:24,359
+Scott: B and G is B and G. You're basically sort of the same exact principle.
+
+688
+00:49:24,439 --> 00:49:29,449
+Scott: only G is improved and as one more thing to the mix It has this thing called my mo.
+
+689
+00:49:29,992 --> 00:49:34,730
+Scott: I'm not gonna go into detail about why mo is because I only understand a little bit myself.
+
+690
+00:49:34,911 --> 00:49:39,790
+Scott: But what you do is you have a bunch of antennas instead of just one antenna.
+
+691
+00:49:40,061 --> 00:49:42,519
+Scott: You know just sending out a signal and receiving a signal.
+
+692
+00:49:43,001 --> 00:49:47,298
+Scott: you get a bunch of antennas and You sort of send out a whole bunch of signals.
+
+693
+00:49:47,318 --> 00:49:53,579
+Scott: and on the other end you have a whole bunch of antennas and they all Receive all these signals and then they add them together.
+
+694
+00:49:53,679 --> 00:49:59,034
+Scott: They do some crazy radio math and what that gets you is Stupid bandwidth.
+
+695
+00:49:59,074 --> 00:50:03,510
+Scott: we're talking faster than a wire here like five hundred and forty megabits per second.
+
+696
+00:50:03,711 --> 00:50:08,870
+Rym: Well, I'd say faster than a wire but gigabit Ethernet gigabit Ethernet rapidly becoming the standard.
+
+697
+00:50:09,010 --> 00:50:13,283
+Scott: It's about five times the speed of regular Ethernet and half the speed of gigabit Ethernet.
+
+698
+00:50:13,423 --> 00:50:14,707
+Scott: That's pretty ridiculous.
+
+699
+00:50:14,747 --> 00:50:15,549
+Scott: fast right there.
+
+700
+00:50:15,990 --> 00:50:22,670
+Scott: Secondly, the range is better than it is on a B or G or a. it's the best range you're ever gonna get.
+
+701
+00:50:23,111 --> 00:50:24,758
+Scott: It's still 2.4 gigahertz though.
+
+702
+00:50:24,818 --> 00:50:27,730
+Scott: So you still got the problems with the water and stuff, but that's not a big deal.
+
+703
+00:50:27,810 --> 00:50:28,753
+Scott: You're dealing with that already.
+
+704
+00:50:28,773 --> 00:50:29,215
+Scott: who cares?
+
+705
+00:50:29,917 --> 00:50:33,650
+Scott: and the last thing that end does is it takes the same amount of power.
+
+706
+00:50:34,071 --> 00:50:38,686
+Scott: Your laptop battery is not gonna drain any faster than it drains with B or G.
+
+707
+00:50:38,726 --> 00:50:40,070
+Rym: It's gonna hot diggity day.
+
+708
+00:50:40,110 --> 00:50:49,599
+Scott: It's gonna drain at the same exact speed and you're gonna get ten times the data ten times the bandwidth Same battery life and is pretty hotness.
+
+709
+00:50:50,081 --> 00:50:53,250
+Scott: The thing is they haven't quite finished and yet.
+
+710
+00:50:53,611 --> 00:51:03,464
+Scott: So there's some people that will sell you some end and like let's say you buy some end stuff from from Linksys and you buy an end card and an end router from linksys.
+
+711
+00:51:03,786 --> 00:51:04,569
+Scott: It'll probably work.
+
+712
+00:51:05,172 --> 00:51:08,442
+Scott: It probably won't work if you try to use it with a netgear end.
+
+713
+00:51:08,984 --> 00:51:09,626
+Scott: You gotta wait.
+
+714
+00:51:09,927 --> 00:51:13,338
+Scott: don't buy end yet You gotta wait until everyone decides.
+
+715
+00:51:13,458 --> 00:51:16,910
+Scott: Okay, this is the standard for end and then all the end stuff will work together.
+
+716
+00:51:17,050 --> 00:51:22,610
+Rym: Yeah, because there was be stuff and G stuff that came out before the standard was finalized and then things changed a little bit.
+
+717
+00:51:22,951 --> 00:51:32,426
+Scott: Yep, I mean G was like out and everyone was like we got G It's faster and better and it worked but it didn't work so well with the other people's G stuff.
+
+718
+00:51:32,487 --> 00:51:33,730
+Scott: everyone kind of you know.
+
+719
+00:51:34,011 --> 00:51:42,636
+Scott: they looked at the current working standard and they put out products before the standard was finalized and the standard changed a little bit and Some of the early products were not so great.
+
+720
+00:51:43,078 --> 00:51:43,940
+Rym: You're probably wondering.
+
+721
+00:51:44,422 --> 00:51:49,080
+Rym: All right, a b g n Didn't they skip a bunch of letters?
+
+722
+00:51:49,381 --> 00:51:50,950
+Scott: No, they didn't skip a bunch of letters.
+
+723
+00:51:51,030 --> 00:51:52,495
+Rym: The thing is there.
+
+724
+00:51:52,656 --> 00:52:02,028
+Rym: all those other letters stand for various aspects of the 802 11 standard group whatever and suffice to say the part that you didn't care about.
+
+725
+00:52:02,168 --> 00:52:05,464
+Scott: and you know, You don't you don't have no idea how much you don't care.
+
+726
+00:52:05,485 --> 00:52:06,530
+Rym: I'll give you an example.
+
+727
+00:52:06,530 --> 00:52:17,950
+Scott: 802 11 J is a specific extensions for Japan But 802 11 s is the extended service set mesh networking.
+
+728
+00:52:19,655 --> 00:52:20,186
+Scott: Yeah, yeah.
+
+729
+00:52:20,691 --> 00:52:22,899
+Rym: so those are things that you really don't need to worry about.
+
+730
+00:52:23,200 --> 00:52:31,789
+Rym: they're just think of them as kind of like standards that are just applied anyway, and AB and G and N are actual protocols that you will use.
+
+731
+00:52:32,371 --> 00:52:39,170
+Scott: Yep, 802 11 P is wave wireless access for the vehicular environment such as ambulances and passenger cars.
+
+732
+00:52:40,931 --> 00:52:42,342
+Rym: There's a list on Wikipedia.
+
+733
+00:52:42,403 --> 00:52:43,330
+Rym: you can read about all this.
+
+734
+00:52:43,330 --> 00:52:44,058
+Rym: That's what I'm reading.
+
+735
+00:52:44,159 --> 00:52:46,156
+Rym: I'm not gonna read it to you All.
+
+736
+00:52:46,217 --> 00:52:55,111
+Rym: in fact at RIT I was told by my professor in the wireless class that all those other letters are useless garbage that you'll never need to know About.
+
+737
+00:52:55,775 --> 00:52:56,981
+Scott: uh, you know what all those letters?
+
+738
+00:52:57,041 --> 00:52:58,870
+Scott: they're useless garbage and you don't need to know about.
+
+739
+00:52:58,930 --> 00:53:01,850
+Rym: I guess unless you're working on the standard then you got to care about them quite a bit.
+
+740
+00:53:02,011 --> 00:53:05,756
+Scott: Yeah, if you work for the IEEE then yes You need to know what all those letters mean.
+
+741
+00:53:06,197 --> 00:53:08,926
+Rym: now when it comes to security you might have heard that there's.
+
+742
+00:53:09,308 --> 00:53:11,800
+Rym: you hear WEP WEP and WPA.
+
+743
+00:53:12,751 --> 00:53:13,315
+Rym: Those are the two.
+
+744
+00:53:13,335 --> 00:53:15,530
+Scott: you might also hear some other words, but don't worry about them.
+
+745
+00:53:15,690 --> 00:53:18,100
+Scott: Yeah, basically, here's the situation.
+
+746
+00:53:18,602 --> 00:53:21,516
+Scott: you're using wireless internets Right now.
+
+747
+00:53:21,938 --> 00:53:34,877
+Scott: when you do important things on the internet Like check your email with Gmail or buy something from Amazon that little lock icon appears and your web browser is encrypting all the important Bits, however, none of the other stuff you're doing is encrypted.
+
+748
+00:53:34,997 --> 00:53:36,259
+Scott: It's pretty much straight out there.
+
+749
+00:53:36,299 --> 00:53:45,686
+Scott: if you visit Frontrecruit.com Anyone who has you know is on this can look at your if they had access to the wire that your computer is connected to The internet with right next to your computer.
+
+750
+00:53:45,987 --> 00:53:48,074
+Scott: They could see that you visited frontrecruit.com.
+
+751
+00:53:48,134 --> 00:53:49,760
+Scott: now take away the wire.
+
+752
+00:53:50,142 --> 00:53:52,453
+Scott: You're just sending a radio signal over the air.
+
+753
+00:53:52,754 --> 00:53:56,170
+Scott: anyone with a radio Can listen to the radio.
+
+754
+00:53:56,591 --> 00:54:09,840
+Scott: if someone has a 2.4 gigahertz radio They can listen to what you're doing and they can plug that radio into their computer and see what you're up to Even though you're still doing your important business encrypted and they won't be able to figure out say your credit card number.
+
+755
+00:54:10,161 --> 00:54:14,060
+Scott: They'll be like, oh you visited this website and then this website and then this website.
+
+756
+00:54:14,584 --> 00:54:19,629
+Scott: Oh and then I know his email address even though I don't know his email password and such and such and so on.
+
+757
+00:54:19,770 --> 00:54:26,294
+Scott: and you really don't want to use wireless if Everyone else and their mother can see everything that you're doing.
+
+758
+00:54:26,676 --> 00:54:27,420
+Scott: That's not cool.
+
+759
+00:54:27,640 --> 00:54:33,120
+Rym: Furthermore these things also exist to keep other people from using your wireless and taking up your bandwidth.
+
+760
+00:54:33,624 --> 00:54:39,958
+Scott: Yeah, I mean if you got a wireless network You sometimes you want to let everyone in the world use it, but sometimes you don't want anyone to use it.
+
+761
+00:54:39,978 --> 00:54:40,420
+Scott: It's yours.
+
+762
+00:54:40,540 --> 00:54:42,127
+Scott: Why should anyone else have access to it?
+
+763
+00:54:42,167 --> 00:54:45,018
+Scott: You need a way to keep people out while keeping you in.
+
+764
+00:54:45,320 --> 00:54:45,902
+Rym: now We're not gonna.
+
+765
+00:54:46,002 --> 00:54:55,980
+Rym: we're gonna go real brief about this and just explain that there are these two different ways of doing it and basically You only want to use one of them, but you're kind of forced to use the other one if you're a gamer.
+
+766
+00:54:56,181 --> 00:54:56,843
+Scott: Yes, okay.
+
+767
+00:54:56,863 --> 00:54:57,805
+Rym: So I'll talk about weapon.
+
+768
+00:54:57,825 --> 00:54:58,548
+Rym: you can talk about WPA.
+
+769
+00:54:58,608 --> 00:54:59,169
+Rym: All right.
+
+770
+00:54:59,671 --> 00:55:03,664
+Rym: WEP is the wire equivalent protocol I think it stands for.
+
+771
+00:55:03,684 --> 00:55:05,592
+Rym: it doesn't matter cuz it meant they don't like.
+
+772
+00:55:05,712 --> 00:55:07,560
+Rym: oh, it's equivalent security to the wire.
+
+773
+00:55:08,085 --> 00:55:16,692
+Rym: basically, it's a system of Encrypting the traffic between you and your access point so that no one else can just kind of stiff it And it worked pretty well for a while.
+
+774
+00:55:17,175 --> 00:55:20,269
+Rym: It is now Completely and entirely broken.
+
+775
+00:55:20,751 --> 00:55:27,833
+Rym: by just sitting there and watching someone else's traffic You can trivially and in a matter of minutes break the web key and read everything they do.
+
+776
+00:55:28,234 --> 00:55:37,300
+Rym: WEP is entirely useless But it does keep the riffraff out because despite the fact that it's broken not many people know that they can break it.
+
+777
+00:55:37,540 --> 00:55:41,820
+Rym: Yes, and the people who do know that they can break it usually just want to get and look at some porn or something.
+
+778
+00:55:42,161 --> 00:55:47,299
+Scott: Yeah, any geek knows that you can break WEP and let's say you secure your wireless access point.
+
+779
+00:55:47,319 --> 00:55:54,970
+Scott: with WEP I can come along with two computers and I can have access to your network in maybe 10 minutes or so if there's a Lot of people using your network.
+
+780
+00:55:55,333 --> 00:55:56,380
+Scott: I don't even need two computers.
+
+781
+00:55:57,043 --> 00:55:58,006
+Scott: One and I can use.
+
+782
+00:55:58,046 --> 00:56:03,267
+Rym: I think there was a flaw where you could force routers to actually generate a Bunch of data and break.
+
+783
+00:56:03,348 --> 00:56:04,555
+Scott: it was certain routers now.
+
+784
+00:56:04,595 --> 00:56:05,299
+Scott: They don't I don't know.
+
+785
+00:56:05,741 --> 00:56:08,690
+Scott: The point is if you're using WEP encryption, right?
+
+786
+00:56:08,970 --> 00:56:12,180
+Scott: Yes, it will encrypt the traffic you send over the wireless and people.
+
+787
+00:56:12,381 --> 00:56:13,023
+Rym: Yep, it is true.
+
+788
+00:56:13,043 --> 00:56:18,119
+Rym: They had a 211 protocol itself breaks wet because it forces the router to send data out.
+
+789
+00:56:18,360 --> 00:56:34,480
+Scott: Yep, but people you'll be encrypted and people listening on the radio won't be able to easily figure out what you're saying but someone who knows what they're doing can get access to your wireless network and Figure out what you're saying and all sorts of stuff with relative ease.
+
+790
+00:56:34,520 --> 00:56:35,949
+Scott: They're just programs that do this.
+
+791
+00:56:36,090 --> 00:56:39,470
+Scott: any nerd knows how to use them but normal people don't know how to use them.
+
+792
+00:56:39,570 --> 00:56:43,900
+Scott: normal people think it's perfectly secure and Oh my god, it's better than nothing.
+
+793
+00:56:44,061 --> 00:56:51,970
+Rym: It takes three seconds and three megabytes of RAM on a Pentium M 1.7 gigahertz to break WEP in the average case.
+
+794
+00:56:52,312 --> 00:56:54,439
+Rym: Wow according to an article I'm looking at.
+
+795
+00:56:54,881 --> 00:57:00,660
+Scott: Yeah, they keep developing new ways of doing it Like you used to take 10 minutes and then it took five minutes, you know, just kind of a game like how fast can I?
+
+796
+00:57:00,860 --> 00:57:01,201
+Rym: Break wet.
+
+797
+00:57:01,442 --> 00:57:07,340
+Scott: Yeah, it's something that we know is broken, but it's better to put like the lock on our front door Rym, right?
+
+798
+00:57:07,780 --> 00:57:10,960
+Scott: Do you think someone who knew a lot about locks could pick that lock easily?
+
+799
+00:57:11,100 --> 00:57:15,679
+Rym: In fact, I could look on the internet and pick the lock to our house or any house in our neighborhood in about 15 minutes.
+
+800
+00:57:16,100 --> 00:57:18,973
+Scott: Yep, but would you rather have that lock or no lock?
+
+801
+00:57:19,415 --> 00:57:20,379
+Scott: I'd rather have that lock.
+
+802
+00:57:20,841 --> 00:57:23,450
+Scott: Yet WEP is sort of like the lock that everyone knows.
+
+803
+00:57:23,490 --> 00:57:23,992
+Scott: you can pick.
+
+804
+00:57:24,313 --> 00:57:28,038
+Scott: sure if there's an expert burglar He's gonna come and get into your house.
+
+805
+00:57:28,441 --> 00:57:33,840
+Scott: But for the most part it keeps people out of your house like the homeless bums walking up and down the road.
+
+806
+00:57:34,081 --> 00:57:40,606
+Rym: It also gives you if you're this kind of person a tiny bit of legal leeway and that if someone is using your wireless Illegally.
+
+807
+00:57:41,009 --> 00:57:47,000
+Rym: you can argue that You did not give them access because you would clearly encrypted your channel and not given them the code.
+
+808
+00:57:47,823 --> 00:57:49,931
+Scott: We are not lawyers though, so I don't know how well that stands up.
+
+809
+00:57:49,971 --> 00:57:52,320
+Scott: considering another recent case of craziness.
+
+810
+00:57:52,521 --> 00:57:54,451
+Rym: Oh, don't get me started on the freaking wireless.
+
+811
+00:57:54,531 --> 00:57:56,220
+Rym: Yeah, I could do a whole show on that.
+
+812
+00:57:56,400 --> 00:57:57,928
+Scott: Yeah, you could do a whole show on a lot of things.
+
+813
+00:57:58,088 --> 00:58:00,600
+Scott: Yeah, I could alright, so that's wet wet.
+
+814
+00:58:00,781 --> 00:58:17,229
+Scott: the thing about problem with WEP is that you can either configure your router to use WEP or use something else and The Wii and the DS and other similar game consoles and things use WEP only they don't support like the DS Especially only supports wet right.
+
+815
+00:58:17,631 --> 00:58:25,879
+Scott: so if you want to use your DS with your Wi-Fi You can either use WEP or use nothing you can't use what I'm about to talk about which is WPA.
+
+816
+00:58:26,760 --> 00:58:33,428
+Scott: WPA is superior to WEP in every possible fashion is two more than X. It is so much better than WEP.
+
+817
+00:58:33,588 --> 00:58:34,392
+Scott: It is ludicrous.
+
+818
+00:58:34,813 --> 00:58:38,609
+Scott: basically if you use WPA No one can break into your network.
+
+819
+00:58:39,352 --> 00:58:41,260
+Scott: No one can get in unless you give them the password.
+
+820
+00:58:41,461 --> 00:58:43,327
+Scott: That's pretty much how it works and not only that.
+
+821
+00:58:43,728 --> 00:58:47,180
+Scott: but your password isn't some you know hex number.
+
+822
+00:58:47,341 --> 00:58:52,043
+Scott: That's only you know using zero one three or six seven eight nine ABCDEF.
+
+823
+00:58:52,344 --> 00:58:53,066
+Scott: it's a password.
+
+824
+00:58:53,207 --> 00:58:54,892
+Scott: you can make it a giant passphrase.
+
+825
+00:58:54,932 --> 00:58:55,594
+Scott: you could make it.
+
+826
+00:58:56,015 --> 00:59:03,220
+Scott: you know my monkey's uncle GeekNights in the house one one three exclamation point and that could be the password to get into your wireless network.
+
+827
+00:59:03,623 --> 00:59:07,244
+Scott: the encryption of WPA is Full-on encryption.
+
+828
+00:59:07,284 --> 00:59:09,210
+Scott: that is very difficult to break.
+
+829
+00:59:09,270 --> 00:59:12,239
+Scott: that would take a bunch of supercomputers a very long time to figure out.
+
+830
+00:59:12,821 --> 00:59:19,589
+Scott: The problem with WPA is if you turn that on you can't also have WEP so your DS Can't get on your Wi-Fi.
+
+831
+00:59:19,629 --> 00:59:21,419
+Scott: That's the only reason we don't use WPA.
+
+832
+00:59:22,182 --> 00:59:27,100
+Scott: Also, not every wireless card works with WPA old busted wireless cards.
+
+833
+00:59:27,180 --> 00:59:31,280
+Scott: They might need a newer firmware or something like that in order to use WPA.
+
+834
+00:59:31,481 --> 00:59:33,347
+Rym: There are multiple ways to use WPA.
+
+835
+00:59:33,427 --> 00:59:34,973
+Rym: most consumers just use something.
+
+836
+00:59:35,013 --> 00:59:35,514
+Rym: PSK.
+
+837
+00:59:35,535 --> 00:59:46,577
+Rym: you might have heard that acronym stands for Pre-shared key where there's a passphrase like Scott said a key and everyone who uses your network you have to share in the Sharon Shared the key with them ahead of time.
+
+838
+00:59:46,758 --> 00:59:55,219
+Rym: yep You can also use this cool X kind of server thing that does that for you in a cool and complicated way But that's really only used in businesses.
+
+839
+00:59:55,360 --> 01:00:00,462
+Scott: Yeah, there are lots of enterprise WPA's and other sorts of WPA's But those are.
+
+840
+01:00:00,502 --> 01:00:03,571
+Scott: the only difference between them is how people get the password.
+
+841
+01:00:03,933 --> 01:00:07,205
+Scott: or maybe it's a fact or maybe everyone has their own password.
+
+842
+01:00:07,225 --> 01:00:08,895
+Scott: it just gets crazy.
+
+843
+01:00:08,935 --> 01:00:12,889
+Scott: the point is WPA is secure wireless networking.
+
+844
+01:00:12,909 --> 01:00:15,155
+Scott: that is ludicrously difficult to break.
+
+845
+01:00:15,597 --> 01:00:26,620
+Scott: if you use WPA Your wireless network is secure And you can sleep easy if you don't have a Nintendo DS or some other web only device that you were using on your wireless network.
+
+846
+01:00:27,224 --> 01:00:29,639
+Scott: I suggest you use WPA and nothing else.
+
+847
+01:00:30,101 --> 01:00:34,558
+Scott: Unless you want to have your network open then use nothing because if you're gonna have it open just have it open.
+
+848
+01:00:34,599 --> 01:00:35,381
+Scott: don't bother With anything.
+
+849
+01:00:35,482 --> 01:00:40,036
+Rym: remember the advantage of an open network is that when the RIA comes calling you can't.
+
+850
+01:00:40,076 --> 01:00:41,380
+Rym: they can't prove at all.
+
+851
+01:00:42,003 --> 01:00:43,712
+Scott: Someone tried that and it didn't work recently.
+
+852
+01:00:43,913 --> 01:00:45,120
+Rym: well it depends on how you argue it.
+
+853
+01:00:45,401 --> 01:00:46,184
+Scott: I guess I don't know.
+
+854
+01:00:46,305 --> 01:00:48,896
+Rym: cuz at most you're guilty of violating the terms of service.
+
+855
+01:00:48,916 --> 01:00:53,766
+Rym: Yeah, we're not lawyers Yeah, but from a technical standpoint I could not prove who did it.
+
+856
+01:00:53,986 --> 01:01:05,340
+Scott: from a technical standpoint if your wireless network is open to the world and anyone can connect Then nobody can prove that you know who is actually doing the traffic that goes over your network.
+
+857
+01:01:05,501 --> 01:01:10,060
+Rym: However, that is usually a violation of the terms of service of just about every ISP in the United States.
+
+858
+01:01:10,361 --> 01:01:15,120
+Scott: Yep, actually there are some ISPs doing some weird things recently, but then I could talk about that.
+
+859
+01:01:15,461 --> 01:01:17,345
+Rym: Yeah, now real real quick.
+
+860
+01:01:17,646 --> 01:01:23,520
+Rym: your Bluetooth is just a really short-range really low bandwidth way of connecting little peripherals to other things.
+
+861
+01:01:23,841 --> 01:01:30,970
+Scott: yep, Bluetooth is a weak tiny radio and They use it to connect a cell phone to a computer a cell phone to a headset.
+
+862
+01:01:31,633 --> 01:01:35,610
+Scott: There are lots of Bluetooth profiles and things that let you do weird things with Bluetooth.
+
+863
+01:01:35,750 --> 01:01:41,226
+Scott: You can use A2DP to send stereo audio over Bluetooth to a pair of stereo headphones.
+
+864
+01:01:41,266 --> 01:01:49,527
+Scott: You can use a Bluetooth DUN to turn a cell phone into a modem and then your computer thinks it's a modem.
+
+865
+01:01:50,008 --> 01:02:00,197
+Scott: you can use Bluetooth pan the personal area network where you can actually make a network of computers an IP network with IP addresses that are all Connected by Bluetooth.
+
+866
+01:02:00,479 --> 01:02:02,090
+Scott: It's a bunch of stuff you can do with Bluetooth.
+
+867
+01:02:02,572 --> 01:02:16,929
+Scott: It's just a nice weak low powered radio to connect things that are close to each other Very close to each other like in the same room wirelessly and not so quickly but quickly enough to say use a mouse or a keyboard or listen to music.
+
+868
+01:02:17,129 --> 01:02:20,983
+Rym: and Yeah RFID a lot of people talk about that's actually really different.
+
+869
+01:02:21,224 --> 01:02:24,940
+Scott: RFID really has nothing to do with this But it's something wireless that people hear about.
+
+870
+01:02:24,960 --> 01:02:26,729
+Rym: people don't seem to really understand it.
+
+871
+01:02:27,251 --> 01:02:27,934
+Rym: I mean all it is.
+
+872
+01:02:27,974 --> 01:02:29,521
+Rym: it's a passive kind of thing.
+
+873
+01:02:29,561 --> 01:02:31,650
+Rym: We have a chip that isn't powered or anything.
+
+874
+01:02:31,730 --> 01:02:43,870
+Rym: It's just a chip sitting there and it has a circuit in it that if you hit it with a certain kind of radio Wave that radio wave Provides power to activate it and then it broadcasts a little bit of data that you then read.
+
+875
+01:02:44,412 --> 01:02:47,582
+Scott: Like if you had you can make a radio without a battery.
+
+876
+01:02:47,622 --> 01:02:50,271
+Scott: just the volume is really low and you can barely hear what's going on.
+
+877
+01:02:50,632 --> 01:02:56,029
+Scott: because the only power that's going into the radio is the power of the radio signal itself and then you add a battery.
+
+878
+01:02:56,130 --> 01:03:02,323
+Scott: when You have a battery in your you know, FM radio All you're really doing with that battery is amplifying the signals that you can hear it.
+
+879
+01:03:02,584 --> 01:03:03,387
+Scott: That's all it really does.
+
+880
+01:03:04,049 --> 01:03:07,220
+Scott: So RFID doesn't really care about amplifying.
+
+881
+01:03:07,241 --> 01:03:09,050
+Scott: you just shoot a radio signal into it.
+
+882
+01:03:09,371 --> 01:03:13,187
+Scott: That's enough power to make the RFID send back the ID.
+
+883
+01:03:13,328 --> 01:03:17,941
+Rym: that's inside All right, and I'm done talking about that.
+
+884
+01:03:18,041 --> 01:03:19,245
+Rym: So I gotta go get a sheet.
+
+885
+01:03:19,265 --> 01:03:24,504
+Rym: I think I'll have some Ghosts might be popping her in the Scott's room and some short orders.
+
+886
+01:03:24,544 --> 01:03:38,126
+Scott: Yeah, there's a bunch of other wireless Technologies like satellite stuff and like point-to-point microwave links and all sorts of ridiculous things out there but these are the ones you really have to know about and the ways to keep them secure.
+
+887
+01:03:38,146 --> 01:03:41,893
+Scott: that you have to know about that you're going to encounter and That's about it.
+
+888
+01:03:42,295 --> 01:03:45,890
+Rym: We'll talk about security sometime in the future probably when we can't come up with a better Monday.
+
+889
+01:03:46,171 --> 01:03:51,692
+Scott: Yep, and if you have any questions and like how to set up a home network, maybe that's a separate episode Maybe not.
+
+890
+01:03:51,933 --> 01:03:52,254
+Scott: I don't know.
+
+891
+01:03:52,615 --> 01:03:53,940
+Rym: Yeah, or you can ask in the forums.
+
+892
+01:03:54,221 --> 01:03:56,329
+Rym: Yeah, Scott will tell you to google it.
+
+893
+01:03:58,190 --> 01:03:59,211
+Scott: That's pretty much how it's gonna go.
+
+894
+01:04:06,118 --> 01:04:08,660
+Rym: this has been GeekNights with Rym and Scott.
+
+895
+01:04:08,720 --> 01:04:10,890
+Rym: Special thanks to DJ pretzel for the opening music.
+
+896
+01:04:11,573 --> 01:04:22,906
+Scott: Be sure to visit our website at www.frontroadcrew.com where you'll find show notes links our awesome forum a link to our frapper map and Links to all the RSS feeds.
+
+897
+01:04:23,347 --> 01:04:29,066
+Rym: we say feeds plural because GeekNights airs four nights a week covering four different Brands of geekery.
+
+898
+01:04:29,549 --> 01:04:31,197
+Rym: Mondays are science and technology.
+
+899
+01:04:31,238 --> 01:04:33,866
+Rym: Tuesdays We have video games board games and RPGs.
+
+900
+01:04:34,227 --> 01:04:39,320
+Rym: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+901
+01:04:40,083 --> 01:04:48,120
+Scott: You can send us feedback by email to GeekNights at front row crew calm Or you can send audio feedback via audio.
+
+902
+01:04:48,502 --> 01:04:52,991
+Scott: Just click the link that says send me an audio on the right side of our website If you like what you hear.
+
+903
+01:04:53,072 --> 01:04:57,230
+Rym: you can catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+904
+01:04:57,470 --> 01:05:00,579
+Rym: for the complete archives visit the website which has everything.
+
+905
+01:05:01,142 --> 01:05:06,044
+Scott: GeekNights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+906
+01:05:07,642 --> 01:05:13,699
+Scott: This means you can do whatever you want with it as long as you give us credit don't make money and share it in kind.
+
+907
+01:05:14,501 --> 01:05:19,916
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+908
+01:05:20,216 --> 01:05:21,540
+Scott: It's actually recorded at night.
+

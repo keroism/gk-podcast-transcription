@@ -1,0 +1,4292 @@
+﻿1
+00:00:08,380 --> 00:00:12,500
+Speaker 1: It's Monday November 23rd 2020.
+
+2
+00:00:12,500 --> 00:00:15,968
+Speaker 1: I'm rim I'm Scott and this is geek nights tonight.
+
+3
+00:00:16,008 --> 00:00:18,040
+Speaker 1: We are talking about displays.
+
+4
+00:00:19,552 --> 00:00:20,568
+Speaker 0: Let's do this.
+
+5
+00:00:21,670 --> 00:00:29,710
+Speaker 1: So as you all know because I talk about it a lot I have two of the same smartphone and the one I had for a long time starting to wear out.
+
+6
+00:00:30,133 --> 00:00:31,787
+Speaker 1: so I started migrating everything to the new one.
+
+7
+00:00:31,807 --> 00:00:41,470
+Speaker 1: and the most annoying thing about migrating from any smartphone to any other smartphone is Resetting up all your two-factor nonsense on the new phone exactly.
+
+8
+00:00:41,952 --> 00:00:43,078
+Speaker 0: So just so people are.
+
+9
+00:00:43,178 --> 00:00:45,670
+Speaker 0: if you don't know we did do a show on two-factor authentication.
+
+10
+00:00:45,790 --> 00:00:52,169
+Speaker 0: But the most common use the most common two-factor authentication method the one you're used to with Google authenticator app or whatever.
+
+11
+00:00:52,189 --> 00:00:58,050
+Speaker 0: it is TOTP And the way it works is it's a time-based one-time pad.
+
+12
+00:00:58,150 --> 00:01:02,970
+Speaker 0: You have a private secret key a number that is in your phone and nowhere else, right?
+
+13
+00:01:03,371 --> 00:01:04,697
+Speaker 0: So it's effectively.
+
+14
+00:01:04,818 --> 00:01:11,966
+Speaker 0: it could be something, you know, someone could know the number But really it's a thing you have because it's written down in the phone's memory in a special place.
+
+15
+00:01:12,207 --> 00:01:25,970
+Speaker 0: if you have an iPhone at Least they have that secure enclave or whatever And then it's nowhere else in the world and there's no way to read it out Like there is no function that will get the app to read that number and tell it to anything else.
+
+16
+00:01:26,177 --> 00:01:27,694
+Speaker 0: Yeah So it's stuck there.
+
+17
+00:01:28,216 --> 00:01:36,730
+Speaker 0: and then using that secret number and the current time it Generates codes and no one else could generate those codes at you know.
+
+18
+00:01:36,770 --> 00:01:41,683
+Speaker 0: So when you send those codes to the other computer They know what time it is because they're also a computer.
+
+19
+00:01:42,145 --> 00:01:47,730
+Speaker 0: and they say well They know mathematically that the only they don't know your private key.
+
+20
+00:01:47,770 --> 00:01:48,814
+Speaker 0: They only know the public one.
+
+21
+00:01:49,537 --> 00:01:53,230
+Speaker 0: the public one can't be used to generate keys, but it can be used to verify keys.
+
+22
+00:01:53,330 --> 00:01:58,050
+Speaker 0: So basically you tell them a number that you made using the private key and the time.
+
+23
+00:01:58,573 --> 00:02:05,683
+Speaker 0: They look at that number and they look at what time it is and they say aha Only someone who has the private key would be able to guess this exact number.
+
+24
+00:02:05,723 --> 00:02:07,108
+Speaker 0: It's a one in a million chance.
+
+25
+00:02:07,168 --> 00:02:07,810
+Speaker 0: It's six digits.
+
+26
+00:02:09,531 --> 00:02:10,334
+Speaker 0: It's not eat right?
+
+27
+00:02:10,354 --> 00:02:11,760
+Speaker 0: You're not gonna get they're not gonna let.
+
+28
+00:02:11,780 --> 00:02:14,390
+Speaker 0: you've got a million guesses six or thirty cells.
+
+29
+00:02:14,571 --> 00:02:16,960
+Speaker 1: It depends that there's different schemes on how many seconds.
+
+30
+00:02:17,301 --> 00:02:21,115
+Speaker 0: I forget how many seconds that if you can divide the time up You want it doesn't matter right?
+
+31
+00:02:21,155 --> 00:02:26,694
+Speaker 0: the point is you don't even if you somebody could guess a million times The perfect.
+
+32
+00:02:26,794 --> 00:02:29,161
+Speaker 0: the system that's having you log in like Google.
+
+33
+00:02:29,482 --> 00:02:31,990
+Speaker 0: if someone tries to guess, you know more than ten codes.
+
+34
+00:02:32,091 --> 00:02:33,769
+Speaker 0: It's like yeah, you've had enough.
+
+35
+00:02:34,313 --> 00:02:39,619
+Speaker 0: It's like we're not gonna let you guess a million times Even if you could generate all million guesses that quickly.
+
+36
+00:02:39,659 --> 00:02:40,943
+Speaker 0: so now some services.
+
+37
+00:02:40,963 --> 00:02:42,067
+Speaker 0: problem is right.
+
+38
+00:02:42,087 --> 00:02:42,950
+Speaker 0: you switch services.
+
+39
+00:02:43,414 --> 00:02:44,829
+Speaker 0: You have to get a new phone.
+
+40
+00:02:45,510 --> 00:02:52,215
+Speaker 0: There's no way to read the private key out of phone a and put it into phone B. It's stuck there.
+
+41
+00:02:52,557 --> 00:02:55,129
+Speaker 1: because if you could do that that actually creates a problem.
+
+42
+00:02:55,330 --> 00:02:57,978
+Speaker 1: now I noticed my Google auth app, which I deprecated like.
+
+43
+00:02:57,998 --> 00:03:01,389
+Speaker 1: I don't use it anymore, but I noticed it has like an export function.
+
+44
+00:03:01,409 --> 00:03:03,333
+Speaker 0: now Mine doesn't?
+
+45
+00:03:03,896 --> 00:03:04,842
+Speaker 1: it appeared that I must be.
+
+46
+00:03:04,943 --> 00:03:05,788
+Speaker 0: it must be Android.
+
+47
+00:03:05,869 --> 00:03:08,950
+Speaker 1: only I'm actually restarting my phone to look at it again because I noticed it.
+
+48
+00:03:09,010 --> 00:03:12,603
+Speaker 1: I wasn't sure what it did but it appeared that I would give you iOS.
+
+49
+00:03:12,723 --> 00:03:15,412
+Speaker 0: one does not have that only the only the Android.
+
+50
+00:03:15,453 --> 00:03:18,624
+Speaker 1: so I might have been able to actually migrate from one to the other.
+
+51
+00:03:19,066 --> 00:03:21,816
+Speaker 1: but what annoys me is that Well-made services.
+
+52
+00:03:21,837 --> 00:03:29,975
+Speaker 1: I don't have many of these problems because they actually let you configure multiple TOTP authenticators for the same service.
+
+53
+00:03:30,015 --> 00:03:34,610
+Speaker 1: you could then give them names or even let you have multiple options like have a key or your thing.
+
+54
+00:03:34,650 --> 00:03:36,420
+Speaker 1: Like you can set up stuff, but a lot of people.
+
+55
+00:03:36,440 --> 00:03:41,960
+Speaker 1: you just don't want phone to be one of your options Yep, but a lot of services only lets you set up one.
+
+56
+00:03:42,301 --> 00:03:42,662
+Speaker 1: You can't.
+
+57
+00:03:42,722 --> 00:03:43,565
+Speaker 0: even email isn't?
+
+58
+00:03:43,705 --> 00:03:45,370
+Speaker 0: email is a is an okay option.
+
+59
+00:03:45,430 --> 00:03:49,150
+Speaker 0: It's better than phone, but it's still not great because email is still unencrypted.
+
+60
+00:03:49,250 --> 00:03:53,927
+Speaker 0: So someone who's accessing email servers could see emails flying around see the codes in them and use them.
+
+61
+00:03:54,228 --> 00:03:55,557
+Speaker 1: Yep And that's a mess.
+
+62
+00:03:55,618 --> 00:03:56,709
+Speaker 1: anyway a worst option.
+
+63
+00:03:57,311 --> 00:03:58,034
+Speaker 0: So Yuba key.
+
+64
+00:03:58,154 --> 00:04:08,029
+Speaker 0: I bought the original or one of the very close to the original you because I belonged I was living in beacon And at the time it wasn't actually that useful because not too many things supported it.
+
+65
+00:04:09,114 --> 00:04:21,209
+Speaker 0: One OAuth service that I used to log into one government account I used it for like WordPress and even though I stopped I my WordPress blogs are still up even though I haven't used them in forever.
+
+66
+00:04:22,154 --> 00:04:31,230
+Speaker 0: But I did like having extra security on them not because they were particularly Worth protecting but because WordPress is very highly attacked.
+
+67
+00:04:31,451 --> 00:04:35,730
+Speaker 0: Yeah, right, so I just wanted to put a little extra security on there.
+
+68
+00:04:36,031 --> 00:04:40,306
+Speaker 0: But yes, you know the Yuba keys that I had those days were not very useful.
+
+69
+00:04:40,326 --> 00:04:44,127
+Speaker 0: They didn't use TOTP They used a what's it called Fido or whatever, right?
+
+70
+00:04:45,230 --> 00:04:50,793
+Speaker 0: Now what I know is I actually you're logging into and they could and they only worked on something that had USB port So not a phone.
+
+71
+00:04:50,953 --> 00:04:51,154
+Speaker 0: Yep.
+
+72
+00:04:51,395 --> 00:04:57,660
+Speaker 1: I set up a bunch of stuff with my Yuba key to control like Access to password vaults and things like.
+
+73
+00:04:57,701 --> 00:05:03,089
+Speaker 1: I did a lot with it back then like as much as I could But it wasn't like mainstream like I couldn't use it with Google easily, right?
+
+74
+00:05:03,671 --> 00:05:08,967
+Speaker 0: So now Yuba key is a lot more mainstream but also so this is the current Yuba key.
+
+75
+00:05:08,987 --> 00:05:12,613
+Speaker 0: is the Yuba key NFC whatever?
+
+76
+00:05:12,673 --> 00:05:19,416
+Speaker 0: so not only does it USB, right but it also in addition to being USB I don't want to show the back of it.
+
+77
+00:05:19,436 --> 00:05:20,520
+Speaker 0: That's what the code is.
+
+78
+00:05:21,283 --> 00:05:22,890
+Speaker 1: Not that that would necessarily matter.
+
+79
+00:05:23,791 --> 00:05:27,890
+Speaker 0: Someone could maybe request the same Yuba key from Yuba key if they had I don't know.
+
+80
+00:05:28,070 --> 00:05:33,070
+Speaker 0: Anyway, the point is not only does it do all the things the old Yuba key did but also works with NFC.
+
+81
+00:05:33,231 --> 00:05:36,190
+Speaker 0: So you just hold your phone near it to get the code.
+
+82
+00:05:36,250 --> 00:05:39,564
+Speaker 1: Now older Yuba keys already did that but in the old days.
+
+83
+00:05:39,965 --> 00:05:41,170
+Speaker 1: that didn't work with iPhones.
+
+84
+00:05:41,311 --> 00:05:45,366
+Speaker 1: It only worked with Android for Apple reasons that were stupid and those reasons are all gone.
+
+85
+00:05:45,426 --> 00:05:46,149
+Speaker 1: Apple finally fixed it.
+
+86
+00:05:46,189 --> 00:05:49,663
+Speaker 0: now I think now the newest Apple devices it will work with.
+
+87
+00:05:49,823 --> 00:05:51,470
+Speaker 0: it works with iPhones going way back.
+
+88
+00:05:51,570 --> 00:05:54,500
+Speaker 0: It worked with my iPhone 7 and my new iPhone 12.
+
+89
+00:05:54,500 --> 00:05:56,306
+Speaker 0: It did not work with my iPad.
+
+90
+00:05:56,367 --> 00:05:57,370
+Speaker 0: That's a couple years old.
+
+91
+00:05:57,451 --> 00:06:04,010
+Speaker 1: I think only the newest iPads Will do it and older iPhones like iPhones 5 like 6 like it didn't work at all from what I remember.
+
+92
+00:06:04,030 --> 00:06:05,889
+Speaker 0: Yeah, it didn't work then but that was like five years ago.
+
+93
+00:06:05,970 --> 00:06:07,378
+Speaker 1: But the cool thing is iPhone 7.
+
+94
+00:06:07,378 --> 00:06:08,987
+Speaker 0: it worked fine and that's four years ago.
+
+95
+00:06:09,007 --> 00:06:09,530
+Speaker 1: Oh check this out.
+
+96
+00:06:09,630 --> 00:06:13,630
+Speaker 1: So in the Google authenticator app in Android, there's an option to export accounts.
+
+97
+00:06:13,690 --> 00:06:22,489
+Speaker 1: It'll create a QR code you scan it with a different Google authenticator It passes the private keys across and then the old authenticator stops working and the new one starts working.
+
+98
+00:06:23,757 --> 00:06:24,300
+Speaker 0: All right.
+
+99
+00:06:24,320 --> 00:06:25,730
+Speaker 0: Well the iOS one doesn't have that.
+
+100
+00:06:25,770 --> 00:06:32,859
+Speaker 0: So if you get access to someone's unlocked phone, open up their Google authenticator and steal their private keys Yeah, I don't know if it's a good thing or a bad thing.
+
+101
+00:06:32,919 --> 00:06:35,289
+Speaker 0: So what the YubaKey does, right?
+
+102
+00:06:37,052 --> 00:06:39,673
+Speaker 0: That is so great Is that you can.
+
+103
+00:06:39,753 --> 00:06:41,017
+Speaker 0: it actually has storage in it.
+
+104
+00:06:41,458 --> 00:06:52,468
+Speaker 0: and over NFC or I guess over USB maybe but over NFC You can actually put into the YubaKey up to 32 TOTP private keys.
+
+105
+00:06:53,254 --> 00:07:06,209
+Speaker 0: So now basically whenever I want to generate codes I hold my phone Near the YubaKey and it's then it generates a set of codes for all my apps And if I don't use the codes, then I have to hold my phone near the thing again.
+
+106
+00:07:06,410 --> 00:07:12,410
+Speaker 1: But what that means, the phone is now just a display like if my phone breaks I can borrow any phone on earth.
+
+107
+00:07:12,932 --> 00:07:15,402
+Speaker 1: That has the Yubico authenticator app, which is free.
+
+108
+00:07:15,703 --> 00:07:17,109
+Speaker 1: hold my key up to it get my code.
+
+109
+00:07:17,993 --> 00:07:35,630
+Speaker 0: Not only that I can take the YubaKey which is USB put it into my desktop computer Which is where it is And then I can open up the Yubico authenticator app on my computer and generate codes with a desktop Application and copy the codes from that application to my browser to use them.
+
+110
+00:07:35,670 --> 00:07:37,903
+Speaker 0: I don't need my phone when I'm at my computer.
+
+111
+00:07:37,923 --> 00:07:39,817
+Speaker 0: if I left my phone in the other room I don't have to go get it.
+
+112
+00:07:40,119 --> 00:07:46,970
+Speaker 1: Yeah, even better I set up a bunch of sites support this now way more than used to using the key itself directly.
+
+113
+00:07:47,193 --> 00:07:50,709
+Speaker 0: Yes, exactly You can also.
+
+114
+00:07:52,271 --> 00:07:52,755
+Speaker 0: What's it called?
+
+115
+00:07:53,057 --> 00:07:58,490
+Speaker 0: What I did is when I was setting up all the keys I actually bought two YubaKeys set it up on both at the same time.
+
+116
+00:07:58,974 --> 00:08:00,690
+Speaker 0: I set it up on both at the same time.
+
+117
+00:08:00,730 --> 00:08:03,848
+Speaker 0: So if I lose one YubaKey, I have a backup that has all the codes in it.
+
+118
+00:08:04,631 --> 00:08:09,812
+Speaker 1: So I thought about doing that but it was kind of a pain with the timing and I gave up and I have one YubaKey With everything.
+
+119
+00:08:10,153 --> 00:08:12,420
+Speaker 0: but I just photographed every QR code twice.
+
+120
+00:08:12,601 --> 00:08:21,810
+Speaker 1: Yeah, I reset up every one of my Backup codes and those those are now secure in a place and I also took my my other YubaKey.
+
+121
+00:08:22,472 --> 00:08:27,145
+Speaker 1: I set that up as a key for things that allow multiple keys.
+
+122
+00:08:27,165 --> 00:08:28,650
+Speaker 1: that I called it my backup key.
+
+123
+00:08:29,493 --> 00:08:31,360
+Speaker 0: Yeah, I did that also if there was something like that.
+
+124
+00:08:32,023 --> 00:08:41,722
+Speaker 0: I just want to give a Sort of thumbs down To Instagram's two factor, right?
+
+125
+00:08:42,066 --> 00:08:44,454
+Speaker 0: Oh, so The Instagram cuz.
+
+126
+00:08:44,494 --> 00:08:46,862
+Speaker 1: I know that I noticed someone was futzing with it.
+
+127
+00:08:46,922 --> 00:08:54,669
+Speaker 0: I assumed it was you of course, it's me so the so if Instagram you can only mess with two factor.
+
+128
+00:08:54,709 --> 00:08:58,538
+Speaker 0: you can Wherever you're logging into Instagram, it'll the two.
+
+129
+00:08:58,599 --> 00:08:59,782
+Speaker 0: logging in is just fine.
+
+130
+00:08:59,822 --> 00:09:00,725
+Speaker 0: It asks for codes.
+
+131
+00:09:00,905 --> 00:09:02,450
+Speaker 0: It asks her backup codes, whatever, right?
+
+132
+00:09:03,330 --> 00:09:08,210
+Speaker 0: When if you want to set up two-factor authentication on Instagram, you have to disable it and re-enable it.
+
+133
+00:09:08,351 --> 00:09:09,829
+Speaker 1: Okay, a lot of services are like that.
+
+134
+00:09:10,831 --> 00:09:15,190
+Speaker 0: That's fine there's a better way but whatever they'll only let you do it on your phone.
+
+135
+00:09:15,230 --> 00:09:16,438
+Speaker 0: They won't let you do it on desktop.
+
+136
+00:09:16,458 --> 00:09:20,179
+Speaker 0: If you try to do it on desktop, it says sorry You have to do it on your phone.
+
+137
+00:09:20,199 --> 00:09:21,626
+Speaker 0: I do it on your hates.
+
+138
+00:09:21,927 --> 00:09:22,470
+Speaker 1: that trend.
+
+139
+00:09:22,530 --> 00:09:25,410
+Speaker 1: There are so many things that don't work at all on desktop anymore.
+
+140
+00:09:26,011 --> 00:09:31,978
+Speaker 0: Yep, if you try to do it on your phone in the Instagram app what it will do when you try when you say You know set me up.
+
+141
+00:09:32,421 --> 00:09:33,830
+Speaker 0: It won't show you a QR code.
+
+142
+00:09:34,271 --> 00:09:34,732
+Speaker 0: It just won't.
+
+143
+00:09:35,253 --> 00:09:47,488
+Speaker 0: what it will do is it will look on your phone for the default authenticator app, whatever that happens to be and launch it and Insert the keys into it using the standard API for doing this.
+
+144
+00:09:48,733 --> 00:09:54,230
+Speaker 0: And I had like three apps even though and there's no way to like choose the default one necessarily.
+
+145
+00:09:54,250 --> 00:09:58,609
+Speaker 0: So we're like opened up the Microsoft Authenticator app, which I wasn't using anymore and I was like no.
+
+146
+00:10:00,913 --> 00:10:02,988
+Speaker 0: So I had to delete the Microsoft Authenticator app.
+
+147
+00:10:04,412 --> 00:10:07,109
+Speaker 0: Get it to open the Google one to put the codes in there.
+
+148
+00:10:07,330 --> 00:10:17,119
+Speaker 0: Right, if you want to use some other authenticator app besides the one it's gonna just launch on its own It won't show you a QR code to photograph.
+
+149
+00:10:17,319 --> 00:10:25,299
+Speaker 0: It will instead show you the literal private key to type in and It's like so to put it on.
+
+150
+00:10:25,319 --> 00:10:30,569
+Speaker 0: so for me to use the YubiKey with Instagram I would add a type in those like a whole big thing.
+
+151
+00:10:31,630 --> 00:10:37,218
+Speaker 0: Right and it didn't tell me like which Encryption method it was using for that key.
+
+152
+00:10:37,861 --> 00:10:47,549
+Speaker 0: and I think if I choose the wrong and there's a lot of choices You know, they're not just straightforward So I tried to just I tried to type it in once and it didn't work.
+
+153
+00:10:48,132 --> 00:10:50,882
+Speaker 0: So I clearly made the wrong choice, which is the default.
+
+154
+00:10:50,902 --> 00:10:52,750
+Speaker 0: I made the default choice and that was wrong.
+
+155
+00:10:54,070 --> 00:11:00,590
+Speaker 0: So I could not put Instagram on to the YubiKey because their implementation is bad.
+
+156
+00:11:01,095 --> 00:11:03,312
+Speaker 1: That is super annoying Yep.
+
+157
+00:11:03,774 --> 00:11:12,325
+Speaker 1: Oh, yeah, so I the biggest thing is I did this so that now I am Disentangled from my phone in case I like drop my phone and it breaks or something happens.
+
+158
+00:11:12,425 --> 00:11:13,990
+Speaker 0: Yeah, I'm not completely disentangled.
+
+159
+00:11:14,131 --> 00:11:24,049
+Speaker 0: I put the most unimportant apps and also Instagram still on a phone But I also have a backup phone now, so that's I'm okay, right I'm good.
+
+160
+00:11:25,252 --> 00:11:26,720
+Speaker 0: So yeah, I just did.
+
+161
+00:11:26,740 --> 00:11:31,099
+Speaker 0: I don't know if I reviewed the tiny iPhone But just briefly like super briefly.
+
+162
+00:11:31,119 --> 00:11:33,970
+Speaker 1: apparently twitch only lets you use authy specifically.
+
+163
+00:11:34,532 --> 00:11:36,678
+Speaker 0: Yes, twitch only lets you use authy specifically.
+
+164
+00:11:36,698 --> 00:11:37,560
+Speaker 0: That's also bullshit.
+
+165
+00:11:37,701 --> 00:11:41,351
+Speaker 0: cold guy point about me and twitch is the only thing that It's.
+
+166
+00:11:42,013 --> 00:11:42,876
+Speaker 1: blizzard is annoying.
+
+167
+00:11:42,936 --> 00:11:47,730
+Speaker 1: blizzard makes you use the blizzard authenticator app and steam makes you use this blizzard indicator app.
+
+168
+00:11:47,991 --> 00:11:53,694
+Speaker 0: Blizzard was also what I had a slight hassle with because I haven't even used battle net in forever But I don't moved it over.
+
+169
+00:11:53,714 --> 00:11:58,070
+Speaker 1: Well, I haven't logged into battle net like I haven't typed a credential in years.
+
+170
+00:11:58,592 --> 00:12:01,266
+Speaker 0: Yeah, I had a little bit of hassle with blizzard, but I got it done.
+
+171
+00:12:01,688 --> 00:12:06,550
+Speaker 0: steam It does make you use their own app, which is bullshit, but it works and is nice and I didn't have any hassle with it.
+
+172
+00:12:06,674 --> 00:12:12,723
+Speaker 0: so Anyway, so yeah tiny iPhone all I want to say is yeah, it's got a better screen.
+
+173
+00:12:12,784 --> 00:12:13,265
+Speaker 0: It's bad.
+
+174
+00:12:13,285 --> 00:12:14,128
+Speaker 0: It looks nicer.
+
+175
+00:12:14,228 --> 00:12:14,850
+Speaker 0: It's smaller.
+
+176
+00:12:15,413 --> 00:12:23,790
+Speaker 0: It's got a better camera, right but functionality wise It's effectively the same as the iPhone 7 which I still have and still works.
+
+177
+00:12:24,291 --> 00:12:29,350
+Speaker 0: So like I could have just kept going with that iPhone 7 until it completely died and that would have been just fine.
+
+178
+00:12:29,551 --> 00:12:31,157
+Speaker 1: That's what I'm doing with my Sony.
+
+179
+00:12:31,599 --> 00:12:34,390
+Speaker 0: Yeah, I'm not disappointed though in this decision.
+
+180
+00:12:34,511 --> 00:12:37,350
+Speaker 0: I don't have any regrets because a it's good to have a backup phone.
+
+181
+00:12:37,510 --> 00:12:41,789
+Speaker 0: Maybe someone else will have their phone broken and need the iPhone 7 which is still perfectly fine.
+
+182
+00:12:43,172 --> 00:12:47,252
+Speaker 0: And also I am hesitant about the rumors on the iPhone 13.
+
+183
+00:12:47,252 --> 00:12:49,544
+Speaker 0: So it's if you're gonna buy a phone it's good to get it.
+
+184
+00:12:49,564 --> 00:12:52,596
+Speaker 0: if you're gonna buy any technology It's good to get it as soon as it comes out.
+
+185
+00:12:52,998 --> 00:12:57,612
+Speaker 0: so you get the most for your money, but this iPhone 12 mini 100%.
+
+186
+00:12:57,612 --> 00:13:03,807
+Speaker 0: I will keep this until it is broken and no longer functioning in such and plus.
+
+187
+00:13:03,827 --> 00:13:07,700
+Speaker 0: the fact that has 5g I think is gonna give it, you know further life than the.
+
+188
+00:13:08,081 --> 00:13:09,345
+Speaker 1: yeah, that's what I'm lacking.
+
+189
+00:13:09,405 --> 00:13:12,857
+Speaker 1: but until kovat comes down There's no reason like 5g doesn't do anything for me.
+
+190
+00:13:12,877 --> 00:13:14,101
+Speaker 1: I mean, it doesn't do anything yet.
+
+191
+00:13:14,162 --> 00:13:14,382
+Speaker 0: Yep.
+
+192
+00:13:14,503 --> 00:13:14,984
+Speaker 0: Not yet.
+
+193
+00:13:15,326 --> 00:13:16,269
+Speaker 1: I'm connected to my files.
+
+194
+00:13:17,472 --> 00:13:21,877
+Speaker 0: very tiny thing to talk about is I've been using.
+
+195
+00:13:21,897 --> 00:13:28,988
+Speaker 0: there's a thing called ansible which is an IT Automation thing along the lines of like chef puppet whatever.
+
+196
+00:13:29,008 --> 00:13:35,195
+Speaker 0: Oh, yeah Some of my developers have been using that and actually so of all the ones I've tried This one's just fantastic.
+
+197
+00:13:35,255 --> 00:13:40,030
+Speaker 0: Like all the other ones were just a big hassle hard to figure out how they work giving me problems.
+
+198
+00:13:40,851 --> 00:13:42,159
+Speaker 0: Ansible is just like terrific.
+
+199
+00:13:42,199 --> 00:13:45,535
+Speaker 0: It works the way I want it to work And I'm setting it all up.
+
+200
+00:13:45,575 --> 00:13:46,057
+Speaker 0: So nice.
+
+201
+00:13:46,117 --> 00:13:48,467
+Speaker 0: Maybe we'll do a show on it later, but I love it.
+
+202
+00:13:48,608 --> 00:13:50,054
+Speaker 0: So That's my.
+
+203
+00:13:50,094 --> 00:13:51,057
+Speaker 0: that's my recommendation.
+
+204
+00:13:51,077 --> 00:13:56,710
+Speaker 0: Oh, yeah, if you don't want if you don't want to do if you don't want to just write shell scripts It's a lot better than writing shells.
+
+205
+00:13:56,830 --> 00:14:01,010
+Speaker 1: I mean, I'm just looking at some config examples and it without knowing anything about it actually how it works.
+
+206
+00:14:01,313 --> 00:14:02,670
+Speaker 1: The configs are very readable.
+
+207
+00:14:03,371 --> 00:14:05,076
+Speaker 0: It's still stupid YAML, but it.
+
+208
+00:14:05,838 --> 00:14:07,463
+Speaker 0: they actually made a YAML schema.
+
+209
+00:14:07,503 --> 00:14:09,570
+Speaker 0: that makes perfect sense and it's real nice.
+
+210
+00:14:09,811 --> 00:14:11,341
+Speaker 1: I guess I can deal with the animal like it does.
+
+211
+00:14:11,381 --> 00:14:15,326
+Speaker 0: I recommend I recommend Ansible it for products of that nature.
+
+212
+00:14:15,507 --> 00:14:20,256
+Speaker 1: Yeah alright, so speaking of Internet access and 5g and everything.
+
+213
+00:14:20,577 --> 00:14:25,049
+Speaker 1: There is some news from Comcast a terrible ISP, but a lot of people are stuck with them.
+
+214
+00:14:26,371 --> 00:14:36,822
+Speaker 1: So I didn't realize they've been in forties or enforcing data caps in a lot of places and now they are expanding To enforce their data caps basically everywhere.
+
+215
+00:14:37,344 --> 00:14:39,290
+Speaker 0: Yeah, isn't it a very large data cap?
+
+216
+00:14:39,330 --> 00:14:41,702
+Speaker 0: It's like 1.2 terabytes a month or something.
+
+217
+00:14:41,823 --> 00:14:48,816
+Speaker 1: Yep, which I have Definitely exceeded 1.2 terabytes in a month many times I think.
+
+218
+00:14:48,957 --> 00:14:58,950
+Speaker 0: even if you were a streamer and a pirater I don't think you would exceed 1.2 terabytes unless you were hosting your piracy server in your house And it was a public piracy server.
+
+219
+00:14:59,010 --> 00:14:59,251
+Speaker 0: I think.
+
+220
+00:14:59,412 --> 00:15:12,139
+Speaker 0: even if you had like a private piracy server that you were hosting for your friends I don't think you would hit 1.2 terabytes a month unless you had 1.2 terabytes of movies and your friend Copied your entire server in the month.
+
+221
+00:15:12,300 --> 00:15:18,150
+Speaker 1: Well, I mean, it's like we have a really hard Devices and like we're streaming geek nights all over.
+
+222
+00:15:18,251 --> 00:15:21,670
+Speaker 1: It's less now that I know that complicated thing with multiple like yeah streams.
+
+223
+00:15:22,252 --> 00:15:36,934
+Speaker 1: But also the time when I used to like blow past those caps was back in the day when Amazon offered their unlimited cloud service and I just sent my entire NAS up to the cloud as a snapshot Every week.
+
+224
+00:15:36,974 --> 00:15:37,476
+Speaker 1: because why not?
+
+225
+00:15:37,557 --> 00:15:40,730
+Speaker 0: I wonder if the limit applies to upload and download or just one of the other.
+
+226
+00:15:40,912 --> 00:15:52,665
+Speaker 1: It's not super clear there But yeah it seems to be causing a problem for what they have a bunch of data in the article about like who exceeds the caps and Apparently like ten percent of people are exceeding that cap on a regular base.
+
+227
+00:15:52,685 --> 00:15:53,508
+Speaker 0: That seems about right.
+
+228
+00:15:53,548 --> 00:16:03,174
+Speaker 0: Yeah You know, I think I guess it could also happen if for example Maybe you have a household full of people right plus first of all people are home now So they're using more bandwidth at home.
+
+229
+00:16:03,395 --> 00:16:08,390
+Speaker 0: Yeah Comcast Comcast bandwidth usage just like T home TP usage went way up, right?
+
+230
+00:16:09,672 --> 00:16:13,105
+Speaker 1: The median Comcast ISP usage is 308 gigabytes a month.
+
+231
+00:16:15,275 --> 00:16:15,859
+Speaker 0: That's about right.
+
+232
+00:16:15,879 --> 00:16:16,282
+Speaker 0: Yeah, let's see.
+
+233
+00:16:16,403 --> 00:16:17,470
+Speaker 0: That seems like a normal number.
+
+234
+00:16:17,530 --> 00:16:18,173
+Speaker 0: Yeah, but the thing is right.
+
+235
+00:16:18,193 --> 00:16:19,478
+Speaker 0: so 300 is like the median, right?
+
+236
+00:16:22,810 --> 00:16:35,630
+Speaker 0: So you think two people living there if you've got a household with several people then you could suddenly start going way up Doing four different Netflix streams like for five hours.
+
+237
+00:16:35,750 --> 00:16:40,182
+Speaker 0: You think you think median the median household is what like, you know.
+
+238
+00:16:40,362 --> 00:16:41,405
+Speaker 0: two point something people.
+
+239
+00:16:41,465 --> 00:16:43,350
+Speaker 0: maybe one point something people in the u.s.
+
+240
+00:16:43,511 --> 00:16:44,199
+Speaker 0: I don't know, right?
+
+241
+00:16:44,584 --> 00:16:51,995
+Speaker 0: I'm guessing but You know, so two people or roommates, okay Here's the biggest one.
+
+242
+00:16:52,256 --> 00:16:52,958
+Speaker 1: say remember it.
+
+243
+00:16:53,119 --> 00:16:57,877
+Speaker 1: remember when we like say four of us lived in an apartment in colony like the four Of us who were hanging out somewhere.
+
+244
+00:16:57,897 --> 00:17:06,540
+Speaker 1: We're all living somewhere in modern times and We all buy a new game and there's an update to that game and it's 200 gigabytes.
+
+245
+00:17:06,641 --> 00:17:07,888
+Speaker 1: cuz it's a big download.
+
+246
+00:17:08,795 --> 00:17:10,285
+Speaker 0: Yeah, and you download it four times.
+
+247
+00:17:10,345 --> 00:17:12,275
+Speaker 0: Yep That's what I'm saying.
+
+248
+00:17:12,295 --> 00:17:16,190
+Speaker 0: So like the 300 gigabytes is probably measuring like one to two.
+
+249
+00:17:16,971 --> 00:17:27,970
+Speaker 0: Normal ish Netflix II watch II people if you've got four plus big time download II gamer Streamy piratey people, right?
+
+250
+00:17:28,430 --> 00:17:32,690
+Speaker 0: That's where you're hitting the 1.2 terabytes and 10% of people falling into that category.
+
+251
+00:17:32,690 --> 00:17:37,747
+Speaker 0: 10% of like Comcast customer accounts falling into that category seems normal.
+
+252
+00:17:37,787 --> 00:17:37,947
+Speaker 0: right.
+
+253
+00:17:38,068 --> 00:17:39,011
+Speaker 0: one in ten How?
+
+254
+00:17:39,031 --> 00:17:49,835
+Speaker 1: but it is interesting because the parents this article the reason they didn't Enforce these cats before they enforce them everywhere except the Northeast like New York.
+
+255
+00:17:50,457 --> 00:17:56,770
+Speaker 1: and the reason they didn't enforce it here was specifically because Everyone here has access to files which is uncapped.
+
+256
+00:17:59,223 --> 00:18:01,049
+Speaker 1: Yep, like straight up which.
+
+257
+00:18:01,350 --> 00:18:03,036
+Speaker 1: that's the part that I think is interesting.
+
+258
+00:18:03,096 --> 00:18:13,460
+Speaker 1: Comcast basically admitted as part of this whole thing that Competition forced them to give better service to people who lived in places with more competition.
+
+259
+00:18:13,944 --> 00:18:14,891
+Speaker 1: And now they're saying fuck it.
+
+260
+00:18:15,012 --> 00:18:15,960
+Speaker 1: We're service for everybody.
+
+261
+00:18:18,060 --> 00:18:22,413
+Speaker 1: Mmm Zoom calls and things like that are also pushing people's bandwidth way up.
+
+262
+00:18:22,774 --> 00:18:24,360
+Speaker 0: They are using a lot.
+
+263
+00:18:24,500 --> 00:18:25,208
+Speaker 0: But I've got a kid.
+
+264
+00:18:25,389 --> 00:18:26,400
+Speaker 1: you've got two kids in school.
+
+265
+00:18:26,520 --> 00:18:30,818
+Speaker 1: They are on a video call for like seven hours a day five days a week.
+
+266
+00:18:31,821 --> 00:18:37,677
+Speaker 0: Sure, that is using a significant amount of bandwidth but zoom really is giving you low resolution video.
+
+267
+00:18:37,718 --> 00:18:40,225
+Speaker 0: those aren't 1080p Those aren't 1080p.
+
+268
+00:18:40,225 --> 00:18:41,772
+Speaker 0: 60 streams on zoom, right?
+
+269
+00:18:41,812 --> 00:18:46,611
+Speaker 0: Those are like 640 by 480 30 at maybe 15 frames, right?
+
+270
+00:18:46,631 --> 00:18:47,013
+Speaker 0: They're not.
+
+271
+00:18:47,274 --> 00:18:51,347
+Speaker 0: they're not high quality Yep, so the article.
+
+272
+00:18:51,428 --> 00:18:53,014
+Speaker 1: you can read this article to see all the details like.
+
+273
+00:18:53,054 --> 00:19:01,613
+Speaker 1: I don't dive into it but there's some interesting points here about how The data caps don't actually protect like the networks in any way.
+
+274
+00:19:01,673 --> 00:19:03,820
+Speaker 1: They're solely not a monetization.
+
+275
+00:19:04,680 --> 00:19:08,720
+Speaker 1: Absolutely, it does not cost them materially more to hazard that bandwidth.
+
+276
+00:19:09,482 --> 00:19:11,890
+Speaker 0: It once you have the cable set up it did.
+
+277
+00:19:11,930 --> 00:19:14,760
+Speaker 0: the marginal cost of data moving over the cable is zero.
+
+278
+00:19:15,061 --> 00:19:15,684
+Speaker 0: I think it's it.
+
+279
+00:19:15,704 --> 00:19:16,308
+Speaker 0: Well, it's not zero.
+
+280
+00:19:16,348 --> 00:19:17,051
+Speaker 0: It's the electricity.
+
+281
+00:19:17,212 --> 00:19:17,534
+Speaker 0: That's it.
+
+282
+00:19:17,675 --> 00:19:22,420
+Speaker 0: Yep, right the laser Whatever it is, and this goes back to an original the laser is gonna be on all day.
+
+283
+00:19:22,540 --> 00:19:23,162
+Speaker 0: So it's like you're.
+
+284
+00:19:23,564 --> 00:19:28,479
+Speaker 1: it's just a fixed cost basically, but we've talked about this a lot and I'm gonna keep saying it.
+
+285
+00:19:29,401 --> 00:19:34,960
+Speaker 1: Internet access needs to be provided by the US post service postal service in America and be a guaranteed.
+
+286
+00:19:35,061 --> 00:19:37,980
+Speaker 0: Doesn't that mean it doesn't have to be the post office specifically?
+
+287
+00:19:38,140 --> 00:19:49,780
+Speaker 0: But it's just like it should be a guaranteed thing the same way that telephone service was and like a private company could be allowed to provide an ISP To compete with that, but it could be some sort of weird.
+
+288
+00:19:50,803 --> 00:19:56,217
+Speaker 0: It just needs to be mandated and regulated at the same way that all the other just utilities are.
+
+289
+00:19:56,277 --> 00:19:59,408
+Speaker 0: it shouldn't be like this special service you subscribe to.
+
+290
+00:19:59,468 --> 00:20:06,940
+Speaker 0: right the way it is now in the US at least is Paying an ISP for internet access is no different than paying like Netflix for a subscription.
+
+291
+00:20:07,141 --> 00:20:10,740
+Speaker 1: It's a luxury magazine treated like a luxury, but it's really a necessity.
+
+292
+00:20:10,841 --> 00:20:14,003
+Speaker 1: It's as important as electricity and water in the modern It needs to be.
+
+293
+00:20:14,043 --> 00:20:17,799
+Speaker 0: it needs to be the same as you know, telephone electricity water, etc.
+
+294
+00:20:18,421 --> 00:20:32,160
+Speaker 0: And also by the way, this is not true in the US but it should be is that if you fail to pay a water electric heating Internet phone bill that they shouldn't be able to cut it off.
+
+295
+00:20:32,762 --> 00:20:38,580
+Speaker 0: They should never be allowed to cut you off unless the place to which the service is being provided is truly uninhabited.
+
+296
+00:20:38,821 --> 00:20:42,640
+Speaker 0: Otherwise, they should not be able to cut you off no matter how much bill you fail to pay.
+
+297
+00:20:42,941 --> 00:20:43,703
+Speaker 1: There are limited.
+
+298
+00:20:43,723 --> 00:20:47,555
+Speaker 1: there are certain rules around electricity in the US for people.
+
+299
+00:20:47,575 --> 00:20:53,875
+Speaker 1: if someone registers that in their house They have like certain kinds of medical equipment, but those protections are few and far between.
+
+300
+00:20:54,176 --> 00:20:54,798
+Speaker 1: and for internet.
+
+301
+00:20:54,858 --> 00:20:57,605
+Speaker 0: There's nothing Yep, I mean for phones.
+
+302
+00:20:57,686 --> 00:21:02,920
+Speaker 0: all there is is if you don't pay your phone bill the phone will still call 911 and nothing else.
+
+303
+00:21:03,100 --> 00:21:14,258
+Speaker 1: Yep, also, don't forget a lot of people don't realize this especially younger people if you have an old cell phone It can always call 911 even if there's no SIM card any any telephone in the United States.
+
+304
+00:21:14,338 --> 00:21:26,449
+Speaker 0: that is like hooked up in any way like op functioning right plugged into the wall a cell phone with no SIM card that still powers on properly if It's a United States phone in the US.
+
+305
+00:21:26,630 --> 00:21:28,054
+Speaker 0: You can call 911 on it.
+
+306
+00:21:28,175 --> 00:21:36,532
+Speaker 0: No matter what, right so You can pick up like a $1 flip phone That is 3g on like about razor or something from.
+
+307
+00:21:36,552 --> 00:21:44,220
+Speaker 0: you know, it'll actually be pretty cool to have a flip Right in 2020 that can call 911 even though it can't call anything.
+
+308
+00:21:44,381 --> 00:21:46,510
+Speaker 0: I realize you could actually get service for it and call.
+
+309
+00:21:46,812 --> 00:21:54,360
+Speaker 1: when I was migrating my phone I actually forgot to migrate the SIM card and didn't notice for like two weeks cuz how would I notice?
+
+310
+00:21:55,340 --> 00:21:56,686
+Speaker 0: Yeah, how would you do the iPhone?
+
+311
+00:21:56,767 --> 00:22:04,699
+Speaker 0: So I don't know if you know this but when you migrate an iPhone All you do is hold your old iPhone near your new one and that's it
+
+312
+00:22:05,080 --> 00:22:11,860
+Speaker 1: Yep, actually the so androids don't like have the same thing by default, but the sony has one little thing built in that'll do that.
+
+313
+00:22:13,442 --> 00:22:18,450
+Speaker 0: Yeah, but like you turn on a new iPhone and since I when I bought it I bought it from Apple and I know where they already knew who I was.
+
+314
+00:22:18,470 --> 00:22:20,680
+Speaker 0: they knew right they knew my Verizon account.
+
+315
+00:22:20,680 --> 00:22:23,751
+Speaker 0: So they're just like hey Scott hold your old iPhone near this new one.
+
+316
+00:22:24,292 --> 00:22:25,637
+Speaker 0: All right, and then it just worked.
+
+317
+00:22:25,858 --> 00:22:28,747
+Speaker 0: the end So apps everything.
+
+318
+00:22:29,169 --> 00:22:34,712
+Speaker 1: so in some other news we can't go too deep into it now But those Apple m1 chips are out and there's.
+
+319
+00:22:35,214 --> 00:22:37,279
+Speaker 1: there's a lot going on there Yep.
+
+320
+00:22:37,400 --> 00:22:47,703
+Speaker 0: so the all you really need to know long and short of it is that the Apple m1 CPU by all accounts and benchmarks and things we've seen is Up to the hype.
+
+321
+00:22:47,844 --> 00:22:53,440
+Speaker 0: it is maybe the best consumer CPU general-purpose CPU available.
+
+322
+00:22:54,401 --> 00:23:05,020
+Speaker 0: Period right - right short of like maybe some ridiculously overclocked i9s or something with the caveat Nonsense that that is only true just like the old days with those alpha chips.
+
+323
+00:23:05,462 --> 00:23:07,611
+Speaker 1: It's only true if your shit is compiled for them.
+
+324
+00:23:08,394 --> 00:23:08,575
+Speaker 0: Yep.
+
+325
+00:23:08,655 --> 00:23:09,217
+Speaker 0: Well, that's true.
+
+326
+00:23:09,338 --> 00:23:18,676
+Speaker 0: Well, no Well, actually I saw some benchmarks that were indicating that there were some x86 programs and not jokey ones like even Adobe ones.
+
+327
+00:23:18,737 --> 00:23:31,383
+Speaker 0: Yeah that Using Apple's Rosetta - right - emulation API whatever layer they have to make x86 apps run on the ARM CPU We're.
+
+328
+00:23:31,443 --> 00:23:37,700
+Speaker 0: actually it's the chip is so good that they were running faster through Rosetta - than they were on native chips.
+
+329
+00:23:37,901 --> 00:23:41,600
+Speaker 1: Now I saw talk of that too, but I didn't actually read those articles yet.
+
+330
+00:23:41,700 --> 00:23:42,847
+Speaker 1: So I'm not I wasn't like sure.
+
+331
+00:23:43,651 --> 00:23:45,240
+Speaker 0: the point is it's ridiculously fast.
+
+332
+00:23:45,381 --> 00:23:56,406
+Speaker 0: The problem is as always with Apple is that the GPU That they give you that sort of built-in is not shabby and they have you know All their their fancy metal.
+
+333
+00:23:56,507 --> 00:24:00,420
+Speaker 0: whatever GPU stuff like you can get good graphics going on an Apple computer.
+
+334
+00:24:00,480 --> 00:24:00,802
+Speaker 0: There's no.
+
+335
+00:24:00,842 --> 00:24:04,719
+Speaker 1: even got the neural engine type stuff that like a modern Nvidia card has.
+
+336
+00:24:05,802 --> 00:24:09,120
+Speaker 0: Yeah, well, I mean that's all built into the the CPU even on I've got right.
+
+337
+00:24:10,420 --> 00:24:18,115
+Speaker 0: But that GPU is still compared to like an Nvidia even 2080. yeah, like it's not.
+
+338
+00:24:18,276 --> 00:24:25,080
+Speaker 0: it's not it Right, and the reason is because the the ARM CPU that Apple has is actually cares about being power efficient, right?
+
+339
+00:24:25,340 --> 00:24:26,959
+Speaker 0: They won't want your battery to just die.
+
+340
+00:24:27,482 --> 00:24:30,454
+Speaker 0: Nvidia GPUs ARM, you know AMD GPUs.
+
+341
+00:24:30,855 --> 00:24:32,000
+Speaker 0: They don't give a shit about power.
+
+342
+00:24:32,080 --> 00:24:35,054
+Speaker 0: Look how you have to plug extra power cables into them from your powers.
+
+343
+00:24:35,114 --> 00:24:36,561
+Speaker 1: I actually get a 3080.
+
+344
+00:24:36,561 --> 00:24:37,485
+Speaker 1: I did the calculation.
+
+345
+00:24:37,505 --> 00:24:40,900
+Speaker 1: I have to upgrade the fucking power supply in my computer, right?
+
+346
+00:24:41,020 --> 00:24:44,480
+Speaker 0: Is there basically like hot rods with the engine sticking out the top of the hood?
+
+347
+00:24:44,580 --> 00:24:48,019
+Speaker 0: That's why they're so fast because they're just like give me that electricity room
+
+348
+00:24:48,320 --> 00:24:53,900
+Speaker 1: Right and one end there because most people do not need that kind of power and it'd be better people use less
+
+349
+00:24:54,121 --> 00:24:54,502
+Speaker 0: Exactly,
+
+350
+00:24:54,782 --> 00:25:00,739
+Speaker 1: but at the same time it means apples will continue to be completely useless for the vast majority of gaming.
+
+351
+00:25:00,759 --> 00:25:04,014
+Speaker 0: if Apple made a computer, right?
+
+352
+00:25:04,054 --> 00:25:04,536
+Speaker 0: I don't know why.
+
+353
+00:25:04,577 --> 00:25:05,160
+Speaker 0: the Mac Pro?
+
+354
+00:25:05,240 --> 00:25:06,345
+Speaker 0: They don't just fucking do it.
+
+355
+00:25:06,686 --> 00:25:10,100
+Speaker 0: put the m1 or like m1 bionic that they'll come out with of course.
+
+356
+00:25:11,141 --> 00:25:13,027
+Speaker 1: Let me just put a real video card in there.
+
+357
+00:25:13,267 --> 00:25:27,640
+Speaker 0: put a fucking Nvidia 3080 in there and that will be the most powerful desktop computer on earth no question and Everyone will pretty much have no choice If they want the powerful computer to do any sort of professional work to buy that computer?
+
+358
+00:25:27,720 --> 00:25:34,480
+Speaker 0: Yes Intel even AMD which is burning out Intel because Intel's in the deep shit won't be able to hold any candles to that.
+
+359
+00:25:34,962 --> 00:25:36,328
+Speaker 0: I would even maybe have to buy one.
+
+360
+00:25:36,529 --> 00:25:39,100
+Speaker 0: and you know five or six years from now when I get a computer.
+
+361
+00:25:39,723 --> 00:25:42,997
+Speaker 0: So my advice is there's still hiccups now because it's still.
+
+362
+00:25:43,379 --> 00:25:48,019
+Speaker 0: you know People are still recompiling their software to get it over to ARM and all that, right?
+
+363
+00:25:49,300 --> 00:25:52,459
+Speaker 0: The m2 I think is gonna be unbelievable.
+
+364
+00:25:53,182 --> 00:26:02,319
+Speaker 1: I'm glad I'm at a point where I can wait because I spent a lot of money on my workstation Years, I say if right your current computer hold on to it as long as you can.
+
+365
+00:26:02,801 --> 00:26:15,040
+Speaker 0: But if your current computer is right wait one to two years to see that m2 CPU come out Before you go and buy an Intel or an AMD CPU or something else.
+
+366
+00:26:15,501 --> 00:26:20,099
+Speaker 0: Right because it is probably gonna be like think about the difference between an iPhone one and an iPhone 3g.
+
+367
+00:26:20,560 --> 00:26:25,576
+Speaker 0: Look at how like the I the crappy iPod versus like iPod nano, right?
+
+368
+00:26:25,837 --> 00:26:27,666
+Speaker 0: That's the kind of jump We're gonna see here.
+
+369
+00:26:27,747 --> 00:26:29,560
+Speaker 0: and the the one is already ridiculous.
+
+370
+00:26:29,683 --> 00:26:34,452
+Speaker 1: Yeah No, it has one caveat, but this will not up.
+
+371
+00:26:34,492 --> 00:26:36,260
+Speaker 1: that's important other than the video card thing.
+
+372
+00:26:36,360 --> 00:26:37,966
+Speaker 1: That does not really apply to most people.
+
+373
+00:26:38,508 --> 00:26:39,832
+Speaker 0: the 16 Meg 16 gigs ram.
+
+374
+00:26:40,013 --> 00:26:41,920
+Speaker 1: Yeah, you cannot have that much RAM.
+
+375
+00:26:42,582 --> 00:26:45,152
+Speaker 0: You can't have more than 16 gigs ram and you know why.
+
+376
+00:26:45,172 --> 00:26:47,200
+Speaker 0: it's actually sort of a plus and a minus.
+
+377
+00:26:47,623 --> 00:26:48,551
+Speaker 0: You can't add more RAM.
+
+378
+00:26:48,572 --> 00:26:49,620
+Speaker 0: You're stuck with 16.
+
+379
+00:26:49,620 --> 00:26:50,243
+Speaker 0: It's like okay.
+
+380
+00:26:50,243 --> 00:26:51,830
+Speaker 0: 16 is enough, but I like having 32.
+
+381
+00:26:51,830 --> 00:26:53,859
+Speaker 0: I've had 32 for a long time, right?
+
+382
+00:26:54,542 --> 00:26:57,010
+Speaker 0: But why can't you have more than 16?
+
+383
+00:26:57,010 --> 00:27:00,100
+Speaker 0: because they put the 16 gigs of RAM in the damn chip.
+
+384
+00:27:00,321 --> 00:27:02,428
+Speaker 0: It's not dims over next to the chip.
+
+385
+00:27:02,528 --> 00:27:03,933
+Speaker 0: It's fucking in the CPU.
+
+386
+00:27:03,993 --> 00:27:05,117
+Speaker 0: The RAM is in there.
+
+387
+00:27:05,197 --> 00:27:05,960
+Speaker 0: It's inside.
+
+388
+00:27:06,100 --> 00:27:12,380
+Speaker 0: It's the fastest goddamn RAM you can get maybe anywhere but definitely in a consumer computer.
+
+389
+00:27:13,160 --> 00:27:14,466
+Speaker 0: It's sort of unbelievable.
+
+390
+00:27:14,506 --> 00:27:17,580
+Speaker 0: Do you would you rather have twice as much or would you rather have half as much?
+
+391
+00:27:18,000 --> 00:27:23,960
+Speaker 1: That's like ridiculously fast, but there is one thing that it will not be able to do better right now.
+
+392
+00:27:24,162 --> 00:27:29,799
+Speaker 1: but this is such an edge case that it You probably takes more than 16 gigs of RAM at once.
+
+393
+00:27:30,462 --> 00:27:35,680
+Speaker 1: Oh, I mean, I've used more than 16 gigs around when I'm editing video and doing effects that I can't render in GPU.
+
+394
+00:27:36,663 --> 00:27:40,707
+Speaker 0: Yeah, I'm pretty sure stabilizers Like I can do that.
+
+395
+00:27:41,129 --> 00:27:59,194
+Speaker 1: I have a feeling if you buy like a Mac Well, this is what I wonder it has how we'll just fine extreme high-end Rendering stuff work on this compared to like an Intel box with a real GPU I'm sure it will be possibly if not comparable.
+
+396
+00:27:59,475 --> 00:28:00,178
+Speaker 0: It might be better.
+
+397
+00:28:00,258 --> 00:28:04,220
+Speaker 0: I can't imagine I don't know, but if you could be it could be worse.
+
+398
+00:28:04,300 --> 00:28:07,540
+Speaker 0: But if it is worse, it will will be slightly worse not severely.
+
+399
+00:28:07,583 --> 00:28:27,627
+Speaker 1: Yeah If you're doing stuff that is usually only the realm of like Wall Street or like weird performance computing Where the task you are doing is bound primarily by number of transactions per second as opposed to any other factor Like an old Pentium 3 could theoretically outperform this thing for a single threaded Like direct task.
+
+400
+00:28:27,748 --> 00:28:38,149
+Speaker 1: if you overclocked it because it maxes out at 3.2 gigahertz It's not super comparable to like the clock speed of an Intel or an AMD chip Because it's a different instruction set.
+
+401
+00:28:38,290 --> 00:28:40,579
+Speaker 1: what it can do with one clock tick is different.
+
+402
+00:28:41,402 --> 00:28:51,280
+Speaker 1: But true if you're if you're doing very discrete linear non-parallel things 3.2 gigahertz is kind of slow, but it's not that much slower.
+
+403
+00:28:51,641 --> 00:28:57,599
+Speaker 1: The best in Intel chips gonna do without overclocking it is like four four and a half like you're not that much faster.
+
+404
+00:28:58,307 --> 00:28:58,980
+Speaker 0: Well, I mean, you know.
+
+405
+00:28:59,040 --> 00:29:04,095
+Speaker 0: But if you're taking advantage of neural engine how many less how much more efficient is your program?
+
+406
+00:29:04,155 --> 00:29:12,677
+Speaker 0: if your program is suddenly like big Oh and instead of big oh, you know, yeah and log the neural engine only apply to the GPU rendering though.
+
+407
+00:29:12,697 --> 00:29:14,262
+Speaker 0: I Don't.
+
+408
+00:29:14,363 --> 00:29:16,820
+Speaker 1: I thought that only applied to regular units for GPU stuff.
+
+409
+00:29:17,902 --> 00:29:21,379
+Speaker 0: I'm pretty sure it's for like any sort of like machine learning type.
+
+410
+00:29:21,459 --> 00:29:24,431
+Speaker 1: Oh, yeah You could run machine learning stuff on it or you can run.
+
+411
+00:29:24,452 --> 00:29:27,403
+Speaker 1: you can use it for rendering because that's why the E80 is so big.
+
+412
+00:29:27,423 --> 00:29:30,735
+Speaker 1: the 3080 can do AI rendering or like.
+
+413
+00:29:30,776 --> 00:29:35,059
+Speaker 1: when the CUDA cores first came out You could run software that just uses them to do AI stuff directly.
+
+414
+00:29:36,381 --> 00:29:41,200
+Speaker 0: But I mean pretty much any application that you have you that you can map to the neural engines.
+
+415
+00:29:41,561 --> 00:29:42,684
+Speaker 0: You know functionality.
+
+416
+00:29:42,825 --> 00:29:49,598
+Speaker 1: just like when early video cards and we had those CUDA cores people could write software that would map to CUDA cores And get ridiculous performance.
+
+417
+00:29:50,565 --> 00:29:53,200
+Speaker 1: Yep, but yeah, this is my point that point about the clock speeds.
+
+418
+00:29:54,461 --> 00:29:57,231
+Speaker 1: But unless you already know that this applies to you.
+
+419
+00:29:57,251 --> 00:29:59,338
+Speaker 1: It definitely does not apply to anything you're doing.
+
+420
+00:30:00,647 --> 00:30:03,423
+Speaker 1: Yeah And some other really brief news.
+
+421
+00:30:03,704 --> 00:30:11,379
+Speaker 1: you might have seen that Twitter if you're using the regular Twitter app a bunch of broken weird stuff appeared at the top that everyone's trying to ignore.
+
+422
+00:30:13,401 --> 00:30:21,333
+Speaker 1: Twitter added a feature that basically no one seemed to want as they keep doing Probably to try to compete with like tick tock or whatever.
+
+423
+00:30:21,795 --> 00:30:30,849
+Speaker 1: They basically added Ephemeral tweets that they call fleets that you can fleet something and 24 hours later Seen or used a fleet.
+
+424
+00:30:30,949 --> 00:30:35,409
+Speaker 0: because I don't use the default Twitter app on any platform I use tweet deck tweet by.
+
+425
+00:30:35,489 --> 00:30:45,476
+Speaker 1: I installed the regular app again And I posted one fleet that asked Twitter why they made this harassment prone abusive feature instead of just banning the Nazis And then I uninstalled the client again.
+
+426
+00:30:46,382 --> 00:30:48,754
+Speaker 1: Yeah, so there is a fleet out there that I posted.
+
+427
+00:30:48,795 --> 00:30:49,699
+Speaker 1: I guess you can still see it.
+
+428
+00:30:51,020 --> 00:30:55,640
+Speaker 1: Hmm, but I guess I'm not gonna go deep into it because it's not super tech news.
+
+429
+00:30:56,142 --> 00:30:59,619
+Speaker 1: Twitter's a company that is in the tech sector social media, etc.
+
+430
+00:30:59,961 --> 00:31:06,263
+Speaker 1: But the thing that bothers me about fleet specifically that you should think about forget the annoyance of them adding a feature Like.
+
+431
+00:31:06,283 --> 00:31:07,412
+Speaker 1: there's a lot of reasons for that.
+
+432
+00:31:07,452 --> 00:31:08,219
+Speaker 1: We can talk about it.
+
+433
+00:31:08,721 --> 00:31:13,340
+Speaker 1: The problem is this is the kind of feature that is extremely prone to abuse.
+
+434
+00:31:13,803 --> 00:31:23,140
+Speaker 1: I can make a tweet that adds someone and Harasses them or gets my love followers to harass that person that automatically disappears in 24 hours to cover my tracks.
+
+435
+00:31:23,942 --> 00:31:25,279
+Speaker 1: That's how well gonna get used.
+
+436
+00:31:26,083 --> 00:31:31,443
+Speaker 0: Right, of course, but Twitter like no one else would be able to see like, you know You like.
+
+437
+00:31:31,463 --> 00:31:36,567
+Speaker 0: if I harass someone and you don't hear about it for a day You wouldn't be able to see that.
+
+438
+00:31:36,607 --> 00:31:42,427
+Speaker 0: I did that but Twitter would presumably not actually delete them But just remove them from visibility.
+
+439
+00:31:42,447 --> 00:31:45,620
+Speaker 0: Yep, and therefore could then still find people who had done her.
+
+440
+00:31:45,841 --> 00:31:55,923
+Speaker 1: I don't like but they tend not to and what this means that you can't do is if you are Harassed it is very hard to prove your case without taking Twitter to court To get that.
+
+441
+00:31:56,024 --> 00:31:56,405
+Speaker 0: also.
+
+442
+00:31:56,767 --> 00:32:03,810
+Speaker 0: there was Twitter apparently did have some problems where yes You could actually access fleets 24 hours after due to.
+
+443
+00:32:03,830 --> 00:32:05,936
+Speaker 1: I just saw that news.
+
+444
+00:32:06,017 --> 00:32:09,010
+Speaker 0: I didn't read the article yet Which proves that I think they're.
+
+445
+00:32:09,030 --> 00:32:10,980
+Speaker 0: you know, like I said, they're not actually deleting them.
+
+446
+00:32:10,980 --> 00:32:16,538
+Speaker 0: They're just you know, basically to change the SQL query is like select fleets where date time less than 24 hours, right?
+
+447
+00:32:18,066 --> 00:32:20,280
+Speaker 0: And they're keeping all the fleets forever in the database.
+
+448
+00:32:21,261 --> 00:32:31,078
+Speaker 0: But I think they're gonna fix that query or it's to make it so that through no public facing API Can anyone access old fleets and only internal people can access them?
+
+449
+00:32:31,259 --> 00:32:40,119
+Speaker 1: Yep so last and least and I have almost nothing to say about this turns out the GIMP is 25 years old.
+
+450
+00:32:42,456 --> 00:32:44,330
+Speaker 1: It had its birthday today.
+
+451
+00:32:44,450 --> 00:32:45,797
+Speaker 0: No the cause.
+
+452
+00:32:45,817 --> 00:32:47,365
+Speaker 0: there's a lot of things with birthdays lately.
+
+453
+00:32:47,405 --> 00:32:50,715
+Speaker 0: Mario's 35 Right.
+
+454
+00:32:50,755 --> 00:32:53,493
+Speaker 0: What else is Microsoft Windows is 35.
+
+455
+00:32:53,493 --> 00:33:00,850
+Speaker 1: so I went and I looked at the GIMP to see like how because I you know, I just use Photoshop since I started paying for Adobe like I haven't I haven't looked at the GIMP in so long.
+
+456
+00:33:01,312 --> 00:33:02,298
+Speaker 1: So I open it up to see.
+
+457
+00:33:02,398 --> 00:33:08,062
+Speaker 1: hey, I know it's been like falling behind Commercial tools further and further, but it's real bad.
+
+458
+00:33:08,242 --> 00:33:09,668
+Speaker 0: How bad can real Photoshop?
+
+459
+00:33:09,789 --> 00:33:12,118
+Speaker 1: it is unusable.
+
+460
+00:33:12,831 --> 00:33:19,189
+Speaker 0: Photoshop just added a feature where you can automatically replace the sky in a photo with a different sky.
+
+461
+00:33:19,289 --> 00:33:30,950
+Speaker 0: Photoshop Just like a feature right a picture of Scott and tell Photoshop to make him happier and look at the looks like People who are like, you know, I don't need that whatever but it's like you don't understand.
+
+462
+00:33:31,171 --> 00:33:35,266
+Speaker 0: There's someone else who does need that and that's why Photoshop costs that amount of money.
+
+463
+00:33:35,327 --> 00:33:36,090
+Speaker 0: if you don't need that.
+
+464
+00:33:36,553 --> 00:33:38,450
+Speaker 0: Yeah, go use junky old GIMP, right?
+
+465
+00:33:39,094 --> 00:33:45,850
+Speaker 1: But even then all GIMP can do well Like I was trying to use the GIMP a little bit is you can resize images and that's pretty much it.
+
+466
+00:33:45,931 --> 00:33:52,988
+Speaker 0: I still can't use the vast majority the vast majority of image editing that people need to do normal people on a daily basis.
+
+467
+00:33:53,048 --> 00:33:56,798
+Speaker 0: resize is Crop resize filter and you know what?
+
+468
+00:33:57,079 --> 00:33:58,102
+Speaker 0: You don't need to use the GIMP.
+
+469
+00:33:58,143 --> 00:34:00,350
+Speaker 0: There's a million little phone apps that do that.
+
+470
+00:34:00,410 --> 00:34:04,503
+Speaker 0: There's now Windows like Windows has the the windows built-in photos app.
+
+471
+00:34:04,523 --> 00:34:05,567
+Speaker 0: It's called photos.
+
+472
+00:34:05,627 --> 00:34:07,856
+Speaker 0: It's just Windows 10 You can do.
+
+473
+00:34:07,956 --> 00:34:10,750
+Speaker 0: you can crop edit whatever with that little app you don't need.
+
+474
+00:34:11,839 --> 00:34:12,105
+Speaker 0: You know.
+
+475
+00:34:12,975 --> 00:34:14,949
+Speaker 0: There there is just like photos on Windows.
+
+476
+00:34:15,070 --> 00:34:16,597
+Speaker 0: This is Windows 10. this.
+
+477
+00:34:16,899 --> 00:34:20,830
+Speaker 1: the reason I bring this news up is it brings a culmination something I've talked about off and on over the years.
+
+478
+00:34:20,870 --> 00:34:40,149
+Speaker 1: I haven't talked about this on geek nights in like a decade But there was an era when like a bunch of open source desktop Applications appeared like the GIMP open office and at the time They did most of what the commercial equivalents would do and as a result they were for most people actually better because they were free
+
+479
+00:34:41,331 --> 00:34:46,030
+Speaker 0: Exactly open office compared to Microsoft Office at the time was just like put any Microsoft Office.
+
+480
+00:34:46,571 --> 00:35:18,369
+Speaker 1: But what the GIMP lacks and what a lot of these open source desktop projects lack aside from UX aside from like documentation aside from like actually thinking about what people want to do they lacked R&D and The features that got added to like Photoshop equivalents over the years could not be replicated by the open source community and this argument that Open source tools will be will be able to like sustain this baseline usage among people Didn't really pan out for a lot of sectors
+
+481
+00:35:18,530 --> 00:35:19,410
+Speaker 0: All right.
+
+482
+00:35:19,410 --> 00:35:19,892
+Speaker 0: Well, I mean it.
+
+483
+00:35:19,992 --> 00:35:26,889
+Speaker 0: you could easily look at features that that the professional abs developed and sort of cop Try to copy them which is what these things tended to do.
+
+484
+00:35:27,050 --> 00:35:30,410
+Speaker 1: But they got a point where those features are very difficult to develop, right?
+
+485
+00:35:30,510 --> 00:35:32,457
+Speaker 0: We've reached the point where it's like, yeah.
+
+486
+00:35:32,558 --> 00:35:36,050
+Speaker 0: Okay, you want to copy the you know, you want to copy the cropper?
+
+487
+00:35:36,191 --> 00:35:36,897
+Speaker 0: We can copy that.
+
+488
+00:35:36,978 --> 00:35:38,330
+Speaker 0: Yeah, you want to copy brushes?
+
+489
+00:35:38,654 --> 00:35:49,451
+Speaker 0: Okay We can copy customizable brushes and then it's up to the people to make the brushes themselves copy the entirety of the like alpha masking layer stuff that Photoshop does Right.
+
+490
+00:35:50,013 --> 00:35:50,314
+Speaker 0: Okay.
+
+491
+00:35:50,334 --> 00:35:54,244
+Speaker 0: We got a copy the sky replacer and it's like who's gonna copy.
+
+492
+00:35:54,284 --> 00:36:08,030
+Speaker 0: who's gonna sit there and code the Sky replacer, you know on their own for free give it away for free and it's gonna work as good as if not better than The Photoshop one to the point at which a professional photographer can actually use it.
+
+493
+00:36:08,070 --> 00:36:12,490
+Speaker 0: No, no, no, but basically anyone who is anyone who is good enough to code.
+
+494
+00:36:12,570 --> 00:36:15,325
+Speaker 0: The sky replacer is already working at Adobe.
+
+495
+00:36:15,385 --> 00:36:21,305
+Speaker 1: their archer set sir Right, but and like audacity is a good example of this too.
+
+496
+00:36:21,606 --> 00:36:33,790
+Speaker 1: It's pretty good or Apple Yeah for audio But even like that all this open-source software They basically implemented all the relatively easy low-hanging fruit and they all kind of just stopped getting better.
+
+497
+00:36:35,452 --> 00:36:44,040
+Speaker 1: Mmm, and I don't know if open source like desktop applications will ever start progressing again at the rate that commercial software is.
+
+498
+00:36:46,173 --> 00:36:50,125
+Speaker 1: Yeah, I don't know - he's never gonna have a real D reverb.
+
+499
+00:36:50,165 --> 00:36:51,088
+Speaker 1: that just works.
+
+500
+00:36:51,409 --> 00:36:55,720
+Speaker 1: but Adobe Audition literally added a D reverb function.
+
+501
+00:36:55,800 --> 00:36:57,686
+Speaker 1: I can click a button it removes reverb.
+
+502
+00:36:58,028 --> 00:36:58,770
+Speaker 1: It just works.
+
+503
+00:36:58,991 --> 00:36:59,897
+Speaker 1: I don't have to do anything.
+
+504
+00:36:59,958 --> 00:37:01,045
+Speaker 1: It saves me so much time.
+
+505
+00:37:01,105 --> 00:37:01,468
+Speaker 1: It's like magic.
+
+506
+00:37:04,900 --> 00:37:05,669
+Speaker 0: It just cost you money.
+
+507
+00:37:06,853 --> 00:37:10,363
+Speaker 1: but anyway things Of the day.
+
+508
+00:37:10,685 --> 00:37:11,390
+Speaker 1: so check this out.
+
+509
+00:37:11,831 --> 00:37:27,649
+Speaker 1: I found a channel that is not what I've linked to before but it's about like civilian like civic engineering and dams and stuff And it's about how this particular turbine engine in a particular dam I think in got a screw dropped into it.
+
+510
+00:37:29,952 --> 00:37:42,710
+Speaker 1: Well, we do get to see like someone like starts grinding down the gears on this turbine but it's a. it's the turbine in a dam that is 92% efficient at turning water falling through it into electricity.
+
+511
+00:37:43,252 --> 00:37:46,642
+Speaker 0: Yeah, hydro is really good, but this is particularly efficient to hide.
+
+512
+00:37:46,663 --> 00:37:53,070
+Speaker 0: the side effects of hydro are not energy loss And if it at least not the major, it's environmental destruction in the local rights environmental structure.
+
+513
+00:37:53,090 --> 00:37:57,750
+Speaker 0: We're building a dam and flooding places and un flooding places and fishes and that sort of thing.
+
+514
+00:37:57,810 --> 00:38:10,232
+Speaker 1: Yep, but this video is really cool because it talks about how you get such an Extreme amount of efficiency from what is actually a very very simple physical device Like this.
+
+515
+00:38:10,272 --> 00:38:18,909
+Speaker 1: dam is not complicated by any measure No, but the reason I'm making this my thing of the day is not because of that.
+
+516
+00:38:19,831 --> 00:38:20,756
+Speaker 1: That alone is cool.
+
+517
+00:38:20,937 --> 00:38:21,581
+Speaker 1: Like this that can I?
+
+518
+00:38:21,601 --> 00:38:23,270
+Speaker 1: this is the kinds of videos I watch all the time.
+
+519
+00:38:23,351 --> 00:38:40,050
+Speaker 1: This is like just my jam But the reason I make is my thing of the day is about midway through the video the dude who is explaining it all Like the youtubey person who was like there in the dam interviewing people is sitting in a chair About a foot away from the actual spinning turbine
+
+520
+00:38:41,452 --> 00:38:41,553
+Speaker 0: Mmm,
+
+521
+00:38:42,014 --> 00:38:44,102
+Speaker 1: like just sitting there like if he touched it.
+
+522
+00:38:44,243 --> 00:38:46,129
+Speaker 1: I just imagined he would be turned into a mist
+
+523
+00:38:47,351 --> 00:38:48,095
+Speaker 0: Probably and
+
+524
+00:38:48,155 --> 00:39:04,090
+Speaker 1: then he turns around and he's very careful but he holds one of those little light bike generators up to it and holds a light bulb connected to it and Touches the spinning thing to this massive turbine for real and lights it up.
+
+525
+00:39:04,692 --> 00:39:09,870
+Speaker 1: And I had to like a cringe and actually like pause the video to figure out if this was an effect or real.
+
+526
+00:39:10,292 --> 00:39:10,675
+Speaker 1: He did it.
+
+527
+00:39:10,795 --> 00:39:13,210
+Speaker 1: He just sat there and touch this turbine.
+
+528
+00:39:15,152 --> 00:39:17,430
+Speaker 1: Okay, that is why this video is my thing of the day.
+
+529
+00:39:19,393 --> 00:39:22,167
+Speaker 1: Okay So what do you got?
+
+530
+00:39:23,550 --> 00:39:24,095
+Speaker 0: What do I have?
+
+531
+00:39:24,176 --> 00:39:25,690
+Speaker 0: so speaking of Photoshop?
+
+532
+00:39:25,871 --> 00:39:29,390
+Speaker 0: Here's some photographers that probably use some Photoshop judging by these images.
+
+533
+00:39:30,531 --> 00:39:39,941
+Speaker 0: So what we have here is the 2020 ocean photographer of the Year award From oceanographic magazine the winners and finalists.
+
+534
+00:39:39,961 --> 00:39:43,230
+Speaker 0: So we got a. you know, we like fishes you like oceans, right?
+
+535
+00:39:44,071 --> 00:39:47,079
+Speaker 0: Here are some really unbelievable photos.
+
+536
+00:39:47,179 --> 00:39:48,603
+Speaker 0: I can't believe this is someone's job.
+
+537
+00:39:48,643 --> 00:39:49,706
+Speaker 0: basically is to go to the.
+
+538
+00:39:49,987 --> 00:39:50,990
+Speaker 0: just take photos of the ocean.
+
+539
+00:39:51,050 --> 00:39:51,452
+Speaker 0: What do you do?
+
+540
+00:39:51,553 --> 00:39:52,577
+Speaker 0: I'm an ocean photographer.
+
+541
+00:39:52,597 --> 00:39:53,662
+Speaker 0: That's my whole job, right?
+
+542
+00:39:53,803 --> 00:39:54,707
+Speaker 0: There's people out there.
+
+543
+00:39:54,747 --> 00:40:05,423
+Speaker 0: That's their job and here is their greatest works of the year and I think it's something anyone can just really appreciate Unless you were really scared of fish or the sea.
+
+544
+00:40:05,443 --> 00:40:08,682
+Speaker 0: I Imagine most people will enjoy this right?
+
+545
+00:40:08,702 --> 00:40:12,782
+Speaker 0: This is some good photos Yeah, but it's the kind of you know, this is the kind of thing where it's like.
+
+546
+00:40:13,064 --> 00:40:21,997
+Speaker 0: it's something everyone would enjoy But it doesn't really go viral and get around even though it feels like everyone would like it And share it if they if it got to them.
+
+547
+00:40:22,138 --> 00:40:23,983
+Speaker 0: so stool spreading, right?
+
+548
+00:40:24,405 --> 00:40:24,786
+Speaker 0: All right.
+
+549
+00:40:24,826 --> 00:40:26,713
+Speaker 0: Appreciate some ocean Photographies.
+
+550
+00:40:27,135 --> 00:40:30,130
+Speaker 1: so in the better moment, we're still stuck at home.
+
+551
+00:40:30,351 --> 00:40:38,270
+Speaker 1: I have not read more tale of Genji because I have not received a message Saying that you have read more tale of Genji, but I received a message that you have escalated.
+
+552
+00:40:39,272 --> 00:40:39,956
+Speaker 0: No, I have not.
+
+553
+00:40:40,358 --> 00:40:42,349
+Speaker 1: In fact, I started reading another nonfiction book.
+
+554
+00:40:44,231 --> 00:40:45,335
+Speaker 0: I've read some comic books.
+
+555
+00:40:45,857 --> 00:40:46,942
+Speaker 1: I'm reading a lot of nonfiction.
+
+556
+00:40:47,605 --> 00:40:48,789
+Speaker 1: I did also finish decadence.
+
+557
+00:40:49,910 --> 00:40:50,914
+Speaker 0: Okay, it's good stuff.
+
+558
+00:40:51,757 --> 00:40:52,259
+Speaker 0: How about that?
+
+559
+00:40:52,359 --> 00:40:53,082
+Speaker 0: How about that dense?
+
+560
+00:40:53,584 --> 00:40:53,825
+Speaker 1: Yep.
+
+561
+00:40:53,945 --> 00:40:55,150
+Speaker 1: It was uh, it was decadent.
+
+562
+00:40:56,852 --> 00:40:59,970
+Speaker 1: There was a. there was a punch at the end that it was appropriately punchy.
+
+563
+00:41:01,150 --> 00:41:02,264
+Speaker 1: Yeah, it's a good show.
+
+564
+00:41:03,332 --> 00:41:05,539
+Speaker 1: So yeah, follow us like join our discord.
+
+565
+00:41:05,800 --> 00:41:06,964
+Speaker 1: our forums been hopping again.
+
+566
+00:41:07,345 --> 00:41:08,770
+Speaker 1: read our gig nights code of conduct.
+
+567
+00:41:08,850 --> 00:41:09,593
+Speaker 1: We've updated it.
+
+568
+00:41:09,974 --> 00:41:15,794
+Speaker 1: If you have feedback about our code of conduct, just check it out and get like get make some changes Give us pull
+
+569
+00:41:15,834 --> 00:41:22,803
+Speaker 0: requests or just tell us via any means of telling us things, you know You can also just use any means of telling us things to tell us things right?
+
+570
+00:41:22,823 --> 00:41:24,610
+Speaker 0: You can just like our DMS are open.
+
+571
+00:41:24,650 --> 00:41:29,110
+Speaker 0: You know, it's like email us, you know YouTube comment us forum post us.
+
+572
+00:41:29,230 --> 00:41:34,529
+Speaker 1: Yeah, might I respond right away depending on what you say, but yeah, I mean, yeah discord chat us.
+
+573
+00:41:34,730 --> 00:41:44,388
+Speaker 0: You know, I'm not working this week and after this week I'm only working seven more days this year and I then I will not be working again until January 4th.
+
+574
+00:41:45,131 --> 00:41:50,179
+Speaker 0: So you can expect me to be doing something Probably biking at least at the very least.
+
+575
+00:41:50,239 --> 00:42:05,390
+Speaker 0: I'll be doing more biking to nowhere in my house And you can watch me do that on my twitch channel and come talk to me because if people talk to me it makes it Go a lot faster Yeah, or at least feel like it's going a lot faster because I'm paying attention to chatting and not to my legs or whatever.
+
+576
+00:42:05,511 --> 00:42:10,035
+Speaker 0: So and that's another way you can DM us Talk to us.
+
+577
+00:42:10,276 --> 00:42:13,352
+Speaker 1: I also will say this I did a show reason celebrities You can't reach.
+
+578
+00:42:13,714 --> 00:42:21,303
+Speaker 1: we did a show recently on now ricochet the tooth the year 2000 mod to half-life Been playing it off and on on the private server.
+
+579
+00:42:21,343 --> 00:42:22,708
+Speaker 1: that super peachy set up.
+
+580
+00:42:24,053 --> 00:42:25,544
+Speaker 0: Yeah, we I'm ready for gaming.
+
+581
+00:42:25,625 --> 00:42:27,155
+Speaker 0: I'm not working I remind you.
+
+582
+00:42:27,679 --> 00:42:29,430
+Speaker 1: and uh ricochet is real fun.
+
+583
+00:42:29,570 --> 00:42:47,041
+Speaker 1: And what I've ever noticed is that when Scott and I play ricochet, we've only done it a few times so far One of us will dominate for a while, but then the other one will like remember some old strategy or gnosis or gain a skill and then that person will dominate for a while and we keep like Leapfrogging each other and ending up pretty even it's.
+
+584
+00:42:47,202 --> 00:42:48,829
+Speaker 1: uh, that game has depth.
+
+585
+00:42:49,832 --> 00:42:51,862
+Speaker 0: I still feel like on the maps that have an upper level.
+
+586
+00:42:51,942 --> 00:42:54,615
+Speaker 0: It's like get on the upper level alone Stay there pull down.
+
+587
+00:42:55,158 --> 00:43:01,417
+Speaker 1: Well when we were playing that big super multiplayer very It was whoever farmed the most like.
+
+588
+00:43:01,457 --> 00:43:09,680
+Speaker 1: sometimes I'd like I'd finally get up there and you've been farming power-ups the whole time and I Get up there and I see just a wave of decapitating ice.
+
+589
+00:43:09,761 --> 00:43:10,703
+Speaker 1: triple shots fast.
+
+590
+00:43:10,723 --> 00:43:15,199
+Speaker 1: Just like coming at me like a catastrophe Like what the fuck do you do?
+
+591
+00:43:15,219 --> 00:43:15,239
+Speaker 1: I?
+
+592
+00:43:16,850 --> 00:43:20,050
+Speaker 0: Just I stay up there alone bouncing back and forth and the power-ups coming.
+
+593
+00:43:20,110 --> 00:43:21,018
+Speaker 0: I wait for you to try to.
+
+594
+00:43:21,401 --> 00:43:23,438
+Speaker 0: it's like if you just stay at the bottom I'm ahead on the score.
+
+595
+00:43:23,478 --> 00:43:23,639
+Speaker 0: I could.
+
+596
+00:43:23,659 --> 00:43:33,069
+Speaker 1: just I don't have to fight you Where there's like two wizards and they're having a fight and they have like a beam of terrible power Just like crushing into the middle against each other.
+
+597
+00:43:33,512 --> 00:43:37,090
+Speaker 1: That's what it feels like with two powered up people in a ricochet game by themselves.
+
+598
+00:43:37,925 --> 00:43:43,214
+Speaker 0: Yeah I love it when there's a wave of discs coming at me like a whole big mess and then I dodge them all with my left Right dodging.
+
+599
+00:43:43,495 --> 00:43:45,562
+Speaker 0: It feels like dodging fireballs from imps and doom.
+
+600
+00:43:45,603 --> 00:43:46,586
+Speaker 0: It's like the same dodging.
+
+601
+00:43:46,727 --> 00:43:47,550
+Speaker 1: It is the same dodging.
+
+602
+00:43:47,773 --> 00:43:48,645
+Speaker 1: Ah, that game is so good.
+
+603
+00:43:49,633 --> 00:43:50,337
+Speaker 1: Yeah, let's get into it.
+
+604
+00:43:50,377 --> 00:43:59,670
+Speaker 1: We have not talked about this topic since April 3rd 2006. now I want to point out we call you run out of Monday ideas.
+
+605
+00:43:59,810 --> 00:44:09,104
+Speaker 0: Send your Monday ideas via any of the DMS but because our show is so old as 15 years old We can redo show ideas now and it'll actually be somewhat fresh now.
+
+606
+00:44:09,284 --> 00:44:11,010
+Speaker 0: also you have to resort to at this point.
+
+607
+00:44:11,171 --> 00:44:11,353
+Speaker 0: so
+
+608
+00:44:11,475 --> 00:44:12,566
+Speaker 1: this one in particular, uh
+
+609
+00:44:13,791 --> 00:44:14,374
+Speaker 0: The news
+
+610
+00:44:14,514 --> 00:44:33,082
+Speaker 1: on this day was that Microsoft virtual server started supporting Linux and also When we Recorded that episode of geek nights on that Monday We mostly explained in the show the difference between CRTs and LCDs and at the time I was still using a 21 inch CRT
+
+611
+00:44:35,530 --> 00:44:35,791
+Speaker 0: Plus.
+
+612
+00:44:35,831 --> 00:44:38,280
+Speaker 0: CRT is still even today have some advantages over.
+
+613
+00:44:38,301 --> 00:44:42,373
+Speaker 1: you want a really really high refresh rate Even the best.
+
+614
+00:44:42,514 --> 00:44:43,296
+Speaker 0: Yeah, even the best.
+
+615
+00:44:43,416 --> 00:44:51,286
+Speaker 0: Oh LED, you know LCD displays are still not as You know good in some ways as a CRT is.
+
+616
+00:44:51,326 --> 00:44:52,753
+Speaker 1: yeah Do you want?
+
+617
+00:44:52,914 --> 00:44:56,529
+Speaker 1: it's a really good zero latency and an extremely high refresh rate a CRT.
+
+618
+00:44:56,650 --> 00:45:02,310
+Speaker 0: So that's why you still you still see like, you know, Smash Brothers players, right using the CRT, right?
+
+619
+00:45:02,410 --> 00:45:04,085
+Speaker 0: Cuz you know, it's what you gotta do.
+
+620
+00:45:05,191 --> 00:45:06,955
+Speaker 1: But that changed a lot.
+
+621
+00:45:06,996 --> 00:45:09,401
+Speaker 1: smart TVs appeared ink appeared.
+
+622
+00:45:09,642 --> 00:45:10,925
+Speaker 1: There's a whole world.
+
+623
+00:45:10,965 --> 00:45:12,990
+Speaker 1: I'm looking at two 4k monitors right now.
+
+624
+00:45:13,776 --> 00:45:18,690
+Speaker 0: Yep OLEDs are a thing We've got you know, and the thing is it's not just monitors, right?
+
+625
+00:45:18,710 --> 00:45:23,509
+Speaker 0: You've got displays on all kinds of devices with all kinds of different properties and things to choose from.
+
+626
+00:45:24,673 --> 00:45:26,130
+Speaker 0: So it's just like a whole new world.
+
+627
+00:45:26,270 --> 00:45:31,124
+Speaker 0: So I guess I'll start with the most frequently used display by most people which is the television.
+
+628
+00:45:31,566 --> 00:45:32,990
+Speaker 0: and what's really happened with the television?
+
+629
+00:45:33,252 --> 00:45:35,590
+Speaker 0: Is you got LCDs but the OLED?
+
+630
+00:45:36,450 --> 00:45:49,973
+Speaker 0: TV is like the king and the thing with an OLED that's different from an LCD is it's sort of the same thing Right, the difference is that an LCD is a screen with pixels and the pixels change color and the light is a light That's separate.
+
+631
+00:45:50,013 --> 00:45:52,123
+Speaker 0: that shines through from the back and then haha.
+
+632
+00:45:52,164 --> 00:45:53,450
+Speaker 0: You can see the colors in the pixel.
+
+633
+00:45:53,470 --> 00:46:03,492
+Speaker 1: Yeah, and the pixels do like crystals basically move to change the polarization But exact they're only modifying the light that's coming through from that backlight Exactly.
+
+634
+00:46:03,532 --> 00:46:15,870
+Speaker 0: So the early LCD screens would have like a couple lights usually like at the bottom and top like light bulbs and They would die or they would dim or you'd have some parts of the screen being brighter than others and they had all problems.
+
+635
+00:46:16,292 --> 00:46:28,494
+Speaker 0: now when you see someone saying like you've got an LED TV an LED TV is just an LCD with a grid of LEDs behind the LCD screen to light it evenly With lower power.
+
+636
+00:46:28,836 --> 00:46:29,839
+Speaker 0: It's a thinner screen.
+
+637
+00:46:29,899 --> 00:46:33,530
+Speaker 0: It's better, but it's just better lights than just light bulbs, right?
+
+638
+00:46:34,671 --> 00:46:36,236
+Speaker 0: So then came along the OLED.
+
+639
+00:46:36,256 --> 00:46:40,890
+Speaker 0: so the OLED is an organic LED and what this is is really unbelievable.
+
+640
+00:46:41,718 --> 00:46:44,834
+Speaker 0: each pixel has its self-illuminating right.
+
+641
+00:46:44,874 --> 00:46:55,205
+Speaker 0: the pixels light themselves up and what this means is that the contrast ratio on an OLED screen is Unbelievable because a black pixel is fucking black.
+
+642
+00:46:55,265 --> 00:46:57,935
+Speaker 0: it turns its light off Right and you can't see.
+
+643
+00:46:57,955 --> 00:47:03,005
+Speaker 0: it's like so the dip on a screen has a light shining behind it at all times Right.
+
+644
+00:47:03,973 --> 00:47:11,309
+Speaker 0: Even the black pixels are still kind of gray because there's light shining through them Right and it can't block all the light with like a like a lead shield.
+
+645
+00:47:12,898 --> 00:47:14,050
+Speaker 0: It's just a crystal whatever.
+
+646
+00:47:15,311 --> 00:47:19,525
+Speaker 0: So an OLED screen the difference between the lit up parts and the dark parts.
+
+647
+00:47:19,605 --> 00:47:21,190
+Speaker 0: The contrast ratio is so high.
+
+648
+00:47:21,332 --> 00:47:22,629
+Speaker 0: It's really really beautiful.
+
+649
+00:47:23,932 --> 00:47:27,955
+Speaker 0: But the problem with LED screens is they are Expensive.
+
+650
+00:47:28,015 --> 00:47:29,442
+Speaker 0: they cost a lot even today.
+
+651
+00:47:29,462 --> 00:47:30,930
+Speaker 0: They cost a lot of fucking money.
+
+652
+00:47:31,432 --> 00:47:37,415
+Speaker 0: And the reason they cost so much money is because when they try to make them at the factory The yields are low.
+
+653
+00:47:37,516 --> 00:47:43,921
+Speaker 0: and what that means is when the factory spits out five screens or whatever some number of screens maybe ten screens.
+
+654
+00:47:44,689 --> 00:47:49,970
+Speaker 0: a Percentage of those screens do not pass QA like they're busted or the pixels are messed up.
+
+655
+00:47:49,970 --> 00:47:56,110
+Speaker 0: They're not good enough to actually sell to anybody and they have to recycle them or try again or throw them out or whatever.
+
+656
+00:47:56,632 --> 00:48:03,443
+Speaker 0: So when you buy a working OLED screen with all its pixels in good shape You're paying for a bunch of broken ones as well.
+
+657
+00:48:03,523 --> 00:48:04,569
+Speaker 0: And that's where all your money went.
+
+658
+00:48:06,332 --> 00:48:06,915
+Speaker 0: So that's a thing.
+
+659
+00:48:07,338 --> 00:48:07,499
+Speaker 1: Yep.
+
+660
+00:48:07,982 --> 00:48:09,350
+Speaker 1: And now we've also on top of that.
+
+661
+00:48:09,430 --> 00:48:11,197
+Speaker 1: we've got the dig at a 1080p or a 4k now TVs.
+
+662
+00:48:11,257 --> 00:48:19,608
+Speaker 1: a 4k TV is really not useful to people.
+
+663
+00:48:19,869 --> 00:48:30,010
+Speaker 0: yet Unless there are you have any Yep, and you're using it as a PC And you might be watching those 4k programs a lot, right.
+
+664
+00:48:30,050 --> 00:48:37,250
+Speaker 0: So if the things you're watching a lot happen to be in 4k a lot Maybe you've got you know, you're you're just super super movie person.
+
+665
+00:48:37,310 --> 00:48:47,762
+Speaker 0: You're buying those ultra boo rays that have 4k movies or you the sports you're watching or like NFL broadcasts are in 4k or something Right, then, you know Super Bowl is probably available in 4k - right.
+
+666
+00:48:47,802 --> 00:48:49,870
+Speaker 0: then maybe maybe you should get it, right?
+
+667
+00:48:50,370 --> 00:48:55,229
+Speaker 0: The HD PC obviously can do 4k but like I don't think the newest consoles the ps5 doesn't do 4k.
+
+668
+00:48:55,570 --> 00:48:56,875
+Speaker 0: I don't think right does it?
+
+669
+00:48:57,437 --> 00:48:58,079
+Speaker 1: I don't think so.
+
+670
+00:48:58,139 --> 00:49:01,802
+Speaker 1: No, I mean most people don't even run their computers at 4k even if they can.
+
+671
+00:49:03,152 --> 00:49:05,618
+Speaker 0: PS 5 4k resolution guide.
+
+672
+00:49:05,678 --> 00:49:06,119
+Speaker 0: Let's see.
+
+673
+00:49:06,661 --> 00:49:09,548
+Speaker 0: It seems like it can do it to some extent.
+
+674
+00:49:09,588 --> 00:49:10,470
+Speaker 0: but how many games?
+
+675
+00:49:11,110 --> 00:49:17,069
+Speaker 1: Yeah, how many games even if it's outputting 4k or I feel like it's upscaling as opposed to rendering in 4k.
+
+676
+00:49:18,437 --> 00:49:25,119
+Speaker 1: Just a change I Watch on my computer with my 4k monitor.
+
+677
+00:49:25,159 --> 00:49:26,622
+Speaker 1: I'm actually rendering in 4k.
+
+678
+00:49:26,642 --> 00:49:27,545
+Speaker 1: Yep.
+
+679
+00:49:27,585 --> 00:49:33,618
+Speaker 0: The the ps5 does support 4k 120 Hertz video output.
+
+680
+00:49:34,691 --> 00:49:47,610
+Speaker 0: So if you guess if you got a ps5 ps5 then maybe a 4k TV is a good idea Maybe maybe all right, it supports it to some extent and I wonder I bet it can play those fancy boo rays the upgrade ultra.
+
+681
+00:49:49,134 --> 00:49:54,330
+Speaker 0: Not that I would ever buy a physical media ever again in my life, but it probably can play those I'm guessing.
+
+682
+00:49:55,491 --> 00:50:02,640
+Speaker 0: See the final thing with TVs that's happened since 2006 is pretty much the smart TV has come to dominate And this is a problem.
+
+683
+00:50:03,143 --> 00:50:04,070
+Speaker 0: This is bad, right?
+
+684
+00:50:04,190 --> 00:50:10,949
+Speaker 0: so you want to go and buy a TV and like us you have no intention of using any of that smart TV bullshit.
+
+685
+00:50:10,969 --> 00:50:16,082
+Speaker 0: because Hey if you let the smart TV connect to the internet, right?
+
+686
+00:50:16,423 --> 00:50:18,890
+Speaker 0: You're just asking for a world of problems, right?
+
+687
+00:50:18,950 --> 00:50:25,990
+Speaker 0: this is a thing that has happened is because The software that you're basically I've seen a lot of smart TVs are bases Android phones in the TV.
+
+688
+00:50:26,572 --> 00:50:31,830
+Speaker 0: That's what they are a lot of them and that software is never getting updated and it's easily exploited.
+
+689
+00:50:32,372 --> 00:50:36,764
+Speaker 0: So your TV which eventually stops getting updates eventually gets hacked.
+
+690
+00:50:36,845 --> 00:50:46,190
+Speaker 0: and now you've got a TV in your house to spamming Emails to someone who knows what it's doing malwaring Attacking using up your bandwidth that is limited by Comcast, right?
+
+691
+00:50:46,450 --> 00:50:47,670
+Speaker 0: Who knows what the hell that thing's doing?
+
+692
+00:50:48,190 --> 00:50:55,063
+Speaker 0: And also the functionality of even the best smart TVs with the best UIs is Basically crap compared to even things.
+
+693
+00:50:55,103 --> 00:50:56,049
+Speaker 0: I don't like like the Roku.
+
+694
+00:50:56,351 --> 00:51:00,890
+Speaker 1: Yeah, the UI tend to be really unresponsive like even on fancy expensive OLED TVs.
+
+695
+00:51:00,950 --> 00:51:04,366
+Speaker 1: You'd be surprised how slowly they respond to commands.
+
+696
+00:51:04,908 --> 00:51:07,661
+Speaker 0: Yeah I mean if you've got the ps5, what do you you know?
+
+697
+00:51:07,681 --> 00:51:09,690
+Speaker 0: or a HD PC or Roku or anything?
+
+698
+00:51:10,530 --> 00:51:24,210
+Speaker 0: Chromecast and Apple TV all of those even though HD PC is the one true master, whatever the best one of all those the The the smart TV loses to everything.
+
+699
+00:51:24,230 --> 00:51:26,557
+Speaker 1: well like the apps a lot of times the apps will just like.
+
+700
+00:51:26,918 --> 00:51:34,421
+Speaker 1: I remember way back when people were using the Netflix apps that were Built-in to or the YouTube apps in particular that were built into their TVs.
+
+701
+00:51:34,882 --> 00:51:37,490
+Speaker 1: those YouTube apps would like one now block ads.
+
+702
+00:51:37,952 --> 00:51:41,687
+Speaker 1: Two didn't really like work the way YouTube normally works.
+
+703
+00:51:41,828 --> 00:51:50,710
+Speaker 1: and three Certain videos that were flagged with certain monetization settings would not show up Like you could not watch them because that was not treated like just a browser.
+
+704
+00:51:52,372 --> 00:52:02,213
+Speaker 1: All sorts of nonsense would happen and that's on top of all these security concerns and the inability to like update them Or even to understand in some cases what they're doing Yep.
+
+705
+00:52:02,595 --> 00:52:04,950
+Speaker 0: So the problem is you want to buy a TV that's not smart.
+
+706
+00:52:05,131 --> 00:52:06,416
+Speaker 0: There aren't a lot to choose from.
+
+707
+00:52:06,436 --> 00:52:10,010
+Speaker 0: there are some but not many and they're not necessarily the best displays.
+
+708
+00:52:10,293 --> 00:52:17,390
+Speaker 0: so what you can do is either a You can buy a smart TV and just not plug it into the internet and not use any of the smart stuff.
+
+709
+00:52:17,490 --> 00:52:20,990
+Speaker 0: Just use it as a screen and try to ignore the smart part as much as possible.
+
+710
+00:52:21,070 --> 00:52:23,199
+Speaker 0: Yeah smart part in quotes.
+
+711
+00:52:23,219 --> 00:52:24,224
+Speaker 0: or you can buy.
+
+712
+00:52:24,244 --> 00:52:27,816
+Speaker 0: there are people selling Large monitors, right?
+
+713
+00:52:27,836 --> 00:52:32,248
+Speaker 0: So they're computer monitors that are just large like Alienware has like a 55 inch monitor.
+
+714
+00:52:32,288 --> 00:52:32,509
+Speaker 0: That's 4k.
+
+715
+00:52:33,011 --> 00:52:35,449
+Speaker 0: That's actually pretty impressive looking monitor.
+
+716
+00:52:37,151 --> 00:52:40,842
+Speaker 0: But you know, it has some limitations mostly the price.
+
+717
+00:52:40,963 --> 00:52:46,170
+Speaker 0: it's real expensive, but it does look pretty nice I gotta say even if you're not gaming or whatever.
+
+718
+00:52:46,331 --> 00:52:55,983
+Speaker 0: So there are some options out there for giant monitor or dumb TV But I think for reasonable in terms of saving money you have.
+
+719
+00:52:56,063 --> 00:52:59,453
+Speaker 0: I think the option today that's available is just Smart TV.
+
+720
+00:52:59,633 --> 00:53:01,378
+Speaker 0: turn off all the smart stuff as much as possible.
+
+721
+00:53:01,418 --> 00:53:04,347
+Speaker 0: Don't plug it in just power in HDMI and that's it.
+
+722
+00:53:04,728 --> 00:53:22,163
+Speaker 1: Yep and As much as I want a dumb TV like a TV that just doesn't do anything fancy I feel like that ship is sailing right now because what's driving these smart TVs like when you really think about it Is that TVs are really commoditized to most people.
+
+723
+00:53:22,223 --> 00:53:23,687
+Speaker 1: they just want a TV that works.
+
+724
+00:53:24,108 --> 00:53:27,366
+Speaker 1: when they buy one It's not like they're gonna replace it until it breaks.
+
+725
+00:53:27,447 --> 00:53:31,907
+Speaker 0: in most cases Until they the bigger one they get enough money to buy a bigger one.
+
+726
+00:53:31,928 --> 00:53:37,089
+Speaker 1: because yeah But once you get a big enough TV, you can get a gigantic TV real cheap if you get like an old LCD.
+
+727
+00:53:38,172 --> 00:53:38,618
+Speaker 0: There's a whole.
+
+728
+00:53:38,638 --> 00:53:44,250
+Speaker 0: there's still a whole Culture of people who are just like oh look at my new big TV is like a dick measuring contest, right?
+
+729
+00:53:44,551 --> 00:53:49,669
+Speaker 1: Yeah, but I think that ran out when you can for like 400 bucks literally get like a 72-inch TV and just like.
+
+730
+00:53:49,870 --> 00:53:52,227
+Speaker 0: well I think there are actually a lot of people buying like.
+
+731
+00:53:52,247 --> 00:53:58,170
+Speaker 0: there are People who don't like cuz you know, you're not bragging to your friends like ha ha it's you know.
+
+732
+00:53:58,190 --> 00:54:00,397
+Speaker 0: They don't understand if you're not tech people, right?
+
+733
+00:54:00,558 --> 00:54:05,478
+Speaker 0: Oh, it's OLED high contrast ratio HDR, but 77 inches.
+
+734
+00:54:05,519 --> 00:54:06,606
+Speaker 0: so there's a lot of TVs out there.
+
+735
+00:54:06,626 --> 00:54:09,050
+Speaker 1: I don't know I was in high school.
+
+736
+00:54:09,171 --> 00:54:10,858
+Speaker 1: I remember people wouldn't like.
+
+737
+00:54:11,139 --> 00:54:19,781
+Speaker 1: there was an error where people were talk about my big TV but once Flat panels started appearing they talked more about the technology.
+
+738
+00:54:19,841 --> 00:54:23,351
+Speaker 1: like the people who had a plasma TV would never shut up about their plasma TV.
+
+739
+00:54:23,372 --> 00:54:24,295
+Speaker 0: that's true.
+
+740
+00:54:24,415 --> 00:54:30,130
+Speaker 0: Anyway, even if they were saying outputting SD like plasma plasma is dead, by the way plasma, alright.
+
+741
+00:54:33,027 --> 00:54:35,397
+Speaker 0: So, yeah That's the deal with TVs.
+
+742
+00:54:35,538 --> 00:54:36,442
+Speaker 0: So what our monitors?
+
+743
+00:54:36,583 --> 00:54:36,744
+Speaker 0: right.
+
+744
+00:54:36,764 --> 00:54:37,467
+Speaker 0: so monitors.
+
+745
+00:54:37,527 --> 00:54:39,777
+Speaker 0: these days They got 4k monitors out there.
+
+746
+00:54:39,797 --> 00:54:42,207
+Speaker 0: The best monitor you can buy is the Apple monitor.
+
+747
+00:54:42,407 --> 00:54:43,030
+Speaker 0: It's unbelievable.
+
+748
+00:54:43,553 --> 00:54:46,310
+Speaker 0: It only works with Apple things and it costs a million that zillion dollars.
+
+749
+00:54:47,252 --> 00:54:50,710
+Speaker 0: So don't buy it unless you win the lottery yesterday and you have Apple computers.
+
+750
+00:54:51,051 --> 00:54:53,419
+Speaker 0: Yeah, pretty much but it's really smart.
+
+751
+00:54:53,460 --> 00:54:56,430
+Speaker 0: Like remember I was talking about how they were like lights behind the LCD screen.
+
+752
+00:54:56,832 --> 00:55:03,117
+Speaker 0: It has a grid of lights and it dims and brightens them Dynamically as the images on the screen change.
+
+753
+00:55:03,698 --> 00:55:04,561
+Speaker 0: no other screen.
+
+754
+00:55:04,701 --> 00:55:07,388
+Speaker 0: I'm aware of for consumers does that it's.
+
+755
+00:55:07,588 --> 00:55:08,210
+Speaker 0: it's ridiculous.
+
+756
+00:55:09,151 --> 00:55:11,801
+Speaker 0: So you're not an Apple person who has a million dollars.
+
+757
+00:55:11,861 --> 00:55:13,467
+Speaker 0: what monitor are you gonna buy now?
+
+758
+00:55:14,190 --> 00:55:19,510
+Speaker 1: I think normal computer usage if you use a work like that like laptops just have a monitor like whatever.
+
+759
+00:55:19,611 --> 00:55:28,290
+Speaker 1: But if you're buying a desktop monitor You pretty much want to get a 4k unless you have a specific reason not to in the model the case.
+
+760
+00:55:28,330 --> 00:55:30,580
+Speaker 0: So there's a few things that have developed right?
+
+761
+00:55:30,600 --> 00:55:32,789
+Speaker 0: So you've got the 4k versus the not HD.
+
+762
+00:55:33,010 --> 00:55:37,770
+Speaker 0: There's even some 2k monitors out there with your higher resolution than 1080p, but you know what?
+
+763
+00:55:38,530 --> 00:55:41,110
+Speaker 0: Most monitors now, it's really hard to get an aspect ratio.
+
+764
+00:55:41,191 --> 00:55:43,990
+Speaker 1: That's not 16 by 9 which I'm mad about but you know what?
+
+765
+00:55:44,170 --> 00:55:48,345
+Speaker 1: I had to let that sail like as much as I honestly my whole life have since it appeared.
+
+766
+00:55:48,365 --> 00:55:50,151
+Speaker 1: if preferred 16 by 10.
+
+767
+00:55:50,151 --> 00:55:53,223
+Speaker 1: I still think it's a better form factor for what I do with computers.
+
+768
+00:55:53,926 --> 00:55:54,528
+Speaker 1: I ship sailed.
+
+769
+00:55:54,608 --> 00:55:55,311
+Speaker 1: I gave up I can't.
+
+770
+00:55:55,331 --> 00:55:55,934
+Speaker 1: there's no way.
+
+771
+00:55:55,934 --> 00:55:58,444
+Speaker 1: 16 by 10 still exists, but they're expensive and no one.
+
+772
+00:55:58,725 --> 00:56:00,010
+Speaker 0: Yeah, no one's making them really.
+
+773
+00:56:00,694 --> 00:56:02,010
+Speaker 0: So here's the things you have to worry about.
+
+774
+00:56:02,070 --> 00:56:05,003
+Speaker 0: The first thing you had to worry about is yeah, do you need that higher resolution?
+
+775
+00:56:05,164 --> 00:56:06,570
+Speaker 0: and is your computer strong enough?
+
+776
+00:56:07,461 --> 00:56:09,689
+Speaker 1: People do not have a computer that can drive 4k.
+
+777
+00:56:10,130 --> 00:56:19,366
+Speaker 1: In fact, if you don't I have a dedicated GPU your computer probably cannot display at 4k Without either really lowering the refresh rate.
+
+778
+00:56:19,386 --> 00:56:25,405
+Speaker 0: I have a 1070. the 1070 can have two 4k monitors and then it is at its absolute limit.
+
+779
+00:56:25,465 --> 00:56:27,170
+Speaker 0: I cannot add a single extra pixel.
+
+780
+00:56:27,290 --> 00:56:32,087
+Speaker 0: I couldn't have 2k to 4k monitors and a 640 by 480 monitor.
+
+781
+00:56:32,107 --> 00:56:32,689
+Speaker 0: That wouldn't work.
+
+782
+00:56:33,871 --> 00:56:34,172
+Speaker 0: It's like.
+
+783
+00:56:34,192 --> 00:56:36,419
+Speaker 0: that's the limit of pixels it can render it once.
+
+784
+00:56:36,620 --> 00:56:41,375
+Speaker 1: if you're a gamer and you put your games to be in 4k They will look beautiful.
+
+785
+00:56:41,696 --> 00:56:46,058
+Speaker 1: However, they use Massive amounts of GPU.
+
+786
+00:56:46,078 --> 00:56:50,095
+Speaker 1: power like 4k is four times 1080p.
+
+787
+00:56:50,135 --> 00:56:51,442
+Speaker 0: that's like having it you.
+
+788
+00:56:51,502 --> 00:56:52,990
+Speaker 0: it's four times as many pixels.
+
+789
+00:56:53,130 --> 00:56:59,090
+Speaker 0: So if you were running at 1080p 80 frames a second, you're probably going down closer to 20.
+
+790
+00:56:59,090 --> 00:57:00,716
+Speaker 0: So I'll give you an example.
+
+791
+00:57:00,956 --> 00:57:05,350
+Speaker 1: my current computer my like super beast with its 1080 and like all the nonsense in it my workstation.
+
+792
+00:57:05,732 --> 00:57:09,447
+Speaker 1: When I played overwatch before I got a 4k monitor, I rendered it at 1080p.
+
+793
+00:57:10,733 --> 00:57:11,980
+Speaker 1: It was just locked at 120 FPS all the time.
+
+794
+00:57:12,000 --> 00:57:18,161
+Speaker 1: Perfect Didn't even like get hot like the GPU was like barely.
+
+795
+00:57:18,361 --> 00:57:19,605
+Speaker 1: I like barely above idle.
+
+796
+00:57:20,107 --> 00:57:24,431
+Speaker 1: when I got the 4k monitor My GPU is running like at 80%.
+
+797
+00:57:24,431 --> 00:57:28,927
+Speaker 1: The room gets hot all the fans spin up and I'm locked at 60 FPS.
+
+798
+00:57:31,486 --> 00:57:33,678
+Speaker 1: But It is so.
+
+799
+00:57:33,999 --> 00:57:37,190
+Speaker 1: I remember you came over right after I'd gotten those monitors.
+
+800
+00:57:37,210 --> 00:57:44,039
+Speaker 1: We were into auto chess and you were like we were talking about auto chess and I started playing and you were like Why does it look so good on your computer?
+
+801
+00:57:44,059 --> 00:57:44,963
+Speaker 1: And you were like really real.
+
+802
+00:57:45,023 --> 00:57:50,418
+Speaker 0: and then you realized oh 4k Yeah Yeah monitors matter a lot more than graphic.
+
+803
+00:57:50,458 --> 00:57:51,381
+Speaker 0: Okay, so that's the first thing.
+
+804
+00:57:51,422 --> 00:57:52,144
+Speaker 0: resolution right.
+
+805
+00:57:52,184 --> 00:57:53,890
+Speaker 0: next thing colors, right?
+
+806
+00:57:53,990 --> 00:57:59,335
+Speaker 0: So if you're doing Photoshop II video type work print type work You're an artist of some kind.
+
+807
+00:57:59,797 --> 00:58:03,170
+Speaker 0: you need a monitor with accurate color display, right?
+
+808
+00:58:03,290 --> 00:58:08,748
+Speaker 0: You'd be surprised you could take the same JPEG in the same app with the same settings like clean windows.
+
+809
+00:58:08,789 --> 00:58:13,030
+Speaker 0: install Right and open that JPEG on two different monitors same computer, right?
+
+810
+00:58:13,090 --> 00:58:16,770
+Speaker 0: Just drag the the the window back and forth between the monitors, right?
+
+811
+00:58:17,150 --> 00:58:30,630
+Speaker 0: And you'll see the colors change completely because one monitor is better has a higher Range of colors it can display in the gamut and It's just better at color accuracy or is more well calibrated or whatever.
+
+812
+00:58:31,232 --> 00:58:34,761
+Speaker 0: So if it matters to you, then you need to.
+
+813
+00:58:34,801 --> 00:58:38,130
+Speaker 0: the monitors that have extreme color accuracy cost a lot of money.
+
+814
+00:58:38,171 --> 00:58:40,996
+Speaker 0: It's basically three tiers Generally speaking.
+
+815
+00:58:41,016 --> 00:58:48,344
+Speaker 0: Yeah, there's ridiculous accuracy, which is like 100% s RGB plus even like Adobe and that's all.
+
+816
+00:58:48,404 --> 00:58:51,654
+Speaker 1: I can use one of those peripherals to Calibrate it like.
+
+817
+00:58:51,835 --> 00:58:57,474
+Speaker 0: after these monitors cost thousands of dollars that use them that we would use them at like Pixar or something I don't even you guys.
+
+818
+00:58:57,956 --> 00:59:00,386
+Speaker 0: yeah, I don't you need that then is like the $500 monitor range.
+
+819
+00:59:01,610 --> 00:59:02,694
+Speaker 0: This is what I'm talking about.
+
+820
+00:59:02,734 --> 00:59:05,806
+Speaker 1: The Dell ultra sharp is a good example of that range, right?
+
+821
+00:59:05,846 --> 00:59:09,275
+Speaker 1: We're talking $500 99% s RGB.
+
+822
+00:59:09,416 --> 00:59:13,670
+Speaker 0: almost everything you see on your desktop computer is s RGB color.
+
+823
+00:59:14,540 --> 00:59:20,546
+Speaker 0: You know Scheme gamut, whatever right so you can see 99% of the colors very accurately.
+
+824
+00:59:21,008 --> 00:59:21,690
+Speaker 0: It's gonna be great.
+
+825
+00:59:22,032 --> 00:59:30,050
+Speaker 0: Then you've got don't care about colors monitors Which are the all those ones that you see a new egg or whatever during Black Friday, which is coming up, right?
+
+826
+00:59:30,110 --> 00:59:31,114
+Speaker 0: It's like oh my god.
+
+827
+00:59:31,134 --> 00:59:34,066
+Speaker 0: What a deal on a monitor 100 bucks 27 inches.
+
+828
+00:59:34,086 --> 00:59:34,890
+Speaker 0: I'm getting this.
+
+829
+00:59:35,251 --> 00:59:36,336
+Speaker 0: Yeah, cuz the colors on it.
+
+830
+00:59:36,376 --> 00:59:37,461
+Speaker 0: They just don't give a shit right?
+
+831
+00:59:37,481 --> 00:59:39,089
+Speaker 0: you who knows what you're seeing on there.
+
+832
+00:59:40,172 --> 00:59:41,298
+Speaker 0: So those are your color things.
+
+833
+00:59:41,358 --> 00:59:43,107
+Speaker 0: Okay, something else important.
+
+834
+00:59:43,128 --> 00:59:46,007
+Speaker 0: these days I have learned every the details about this, right?
+
+835
+00:59:47,410 --> 00:59:49,465
+Speaker 0: G-sync free sync, right?
+
+836
+00:59:49,747 --> 00:59:52,664
+Speaker 0: Oh, yeah What is the deal with that?
+
+837
+00:59:52,805 --> 00:59:53,589
+Speaker 0: So here's the deal?
+
+838
+00:59:54,510 --> 01:00:03,276
+Speaker 0: You and the olden days right would have a game and the game would run at X FPS and your monitor can only render So many frames a second.
+
+839
+01:00:03,316 --> 01:00:04,482
+Speaker 0: It's a 60 Hertz monitor.
+
+840
+01:00:04,502 --> 01:00:05,567
+Speaker 0: It's a 144 Hertz monitor, right?
+
+841
+01:00:06,290 --> 01:00:08,670
+Speaker 0: You obviously if you're gaming higher Hertz is better, right?
+
+842
+01:00:08,770 --> 01:00:14,277
+Speaker 0: Because if you're no point in rendering 100 FPS if you only got a 60 Hertz monitor You're throwing away 40 frames never to be seen.
+
+843
+01:00:14,457 --> 01:00:16,684
+Speaker 1: Yep gamers will make a weird argument.
+
+844
+01:00:16,865 --> 01:00:18,450
+Speaker 1: That is pretty much nonsense.
+
+845
+01:00:18,811 --> 01:00:20,135
+Speaker 0: So right if you.
+
+846
+01:00:20,155 --> 01:00:25,010
+Speaker 0: but hey, you can buy 144 Hertz monitor now by even more than that, right?
+
+847
+01:00:25,390 --> 01:00:33,369
+Speaker 0: Yeah, I can't run 4k at 144 Hertz just saying But someone who's got a 3080 maybe 3080s probably could right who knows?
+
+848
+01:00:34,571 --> 01:00:36,378
+Speaker 0: But yeah, if you've got the power you can do it.
+
+849
+01:00:37,001 --> 01:00:37,343
+Speaker 0: Damn.
+
+850
+01:00:37,423 --> 01:00:38,086
+Speaker 0: That's some stuff.
+
+851
+01:00:38,146 --> 01:00:38,869
+Speaker 0: But here's the problem.
+
+852
+01:00:40,031 --> 01:00:41,117
+Speaker 0: They're used as a setting.
+
+853
+01:00:41,258 --> 01:00:43,630
+Speaker 0: every pretty much every video game has a setting vertical sync.
+
+854
+01:00:43,951 --> 01:00:44,713
+Speaker 0: What does that mean?
+
+855
+01:00:45,114 --> 01:00:46,840
+Speaker 0: That means when you set vertical sync.
+
+856
+01:00:46,860 --> 01:00:48,224
+Speaker 0: you're telling the GPU.
+
+857
+01:00:48,465 --> 01:00:50,050
+Speaker 0: Hey, my monitor is 60 Hertz.
+
+858
+01:00:50,611 --> 01:00:54,724
+Speaker 0: I want you to render 60 frames and we're gonna be in sync with each other.
+
+859
+01:00:54,804 --> 01:00:55,466
+Speaker 0: render a frame.
+
+860
+01:00:55,586 --> 01:00:56,108
+Speaker 0: show the frame.
+
+861
+01:00:56,368 --> 01:00:56,890
+Speaker 0: render a frame.
+
+862
+01:00:57,171 --> 01:00:57,692
+Speaker 0: Show the frame.
+
+863
+01:00:57,953 --> 01:00:58,475
+Speaker 0: render a frame.
+
+864
+01:00:58,575 --> 01:00:59,057
+Speaker 0: show the frame.
+
+865
+01:00:59,899 --> 01:01:13,599
+Speaker 0: if you don't set that setting what can happen is something I saw as recently as Star Squadrons, which is sort of the screen tearing effect where the computer is drawn half the the current frame to the screen and it's about halfway through.
+
+866
+01:01:13,860 --> 01:01:28,789
+Speaker 0: so it's in the middle of the screen drawing pixels and suddenly the next frame gets swapped in the frame buffer and So frame one is on the top half of the screen in frame two is in the bottom half of the screen and they don't Line up and you see sort of this horizontal line across the screen and it's sort of awkward.
+
+867
+01:01:30,350 --> 01:01:32,721
+Speaker 0: So the way we solved that was vertical sync.
+
+868
+01:01:32,781 --> 01:01:34,910
+Speaker 0: right render the frames on time with each other.
+
+869
+01:01:36,131 --> 01:01:37,697
+Speaker 0: What the hell is G sync then?
+
+870
+01:01:37,757 --> 01:01:39,624
+Speaker 0: if we have vertical sync, right?
+
+871
+01:01:39,965 --> 01:01:41,350
+Speaker 0: Why the hell do you need G sync?
+
+872
+01:01:41,670 --> 01:01:44,919
+Speaker 0: Well, what if you can't render 60 FPS?
+
+873
+01:01:44,959 --> 01:01:47,987
+Speaker 0: What if you've got 144 Hertz monitor, but you can't render 144 frames?
+
+874
+01:01:49,471 --> 01:01:58,821
+Speaker 0: What if you can do more than 144 frame, you know, whatever what this does is it basically says hey, you know GPU You're gonna render all the frames you can right.
+
+875
+01:01:58,881 --> 01:02:01,150
+Speaker 0: just you know, don't care about what the monitors doing.
+
+876
+01:02:01,190 --> 01:02:11,082
+Speaker 0: Don't try to stay in sync with the monitor and the monitor is gonna display the frames properly in sync Right so that that effect doesn't happen.
+
+877
+01:02:11,323 --> 01:02:13,410
+Speaker 0: Every frame is gonna start at the top and end at the bottom.
+
+878
+01:02:14,450 --> 01:02:24,509
+Speaker 0: so NVIDIA just to not go into extreme detail NVIDIA does this in a very fancy way with lots of extra fancy features that are really kind of nice.
+
+879
+01:02:25,512 --> 01:02:37,946
+Speaker 0: But it does it by having an actual CPU in the monitor to do the extra work and that's why G sync monitors are expensive Because they have extra hardware in the monitor to gain these extra features that are kind of nice.
+
+880
+01:02:37,986 --> 01:02:40,257
+Speaker 0: if you can afford them The free sync.
+
+881
+01:02:40,518 --> 01:02:42,167
+Speaker 0: what Nvidia AMD does?
+
+882
+01:02:42,267 --> 01:02:42,730
+Speaker 0: free sync?
+
+883
+01:02:43,890 --> 01:02:46,259
+Speaker 0: Free sync has less features than G sync.
+
+884
+01:02:46,360 --> 01:02:49,010
+Speaker 0: It is not as high spec.
+
+885
+01:02:49,111 --> 01:02:49,594
+Speaker 0: Yeah, right.
+
+886
+01:02:49,816 --> 01:02:51,810
+Speaker 0: It doesn't do all the fancy things.
+
+887
+01:02:51,930 --> 01:02:53,916
+Speaker 0: It just does the basics of synchronizing.
+
+888
+01:02:54,398 --> 01:02:58,530
+Speaker 0: but the monitors are less expensive because they don't need that fancy extra CPU in the monitor.
+
+889
+01:02:59,571 --> 01:03:05,913
+Speaker 0: So you can just get a free sync monitor and get most of the benefits, but not all the benefits You can.
+
+890
+01:03:05,953 --> 01:03:10,850
+Speaker 0: however, you'll see some G sync compatible monitors, which are usually free sync monitors.
+
+891
+01:03:11,232 --> 01:03:15,730
+Speaker 0: So you got an NVIDIA GPU, but you got an AMD free sync monitor.
+
+892
+01:03:16,132 --> 01:03:20,670
+Speaker 0: You can get the benefits of the AMD one because the NVIDIA one sort of encompasses all that and more.
+
+893
+01:03:21,172 --> 01:03:23,379
+Speaker 0: You're just sort of telling the NVIDIA GPU.
+
+894
+01:03:23,399 --> 01:03:26,189
+Speaker 0: Hey, don't do the extra stuff because the monitor doesn't have the CPU in it.
+
+895
+01:03:27,612 --> 01:03:33,688
+Speaker 0: so that's what that's what that is, it's only important if you're gaming and Such and you got extra money for the monitor.
+
+896
+01:03:34,332 --> 01:03:38,270
+Speaker 1: Yep, and I do not have that because I actually got my monitors a while ago when I built the new computer.
+
+897
+01:03:38,910 --> 01:03:46,566
+Speaker 0: My my plan actually is when I eventually do get new monitors whenever the hell that is could be a year from now You've got one of my old monitors.
+
+898
+01:03:46,626 --> 01:03:50,670
+Speaker 0: right now I'm gonna get one monitor that doesn't care about frame rate.
+
+899
+01:03:50,690 --> 01:03:55,990
+Speaker 0: That's all about color right like a $500 color fancy monitor and then a second monitor.
+
+900
+01:03:56,050 --> 01:03:59,110
+Speaker 0: That's the gaming monitor with the free sync G sync, right?
+
+901
+01:03:59,530 --> 01:04:08,165
+Speaker 0: You know not maybe not caring about color so much getting the high frame rates 144 or more And hopefully both of them will be 4k and that'll be the limit of my GPU
+
+902
+01:04:08,185 --> 01:04:13,790
+Speaker 1: now for me in terms of screen size I actually 27 inches feels like the sweet spot for like desktop like the kind of work.
+
+903
+01:04:13,790 --> 01:04:20,690
+Speaker 0: 27 I think is the C 24 but I have 16 by 10. if it's 27 then it could be 16 by 9.
+
+904
+01:04:20,690 --> 01:04:23,683
+Speaker 0: Yeah, it's like, you know, but bigger than that.
+
+905
+01:04:23,743 --> 01:04:25,450
+Speaker 0: It's like that's a television that doesn't go on.
+
+906
+01:04:25,550 --> 01:04:27,644
+Speaker 0: I see people who got these televisions on their desk.
+
+907
+01:04:27,684 --> 01:04:28,690
+Speaker 0: It's like no, what are you doing?
+
+908
+01:04:29,050 --> 01:04:30,676
+Speaker 0: Yeah, that is that is not.
+
+909
+01:04:30,877 --> 01:04:34,190
+Speaker 0: that is not right unless you've got eye problems or some other reason that makes sense.
+
+910
+01:04:34,563 --> 01:04:47,324
+Speaker 1: Yeah now one thing I think about too is one of the real benefits of 4k on the desktop like when you go to 4k outside of gaming where if you don't Have a great GPU you can still tell your games to render in 1080p.
+
+911
+01:04:47,364 --> 01:04:48,448
+Speaker 1: That's what I do for Star Wars.
+
+912
+01:04:48,529 --> 01:04:49,775
+Speaker 0: actually Yep.
+
+913
+01:04:49,816 --> 01:04:50,137
+Speaker 0: Yep.
+
+914
+01:04:50,198 --> 01:04:51,224
+Speaker 0: I do that for some games.
+
+915
+01:04:51,244 --> 01:04:51,365
+Speaker 0: Yeah.
+
+916
+01:04:51,486 --> 01:04:59,969
+Speaker 1: Yep, but Texts will be surprisingly legible at very small physical sizes with a 4k monitor.
+
+917
+01:05:01,872 --> 01:05:08,515
+Speaker 1: That is the thing you might not realize that you might think oh my text will all be tiny but it'll be Crystal-clear when it's tiny.
+
+918
+01:05:08,536 --> 01:05:21,590
+Speaker 1: Yep and windows at least like it used to not work that great But like high resolution monitors used to have used to have a lot of problems on Windows But that's pretty much all gone now and you can set the scaling factor in Windows.
+
+919
+01:05:21,610 --> 01:05:31,290
+Speaker 1: a lot of people don't think to do this and you can set it to like a hundred and twenty five or a hundred and Fifty percent where you still want your computer to output to your monitor at its native resolution.
+
+920
+01:05:31,793 --> 01:05:32,658
+Speaker 1: Very rarely.
+
+921
+01:05:32,678 --> 01:05:34,670
+Speaker 1: Do you want to output at any other resolution?
+
+922
+01:05:35,150 --> 01:05:40,370
+Speaker 1: You can theoretically do like a perfect half or quarter, but that's not an ideal solution.
+
+923
+01:05:40,390 --> 01:05:54,941
+Speaker 1: You're better off always sending data to your monitor at its native resolution so 3840 by like 2160 and then tell Windows to scale up all the like Interface stuff by 50%.
+
+924
+01:05:54,941 --> 01:05:56,186
+Speaker 1: so text will be a little bit.
+
+925
+01:05:56,347 --> 01:05:58,716
+Speaker 0: Alright, you know My resolution is twice as high.
+
+926
+01:05:58,776 --> 01:06:00,261
+Speaker 0: make my icons twice as big.
+
+927
+01:06:00,322 --> 01:06:02,610
+Speaker 0: make my text font my text size twice as big.
+
+928
+01:06:02,711 --> 01:06:05,150
+Speaker 0: I just mean it's like oh and now everything looks great.
+
+929
+01:06:06,332 --> 01:06:08,683
+Speaker 1: Yeah, and that really just comes down to how are your eyes?
+
+930
+01:06:08,724 --> 01:06:09,910
+Speaker 1: How are you using the computer?
+
+931
+01:06:10,371 --> 01:06:14,706
+Speaker 1: I've seen some people that they have the big TV monitor because they sit pretty far away from it.
+
+932
+01:06:14,746 --> 01:06:15,849
+Speaker 1: the way they've set up their desk.
+
+933
+01:06:17,271 --> 01:06:18,241
+Speaker 0: Mmm, that could work.
+
+934
+01:06:18,423 --> 01:06:23,704
+Speaker 1: Yeah Of the Dell ultra sharp like U2718Q.
+
+935
+01:06:23,744 --> 01:06:29,124
+Speaker 0: if you want a cheap pretty color I do like them because this applies to the TVs and the monitors.
+
+936
+01:06:29,184 --> 01:06:30,910
+Speaker 0: just how many connectors are on there, right?
+
+937
+01:06:30,950 --> 01:06:31,955
+Speaker 0: It's like if you're not a nerd.
+
+938
+01:06:31,995 --> 01:06:32,920
+Speaker 0: you probably don't care you just need.
+
+939
+01:06:33,081 --> 01:06:34,810
+Speaker 1: Oh, yeah, we should talk about this really briefly.
+
+940
+01:06:34,932 --> 01:06:35,968
+Speaker 1: I think we talked about it before.
+
+941
+01:06:36,652 --> 01:06:38,499
+Speaker 1: Modern TVs still just HDMI.
+
+942
+01:06:38,559 --> 01:06:38,900
+Speaker 1: That's it.
+
+943
+01:06:39,362 --> 01:06:41,490
+Speaker 1: But monitors take display port.
+
+944
+01:06:42,391 --> 01:06:43,615
+Speaker 1: Uh a lot.
+
+945
+01:06:43,675 --> 01:06:46,784
+Speaker 1: do not buy generic display port cables for reasons.
+
+946
+01:06:46,824 --> 01:06:47,547
+Speaker 1: I don't want to get into.
+
+947
+01:06:47,607 --> 01:06:48,329
+Speaker 1: you can google it.
+
+948
+01:06:49,651 --> 01:06:56,697
+Speaker 1: most display port cables, especially if they're generic or cheap will have Wires in them that are not supposed to be there.
+
+949
+01:06:56,757 --> 01:07:08,887
+Speaker 1: that will literally fry either your GPU or your monitor or both possibly Mmm, like just go read about display port cables and do not buy like Amazon generic or whatever.
+
+950
+01:07:08,947 --> 01:07:09,649
+Speaker 1: you'll have a problem.
+
+951
+01:07:11,391 --> 01:07:18,717
+Speaker 0: Okay, I wanted to talk about displays and like phones tablets and that We'll talk about a little bit I guess because we're going long.
+
+952
+01:07:18,737 --> 01:07:25,090
+Speaker 0: but basically yeah most of the phones these days have you know The same sort of thing that's going on with monitors.
+
+953
+01:07:25,130 --> 01:07:27,010
+Speaker 0: They're like really high resolution screens.
+
+954
+01:07:27,070 --> 01:07:31,930
+Speaker 0: A lot of all the best ones are oleds because even those those oleds are expensive on the tv side.
+
+955
+01:07:32,271 --> 01:07:37,174
+Speaker 0: They're still expensive on the phone side, but they're so much smaller that you know And they can make more.
+
+956
+01:07:37,295 --> 01:07:38,781
+Speaker 0: it seems to make a smaller one, right?
+
+957
+01:07:39,363 --> 01:07:40,729
+Speaker 0: It doesn't cost as much as a giant one.
+
+958
+01:07:41,851 --> 01:07:46,666
+Speaker 0: Uh, it's like, you know, this new iphone has like a you know, super amazing oled screen in it.
+
+959
+01:07:46,746 --> 01:07:47,629
+Speaker 0: It's like unbelievable.
+
+960
+01:07:47,749 --> 01:07:55,030
+Speaker 0: Yeah Uh, some of the android phones have super high refresh rate screens like some of those samsung galaxy ones and that's pretty nice, too.
+
+961
+01:07:55,130 --> 01:07:59,897
+Speaker 0: I think the iphone refresh rate is actually maybe the one area It's still behind in terms of.
+
+962
+01:08:00,399 --> 01:08:01,403
+Speaker 0: I guess they didn't feel the need.
+
+963
+01:08:01,423 --> 01:08:02,970
+Speaker 0: they're like, yeah, they were like why I don't know.
+
+964
+01:08:03,130 --> 01:08:06,850
+Speaker 1: I mean i'm good with like a 720p cell phone because maybe it saves battery.
+
+965
+01:08:07,332 --> 01:08:10,547
+Speaker 0: Yeah, maybe it's yeah, maybe it saves battery to have a lower refresh rate on the screen.
+
+966
+01:08:10,567 --> 01:08:12,581
+Speaker 0: I don't know Uh, but yeah, those are.
+
+967
+01:08:12,702 --> 01:08:13,709
+Speaker 0: that's what's going on there.
+
+968
+01:08:14,512 --> 01:08:20,470
+Speaker 0: It's still oleds regular leds that sort of thing, you know, it's the same technology that we were just talking about only smaller.
+
+969
+01:08:21,594 --> 01:08:34,609
+Speaker 0: Uh, there are all sorts of other display technologies like e-ink Yeah, like e-inks and those sorts of things, uh, you know old ips screens these older technologies They've been around a long time but miniaturization has happened.
+
+970
+01:08:35,011 --> 01:08:38,563
+Speaker 0: So you see a lot in the hacking modding communities like.
+
+971
+01:08:38,582 --> 01:08:52,970
+Speaker 0: you can buy now an e-ink display Of many varieties to go with a raspberry pi and it's like any shape size Sets of colors different properties, so, you know, there's like so many choices at reasonable prices.
+
+972
+01:08:53,732 --> 01:08:58,064
+Speaker 0: Uh, there are ips screens like old, you know, like tiny lcd's.
+
+973
+01:08:58,124 --> 01:09:00,250
+Speaker 0: I put one in my gameboy advance, right?
+
+974
+01:09:00,370 --> 01:09:02,502
+Speaker 0: It's unbelievable this screen that you can put in there.
+
+975
+01:09:02,522 --> 01:09:02,563
+Speaker 0: Um.
+
+976
+01:09:04,151 --> 01:09:10,500
+Speaker 0: So for handheld portable devices like the kinds of screens you can just buy a screen like to mod into your project.
+
+977
+01:09:10,761 --> 01:09:13,752
+Speaker 0: the choices now are really Like you're.
+
+978
+01:09:13,832 --> 01:09:19,849
+Speaker 0: you're basically getting like best possible monitor from 10 years ago in a really tiny tiny space.
+
+979
+01:09:19,910 --> 01:09:22,828
+Speaker 0: now Uh, like choose your resolution choose your size.
+
+980
+01:09:23,551 --> 01:09:27,281
+Speaker 0: It low power right super bright super nice colors.
+
+981
+01:09:27,321 --> 01:09:34,389
+Speaker 0: They might not be accurate colors, but they'll be nice looking Right, uh way better than what else you're going to get at that size.
+
+982
+01:09:35,032 --> 01:09:44,390
+Speaker 0: So it's just there's a lot of activity going on in that realm even though that's not The highest end realm of displays that people think about the most which is you know televisions monitors.
+
+983
+01:09:44,872 --> 01:09:48,029
+Speaker 0: There's still a lot of activity happening in the tiny display zone.
+
+984
+01:09:48,992 --> 01:09:52,149
+Speaker 0: Uh in terms of using older technologies better smaller.
+
+985
+01:09:52,169 --> 01:09:58,489
+Speaker 1: Yep I still think there's a lot of cool uses for e-ink that are just around the corner because it uses so little power.
+
+986
+01:09:59,491 --> 01:10:03,287
+Speaker 0: Yep, because it only refreshes we need to refresh it and they've got some that are like partial refresh.
+
+987
+01:10:03,307 --> 01:10:07,246
+Speaker 0: where you're like Okay, you've got you're reading an e-book reader, right?
+
+988
+01:10:07,488 --> 01:10:10,229
+Speaker 0: It's like okay You've got your words here and the top left is a clock.
+
+989
+01:10:10,742 --> 01:10:11,612
+Speaker 0: So, okay We need to read.
+
+990
+01:10:11,713 --> 01:10:15,890
+Speaker 0: we're not going to redraw the screen every second or every minute because the clock is on the screen.
+
+991
+01:10:15,950 --> 01:10:19,068
+Speaker 0: We'll just refresh the tiny part of the screen that has the clock on it.
+
+992
+01:10:19,209 --> 01:10:23,229
+Speaker 0: only All right, and then if you turn the page, okay, we'll refresh the whole screen now, right?
+
+993
+01:10:23,890 --> 01:10:25,423
+Speaker 0: And save a lot of power that way.
+
+994
+01:10:25,484 --> 01:10:26,230
+Speaker 0: It's it's real nice.
+
+995
+01:10:27,341 --> 01:10:40,763
+Speaker 1: um Yeah, but the cool thing is if you're in the market to buy a new monitor at least Uh, if you don't need something very specific and fancy you can get Real good 4k monitors for pretty cheap.
+
+996
+01:10:40,864 --> 01:10:49,881
+Speaker 1: Like they're not going to be super color correct They might only have a 60 fp like a frame refresh rate 60 hertz But they're way better than an lcd.
+
+997
+01:10:49,901 --> 01:10:51,770
+Speaker 1: you would have gotten even five six years ago.
+
+998
+01:10:51,971 --> 01:10:55,264
+Speaker 0: Yeah, I remember the one thing I forgot to talk about that.
+
+999
+01:10:55,345 --> 01:10:55,786
+Speaker 0: we can end this.
+
+1000
+01:10:55,867 --> 01:10:56,825
+Speaker 0: we can end on this All right.
+
+1001
+01:10:56,890 --> 01:11:00,264
+Speaker 0: There's a couple trends that are going on in monitor realm that we haven't talked about.
+
+1002
+01:11:00,305 --> 01:11:02,753
+Speaker 0: the first trend is the curved Display trend.
+
+1003
+01:11:02,894 --> 01:11:08,170
+Speaker 1: I am theoretically a fan of that but every curved display i've seen is a really low resolution screen.
+
+1004
+01:11:09,051 --> 01:11:09,512
+Speaker 0: I agree.
+
+1005
+01:11:09,652 --> 01:11:16,655
+Speaker 0: I've used i've seen curved resolution displays, especially at packs as like demo machines and The curve.
+
+1006
+01:11:16,776 --> 01:11:19,250
+Speaker 0: it's like you think it's a gimmick, but it's actually kind of nice.
+
+1007
+01:11:19,410 --> 01:11:25,149
+Speaker 1: It's real nice if your monitor's big like 27 inch or bigger like that's real nice Like there's something to it.
+
+1008
+01:11:25,250 --> 01:11:30,158
+Speaker 0: Like it's like you sit in front of the curved screen and it's like, you know It doesn't feel like awkward at all.
+
+1009
+01:11:30,218 --> 01:11:31,503
+Speaker 0: It just it's like it.
+
+1010
+01:11:31,543 --> 01:11:38,559
+Speaker 0: actually, you know, it's sort of like easier It just I don't know if there's like a science behind it But it's sort of one of those things where it's like.
+
+1011
+01:11:38,620 --> 01:11:39,824
+Speaker 0: it could just be bs.
+
+1012
+01:11:39,884 --> 01:11:46,006
+Speaker 0: It could just be psychological Where it's like, oh, yes, my split keyboard in my dvorak layout is better.
+
+1013
+01:11:46,107 --> 01:11:46,890
+Speaker 0: It feels better.
+
+1014
+01:11:47,031 --> 01:11:47,858
+Speaker 0: I can't explain it.
+
+1015
+01:11:47,899 --> 01:11:49,190
+Speaker 0: There's no science behind it, right?
+
+1016
+01:11:49,550 --> 01:11:51,216
+Speaker 0: the curved monitor is the same way.
+
+1017
+01:11:51,276 --> 01:12:00,750
+Speaker 0: where it's like it just feels nice like you stand in front of them and it just like Feels nice the way like a nicer carpet just feels nicer than a rough carpet, right?
+
+1018
+01:12:00,930 --> 01:12:01,695
+Speaker 0: You know, there's something there.
+
+1019
+01:12:02,017 --> 01:12:15,690
+Speaker 0: the second trend that's going on in monitor land Is the combined monitors right where you'll get a display that is mega big like instead of being 1920 by 1080 What's 1920 times 2 like 4000?
+
+1020
+01:12:15,690 --> 01:12:17,812
+Speaker 1: Yeah, but it's not like two separate monitors It's just it.
+
+1021
+01:12:17,852 --> 01:12:20,929
+Speaker 1: basically like you're almost outputting two different monitors to one physical device.
+
+1022
+01:12:21,471 --> 01:12:31,450
+Speaker 0: Some sometimes you do have to plug in like two hdmi cables, but it's basically one big ass screen or One package that has secretly two screens in it.
+
+1023
+01:12:31,530 --> 01:12:34,923
+Speaker 0: But in the middle, they're just right next to each other literally next to each other.
+
+1024
+01:12:34,984 --> 01:12:40,904
+Speaker 0: So it might as well be one Extra wide screen or sometimes even extra tall.
+
+1025
+01:12:40,984 --> 01:12:46,584
+Speaker 0: i've seen screens where it's like, yeah It's extra big but you're actually splitting up this one.
+
+1026
+01:12:46,804 --> 01:12:51,196
+Speaker 0: What looks to you to be one Screen Splitting it up four ways.
+
+1027
+01:12:51,457 --> 01:12:54,109
+Speaker 0: plug in four hdmi cables and show four different things.
+
+1028
+01:12:54,612 --> 01:13:00,577
+Speaker 0: Rather than buying four monitors you buy one giant monitor and show four things on it Like a video wall almost.
+
+1029
+01:13:00,617 --> 01:13:00,838
+Speaker 1: Yep.
+
+1030
+01:13:01,239 --> 01:13:11,150
+Speaker 1: Now on one hand I can see a time and a place for that kind of thing but most of the ones i've seen are also Actually either pretty low resolution or have a lot of weird drawbacks.
+
+1031
+01:13:11,592 --> 01:13:17,418
+Speaker 1: The other problem is if you don't live somewhere where you can have a big spacious desk That might not fit anywhere.
+
+1032
+01:13:17,438 --> 01:13:19,869
+Speaker 1: like I could not put a monitor like that on this desk.
+
+1033
+01:13:20,752 --> 01:13:23,530
+Speaker 0: Well, it's like and also just my personal workflow, right?
+
+1034
+01:13:23,650 --> 01:13:28,258
+Speaker 0: Having one even if I could just combine both of my monitors into one monitor That was I guess what I have.
+
+1035
+01:13:28,258 --> 01:13:28,560
+Speaker 0: 1920 by 1200 now time.
+
+1036
+01:13:29,890 --> 01:13:36,956
+Speaker 1: Well, like if it's one big monitor and you tell a game to go full screen a lot of games do not have that aspect Ratio and there's all sorts of fuck-ups that happen.
+
+1037
+01:13:37,377 --> 01:13:41,850
+Speaker 1: or they're playing on counter strike on like half of a monitor and that just feels weird.
+
+1038
+01:13:42,812 --> 01:13:43,497
+Speaker 0: Yeah, so 3840 by 1200 it's like.
+
+1039
+01:13:45,873 --> 01:13:53,310
+Speaker 0: It's like that's actually worse for me to combine these two screens Like I keep something on the right and something on the left and they're separated, right?
+
+1040
+01:13:53,510 --> 01:14:02,470
+Speaker 0: So putting them in one screen the major benefit is really a few Applications like games that will spread their way across right?
+
+1041
+01:14:02,570 --> 01:14:04,142
+Speaker 0: It's like star wars could be pretty good.
+
+1042
+01:14:04,162 --> 01:14:08,350
+Speaker 0: if you're not doing vr And you do it on the big wide screen that could be pretty nice, right?
+
+1043
+01:14:08,471 --> 01:14:09,557
+Speaker 0: It's extra wide.
+
+1044
+01:14:09,577 --> 01:14:12,010
+Speaker 0: you see a lot to the left a lot to the right, you know.
+
+1045
+01:14:12,090 --> 01:14:18,550
+Speaker 0: Maybe an fps could be really nice if it spreads its way across both screens like that, but so few applications do that.
+
+1046
+01:14:19,074 --> 01:14:33,130
+Speaker 0: It's like it makes a really good demo But I think it's only a good purchase if you are frequent like your game is a game Like like your your life is focused on a game and that game supports that or something, right?
+
+1047
+01:14:33,511 --> 01:14:41,050
+Speaker 0: Or you primarily most of the time use an application that supports that giant wide screen, you know one application across both, right?
+
+1048
+01:14:41,811 --> 01:14:47,390
+Speaker 0: If you're doing two screens with one application left one on the right don't buy the big wide, you know mega screen.
+
+1049
+01:14:47,471 --> 01:14:48,827
+Speaker 0: It's kind of silly, right?
+
+1050
+01:14:49,510 --> 01:14:50,193
+Speaker 0: Yep, but it is.
+
+1051
+01:14:50,294 --> 01:14:54,290
+Speaker 0: it is a thing and it exists and it has uses but you make sacrifices in other areas.
+
+1052
+01:14:54,935 --> 01:14:58,224
+Speaker 0: Uh for that at least right now And that's that.
+
+1053
+01:14:58,407 --> 01:15:01,135
+Speaker 0: so 2020 screen update.
+
+1054
+01:15:01,316 --> 01:15:01,537
+Speaker 1: Yep.
+
+1055
+01:15:01,657 --> 01:15:04,810
+Speaker 1: And if you want to listen to what this was like in 2006, i'll link to that episode.
+
+1056
+01:15:04,890 --> 01:15:09,670
+Speaker 1: You'll hear us talk a lot about crts versus these newfangled early lcd.
+
+1057
+01:15:11,051 --> 01:15:13,539
+Speaker 0: All right, so we're allowed to do this show again in 2034.
+
+1058
+01:15:13,539 --> 01:15:17,009
+Speaker 1: All right, hopefully by then it's either just like.
+
+1059
+01:15:17,050 --> 01:15:19,579
+Speaker 1: well I've got the i-implant and oh I got the.
+
+1060
+01:15:19,759 --> 01:15:22,810
+Speaker 1: I got the synchronized i-implant, but I got the asynchronous one.
+
+1061
+01:15:23,652 --> 01:15:25,514
+Speaker 0: I'm waiting for i-implant 2.0.
+
+1062
+01:15:25,514 --> 01:15:34,480
+Speaker 1: At least This has been geek nights with rim and scott special.
+
+1063
+01:15:34,560 --> 01:15:38,195
+Speaker 1: Thanks to dj pretzel for the opening music cat lee for web design and brand.
+
+1064
+01:15:38,235 --> 01:15:44,620
+Speaker 0: ok for the logos Be sure to visit our website at front row crew.com for show notes discussion news and more.
+
+1065
+01:15:44,900 --> 01:15:50,535
+Speaker 1: Remember geek nights is not one but four different shows sci-tech mondays gaming tuesdays anime comic wednesdays.
+
+1066
+01:15:50,635 --> 01:15:52,300
+Speaker 1: and indiscriminate thursdays.
+
+1067
+01:15:52,661 --> 01:15:56,693
+Speaker 0: Geek nights is distributed under a creative commons attribution 3.0 license.
+
+1068
+01:15:57,094 --> 01:16:01,853
+Speaker 0: geek nights is recorded live with no studio And no audience, but unlike those other late shows.
+
+1069
+01:16:01,973 --> 01:16:10,020
+Speaker 1: It's actually recorded at night And the patreon patrons for this episode of geek nights are alan joyce heidi munickel marty green.
+
+1070
+01:16:10,060 --> 01:16:16,620
+Speaker 1: Yeah link eg graham finch you hold the key to my heart and I yelled to the cabbie yo home smell you later.
+
+1071
+01:16:16,841 --> 01:16:28,903
+Speaker 1: clinton walton reyn from new zealand ryan paren chris midkiff dread lily tenerbrade just like A dude guy chris rimer finn shervin vat horrell and a whole bunch of people who do not want me to say Their names.
+
+1072
+01:16:29,364 --> 01:16:32,211
+Speaker 1: looks like philly, uh pennsylvania certified its vote.
+
+1073
+01:16:32,492 --> 01:16:34,397
+Speaker 1: So now I leave you with.
+

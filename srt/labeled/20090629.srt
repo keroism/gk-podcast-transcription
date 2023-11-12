@@ -1,0 +1,2768 @@
+1
+00:00:09,340 --> 00:00:11,899
+Rym: Hey, it's Monday, June 29th.
+
+2
+00:00:12,160 --> 00:00:12,622
+Scott: I'm Rym.
+
+3
+00:00:12,862 --> 00:00:17,493
+Rym: I'm Scott and this is GeekNights tonight HTML5.
+
+4
+00:00:25,883 --> 00:00:26,917
+Scott: Let's do this.
+
+5
+00:00:30,944 --> 00:00:31,707
+Rym: Well last week.
+
+6
+00:00:31,788 --> 00:00:34,098
+Rym: I went to SIFMA in the city my work.
+
+7
+00:00:34,179 --> 00:00:38,620
+Rym: actually I got a free pass and they let me take like four hours off to go poke around.
+
+8
+00:00:38,721 --> 00:00:39,907
+Rym: What's SIFMA?
+
+9
+00:00:39,927 --> 00:00:55,500
+Rym: SIFMA is the Securities Industry and Financial Markets Association, which is I Designed specifically for High-end ultra enterprise technology as it applies to the financial markets of the world.
+
+10
+00:00:55,700 --> 00:00:57,667
+Scott: That's a really specific trade show.
+
+11
+00:00:57,687 --> 00:00:58,590
+Scott: You know crowded.
+
+12
+00:00:58,831 --> 00:01:00,556
+Rym: It was crazy crowded was.
+
+13
+00:01:00,636 --> 00:01:01,720
+Rym: it was actually gigantic.
+
+14
+00:01:01,841 --> 00:01:04,271
+Rym: It was bigger than a lot of the smaller anime cons we go to.
+
+15
+00:01:04,611 --> 00:01:06,360
+Rym: huh it was in the Hilton.
+
+16
+00:01:06,460 --> 00:01:07,945
+Scott: I think I wasn't in the Javits.
+
+17
+00:01:08,266 --> 00:01:12,200
+Rym: nah, okay, but they used like almost all the function space.
+
+18
+00:01:12,220 --> 00:01:15,660
+Rym: They had all these different areas, but I know I didn't go to SIFMA last year.
+
+19
+00:01:15,680 --> 00:01:20,560
+Rym: I just I didn't think too, but this year You know I took my free pass and I went and I walked around.
+
+20
+00:01:20,781 --> 00:01:24,060
+Rym: I didn't go into any of the events or any of the like behind closed doors things.
+
+21
+00:01:24,140 --> 00:01:30,340
+Rym: But I met the people who work for the group that makes the fixed protocol like the actual people that make the fixed.
+
+22
+00:01:30,440 --> 00:01:31,163
+Scott: Oh, there's a people.
+
+23
+00:01:31,344 --> 00:01:31,705
+Scott: It's not.
+
+24
+00:01:31,745 --> 00:01:33,913
+Scott: it's not like a you know an industry standard.
+
+25
+00:01:33,953 --> 00:01:35,739
+Scott: It's like it's a one company makes it.
+
+26
+00:01:35,800 --> 00:01:38,830
+Rym: well No, it is an industry standard, and there's an open consortium.
+
+27
+00:01:38,871 --> 00:01:41,239
+Rym: that yeah right the consortium, so that was there.
+
+28
+00:01:41,962 --> 00:01:45,497
+Scott: So I talked to consortium is usually a bunch of companies not just one.
+
+29
+00:01:45,517 --> 00:01:57,557
+Rym: well Yeah But the body that is created by them the body that actually maintains your like the infrastructure like the website where they host the current Standard and the comments on the new standard and all that stuff mm-hmm.
+
+30
+00:01:58,161 --> 00:02:02,000
+Rym: So I talked to them and they were pretty cool, and I learned you know I'm the NTP guy.
+
+31
+00:02:02,201 --> 00:02:09,788
+Rym: I I've realized over time that I'm one of the few NTP guys and server fault has told me as I went and answered Every question about NTP.
+
+32
+00:02:09,809 --> 00:02:11,476
+Rym: no because people just don't know how to use it.
+
+33
+00:02:11,757 --> 00:02:14,304
+Rym: yeah, but That's what I use.
+
+34
+00:02:14,324 --> 00:02:14,926
+Rym: That's what I know.
+
+35
+00:02:15,248 --> 00:02:16,794
+Rym: and as I was walking around.
+
+36
+00:02:16,834 --> 00:02:21,838
+Rym: You know my boss was walking around He comes to me the next day after six months as hey, so can you get us some of that PTP?
+
+37
+00:02:22,700 --> 00:02:23,684
+Rym: And I'm like what's PTP?
+
+38
+00:02:23,704 --> 00:02:31,419
+Rym: and he says the precision time protocol it should get us nanosecond to accuracy as opposed to the NTP microsecond accuracy.
+
+39
+00:02:31,439 --> 00:02:33,624
+Scott: is It BS?
+
+40
+00:02:33,885 --> 00:02:35,330
+Rym: no, it's not however.
+
+41
+00:02:35,350 --> 00:02:39,382
+Rym: I don't know if it is Useful?
+
+42
+00:02:39,682 --> 00:02:40,886
+Scott: is it non free?
+
+43
+00:02:41,348 --> 00:02:41,589
+Rym: well.
+
+44
+00:02:42,050 --> 00:02:44,779
+Rym: It's not free in the sense that it requires hardware.
+
+45
+00:02:45,341 --> 00:02:50,544
+Rym: It is here's as far as I can tell all I've read To qualify this.
+
+46
+00:02:50,665 --> 00:02:54,440
+Rym: I have read a white paper, and I have looked at a diagram.
+
+47
+00:02:54,541 --> 00:02:56,179
+Rym: I haven't gone into any more depth than that.
+
+48
+00:02:56,400 --> 00:03:17,220
+Rym: The PTP as far as I can tell is a mechanism of using a physical device to put insert hardware time stamps into packets such that you can determine the latency between devices to the nanosecond level and Using that you can then have perfectly synchronized time with real-time kernels between all your devices.
+
+49
+00:03:18,662 --> 00:03:21,454
+Scott: Okay, but do you really need that much precision?
+
+50
+00:03:21,575 --> 00:03:24,301
+Rym: we do more than Microsecond.
+
+51
+00:03:24,341 --> 00:03:30,320
+Rym: you realize I have developers coming to me already in our you know testing environment, and they're like look at these logs.
+
+52
+00:03:30,400 --> 00:03:32,647
+Rym: I'm like okay, and they're like this is bullshit.
+
+53
+00:03:32,887 --> 00:03:33,168
+Rym: How come?
+
+54
+00:03:33,188 --> 00:03:39,519
+Rym: the time is off by like six microseconds, and I'm like Jesus Christ, man How can you even tell?
+
+55
+00:03:41,261 --> 00:03:41,923
+Rym: Like the clock?
+
+56
+00:03:41,943 --> 00:03:44,091
+Scott: you're not just bullshitting you know I'm sure.
+
+57
+00:03:44,112 --> 00:03:44,754
+Rym: I'm sure.
+
+58
+00:03:44,814 --> 00:03:46,159
+Scott: what did they do before you were there?
+
+59
+00:03:46,800 --> 00:03:48,088
+Scott: The time must have been way off.
+
+60
+00:03:48,511 --> 00:03:55,659
+Rym: well now because they weren't doing this kind of thing My company is advancing rapidly in what we do and this was stuff that wasn't even done when I wasn't there.
+
+61
+00:03:56,921 --> 00:04:08,687
+Rym: But NTP is basically the protocol for synchronizing things in a way that is nice for computers But nice for computers does not mean nice for Accurate timekeeping.
+
+62
+00:04:09,511 --> 00:04:15,651
+Scott: if you need that much accurate timekeeping Just get your own atomic clock and connect all your computers to it directly.
+
+63
+00:04:16,031 --> 00:04:18,880
+Rym: that actually would be a terrible idea for a number of reasons.
+
+64
+00:04:20,212 --> 00:04:21,401
+Rym: One it's not so much I mean.
+
+65
+00:04:21,541 --> 00:04:29,933
+Rym: one idea is that you want to have the time be synchronous between all of your devices - I want my time to synchronize to an external body.
+
+66
+00:04:29,953 --> 00:04:39,235
+Rym: if I'm following my atomic clock But someone else is using their atomic clock while the intervals are the same I have to make sure that I match exactly at the start and then nothing gets off.
+
+67
+00:04:39,556 --> 00:04:41,503
+Scott: get to atomic clocks.
+
+68
+00:04:41,904 --> 00:04:49,706
+Rym: a better way is to synchronize to the same atomic clock that all the people I do business with are syncing to and Synchronize your atomic clock with that atomic clock.
+
+69
+00:04:49,867 --> 00:04:54,700
+Rym: Well, you see why don't I just use PA PTP to synchronize my devices to my?
+
+70
+00:04:55,442 --> 00:04:57,911
+Scott: Because it seems like an unnecessary ludicrous thing.
+
+71
+00:04:58,212 --> 00:04:59,075
+Rym: No, it looks pretty.
+
+72
+00:04:59,356 --> 00:05:00,520
+Rym: the math behind it's pretty cool.
+
+73
+00:05:00,621 --> 00:05:01,045
+Rym: I'm gonna.
+
+74
+00:05:01,187 --> 00:05:01,470
+Rym: I will.
+
+75
+00:05:01,793 --> 00:05:05,400
+Rym: in a couple weeks I'll know the fullness of this and I will be able to talk about it in depth.
+
+76
+00:05:05,480 --> 00:05:14,607
+Scott: but also I think that the number of people on the earth who never need for a greater than NTP accuracy is maybe like to Know.
+
+77
+00:05:14,647 --> 00:05:18,340
+Rym: you'd be surprised All right, but what about science?
+
+78
+00:05:19,522 --> 00:05:21,779
+Scott: But anyway, the sciences have their own atomic clocks.
+
+79
+00:05:22,262 --> 00:05:26,020
+Rym: I just say is pretty cool that the one that's why all the atomic clocks are at science lab.
+
+80
+00:05:26,060 --> 00:05:30,798
+Rym: But one thing that worries me is that it appears to need an entire separate physical infrastructure.
+
+81
+00:05:32,341 --> 00:05:36,360
+Rym: As in you have a backplane Ethernet or something that everything uses just to synchronize time.
+
+82
+00:05:37,701 --> 00:05:40,515
+Scott: So you need to double your network size, which is fine.
+
+83
+00:05:40,576 --> 00:05:48,933
+Rym: All right, like an IBM We did that to have a full backplane moderating system, which basically came down to me Connecting an entire new LAN to every server.
+
+84
+00:05:49,034 --> 00:05:54,015
+Scott: every computer needs like an extra Nick and you need to double the switches and double the routers.
+
+85
+00:05:54,076 --> 00:05:57,449
+Rym: and well We would probably wouldn't have routers for this.
+
+86
+00:05:57,730 --> 00:05:59,557
+Rym: It would probably only be on a local subnet.
+
+87
+00:05:59,718 --> 00:06:05,977
+Rym: No Steven So yeah, but I mean we already have like two four or five gigi interfaces on every single server.
+
+88
+00:06:06,037 --> 00:06:09,047
+Scott: So Those the real interfaces.
+
+89
+00:06:09,067 --> 00:06:12,418
+Scott: actually real interface is enough room for more interfaces.
+
+90
+00:06:12,458 --> 00:06:15,671
+Scott: Yes How many network cards he got in there?
+
+91
+00:06:15,952 --> 00:06:18,040
+Rym: I actually we just ordered these ninja boxes.
+
+92
+00:06:18,501 --> 00:06:29,635
+Rym: They're basically they have these special hardware nicks that have all this packet inspection stuff built into them Such that I can fully sniff and analyze gigi in real time.
+
+93
+00:06:29,655 --> 00:06:30,537
+Rym: Mm-hmm.
+
+94
+00:06:30,678 --> 00:06:31,360
+Rym: It's crazy.
+
+95
+00:06:31,763 --> 00:06:33,480
+Scott: All right, it is absolutely crazy.
+
+96
+00:06:33,962 --> 00:06:36,957
+Rym: And then all we discovered was well now we need to make our application.
+
+97
+00:06:36,997 --> 00:06:37,279
+Rym: do that.
+
+98
+00:06:39,483 --> 00:06:42,095
+Rym: That was what I spent my a couple of days doing but step move was cool.
+
+99
+00:06:42,115 --> 00:06:45,548
+Rym: the one thing that's interesting I've been to a lot of trade shows and they always suck.
+
+100
+00:06:46,070 --> 00:06:48,900
+Rym: They're just really boring and it's like trade shows don't suck.
+
+101
+00:06:49,342 --> 00:06:50,828
+Rym: Well a lot of technology
+
+102
+00:06:50,868 --> 00:06:51,430
+Scott: on the trade
+
+103
+00:06:51,591 --> 00:07:02,634
+Rym: industry centric trade shows Tend to be a lot of people trying to sell me things that are not entirely true or trying to sell me products I don't actually need and mostly trying to sell me things but not giving you have to go
+
+104
+00:07:02,654 --> 00:07:04,000
+Scott: to food industry trade shows.
+
+105
+00:07:04,180 --> 00:07:05,891
+Rym: Well because they give me food and it's great.
+
+106
+00:07:06,495 --> 00:07:21,186
+Rym: So SIFMA Basically as far I'll describe it to you like this There was infinite booze of any strife and free food and coffee and hangout places and couches and I've entered to win like all These BMW motorcycles.
+
+107
+00:07:21,286 --> 00:07:23,213
+Scott: and it was you know, I noticed.
+
+108
+00:07:23,453 --> 00:07:25,420
+Rym: well the drawings aren't for another couple weeks.
+
+109
+00:07:26,402 --> 00:07:28,149
+Rym: Yeah, I entered a lot of contests at this.
+
+110
+00:07:28,189 --> 00:07:32,849
+Rym: thing is a drop in your business card contest Yep, but some of them were fill out this survey.
+
+111
+00:07:32,990 --> 00:07:41,359
+Rym: So yeah, I basically carried around Work business cards for companies that looked legitimate and GeekNights business cards for companies that look like they were making shit up.
+
+112
+00:07:41,700 --> 00:07:46,520
+Rym: Yeah, because I didn't want the companies that were making shit up to ever contact me in a professional capacity.
+
+113
+00:07:47,761 --> 00:07:49,653
+Rym: But if they email me with GeekNights, that's great.
+
+114
+00:07:49,673 --> 00:07:50,377
+Rym: I'll get them on the show.
+
+115
+00:07:51,381 --> 00:07:51,682
+Scott: God.
+
+116
+00:07:51,884 --> 00:08:02,064
+Rym: but like the London Stock Exchange had a booth and I Hung out there and they were just giving out champagne and sit in this little lounge and just chatting and everyone was all just hanging out I should get that job.
+
+117
+00:08:02,746 --> 00:08:04,653
+Rym: And yeah, it was real fun.
+
+118
+00:08:04,733 --> 00:08:05,978
+Rym: I I wouldn't.
+
+119
+00:08:06,138 --> 00:08:13,308
+Rym: some year I should just take the day off work and just just go to this convention and just drink and eat all day and then go Home, not a bad idea.
+
+120
+00:08:13,449 --> 00:08:13,971
+Scott: It's free.
+
+121
+00:08:14,192 --> 00:08:15,639
+Scott: That's the reason they have those things.
+
+122
+00:08:15,981 --> 00:08:19,140
+Scott: Yeah, basically everyone's like I'll give you as much money as you want.
+
+123
+00:08:19,220 --> 00:08:21,891
+Scott: Let me get the day off work and just truck and hang out.
+
+124
+00:08:21,911 --> 00:08:23,015
+Scott: Oh, thank you.
+
+125
+00:08:23,035 --> 00:08:23,337
+Scott: Thank you.
+
+126
+00:08:23,377 --> 00:08:24,220
+Scott: Here's even more money.
+
+127
+00:08:24,321 --> 00:08:25,697
+Scott: Oh, thank you for getting me out of work.
+
+128
+00:08:27,064 --> 00:08:29,081
+Scott: You saved me Thank you.
+
+129
+00:08:29,101 --> 00:08:29,743
+Scott: Okay.
+
+130
+00:08:30,264 --> 00:08:30,766
+Rym: It was alright.
+
+131
+00:08:31,046 --> 00:08:32,530
+Scott: So check this news out right?
+
+132
+00:08:32,549 --> 00:08:33,332
+Rym: I can't I'm checking.
+
+133
+00:08:33,653 --> 00:08:38,005
+Scott: So remember when Pirate Bay did Bay image Whatever came of that?
+
+134
+00:08:38,025 --> 00:08:38,549
+Rym: I never went.
+
+135
+00:08:38,568 --> 00:08:40,458
+Scott: basically no one uses it as far as I can tell.
+
+136
+00:08:40,660 --> 00:08:42,953
+Scott: I mean like I've never seen anyone linked to it there.
+
+137
+00:08:42,974 --> 00:08:44,020
+Rym: right now while you keep talking.
+
+138
+00:08:44,020 --> 00:08:46,852
+Rym: Alright, cuz I remember I predicted that there's no use for it.
+
+139
+00:08:47,233 --> 00:08:47,474
+Scott: Yeah.
+
+140
+00:08:47,595 --> 00:08:50,323
+Scott: Well, I mean basically You know, it's like.
+
+141
+00:08:50,384 --> 00:08:54,940
+Scott: what kind of image are you gonna post that other people are gonna take down other than child?
+
+142
+00:08:55,380 --> 00:08:56,706
+Scott: And they weren't allowing child porn.
+
+143
+00:08:56,726 --> 00:08:58,875
+Scott: They were pretty much saying anything but child porn.
+
+144
+00:08:58,936 --> 00:08:59,920
+Rym: I'm looking at Pokemon art.
+
+145
+00:08:59,980 --> 00:09:00,764
+Rym: I'm gonna look around.
+
+146
+00:09:00,845 --> 00:09:03,800
+Scott: I mean, it's like you can just host images on your own website.
+
+147
+00:09:04,380 --> 00:09:05,144
+Rym: Really, you know what?
+
+148
+00:09:05,184 --> 00:09:06,630
+Rym: The biggest tag is right here.
+
+149
+00:09:07,252 --> 00:09:08,277
+Scott: What Ranma?
+
+150
+00:09:08,678 --> 00:09:14,715
+Scott: All right Alright, so is everyone storing all the 4chan images, you know, I mean, there's always places to put images.
+
+151
+00:09:14,735 --> 00:09:16,440
+Scott: We don't really need Bay image.
+
+152
+00:09:17,541 --> 00:09:25,404
+Scott: But they're making video Bay and the extreme beta is out now I Wouldn't recommend using this extreme.
+
+153
+00:09:25,424 --> 00:09:26,146
+Rym: Oh my god.
+
+154
+00:09:26,186 --> 00:09:31,260
+Rym: It's all Pokemon porn, of course, Ranma porn, of course.
+
+155
+00:09:32,262 --> 00:09:36,580
+Scott: So video Bay, I wouldn't recommend using the extreme beta.
+
+156
+00:09:36,821 --> 00:09:39,369
+Rym: It's a it's a vaporion and a Pidgeot.
+
+157
+00:09:39,569 --> 00:09:42,017
+Scott: having said why are you looking at it still?
+
+158
+00:09:42,057 --> 00:09:42,940
+Rym: It's like a train wreck.
+
+159
+00:09:43,303 --> 00:09:43,988
+Rym: Oh, there's a penis.
+
+160
+00:09:44,048 --> 00:09:44,532
+Rym: Okay, I'm done.
+
+161
+00:09:44,935 --> 00:09:45,479
+Rym: Oh my god.
+
+162
+00:09:46,781 --> 00:09:49,753
+Scott: So the Bay the video Bay the extreme beta.
+
+163
+00:09:49,914 --> 00:09:51,280
+Scott: you should not use it for two reasons.
+
+164
+00:09:51,320 --> 00:09:55,140
+Scott: Number one is extreme beta probably doesn't work - it's gonna be just like Bay image.
+
+165
+00:09:55,300 --> 00:09:57,974
+Rym: It's gonna be Ranma and Pokemon porn and nothing else.
+
+166
+00:09:57,994 --> 00:10:00,971
+Scott: That's possibly true But - they're apparently there.
+
+167
+00:10:01,172 --> 00:10:02,500
+Scott: since it's so beta right now.
+
+168
+00:10:02,560 --> 00:10:08,749
+Scott: They're like storing all your passwords and plain text and you can tell they're doing this because they email you the password you said After you register.
+
+169
+00:10:09,113 --> 00:10:22,220
+Scott: awesome yeah, so I wouldn't use it right now, but it is interesting because While Bay image right isn't really necessary because there's no people really taking images off of hosted places.
+
+170
+00:10:24,161 --> 00:10:27,940
+Scott: Video Bay, I mean YouTube takes down a lot of copyrighted stuff.
+
+171
+00:10:27,940 --> 00:10:32,600
+Scott: I mean how many of our things of the day always get taken down and then we can't find them.
+
+172
+00:10:32,720 --> 00:10:37,213
+Rym: I mean so someone uploaded what appears to be all of xkcd to Bay image.
+
+173
+00:10:37,655 --> 00:10:39,300
+Scott: Why are you still looking at Bay him?
+
+174
+00:10:39,560 --> 00:10:40,874
+Rym: I'm fascinated by it.
+
+175
+00:10:41,076 --> 00:10:52,160
+Scott: anyway Video Bay could be pretty awesome if there's all of Dilbert Mm-hmm, if people post like all the copyrighted videos they get taken off of YouTube to video Bay.
+
+176
+00:10:52,722 --> 00:11:00,690
+Scott: maybe video Bay could become like the default go-to place, but I Wonder they're currently an extreme beta.
+
+177
+00:11:00,710 --> 00:11:02,880
+Scott: I mean by the time they're not an extreme beta.
+
+178
+00:11:02,980 --> 00:11:09,040
+Scott: Are they gonna be like, you know is video in the website still gonna be something people want?
+
+179
+00:11:09,281 --> 00:11:17,820
+Rym: You know, a lot of people were saying that Bay image or I guess they'll say the same thing about this are going to be Used for good purposes like right now the situation in Iran.
+
+180
+00:11:18,350 --> 00:11:23,696
+Rym: It'd be great If there was a place where people could put all this stuff to where no one would take it down or mess with it And the world can see it.
+
+181
+00:11:24,525 --> 00:11:32,700
+Rym: There are a grand total of three Images with the Iran tag on Bay and right now they am just not being used for anything worthwhile.
+
+182
+00:11:33,763 --> 00:11:35,157
+Scott: Not that you can tell right away.
+
+183
+00:11:35,218 --> 00:11:38,189
+Rym: anyway It's nothing but Pokemon porn.
+
+184
+00:11:38,431 --> 00:11:40,600
+Scott: it's major mostly Pokemon fun.
+
+185
+00:11:41,043 --> 00:11:43,739
+Rym: I would say the vast majority of it is Pokemon porn.
+
+186
+00:11:44,734 --> 00:11:50,800
+Scott: Wow Well Bay video Bay might just turn into Pokemon porn video city.
+
+187
+00:11:51,121 --> 00:11:54,539
+Scott: So if you like Pokemon porn, this is good news for you.
+
+188
+00:11:56,701 --> 00:12:11,097
+Scott: Yeah, I think it's just interesting that despite guilty verdicts and everyone Pirate Bay is gonna keep fighting like You know, there's no tomorrow like Napster caved Supernova that all they remember the original bit torrent video site.
+
+189
+00:12:11,157 --> 00:12:13,846
+Scott: they caved caved but.
+
+190
+00:12:13,866 --> 00:12:19,990
+Scott: but Pirate Bay is going to fight forever and Till they can't fight anymore and they're even.
+
+191
+00:12:20,191 --> 00:12:34,525
+Scott: in fact, they're not only gonna keep themselves up but they're gonna keep doing new stuff to stick it to the man and that's that's good by me even if the things they actually Make you know are just useless Pokemon porn hosting situations It doesn't matter.
+
+192
+00:12:34,645 --> 00:12:37,878
+Scott: as long as you know, they're still sticking it to the man, you know.
+
+193
+00:12:39,241 --> 00:12:41,928
+Rym: So in other news, we all know Michael Jackson.
+
+194
+00:12:42,069 --> 00:12:42,871
+Rym: We talked about that.
+
+195
+00:12:42,931 --> 00:12:43,774
+Scott: He's got we didn't?
+
+196
+00:12:44,255 --> 00:12:45,820
+Rym: we talked about that on the previous show?
+
+197
+00:12:46,040 --> 00:12:46,422
+Scott: No, we didn't.
+
+198
+00:12:46,442 --> 00:12:51,860
+Scott: the previous show was a Thursday and he died on Friday, but we did a show on celebrity death Scott.
+
+199
+00:12:52,402 --> 00:12:52,903
+Scott: Oh, right.
+
+200
+00:12:52,963 --> 00:12:54,488
+Scott: Yes, right.
+
+201
+00:12:54,629 --> 00:12:58,120
+Rym: Would we have done that show prior to this guy about that show?
+
+202
+00:12:58,380 --> 00:13:02,960
+Rym: I mean it would have been crazy if we had done that show randomly, you know before all this happened.
+
+203
+00:13:03,647 --> 00:13:10,797
+Rym: Okay But there were two interesting stories on slashdot kind of follow-ups to this.
+
+204
+00:13:10,997 --> 00:13:17,000
+Rym: one was that The put the primary cause of all the website slowing down as a result of this.
+
+205
+00:13:17,040 --> 00:13:21,439
+Rym: We're not the websites of the hosting themselves, but the ad networks that couldn't keep up.
+
+206
+00:13:21,721 --> 00:13:22,846
+Scott: Yeah, I mean it is a problem.
+
+207
+00:13:22,866 --> 00:13:24,433
+Scott: you visit a website right like.
+
+208
+00:13:24,714 --> 00:13:26,080
+Scott: take it take our website, right?
+
+209
+00:13:26,200 --> 00:13:27,878
+Scott: I got the like the Google Analytics on there.
+
+210
+00:13:28,301 --> 00:13:31,894
+Scott: It's like okay the website loads need to wait for Google Analytics to load.
+
+211
+00:13:32,335 --> 00:13:36,980
+Scott: or you visit like, you know A website that has like ads from project wonderful.
+
+212
+00:13:37,040 --> 00:13:41,880
+Scott: It's like okay you load the website and now you have to wait for the ad from project wonderful to load.
+
+213
+00:13:41,920 --> 00:13:43,820
+Scott: It's not all coming from the same server.
+
+214
+00:13:43,981 --> 00:13:54,940
+Rym: The thing is one the ad networks clearly can't keep up with any sort of load and they have no real Incentive to especially if I know this isn't the case everywhere, but there are places where the website won't load until the ads load.
+
+215
+00:13:55,421 --> 00:14:00,696
+Scott: It depends on a lot of different factors a browser and hosting and all sort of stuff.
+
+216
+00:14:01,037 --> 00:14:04,348
+Rym: while this is interesting It's not really a concern of mine because one ad block.
+
+217
+00:14:04,629 --> 00:14:14,478
+Rym: Yep, and two even if they somehow Someday prevent me from using ad block I'll just use the ad block that pretends to download the ad and doesn't show it to me.
+
+218
+00:14:14,739 --> 00:14:16,052
+Rym: Yep They can't detect that ever.
+
+219
+00:14:16,335 --> 00:14:27,717
+Rym: Nope Yeah, but the more interesting one the much more interesting one was that Supposedly and there are a bunch of stories about this I did not do any due diligence or dig up any like further sources, but it was on slashdot.
+
+220
+00:14:27,737 --> 00:14:28,520
+Rym: I figured that's good enough.
+
+221
+00:14:29,082 --> 00:14:47,639
+Rym: They were talking about how Google at least initially in the early hours after Michael Jackson's death was hit by so many searches such a massive spike in Google usage that they thought it was a DDoS attack of some kind and at least in some places put up the 404 while they sort of things
+
+222
+00:14:47,800 --> 00:14:47,860
+Scott: out.
+
+223
+00:14:47,921 --> 00:14:54,034
+Scott: I mean that is interesting in that you know you think about it and this is part of the reason why I like spam.
+
+224
+00:14:54,054 --> 00:15:00,118
+Scott: filtering and such is so difficult because it is you know, and why we have captchas and all these sorts of things.
+
+225
+00:15:00,138 --> 00:15:18,151
+Scott: a Attack is often completely indistinguishable from legitimate usage and it's it's you know Next to impossible to you know, determine the difference between the two even if you have like humans Investigating with their own eyeballs, so it's.
+
+226
+00:15:18,232 --> 00:15:33,064
+Rym: it's gonna be a problem basically forever Yeah, but what I find interesting is that this this really belies the the technical proficiency of the greater Populace more so than people might have already suspected because I remember way back in the day I don't know.
+
+227
+00:15:33,104 --> 00:15:34,573
+Scott: We already suspect a lot.
+
+228
+00:15:34,593 --> 00:15:40,425
+Rym: I Still say that it belies it because people Still don't get it.
+
+229
+00:15:40,807 --> 00:15:41,751
+Rym: Michael Jackson's done.
+
+230
+00:15:41,811 --> 00:15:42,333
+Rym: That's the news.
+
+231
+00:15:42,353 --> 00:15:45,163
+Rym: Let's say we know it's happened or people hear Yeah, Michael Jackson died.
+
+232
+00:15:45,784 --> 00:15:54,329
+Rym: smart people go to a news aggregator of some kind or just go to one of their trusted news sites CNN.com news.google.com.
+
+233
+00:15:54,450 --> 00:15:57,240
+Rym: Yeah, one of those places and confirm it, you know, it'll be on the front page.
+
+234
+00:15:57,260 --> 00:15:57,963
+Rym: It was legitimate.
+
+235
+00:15:58,143 --> 00:15:59,689
+Rym: dig calm or maybe they.
+
+236
+00:15:59,810 --> 00:16:03,508
+Rym: maybe they go to Google News and they search for it there I do Google News.
+
+237
+00:16:04,011 --> 00:16:09,820
+Rym: Yep, or of course I mean remember in the previous times like September 11th princess die all these things in the past.
+
+238
+00:16:10,302 --> 00:16:12,314
+Rym: You go to a place like FARC and slashed out.
+
+239
+00:16:12,334 --> 00:16:13,420
+Rym: those places never go down.
+
+240
+00:16:13,480 --> 00:16:15,639
+Rym: They can handle pretty much any traffic anyone throws at him.
+
+241
+00:16:15,820 --> 00:16:20,096
+Rym: Yeah, and they will always be there to give you the news when everyone else has failed.
+
+242
+00:16:20,337 --> 00:16:27,560
+Rym: Mm-hmm But the majority of people go to Google apparently and just type Michael Jackson into Google.
+
+243
+00:16:29,241 --> 00:16:33,417
+Rym: Now my question to you people obviously the tech people here don't they know the answer to this.
+
+244
+00:16:33,457 --> 00:16:36,311
+Rym: but to these people What do you expect to find?
+
+245
+00:16:36,553 --> 00:16:37,359
+Rym: What are you looking for?
+
+246
+00:16:37,641 --> 00:16:46,600
+Rym: You're gonna find like I don't know Michael Jackson's website Which is gonna say died and you're gonna find the Wikipedia article about Michael Jackson Unless you're searching for something specific.
+
+247
+00:16:47,542 --> 00:17:09,329
+Rym: every time I see people can't and they can't find something on the internet or I See people like the sure sign that someone doesn't get how the internet works is when they search for generic information in a search engine mmm, like someone who searches for something like puppies or Raising puppies as opposed to searching for a specific piece of information You're basically just asking for problems.
+
+248
+00:17:09,730 --> 00:17:10,915
+Scott: Yeah, I mean you're not.
+
+249
+00:17:11,215 --> 00:17:11,998
+Scott: it that's like, you know.
+
+250
+00:17:12,861 --> 00:17:16,108
+Scott: I mean you go to the card catalog in the library cars.
+
+251
+00:17:16,147 --> 00:17:16,910
+Scott: I'm looking for cars.
+
+252
+00:17:18,662 --> 00:17:20,810
+Scott: What about them how they work?
+
+253
+00:17:21,781 --> 00:17:26,079
+Scott: You know how to buy one, you know, if you're searching you need a specific thing.
+
+254
+00:17:26,099 --> 00:17:30,692
+Scott: I mean at least search for like, you know, how did Michael Jackson die?
+
+255
+00:17:31,153 --> 00:17:33,620
+Scott: or you know, when did Michael Jackson?
+
+256
+00:17:34,925 --> 00:17:36,611
+Scott: Did Michael Jackson?
+
+257
+00:17:36,732 --> 00:17:38,980
+Rym: if you're savvy don't search for that.
+
+258
+00:17:39,060 --> 00:17:47,247
+Rym: Just go to one of the news aggregators or one of the places like Parker slash shot and in that story or possibly in the comments The answers are all gonna be there.
+
+259
+00:17:47,448 --> 00:17:49,118
+Rym: Yeah, there's nothing you're gonna find.
+
+260
+00:17:49,179 --> 00:17:49,420
+Rym: searching.
+
+261
+00:17:49,480 --> 00:17:56,260
+Scott: I mean if you're just searching let's say, you know, he died But now you're searching for like, you know, Michael Jackson stuff to feel all nostalgic.
+
+262
+00:17:56,460 --> 00:17:58,427
+Scott: Well, you can't don't just search for Michael Jackson.
+
+263
+00:17:58,447 --> 00:18:02,300
+Scott: You get a search for like Michael Jackson music videos, you know.
+
+264
+00:18:02,340 --> 00:18:06,020
+Scott: Or you know a specific song and you want to see the lyrics.
+
+265
+00:18:06,241 --> 00:18:09,659
+Rym: Yeah, like when you went to YouTube and everyone was watching thriller over and over and over again.
+
+266
+00:18:09,881 --> 00:18:11,351
+Scott: Yeah, well, it's on the front page YouTube.
+
+267
+00:18:11,371 --> 00:18:11,996
+Scott: They helped you out.
+
+268
+00:18:12,116 --> 00:18:12,298
+Rym: Yep.
+
+269
+00:18:12,358 --> 00:18:23,512
+Scott: Yep But but people just don't know how to use Google and that's why I think as soon as I think it's actually be a problem For Google if people learned because they'd use Google a lot less.
+
+270
+00:18:23,552 --> 00:18:25,036
+Scott: I mean Google is my search engine.
+
+271
+00:18:25,097 --> 00:18:26,160
+Scott: I use it every day.
+
+272
+00:18:26,361 --> 00:18:31,700
+Scott: I use it multiple times a day, but I use it a lot less than I ever did.
+
+273
+00:18:31,861 --> 00:18:33,771
+Scott: You know, I use it less and less all the time.
+
+274
+00:18:33,791 --> 00:18:38,231
+Rym: Well because I don't go to Google for news I go to like Farken slash dot and all those places.
+
+275
+00:18:38,251 --> 00:18:43,213
+Rym: Yeah, and I don't use it to find cool things I go to people that find those cool things for me and I look at those.
+
+276
+00:18:43,374 --> 00:18:49,475
+Scott: I go to Google when there is a Specific thing that I'm looking for like an error code from a device.
+
+277
+00:18:49,916 --> 00:18:51,220
+Rym: Yeah, I'll type that into Google.
+
+278
+00:18:51,621 --> 00:18:58,037
+Scott: Yeah, like a really specific thing like, you know, I needed this kind of plug-in for this kind of.
+
+279
+00:18:58,539 --> 00:19:03,300
+Rym: you know JavaScript library, I mean if I want generic Pokemon porn I'll go to Bay image.
+
+280
+00:19:03,521 --> 00:19:08,980
+Rym: But if I want a very specific Pokemon porn like such say a Pidgeot and a Vayperion having sex, right?
+
+281
+00:19:11,140 --> 00:19:14,989
+Rym: Pidgeot and Vayporion fucking Cuz that'll narrow it down quite a bit.
+
+282
+00:19:15,009 --> 00:19:16,134
+Rym: and then you got to search through those.
+
+283
+00:19:16,195 --> 00:19:19,504
+Scott: but yeah People just don't know how to use Google's.
+
+284
+00:19:19,624 --> 00:19:32,579
+Rym: but along those lines there apparently the Iranian election and despite all the good that Twitter was doing It was a drop in the bucket compared to the number of tweets that hit Twitter in the hours after Michael Jackson's death.
+
+285
+00:19:32,679 --> 00:19:39,508
+Rym: now What I asked to you internet ask of you internet What did you possibly tweet others?
+
+286
+00:19:39,549 --> 00:19:40,391
+Rym: I mean, what did you type?
+
+287
+00:19:40,812 --> 00:19:42,237
+Rym: OMG Michael Jackson's dead.
+
+288
+00:19:42,357 --> 00:19:43,902
+Rym: RT RT RT I mean what.
+
+289
+00:19:44,203 --> 00:19:46,270
+Scott: well, some people were saying he's dead.
+
+290
+00:19:46,772 --> 00:19:48,960
+Scott: Some people were doing like up-to-the-minute updates.
+
+291
+00:19:49,000 --> 00:19:51,291
+Scott: You know, he died still that no way.
+
+292
+00:19:51,352 --> 00:19:52,055
+Scott: No, he's not dead.
+
+293
+00:19:52,115 --> 00:19:52,437
+Scott: Oh, yes.
+
+294
+00:19:52,477 --> 00:19:55,512
+Scott: He is Okay, it seems like he might have died of this.
+
+295
+00:19:56,115 --> 00:19:57,040
+Scott: he is the night.
+
+296
+00:19:57,040 --> 00:20:00,800
+Scott: He's a link to the 911 phone call, you know, the constant updates like that, right?
+
+297
+00:20:01,120 --> 00:20:03,830
+Rym: The thing is if you want those constant updates you go to again.
+
+298
+00:20:03,890 --> 00:20:04,733
+Rym: either subscribe.
+
+299
+00:20:04,754 --> 00:20:10,766
+Rym: only one person needs to do it But if only one person did it we wouldn't have these Tens of thousands of trees.
+
+300
+00:20:10,986 --> 00:20:23,153
+Scott: the other thing is that some people, you know, we're posting their personal feelings, you know, like good He's dead or Oh Sorrow or his link to my favorite Michael Jackson vid or you know, it
+
+301
+00:20:23,555 --> 00:20:33,890
+Rym: just saddens me that the Possibility of a popular revolution in Iran of an oppressed Persian people rising up Gets less tweets than a pop star.
+
+302
+00:20:33,930 --> 00:20:36,260
+Scott: That's just the demographic of the users of Twitter.
+
+303
+00:20:36,601 --> 00:20:41,538
+Rym: It is it is and but at the same time the users of Twitter are looking at the Orion election as being.
+
+304
+00:20:41,558 --> 00:20:44,951
+Rym: you know Look Twitter is doing something useful.
+
+305
+00:20:45,011 --> 00:20:46,637
+Scott: No Twitter's not doing anything useful.
+
+306
+00:20:46,838 --> 00:20:47,320
+Rym: I think it is.
+
+307
+00:20:47,742 --> 00:20:50,113
+Rym: Without Twitter a lot of what happened there could not have happened.
+
+308
+00:20:50,274 --> 00:20:51,480
+Scott: No would have been fine.
+
+309
+00:20:51,741 --> 00:20:55,551
+Scott: There's plenty of well other technologies that can be used.
+
+310
+00:20:56,193 --> 00:20:58,660
+Rym: I disagree strongly, but that's not the topic tonight.
+
+311
+00:20:58,780 --> 00:21:01,605
+Rym: So well, I'll let it slide but I don't think you're right.
+
+312
+00:21:01,825 --> 00:21:10,780
+Rym: Yeah, but anyway things of the day.
+
+313
+00:21:12,261 --> 00:21:14,329
+Rym: I found this on FARC, but it was in gadget things.
+
+314
+00:21:14,369 --> 00:21:27,428
+Rym: I'm sure many of you have seen it already, but I Find it interesting from this sort of macabre perspective and I've heard people talk about Yes Someone they made
+
+315
+00:21:27,448 --> 00:21:28,894
+Scott: macabre on a gadget
+
+316
+00:21:29,357 --> 00:21:29,879
+Rym: a clock
+
+317
+00:21:30,341 --> 00:21:31,103
+Scott: Cthulhu clock
+
+318
+00:21:31,143 --> 00:21:41,720
+Rym: that powers itself by catching and killing flies and then converting their bodies into fuel That is then turned into electricity to continue to fuel the death machine.
+
+319
+00:21:42,965 --> 00:21:44,119
+Scott: What if there's not enough flies?
+
+320
+00:21:44,960 --> 00:21:46,498
+Rym: Well, eventually it'll run out of power.
+
+321
+00:21:47,141 --> 00:21:53,420
+Scott: Uh-huh, what if it has like enough flies to run a little bit but not enough flies to actually kill any more flies?
+
+322
+00:21:54,581 --> 00:21:59,522
+Rym: Because the fly killing mechanism is basically just flypaper and whenever a fly gets stuck to it It rolls.
+
+323
+00:21:59,662 --> 00:22:00,405
+Rym: after the fly dies.
+
+324
+00:22:00,465 --> 00:22:04,400
+Scott: it rolls it into the bacterial vat, but doesn't need enough power to roll the fly.
+
+325
+00:22:04,641 --> 00:22:09,940
+Scott: Yep, but if it doesn't have enough to roll the fly into the vat, well then like any carnivorous being it dies.
+
+326
+00:22:11,383 --> 00:22:16,992
+Rym: I mean if you run out of power to roll this thing Get you can't power this thing solely on flies.
+
+327
+00:22:17,012 --> 00:22:18,197
+Scott: you need to sort of.
+
+328
+00:22:18,559 --> 00:22:21,640
+Scott: you know Give it some initial battery power or something.
+
+329
+00:22:21,740 --> 00:22:26,439
+Rym: Well much like the umbilical cord gives you some initial power to get starting before you start eating.
+
+330
+00:22:29,986 --> 00:22:31,826
+Rym: There's something Fascinating
+
+331
+00:22:31,846 --> 00:22:36,899
+Scott: thing is unlike an actual clock You can just like replace the battery you like dump a bunch of flies in there to kick
+
+332
+00:22:37,684 --> 00:22:39,395
+Rym: Or just live in a place where there are flies,
+
+333
+00:22:39,617 --> 00:22:39,899
+Scott: I guess
+
+334
+00:22:41,381 --> 00:22:51,700
+Rym: It's a concept more than anything, but it's one of those things where you look at it, and it's really cool But it's vaguely unsettling for a number of kind of ill-defined reasons.
+
+335
+00:22:53,243 --> 00:22:54,552
+Scott: I don't see what's unsettling.
+
+336
+00:22:54,572 --> 00:22:55,820
+Rym: I think it's a little bit unsettling.
+
+337
+00:22:55,901 --> 00:23:04,669
+Rym: I mean it think about this This is the early prototype of a machine that can continue in its existence Only by killing living things and taking their energy.
+
+338
+00:23:05,091 --> 00:23:06,877
+Rym: that is just like ten steps from Skynet.
+
+339
+00:23:06,917 --> 00:23:08,925
+Scott: It's alright It's a clock.
+
+340
+00:23:09,528 --> 00:23:12,040
+Scott: for now, it's countdown till Judgment Day.
+
+341
+00:23:14,221 --> 00:23:28,439
+Rym: You know it was always shocking every time I watch Terminator 2 again that the Judgment Day was so far in the past Kind of like October whatever 1997 the end day in Crystalis something like that.
+
+342
+00:23:29,584 --> 00:23:31,471
+Rym: Yeah, I think this is cool, but that's all I got.
+
+343
+00:23:31,491 --> 00:23:47,839
+Scott: so some dude went to Russia Which is awesome like people do when people do and he went to all of the Russian art museums or at least the big awesome ones right and He did a photo essay And what he took pictures of was not the art.
+
+344
+00:23:47,859 --> 00:23:51,860
+Scott: well He did take pictures of the art, but in those pictures of the art.
+
+345
+00:23:51,900 --> 00:23:56,556
+Scott: He was primarily focusing on the guards in the Russian art museums.
+
+346
+00:23:56,717 --> 00:23:57,560
+Scott: That's pretty cool.
+
+347
+00:23:57,640 --> 00:24:05,000
+Rym: No, I know you know how museums always have like guards who are protecting all the arts Two guys standing next to the important painting with the hands behind their backs looking at you, right?
+
+348
+00:24:05,780 --> 00:24:09,238
+Scott: Apparently though in the Russian art museums all the guards are old ladies with nothing better to do.
+
+349
+00:24:10,521 --> 00:24:12,459
+Scott: Here's a quote from one of the old ladies.
+
+350
+00:24:13,203 --> 00:24:16,175
+Rym: Wait so the guy basically went around Russia taking pictures of old ladies.
+
+351
+00:24:17,199 --> 00:24:26,199
+Scott: a woman in Moscow State Shretakov Gallery Museum said she often returns there on her day off to sit in front of a painting that reminds her of her child.
+
+352
+00:24:26,260 --> 00:24:33,980
+Scott: at Another guard travels three hours each way to work since at home She would just sit on her porch and complain about her illnesses as old women do.
+
+353
+00:24:36,701 --> 00:24:48,020
+Scott: So I mean you look at these pictures right and it's it's pretty amazing because you got like these old ladies You know sitting next to like this amazing arts, but at the same time the old ladies are like arts themselves.
+
+354
+00:24:48,683 --> 00:24:51,454
+Scott: You know it's pretty it's pretty impressive.
+
+355
+00:24:51,514 --> 00:24:56,060
+Scott: and also now I just want to go to Russia and tour the art museums.
+
+356
+00:24:56,561 --> 00:25:02,640
+Scott: Cuz you look at these art museums, then it's like all man's All man's like I go to these museums and see what else they got.
+
+357
+00:25:02,801 --> 00:25:05,974
+Rym: I have not finished touring all of the New York City museums.
+
+358
+00:25:06,154 --> 00:25:11,937
+Scott: I know it's not easy But yeah, I want to go to the Russian art museums big time.
+
+359
+00:25:11,957 --> 00:25:13,184
+Rym: well Maybe you should do that.
+
+360
+00:25:13,264 --> 00:25:14,811
+Scott: I mean look at this statue here with like.
+
+361
+00:25:14,872 --> 00:25:16,600
+Scott: it's like it looks like Neptune or someone.
+
+362
+00:25:16,640 --> 00:25:18,385
+Scott: It's got a big Neptune like beard anyway.
+
+363
+00:25:18,987 --> 00:25:19,729
+Scott: It's looking pretty good.
+
+364
+00:25:19,749 --> 00:25:21,093
+Scott: Uh-huh all right.
+
+365
+00:25:21,835 --> 00:25:23,159
+Scott: Oh, there's a nice pillar, okay?
+
+366
+00:25:24,560 --> 00:25:29,492
+Scott: so Today's show we're gonna talk about some HTML fives and rims.
+
+367
+00:25:29,512 --> 00:25:33,231
+Scott: that he doesn't know about HTML 5 so much mostly I have not read.
+
+368
+00:25:33,252 --> 00:25:34,040
+Rym: you know I know about it.
+
+369
+00:25:34,100 --> 00:25:39,800
+Rym: It's coming mm-hmm, and I just I haven't read in depth all of the like the actual standard.
+
+370
+00:25:39,961 --> 00:25:41,949
+Rym: I haven't read any of the white papers about it.
+
+371
+00:25:42,029 --> 00:25:45,364
+Scott: the thing is you don't need to know any of those things unless you're an HTML writer.
+
+372
+00:25:45,565 --> 00:25:58,880
+Scott: the thing is there are three things that people who are actually Internet people need to know about HTML 5. right and those things are canvas video and audio right Right now not the fact that it's no longer in the SGML family.
+
+373
+00:25:59,604 --> 00:26:00,891
+Scott: I don't know if it is or if it isn't.
+
+374
+00:26:01,052 --> 00:26:02,340
+Rym: it is not big deal.
+
+375
+00:26:02,642 --> 00:26:05,159
+Rym: It's similar to SGML, but it is no longer as GMM.
+
+376
+00:26:05,280 --> 00:26:06,960
+Scott: It doesn't really matter in term.
+
+377
+00:26:07,041 --> 00:26:08,118
+Scott: You know who's using an edge.
+
+378
+00:26:08,642 --> 00:26:11,775
+Scott: You know people always worry about that kind of stuff like I'll use X HTML.
+
+379
+00:26:12,196 --> 00:26:15,988
+Scott: who is really using XML parses to go and grab X HTML pages?
+
+380
+00:26:16,028 --> 00:26:20,540
+Scott: who's really using like SGML parsers - no one's doing that kind of stuff all right.
+
+381
+00:26:20,901 --> 00:26:23,134
+Rym: Despite that they did make it backwards compatible.
+
+382
+00:26:23,395 --> 00:26:24,140
+Scott: Yeah, okay?
+
+383
+00:26:24,220 --> 00:26:27,633
+Scott: But anyway, so canvas video and audio these are three things you need to know about.
+
+384
+00:26:27,653 --> 00:26:31,125
+Scott: let's start with the canvas because that's probably The least exciting right?
+
+385
+00:26:31,225 --> 00:26:32,709
+Scott: basically here's the deal with canvas.
+
+386
+00:26:33,090 --> 00:26:43,254
+Scott: canvas has actually been in Firefox and some other browsers for a while But no one's used it because not enough browsers Supported it and supported it in the same way and supported it in a good way.
+
+387
+00:26:43,314 --> 00:26:44,680
+Scott: so no one really did anything with it.
+
+388
+00:26:44,720 --> 00:26:45,021
+Scott: You know it's.
+
+389
+00:26:45,262 --> 00:26:50,243
+Scott: it's one of those all of these three things in fact all of HTML 5 is you know it's one of those chicken Egg problems.
+
+390
+00:26:50,303 --> 00:26:54,120
+Scott: right until all the browsers support it nobody will write in it.
+
+391
+00:26:54,421 --> 00:27:02,419
+Scott: And as long as most people are still using old browsers right then You know people still won't write in it or if they do write in it.
+
+392
+00:27:02,701 --> 00:27:18,296
+Scott: They'll make sure to have some sort of switch that looks at what browser you're using and not use it if you're using the old browser and Thus people have no reason to upgrade their browser because everything still works with the old browser And you know such-and-such it takes forever to get ahead and like didn't it?
+
+393
+00:27:18,316 --> 00:27:19,480
+Scott: with new web stuff, right?
+
+394
+00:27:20,283 --> 00:27:23,295
+Scott: But the canvas it has been around it's still around.
+
+395
+00:27:23,315 --> 00:27:32,325
+Scott: what it is is Normally when you do an HTML you can do like a table an image right you know some text a paragraph That kind of stuff.
+
+396
+00:27:32,787 --> 00:27:39,060
+Scott: a canvas lets you have a vector drawing area And you can use JavaScript to draw in this area.
+
+397
+00:27:39,762 --> 00:27:47,963
+Scott: So you can go online and you can find like Wolfenstein 3d done in canvas And this is with no browser plugins whatsoever You know.
+
+398
+00:27:48,084 --> 00:27:58,812
+Scott: and you can do vector drawing and it involves SGML and which is a XML format for storing vector images and such and this sort of.
+
+399
+00:27:58,892 --> 00:28:05,561
+Scott: really you know pretty much goes directly after flash But only these sort of vector drawing applications of flash you know.
+
+400
+00:28:05,581 --> 00:28:10,737
+Scott: so you could make a video game and canvas or you could make home star runner and canvas.
+
+401
+00:28:10,797 --> 00:28:19,905
+Scott: you know that that sort of stuff and HTML5 canvas is in there, and it's gonna be you know full-on thing And it's it's gonna be interesting to see.
+
+402
+00:28:19,945 --> 00:28:22,252
+Scott: you know our browsers actually going to.
+
+403
+00:28:22,272 --> 00:28:29,480
+Scott: you know support the canvas in the identical way Or people gonna be driven nuts that the canvas is like different in the different browsers.
+
+404
+00:28:29,681 --> 00:28:31,270
+Scott: You know this kind of thing.
+
+405
+00:28:31,310 --> 00:28:33,200
+Scott: and also what is flash gonna?
+
+406
+00:28:33,320 --> 00:28:37,756
+Scott: Do you know I mean all those websites out there that use flash for like.
+
+407
+00:28:38,238 --> 00:28:38,920
+Scott: you know drawing?
+
+408
+00:28:39,040 --> 00:28:40,640
+Scott: You know how many stupid websites out there?
+
+409
+00:28:40,740 --> 00:28:46,386
+Scott: You go to that are like you know they like the front page is all flashed up But it's just for like logos.
+
+410
+00:28:46,446 --> 00:28:50,580
+Rym: something like this has been a long time coming just in that flash originally was intended.
+
+411
+00:28:50,700 --> 00:28:52,646
+Rym: Well, you know remember shockwave.
+
+412
+00:28:52,887 --> 00:28:58,623
+Scott: well flash isn't from shockwave flash is from that other thing yeah, but separate sorts of things.
+
+413
+00:28:58,663 --> 00:29:05,909
+Rym: it was the idea that you know people wanted to have very much control over what was displayed and they wanted to Do these cool things that they couldn't do.
+
+414
+00:29:06,030 --> 00:29:07,740
+Rym: and we kind of got these?
+
+415
+00:29:08,381 --> 00:29:15,479
+Rym: proprietary Products becoming the de facto standards as opposed to having an open just standard for doing that sort of thing.
+
+416
+00:29:15,540 --> 00:29:22,277
+Rym: and The fact that it took this long to get anything that is actually a real standard for it really is it's.
+
+417
+00:29:22,498 --> 00:29:25,367
+Rym: it's not necessarily Surprising, but it is a little bit saddening.
+
+418
+00:29:25,648 --> 00:29:28,680
+Scott: Yeah, and the thing is with the canvas right?
+
+419
+00:29:30,043 --> 00:29:33,937
+Scott: It's it's sort of you know limiting and you know also freeing.
+
+420
+00:29:33,977 --> 00:29:37,643
+Scott: at the same time You know we can get away from the browser Plugins.
+
+421
+00:29:38,006 --> 00:29:53,994
+Scott: you know we might be able to do like better implementation of these things Mobily speaking you know which is more and more the mobile browsers are really what's important But at the same time it's like okay Do we really need like someone drawing all this crazy shit in our web page?
+
+422
+00:29:54,315 --> 00:29:55,660
+Scott: all people are gonna make canvas ads.
+
+423
+00:29:56,562 --> 00:29:58,814
+Scott: It's good at you know, and it's it's not a plug-in.
+
+424
+00:29:59,155 --> 00:30:01,899
+Rym: well that is one thing I was thinking about the way canvas works.
+
+425
+00:30:02,401 --> 00:30:08,220
+Rym: It'll be much easier to create inline ads that are not easily blocked and are also totally crazy.
+
+426
+00:30:09,284 --> 00:30:10,657
+Scott: You know all over the you know you know.
+
+427
+00:30:10,697 --> 00:30:14,131
+Scott: right now If you can make an animated gif wait till you see like some you know.
+
+428
+00:30:14,833 --> 00:30:19,619
+Scott: so freeform vector advertisements You know and you can also load images in there, too.
+
+429
+00:30:19,700 --> 00:30:21,628
+Scott: So you know be totally out of control.
+
+430
+00:30:22,030 --> 00:30:24,379
+Scott: basically flash ads that are not a plug-in
+
+431
+00:30:24,741 --> 00:30:47,391
+Rym: but at the same time it it opens up an interesting situation where people in our generation and younger are so used to not seeing advertisements at least tech people that If this sort of technology gets to the point to where ads are intertwined with the content such that they cannot be removed easily I See a mass migration away from ad supported media entirely mm-hmm.
+
+432
+00:30:47,972 --> 00:30:50,560
+Scott: now is the the video and the audio tags.
+
+433
+00:30:50,861 --> 00:30:54,915
+Scott: They're pretty much the same thing right and they have the same sort of issues and that you know.
+
+434
+00:30:54,976 --> 00:31:05,505
+Scott: for as long as web browsers Been around I mean even in Netscape - you could have audio and or you know not video necessarily But you get of audio in a web page You know and video came later.
+
+435
+00:31:05,525 --> 00:31:11,147
+Rym: remember the old MIDI file juice that he's made it real easy to do right and that The only way to do it back.
+
+436
+00:31:11,207 --> 00:31:13,134
+Scott: Then was you would pretty much.
+
+437
+00:31:13,234 --> 00:31:18,880
+Scott: Just you know do You know an embed tag to the file?
+
+438
+00:31:18,940 --> 00:31:23,194
+Scott: And then it was up to your browser to have a plug-in right.
+
+439
+00:31:23,214 --> 00:31:24,659
+Scott: so you had to install a plug-in if like.
+
+440
+00:31:24,679 --> 00:31:28,280
+Scott: if you didn't Have any plugins your browser would be like hey, there's an mp3 embedded.
+
+441
+00:31:28,280 --> 00:31:40,580
+Scott: I don't know what to do with it But if you did have a plug-in like say QuickTime plug-in and that was associated with Mp3 then your browser would load the QuickTime plug-in and the QuickTime plug-in would get the mp3 and it would be in your page.
+
+442
+00:31:40,881 --> 00:31:45,359
+Rym: But I mean back in the day there was a long period where this basically just did not work for the majority of people.
+
+443
+00:31:45,379 --> 00:31:48,645
+Scott: well because everyone had a different plug-in and That's the reason.
+
+444
+00:31:48,686 --> 00:31:54,760
+Scott: you know this technology still works right and in fact You know it would work, but people don't use it on web pages anymore.
+
+445
+00:31:54,860 --> 00:32:00,359
+Scott: And the reason is this and that okay, let's say I embed an mp3 in my page right okay?
+
+446
+00:32:01,821 --> 00:32:09,320
+Scott: Problem number one is That it's you know if you have QuickTime, and he's got Windows Media Player, and he's got something else.
+
+447
+00:32:09,782 --> 00:32:18,060
+Scott: You know it's gonna look different for each person because all the plugins look different I mean, and it's gonna totally break my website if your thing is too big or too small.
+
+448
+00:32:18,261 --> 00:32:20,348
+Rym: It's got a navbar in a weird place.
+
+449
+00:32:20,368 --> 00:32:21,733
+Scott: It's gonna look wicked ugly right.
+
+450
+00:32:22,456 --> 00:32:24,689
+Scott: so no one wants to do that you know.
+
+451
+00:32:24,871 --> 00:32:31,980
+Rym: and Second of all it, but at the same time people don't want every website to install a special plug-in for them.
+
+452
+00:32:31,980 --> 00:32:33,044
+Rym: Cuz people don't trust right?
+
+453
+00:32:33,105 --> 00:32:37,324
+Scott: if you don't have the plug-in it's gonna bother you and say hey you got install plug-in to play this mp3.
+
+454
+00:32:37,364 --> 00:32:38,415
+Scott: that's in the page.
+
+455
+00:32:38,436 --> 00:32:43,251
+Scott: and The other thing is browsers don't all handle it intelligently either.
+
+456
+00:32:43,491 --> 00:32:44,755
+Scott: some of them are auto playing.
+
+457
+00:32:44,775 --> 00:32:46,360
+Scott: you got to turn off autoplay turn.
+
+458
+00:32:47,063 --> 00:32:48,088
+Scott: It's a nightmare right.
+
+459
+00:32:48,630 --> 00:32:54,393
+Scott: so what everyone seems to do these days is again They use flash for audio and video even though flash is originally.
+
+460
+00:32:54,413 --> 00:32:56,380
+Scott: you know the vector drawing the canvas thing.
+
+461
+00:32:56,962 --> 00:33:02,440
+Scott: So it's sort of like HTML 5 is doing these three things to kick flashes ass out of the head of the game.
+
+462
+00:33:02,961 --> 00:33:11,592
+Rym: Well, there are a lot of smaller more subtle changes like I noticed just in my cursory readings that they've broken out div into a Few very useful divisions.
+
+463
+00:33:11,733 --> 00:33:17,091
+Scott: Yeah, yeah That doesn't make it any difference for the end user no it doesn't.
+
+464
+00:33:17,111 --> 00:33:23,789
+Rym: but for a developer and just for usability that having a Navbar tag that is defined and accepted.
+
+465
+00:33:23,809 --> 00:33:26,620
+Rym: Yeah, I think that that should have been in HTML.
+
+466
+00:33:26,781 --> 00:33:30,622
+Rym: Yeah, I mean from the beginning when I learned HTML 3 What did you do?
+
+467
+00:33:30,642 --> 00:33:36,240
+Rym: you had four frames or something like that and you made this like hacked together navbar in the top?
+
+468
+00:33:36,700 --> 00:33:40,693
+Scott: Yeah, but anyway the video and the audio tags are an interesting situation.
+
+469
+00:33:40,814 --> 00:33:45,127
+Scott: right a little bit more interesting to the canvas Is is pretty much standardized.
+
+470
+00:33:45,167 --> 00:33:46,852
+Scott: You know it's a vector drawing thing.
+
+471
+00:33:47,233 --> 00:33:48,256
+Scott: You know these.
+
+472
+00:33:48,296 --> 00:33:49,820
+Scott: you use JavaScript to control it.
+
+473
+00:33:49,860 --> 00:33:50,562
+Scott: That's it right.
+
+474
+00:33:51,245 --> 00:33:52,970
+Scott: the video and audio are a little different.
+
+475
+00:33:52,990 --> 00:33:53,673
+Scott: because okay.
+
+476
+00:33:53,793 --> 00:33:55,840
+Scott: We're gonna put a video tag in an audio tag.
+
+477
+00:33:55,940 --> 00:34:02,880
+Scott: they're gonna point at a video file or an audio file and You know there's not gonna be no plug-in involved.
+
+478
+00:34:02,960 --> 00:34:06,311
+Scott: It's up to the browser to play these files and provide.
+
+479
+00:34:06,351 --> 00:34:06,792
+Scott: you know the.
+
+480
+00:34:07,053 --> 00:34:11,047
+Scott: so basically just like plugins before Right so the browser does it.
+
+481
+00:34:11,147 --> 00:34:11,629
+Scott: so it's not.
+
+482
+00:34:11,750 --> 00:34:16,130
+Scott: it's not a separate thing right cuz you realize most browser crashes or because of plugins.
+
+483
+00:34:16,574 --> 00:34:19,447
+Scott: right and Everyone has like a different plug-in.
+
+484
+00:34:19,469 --> 00:34:22,159
+Scott: that screws shit up and who knows what these things are doing.
+
+485
+00:34:22,260 --> 00:34:26,199
+Rym: So I think part of the problem is it looks like they have not defined what codex.
+
+486
+00:34:27,043 --> 00:34:28,047
+Scott: This is what I'm getting to.
+
+487
+00:34:28,168 --> 00:34:28,268
+Rym: well.
+
+488
+00:34:28,309 --> 00:34:31,020
+Rym: There's a apparently there's some gigantic shit storm on the internet.
+
+489
+00:34:31,101 --> 00:34:33,344
+Scott: This is the shit storm I was about to discuss.
+
+490
+00:34:33,645 --> 00:34:41,819
+Rym: all right the early draft that said and I quote user agent should support the og Theora video and og verb is audio yes, and then they basically took that out.
+
+491
+00:34:42,221 --> 00:34:44,536
+Scott: Yeah, so is is the problem right?
+
+492
+00:34:44,616 --> 00:34:45,260
+Scott: is okay?
+
+493
+00:34:45,380 --> 00:34:54,966
+Scott: So if the web browser is going to have allow this video and audio tag right then the web browser has to include the Codex at least the decoding parts.
+
+494
+00:34:55,226 --> 00:34:58,476
+Scott: you know of the of the codex for some video and audio formats.
+
+495
+00:34:58,536 --> 00:35:02,551
+Scott: right all right already trouble I mean already trouble which formats mp3.
+
+496
+00:35:03,033 --> 00:35:03,716
+Scott: You know I mean a IFF.
+
+497
+00:35:05,761 --> 00:35:12,986
+Rym: And remember a lot of these formats are still encumbered by patents and while they are effectively de facto free They're not legally free.
+
+498
+00:35:13,327 --> 00:35:14,811
+Rym: yep, and trouble could come.
+
+499
+00:35:14,871 --> 00:35:20,970
+Scott: there's also the situation of you know the CPU power That is necessary to process some of these video files.
+
+500
+00:35:21,312 --> 00:35:23,640
+Scott: There is the situation of you know okay?
+
+501
+00:35:23,720 --> 00:35:31,875
+Scott: Maybe my computer is less powerful And I want to get like a lower you know bitrate version of the file coming into me because I got a 56k modem.
+
+502
+00:35:31,895 --> 00:35:34,520
+Scott: or You know.
+
+503
+00:35:35,401 --> 00:35:40,100
+Rym: Basically as far as I can tell what happened was all the parties involved could not agree on anything.
+
+504
+00:35:40,181 --> 00:35:41,900
+Rym: So the standard does not specify anything.
+
+505
+00:35:42,000 --> 00:35:47,860
+Rym: Yeah, it went from a should cuz remember in like RFCs and things like that language means very specific things.
+
+506
+00:35:48,281 --> 00:35:51,866
+Rym: So there is should must must not cannot.
+
+507
+00:35:51,886 --> 00:35:56,044
+Rym: you know all those sorts of language and should is Very powerful.
+
+508
+00:35:56,124 --> 00:36:00,279
+Rym: should basically means that unless you can't you must yep.
+
+509
+00:36:01,194 --> 00:36:04,310
+Scott: so Yeah, so it's like which codec do we use?
+
+510
+00:36:04,330 --> 00:36:10,315
+Scott: so there's a big push for ogg theora Which is a very full open source codec of video and audio.
+
+511
+00:36:10,355 --> 00:36:11,620
+Rym: of course who was pushing it?
+
+512
+00:36:11,900 --> 00:36:14,295
+Rym: I mean all the big companies were not pushing it.
+
+513
+00:36:14,778 --> 00:36:16,004
+Rym: well No goal was pushing.
+
+514
+00:36:16,044 --> 00:36:16,807
+Scott: the thing is they didn't.
+
+515
+00:36:16,828 --> 00:36:20,614
+Scott: really you know the big companies really don't care too much What the codec is.
+
+516
+00:36:20,716 --> 00:36:20,939
+Scott: well?
+
+517
+00:36:21,260 --> 00:36:22,665
+Scott: What they do care is they want.
+
+518
+00:36:23,006 --> 00:36:26,196
+Scott: they want the best quality with the least space to save on bandwidth.
+
+519
+00:36:26,216 --> 00:36:30,774
+Rym: well Apple and Nokia Both strongly fought against using ogg.
+
+520
+00:36:31,196 --> 00:36:36,060
+Scott: yeah well there You know Apple pretty much owns age 264 so they have an interest.
+
+521
+00:36:36,120 --> 00:36:38,086
+Scott: But other people don't have too much interest.
+
+522
+00:36:38,387 --> 00:36:42,398
+Scott: you know as long as it's lower bandwidth higher quality is what people care about.
+
+523
+00:36:42,559 --> 00:36:45,625
+Scott: yeah But you know it's like.
+
+524
+00:36:45,946 --> 00:36:50,000
+Scott: well the ogg is open source and a different bit rates is different qualities.
+
+525
+00:36:50,060 --> 00:36:51,928
+Scott: And you know if someone has a bunch of videos now.
+
+526
+00:36:51,948 --> 00:36:54,800
+Scott: They're gonna have to re-encode them all to be in the right format.
+
+527
+00:36:55,061 --> 00:36:57,716
+Rym: Well there's also the trouble that ogg is not.
+
+528
+00:36:57,736 --> 00:36:58,460
+Scott: it's also the art.
+
+529
+00:36:58,520 --> 00:37:04,360
+Scott: You know there's the wrapper file, and then there's also the video codec and the audio codec in the video file.
+
+530
+00:37:04,440 --> 00:37:08,860
+Scott: It's like this big mishmash, which a lot of people don't understand people like my MK V's.
+
+531
+00:37:08,941 --> 00:37:10,343
+Scott: It's like well What's in your MK V's?
+
+532
+00:37:10,403 --> 00:37:11,286
+Scott: anything could be in there.
+
+533
+00:37:11,547 --> 00:37:12,350
+Scott: my avi is.
+
+534
+00:37:12,410 --> 00:37:13,334
+Scott: anything could be in there.
+
+535
+00:37:13,635 --> 00:37:14,799
+Scott: it could be an avi with an?
+
+536
+00:37:15,721 --> 00:37:17,468
+Scott: mp3 and an HD 6-4 in there.
+
+537
+00:37:17,528 --> 00:37:25,009
+Scott: it could be a. it could be an a. it could be an MK V with like You know Like an eggs vid and a and a frickin.
+
+538
+00:37:25,390 --> 00:37:26,974
+Scott: you know AAC in there.
+
+539
+00:37:27,075 --> 00:37:27,616
+Scott: you never know.
+
+540
+00:37:27,636 --> 00:37:29,040
+Rym: well people don't understand all that.
+
+541
+00:37:30,507 --> 00:37:32,980
+Rym: You shouldn't expect people to have to understand how that all works.
+
+542
+00:37:33,020 --> 00:37:34,024
+Scott: No, and there's another thing.
+
+543
+00:37:34,044 --> 00:37:37,539
+Scott: is you know there's a lot of people who make web pages who don't really?
+
+544
+00:37:38,681 --> 00:37:38,983
+Scott: Understand.
+
+545
+00:37:39,304 --> 00:37:42,139
+Scott: you know fully what's going on and you know?
+
+546
+00:37:42,540 --> 00:37:48,844
+Scott: HTML 5 will make it a lot easier for those people to just be like video this audio that right But they're they're.
+
+547
+00:37:48,945 --> 00:37:53,219
+Scott: they'll be smart enough to do a video and audio tag and that'll be a lot easier for those people.
+
+548
+00:37:53,259 --> 00:38:06,720
+Scott: then You know embed or flash or who knows what we you know anything that we currently using But it'll be much more difficult for those people to get their stuff in the right Codec and to host it properly so that they won't get totally crushed.
+
+549
+00:38:06,800 --> 00:38:07,041
+Scott: Yep,
+
+550
+00:38:07,182 --> 00:38:14,004
+Rym: I mean remember back in the day when mp3s first hit the world and you often had to quote Uncook them
+
+551
+00:38:14,305 --> 00:38:14,565
+Scott: yep
+
+552
+00:38:14,886 --> 00:38:25,360
+Rym: because browsers couldn't deal with them and web servers Apache the mom types Weren't set up weren't recognized people they would download as ASCII files that would include all this garbage.
+
+553
+00:38:25,462 --> 00:38:26,484
+Rym: Yeah It was.
+
+554
+00:38:26,746 --> 00:38:35,615
+Rym: there was a long period where you had to download mp3s and then half the time you would have to run special applications to pull all of the Binary garbage data out of them in order to listen.
+
+555
+00:38:36,038 --> 00:38:37,304
+Rym: yeah And we're good.
+
+556
+00:38:37,685 --> 00:38:41,500
+Rym: the thing is I don't think that'll be a problem that the cooking isn't gonna be a problem.
+
+557
+00:38:41,641 --> 00:38:44,254
+Scott: Well, I think mine is probably aren't gonna be a problem.
+
+558
+00:38:44,274 --> 00:38:53,779
+Rym: my expectation is that all the formats that are commonly used on the internet will just work in every browser and Ogg will work in Chrome and nothing else.
+
+559
+00:38:55,324 --> 00:38:56,113
+Scott: Yeah, it's it's gonna.
+
+560
+00:38:56,153 --> 00:39:01,080
+Rym: Maybe Firefox will support Ogg, but no one else was gonna be a weird situation.
+
+561
+00:39:01,200 --> 00:39:13,225
+Scott: You know everyone's basically you know in this attempt to make the web easier right and just allow me if let's say We got the whole world to switch It would be a beautiful thing because if you were making a web page You can just be like video.
+
+562
+00:39:13,526 --> 00:39:16,860
+Scott: the file is at this URL and boom there'd be the video in your page.
+
+563
+00:39:16,940 --> 00:39:18,204
+Scott: You could specify width and height.
+
+564
+00:39:18,585 --> 00:39:28,320
+Scott: you could use JavaScript to like do stuff to the video because that's another thing right is that Right now if you're using a plug-in basically anything in a plug-in is invisible to the rest of the world.
+
+565
+00:39:28,340 --> 00:39:30,506
+Scott: That's why Google can't search within flash.
+
+566
+00:39:30,907 --> 00:39:34,237
+Scott: right you can't like use JavaScript like you know.
+
+567
+00:39:34,397 --> 00:39:35,240
+Scott: make flash.
+
+568
+00:39:35,562 --> 00:39:38,440
+Scott: You know boxes do stuff really too much.
+
+569
+00:39:39,042 --> 00:39:46,527
+Scott: But now you'll be able to like fully do stuff with the audio and video Tags with JavaScript.
+
+570
+00:39:46,547 --> 00:39:47,912
+Scott: so for example all right.
+
+571
+00:39:48,032 --> 00:39:49,858
+Scott: I've always wanted to make it right.
+
+572
+00:39:49,939 --> 00:40:01,433
+Scott: where On our page there was one audio player and clicking different links on the page would load up different files in the audio player In HTML 5. that's trivial.
+
+573
+00:40:01,634 --> 00:40:05,790
+Scott: with JavaScript It's like a joke, but with right now with flash.
+
+574
+00:40:05,911 --> 00:40:07,115
+Scott: You know with a flash player.
+
+575
+00:40:07,135 --> 00:40:07,657
+Scott: It's a nightmare.
+
+576
+00:40:08,138 --> 00:40:08,640
+Scott: It's forget it.
+
+577
+00:40:08,640 --> 00:40:09,544
+Scott: It's not even gonna happen.
+
+578
+00:40:09,805 --> 00:40:11,713
+Scott: You know I guess it's possible, but it's not worth it.
+
+579
+00:40:11,934 --> 00:40:16,980
+Rym: It's possible in the way that Crazy people will make it work, but it's not worth it, and it'll break anyway.
+
+580
+00:40:17,201 --> 00:40:21,011
+Scott: Yeah, so you know this is actually going to make web pages.
+
+581
+00:40:21,071 --> 00:40:33,470
+Scott: You know if people use it a lot more dynamic It's gonna make the video and the audio like you know an integrated part of the web experience and not this sort of Application that happens to be stuck in the middle of a web page.
+
+582
+00:40:33,510 --> 00:40:36,060
+Scott: the way quake live happens to be stuck on a web page.
+
+583
+00:40:36,503 --> 00:40:38,700
+Scott: You know it's actually gonna be part of the web page.
+
+584
+00:40:39,041 --> 00:40:44,882
+Scott: Google's probably gonna be able to you know get its hands into it a little bit more for the searching and all that kind of Business.
+
+585
+00:40:45,425 --> 00:40:49,660
+Scott: you know it's gonna be pretty exciting, but Is it gonna happen?
+
+586
+00:40:50,621 --> 00:40:52,072
+Scott: It's it's you know right.
+
+587
+00:40:52,213 --> 00:40:57,933
+Scott: in the short term Everyone's gonna have to code up even more difficult web pages because they had to put all these.
+
+588
+00:40:58,395 --> 00:41:07,240
+Scott: if old browser do flash if New browser do this if this browser do the different codec, and it's basically making things worse before they get better.
+
+589
+00:41:07,963 --> 00:41:09,609
+Rym: But that is there any other?
+
+590
+00:41:09,689 --> 00:41:12,380
+Rym: I mean we have to push forward and we have to make new standards.
+
+591
+00:41:12,542 --> 00:41:13,558
+Rym: We have to make this stuff work.
+
+592
+00:41:14,141 --> 00:41:18,855
+Rym: So doing this now is better than doing it later because the longer we wait the harder it gets.
+
+593
+00:41:19,016 --> 00:41:28,511
+Rym: really the more entrenched these proprietary closed third-party you know self-interested Codex codex and formats and markup languages become.
+
+594
+00:41:28,791 --> 00:41:39,154
+Scott: yeah, I mean it's gonna be real bad for Adobe I think because basically you know flashes is powering video on the web right and Silver light is sort of in a distant distant distant.
+
+595
+00:41:39,175 --> 00:41:39,778
+Scott: second place.
+
+596
+00:41:40,543 --> 00:41:47,555
+Scott: Basically if the video once the video tag is there I mean think about most of the uses of flash on the web now are for video playing.
+
+597
+00:41:47,595 --> 00:41:59,304
+Scott: you know I mean if They take video away from Adobe flash is only gonna be used for you know games Pretty much, and then if people actually start doing canvas games That's it.
+
+598
+00:41:59,344 --> 00:42:02,796
+Rym: not just canvas, but you know also unity and things like that flash is well.
+
+599
+00:42:02,837 --> 00:42:11,294
+Rym: It's still a plug-in There's no, but the difference is flash is Primarily it's kind of this very generic often difficult to work with like.
+
+600
+00:42:11,354 --> 00:42:17,253
+Rym: it's a tool that can do a lot of things like Java But it's not particularly good at doing many of those things.
+
+601
+00:42:17,473 --> 00:42:20,485
+Rym: people just use it because it's the only Alternative.
+
+602
+00:42:20,526 --> 00:42:21,494
+Rym: it's the most well-known.
+
+603
+00:42:21,534 --> 00:42:25,374
+Rym: it just works But you have to really kind of bend it backwards to make it do a lot of things.
+
+604
+00:42:25,394 --> 00:42:31,172
+Scott: the thing is you know I wonder Cuz flash does do a few things most notably right flash.
+
+605
+00:42:31,232 --> 00:42:34,019
+Scott: You know has the webcam kind of support going on?
+
+606
+00:42:34,521 --> 00:42:37,320
+Scott: Yeah, so you can like you know make a YouTube video.
+
+607
+00:42:37,420 --> 00:42:41,440
+Rym: Should we have a webcam tag that just embeds the webcam from a local device?
+
+608
+00:42:42,340 --> 00:42:45,080
+Scott: Well, I think no there shouldn't be a webcam tag.
+
+609
+00:42:45,542 --> 00:42:51,442
+Scott: There's nothing to do with HTML, but there should be a JavaScript way of Accessing.
+
+610
+00:42:51,743 --> 00:42:58,404
+Scott: you know cuz right now with JavaScript right and and web pages you can get input from the keyboard Via the form elements.
+
+611
+00:42:58,424 --> 00:42:59,688
+Scott: you know text inputs right.
+
+612
+00:42:59,988 --> 00:43:17,134
+Scott: you get input via the mouse based on where they click in a canvas or Clicking on radio buttons or check boxes or submit buttons or links right, but we need more ways in JavaScript of getting input from the user and we need I think we should.
+
+613
+00:43:17,295 --> 00:43:30,431
+Scott: the next step in JavaScript should be audio and video input capture from the user and then allowing to stream that data back to The server or process it with the JavaScript locally on the.
+
+614
+00:43:30,632 --> 00:43:39,335
+Scott: you know the users machine something like that in the long run And you stream it back You know with some sort of Ajax ish thing to the server and do stuff like that.
+
+615
+00:43:39,355 --> 00:43:42,586
+Rym: well something like that in the long run Will I think really change the web?
+
+616
+00:43:42,606 --> 00:43:46,940
+Rym: because right now look at YouTube even as it stands how many people will just have?
+
+617
+00:43:47,060 --> 00:43:49,540
+Rym: Conversations back and forth by making videos.
+
+618
+00:43:49,729 --> 00:43:53,137
+Rym: Yeah What if that was just that worked with every like that sort of thing happened.
+
+619
+00:43:53,178 --> 00:43:56,730
+Scott: you could also also be a JavaScript way of capturing input from.
+
+620
+00:43:56,750 --> 00:44:10,837
+Scott: you know all sorts of other devices like game pads or Touch screens if you know they'd have a special touchscreen thingy Touch pad things like sharing desktops and sharing vector graphics and shared workspaces yep.
+
+621
+00:44:12,723 --> 00:44:14,931
+Scott: So I think that's that's what has to come.
+
+622
+00:44:14,992 --> 00:44:21,495
+Scott: you know after HTML 5 we need to get JavaScript to have support for more different kinds of user input.
+
+623
+00:44:21,536 --> 00:44:30,459
+Rym: there are basically all these Simple things that would be very useful for the internet, but companies have made products that do those things just well enough.
+
+624
+00:44:31,362 --> 00:44:37,760
+Rym: But eventually all of those companies will be made completely obsolete by standards that just do what these companies make a product to do.
+
+625
+00:44:37,840 --> 00:44:38,791
+Scott: It's just so weird.
+
+626
+00:44:38,831 --> 00:44:40,161
+Scott: It's like It's.
+
+627
+00:44:40,322 --> 00:44:51,373
+Scott: it's basically we have we made these operating systems for computers, and then we made browsers right and then in the browser We're slowly making the whole operating system again in the browser.
+
+628
+00:44:51,393 --> 00:44:53,320
+Scott: to where the browser is becoming the operating system.
+
+629
+00:44:53,381 --> 00:44:55,339
+Scott: It's like why don't we just make you know?
+
+630
+00:44:55,600 --> 00:45:01,300
+Scott: Why don't we just take a step back and make the operating system the browser where all that work is already done?
+
+631
+00:45:01,400 --> 00:45:03,190
+Rym: Well, I think that what you know?
+
+632
+00:45:03,230 --> 00:45:05,502
+Rym: people always wonder what web 3.0 is gonna Be like.
+
+633
+00:45:05,542 --> 00:45:08,300
+Scott: we have the same piece of software running on top of itself effectively.
+
+634
+00:45:08,380 --> 00:45:09,846
+Scott: It's like okay everyone.
+
+635
+00:45:09,887 --> 00:45:25,008
+Scott: you run windows you run Linux you run Mac and that talks to your hardware And then everyone runs a web browser on top of that which allows us to have this common platform of JavaScript and HTML which is really what everyone's using nowadays even though It's you know and that it's
+
+636
+00:45:25,088 --> 00:45:25,349
+Rym: like.
+
+637
+00:45:25,410 --> 00:45:30,600
+Rym: but here like I was saying everyone says you know web 3.0 is gonna be the semantic web, and I think that's too far out.
+
+638
+00:45:30,620 --> 00:45:32,800
+Rym: That's gonna require AI and all sorts of crazy things.
+
+639
+00:45:33,522 --> 00:45:39,056
+Rym: I think what web 3.0 would be which is much more feasible is to where the OS.
+
+640
+00:45:39,217 --> 00:45:40,360
+Rym: there is no more browser.
+
+641
+00:45:40,781 --> 00:45:47,360
+Rym: The OS is just integrated online all the time and instead of you don't you know get rid of this idea.
+
+642
+00:45:47,440 --> 00:45:50,414
+Scott: You can't tell a web application apart from a regular app.
+
+643
+00:45:50,434 --> 00:45:51,640
+Rym: There aren't even websites.
+
+644
+00:45:51,760 --> 00:45:53,746
+Rym: You're just interacting through.
+
+645
+00:45:53,806 --> 00:45:56,213
+Rym: you have an interface that just interacts with data.
+
+646
+00:45:56,434 --> 00:45:58,380
+Rym: some of it is local some of is shared.
+
+647
+00:45:58,782 --> 00:46:02,400
+Rym: Everyone is a server and a receiver simultaneously all the time.
+
+648
+00:46:02,880 --> 00:46:03,644
+Rym: There's no hosting.
+
+649
+00:46:03,665 --> 00:46:04,167
+Rym: you don't go to.
+
+650
+00:46:04,187 --> 00:46:05,957
+Rym: like you know libsyn host mp3s.
+
+651
+00:46:06,741 --> 00:46:15,500
+Rym: I'm listening to an mp3 that someone else is sharing right now in their web browser and Chatting with four other people and all our computers are just connected to each other in real time.
+
+652
+00:46:15,560 --> 00:46:16,303
+Scott: You know we should do.
+
+653
+00:46:16,584 --> 00:46:20,320
+Scott: see that's a. that's a good vision for the distant future.
+
+654
+00:46:20,380 --> 00:46:21,825
+Scott: But you know we should do is you?
+
+655
+00:46:21,845 --> 00:46:23,772
+Scott: just make that happen in a lab.
+
+656
+00:46:23,833 --> 00:46:26,924
+Scott: get like ten computers and just make it happen And it's in a lab.
+
+657
+00:46:27,085 --> 00:46:34,079
+Rym: dude you realize how often now you know when I was at RIT There are all the research labs for like like IT research at RIT.
+
+658
+00:46:34,220 --> 00:46:37,534
+Rym: Yeah, and I always kind of looking and be like I wonder what those people are doing.
+
+659
+00:46:37,574 --> 00:46:40,884
+Rym: and you know I didn't really get involved Almost every day.
+
+660
+00:46:40,904 --> 00:46:45,260
+Rym: I would kill to be back at RIT and have access to those labs to do stuff like that.
+
+661
+00:46:45,461 --> 00:46:47,480
+Rym: Yeah, because that's what those kids are doing right now.
+
+662
+00:46:47,540 --> 00:46:49,291
+Rym: I should have gotten into the academia, but I didn't.
+
+663
+00:46:49,613 --> 00:46:50,620
+Rym: I wanted to make money.
+
+664
+00:46:50,740 --> 00:46:54,639
+Rym: I wanted to have a job and look where I got a lot of money.
+
+665
+00:46:56,560 --> 00:47:01,634
+Scott: Yep That's alright, so yeah HTML 5 be on the lookout.
+
+666
+00:47:01,875 --> 00:47:08,000
+Scott: and of course you know You know upgrade your browser as anyone to listen to this site is upgrading their browser.
+
+667
+00:47:08,120 --> 00:47:12,013
+Scott: But you know upgrade your browsers as soon as you can to get the HTML 5.
+
+668
+00:47:12,013 --> 00:47:14,060
+Rym: goodness actually my company is doing something cool.
+
+669
+00:47:14,181 --> 00:47:25,808
+Rym: Right we you know we need IE because all the enterprise crap supports I even silverlight now so we have to use it, but we have software to update people's pcs Because everyone smart uses Firefox.
+
+670
+00:47:26,309 --> 00:47:32,507
+Rym: we the update software is going to go through and anyone who's installed Firefox It will forcibly update them regularly.
+
+671
+00:47:32,527 --> 00:47:33,992
+Rym: all right keep them up to date.
+
+672
+00:47:34,012 --> 00:47:42,117
+Scott: Okay, not opera though But yeah keep updating your browser so you can get the HTML 5 goodness.
+
+673
+00:47:42,198 --> 00:47:49,230
+Scott: and basically You know try to get other people to upgrade their browsers, too So we can get away from flash and the old web.
+
+674
+00:47:49,250 --> 00:47:56,660
+Scott: because the sooner everyone starts using HTML 5 browsers the sooner You know web developers will see aha look at these web stats.
+
+675
+00:47:56,961 --> 00:48:02,323
+Scott: There's only 10% of users still using IE 7 & 8. that means we can go ahead Hooray, and they'll.
+
+676
+00:48:02,464 --> 00:48:06,967
+Scott: you know they'll stop doing the old stuff, and they'll stop supporting all the old crap And they'll be happy.
+
+677
+00:48:07,491 --> 00:48:08,198
+Scott: so make us happy.
+
+678
+00:48:14,732 --> 00:48:17,318
+Rym: This has been GeekNights with Rym and Scott.
+
+679
+00:48:17,338 --> 00:48:19,524
+Rym: Special thanks to DJ pretzel for the opening music.
+
+680
+00:48:20,206 --> 00:48:31,390
+Scott: be sure to visit our website at www.frontroadcrew.com Where you'll find show notes links our awesome forum a link to our frapper map and links to all the RSS feeds.
+
+681
+00:48:31,951 --> 00:48:37,610
+Rym: We say feeds plural because GeekNights airs four nights a week covering four different brands of geekery.
+
+682
+00:48:38,153 --> 00:48:42,476
+Rym: Mondays are science and technology Tuesdays We have video games board games and RPGs.
+
+683
+00:48:42,837 --> 00:48:47,950
+Rym: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+684
+00:48:48,693 --> 00:48:56,730
+Scott: You can send us feedback by email to GeekNights at front row crew calm Or you can send audio feedback via audio.
+
+685
+00:48:57,131 --> 00:49:00,424
+Scott: Just click the link that says send me an audio on the right side of our website.
+
+686
+00:49:00,705 --> 00:49:01,609
+Rym: if you like what you hear.
+
+687
+00:49:01,689 --> 00:49:05,861
+Rym: you can Catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+688
+00:49:06,081 --> 00:49:09,190
+Rym: for the complete archives visit the website which has everything.
+
+689
+00:49:09,752 --> 00:49:14,674
+Scott: GeekNights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+690
+00:49:16,252 --> 00:49:21,929
+Scott: This means you can do whatever you want with it as long as you give us credit don't make money and share it in kind.
+
+691
+00:49:23,111 --> 00:49:28,546
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+692
+00:49:28,846 --> 00:49:30,170
+Scott: It's actually recorded at night.
+

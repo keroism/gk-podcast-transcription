@@ -1,0 +1,2984 @@
+1
+00:00:09,580 --> 00:00:17,819
+Scott: It's Monday July 10th, and this is GeekNights tonight part 3 of our continuing series, and how a computer works the flip-flop.
+
+2
+00:00:19,061 --> 00:00:20,078
+Rym: Let's do this.
+
+3
+00:00:21,201 --> 00:00:24,090
+Rym: So we've said this almost every Monday, but we're saying it again.
+
+4
+00:00:24,170 --> 00:00:29,946
+Rym: We're back from a crazy weekend yet another Convention over yep.
+
+5
+00:00:30,006 --> 00:00:35,320
+Scott: this time we were at Connecticut for Saturday only and apparently someone thought we were gonna be there all three days.
+
+6
+00:00:35,380 --> 00:00:36,306
+Scott: I don't remember saying that.
+
+7
+00:00:36,567 --> 00:00:37,211
+Rym: I'm pretty sure.
+
+8
+00:00:37,251 --> 00:00:38,680
+Rym: we said we were only gonna be there Saturday.
+
+9
+00:00:38,840 --> 00:00:57,820
+Rym: And even if that weren't the case I submit to you who goes to a convention just on Sunday especially a convention that cost as much as, Connecticut and Who makes four podcasts a week and has time to go to a whole mess of conventions for full weekends?
+
+10
+00:00:58,500 --> 00:01:00,448
+Rym: The thing is I would have stayed the whole weekend.
+
+11
+00:01:00,508 --> 00:01:01,653
+Rym: I just didn't have a ride home.
+
+12
+00:01:01,673 --> 00:01:04,986
+Scott: Yeah, I Wouldn't have stayed the whole weekend.
+
+13
+00:01:05,007 --> 00:01:07,739
+Scott: You know why it was much much cheaper.
+
+14
+00:01:07,759 --> 00:01:11,817
+Rym: and Yeah, I would have because I was there anyway, and I would have just hung out.
+
+15
+00:01:12,199 --> 00:01:13,827
+Scott: well We'll talk about it on Wednesday.
+
+16
+00:01:13,867 --> 00:01:24,067
+Rym: Yeah, we have quite a bit to say about Connecticut and One thing we will say I know we have a lot of new listeners because we met a lot of cool people at Connecticut And many of you took our flyers.
+
+17
+00:01:24,368 --> 00:01:27,520
+Rym: in fact unlike previous cons people actually asked us for flyers.
+
+18
+00:01:28,400 --> 00:01:28,526
+Rym: hooray.
+
+19
+00:01:29,541 --> 00:01:34,033
+Rym: Also, I've just noticed in the Libsyn and such that we have a lot of new listeners.
+
+20
+00:01:34,093 --> 00:01:37,165
+Rym: regardless of all that hooray again Welcome.
+
+21
+00:01:37,185 --> 00:01:40,324
+Scott: yeah, we're come to GeekNights Zombocom.
+
+22
+00:01:40,625 --> 00:01:42,332
+Scott: anything is possible now.
+
+23
+00:01:42,372 --> 00:01:47,873
+Rym: the drawback of that to all of you current listeners Is that you're gonna have to hear us talk about all that new listener crap again.
+
+24
+00:01:48,335 --> 00:01:51,245
+Scott: all right new listeners listen up This is GeekNights.
+
+25
+00:01:51,706 --> 00:01:53,111
+Scott: It's a podcast.
+
+26
+00:01:53,632 --> 00:01:54,596
+Scott: if you're listening to it.
+
+27
+00:01:54,736 --> 00:01:55,799
+Scott: You already know how.
+
+28
+00:01:56,607 --> 00:01:57,698
+Scott: You don't need any more help.
+
+29
+00:01:58,341 --> 00:02:04,539
+Scott: We have a forum where we talk about the stuff that we talk about on the show on the internet on the show.
+
+30
+00:02:04,559 --> 00:02:05,523
+Rym: the form Is pretty kickin.
+
+31
+00:02:06,046 --> 00:02:09,039
+Rym: yep, we actually have a lot of people in there more so than a lot of other podcasts.
+
+32
+00:02:09,101 --> 00:02:10,277
+Rym: We know that have a lot more listeners.
+
+33
+00:02:10,640 --> 00:02:15,955
+Scott: Yeah, so if you got to us by some other means such as iTunes you want to go to front row.
+
+34
+00:02:16,075 --> 00:02:17,178
+Scott: crew comm.
+
+35
+00:02:17,580 --> 00:02:20,679
+Rym: yep The forums are there show notes are there links to everything we talk about?
+
+36
+00:02:21,202 --> 00:02:22,045
+Rym: We have a frapper map.
+
+37
+00:02:22,085 --> 00:02:23,410
+Rym: you can see where all our listeners are.
+
+38
+00:02:23,691 --> 00:02:26,944
+Rym: you can marvel at the fact that many of our listeners are Not Americans.
+
+39
+00:02:27,446 --> 00:02:36,560
+Scott: you can email us at GeekNights at front row crew Comm if you want to tell us something and then we probably will read it on the show if it's intelligent.
+
+40
+00:02:37,164 --> 00:02:40,000
+Rym: Yep, we've just started reading things more and more recently.
+
+41
+00:02:40,121 --> 00:02:43,580
+Rym: We'll probably reading a lot more as we continue to argue with anime world order.
+
+42
+00:02:43,812 --> 00:02:53,200
+Scott: Yeah If you want to send us some audio you can just record a little mp3 or something and email that to us by Attachment or put it on the web and link to it or something like that.
+
+43
+00:02:53,622 --> 00:02:55,858
+Rym: Or if you're a lot I'd find us in person and give us a CD.
+
+44
+00:02:56,462 --> 00:03:00,280
+Rym: Yeah, Luddite did did art boy actually give us that CD over the weekend or no?
+
+45
+00:03:00,683 --> 00:03:06,342
+Scott: He said he gave it to you, and then I said no We didn't give it to me said you didn't give it to him give it to me And then he didn't.
+
+46
+00:03:06,603 --> 00:03:09,033
+Rym: he said he would give it to me, and then he didn't and then I left.
+
+47
+00:03:09,053 --> 00:03:10,860
+Scott: hey great good job.
+
+48
+00:03:11,321 --> 00:03:12,265
+Rym: Oh, well anyway.
+
+49
+00:03:12,285 --> 00:03:14,251
+Rym: Yeah, that's all we really got to say about that.
+
+50
+00:03:14,552 --> 00:03:18,285
+Rym: actually we have a lot of interesting leader Bits more so than other days.
+
+51
+00:03:18,305 --> 00:03:23,945
+Rym: a completely unrelated to the weekend will hold off on reporting on ConnectiCon until Wednesday Which is anime day.
+
+52
+00:03:24,206 --> 00:03:27,036
+Rym: yep today is Monday, which is science and technology day.
+
+53
+00:03:27,237 --> 00:03:27,859
+Scott: That is right.
+
+54
+00:03:28,120 --> 00:03:36,100
+Rym: We're gonna talk about some technology today, but of course before we do that We always cover the news and whatever you know crap happened in our lives and mine's real short.
+
+55
+00:03:36,240 --> 00:03:52,410
+Rym: I was in the Bronx doing some work, and I got off work early like earlier than I suspected Which was kind of annoying because the ninja consultant podcast is tonight celebrating their one-year anniversary And they invited us to their awesome party down in Manhattan Which Scott wanted to go to.
+
+56
+00:03:52,470 --> 00:03:54,280
+Rym: but you really there's no way you could have made it.
+
+57
+00:03:54,441 --> 00:04:05,280
+Rym: There's really no way I could have made it and I wanted to but As far as I knew for most of today I was gonna be stuck in Yonkers all day And it's a pain in the ass to get from Yonkers to Manhattan on a weekday night.
+
+58
+00:04:05,822 --> 00:04:15,320
+Rym: It sure is because most of this stuff's going the opposite direction, so I told him sorry guys We can't make it and then of like four hours later I'm in the Bronx, and I probably could have gone, but it was too late.
+
+59
+00:04:15,360 --> 00:04:17,289
+Rym: I really it was too late to change my plans.
+
+60
+00:04:17,490 --> 00:04:18,353
+Rym: Yeah, so instead.
+
+61
+00:04:18,374 --> 00:04:19,820
+Scott: I'm sure we will hook up with those guys.
+
+62
+00:04:19,899 --> 00:04:21,748
+Scott: They were at anime next and I guess we missed them.
+
+63
+00:04:22,190 --> 00:04:24,340
+Scott: Yeah, we met every other podcast in the universe.
+
+64
+00:04:25,381 --> 00:04:26,647
+Scott: They'll probably go to Otakon.
+
+65
+00:04:26,667 --> 00:04:27,391
+Scott: We'll have to ask them.
+
+66
+00:04:27,592 --> 00:04:29,200
+Scott: Oh, yeah, definitely hook up at Otakon.
+
+67
+00:04:29,724 --> 00:04:31,780
+Rym: We're having one hell of a podcast and party.
+
+68
+00:04:32,182 --> 00:04:35,818
+Rym: Oh, we sure as hell are but we'll talk about that as time goes on.
+
+69
+00:04:35,959 --> 00:04:47,736
+Rym: yes We will now because I had all this free time in the Bronx And I've needed a haircut for I don't know about six months because for anyone who hasn't ever actually seen me I have very long hair and it had gotten too long.
+
+70
+00:04:47,756 --> 00:04:56,468
+Rym: now Aesthetically I don't think there's such thing is too long, but if your hair was just dragging on the floor Ah, I could do cool things with that.
+
+71
+00:04:57,151 --> 00:04:57,413
+Scott: No.
+
+72
+00:04:57,473 --> 00:04:58,357
+Scott: That's just a mess.
+
+73
+00:04:58,979 --> 00:05:00,790
+Rym: well You see I bind it or something.
+
+74
+00:05:00,891 --> 00:05:02,904
+Scott: if it's hanging down below your ass It's a mess.
+
+75
+00:05:02,945 --> 00:05:04,456
+Rym: I turned it into rope and make a belt out of it.
+
+76
+00:05:05,321 --> 00:05:06,525
+Scott: Anyway, that's just bad.
+
+77
+00:05:06,585 --> 00:05:14,780
+Rym: the operative part is my hair finally got so long that it wasn't sustainable And the hair was breaking at the front of my head because it was too heavy in the back.
+
+78
+00:05:15,323 --> 00:05:19,212
+Rym: So I got this cool lady who didn't speak much English But she was very good at cutting hair.
+
+79
+00:05:19,515 --> 00:05:19,960
+Rym: cut my hair.
+
+80
+00:05:20,040 --> 00:05:21,830
+Rym: But the funny part is she didn't speak a lot of English.
+
+81
+00:05:21,850 --> 00:05:33,966
+Rym: and when I walk in to this Barbershop salon, and I say like I need a haircut She looks at me with this mortified look on her face, and she runs over and she's like no No, you cannot cut that hair off.
+
+82
+00:05:34,006 --> 00:05:34,589
+Rym: It's beautiful.
+
+83
+00:05:34,609 --> 00:05:35,633
+Rym: I won't do it.
+
+84
+00:05:35,654 --> 00:05:37,965
+Rym: Yeah, and I was like no no I just want to trim.
+
+85
+00:05:37,986 --> 00:05:38,690
+Rym: I'm not cutting it off.
+
+86
+00:05:38,751 --> 00:05:40,823
+Rym: She's like oh oh come in I'll wash it like.
+
+87
+00:05:40,884 --> 00:05:43,840
+Rym: she really wanted to wash my hair and she kept telling me how much she loved my hair.
+
+88
+00:05:43,962 --> 00:05:44,517
+Rym: It was kind of fun.
+
+89
+00:05:44,861 --> 00:05:46,668
+Rym: She gave me an awesome haircut for very little money.
+
+90
+00:05:47,009 --> 00:05:52,071
+Scott: next time you'll have to go find some like fancy place in the city With the the fancy fancy.
+
+91
+00:05:52,152 --> 00:05:53,519
+Rym: see if they give a better haircut or not.
+
+92
+00:05:53,861 --> 00:06:00,876
+Scott: Yeah, all those like those frou-frou people You know and like the gay guys who cut hair or like the that feng shui haircut on bullshit.
+
+93
+00:06:01,117 --> 00:06:01,919
+Scott: Yeah, you don't want that.
+
+94
+00:06:03,401 --> 00:06:14,154
+Scott: But yeah like those super ultra fancy $200 salons that are all tricked out and hipster Yeah, I have a feeling that scruffy's $300 haircut isn't so snazzy.
+
+95
+00:06:14,575 --> 00:06:15,599
+Scott: no, no, it's not.
+
+96
+00:06:15,880 --> 00:06:18,680
+Rym: no I think Scott's a leader bit is a little more interesting.
+
+97
+00:06:19,041 --> 00:06:23,579
+Scott: Yeah, so like people may or may not know I got a speeding ticket in Jersey last week.
+
+98
+00:06:23,639 --> 00:06:25,560
+Scott: now I got a speeding ticket in New York.
+
+99
+00:06:25,640 --> 00:06:28,695
+Scott: They just kind of gave me the ticket and then I dealt with it and that was it.
+
+100
+00:06:29,117 --> 00:06:31,294
+Scott: in New Jersey It went a little differently.
+
+101
+00:06:31,617 --> 00:06:36,591
+Scott: you see Today I I don't know how to talk about this.
+
+102
+00:06:36,872 --> 00:06:47,550
+Scott: basically it was a big ticket So I didn't really want to pay it especially since it was sort of bullshit And the cop was an ass and I wasn't really yeah.
+
+103
+00:06:47,590 --> 00:06:52,999
+Scott: Yeah, whatever anyway unlike the New York ticket Which I just baldly admit get to the important part.
+
+104
+00:06:53,401 --> 00:07:08,179
+Scott: so I considered getting a lawyer to go to the court for me to do whatever and I found out today while researching lawyers and emailing them and such that in New Jersey You can just go to this website and pay your ticket just ding.
+
+105
+00:07:09,144 --> 00:07:20,179
+Scott: but also in New Jersey it goes on like the record of the court when you get a ticket and It's kind of weird that today was the first day I had ever contacted a lawyer ever.
+
+106
+00:07:20,802 --> 00:07:24,191
+Scott: Yet today was also the day where I received how many letters in the mail.
+
+107
+00:07:24,251 --> 00:07:30,608
+Scott: what like five six more than that is between five and ten letters from lawyers.
+
+108
+00:07:30,929 --> 00:07:41,857
+Scott: there was an army of traffic lawyers in New Jersey Watching the court record for traffic tickets and Sending basically junk mail to anyone who gets a ticket.
+
+109
+00:07:42,459 --> 00:07:51,100
+Rym: now This is evidence to me that there is some sort of racket going on some sort of economic incentive all the way round.
+
+110
+00:07:51,983 --> 00:07:59,454
+Scott: It's an obvious racket and the fact that it's so obvious means There's not a goddamn thing you can do about it attitude going on.
+
+111
+00:07:59,474 --> 00:08:00,780
+Rym: I just find it hilarious.
+
+112
+00:08:01,701 --> 00:08:11,146
+Scott: Yeah, you know the thing is is that the lawyers I actually talked to we're basically saying yep speeding is bullshit Yep, it doesn't make the road safer.
+
+113
+00:08:11,166 --> 00:08:11,908
+Scott: Yep.
+
+114
+00:08:12,329 --> 00:08:19,856
+Scott: It's just a way for the states to basically bandit you on the highway and Here's the only goddamn things we can do about it.
+
+115
+00:08:20,861 --> 00:08:39,090
+Rym: basically the best they'll usually do is go and talk to the judge and get a speeding ticket turned into a parking ticket which Means I mean with a speeding ticket the state takes a cut and the feds take a cut depending and all these people get a cut of the money and you get a small percentage if A town writes a parking ticket or certain other kinds of tickets.
+
+116
+00:08:39,510 --> 00:08:42,078
+Rym: It's a municipal thing and they get all the money.
+
+117
+00:08:42,721 --> 00:08:50,580
+Rym: So a lot of places will turn your you know two-point speeding ticket into a zero-point non moving violation not reported to anyone parking ticket.
+
+118
+00:08:51,001 --> 00:08:57,462
+Rym: But the parking ticket is one more money than the speeding ticket and to all of the money goes to the town where the judge presides.
+
+119
+00:08:58,104 --> 00:09:16,669
+Scott: yeah, basically my choices are pay a $200 speeding ticket and then gamble on how much my insurance will go up for the next three years or to hire a lawyer for a pile of money who will go to the court for a pile of money get the ticket doubled to $400 and then my insurance won't know.
+
+120
+00:09:16,749 --> 00:09:23,295
+Scott: so it's either a big cost right now or a Potentially bigger cost in the long run.
+
+121
+00:09:23,396 --> 00:09:23,557
+Scott: now.
+
+122
+00:09:23,577 --> 00:09:28,411
+Rym: now now Here's the point where Rym that is me gives to Scott.
+
+123
+00:09:28,471 --> 00:09:33,507
+Rym: that is him the kind of advice that Scott that is him would usually Give to someone like me.
+
+124
+00:09:33,929 --> 00:09:34,472
+Rym: That is me.
+
+125
+00:09:35,014 --> 00:09:36,020
+Rym: Why aren't you just me?
+
+126
+00:09:36,641 --> 00:09:40,375
+Rym: I have a lawyer on retainer from my company who will fight this for free.
+
+127
+00:09:40,656 --> 00:09:41,800
+Rym: Why don't you have a lawyer for free?
+
+128
+00:09:41,920 --> 00:09:43,628
+Rym: It's your fault for not having a free lawyer.
+
+129
+00:09:43,809 --> 00:09:45,940
+Scott: My company didn't give me a free lawyer.
+
+130
+00:09:46,602 --> 00:09:47,205
+Scott: You didn't even know.
+
+131
+00:09:47,225 --> 00:09:50,978
+Rym: this is such a thing is pretty well, I guess you are suck for not having that mr.
+
+132
+00:09:54,181 --> 00:09:54,583
+Scott: Anyway, mr.
+
+133
+00:09:54,624 --> 00:10:10,124
+Scott: The kids need the opiate you just crawl their way to the border Is that Basically, I've decided I'm probably just gonna pay it because I won't get any points on my license because I'm a New York driver Which is good.
+
+134
+00:10:10,345 --> 00:10:17,374
+Rym: Yeah, New York State despite the fact that they use the speeding racket to make money They won't accept tickets from freaking any other state.
+
+135
+00:10:17,394 --> 00:10:18,880
+Scott: Well, they said they accept the ticket.
+
+136
+00:10:18,900 --> 00:10:21,240
+Scott: They just don't add points to your license.
+
+137
+00:10:21,401 --> 00:10:24,252
+Rym: Well, no, so they don't really accept it as if it doesn't do anything.
+
+138
+00:10:24,332 --> 00:10:26,200
+Scott: I'll be your New York insurance still finds out.
+
+139
+00:10:26,200 --> 00:10:27,647
+Rym: Well, yeah, but they can find out independently.
+
+140
+00:10:27,667 --> 00:10:30,200
+Rym: Yeah, cuz they they look in databases and they get notified.
+
+141
+00:10:30,361 --> 00:10:32,110
+Rym: But well, that's also a racket.
+
+142
+00:10:32,150 --> 00:10:33,898
+Rym: but we could talk about car insurance another day.
+
+143
+00:10:34,421 --> 00:10:41,120
+Rym: But New York won't give you grief about a ticket you got anywhere else except Ontario and Quebec.
+
+144
+00:10:41,741 --> 00:10:50,857
+Rym: Yeah, which was great when I was in high in college because I drive through Ontario all the time speeding But I was a Michigan resident and Michigan doesn't accept tickets from fuck anyone.
+
+145
+00:10:50,877 --> 00:10:56,399
+Rym: Mm-hmm And now I'm a New Yorker, but I don't go to Canada so often anymore Me either because they're very far away from it now?
+
+146
+00:10:56,761 --> 00:10:57,745
+Rym: Yeah, I mean it used to be.
+
+147
+00:10:57,766 --> 00:11:04,099
+Scott: we're right next to her almost as far away from it as you can be in, New York Which is probably the Hamptons as far away as you can.
+
+148
+00:11:05,764 --> 00:11:06,840
+Rym: It may be some Staten Island.
+
+149
+00:11:07,741 --> 00:11:09,409
+Scott: No, the Hamptons at the end of Long Island.
+
+150
+00:11:09,650 --> 00:11:09,991
+Scott: Oh, yeah.
+
+151
+00:11:10,152 --> 00:11:11,819
+Rym: Yeah, so yeah, Long Island is big.
+
+152
+00:11:12,202 --> 00:11:23,540
+Scott: The thing is even if it costs me more money in the long run it'll feel less painful and Give money to my insurance company, which while evil is less evil than the racket in New Jersey.
+
+153
+00:11:23,540 --> 00:11:24,680
+Rym: Are you still gonna go fight the ticket?
+
+154
+00:11:25,102 --> 00:11:26,634
+Scott: I don't know because I will warn you.
+
+155
+00:11:26,654 --> 00:11:31,338
+Rym: if you do fight it They'll probably if they do find you guilty, which I'm not gonna give my opinion.
+
+156
+00:11:31,378 --> 00:11:36,520
+Rym: either way You're welcome to fight in our wonderful judicial system, but they usually tack on a court fee.
+
+157
+00:11:36,640 --> 00:11:38,403
+Rym: That's a lot of money like 80 or 90 bucks.
+
+158
+00:11:38,864 --> 00:11:42,029
+Rym: Yes an administrative fee and then a state surcharge.
+
+159
+00:11:42,349 --> 00:11:46,978
+Rym: Yeah, and Magically those things don't happen if you just plead guilty and don't put up a fight.
+
+160
+00:11:48,206 --> 00:11:49,159
+Rym: Yeah, funny how that works.
+
+161
+00:11:49,341 --> 00:11:55,773
+Scott: So now I what I really want to know is there a way I can sue New Jersey Lawyers for sending me junk mail.
+
+162
+00:11:55,813 --> 00:11:59,319
+Rym: You know what the answer is Everyone thinks that and that never happens.
+
+163
+00:12:00,360 --> 00:12:04,299
+Rym: You Should ask all the lawyers and give them as much verbal trouble as you can.
+
+164
+00:12:04,962 --> 00:12:08,977
+Scott: Is there there has to be a way maybe to like charge all these people the racketeering or something?
+
+165
+00:12:09,238 --> 00:12:09,740
+Rym: Wait a minute.
+
+166
+00:12:10,141 --> 00:12:10,984
+Rym: Why don't we?
+
+167
+00:12:11,385 --> 00:12:16,940
+Rym: because New York is a state a one-party consent state meaning if you call someone on the phone You're on a phone conversation.
+
+168
+00:12:17,462 --> 00:12:23,340
+Rym: If any one person in the conversation consents to the conversation being recorded that conversation can legally be recorded.
+
+169
+00:12:23,601 --> 00:12:26,755
+Rym: I'm not a hundred percent sure about New Jersey, but I'm pretty sure it's the same way.
+
+170
+00:12:27,277 --> 00:12:29,360
+Rym: if that's true We'll set up our Skype.
+
+171
+00:12:29,842 --> 00:12:34,699
+Rym: You can call every one of those lawyers will record them all and I guarantee you will get some funny bits.
+
+172
+00:12:35,302 --> 00:12:44,680
+Scott: The thing was is that when I called most of the lawyers they had, you know They said sensible things the two lawyers that I've actually so I say get him on like, how'd you get my address?
+
+173
+00:12:45,100 --> 00:12:49,757
+Rym: So you sit and troll the database watching for people getting tickets and just ambulance chase them.
+
+174
+00:12:50,058 --> 00:12:50,519
+Rym: What's the deal?
+
+175
+00:12:51,561 --> 00:12:52,324
+Rym: And just see what we can get.
+
+176
+00:12:52,344 --> 00:12:53,949
+Scott: All right, maybe they'll get some.
+
+177
+00:12:54,270 --> 00:12:56,899
+Rym: maybe one of them will explode all Edgeworth style on us.
+
+178
+00:12:57,361 --> 00:13:02,436
+Scott: Awesome, some of the lawyers actually if you look at the pieces of paper, they sent me were pretty humorous lawyers.
+
+179
+00:13:02,777 --> 00:13:08,983
+Scott: Yeah of various humorous and stereotypical backgrounds All right.
+
+180
+00:13:09,104 --> 00:13:16,459
+Rym: Anyway, we should probably move on to the news Now it's like it's science and tech day and I got some science and tech here now.
+
+181
+00:13:16,921 --> 00:13:18,648
+Rym: DNS has been around for a long time.
+
+182
+00:13:18,688 --> 00:13:21,960
+Rym: It's the system that you type a domain name.
+
+183
+00:13:22,181 --> 00:13:31,450
+Rym: Yeah, you type a name into a web browser or something and it gets translated by this system into an IP address Which is the address that you want to connect to.
+
+184
+00:13:31,730 --> 00:13:37,835
+Rym: I'm doing this in very layman's terms because anyone who doesn't need layman's terms Knows what DNS is especially our Monday listeners Mm-hmm.
+
+185
+00:13:38,140 --> 00:13:52,629
+Rym: now there have been a lot of people who say the DNS is broken or old or stupid and a lot of people who propose alternatives and a number of people have tried to actually create alternatives and Our current one that is making the rounds is open DNS.
+
+186
+00:13:53,050 --> 00:13:53,210
+Rym: now.
+
+187
+00:13:53,270 --> 00:14:06,881
+Rym: their shtick is that they protect you from phishers the people who have like eBay Dot-com or goggle dot-com and then they try to trick you into giving them account information or installing spyware all sorts of bad stuff Mm-hmm.
+
+188
+00:14:07,122 --> 00:14:15,125
+Rym: and their shtick is that they reroute common misspellings of major domains to the actual domains protecting you Which I don't know.
+
+189
+00:14:15,166 --> 00:14:20,039
+Rym: I feel about that because what if your domain is just similar to another domain But it's not one of those sites?
+
+190
+00:14:20,592 --> 00:14:28,611
+Scott: Yeah I really don't like it when you're really depending on these guys to Know which domains are real and which ones are not and to maintain that.
+
+191
+00:14:28,852 --> 00:14:44,786
+Rym: yeah now just when it comes to internet technology I am very much leery of any point at which Humans start making decisions as opposed to computers with algorithms because algorithms are 100% reliable Unless the algorithm is broken and then it's broken in a reliable way.
+
+192
+00:14:44,846 --> 00:14:45,508
+Rym: my problem.
+
+193
+00:14:45,548 --> 00:14:48,870
+Scott: Here is really that they're Solving a problem.
+
+194
+00:14:49,633 --> 00:14:50,878
+Scott: They're finding a use for it.
+
+195
+00:14:51,259 --> 00:14:52,504
+Scott: It's good for hacking.
+
+196
+00:14:52,524 --> 00:14:58,890
+Scott: you know from a hacking standpoint It's interesting to use a tool to solve a problem that it wasn't designed to solve.
+
+197
+00:14:59,572 --> 00:15:04,850
+Scott: But they're solving this particular problem in the wrong spot thus causing other problems.
+
+198
+00:15:05,334 --> 00:15:12,044
+Scott: There's a much better way to solve the phishing problem And that's a spell checker in the location bar of the web browser now.
+
+199
+00:15:12,124 --> 00:15:13,809
+Rym: They're they're bigger parts to this than that.
+
+200
+00:15:14,831 --> 00:15:20,117
+Rym: DNS is old venerable, and it works very very well And I want to.
+
+201
+00:15:20,137 --> 00:15:27,124
+Rym: I'm gonna make a broad generalization about IT students and young Technology professionals in college because I was once there and I know.
+
+202
+00:15:27,144 --> 00:15:40,308
+Rym: it seems to me that Everyone who's a freshman or a sophomore at an IT school or even a lot of CS schools and MIS schools Will always once they start learning about DNS and they start making DNS servers talk about how.
+
+203
+00:15:40,589 --> 00:15:52,429
+Rym: you know They're so smart and DNS is stupid and broken and it's honest last legs and it's gonna be replaced any day now but something better and everything's corrupt and all this crap and they always come up with some crapo solution to replace it.
+
+204
+00:15:52,449 --> 00:15:54,717
+Rym: and You're dumb.
+
+205
+00:15:54,979 --> 00:15:59,282
+Rym: I'm telling you right now Once you get two more years of schooling you're gonna realize that that's not true.
+
+206
+00:15:59,302 --> 00:16:01,350
+Rym: DNS is mostly just fine.
+
+207
+00:16:01,693 --> 00:16:03,149
+Rym: Your idea was a bad idea.
+
+208
+00:16:03,972 --> 00:16:09,310
+Scott: Now people who don't realize I will agree that there is probably something better than DNS.
+
+209
+00:16:09,752 --> 00:16:13,010
+Rym: Oh, definitely, but well one DNS works very well.
+
+210
+00:16:13,191 --> 00:16:13,961
+Scott: How are you gonna do it to?
+
+211
+00:16:15,510 --> 00:16:19,000
+Rym: DNS is not designed to be transitioned to or from.
+
+212
+00:16:19,181 --> 00:16:24,276
+Rym: really if you have a DNS system and you Want to use an alternate DNS system?
+
+213
+00:16:24,717 --> 00:16:28,570
+Rym: You can't use both on your computer easily because of the way DNS works.
+
+214
+00:16:28,670 --> 00:16:34,150
+Rym: You'd have to do a lot of hacking to make it work reliably when you're talking to two separate name hierarchies.
+
+215
+00:16:34,512 --> 00:16:40,806
+Rym: So if you want to use one of these alternate DNS systems like open DNS You have to just go switch to it entirely.
+
+216
+00:16:40,826 --> 00:16:47,210
+Rym: now Open DNS at least relies a little bit on the root real DNS servers to get a lot of its information.
+
+217
+00:16:47,672 --> 00:16:49,902
+Rym: So they kind of piggyback off of that, but they add their own stuff.
+
+218
+00:16:50,204 --> 00:16:52,729
+Rym: like they can add their own domains They can do whatever they want.
+
+219
+00:16:53,292 --> 00:16:59,205
+Rym: They do one really kind of shitty thing where if you type in a domain that isn't real They will redirect you to their own website.
+
+220
+00:16:59,225 --> 00:16:59,870
+Rym: That's full of ads.
+
+221
+00:16:59,890 --> 00:17:01,939
+Scott: Yeah, if you type but it's not full of ads.
+
+222
+00:17:02,080 --> 00:17:04,470
+Rym: it has ads on it and they make money off of them.
+
+223
+00:17:04,470 --> 00:17:05,292
+Scott: That's how they make.
+
+224
+00:17:05,313 --> 00:17:13,089
+Scott: their money is if you go to a site that really really doesn't exist at all And it's not just a misspelling You're just way off entirely.
+
+225
+00:17:13,811 --> 00:17:19,813
+Scott: It will send you to a web page with an ad on it and that is clearly labeled as an ad and they get money From that.
+
+226
+00:17:20,155 --> 00:17:24,259
+Scott: personally if I go to a site that's not a site I want it to say this is not a site and that's it.
+
+227
+00:17:24,579 --> 00:17:27,030
+Rym: now my main my problems with this because people might say why?
+
+228
+00:17:27,210 --> 00:17:28,175
+Rym: Rain on these people's parade.
+
+229
+00:17:28,194 --> 00:17:30,950
+Rym: they're doing this and they think it's a good thing and it's optional.
+
+230
+00:17:31,312 --> 00:17:34,790
+Scott: Yeah, but these guys at least they're not screwing up the existing system.
+
+231
+00:17:35,245 --> 00:17:37,977
+Rym: No but there have been things like this before and there'll be things like this in the future.
+
+232
+00:17:38,017 --> 00:17:45,950
+Rym: the people that do this are Spending so much time and resource and the I just get this vibe that they're really kind of scary people.
+
+233
+00:17:46,334 --> 00:17:49,437
+Rym: Maybe if one of them listens to GeekNights They'll call in and give us some feedback on this.
+
+234
+00:17:49,477 --> 00:17:52,730
+Rym: but I note that slashdot had the story about open DNS.
+
+235
+00:17:53,810 --> 00:18:00,690
+Rym: Immediately one of the guys from open DNS is all over slashdot shilling it and arguing with people even better.
+
+236
+00:18:01,171 --> 00:18:09,034
+Rym: His arguments really gave me that vibe of like a fanboy who's defending his fanboyness more than a technologist Who's defending his technology?
+
+237
+00:18:09,495 --> 00:18:12,082
+Scott: It's like they're really hard to defend this as technology.
+
+238
+00:18:12,282 --> 00:18:13,766
+Rym: Yeah, I mean DNS is fine.
+
+239
+00:18:14,208 --> 00:18:15,070
+Rym: It has problems.
+
+240
+00:18:15,431 --> 00:18:16,796
+Rym: I could do a whole thing about DNS.
+
+241
+00:18:16,816 --> 00:18:18,101
+Rym: I probably said numerous times.
+
+242
+00:18:18,141 --> 00:18:19,366
+Rym: I'll do a whole thing about DNS.
+
+243
+00:18:19,667 --> 00:18:20,390
+Scott: someone write that down.
+
+244
+00:18:20,430 --> 00:18:27,690
+Scott: We need a thread in the forums Anytime we say we're gonna do a show on X and we'd ever do a show on X. that's because we forgot.
+
+245
+00:18:28,173 --> 00:18:34,565
+Scott: So someone make a thread in the forums and everyone go and post all the X's that we've never done a show about that.
+
+246
+00:18:34,585 --> 00:18:38,750
+Scott: we said we would because You know we come up and it's time to do a show and we go, huh?
+
+247
+00:18:38,850 --> 00:18:39,778
+Scott: What do we do a show about?
+
+248
+00:18:39,979 --> 00:18:41,310
+Scott: if I had a list of all those things?
+
+249
+00:18:41,430 --> 00:18:44,063
+Scott: It would be so much easier unless it's Wednesday cuz anime days.
+
+250
+00:18:44,083 --> 00:18:46,295
+Rym: We just knock off without even thinking Yeah, that's easy.
+
+251
+00:18:46,335 --> 00:18:48,167
+Scott: But you know the Mondays most end of Thursdays.
+
+252
+00:18:48,449 --> 00:19:00,524
+Rym: Yep But yeah, my real suggestion here is that I highly recommend this is my professional opinion as an information technologist Don't use alternative DNS structures.
+
+253
+00:19:00,925 --> 00:19:19,350
+Scott: They are often slow unreliable broken shady or just dangerous and the problems that open DNS solves are better solved via other Means such as a spell checker for the location bar in the web browsing or just you know Societal cultural change or better law enforcement or whatnot.
+
+254
+00:19:19,562 --> 00:19:31,986
+Scott: Yeah People learning to understand that it was in real sites and fake sites and all sorts of other technologies are much better technology wise for stopping What's it called fishing fishing scamming?
+
+255
+00:19:32,006 --> 00:19:39,858
+Rym: Yep Ma'am no, well, they want to stop spam with it - yeah That's not good.
+
+256
+00:19:40,851 --> 00:19:51,637
+Rym: See the best thing about this is that someone posted something I haven't seen in a while That there is a form that someone made a long freaking time ago and it is a list of reasons Why an anti-spam solution will fail.
+
+257
+00:19:51,998 --> 00:19:59,726
+Rym: and whenever someone proposes an anti-spam solution someone smart will take this form Check the appropriate boxes and post it on wherever the solution was posted.
+
+258
+00:19:59,947 --> 00:20:02,942
+Rym: I remember that Yeah, and someone posted it for this and you know what?
+
+259
+00:20:03,464 --> 00:20:12,938
+Rym: That is one of the few technology memes like that out there that once again in my professional technical opinion is Almost 100% accurate.
+
+260
+00:20:13,299 --> 00:20:17,576
+Rym: if you come up with a spam solution that defeats that thing You are an instant millionaire.
+
+261
+00:20:17,596 --> 00:20:18,498
+Scott: it pretty much.
+
+262
+00:20:18,518 --> 00:20:25,962
+Scott: if you're thinking about a way to stop spam or fishing or anything like that Just go to this website and every time you think of something look at the list.
+
+263
+00:20:26,363 --> 00:20:36,278
+Scott: and if you and keep trying to beat the List because when you beat the list your Bill Gates number two if you beat the list, you'll have slashdot behind you He will be so mad monies.
+
+264
+00:20:36,920 --> 00:20:38,005
+Scott: We should go look at it right now.
+
+265
+00:20:38,165 --> 00:20:40,553
+Rym: I Know it practically by heart.
+
+266
+00:20:40,714 --> 00:20:46,833
+Scott: All right, so in other tech news Firefox, which is the browser everyone should be using Yeah, what?
+
+267
+00:20:46,873 --> 00:20:49,805
+Rym: there's a story that may or may not be true that it was that it hit 25% of a market share.
+
+268
+00:20:51,672 --> 00:21:12,706
+Scott: Yeah, anyway, Firefox 2.0 beta 1 release candidate 1 Is coming out Which which I wouldn't recommend using is your full-time browser Because it's beta 1 but you can put it on a thumb drive and run that without Messing up your existing Firefox install.
+
+269
+00:21:13,089 --> 00:21:21,420
+Rym: Yep and also if you really like Firefox you can use it and test it and when it breaks or something doesn't work the way you want it to tell the Firefox people yeah in the bugzilla whatnot.
+
+270
+00:21:21,440 --> 00:21:24,599
+Scott: You don't even really have to install on a thumb drive You just get a thumb drive version.
+
+271
+00:21:24,659 --> 00:21:26,430
+Scott: install it in some folder like on your desktop.
+
+272
+00:21:27,211 --> 00:21:31,630
+Scott: Anyway, the new features which is what everyone really wants to know is why should I go to the new Firefox?
+
+273
+00:21:32,270 --> 00:21:33,234
+Scott: What's gonna be different?
+
+274
+00:21:33,435 --> 00:21:38,958
+Scott: and the thing is when Firefox point seven was out I was like, what could they possibly do to make this better?
+
+275
+00:21:38,978 --> 00:21:44,137
+Rym: Hell Firefox like almost every version of Firefox I thought this is almost perfect.
+
+276
+00:21:44,438 --> 00:21:47,328
+Scott: and then point eight came out and I was like goddamn if that isn't better.
+
+277
+00:21:47,348 --> 00:21:48,794
+Scott: and 1.0 came out.
+
+278
+00:21:48,814 --> 00:21:50,341
+Scott: I was like goddamn that isn't better.
+
+279
+00:21:50,361 --> 00:21:52,450
+Scott: and then one they're like we're coming out with 1.1.
+
+280
+00:21:52,450 --> 00:21:54,017
+Scott: I'm like, what are you gonna do?
+
+281
+00:21:54,037 --> 00:21:55,222
+Scott: There's nothing left to do.
+
+282
+00:21:55,242 --> 00:21:57,151
+Scott: Well, goddamn they proved me wrong again All right.
+
+283
+00:21:57,171 --> 00:21:59,279
+Rym: So what the hell did they add is what they're adding.
+
+284
+00:21:59,720 --> 00:22:04,418
+Scott: They're gonna put closed buttons on all the tabs Which is something they've been arguing about.
+
+285
+00:22:04,438 --> 00:22:05,923
+Rym: and can I turn that off?
+
+286
+00:22:06,365 --> 00:22:07,650
+Scott: I don't know because I don't think I like that.
+
+287
+00:22:08,152 --> 00:22:09,658
+Rym: I don't know but that's an aesthetic thing.
+
+288
+00:22:09,818 --> 00:22:12,610
+Scott: Yeah, the you know the search box in the top, right?
+
+289
+00:22:12,850 --> 00:22:14,963
+Scott: Yeah, they're making it a lot easier to manage.
+
+290
+00:22:15,003 --> 00:22:15,607
+Scott: What's in there?
+
+291
+00:22:15,687 --> 00:22:17,949
+Rym: good Because I like it.
+
+292
+00:22:18,030 --> 00:22:27,513
+Rym: But if you're if you're not someone like us who knows a lot about this sort of thing and you wanted to put something in There that someone else didn't already make and make an easy way to do Yeah, you know how.
+
+293
+00:22:27,875 --> 00:22:35,524
+Scott: also, you know, sometimes your browser crashes and then you open it again You lose all your tabs and some people made extensions that will save your tabs.
+
+294
+00:22:35,745 --> 00:22:36,970
+Scott: Well now they're just gonna do that.
+
+295
+00:22:37,311 --> 00:22:37,693
+Rym: That's good.
+
+296
+00:22:37,813 --> 00:22:40,042
+Rym: Even though your bra well, I'll say your browser shouldn't crash.
+
+297
+00:22:40,403 --> 00:22:41,929
+Rym: Firefox crashes a lot for me now.
+
+298
+00:22:41,949 --> 00:22:43,154
+Scott: now Here's something they're doing.
+
+299
+00:22:43,174 --> 00:22:46,329
+Scott: this is my biggest one that I love because they remove the other one that I like.
+
+300
+00:22:47,432 --> 00:22:50,450
+Scott: You know how there used to be extensions that do this, but they don't work anymore.
+
+301
+00:22:51,013 --> 00:22:53,546
+Scott: That would add a spell checker to the browser.
+
+302
+00:22:53,707 --> 00:22:55,917
+Scott: Yeah Typing in a comment box.
+
+303
+00:22:55,937 --> 00:22:57,122
+Scott: You can spell check that shit.
+
+304
+00:22:57,684 --> 00:23:02,783
+Rym: Yeah as an aside I'm glad that all of our forum users are using the spell check we put in.
+
+305
+00:23:03,124 --> 00:23:03,325
+Scott: Yep.
+
+306
+00:23:03,566 --> 00:23:05,131
+Rym: It's all I got to say about that Mr.
+
+307
+00:23:05,151 --> 00:23:05,352
+Rym: Paul.
+
+308
+00:23:05,372 --> 00:23:07,118
+Scott: Yeah, we upgraded anyone out there.
+
+309
+00:23:07,159 --> 00:23:09,708
+Scott: We upgraded the forums and now they're much more awesome.
+
+310
+00:23:10,069 --> 00:23:11,394
+Rym: Yes We've liked the.
+
+311
+00:23:11,574 --> 00:23:14,765
+Rym: the issues that remain are almost insignificant.
+
+312
+00:23:14,785 --> 00:23:21,090
+Scott: There's no way you'll even see him Yep, and if you do have an issue just let me know and I'll upgrade the appropriate bits.
+
+313
+00:23:21,834 --> 00:23:24,190
+Scott: Alright, so there's also an anti-phishing tool.
+
+314
+00:23:24,291 --> 00:23:33,390
+Scott: Guess you don't need open DNS Haha, and basically what that is is if you go to a site that has been blacklisted by Mozilla It'll warn you but you can still go to the site.
+
+315
+00:23:33,691 --> 00:23:34,192
+Rym: I like that.
+
+316
+00:23:34,573 --> 00:23:37,602
+Rym: of course a black list suck is one of the options.
+
+317
+00:23:37,843 --> 00:23:43,487
+Scott: on the spam solutions that fail for Well, I don't think they mean it to be an absolute spam solution.
+
+318
+00:23:43,527 --> 00:23:44,130
+Scott: It's just a little help.
+
+319
+00:23:44,252 --> 00:23:47,579
+Rym: Oh, yeah, I like helpers but as long as no one thinks that this will protect them from anything.
+
+320
+00:23:47,800 --> 00:23:56,889
+Scott: no Firefox just using Firefox protects you a lot and The thing that I wanted that they're removing is the new bookmarks thing because you know bookmarks and Firefox.
+
+321
+00:23:56,930 --> 00:23:58,489
+Scott: now We're kind of crappy to manage.
+
+322
+00:23:59,101 --> 00:23:59,510
+Rym: You know what?
+
+323
+00:23:59,810 --> 00:24:06,594
+Rym: Honestly, I had noticed because the more I won the more I use delicious into the more as you use the bookmark the more this Web 2.0 thing.
+
+324
+00:24:06,875 --> 00:24:10,889
+Rym: my bookmarks exist solely to have all my banking sites which are in my delicious.
+
+325
+00:24:10,929 --> 00:24:12,835
+Rym: now Yeah, and my web comics?
+
+326
+00:24:13,457 --> 00:24:16,125
+Scott: my bookmarks are solely my RSS feeds.
+
+327
+00:24:16,205 --> 00:24:17,730
+Scott: a lot for the you know, whatnots?
+
+328
+00:24:17,890 --> 00:24:23,728
+Scott: yep, so I don't use RSS yeah and websites that I visit once a day like all the web comics.
+
+329
+00:24:23,788 --> 00:24:31,810
+Scott: and And also quick things like if you make a bookmark of a website you can like make a short name for it.
+
+330
+00:24:31,890 --> 00:24:43,290
+Scott: So if I type in dig and press enter it actually goes to dig comm slash view all and if I type in Like Gmail it actually goes to mail that google.com slash blah blah blah blah to my email.
+
+331
+00:24:43,753 --> 00:24:44,963
+Scott: That's what I use bookmarks for.
+
+332
+00:24:45,346 --> 00:24:53,150
+Scott: but anyway There it was going to a. there was going to be a new bookmark manager called places and it was really cool.
+
+333
+00:24:53,833 --> 00:24:55,982
+Scott: But the they got rid of it they canned it.
+
+334
+00:24:56,263 --> 00:25:04,029
+Scott: so sadness great Yep, but there are many other awesome things mostly the spell checker to look forward to now.
+
+335
+00:25:04,129 --> 00:25:07,309
+Rym: actually I very happily as I poke around in the stats of GeekNights.
+
+336
+00:25:07,590 --> 00:25:07,972
+Rym: They were in.
+
+337
+00:25:08,012 --> 00:25:12,330
+Rym: fewer people use Internet Explorer in any way to view GeekNights at least our website.
+
+338
+00:25:12,491 --> 00:25:13,555
+Scott: Yeah, well, you know what it is.
+
+339
+00:25:13,616 --> 00:25:26,610
+Scott: It's that Internet Explorer might still be bigger than Firefox but the thing is Firefox users use the web a lot more because they have Firefox and it's easier and because People who use the web a lot more more likely to use Firefox.
+
+340
+00:25:27,071 --> 00:25:29,860
+Rym: Yep, and I gotta say in the last six months.
+
+341
+00:25:30,241 --> 00:25:33,210
+Rym: I have not run into a single website that did not work in Firefox.
+
+342
+00:25:33,766 --> 00:25:46,370
+Scott: Yep so well I would argue that while it's probably true that more people and More computers are on the web using Internet Explorer I would say that more pages web pages are loaded with Firefox.
+
+343
+00:25:47,453 --> 00:25:51,427
+Rym: I don't know because even the most generous estimates put Firefox about 25% market share.
+
+344
+00:25:52,691 --> 00:25:57,670
+Scott: Yeah, which means that Firefox users only have to use the web four times as much as normal schmucks.
+
+345
+00:25:58,194 --> 00:26:00,370
+Scott: That's not much that true, you know.
+
+346
+00:26:00,410 --> 00:26:03,042
+Rym: I'm just saying a lot of people use IE.
+
+347
+00:26:03,102 --> 00:26:04,870
+Scott: it is a lot a lot of grandmas.
+
+348
+00:26:05,131 --> 00:26:09,350
+Scott: But I mean even think if it's only 10% I use the web 10 times as much as normal schmucks.
+
+349
+00:26:09,370 --> 00:26:10,155
+Rym: But then again think of this.
+
+350
+00:26:10,477 --> 00:26:13,294
+Rym: I work in a technology firm I've worked in.
+
+351
+00:26:13,415 --> 00:26:22,650
+Rym: every company I've worked for has been a technology firm other than RIT Where it was all punk awesome tech kids like me IBM, but my new at my current company and everything.
+
+352
+00:26:23,370 --> 00:26:26,810
+Rym: Every single person except for like one or two used fire or used IE.
+
+353
+00:26:27,051 --> 00:26:28,377
+Scott: But how much did they browse?
+
+354
+00:26:28,618 --> 00:26:30,828
+Scott: they browsed a lot did they?
+
+355
+00:26:31,169 --> 00:26:37,650
+Rym: yeah I mean in IBM there was one guy I knew he sat a floor down for me in the office high-rise.
+
+356
+00:26:38,012 --> 00:26:42,009
+Rym: I don't think he ever did work and not like me where I just didn't have a lot of work to do.
+
+357
+00:26:42,594 --> 00:26:44,009
+Rym: He just like didn't do work.
+
+358
+00:26:44,251 --> 00:26:45,741
+Rym: He just sat around surfing the net he had.
+
+359
+00:26:45,781 --> 00:26:47,029
+Rym: cuz I run in all the time.
+
+360
+00:26:49,771 --> 00:26:53,590
+Rym: He's a big anime fan - it wall scrolls kind of scary kind of a fanboy.
+
+361
+00:26:53,973 --> 00:27:03,490
+Rym: Oh, I don't know how he had a job there But maybe the fact that he has a job there is the reason I chose not to work there anymore On a very broad scale.
+
+362
+00:27:03,771 --> 00:27:14,830
+Rym: But I think there are a lot of people who are in the technology industry who know their shit about like routers or internet Technology and yet they use IE Yeah, which I could say I guess that means they don't know their shit.
+
+363
+00:27:14,890 --> 00:27:20,449
+Rym: But then well that that corollary lays me down the path to almost no one knows their shit.
+
+364
+00:27:21,550 --> 00:27:22,689
+Scott: That's that's pretty true.
+
+365
+00:27:22,870 --> 00:27:28,510
+Rym: I hate to make the argument of everyone's crazy, but me because the logical conclusion of that argument is that I am crazy.
+
+366
+00:27:29,012 --> 00:27:32,270
+Rym: Mm-hmm you agree to that Scott you just agreed to that.
+
+367
+00:27:32,330 --> 00:27:33,656
+Rym: Are you going to stay agreeing to that?
+
+368
+00:27:33,716 --> 00:27:35,785
+Rym: because I have some arguments with you after the show.
+
+369
+00:27:35,805 --> 00:27:40,970
+Rym: if that's true Is the argument that everyone is crazy, but me silly or not?
+
+370
+00:27:42,172 --> 00:27:43,036
+Scott: It's a little bit silly.
+
+371
+00:27:43,056 --> 00:27:43,357
+Scott: Okay.
+
+372
+00:27:43,458 --> 00:27:43,679
+Rym: Okay.
+
+373
+00:27:43,739 --> 00:27:44,101
+Rym: I got you.
+
+374
+00:27:44,222 --> 00:27:45,367
+Scott: It's not always true.
+
+375
+00:27:45,387 --> 00:27:50,422
+Scott: Yeah Possible that everyone is crazy, but you yeah, yeah Occam's razor.
+
+376
+00:27:50,823 --> 00:27:55,109
+Scott: Yeah, most 99.99 percent of the time you're crazy.
+
+377
+00:27:55,712 --> 00:27:56,554
+Rym: That's all I needed.
+
+378
+00:27:56,614 --> 00:27:58,620
+Scott: point Oh one percent of the time.
+
+379
+00:27:59,102 --> 00:27:59,383
+Scott: Yes.
+
+380
+00:27:59,543 --> 00:28:01,770
+Scott: Everyone is crazy, but you watch like a van gallon.
+
+381
+00:28:01,850 --> 00:28:05,484
+Rym: You have a point zero zero zero zero zero zero zero zero zero zero zero.
+
+382
+00:28:05,544 --> 00:28:06,588
+Rym: one percent chance of surviving.
+
+383
+00:28:06,930 --> 00:28:07,554
+Scott: well No, you know what?
+
+384
+00:28:07,615 --> 00:28:08,744
+Scott: What's the population of the world?
+
+385
+00:28:09,187 --> 00:28:09,490
+Rym: a lot?
+
+386
+00:28:09,791 --> 00:28:16,894
+Scott: Okay, so one over a lot is the chances of everyone is crazy, but you possibly I mean, yeah You got to take into account.
+
+387
+00:28:16,934 --> 00:28:18,882
+Rym: I don't know free will and all maybe quantum theory.
+
+388
+00:28:18,902 --> 00:28:20,227
+Scott: Well, whatever.
+
+389
+00:28:20,308 --> 00:28:23,696
+Scott: Yeah One e over a lot.
+
+390
+00:28:24,117 --> 00:28:24,980
+Rym: e to the pi.
+
+391
+00:28:25,000 --> 00:28:28,369
+Scott: i yeah is the chances that everyone is crazy with you.
+
+392
+00:28:35,177 --> 00:28:39,150
+Scott: things of the day burning new listeners out there the things of the days.
+
+393
+00:28:39,752 --> 00:28:46,780
+Scott: We each pick some sort of thing on the internet usually some sort of thing of the day Yes, and we talk about it.
+
+394
+00:28:46,982 --> 00:28:52,443
+Scott: and at front row crew calm There are links to the things of the day for you to listen to or watch.
+
+395
+00:28:52,664 --> 00:28:53,708
+Rym: It's just whatever weird thing.
+
+396
+00:28:53,728 --> 00:28:55,696
+Rym: worry fine They've been very popular.
+
+397
+00:28:55,716 --> 00:28:56,298
+Rym: Yep.
+
+398
+00:28:56,981 --> 00:29:02,629
+Scott: So my thing of the day today is A prank call if you will but an interesting one.
+
+399
+00:29:03,151 --> 00:29:10,057
+Scott: This British guy calls up a Chinese restaurant and he tells the Chinese restaurant an order and then he says hold on My friend is coming.
+
+400
+00:29:10,098 --> 00:29:12,273
+Scott: I might want to change the order Whatever.
+
+401
+00:29:12,795 --> 00:29:15,486
+Rym: yeah, he's like get read it back to me, but just give me a minute.
+
+402
+00:29:15,526 --> 00:29:22,090
+Scott: I gotta get my friend on the line Yep, so he then calls another Chinese restaurant and he puts them on hold.
+
+403
+00:29:22,531 --> 00:29:27,810
+Scott: Then he connects the two Chinese restaurants and gets the one to repeat the order to the other.
+
+404
+00:29:28,354 --> 00:29:36,090
+Rym: Now if you don't see where this is going Both Chinese restaurants now think that they're taking an order from the other Chinese restaurant.
+
+405
+00:29:36,372 --> 00:29:39,110
+Scott: But actually yeah, you get the idea.
+
+406
+00:29:40,111 --> 00:29:41,496
+Rym: It's quite hilarious.
+
+407
+00:29:41,736 --> 00:29:42,860
+Scott: you gotta listen to it.
+
+408
+00:29:43,181 --> 00:29:44,245
+Scott: You're like delivery.
+
+409
+00:29:44,265 --> 00:29:45,128
+Scott: We don't do delivery.
+
+410
+00:29:45,228 --> 00:29:46,331
+Scott: We do delivery We don't do.
+
+411
+00:29:46,351 --> 00:29:47,535
+Rym: it's like you come pick it up.
+
+412
+00:29:48,357 --> 00:29:51,125
+Rym: No, you come pick it up, but but we don't deliver.
+
+413
+00:29:51,145 --> 00:30:03,439
+Rym: Yeah, and If you've if you've never seen a train wreck, this is probably the most perfect Conversational example of a train wreck ever created.
+
+414
+00:30:04,401 --> 00:30:07,870
+Rym: it is just two people talking but not understanding.
+
+415
+00:30:08,911 --> 00:30:14,550
+Scott: Yeah, the thing about it that really makes it work is that you call Chinese restaurants and you don't really communicate in complete sentences.
+
+416
+00:30:14,671 --> 00:30:15,920
+Scott: You just kind of say words.
+
+417
+00:30:15,960 --> 00:30:17,270
+Scott: they give the whole idea.
+
+418
+00:30:17,491 --> 00:30:20,530
+Scott: Yeah, like when I order I says, you know, I don't do delivery.
+
+419
+00:30:20,751 --> 00:30:22,901
+Scott: The only word that really means anything there is delivery.
+
+420
+00:30:23,022 --> 00:30:24,489
+Scott: So the guy's like we don't we do.
+
+421
+00:30:25,471 --> 00:30:28,550
+Rym: Yeah, and it's like egg for young is like yes, we have egg for y'all like egg for y'all.
+
+422
+00:30:32,052 --> 00:30:33,176
+Rym: It takes them a while to.
+
+423
+00:30:33,216 --> 00:30:36,710
+Rym: finally they're both just like, you know what forget you and then they hang up on each other.
+
+424
+00:30:36,971 --> 00:30:38,817
+Scott: Yep, quite fantastic.
+
+425
+00:30:38,977 --> 00:30:40,462
+Rym: It is well worth listening to.
+
+426
+00:30:40,642 --> 00:30:45,158
+Rym: I'd take I'd play it all in the show But you know copyright and all that.
+
+427
+00:30:45,901 --> 00:30:47,828
+Scott: Yeah, I don't know if there's any copyright, but whatever.
+
+428
+00:30:47,848 --> 00:30:49,955
+Rym: Yeah Anyway, all right.
+
+429
+00:30:49,975 --> 00:30:54,230
+Rym: My thing is much less amazingly funny, but it's more somewhat useful.
+
+430
+00:30:54,711 --> 00:31:02,902
+Rym: Someone made a chart that's for the most part accurate of all the major religions in the world including some things I would call cults and not religions.
+
+431
+00:31:03,225 --> 00:31:03,790
+Rym: Yeah, whatever.
+
+432
+00:31:03,850 --> 00:31:06,037
+Rym: Well, it depends on how much of a distinction you make.
+
+433
+00:31:06,098 --> 00:31:09,830
+Scott: but there everything I have a list of 20 characteristics of a cult.
+
+434
+00:31:09,931 --> 00:31:10,948
+Scott: If you have 10, you're a cult.
+
+435
+00:31:12,350 --> 00:31:14,300
+Rym: Remember that argument we had with the Scientologists.
+
+436
+00:31:14,722 --> 00:31:15,766
+Rym: Yeah, that was great.
+
+437
+00:31:15,787 --> 00:31:16,510
+Rym: I was like you're a cult.
+
+438
+00:31:16,570 --> 00:31:20,406
+Rym: They're like, no, we're not and the argument really didn't get much beyond that.
+
+439
+00:31:20,446 --> 00:31:21,450
+Rym: But that's beside the point.
+
+440
+00:31:21,651 --> 00:31:22,996
+Rym: Yeah, Scientology is on the chart.
+
+441
+00:31:23,016 --> 00:31:33,890
+Rym: This is a chart of all the world religions and one if you read through it like I know a lot of people have heard about Gnosticism because Christianity is in many ways based on some of the ideas of Gnosticism.
+
+442
+00:31:34,512 --> 00:31:40,530
+Rym: But I have not met many people in the world who know what Gnosticism entails and this is well not a perfect.
+
+443
+00:31:41,394 --> 00:31:49,550
+Rym: It is a better explanation that I've heard Given by almost anyone in my life other than people I know they know about it.
+
+444
+00:31:49,570 --> 00:31:53,949
+Scott: The other interesting is they cover a lot of those little religions that you don't really know anything like Jane ism.
+
+445
+00:31:54,451 --> 00:32:00,269
+Scott: Yeah, there's one religion like I've when we went to Israel There was a religion like these people.
+
+446
+00:32:01,253 --> 00:32:02,056
+Scott: They were so small.
+
+447
+00:32:02,096 --> 00:32:06,070
+Scott: They literally had one village was the whole religion and they also had a village in Egypt.
+
+448
+00:32:06,170 --> 00:32:07,535
+Scott: It was like two villages and that was it.
+
+449
+00:32:08,017 --> 00:32:13,634
+Rym: I mean, it's got like Shinto and the six and Zoroastrianism and Mormonism Christianity's all lumped into one.
+
+450
+00:32:13,654 --> 00:32:18,170
+Rym: but that's because it covers the basic basic the things that all they split Catholic out though.
+
+451
+00:32:18,291 --> 00:32:20,842
+Rym: No, no, because it goes so basic.
+
+452
+00:32:20,922 --> 00:32:22,630
+Scott: I would say Catholic Protestant.
+
+453
+00:32:22,992 --> 00:32:24,117
+Rym: Well, no because Catholic.
+
+454
+00:32:24,158 --> 00:32:26,630
+Rym: well Mormon is separate but Catholic and Protestant.
+
+455
+00:32:27,513 --> 00:32:32,550
+Rym: While they disagree on a lot of things at the very very core, they're mostly identical.
+
+456
+00:32:32,831 --> 00:32:35,927
+Rym: Yeah, it's just all the mysticism and spirituality and stuff beyond.
+
+457
+00:32:35,948 --> 00:32:36,430
+Rym: that is different.
+
+458
+00:32:36,490 --> 00:32:44,214
+Rym: But the interesting thing is they also have some stats as to how many people adhere to or in the case of atheism Don't adhere to.
+
+459
+00:32:44,274 --> 00:32:46,159
+Scott: yeah, they're very rough estimates.
+
+460
+00:32:46,721 --> 00:32:48,747
+Rym: Yeah, and there are a lot more atheists.
+
+461
+00:32:48,767 --> 00:32:49,870
+Scott: Well, it's ever the small religions.
+
+462
+00:32:49,930 --> 00:32:50,914
+Scott: It's very easy to know.
+
+463
+00:32:50,934 --> 00:32:52,219
+Rym: Yeah, there's eight guys.
+
+464
+00:32:52,279 --> 00:32:53,343
+Rym: They live in Long Island.
+
+465
+00:32:53,403 --> 00:32:54,507
+Scott: There's 70,000 people.
+
+466
+00:32:54,547 --> 00:32:55,230
+Scott: they live in the city.
+
+467
+00:32:55,773 --> 00:33:04,599
+Rym: But yeah atheism is trickier because they use a. I mean There's anti theism, you know positive and negative atheism Like there's some atheists who there is no God.
+
+468
+00:33:04,639 --> 00:33:07,168
+Rym: and I'm sure there's atheists who like I just don't believe in anything.
+
+469
+00:33:07,208 --> 00:33:07,770
+Rym: and atheists who?
+
+470
+00:33:07,970 --> 00:33:08,231
+Rym: I don't know.
+
+471
+00:33:08,271 --> 00:33:08,814
+Rym: I don't care.
+
+472
+00:33:09,155 --> 00:33:09,999
+Rym: They're agnostics.
+
+473
+00:33:10,260 --> 00:33:12,410
+Rym: They're you know, all these sorts of shades of gray.
+
+474
+00:33:12,470 --> 00:33:14,898
+Rym: They lumped them all into one as non religious.
+
+475
+00:33:15,359 --> 00:33:15,560
+Rym: Yep.
+
+476
+00:33:15,700 --> 00:33:18,870
+Rym: There are a lot of non religious people like a billion non religious people.
+
+477
+00:33:19,273 --> 00:33:21,650
+Scott: Yep, the Muslims give us a run for our money.
+
+478
+00:33:24,396 --> 00:33:25,038
+Rym: Yeah, I don't know.
+
+479
+00:33:25,099 --> 00:33:28,329
+Rym: maybe we'll have some sort of halo tournament to settle that once and for all.
+
+480
+00:33:32,152 --> 00:33:33,430
+Scott: What's master chief's religion?
+
+481
+00:33:34,613 --> 00:33:39,722
+Rym: Master chief ism, obviously but anyway on to our main bit being science and technology day.
+
+482
+00:33:39,762 --> 00:33:53,888
+Rym: as I've said a lot only because we have so many new listeners and I hope they realize that GeekNights has broken up into four distinct days with four distinct sets of topics and Like Tuesdays are gaming Wednesdays anime Thursdays pretty much any geekery that fills in the cracks and voids.
+
+483
+00:33:54,429 --> 00:33:59,121
+Rym: and We've been doing a long-running series long-running meaning we've done two episodes so far.
+
+484
+00:33:59,161 --> 00:34:02,430
+Scott: and there's the third episode on how computers work.
+
+485
+00:34:02,791 --> 00:34:04,820
+Scott: We're going to tell you everything we learned.
+
+486
+00:34:04,841 --> 00:34:05,423
+Scott: that are everything.
+
+487
+00:34:05,504 --> 00:34:10,217
+Scott: I learned at RIT at least And then after that, we'll tell you everything Rym learned.
+
+488
+00:34:10,558 --> 00:34:14,969
+Scott: Yeah, you're getting basically a free RIT CS and IT education.
+
+489
+00:34:15,632 --> 00:34:23,436
+Rym: Now this will take us a long time partly because the only time we'll do another episode of the series is when we don't come Up with a better idea for a Monday.
+
+490
+00:34:23,456 --> 00:34:23,857
+Rym: Yep.
+
+491
+00:34:24,500 --> 00:34:27,027
+Scott: It was basically due to lack of ideas for a Monday.
+
+492
+00:34:27,088 --> 00:34:29,922
+Scott: We came up Alright, we'll do a long-running series to fill in the gaps.
+
+493
+00:34:30,204 --> 00:34:31,330
+Rym: I mean this will take us years.
+
+494
+00:34:31,491 --> 00:34:33,417
+Rym: There's a lot of things I could talk about.
+
+495
+00:34:33,437 --> 00:34:34,641
+Rym: I mean right now.
+
+496
+00:34:34,762 --> 00:34:36,949
+Rym: I'm looking at all the books in front of me on my desk.
+
+497
+00:34:37,072 --> 00:34:45,402
+Rym: I mean network printing HTML Perl ASP yep, Java will eventually get there.
+
+498
+00:34:45,583 --> 00:34:50,440
+Scott: Yep, but right today We're still on the low low levels now.
+
+499
+00:34:50,481 --> 00:34:51,163
+Rym: We left off.
+
+500
+00:34:51,485 --> 00:34:56,184
+Rym: we had basically come up with Binary logic logic gates, you know Turing machines.
+
+501
+00:34:56,646 --> 00:34:59,358
+Rym: input output Input comes in this.
+
+502
+00:34:59,498 --> 00:35:04,036
+Rym: if for any given input the output will always be the same Everything is fully deterministic.
+
+503
+00:35:04,457 --> 00:35:08,670
+Rym: you put data in and then the data is manipulated and it comes back out with electricity.
+
+504
+00:35:09,032 --> 00:35:10,300
+Scott: That's what a computer is.
+
+505
+00:35:10,844 --> 00:35:11,810
+Rym: well to a point.
+
+506
+00:35:11,931 --> 00:35:14,370
+Rym: I mean what we described what we brought together.
+
+507
+00:35:14,410 --> 00:35:18,669
+Rym: You know a bunch of logic gates and for every signal you put in a deterministic signal will come out.
+
+508
+00:35:19,333 --> 00:35:21,789
+Rym: That can't do much other than calculate one thing.
+
+509
+00:35:22,572 --> 00:35:28,170
+Rym: How do you get from calculating one thing to calculating more than one thing like computers do?
+
+510
+00:35:28,992 --> 00:35:29,609
+Scott: It's tricky.
+
+511
+00:35:29,851 --> 00:35:37,324
+Scott: I mean if you just set up a bunch of logic gates sure you could put in one number here and one number there And then a number comes out, but that's all it can do.
+
+512
+00:35:37,404 --> 00:35:38,490
+Scott: it can't do anything else.
+
+513
+00:35:38,851 --> 00:35:53,557
+Scott: You need to make a whole different chip to do different things and in fact couldn't do a lot of advanced things like What if you wanted like, you know to I don't know add something together Remember that number and then add something to that.
+
+514
+00:35:53,899 --> 00:36:05,514
+Rym: basically at this point you would need an entire Computer an entire Turing machine for every possible question or every possible problem You could ever solve.
+
+515
+00:36:05,895 --> 00:36:10,610
+Rym: I mean down to one plus one and one plus two are two separate computers.
+
+516
+00:36:10,893 --> 00:36:11,782
+Scott: No, not really.
+
+517
+00:36:11,802 --> 00:36:12,590
+Scott: You just need an adder.
+
+518
+00:36:13,531 --> 00:36:18,530
+Scott: Yeah, but I'm hiding would need a different computer from subtracting would need a different computer for multiplying.
+
+519
+00:36:18,892 --> 00:36:22,270
+Scott: And if you wanted to use bigger numbers to add and subtract you would need bigger.
+
+520
+00:36:22,591 --> 00:36:28,650
+Rym: You wanted to and you would need more and more switches if you wanted to add more numbers like three numbers instead of two.
+
+521
+00:36:29,091 --> 00:36:34,856
+Scott: So to do most adding I mean to add any two numbers you would need like Any two reasonable numbers.
+
+522
+00:36:34,876 --> 00:36:43,309
+Scott: you need 64 switches and then if you wanted to add three numbers together Well, you need another computer that had like god knows how many switches on it.
+
+523
+00:36:43,590 --> 00:36:48,132
+Rym: It's just a crazy and nothing could remember anything and basically the computer is useless Yep.
+
+524
+00:36:48,553 --> 00:36:51,904
+Rym: Now we said that there's one other component in addition to the logic gates.
+
+525
+00:36:51,944 --> 00:36:53,830
+Scott: This was I think the answer to a trivia question.
+
+526
+00:36:53,950 --> 00:37:00,994
+Rym: Yep, I mean we said and or you know all those logic gates nor X or X Etc.
+
+527
+00:37:01,115 --> 00:37:01,296
+Scott: Yep.
+
+528
+00:37:01,599 --> 00:37:04,918
+Rym: Now there was one component missing and No one actually bothered to answer it.
+
+529
+00:37:04,938 --> 00:37:06,526
+Rym: I don't think or if they did it's been so long.
+
+530
+00:37:06,546 --> 00:37:06,988
+Rym: I forgot.
+
+531
+00:37:07,129 --> 00:37:09,690
+Scott: Yep Well, the answer is a flip-flop.
+
+532
+00:37:10,272 --> 00:37:14,063
+Rym: Now a flip-flop can be somewhat complex electronically.
+
+533
+00:37:14,083 --> 00:37:20,650
+Scott: Yeah, there are many different kinds of flip-flops So we're not gonna go over that because it's not necessary to know that unless you're going to go into electronics.
+
+534
+00:37:20,770 --> 00:37:23,119
+Rym: Yes conceptually in terms of what it does.
+
+535
+00:37:23,179 --> 00:37:24,243
+Rym: It's actually very simple.
+
+536
+00:37:24,764 --> 00:37:34,650
+Rym: It remembers one bit It can remember something you can put a bit into it and the bit will stay there And if you tell it to shoot the bit back out, it'll shoot the bit.
+
+537
+00:37:34,710 --> 00:37:36,959
+Scott: Well, it's it constantly shoots the bit out.
+
+538
+00:37:37,040 --> 00:37:40,708
+Rym: Well, yeah, it happens to be so if you choose to listen to it Then you'll get the bit back.
+
+539
+00:37:41,051 --> 00:37:46,490
+Scott: Yeah, basically a flip-flop is actually a combination of gates and it can be advanced or not advanced.
+
+540
+00:37:46,591 --> 00:37:48,910
+Scott: But what it does is it remembers a bit?
+
+541
+00:37:49,130 --> 00:38:01,369
+Scott: So let's see of a flip-flop and right now it's zero which is no electricity you can send in a one and the flip-flop will change to one and It'll constantly output one.
+
+542
+00:38:01,890 --> 00:38:11,754
+Scott: And then you can change it to zero or keep it at one and it will constantly shoot out one or zero Whatever happens to be in the flip-flop and it'll do that Basically forever.
+
+543
+00:38:11,854 --> 00:38:20,590
+Scott: so you can do some math and then the result of that math Will do something to the flip-flop or to the whole mess of flip-flops.
+
+544
+00:38:20,690 --> 00:38:22,479
+Scott: Let's say you have a whole mess of these guys, right?
+
+545
+00:38:22,499 --> 00:38:27,839
+Scott: So let's say I have a 32 flip-flops I do some adding and the result goes into.
+
+546
+00:38:27,839 --> 00:38:31,830
+Scott: 32 is a 32-bit number which goes into 32 flip-flops.
+
+547
+00:38:32,572 --> 00:38:37,487
+Scott: Then I take the output of all those flip-flops send them back into the input to add something else.
+
+548
+00:38:37,507 --> 00:38:38,390
+Scott: Holy crap.
+
+549
+00:38:38,701 --> 00:38:43,969
+Rym: Yep Now if the machine you had the the input output loop was just add one to whatever number came in.
+
+550
+00:38:44,493 --> 00:38:46,566
+Rym: You'll just keep adding up and you'll have a little counting machine.
+
+551
+00:38:46,949 --> 00:38:47,695
+Scott: Yep Now what?
+
+552
+00:38:47,735 --> 00:38:54,628
+Scott: if I want to do like, you know I do something and then I want to say if the last thing I did was this then do this next.
+
+553
+00:38:54,728 --> 00:38:56,899
+Scott: or if the last Thing I did was this then do something else.
+
+554
+00:38:56,979 --> 00:38:58,950
+Scott: next you have a flip-flop goes.
+
+555
+00:39:00,072 --> 00:39:04,868
+Scott: So you just look at the flip-flop to see what you just did because it can remember things.
+
+556
+00:39:05,389 --> 00:39:11,130
+Rym: now If this doesn't seem like a huge leap or like an amazing thing consider for a minute.
+
+557
+00:39:11,170 --> 00:39:15,090
+Rym: I mean we've added the ability of our Turing machine to remember something.
+
+558
+00:39:15,592 --> 00:39:18,123
+Rym: So before I add one and one I get to.
+
+559
+00:39:18,485 --> 00:39:20,393
+Rym: if I want to do anything else I forget to.
+
+560
+00:39:20,473 --> 00:39:21,437
+Rym: I forget to even exist.
+
+561
+00:39:21,477 --> 00:39:23,183
+Scott: It's not really a Turing machine, but whatever.
+
+562
+00:39:23,304 --> 00:39:27,662
+Rym: Yeah, we're real simple here I mean people real simple Turing machines.
+
+563
+00:39:27,883 --> 00:39:29,550
+Rym: I think we explained the concept pretty well.
+
+564
+00:39:29,641 --> 00:39:31,496
+Scott: No We didn't explain the concept of Turing machine at all.
+
+565
+00:39:31,657 --> 00:39:36,318
+Rym: right because Kate borrowed my copy of diamond age that had the awesome thing I wanted to read to everyone.
+
+566
+00:39:36,438 --> 00:39:38,070
+Scott: We never talked about a Turing machine at all.
+
+567
+00:39:38,231 --> 00:39:40,085
+Rym: All right, we'll talk about that whenever I get my book back.
+
+568
+00:39:40,186 --> 00:39:43,686
+Rym: Yeah Anyway, but I add one and one I get to.
+
+569
+00:39:43,706 --> 00:39:45,674
+Rym: if I want to add anything else I forget to now.
+
+570
+00:39:45,714 --> 00:39:47,461
+Rym: I can remember to and do something else.
+
+571
+00:39:47,842 --> 00:39:49,829
+Rym: or I can remember to and do something with two.
+
+572
+00:39:50,533 --> 00:39:52,263
+Rym: Or I can remember the order.
+
+573
+00:39:52,303 --> 00:39:55,054
+Rym: I did things in Mm-hmm that that's.
+
+574
+00:39:55,175 --> 00:39:55,716
+Rym: that's huge.
+
+575
+00:39:55,776 --> 00:39:57,682
+Rym: that makes the leap from nothing.
+
+576
+00:39:57,843 --> 00:40:00,350
+Rym: or you know a one operation thing to a computer.
+
+577
+00:40:00,985 --> 00:40:21,529
+Scott: Yep I mean you just get a whole mess of flip-flops in there and you can get them to flip and it's basically a bunch of switches that stay switched as Opposed to switches that you have to switch yourself, and yeah And they basically they change based on what you just did Before or what you did two times ago, or what you did three times ago.
+
+578
+00:40:22,430 --> 00:40:35,981
+Scott: Now the way a flip-flop kind of works, I'm not gonna go too much into it is that there is really three inputs Generally, but really only one that you care about.
+
+579
+00:40:36,242 --> 00:40:37,968
+Rym: you'd better get it because I'm not editing anything.
+
+580
+00:40:38,209 --> 00:40:43,293
+Scott: Yep so there's a clock and Let's see.
+
+581
+00:40:43,314 --> 00:40:46,030
+Scott: Let's just do an advanced flip-flop the one that people use.
+
+582
+00:40:46,070 --> 00:40:57,514
+Scott: It's actually called a latch because it's there's a. there's a flip-flop that doesn't have a clock input which is like a set reset flip-flop, but the D latch is the Advanced kind.
+
+583
+00:40:57,915 --> 00:41:05,238
+Scott: the way it works is it has an input line which can be 0 or 1. it has a clock Which is a clock which I'm going to talk about.
+
+584
+00:41:05,680 --> 00:41:08,210
+Scott: it has an output and then it has another output.
+
+585
+00:41:08,331 --> 00:41:10,390
+Scott: That is always the opposite of the other output.
+
+586
+00:41:10,551 --> 00:41:14,306
+Scott: So, you know you can just use that if or not use that at your will.
+
+587
+00:41:14,647 --> 00:41:15,330
+Scott: now a clock.
+
+588
+00:41:15,892 --> 00:41:17,159
+Scott: This is where we get into stuff.
+
+589
+00:41:17,621 --> 00:41:23,604
+Scott: a clock is an input But it's not an input that you control or anything.
+
+590
+00:41:23,805 --> 00:41:24,888
+Scott: It's simply a clock.
+
+591
+00:41:25,049 --> 00:41:27,498
+Scott: as in 1 0 0 0 1 0 0. it's deterministic.
+
+592
+00:41:30,471 --> 00:41:31,515
+Rym: Temporally it is.
+
+593
+00:41:31,535 --> 00:41:35,690
+Rym: it is always giving out a reliable stream of binary data.
+
+594
+00:41:36,132 --> 00:41:41,636
+Scott: It just gives out ones on you know or zeros at Specific intervals.
+
+595
+00:41:41,978 --> 00:41:44,007
+Rym: now to shoot up to high level.
+
+596
+00:41:44,067 --> 00:41:47,829
+Rym: very briefly You know how people have a CPU or computer and they talk about the megahertz.
+
+597
+00:41:48,352 --> 00:41:49,536
+Scott: The megahertz is the clock.
+
+598
+00:41:49,897 --> 00:41:52,547
+Rym: That's how fast the clock is going because every time the clock goes.
+
+599
+00:41:52,828 --> 00:41:59,069
+Rym: Hey, hey Hey, it's Ted's going do something do something and the processor can do something if there's something to do.
+
+600
+00:41:59,552 --> 00:42:06,469
+Rym: so the more times it says Hey per second the more things your computer can do in a second and therefore the faster it is.
+
+601
+00:42:06,850 --> 00:42:17,675
+Scott: Yes You have a bunch of crazy circuits and gates and stuff all arranged with flip-flops in there and the flip-flops Can change.
+
+602
+00:42:17,756 --> 00:42:25,190
+Scott: that's when they do change and Then the clock says zero and the flip-flops don't do anything and then the cock says one and all the flip-flops change now.
+
+603
+00:42:25,451 --> 00:42:36,648
+Scott: So if your circuits are set up to where the results are, you know finished doing things fast enough You can send in the ones more often and your computer will do things faster.
+
+604
+00:42:37,029 --> 00:42:47,710
+Rym: Yep Now it's not a great reliable factor to determine how fast a computer is overall anymore Because chips have gotten more complex to where they can do more on a given.
+
+605
+00:42:47,790 --> 00:42:53,230
+Rym: Hey do something than older chips and all sorts of other things that we'll talk about far in the future of this series.
+
+606
+00:42:53,230 --> 00:42:57,187
+Scott: Yes but let's say you had a computer that had one flip-flop and it was one hurt.
+
+607
+00:42:57,609 --> 00:43:05,309
+Scott: the One hurt means that once a second the flip-flop changes, which means the computer basically does one whatever it does.
+
+608
+00:43:05,992 --> 00:43:10,850
+Scott: Changing the flip-flop once a second if it was a mega hurt it would do it a million times a second.
+
+609
+00:43:11,252 --> 00:43:16,298
+Scott: But if you had more flip-flops, you know and a much more complex processor It gets crazy.
+
+610
+00:43:16,318 --> 00:43:23,310
+Scott: and you you know It's much faster to have more of them at a slower speed than fewer to higher speed and you got it's crazy.
+
+611
+00:43:23,712 --> 00:43:25,281
+Rym: Yep, and keep in mind this is.
+
+612
+00:43:25,422 --> 00:43:26,750
+Rym: I mean this sounds like a very simple thing.
+
+613
+00:43:26,750 --> 00:43:31,604
+Rym: I mean you you've saved one bit in a flip-flop one actually in a real computer.
+
+614
+00:43:31,624 --> 00:43:33,590
+Scott: There are kajillions of flip-flops going on.
+
+615
+00:43:33,670 --> 00:43:40,370
+Rym: Yep I mean we're talking such low level and I mean zoom out a lot and there are billions and billions and billions of these things.
+
+616
+00:43:40,450 --> 00:43:42,596
+Rym: Your computer flip-flopping constantly.
+
+617
+00:43:42,616 --> 00:43:43,198
+Rym: Yep.
+
+618
+00:43:43,399 --> 00:43:45,505
+Rym: Computers are extremely complex.
+
+619
+00:43:45,966 --> 00:43:51,529
+Scott: from a high modern computers Yeah from a high level you can make something that is technically a computer with very very few.
+
+620
+00:43:51,714 --> 00:43:51,798
+Scott: Yep.
+
+621
+00:43:52,312 --> 00:44:00,502
+Rym: but the computer sitting in front of you now or in your iPod is doing an Incredibly insane number of these flip-flops and gates per second millions upon millions.
+
+622
+00:44:00,742 --> 00:44:01,063
+Rym: and it's.
+
+623
+00:44:01,304 --> 00:44:06,746
+Rym: it's very conceptually complex yet at its root It's doing a very very simple things.
+
+624
+00:44:06,967 --> 00:44:08,535
+Rym: a lot Mm-hmm, like.
+
+625
+00:44:09,159 --> 00:44:11,230
+Rym: there are now functions that do this more efficiently.
+
+626
+00:44:11,410 --> 00:44:17,788
+Rym: But early computer chips like adders, right if you wanted to multiply a number you added it a bunch of times.
+
+627
+00:44:18,350 --> 00:44:25,150
+Rym: now There are special functions that can do matrix Transformations and multiply things in one step or in different numbers of steps and do different fun things.
+
+628
+00:44:25,210 --> 00:44:27,258
+Rym: But it used to be and consider.
+
+629
+00:44:27,278 --> 00:44:30,550
+Rym: This is more of a broad analogy that you do a very simple thing.
+
+630
+00:44:30,610 --> 00:44:32,948
+Rym: I mean adding is simpler than multiplying.
+
+631
+00:44:33,711 --> 00:44:43,460
+Rym: So if you want to add if you want to multiply 9 times 9 you add 9 to 9 9 times And if you wanted to subtract you just added negative numbers.
+
+632
+00:44:43,841 --> 00:44:45,425
+Scott: Yep, you know dividing.
+
+633
+00:44:45,565 --> 00:44:46,548
+Scott: Well, that's crazy.
+
+634
+00:44:46,588 --> 00:44:48,274
+Scott: But yeah Yeah, yeah, we're.
+
+635
+00:44:48,595 --> 00:44:52,630
+Rym: we don't want to talk more about binary math because people had trouble with that and enough.
+
+636
+00:44:53,172 --> 00:44:57,650
+Rym: I think we'll do a whole show on that completely separate like how to add and subtract and multiply and divide binary.
+
+637
+00:44:57,791 --> 00:45:06,383
+Scott: yes, what's important to know is that the flip-flop or the latch is a Electronic component that can remember a bit.
+
+638
+00:45:06,724 --> 00:45:13,828
+Scott: it can remember zero or one Whereas in a normal and a what we were talking about before there was no way to remember a zero one.
+
+639
+00:45:13,848 --> 00:45:25,490
+Scott: now You can remember it which means you can do something based on What you did before as opposed to just doing something then doing something else and then doing something else.
+
+640
+00:45:25,510 --> 00:45:26,373
+Scott: You can do something.
+
+641
+00:45:26,674 --> 00:45:35,081
+Scott: then based on the result of what you did do something and then based on the result of that do something and you can build upon things.
+
+642
+00:45:35,121 --> 00:45:40,640
+Scott: you can set an option and then Based on that option do something.
+
+643
+00:45:41,162 --> 00:45:44,736
+Scott: you can change modes you can change settings You can change all sorts of things.
+
+644
+00:45:45,098 --> 00:45:47,570
+Scott: You just need more flip-flops to have more complex things.
+
+645
+00:45:47,891 --> 00:45:52,210
+Rym: Yep, and if you keep making more and more flip-flops you can do more and more and more and it gets more and more complex.
+
+646
+00:45:52,311 --> 00:45:54,748
+Rym: But it's still just these basic little things flipping back and forth.
+
+647
+00:45:55,191 --> 00:45:59,810
+Rym: Yep, now that the terms here involved are basically you have a stateless computer.
+
+648
+00:46:00,453 --> 00:46:08,187
+Rym: It doesn't remember anything like when you add what Scott just said the flip-flops You know have a stateful computer as in the state of things matters.
+
+649
+00:46:08,609 --> 00:46:11,230
+Scott: Yep So let's say you have a computer with two flip-flops in it.
+
+650
+00:46:11,310 --> 00:46:13,159
+Scott: That means there's four possible states.
+
+651
+00:46:13,279 --> 00:46:14,606
+Scott: both flip-flops are zero.
+
+652
+00:46:14,746 --> 00:46:16,579
+Scott: one of them is one The other one is one.
+
+653
+00:46:16,599 --> 00:46:17,829
+Scott: they're both one four states.
+
+654
+00:46:18,432 --> 00:46:22,306
+Rym: So in a computer fanatical devotion to the Pope five five states.
+
+655
+00:46:22,827 --> 00:46:24,085
+Scott: Yeah Connecticut.
+
+656
+00:46:26,610 --> 00:46:33,790
+Scott: So now depending on you could have a computer where depending on which of the four states it's in it does something completely different.
+
+657
+00:46:34,171 --> 00:46:43,590
+Scott: yeah, because that one bit of or two bits of output from the flip-flops are going into the computer and Changing the way the computer works like a nice example.
+
+658
+00:46:43,630 --> 00:46:45,276
+Rym: That's probably in front of many of you right now.
+
+659
+00:46:45,336 --> 00:46:49,030
+Rym: Look at your computer monitor or the screen on your iPod your Zen or whatever.
+
+660
+00:46:49,452 --> 00:46:49,954
+Rym: There's a whole.
+
+661
+00:46:50,014 --> 00:46:52,947
+Rym: there's basically not gonna talk about video buffers and all that.
+
+662
+00:46:52,988 --> 00:47:02,615
+Rym: but there's a place of flip-flops where every little pixel on your screen is just a bunch of flip-flops storing the data of What should appear on that pixel?
+
+663
+00:47:02,635 --> 00:47:06,450
+Rym: It's just a matrix of data and all that is is just a whole bunch of flip-flops.
+
+664
+00:47:07,092 --> 00:47:07,675
+Scott: Well, they don't.
+
+665
+00:47:07,735 --> 00:47:11,410
+Scott: actually I don't think those chips actually well now that flops but that's not the point.
+
+666
+00:47:11,631 --> 00:47:12,796
+Scott: They use your memory.
+
+667
+00:47:12,816 --> 00:47:13,761
+Rym: They use remembering.
+
+668
+00:47:13,962 --> 00:47:15,710
+Rym: Yes, things can remember in different ways.
+
+669
+00:47:15,730 --> 00:47:20,344
+Scott: In fact, there's a flip-flop is the basic electronic means of remembering their other means.
+
+670
+00:47:20,444 --> 00:47:29,504
+Rym: but don't worry about I may be corrected by one of our listeners, but as far as I know the only Computer components that really use flip-flops a lot now are like registers in CPUs.
+
+671
+00:47:29,565 --> 00:47:29,805
+Scott: Yep.
+
+672
+00:47:30,266 --> 00:47:31,610
+Scott: That's that's basically where they're found.
+
+673
+00:47:31,750 --> 00:47:33,357
+Rym: I don't think there's anywhere else they're used anymore.
+
+674
+00:47:34,080 --> 00:47:36,570
+Scott: No hard drives use magnetic means of memory.
+
+675
+00:47:36,851 --> 00:47:39,500
+Rym: Yep, RAM uses basically capacitors though.
+
+676
+00:47:39,560 --> 00:47:42,430
+Rym: There are different kinds of RAM, but that's that's way beyond.
+
+677
+00:47:42,651 --> 00:47:47,167
+Scott: Yeah, your BIOS uses what's the equivalent of very small circuit breakers?
+
+678
+00:47:47,869 --> 00:47:53,770
+Rym: Yep We'll talk about all of these in kind if you because if they sound cool these this is actually where things start getting cool.
+
+679
+00:47:54,191 --> 00:48:00,049
+Scott: Yep, it is different ways of basically storing information and remembering it until later.
+
+680
+00:48:00,571 --> 00:48:03,584
+Scott: Yeah, because you flip-flop is just the basic component.
+
+681
+00:48:03,664 --> 00:48:04,789
+Scott: it stores one bit.
+
+682
+00:48:05,353 --> 00:48:12,030
+Rym: Yeah, so I kept saying flip-flop but with the screen example It's remembering every one of those things just an array of things that remembered the state of something.
+
+683
+00:48:12,444 --> 00:48:17,870
+Scott: Yeah If you change there's an array of pretend they're flip-flops that remember zeros and ones.
+
+684
+00:48:18,492 --> 00:48:22,689
+Scott: So you do some math and you figure out what the output of this on the screen should be.
+
+685
+00:48:23,172 --> 00:48:25,650
+Scott: You send it in and it modifies all these flip-flops.
+
+686
+00:48:26,071 --> 00:48:30,809
+Scott: Then there's another device that reads those flip-flops and creates the image on your screen based on that.
+
+687
+00:48:31,672 --> 00:48:36,170
+Scott: Those flip-flops remember what the screen is supposed to look like until you change it again.
+
+688
+00:48:36,451 --> 00:48:43,727
+Rym: So if I want to draw a square I run a set of instructions that usually those instructions are stored About instructions next time.
+
+689
+00:48:43,808 --> 00:48:53,130
+Rym: Yep But basically just a bunch of gates or a bunch of equations or a bunch of numbers that go in a certain way To create the math that will put into those flip-flops or those memory bits.
+
+690
+00:48:53,451 --> 00:48:59,327
+Scott: It will change the flip-flops that need to be changed to make a square because that is all your computer does.
+
+691
+00:48:59,648 --> 00:49:12,880
+Rym: it takes input it saves it to memory or it manipulates memory with that data and all you're doing is Changing ones to zeros and zeros to ones and ones to ones again and zeros to zeros again.
+
+692
+00:49:13,150 --> 00:49:13,320
+Scott: Yep.
+
+693
+00:49:13,400 --> 00:49:23,878
+Scott: So in conclusion, you know a a computer is input from the human being or from devices such as you know I know a light sensor or a keyboard or a mouse or who knows what?
+
+694
+00:49:24,360 --> 00:49:31,946
+Scott: Goes and is processed somehow and then is outputted to a printer or a monitor or a speaker The flip-flops.
+
+695
+00:49:32,147 --> 00:49:35,300
+Scott: what they do is they are in the processing area.
+
+696
+00:49:35,781 --> 00:49:37,185
+Scott: So you put some input.
+
+697
+00:49:37,506 --> 00:49:42,800
+Scott: there is processing and output but in the course of that processing some things are remembered.
+
+698
+00:49:43,363 --> 00:49:48,525
+Scott: so that way you give another input and The processing is different.
+
+699
+00:49:48,746 --> 00:49:57,051
+Scott: because you know, it's the prod the input that you gave before Matters not just the input you gave right now now.
+
+700
+00:49:57,572 --> 00:49:59,860
+Rym: We've gotten feedback as we've done this series, right?
+
+701
+00:49:59,920 --> 00:50:01,265
+Rym: I think we're done talking about this for today.
+
+702
+00:50:01,807 --> 00:50:04,920
+Rym: And the first feedback we got was that we were going way too fast.
+
+703
+00:50:05,601 --> 00:50:07,759
+Rym: We've slowed it down about as slow as we can go.
+
+704
+00:50:08,141 --> 00:50:12,293
+Rym: So if that's if it sounded like we were repeating ourselves a lot, it's because we were.
+
+705
+00:50:12,313 --> 00:50:14,964
+Rym: I mean the concept of flip-flops Is.
+
+706
+00:50:15,247 --> 00:50:16,238
+Rym: there's not much to it.
+
+707
+00:50:16,661 --> 00:50:20,739
+Rym: So all we did was keep giving more and more analogies and trying to explain it again and again.
+
+708
+00:50:21,221 --> 00:50:22,745
+Rym: So was that too slow?
+
+709
+00:50:22,825 --> 00:50:23,407
+Rym: was that right?
+
+710
+00:50:23,868 --> 00:50:24,449
+Rym: You guys getting it?
+
+711
+00:50:24,871 --> 00:50:28,159
+Scott: Yeah, we need some more feedback if you guys you know.
+
+712
+00:50:29,162 --> 00:50:30,695
+Rym: Yeah, yeah, we're not doing this for us.
+
+713
+00:50:30,776 --> 00:50:31,180
+Rym: We know it.
+
+714
+00:50:31,220 --> 00:50:38,060
+Rym: We're doing it for you because you were you were interested in how your computer works and we're eventually gonna get to the stuff.
+
+715
+00:50:38,140 --> 00:50:43,980
+Scott: That's closer to what you understand, but this stuff will really give you like a huge insight.
+
+716
+00:50:44,100 --> 00:50:46,809
+Scott: It's like, you know, we start talking about how email works.
+
+717
+00:50:46,929 --> 00:50:50,300
+Scott: You'll be like, oh cool, but a lot of it you'd be like, huh?
+
+718
+00:50:50,700 --> 00:50:58,237
+Scott: But that you're talking about this networking stuff and then that networking stuff works on something else which works eventually on the stuff We're talking about right now.
+
+719
+00:50:58,601 --> 00:51:08,516
+Rym: Plus there are things we'll learn from each other because Scott knows a lot more about the lower workings and the coding than I do Yeah, but when we get to the networking and things like that, I actually did learn things in college.
+
+720
+00:51:08,938 --> 00:51:15,340
+Rym: Oh my god OMG, OMG, even though honestly I learned more in the working world than I did at RIT.
+
+721
+00:51:15,440 --> 00:51:17,207
+Scott: Yeah, yeah.
+
+722
+00:51:17,348 --> 00:51:18,091
+Scott: Yeah.
+
+723
+00:51:18,473 --> 00:51:18,794
+Rym: Yeah.
+
+724
+00:51:18,814 --> 00:51:19,557
+Rym: All right.
+
+725
+00:51:19,598 --> 00:51:20,160
+Rym: That's all we've got.
+
+726
+00:51:20,241 --> 00:51:24,607
+Rym: Once again, if you're a new listener and you don't care about technology But you still listen to the end of this.
+
+727
+00:51:24,969 --> 00:51:27,160
+Rym: keep in mind that we talk about different things every day.
+
+728
+00:51:27,240 --> 00:51:28,244
+Rym: We go four nights a week.
+
+729
+00:51:28,746 --> 00:51:32,700
+Rym: If you're looking for the ConnectiCon feedback, it's going to be on Wednesday, which is anime day.
+
+730
+00:51:33,102 --> 00:51:34,127
+Scott: Yeah, Wednesday night.
+
+731
+00:51:34,268 --> 00:51:41,026
+Scott: So for most of you schmucks, that means Thursday But you should listen Wednesday night if you're cool And if you don't have anything better to do.
+
+732
+00:51:41,447 --> 00:51:47,411
+Rym: it seems like a decent portion of our listeners like a good third Listen to the show on about a week lag time.
+
+733
+00:51:47,432 --> 00:51:49,120
+Scott: Yeah, I don't know what's up with that.
+
+734
+00:51:49,546 --> 00:51:50,420
+Rym: Well, I mean, I don't know.
+
+735
+00:51:50,442 --> 00:51:58,994
+Rym: I mean maybe it's people who commute or I know a lot of people go through the archives because The oldest episodes on Libsyn are getting three or four downloads every day.
+
+736
+00:51:59,014 --> 00:52:08,308
+Scott: Yeah to be honest with you If I was a listener of GeekNights, I would probably subscribe to just one or two days Because it's just too much to have the four days.
+
+737
+00:52:08,488 --> 00:52:10,274
+Rym: Well, maybe we should start doing shorter episodes again.
+
+738
+00:52:10,695 --> 00:52:21,979
+Rym: Yeah, so we're out And that was GeekNights with Rym and Scott.
+
+739
+00:52:21,999 --> 00:52:24,105
+Rym: Special thanks to DJ pretzel for our opening theme.
+
+740
+00:52:24,506 --> 00:52:28,937
+Scott: Be sure to visit our website at Www.frontrowcrew.com.
+
+741
+00:52:29,559 --> 00:52:32,027
+Scott: if you like our podcast you'll love our forums.
+
+742
+00:52:32,107 --> 00:52:32,829
+Scott: Make sure you visit them.
+
+743
+00:52:33,392 --> 00:52:39,478
+Scott: You can send your email feedback to GeekNights at gmail.com And if you want you can leave us a voicemail at 206-333-1537.
+
+744
+00:52:44,213 --> 00:52:46,950
+Rym: GeekNights airs every weeknight Monday through Thursday.
+
+745
+00:52:47,632 --> 00:52:53,126
+Scott: GeekNights is recorded with absolutely no studio and no audience, but unlike those other talk shows.
+
+746
+00:52:53,507 --> 00:52:54,770
+Scott: It's actually recorded at night.
+

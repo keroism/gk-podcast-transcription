@@ -1,0 +1,4252 @@
+1
+00:00:08,780 --> 00:00:12,521
+Rym: It's Thursday, December 3rd, 2020.
+
+2
+00:00:12,521 --> 00:00:12,963
+Rym: I'm Rym.
+
+3
+00:00:13,644 --> 00:00:15,610
+Rym: I'm Scott and this is GeekNights tonight.
+
+4
+00:00:15,731 --> 00:00:18,309
+Rym: We are talking about hair on your body.
+
+5
+00:00:20,212 --> 00:00:21,207
+Scott: Let's do this.
+
+6
+00:00:23,701 --> 00:00:26,689
+Scott: All right, this is more Monday action, but whatever right.
+
+7
+00:00:26,709 --> 00:00:40,564
+Scott: so the advent of code is happening and even as a you know a non Christian person who doesn't care about any advents right advent of code is a really cool thing And I think because people are stuck at home this year It's like its fifth year.
+
+8
+00:00:40,665 --> 00:00:41,006
+Scott: Also.
+
+9
+00:00:41,528 --> 00:00:44,659
+Scott: It's bigger than ever right because people not have time to do it.
+
+10
+00:00:45,000 --> 00:00:47,311
+Scott: If you don't know what it is what there's a person.
+
+11
+00:00:47,371 --> 00:00:48,577
+Scott: I don't know the person's name.
+
+12
+00:00:48,617 --> 00:00:49,140
+Scott: I could look it up.
+
+13
+00:00:49,220 --> 00:00:49,644
+Scott: I'm sorry.
+
+14
+00:00:49,704 --> 00:00:50,995
+Scott: I met them once at PAX East.
+
+15
+00:00:51,095 --> 00:00:51,499
+Scott: actually I was.
+
+16
+00:00:52,365 --> 00:01:01,755
+Scott: I was where it was like for two seconds But I was working in the tabletop library and someone walks up to check out a game And they're wearing an advent of code shirt, and I'm like oh advent of code.
+
+17
+00:01:01,796 --> 00:01:03,986
+Scott: and the dude was like oh Oh, he was so happy.
+
+18
+00:01:04,006 --> 00:01:05,634
+Scott: He was like I'm the guy who made it.
+
+19
+00:01:05,715 --> 00:01:07,806
+Scott: I'm like whoa that's awesome Right.
+
+20
+00:01:07,926 --> 00:01:10,259
+Scott: and then they walked away, and I never saw them again.
+
+21
+00:01:11,386 --> 00:01:20,390
+Scott: But yeah, so what it is is Every day from December 1st through December 25th This website puts out a coding puzzle.
+
+22
+00:01:20,631 --> 00:01:24,327
+Scott: right it's not technically a coding puzzle But it does.
+
+23
+00:01:24,347 --> 00:01:31,435
+Scott: is there's a. there's a problem And they give you a text file with your inputs and your inputs are unique to use.
+
+24
+00:01:31,476 --> 00:01:35,450
+Scott: you can't just like crib off of someone Else's answer right and then there's a box.
+
+25
+00:01:35,470 --> 00:01:39,106
+Scott: you just have to type in the right answer into the box You could solve.
+
+26
+00:01:39,507 --> 00:01:39,849
+Scott: you know it.
+
+27
+00:01:40,391 --> 00:01:44,207
+Rym: any way you want someone in our forum already They posted their solution to one.
+
+28
+00:01:44,267 --> 00:01:45,030
+Rym: they use Excel.
+
+29
+00:01:45,110 --> 00:01:46,075
+Rym: That's totally valid.
+
+30
+00:01:46,557 --> 00:01:47,300
+Scott: you can use Excel.
+
+31
+00:01:47,420 --> 00:01:47,802
+Scott: I've see.
+
+32
+00:01:47,842 --> 00:01:48,525
+Scott: you can use bat.
+
+33
+00:01:48,546 --> 00:01:50,133
+Scott: You know, but it's like you could do it by hand.
+
+34
+00:01:50,354 --> 00:01:51,620
+Scott: right you could figure out the answer.
+
+35
+00:01:51,701 --> 00:02:08,496
+Scott: But the problems are such that You're going to probably have to write a computer program of some kind But the inputs a text file so you can write in whatever language you want on whatever Platform you want and pretty much any silicon that you can get to help you is going to be able to get the job done.
+
+36
+00:02:08,657 --> 00:02:12,909
+Scott: and the problems get significantly harder as you get closer to Christmas.
+
+37
+00:02:12,969 --> 00:02:15,254
+Scott: and also each day actually has two problems.
+
+38
+00:02:15,936 --> 00:02:25,171
+Scott: and the second problem is Very real and each each day is a perfectly new thing But the two different problems on the same day are very related to each other.
+
+39
+00:02:25,311 --> 00:02:38,020
+Scott: and if you solve if the program you write To solve problem one on a particular day is well-written and very flexible You will be able to solve problem two with like a very minor change in a matter of seconds.
+
+40
+00:02:38,180 --> 00:02:42,840
+Scott: So that is the danger using Excel to solve problem one sometimes even no changes.
+
+41
+00:02:42,980 --> 00:02:53,990
+Scott: But if you write something very specific and inflexible with not very good programming Then you'll solve problem one and then problem two you'll be like Start over right.
+
+42
+00:02:54,855 --> 00:02:55,540
+Scott: so it's a lot of fun.
+
+43
+00:02:55,600 --> 00:03:00,136
+Scott: I'm doing it this year that we have leaderboards that there's there's all kinds of things you can get involved with.
+
+44
+00:03:00,156 --> 00:03:03,366
+Scott: there's a competitive aspect Although you don't need to worry about that.
+
+45
+00:03:03,466 --> 00:03:05,311
+Scott: It's not really that competitive you.
+
+46
+00:03:05,331 --> 00:03:07,517
+Scott: basically it's impossible to compete.
+
+47
+00:03:07,658 --> 00:03:08,259
+Scott: don't even try.
+
+48
+00:03:09,702 --> 00:03:10,707
+Scott: so yeah doing that.
+
+49
+00:03:11,069 --> 00:03:16,971
+Scott: and I was thinking hey wouldn't it be fun if Maybe I could like stream myself solving it right is that?
+
+50
+00:03:17,091 --> 00:03:18,095
+Scott: or make a YouTube video?
+
+51
+00:03:18,135 --> 00:03:19,520
+Scott: would that be interesting content?
+
+52
+00:03:19,680 --> 00:03:20,685
+Scott: Maybe we'll find out.
+
+53
+00:03:20,786 --> 00:03:22,313
+Scott: I'm gonna try it later today.
+
+54
+00:03:22,333 --> 00:03:24,082
+Scott: I didn't do day three yet, right We'll see.
+
+55
+00:03:24,766 --> 00:03:30,538
+Scott: and then I was thinking how could I make it more interesting, and I'm like you know What if I solved it using like my Apple - oh?
+
+56
+00:03:33,042 --> 00:03:35,519
+Scott: That would be even more interesting right?
+
+57
+00:03:36,641 --> 00:03:38,807
+Rym: Well, you know point a camera at your Apple.
+
+58
+00:03:38,827 --> 00:03:40,492
+Scott: - well, so here's the problem.
+
+59
+00:03:40,532 --> 00:03:47,145
+Scott: an Apple - GS can't run OBS on that The I have a monitor for.
+
+60
+00:03:47,185 --> 00:03:48,669
+Scott: it uses an external monitor.
+
+61
+00:03:49,311 --> 00:03:52,940
+Scott: the external monitor uses a special RGB cable.
+
+62
+00:03:53,582 --> 00:03:55,808
+Scott: So I have to point a camera at the monitor.
+
+63
+00:03:55,848 --> 00:03:56,390
+Scott: that sucks.
+
+64
+00:03:56,931 --> 00:03:58,476
+Scott: There is a thing you can get.
+
+65
+00:03:58,496 --> 00:03:59,980
+Scott: there's actually a few different solutions.
+
+66
+00:03:59,980 --> 00:04:02,899
+Scott: There's a whole web page full of different solutions to doing this.
+
+67
+00:04:03,803 --> 00:04:06,191
+Scott: But there's a thing called the vid HD.
+
+68
+00:04:06,231 --> 00:04:10,130
+Scott: you put it in a card slot in the Apple - GS And it creates an HDMI output.
+
+69
+00:04:10,855 --> 00:04:11,499
+Scott: I might buy one.
+
+70
+00:04:13,321 --> 00:04:16,452
+Scott: Not only would that make it much easier to use the Apple - GS.
+
+71
+00:04:17,255 --> 00:04:18,640
+Scott: It would mean I can get rid of that monitor.
+
+72
+00:04:19,041 --> 00:04:22,191
+Scott: I'm sure someone wants it because it's a working quality Apple - GS.
+
+73
+00:04:22,251 --> 00:04:24,960
+Rym: I'm confident you could give that away or sell it easily.
+
+74
+00:04:25,661 --> 00:04:27,946
+Scott: Yes, the Mac plus is even harder.
+
+75
+00:04:28,007 --> 00:04:33,120
+Scott: the Mac plus right has a problem in that the monitor is built in.
+
+76
+00:04:34,761 --> 00:04:36,429
+Scott: So you know it's one of those max.
+
+77
+00:04:36,469 --> 00:04:37,635
+Scott: It's an all-in-one unit.
+
+78
+00:04:37,977 --> 00:04:38,600
+Rym: I'll crack it open.
+
+79
+00:04:38,680 --> 00:04:39,242
+Scott: It works.
+
+80
+00:04:39,282 --> 00:04:40,165
+Rym: figure out the output.
+
+81
+00:04:40,206 --> 00:04:41,791
+Rym: that's going to the CRT.
+
+82
+00:04:42,293 --> 00:04:43,116
+Scott: you could do that.
+
+83
+00:04:43,176 --> 00:04:45,278
+Scott: people have done that yes But I'm not doing that.
+
+84
+00:04:46,481 --> 00:04:49,114
+Scott: But so I go today, and I'm thinking you know the Mac plus will be easier.
+
+85
+00:04:49,174 --> 00:04:50,360
+Scott: let me turn it on right.
+
+86
+00:04:51,301 --> 00:04:54,954
+Scott: So I go to turn on the Mac plus, and I got.
+
+87
+00:04:55,095 --> 00:04:56,540
+Scott: I have an external hard drive for it.
+
+88
+00:04:56,540 --> 00:04:58,820
+Scott: It's a 20 megabyte hard drive in an enclosure.
+
+89
+00:05:00,522 --> 00:05:02,680
+Scott: And I set it all up, and then I realized wait a minute.
+
+90
+00:05:02,760 --> 00:05:05,533
+Scott: Where is the cable that connects the hard drive to the computer?
+
+91
+00:05:05,774 --> 00:05:07,039
+Rym: Oh because that ain't USB I?
+
+92
+00:05:09,240 --> 00:05:10,025
+Scott: Can't find the cable.
+
+93
+00:05:10,066 --> 00:05:10,790
+Scott: I looked all over.
+
+94
+00:05:10,851 --> 00:05:11,979
+Scott: I don't know what the hell happened to it.
+
+95
+00:05:13,344 --> 00:05:18,020
+Rym: Hopefully you didn't accidentally purge it in a great cable purge because we've both done a bunch of cable purges recently.
+
+96
+00:05:18,302 --> 00:05:25,600
+Rym: I'm I don't know I may have but I used to always philosophy of I would keep if I saw a cable that I did not know I had another one of.
+
+97
+00:05:26,001 --> 00:05:26,745
+Rym: No matter what it was.
+
+98
+00:05:26,785 --> 00:05:30,199
+Rym: I would keep that one cable, so I had one of everything I'd ever owned.
+
+99
+00:05:33,543 --> 00:05:39,007
+Scott: But it doesn't matter because I got another better solution, there's apparently a product I was unaware of until just now.
+
+100
+00:05:39,228 --> 00:05:41,156
+Scott: I already ordered it because it was in stock.
+
+101
+00:05:41,357 --> 00:05:56,877
+Scott: these things tend to go Out-of-stock, it's called the floppy emu model C and what it is is it's a little board with an LCD screen on it even and An SD slot a micro SD slot and put out by BMW.
+
+102
+00:05:56,917 --> 00:05:57,298
+Rym: I know them.
+
+103
+00:05:57,338 --> 00:05:57,659
+Rym: They're cool.
+
+104
+00:05:58,506 --> 00:05:59,819
+Rym: Yeah, big mess of wires.
+
+105
+00:06:00,702 --> 00:06:05,054
+Scott: Yep, it's got a cable and that cable goes to an Apple floppy port.
+
+106
+00:06:05,114 --> 00:06:05,716
+Scott: and you know what?
+
+107
+00:06:06,137 --> 00:06:07,140
+Scott: the Apple floppy port.
+
+108
+00:06:07,260 --> 00:06:15,140
+Scott: You know there's not a lot in common actually between the Apple to GS and the Mac plus even though they came out around The same ish time, but the floppy port is the same.
+
+109
+00:06:15,642 --> 00:06:21,261
+Scott: So this thing is gonna make it real easy to get all kinds of software going on both of those computers Right.
+
+110
+00:06:21,823 --> 00:06:29,959
+Scott: and if I get the HDMI thing I can get I can like keep these computers Use them more than the zero I've used them in years, right?
+
+111
+00:06:31,782 --> 00:06:33,289
+Scott: And it'll be I can get rid of stuff.
+
+112
+00:06:33,410 --> 00:06:35,280
+Scott: I can get rid of this 20 megabyte hard drive.
+
+113
+00:06:36,362 --> 00:06:37,950
+Scott: I can get rid of that monitor.
+
+114
+00:06:37,970 --> 00:06:39,317
+Scott: I can get rid of a lot of junk.
+
+115
+00:06:39,377 --> 00:06:41,666
+Scott: so Yeah, we'll see.
+
+116
+00:06:41,686 --> 00:06:47,852
+Scott: we'll see what's what there but regardless Come to my twitch or end or my youtube.
+
+117
+00:06:47,872 --> 00:06:49,016
+Scott: We're gonna see discord.
+
+118
+00:06:49,036 --> 00:06:50,000
+Scott: I'm gonna see what I can do.
+
+119
+00:06:52,001 --> 00:06:58,189
+Scott: And if you want to watch me code and solve a simple problem though the problems will get harder And we'll see how hard I can go.
+
+120
+00:06:58,229 --> 00:07:01,542
+Scott: I've never gone past like day 10.
+
+121
+00:07:01,542 --> 00:07:07,660
+Scott: So I'm not not that I failed on day 10 It's that I just you know haven't put in the time and this year I got a lot of time.
+
+122
+00:07:08,122 --> 00:07:16,345
+Rym: I feel like this year more people are gonna engage with things like this than they previously would because we're about to hit the very dark times both Psychologically and just.
+
+123
+00:07:16,405 --> 00:07:17,671
+Rym: it's literally dark outside.
+
+124
+00:07:18,154 --> 00:07:19,460
+Scott: Yeah, it's literally dark outside now.
+
+125
+00:07:19,500 --> 00:07:29,162
+Scott: So just for reference right on day two I stayed up until midnight to start because it's based on who gets it in first to score points on the global leader the global Leaderboard.
+
+126
+00:07:29,183 --> 00:07:32,960
+Scott: you need to be in the top 100 fastest people to solve your puzzle.
+
+127
+00:07:33,582 --> 00:07:34,145
+Scott: I tried to.
+
+128
+00:07:34,306 --> 00:07:34,567
+Scott: I like.
+
+129
+00:07:34,627 --> 00:07:37,520
+Scott: I know that coding nicely is just gonna make it slow.
+
+130
+00:07:37,781 --> 00:07:38,784
+Scott: Right to get your answer.
+
+131
+00:07:38,804 --> 00:07:39,887
+Rym: Oh, you got to write software.
+
+132
+00:07:39,927 --> 00:07:49,140
+Rym: That's hitting this website with curl and the software you write uses AI to read the text figure out the problem and write scaffold code for you.
+
+133
+00:07:49,501 --> 00:07:51,189
+Scott: So I just I coded as quickly.
+
+134
+00:07:51,209 --> 00:07:51,872
+Scott: I did not.
+
+135
+00:07:51,892 --> 00:07:56,551
+Scott: I could have done it a little bit faster Right if I had really pushed, but you know a certain reflex to like.
+
+136
+00:07:56,611 --> 00:07:58,799
+Scott: I had to write at least somewhat cleanly, right?
+
+137
+00:08:00,160 --> 00:08:01,484
+Scott: Yeah, I can't doing it.
+
+138
+00:08:01,544 --> 00:08:06,600
+Scott: It took me about 11 minutes for problem one and then 15 for problem two.
+
+139
+00:08:06,801 --> 00:08:14,207
+Scott: I think you know it didn't take that much difference and I came in 2,000 something place Wow.
+
+140
+00:08:14,949 --> 00:08:20,715
+Scott: and so that's how many people were doing it that quickly and you know by now Way more people have done it.
+
+141
+00:08:20,776 --> 00:08:23,989
+Scott: so Yeah, no don't bother competing though.
+
+142
+00:08:24,049 --> 00:08:44,713
+Scott: granted the problems are so easy early on In order to get points in the early days when the easy problems are out Your skills that are being tested are like fast reading fast typing right that sort of thing Whereas I think in the later days and the problems are substantially difficult and take a long time to solve Then those skills won't matter.
+
+143
+00:08:44,753 --> 00:08:46,140
+Scott: your programming skill will matter.
+
+144
+00:08:46,160 --> 00:08:52,219
+Rym: Yeah, like the live stream might be five minutes of you just sitting there, and then suddenly you go aha and type something or an hour.
+
+145
+00:08:54,561 --> 00:09:04,380
+Rym: We'll see anyway, that's that's that that's good stuff, so there is actually huge news And it's lucky that it's not a Thursday, and it's easy just to talk about generically.
+
+146
+00:09:04,460 --> 00:09:11,103
+Rym: But this is this is a game changer for the entertainment industry, and I feel like People.
+
+147
+00:09:11,565 --> 00:09:15,700
+Rym: well companies like HBO like Netflix movie distributor.
+
+148
+00:09:15,740 --> 00:09:19,300
+Rym: There's a lot of people who've been wanting to do something like this for a long time.
+
+149
+00:09:19,400 --> 00:09:24,877
+Scott: This has basically been a Pandora's box that's been sitting there for a good five to ten years plus.
+
+150
+00:09:24,917 --> 00:09:36,055
+Scott: Maybe even yeah No Lizing no one with the power to do this was willing to do it And I've been just waiting for someone to do it like you cowards.
+
+151
+00:09:36,296 --> 00:09:36,979
+Scott: and here they go.
+
+152
+00:09:37,361 --> 00:09:38,548
+Scott: They're finally gonna do it.
+
+153
+00:09:38,608 --> 00:09:59,379
+Rym: Warner Brothers will release Every single movie that they make and put in release to theaters in 2021 Simultaneously will just be watchable digitally at home on HBO max For about a month, and then it'll go away, and then it'll come back later like in the normal streaming stuff.
+
+154
+00:10:00,822 --> 00:10:06,568
+Scott: So up until 2020 right Movie companies the big Hollywood ones at least.
+
+155
+00:10:06,708 --> 00:10:12,724
+Scott: if they made movies they always would release them first in the movie theater Exclusively right.
+
+156
+00:10:13,205 --> 00:10:17,998
+Scott: then they would release them on like a disc of some kind and then streaming of some kind.
+
+157
+00:10:18,038 --> 00:10:23,298
+Scott: right and the time Between the theater and the and the other wider home release kept shrinking.
+
+158
+00:10:23,318 --> 00:10:26,020
+Rym: right Yeah, but it would also days something would be in the theater.
+
+159
+00:10:26,422 --> 00:10:30,340
+Rym: You couldn't fucking see it again for a long time when it was out of theaters.
+
+160
+00:10:30,621 --> 00:10:37,923
+Scott: Then eventually there'd be a tape and then when I came right it might be on cable TV with like pay-per-view For a period.
+
+161
+00:10:37,984 --> 00:10:44,440
+Rym: the last last place it would appear would be on actual broadcast television with ads like sometimes years later.
+
+162
+00:10:45,082 --> 00:10:54,430
+Scott: And this was a method by which they were sort of artificially propping up the different Platforms on which their content would screen right.
+
+163
+00:10:54,451 --> 00:10:56,680
+Rym: people would basically pay at every step of the way.
+
+164
+00:10:56,720 --> 00:10:59,180
+Rym: They'd go see it in the theater, then they'd want to see it again.
+
+165
+00:10:59,260 --> 00:11:01,760
+Rym: They'd pay for a pay-per-view like a year later.
+
+166
+00:11:02,182 --> 00:11:07,482
+Rym: Then they'd buy the VHS like that was a. that was a way to get a maximum money Right.
+
+167
+00:11:07,502 --> 00:11:10,210
+Scott: well it was also a way to like keep theaters in business.
+
+168
+00:11:10,270 --> 00:11:10,470
+Scott: right.
+
+169
+00:11:10,490 --> 00:11:19,070
+Scott: the thinking was hey if a if the theater doesn't have if The theater just has the same movies you could watch at home Why would you go to the theater now?
+
+170
+00:11:19,190 --> 00:11:21,098
+Scott: theater would just go out of business right.
+
+171
+00:11:21,158 --> 00:11:21,740
+Rym: that argument?
+
+172
+00:11:22,320 --> 00:11:31,956
+Rym: Was kind of silly back then because the theater experience especially in like the 70s or the 80s Was just objectively better than the best you could possibly do at home.
+
+173
+00:11:32,659 --> 00:11:35,150
+Scott: Yep We're kind of like 4k TV at home.
+
+174
+00:11:35,633 --> 00:11:44,160
+Rym: Yep, so when the internet appeared Nobody wanted to touch this because that changes in everything internet modern screens modern sound systems.
+
+175
+00:11:44,522 --> 00:11:45,366
+Rym: That was just that.
+
+176
+00:11:45,406 --> 00:11:53,700
+Rym: like Scott said that was a Pandora's box that would destroy Everything we know about this industry and no one knows what it would look like after that had happened.
+
+177
+00:11:54,462 --> 00:12:10,880
+Scott: But now what's happened is basically a pandemic has destroyed the movie theater Being destroyed if it's already destroyed Yep, and we've already had you saw companies testing the waters and doing like a limited.
+
+178
+00:12:11,021 --> 00:12:14,958
+Rym: Well, this movie will be on the streaming platform this one movie because of kovat.
+
+179
+00:12:15,942 --> 00:12:17,085
+Rym: But now what are brothers saying?
+
+180
+00:12:17,145 --> 00:12:17,446
+Rym: Fuck it.
+
+181
+00:12:17,506 --> 00:12:18,228
+Rym: This is everything.
+
+182
+00:12:18,830 --> 00:12:21,518
+Scott: Yeah, we've also seen minor things happening.
+
+183
+00:12:21,578 --> 00:12:30,673
+Scott: For example We've seen people like, you know They just make digital screeners of all the movies for the Hollywood people to see and the Oscar reviewers to see.
+
+184
+00:12:30,774 --> 00:12:34,047
+Scott: and you know all kinds of digital pre-releases For secret stuff.
+
+185
+00:12:34,108 --> 00:12:35,940
+Scott: right a film festivals been online.
+
+186
+00:12:36,962 --> 00:12:38,970
+Scott: You know, we watch Wolfwalkers at one of those right?
+
+187
+00:12:39,572 --> 00:12:40,175
+Scott: So it's like.
+
+188
+00:12:40,195 --> 00:12:44,452
+Scott: well, you're already doing that It's like and people are leaking those too.
+
+189
+00:12:44,473 --> 00:12:49,553
+Scott: So You know, you're kind of are sort of releasing it digitally first.
+
+190
+00:12:49,874 --> 00:12:56,360
+Scott: Yeah to the Pirates at least You know, why not at least get money for that do it by some means.
+
+191
+00:12:57,223 --> 00:13:00,878
+Scott: And also, I don't know people realize this there was a rule an old rule.
+
+192
+00:13:02,202 --> 00:13:04,879
+Scott: It's been around for a long time for a lot of reasons.
+
+193
+00:13:05,461 --> 00:13:11,698
+Scott: Yes, it was an antitrust rule and the rule in the United States was if you're the movie maker, right?
+
+194
+00:13:11,738 --> 00:13:15,288
+Scott: You're Disney You can't own the movie theater.
+
+195
+00:13:15,630 --> 00:13:23,337
+Scott: because if you own the movie theater and you made the movies Right if you made the VCRs and also the movies, it's like oh you got it.
+
+196
+00:13:23,377 --> 00:13:24,160
+Scott: now you got to buy.
+
+197
+00:13:24,260 --> 00:13:28,700
+Scott: You know, it's the same way that like, you know, basically it's what Nintendo did on purpose, right?
+
+198
+00:13:28,780 --> 00:13:32,280
+Scott: Where it's like aha you want to get your video game on a Nintendo console.
+
+199
+00:13:32,400 --> 00:13:36,312
+Scott: You got to make our cartridge and get our approved by us, right?
+
+200
+00:13:36,713 --> 00:13:38,920
+Scott: It's the same thing the Apple App Store does right?
+
+201
+00:13:39,200 --> 00:13:40,999
+Rym: I think about the old Hollywood studio system.
+
+202
+00:13:41,461 --> 00:13:49,579
+Rym: Like imagine if literally like AMC makes a movie and you can only go see it in AMC theaters And they can only buy the AMC disc.
+
+203
+00:13:50,620 --> 00:13:52,330
+Scott: Yep, it'd be like, okay.
+
+204
+00:13:52,370 --> 00:13:54,020
+Scott: Well now someone else wants to make a movie.
+
+205
+00:13:54,462 --> 00:13:59,360
+Scott: They can't get it onto screens anywhere because they're not the company that owns the screens.
+
+206
+00:13:59,541 --> 00:14:02,673
+Scott: The only movies that would ever be in theaters would be the Disney movies.
+
+207
+00:14:02,733 --> 00:14:07,279
+Scott: if Disney owns all the movie theaters Right the end they wouldn't let anyone else show movies.
+
+208
+00:14:08,861 --> 00:14:15,965
+Rym: Yeah, you see a lot of anti-competitive practices like there was a time when our government was interested in Forcing the market to be more fair.
+
+209
+00:14:16,306 --> 00:14:18,773
+Rym: Our government hasn't been interested in that in some time.
+
+210
+00:14:19,155 --> 00:14:28,480
+Scott: So one thing is that a It's things have changed and that yeah even if Disney owns all the theaters They can't stop you from putting out a movie because you just put it out.
+
+211
+00:14:28,741 --> 00:14:30,227
+Scott: Anyone can just put out a movie you get.
+
+212
+00:14:30,509 --> 00:14:36,919
+Scott: everyone's could just go to the store buy a camera if you got enough money Yeah, or a video edit it on your computer with Adobe or something free.
+
+213
+00:14:37,461 --> 00:14:43,838
+Rym: I mean, I subscribe to a patreon where Neil Cicierega will guarantee me a video on a regular basis, right?
+
+214
+00:14:43,918 --> 00:14:45,525
+Scott: It's like You know.
+
+215
+00:14:45,666 --> 00:14:47,139
+Scott: anyone can make video content.
+
+216
+00:14:47,481 --> 00:14:48,687
+Scott: You know, there's Disney.
+
+217
+00:14:48,828 --> 00:14:55,020
+Scott: if even if they bottle the movie theaters isn't holding people back But they could keep you out of the movie theaters.
+
+218
+00:14:55,181 --> 00:14:59,394
+Scott: If movie theaters are still a thing that people care about right?
+
+219
+00:14:59,555 --> 00:15:04,050
+Rym: Yeah, but movie theaters We're already moribund from what I gather.
+
+220
+00:15:04,070 --> 00:15:06,639
+Rym: I was poking around into like what's the real state of the theater business?
+
+221
+00:15:07,220 --> 00:15:14,280
+Rym: Irrespective of kovat not good theaters are only doing well in major cities because there's a different dynamic there.
+
+222
+00:15:14,320 --> 00:15:15,230
+Rym: There's different reasons.
+
+223
+00:15:15,250 --> 00:15:22,620
+Rym: people go to theaters But yeah in suburbs in more rural places and if people like people have a objectively better experience at home.
+
+224
+00:15:24,922 --> 00:15:30,280
+Scott: I think also what we've seen over the course of I guess the entire millennium, right?
+
+225
+00:15:30,400 --> 00:15:43,189
+Scott: I want to say since like, you know Maybe episodes Star Wars Episode 1 came out and ish times right the movie theater has become An event type place, right?
+
+226
+00:15:43,670 --> 00:15:46,380
+Rym: I mean look at a fathom events, right?
+
+227
+00:15:46,480 --> 00:15:51,340
+Scott: There are some people who go to a movie theater to still just see movies all the time.
+
+228
+00:15:51,641 --> 00:15:54,400
+Scott: You know big-time movie people who just love the hell out of movies.
+
+229
+00:15:54,440 --> 00:16:07,079
+Scott: Yeah but I think the majority of people who go to a movie theater do it because like you're having a kid's birthday party there or something like that or There's a movie that's just like so up your alley you got to see it right away.
+
+230
+00:16:07,981 --> 00:16:15,437
+Rym: Occasionally a movie is like one of those cinema Movies that just is better to watch on a screen that is that big like.
+
+231
+00:16:15,457 --> 00:16:16,140
+Rym: there's some more.
+
+232
+00:16:16,381 --> 00:16:22,039
+Scott: I think the number one people reason people go to a movie theater right is there's an event type.
+
+233
+00:16:22,119 --> 00:16:25,889
+Rym: movie Director is gonna give commentary after.
+
+234
+00:16:25,909 --> 00:16:26,190
+Scott: well, no.
+
+235
+00:16:26,231 --> 00:16:31,167
+Scott: No, I mean like, you know, just like the new Movies coming out right?
+
+236
+00:16:31,267 --> 00:16:32,531
+Scott: It's a big fucking event.
+
+237
+00:16:32,551 --> 00:16:35,460
+Scott: you line up at midnight and shit not event at a specific theater.
+
+238
+00:16:35,520 --> 00:16:36,906
+Rym: You're like Star Wars came out.
+
+239
+00:16:36,946 --> 00:16:38,131
+Rym: It's the next Star Wars movie.
+
+240
+00:16:38,151 --> 00:16:40,400
+Rym: people are gonna talk about it tomorrow, right?
+
+241
+00:16:40,520 --> 00:16:42,560
+Scott: It's like you're going to see that shit in the theater.
+
+242
+00:16:42,620 --> 00:16:47,020
+Scott: You if that even if that was out on DVD on the internet at home at the same exact time.
+
+243
+00:16:47,161 --> 00:16:48,659
+Scott: It's like you're going to the theater.
+
+244
+00:16:48,912 --> 00:16:59,119
+Rym: Yeah but we've already seen theater usage demographics changing a lot like look at the Crazy success of like Alamo Drafthouse and all the people copying them of radically changing what the theater is.
+
+245
+00:17:00,361 --> 00:17:02,186
+Scott: Right, they make the theater is now go.
+
+246
+00:17:02,507 --> 00:17:06,740
+Scott: I think what's gonna happen is your the movie theater will not die completely.
+
+247
+00:17:07,403 --> 00:17:12,440
+Scott: but the movie theater instead of being a thing that is No matter where you are in the u.s.
+
+248
+00:17:12,500 --> 00:17:17,560
+Scott: There's a movie theater nearby where you can see the latest movie somewhere, but they're all interchangeable and generic, right?
+
+249
+00:17:17,960 --> 00:17:23,663
+Scott: I think instead what you're gonna see is those are gonna go away replaced by if you just want to watch movies You just watch them at home.
+
+250
+00:17:23,905 --> 00:17:25,573
+Scott: Yeah, right the movie theater.
+
+251
+00:17:25,613 --> 00:17:25,954
+Scott: You're all.
+
+252
+00:17:25,974 --> 00:17:27,079
+Scott: you're gonna go to a theater.
+
+253
+00:17:27,182 --> 00:17:40,138
+Scott: There will be one near you but there will be about as many as there are like Concert halls like going to a movie will be an event like going to a concert which kind of gets back to how early movie theaters Were the old show palaces?
+
+254
+00:17:40,780 --> 00:17:43,279
+Scott: Exactly, that's how movies and that's how movies like going.
+
+255
+00:17:43,601 --> 00:17:51,950
+Scott: I said, let's tell that's how going to the theater for a movie has been for me for many many New York for the last decade.
+
+256
+00:17:52,010 --> 00:17:54,260
+Rym: we rarely like just go to the theater see a movie and leave.
+
+257
+00:17:54,541 --> 00:17:59,360
+Rym: We'll like meet all our friends at a theater watch the movie together and then go out for a big dinner.
+
+258
+00:17:59,440 --> 00:18:01,349
+Rym: It's always like a we only and any time.
+
+259
+00:18:01,530 --> 00:18:03,620
+Scott: I've gone to the movies many times.
+
+260
+00:18:03,961 --> 00:18:16,630
+Scott: But every single time I can think of in like years of memory that I went to the movies It was always some kind of like a big deal thing Like there was an anime showing one night only there was.
+
+261
+00:18:16,851 --> 00:18:19,378
+Scott: we went to go see something in 70 millimeter.
+
+262
+00:18:19,478 --> 00:18:21,706
+Scott: big deal Special limited thing.
+
+263
+00:18:22,128 --> 00:18:27,730
+Scott: the director was there was a film festival It was a Star Wars it or it was.
+
+264
+00:18:28,052 --> 00:18:29,417
+Scott: every single time went to the movie.
+
+265
+00:18:29,437 --> 00:18:30,160
+Scott: It was a big deal.
+
+266
+00:18:30,260 --> 00:18:30,782
+Scott: It was never.
+
+267
+00:18:30,802 --> 00:18:36,960
+Scott: oh, there's a movie that you know, like I like and it's in the theater now and it'll be on DVD later.
+
+268
+00:18:37,021 --> 00:18:38,031
+Scott: Let me go to the theater and watch.
+
+269
+00:18:38,092 --> 00:18:38,840
+Scott: I never do that.
+
+270
+00:18:38,860 --> 00:18:40,144
+Rym: I still do the latter a lot.
+
+271
+00:18:40,164 --> 00:18:49,339
+Rym: well did but outside of kovin except it's only really old movies at Theaters that have something else going on like they serve you brunch while you're watching it.
+
+272
+00:18:50,480 --> 00:18:52,507
+Scott: You know, but that's more.
+
+273
+00:18:52,547 --> 00:18:53,390
+Scott: you're going to brunch.
+
+274
+00:18:53,410 --> 00:18:53,851
+Scott: They're happy.
+
+275
+00:18:53,912 --> 00:18:54,534
+Rym: I'm going to brunch.
+
+276
+00:18:54,594 --> 00:18:56,480
+Rym: I happen to watch vampire hunter D over.
+
+277
+00:18:56,500 --> 00:18:57,042
+Rym: You're right.
+
+278
+00:18:57,062 --> 00:19:01,160
+Scott: You're not going to vampire hunter and I'll see you're not going to vampire hunter D and there happens to be brunch.
+
+279
+00:19:01,402 --> 00:19:05,043
+Rym: Oh, it actually yeah, they cut it was that Sometimes.
+
+280
+00:19:05,567 --> 00:19:07,319
+Scott: yeah, also vampire hunter D is a special event.
+
+281
+00:19:08,581 --> 00:19:09,424
+Rym: They show it kind of right.
+
+282
+00:19:09,444 --> 00:19:11,954
+Rym: they do midnight showings of vampire hunter D pretty regularly there.
+
+283
+00:19:12,376 --> 00:19:12,597
+Rym: Yeah.
+
+284
+00:19:12,938 --> 00:19:13,420
+Scott: Well they did.
+
+285
+00:19:15,263 --> 00:19:16,027
+Rym: I think they'll survive.
+
+286
+00:19:16,509 --> 00:19:17,856
+Scott: I think I was already planning.
+
+287
+00:19:17,917 --> 00:19:19,704
+Scott: by the way, Mike You know, I only try to.
+
+288
+00:19:19,805 --> 00:19:22,195
+Scott: I try to you know, switch my subscriptions around.
+
+289
+00:19:22,215 --> 00:19:25,251
+Rym: Oh, I was like, yeah We were both talking off the outside of the show.
+
+290
+00:19:25,271 --> 00:19:29,972
+Rym: We were both saying like wow HBO Max seems to be like where we should.
+
+291
+00:19:30,032 --> 00:19:32,320
+Scott: I mentioned it during our show on the new adventure time.
+
+292
+00:19:32,360 --> 00:19:32,944
+Scott: You know before.
+
+293
+00:19:33,005 --> 00:19:38,892
+Scott: my current subscriptions are crunchy rolling Netflix And I guess I always have Amazon Prime just always because you know, whatever.
+
+294
+00:19:39,373 --> 00:19:50,039
+Scott: but yeah, I think that if When this happens probably, you know, I'm probably gonna turn off Netflix temporarily and turn back on HBO Max and I'll have HBO Max
+
+295
+00:19:51,542 --> 00:19:55,339
+Rym: Dragon prince is gonna come out on Netflix like four more seasons of that real soon
+
+296
+00:19:56,063 --> 00:19:57,010
+Scott: Yeah, but I can switch by the.
+
+297
+00:19:57,473 --> 00:19:58,560
+Scott: that's always gonna be there.
+
+298
+00:19:58,620 --> 00:20:02,146
+Scott: So whenever I done with HBO Max I'll switch back to Netflix in what?
+
+299
+00:20:02,206 --> 00:20:06,989
+Scott: two year three year one year whenever I'm in a year and all those dragon princes will be There waiting for me.
+
+300
+00:20:07,393 --> 00:20:12,336
+Rym: Yeah Yeah going anywhere, but I think I think a few things are gonna happen.
+
+301
+00:20:12,617 --> 00:20:24,482
+Rym: I think one we're gonna see companies like HBO and Netflix buy theaters out of bankruptcy post COVID and just run special screenings and things Like.
+
+302
+00:20:24,502 --> 00:20:30,800
+Rym: that's gonna be a thing - I think we're gonna see Alamo Drafthouse will sort of turn into the default.
+
+303
+00:20:31,382 --> 00:20:35,780
+Scott: I think you're gonna see something like oh, by the way, I heard I don't know if this how true this is.
+
+304
+00:20:35,860 --> 00:20:37,607
+Scott: I should look it up more before saying it.
+
+305
+00:20:37,647 --> 00:20:40,840
+Scott: So I'm gonna say research this for yourself to see if it's true.
+
+306
+00:20:41,781 --> 00:20:51,112
+Scott: But I I heard whispers that the people who run Alamo Drafthouse specifically that company are like Waybad and shitty type people or maybe the CEO is shitty or something like that.
+
+307
+00:20:51,152 --> 00:20:54,623
+Scott: heard bad milkshake duck type news about them Specifically.
+
+308
+00:20:54,643 --> 00:20:56,489
+Scott: go verify it for yourself.
+
+309
+00:20:56,609 --> 00:21:00,060
+Scott: But I you know, we're talking not just about that company specifically.
+
+310
+00:21:00,220 --> 00:21:07,180
+Scott: But yeah, just but that's you know, any theater any theater that has assigned fancy seats with dinner?
+
+311
+00:21:07,321 --> 00:21:10,613
+Rym: Oh, I refuse to go to any fucking theater that doesn't have assigned seats.
+
+312
+00:21:10,894 --> 00:21:12,360
+Rym: That's been my thing for a long time.
+
+313
+00:21:13,801 --> 00:21:16,070
+Scott: When's the last time I went to a theater that wasn't an assigned?
+
+314
+00:21:16,110 --> 00:21:18,440
+Rym: because I'm unwilling to get with the I live with assigned seats.
+
+315
+00:21:18,560 --> 00:21:23,599
+Rym: The magic is I can roll into the theater 20 seconds before the movie starts and just sit down.
+
+316
+00:21:25,162 --> 00:21:27,475
+Scott: You know, the the Museum of the moving image doesn't assign.
+
+317
+00:21:27,515 --> 00:21:31,000
+Rym: you see that is true But I've never like gone to that.
+
+318
+00:21:31,040 --> 00:21:35,600
+Rym: I've never tried to see something there and like so many people showed up so early that I didn't get a good seat.
+
+319
+00:21:36,023 --> 00:21:42,892
+Rym: yeah, it's never it's never happened, but I think you know, there's the Japanese style karaoke places.
+
+320
+00:21:42,952 --> 00:21:43,214
+Rym: We're like.
+
+321
+00:21:43,234 --> 00:21:44,000
+Rym: there's private rooms.
+
+322
+00:21:44,461 --> 00:21:54,800
+Rym: I think you're gonna see some theaters that are really crazy fancy sound system and good seats and everything But in smaller semi-private rooms that like groups will get together and watch movies in similar.
+
+323
+00:21:54,941 --> 00:22:01,325
+Scott: I would like to see I think that is you know with the fathom events thing and people I don't know how many people know About it's like opera bands.
+
+324
+00:22:01,365 --> 00:22:02,669
+Rym: We're gonna get opera boxes for movies.
+
+325
+00:22:02,850 --> 00:22:10,200
+Scott: fathom events is a company where you know It'd be really hard if like we filmed the GeekNights thing to get it on the screen in a movie theater.
+
+326
+00:22:10,361 --> 00:22:15,900
+Scott: Right, but and there's a lot of companies that are smaller distributors, you know, like Funimation for example, right?
+
+327
+00:22:15,980 --> 00:22:22,300
+Scott: They make some anime and they want to screen this anime movie that they just licensed in theaters in the US like a one-night-only thing.
+
+328
+00:22:22,881 --> 00:22:28,820
+Scott: Fathom events is sort of like an in-between company that helps you get your shit onto theater screens and they get all these theater.
+
+329
+00:22:28,920 --> 00:22:43,000
+Scott: You know and there's a bunch of movie theaters out there that I got a shit ton of screens and there aren't that many big Movies, so yeah for one night, you know, sure They'll take one of the screens that isn't showing the top movie and show whatever Funimation wants to show.
+
+330
+00:22:43,020 --> 00:22:45,228
+Scott: They'll show Broadway shows in their concerts.
+
+331
+00:22:45,630 --> 00:22:47,999
+Scott: They got all kinds of random one-night-only.
+
+332
+00:22:48,882 --> 00:22:56,996
+Scott: It makes the movie theater and it makes fathom and the distributor more money than if they had showed The least popular Hollywood movie at the time on that screen.
+
+333
+00:22:57,096 --> 00:23:02,980
+Rym: one more showing Yeah, but also imagine if like Netflix like they're like, this is just like the business idea.
+
+334
+00:23:03,040 --> 00:23:07,080
+Rym: I could see a company like Netflix making a place that looks like a karaoke place.
+
+335
+00:23:07,381 --> 00:23:12,456
+Rym: But it's all these little private comfortable rooms that have like ultra high quality Netflix original.
+
+336
+00:23:12,556 --> 00:23:13,800
+Scott: I don't think little rooms.
+
+337
+00:23:14,021 --> 00:23:21,383
+Scott: I think that your fathom events type model will be taken to the next level where you instead Choose it.
+
+338
+00:23:21,403 --> 00:23:26,918
+Scott: There's some sort of user input on what will be screened right in the big theater.
+
+339
+00:23:26,978 --> 00:23:30,109
+Rym: So it's like yeah Both I think they'll see.
+
+340
+00:23:30,129 --> 00:23:40,108
+Scott: there's a theater near you and in theater seven doesn't have anything for an eight o'clock showing tonight and People are gonna be like, you know choosing like.
+
+341
+00:23:40,269 --> 00:23:51,160
+Scott: I really want to see this new maybe a new movie a Netflix original movie came out something and you're - you choose that and then it's like you go to the theater and it ends up that app app it.
+
+342
+00:23:51,220 --> 00:23:51,964
+Scott: That's what's popular.
+
+343
+00:23:52,005 --> 00:23:54,660
+Scott: So that ends up showing that you know what I can see at eight o'clock.
+
+344
+00:23:54,680 --> 00:24:06,658
+Rym: Here's an example see it the Disney theater shows the new Mandalorian at a specific time every like week and People buy tickets to go like see it first and hang out with all the other people who saw it first.
+
+345
+00:24:07,683 --> 00:24:08,567
+Scott: Yeah, people would do that.
+
+346
+00:24:08,727 --> 00:24:11,660
+Scott: people who are you know social show watching type people.
+
+347
+00:24:11,801 --> 00:24:12,405
+Rym: I think that's it.
+
+348
+00:24:12,425 --> 00:24:13,613
+Rym: You're gonna see a like.
+
+349
+00:24:14,217 --> 00:24:24,529
+Rym: there is So much that's going to change in the movie industry over the next decade because of the thing that happened today at 1 30 p.m Eastern Standard Time.
+
+350
+00:24:25,357 --> 00:24:29,088
+Rym: Oh, yeah Like we're not we're not experts in this space.
+
+351
+00:24:29,128 --> 00:24:32,380
+Rym: Like you're gonna see industry people talking about this for years.
+
+352
+00:24:33,161 --> 00:24:40,219
+Scott: Well, someone finally had the balls to do what we always knew could be done could have been done a long time ago But yeah now it's gonna be a pandemic made happen.
+
+353
+00:24:40,741 --> 00:24:42,006
+Rym: So you had some news.
+
+354
+00:24:42,106 --> 00:24:46,221
+Rym: Emily actually was telling me this story and I didn't read the article because Emily kind of explained it To me.
+
+355
+00:24:46,281 --> 00:24:50,960
+Rym: but that the the news article that you gave me to talk about today is pretty good, right?
+
+356
+00:24:51,382 --> 00:24:53,051
+Scott: So I'm not gonna explain all the details.
+
+357
+00:24:53,072 --> 00:24:58,752
+Scott: you can read them yourself, right but There was an unidentified object like in space, right?
+
+358
+00:24:58,792 --> 00:25:01,000
+Scott: They were seeing it and they were like, is that an asteroid?
+
+359
+00:25:01,420 --> 00:25:03,211
+Rym: Like what is they're like, no, it's not an asteroid.
+
+360
+00:25:03,372 --> 00:25:03,855
+Rym: We know it.
+
+361
+00:25:03,875 --> 00:25:05,242
+Rym: We don't know what it is It's something.
+
+362
+00:25:05,805 --> 00:25:11,697
+Scott: so they looked at it and basically their guess Was that you know in the in the 60s?
+
+363
+00:25:13,260 --> 00:25:17,646
+Scott: When they were trying to go to the moon, right before they had like, you know Saturn five rockets.
+
+364
+00:25:17,887 --> 00:25:38,434
+Scott: a different rocket they had before then was the centaur rocket and One of the rockets they sent up in the 60s You know as a multi-stage deal, right and one of the stages One of the the upper booster stage went missing in the 60s and they saw it and somebody real smart said I bet That's what that is.
+
+365
+00:25:39,282 --> 00:25:42,452
+Scott: That's that that booster that we lost in the 60s.
+
+366
+00:25:43,053 --> 00:25:44,077
+Scott: But how can you know?
+
+367
+00:25:44,297 --> 00:25:45,100
+Scott: How can you know?
+
+368
+00:25:45,220 --> 00:25:47,452
+Scott: It's just like a dot of light in space.
+
+369
+00:25:47,492 --> 00:25:48,980
+Scott: That's like blinking or whatever the fuck.
+
+370
+00:25:49,000 --> 00:25:50,300
+Scott: How do you know what the hell that is, right?
+
+371
+00:25:50,760 --> 00:25:55,799
+Scott: You look at it with your telescope and shit and it's just like you can't visually identify it, right?
+
+372
+00:25:56,120 --> 00:25:59,182
+Scott: It's like you would need to zoom in so much it's like we don't have.
+
+373
+00:25:59,202 --> 00:26:06,006
+Rym: like most modern astronomy is just in like inferring information from the photons themselves in ways that you perceive.
+
+374
+00:26:06,127 --> 00:26:11,652
+Scott: so the way you identify it is Basically with spectronomy, right?
+
+375
+00:26:11,792 --> 00:26:13,280
+Scott: I guess is that the right word, right?
+
+376
+00:26:13,320 --> 00:26:27,282
+Scott: You look at the spectrum of electromagnetic waves that it is reflecting because most Materials in the world right have a unique right spectrum of electromagnetic waves that they reflect versus Absorb.
+
+377
+00:26:27,703 --> 00:26:29,228
+Scott: compared to what the Sun puts out.
+
+378
+00:26:29,268 --> 00:26:37,019
+Scott: right the Sun puts out like fucking everything from infrared to ultraviolet, you know all over the place Right, I guess not everything but a very wide spectrum, right?
+
+379
+00:26:37,620 --> 00:26:43,280
+Rym: Our Sun is not outputting those high-energy photons that come like cosmic rays that come from out in deep space.
+
+380
+00:26:43,280 --> 00:26:46,846
+Rym: I hope not Happening we're in trouble right?
+
+381
+00:26:47,328 --> 00:26:50,288
+Scott: and that stuff that light from the Sun hits I don't know a leaf.
+
+382
+00:26:50,449 --> 00:26:51,660
+Scott: and what does the leaf reflect?
+
+383
+00:26:51,960 --> 00:27:00,900
+Scott: Well, it reflects the green light in the visible spectrum But it also reflects, you know electromagnetic waves in other parts of the spectrum that just aren't visible, right?
+
+384
+00:27:01,282 --> 00:27:01,746
+Scott: It's gonna.
+
+385
+00:27:01,767 --> 00:27:09,300
+Scott: that's why so many things are green But they might still be unique if you can if you use like an infrared camera or ultraviolet camera or even wider.
+
+386
+00:27:09,541 --> 00:27:17,465
+Scott: You know the widest spectrum you can look at - and you could by taking a camera that can see all the different wavelengths Pointing it at different objects.
+
+387
+00:27:17,605 --> 00:27:27,176
+Scott: You could say what that is with a very high likely, you know hood of being correct because objects are really unique, you know, but materials wise right.
+
+388
+00:27:27,739 --> 00:27:31,631
+Scott: so They know what the booster rocket was made of right?
+
+389
+00:27:31,651 --> 00:27:32,574
+Scott: They're like there was.
+
+390
+00:27:32,855 --> 00:27:34,100
+Scott: they thought there was paint on it.
+
+391
+00:27:34,180 --> 00:27:36,319
+Scott: They know that this part was made of stainless steel.
+
+392
+00:27:36,501 --> 00:27:39,744
+Scott: This part was made of foam, you know And they can look at it.
+
+393
+00:27:39,804 --> 00:27:48,152
+Scott: and they could also point at another known objects that are made of the same materials Right and compare what they're seeing.
+
+394
+00:27:48,634 --> 00:27:49,979
+Scott: and that's how they figured out that.
+
+395
+00:27:50,019 --> 00:27:54,359
+Scott: yeah It's almost certain that this is exactly what that is in space over there.
+
+396
+00:27:55,306 --> 00:27:59,250
+Scott: So very very cool Science action going.
+
+397
+00:27:59,310 --> 00:28:00,157
+Rym: it is super cool.
+
+398
+00:28:01,042 --> 00:28:09,500
+Scott: One also, it's always I always like finding a lost object right like a sunken ship, you know I don't know how many people remember how big a deal it was.
+
+399
+00:28:09,600 --> 00:28:22,873
+Scott: It's like yeah, we know the Titanic sank but like they didn't remember that They didn't find the Titanic on the bottom of the sea until like I was old enough to read That was all anyone talked about on TV for like a year.
+
+400
+00:28:23,254 --> 00:28:29,480
+Scott: There was a National Geographic issue That was like 100% filled with photos of the Titanic from the bottom of the sea.
+
+401
+00:28:29,480 --> 00:28:30,767
+Scott: They're like we fucking found it.
+
+402
+00:28:30,827 --> 00:28:31,612
+Rym: Holy shit.
+
+403
+00:28:31,873 --> 00:28:33,160
+Rym: I remember not that long ago.
+
+404
+00:28:33,260 --> 00:28:36,579
+Scott: They found it was so and that was so big and it was on earth.
+
+405
+00:28:36,760 --> 00:28:39,039
+Scott: It wasn't even in space and it took him that long to find it.
+
+406
+00:28:39,140 --> 00:28:41,208
+Rym: Remember we when I got I freaked out on GeekNights.
+
+407
+00:28:41,348 --> 00:28:46,298
+Rym: It wasn't that long ago when they found the Erebus and the terror up in the Arctic.
+
+408
+00:28:48,840 --> 00:28:52,500
+Scott: Finding this is much, you know, not too many people cared about where this was.
+
+409
+00:28:52,520 --> 00:28:55,140
+Scott: It's not like there were any people in it, but it was more like by God.
+
+410
+00:28:56,161 --> 00:29:00,100
+Scott: Finding this was actually probably much harder than finding the Titanic.
+
+411
+00:29:01,641 --> 00:29:03,631
+Scott: It's so small and then even fight.
+
+412
+00:29:03,671 --> 00:29:05,340
+Scott: they weren't looking for this to find it.
+
+413
+00:29:05,440 --> 00:29:08,312
+Scott: They saw a thing by chance and then identified it.
+
+414
+00:29:08,433 --> 00:29:10,080
+Rym: So it was a literal UFO.
+
+415
+00:29:10,220 --> 00:29:16,300
+Scott: Yeah, if it hadn't appeared I don't think you would have found this until we had like, you know easy go to space.
+
+416
+00:29:16,681 --> 00:29:25,403
+Rym: It is with the limited capabilities that humans have on this planet today If we ever see something in space that we don't do that We can't explain.
+
+417
+00:29:25,423 --> 00:29:29,336
+Rym: it is very important to try to figure out what the fuck it is as fast as possible.
+
+418
+00:29:30,119 --> 00:29:30,380
+Scott: Oh, yeah.
+
+419
+00:29:32,565 --> 00:29:35,764
+Rym: So in one last little news so the American election like.
+
+420
+00:29:35,824 --> 00:29:37,329
+Rym: obviously Joe Biden won like that.
+
+421
+00:29:37,429 --> 00:29:43,840
+Rym: that's not disputed by anyone except crazy people, but We hit a weird milestone.
+
+422
+00:29:44,421 --> 00:29:52,898
+Rym: Biden so far has won the popular vote by seven million and it's still growing as they continue to count states like New York.
+
+423
+00:29:54,361 --> 00:29:55,546
+Rym: This is actually one of the big.
+
+424
+00:29:55,586 --> 00:29:59,740
+Rym: this might be the biggest blowout in like modern American history.
+
+425
+00:30:00,342 --> 00:30:03,671
+Scott: Well, I mean, you know, it's a terrifying and also good.
+
+426
+00:30:03,871 --> 00:30:07,000
+Scott: It's like it's like both sides right because on the one hand, right?
+
+427
+00:30:07,120 --> 00:30:14,465
+Scott: It's like if you consider all past elections that have ever happened in the United States for president This might have been the most important one.
+
+428
+00:30:15,066 --> 00:30:20,983
+Scott: Well, Donald Trump got more votes than any previous Person.
+
+429
+00:30:21,526 --> 00:30:27,769
+Scott: right popular vote wise there were more Legitimate votes for Donald Trump than any president ever.
+
+430
+00:30:27,809 --> 00:30:32,766
+Scott: with the number of votes Donald Trump just got he could have beaten Obama both times Right.
+
+431
+00:30:32,908 --> 00:30:34,260
+Scott: Yeah, he just got that many votes.
+
+432
+00:30:35,880 --> 00:30:40,760
+Scott: Biden got seven plus million more votes than that.
+
+433
+00:30:40,961 --> 00:30:42,817
+Rym: There are more good people than bad.
+
+434
+00:30:42,877 --> 00:30:43,160
+Rym: people.
+
+435
+00:30:43,944 --> 00:30:45,432
+Scott: Are seven million more?
+
+436
+00:30:45,694 --> 00:30:46,820
+Rym: the election looks a lot.
+
+437
+00:30:46,860 --> 00:30:48,005
+Scott: Do you want to get in a fight?
+
+438
+00:30:48,025 --> 00:30:51,920
+Scott: Do you want to have your gang fight another gang when the other gang is seven million?
+
+439
+00:30:52,060 --> 00:30:55,784
+Scott: bigger than your game But I don't want to do that.
+
+440
+00:30:55,905 --> 00:30:59,716
+Scott: that that really underscores like the especially even if it's 70 million for 77 million.
+
+441
+00:31:01,563 --> 00:31:02,893
+Scott: Seven million is scared.
+
+442
+00:31:02,914 --> 00:31:04,764
+Scott: Yeah 70 is well.
+
+443
+00:31:04,785 --> 00:31:07,356
+Rym: that could also be six million nine or nine thousand nine and ninety.
+
+444
+00:31:07,416 --> 00:31:17,095
+Scott: nine versus one Right, but I'm saying even if it's a hundred million people in a fight against a hundred and seven million people hundred million people need to be scared.
+
+445
+00:31:18,446 --> 00:31:19,198
+Scott: You're not gonna win.
+
+446
+00:31:19,781 --> 00:31:19,962
+Scott: But
+
+447
+00:31:20,403 --> 00:31:39,120
+Rym: that's the sort of the news that if you're not like familiar with US politics just to think about the election was a blowout Except America is set up to make to ensure that rural votes count a lot more than urban votes Such that the vast majority like the far majority of Americans voted for the correct option.
+
+448
+00:31:40,320 --> 00:31:42,026
+Rym: Yet everything was close.
+
+449
+00:31:42,206 --> 00:31:46,480
+Rym: And in fact, there are losses at the local level because of gerrymandering and rural overrepresentation.
+
+450
+00:31:48,140 --> 00:31:53,035
+Rym: Mmm, which goes all the way back to the founding of America when they hide your old news.
+
+451
+00:31:53,055 --> 00:31:54,359
+Scott: Yeah, is that even news?
+
+452
+00:31:57,442 --> 00:32:04,693
+Scott: It's one thing to use a new when you sometimes you use a news that's like, you know Oh, I heard that last month using the news as 200 years old.
+
+453
+00:32:04,774 --> 00:32:05,777
+Rym: be careful with that news.
+
+454
+00:32:05,898 --> 00:32:09,096
+Scott: It's an antique 250 years old probably I think.
+
+455
+00:32:09,116 --> 00:32:10,944
+Scott: yeah, well 50 year old.
+
+456
+00:32:11,045 --> 00:32:14,157
+Rym: well, remember the Constitution wasn't written until well after the revolution.
+
+457
+00:32:14,197 --> 00:32:14,820
+Rym: we had that whole.
+
+458
+00:32:15,001 --> 00:32:17,951
+Scott: Yeah, but but they but the bicentennial was 1970 something.
+
+459
+00:32:18,051 --> 00:32:24,193
+Rym: Yeah, which was silly because all you not Americans Remember you might not realize I don't know if they even teach you this.
+
+460
+00:32:24,614 --> 00:32:31,808
+Rym: when America got independence We founded this bullshit government that just sucked and after like a decade we were like wow Fuck this.
+
+461
+00:32:31,889 --> 00:32:32,679
+Rym: and we rewrote it all.
+
+462
+00:32:33,781 --> 00:32:35,912
+Rym: Yep, I don't think they teach that outside of the you.
+
+463
+00:32:35,952 --> 00:32:36,394
+Rym: I should do.
+
+464
+00:32:36,756 --> 00:32:37,400
+Scott: they taught it to me.
+
+465
+00:32:37,561 --> 00:32:38,527
+Scott: But yeah, we should do it again.
+
+466
+00:32:38,567 --> 00:32:44,517
+Scott: Maybe I think we're getting close to that But we had to make sure that you know, the bad people aren't allowed to participate.
+
+467
+00:32:44,959 --> 00:32:45,140
+Rym: Yep.
+
+468
+00:32:45,822 --> 00:32:51,724
+Rym: Also, there's a lot of evidence that when the Constitution was written part of the reason why it had ended in the state It did like.
+
+469
+00:32:51,784 --> 00:33:02,542
+Rym: literally there's even a big like article and like an analysis of this The people who were actually writing it were bored and sick of this shit and just wanted to be done and they all just voted To like.
+
+470
+00:33:02,582 --> 00:33:05,940
+Rym: that's good enough because they assumed we'd fix it later and we never did.
+
+471
+00:33:06,020 --> 00:33:07,666
+Scott: Yeah, that's why they put in the amendment rule.
+
+472
+00:33:07,787 --> 00:33:13,511
+Scott: Yep, and we kind of just used it that they immediately used it Like ten times plus right away.
+
+473
+00:33:13,531 --> 00:33:18,160
+Scott: Yeah, they're like, hey we you know Cuz they were writing it at a literal meeting together in his place.
+
+474
+00:33:18,200 --> 00:33:30,304
+Rym: They wanted to go home and then just kind of stopped like the last few though that last few amendments didn't do much anyway.
+
+475
+00:33:30,345 --> 00:33:32,740
+Rym: things Of the day, what do you got?
+
+476
+00:33:33,900 --> 00:33:34,866
+Scott: What was my thing today?
+
+477
+00:33:34,947 --> 00:33:37,020
+Scott: Oh, yeah, so I'm sure you've all played minesweeper.
+
+478
+00:33:37,161 --> 00:33:44,334
+Scott: I think I've had several minesweeper things of the day which I think is an over Representation compared to how often I play minesweeper, which is not often.
+
+479
+00:33:44,775 --> 00:33:45,820
+Rym: I used to play it a lot.
+
+480
+00:33:46,021 --> 00:33:47,307
+Rym: There was a time when that was very.
+
+481
+00:33:47,428 --> 00:33:48,654
+Scott: it was a time when I played a lot.
+
+482
+00:33:48,674 --> 00:33:52,766
+Scott: that time is not recently but I don't know if you know the website itch.io.
+
+483
+00:33:52,867 --> 00:34:06,340
+Scott: itch.io is a great website where indie game makers mostly but you know You can sell pretty much any digital goods on there But it's mostly games tabletop RPG PDFs, you know that sort of thing And so there's a lot of great stuff on there.
+
+484
+00:34:06,420 --> 00:34:13,487
+Scott: they actually recently on Black Friday what they did is they had a special day where they gave the itch.io took no cut and they gave.
+
+485
+00:34:13,647 --> 00:34:20,208
+Scott: when you bought something in itch.io all the money went to the developer or You know designer or artist whatever and that was nice.
+
+486
+00:34:20,771 --> 00:34:22,757
+Scott: that I think is over now, but it'll come again.
+
+487
+00:34:22,797 --> 00:34:23,079
+Scott: I'm sure.
+
+488
+00:34:23,902 --> 00:34:27,762
+Scott: Regardless there is a platform called Pico 8.
+
+489
+00:34:27,762 --> 00:34:41,275
+Scott: I saw this on display most prominently when we were at gamer X and this amazing creator Driggs I think that's how you pronounce their name and They had like this game with a spider like a web and it was like this amazing.
+
+490
+00:34:41,295 --> 00:34:54,000
+Scott: It's basically a. Basically Pico 8 is a fake video game console that never existed and you can make games for it as if it did exist And run them on your normal computer, right and it basically provides these sort of limitations.
+
+491
+00:34:54,681 --> 00:35:05,010
+Scott: Right as if you are programming a game for like this limited old, you know computer with only so much anyway Somebody named Numachi Tamanegi.
+
+492
+00:35:05,030 --> 00:35:07,018
+Scott: I'm probably pronouncing their name wrong.
+
+493
+00:35:07,058 --> 00:35:09,906
+Scott: I'm sorry Not I'm the last Tamanegi?
+
+494
+00:35:10,588 --> 00:35:11,811
+Scott: Tamanegi Tamanegi.
+
+495
+00:35:11,831 --> 00:35:13,877
+Scott: I don't know where to Tamanegi, whatever.
+
+496
+00:35:13,917 --> 00:35:20,860
+Scott: Sorry, so This person made a game called artemis's artemis minesweeper, right?
+
+497
+00:35:20,920 --> 00:35:25,436
+Scott: It's an apostrophe after the end of the s because it's the minesweeper that belongs to artemis.
+
+498
+00:35:25,476 --> 00:35:26,560
+Scott: It's a possessive, right?
+
+499
+00:35:28,261 --> 00:35:30,949
+Scott: And it's minesweeper except there's this character.
+
+500
+00:35:31,029 --> 00:35:32,253
+Scott: I presume their name is artemis.
+
+501
+00:35:32,533 --> 00:35:40,289
+Scott: Yeah, it's like a kraken monster girl right and they're shooting at you as if it is some sort of bullet hell shmup.
+
+502
+00:35:40,310 --> 00:35:46,090
+Scott: and While you're solving the little minesweeper which under normal circumstances would be an easy minesweeper.
+
+503
+00:35:46,813 --> 00:35:50,570
+Scott: Your mouse cursor has to dodge all this bullet hell bullets.
+
+504
+00:35:51,092 --> 00:35:55,706
+Scott: It is so hard and also if you click a bomb you don't die.
+
+505
+00:35:55,947 --> 00:36:01,057
+Scott: You don't lose immediately You just take damage the same amount of damage You would have taken if you got hit by a bullet.
+
+506
+00:36:01,479 --> 00:36:03,006
+Scott: and you lose if your health runs out.
+
+507
+00:36:03,066 --> 00:36:05,849
+Scott: you win if you solve the Minesweeper before your health runs out.
+
+508
+00:36:06,452 --> 00:36:08,118
+Scott: It's an amazing game that they were.
+
+509
+00:36:08,259 --> 00:36:09,604
+Scott: I can't believe they're able to make that.
+
+510
+00:36:09,945 --> 00:36:11,090
+Scott: come up with a genius idea.
+
+511
+00:36:11,672 --> 00:36:15,003
+Scott: Get it to run on pico 8 and look so good and work so smoothly.
+
+512
+00:36:15,023 --> 00:36:16,970
+Scott: and here it is on itch.io.
+
+513
+00:36:17,552 --> 00:36:18,515
+Scott: You can just go play it.
+
+514
+00:36:19,118 --> 00:36:22,590
+Scott: I think you can also pay what you want for it because it's itch.io.
+
+515
+00:36:22,671 --> 00:36:23,722
+Scott: That's usually how that works.
+
+516
+00:36:23,742 --> 00:36:24,369
+Scott: Let me take a look.
+
+517
+00:36:25,811 --> 00:36:30,047
+Scott: I keep miss clicking because I don't even think you can pay for it directly.
+
+518
+00:36:30,087 --> 00:36:30,970
+Scott: It just says download.
+
+519
+00:36:31,031 --> 00:36:32,624
+Scott: They just download links and comments.
+
+520
+00:36:32,684 --> 00:36:37,630
+Scott: I don't think there's any Purchasing button for this game specifically whatsoever.
+
+521
+00:36:39,112 --> 00:36:40,802
+Scott: Let's see view all by this person.
+
+522
+00:36:40,842 --> 00:36:41,767
+Scott: Do they have other games?
+
+523
+00:36:41,948 --> 00:36:54,086
+Scott: Oh, there's Tsunamaki junk and boss battle, right Pico 8 tic-tac-toe pico 8 juggle, which is just a game and watch with a guy playing ball.
+
+524
+00:36:54,107 --> 00:36:56,835
+Scott: a Lot of pico 8 games going on here.
+
+525
+00:36:56,875 --> 00:36:58,379
+Scott: Very nice new machi.
+
+526
+00:36:58,500 --> 00:37:00,787
+Scott: follow new machi on itch.
+
+527
+00:37:00,887 --> 00:37:05,049
+Rym: I have done so No, so on Twitter, so I got a real simple thing of the day.
+
+528
+00:37:05,732 --> 00:37:12,030
+Rym: There's the article's old but I came across this because people were talking about it recently for some reason and I didn't know it existed.
+
+529
+00:37:12,772 --> 00:37:18,130
+Rym: It's a breakdown of the Soviet laser space pistol that was intended to arm.
+
+530
+00:37:18,491 --> 00:37:22,320
+Rym: So here's the cool thing.
+
+531
+00:37:22,400 --> 00:37:28,538
+Rym: it was real but it wasn't to attack people it was to attack Satellites and sensors.
+
+532
+00:37:28,919 --> 00:37:46,770
+Rym: It's a gun that uses chemical cartridges and electricity That would basically expend these cartridges to shoot out huge amounts of photons and electrons basically to Destroy satellite sensors and attack like things that could be used to wage war in space.
+
+533
+00:37:48,512 --> 00:37:51,825
+Rym: So you couldn't really shoot a person with it, but you could shoot a satellite with.
+
+534
+00:37:51,865 --> 00:37:53,874
+Scott: you could shoot a person with it Just wouldn't do much.
+
+535
+00:37:54,116 --> 00:37:54,920
+Rym: Yeah, I guess it could.
+
+536
+00:37:54,961 --> 00:37:59,950
+Rym: if you shot a person in the face with this I'm pretty sure would permanently blind them if you shot him right in the eye.
+
+537
+00:38:00,692 --> 00:38:07,050
+Rym: It basically is a super super powerful laser that only goes off for like a tiny tiny fraction of time.
+
+538
+00:38:08,010 --> 00:38:11,888
+Scott: Hmm, but if you shoot it right into like a camera sensor, it's like it the digital camera sensor.
+
+539
+00:38:11,928 --> 00:38:12,270
+Scott: It's done.
+
+540
+00:38:12,431 --> 00:38:16,150
+Rym: I mean if you point a good camera like right at the Sun you're gonna fuck it up, right?
+
+541
+00:38:16,190 --> 00:38:18,530
+Scott: If you shoot it right at some film, it's done, right?
+
+542
+00:38:18,630 --> 00:38:22,290
+Scott: You know, it's like, you know most set and digital sensors just cameras.
+
+543
+00:38:22,330 --> 00:38:26,226
+Rym: So the article is pretty cool because it actually talks about like how it worked why it was made.
+
+544
+00:38:26,286 --> 00:38:36,862
+Rym: like they had to deal with Stuff like it had to not mess up the atmosphere or be toxic like inside of a space station Because you would use it like in a space station like shoot it out the window.
+
+545
+00:38:36,882 --> 00:38:40,020
+Scott: Oh You should out the window.
+
+546
+00:38:40,061 --> 00:38:41,110
+Scott: you wouldn't like go outside.
+
+547
+00:38:41,190 --> 00:38:42,559
+Rym: You could also go out and use it.
+
+548
+00:38:42,619 --> 00:38:44,370
+Rym: so it also had to work in the vacuum of space.
+
+549
+00:38:45,131 --> 00:38:47,642
+Scott: I was gonna say I think that's why it's full of the chemicals, right?
+
+550
+00:38:47,943 --> 00:38:49,670
+Rym: Yep, but you can read the article.
+
+551
+00:38:49,690 --> 00:38:51,390
+Rym: I'm not even gonna try to explain all the details.
+
+552
+00:38:51,513 --> 00:38:52,189
+Rym: There's a lot here.
+
+553
+00:38:52,290 --> 00:39:11,648
+Rym: But this shit is fascinating because this was the era where like the u.s And the Soviet Union were very much trying to like prepare to wage war in space but at the same time they were over focusing on certain aspects that are today irrelevant and also kind of like.
+
+554
+00:39:12,912 --> 00:39:16,483
+Rym: They were so close to understanding what modern space warfare would actually look like.
+
+555
+00:39:16,724 --> 00:39:20,669
+Rym: but yet they kind of just missed the mark and went Off in a crazy town both them and us.
+
+556
+00:39:21,672 --> 00:39:26,777
+Scott: Yeah, I mean have you seen moonraker In the meta moment?
+
+557
+00:39:27,241 --> 00:39:31,076
+Scott: we're still stuck at home Mmm, I thought about reading that book.
+
+558
+00:39:31,437 --> 00:39:34,146
+Rym: I also thought about it, but I'm still reading that nonfiction book at elections.
+
+559
+00:39:34,928 --> 00:39:37,640
+Scott: Mm-hmm I'm reading the Adventure Time comic.
+
+560
+00:39:38,505 --> 00:39:39,490
+Rym: Oh, I gotta read more of that.
+
+561
+00:39:40,213 --> 00:39:41,538
+Rym: I read a bunch and I kind of just stopped.
+
+562
+00:39:42,240 --> 00:39:42,642
+Scott: it was really good.
+
+563
+00:39:42,662 --> 00:39:43,244
+Scott: It's really good.
+
+564
+00:39:43,646 --> 00:39:44,750
+Scott: I guess tiny review, right?
+
+565
+00:39:44,810 --> 00:39:45,393
+Scott: It's really good.
+
+566
+00:39:45,454 --> 00:39:52,012
+Scott: At least I'm only in volume one or two and there's a lot of them But it's very Like it's.
+
+567
+00:39:52,313 --> 00:39:57,170
+Scott: you know, when you read comics you usually want they're usually fast to read like manga is like the fastest to read.
+
+568
+00:39:57,210 --> 00:39:58,114
+Scott: It's like whoosh, right?
+
+569
+00:39:58,536 --> 00:39:59,440
+Scott: This is slow to read.
+
+570
+00:39:59,500 --> 00:40:01,710
+Scott: It's kind of wordy and it's the wordy.
+
+571
+00:40:02,791 --> 00:40:06,609
+Scott: It has a lot of words and there's also like tiny words at the bottom of some of the pages that are hidden.
+
+572
+00:40:06,629 --> 00:40:07,404
+Scott: you want to read those too.
+
+573
+00:40:08,551 --> 00:40:10,422
+Rym: You know, it's funny because the my little pony it's not.
+
+574
+00:40:10,482 --> 00:40:10,623
+Scott: it's.
+
+575
+00:40:11,085 --> 00:40:16,026
+Rym: we're slow to do But not because of the words because of all the weird fiddly little details and everything.
+
+576
+00:40:16,066 --> 00:40:20,790
+Scott: Yeah, exactly It's like you read an old Stan Lee comic and it's got a bunch of words.
+
+577
+00:40:20,830 --> 00:40:22,195
+Scott: But those words are corny words.
+
+578
+00:40:22,235 --> 00:40:26,950
+Scott: Like I hit you you little guy and explain a science explain a science explain a science.
+
+579
+00:40:27,010 --> 00:40:28,335
+Scott: That's why is such and such as such.
+
+580
+00:40:28,375 --> 00:40:32,210
+Rym: I read an x-men floppy in like 60 seconds, right?
+
+581
+00:40:32,571 --> 00:40:35,121
+Scott: The words in here are not corny words.
+
+582
+00:40:35,161 --> 00:40:36,165
+Scott: They're at their Adventure Time.
+
+583
+00:40:36,206 --> 00:40:37,230
+Scott: dialogue, right?
+
+584
+00:40:37,690 --> 00:40:39,538
+Scott: This is just jam-packed.
+
+585
+00:40:39,879 --> 00:40:42,630
+Scott: So it takes a while to get through a volume.
+
+586
+00:40:43,513 --> 00:40:47,747
+Rym: So, there you go, all right, so yeah join our discord hang out in the live streams.
+
+587
+00:40:47,767 --> 00:40:48,810
+Rym: There's people rocking in here.
+
+588
+00:40:48,830 --> 00:40:52,167
+Rym: There's actually a thriving conversation happening in parallel with the show.
+
+589
+00:40:52,207 --> 00:40:55,055
+Rym: right now We're gonna try to make some content.
+
+590
+00:40:55,376 --> 00:40:59,350
+Rym: I've done a little more work toward the next utenna analysis episode.
+
+591
+00:41:00,372 --> 00:41:12,233
+Rym: I've started cutting out clips of episode 17 of utenna mmm, and We realized we've never talked about hair on GeekNights except once on December.
+
+592
+00:41:12,253 --> 00:41:17,268
+Scott: maybe we have and that video was deleted by the episode by somebody on December 15th.
+
+593
+00:41:20,532 --> 00:41:22,038
+Rym: We did an episode shows.
+
+594
+00:41:22,238 --> 00:41:23,182
+Scott: It's one of our earliest shows.
+
+595
+00:41:23,222 --> 00:41:23,463
+Rym: Yep.
+
+596
+00:41:23,544 --> 00:41:35,640
+Rym: We did an episode on shaving because We had both decided to get real safety razors and stop using the mock threes to save money And we've saved a lot of money and had better shaves.
+
+597
+00:41:35,781 --> 00:41:36,523
+Rym: I had saved 20 or 15 years.
+
+598
+00:41:38,694 --> 00:41:40,112
+Rym: I had saved almost $4,000.
+
+599
+00:41:40,112 --> 00:41:52,260
+Rym: cuz I was keeping track of like how much money I saved and after I hit like $4,000 and I just stopped counting and that was a long time ago Mmm, I changed my blade like once a week.
+
+600
+00:41:52,280 --> 00:41:54,469
+Rym: that blade costs like 2 cents.
+
+601
+00:41:57,011 --> 00:41:59,400
+Rym: So, uh, we're not gonna talk about shaving necessarily.
+
+602
+00:41:59,581 --> 00:42:01,006
+Scott: everything we said 15 years ago.
+
+603
+00:42:01,026 --> 00:42:01,970
+Scott: We were right.
+
+604
+00:42:02,272 --> 00:42:04,483
+Rym: Yeah safety razors are just so.
+
+605
+00:42:04,543 --> 00:42:05,910
+Rym: they are superior in every body.
+
+606
+00:42:06,010 --> 00:42:10,787
+Scott: You are using any sort of like, you know, Mach 3 shik Gillette bullshit.
+
+607
+00:42:10,807 --> 00:42:11,730
+Scott: that cost a lot of money.
+
+608
+00:42:12,252 --> 00:42:18,617
+Scott: Go back and listen to that because you got to shave the old-fashioned way with the cheapo blade But not the oldest fashion ways.
+
+609
+00:42:18,798 --> 00:42:20,985
+Scott: straight razors do get better razor.
+
+610
+00:42:21,206 --> 00:42:22,310
+Rym: So they do give a better shave.
+
+611
+00:42:22,370 --> 00:42:26,570
+Rym: I'm not gonna say they don't like they are but you'll cut yourself or you'll get good at it.
+
+612
+00:42:26,670 --> 00:42:33,470
+Rym: But it's a skill you have to learn and then you have introduced to your morning routine a real element of danger.
+
+613
+00:42:34,135 --> 00:42:41,230
+Scott: Yes, the point is safety razor Brush, you're gonna have a way better shaving experience and shaving life and save a shit ton of money.
+
+614
+00:42:41,290 --> 00:42:42,372
+Scott: It's better and cheaper.
+
+615
+00:42:42,412 --> 00:42:43,534
+Scott: How often is that true?
+
+616
+00:42:43,554 --> 00:42:47,020
+Rym: I almost bought a new puck of soap when I moved to New York City.
+
+617
+00:42:48,315 --> 00:42:49,548
+Rym: I replaced it last year.
+
+618
+00:42:52,439 --> 00:43:03,119
+Scott: so I Recently like within the past month Opened the third Tub of shaving soap that I bought.
+
+619
+00:43:03,219 --> 00:43:05,506
+Rym: Oh, you still use the pre-whipped stuff, right?
+
+620
+00:43:05,827 --> 00:43:09,054
+Scott: Yeah since 2005 I guess right.
+
+621
+00:43:09,856 --> 00:43:11,901
+Scott: so five five years per tub.
+
+622
+00:43:12,041 --> 00:43:12,241
+Rym: Yep.
+
+623
+00:43:12,602 --> 00:43:13,364
+Rym: I went a little deeper.
+
+624
+00:43:13,464 --> 00:43:15,569
+Rym: I went to puck of just hard soap.
+
+625
+00:43:16,973 --> 00:43:19,009
+Rym: Nine years is about how long one of those will last.
+
+626
+00:43:21,113 --> 00:43:22,921
+Rym: I didn't replace it because it was gone.
+
+627
+00:43:23,242 --> 00:43:24,870
+Rym: I replaced it because it got disgusting.
+
+628
+00:43:27,057 --> 00:43:34,210
+Scott: I Started like holding it under To like reach it up the smells when you do it a little more frequently.
+
+629
+00:43:34,331 --> 00:43:38,330
+Rym: Yeah, I did want to change up the smell too because it was the same smell for a decade.
+
+630
+00:43:38,671 --> 00:43:43,830
+Rym: So right exactly, but now we're talking about pretty good all hair except shaving.
+
+631
+00:43:43,911 --> 00:43:45,763
+Rym: But I guess we'll talk about it face hair.
+
+632
+00:43:45,863 --> 00:43:46,910
+Scott: Hey, we're talking about head hair.
+
+633
+00:43:46,970 --> 00:43:52,050
+Scott: We're not talking about chest hair back hair pubes not talking about we need those future Thursday episodes.
+
+634
+00:43:52,796 --> 00:43:53,158
+Scott: That's right.
+
+635
+00:43:53,199 --> 00:43:54,005
+Scott: head hair only.
+
+636
+00:43:54,267 --> 00:43:56,075
+Rym: yep Cuz I used to.
+
+637
+00:43:56,136 --> 00:43:57,219
+Scott: I used to have head hair.
+
+638
+00:43:57,280 --> 00:43:59,026
+Scott: believe it or not Scott did had a lot.
+
+639
+00:43:59,106 --> 00:44:14,381
+Rym: in fact funnily enough Today Scott found on a floppy disk a bunch of pictures of us in college in the year 2001 and Scott looks like 20 years younger and There weren't any pictures of me, but I was 20 years younger though.
+
+640
+00:44:14,421 --> 00:44:16,870
+Rym: Yeah, but I looked at a picture of myself.
+
+641
+00:44:16,990 --> 00:44:18,556
+Scott: I was 20 years.
+
+642
+00:44:18,597 --> 00:44:21,126
+Scott: Yeah, I pretty much like two trains already gone.
+
+643
+00:44:21,167 --> 00:44:22,070
+Rym: you pieces of shit.
+
+644
+00:44:22,231 --> 00:44:23,356
+Rym: I bought the.
+
+645
+00:44:23,477 --> 00:44:24,241
+Rym: I bought a three train.
+
+646
+00:44:24,261 --> 00:44:25,005
+Rym: there weren't that many left.
+
+647
+00:44:25,025 --> 00:44:25,487
+Rym: fuck you.
+
+648
+00:44:25,547 --> 00:44:26,030
+Scott: It's a good thing.
+
+649
+00:44:26,111 --> 00:44:27,543
+Scott: I have one three train for company.
+
+650
+00:44:27,704 --> 00:44:31,700
+Scott: Yeah We get a run more one more time though if the three train wait.
+
+651
+00:44:31,740 --> 00:44:34,250
+Rym: wait did the are the twos rusted?
+
+652
+00:44:35,172 --> 00:44:35,901
+Rym: Yeah, oh fuck.
+
+653
+00:44:36,184 --> 00:44:36,650
+Rym: I'm in trouble.
+
+654
+00:44:37,570 --> 00:44:38,333
+Scott: Yeah, good thing.
+
+655
+00:44:38,373 --> 00:44:40,160
+Rym: I'm you are is gonna have to merge.
+
+656
+00:44:40,200 --> 00:44:41,103
+Rym: We're playing a train game.
+
+657
+00:44:41,123 --> 00:44:44,252
+Rym: We're playing 1817.
+
+658
+00:44:44,252 --> 00:44:44,695
+Rym: God damn it.
+
+659
+00:44:44,715 --> 00:44:46,569
+Rym: I was hoping I'd get to run one more - with my job.
+
+660
+00:44:46,690 --> 00:44:48,950
+Scott: I was hoping I get to run more time even though I don't need him all right.
+
+661
+00:44:50,391 --> 00:44:56,608
+Rym: Anyway, anyway, uh Over the years Scott got balder and balder, and I pretty much stayed the same.
+
+662
+00:44:57,029 --> 00:45:03,929
+Rym: now I'm thinning because I'm old but still got long hair and we get we inverted and Scott is completely bald and I have long hair.
+
+663
+00:45:05,232 --> 00:45:11,567
+Rym: and it's funny when I look at our YouTube videos because People a lot of people who watch our YouTube videos have no idea.
+
+664
+00:45:11,607 --> 00:45:12,290
+Rym: GeekNights exists.
+
+665
+00:45:12,912 --> 00:45:22,710
+Rym: Like there's a weird segment of like game design people who just find our videos and watch them and interact in YouTube But they always refer to us as long hair guy and bald guy.
+
+666
+00:45:24,092 --> 00:45:28,146
+Rym: That seems accurate yep, and there was a comment that was posted two days ago.
+
+667
+00:45:28,527 --> 00:45:29,370
+Rym: That was really funny.
+
+668
+00:45:29,996 --> 00:45:31,691
+Rym: It was on an old old panel We did.
+
+669
+00:45:31,711 --> 00:45:38,988
+Rym: it was on one of those ones from like paxies 2010 and the comment was the bald guy is way too mean to the long haired guy.
+
+670
+00:45:40,920 --> 00:45:49,755
+Rym: Oh So uh long hair is kind of a pain in the ass Like.
+
+671
+00:45:49,776 --> 00:45:53,793
+Scott: I've gathered that from the people that I'm aware of Like.
+
+672
+00:45:53,853 --> 00:45:58,567
+Rym: I would never get rid of it unless I got too scully and was forced to like.
+
+673
+00:45:58,627 --> 00:46:06,710
+Rym: I love having long hair But you will like roll over on your own hair in bed and wake yourself up from like yanking it.
+
+674
+00:46:07,174 --> 00:46:08,509
+Rym: You will get hot and stuff.
+
+675
+00:46:09,811 --> 00:46:12,710
+Rym: It'll like stick to certain kinds of clothes like velcro.
+
+676
+00:46:14,151 --> 00:46:17,143
+Scott: Well, it's like you shampoo like when I shampooed and I had hair.
+
+677
+00:46:17,204 --> 00:46:18,790
+Scott: I never had long hair, right?
+
+678
+00:46:18,950 --> 00:46:23,335
+Scott: I would shampoo had rubbed my head to lather it up But how do you shampoo the hair?
+
+679
+00:46:23,375 --> 00:46:25,423
+Scott: that's like way down far about the pro move.
+
+680
+00:46:25,443 --> 00:46:25,825
+Rym: you don't.
+
+681
+00:46:25,985 --> 00:46:30,050
+Rym: if you don't shampoo that shit It'll only shampoo to clean the scalp the hair just rinse out.
+
+682
+00:46:31,171 --> 00:46:32,438
+Rym: Okay, you only put a listener.
+
+683
+00:46:32,458 --> 00:46:34,570
+Scott: grab the hair in a bunch and try to like shim.
+
+684
+00:46:35,154 --> 00:46:37,350
+Rym: That would just tangle it into an impossible nightmare.
+
+685
+00:46:37,811 --> 00:46:45,588
+Rym: what I do is I shampoo it just the top with Celsius and blue because I got I'll get some dandruff otherwise and I only do that like once a week.
+
+686
+00:46:45,991 --> 00:46:51,028
+Rym: Otherwise, I just rinse it and then I put conditioner all the way in and I comb it all out and straighten it.
+
+687
+00:46:52,631 --> 00:46:54,861
+Scott: So you don't condition the dangling parts either.
+
+688
+00:46:54,921 --> 00:46:56,990
+Rym: You know, I mostly condition the dangling parts.
+
+689
+00:46:57,050 --> 00:46:58,539
+Rym: I don't condition the parts by my scalp.
+
+690
+00:46:58,559 --> 00:47:00,430
+Scott: So you see you squirt some goop on your hand.
+
+691
+00:47:01,231 --> 00:47:02,114
+Scott: Yeah, how do you physically?
+
+692
+00:47:02,275 --> 00:47:06,170
+Rym: so shampoo goes in my hand just on the scalp and then I rinse it all out.
+
+693
+00:47:06,591 --> 00:47:07,895
+Rym: Then I rinse the hair thoroughly.
+
+694
+00:47:08,457 --> 00:47:12,690
+Rym: then I put a bunch of conditioner in my hand and I only put it in the long part.
+
+695
+00:47:13,491 --> 00:47:14,697
+Scott: How do you how do you put it in?
+
+696
+00:47:14,758 --> 00:47:15,521
+Scott: like you just sort of like.
+
+697
+00:47:15,562 --> 00:47:17,150
+Rym: I just reach up and like hold the hair.
+
+698
+00:47:17,656 --> 00:47:30,004
+Rym: I just kind of like it Finger comb it with this with it and then I take a comb in the shower and I comb it while the conditioners in there See you you sort of like use your fingers as a comb covered.
+
+699
+00:47:30,065 --> 00:47:34,788
+Scott: when your fingers are covered in condition Basically, yeah, and you comb through all the hair with your fingers till the all the.
+
+700
+00:47:35,049 --> 00:47:36,224
+Scott: you know The goop is on the hair.
+
+701
+00:47:36,326 --> 00:47:45,380
+Rym: basically Yeah, use a and use a real coat but when my hair was the longest it ever got when it was kind of past my ass It actually took a lot of conditioner and I have.
+
+702
+00:47:45,922 --> 00:47:52,705
+Rym: I have kept my hair actually a lot shorter than I used to for many Years, I keep it like a couple feet like it goes past my shoulder blades.
+
+703
+00:47:52,725 --> 00:47:56,390
+Rym: Of course now kovat It's actually getting real long because I'm not willing to go get a haircut.
+
+704
+00:47:58,290 --> 00:48:04,066
+Scott: Mmm Alright, so but when you go you have the long hair and you go to do go to get a haircut You got to pay more money, right?
+
+705
+00:48:04,167 --> 00:48:06,850
+Rym: Yep So I remember when I first started having long hair.
+
+706
+00:48:06,910 --> 00:48:10,510
+Rym: I went to my usual barber and they said they had to charge me the women's price.
+
+707
+00:48:11,291 --> 00:48:14,023
+Rym: They just charge more if you have long hair straight out.
+
+708
+00:48:14,043 --> 00:48:14,625
+Scott: It's more work.
+
+709
+00:48:14,886 --> 00:48:15,087
+Rym: Yep.
+
+710
+00:48:15,167 --> 00:48:15,750
+Rym: It is more work.
+
+711
+00:48:15,790 --> 00:48:18,445
+Rym: There's a lot more stuff to do if you mess it up, right?
+
+712
+00:48:18,466 --> 00:48:27,219
+Scott: You can't fix it Right, and it's got this weird sort of intermingling with like Sexism but also reality on the one hand.
+
+713
+00:48:27,640 --> 00:48:35,909
+Scott: It's like we've created this standard, you know for like, you know Women to have long hair but and then therefore hair cuts cost more but it's like.
+
+714
+00:48:35,969 --> 00:48:36,894
+Rym: but well There's also more.
+
+715
+00:48:36,954 --> 00:48:39,890
+Rym: like a lot of times when people say a quote women's haircut.
+
+716
+00:48:40,031 --> 00:48:44,938
+Rym: They also mean styling which is expensive but also very difficult and time-consuming Right, but it's like.
+
+717
+00:48:44,958 --> 00:48:50,901
+Scott: it's also difficult times news like these, you know These, you know beauty standards and then all these things are getting in on there.
+
+718
+00:48:51,021 --> 00:48:56,938
+Scott: What's cool though is the barbershop relating to actual You know Economics, right?
+
+719
+00:48:57,220 --> 00:48:57,481
+Scott: Yeah.
+
+720
+00:48:57,582 --> 00:48:58,890
+Rym: Yeah, but some cool things.
+
+721
+00:49:00,114 --> 00:49:04,890
+Rym: In New York City a lot of the barbershops I go to they don't gender it anymore.
+
+722
+00:49:04,950 --> 00:49:06,876
+Rym: They're not like Oh women's price men's price.
+
+723
+00:49:07,117 --> 00:49:08,923
+Rym: They're like this kind of hair.
+
+724
+00:49:09,003 --> 00:49:10,387
+Rym: is this price this kind of hair?
+
+725
+00:49:10,447 --> 00:49:11,029
+Rym: is this price?
+
+726
+00:49:11,872 --> 00:49:13,677
+Scott: Right, but it's still the you know, the the.
+
+727
+00:49:13,797 --> 00:49:19,498
+Scott: so, you know, despite how much progress you've made and how many people of you know Like you're a dude with long hair.
+
+728
+00:49:19,518 --> 00:49:25,600
+Rym: Yeah, that was any that was actually Moderately controversial when I was in middle school in high school, right?
+
+729
+00:49:25,640 --> 00:49:28,449
+Scott: How many not dudes how many not dudes have short hair?
+
+730
+00:49:28,509 --> 00:49:28,850
+Scott: plenty?
+
+731
+00:49:29,210 --> 00:49:31,350
+Rym: In fact when I was in middle school some people up all the time.
+
+732
+00:49:31,350 --> 00:49:35,569
+Rym: I remember there were people who had a problem with the fact that I had a pierced ear as a man.
+
+733
+00:49:36,452 --> 00:49:38,497
+Rym: Sure, but wasn't that long ago, right?
+
+734
+00:49:38,758 --> 00:49:41,705
+Scott: The majority beauty standard is still right.
+
+735
+00:49:41,746 --> 00:49:42,768
+Scott: long hair on.
+
+736
+00:49:43,129 --> 00:49:47,247
+Scott: you know People who are women and the craft is or not.
+
+737
+00:49:48,493 --> 00:49:52,610
+Rym: There's a thing that I learned a while ago that really explained a lot of nonsense.
+
+738
+00:49:53,472 --> 00:50:08,230
+Rym: there is a problem that men with long hair have that that women with long hair do not have when we talk about biology and it's specific to the hair on the bottom of the neck in a male body like a genetically male body.
+
+739
+00:50:09,410 --> 00:50:12,743
+Rym: Usually that hair isn't the same as head hair.
+
+740
+00:50:13,385 --> 00:50:17,350
+Rym: It's beard hair So it won't grow as long as your head hair.
+
+741
+00:50:19,211 --> 00:50:20,417
+Rym: It'll grow to a certain length and kind of.
+
+742
+00:50:20,437 --> 00:50:24,663
+Scott: is that also true if you are a Trans man and you retain testosterone?
+
+743
+00:50:24,683 --> 00:50:25,609
+Scott: would that change that hair?
+
+744
+00:50:26,311 --> 00:50:29,410
+Scott: I know it depends on strong and hair are pretty linked or it is from what I've read.
+
+745
+00:50:29,450 --> 00:50:30,799
+Rym: It depends on when you transition.
+
+746
+00:50:30,819 --> 00:50:43,310
+Rym: There's a bunch of factors and it gets complicated Mm-hmm, but for me what that means is I have long hair and I can just tie it back except the hair on the bottom of My neck will only get as long as the maximum length of my beard and never longer.
+
+747
+00:50:43,794 --> 00:50:45,650
+Rym: So I can't tie it into a ponytail.
+
+748
+00:50:46,511 --> 00:50:53,974
+Rym: So there's this like frizz back there that I have to get styled and buzzed like regularly or my hair looks really messy Mm-hmm.
+
+749
+00:50:54,136 --> 00:50:55,210
+Rym: It's a giant pain in the ass.
+
+750
+00:50:55,511 --> 00:51:01,976
+Rym: I can't do it myself and if and if and even if like I asked Emily to do it if you mess that up and like Buzz too much into the long hair.
+
+751
+00:51:02,538 --> 00:51:03,502
+Rym: That'll be a problem.
+
+752
+00:51:03,562 --> 00:51:05,349
+Rym: That'll take like six months to grow out.
+
+753
+00:51:06,411 --> 00:51:07,415
+Scott: Yeah, I mean that's the thing.
+
+754
+00:51:07,455 --> 00:51:09,143
+Scott: Is it on anyone's body?
+
+755
+00:51:09,504 --> 00:51:12,836
+Scott: right when you start, you know Getting more hairs from puberty and whatnot?
+
+756
+00:51:13,158 --> 00:51:16,950
+Scott: the different different kinds of hairs grow in different parts of your body.
+
+757
+00:51:18,252 --> 00:51:20,590
+Scott: It's and it's like, you know one, you know my arm hair.
+
+758
+00:51:20,811 --> 00:51:30,830
+Scott: It's like, you know, if I didn't absolutely nothing if I was like a caveman I wore no clothes and I applied no products and I did no grooming my arm hair would still be different hair from my head hair.
+
+759
+00:51:30,870 --> 00:51:31,591
+Scott: Yeah It's just
+
+760
+00:51:31,953 --> 00:51:46,848
+Rym: or different people due to genetics have different kinds of hair and that's where you get into now racism and the fact that a lot of hair products and a lot of styling guides Are aimed at the default like straight or wavy white person hair and not all the other kinds of hair.
+
+761
+00:51:46,888 --> 00:51:50,719
+Scott: people might have Mm-hmm or depending on the country you're in.
+
+762
+00:51:50,920 --> 00:51:51,602
+Scott: Yep.
+
+763
+00:51:51,662 --> 00:51:54,430
+Rym: I'm talking from an American centric person, right?
+
+764
+00:51:54,510 --> 00:52:04,848
+Scott: But I'm saying like let's say you go to China Right, if you don't have you know, the hair of a Chinese person and you're in China It's you're gonna maybe have a hard time finding, you know things that are gonna work for you.
+
+765
+00:52:04,868 --> 00:52:07,300
+Rym: Yeah I remember a couple years ago.
+
+766
+00:52:07,321 --> 00:52:09,090
+Rym: I went to a barbershop that was aimed.
+
+767
+00:52:09,170 --> 00:52:13,810
+Rym: It was like a fancy barbershop that would do like straight razor shaves and stuff and I went to it in Midtown.
+
+768
+00:52:13,910 --> 00:52:18,290
+Rym: I was like I need a nice haircut cuz I'm gonna go to line the strip and they were like you have long hair.
+
+769
+00:52:18,411 --> 00:52:19,918
+Rym: We don't know how to cut it at all.
+
+770
+00:52:20,441 --> 00:52:22,209
+Rym: We specialize in these kinds of hair.
+
+771
+00:52:23,131 --> 00:52:27,590
+Rym: I will fuck it up and they actually gave me a referral to a different place that could cut my hair.
+
+772
+00:52:29,772 --> 00:52:31,885
+Scott: Mmm, I mean it's the same if you bring your car to a place.
+
+773
+00:52:31,925 --> 00:52:32,650
+Scott: They can't work on it.
+
+774
+00:52:34,693 --> 00:52:37,209
+Scott: But yeah, so let's I guess I'll talk about having no hair.
+
+775
+00:52:38,532 --> 00:52:44,370
+Scott: My whole life I had hair but I almost always, you know had some sort of short haircut of some kind, right?
+
+776
+00:52:44,530 --> 00:52:54,353
+Scott: Sometimes I would go shorter than other times Sometimes I'd like part it over sometimes I'd like make it go backwards, you know, whatever I didn't you know Do too much of it.
+
+777
+00:52:54,834 --> 00:53:01,823
+Scott: Mostly I just had hair because I had it and I would wash it.
+
+778
+00:53:02,388 --> 00:53:04,858
+Scott: and You know, I didn't want to.
+
+779
+00:53:04,938 --> 00:53:13,489
+Scott: you know, they do too much work or maintenance on it was a pain in the ass Yeah, and then I was like that until I decided to grow my hair out and then I had to do stuff to it.
+
+780
+00:53:14,272 --> 00:53:24,699
+Scott: Yeah, and you know some of my relatives like, you know, my dad and his dad and his brother That whole side the Reuben part of the family They all didn't have a lot of hair left.
+
+781
+00:53:25,482 --> 00:53:28,455
+Scott: and the other side of the family mother's side of the family They all had a lot of hair.
+
+782
+00:53:28,595 --> 00:53:29,459
+Scott: They still had hair.
+
+783
+00:53:29,539 --> 00:53:30,223
+Scott: They didn't lose it.
+
+784
+00:53:30,343 --> 00:53:31,167
+Rym: So maybe you had a 50/50 shot.
+
+785
+00:53:32,635 --> 00:53:34,447
+Scott: Who knows how it's gonna be right?
+
+786
+00:53:34,487 --> 00:53:36,412
+Scott: Whatever You know.
+
+787
+00:53:36,452 --> 00:53:42,490
+Scott: and then over time it's like, you know, did I have like some bald spot or some widow's peak?
+
+788
+00:53:42,630 --> 00:53:49,210
+Scott: not really, but what's sort of happening was sort of like an Einstein sort of effect where just I had hair.
+
+789
+00:53:49,351 --> 00:53:53,610
+Scott: I still do actually have hair from front on every single part of my head there.
+
+790
+00:53:53,811 --> 00:53:56,430
+Scott: It is not like some spot where there's like no hair growing.
+
+791
+00:53:56,992 --> 00:54:04,096
+Scott: It's just the density of hairs is way less in anywhere on top from the front, you know It's like at the front of my head.
+
+792
+00:54:04,116 --> 00:54:05,162
+Scott: There's still hairs middle.
+
+793
+00:54:05,262 --> 00:54:06,670
+Scott: I can still feel some hairs back.
+
+794
+00:54:06,772 --> 00:54:13,773
+Scott: I still feel some hairs Right, but it's pretty much only on the sides of my head and the back of my head that there is still the same Density of hairs.
+
+795
+00:54:13,813 --> 00:54:18,470
+Scott: there has been my whole life at least since I had hair, you know babies don't have hair not too much.
+
+796
+00:54:18,530 --> 00:54:24,870
+Scott: Anyway, I was born with a pretty substantial head of hair actually Yeah, but the top of my head there are way less hairs.
+
+797
+00:54:24,950 --> 00:54:29,010
+Scott: So even if I were to let them grow now, like there wouldn't be a bald spot.
+
+798
+00:54:29,151 --> 00:54:29,854
+Scott: It would just be.
+
+799
+00:54:29,874 --> 00:54:33,570
+Scott: you'd be like able to see through the hairs on the top of my head.
+
+800
+00:54:33,651 --> 00:54:34,862
+Scott: Yeah to the wall behind me.
+
+801
+00:54:34,882 --> 00:54:35,710
+Rym: you got to that moment.
+
+802
+00:54:35,984 --> 00:54:49,202
+Rym: Yeah I think a lot of men Will get to this point where from the front like when you're looking at yourself in the mirror It looks fine, but from other angles those thin areas appear Yeah, so I'm getting that a little bit from actually from.
+
+803
+00:54:49,543 --> 00:54:56,310
+Rym: because I've tied my hair back so tightly for so long I've actually fucked up a bunch of the hair follicles in the back of my head near the top.
+
+804
+00:54:56,953 --> 00:55:01,391
+Rym: But once I corrected that I haven't thinned further Hmm.
+
+805
+00:55:02,234 --> 00:55:05,406
+Scott: But yeah, so, you know over time in my life, I did different hair.
+
+806
+00:55:05,527 --> 00:55:06,330
+Scott: I went to barbers.
+
+807
+00:55:06,570 --> 00:55:13,790
+Scott: Sometimes I went to like, you know fans slightly fancier not actually fancy places, right but slightly not barber places.
+
+808
+00:55:13,930 --> 00:55:15,034
+Scott: You know places that would you know.
+
+809
+00:55:15,074 --> 00:55:21,557
+Scott: shampoo and stuff, you know, not just cut your hair and send you on your way for 10 bucks You know, I mixed it up.
+
+810
+00:55:21,617 --> 00:55:22,541
+Scott: I've had different places.
+
+811
+00:55:22,581 --> 00:55:24,390
+Scott: sometimes I stuck with the place for a long time.
+
+812
+00:55:24,530 --> 00:55:27,965
+Scott: Sometimes I you know went to own a place only a couple times whatever.
+
+813
+00:55:28,005 --> 00:55:28,949
+Scott: whatever is convenient, right?
+
+814
+00:55:29,873 --> 00:55:36,985
+Scott: And then when I started seeing that, you know When the the trend you the the thinning on the top was becoming sort of like too much.
+
+815
+00:55:37,026 --> 00:55:42,266
+Scott: It's like, alright, you know bad enough of this Right, and I said, you know what?
+
+816
+00:55:43,230 --> 00:55:47,790
+Scott: I'm gonna shave my head but I don't want to do what a lot of people do which is use the razor on their head.
+
+817
+00:55:47,870 --> 00:55:49,680
+Scott: Cuz I was worried about a cut in my head.
+
+818
+00:55:50,203 --> 00:55:51,509
+Scott: Yeah B. That's a lot of work.
+
+819
+00:55:51,992 --> 00:55:54,750
+Scott: See I got like take a razor all the way in the back of my head.
+
+820
+00:55:54,810 --> 00:55:57,644
+Scott: It's like I didn't want to go to that territory, right?
+
+821
+00:55:58,107 --> 00:55:58,750
+Scott: I said, you know what?
+
+822
+00:55:58,890 --> 00:56:04,510
+Scott: I'll just get the Clippers that the barber has the same ones Oster 76, you know the big burn, right?
+
+823
+00:56:04,990 --> 00:56:06,076
+Scott: I can just buy that same thing.
+
+824
+00:56:06,116 --> 00:56:07,402
+Scott: The barber has right.
+
+825
+00:56:07,442 --> 00:56:08,166
+Scott: I go on Amazon.
+
+826
+00:56:08,206 --> 00:56:12,642
+Scott: It's not that expensive It's a hundred something bucks right the cost of what like five or six haircuts.
+
+827
+00:56:12,923 --> 00:56:15,170
+Scott: Yeah, you know, I'm gonna and it's gonna last me forever.
+
+828
+00:56:16,179 --> 00:56:20,010
+Scott: and You know, you can get all the guards for it and different blades for it.
+
+829
+00:56:20,090 --> 00:56:21,502
+Scott: You can you know, you got a grease it.
+
+830
+00:56:21,542 --> 00:56:22,510
+Scott: you got to take care of it.
+
+831
+00:56:22,590 --> 00:56:25,090
+Scott: So it lasts a long time, but you can replace the blades.
+
+832
+00:56:25,231 --> 00:56:28,750
+Scott: It's pretty much just a motor with a power cable coming out of it, right?
+
+833
+00:56:29,630 --> 00:56:32,200
+Scott: So I bought one and it's real easy.
+
+834
+00:56:32,301 --> 00:56:34,490
+Scott: It's you can mow a lawn you can buzz your head.
+
+835
+00:56:35,212 --> 00:56:38,095
+Scott: You're not trying to make any particular style You're just trying to get rid all your hair.
+
+836
+00:56:38,597 --> 00:56:43,737
+Scott: and what I did the first time is I put on a thicker guard Right and I went down.
+
+837
+00:56:43,757 --> 00:56:45,764
+Scott: I think I put like number one and I moved.
+
+838
+00:56:45,784 --> 00:56:48,356
+Scott: all my hair is number one and I said How does that look?
+
+839
+00:56:48,799 --> 00:56:49,786
+Scott: that looks kind of stupid?
+
+840
+00:56:49,827 --> 00:56:50,189
+Scott: Let me go.
+
+841
+00:56:51,554 --> 00:56:57,173
+Scott: and I basically just kept decreasing the you know, the the amount of hair and What I've.
+
+842
+00:56:57,213 --> 00:57:05,289
+Scott: just what I've landed on after you know Not too long is that at first I ended up just using the triple zero blade itself, right?
+
+843
+00:57:05,329 --> 00:57:05,730
+Scott: Just direct.
+
+844
+00:57:06,976 --> 00:57:14,670
+Scott: but then I Realized there was a five zero blade and I said is that five zero blade really?
+
+845
+00:57:15,390 --> 00:57:16,996
+Scott: Like is that just like a gimmick?
+
+846
+00:57:17,056 --> 00:57:20,770
+Scott: how much closer and shorter can the hair be than the triple zero blade, right?
+
+847
+00:57:20,890 --> 00:57:28,870
+Scott: It's like I'm already down And it's like no the five zero blade actually is really nice and even shorter than the three zero blade.
+
+848
+00:57:28,990 --> 00:57:33,044
+Scott: So all I do is I go in the somewhere that I don't I can't.
+
+849
+00:57:33,085 --> 00:57:36,758
+Scott: I can safely make a mess of hair Like the shower or a balcony or whatever.
+
+850
+00:57:36,778 --> 00:57:39,730
+Scott: I take the five zero blade and it's come here.
+
+851
+00:57:39,791 --> 00:57:43,236
+Scott: I just mow my whole head like it's a lawn Even behind.
+
+852
+00:57:43,316 --> 00:57:51,221
+Scott: I just use two mirrors get behind there, you know to verify this whole head at the five zero, but Then there's some issues.
+
+853
+00:57:51,281 --> 00:58:00,150
+Scott: right the issues are no Mostly right behind your ear right the bottom of the back of the neck where rims, you know beard tangly hairs are right.
+
+854
+00:58:00,613 --> 00:58:03,330
+Scott: You know this right in the very front of the head.
+
+855
+00:58:03,410 --> 00:58:09,770
+Scott: It's actually here and also this sort of front side not sideburn but like in front temple area, right?
+
+856
+00:58:10,490 --> 00:58:13,570
+Scott: So I have this thing called the T trimmer, right?
+
+857
+00:58:13,950 --> 00:58:14,613
+Scott: Which is what the.
+
+858
+00:58:14,733 --> 00:58:18,650
+Scott: it's like that tiny clipper the barber uses right to sort of clean up the edges, right?
+
+859
+00:58:19,411 --> 00:58:20,516
+Scott: And so I got one of those.
+
+860
+00:58:20,577 --> 00:58:20,898
+Scott: it doesn't.
+
+861
+00:58:20,918 --> 00:58:23,310
+Scott: you can't interchange the but you can replace the blade if it breaks.
+
+862
+00:58:23,310 --> 00:58:24,670
+Scott: But you can't interchange the blade.
+
+863
+00:58:24,670 --> 00:58:28,330
+Scott: It's just the T trimmer blade and I use that to clean up the edges, right?
+
+864
+00:58:29,631 --> 00:58:34,310
+Scott: And then I shave or don't shave my face based on whether I'm beard and lately I'm not bearded.
+
+865
+00:58:34,391 --> 00:58:35,357
+Scott: I'm trying to take care of.
+
+866
+00:58:35,377 --> 00:58:42,469
+Rym: skin is in terms of face hair I like both of us can grow a really good beard and I can't just alternate between beard and no beard randomly.
+
+867
+00:58:42,509 --> 00:58:43,794
+Rym: right now I'm bearding cuz.
+
+868
+00:58:43,874 --> 00:58:44,938
+Rym: I've been too lazy to shave.
+
+869
+00:58:45,660 --> 00:58:46,744
+Scott: I've been not bearding cuz.
+
+870
+00:58:46,764 --> 00:58:48,250
+Scott: I'm trying to take care of my face skins.
+
+871
+00:58:48,932 --> 00:58:59,390
+Rym: Ah, yeah, you've always had a little more like face hair skin troubles that I have My my hair skin troubles are more like I'll get tinea versicolor on my chest, but we're not talking about chest hair today.
+
+872
+00:58:59,732 --> 00:59:03,590
+Scott: I get that in the back on the back of and I'll get a thick dandruff.
+
+873
+00:59:03,691 --> 00:59:07,270
+Rym: I'm not careful with the Celsius and blue but only on the head and the sideburns.
+
+874
+00:59:08,851 --> 00:59:12,674
+Rym: Mmm, what I've been doing though is I also have the fancy clippers But I've been using them to.
+
+875
+00:59:12,794 --> 00:59:27,624
+Rym: I've been fading my sideburns myself because as much as I appreciate good mutton shops My mutton shops do not work or look good unless I grow them like with a full-on beard Like if I let them just be proper mutton jobs, they just look scraggly and weird.
+
+876
+00:59:27,644 --> 00:59:29,370
+Rym: So I really got to like fade them regularly.
+
+877
+00:59:30,451 --> 00:59:31,336
+Rym: Actually, they're kind of do.
+
+878
+00:59:31,417 --> 00:59:33,227
+Rym: they're sticking out past the headphones right now.
+
+879
+00:59:34,272 --> 00:59:48,670
+Scott: Yeah, so the final thing I do is after you know, even if I'm not I Even if I have a whether I have a beard or not, right You know, you sort of still want to even out the sideburns somewhat maybe right?
+
+880
+00:59:49,310 --> 00:59:53,090
+Scott: So I actually do use the real razor on the sideburn.
+
+881
+00:59:53,191 --> 00:59:54,929
+Rym: I knew that all the sideburns.
+
+882
+00:59:54,990 --> 01:00:01,229
+Rym: but I use the buzzer with the like the fade controls to go up and make sure that they're like a nice even look.
+
+883
+01:00:01,249 --> 01:00:05,270
+Scott: and Sometimes the tea trimmer doesn't do a great job behind the ear.
+
+884
+01:00:05,410 --> 01:00:11,854
+Scott: So I'll maybe I'll even take the razor behind the ear a little bit right to try to you know, get that action And then that's it.
+
+885
+01:00:11,995 --> 01:00:14,849
+Scott: And then it's like it looks like I look like a bald person.
+
+886
+01:00:15,851 --> 01:00:19,809
+Scott: And my alternative is to look like Einstein right or just hair coming out the sides only.
+
+887
+01:00:21,131 --> 01:00:22,397
+Scott: Maybe I'll do that when I'm an old man.
+
+888
+01:00:22,438 --> 01:00:24,387
+Scott: It'll be fun for a Halloween customer.
+
+889
+01:00:24,428 --> 01:00:27,236
+Scott: So, I don't know You could definitely pull off a full-on Aramaki.
+
+890
+01:00:27,296 --> 01:00:28,279
+Rym: I still say you should do it.
+
+891
+01:00:28,480 --> 01:00:30,425
+Scott: Yeah, exactly Aramaki same Einstein hair.
+
+892
+01:00:30,445 --> 01:00:30,505
+Scott: Yep.
+
+893
+01:00:30,545 --> 01:00:30,605
+Scott: Dr.
+
+894
+01:00:30,625 --> 01:00:33,572
+Scott: Wylie Dr.
+
+895
+01:00:33,612 --> 01:00:34,456
+Scott: Wylie same haircut.
+
+896
+01:00:34,476 --> 01:00:38,030
+Rym: Yeah, you know what when we're old you will be great at cosplays.
+
+897
+01:00:39,213 --> 01:00:42,500
+Scott: Those three costs those three cosplays Einstein, dr.
+
+898
+01:00:42,560 --> 01:00:46,721
+Scott: Wylie and Arma Or all Saitama.
+
+899
+01:00:46,842 --> 01:00:47,688
+Scott: Those are my four cosplay.
+
+900
+01:00:50,372 --> 01:00:50,994
+Scott: But yeah, no.
+
+901
+01:00:51,034 --> 01:00:55,696
+Scott: so that the main thing though is like when you don't have hair at all Right, you're at least.
+
+902
+01:00:55,716 --> 01:01:03,689
+Scott: when you have this few little hair on your head You enter a whole new world of benefits and consequences not all of which were obvious at the beginning.
+
+903
+01:01:03,769 --> 01:01:18,209
+Scott: so Benefit number one don't got to spend money at the barber, you know much money I've saved not time at the razor money anymore, right every time I went to the barber I was spending even if it was a cheap barber 15 bucks plus tip 20 bucks plus something like that cheap cheap barber.
+
+904
+01:01:18,851 --> 01:01:19,613
+Scott: Now I'm paying zero.
+
+905
+01:01:20,376 --> 01:01:25,518
+Scott: I bought the Clippers once the end I Don't have to buy anything else.
+
+906
+01:01:25,538 --> 01:01:28,214
+Scott: I mean I bought all this stuff like Lubricants and whatever.
+
+907
+01:01:28,234 --> 01:01:32,050
+Scott: I have a spray can of like this spray cool, whatever.
+
+908
+01:01:32,090 --> 01:01:35,485
+Scott: No, it's like you spray it on the clipper before you use it, you know barber does that too?
+
+909
+01:01:36,188 --> 01:01:36,550
+Scott: that one?
+
+910
+01:01:36,650 --> 01:01:37,515
+Scott: Can is not empty.
+
+911
+01:01:37,816 --> 01:01:39,062
+Scott: I've had it for how many years.
+
+912
+01:01:39,082 --> 01:01:40,590
+Scott: I don't even know how many it's still going.
+
+913
+01:01:42,171 --> 01:01:44,140
+Scott: I have a tube of like blade oil in a bottle.
+
+914
+01:01:44,200 --> 01:01:45,325
+Scott: It's a bottle of blade oil.
+
+915
+01:01:45,787 --> 01:01:46,450
+Scott: It's never run out.
+
+916
+01:01:46,571 --> 01:01:47,768
+Scott: It's still very very full.
+
+917
+01:01:48,711 --> 01:01:49,495
+Scott: You know, it's like it's.
+
+918
+01:01:49,555 --> 01:01:51,625
+Scott: I don't think it's gonna run out maybe ever.
+
+919
+01:01:51,645 --> 01:01:52,590
+Scott: who knows?
+
+920
+01:01:54,417 --> 01:02:01,869
+Scott: You know just stuff like that, right The worst thing that's happened is one times I dropped the clipper and I broke the blade and had to buy a new one For 20 bucks.
+
+921
+01:02:02,351 --> 01:02:06,847
+Scott: So with the cost of a single haircut if I happen to drop the Clippers and break the blade.
+
+922
+01:02:06,907 --> 01:02:13,472
+Rym: a major con I've noticed for you though is You get cold way easy.
+
+923
+01:02:13,854 --> 01:02:21,189
+Scott: the two major cons of having no hair, so Having no hair Temperature wise is a pro and a con.
+
+924
+01:02:21,631 --> 01:02:26,624
+Scott: The pro is like biking in the summer and a cool breeze comes through and there's.
+
+925
+01:02:26,765 --> 01:02:27,146
+Scott: it doesn't.
+
+926
+01:02:27,206 --> 01:02:29,223
+Scott: it's not even cool breeze through your hair it's just.
+
+927
+01:02:31,031 --> 01:02:35,610
+Scott: That's a lot of the reason how come I can stand the heat and bike when it's like 90 degrees out.
+
+928
+01:02:35,931 --> 01:02:41,009
+Rym: I gotta like tie my hair up into a bun to keep it like off the back of my neck while I'm biking in the heat.
+
+929
+01:02:42,085 --> 01:02:44,899
+Scott: Yep Yeah, that's but of course.
+
+930
+01:02:44,999 --> 01:02:47,390
+Scott: Yeah, I'm very very cold all the time.
+
+931
+01:02:47,530 --> 01:02:49,215
+Scott: I gotta like bundle up in the winter.
+
+932
+01:02:49,335 --> 01:02:52,623
+Scott: blankets coats hats hats are huge.
+
+933
+01:02:52,724 --> 01:02:55,210
+Scott: Very important to have the hats going on, right?
+
+934
+01:02:56,350 --> 01:03:00,529
+Scott: But the other con besides being way cold is sunburn on the head.
+
+935
+01:03:02,931 --> 01:03:15,410
+Scott: Despite you know learning having learned that lesson more than once I Listen is bike helmet does not stop all Sun from getting through.
+
+936
+01:03:16,333 --> 01:03:16,915
+Scott: It does not.
+
+937
+01:03:17,437 --> 01:03:20,850
+Rym: even I cuz I've got that thin spot in the back where my ponytail pulls down.
+
+938
+01:03:21,312 --> 01:03:24,250
+Rym: I've gotten a sunburn there from my bike helmet.
+
+939
+01:03:24,290 --> 01:03:29,348
+Rym: There was like this two squares of sunburn under the hair because of those holes in the bike helmet.
+
+940
+01:03:30,234 --> 01:03:31,970
+Scott: Yeah, so the benefits are you know?
+
+941
+01:03:32,150 --> 01:03:37,929
+Scott: The money saving the cold when you want to be cold because cold when you don't want to be cold is a con, right?
+
+942
+01:03:39,511 --> 01:03:42,969
+Scott: In lack of maintenance you don't have to like do any hair shit.
+
+943
+01:03:44,532 --> 01:03:45,840
+Scott: You know like you don't like.
+
+944
+01:03:46,383 --> 01:03:54,849
+Scott: if I mean I do Put some like Celsius and blue on the sides mostly But it's mostly to keep fungus off my back more than it is to not a dandruff or anything on my head.
+
+945
+01:03:56,651 --> 01:04:00,424
+Scott: I do have an oily scalp, which isn't really a problem actually.
+
+946
+01:04:00,505 --> 01:04:01,970
+Scott: It's not like actually a bad thing.
+
+947
+01:04:02,915 --> 01:04:05,189
+Scott: In fact oil just protects your skin.
+
+948
+01:04:05,411 --> 01:04:10,029
+Scott: It's kind of good, but it can also be kind of gross just a bunch of sebum all over the place.
+
+949
+01:04:11,371 --> 01:04:26,330
+Scott: So if you want to you can like you know use like skin facial skincare products on your head like moisturizers Cleansers to sort of you know because your scalp is now skin and not hair rather than shampooing skin, which is kind of right.
+
+950
+01:04:28,012 --> 01:04:31,630
+Scott: But you still the side of your head, I guess even though I you know it still has hair there right.
+
+951
+01:04:31,711 --> 01:04:32,743
+Scott: So I wouldn't do it on the side.
+
+952
+01:04:34,774 --> 01:04:36,250
+Scott: So I guess that's kind of a con.
+
+953
+01:04:37,111 --> 01:04:38,417
+Scott: But yeah, it's just like you know.
+
+954
+01:04:38,458 --> 01:04:41,170
+Scott: life becomes comfortable and easy in a lot of ways.
+
+955
+01:04:41,170 --> 01:04:44,124
+Scott: You don't got to worry about hair, but no bad hair days.
+
+956
+01:04:44,184 --> 01:04:45,330
+Scott: No hair getting caught and stuff.
+
+957
+01:04:45,391 --> 01:04:49,040
+Scott: No one can pull on your hair in a fight I always thought about like.
+
+958
+01:04:49,060 --> 01:04:50,870
+Rym: I wouldn't mind trying a bunch of short hair styles.
+
+959
+01:04:50,950 --> 01:04:54,493
+Rym: The only reason I don't is that if I want to go back It's not.
+
+960
+01:04:54,594 --> 01:04:56,370
+Rym: I can go from long to short really fast.
+
+961
+01:04:56,852 --> 01:04:59,121
+Rym: I can't go from short to long really easily.
+
+962
+01:04:59,182 --> 01:05:01,090
+Rym: and the worst part is if you've never grown your hair out.
+
+963
+01:05:01,732 --> 01:05:07,350
+Rym: There's a period where it starts to get long and it looks extra stupid and it's a giant pain in the ass.
+
+964
+01:05:07,712 --> 01:05:10,128
+Rym: But it's not long enough to tie back reliably.
+
+965
+01:05:10,148 --> 01:05:22,479
+Rym: yet You have to go through this really long awkward period before it's long enough again Especially in light of the beard hair nonsense in the back when you're first trying to tie it back.
+
+966
+01:05:23,961 --> 01:05:39,797
+Scott: Yeah, so I would recommend to people you know if you just you know If you have hair Right that's growing well Then you should do what you feel like doing with it and then act accordingly right?
+
+967
+01:05:39,838 --> 01:05:40,720
+Scott: How do you want to look?
+
+968
+01:05:40,900 --> 01:05:41,940
+Scott: What is your personal image?
+
+969
+01:05:42,300 --> 01:05:47,077
+Scott: Whatever that is make your hair be that way and do what you got to do to make it be that way.
+
+970
+01:05:47,197 --> 01:05:48,621
+Scott: high maintenance low Maintenance.
+
+971
+01:05:48,762 --> 01:05:58,050
+Scott: you know whatever right, but the way you want to look doesn't doesn't match up with your money and your Maintenance effort you're willing to put in.
+
+972
+01:05:58,512 --> 01:06:10,359
+Rym: then you're gonna have to make some tough choices but also learn the deal with your personal hair and You might find that your hair is a way to where the thing you're trying to do is not feasible or damages your hair.
+
+973
+01:06:11,442 --> 01:06:15,115
+Rym: Mm-hmm like it's very much easier to lean into what your hair wants to do.
+
+974
+01:06:15,136 --> 01:06:19,920
+Rym: is my advice Exactly if you're willing to go for it like go nuts.
+
+975
+01:06:20,000 --> 01:06:30,379
+Rym: I know people who do like crazy radical hair like really strong dye jobs and weird nonsense and like that's awesome But like a mohawk is a gigantic pain in the ass.
+
+976
+01:06:31,482 --> 01:06:32,789
+Scott: Yep, like people.
+
+977
+01:06:32,850 --> 01:06:34,560
+Scott: I know that have had like mohawks.
+
+978
+01:06:34,801 --> 01:06:40,478
+Scott: It's like they only make it straight stand-up kick-ass punk rock on the special occasions.
+
+979
+01:06:40,518 --> 01:06:46,020
+Scott: most of the time It just they're just shaving the sides of their head and not the middle and it just sort of flops to the side.
+
+980
+01:06:46,140 --> 01:06:46,923
+Scott: It's just hair.
+
+981
+01:06:47,305 --> 01:06:55,898
+Scott: Yeah, and that they only put on all the mohawk effort when it's you know Time to go out for a reason to be awesome Convention, you know, whatever.
+
+982
+01:06:57,301 --> 01:07:11,172
+Scott: But yeah, if you have hair that is trying to run away from you and you're running out of hair You could if you wanted to try those, you know, don't be ashamed to try, you know, one of those Rogain's Propecia Yeah, whatever that's true.
+
+983
+01:07:11,212 --> 01:07:11,596
+Scott: That's cool.
+
+984
+01:07:12,941 --> 01:07:15,068
+Scott: They have side effects, but they will work.
+
+985
+01:07:15,309 --> 01:07:18,420
+Scott: they they legitimately work for some people to some degree.
+
+986
+01:07:20,122 --> 01:07:22,833
+Scott: I was just the main reason I never even bothered to try.
+
+987
+01:07:22,853 --> 01:07:24,500
+Scott: I was like that one cost money.
+
+988
+01:07:25,721 --> 01:07:28,334
+Scott: Yeah, I was like how long am I gonna be buying that for?
+
+989
+01:07:28,434 --> 01:07:29,560
+Scott: and it's also more maintenance.
+
+990
+01:07:30,061 --> 01:07:30,944
+Scott: Right where I was going.
+
+991
+01:07:30,964 --> 01:07:32,689
+Scott: the less money less maintenance, right?
+
+992
+01:07:32,709 --> 01:07:33,150
+Rym: Oh, you know what?
+
+993
+01:07:33,190 --> 01:07:34,193
+Rym: I actually just looked up.
+
+994
+01:07:34,273 --> 01:07:39,050
+Rym: apparently Rogain works on traction Alopecia, which is what I got going from my ponytail.
+
+995
+01:07:39,090 --> 01:07:40,656
+Scott: No, I did not know that.
+
+996
+01:07:40,676 --> 01:07:42,422
+Scott: try it See what happens.
+
+997
+01:07:42,543 --> 01:07:48,520
+Rym: It doesn't have the same side effects because male pattern baldness is caused by like baldness is a whole field.
+
+998
+01:07:48,540 --> 01:07:49,764
+Rym: There's like a lot of different causes.
+
+999
+01:07:49,824 --> 01:07:51,129
+Rym: testosterone is tied to it.
+
+1000
+01:07:51,530 --> 01:07:53,196
+Rym: Tying it back is tied to it hair.
+
+1001
+01:07:53,236 --> 01:07:54,360
+Rym: Trauma is tied to it.
+
+1002
+01:07:54,400 --> 01:07:55,884
+Rym: There's all complicated.
+
+1003
+01:07:56,044 --> 01:07:56,285
+Rym: Yep.
+
+1004
+01:07:56,787 --> 01:08:00,817
+Rym: They're they're wearing hats too tight over long periods of time can cause certain kinds of baldness.
+
+1005
+01:08:01,499 --> 01:08:08,948
+Scott: Yep If you want to dye your hair either because you just want to have awesome colors or because your hair is going gray Go for it.
+
+1006
+01:08:09,008 --> 01:08:13,128
+Scott: Just keep in mind that money Maintenance effort thing going up.
+
+1007
+01:08:13,268 --> 01:08:21,337
+Rym: or if you have very dark hair and you want to dye it strong colors You're gonna have to lighten it first, which will damage it and make it more fragile and then you run into situations.
+
+1008
+01:08:22,118 --> 01:08:27,880
+Scott: Yep But if you are running out of hair and you don't want to try to bring it back, right?
+
+1009
+01:08:28,801 --> 01:08:34,220
+Scott: I highly suggest don't try to do some, you know, just go for it, right?
+
+1010
+01:08:34,460 --> 01:08:36,548
+Scott: It's like yeah, just shave it all off.
+
+1011
+01:08:36,648 --> 01:08:39,738
+Scott: It was so easy and life has been easy since then.
+
+1012
+01:08:40,180 --> 01:08:45,380
+Scott: In fact, the biggest hassle now is like, you know, it's like oh my hair is getting a little long.
+
+1013
+01:08:46,502 --> 01:08:47,566
+Scott: I don't really want it's like.
+
+1014
+01:08:47,645 --> 01:08:50,859
+Scott: it takes like, you know 20 minutes or so to shave my head.
+
+1015
+01:08:50,920 --> 01:08:51,344
+Scott: It's like I don't.
+
+1016
+01:08:51,404 --> 01:08:51,667
+Scott: it's like.
+
+1017
+01:08:52,152 --> 01:08:52,959
+Scott: do I want to do that?
+
+1018
+01:08:53,040 --> 01:08:55,772
+Scott: It's almost like a chore like cleaning the dishes like I don't want to.
+
+1019
+01:08:56,435 --> 01:08:57,560
+Rym: oh, I'll just googling.
+
+1020
+01:08:57,680 --> 01:09:03,800
+Rym: I found some medical sites that say Rogaine works for traction alopecia and other sites that say it does not work for traction alopecia.
+
+1021
+01:09:03,880 --> 01:09:07,173
+Scott: So yeah, I think you just got a. it's all it's over-the-counter.
+
+1022
+01:09:07,233 --> 01:09:13,658
+Rym: So by I remember when it's And every ad on TV was Rogaine with Minoxidil.
+
+1023
+01:09:14,520 --> 01:09:20,359
+Scott: It's like just try it and see, you know, I'm not gonna I can't speak, you know to any experience with it.
+
+1024
+01:09:20,439 --> 01:09:21,727
+Rym: It's just like I will say I know.
+
+1025
+01:09:21,767 --> 01:09:24,479
+Scott: so if you really want hair and you don't have it, you know.
+
+1026
+01:09:25,902 --> 01:09:32,238
+Rym: One thing I can say that I do know a little bit about this because I do know someone who tried one of the other options To grow hair back or to not lose hair.
+
+1027
+01:09:32,801 --> 01:09:46,219
+Rym: the difference is things like Rogaine act on the scalp because a lot of people who have male pattern baldness that it's testosterone scalp interactions that cause the baldness meaning the treatments mess with your hormones.
+
+1028
+01:09:47,981 --> 01:09:51,639
+Rym: so Rogaine just does like blood stuff in the scalp and doesn't have like isn't?
+
+1029
+01:09:51,759 --> 01:10:02,034
+Rym: as It doesn't have as many of these side effects, but the person I knew who took Propecia had Significance sexual side effects and chose not continue.
+
+1030
+01:10:02,355 --> 01:10:03,500
+Rym: That is very common.
+
+1031
+01:10:03,620 --> 01:10:06,492
+Rym: So if you're gonna do something, why couldn't it?
+
+1032
+01:10:06,512 --> 01:10:07,315
+Scott: You know, it could.
+
+1033
+01:10:07,335 --> 01:10:08,299
+Scott: why couldn't it have been a?
+
+1034
+01:10:09,221 --> 01:10:10,726
+Scott: Why are human bodies made that way?
+
+1035
+01:10:10,786 --> 01:10:15,080
+Scott: Yeah, couldn't it have been such that it caused positive sexual side effects.
+
+1036
+01:10:15,080 --> 01:10:16,218
+Scott: It's always negative ones.
+
+1037
+01:10:16,340 --> 01:10:23,713
+Scott: Well, you can get a two-for-one Viagra Propecia same thing but you realize grow your hair and grow your junk say.
+
+1038
+01:10:23,753 --> 01:10:37,718
+Rym: probably the only thing that pharmaceuticals are trying to find more than cures and treatments and vaccines for kovat is trying to find something that is both a sexual enhancer and Causes head hair to grow.
+
+1039
+01:10:38,682 --> 01:10:40,500
+Scott: Magic Scott Rubins magic elixir.
+
+1040
+01:10:41,323 --> 01:10:42,333
+Scott: It'll do both of those things.
+
+1041
+01:10:44,025 --> 01:10:52,109
+Scott: Buy some today send $100,000 to me and I will send you one ounce in a tiny bottle Bloom County called based.
+
+1042
+01:10:52,149 --> 01:10:54,359
+Rym: they want you to pay them for stealing their idea.
+
+1043
+01:10:59,882 --> 01:11:02,149
+Rym: This has been GeekNights with Rym and Scott.
+
+1044
+01:11:02,189 --> 01:11:06,080
+Rym: special thanks to DJ pretzel for the opening music cat leave for web design and brand.
+
+1045
+01:11:06,160 --> 01:11:12,560
+Scott: Okay for the logos be sure to visit our website at frontrowcrew.com for show notes discussion news and more.
+
+1046
+01:11:12,840 --> 01:11:19,860
+Rym: Remember GeekNights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+1047
+01:11:20,600 --> 01:11:23,776
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+1048
+01:11:25,022 --> 01:11:28,100
+Scott: GeekNights is recorded live with no studio and no audience.
+
+1049
+01:11:28,301 --> 01:11:31,229
+Scott: But unlike those other late shows it's actually recorded at night.
+
+1050
+01:11:31,891 --> 01:11:37,005
+Rym: and the patreon patrons for this episode of GeekNights Are Alan Joyce Heidi McNichol Marty green?
+
+1051
+01:11:37,025 --> 01:11:39,412
+Rym: Yeah, link eg Graham Finch.
+
+1052
+01:11:39,673 --> 01:11:57,900
+Rym: You hold the key to my heart To sit on my throne as the Prince of Bel-Air Clinton Walton Frank from New Zealand Ryan Perrin Chris mink if dread Lily Tenebrae just like a dude guy Chris Reimer Finn Shervin von Horl and a whole bunch of people who do not want me to say their names.
+
+1053
+01:11:58,401 --> 01:12:02,897
+Rym: Stay safe out there and now on this fine Thursday as it starts to get cold.
+
+1054
+01:12:02,917 --> 01:12:05,113
+Rym: I leave you with.
+
+1055
+01:12:06,041 --> 01:12:06,585
+Rym: I'll give it a shot.
+
+1056
+01:12:06,605 --> 01:12:07,835
+Rym: I haven't done in a while here.
+
+1057
+01:12:07,936 --> 01:12:10,380
+Rym: So let's see I'm pretty because I'm a situation you didn't know what you're telling you.
+
+1058
+01:12:10,380 --> 01:12:11,932
+Scott: What I'd worth the kind of is just to indicate about the pool table.
+
+1059
+01:12:11,952 --> 01:12:13,648
+Scott: your community will get some of my friends right here So I'd worry to reverse it.
+
+1060
+01:12:13,669 --> 01:12:15,990
+Scott: You were sure my food place or not But it might be pretty same was my first day next to the artist.
+
+1061
+01:12:16,010 --> 01:12:16,514
+Rym: No, I can't go.
+
+1062
+01:12:16,534 --> 01:12:17,684
+Rym: look at a person's at cool it and kinai.
+
+1063
+01:12:18,920 --> 01:12:21,399
+Rym: So it's a little fast to understand but when they slow it down.
+

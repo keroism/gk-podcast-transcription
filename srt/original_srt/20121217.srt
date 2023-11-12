@@ -1,0 +1,3424 @@
+﻿1
+00:00:09,180 --> 00:00:15,534
+Speaker 1: It's Monday, December 17th, 2012.
+
+2
+00:00:15,534 --> 00:00:16,195
+Speaker 1: I'm Rym.
+
+3
+00:00:16,596 --> 00:00:17,117
+Speaker 0: I'm Sky.
+
+4
+00:00:17,157 --> 00:00:18,279
+Speaker 1: And this is Geek Nights.
+
+5
+00:00:18,319 --> 00:00:22,931
+Speaker 1: Tonight we're talking about internet governance, which is not as boring as it should be.
+
+6
+00:00:22,951 --> 00:00:28,244
+Speaker 0: That sums up the whole goddamn thing right there, isn't it?
+
+7
+00:00:31,051 --> 00:00:35,180
+Speaker 0: I have not heard that summed up more eloquently.
+
+8
+00:00:37,820 --> 00:00:38,863
+Speaker 0: Let's do this.
+
+9
+00:00:39,886 --> 00:00:44,924
+Speaker 1: So it's been a long time since my job was to go into data centers and fuck with physical things.
+
+10
+00:00:45,004 --> 00:00:46,070
+Speaker 0: Did you go to a data center?
+
+11
+00:00:46,091 --> 00:00:46,634
+Speaker 0: No, no, no.
+
+12
+00:00:46,654 --> 00:00:48,001
+Speaker 0: You went into your closet in your office?
+
+13
+00:00:48,182 --> 00:00:57,814
+Speaker 1: So in every company, even if you have data centers with all your stuff hosted in cloud and whatever, you usually have a few servers in your local office.
+
+14
+00:00:57,854 --> 00:01:03,479
+Speaker 0: Well, I mean, if you're a big enough company to have an office and everyone has a computer- You at least have a switch.
+
+15
+00:01:03,841 --> 00:01:09,062
+Speaker 0: You at least have a big ass switch and you have a closet where Verizon runs in the tea, whatever you got.
+
+16
+00:01:09,082 --> 00:01:09,142
+Speaker 0: Yep.
+
+17
+00:01:09,384 --> 00:01:12,336
+Speaker 1: And then you probably have like- So that's already two boxes.
+
+18
+00:01:12,356 --> 00:01:19,335
+Speaker 1: You probably have like a caching server for like private shares or DNS or whatever.
+
+19
+00:01:19,355 --> 00:01:23,127
+Speaker 1: So you're going to have at least three or four servers in your local place.
+
+20
+00:01:23,147 --> 00:01:25,055
+Speaker 0: You probably want a UPS in there too.
+
+21
+00:01:25,416 --> 00:01:31,659
+Speaker 1: Now in New York City, unless you're in a nice building, usually buildings do not have really places for that.
+
+22
+00:01:31,679 --> 00:01:33,684
+Speaker 0: No, it's an old building.
+
+23
+00:01:33,784 --> 00:01:35,309
+Speaker 0: There's just a closet in your office.
+
+24
+00:01:35,350 --> 00:01:36,433
+Speaker 0: that was a closet.
+
+25
+00:01:36,453 --> 00:01:42,440
+Speaker 1: Other companies I've worked at, we at least had the blessing of the building, but our building kind of sucks.
+
+26
+00:01:43,500 --> 00:01:45,006
+Speaker 1: And I hate where our building is.
+
+27
+00:01:45,026 --> 00:01:50,448
+Speaker 1: But anyway, there's a closet and it was set up long before I got to the company and I kind of ignored it.
+
+28
+00:01:50,508 --> 00:01:51,914
+Speaker 1: I'm not the system administrator.
+
+29
+00:01:52,095 --> 00:01:53,942
+Speaker 1: I do different things.
+
+30
+00:01:54,243 --> 00:01:55,327
+Speaker 1: So I just let it be.
+
+31
+00:01:55,347 --> 00:01:56,109
+Speaker 1: I ignore it.
+
+32
+00:01:56,270 --> 00:01:57,152
+Speaker 0: Until it stopped working.
+
+33
+00:01:57,493 --> 00:02:01,892
+Speaker 1: So yeah, I had to deal with it because I came in one day and I'm like, "The fuck is that burning
+
+34
+00:02:01,952 --> 00:02:02,194
+Speaker 1: smell?".
+
+35
+00:02:02,234 --> 00:02:06,620
+Speaker 1: And I go in and the outlet that connects one of the air conditioning units in there is on fire.
+
+36
+00:02:07,121 --> 00:02:07,886
+Speaker 0: Literally a fire?
+
+37
+00:02:07,906 --> 00:02:09,940
+Speaker 0: Did you need a fire extinguisher?
+
+38
+00:02:10,220 --> 00:02:14,699
+Speaker 1: It was smoking and the fire had apparently happened and then gone out and ruined it.
+
+39
+00:02:15,360 --> 00:02:18,960
+Speaker 1: So I unplugged the thing with like a piece of metal, like knock it out of the wall.
+
+40
+00:02:19,140 --> 00:02:20,125
+Speaker 0: Well, you're an expert at that.
+
+41
+00:02:20,426 --> 00:02:22,254
+Speaker 0: Yeah.
+
+42
+00:02:22,475 --> 00:02:26,009
+Speaker 1: Someone can find the relevant geek nights episode about that.
+
+43
+00:02:26,470 --> 00:02:27,133
+Speaker 1: And then I'm like, "Oh
+
+44
+00:02:27,193 --> 00:02:27,494
+Speaker 1: fuck.".
+
+45
+00:02:27,534 --> 00:02:30,465
+Speaker 1: So we get the new air conditioning unit to stick in the room.
+
+46
+00:02:30,505 --> 00:02:30,987
+Speaker 1: There were two.
+
+47
+00:02:31,068 --> 00:02:37,080
+Speaker 1: And in the course of this, I kind of look around the room and I realized that whoever set it up had no idea what they were doing.
+
+48
+00:02:38,480 --> 00:02:38,621
+Speaker 0: Yeah.
+
+49
+00:02:38,821 --> 00:02:40,388
+Speaker 0: Usually that's the way it goes.
+
+50
+00:02:40,529 --> 00:02:42,718
+Speaker 1: Now I know HVAC okay as in.
+
+51
+00:02:42,758 --> 00:02:45,591
+Speaker 1: I know like the high level stuff, but I don't know the exact details.
+
+52
+00:02:45,631 --> 00:02:49,849
+Speaker 1: Like what pressure differential, all that kind of like low level stuff.
+
+53
+00:02:50,432 --> 00:02:53,224
+Speaker 1: So I look at the room and I'm like, "Something's not right
+
+54
+00:02:53,285 --> 00:02:53,485
+Speaker 1: here.".
+
+55
+00:02:53,927 --> 00:02:55,957
+Speaker 1: So I do a little Google in to confirm my suspicions.
+
+56
+00:02:56,399 --> 00:03:00,700
+Speaker 1: And sure enough, it's those standalone units, like what our friend Alex had in his apartment, right?
+
+57
+00:03:01,041 --> 00:03:03,660
+Speaker 1: What you use to air condition a room that's basically sealed.
+
+58
+00:03:03,820 --> 00:03:05,649
+Speaker 0: Did the hose not go outside the building?
+
+59
+00:03:05,769 --> 00:03:07,056
+Speaker 1: So there are two kinds.
+
+60
+00:03:07,076 --> 00:03:09,226
+Speaker 1: Well, no, and it still doesn't, but that's not.
+
+61
+00:03:09,969 --> 00:03:11,295
+Speaker 1: So there's two different kinds of those.
+
+62
+00:03:11,576 --> 00:03:16,774
+Speaker 1: There's kinds that basically intake air from the room and then exhaust hot air out.
+
+63
+00:03:17,376 --> 00:03:18,740
+Speaker 1: They cause negative pressure.
+
+64
+00:03:19,601 --> 00:03:20,546
+Speaker 1: They're basically terrible.
+
+65
+00:03:20,566 --> 00:03:23,100
+Speaker 1: You should never use a unit like that unless you really know why.
+
+66
+00:03:23,280 --> 00:03:28,953
+Speaker 0: You want the kind that takes air in from the outside, cools it and blows it into the room.
+
+67
+00:03:29,034 --> 00:03:30,120
+Speaker 1: No, you don't want that either.
+
+68
+00:03:31,484 --> 00:03:35,480
+Speaker 0: All the heat from the cooling machine, the compressor goes outside the building.
+
+69
+00:03:35,520 --> 00:03:36,352
+Speaker 1: You don't want that either.
+
+70
+00:03:36,372 --> 00:03:36,413
+Speaker 1: No?
+
+71
+00:03:37,320 --> 00:03:37,360
+Speaker 1: No.
+
+72
+00:03:37,381 --> 00:03:39,280
+Speaker 0: Isn't that how a regular-ass air conditioner works?
+
+73
+00:03:39,360 --> 00:03:40,605
+Speaker 0: No.
+
+74
+00:03:40,745 --> 00:03:40,986
+Speaker 0: Wow.
+
+75
+00:03:41,027 --> 00:03:41,749
+Speaker 1: I guess a lot of people.
+
+76
+00:03:42,031 --> 00:03:44,099
+Speaker 0: So a regular-ass air conditioner, right?
+
+77
+00:03:44,700 --> 00:03:45,800
+Speaker 0: There's a compressor, just like your refrigerator.
+
+78
+00:03:46,001 --> 00:03:49,641
+Speaker 1: Scott, the one that you put in your window when we lived in the geek house in Beacon, right?
+
+79
+00:03:49,781 --> 00:03:50,464
+Speaker 1: Same one I had.
+
+80
+00:03:51,027 --> 00:04:01,159
+Speaker 1: The way it worked is it took air from in your room, circled it over a compressor, sorry, a condenser, and then circulated back into the room.
+
+81
+00:04:02,300 --> 00:04:03,868
+Speaker 0: But all the heat goes out the outside.
+
+82
+00:04:03,988 --> 00:04:13,038
+Speaker 1: Independently, it took air from the outside, ran it over the compressor where the hot side was, and then exhausted it back outside.
+
+83
+00:04:13,099 --> 00:04:17,031
+Speaker 1: It used the outside air to just cool down the hot end of the heat pump.
+
+84
+00:04:17,994 --> 00:04:20,664
+Speaker 1: So there's no actual air exchange with the outside.
+
+85
+00:04:20,684 --> 00:04:23,999
+Speaker 1: For a small unit like that, that would actually be really inefficient.
+
+86
+00:04:24,019 --> 00:04:24,622
+Speaker 1: Because think about it.
+
+87
+00:04:24,742 --> 00:04:30,928
+Speaker 1: Either you're sucking hot air in, way hotter than the air already in your room, cooling it, and then pumping it in.
+
+88
+00:04:30,968 --> 00:04:33,941
+Speaker 1: And if you do that, now you've got a positive pressure in your room.
+
+89
+00:04:33,961 --> 00:04:35,606
+Speaker 1: So what are you going to do?
+
+90
+00:04:35,646 --> 00:04:38,275
+Speaker 1: Pump your nicely new cold air back outside?
+
+91
+00:04:39,419 --> 00:04:40,664
+Speaker 1: Pump it into the rest of the house?
+
+92
+00:04:40,724 --> 00:04:42,071
+Speaker 0: I like it to be high pressure though.
+
+93
+00:04:42,091 --> 00:04:45,284
+Speaker 0: Especially if it can like squish me against the floor.
+
+94
+00:04:45,785 --> 00:04:47,330
+Speaker 0: Get the bends going in my room.
+
+95
+00:04:49,096 --> 00:04:51,224
+Speaker 1: So independently, so there's all these different ways to do it.
+
+96
+00:04:51,264 --> 00:04:52,470
+Speaker 0: Keep the dust out of my room too.
+
+97
+00:04:52,491 --> 00:04:59,623
+Speaker 1: Basically, one of those units that you like put in a room that has the two hoses coming out of it, one of the hoses sucks air in, one sucks out.
+
+98
+00:04:59,743 --> 00:05:04,360
+Speaker 1: It's basically as though where those two hoses go is the equivalent of outside.
+
+99
+00:05:04,880 --> 00:05:07,192
+Speaker 0: Well, usually they have one hose that goes outside.
+
+100
+00:05:07,292 --> 00:05:08,237
+Speaker 1: Usually they have two.
+
+101
+00:05:08,378 --> 00:05:17,910
+Speaker 1: The ones that only have one hose either inside of that actually have two hoses or they're a negative pressure system, which has a whole different set of requirements.
+
+102
+00:05:19,635 --> 00:05:36,576
+Speaker 1: So anyway, I knew all this already, but I did a little bit of Googling to confirm the best practices for air conditioning in a sealed room, which as I've mentioned on geek nights, if you Google for that, you find pretty much nothing but idiots trying to grow marijuana in their houses, which is kind of funny.
+
+103
+00:05:37,459 --> 00:05:47,736
+Speaker 1: But anyway, so I realized that what was going on, because the old SA left this node on the door that was basically like never closed the door to this room for any reason ever.
+
+104
+00:05:47,816 --> 00:05:48,560
+Speaker 0: Did you close the door?
+
+105
+00:05:49,040 --> 00:05:52,753
+Speaker 1: So one time an intern closed the door and the room got like a hundred degrees.
+
+106
+00:05:52,773 --> 00:05:53,275
+Speaker 1: Awesome.
+
+107
+00:05:53,797 --> 00:05:55,483
+Speaker 1: So I look, I'm like, wait a minute.
+
+108
+00:05:55,564 --> 00:05:56,890
+Speaker 1: Why is that sign there?
+
+109
+00:05:56,911 --> 00:06:01,188
+Speaker 1: Basically what they had done is they had taken two standalone air conditioners with the two hoses.
+
+110
+00:06:01,630 --> 00:06:11,160
+Speaker 1: They had taken the hot end hoses and piped them into the ceiling, which is what's above the ceiling drop ceiling in a typical office building.
+
+111
+00:06:11,260 --> 00:06:12,044
+Speaker 0: Where does that air go?
+
+112
+00:06:12,144 --> 00:06:14,657
+Speaker 0: Once the area above the drop ceiling is filled with hot air.
+
+113
+00:06:14,757 --> 00:06:15,280
+Speaker 0: Good question.
+
+114
+00:06:15,380 --> 00:06:16,184
+Speaker 1: So we'll get back to that.
+
+115
+00:06:16,204 --> 00:06:16,766
+Speaker 1: Okay.
+
+116
+00:06:17,007 --> 00:06:18,212
+Speaker 0: Is there a vent up there?
+
+117
+00:06:18,614 --> 00:06:19,618
+Speaker 1: So a good question.
+
+118
+00:06:19,638 --> 00:06:20,481
+Speaker 1: We'll get back to that.
+
+119
+00:06:20,501 --> 00:06:20,803
+Speaker 0: Okay.
+
+120
+00:06:20,983 --> 00:06:23,614
+Speaker 1: So the intakes, there were no hoses connected.
+
+121
+00:06:23,634 --> 00:06:25,561
+Speaker 1: They were drawing air from inside of the room.
+
+122
+00:06:26,204 --> 00:06:31,584
+Speaker 1: So they were sucking air from the inside of the room over the condenser to cool it and then putting it back into the room.
+
+123
+00:06:32,046 --> 00:06:39,395
+Speaker 1: They were simultaneously sucking air from the room to cool the hot end of the air conditioner and pushing it out into.
+
+124
+00:06:39,415 --> 00:06:40,720
+Speaker 1: for now dev null.
+
+125
+00:06:41,280 --> 00:06:42,764
+Speaker 1: Let's assume it's definitely no.
+
+126
+00:06:42,805 --> 00:06:43,186
+Speaker 0: Okay.
+
+127
+00:06:43,767 --> 00:06:49,067
+Speaker 1: This will cause a negative differential, which is why you had to keep the door open.
+
+128
+00:06:49,107 --> 00:06:51,180
+Speaker 1: Cause otherwise basically the room would just get stagnant.
+
+129
+00:06:51,300 --> 00:06:52,667
+Speaker 1: The air conditions wouldn't fucking work.
+
+130
+00:06:53,069 --> 00:06:53,190
+Speaker 0: No.
+
+131
+00:06:53,230 --> 00:06:54,758
+Speaker 0: So you needed air to come into the room.
+
+132
+00:06:54,859 --> 00:06:54,939
+Speaker 0: Yes.
+
+133
+00:06:55,280 --> 00:06:59,640
+Speaker 1: So, but at the same time he was sucking the cold air that he just made back out into dev null.
+
+134
+00:07:01,161 --> 00:07:04,816
+Speaker 1: So I did a little bit of investigation and a little hint.
+
+135
+00:07:04,836 --> 00:07:05,479
+Speaker 1: I'm going to move on.
+
+136
+00:07:05,519 --> 00:07:08,193
+Speaker 0: I wanted this and go to be forever, but it worked as long as the door was open.
+
+137
+00:07:08,574 --> 00:07:16,030
+Speaker 1: So I did some testing by taking a receipt because that's really light paper to figure out where the air differentials were by like holding it up to different cracks.
+
+138
+00:07:16,451 --> 00:07:18,340
+Speaker 1: And I realized the ceiling was also just fucking open.
+
+139
+00:07:18,661 --> 00:07:19,745
+Speaker 1: So I sealed the ceiling.
+
+140
+00:07:19,765 --> 00:07:26,831
+Speaker 1: I cooked both tubes of the air conditioners from both units into the ceiling, which theoretically would be pressure neutral.
+
+141
+00:07:27,854 --> 00:07:29,400
+Speaker 1: And then I closed the fucking door.
+
+142
+00:07:29,681 --> 00:07:31,389
+Speaker 1: So theoretically the room would be pressure neutral.
+
+143
+00:07:31,751 --> 00:07:44,740
+Speaker 1: The end result, the room is slightly pressure negative due to what appears to be a negative differential on the currently inactive air conditioning for the building that actually vents into the top of the room, which I'm not going to seal because that could cause chaos.
+
+144
+00:07:46,381 --> 00:07:50,134
+Speaker 1: And there is a return for the air conditioners active in the ceiling.
+
+145
+00:07:50,596 --> 00:07:59,309
+Speaker 1: And as far as I can tell, I have not significantly elevated the temperature in the ceiling by more than like five degrees and the air is going fucking somewhere.
+
+146
+00:08:00,092 --> 00:08:02,017
+Speaker 0: is the, uh, is the room nice and chilly.
+
+147
+00:08:02,178 --> 00:08:06,596
+Speaker 1: So now the room is nice and chilly and our air conditioners are not running 24 seven inefficiently.
+
+148
+00:08:06,616 --> 00:08:10,553
+Speaker 1: I've probably saved someone a ridiculous amount of money on their electric bill.
+
+149
+00:08:10,573 --> 00:08:12,140
+Speaker 0: What about fixing the fire?
+
+150
+00:08:13,122 --> 00:08:19,190
+Speaker 1: I just took the unit that was on fire and threw it away and replaced it with the new unit that now won't catch fire because it's not a new one on Amazon.
+
+151
+00:08:19,251 --> 00:08:21,239
+Speaker 1: It's not running horribly inefficiently.
+
+152
+00:08:22,042 --> 00:08:22,323
+Speaker 0: Okay.
+
+153
+00:08:23,065 --> 00:08:24,249
+Speaker 0: So that is my odyssey.
+
+154
+00:08:24,570 --> 00:08:24,952
+Speaker 1: I did it.
+
+155
+00:08:25,012 --> 00:08:28,584
+Speaker 1: I did the kind of thing that I used to do as a job, maybe 10 years ago.
+
+156
+00:08:28,604 --> 00:08:29,407
+Speaker 0: All right.
+
+157
+00:08:29,568 --> 00:08:31,033
+Speaker 0: I have a, I have a small tidbit here.
+
+158
+00:08:31,053 --> 00:08:36,592
+Speaker 0: So you notice I'm wearing not jeans and a t-shirt because you're wearing khaki.
+
+159
+00:08:36,613 --> 00:08:37,355
+Speaker 1: What the fuck?
+
+160
+00:08:37,416 --> 00:08:37,777
+Speaker 1: Yeah.
+
+161
+00:08:37,817 --> 00:08:40,707
+Speaker 1: The, uh, well you have your khaki killed, I guess.
+
+162
+00:08:40,967 --> 00:08:44,520
+Speaker 0: So work, we were going to eat at a fancy restaurant for free.
+
+163
+00:08:44,540 --> 00:08:48,860
+Speaker 0: So I'm not going to complain, but the restaurant had a sign that said, please dress appropriately.
+
+164
+00:08:48,960 --> 00:08:51,229
+Speaker 1: You know, I'll just say this.
+
+165
+00:08:51,791 --> 00:08:59,717
+Speaker 1: I have never been turned away from a restaurant for inappropriate attire, even though I have often been dressed directly against their posted rules.
+
+166
+00:08:59,858 --> 00:09:04,037
+Speaker 0: This place is pretty crazy because we had a reservation for noon, which is when they opened.
+
+167
+00:09:04,318 --> 00:09:05,302
+Speaker 0: We got there like 1150.
+
+168
+00:09:05,302 --> 00:09:09,136
+Speaker 0: The door wasn't even open, but there are people waiting.
+
+169
+00:09:09,156 --> 00:09:12,369
+Speaker 0: And then when the doors finally opened, it was like a lot of mob.
+
+170
+00:09:12,489 --> 00:09:15,060
+Speaker 0: And then by the time we were done eating, the place is jam packed.
+
+171
+00:09:15,921 --> 00:09:22,369
+Speaker 0: The other people at my table, my coworkers saw a famous person I never heard of and were like, Ooh, do you remember the guy's name?
+
+172
+00:09:22,389 --> 00:09:23,616
+Speaker 0: It was some, it was some lady.
+
+173
+00:09:23,636 --> 00:09:24,822
+Speaker 1: Do you remember the girl's name?
+
+174
+00:09:24,962 --> 00:09:26,147
+Speaker 0: No, no idea whatsoever.
+
+175
+00:09:26,167 --> 00:09:26,308
+Speaker 0: Okay.
+
+176
+00:09:26,348 --> 00:09:26,970
+Speaker 1: I'm just curious.
+
+177
+00:09:27,914 --> 00:09:29,320
+Speaker 0: A not important famous person.
+
+178
+00:09:30,101 --> 00:09:36,770
+Speaker 0: But whatever the, uh, the important thing that I want to discuss here is that on the menu, I was looking at the non alcoholic beverages.
+
+179
+00:09:36,810 --> 00:09:43,695
+Speaker 0: The, in fact, the waiters specifically mentioned in the giant book of beverages that there were non alcoholic beverages.
+
+180
+00:09:44,277 --> 00:09:45,220
+Speaker 0: So besides water.
+
+181
+00:09:45,960 --> 00:09:56,567
+Speaker 0: So I took a look and I went going down the list and it's like, Oh, you know, water, some kind of, you know, it's funny because we were just at that fancy Russian restaurant last night and they had the odd juices.
+
+182
+00:09:56,848 --> 00:09:57,149
+Speaker 0: Yeah.
+
+183
+00:09:57,310 --> 00:09:58,777
+Speaker 0: Well that was cucumber juice I had there.
+
+184
+00:09:58,978 --> 00:10:00,728
+Speaker 1: Well they had the other juices too, but they were out of them.
+
+185
+00:10:00,768 --> 00:10:00,989
+Speaker 1: Yeah.
+
+186
+00:10:01,331 --> 00:10:04,808
+Speaker 0: But going down the list, it was like, you know, fancy, weird water.
+
+187
+00:10:05,130 --> 00:10:05,853
+Speaker 0: They had, what's that?
+
+188
+00:10:05,993 --> 00:10:08,826
+Speaker 0: The, the water that was at the Italian restaurants and Pellegrino.
+
+189
+00:10:08,906 --> 00:10:09,027
+Speaker 1: Yeah.
+
+190
+00:10:09,047 --> 00:10:10,896
+Speaker 0: They had San Pellegrino mixed with shit.
+
+191
+00:10:11,197 --> 00:10:13,790
+Speaker 1: And they had, uh, it's just fucking seltzer mineral water.
+
+192
+00:10:13,830 --> 00:10:14,594
+Speaker 1: It's not special.
+
+193
+00:10:14,714 --> 00:10:15,016
+Speaker 1: Right.
+
+194
+00:10:15,096 --> 00:10:21,287
+Speaker 0: And then they had, you know, all those things that you always mix with alcohol that aren't alcohol mixed together, like bitters and something else.
+
+195
+00:10:22,090 --> 00:10:22,351
+Speaker 0: Yeah.
+
+196
+00:10:22,592 --> 00:10:27,032
+Speaker 1: But then I get down to the bottom and it says you could, actually, yeah, I could make you a non alcoholic beverage.
+
+197
+00:10:27,133 --> 00:10:28,742
+Speaker 0: I don't really want to drink any of that nasty.
+
+198
+00:10:28,762 --> 00:10:29,264
+Speaker 0: It's awesome.
+
+199
+00:10:29,284 --> 00:10:30,188
+Speaker 1: Bitters is not bitter.
+
+200
+00:10:30,228 --> 00:10:31,352
+Speaker 1: It's delicious.
+
+201
+00:10:31,413 --> 00:10:31,794
+Speaker 0: Whatever.
+
+202
+00:10:31,854 --> 00:10:36,250
+Speaker 0: Anyway, going on the list and it just says fucking Gertschwemener juice.
+
+203
+00:10:36,331 --> 00:10:38,618
+Speaker 0: And then it says Pinot Noir juice.
+
+204
+00:10:38,739 --> 00:10:42,136
+Speaker 0: And I asked the guy and I'm like, is that actually just fucking wine grapes made into juice?
+
+205
+00:10:42,619 --> 00:10:43,623
+Speaker 0: I didn't say fucking.
+
+206
+00:10:43,723 --> 00:10:47,335
+Speaker 0: I was like, is that just wine grapes made into juice?
+
+207
+00:10:47,355 --> 00:10:47,897
+Speaker 0: He's like, yeah.
+
+208
+00:10:47,937 --> 00:10:49,443
+Speaker 0: I'm like, I want that right now.
+
+209
+00:10:49,644 --> 00:10:50,647
+Speaker 1: I would drink that.
+
+210
+00:10:50,828 --> 00:10:52,052
+Speaker 0: It was $9 a glass.
+
+211
+00:10:52,193 --> 00:10:53,899
+Speaker 0: I know I wasn't paying for it.
+
+212
+00:10:53,919 --> 00:10:57,350
+Speaker 1: You know, the last time I ordered wine at a restaurant, I paid $7 for my glass.
+
+213
+00:10:57,370 --> 00:11:02,065
+Speaker 1: So it was $9 for a glass of Pinot Noir grape juice.
+
+214
+00:11:02,266 --> 00:11:02,687
+Speaker 1: How was it?
+
+215
+00:11:03,430 --> 00:11:07,664
+Speaker 0: It was freezing cold, like not ice, obviously, but like as cold as you can get.
+
+216
+00:11:07,684 --> 00:11:12,844
+Speaker 1: I like how the colloquial freezing cold actually was really the wrong thing to say that it was.
+
+217
+00:11:12,925 --> 00:11:14,332
+Speaker 0: It was basically as cold as ice water.
+
+218
+00:11:14,533 --> 00:11:16,763
+Speaker 1: You could say it's freezing has not frozen yet.
+
+219
+00:11:16,843 --> 00:11:18,489
+Speaker 0: It was as cold as ice water.
+
+220
+00:11:18,529 --> 00:11:20,295
+Speaker 0: You see the bottle was condensing.
+
+221
+00:11:20,315 --> 00:11:23,530
+Speaker 0: He poured it into the, you know, he treated it like it was wine.
+
+222
+00:11:23,570 --> 00:11:25,058
+Speaker 0: He showed it to me, poured it in the glass.
+
+223
+00:11:25,118 --> 00:11:26,765
+Speaker 0: I tasted it to make sure it wasn't ruined.
+
+224
+00:11:27,146 --> 00:11:27,568
+Speaker 0: It wasn't.
+
+225
+00:11:28,070 --> 00:11:31,281
+Speaker 0: It was pretty much the best grape juice I ever had ever.
+
+226
+00:11:32,124 --> 00:11:35,634
+Speaker 0: So I bought a whole case of it, which is not expensive at all.
+
+227
+00:11:36,316 --> 00:11:36,737
+Speaker 0: Basically.
+
+228
+00:11:36,758 --> 00:11:40,328
+Speaker 0: I mean, it costs my company $9 for the eight ounces.
+
+229
+00:11:40,349 --> 00:11:41,693
+Speaker 0: They gave me 12, maybe.
+
+230
+00:11:42,174 --> 00:11:42,395
+Speaker 0: Right.
+
+231
+00:11:42,676 --> 00:11:55,600
+Speaker 0: If you buy a whole case of it from the exact same place against his Navarro, which is just some seems like basically the apple, uh, the sweet apple acres of California, basically, uh, and grapes instead of apples.
+
+232
+00:11:56,301 --> 00:11:59,312
+Speaker 0: It was basically comes out to like eight, $9 a bottle.
+
+233
+00:11:59,934 --> 00:12:00,877
+Speaker 1: So it's not bad.
+
+234
+00:12:00,917 --> 00:12:10,091
+Speaker 1: Like I was saying over our Twitter before the, uh, my favorite wine that I purchase on a regular basis is between eight and $12 a bottle and much less if I buy it by the case.
+
+235
+00:12:10,292 --> 00:12:12,039
+Speaker 0: So we'll see when it shows up.
+
+236
+00:12:12,560 --> 00:12:13,685
+Speaker 0: Apparently come, here's the thing.
+
+237
+00:12:13,725 --> 00:12:16,376
+Speaker 0: It comes with, you know, it comes with 12 bottles.
+
+238
+00:12:16,758 --> 00:12:20,776
+Speaker 0: I think five of which are the white grapes and six of which are the red grapes.
+
+239
+00:12:20,816 --> 00:12:21,941
+Speaker 0: Or maybe it's the other way around.
+
+240
+00:12:22,242 --> 00:12:38,635
+Speaker 0: And then they give you one bottle of verjuice or V E R J U S, which are probably pronouncing incorrectly, which is they take the unripe grapes and they squeeze them mad early and they make sort of like this really, you know, sour kind of thing.
+
+241
+00:12:38,836 --> 00:12:44,014
+Speaker 0: And what you can use it for is you don't just drink that because why the fuck would you drink that?
+
+242
+00:12:44,456 --> 00:12:51,201
+Speaker 0: What you do is you can use it a instead of lemon juice in pretty much anything that requires lemon juice, including lemonade.
+
+243
+00:12:51,622 --> 00:12:53,046
+Speaker 0: So you can make verjuice aid.
+
+244
+00:12:54,009 --> 00:12:58,843
+Speaker 0: You can also use it instead of vinegar and say something like salad dressing.
+
+245
+00:12:59,646 --> 00:13:01,974
+Speaker 0: So, and then they had a PDF on there.
+
+246
+00:13:02,115 --> 00:13:04,102
+Speaker 1: Use that with some salad dressing instead of vinegar.
+
+247
+00:13:04,162 --> 00:13:09,320
+Speaker 1: And I put some like, ah, let's see some oranges and apples and walnuts and go cheese.
+
+248
+00:13:09,541 --> 00:13:09,882
+Speaker 0: Oh yeah.
+
+249
+00:13:09,942 --> 00:13:16,787
+Speaker 0: That kind of, well, I can do is I can go get that exact salad from the salad fresh coat near my work and say no dressing, bro.
+
+250
+00:13:18,311 --> 00:13:18,993
+Speaker 0: I got my own.
+
+251
+00:13:19,053 --> 00:13:27,142
+Speaker 1: And then, uh, they got to have walnuts and feta on their website, like a goat cheese with like a little bit of lavender in it on their website.
+
+252
+00:13:27,443 --> 00:13:31,878
+Speaker 0: They have a PDF of recipes where you can use verjuice as the ingredient.
+
+253
+00:13:31,898 --> 00:13:32,761
+Speaker 0: It's like the very juice.
+
+254
+00:13:32,921 --> 00:13:36,011
+Speaker 0: like PDF has a ton of fucking recipes to a lot of them.
+
+255
+00:13:36,071 --> 00:13:39,864
+Speaker 0: So, uh, I'm a big fan of this, a fancy juice.
+
+256
+00:13:40,206 --> 00:13:49,496
+Speaker 0: And I think I'm going to start, maybe I'm going to try to find or maybe start my own juice from the fancy bottles on poison.
+
+257
+00:13:49,776 --> 00:13:54,095
+Speaker 1: You're going to get to hear the things I've had to hear from you for the last like 10 years about my wine.
+
+258
+00:13:54,115 --> 00:13:55,059
+Speaker 0: You know what I mean?
+
+259
+00:13:55,540 --> 00:13:57,687
+Speaker 1: You're spending $9 a bottle in grape juice.
+
+260
+00:13:57,747 --> 00:13:59,212
+Speaker 1: Ketim's a dollar 50.
+
+261
+00:13:59,212 --> 00:14:01,038
+Speaker 0: Ketim doesn't taste very good.
+
+262
+00:14:01,440 --> 00:14:01,981
+Speaker 1: Oh, oh.
+
+263
+00:14:02,061 --> 00:14:04,310
+Speaker 1: So you're saying that the more expensive one tastes better.
+
+264
+00:14:04,651 --> 00:14:05,193
+Speaker 0: No, it's.
+
+265
+00:14:05,314 --> 00:14:09,751
+Speaker 0: it's that these are the reason it's expensive is not because it's better.
+
+266
+00:14:09,851 --> 00:14:18,883
+Speaker 0: It is because they could have turned these grapes into wine and at least wine that I only pay $8 a bottle for instead of the $9 a bottle you're paying for this juice.
+
+267
+00:14:20,166 --> 00:14:22,874
+Speaker 0: Uh, well, no, their wine is $20 a bottle.
+
+268
+00:14:22,894 --> 00:14:26,906
+Speaker 1: So they could, they could have, I can get higher rated wine for less money.
+
+269
+00:14:26,926 --> 00:14:28,692
+Speaker 0: They could have doubled the value.
+
+270
+00:14:28,712 --> 00:14:31,762
+Speaker 0: That's the exact wine.
+
+271
+00:14:31,802 --> 00:14:33,167
+Speaker 1: The Wilm one is the one I drink.
+
+272
+00:14:33,288 --> 00:14:35,476
+Speaker 1: I bought it for as low as $7 a bottle.
+
+273
+00:14:35,536 --> 00:14:35,938
+Speaker 1: Yeah.
+
+274
+00:14:36,078 --> 00:14:39,511
+Speaker 0: But this, they sell it for 20 so they could double.
+
+275
+00:14:39,852 --> 00:14:45,220
+Speaker 0: from their perspective, regardless of if you're getting better wine than they make and who knows how good theirs is because I haven't tasted it.
+
+276
+00:14:45,420 --> 00:14:46,022
+Speaker 0: Right.
+
+277
+00:14:46,303 --> 00:14:52,265
+Speaker 0: Uh, they could double the value of those grapes by letting them sit around and turn into wine, but they choose not to.
+
+278
+00:14:53,168 --> 00:14:53,891
+Speaker 0: So there you go.
+
+279
+00:14:54,031 --> 00:14:54,453
+Speaker 0: Not bad.
+
+280
+00:14:54,513 --> 00:14:57,082
+Speaker 0: Which benefits me not wanting to drink poison.
+
+281
+00:14:57,343 --> 00:14:57,905
+Speaker 1: So it's Monday.
+
+282
+00:14:57,945 --> 00:14:58,748
+Speaker 1: It's not the lounge.
+
+283
+00:14:58,768 --> 00:14:59,491
+Speaker 1: You got any news?
+
+284
+00:15:00,054 --> 00:15:00,917
+Speaker 0: Do I have a news?
+
+285
+00:15:00,977 --> 00:15:01,640
+Speaker 0: I do indeed.
+
+286
+00:15:02,461 --> 00:15:41,101
+Speaker 0: I've been working, I guess, you know, one of my many half actually way less than 1% finished projects is sort of the ultimate backup, save your ass thing where basically you'll set up like get input from Twitter, get input from flicker backup to S3, backup to my hard drive, you know, basically something that will download and rescue all your files and wherever cloud services or local sources they may be on and then back them up and whatever places they need to back up to synchronize your blog posts, tweets, photos, videos, all your data's documents in all the places.
+
+287
+00:15:41,121 --> 00:15:42,205
+Speaker 0: So you can't be fucked.
+
+288
+00:15:43,328 --> 00:15:48,548
+Speaker 0: Uh, so Twitter, the problem with them is that, yeah, you can sort of back up your tweets for a while.
+
+289
+00:15:48,608 --> 00:15:53,809
+Speaker 0: I was using this one website that would read your tweets every day and then sort of put them in, you know, files.
+
+290
+00:15:54,571 --> 00:15:59,388
+Speaker 0: Um, but that sort of needed to be constantly running and reading your tweets all the time.
+
+291
+00:15:59,991 --> 00:16:07,055
+Speaker 0: Twitter is finally coming out with something delicious has had for a long time, which is download all your tweets ever.
+
+292
+00:16:07,937 --> 00:16:17,111
+Speaker 1: Now this is actually kind of interesting because Twitter has been in pissing matches with pretty much everyone over their APIs and data access and agreements.
+
+293
+00:16:17,171 --> 00:16:21,046
+Speaker 0: Well, Twitter doesn't want to let people access every tweet ever, right?
+
+294
+00:16:21,126 --> 00:16:24,617
+Speaker 0: Is this is all about you access your own exactly.
+
+295
+00:16:24,798 --> 00:16:37,508
+Speaker 1: But for example, like recently they got into a thing where they, they won't let you have like an embedded link anymore with Instagram because they don't want people to, you know, Instagram shows not to do that because Facebook bought Instagram.
+
+296
+00:16:38,993 --> 00:16:40,899
+Speaker 0: So that's one of those, he said, she said battles.
+
+297
+00:16:40,939 --> 00:16:42,726
+Speaker 0: We don't know who's good, who's bad.
+
+298
+00:16:42,766 --> 00:16:50,011
+Speaker 1: The gist of it is that basically all these services like this that are not federated are trying to monetize.
+
+299
+00:16:50,111 --> 00:16:54,928
+Speaker 1: And the only way they can monetize is to make sure that people have to use them and their stuff.
+
+300
+00:16:55,169 --> 00:17:00,404
+Speaker 1: They can't just go to like Tumblr, but also see everyone's tweets, which fuck them.
+
+301
+00:17:00,484 --> 00:17:02,150
+Speaker 1: But that's a separate show for a separate day.
+
+302
+00:17:04,801 --> 00:17:04,963
+Speaker 0: Yeah.
+
+303
+00:17:04,983 --> 00:17:08,945
+Speaker 0: But this is really interesting because I actually seem to have a really good interface for looking at all your tweets.
+
+304
+00:17:09,388 --> 00:17:13,325
+Speaker 0: And it's also going to be really interesting once people have access to their own old tweets.
+
+305
+00:17:13,746 --> 00:17:19,303
+Speaker 0: If anyone like voluntarily combines their tweets together for data purposes.
+
+306
+00:17:19,684 --> 00:17:25,424
+Speaker 0: or be what kind of interesting things people discover from analyzing their own past tweets.
+
+307
+00:17:25,565 --> 00:17:30,830
+Speaker 1: You know, I'm going to try to, we should come up with a program that makes it very easy for you to download your archive and then say, boop.
+
+308
+00:17:31,111 --> 00:17:32,295
+Speaker 1: And now it's all public again.
+
+309
+00:17:32,316 --> 00:17:37,114
+Speaker 1: Someone else can aggregate it and recreate effectively all of Twitter.
+
+310
+00:17:37,335 --> 00:17:39,585
+Speaker 0: We can make a website like upload your Twitter archive here.
+
+311
+00:17:39,605 --> 00:17:44,126
+Speaker 0: Uh, but no, I'm going to try to make something that does really simple stuff that will be entertaining.
+
+312
+00:17:44,166 --> 00:17:49,811
+Speaker 0: Like count the number of times you said, fuck, count the number of times you added who's, who did you at the most?
+
+313
+00:17:50,132 --> 00:17:51,578
+Speaker 0: count the number of times I did that.
+
+314
+00:17:51,599 --> 00:17:53,064
+Speaker 0: There's that retweet the most.
+
+315
+00:17:53,084 --> 00:17:56,297
+Speaker 1: There's that one nice, uh, website, not the scammy one.
+
+316
+00:17:56,317 --> 00:17:58,968
+Speaker 1: That'll do it like the pseudo analysis of your Twitter feed.
+
+317
+00:17:59,310 --> 00:18:06,884
+Speaker 0: This is going to do just, you know, that kind of boring non-scientific stuff like count the number of times, you know, which word did you tweet the most often?
+
+318
+00:18:07,326 --> 00:18:08,853
+Speaker 0: And you know, this thing is things like that.
+
+319
+00:18:09,053 --> 00:18:12,309
+Speaker 0: They don't mean anything, but they're really kind of interesting and people love that shit.
+
+320
+00:18:12,711 --> 00:18:21,632
+Speaker 0: So being able to download all your tweets, you know, drag them into this program, click a button and get that information, get a JPEG or something that you can just put on a website somewhere.
+
+321
+00:18:21,652 --> 00:18:23,220
+Speaker 1: So, you know, somewhat related to that.
+
+322
+00:18:23,241 --> 00:18:26,112
+Speaker 1: There is a, an article on slash dot right now.
+
+323
+00:18:26,172 --> 00:18:30,267
+Speaker 1: that is, I kind of want to talk about this as a show, so we'll go briefly.
+
+324
+00:18:30,748 --> 00:18:32,313
+Speaker 1: It's called the web we lost.
+
+325
+00:18:32,614 --> 00:18:33,015
+Speaker 0: Okay.
+
+326
+00:18:33,156 --> 00:18:34,821
+Speaker 0: I did see links to this article everywhere.
+
+327
+00:18:34,861 --> 00:18:48,659
+Speaker 1: In the early days of, you know, web 2.0 back when there was 2.0, not so early days when there was a web 2.0 as in there was an internet of web rings and static content.
+
+328
+00:18:48,740 --> 00:18:52,391
+Speaker 1: And then the idea of, you know, modern interactivity appeared.
+
+329
+00:18:53,033 --> 00:19:00,120
+Speaker 1: People were, you know, sharing things between websites and embedding data in websites and the first social networks were arising.
+
+330
+00:19:00,921 --> 00:19:03,671
+Speaker 1: And that was a really open world in terms of data.
+
+331
+00:19:03,691 --> 00:19:05,316
+Speaker 1: The data was accepted.
+
+332
+00:19:05,357 --> 00:19:12,422
+Speaker 1: You're basically every website wanted to make your data as open and accessible as possible and shared as much as possible.
+
+333
+00:19:12,442 --> 00:19:14,874
+Speaker 0: Cause that was the hot was how you got popular, right?
+
+334
+00:19:14,914 --> 00:19:16,160
+Speaker 0: How did Twitter become popular?
+
+335
+00:19:16,220 --> 00:19:16,260
+Speaker 0: in?
+
+336
+00:19:16,421 --> 00:19:16,944
+Speaker 0: oh seven?
+
+337
+00:19:17,004 --> 00:19:21,885
+Speaker 0: by having an API where you could do whatever the fuck you wanted with tweets or posting to tweets.
+
+338
+00:19:22,126 --> 00:19:24,897
+Speaker 1: But now, so web 2.0 evolved and evolved and evolved.
+
+339
+00:19:24,917 --> 00:19:28,593
+Speaker 1: And now there's the big debate over what and when and where the web 3.0 will be.
+
+340
+00:19:28,613 --> 00:19:36,738
+Speaker 1: And you know, but basically argues that everything we gained in web 2.0 is it's not gone yet, but it's rapidly disappearing.
+
+341
+00:19:36,939 --> 00:19:39,024
+Speaker 0: Everyone's locking down their APIs.
+
+342
+00:19:39,165 --> 00:19:49,396
+Speaker 1: We went from a federated model back to a sole provider walled garden model with all these pissing matches between the few people who provide this stuff.
+
+343
+00:19:49,818 --> 00:19:55,120
+Speaker 1: So instead of every website having its own little like federated, follow me back, yo, Tumblr has its one thing.
+
+344
+00:19:55,320 --> 00:19:56,425
+Speaker 1: Twitter has its other thing.
+
+345
+00:19:56,707 --> 00:19:58,717
+Speaker 1: Everyone fights to monetize and won't let you connect.
+
+346
+00:19:59,159 --> 00:20:01,228
+Speaker 1: And he's basically saying that we need to stop this.
+
+347
+00:20:02,032 --> 00:20:02,876
+Speaker 0: It'll happen eventually.
+
+348
+00:20:02,916 --> 00:20:04,041
+Speaker 0: This is what always happens, right?
+
+349
+00:20:04,101 --> 00:20:08,997
+Speaker 0: Is that every, you know, anything that's low and not strong goes open.
+
+350
+00:20:09,057 --> 00:20:13,980
+Speaker 0: and by going open, they become strong, but because they're open, they can't make any goddamn money.
+
+351
+00:20:14,261 --> 00:20:16,371
+Speaker 0: Except with advertising, but, uh, right.
+
+352
+00:20:16,652 --> 00:20:18,320
+Speaker 0: It's cause it's too free and too open.
+
+353
+00:20:18,740 --> 00:20:19,645
+Speaker 0: They can't make any money.
+
+354
+00:20:19,685 --> 00:20:24,954
+Speaker 0: And even if they put ads in the, if the ads get too bad, everyone will just bail with their data and go somewhere else.
+
+355
+00:20:25,034 --> 00:20:26,040
+Speaker 0: It's open and has no ads.
+
+356
+00:20:26,301 --> 00:20:28,531
+Speaker 0: And they'll keep moving to the no ad place over and over.
+
+357
+00:20:28,551 --> 00:20:28,711
+Speaker 0: Right?
+
+358
+00:20:29,214 --> 00:20:30,339
+Speaker 0: So what do they do?
+
+359
+00:20:30,399 --> 00:20:35,077
+Speaker 0: They start to lock down and people will tolerate it cause you gradually do it.
+
+360
+00:20:35,097 --> 00:20:36,583
+Speaker 0: If you did it all at once, people like, fuck that.
+
+361
+00:20:36,884 --> 00:20:44,171
+Speaker 0: But they do it gradually and slowly closing it up, closing it up, no systems slip through their fingers.
+
+362
+00:20:44,231 --> 00:20:47,705
+Speaker 1: And then it does this back in the day, let's talk nineties.
+
+363
+00:20:47,866 --> 00:20:53,333
+Speaker 0: in the nineties when things like the CDT, I mean, do you want to talk about the original burners leeway?
+
+364
+00:20:53,414 --> 00:20:54,600
+Speaker 0: Every page is Wikipedia.
+
+365
+00:20:54,981 --> 00:20:56,124
+Speaker 1: No, I do.
+
+366
+00:20:56,164 --> 00:20:57,168
+Speaker 1: But now right now, okay.
+
+367
+00:20:57,268 --> 00:21:18,455
+Speaker 1: So I remember in the nineties when I really got into encryption and you know, things like, you know, before waste even like using PGP and PGP phone and, you know, tempest and protection and all that crazy bullshit was because back then really like the main operating systems you have had access to were pretty locked down.
+
+368
+00:21:18,776 --> 00:21:28,855
+Speaker 1: And there was a fear, especially with CDB TPA type type stuff coming down the pipe that the governments of the world might actually crack down on computers and get to the middle earlier.
+
+369
+00:21:28,976 --> 00:21:30,903
+Speaker 1: So nerd people were like, Oh fuck.
+
+370
+00:21:31,083 --> 00:21:36,809
+Speaker 1: And there was a big explosion of interest in Linux and encryption and all this stuff that drove a lot of cool things later on down the road.
+
+371
+00:21:37,613 --> 00:21:39,320
+Speaker 1: And now, I mean, I use windows for everything.
+
+372
+00:21:39,500 --> 00:21:42,933
+Speaker 1: I've gone back to all those worlds because things are pretty safe.
+
+373
+00:21:43,154 --> 00:21:46,888
+Speaker 1: But on the far off horizon now, we're seeing the slow lockdown happen again.
+
+374
+00:21:46,908 --> 00:21:55,383
+Speaker 1: And I think it'll hit a crisis point where the nerds like us are already looking ahead toward the federated models to replace Twitter when Twitter finally fucks.
+
+375
+00:21:55,403 --> 00:21:56,046
+Speaker 0: Well, we did that.
+
+376
+00:21:56,147 --> 00:21:58,277
+Speaker 0: People saw that immediately with the Konica.
+
+377
+00:21:58,318 --> 00:21:59,964
+Speaker 0: They just did a shitty ass job.
+
+378
+00:22:00,305 --> 00:22:03,697
+Speaker 1: But I think there is a place for a federated replacement to Twitter.
+
+379
+00:22:03,717 --> 00:22:12,809
+Speaker 1: And I think if they keep cracking down on their APIs and they keep locking themselves up, nerds are going to move on to something new like nerds always do.
+
+380
+00:22:12,829 --> 00:22:18,171
+Speaker 0: I mean, Google plus isn't really failing, but it's not really taking off and not yet killing the world either.
+
+381
+00:22:18,211 --> 00:22:20,743
+Speaker 0: But then again, I see Google plus right now.
+
+382
+00:22:20,764 --> 00:22:22,634
+Speaker 0: I'm not saying this is a locked in prediction.
+
+383
+00:22:22,654 --> 00:22:34,936
+Speaker 0: I don't have a lot of confidence in this, but it sort of feels, you know, Google plus right now feels the way Google chat did early on where a few peep cool people are using that instead of, say, aim.
+
+384
+00:22:35,076 --> 00:22:36,561
+Speaker 1: I'm trying to use it more and more.
+
+385
+00:22:36,883 --> 00:22:37,204
+Speaker 0: Right.
+
+386
+00:22:37,705 --> 00:22:41,237
+Speaker 0: And but everyone else is still using aim and MSN and Yahoo.
+
+387
+00:22:41,277 --> 00:22:42,903
+Speaker 0: But a few cool people are using Google plus.
+
+388
+00:22:42,943 --> 00:22:51,432
+Speaker 0: But meanwhile, nowadays, Google chat went from being that sort of other instant messaging thing that only a few people use to being the one.
+
+389
+00:22:51,753 --> 00:22:54,784
+Speaker 0: And aim is dead and ICQ is dead and MSN is dead.
+
+390
+00:22:54,824 --> 00:22:55,466
+Speaker 0: And then Yahoo's.
+
+391
+00:22:55,486 --> 00:23:02,213
+Speaker 0: So maybe Google plus will follow the same path and kill Twitter and Facebook, possibly not saying it's for sure.
+
+392
+00:23:02,293 --> 00:23:08,220
+Speaker 0: I'm just saying that's what it feels like, because I have the same feels using Google plus that I had using Google chat in the early days.
+
+393
+00:23:08,420 --> 00:23:08,661
+Speaker 0: Yeah.
+
+394
+00:23:09,183 --> 00:23:12,898
+Speaker 1: But so talking about free stuff and ads, I don't want to talk about this.
+
+395
+00:23:12,918 --> 00:23:14,043
+Speaker 1: There's an article that's pretty awesome.
+
+396
+00:23:14,063 --> 00:23:20,454
+Speaker 1: Basically, everyone's rumbling about our ad blocking things going to be made illegal and or will there be lawsuits again?
+
+397
+00:23:20,554 --> 00:23:24,468
+Speaker 1: You're going to the main bit again, which is going to be relevant to the main bit.
+
+398
+00:23:24,529 --> 00:23:31,113
+Speaker 1: But I just want to point out this is this issue was an issue in the nineties and it disappeared.
+
+399
+00:23:31,354 --> 00:23:33,843
+Speaker 1: All the nerds was like, yeah, I just block every ad no matter what.
+
+400
+00:23:33,923 --> 00:23:34,546
+Speaker 1: Fuck you guys.
+
+401
+00:23:34,607 --> 00:23:34,989
+Speaker 1: That's right.
+
+402
+00:23:35,049 --> 00:23:37,702
+Speaker 1: And normal people are slowly learning to block ads, but it wasn't.
+
+403
+00:23:37,742 --> 00:23:38,988
+Speaker 1: It's not enough for majority of matter.
+
+404
+00:23:39,008 --> 00:23:43,887
+Speaker 1: But now suddenly there's rumblings of the ethical question and the legal question.
+
+405
+00:23:43,907 --> 00:23:47,320
+Speaker 0: Again, we already had this discussion the first time.
+
+406
+00:23:47,440 --> 00:23:48,505
+Speaker 1: So we had this discussion.
+
+407
+00:23:48,525 --> 00:23:49,269
+Speaker 1: It was done.
+
+408
+00:23:49,289 --> 00:23:53,148
+Speaker 1: The answer was if data's on the internet, I can do whatever I want with it.
+
+409
+00:23:53,369 --> 00:23:55,200
+Speaker 1: I'm the one who controls the display side.
+
+410
+00:23:55,381 --> 00:23:56,766
+Speaker 0: My computer sent you some bits.
+
+411
+00:23:56,907 --> 00:23:59,336
+Speaker 0: Your computer willingly sent me some bits.
+
+412
+00:23:59,417 --> 00:24:02,269
+Speaker 0: I can do what my computer does with those bits is up to me.
+
+413
+00:24:02,510 --> 00:24:09,194
+Speaker 1: Now, the reason the argument is going to be different this time is because phones are pretty locked down.
+
+414
+00:24:09,274 --> 00:24:11,220
+Speaker 1: They are and much harder are going to be.
+
+415
+00:24:11,400 --> 00:24:16,822
+Speaker 1: I mean, already I can't block ads, at least the kinds of ads they're slipping into the stream on my phone.
+
+416
+00:24:16,862 --> 00:24:21,240
+Speaker 1: And as a result, I'm using my phone for fewer and fewer things where an ad could appear.
+
+417
+00:24:21,320 --> 00:24:28,291
+Speaker 0: Well, this is, you know, this is the free software, you know, like the, you know, the Richard Stallman situation, right?
+
+418
+00:24:28,412 --> 00:24:29,175
+Speaker 0: I have a computer.
+
+419
+00:24:29,477 --> 00:24:30,120
+Speaker 0: It's my phone.
+
+420
+00:24:30,721 --> 00:24:33,774
+Speaker 0: It does things with bits that I did not tell it to do.
+
+421
+00:24:33,894 --> 00:24:38,591
+Speaker 0: I wanted to do something with those bits, but I can't make it do that because it's all closed.
+
+422
+00:24:39,495 --> 00:24:41,542
+Speaker 0: Therefore, it shows me ads when I don't want to see him.
+
+423
+00:24:42,165 --> 00:24:46,948
+Speaker 1: So we won't have that argument, but just remember this is, this is burning on the horizon and it's going to come.
+
+424
+00:24:46,968 --> 00:24:47,954
+Speaker 1: And you know what's going to happen?
+
+425
+00:24:48,336 --> 00:24:50,809
+Speaker 1: The same thing that happened before nerds will block ads.
+
+426
+00:24:50,829 --> 00:24:53,984
+Speaker 1: No one else will be able to, and eventually the nerds will make it easy for normal people.
+
+427
+00:24:54,224 --> 00:24:55,830
+Speaker 1: And then the cycle will repeat.
+
+428
+00:24:56,172 --> 00:25:04,518
+Speaker 1: The question is, will the advertising industry as a whole collapse before this next round or not, which I'm, I give it a 30% shot.
+
+429
+00:25:06,541 --> 00:25:12,199
+Speaker 0: So I think, you know, we just, as the fundamental problem of the world has discussions, right?
+
+430
+00:25:12,260 --> 00:25:14,548
+Speaker 0: It's like someone was just born just now.
+
+431
+00:25:14,870 --> 00:25:16,175
+Speaker 0: They haven't seen the Godfather.
+
+432
+00:25:16,436 --> 00:25:18,504
+Speaker 0: They also have never had an argument about copyright.
+
+433
+00:25:18,565 --> 00:25:23,006
+Speaker 1: They've also never seen a world where the TSA doesn't touch my genitalia to let me get on a plane.
+
+434
+00:25:23,087 --> 00:25:23,268
+Speaker 0: Right.
+
+435
+00:25:23,288 --> 00:25:29,158
+Speaker 0: But that discussion of copyright for that new person will happen again, just like they will see the Godfather having never seen it.
+
+436
+00:25:29,198 --> 00:25:31,065
+Speaker 0: They will have that discussion having never had it.
+
+437
+00:25:31,407 --> 00:25:44,133
+Speaker 0: And every discussion that we, that we don't solve once and for all, such that there is no one complaining about it, will repeat the same points over and over again with no new points discovered, except for science.
+
+438
+00:25:44,254 --> 00:25:46,886
+Speaker 1: Jon Stewart made a really funny science.
+
+439
+00:25:46,906 --> 00:25:48,131
+Speaker 0: There'll be nothing new to say.
+
+440
+00:25:48,152 --> 00:25:53,780
+Speaker 1: There's a recent daily show where he was like, you talked about the fact that the SCOTUS is taking up the two gay rights cases on marriage.
+
+441
+00:25:54,362 --> 00:26:00,183
+Speaker 1: And he's like, finally, the Supreme court is going to answer whether or not gays getting married is a fundamental right.
+
+442
+00:26:00,664 --> 00:26:04,174
+Speaker 1: Because when they ruled on abortion, that ended the argument.
+
+443
+00:26:05,979 --> 00:26:12,936
+Speaker 0: No argument doesn't end when the Supreme court says it, it ends when you know, old people die.
+
+444
+00:26:13,057 --> 00:26:13,438
+Speaker 0: Yes.
+
+445
+00:26:13,518 --> 00:26:13,759
+Speaker 0: Yeah.
+
+446
+00:26:14,582 --> 00:26:22,716
+Speaker 1: So to, to segue into the main bit that someone proposed a pretty interesting answer to this whole thing, the ad thing, uh, basically everything we just talked about.
+
+447
+00:26:22,776 --> 00:26:23,157
+Speaker 1: Okay.
+
+448
+00:26:23,880 --> 00:26:27,732
+Speaker 1: The question is, is the flicker API, a national treasure?
+
+449
+00:26:28,455 --> 00:26:29,899
+Speaker 0: What, what is the language?
+
+450
+00:26:29,959 --> 00:26:31,385
+Speaker 0: I mean, do you want to talk legally here?
+
+451
+00:26:31,485 --> 00:26:36,024
+Speaker 0: Or do you want to talk ethically, morally, uh, open API, blah, blah, blah, blah, blah, blah.
+
+452
+00:26:36,346 --> 00:26:39,603
+Speaker 1: Worried that the possibility of Yahoo might do the same thing with flipper API's.
+
+453
+00:26:39,884 --> 00:26:45,304
+Speaker 0: Some guy named Dave Weiner just launched a, Dave Weiner is the guy who invented a podcast.
+
+454
+00:26:45,345 --> 00:26:48,254
+Speaker 1: Basically he launched one of those petitions to Obama.
+
+455
+00:26:48,595 --> 00:27:01,320
+Speaker 1: He's asking that the federal government through the national historic landmark act declared the API to flicker as it currently exists, a national historic landmark, meaning it cannot be fucked with by anyone, even flicker.
+
+456
+00:27:01,380 --> 00:27:02,203
+Speaker 1: And they have to maintain it.
+
+457
+00:27:03,790 --> 00:27:05,999
+Speaker 0: That is a really liquor goes out of business.
+
+458
+00:27:06,821 --> 00:27:11,340
+Speaker 1: If I was government would get control of it and have to maintain it with tax money.
+
+459
+00:27:11,841 --> 00:27:14,273
+Speaker 0: If I was Yahoo, I'd be like, fine, take it.
+
+460
+00:27:14,293 --> 00:27:15,177
+Speaker 0: We don't have to pay for it anymore.
+
+461
+00:27:15,237 --> 00:27:15,298
+Speaker 0: Woo.
+
+462
+00:27:16,180 --> 00:27:16,381
+Speaker 0: Yeah.
+
+463
+00:27:16,401 --> 00:27:17,447
+Speaker 0: There goes all our costs.
+
+464
+00:27:17,607 --> 00:27:18,009
+Speaker 1: But you know what?
+
+465
+00:27:18,030 --> 00:27:29,026
+Speaker 1: At the same time, think about if the guy, think about the idea that data that is out there on the internet can be a landmark, just like some crappy old farmhouse can be a landmark.
+
+466
+00:27:29,066 --> 00:27:37,165
+Speaker 0: Well then maybe we should have the language of the law.
+
+467
+00:27:37,226 --> 00:27:40,120
+Speaker 0: What does the thing have to be to be a landmark?
+
+468
+00:27:40,540 --> 00:27:41,767
+Speaker 1: Do you really think I know that?
+
+469
+00:27:42,210 --> 00:27:43,860
+Speaker 0: Does it say in the article that you're reading?
+
+470
+00:27:45,120 --> 00:27:46,187
+Speaker 0: Then you're not being very helpful.
+
+471
+00:27:46,288 --> 00:27:49,028
+Speaker 1: Do you want me to be a journalist or you want me to read this whole thing?
+
+472
+00:27:49,049 --> 00:27:50,420
+Speaker 1: Uh, it's gonna take too long.
+
+473
+00:27:57,481 --> 00:27:59,929
+Speaker 1: So let's just move right on to things of the day.
+
+474
+00:27:59,949 --> 00:28:03,340
+Speaker 1: A friend of mine, a coworker showed me this.
+
+475
+00:28:03,460 --> 00:28:04,366
+Speaker 1: It was pretty hilarious.
+
+476
+00:28:04,446 --> 00:28:06,580
+Speaker 1: I promised him I would make it a thing of the day on geek nights.
+
+477
+00:28:07,422 --> 00:28:08,966
+Speaker 1: Uh, I don't know.
+
+478
+00:28:08,986 --> 00:28:18,180
+Speaker 1: I'm, I am 50 50 on whether or not it is a legit thing that happened or if it is a stage thing from some sort of like comedy skit show.
+
+479
+00:28:18,520 --> 00:28:22,180
+Speaker 0: I did see the same video and I wasn't totally sure what was going on.
+
+480
+00:28:22,320 --> 00:28:32,560
+Speaker 1: It's hard now because in the modern era, like especially in Brazil, security cameras are HD, so it's not that far out of the realm that the video quality would be this high.
+
+481
+00:28:33,102 --> 00:28:36,880
+Speaker 1: But I was in Sao Paulo not that long ago and yeah, crime is off the hook.
+
+482
+00:28:37,380 --> 00:28:43,927
+Speaker 1: This is a video of a dude who allegedly parks his car and breaks into a clinic to steal some drugs while he's robbing the clinic.
+
+483
+00:28:43,967 --> 00:28:46,197
+Speaker 1: Someone steals his car while he's outgoing.
+
+484
+00:28:46,238 --> 00:28:47,162
+Speaker 1: What the fuck happened to my car?
+
+485
+00:28:47,182 --> 00:28:48,832
+Speaker 1: Someone else mugs him and steals the drugs.
+
+486
+00:28:49,034 --> 00:28:50,080
+Speaker 0: Well, it doesn't really mug him.
+
+487
+00:28:50,140 --> 00:28:51,689
+Speaker 0: They just sort of grab the drugs and run.
+
+488
+00:28:51,729 --> 00:28:53,560
+Speaker 1: basically purse snatches the guy's drugs.
+
+489
+00:28:53,680 --> 00:28:55,004
+Speaker 1: Yeah, it is.
+
+490
+00:28:55,485 --> 00:29:01,143
+Speaker 1: If this is true, this is one of the funniest pieces of poetic justice the world has ever seen.
+
+491
+00:29:01,163 --> 00:29:07,792
+Speaker 1: And if it's not true, it's actually still pretty funny just because the look in the guy's face at the end, he's like, what the fuck?
+
+492
+00:29:08,233 --> 00:29:09,177
+Speaker 0: He got what he deserves.
+
+493
+00:29:09,197 --> 00:29:12,688
+Speaker 0: He can't feel bad for him, but it's like, eh, anyway.
+
+494
+00:29:13,571 --> 00:29:19,171
+Speaker 0: So, you know, a lot of times when you cook something, you got to separate the egg yolk and the cooking by the book.
+
+495
+00:29:19,191 --> 00:29:19,674
+Speaker 0: All right.
+
+496
+00:29:19,714 --> 00:29:24,374
+Speaker 0: You take, you open up an egg and out comes a yolk and a white crack, crack, crack the egg into the baby.
+
+497
+00:29:24,494 --> 00:29:25,237
+Speaker 0: Just right.
+
+498
+00:29:25,378 --> 00:29:30,161
+Speaker 0: If you, and usually the way I separate the egg and the white is usually the way I see people on cooking shows do it.
+
+499
+00:29:30,262 --> 00:29:31,446
+Speaker 1: I hit X, X, X.
+
+500
+00:29:31,948 --> 00:29:34,819
+Speaker 0: Now you pour the yolk back and forth between the two egg shells.
+
+501
+00:29:34,839 --> 00:29:35,963
+Speaker 1: You never played Parappa the Rapper?
+
+502
+00:29:36,344 --> 00:29:37,087
+Speaker 0: I know about it.
+
+503
+00:29:37,127 --> 00:29:37,468
+Speaker 0: Okay.
+
+504
+00:29:38,050 --> 00:29:44,215
+Speaker 0: So you, uh, you pour the egg yolk back and forth between the two shells while the white part does not pour back.
+
+505
+00:29:44,235 --> 00:29:45,280
+Speaker 1: You mean like Spike Spiegel does?
+
+506
+00:29:45,440 --> 00:29:45,761
+Speaker 0: Yes.
+
+507
+00:29:46,263 --> 00:29:50,984
+Speaker 0: And the white part just sort of droops down into the bowl until only you have left in the shell is the yolk.
+
+508
+00:29:51,044 --> 00:29:52,912
+Speaker 0: And then you can do it with either part.
+
+509
+00:29:52,972 --> 00:29:53,454
+Speaker 0: what you like.
+
+510
+00:29:53,836 --> 00:29:54,599
+Speaker 0: That is the method.
+
+511
+00:29:54,640 --> 00:29:56,104
+Speaker 0: I see most people do that.
+
+512
+00:29:56,144 --> 00:30:03,664
+Speaker 0: I also do in this video, some awesome Australian dude shows you a far superior method.
+
+513
+00:30:04,646 --> 00:30:10,282
+Speaker 0: What he does is watch the video and find out, Holy shit, I got to do this for now on.
+
+514
+00:30:10,322 --> 00:30:16,546
+Speaker 1: I think a better thing to do is to make a device that purports to do this and sell it for 20 bucks as seen on TV.
+
+515
+00:30:16,666 --> 00:30:18,390
+Speaker 0: You'd make at least 1 million.
+
+516
+00:30:18,410 --> 00:30:20,635
+Speaker 0: Does it patent that shit?
+
+517
+00:30:22,439 --> 00:30:28,283
+Speaker 0: So in the moment this video count as prior art, if I patented that, uh, they'd have to find it as prior art.
+
+518
+00:30:28,905 --> 00:30:29,849
+Speaker 0: Uh, maybe, I don't know.
+
+519
+00:30:30,211 --> 00:30:38,601
+Speaker 1: So in the meta moment, the book club book, which we're not going to get to until sometime quarter one next year is the great Gatsby by F. Scott Fitzgerald famous book.
+
+520
+00:30:38,682 --> 00:30:39,264
+Speaker 1: I've never read it.
+
+521
+00:30:39,344 --> 00:30:42,216
+Speaker 1: I feel dumb and lacking for having not read it.
+
+522
+00:30:42,296 --> 00:30:45,168
+Speaker 1: It's like a big gaping hole in my list of famous books.
+
+523
+00:30:45,228 --> 00:30:47,115
+Speaker 1: I have plenty of other famous books.
+
+524
+00:30:47,236 --> 00:30:48,982
+Speaker 0: You have never named another famous book.
+
+525
+00:30:49,022 --> 00:30:49,705
+Speaker 0: I haven't read that.
+
+526
+00:30:49,725 --> 00:30:51,150
+Speaker 0: You've never read, never read.
+
+527
+00:30:51,572 --> 00:30:52,053
+Speaker 1: Okay.
+
+528
+00:30:52,154 --> 00:30:54,542
+Speaker 1: Mr's never read or seen Macbeth.
+
+529
+00:30:54,683 --> 00:30:57,492
+Speaker 0: Have you read a tree grows in Brooklyn?
+
+530
+00:30:58,355 --> 00:30:59,218
+Speaker 1: Uh, actually, no, I haven't.
+
+531
+00:30:59,258 --> 00:31:00,523
+Speaker 0: Well, there's a famous book you haven't read.
+
+532
+00:31:00,684 --> 00:31:01,587
+Speaker 0: That was easy.
+
+533
+00:31:01,648 --> 00:31:02,150
+Speaker 0: First one.
+
+534
+00:31:02,190 --> 00:31:03,596
+Speaker 1: I think that's worse than Macbeth.
+
+535
+00:31:03,938 --> 00:31:04,460
+Speaker 0: I don't know.
+
+536
+00:31:04,600 --> 00:31:06,187
+Speaker 0: I'm not saying it is, or is it?
+
+537
+00:31:06,207 --> 00:31:07,572
+Speaker 0: I'm saying it's eat.
+
+538
+00:31:07,612 --> 00:31:09,038
+Speaker 0: There are lots of famous books.
+
+539
+00:31:09,178 --> 00:31:15,502
+Speaker 0: I don't think there's anyone on earth who's read all the Epic famous classic books because there are just so many.
+
+540
+00:31:15,823 --> 00:31:27,914
+Speaker 1: So anyway, a kinetic con, the everything convention that we, uh, run the panels and workshops and special events department for, and I have for many years in Connecticut, Hartford in July is a long way out, but it's a long way away.
+
+541
+00:31:27,934 --> 00:31:29,020
+Speaker 0: Why are we talking about it now?
+
+542
+00:31:29,280 --> 00:31:38,075
+Speaker 1: Well, Scott, because panel submissions, lecture submissions, workshop submissions are open and we're going to start scheduling shit and the next month.
+
+543
+00:31:38,497 --> 00:31:41,887
+Speaker 1: So if you want to do something, submit your shit now.
+
+544
+00:31:41,907 --> 00:31:43,371
+Speaker 0: Ooh, yeah.
+
+545
+00:31:43,552 --> 00:31:48,655
+Speaker 1: We're so far ahead of the game that I'm assuming something horrible is going to happen to ruin all of this for us.
+
+546
+00:31:48,675 --> 00:31:54,740
+Speaker 0: The only other convention we need to talk about is the one that is impending quickly less than a month away.
+
+547
+00:31:55,380 --> 00:32:04,798
+Speaker 0: The weekend after new year's magfest 11 balls, balls, balls, balls of steel.
+
+548
+00:32:04,819 --> 00:32:13,460
+Speaker 0: This is for nonstop days of gaming, gaming, gaming concerts, concerts, concerts related to gaming.
+
+549
+00:32:13,881 --> 00:32:17,571
+Speaker 0: The lineup of musical acts is unbelievable.
+
+550
+00:32:17,972 --> 00:32:19,556
+Speaker 0: Last year, no boo.
+
+551
+00:32:19,676 --> 00:32:20,639
+Speaker 0: How could you top that?
+
+552
+00:32:20,739 --> 00:32:20,920
+Speaker 0: Right?
+
+553
+00:32:20,940 --> 00:32:23,209
+Speaker 0: Some of the best video game musics there ever was.
+
+554
+00:32:23,952 --> 00:32:31,098
+Speaker 1: Even if a lot of the final fantasy games are boring, I have a video upload of no boo doing the Colossus for our back to the audience.
+
+555
+00:32:31,158 --> 00:32:34,648
+Speaker 0: The music has never been bad in any final fantasy that I know of.
+
+556
+00:32:36,152 --> 00:32:40,666
+Speaker 0: So how could they top that with also the best video game music ever?
+
+557
+00:32:40,686 --> 00:32:44,661
+Speaker 0: I don't remember the guy's name, the guy who did the streets of rage music.
+
+558
+00:32:44,841 --> 00:32:45,964
+Speaker 0: Oh my God.
+
+559
+00:32:46,365 --> 00:32:47,086
+Speaker 0: Oh my God.
+
+560
+00:32:47,166 --> 00:32:53,179
+Speaker 0: Not to mention every nerd chord chip tune video game metal band.
+
+561
+00:32:53,239 --> 00:32:56,747
+Speaker 0: Never ever heard of or cared about.
+
+562
+00:32:56,787 --> 00:33:05,891
+Speaker 1: Nevermind the football field of arcade machines open 24 seven ridiculous just land party of counter-strike all night.
+
+563
+00:33:06,072 --> 00:33:08,860
+Speaker 0: You want to play initial D at 4 a.m.
+
+564
+00:33:08,880 --> 00:33:12,662
+Speaker 1: Well, you can't because there's two guys are going to sit at that machine Thursday morning through Sunday night.
+
+565
+00:33:12,702 --> 00:33:16,815
+Speaker 0: But if you want to play dig dug at 4 a.m, it's game on.
+
+566
+00:33:17,336 --> 00:33:22,834
+Speaker 1: We are going to be there doing three panels all on Friday, all in a row on fly Friday.
+
+567
+00:33:22,995 --> 00:33:36,034
+Speaker 0: And we're going to spend Saturday, Saturday night, Thursday, Thursday night, late Friday, Friday night, and Sunday until we leave playing games, games, games, games, games, maybe a concert.
+
+568
+00:33:36,074 --> 00:33:36,937
+Speaker 0: games, games, games.
+
+569
+00:33:37,018 --> 00:33:46,380
+Speaker 1: If you want to meet rim, having just played a five hour game of eclipse and then drunk himself into a stupor, wondering around another five hour game of eclipse, wandering around and playing dig dug.
+
+570
+00:33:46,922 --> 00:33:47,785
+Speaker 1: That is your chance.
+
+571
+00:33:48,207 --> 00:33:50,615
+Speaker 0: Also playing net runner like 20 times in a row.
+
+572
+00:33:50,736 --> 00:33:51,278
+Speaker 1: Oh my God.
+
+573
+00:33:51,338 --> 00:33:51,840
+Speaker 1: And infiltration.
+
+574
+00:33:52,080 --> 00:33:52,663
+Speaker 1: I'm bringing that shit.
+
+575
+00:33:52,744 --> 00:33:53,830
+Speaker 0: Oh, we're bringing all the shit.
+
+576
+00:33:53,870 --> 00:33:55,097
+Speaker 0: I got two new games too.
+
+577
+00:33:55,418 --> 00:33:55,700
+Speaker 1: We got it.
+
+578
+00:33:55,800 --> 00:33:57,365
+Speaker 1: We got a rash castles of burgundy.
+
+579
+00:33:57,405 --> 00:33:58,628
+Speaker 0: I got dominant species.
+
+580
+00:33:59,069 --> 00:34:03,142
+Speaker 0: So two top tier board game geek list games.
+
+581
+00:34:03,202 --> 00:34:04,045
+Speaker 0: I never played before.
+
+582
+00:34:04,065 --> 00:34:05,350
+Speaker 0: I just bought them big sale.
+
+583
+00:34:05,370 --> 00:34:06,475
+Speaker 0: All right.
+
+584
+00:34:07,037 --> 00:34:12,583
+Speaker 0: And you should go on the internet and find us in all the places we live on the internet and follow us and subscribe and newsletter.
+
+585
+00:34:12,664 --> 00:34:17,420
+Speaker 1: I'm going to send out maybe we, uh, we have more episodes of geek nights presents.
+
+586
+00:34:17,520 --> 00:34:21,074
+Speaker 1: However, uh, due to a hardware failure, we might have to rerecord one of them.
+
+587
+00:34:21,395 --> 00:34:21,897
+Speaker 0: Oh no.
+
+588
+00:34:22,098 --> 00:34:23,141
+Speaker 1: So I gotta, I gotta do some.
+
+589
+00:34:23,161 --> 00:34:23,523
+Speaker 1: look in that.
+
+590
+00:34:23,583 --> 00:34:30,956
+Speaker 1: But if you want us to release geek nights presents faster, share that shit around, unless it gets tens of thousands of views.
+
+591
+00:34:31,016 --> 00:34:31,438
+Speaker 1: I'm doing it.
+
+592
+00:34:31,900 --> 00:34:34,532
+Speaker 1: And Scott's doing it as we damn well feel like.
+
+593
+00:34:34,592 --> 00:34:34,732
+Speaker 1: Yeah.
+
+594
+00:34:34,773 --> 00:34:41,405
+Speaker 0: I mean, in general, we have this YouTube, we've been trying to break into the world of video cause podcasts, not so hot videos, pretty hot right now.
+
+595
+00:34:41,987 --> 00:34:44,620
+Speaker 0: We're not that good at it, but we're practicing and getting better.
+
+596
+00:34:44,880 --> 00:34:50,731
+Speaker 1: So if you like our video stuff, share it because unless it starts getting a lot of views, we're not going to speed up the release cycle.
+
+597
+00:34:50,831 --> 00:34:51,132
+Speaker 1: Yeah.
+
+598
+00:34:51,152 --> 00:34:55,092
+Speaker 0: It's like, if you want us to do more, you got to watch it and get other people to watch it.
+
+599
+00:34:55,172 --> 00:35:00,960
+Speaker 0: And we got to see the numbers go up and then we will have an incentive to make more and see if the numbers go up.
+
+600
+00:35:01,100 --> 00:35:05,720
+Speaker 1: So yo dogs post that shit on Reddit because I can't cause I'll get downvoted for self-promotion.
+
+601
+00:35:05,941 --> 00:35:06,201
+Speaker 0: Yeah.
+
+602
+00:35:07,785 --> 00:35:08,166
+Speaker 1: All right.
+
+603
+00:35:08,347 --> 00:35:08,688
+Speaker 1: All right.
+
+604
+00:35:08,768 --> 00:35:20,710
+Speaker 1: So internet governance don't want to talk about the details of the votes that just happened and all that complicated bullshit because the general question is actually something that there isn't a good answer for.
+
+605
+00:35:21,192 --> 00:35:22,920
+Speaker 1: So the general case is worth discussing.
+
+606
+00:35:23,541 --> 00:35:24,786
+Speaker 0: Who's the governor of the internet.
+
+607
+00:35:24,806 --> 00:35:24,986
+Speaker 1: Yeah.
+
+608
+00:35:25,107 --> 00:35:36,726
+Speaker 1: Who will, who decides who gets what IP address, who decides where the routers go, who pays for the transatlantic cable between like Australia and New Zealand?
+
+609
+00:35:36,746 --> 00:35:38,516
+Speaker 0: Those are all different questions with different answers.
+
+610
+00:35:38,537 --> 00:35:39,782
+Speaker 0: Why don't we stick with one at a time?
+
+611
+00:35:39,802 --> 00:35:40,525
+Speaker 0: All right.
+
+612
+00:35:40,585 --> 00:35:42,451
+Speaker 1: So don't DNS.
+
+613
+00:35:42,632 --> 00:35:43,595
+Speaker 1: who controls that?
+
+614
+00:35:43,836 --> 00:35:45,924
+Speaker 1: What if one country wants to do something different?
+
+615
+00:35:46,125 --> 00:35:49,860
+Speaker 1: What if Venezuela is mad about their TLD and they want a different one?
+
+616
+00:35:49,940 --> 00:35:50,944
+Speaker 1: Who do they complain to?
+
+617
+00:35:51,305 --> 00:35:53,072
+Speaker 0: Well, here's the way it works right now, right?
+
+618
+00:35:53,213 --> 00:35:59,758
+Speaker 0: Is anyone who owns a computer or hardware device can do whatever they wish with that device, right?
+
+619
+00:35:59,818 --> 00:36:05,442
+Speaker 0: So if I'm some country, you know, and, uh, there's some internet, so I have to be connected to other countries.
+
+620
+00:36:05,482 --> 00:36:10,224
+Speaker 0: Otherwise it's just going to be a big land and not an internet or it'll be on internet, but not the internet.
+
+621
+00:36:10,866 --> 00:36:11,930
+Speaker 0: And it's just in my country.
+
+622
+00:36:12,291 --> 00:36:16,809
+Speaker 0: I want some other country too, because you know, right now the world is governed by countries.
+
+623
+00:36:16,869 --> 00:36:21,992
+Speaker 0: So their law still stands for a lot of things, especially physical devices and physical locations.
+
+624
+00:36:22,012 --> 00:36:23,960
+Speaker 0: who owns them, who is allowed to do things with them.
+
+625
+00:36:24,001 --> 00:36:25,126
+Speaker 0: It's property law, right?
+
+626
+00:36:25,467 --> 00:36:26,230
+Speaker 0: I own this computer.
+
+627
+00:36:26,371 --> 00:36:29,383
+Speaker 0: I can make it do with bits, whatever I want it to do.
+
+628
+00:36:29,464 --> 00:36:32,213
+Speaker 0: That's legal, you know, in this country to do with it.
+
+629
+00:36:33,096 --> 00:36:35,885
+Speaker 0: So, but my country wants to connect with another country.
+
+630
+00:36:36,708 --> 00:36:47,633
+Speaker 1: So we need some sort of agreement between us to have this cable go and maybe that agreement often will be between, for example, two private entities that are high level to like, you know, high tier service providers.
+
+631
+00:36:47,653 --> 00:36:47,794
+Speaker 1: Yeah.
+
+632
+00:36:47,874 --> 00:36:59,555
+Speaker 0: And it's, you know, a lot of the same laws that are involved with say importer exporter will be involved in the cable going from chips us to exactly with the cable going from us to Canada.
+
+633
+00:36:59,755 --> 00:37:04,052
+Speaker 0: You know, let's say it goes from sprint to Canadian phone company.
+
+634
+00:37:04,072 --> 00:37:05,799
+Speaker 0: I don't know the name of right.
+
+635
+00:37:05,859 --> 00:37:07,546
+Speaker 0: You know, those companies work it out.
+
+636
+00:37:07,667 --> 00:37:11,726
+Speaker 0: There's some laws involving, you know, who's defending the cable in times of war, I guess.
+
+637
+00:37:11,766 --> 00:37:12,107
+Speaker 0: I don't know.
+
+638
+00:37:12,931 --> 00:37:14,719
+Speaker 0: And they set it up and now they're sending bits.
+
+639
+00:37:14,799 --> 00:37:31,817
+Speaker 0: Well, what if Canada decides to make a law that they're going to do bits different, like reverse bits, the U S side either has to also do reverse bits or say flip, reverse all the bits going to Canada or coming from Canada or just say, fuck you Canada.
+
+640
+00:37:31,837 --> 00:37:34,450
+Speaker 0: You're not doing things the way we do them and the way everyone else does them.
+
+641
+00:37:34,490 --> 00:37:37,866
+Speaker 0: So we're just going to cut your ass off and we're not going to accept your bits anymore.
+
+642
+00:37:38,668 --> 00:37:42,684
+Speaker 1: Now, the reality is that the United States basically invented the internet.
+
+643
+00:37:42,704 --> 00:37:45,539
+Speaker 1: It's like the last great thing we as a country spent tax dollars on.
+
+644
+00:37:45,559 --> 00:37:47,850
+Speaker 0: And we say the way the bits are going to go.
+
+645
+00:37:47,990 --> 00:37:52,571
+Speaker 0: And if someone doesn't make their bits go the way our bids go, they just don't have any working internet.
+
+646
+00:37:52,792 --> 00:37:57,830
+Speaker 1: Basically right now, the U S department of effectively has control over the internet.
+
+647
+00:37:58,271 --> 00:38:01,122
+Speaker 1: And while a lot of other countries might say they can control.
+
+648
+00:38:01,162 --> 00:38:09,822
+Speaker 1: like China kind of has walled themselves off from the internet, a lot of other restrictive and or horrible countries have walled themselves off or attempted to wall themselves off.
+
+649
+00:38:09,963 --> 00:38:20,820
+Speaker 1: North Korea doesn't really appear to have an internet, but the fact remains that the vast majority of pretty much everything is in the sphere of influence of the United States.
+
+650
+00:38:21,740 --> 00:38:26,140
+Speaker 1: And we have hitherto basically told the entire rest of the world to go fuck themselves.
+
+651
+00:38:26,600 --> 00:38:26,680
+Speaker 0: Good.
+
+652
+00:38:27,142 --> 00:38:30,998
+Speaker 0: Now at the same time, not really good because, you know, even though I'm a U?
+
+653
+00:38:31,119 --> 00:38:32,926
+Speaker 0: S person, I live here, I was born here.
+
+654
+00:38:32,966 --> 00:38:33,448
+Speaker 0: I've been here.
+
+655
+00:38:33,468 --> 00:38:37,726
+Speaker 0: the over and over 99% of my life has been spent in this country, right?
+
+656
+00:38:38,208 --> 00:38:40,156
+Speaker 0: I'm not always the biggest fan of this country.
+
+657
+00:38:40,176 --> 00:38:41,482
+Speaker 0: We complain about it all the time.
+
+658
+00:38:41,582 --> 00:38:45,421
+Speaker 0: Every country has a lot of bad shit and ours notwithstanding, we get a lot of bad shit here.
+
+659
+00:38:45,441 --> 00:38:51,603
+Speaker 1: So we just had a huge mass shooting and the country flipped out about how we shouldn't talk about it.
+
+660
+00:38:51,764 --> 00:38:51,964
+Speaker 0: Yeah.
+
+661
+00:38:52,045 --> 00:38:57,287
+Speaker 0: Anyway, well, we've got a situation where, you know, should we really be in charge of this internet?
+
+662
+00:38:57,448 --> 00:38:59,400
+Speaker 1: Our Congress can't figure out if they're going to pay back money.
+
+663
+00:38:59,480 --> 00:39:00,666
+Speaker 1: They already borrowed, right?
+
+664
+00:39:00,847 --> 00:39:09,343
+Speaker 0: This internet is something that is important to the whole world, even though we invented it, or at least most of it, it is not something that really belongs to us entirely.
+
+665
+00:39:09,403 --> 00:39:12,514
+Speaker 0: It's something that the entire world has a huge stake in.
+
+666
+00:39:12,895 --> 00:39:18,899
+Speaker 0: So for one country to control it and do things in its own interest, you can see how that's not exactly fair or right.
+
+667
+00:39:18,939 --> 00:39:22,133
+Speaker 0: We could fuck over all these other countries and be evil in many ways.
+
+668
+00:39:22,173 --> 00:39:24,182
+Speaker 0: And I, we recognize that that is not cool.
+
+669
+00:39:24,242 --> 00:39:24,463
+Speaker 1: Yes.
+
+670
+00:39:24,583 --> 00:39:32,676
+Speaker 1: Now at the same time, and this is why, you know, when it comes to politics, I take very nuanced and sometimes complicated positions and shows it.
+
+671
+00:39:32,716 --> 00:39:46,895
+Speaker 1: So does Scott on most issues, but people would consider me perhaps left wing, liberal, radical, you know, but, uh, I'm actually very effectively right wing on the issue of internet governance.
+
+672
+00:39:47,497 --> 00:39:56,434
+Speaker 1: I'm of the mind that the United States government should maintain its effective control over internet governance and furthermore should defend that if necessary with military force.
+
+673
+00:39:56,816 --> 00:39:57,036
+Speaker 0: Yeah.
+
+674
+00:39:57,117 --> 00:39:59,024
+Speaker 0: And because basically here's the situation, right?
+
+675
+00:39:59,687 --> 00:40:07,198
+Speaker 0: It would be nice as I just said, if the whole world could come together to govern the internet in unison, the United nations, why don't we have them?
+
+676
+00:40:07,318 --> 00:40:17,016
+Speaker 0: And we could work together for everyone's interest in the internet and not just have the internet be serving of the U S and basically all these other countries while dependent on the internets.
+
+677
+00:40:17,859 --> 00:40:29,841
+Speaker 0: Um, basically under our foot and basically needing, you know, us so badly because we run the show, it's not fair to them to not be able to have any control or say in this thing that is so important to them.
+
+678
+00:40:30,383 --> 00:40:42,782
+Speaker 0: It's because up until now, if you look at reality, anything, the other countries of the world have wanted to do with the internet, if they had the power to do so are stupid things that they shouldn't do.
+
+679
+00:40:43,765 --> 00:40:53,160
+Speaker 1: It basically is true that with a few exceptions, despite all the bullshit that goes on in the U S our freedom of speech is one of the few things that we really have going for us.
+
+680
+00:40:53,300 --> 00:41:02,749
+Speaker 1: And unless copyright is involved, you can basically post anything, but the vast majority of the rest of the world would rather that not be the case.
+
+681
+00:41:02,970 --> 00:41:19,661
+Speaker 1: And if we let the United nations control the internet to the degree that many of its members now would like the people who are pushing for that, the more the most seem to be the countries that actually want to straight up restrict the thing the internet is the best at, which is sharing information in an unfettered manner.
+
+682
+00:41:20,564 --> 00:41:26,042
+Speaker 0: The other thing is that a lot of these countries, you know, they view the internet as the web.
+
+683
+00:41:26,062 --> 00:41:28,394
+Speaker 0: They don't have a technological view of it, right?
+
+684
+00:41:28,434 --> 00:41:32,091
+Speaker 0: They're viewing like this surface level crap because they don't have a technological understanding.
+
+685
+00:41:32,131 --> 00:41:35,145
+Speaker 0: They're politicians and diplomats and those sorts of people.
+
+686
+00:41:35,185 --> 00:41:38,561
+Speaker 0: They don't, you know, most, almost all of them do not understand technology.
+
+687
+00:41:39,083 --> 00:41:47,865
+Speaker 0: So the things they want to do for purposes of censorship or spying or commerce or whatever they're, you know, all tear.
+
+688
+00:41:47,945 --> 00:42:00,883
+Speaker 0: your old world motives are most likely most of those things will ruin the internet technologically and bit wise and performance wise and reliability wise and security wise.
+
+689
+00:42:01,425 --> 00:42:05,296
+Speaker 0: And we cannot let any of those things happen for those reasons.
+
+690
+00:42:05,978 --> 00:42:13,570
+Speaker 0: And you know, if there was some sort of elite panel of, you know, amazing technology, people who are going to run the internet, that would be totally chill.
+
+691
+00:42:13,670 --> 00:42:21,863
+Speaker 1: But now we've got a bunch of countries who want to basically make it illegal to blaspheme on the internet or to restrict things like Australia or Britain does.
+
+692
+00:42:22,023 --> 00:42:25,737
+Speaker 1: And we just, the one thing we've got going for us is free speech.
+
+693
+00:42:26,058 --> 00:42:29,190
+Speaker 1: And the other thing is that we've actually managed the internet pretty well.
+
+694
+00:42:29,210 --> 00:42:29,853
+Speaker 1: Yeah.
+
+695
+00:42:29,953 --> 00:42:46,548
+Speaker 0: I mean, if you look, even though the US has done many things wrong up until now, at least, and so far no evidence of badness in the future, the things the US government has wanted and declared for the internet to do have mostly been good and the right thing to do.
+
+696
+00:42:46,769 --> 00:42:51,865
+Speaker 0: And mostly in good, been better than anything any other country would have done if they were in charge.
+
+697
+00:42:52,668 --> 00:42:54,313
+Speaker 0: So not going to complain yet.
+
+698
+00:42:54,474 --> 00:42:58,829
+Speaker 0: If it has to be one country, this one has done a good job so far.
+
+699
+00:42:58,949 --> 00:43:03,344
+Speaker 0: Let's stick with it until we can't stick with it anymore and then figure something else out.
+
+700
+00:43:04,468 --> 00:43:08,622
+Speaker 1: So very recently is kind of an example of how this is making it to the news.
+
+701
+00:43:08,782 --> 00:43:16,716
+Speaker 1: And it's interesting because most of the news coverage around this doesn't really even explain what, because journalists don't know anything about technology either.
+
+702
+00:43:16,797 --> 00:43:25,470
+Speaker 1: So the ITU is a part of the United Nations that manages things like telecommunications between countries, like long distance phone calls and all that stuff.
+
+703
+00:43:25,570 --> 00:43:25,691
+Speaker 0: Yeah.
+
+704
+00:43:25,731 --> 00:43:27,800
+Speaker 0: It's a very old organization.
+
+705
+00:43:28,220 --> 00:43:30,850
+Speaker 0: And for things like phone calls, it worked pretty well.
+
+706
+00:43:31,251 --> 00:43:38,920
+Speaker 1: So the United States, there was a treaty that was put forth that would expand part of the ITU's purview to cover some internet things.
+
+707
+00:43:40,402 --> 00:43:45,939
+Speaker 1: And US ambassador Terry Kramer basically told everyone, yeah, we're not signing it.
+
+708
+00:43:45,999 --> 00:43:47,828
+Speaker 1: And he gave a really good speech as to why.
+
+709
+00:43:48,190 --> 00:43:49,637
+Speaker 1: And I want to read the relevant quote here.
+
+710
+00:43:49,657 --> 00:43:58,349
+Speaker 1: Quote, "The internet has given the world unimaginable economic and social benefits during these past 24 years, all without UN regulation.
+
+711
+00:43:58,670 --> 00:44:04,371
+Speaker 1: We candidly cannot support an ITU treaty that is inconsistent with a multi-stakeholder model of internet governance.
+
+712
+00:44:04,933 --> 00:44:13,474
+Speaker 1: These past two weeks, we have of course made good progress and shown willingness to negotiate on a variety of telecommunications policy issues, such as roaming and settlement, blah, blah, blah, blah, blah.
+
+713
+00:44:14,238 --> 00:44:18,260
+Speaker 1: But the United States continues to believe that internet policy must be multi-stakeholder driven.
+
+714
+00:44:18,601 --> 00:44:25,125
+Speaker 1: Internet policy should not be determined by member states, but by citizens, communities, and the broader society.
+
+715
+00:44:25,607 --> 00:44:29,081
+Speaker 1: And that consultation from the private sector and civil society is paramount.
+
+716
+00:44:29,563 --> 00:44:30,605
+Speaker 1: It has not happened
+
+717
+00:44:30,706 --> 00:44:31,067
+Speaker 1: here.".
+
+718
+00:44:31,548 --> 00:44:32,811
+Speaker 1: Referring to the ITU treaty.
+
+719
+00:44:33,754 --> 00:44:41,237
+Speaker 1: And he basically goes on to say that the people involved in making these treaties that we're currently refusing to sign.
+
+720
+00:44:41,257 --> 00:44:42,743
+Speaker 1: Oh, there's a great quote here.
+
+721
+00:44:43,044 --> 00:44:51,716
+Speaker 1: He warned, or another guy warned, "The US should immediately prepare for an even more treacherous ITU treaty negotiation that's going to take place in 2014 in
+
+722
+00:44:51,756 --> 00:44:51,937
+Speaker 1: Korea.".
+
+723
+00:44:54,080 --> 00:45:01,694
+Speaker 1: So the UN, different groups of countries keep getting together and trying to put forth resolutions, giving themselves more control over the internet.
+
+724
+00:45:01,975 --> 00:45:04,264
+Speaker 1: And every time the US just says, "Well, you know what?
+
+725
+00:45:04,344 --> 00:45:04,545
+Speaker 1: No.".
+
+726
+00:45:04,746 --> 00:45:06,294
+Speaker 0: Well, I mean, think about it this way, right?
+
+727
+00:45:06,536 --> 00:45:10,188
+Speaker 0: If you consider the internet as almost like a country, right?
+
+728
+00:45:10,249 --> 00:45:11,091
+Speaker 0: It's that important.
+
+729
+00:45:11,593 --> 00:45:15,385
+Speaker 0: And its citizens are all sorts of people all over the world.
+
+730
+00:45:15,767 --> 00:45:22,855
+Speaker 0: So this is like, you know, in the olden days of the US, only the white dudes who owned land and had penises could vote.
+
+731
+00:45:23,237 --> 00:45:29,419
+Speaker 0: Well, this is like, well, this is internet and we're all live in it, but only the people who run countries can vote.
+
+732
+00:45:29,580 --> 00:45:31,449
+Speaker 0: It's like, no, that's not how it's got to work.
+
+733
+00:45:31,529 --> 00:45:31,629
+Speaker 0: Yeah.
+
+734
+00:45:31,690 --> 00:45:35,769
+Speaker 1: I mean, the people who run Libya really don't want the people in Libya having access to the internet.
+
+735
+00:45:35,870 --> 00:45:37,859
+Speaker 0: The people who run China really don't want people.
+
+736
+00:45:38,861 --> 00:45:42,315
+Speaker 1: the people in China running it really don't want the people living in it.
+
+737
+00:45:42,415 --> 00:45:47,820
+Speaker 0: Even in a situation like this is like corporations really depend on the internet to live all around the world.
+
+738
+00:45:48,341 --> 00:45:52,698
+Speaker 0: And they don't even have a say in this ITU shit other than paying the government, right?
+
+739
+00:45:52,758 --> 00:46:06,384
+Speaker 0: So governance, you know, people who own, you know, govern large pieces of land, you know, even if they represent their people should, you know, on paper should not be the ones to determine the policy of the internet.
+
+740
+00:46:06,444 --> 00:46:16,101
+Speaker 0: It is, you know, we should instead imagine it as a separate country and anyone who uses or depends on the internet is a citizen of it and has an equal say to everyone else.
+
+741
+00:46:16,221 --> 00:46:21,641
+Speaker 1: My fantasy depends on my fantasy that I know is not relevant for at least for the next day.
+
+742
+00:46:21,661 --> 00:46:24,031
+Speaker 0: The internet is its own country.
+
+743
+00:46:24,172 --> 00:46:33,943
+Speaker 1: My fantasy of the next few decades is that the internet is recognized by the United nations, probably out of necessity as a sovereign nation and has delegates
+
+744
+00:46:34,104 --> 00:46:40,309
+Speaker 0: and the people who are in charge of the internet and are elected and in charge of it or whatever are really smart technological people.
+
+745
+00:46:40,369 --> 00:46:45,331
+Speaker 0: And suddenly they person who's the head of that is more important than the president of the United States.
+
+746
+00:46:45,351 --> 00:46:53,428
+Speaker 1: I have a feeling that that can only come to pass if the, if the people who consider themselves citizens of the internet, I mean, I consider myself personally, if they
+
+747
+00:46:53,468 --> 00:46:55,376
+Speaker 0: had us, if they had New York city
+
+748
+00:46:55,496 --> 00:46:56,380
+Speaker 1: and of the internet,
+
+749
+00:46:56,520 --> 00:47:01,724
+Speaker 0: if they had legit internet passports, like you could go to a country and say, you know, I'm from internet.
+
+750
+00:47:01,944 --> 00:47:02,768
+Speaker 0: That is my country.
+
+751
+00:47:03,490 --> 00:47:04,815
+Speaker 0: I would switch and get one.
+
+752
+00:47:04,836 --> 00:47:08,696
+Speaker 1: I would say that internet would be, well, then again, what if you have to be super legit though?
+
+753
+00:47:08,716 --> 00:47:15,986
+Speaker 0: It couldn't be like green card to live in the U S unless you were a dual citizen, but it would have to be super legit, not sea land legit, right?
+
+754
+00:47:16,026 --> 00:47:17,977
+Speaker 0: So it would have to be as legit as a French pass.
+
+755
+00:47:18,017 --> 00:47:19,042
+Speaker 1: It would have to be dual citizens.
+
+756
+00:47:19,083 --> 00:47:24,590
+Speaker 1: just because as cool as this fantasy is, the fact remains that the one thing the internet does not have is sovereign land.
+
+757
+00:47:24,610 --> 00:47:27,485
+Speaker 1: So even if you're a citizen of the internet, you got to live in some other country.
+
+758
+00:47:27,505 --> 00:47:29,815
+Speaker 1: Do you really want to have a green card to live here?
+
+759
+00:47:29,836 --> 00:47:45,346
+Speaker 0: If it was, if the passport and the, you know, the citizenship was as legit as current citizenship is and not some sea land joke, like I said, I would do whatever I had to do to be that even if it meant green cards or whatever.
+
+760
+00:47:45,567 --> 00:47:45,808
+Speaker 1: Is that?
+
+761
+00:47:45,848 --> 00:47:53,499
+Speaker 1: the only way for the internet to have a legitimate sort of citizenship or recognition would be if it had the sort of independent ability to defend itself.
+
+762
+00:47:54,840 --> 00:47:57,880
+Speaker 1: Now you can imagine what that might entail.
+
+763
+00:48:00,622 --> 00:48:01,003
+Speaker 0: Well, yeah.
+
+764
+00:48:01,023 --> 00:48:07,265
+Speaker 0: I mean, you know, like you said before, we should use military force to defend the internets if necessary.
+
+765
+00:48:07,285 --> 00:48:17,441
+Speaker 1: I have a feeling that if you know, the CBD TPA was basically fought off by the citizens of the internet from the era because normal people had no idea that that was happening.
+
+766
+00:48:17,461 --> 00:48:24,005
+Speaker 1: I know I bring that up a lot lately, but those kinds of laws keep trying to come back and we keep fighting them off.
+
+767
+00:48:24,085 --> 00:48:26,736
+Speaker 1: But non nerds still have no idea this stuff happens.
+
+768
+00:48:27,539 --> 00:48:35,532
+Speaker 1: If it, if it ever got to the point where stuff like that was about to pass, I think nerds would start doing the kinds of things that they were planning for in the nineties.
+
+769
+00:48:35,773 --> 00:48:41,051
+Speaker 1: They'd start using PGP phone equivalents again and crazy encryption and dark nets.
+
+770
+00:48:41,773 --> 00:48:44,602
+Speaker 0: There's only so much we can do along those lines.
+
+771
+00:48:44,622 --> 00:48:48,317
+Speaker 0: And we could be pushed to the point of using all of those tools, right.
+
+772
+00:48:48,338 --> 00:48:52,351
+Speaker 0: And you know, doing lots and lots of, you know, internet side damage.
+
+773
+00:48:52,432 --> 00:49:02,449
+Speaker 0: Basically, it's sort of like, uh, you know, if there is a war on the internet for the internet, it's going to look a lot like Russia retreating away from Napoleon and or Hitler.
+
+774
+00:49:02,670 --> 00:49:13,458
+Speaker 0: We're basically burning down the internet, uh, to damage those who were trying to harm the internet, to make them suffer in the land of the bad internet while simultaneously rotting around for ourselves who know better.
+
+775
+00:49:13,599 --> 00:49:13,840
+Speaker 0: Yes.
+
+776
+00:49:14,281 --> 00:49:18,978
+Speaker 0: But in the end, the internet really does need physical defenses.
+
+777
+00:49:18,998 --> 00:49:22,632
+Speaker 0: I mean, it needs, the internet needs a Navy at the least to defend the undersea cables.
+
+778
+00:49:22,752 --> 00:49:27,187
+Speaker 0: It needs some sort of space to put up and fix it.
+
+779
+00:49:27,428 --> 00:49:28,151
+Speaker 1: Talk about this.
+
+780
+00:49:28,272 --> 00:49:32,952
+Speaker 1: One thing that I could have, I wrote in high school, a short science fiction story that I can't find about.
+
+781
+00:49:33,173 --> 00:49:41,599
+Speaker 1: And the idea was that the internet was recognized in some year, 20 X DX after a global act of pseudo terror to bay.
+
+782
+00:49:41,619 --> 00:49:52,900
+Speaker 1: It was basically a threat from some form of anonymous to tell the world that they could, in fact, you know, people who are citizens of the internet in quotes had basically pervaded all levels of society.
+
+783
+00:49:52,980 --> 00:49:58,384
+Speaker 1: So you couldn't know who was or wasn't thanks to encrypted keys and anonymous stuff and all those sorts of things.
+
+784
+00:49:58,887 --> 00:50:00,840
+Speaker 1: And I think that's, you know, my idea about the milk crates.
+
+785
+00:50:01,681 --> 00:50:15,202
+Speaker 1: It's the idea that in every intersection of every major city in the world, citizens of the internet shoved shopping carts filled with gallons of milk into the intersection to stop all street traffic in every country in the world for one afternoon during rush hour to prove that it had the power to act if it needed to.
+
+786
+00:50:15,784 --> 00:50:20,475
+Speaker 1: Hoping that that threat happens in that anime.
+
+787
+00:50:21,878 --> 00:50:28,094
+Speaker 0: The one with the girl with the yellow door, a little bit of that action going on a little bit.
+
+788
+00:50:28,956 --> 00:50:29,297
+Speaker 1: We'll see.
+
+789
+00:50:29,798 --> 00:50:35,161
+Speaker 1: I think things like that will happen in our lifetime, but I think we're already too old to be on the forefront of that.
+
+790
+00:50:35,602 --> 00:50:41,968
+Speaker 0: shopping carts aren't going to fix some someone cutting all the undersea cables either, which are surprisingly easy to cut.
+
+791
+00:50:42,008 --> 00:50:43,414
+Speaker 0: They're cut all the time by accident.
+
+792
+00:50:43,574 --> 00:50:43,775
+Speaker 0: Yeah.
+
+793
+00:50:44,317 --> 00:50:50,421
+Speaker 1: But at the same time on the land and where you can have retransmitters, you can still keep the signals.
+
+794
+00:50:50,461 --> 00:50:51,706
+Speaker 0: Well, that's another thing, right?
+
+795
+00:50:51,867 --> 00:51:08,407
+Speaker 0: If there is sufficient technological innovation to where everything can be wireless and fast and affordable and et cetera, you have to get to the point to where a government cannot stop the internet without stopping all communication or this can't period.
+
+796
+00:51:08,447 --> 00:51:08,567
+Speaker 0: Right.
+
+797
+00:51:08,648 --> 00:51:14,470
+Speaker 1: What if we reach a time where there is, it's always easier to disrupt a signal than it is to read it.
+
+798
+00:51:14,610 --> 00:51:15,172
+Speaker 0: That is true.
+
+799
+00:51:15,233 --> 00:51:22,662
+Speaker 0: But what if there is, we can reach a point in time where we have technology such that, you know, we can, everyone just has their own power sources.
+
+800
+00:51:22,682 --> 00:51:24,207
+Speaker 0: So it doesn't even matter if they cut the power.
+
+801
+00:51:24,428 --> 00:51:25,412
+Speaker 0: Right.
+
+802
+00:51:25,432 --> 00:51:38,222
+Speaker 0: And B everyone just wirelessly sending their own data and we can just, you know, use it every hell frequencies and shit we want, you know, crazy jamming, crazy noise, but that would require such an immense, well, no, that's what I'm saying.
+
+803
+00:51:38,263 --> 00:51:39,991
+Speaker 1: It doesn't matter the resources it takes.
+
+804
+00:51:40,031 --> 00:51:46,636
+Speaker 1: The idea is that you have to make the internet so integral to the real world in the day to day interactions of everything.
+
+805
+00:51:47,298 --> 00:51:56,351
+Speaker 1: And at the same time, make it so resilient that the only way to stop, uh, the nerds who run the internet shadow, whatever, is to stop the entire internet.
+
+806
+00:51:56,612 --> 00:51:57,516
+Speaker 1: That is all or nothing.
+
+807
+00:51:57,536 --> 00:52:04,564
+Speaker 1: Because then basically it'd be like the equivalent of the only way to save New York city from the invasion is to nuke New York city.
+
+808
+00:52:04,684 --> 00:52:06,051
+Speaker 0: Then they won't want it anymore.
+
+809
+00:52:06,152 --> 00:52:08,986
+Speaker 0: And they'll realize how important New York was and why they shouldn't have fucked with it.
+
+810
+00:52:09,328 --> 00:52:13,228
+Speaker 0: And then we, cause we're New Yorkers, we can put it back together once they get the hell out of here.
+
+811
+00:52:13,811 --> 00:52:16,462
+Speaker 1: That's basically the only way the internet could be a sovereign power.
+
+812
+00:52:16,703 --> 00:52:16,964
+Speaker 0: Yeah.
+
+813
+00:52:17,445 --> 00:52:20,052
+Speaker 0: Well, maybe in our lives, maybe in the next lives.
+
+814
+00:52:20,072 --> 00:52:26,095
+Speaker 1: We'll see what decade in terms of internet governance and we'll see what happens.
+
+815
+00:52:26,115 --> 00:52:28,586
+Speaker 0: The fundamental point, at least for the short term is that the U?
+
+816
+00:52:29,048 --> 00:52:30,495
+Speaker 1: S topic should be really boring.
+
+817
+00:52:30,535 --> 00:52:34,955
+Speaker 1: It should be nerds just talking about, well, how do we allocate IP addresses in this country?
+
+818
+00:52:34,995 --> 00:52:39,558
+Speaker 1: But instead we have countries like Korea being like, well, we don't want porn IP addresses and Germany.
+
+819
+00:52:39,578 --> 00:52:41,367
+Speaker 0: Like we don't want any Nazi and Britain's
+
+820
+00:52:41,407 --> 00:52:43,497
+Speaker 1: like, we want defamation laws like crazy
+
+821
+00:52:43,597 --> 00:52:52,700
+Speaker 0: and people and other countries are like, well, you shouldn't be able to see anything that we don't like anywhere, or you should have to prove beyond any doubt that you're 18 plus in order to see any of this stuff.
+
+822
+00:52:52,880 --> 00:52:56,892
+Speaker 0: And it's like every computer must send bits.
+
+823
+00:52:56,992 --> 00:53:01,209
+Speaker 0: It is asked to say, and if it wants to in any computer, then that is the problem.
+
+824
+00:53:01,249 --> 00:53:02,577
+Speaker 0: We can't be looking at anyone's bits.
+
+825
+00:53:02,597 --> 00:53:03,743
+Speaker 0: You can be blocking any internet.
+
+826
+00:53:03,783 --> 00:53:05,069
+Speaker 1: Government should be boring.
+
+827
+00:53:05,169 --> 00:53:09,104
+Speaker 1: It's not because people are stupid, greedy, drama filled and fearful.
+
+828
+00:53:09,184 --> 00:53:12,353
+Speaker 0: It should just be as boring as, you know, here are computers.
+
+829
+00:53:15,381 --> 00:53:16,225
+Speaker 0: They are not working.
+
+830
+00:53:16,285 --> 00:53:17,269
+Speaker 0: Let us make them work.
+
+831
+00:53:17,410 --> 00:53:17,772
+Speaker 0: Okay.
+
+832
+00:53:17,812 --> 00:53:18,836
+Speaker 0: They are now working.
+
+833
+00:53:18,957 --> 00:53:24,780
+Speaker 1: So guys, do we add one bit or two bit to the new address scheme for IP 47?
+
+834
+00:53:24,780 --> 00:53:34,605
+Speaker 0: Uh, well it seems like we never thought we would need all the IP addresses of IPV six until every nanobot had an IP address.
+
+835
+00:53:34,646 --> 00:53:38,800
+Speaker 1: And we made the nanobots should we use for the deep space network?
+
+836
+00:53:39,942 --> 00:53:43,533
+Speaker 0: Think about farthest into the future as possible, right?
+
+837
+00:53:43,694 --> 00:53:46,603
+Speaker 0: The smallest computer we can make will be half a quark.
+
+838
+00:53:46,985 --> 00:53:52,486
+Speaker 0: If we computers are half a quark, we'll need this many bits to have an IP address for every half a quark computer.
+
+839
+00:53:52,787 --> 00:53:54,815
+Speaker 0: Let's add two more bits to that.
+
+840
+00:53:54,835 --> 00:53:56,260
+Speaker 0: So it will be super future.
+
+841
+00:53:56,600 --> 00:54:01,337
+Speaker 1: So everyone who isn't the U S you can help us administer the internet.
+
+842
+00:54:01,477 --> 00:54:08,730
+Speaker 1: If we can get it to the point to where those kinds of discussions are literally the only discussions that happen in relation to the administration of the internet.
+
+843
+00:54:08,750 --> 00:54:11,082
+Speaker 0: Or if the U S starts fucking it up, which they haven't yet.
+
+844
+00:54:11,102 --> 00:54:12,749
+Speaker 1: If the U S starts fucking it up, take it from us.
+
+845
+00:54:13,111 --> 00:54:13,653
+Speaker 0: That's right.
+
+846
+00:54:14,859 --> 00:54:15,120
+Speaker 0: Please.
+
+847
+00:54:22,411 --> 00:54:24,983
+Speaker 1: This has been geek nights with rim and Scott special.
+
+848
+00:54:25,023 --> 00:54:28,619
+Speaker 1: Thanks to DJ pretzel for the opening music cat Lee for web design and brand.
+
+849
+00:54:28,679 --> 00:54:28,980
+Speaker 1: Okay.
+
+850
+00:54:29,040 --> 00:54:29,864
+Speaker 1: For the logos.
+
+851
+00:54:30,065 --> 00:54:35,124
+Speaker 0: Be sure to visit our website at front row crew.com for show notes, discussion news, and more.
+
+852
+00:54:35,365 --> 00:54:38,035
+Speaker 1: Remember geek nights is not one, but four different shows.
+
+853
+00:54:38,156 --> 00:54:42,797
+Speaker 1: Sci-Tech Mondays, gaming Tuesdays, anime comic Wednesdays, and indiscriminate Thursdays.
+
+854
+00:54:43,118 --> 00:54:45,950
+Speaker 0: geek nights is distributed under a creative commons attribution.
+
+855
+00:54:45,950 --> 00:54:47,134
+Speaker 0: 3.0 license.
+
+856
+00:54:47,556 --> 00:54:53,710
+Speaker 0: Geek nights is recorded live with no studio and no audience, but unlike those other late shows it's actually recorded at night.
+

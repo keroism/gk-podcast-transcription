@@ -1,0 +1,2524 @@
+﻿1
+00:00:09,420 --> 00:00:13,067
+Speaker 0: It's Wednesday December 21st, and this is geek nights.
+
+2
+00:00:13,529 --> 00:00:18,169
+Speaker 0: tonight We talk about anime big o2 and space symphony my town.
+
+3
+00:00:19,911 --> 00:00:20,947
+Speaker 1: Let's do this.
+
+4
+00:00:21,996 --> 00:00:32,101
+Speaker 0: So today at work one of my co-workers Came into my office with a box of some sort of card like a card for a computer And they looked real old.
+
+5
+00:00:32,847 --> 00:00:37,505
+Speaker 0: and he looked at me And he asked me what they were and I didn't know and they were kind of weird.
+
+6
+00:00:37,545 --> 00:00:45,373
+Speaker 0: there were these large like super large before the days of PCI or EISA and There were two cards.
+
+7
+00:00:45,393 --> 00:00:50,086
+Speaker 0: They were connected by this ribbon cable between the two and they had a coax coming out of them.
+
+8
+00:00:51,290 --> 00:00:54,508
+Speaker 0: and then another co-worker appeared and he's like oh, that's token bus.
+
+9
+00:00:54,709 --> 00:01:04,549
+Speaker 0: and Finally a piece of legendary computing that I never really understood came together And I finally for the first time saw an actual token bus.
+
+10
+00:01:05,293 --> 00:01:06,137
+Speaker 1: Not a token ring.
+
+11
+00:01:06,378 --> 00:01:09,070
+Speaker 0: no not a token ring a token bus a token bus.
+
+12
+00:01:09,411 --> 00:01:12,870
+Speaker 1: I've heard of such a thing, but I've never actually seen it or known how it worked.
+
+13
+00:01:13,211 --> 00:01:29,696
+Speaker 0: You see what happened was I remember in all my history of computing classes at RIT We learned like Ethernet and all the different kinds of Ethernet and PC net and token ring And I remember our textbook had a little blurb like one paragraph And it said like token bus.
+
+14
+00:01:30,218 --> 00:01:39,510
+Speaker 0: and all it said was token bus was similar to token ring in that it used token But was completely different in other ways and it is beyond the scope of this book.
+
+15
+00:01:40,393 --> 00:01:42,060
+Speaker 0: All right, so we asked the professor.
+
+16
+00:01:42,140 --> 00:01:44,529
+Speaker 0: He was like it's beyond the scope of this class.
+
+17
+00:01:45,871 --> 00:01:46,875
+Speaker 0: It's it's alien.
+
+18
+00:01:47,196 --> 00:01:50,949
+Speaker 0: It's utterly alien, and it's not used by anyone, but you had it.
+
+19
+00:01:51,591 --> 00:01:54,290
+Speaker 0: Well, it was used mostly by factories.
+
+20
+00:01:55,174 --> 00:01:58,730
+Speaker 0: I mean basically to get into a very very brief history of the Internet.
+
+21
+00:01:59,232 --> 00:02:01,419
+Speaker 0: There are two ways to connect computers together.
+
+22
+00:02:01,479 --> 00:02:02,282
+Speaker 0: on a fundamental level.
+
+23
+00:02:02,663 --> 00:02:06,789
+Speaker 0: there are statistical networking methods And they're deterministic networking methods.
+
+24
+00:02:07,491 --> 00:02:11,060
+Speaker 0: Token ring token bus all those things are deterministic.
+
+25
+00:02:11,401 --> 00:02:13,967
+Speaker 0: you can calculate exactly how much latency.
+
+26
+00:02:14,007 --> 00:02:15,230
+Speaker 0: They'll be between different machines.
+
+27
+00:02:17,092 --> 00:02:19,380
+Speaker 0: Machines can't talk unless they get a little token or something.
+
+28
+00:02:19,420 --> 00:02:21,708
+Speaker 0: so everything's very deterministic and collisions don't exist.
+
+29
+00:02:22,712 --> 00:02:33,173
+Speaker 0: Ethernet was statistical meaning they expect a certain amount of collisions But statistically in the long run they expect most of the data to get through despite that Mm-hmm.
+
+30
+00:02:33,473 --> 00:02:38,789
+Speaker 0: so it's very chaotic and they expected that via through the chaos the data would get through somehow all right.
+
+31
+00:02:38,809 --> 00:02:48,450
+Speaker 0: and IBM backed Deterministic methods and other people like Xerox backed other methods and eventually ethernet won, and that's what we use today almost exclusively.
+
+32
+00:02:49,653 --> 00:02:51,229
+Speaker 1: What are you gonna do with these token bus guards?
+
+33
+00:02:52,171 --> 00:02:53,030
+Speaker 0: They're probably gonna be thrown away.
+
+34
+00:02:53,030 --> 00:02:53,372
+Speaker 0: I'll see.
+
+35
+00:02:53,412 --> 00:02:57,210
+Speaker 0: if they'll give me one to take home and put on display you just send them to the museum to put them next.
+
+36
+00:02:57,892 --> 00:02:59,438
+Speaker 0: I said they should donate them to RIT.
+
+37
+00:02:59,478 --> 00:03:03,874
+Speaker 0: so next time a kid asks what the hell token bus is the professor can be Like it's this.
+
+38
+00:03:04,276 --> 00:03:06,386
+Speaker 1: they'll just put them on the wall in the lab as decoration.
+
+39
+00:03:06,446 --> 00:03:06,808
+Speaker 1: send a museum.
+
+40
+00:03:07,970 --> 00:03:08,653
+Speaker 1: Museums are worried,
+
+41
+00:03:08,674 --> 00:03:23,915
+Speaker 0: but actually token bus is kind of cool now that I know exactly what it was And I'm not gonna bore you with the details, but it is Basically a super super super deterministic real-time way of doing networking that was used in a lot of factories Back in the day.
+
+42
+00:03:23,975 --> 00:03:25,444
+Speaker 0: GM was a big proponent of it.
+
+43
+00:03:26,189 --> 00:03:30,210
+Speaker 0: all right It was used to control robots in factories, and now it use is used for nothing.
+
+44
+00:03:31,191 --> 00:03:31,692
+Speaker 1: That's cool.
+
+45
+00:03:32,194 --> 00:03:32,335
+Speaker 1: Yeah.
+
+46
+00:03:32,696 --> 00:03:36,810
+Speaker 0: I was like old technology bits me too, so that's why it's fun working at IBM.
+
+47
+00:03:36,990 --> 00:03:41,529
+Speaker 0: I find all this old busted crap like in back warehouses, and I get to fiddle with it.
+
+48
+00:03:41,831 --> 00:03:44,243
+Speaker 1: You should go find it and destroy it and replace it with new stuff.
+
+49
+00:03:44,545 --> 00:03:45,470
+Speaker 0: It's not even being used.
+
+50
+00:03:45,470 --> 00:03:46,536
+Speaker 0: It's just like in boxes.
+
+51
+00:03:47,039 --> 00:03:48,467
+Speaker 1: Wow just Wow.
+
+52
+00:03:48,729 --> 00:03:54,820
+Speaker 1: yeah I wonder how much space and how much money it caused IBM to have all this old useless crap Taking up room
+
+53
+00:03:54,881 --> 00:04:03,328
+Speaker 0: and considering that They own more warehouse space than they need and that they owned large buildings with plenty of extra space and every now And then that stuff comes in handy.
+
+54
+00:04:05,013 --> 00:04:07,049
+Speaker 0: Yeah, yeah, it's cool all right.
+
+55
+00:04:08,720 --> 00:04:27,625
+Speaker 1: so speaking of computer hardware's The number one hard drive manufacturer in the world Seagate who I also happen to think is the best hard drive manufacturer in the world Has purchased for 1.9 billion dollars The third Largest hard drive manufacturer in the world which is max door the drive
+
+56
+00:04:27,645 --> 00:04:28,870
+Speaker 0: the brand a I use
+
+57
+00:04:29,251 --> 00:04:32,044
+Speaker 1: Which I would say makes the second best hard drives in the world.
+
+58
+00:04:32,205 --> 00:04:33,350
+Speaker 0: Western Digital is number two.
+
+59
+00:04:34,031 --> 00:04:38,449
+Speaker 1: Yeah, they make the second most number, but they I don't think they're good.
+
+60
+00:04:39,574 --> 00:04:40,790
+Speaker 0: Well actually it was funny.
+
+61
+00:04:40,790 --> 00:04:47,956
+Speaker 0: I was looking on the slashed out article of and the comments about this and there were several people who said Western Digital is Fantastic and I've never had one die.
+
+62
+00:04:47,996 --> 00:04:49,462
+Speaker 0: we use them in all our servers blah blah.
+
+63
+00:04:49,923 --> 00:04:50,987
+Speaker 1: It's just statistics man.
+
+64
+00:04:51,007 --> 00:04:58,329
+Speaker 1: Yeah, yeah It's not actually that those are worse, but I've had like two or three WDS die, and I've had Seagate.
+
+65
+00:04:58,650 --> 00:05:03,288
+Speaker 1: I've never seen the Seagate crash except for this really old 20 megabyte one which doesn't count.
+
+66
+00:05:03,529 --> 00:05:03,750
+Speaker 0: yeah.
+
+67
+00:05:04,151 --> 00:05:15,009
+Speaker 0: So I guess you really can't listen to geeks when it comes to that kind of hard drive thing because basically hard drives crash all of them and Depending on what geek you talk to they'll have a different brand crash on them.
+
+68
+00:05:15,110 --> 00:05:20,248
+Speaker 1: Yeah They will be loyal to another brand based solely on which brand crashed in which brand did not.
+
+69
+00:05:20,509 --> 00:05:25,867
+Speaker 0: yeah Because the first hard drive ever had that crash was a Western Digital, and I haven't had a Western Digital since.
+
+70
+00:05:26,509 --> 00:05:30,709
+Speaker 0: but My most recent hard drives crash was this max tour that I'm holding my hand right now.
+
+71
+00:05:31,151 --> 00:05:32,840
+Speaker 0: It still has data on it, but I can't get the data.
+
+72
+00:05:33,423 --> 00:05:34,870
+Speaker 1: I've seen his max store crash.
+
+73
+00:05:35,512 --> 00:05:45,671
+Speaker 1: I've had WDS that crashed, and I've had Seagate's never crashed, so you yeah That's my really that that's the only reason I'm loyal to Seagate is Randomness.
+
+74
+00:05:45,892 --> 00:05:47,699
+Speaker 0: basically well, and they give you the seashell.
+
+75
+00:05:48,221 --> 00:05:50,510
+Speaker 1: oh the seashell is great cuz oh my god.
+
+76
+00:05:50,791 --> 00:05:54,830
+Speaker 0: Oh, yeah, it's this little plastic thing that you can stick a hard drive in and it pretty much makes it invincible.
+
+77
+00:05:55,691 --> 00:05:58,466
+Speaker 1: Yep, no no all the other hard drive manufacturers.
+
+78
+00:05:58,486 --> 00:06:03,928
+Speaker 1: They don't give you crap They just give you the hard drive and maybe like a piece of plastic or a static bag or something.
+
+79
+00:06:04,048 --> 00:06:10,049
+Speaker 0: yeah The seashell is very nice and patented by Seagate, but I wonder if they're gonna be any ramifications of this merger.
+
+80
+00:06:10,089 --> 00:06:11,628
+Speaker 0: I mean Monopoly.
+
+81
+00:06:12,552 --> 00:06:15,128
+Speaker 1: You know definitely Monopoly is one thing to worry about.
+
+82
+00:06:15,188 --> 00:06:20,390
+Speaker 1: however I don't see them not keeping up hard drive technology.
+
+83
+00:06:21,176 --> 00:06:23,050
+Speaker 1: They'll continue to improve hard drive technology.
+
+84
+00:06:23,150 --> 00:06:24,195
+Speaker 1: So I'm not worried about that.
+
+85
+00:06:24,215 --> 00:06:31,769
+Speaker 1: not like Microsoft's Monopoly where they stagnated software innovation Because you know oh we don't need to improve IE we have Monopoly.
+
+86
+00:06:33,131 --> 00:06:38,790
+Speaker 1: The other worry is price increases because they can basically screw you because where else are you gonna go to get your hard drive?
+
+87
+00:06:39,750 --> 00:06:41,549
+Speaker 0: Yeah, well you know what we'll go to Western Digital of that.
+
+88
+00:06:42,031 --> 00:06:47,065
+Speaker 1: Yeah, if Seagate makes the price is way too high like oh for our new drives.
+
+89
+00:06:47,165 --> 00:06:48,870
+Speaker 1: We will charge a bajillion dollars.
+
+90
+00:06:49,031 --> 00:06:50,887
+Speaker 1: I'll just I'll really will buy a WD.
+
+91
+00:06:50,907 --> 00:06:54,220
+Speaker 0: and Yeah, though the thing is with hard drives is one.
+
+92
+00:06:54,281 --> 00:06:55,990
+Speaker 0: It's a real low margin market.
+
+93
+00:06:56,653 --> 00:07:00,250
+Speaker 0: They don't make so much profit per drive because it's a really competitive market.
+
+94
+00:07:00,612 --> 00:07:04,229
+Speaker 0: And if you slip it all a Chinese manufacturer will appear and just destroy you.
+
+95
+00:07:04,872 --> 00:07:05,856
+Speaker 1: See my worry here.
+
+96
+00:07:06,078 --> 00:07:24,070
+Speaker 1: the the place I can see it going wrong is let's say Seagate comes out with some new awesome hard drive technology because they have so many labs and things now right and the good research and They patent it and the only ones who have it and because they're so big they push it to be the standard
+
+97
+00:07:25,591 --> 00:07:25,992
+Speaker 0: Luckily,
+
+98
+00:07:26,012 --> 00:07:32,950
+Speaker 1: and then they screw us because aha the only place you can get the awesome hard drives with this technology is from us And we will charge more money.
+
+99
+00:07:34,152 --> 00:07:40,370
+Speaker 0: A standard like that doesn't mean anything because I mean all different hard drives are pretty much completely different internally.
+
+100
+00:07:40,772 --> 00:07:44,795
+Speaker 0: They use different mechanisms and different algorithms different chips And they're all pretty crazy.
+
+101
+00:07:45,258 --> 00:07:51,762
+Speaker 0: and the only commonalities that on the end of them There is a little thing that is serial ATA or IDE or SCSI.
+
+102
+00:07:51,782 --> 00:07:53,386
+Speaker 1: I'm not talking about the.
+
+103
+00:07:53,507 --> 00:07:54,670
+Speaker 1: I'm not talking about the connector.
+
+104
+00:07:54,730 --> 00:07:58,990
+Speaker 0: I don't think we'll have a worry about so if they don't the thing is currently the hard drive manufacturers do that.
+
+105
+00:07:59,070 --> 00:08:03,350
+Speaker 0: Anyway, max tour has this special technology that they can make the drives quiet or fast.
+
+106
+00:08:03,530 --> 00:08:08,364
+Speaker 1: Oh, yeah, but I'm talking about all of those are just mostly like marketing talk.
+
+107
+00:08:08,424 --> 00:08:14,410
+Speaker 1: things like oh ours has feature XYZ which is just these little marketing labels that they say theirs is better.
+
+108
+00:08:14,872 --> 00:08:18,909
+Speaker 1: I'm worried about them actually making something where their drives just wipe the floor with everyone else.
+
+109
+00:08:19,391 --> 00:08:23,507
+Speaker 0: Yeah, there's not really much you could do without changing the interface as well.
+
+110
+00:08:23,527 --> 00:08:24,270
+Speaker 0: That's just the drive.
+
+111
+00:08:24,591 --> 00:08:28,767
+Speaker 1: Yeah, well Hitachi actually has that perpendicular thing going on.
+
+112
+00:08:29,429 --> 00:08:33,389
+Speaker 0: Yeah Well, that's partly because Hitachi bought a IBM's hard drive division not so long ago.
+
+113
+00:08:34,011 --> 00:08:38,130
+Speaker 0: Ah, well our drive market has been consolidating rapidly for the last five years.
+
+114
+00:08:38,732 --> 00:08:40,001
+Speaker 1: So what happens when margins are low?
+
+115
+00:08:40,061 --> 00:08:40,443
+Speaker 1: is you just?
+
+116
+00:08:40,544 --> 00:08:41,490
+Speaker 1: you know, you buy up the other guy.
+
+117
+00:08:41,711 --> 00:08:44,926
+Speaker 1: Yeah, but um, I heard that Hitachi.
+
+118
+00:08:44,946 --> 00:08:45,589
+Speaker 1: There's a rumor.
+
+119
+00:08:45,670 --> 00:08:49,338
+Speaker 1: I Even if it's not a rumor, I only saw one sentence.
+
+120
+00:08:49,739 --> 00:08:58,908
+Speaker 1: So don't hold me to this rumor monger, but I saw it said Hitachi is working on or releasing a what was it like?
+
+121
+00:08:58,948 --> 00:08:59,310
+Speaker 1: a five?
+
+122
+00:09:00,650 --> 00:09:02,057
+Speaker 1: Terabyte hard drive.
+
+123
+00:09:02,258 --> 00:09:03,786
+Speaker 0: Oh, I saw that.
+
+124
+00:09:03,966 --> 00:09:04,529
+Speaker 0: I don't know.
+
+125
+00:09:04,951 --> 00:09:17,376
+Speaker 1: I think if now if they're using the perpendicular technology, I might believe it because basically right now the This is really really dumb and non-technological the way I'm gonna say this.
+
+126
+00:09:17,556 --> 00:09:26,329
+Speaker 1: cuz actually I don't really understand it myself so much but The zeros and the ones in the hard drive are lying flat.
+
+127
+00:09:27,350 --> 00:09:30,529
+Speaker 1: Perpendicular technology is where they're all stand up in a row.
+
+128
+00:09:31,152 --> 00:09:34,282
+Speaker 1: Now if you think about zeros and ones lying flat on a disc.
+
+129
+00:09:34,543 --> 00:09:38,969
+Speaker 1: as to them standing up on a disc You can fit a lot more if they're all standing up.
+
+130
+00:09:39,732 --> 00:09:41,015
+Speaker 1: That's what perpendicular is.
+
+131
+00:09:41,076 --> 00:09:44,987
+Speaker 0: to put it in a slightly more scientific light because that kind of hurt a little.
+
+132
+00:09:45,047 --> 00:09:45,890
+Speaker 1: yeah, it hurt me too.
+
+133
+00:09:46,398 --> 00:09:51,750
+Speaker 0: basically Data density is increasing and there have been a lot of reasons for that.
+
+134
+00:09:51,770 --> 00:09:56,242
+Speaker 0: But basically older drives the bits are longer on the drive.
+
+135
+00:09:56,262 --> 00:10:00,035
+Speaker 0: just because that's the resolution of bits like imagine a CD There's little pits on it.
+
+136
+00:10:00,417 --> 00:10:04,479
+Speaker 0: It's the same basic deal on these magnetic bits instead Mm-hmm, and they're not.
+
+137
+00:10:04,661 --> 00:10:09,010
+Speaker 0: they're not uniform in their shape They're rectangular and they've been making them smaller and smaller and smaller.
+
+138
+00:10:09,311 --> 00:10:09,693
+Speaker 0: Like.
+
+139
+00:10:09,713 --> 00:10:22,669
+Speaker 0: I remember it was a year or two ago when you might have heard about the magic pixie dust And it was a technology where they put a dust of magnetic Pseudo-material on hard drives internally and then you could get higher data density stuff like that.
+
+140
+00:10:23,493 --> 00:10:33,547
+Speaker 0: so this perpendicular technology is really just a means of making the Bits on the drive smaller physically smaller, but still able to be read and verified.
+
+141
+00:10:33,567 --> 00:10:41,990
+Speaker 0: Mm-hmm I don't know exactly how they do it because hard drive manufacturers are Incredibly secretive about their trip about their trade secrets and technology.
+
+142
+00:10:42,050 --> 00:10:46,589
+Speaker 1: Just imagine a bunch of people lying on the ground right in it and they had it is 20 feet.
+
+143
+00:10:47,011 --> 00:10:47,233
+Speaker 1: It's a 20.
+
+144
+00:10:47,233 --> 00:10:48,485
+Speaker 0: think everyone gets it.
+
+145
+00:10:48,606 --> 00:10:48,929
+Speaker 1: All right.
+
+146
+00:10:49,614 --> 00:10:55,482
+Speaker 1: Well, if you need a further explanation There's actually an acute flash video Hitachi put out.
+
+147
+00:10:55,502 --> 00:10:57,349
+Speaker 1: you can search for or will link to it.
+
+148
+00:10:57,611 --> 00:11:00,666
+Speaker 1: Yeah, just type in like perpendicular flash video or something into Google.
+
+149
+00:11:00,727 --> 00:11:02,392
+Speaker 1: You should find it Yep.
+
+150
+00:11:02,976 --> 00:11:07,999
+Speaker 0: Well the thing about hard drives is not only are the margins low But the prices are generally very constant.
+
+151
+00:11:08,180 --> 00:11:11,050
+Speaker 0: the speed the size and speed just increase over time.
+
+152
+00:11:12,611 --> 00:11:15,930
+Speaker 0: So like a lot of people think oh, I'll buy a cheapo 40 gigabyte hard drive for nothing.
+
+153
+00:11:16,291 --> 00:11:20,810
+Speaker 0: But then you look and the 40 gigabyte hard drives aren't really any cheaper than the 180 gigabyte hard drives.
+
+154
+00:11:21,051 --> 00:11:24,307
+Speaker 1: There's no real reason right now to buy a hard drive less than 80 gigs.
+
+155
+00:11:24,729 --> 00:11:30,309
+Speaker 1: Yeah It's just a waste of money and really you can get 120 for maybe five ten bucks more sometimes.
+
+156
+00:11:31,076 --> 00:11:34,678
+Speaker 0: But don't think they're ripping you off Basically, it's just that it cost the same.
+
+157
+00:11:34,759 --> 00:11:41,546
+Speaker 0: once you figure out how to make a 400 gigabyte hard drive It cost almost the same to make one 400 gigabyte one as it does to make 140 gigabyte one.
+
+158
+00:11:42,992 --> 00:11:48,010
+Speaker 1: Yeah, I mean a hard drive is a motor which cost the same no matter what as long as it's the same speed and power.
+
+159
+00:11:48,110 --> 00:11:50,940
+Speaker 0: Yep, the platters that are very similarly manufactured.
+
+160
+00:11:51,001 --> 00:11:51,241
+Speaker 0: Yep.
+
+161
+00:11:51,563 --> 00:11:55,641
+Speaker 1: They're just platters and then there's a circuit board Which is mostly the same price no matter what.
+
+162
+00:11:56,224 --> 00:12:00,490
+Speaker 1: and the case it goes Do you put all the pieces together in which is the same price no matter what?
+
+163
+00:12:01,030 --> 00:12:05,807
+Speaker 1: So the only difference is how many platters and what type of platter they are.
+
+164
+00:12:06,348 --> 00:12:11,863
+Speaker 1: if they're high Higher-density platters cost more and having four platters instead of three or two cost more.
+
+165
+00:12:12,685 --> 00:12:14,650
+Speaker 1: So that's really the only difference.
+
+166
+00:12:15,653 --> 00:12:27,917
+Speaker 1: So an 80 gig drive might have like two 40 gig platters or three Like 20 something gig platters, you know, and if you compare that to a hundred gig drive Which might just have two or three platters.
+
+167
+00:12:28,378 --> 00:12:29,662
+Speaker 1: It's not much price difference.
+
+168
+00:12:30,123 --> 00:12:32,310
+Speaker 1: It's you know, so that's how it works.
+
+169
+00:12:32,954 --> 00:12:40,578
+Speaker 0: Yeah, so we'll see what comes of this merger Mm-hmm, though in other extremely esoteric computer geek news X11 r7.
+
+170
+00:12:42,352 --> 00:12:47,306
+Speaker 0: So are you right now that if you're not very technical, we're sorry about this next short segment.
+
+171
+00:12:47,427 --> 00:12:48,169
+Speaker 1: Just fast forward.
+
+172
+00:12:48,309 --> 00:12:58,630
+Speaker 1: Yeah So in Linux when you or Unix when you want a GUI use the X window system And if you use Unix Linux, you know this it's pretty universal.
+
+173
+00:12:58,862 --> 00:13:15,296
+Speaker 1: Yeah and until very recently you were using X free 86 now and We just switched to X org because X free 86 changed their license and now X org is better and actually improving X. and before X org X3 wasn't really improving X at all.
+
+174
+00:13:15,336 --> 00:13:23,103
+Speaker 1: They were just pretty much making X and incrementally bug fixing and Doing small performance enhancements.
+
+175
+00:13:23,123 --> 00:13:29,039
+Speaker 1: They weren't adding features they're actually trying to go anywhere but people kept using it because that's what it was and no one was competing with them.
+
+176
+00:13:29,059 --> 00:13:32,022
+Speaker 1: and It pretty much stayed that way for 10 years.
+
+177
+00:13:34,071 --> 00:13:41,451
+Speaker 1: For almost 10 years X free 86 was just had X 11 r6 and it was just stagnant unchanging.
+
+178
+00:13:42,095 --> 00:13:44,450
+Speaker 1: that's why gooeys and Linux still really suck.
+
+179
+00:13:44,811 --> 00:13:48,863
+Speaker 0: Yep, because it's really hard to do things with X in certain cases.
+
+180
+00:13:49,485 --> 00:13:53,294
+Speaker 0: It's very obtuse and Yeah, it is.
+
+181
+00:13:53,334 --> 00:13:54,959
+Speaker 0: But now that's not even like.
+
+182
+00:13:55,120 --> 00:14:05,138
+Speaker 1: that's like people who know a lot about it say that - yeah It also had a lot of inherent problems with its design and then they used a lot of hacks over the years to cover them up.
+
+183
+00:14:05,995 --> 00:14:14,995
+Speaker 1: Like it was just inherently insecure because but it would be wanted to have this feature where it was network transparent and That's sort of conflicted.
+
+184
+00:14:15,055 --> 00:14:17,950
+Speaker 1: So they just kind of hacked at it until they made it fake secure.
+
+185
+00:14:19,120 --> 00:14:23,788
+Speaker 1: anyway Since X org took over they've actually been working on it.
+
+186
+00:14:24,431 --> 00:14:37,167
+Speaker 1: So now finally today they released the final official version of X 11 r7 Which is gonna screw a lot of people up because they have that USR X 11 r6 folder.
+
+187
+00:14:41,590 --> 00:14:44,810
+Speaker 1: Yeah, and Right the way it works is it's modular.
+
+188
+00:14:45,091 --> 00:14:59,329
+Speaker 1: so now the parts that you want you have and the parts that you don't want you don't have and Everything that used to suck before now works in either an awesome way or at least a nicer way especially things like mouses.
+
+189
+00:15:00,494 --> 00:15:01,890
+Speaker 0: Yeah, I mean there are issues.
+
+190
+00:15:02,091 --> 00:15:10,910
+Speaker 0: I use some crap old red hat boxes at work and I had to reconfigure X because certain mice That I mean standard ps2 mice just fucked up.
+
+191
+00:15:11,771 --> 00:15:17,109
+Speaker 0: They would they would crash X and I had to die to do some hackish things to make them not crash X.
+
+192
+00:15:17,691 --> 00:15:19,679
+Speaker 1: I mean it used to have to be there used to be.
+
+193
+00:15:19,759 --> 00:15:22,450
+Speaker 1: I remember when I first was using Linux four or five years ago.
+
+194
+00:15:22,872 --> 00:15:25,369
+Speaker 1: He couldn't make a USB Mouse work just by putting it in.
+
+195
+00:15:26,373 --> 00:15:33,545
+Speaker 1: I mean and even today if you don't configure it, right, you know things don't you might the mouse might not work Or you might unplug the mouse plug it back in and it won't work.
+
+196
+00:15:33,766 --> 00:15:35,412
+Speaker 1: It's crazy now.
+
+197
+00:15:35,492 --> 00:15:46,030
+Speaker 0: I just saw this while I while we were talking I was looking through the article on this and Some guy named sim hacker on slashdot has probably the most succinct description of X that I've ever seen.
+
+198
+00:15:46,451 --> 00:15:55,409
+Speaker 0: alright X windows is the Iran contra of graphical user interfaces a tragedy of political compromises entangled alliances marketing hype and greed.
+
+199
+00:15:56,193 --> 00:15:59,024
+Speaker 0: X windows is to memory as Ronald Reagan is to money.
+
+200
+00:15:59,045 --> 00:16:02,040
+Speaker 0: Yeah It goes on and on like that.
+
+201
+00:16:02,060 --> 00:16:03,147
+Speaker 0: So props to this guy.
+
+202
+00:16:03,187 --> 00:16:03,670
+Speaker 0: That's yeah.
+
+203
+00:16:05,171 --> 00:16:14,310
+Speaker 1: Basically anyone who's using some leet awesome distribution like gen 2 or something will have x11r7 Within days probably.
+
+204
+00:16:15,011 --> 00:16:18,685
+Speaker 0: Yeah, and if you've got red hat you're never gonna get it don't even.
+
+205
+00:16:18,845 --> 00:16:22,038
+Speaker 1: yeah, if you're using fedora You're gonna be waiting a few months to get it.
+
+206
+00:16:22,420 --> 00:16:31,450
+Speaker 0: Honestly, if you're using fedora, you're probably better off not Upgrading you're very better off using Ubuntu or if you're gonna use this you're gonna have to pretty much wipe out your system.
+
+207
+00:16:32,091 --> 00:16:38,659
+Speaker 1: Yeah, I mean, I'm sure there'll be a how-to in a few days and some rpms like here's how to do it Here's how to do it, but it won't work for everyone.
+
+208
+00:16:38,679 --> 00:16:43,778
+Speaker 1: It won't work in all cases and you know, but Pretty much what it comes down to is.
+
+209
+00:16:43,798 --> 00:16:55,930
+Speaker 1: I'm willing to bet the gen 2 will have it working first but they'll have a few problems with the people who go for it real early and Ubuntu will be the engine and Debian will be the first people to have it working reliably and awesomely.
+
+210
+00:16:57,871 --> 00:17:05,500
+Speaker 1: And I'm really looking forward to it because it's gonna make I think it's going to make a jump in the usability of Linux as big as the 2.6 kernel made.
+
+211
+00:17:05,520 --> 00:17:14,270
+Speaker 0: if It actually does all that's promised and it works and people are able to extend and modify and enhance this could be really awesome.
+
+212
+00:17:14,872 --> 00:17:19,207
+Speaker 0: Yeah, like this could be one of the factors that we really need to get Linux out there on the desktop.
+
+213
+00:17:19,247 --> 00:17:24,990
+Speaker 1: to non geeks I remember when the 2.4 kernel was when I started using Linux and it was kind of paint.
+
+214
+00:17:25,069 --> 00:17:29,974
+Speaker 1: Well, I technically used older kernels than that, but 2.4 was the first kernel I really interacted with.
+
+215
+00:17:29,974 --> 00:17:34,249
+Speaker 0: 2.4 was the first kernel where I knew what a kernel was and what I did.
+
+216
+00:17:34,269 --> 00:17:38,010
+Speaker 1: and You know, it wasn't great for desktop thing.
+
+217
+00:17:38,050 --> 00:17:39,274
+Speaker 1: It was just kind of like a mess.
+
+218
+00:17:39,354 --> 00:17:41,079
+Speaker 1: and then 2.6 made everything.
+
+219
+00:17:41,360 --> 00:17:44,610
+Speaker 1: it was just just leaps and bounds ahead in terms of greatness.
+
+220
+00:17:44,731 --> 00:17:53,549
+Speaker 1: I completely forget a lot of 2.4 because I use 2.6 so much now and it's so great and I'm hoping x11 r7 does the same thing and it probably will.
+
+221
+00:18:02,856 --> 00:18:06,237
+Speaker 0: Alright, so my thing of the day Gamers have bad posture.
+
+222
+00:18:06,880 --> 00:18:09,550
+Speaker 0: I do and gamers and I'm no exception.
+
+223
+00:18:09,550 --> 00:18:12,466
+Speaker 0: I remember when I was a young kid playing like Final Fantasy, you know one.
+
+224
+00:18:13,914 --> 00:18:20,410
+Speaker 0: You'd pretty much sit there hunched over with the controller Just kind of in the state of bed for hours and hours hours on end.
+
+225
+00:18:20,751 --> 00:18:20,992
+Speaker 0: I did.
+
+226
+00:18:21,494 --> 00:18:25,450
+Speaker 0: didn't you ever want to prop your chin up on something or kind of like prop your body up on something?
+
+227
+00:18:25,690 --> 00:18:27,669
+Speaker 1: No, what I wanted to do is lay down on my back.
+
+228
+00:18:27,790 --> 00:18:35,550
+Speaker 1: That's what I and with like my head resting on a pillow But I could never get a video game close enough to my bed until like Game Boys and DS is no sorts of things.
+
+229
+00:18:35,651 --> 00:18:38,106
+Speaker 0: Well, luckily science has made advances in this field.
+
+230
+00:18:38,247 --> 00:18:42,521
+Speaker 0: Hooray I mean we have the video rockers which we have and are awesome awesome.
+
+231
+00:18:43,143 --> 00:18:45,370
+Speaker 0: And now there's the head pillow.
+
+232
+00:18:46,811 --> 00:18:48,017
+Speaker 0: It's it's sold in Japan.
+
+233
+00:18:48,037 --> 00:18:49,404
+Speaker 0: I don't know if it's coming to the US or not.
+
+234
+00:18:49,465 --> 00:18:50,289
+Speaker 0: I imagine it will.
+
+235
+00:18:51,410 --> 00:19:01,685
+Speaker 0: Basically, it looks like a video rocker But just the back end and it sits on your lap and it's positioned in such a way that it holds your chin and head up But yeah, your arms can still get around it.
+
+236
+00:19:03,971 --> 00:19:05,336
+Speaker 0: You'll have to look at the picture in the link.
+
+237
+00:19:06,139 --> 00:19:12,469
+Speaker 1: It's both cool and sad at the same time Yeah, but that's pretty much the exact thing you get by looking at it.
+
+238
+00:19:14,902 --> 00:19:24,530
+Speaker 1: So I'm sure everyone knows about be money games which are you know in the beat mania series from Konami and other similar rhythm games?
+
+239
+00:19:24,810 --> 00:19:28,923
+Speaker 1: dance-dance revolution, you know or you know the game.
+
+240
+00:19:28,943 --> 00:19:38,070
+Speaker 1: play the guitar and push the buttons to the beat or dance to the beat or Wave your hands to the beat and we are going to do a show on DDR at some point.
+
+241
+00:19:38,070 --> 00:19:39,519
+Speaker 0: It's been requested by two people.
+
+242
+00:19:39,600 --> 00:19:40,405
+Speaker 0: So hang in there.
+
+243
+00:19:40,425 --> 00:19:49,110
+Speaker 1: All right, and There is one current existing game called taiko drum master, which is a beat game where you bang on a taiko drum.
+
+244
+00:19:49,634 --> 00:19:56,430
+Speaker 1: Yeah, I always wanted to play because it looks really cool Yeah, but anyway, I never played it, but I do know of it and I've seen it has these cute little drum guys.
+
+245
+00:19:56,490 --> 00:20:02,409
+Speaker 1: we're all happy and everything and I'm sure that everyone in Japan is just the lead master of this game.
+
+246
+00:20:03,152 --> 00:20:09,290
+Speaker 1: But it's the first time on the internet that I've seen video of someone playing the hardest songs in the game.
+
+247
+00:20:09,532 --> 00:20:10,762
+Speaker 0: Perfectly, you know what?
+
+248
+00:20:11,327 --> 00:20:17,630
+Speaker 1: Wow Yeah, I mean, I've seen lots of DDR videos and they're usually impressive because someone dances in an interesting way or something.
+
+249
+00:20:18,353 --> 00:20:20,925
+Speaker 1: This is just a guy playing the game boringly now.
+
+250
+00:20:20,945 --> 00:20:27,430
+Speaker 1: I Expected to be impressed by some crazy as drumming But I watched the first song and it was pretty lame.
+
+251
+00:20:27,490 --> 00:20:29,620
+Speaker 1: Like I'm like I could do that with a little bit of practice.
+
+252
+00:20:29,660 --> 00:20:30,966
+Speaker 1: It's not hard at all.
+
+253
+00:20:31,167 --> 00:20:33,894
+Speaker 0: Yeah, I mean I Back in high school.
+
+254
+00:20:33,934 --> 00:20:37,547
+Speaker 0: I was a trumpet player, but I like did some set drumming on the side.
+
+255
+00:20:37,587 --> 00:20:38,410
+Speaker 0: Like I wasn't very good.
+
+256
+00:20:38,530 --> 00:20:48,889
+Speaker 0: I'm not even gonna pretend that I was a good drummer, but I played a set drum for some pet band and Pretty much the hardest song in the game as far as I can tell is like basic basic basic snare drumming.
+
+257
+00:20:49,251 --> 00:20:54,250
+Speaker 1: Yep, but the the second song was significantly more impressive in his difficulty.
+
+258
+00:20:55,492 --> 00:21:05,409
+Speaker 1: Well, you know, it would actually take me a little while before I would be able to do it as well as that guy did But at the same time it's still not nearly as crazy as some of the DDR things are.
+
+259
+00:21:05,549 --> 00:21:09,765
+Speaker 0: yeah I mean even some of the moderately difficult DDR songs are insane compared to this.
+
+260
+00:21:09,785 --> 00:21:20,364
+Speaker 1: Yeah, absolutely but it's still cool to watch and especially the second song if you've never seen taiko drum master or If you want to know what it looks like when someone scores perfectly on the hardest song.
+
+261
+00:21:20,525 --> 00:21:22,680
+Speaker 1: Yeah, I thought it was cool It was alright.
+
+262
+00:21:22,963 --> 00:21:26,501
+Speaker 0: Yep So today being anime day and comic day.
+
+263
+00:21:27,103 --> 00:21:34,095
+Speaker 0: We've been watching big o - We just saw the first episode of Space Symphony.
+
+264
+00:21:34,135 --> 00:21:38,732
+Speaker 0: my tell which is part of that whole my tell Harlock Saga.
+
+265
+00:21:38,752 --> 00:21:39,455
+Speaker 0: that's complicated.
+
+266
+00:21:39,475 --> 00:21:40,739
+Speaker 1: Yeah, I like to express really.
+
+267
+00:21:40,799 --> 00:21:42,866
+Speaker 0: Yeah, and then we got some comics.
+
+268
+00:21:43,388 --> 00:21:43,509
+Speaker 1: Mm-hmm.
+
+269
+00:21:44,151 --> 00:21:48,826
+Speaker 0: So, uh big o I talked about back in the scotless show quite some time ago.
+
+270
+00:21:48,846 --> 00:21:56,649
+Speaker 0: It's a good show and I'm not gonna spoil anything but suffice to say the end of big O is unsatisfying.
+
+271
+00:21:57,871 --> 00:22:00,529
+Speaker 1: that's Putting it lightly by unsatisfying.
+
+272
+00:22:00,872 --> 00:22:12,495
+Speaker 0: imagine if suddenly in about 25 seconds worth of episode they introduce a whole shit ton of plot and then a crazy thing happens and then the episode just stops And that's the end of the whole show.
+
+273
+00:22:12,937 --> 00:22:13,821
+Speaker 1: Yeah, that was the end of.
+
+274
+00:22:13,881 --> 00:22:15,950
+Speaker 1: that was the 13th episode of big o one.
+
+275
+00:22:16,733 --> 00:22:23,082
+Speaker 0: So you'll be pleased to know that big o two starts up right there Like exactly where the first show ended.
+
+276
+00:22:23,404 --> 00:22:28,462
+Speaker 1: I mean as far as I'm concerned It's really a 26 episode show and just call the second 13.
+
+277
+00:22:28,462 --> 00:22:29,967
+Speaker 1: I think we go to 13 episodes.
+
+278
+00:22:31,015 --> 00:22:41,065
+Speaker 1: I think so They just call the second 13 episodes big o - because the show Originally ended after the 13th and then cards you Network had to pay them to make more.
+
+279
+00:22:41,086 --> 00:22:46,769
+Speaker 0: Yep The though the one thing that I got to say big o - definitely has plot this time.
+
+280
+00:22:47,311 --> 00:22:53,895
+Speaker 1: Yeah, big o one some of the episodes were sort of episodic and that they didn't matter to the plot and a lot of things Are real vague.
+
+281
+00:22:54,519 --> 00:23:04,444
+Speaker 1: and big o - certainly isn't Straightforward by any means but is much much much more straightforward Yeah, but it's like, you know what an anime and they always have like.
+
+282
+00:23:05,025 --> 00:23:06,530
+Speaker 1: it's the whole effect of the guy in white.
+
+283
+00:23:06,771 --> 00:23:10,170
+Speaker 1: Remember the Simpsons episode was the guy in white and he hasn't done anything.
+
+284
+00:23:10,190 --> 00:23:14,110
+Speaker 0: This is the episode where the Mafia and the Chinese triad are fighting with each other or the rockers.
+
+285
+00:23:14,251 --> 00:23:14,612
+Speaker 0: I forget.
+
+286
+00:23:14,653 --> 00:23:22,470
+Speaker 1: it was something like that on the front lawn of Simpsons house and Homer's like Oh, I know when he he hasn't done anything and he looks different than the other guys.
+
+287
+00:23:22,571 --> 00:23:24,973
+Speaker 1: so I know when he does something it's gonna be Awesome.
+
+288
+00:23:25,034 --> 00:23:31,906
+Speaker 1: and margins like get in the house Homer and then as soon as he closed the door you hear like wow And he's like, oh I missed it.
+
+289
+00:23:33,210 --> 00:23:45,166
+Speaker 1: Well when you watch an anime, there's usually like some big bad guys who are all secretive or mysteries that aren't revealed Right, and then towards the end they start to do more and more things that make you go.
+
+290
+00:23:45,908 --> 00:23:46,913
+Speaker 1: Oh my god There's the thing.
+
+291
+00:23:46,953 --> 00:23:47,819
+Speaker 1: Oh my god.
+
+292
+00:23:47,879 --> 00:23:49,509
+Speaker 1: It was a secret that is now revealed, right?
+
+293
+00:23:50,371 --> 00:23:52,219
+Speaker 1: Well big o2 is pretty much just.
+
+294
+00:23:52,480 --> 00:23:54,710
+Speaker 1: they really step it up in terms of that kind of stuff.
+
+295
+00:23:54,790 --> 00:23:55,914
+Speaker 1: It's like there's a guy.
+
+296
+00:23:56,436 --> 00:24:00,269
+Speaker 1: the main secretive guy is talking a lot and he's a major part of the plot.
+
+297
+00:24:00,771 --> 00:24:06,453
+Speaker 1: Oh, we actually get to see all kinds of stuff that used to just be in the background and sort of implied Mysterious.
+
+298
+00:24:06,714 --> 00:24:14,190
+Speaker 0: Yep, you know like in the first one like you really weren't sure what was going on like Rosewater who was kind of this like the head of paradigm city.
+
+299
+00:24:14,290 --> 00:24:18,489
+Speaker 0: You only saw him talk like four times and he'd say some offhand thing, but everything he said was like, huh?
+
+300
+00:24:18,753 --> 00:24:23,403
+Speaker 0: Ah Yep, now he's just like a main character.
+
+301
+00:24:23,423 --> 00:24:24,490
+Speaker 0: He's talking all the time.
+
+302
+00:24:25,393 --> 00:24:30,530
+Speaker 0: He explains in great detail like very obscure obscure plot points that you've been wondering about forever.
+
+303
+00:24:31,872 --> 00:24:33,800
+Speaker 0: The problem is for everything they reveal.
+
+304
+00:24:34,302 --> 00:24:36,030
+Speaker 0: they introduced two or three more mysteries.
+
+305
+00:24:36,492 --> 00:24:39,650
+Speaker 1: Yeah, like there's this new bad guy who's all evil and you know, he's a bad guy.
+
+306
+00:24:39,670 --> 00:24:45,950
+Speaker 1: He's got a kind of a kefka attitude But they don't tell you jack about him other than you know, he's bad and you know, you got to get rid of him.
+
+307
+00:24:46,232 --> 00:24:51,149
+Speaker 0: He seems to be working for our Rosewater there But I don't know if it's gonna be a kefka where there's betrayal or what.
+
+308
+00:24:51,613 --> 00:25:00,270
+Speaker 1: The other thing they do is there's a lot of recurring going on Like there were episodes that you thought were just kind of Blair before like the ones a little seat the diving guys.
+
+309
+00:25:00,912 --> 00:25:10,839
+Speaker 1: But now the diving guys reappear and it's like recurring things meaning recurring and explained like oh Okay, that's what they were doing.
+
+310
+00:25:11,160 --> 00:25:22,650
+Speaker 0: Yep, like remember that episode again Really voting spoilers here, but when there's the girl and she has the red balloon Let's go of it and it flies away and they keep like focused on this red balloon, but they don't explain it.
+
+311
+00:25:22,750 --> 00:25:33,174
+Speaker 0: You think it's just like a metaphor a symbol of something that comes back twice in the first four episodes of big o2 And he's like the second time you're like, oh That makes perfect sense.
+
+312
+00:25:33,274 --> 00:25:33,535
+Speaker 1: Now.
+
+313
+00:25:33,775 --> 00:25:39,410
+Speaker 1: Yeah now I know the red balloon is it's actually means something physical not just kind of a symbol.
+
+314
+00:25:39,691 --> 00:25:42,222
+Speaker 0: Yeah, it's very much a literal physical event.
+
+315
+00:25:42,282 --> 00:25:43,447
+Speaker 0: It is not just metaphor.
+
+316
+00:25:43,467 --> 00:25:47,930
+Speaker 1: Yep It's pretty cool when stuff like that happens and you only catch it if you're paying attention.
+
+317
+00:25:48,192 --> 00:25:51,130
+Speaker 1: If you watch the show lazily, you'll miss a lot of stuff.
+
+318
+00:25:51,391 --> 00:25:53,076
+Speaker 0: Yeah, like big o1 you can get away with that.
+
+319
+00:25:53,096 --> 00:25:53,257
+Speaker 0: cuz.
+
+320
+00:25:53,297 --> 00:25:53,578
+Speaker 0: alright.
+
+321
+00:25:53,618 --> 00:25:54,621
+Speaker 0: now the robots are fighting.
+
+322
+00:25:54,842 --> 00:25:55,183
+Speaker 0: Whoo.
+
+323
+00:25:55,664 --> 00:25:56,969
+Speaker 0: Oh, we punched him real hard.
+
+324
+00:25:57,531 --> 00:25:58,156
+Speaker 0: They go to.
+
+325
+00:25:58,499 --> 00:26:09,030
+Speaker 0: everything means something Or at least mean something in the sense that if you've ever seen the later episodes of utenna It gets to the point where things mean something but you're not sure and it might just like be.
+
+326
+00:26:10,031 --> 00:26:10,815
+Speaker 0: It's hard to explain.
+
+327
+00:26:11,297 --> 00:26:14,410
+Speaker 0: some things are silly like there's this tomato thing going on.
+
+328
+00:26:15,271 --> 00:26:16,816
+Speaker 1: Tomato thing makes sense in big O.
+
+329
+00:26:16,937 --> 00:26:19,446
+Speaker 0: it makes sense in big O but is definitely a metaphor.
+
+330
+00:26:19,546 --> 00:26:20,590
+Speaker 1: It's definitely a metaphor.
+
+331
+00:26:20,730 --> 00:26:25,367
+Speaker 0: It's an obvious metaphor where things turn into tomatoes and everyone's always eating tomatoes and there's tomatoes everywhere.
+
+332
+00:26:25,387 --> 00:26:31,311
+Speaker 0: Yep And if you think I'm exaggerating no Roger Smith wakes up in a pile of tomatoes at one point Yep.
+
+333
+00:26:31,532 --> 00:26:36,430
+Speaker 1: Anyway, the other cool thing about big o2 is the robot reveals a lot more of its powers.
+
+334
+00:26:37,052 --> 00:26:41,104
+Speaker 1: Yeah, big o1 pretty much all it does is punch and it has.
+
+335
+00:26:41,224 --> 00:26:44,360
+Speaker 1: I think he used the eye laser a couple times Once they use the missile in this.
+
+336
+00:26:44,501 --> 00:26:49,490
+Speaker 1: once it used the missiles But just once and then I think he might have used the metal hooks once.
+
+337
+00:26:49,691 --> 00:26:58,907
+Speaker 1: Yeah in big o2 he uses like a bunch of metal hooks and a bunch of guns And all kinds of crazy weaponry on the robot that he never used before.
+
+338
+00:26:58,967 --> 00:27:03,244
+Speaker 0: cuz in big o1 You notice how whenever he fought someone it was someone where just there was no chance.
+
+339
+00:27:03,284 --> 00:27:03,967
+Speaker 0: He was just gonna win.
+
+340
+00:27:04,027 --> 00:27:09,808
+Speaker 0: no matter what Big o2 he's fighting things that are as dangerous if not more dangerous than the big.
+
+341
+00:27:09,868 --> 00:27:14,650
+Speaker 0: Oh, yep The big O takes damage loses arms gets parts of it blown off.
+
+342
+00:27:15,356 --> 00:27:15,862
+Speaker 1: It's pretty cool.
+
+343
+00:27:16,286 --> 00:27:30,169
+Speaker 0: Yeah now the one thing I wonder is we've seen the first DVD a big o2 and Almost everything from big o1 no matter how minor it was is now Coming back into big o2 and being explained and is usually really important.
+
+344
+00:27:31,151 --> 00:27:34,562
+Speaker 0: What I'm wondering is it was that intended from the beginning?
+
+345
+00:27:34,702 --> 00:27:38,540
+Speaker 0: or did they go through those episodes and decide alright Let's take this and make it mean this.
+
+346
+00:27:38,580 --> 00:27:39,669
+Speaker 0: Let's take this and do this with it.
+
+347
+00:27:39,910 --> 00:27:42,259
+Speaker 1: Well, if it's the second one did a really good job.
+
+348
+00:27:42,701 --> 00:27:48,804
+Speaker 1: Yeah, there's one way to find out and I think reading the mom I well, I think reading the manga might reveal the truth,
+
+349
+00:27:49,748 --> 00:27:57,267
+Speaker 0: of course I'm also wondering if they just made up a bunch of stuff and then when they ran out of stuff to make up they tried To do something that they had.
+
+350
+00:27:58,012 --> 00:28:12,560
+Speaker 0: Because we watched one of the or we read one of the interviews with the guy who made big O and Basically he got the idea big O spawned in his head when he decided he wanted a guy like Batman To pilot a big robot in a city like Gotham.
+
+351
+00:28:13,062 --> 00:28:13,303
+Speaker 0: Mm-hmm.
+
+352
+00:28:13,563 --> 00:28:14,145
+Speaker 0: That is all.
+
+353
+00:28:14,186 --> 00:28:18,730
+Speaker 1: big O started as Yep, actually it also has a little bit of Megaman.
+
+354
+00:28:18,850 --> 00:28:31,230
+Speaker 1: I think one of the artists is Megaman artist and also I watched like the first couple episodes of steam detectives and Steam detectives and big O. I mean you can't say that big O didn't steal anything just out of hand.
+
+355
+00:28:32,952 --> 00:28:42,854
+Speaker 1: Just look at the coat that the main character of steam detectives wears and the buttons on it and compared to Roger Smith's coat and The fact that there's big robots that yeah, you're just done right there.
+
+356
+00:28:43,235 --> 00:28:43,575
+Speaker 1: That's it.
+
+357
+00:28:45,979 --> 00:28:46,059
+Speaker 0: Now.
+
+358
+00:28:46,079 --> 00:28:47,040
+Speaker 0: There's one episode.
+
+359
+00:28:47,241 --> 00:28:48,566
+Speaker 0: This was the first episode.
+
+360
+00:28:48,606 --> 00:28:50,091
+Speaker 0: I think I don't remember.
+
+361
+00:28:50,192 --> 00:28:51,336
+Speaker 0: there's a weird episode.
+
+362
+00:28:51,376 --> 00:28:52,200
+Speaker 1: That was the first one.
+
+363
+00:28:52,461 --> 00:29:00,113
+Speaker 0: Yeah, like it picks up with the action, but there's this weird episode And to bring up just utenna yet is very utenna esque there.
+
+364
+00:29:00,193 --> 00:29:11,011
+Speaker 0: It was a very like super metaphoric Yes, and Aviva very much and all I have to say about that is that when you see it and you're wondering what the fuck we Also thought what the fuck.
+
+365
+00:29:11,031 --> 00:29:11,476
+Speaker 0: so don't worry.
+
+366
+00:29:13,160 --> 00:29:23,079
+Speaker 1: Hopefully by the end of big O in a whole as a whole that that will be sealed up and you will Understand at least what half of that means, but I don't know because I haven't seen that far.
+
+367
+00:29:23,320 --> 00:29:31,796
+Speaker 0: Yeah, honestly if big O - doesn't explain enough like there's a threshold of an amount of things I want explained I'm going nuts and killing Scott great.
+
+368
+00:29:34,840 --> 00:29:39,177
+Speaker 0: So, uh Mitel Mitel legend Harlock and all that.
+
+369
+00:29:39,197 --> 00:29:41,766
+Speaker 0: Yep We got the first episode.
+
+370
+00:29:41,786 --> 00:29:45,300
+Speaker 0: Like I said of a space symphony Mitel and we watched it and it's really cool.
+
+371
+00:29:45,641 --> 00:29:50,779
+Speaker 1: Yep, it reminds me a lot of well all the other Galaxy Express shows.
+
+372
+00:29:52,521 --> 00:29:55,911
+Speaker 0: I mean, it's a really hard series to sink your teeth into.
+
+373
+00:29:56,252 --> 00:30:02,450
+Speaker 0: it's real complicated the timelines convoluted It's hard to tell where it starts and ends or what's going on.
+
+374
+00:30:02,470 --> 00:30:03,794
+Speaker 0: A lot of the characters look similar.
+
+375
+00:30:03,855 --> 00:30:05,419
+Speaker 0: It's really super stylized.
+
+376
+00:30:06,203 --> 00:30:09,579
+Speaker 1: Well, it's in the same style that all of that guy's stuff is in.
+
+377
+00:30:09,599 --> 00:30:11,486
+Speaker 1: I forget Why can't I remember his name though?
+
+378
+00:30:11,726 --> 00:30:23,029
+Speaker 1: Ah, but he's the same guy who did all the Galaxy Express is all the Harlocks interstellar 555 Battleship Yamato All those things and all his stuff.
+
+379
+00:30:23,129 --> 00:30:24,576
+Speaker 1: is people are drawn the same way.
+
+380
+00:30:24,596 --> 00:30:25,218
+Speaker 1: They're kind of like.
+
+381
+00:30:26,064 --> 00:30:27,818
+Speaker 1: They're like kind of wavy I guess.
+
+382
+00:30:28,401 --> 00:30:29,405
+Speaker 0: Yeah, real like.
+
+383
+00:30:29,465 --> 00:30:34,140
+Speaker 0: take the the be shown in like the old school be shown in very tall very thin and take it to an extreme.
+
+384
+00:30:34,782 --> 00:30:35,344
+Speaker 1: Yeah, it's like.
+
+385
+00:30:35,484 --> 00:30:37,550
+Speaker 1: it's like this unique anime style.
+
+386
+00:30:37,591 --> 00:30:38,032
+Speaker 1: That's like.
+
+387
+00:30:38,092 --> 00:30:40,560
+Speaker 1: it's definitely anime, but it's like.
+
+388
+00:30:41,822 --> 00:30:52,224
+Speaker 1: It's as if the old anime style of like Tezuka was taken in a different direction as opposed to the direction that all the other anime went in which is a direction that lotos war took them in.
+
+389
+00:30:52,845 --> 00:31:02,636
+Speaker 0: I mean character designs are very unrealistic and very stylized but there's there's a lot of depth of emotion and Cool things you can do with these characters.
+
+390
+00:31:02,696 --> 00:31:09,120
+Speaker 1: as a result Mm-hmm, and the plots are very space epic, which is very lacking around in general.
+
+391
+00:31:09,241 --> 00:31:15,479
+Speaker 1: So if you like space epic You got to watch all these things and figure out what order to put them in and yeah, it's great.
+
+392
+00:31:15,963 --> 00:31:22,326
+Speaker 0: So space symphony might tell is Basically as far as we can tell the second thing in the chronological timeline.
+
+393
+00:31:22,547 --> 00:31:24,610
+Speaker 1: in the chronological timeline of Galaxy Express.
+
+394
+00:31:25,661 --> 00:31:31,717
+Speaker 1: See this Galaxy Express and Harlock seems to be separate but sometimes Harlock appears in the Galaxy Express.
+
+395
+00:31:31,778 --> 00:31:32,680
+Speaker 1: It's the same universe.
+
+396
+00:31:33,121 --> 00:31:33,382
+Speaker 1: It's like.
+
+397
+00:31:33,422 --> 00:31:38,979
+Speaker 1: sometimes his plot kind of intertwines with the Galaxy Express plot, but it's not the same thing.
+
+398
+00:31:39,722 --> 00:31:47,739
+Speaker 1: Captain Harlock is a story of a space pirate and Galaxy Express is the story of the cyborg people You see and sometimes Harlock interferes.
+
+399
+00:31:48,302 --> 00:31:51,699
+Speaker 0: Yeah, if we did our research we could try to a whole show just trying to explain this.
+
+400
+00:31:51,951 --> 00:31:57,777
+Speaker 1: Yeah But the Galaxy Express order as I can tell from information on the internet is my tell.
+
+401
+00:31:57,817 --> 00:31:58,740
+Speaker 1: legend is the first.
+
+402
+00:31:59,566 --> 00:32:00,878
+Speaker 1: This is the second thing.
+
+403
+00:32:01,642 --> 00:32:09,977
+Speaker 1: There is something else that is not yet made because the Japanese but the Japanese website says coming soon September 2005 so don't ask me about that.
+
+404
+00:32:09,997 --> 00:32:19,380
+Speaker 1: and And Then comes the Galaxy Express movies one, two, three four, but the Galaxy Express TV show comes before the Galaxy Express first movie.
+
+405
+00:32:20,861 --> 00:32:26,128
+Speaker 0: So as for this specific one space symphony might tell it's kind of modern in terms of.
+
+406
+00:32:26,148 --> 00:32:27,610
+Speaker 0: there's definitely some CG going on.
+
+407
+00:32:28,484 --> 00:32:34,137
+Speaker 0: it's kind of recently made and My first impression is that it's very good and I want to see more of it.
+
+408
+00:32:35,162 --> 00:32:40,220
+Speaker 1: Yeah, got the original Galaxy Express movie was like one of the first animes I ever saw.
+
+409
+00:32:40,520 --> 00:32:45,060
+Speaker 1: Yeah, cuz it was on that sci-fi channel thing was on the sci-fi channel thing and I was just like whoa.
+
+410
+00:32:45,942 --> 00:32:47,410
+Speaker 0: It was on right after earth.
+
+411
+00:32:47,430 --> 00:32:49,100
+Speaker 0: say it sir - if I recall correctly
+
+412
+00:32:50,702 --> 00:33:05,476
+Speaker 1: Mmm, and I think the day after I watched the second movie which wasn't as good as the first movie, but still awesome And it always seems to have this message of you know cyborg people, you know It's it's better to be a normal human because cyborg people are like immortal.
+
+413
+00:33:05,617 --> 00:33:10,380
+Speaker 1: and thus, you know What's the point of living if you're gonna live forever blah blah blah blah blah, you know?
+
+414
+00:33:10,480 --> 00:33:15,300
+Speaker 1: And then you always have pity on the normal people who are like revolting against the robot.
+
+415
+00:33:15,501 --> 00:33:18,500
+Speaker 0: So then you have pity on the robot people who are like tragic and immortal.
+
+416
+00:33:18,701 --> 00:33:21,851
+Speaker 1: Yeah, because the robot people actually are still people.
+
+417
+00:33:22,192 --> 00:33:35,726
+Speaker 1: so it's like when they die, you're still also kind of like you know, but this one seems to be a little less in that direction and More in the everyone is people direction, you know because I remember the Galaxy Express.
+
+418
+00:33:35,746 --> 00:33:36,730
+Speaker 1: you just like outright.
+
+419
+00:33:37,031 --> 00:33:37,934
+Speaker 1: the cyborgs are bad.
+
+420
+00:33:37,975 --> 00:33:51,160
+Speaker 1: the humans are good and like the kids mom like it starts out with his kids mom being like hunted by a robot guy as If she was like a deer and then he like hangs her on his wall and stuff and it's like oh robots are bad.
+
+421
+00:33:51,721 --> 00:33:58,750
+Speaker 1: This one is much less that which I think is good because it kind of shows you that the whole universe isn't that way.
+
+422
+00:33:59,781 --> 00:34:03,662
+Speaker 1: It gives you a new perspective on the what's going on Now.
+
+423
+00:34:03,762 --> 00:34:07,835
+Speaker 0: don't be turned off by the fact that there's a steam-powered locomotive in space.
+
+424
+00:34:08,697 --> 00:34:09,460
+Speaker 1: Oh, of course not.
+
+425
+00:34:09,520 --> 00:34:10,183
+Speaker 0: That's just kind of.
+
+426
+00:34:10,203 --> 00:34:11,830
+Speaker 0: that's like a symbol of this show.
+
+427
+00:34:11,889 --> 00:34:16,476
+Speaker 0: There's there's this galactic train and Just go with it.
+
+428
+00:34:16,960 --> 00:34:18,110
+Speaker 0: Suspension of disbelief.
+
+429
+00:34:18,210 --> 00:34:19,400
+Speaker 0: the show is cool and worth it.
+
+430
+00:34:19,460 --> 00:34:20,304
+Speaker 0: Don't look at that.
+
+431
+00:34:20,505 --> 00:34:23,719
+Speaker 0: like some people looked at eska flones long noses and say I can't watch this.
+
+432
+00:34:23,909 --> 00:34:28,960
+Speaker 1: Yeah They actually explain the Train in many places and such and the Train is actually really cool.
+
+433
+00:34:29,040 --> 00:34:32,293
+Speaker 1: And if you watch Galaxy Express, you'll learn all about the Train.
+
+434
+00:34:32,333 --> 00:34:33,920
+Speaker 0: and yeah, Galaxy Express 999.
+
+435
+00:34:33,920 --> 00:34:35,168
+Speaker 0: I love the credible movie.
+
+436
+00:34:35,188 --> 00:34:35,953
+Speaker 0: if you haven't seen it.
+
+437
+00:34:35,993 --> 00:34:37,000
+Speaker 0: I recommend it highly.
+
+438
+00:34:37,241 --> 00:34:42,540
+Speaker 1: Yeah, so it's like for people who've already seen or know about this universe read the manga saw their shows.
+
+439
+00:34:42,960 --> 00:34:45,911
+Speaker 1: The Train is like this symbol of like awesomeness.
+
+440
+00:34:46,292 --> 00:34:50,290
+Speaker 1: So just having a show with the Train in it is like oh There's the Train.
+
+441
+00:34:50,371 --> 00:34:54,279
+Speaker 1: Oh my god You know and they already know all this other stuff about it.
+
+442
+00:34:54,487 --> 00:35:01,668
+Speaker 1: You know Like if you watch this show and you've never seen any of it before you'll see like the conductor and he just comes on He conducts he seems perfectly normal.
+
+443
+00:35:02,251 --> 00:35:04,080
+Speaker 1: But if you know the conductor, it's like whoa.
+
+444
+00:35:07,521 --> 00:35:15,877
+Speaker 0: So, I guess I mean this is kind of obscure anime that most people it's very definitely not mainstream definitely not mainstream I mean, it's not up there with the Naruto's mainstream in Japan.
+
+445
+00:35:16,098 --> 00:35:21,194
+Speaker 0: Yes But especially for people out there who might not know a lot about anime.
+
+446
+00:35:21,515 --> 00:35:22,920
+Speaker 0: I can't recommend this stuff enough.
+
+447
+00:35:23,081 --> 00:35:24,790
+Speaker 0: It's very neat very cerebral.
+
+448
+00:35:25,292 --> 00:35:38,107
+Speaker 1: It's it's good stuff Mm-hmm, and as long as you I mean the order in which the series go in might be complex But as long as you watch all the series is themselves in their order It doesn't really matter which ones you watch.
+
+449
+00:35:38,267 --> 00:35:47,080
+Speaker 1: when I mean there are prequels that came out after sequels and OAVs and movies and Just watch as much as you can and it'll all fit together and it'll be enjoyable.
+
+450
+00:35:47,382 --> 00:35:51,645
+Speaker 0: And if you need a good starting point, I'd once again Galaxy Express 999.
+
+451
+00:35:51,645 --> 00:35:52,228
+Speaker 0: Yep.
+
+452
+00:35:52,248 --> 00:35:54,219
+Speaker 1: The first movie is definitely a great starting point.
+
+453
+00:35:55,841 --> 00:36:00,040
+Speaker 1: All right, so you picked up some comics - I went to the comic book store today.
+
+454
+00:36:00,562 --> 00:36:02,451
+Speaker 1: Let's look in this little bag here to see what I bought.
+
+455
+00:36:03,074 --> 00:36:08,627
+Speaker 1: Ooh Midtown Comics Oh That's the one I'm gonna save for last.
+
+456
+00:36:08,888 --> 00:36:09,411
+Speaker 0: so okay.
+
+457
+00:36:09,451 --> 00:36:10,074
+Speaker 0: It better be good.
+
+458
+00:36:10,094 --> 00:36:11,943
+Speaker 1: I Think it's good.
+
+459
+00:36:12,003 --> 00:36:12,565
+Speaker 1: That's the that's.
+
+460
+00:36:12,686 --> 00:36:13,811
+Speaker 1: there's a story behind it.
+
+461
+00:36:13,831 --> 00:36:14,594
+Speaker 0: Well, he's digging out.
+
+462
+00:36:14,654 --> 00:36:18,834
+Speaker 0: since media play is going out of business I picked up all the rest of here's Greenwood at a steep discount.
+
+463
+00:36:19,115 --> 00:36:20,100
+Speaker 0: Mm-hmm, cuz I like that mom.
+
+464
+00:36:20,140 --> 00:36:24,623
+Speaker 1: they also have a great cheap toys going down at Media play.
+
+465
+00:36:25,287 --> 00:36:34,502
+Speaker 1: Yeah, so if you like toys, that's a great place to go Alright, so the first thing I bought was this gravity digest which the comic book podcast guys are really hyping it up Now.
+
+466
+00:36:35,286 --> 00:36:37,560
+Speaker 1: I had seen this in the comic book store before.
+
+467
+00:36:37,962 --> 00:36:43,502
+Speaker 1: They hyped it up and I was waiting for them to put it all in one book because I wasn't gonna buy five comic books Of some.
+
+468
+00:36:43,803 --> 00:36:46,793
+Speaker 1: it just looks like some normal superhero guy kind of generic.
+
+469
+00:36:46,853 --> 00:36:48,920
+Speaker 0: I see a superhero flying with an arm outstretched.
+
+470
+00:36:49,221 --> 00:36:58,100
+Speaker 1: Yep now and that will make you kind of feel kind of a if you're like us and you don't like superheroes So much or at least generic superhero stories.
+
+471
+00:36:59,360 --> 00:37:03,968
+Speaker 1: however this actually Surprised the hell out of me really.
+
+472
+00:37:04,089 --> 00:37:07,020
+Speaker 1: I read it just because they told me to and it was only eight bucks.
+
+473
+00:37:07,401 --> 00:37:11,660
+Speaker 1: So for a whole book of comics, that's a great deal because normally one comic book is three bucks.
+
+474
+00:37:12,022 --> 00:37:13,651
+Speaker 1: This is like five or six comic books.
+
+475
+00:37:14,053 --> 00:37:30,166
+Speaker 1: So hell yeah, and You know First off it's a story about this kid Who has superpowers of gravity and he can fly and he can hit strong and do anything, you know, it's very generic superpowers But he's got.
+
+476
+00:37:30,206 --> 00:37:33,820
+Speaker 1: he's pretty strong you can kick the shit out of things and beat people up and all kinds of good stuff.
+
+477
+00:37:34,042 --> 00:37:39,660
+Speaker 1: all right, and You know his his origin is a simple generic origin.
+
+478
+00:37:39,861 --> 00:37:44,020
+Speaker 1: Oh, he was on a boat and he got sucked into a vortex and it gave him gravity powers.
+
+479
+00:37:44,541 --> 00:38:09,339
+Speaker 1: whatever the story starts where he goes to college at NYU leaving the hickville of Wisconsin and It's more a story about him in NYU and in New York City Managing his life as you know in the aspects of grades girlfriend Friends in general and superheroing at night not getting enough sleep.
+
+480
+00:38:10,202 --> 00:38:19,455
+Speaker 1: So if you like stories or if you're about to go to college or if you're in college or nostalgic for college This will hit you in so many ways.
+
+481
+00:38:19,475 --> 00:38:21,685
+Speaker 1: I Mean literally.
+
+482
+00:38:21,705 --> 00:38:32,719
+Speaker 1: you see this guy like going out to parties and stuff and then You know the girlfriend's trying to go with guys despite him and it's good stuff and It's also good.
+
+483
+00:38:33,121 --> 00:38:39,320
+Speaker 1: The second aspect of it is from the superhero part is he's a total noob at super heroing like it's New York.
+
+484
+00:38:39,400 --> 00:38:48,238
+Speaker 1: so there's real superheroes all over the place in the Marvel Universe and You see him like try to help out real superheroes and like go away new buying babysitting you, huh?
+
+485
+00:38:49,281 --> 00:38:57,160
+Speaker 1: And like he gets tricked like someone comes in is like help help I can't open my car and since he's just a noob, that's the kind of thing he handles, right?
+
+486
+00:38:57,820 --> 00:39:00,896
+Speaker 1: So he goes and he opens the car and then the guy just steals it.
+
+487
+00:39:00,936 --> 00:39:03,308
+Speaker 1: He's like, hey He's like crap.
+
+488
+00:39:03,711 --> 00:39:04,194
+Speaker 1: I'm a noob.
+
+489
+00:39:04,235 --> 00:39:11,759
+Speaker 1: I got fooled You know and it's about him becoming from a noob to a not noob superhero, you know, which is pretty cool.
+
+490
+00:39:12,962 --> 00:39:19,671
+Speaker 1: the other fun the thing I like about this is the Sort of things that go on in the background that are hilarious.
+
+491
+00:39:20,033 --> 00:39:24,960
+Speaker 1: Like if you look here right in the beginning There's a guy who's a hot dog vendor.
+
+492
+00:39:25,980 --> 00:39:28,860
+Speaker 1: But obviously there's something special about that hot dog vendor.
+
+493
+00:39:29,021 --> 00:39:33,880
+Speaker 1: It's a me a Mario and he's peeing in front of a sign for the producers.
+
+494
+00:39:36,142 --> 00:39:37,245
+Speaker 1: You know, it's that kind of stuff.
+
+495
+00:39:37,325 --> 00:39:42,360
+Speaker 1: and like the roommate is always playing as Nintendo DS and that's kind of hilarious, too.
+
+496
+00:39:43,842 --> 00:39:45,287
+Speaker 1: You know, it's it's it's stuff like that.
+
+497
+00:39:45,367 --> 00:39:56,178
+Speaker 1: That makes it pretty cool when you and also I think Let me just check on this Yeah, yep is there the one of the guys who worked on this comic is like buddy.
+
+498
+00:39:56,218 --> 00:39:59,559
+Speaker 1: buddy with the Guys from the comic geek speak podcast.
+
+499
+00:40:00,061 --> 00:40:07,720
+Speaker 1: So you see like towards the end the guy the kid is searching for male freshman from Wisconsin at NYU on his computer.
+
+500
+00:40:08,403 --> 00:40:15,700
+Speaker 1: And you see one of the people on the list is one of the guys from the comic book podcast Because he's from Wisconsin.
+
+501
+00:40:16,967 --> 00:40:17,560
+Speaker 1: It's pretty cool.
+
+502
+00:40:17,761 --> 00:40:23,878
+Speaker 1: if you like college or New York because it has they like mention all these NYU buildings and stuff and they get blown up.
+
+503
+00:40:23,999 --> 00:40:29,340
+Speaker 1: and So if you're at NYU, this is just great for you to read because you'll be laughing it up.
+
+504
+00:40:30,545 --> 00:40:32,523
+Speaker 1: No next All right.
+
+505
+00:40:32,543 --> 00:40:35,073
+Speaker 1: The second thing I bought was preacher volume 4.
+
+506
+00:40:35,073 --> 00:40:36,358
+Speaker 1: I think I already talked about preacher.
+
+507
+00:40:36,598 --> 00:40:37,000
+Speaker 0: Yeah, you did.
+
+508
+00:40:37,040 --> 00:40:38,226
+Speaker 0: I still have to start reading that.
+
+509
+00:40:38,346 --> 00:40:38,889
+Speaker 1: Yeah, I was.
+
+510
+00:40:38,989 --> 00:40:45,360
+Speaker 1: I was a little confused because this one had different artists But actually this they should have told me this but I would have bought it.
+
+511
+00:40:45,400 --> 00:40:48,499
+Speaker 1: Anyway, it's not in the continuity of the story.
+
+512
+00:40:48,961 --> 00:40:53,720
+Speaker 1: It was a side story about one of the not main characters, but I'm still good.
+
+513
+00:40:53,720 --> 00:40:56,640
+Speaker 1: I've yet to read it, but it's probably really cool.
+
+514
+00:40:56,740 --> 00:41:05,318
+Speaker 1: But just so you know that you if you don't want to read preacher volume 4 you can skip volume 4 Although I wouldn't recommend it because I think it's pretty cool and it has different artists.
+
+515
+00:41:06,841 --> 00:41:11,516
+Speaker 1: Third thing I brought was testament number one, which is by my buddy rush cough.
+
+516
+00:41:12,439 --> 00:41:18,111
+Speaker 1: now When I say this knowing you rim, I think you're really gonna like it.
+
+517
+00:41:18,993 --> 00:41:21,900
+Speaker 1: Oh really and not in a penny arcade way in a real.
+
+518
+00:41:23,865 --> 00:41:25,219
+Speaker 1: Basically it starts off.
+
+519
+00:41:25,601 --> 00:41:50,758
+Speaker 1: It's supposed to be a modern open source Bible telling right and it starts off With a comic book telling of the story of Abraham bringing his son Isaac up the mountain and all that stuff, right and then immediately They kind of put that on top of a story about a kid a dad sending his son to the draft You know like Oh sacrificing the Sun sacrificing the Sun
+
+520
+00:41:53,671 --> 00:41:56,954
+Speaker 0: Like you go Whenever something's like metaphorical or meaningful.
+
+521
+00:41:57,075 --> 00:41:57,900
+Speaker 1: Yeah, it's really cool.
+
+522
+00:41:58,481 --> 00:42:04,920
+Speaker 1: And then there's a point where like Doug is you there's a professor teaching a class and you can tell they it's Doug rush cough.
+
+523
+00:42:04,980 --> 00:42:13,034
+Speaker 1: they drew him that's his face into the comic as a teacher and It's a story about how like it's sort of like, you know how.
+
+524
+00:42:13,074 --> 00:42:14,460
+Speaker 1: now we're all worried about Big Brother.
+
+525
+00:42:15,006 --> 00:42:16,160
+Speaker 1: Well, this is super Big Brother.
+
+526
+00:42:16,200 --> 00:42:22,683
+Speaker 1: You have these rebel kids who are dodging the draft by cutting the RF IDs out of their arms and hiding in a swimming pool In a building.
+
+527
+00:42:22,703 --> 00:42:23,787
+Speaker 1: Wow.
+
+528
+00:42:24,189 --> 00:42:28,211
+Speaker 1: Yeah, it gets pretty crazy, but everything is Contrasted with.
+
+529
+00:42:28,453 --> 00:42:44,760
+Speaker 1: you know The the Bible but the reason that you're gonna like it is because it's not the Old Testament as written it's the Old Testament as like, you know, the Somewhat real telling of you know, there were many and then one God came and killed all the other.
+
+530
+00:42:46,208 --> 00:42:50,745
+Speaker 1: You know the real somewhat Archaeological historical type.
+
+531
+00:42:50,826 --> 00:42:54,840
+Speaker 0: I'm real big on that like pre Christian pre monotheism Judaic mythology.
+
+532
+00:42:55,142 --> 00:42:56,168
+Speaker 0: Yeah real big.
+
+533
+00:42:56,570 --> 00:42:57,315
+Speaker 1: so that's what.
+
+534
+00:42:57,335 --> 00:42:58,120
+Speaker 1: that's what this is.
+
+535
+00:42:58,321 --> 00:43:02,420
+Speaker 1: I'm probably gonna buy all the rest of them and then if there's a trade I'll probably buy all those.
+
+536
+00:43:02,601 --> 00:43:04,392
+Speaker 0: Well good, cuz then I'll borrow them all from you.
+
+537
+00:43:04,412 --> 00:43:05,639
+Speaker 1: Yeah, as long as they keep it up.
+
+538
+00:43:05,941 --> 00:43:09,839
+Speaker 1: I mean Doug rush cough is like, you know, the amazing writer of writing.
+
+539
+00:43:10,620 --> 00:43:19,209
+Speaker 1: so and oh the cover is just great because it shows this guy like he has his hand like kind of like almost in a fist like his fingers are clenched, but not a fist.
+
+540
+00:43:19,229 --> 00:43:24,970
+Speaker 1: and You know, if you look at I've only seen the picture in like a thumbnail on the internet before I bought it.
+
+541
+00:43:25,432 --> 00:43:28,510
+Speaker 1: So it looked like a guy like, you know, there's a big bright light.
+
+542
+00:43:28,591 --> 00:43:30,029
+Speaker 1: So look kind of like a Bible pose.
+
+543
+00:43:30,411 --> 00:43:36,393
+Speaker 1: But then you realize he's cutting this RFID out of his arm and it's like oh It's a combo.
+
+544
+00:43:36,835 --> 00:43:37,718
+Speaker 0: This sounds pretty cool.
+
+545
+00:43:37,858 --> 00:43:38,039
+Speaker 1: Yep.
+
+546
+00:43:38,620 --> 00:43:41,028
+Speaker 1: Now the last thing I bought is a very large $30 book.
+
+547
+00:43:43,902 --> 00:43:46,422
+Speaker 1: So I only reason I bought it for $30.
+
+548
+00:43:46,422 --> 00:43:51,669
+Speaker 1: Well, one of the reasons I bought it was because I spent over $100 today Which means they get $20 in store credit.
+
+549
+00:43:52,031 --> 00:43:53,319
+Speaker 1: So it was a $10 book for me.
+
+550
+00:43:54,320 --> 00:44:07,548
+Speaker 1: Now you might be aware that you know, there are the Grammys for music the Oscars for movies comic books and other graphic Storytelling graphic novels and things have the Eisner Awards, right?
+
+551
+00:44:08,310 --> 00:44:14,340
+Speaker 1: Now the Eisner Awards are not for Michael Eisner the Disney guy and You know, I never really knew who they were for.
+
+552
+00:44:14,400 --> 00:44:18,939
+Speaker 1: I just knew there was a guy named Eisner who must have done some great comics, but you know, I didn't really know.
+
+553
+00:44:19,962 --> 00:44:27,080
+Speaker 1: That man is Will Eisner and he apparently wrote like the comics of all comic-dom and I haven't read a damn one.
+
+554
+00:44:27,582 --> 00:44:29,694
+Speaker 0: Well considering that I have no idea what you're talking about.
+
+555
+00:44:29,714 --> 00:44:31,521
+Speaker 0: I Haven't read any either.
+
+556
+00:44:31,962 --> 00:44:44,909
+Speaker 1: Well, the Eisner Awards are like the Grammys of comic books and Every year they give them out to like the best comics and graphic novels and things and if something wins an Eisner Award It's usually not gonna be some Marvel superhero book.
+
+557
+00:44:44,989 --> 00:44:48,880
+Speaker 1: It's usually like a real serious graphic novel of quality, you know.
+
+558
+00:44:49,622 --> 00:44:57,606
+Speaker 1: and every year you'll see that there's one Eisner Award for like best imported foreign material and Things like Buddha will win.
+
+559
+00:44:57,646 --> 00:45:06,940
+Speaker 1: that you know, so that's why you don't see them bringing over Multiple awesome mangas in the same year because they want to spread the Eisner Awards everything that deserves it.
+
+560
+00:45:07,161 --> 00:45:08,595
+Speaker 1: You know, they're thinking about that sort of thing.
+
+561
+00:45:09,842 --> 00:45:16,840
+Speaker 1: But the Eisner Awards are because of Will Eisner who pretty much was the first person to make serious graphic novels.
+
+562
+00:45:17,542 --> 00:45:20,008
+Speaker 1: Huh and they're mad high quality.
+
+563
+00:45:20,630 --> 00:45:23,979
+Speaker 1: one of them that I don't have that I'm gonna get is actually about.
+
+564
+00:45:24,139 --> 00:45:24,977
+Speaker 1: you know What was that?
+
+565
+00:45:26,181 --> 00:45:27,585
+Speaker 1: The elders of Zion.
+
+566
+00:45:27,705 --> 00:45:31,076
+Speaker 1: whole thing, you know with the Jewish conspiracy thing.
+
+567
+00:45:31,136 --> 00:45:35,520
+Speaker 1: He made a whole Graphic novel about that and I forget what it's called.
+
+568
+00:45:35,620 --> 00:45:42,919
+Speaker 1: But if you see the cover of you'll probably recognize it like I saw the cover and I was like, oh that thing I know that cover, you know.
+
+569
+00:45:43,040 --> 00:45:46,198
+Speaker 1: But I didn't actually know what it was until I read about it because I wanted to know.
+
+570
+00:45:47,084 --> 00:45:49,120
+Speaker 1: You know now that I'm doing more comics.
+
+571
+00:45:49,161 --> 00:45:50,052
+Speaker 1: I want to know what is about.
+
+572
+00:45:50,154 --> 00:46:05,880
+Speaker 1: but anyway I saw on the list of things that were coming out this week will Eisner the contract with God trilogy and It's apparently like the amazing work of his Legendary novel and sequels that launched a new art form.
+
+573
+00:46:06,020 --> 00:46:10,180
+Speaker 0: I think you referred to it earlier today when you were telling me what you're gonna talk about on the show that this is like.
+
+574
+00:46:10,220 --> 00:46:11,509
+Speaker 0: This isn't cane of comics.
+
+575
+00:46:11,750 --> 00:46:13,240
+Speaker 1: if it's not this isn't cane of comics.
+
+576
+00:46:13,481 --> 00:46:19,118
+Speaker 1: It sure is how it looks like it supposed to be, you know great enough to have the important awards named after him.
+
+577
+00:46:19,599 --> 00:46:22,946
+Speaker 1: All right There's a quote by Scott McCloud.
+
+578
+00:46:22,966 --> 00:46:24,330
+Speaker 0: Oh god.
+
+579
+00:46:24,691 --> 00:46:27,500
+Speaker 1: He says will Eisner is the heart and mind of American comics.
+
+580
+00:46:28,182 --> 00:46:28,343
+Speaker 0: Huh?
+
+581
+00:46:28,824 --> 00:46:30,390
+Speaker 0: I guess he said something intelligent for once.
+
+582
+00:46:30,791 --> 00:46:34,970
+Speaker 0: Yeah, though apparently I hear I mean that guy was actually He said a lot of good things.
+
+583
+00:46:35,070 --> 00:46:41,353
+Speaker 0: I'm selling recently that he's been kind of On the webcomics, yeah, we'll get into him someday.
+
+584
+00:46:41,433 --> 00:46:43,360
+Speaker 0: if you read penny arcade, you know what that's all about.
+
+585
+00:46:43,661 --> 00:46:45,327
+Speaker 1: Yeah, we just agree with penny arcade.
+
+586
+00:46:45,367 --> 00:46:50,947
+Speaker 1: Well because we like penny arcade and we don't like Scott McCloud's comics They're not funny or interesting to us.
+
+587
+00:46:51,649 --> 00:46:54,780
+Speaker 1: So we just I guess by default side with whatever gave in tycos.
+
+588
+00:46:54,780 --> 00:47:08,220
+Speaker 0: Well, plus I mean basically to sum up Scott McCloud is in an advocate of among other things Micropayments paying for comics online and we're of the mind that things like this podcast and things like penny arcade should be free.
+
+589
+00:47:08,924 --> 00:47:17,600
+Speaker 1: Yeah, I mean if I can spend all this time making this podcast I don't ask for any money and some guy who draws a webcomic occasionally shouldn't be asking for any money.
+
+590
+00:47:18,186 --> 00:47:28,790
+Speaker 1: I mean, come on, man Get with the times and don't tell me that you need to ask for money to make it big because penny arcade you lose They're loaded they give the comic away for free, you know what?
+
+591
+00:47:28,830 --> 00:47:31,540
+Speaker 0: not even just then mega Tokyo all the big comics.
+
+592
+00:47:31,701 --> 00:47:33,538
+Speaker 0: Yeah, 8-bit theater makes a lot of money.
+
+593
+00:47:34,262 --> 00:47:38,600
+Speaker 1: So just cuz you're pissed off that the way they decided worked in the way you decided didn't work.
+
+594
+00:47:38,700 --> 00:47:40,667
+Speaker 1: Don't keep claiming that they're doing it wrong.
+
+595
+00:47:41,008 --> 00:47:41,871
+Speaker 1: Just mess up.
+
+596
+00:47:42,372 --> 00:47:44,680
+Speaker 0: Yeah, but we got off under a little tangent there.
+
+597
+00:47:44,720 --> 00:47:46,487
+Speaker 0: We'll cover him in more detail someday.
+
+598
+00:47:46,507 --> 00:47:51,803
+Speaker 0: Yep, but I guess to close out we got one little metabit Reader ship.
+
+599
+00:47:51,844 --> 00:47:55,500
+Speaker 0: well, I guess listenership is growing even though many of you aren't using the feed.
+
+600
+00:47:55,540 --> 00:47:57,797
+Speaker 0: You're just going to the website, which is fine because that's what I do.
+
+601
+00:47:58,940 --> 00:48:06,399
+Speaker 0: But uh, tell your friends We're kind of getting to that critical mass point and I could see the show exploding if we get a little bit of word-of-mouth.
+
+602
+00:48:06,960 --> 00:48:11,979
+Speaker 1: Yeah, so if you go to any forums online besides ours, you know, just post a little link.
+
+603
+00:48:12,321 --> 00:48:20,595
+Speaker 1: If especially if something we said in the podcast is relevant to his discussion be like hey these guys in their podcast Episode something something set talked about this.
+
+604
+00:48:20,635 --> 00:48:21,339
+Speaker 1: go listen to it.
+
+605
+00:48:21,862 --> 00:48:24,072
+Speaker 0: Of course, if you don't like us don't do that.
+
+606
+00:48:24,474 --> 00:48:24,996
+Speaker 1: You don't like us.
+
+607
+00:48:25,016 --> 00:48:25,820
+Speaker 1: Why are you still listening?
+
+608
+00:48:27,307 --> 00:48:41,687
+Speaker 1: you know, but Yeah, also if you're not in our forums Go to our forums front row crew calm Forum, they're actually really rocking.
+
+609
+00:48:42,088 --> 00:48:54,060
+Speaker 1: Yeah, I mean, you know if you like listening to this stuff Then I have to only assume that you have something to say about it or at least you're thinking, you know or giving an Nod, you know, we know you're out there.
+
+610
+00:48:54,120 --> 00:48:58,060
+Speaker 0: We see how many of you download the episode and we see how many people are in the forums.
+
+611
+00:48:58,321 --> 00:49:11,020
+Speaker 1: Yeah, and one of the numbers is a lot smaller than the other number and there's no way that we could be so Uncontroversial as to where everyone listening is just nodding in agreement has nothing contradictory or interesting to say or anything to add at all.
+
+612
+00:49:11,121 --> 00:49:12,117
+Speaker 0: Because yeah, well we got.
+
+613
+00:49:12,158 --> 00:49:21,679
+Speaker 0: well I mean recently the the biggest thing I've seen in the forum that is kind of Adversarial toward us is all of our scientific friends yelling at us about a description of viruses and how they work.
+
+614
+00:49:22,161 --> 00:49:22,402
+Speaker 1: Great.
+
+615
+00:49:22,825 --> 00:49:25,720
+Speaker 0: So if you want to see people make fun of us go to our forums.
+
+616
+00:49:25,846 --> 00:49:36,165
+Speaker 1: Yeah Cuz you know we're so all knowing and we're so correct all the time that no one could possibly have anything to add or Contradict anything we ever say on this.
+
+617
+00:49:36,205 --> 00:49:39,936
+Speaker 0: No, in fact, did you realize that I am indeed a an almighty God?
+
+618
+00:49:40,417 --> 00:49:41,240
+Speaker 0: really things.
+
+619
+00:49:41,420 --> 00:49:46,337
+Speaker 1: Then why is it that my face appears in this comic where he's trying to depict God telling Abraham what?
+
+620
+00:49:46,357 --> 00:49:51,299
+Speaker 0: because you see I made It appear to be your face so that you would think that you were God when in actuality it is me.
+
+621
+00:49:51,883 --> 00:49:52,869
+Speaker 1: What kind of plan is that?
+
+622
+00:49:52,949 --> 00:49:54,217
+Speaker 1: What kind of crappy God are you?
+
+623
+00:49:54,458 --> 00:49:54,780
+Speaker 0: You know what?
+
+624
+00:49:54,900 --> 00:50:01,811
+Speaker 0: that's the same kind of God who would uh plant fossils to trick people and Make a young universe but put light already in transit.
+
+625
+00:50:01,892 --> 00:50:03,900
+Speaker 0: So you'd think the universe was older than it really was.
+
+626
+00:50:04,442 --> 00:50:09,560
+Speaker 1: That's the same kind of God who would put a pleasure dome in the middle of a waste disposal pipe.
+
+627
+00:50:18,458 --> 00:50:21,251
+Speaker 0: And That was geek nights with rim and Scott special.
+
+628
+00:50:21,272 --> 00:50:23,179
+Speaker 0: Thanks to DJ pretzel for the opening music.
+
+629
+00:50:24,051 --> 00:50:24,700
+Speaker 1: Thanks for listening.
+
+630
+00:50:24,900 --> 00:50:32,000
+Speaker 1: Please remember to point your favorite podcatcher at feeds feed burner comm slash geek nights to get the latest episodes as soon as they're released.
+
+631
+00:50:32,604 --> 00:50:46,219
+Speaker 1: also, please visit our website at www.frontrowcrew.com For the latest updates and forum discussion and whether you love or hate our podcast We won't know unless you send your feedback to us at geek nights at gmail.com.
+

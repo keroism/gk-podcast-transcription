@@ -1,0 +1,2824 @@
+1
+00:00:08,780 --> 00:00:12,191
+Rym: It's Wednesday, December 4th, 2013.
+
+2
+00:00:12,191 --> 00:00:12,592
+Rym: I'm Rym.
+
+3
+00:00:12,612 --> 00:00:13,174
+Rym: I'm Scott.
+
+4
+00:00:13,255 --> 00:00:14,398
+Rym: And this is GeekNights.
+
+5
+00:00:14,599 --> 00:00:18,428
+Rym: Tonight, Rumiko Takahashi's primal needs.
+
+6
+00:00:18,989 --> 00:00:20,312
+Scott: Oh, gosh.
+
+7
+00:00:20,332 --> 00:00:21,475
+Scott: You say it that way.
+
+8
+00:00:21,716 --> 00:00:24,162
+Rym: Part of the Rumiko Takahashi anthology.
+
+9
+00:00:24,182 --> 00:00:26,827
+Rym: You might have gotten it in your Genian box.
+
+10
+00:00:28,150 --> 00:00:29,232
+Scott: Let's do this.
+
+11
+00:00:31,818 --> 00:00:35,592
+Rym: So I wanted to do something that people don't really do anymore.
+
+12
+00:00:35,612 --> 00:00:38,525
+Rym: At least, like, hobbyists don't care about it like they used to back in the day.
+
+13
+00:00:38,545 --> 00:00:40,933
+Rym: I wanted to make a webcam.
+
+14
+00:00:42,017 --> 00:00:43,101
+Scott: What do you mean make a webcam?
+
+15
+00:00:43,141 --> 00:00:44,426
+Scott: You just get a webcam.
+
+16
+00:00:44,466 --> 00:00:44,847
+Rym: It's like 10 bucks.
+
+17
+00:00:44,867 --> 00:00:45,991
+Scott: Yeah, like a 24/7 hosted webcam.
+
+18
+00:00:46,011 --> 00:00:50,268
+Scott: Oh, well, you could just use your Elgato, right?
+
+19
+00:00:50,328 --> 00:00:51,032
+Scott: Just hook it up and...
+
+20
+00:00:51,193 --> 00:00:51,817
+Rym: Yeah, I could.
+
+21
+00:00:51,897 --> 00:00:55,677
+Rym: So the only way to really do that, the only, like, other than... You have Vios.
+
+22
+00:00:55,717 --> 00:00:56,320
+Scott: What's the problem?
+
+23
+00:00:56,560 --> 00:00:57,908
+Rym: So where do you host it?
+
+24
+00:00:58,009 --> 00:00:59,095
+Rym: Like, there's a lot of options there.
+
+25
+00:00:59,135 --> 00:00:59,799
+Rym: Where do you host it?
+
+26
+00:00:59,840 --> 00:01:00,442
+Rym: How do you host it?
+
+27
+00:01:00,462 --> 00:01:01,506
+Scott: You can use Twitch, YouTube, whatever.
+
+28
+00:01:01,848 --> 00:01:07,869
+Rym: Yeah, so you can theoretically make a YouTube live event that never ends.
+
+29
+00:01:08,451 --> 00:01:18,029
+Rym: But the practical reality of that, based on my experiences with the Elgato software and the heat that the thing generates over time and everything else, not the best option.
+
+30
+00:01:18,992 --> 00:01:22,706
+Rym: And basically, I was looking around because it's hard to search for that.
+
+31
+00:01:22,766 --> 00:01:37,327
+Rym: Because if you search for anything related to webcam, you mostly find the software people use to make webcams work, like physical webcams, not to run what you used to call a webcam, which meant a camera pointed to something 24/7 that is on a web page for you to look at.
+
+32
+00:01:37,347 --> 00:01:42,190
+Scott: Well, the thing is, the webcam is like the kind that you're looking for, where it's just anyone can look at it anytime.
+
+33
+00:01:42,712 --> 00:01:49,117
+Scott: Most of those are sold as, like, security cameras where you log into this web site and look at your thing.
+
+34
+00:01:49,177 --> 00:01:51,003
+Scott: And they're mostly really low.
+
+35
+00:01:51,144 --> 00:01:54,057
+Scott: Even the ones that you see in public, like, look at the panda at the zoo.
+
+36
+00:01:54,077 --> 00:01:55,764
+Scott: That's set up the same way.
+
+37
+00:01:55,885 --> 00:02:00,222
+Scott: And it's just... Or... You have to know your IP so you can visit the URL.
+
+38
+00:02:00,242 --> 00:02:10,026
+Rym: So there's a lot of companies that sell those webcam services, mostly to restaurants and businesses, to have, like, a webcam of your waiting room to see how long it would be to get a table, stuff like that.
+
+39
+00:02:10,127 --> 00:02:11,051
+Scott: It's all the same stuff.
+
+40
+00:02:11,072 --> 00:02:13,485
+Scott: The security stuff, the panda thing, and they're all the same.
+
+41
+00:02:13,525 --> 00:02:20,577
+Rym: But I realized that it was hard to search for when I went and found all the software because there's a lot of software to, like, run Apache and then...
+
+42
+00:02:20,617 --> 00:02:22,385
+Scott: There's some open source software.
+
+43
+00:02:22,747 --> 00:02:30,981
+Scott: The thing is, you would just run it as a server and port forward, and then you would have to know your IP of your house, visit it, and then with VLC in a special URL.
+
+44
+00:02:31,002 --> 00:02:31,926
+Rym: Yeah, but no, that's bullshit.
+
+45
+00:02:31,946 --> 00:02:38,493
+Rym: I wanted the traditional... You host a website somewhere with HTTP and embedded in that site is a little video.
+
+46
+00:02:38,573 --> 00:02:43,554
+Scott: Well, you could just put the link embedded in the site with HTML, you know, that special address for VLC.
+
+47
+00:02:43,574 --> 00:02:44,237
+Rym: Yes, if you have it.
+
+48
+00:02:44,518 --> 00:02:48,015
+Scott: And then you had, like, a VLC plug-in and then it would appear on the website.
+
+49
+00:02:48,176 --> 00:02:53,460
+Rym: Yeah, I'm well aware of all those options, but the software that people make to manage the stuff well... It's really...
+
+50
+00:02:54,201 --> 00:02:56,431
+Scott: It's like this software that's pre-installed on your router.
+
+51
+00:02:56,632 --> 00:02:57,295
+Scott: It's really shitty.
+
+52
+00:02:57,315 --> 00:03:01,008
+Rym: It really hasn't changed much in the last 15 years.
+
+53
+00:03:01,088 --> 00:03:01,891
+Scott: No, it hasn't.
+
+54
+00:03:02,071 --> 00:03:02,894
+Scott: No one cares about that.
+
+55
+00:03:02,934 --> 00:03:03,997
+Rym: Yeah, no one cares at all.
+
+56
+00:03:05,460 --> 00:03:12,542
+Rym: But what's interesting is that I realized the best way to do this is actually just to use Skype because what I...
+
+57
+00:03:12,562 --> 00:03:13,466
+Scott: How do you do that?
+
+58
+00:03:13,486 --> 00:03:16,258
+Scott: Because you need the other end to pick up when you call.
+
+59
+00:03:16,700 --> 00:03:18,244
+Rym: Ah, so get this.
+
+60
+00:03:18,264 --> 00:03:25,390
+Rym: A lot of people use Skype to be a personal secure webcam, and it's actually way more secure than a lot of the other ways to do it.
+
+61
+00:03:25,491 --> 00:03:29,450
+Scott: Except for, you know, the NSA looking at everything Microsoft wants to show them, which is everything.
+
+62
+00:03:29,531 --> 00:03:30,636
+Rym: Oh, yeah, of course, of course.
+
+63
+00:03:30,656 --> 00:03:35,193
+Rym: Well, I could use, like, PGP phone to encrypt the audio going over that connection.
+
+64
+00:03:35,534 --> 00:03:35,815
+Scott: Good job.
+
+65
+00:03:36,237 --> 00:03:38,948
+Rym: Anyway, so what you do is you make a Skype account.
+
+66
+00:03:39,390 --> 00:03:40,335
+Rym: You don't give it to anyone.
+
+67
+00:03:40,355 --> 00:03:41,400
+Rym: You don't tell anyone it exists.
+
+68
+00:03:41,480 --> 00:03:48,146
+Rym: Give it to some really obscure name and make it context with the people you want to be able to view your little webcam.
+
+69
+00:03:48,186 --> 00:03:50,500
+Rym: Like, you want them to be able to log in and look at your video occasionally.
+
+70
+00:03:51,521 --> 00:04:04,665
+Rym: And then there's an option buried deep in Skype that basically says automatically answer with video any call that comes in and then also check the option to only accept calls from people who are contacts with you.
+
+71
+00:04:05,408 --> 00:04:06,352
+Scott: Ah, so it's basically.
+
+72
+00:04:06,372 --> 00:04:09,266
+Scott: it doesn't matter if someone figures out the obscure name because it ain't picking up.
+
+73
+00:04:09,346 --> 00:04:10,330
+Rym: Yeah, it'll never respond.
+
+74
+00:04:10,672 --> 00:04:13,726
+Rym: So I set this up and I tested it, and it works amazingly.
+
+75
+00:04:13,806 --> 00:04:14,851
+Scott: I'm sure it works just fine.
+
+76
+00:04:14,911 --> 00:04:15,775
+Rym: So now I have a lot.
+
+77
+00:04:15,795 --> 00:04:16,458
+Rym: I have access.
+
+78
+00:04:16,498 --> 00:04:18,406
+Rym: I didn't know about that auto pickup option.
+
+79
+00:04:18,426 --> 00:04:19,831
+Scott: Neither did I. It's the option.
+
+80
+00:04:20,052 --> 00:04:24,490
+Scott: So now, so any number of people can call it once and let's keep picking up and making new.
+
+81
+00:04:24,811 --> 00:04:32,820
+Rym: I think if someone else if you call while someone else is already called in, either it kicks one of them out or it kicks the other one out.
+
+82
+00:04:32,861 --> 00:04:33,906
+Scott: It doesn't make a group.
+
+83
+00:04:34,188 --> 00:04:38,064
+Scott: So suddenly you've got two people attached to each other like, oh, I don't think three way.
+
+84
+00:04:38,084 --> 00:04:40,512
+Rym: I got to test a little more to find out.
+
+85
+00:04:40,572 --> 00:04:42,820
+Rym: But it works surprisingly well.
+
+86
+00:04:42,961 --> 00:04:45,913
+Rym: Now I have a bunny cam to check on the bunnies when we're off at conventions.
+
+87
+00:04:46,677 --> 00:04:52,223
+Scott: Yeah, I'm sure it works well, but I don't know, you know, technologically, I guess it could be a better option, but you know what?
+
+88
+00:04:52,544 --> 00:04:58,828
+Rym: There are no better options that don't either cost a lot of money and still probably suck because they reek of enterprise.
+
+89
+00:04:58,868 --> 00:05:00,834
+Scott: I still like the VLC URL method.
+
+90
+00:05:00,854 --> 00:05:02,359
+Rym: Yeah, but VLC is.
+
+91
+00:05:04,142 --> 00:05:08,261
+Scott: the only problem with that is you got to use dynamic DNS or know your house's IP and hope it doesn't change.
+
+92
+00:05:08,442 --> 00:05:09,766
+Rym: Skype comes with net busting.
+
+93
+00:05:10,348 --> 00:05:10,849
+Scott: That's true.
+
+94
+00:05:11,150 --> 00:05:17,471
+Rym: Also, I got to trust the security of the VLC stuff or roll my own authentication.
+
+95
+00:05:17,491 --> 00:05:19,879
+Scott: Oh, you know what you could do?
+
+96
+00:05:19,899 --> 00:05:20,743
+Rym: Skype's authentication.
+
+97
+00:05:20,803 --> 00:05:24,923
+Scott: Here's the way you could do it with your without worrying about your house's net busting, right?
+
+98
+00:05:25,626 --> 00:05:29,963
+Rym: You could just do port forwarding and stuff because I know there's a better way to do it, right?
+
+99
+00:05:30,846 --> 00:05:34,277
+Scott: The computer that has the VLC running, right?
+
+100
+00:05:34,337 --> 00:05:35,080
+Scott: The stream running.
+
+101
+00:05:35,200 --> 00:05:40,101
+Scott: Yeah, you VPN that computer to like your web hosting somewhere that you already have no matter.
+
+102
+00:05:40,181 --> 00:05:41,225
+Scott: Oh, yeah.
+
+103
+00:05:41,245 --> 00:05:44,737
+Scott: And then you just connect to your web host and there it is.
+
+104
+00:05:44,797 --> 00:05:47,608
+Scott: It's like it's running on your web host all the time.
+
+105
+00:05:47,648 --> 00:05:47,809
+Scott: Yeah.
+
+106
+00:05:47,869 --> 00:05:50,218
+Rym: And you have the VPN originate from home.
+
+107
+00:05:50,238 --> 00:05:55,559
+Rym: So even if your dynamic IP from your ISP changes, it'll always reinitiate and still write.
+
+108
+00:05:55,579 --> 00:05:59,194
+Scott: So you VPN to your web host from the Starbucks where you're at.
+
+109
+00:05:59,254 --> 00:06:03,634
+Scott: And then it's like the computer in your house is with VLC is on your same land as you.
+
+110
+00:06:03,674 --> 00:06:05,161
+Scott: And then you just type in its address and you're good.
+
+111
+00:06:05,302 --> 00:06:10,965
+Rym: So, yeah, you kids who only subscribe to Wednesday and anime, manga, comics, take that technology.
+
+112
+00:06:11,005 --> 00:06:11,487
+Scott: Boom.
+
+113
+00:06:11,568 --> 00:06:13,295
+Rym: That's what Monday gig nights is like.
+
+114
+00:06:13,335 --> 00:06:14,219
+Rym: It's actually pretty cool.
+
+115
+00:06:15,041 --> 00:06:19,281
+Scott: Subscribe to that one to the one that we make the least except Thursday, which you make even less.
+
+116
+00:06:19,784 --> 00:06:22,175
+Rym: I could do some more Thursdays if we just talk more about politics.
+
+117
+00:06:22,838 --> 00:06:24,347
+Scott: I think there might be mentoring next Thursday.
+
+118
+00:06:24,368 --> 00:06:24,690
+Scott: We'll see.
+
+119
+00:06:24,710 --> 00:06:25,454
+Rym: We'll figure it out.
+
+120
+00:06:25,776 --> 00:06:27,062
+Rym: Like we said, it's the holiday season.
+
+121
+00:06:27,083 --> 00:06:27,544
+Rym: There's trouble.
+
+122
+00:06:27,865 --> 00:06:29,390
+Rym: So, uh, got any news?
+
+123
+00:06:29,992 --> 00:06:30,896
+Scott: Do I have news?
+
+124
+00:06:30,976 --> 00:06:32,522
+Scott: I do, in fact, have news.
+
+125
+00:06:32,562 --> 00:06:38,186
+Scott: There's this company that people don't know a lot about and I didn't know a lot about until recently called Picture Box.
+
+126
+00:06:38,748 --> 00:06:42,882
+Scott: And they're basically a publisher of incredibly niche artsy fartsy books.
+
+127
+00:06:43,384 --> 00:06:43,605
+Scott: Right.
+
+128
+00:06:44,107 --> 00:06:48,321
+Scott: So why do we care about this company, Picture Box and their artsy fartsy books?
+
+129
+00:06:48,462 --> 00:06:49,907
+Scott: Besides, maybe some of them are cool.
+
+130
+00:06:49,967 --> 00:06:56,429
+Scott: Well, some of them were super cool, like crazy weird mangas and shit, including one Tezuka manga.
+
+131
+00:06:56,449 --> 00:07:06,167
+Scott: And I ordered it before they went out of business, which is the news that they're going out of business so you can loot them for 50% off pretty much everything they've got.
+
+132
+00:07:07,211 --> 00:07:11,329
+Scott: And some of this stuff is crazy cool and I kind of want it, but I kind of don't want to spend money.
+
+133
+00:07:11,349 --> 00:07:13,821
+Rym: Yeah, I also don't want stuff to take up space in my apartment.
+
+134
+00:07:13,861 --> 00:07:14,444
+Rym: Exactly.
+
+135
+00:07:14,464 --> 00:07:23,858
+Rym: I mean, I just took every anime DVD I owned except for some things that are in crazy efficient box sets and threw away all the clamshells and art and goodies.
+
+136
+00:07:23,998 --> 00:07:25,142
+Scott: I did that years ago.
+
+137
+00:07:25,162 --> 00:07:26,267
+Rym: Yeah, I finally did it.
+
+138
+00:07:26,809 --> 00:07:27,391
+Rym: Good God.
+
+139
+00:07:27,431 --> 00:07:29,801
+Rym: That was like three garbage bags of crap I got rid of.
+
+140
+00:07:30,222 --> 00:07:31,548
+Rym: And now there's one tiny binder.
+
+141
+00:07:32,150 --> 00:07:36,548
+Scott: I'm going to get, I saved up a bunch of Amazon boxes and I'm going to start mailing stuff to Amazon to sell.
+
+142
+00:07:36,629 --> 00:07:37,553
+Scott: So we'll see.
+
+143
+00:07:37,955 --> 00:07:43,297
+Rym: So speaking of companies going out of business, Scott and I relatively recently discovered Rune Factory.
+
+144
+00:07:43,317 --> 00:07:44,421
+Scott: I didn't discover it recently.
+
+145
+00:07:44,441 --> 00:07:45,848
+Scott: I played Rune Factory 2.
+
+146
+00:07:45,848 --> 00:07:46,471
+Scott: I didn't beat it though.
+
+147
+00:07:46,772 --> 00:07:48,722
+Rym: Oh, see, I'd never played any of those games.
+
+148
+00:07:48,762 --> 00:07:51,473
+Scott: It's Harvest Moon, but also Dating and also Dungeons.
+
+149
+00:07:51,593 --> 00:07:51,834
+Rym: Yeah.
+
+150
+00:07:51,955 --> 00:07:55,090
+Rym: Three awesome things that on their own can be kind of lame, but together.
+
+151
+00:07:55,110 --> 00:07:55,191
+Scott: Yeah.
+
+152
+00:07:55,693 --> 00:07:58,267
+Scott: It's one of those games where it's like, it's not really linear.
+
+153
+00:07:58,287 --> 00:08:00,458
+Scott: It's just sort of do whatever, but there's so much to do.
+
+154
+00:08:00,539 --> 00:08:01,683
+Scott: It's like, there's always something to do.
+
+155
+00:08:01,904 --> 00:08:02,145
+Scott: Yeah.
+
+156
+00:08:02,567 --> 00:08:04,595
+Rym: So I'd started playing it.
+
+157
+00:08:04,715 --> 00:08:05,418
+Rym: It's pretty fun.
+
+158
+00:08:05,438 --> 00:08:07,425
+Scott: Like Rune Factory 4, you're playing the new one.
+
+159
+00:08:07,465 --> 00:08:07,827
+Scott: Yeah.
+
+160
+00:08:08,288 --> 00:08:09,011
+Rym: Like the old ones.
+
+161
+00:08:09,894 --> 00:08:10,135
+Rym: Yeah.
+
+162
+00:08:10,235 --> 00:08:15,195
+Rym: And Neverland, the company that developed it, bankrupt, suspends operations, done.
+
+163
+00:08:15,215 --> 00:08:16,881
+Scott: A lot of people like Rune Factory had to go bankrupt.
+
+164
+00:08:16,922 --> 00:08:18,950
+Rym: Japanese video game developer Neverland Co.
+
+165
+00:08:19,091 --> 00:08:23,615
+Rym: Limited announced on his website that the company is suspending operations, blah, blah, blah, bankruptcy.
+
+166
+00:08:23,635 --> 00:08:24,722
+Rym: I guess they didn't get enough sales.
+
+167
+00:08:24,802 --> 00:08:25,345
+Scott: I was helping.
+
+168
+00:08:25,426 --> 00:08:25,908
+Scott: I bought it.
+
+169
+00:08:26,029 --> 00:08:27,537
+Rym: According to the Anime News Network.
+
+170
+00:08:27,718 --> 00:08:28,863
+Rym: Well, remember, they're just the developer.
+
+171
+00:08:28,903 --> 00:08:30,069
+Rym: Like other people own the IP.
+
+172
+00:08:30,109 --> 00:08:30,571
+Scott: Yeah.
+
+173
+00:08:30,612 --> 00:08:31,757
+Scott: I never heard of Neverland.
+
+174
+00:08:31,777 --> 00:08:33,284
+Scott: Like on the box it says XSeed.
+
+175
+00:08:33,304 --> 00:08:34,087
+Scott: What's the deal with that?
+
+176
+00:08:34,227 --> 00:08:35,172
+Rym: That's the publisher.
+
+177
+00:08:35,332 --> 00:08:35,554
+Scott: Okay.
+
+178
+00:08:35,573 --> 00:08:36,840
+Scott: So who published Harvest Moon?
+
+179
+00:08:36,940 --> 00:08:37,482
+Scott: Who makes that?
+
+180
+00:08:37,501 --> 00:08:38,486
+Rym: I don't remember.
+
+181
+00:08:38,527 --> 00:08:41,339
+Scott: So it's not the same developer for Harvest Moon as it is for...
+
+182
+00:08:41,640 --> 00:08:41,821
+Rym: No.
+
+183
+00:08:42,102 --> 00:08:42,804
+Rym: Neverland here.
+
+184
+00:08:42,865 --> 00:08:44,371
+Rym: I got the Anime News Network article up.
+
+185
+00:08:44,391 --> 00:08:47,603
+Rym: So Neverland is also known for Shining Force.
+
+186
+00:08:48,165 --> 00:08:49,329
+Scott: That's a popular game.
+
+187
+00:08:49,349 --> 00:08:49,530
+Rym: Yeah.
+
+188
+00:08:49,771 --> 00:08:50,373
+Rym: Lufia.
+
+189
+00:08:50,553 --> 00:08:51,075
+Scott: That's huge.
+
+190
+00:08:51,115 --> 00:08:54,067
+Rym: You can already see there's kind of a trend to the kinds of games they work on.
+
+191
+00:08:54,127 --> 00:08:54,308
+Scott: Right.
+
+192
+00:08:54,328 --> 00:08:59,511
+Scott: But all these games are, they're not like super Final Fantasy level, but they're like one step under.
+
+193
+00:08:59,551 --> 00:09:01,439
+Scott: These are big, relatively big games.
+
+194
+00:09:01,459 --> 00:09:01,640
+Scott: Yeah.
+
+195
+00:09:02,101 --> 00:09:08,945
+Rym: According to the Anime News Network article here, and I keep saying Anime News Network because I'm just reading from their press release.
+
+196
+00:09:09,005 --> 00:09:10,690
+Rym: I did no independent research on this.
+
+197
+00:09:11,111 --> 00:09:13,940
+Rym: So blah, blah, blah.
+
+198
+00:09:14,080 --> 00:09:15,105
+Rym: Neverland apologized.
+
+199
+00:09:15,125 --> 00:09:16,250
+Rym: So they're a Japanese company.
+
+200
+00:09:16,350 --> 00:09:16,833
+Rym: We're sorry.
+
+201
+00:09:16,853 --> 00:09:18,078
+Scott: There won't be a Rune Factory 5, kids.
+
+202
+00:09:19,561 --> 00:09:20,565
+Rym: Recent, okay.
+
+203
+00:09:20,605 --> 00:09:26,246
+Rym: The announcement that in recent years the industry had changed and as a result the company's sales have been sluggish.
+
+204
+00:09:26,708 --> 00:09:36,018
+Rym: They added that they had tons of loans that were hard to repay and they had some sources of funding, but then that all backed out and they're done.
+
+205
+00:09:36,118 --> 00:09:38,991
+Scott: Well, I know you anime kids also tend to like JRPGs.
+
+206
+00:09:39,011 --> 00:09:40,518
+Scott: That seems to be the popular, most popular genre.
+
+207
+00:09:40,538 --> 00:09:42,445
+Rym: There's like no comments on this article.
+
+208
+00:09:42,525 --> 00:09:43,608
+Rym: No one seems to care.
+
+209
+00:09:43,869 --> 00:09:53,126
+Scott: Anyway, but Lufia is a really interesting JRPG because even though it's pretty typical, walk around, fight monsters, random encounters, buy loot, equip items, right?
+
+210
+00:09:53,708 --> 00:09:59,292
+Scott: It's really interesting because the very beginning of the game, you're basically the ultimate badass is saving the world.
+
+211
+00:09:59,352 --> 00:10:02,849
+Scott: Like from the get-go, it's like you're already a zillion levels and crazy invincible.
+
+212
+00:10:02,869 --> 00:10:04,699
+Rym: Yeah, you get into a battle, you've had all these powers.
+
+213
+00:10:04,779 --> 00:10:07,372
+Scott: Right, you battle like the super boss immediately.
+
+214
+00:10:07,473 --> 00:10:11,190
+Scott: And the first time I played it, I was like, this is the best ever and no leveling up.
+
+215
+00:10:11,251 --> 00:10:14,423
+Scott: I'm just going to be a badass the whole time and it's going to be badass as fighting.
+
+216
+00:10:14,444 --> 00:10:23,210
+Scott: And then as soon as you beat that boss, it gives you your real characters, which are the sons and daughters of the characters you just were.
+
+217
+00:10:23,230 --> 00:10:29,071
+Scott: And they're mad weak and you have to level up and become as strong as your parents and fuck that.
+
+218
+00:10:29,152 --> 00:10:31,522
+Scott: But yeah, it's interesting they let you do that.
+
+219
+00:10:31,883 --> 00:10:38,389
+Rym: Lufia also just, I know a lot of people who outgrew JRPGs, you know, like you do and you have a life and things to do.
+
+220
+00:10:38,409 --> 00:10:42,806
+Scott: And the only Luns that are still playable are Chrono Trigger and Chrono Trigger and Earth Band.
+
+221
+00:10:43,047 --> 00:10:50,232
+Rym: Lufia has such, the people who liked Lufia, you'll know Lufia fans because they have a whole bunch of Lufia swag to this day.
+
+222
+00:10:50,473 --> 00:10:51,618
+Scott: Oh, they also like Lunar.
+
+223
+00:10:51,980 --> 00:10:53,684
+Rym: Yeah, oh my god, Lunar and Lufia.
+
+224
+00:10:53,704 --> 00:10:56,391
+Rym: It's like the two L's of this JRPG.
+
+225
+00:10:56,411 --> 00:11:00,282
+Scott: I know a dude named Lu who likes Lunar.
+
+226
+00:11:00,302 --> 00:11:04,513
+Rym: I was about to bring Lu up as an example.
+
+227
+00:11:04,854 --> 00:11:07,581
+Scott: Lufia also begins with Lu, I wonder if he likes it.
+
+228
+00:11:07,681 --> 00:11:12,315
+Rym: But Lufia people have the same kind of connection that Lunar people do.
+
+229
+00:11:12,335 --> 00:11:14,603
+Rym: And other than Chrono Trigger.
+
+230
+00:11:14,623 --> 00:11:17,015
+Scott: Same thing with like Breath of Fire people or whatever.
+
+231
+00:11:17,055 --> 00:11:21,695
+Rym: Breath of Fire people really don't deserve to continue to, those games are bad guys, I'm sorry.
+
+232
+00:11:21,735 --> 00:11:22,639
+Scott: Or Thousand Arms people.
+
+233
+00:11:23,301 --> 00:11:25,048
+Rym: Nobody remembers Thousand Arms.
+
+234
+00:11:25,088 --> 00:11:27,057
+Rym: Were there even any sequels to Thousand Arms?
+
+235
+00:11:27,117 --> 00:11:27,760
+Rym: I don't even know.
+
+236
+00:11:28,160 --> 00:11:28,441
+Scott: Anyway.
+
+237
+00:11:30,448 --> 00:11:33,899
+Rym: I remember I was amazed when someone explained to me what Thousand Arms was.
+
+238
+00:11:33,919 --> 00:11:35,264
+Rym: Like, never conceived.
+
+239
+00:11:35,304 --> 00:11:37,513
+Scott: It's not much different from Rune Factory.
+
+240
+00:11:37,533 --> 00:11:38,216
+Rym: Yeah, exactly.
+
+241
+00:11:38,256 --> 00:11:45,319
+Rym: But back then, in like freshman year of RIT, I'd never conceived of mixing dating game with Final Fantasy.
+
+242
+00:11:45,459 --> 00:11:47,187
+Scott: I wish Rune Factory was also a puzzle game.
+
+243
+00:11:47,408 --> 00:11:48,070
+Scott: That'd be the best.
+
+244
+00:11:48,552 --> 00:11:50,961
+Rym: Or maybe some mappings, Metrian Odyssey, mix that in.
+
+245
+00:11:52,202 --> 00:11:53,444
+Scott: So yeah, every game at once.
+
+246
+00:11:53,945 --> 00:12:04,642
+Rym: There are only seven comments on this article on the bankrupt.
+
+247
+00:12:05,305 --> 00:12:10,346
+Rym: And some of the first posts are, I don't know how to feel, I like this game, but I don't really know anything.
+
+248
+00:12:10,888 --> 00:12:12,875
+Rym: There's one guy who knows a shit ton about it.
+
+249
+00:12:13,417 --> 00:12:14,501
+Rym: But then there's a comment.
+
+250
+00:12:14,521 --> 00:12:15,625
+Scott: How many fedoras is he wearing?
+
+251
+00:12:17,010 --> 00:12:18,916
+Rym: He knows about it for real, no fedora.
+
+252
+00:12:19,478 --> 00:12:23,015
+Rym: Like, For Real knows about it, talks about who owns the IP, it's a company called Marvelous.
+
+253
+00:12:23,297 --> 00:12:25,006
+Rym: He knows the people who work at the company.
+
+254
+00:12:25,127 --> 00:12:28,805
+Scott: Oh, so a different company owns the IP, so someone else could develop Rune Factory 5 easily.
+
+255
+00:12:29,046 --> 00:12:29,327
+Scott: Yes.
+
+256
+00:12:29,467 --> 00:12:30,150
+Scott: Okay, whatever.
+
+257
+00:12:30,391 --> 00:12:32,097
+Rym: So, there's a comment here.
+
+258
+00:12:32,117 --> 00:12:33,301
+Rym: that's kind of amazing to me.
+
+259
+00:12:34,023 --> 00:12:36,150
+Rym: Since I've never owned a Nintendo console.
+
+260
+00:12:37,333 --> 00:12:38,577
+Scott: Then why are you commenting on this?
+
+261
+00:12:39,199 --> 00:12:41,987
+Rym: I've only ever played the once Rune Factory game.
+
+262
+00:12:43,030 --> 00:12:45,397
+Rym: But I loved Oceans, blah blah blah.
+
+263
+00:12:45,818 --> 00:12:52,324
+Rym: We're at a point in the world where there are people who will grow up having never owned or used a Nintendo console and won't be missing much.
+
+264
+00:12:53,988 --> 00:12:56,214
+Scott: Except the entire NES and SNES library.
+
+265
+00:12:56,615 --> 00:12:59,986
+Rym: Does it count as owning an NES if you just use an emulator?
+
+266
+00:13:00,689 --> 00:13:02,316
+Scott: No, but you still gotta play that shit.
+
+267
+00:13:02,376 --> 00:13:05,504
+Rym: Yeah, you can play it, but they'll never own a Nintendo console.
+
+268
+00:13:05,584 --> 00:13:06,105
+Scott: Oh, that's fine.
+
+269
+00:13:11,856 --> 00:13:14,260
+Rym: But anyway, things of the day.
+
+270
+00:13:16,742 --> 00:13:23,246
+Rym: So, we're sure that we talked about this on GeekNights probably as a thing of the day at some point in the past.
+
+271
+00:13:23,347 --> 00:13:24,210
+Scott: I'm almost 99% sure.
+
+272
+00:13:24,471 --> 00:13:25,515
+Rym: I'm also pretty sure.
+
+273
+00:13:25,536 --> 00:13:28,025
+Scott: But it could have been one of those episodes that was lost.
+
+274
+00:13:28,346 --> 00:13:30,352
+Rym: It also could be that we're just wrong.
+
+275
+00:13:31,075 --> 00:13:33,102
+Rym: Like, maybe we just talked about it.
+
+276
+00:13:33,222 --> 00:13:34,226
+Scott: I am so positive.
+
+277
+00:13:34,246 --> 00:13:37,277
+Scott: this is already a thing of the day or news or something.
+
+278
+00:13:37,377 --> 00:13:44,660
+Rym: So if you believe that this is a duplicate and you're mad about that, by all means, please send us the link.
+
+279
+00:13:44,940 --> 00:13:47,229
+Scott: Help us find the episode where we talked about this already.
+
+280
+00:13:47,430 --> 00:13:49,257
+Rym: So, Prince Rupert's Drop.
+
+281
+00:13:49,277 --> 00:13:51,805
+Rym: This is a video that explains it.
+
+282
+00:13:52,146 --> 00:14:01,012
+Rym: Basically, if you take some glass and melt it and drop it in water, the thing that comes out is actually kind of crazy and awesome.
+
+283
+00:14:01,975 --> 00:14:07,010
+Rym: It's crazy and awesome in a way that this video really, really expresses well.
+
+284
+00:14:07,531 --> 00:14:08,494
+Rym: That's all science.
+
+285
+00:14:08,555 --> 00:14:08,956
+Rym: It's cool.
+
+286
+00:14:09,196 --> 00:14:09,658
+Rym: Check it out.
+
+287
+00:14:09,959 --> 00:14:11,703
+Scott: I also have a science thing of day.
+
+288
+00:14:12,606 --> 00:14:24,877
+Scott: So, if I take some water and I have two cups of water and I pour the cups of water together into one cup, two bodies of water now form one body of water.
+
+289
+00:14:24,978 --> 00:14:26,342
+Rym: Two cups, one body.
+
+290
+00:14:26,703 --> 00:14:27,065
+Scott: Right.
+
+291
+00:14:27,406 --> 00:14:31,562
+Scott: They combine because the water molecules don't know which body of water they belong to.
+
+292
+00:14:31,682 --> 00:14:34,530
+Scott: So, it all becomes one body of water, right?
+
+293
+00:14:34,670 --> 00:14:35,011
+Scott: Obvious.
+
+294
+00:14:35,653 --> 00:14:41,091
+Scott: What if I take a bar of copper and another bar of copper and I touch them together?
+
+295
+00:14:41,573 --> 00:14:45,607
+Scott: Shouldn't the atoms of copper be confused about which bar they belong to?
+
+296
+00:14:45,788 --> 00:14:47,815
+Scott: How does they stay apart from each other?
+
+297
+00:14:47,835 --> 00:14:51,088
+Rym: Now, I was wrong when Scott posed this question to me.
+
+298
+00:14:51,108 --> 00:14:53,076
+Rym: I tried to come up with something.
+
+299
+00:14:53,096 --> 00:14:55,504
+Scott: Well, you could be right if Feynman is wrong.
+
+300
+00:14:55,604 --> 00:14:55,865
+Rym: Yeah.
+
+301
+00:14:56,206 --> 00:14:56,867
+Scott: Unlikely.
+
+302
+00:14:58,612 --> 00:14:59,273
+Rym: Unlikely.
+
+303
+00:14:59,294 --> 00:15:00,677
+Rym: Well, yeah.
+
+304
+00:15:00,757 --> 00:15:04,551
+Rym: I tried to come up with some rationale having to do with adhesion and cohesion.
+
+305
+00:15:04,592 --> 00:15:04,913
+Rym: Right.
+
+306
+00:15:04,933 --> 00:15:06,218
+Scott: It's something so obvious.
+
+307
+00:15:06,259 --> 00:15:17,450
+Scott: Like, you don't even think to ask this question, but as soon as someone asks you this question, like, why do two bars of copper or iron or whatever not just merge together like two cups of water, right?
+
+308
+00:15:17,550 --> 00:15:26,970
+Scott: And you answer is incredibly surprising.
+
+309
+00:15:26,990 --> 00:15:28,256
+Scott: So, I'm just going to link to it.
+
+310
+00:15:28,296 --> 00:15:31,204
+Scott: You should read it because it will blow your mind.
+
+311
+00:15:31,244 --> 00:15:37,035
+Scott: Like, that much blowing.
+
+312
+00:15:37,196 --> 00:15:38,137
+Rym: Yep.
+
+313
+00:15:38,158 --> 00:15:39,400
+Rym: You know, Feynman was good at that.
+
+314
+00:15:39,800 --> 00:15:40,483
+Scott: That's what he does.
+
+315
+00:15:40,583 --> 00:15:41,547
+Rym: Yeah.
+
+316
+00:15:41,567 --> 00:15:42,270
+Rym: That's his thing.
+
+317
+00:15:42,712 --> 00:15:44,860
+Rym: Yo, did you ever think about this?
+
+318
+00:15:46,441 --> 00:15:46,721
+Scott: Okay.
+
+319
+00:15:47,042 --> 00:15:47,442
+Rym: Okay.
+
+320
+00:15:48,004 --> 00:15:49,847
+Rym: In the metamoment, the book club book is?
+
+321
+00:15:49,867 --> 00:15:51,009
+Rym: Aideru.
+
+322
+00:15:51,570 --> 00:15:51,851
+Scott: Yes.
+
+323
+00:15:51,931 --> 00:15:53,013
+Scott: By William Gibson.
+
+324
+00:15:53,093 --> 00:15:57,142
+Rym: It might seem cliche.
+
+325
+00:15:57,563 --> 00:15:59,269
+Rym: Don't give me any crap about this.
+
+326
+00:15:59,329 --> 00:16:01,676
+Rym: like super cliche cyberpunk setting.
+
+327
+00:16:01,737 --> 00:16:03,862
+Scott: This cliche Shakespeare.
+
+328
+00:16:08,049 --> 00:16:09,672
+Rym: Two young lovers separated.
+
+329
+00:16:10,113 --> 00:16:11,556
+Scott: All right.
+
+330
+00:16:11,836 --> 00:16:12,017
+Rym: Yep.
+
+331
+00:16:12,357 --> 00:16:13,800
+Scott: I've read this story a million times.
+
+332
+00:16:14,220 --> 00:16:24,526
+Rym: Since it's Wednesday, don't forget that we have an ongoing series, Gig Nights Presents, Shoujo Kakamei Utena, where we're talking at length about the allegory and symbolism and cool things you might not notice.
+
+333
+00:16:24,667 --> 00:16:28,062
+Rym: And the incredibly obvious non-metaphorical parts.
+
+334
+00:16:28,102 --> 00:16:28,464
+Rym: Yes.
+
+335
+00:16:29,227 --> 00:16:30,432
+Scott: The car is a metaphor for sex.
+
+336
+00:16:30,452 --> 00:16:32,320
+Scott: The straight forward plot as well.
+
+337
+00:16:32,600 --> 00:16:35,448
+Rym: The car is both metaphor for sex and literal sex.
+
+338
+00:16:35,549 --> 00:16:36,552
+Rym: Yes.
+
+339
+00:16:37,274 --> 00:16:39,360
+Scott: I'm making videos of games and Netrunner.
+
+340
+00:16:39,920 --> 00:16:40,021
+Scott: Yeah.
+
+341
+00:16:40,524 --> 00:16:43,360
+Scott: People seem to like them, but those are people who like Netrunner.
+
+342
+00:16:46,001 --> 00:16:47,650
+Rym: Otherwise, check us out at MAGFest.
+
+343
+00:16:47,710 --> 00:16:48,776
+Rym: It's coming up real soon.
+
+344
+00:16:48,816 --> 00:16:51,508
+Rym: We're going to be on a bunch of panels.
+
+345
+00:16:51,769 --> 00:16:53,134
+Rym: They're going to be panel discussion.
+
+346
+00:16:53,194 --> 00:16:59,880
+Rym: So other people will be sitting on these panels with us and we're just going to be argumentative and jerks like we are every year.
+
+347
+00:17:00,120 --> 00:17:01,224
+Rym: So come enjoy the spectacle.
+
+348
+00:17:01,244 --> 00:17:03,592
+Scott: And the concerts.
+
+349
+00:17:03,913 --> 00:17:04,074
+Rym: Yep.
+
+350
+00:17:04,295 --> 00:17:05,098
+Rym: We'll be at the concerts.
+
+351
+00:17:05,419 --> 00:17:08,348
+Rym: We'll be doing stuff, hanging out, doing our thing.
+
+352
+00:17:08,711 --> 00:17:11,138
+Rym: PAX East is a ways off, but we're going to be at that.
+
+353
+00:17:12,300 --> 00:17:13,185
+Rym: PAX Prime's a ways off.
+
+354
+00:17:13,205 --> 00:17:13,888
+Rym: We're going to be at that.
+
+355
+00:17:14,089 --> 00:17:14,733
+Rym: Anime Boston.
+
+356
+00:17:14,954 --> 00:17:16,000
+Rym: Anime Boston's a ways off.
+
+357
+00:17:16,000 --> 00:17:16,723
+Rym: We're going to be at that.
+
+358
+00:17:16,743 --> 00:17:18,012
+Scott: ConnectiCon, you can submit panels.
+
+359
+00:17:18,193 --> 00:17:20,587
+Rym: ConnectiCon panel submissions have been open for months.
+
+360
+00:17:20,929 --> 00:17:21,310
+Scott: Yeah.
+
+361
+00:17:21,371 --> 00:17:21,792
+Scott: Take that.
+
+362
+00:17:21,854 --> 00:17:23,060
+Scott: We're going to start scheduling shit.
+
+363
+00:17:23,579 --> 00:17:24,202
+Scott: July, right?
+
+364
+00:17:24,301 --> 00:17:24,603
+Scott: Yeah.
+
+365
+00:17:24,844 --> 00:17:30,260
+Rym: So submit your panels, ye all, and read every word in the submission.
+
+366
+00:17:30,480 --> 00:17:36,784
+Rym: We've cleaned up a lot of things, so there's no more confusion about who gets a badge and how many badges.
+
+367
+00:17:37,025 --> 00:17:38,189
+Rym: But I was promised a badge.
+
+368
+00:17:38,229 --> 00:17:39,312
+Rym: It's all sorted out now.
+
+369
+00:17:39,713 --> 00:17:41,700
+Rym: So you can't get badges.
+
+370
+00:17:41,720 --> 00:17:45,060
+Rym: you're not supposed to get, but you're also going to get a badge if you're supposed to get a badge.
+
+371
+00:17:45,100 --> 00:17:45,563
+Scott: That's right.
+
+372
+00:17:46,367 --> 00:17:48,680
+Scott: And you will know if you're supposed to get one or not beforehand.
+
+373
+00:17:49,060 --> 00:17:49,180
+Scott: Yep.
+
+374
+00:17:50,244 --> 00:17:52,994
+Scott: Is there anything else in the meta?
+
+375
+00:17:53,335 --> 00:17:54,037
+Rym: No, not really.
+
+376
+00:17:54,078 --> 00:17:57,591
+Rym: Just check out our stuff, join our awesome forum, which is reinvigorated.
+
+377
+00:17:57,812 --> 00:18:07,883
+Rym: And if you want to play some Counter-Strike, I think maybe tomorrow might play a little bit of Counter-Strike in the evening on the official Thursday.
+
+378
+00:18:08,004 --> 00:18:10,211
+Rym: The official GeekNights Counter-Strike server.
+
+379
+00:18:10,412 --> 00:18:11,194
+Scott: Tomorrow's Thursday?
+
+380
+00:18:11,676 --> 00:18:12,037
+Rym: Yes.
+
+381
+00:18:12,459 --> 00:18:29,238
+Scott: After you're done playing Counter-Strike on the official GeekNights Counter-Strike server at 9pm New York time, you should come to the official GeekNights IRC channel, and in your other window on your computer, open up Jan Saltybet, so that we can have a chat during the Saltybet.
+
+382
+00:18:29,278 --> 00:18:32,308
+Scott: that is not inside the Saltybet chat, so you can read it.
+
+383
+00:18:32,649 --> 00:18:33,111
+Rym: Yo, dog.
+
+384
+00:18:33,311 --> 00:18:40,615
+Scott: We've been doing this for every Shaker Classic for the past month or so, so more people showing up would be cool.
+
+385
+00:18:40,895 --> 00:18:47,767
+Rym: Now perhaps between the Saltybetting and the Counter-Striking, you should watch the new Kill La Kill, so we can all talk about it in between Saltybets.
+
+386
+00:18:47,847 --> 00:18:48,350
+Rym: That's right.
+
+387
+00:18:48,470 --> 00:18:50,781
+Rym: Why aren't there Kill La Kill characters in Saltybet yet?
+
+388
+00:18:50,801 --> 00:18:52,246
+Scott: Because go make one.
+
+389
+00:18:52,486 --> 00:18:55,717
+Rym: Yeah, I looked at how to make one of them.
+
+390
+00:18:55,737 --> 00:18:56,800
+Rym: Emily said it would be easy.
+
+391
+00:18:56,940 --> 00:18:57,121
+Rym: Nope.
+
+392
+00:18:57,362 --> 00:18:58,326
+Scott: So Emily, you do it.
+
+393
+00:18:59,410 --> 00:19:00,957
+Rym: I delved into that documentation.
+
+394
+00:19:01,037 --> 00:19:01,519
+Rym: I was like, all right.
+
+395
+00:19:01,539 --> 00:19:02,664
+Scott: Talking like it's so easy.
+
+396
+00:19:02,684 --> 00:19:04,392
+Rym: I never said it was easy.
+
+397
+00:19:04,412 --> 00:19:08,606
+Scott: You should even do the easy character, the sidekick girl, and not the main character.
+
+398
+00:19:09,930 --> 00:19:10,912
+Rym: I'll just do Senketsu.
+
+399
+00:19:11,233 --> 00:19:11,815
+Rym: It's just him.
+
+400
+00:19:12,817 --> 00:19:13,760
+Scott: Oh, it's even easier.
+
+401
+00:19:14,140 --> 00:19:14,781
+Rym: Yeah, or the dog.
+
+402
+00:19:14,801 --> 00:19:17,767
+Scott: Just the dog.
+
+403
+00:19:17,787 --> 00:19:18,469
+Rym: Oh, guts.
+
+404
+00:19:19,791 --> 00:19:20,132
+Scott: Anyway.
+
+405
+00:19:20,433 --> 00:19:30,104
+Scott: Yeah, so Scott ordered a ridiculous- Okay, so Crunchyroll does this thing where they're like, it's also the TRSI that does this with Crunchyroll, right?
+
+406
+00:19:30,164 --> 00:19:31,630
+Scott: It's basically teamed up.
+
+407
+00:19:31,791 --> 00:19:33,979
+Scott: I'm pretty sure the Crunchyroll store is just TRSI.
+
+408
+00:19:34,721 --> 00:19:40,002
+Scott: Anyway, they do this thing where it's like, buy a box of mystery manga, like 20 bucks, tons of manga.
+
+409
+00:19:40,042 --> 00:19:43,460
+Scott: And it's all the shit from the discount rack at the conventions that no one ever buys.
+
+410
+00:19:44,000 --> 00:19:45,326
+Scott: And they did the same thing with DVDs.
+
+411
+00:19:45,386 --> 00:19:46,129
+Scott: And I said, you know what?
+
+412
+00:19:46,491 --> 00:19:48,941
+Scott: This will be on adventure and kind of fun.
+
+413
+00:19:48,961 --> 00:19:49,463
+Scott: So I'll do it.
+
+414
+00:19:49,503 --> 00:19:50,667
+Scott: I gave them like 25 bucks.
+
+415
+00:19:50,988 --> 00:19:53,597
+Scott: They sent me a box of like a zillion DVDs.
+
+416
+00:19:53,617 --> 00:19:58,295
+Scott: So, of course, I think it was between 99 and a hundred percent.
+
+417
+00:19:58,355 --> 00:19:59,720
+Scott: genie on and pioneer DVDs.
+
+418
+00:19:59,941 --> 00:20:01,626
+Rym: This is a treasure.
+
+419
+00:20:01,847 --> 00:20:02,469
+Rym: You know what this is?
+
+420
+00:20:02,529 --> 00:20:07,827
+Rym: This is a box ready made to be at an anime con dealers room under the table.
+
+421
+00:20:07,907 --> 00:20:12,185
+Scott: Dude, if you bought a bunch of these boxes, you could just be an anime con dealer immediately.
+
+422
+00:20:12,426 --> 00:20:13,371
+Rym: One dollar, one dollar.
+
+423
+00:20:13,391 --> 00:20:14,597
+Scott: You wouldn't make any money on them.
+
+424
+00:20:14,718 --> 00:20:16,204
+Rym: One dollar, silent service.
+
+425
+00:20:16,646 --> 00:20:19,016
+Scott: If I sold them for a dollar each, I'd maybe break even.
+
+426
+00:20:19,056 --> 00:20:21,084
+Scott: But no, then I had to pay for the table at the convention.
+
+427
+00:20:21,305 --> 00:20:23,452
+Scott: Anyway, and that's only if I sold out.
+
+428
+00:20:24,917 --> 00:20:26,423
+Scott: Yeah, so some of the DVDs and they were good.
+
+429
+00:20:26,443 --> 00:20:28,070
+Scott: I got like a random lane DVD.
+
+430
+00:20:28,531 --> 00:20:30,218
+Scott: Oh, and I got not DVD one.
+
+431
+00:20:30,238 --> 00:20:35,175
+Scott: There are some lupin DVDs and there were some random couple X DVDs.
+
+432
+00:20:35,215 --> 00:20:36,740
+Scott: I guess you want to watch that X TV.
+
+433
+00:20:38,601 --> 00:20:39,725
+Scott: But mostly it's just garbage.
+
+434
+00:20:40,709 --> 00:20:45,609
+Scott: One of the DVDs in there was Rumiko Takahashi Anthology, which and there's three DVDs of that.
+
+435
+00:20:45,629 --> 00:20:46,775
+Scott: And I only got one or two of them.
+
+436
+00:20:46,835 --> 00:20:52,377
+Scott: And I don't know which ones, but I also knew that Rym for some reason already owned one of the DVDs of that.
+
+437
+00:20:52,437 --> 00:20:53,862
+Scott: It may be one that was in the box.
+
+438
+00:20:54,143 --> 00:20:56,170
+Scott: Maybe the missing one or one?
+
+439
+00:20:56,210 --> 00:20:56,731
+Scott: I don't have.
+
+440
+00:20:56,832 --> 00:20:59,139
+Rym: I cannot tell or remember.
+
+441
+00:20:59,159 --> 00:21:01,949
+Scott: I have to go home and check where I got this thing.
+
+442
+00:21:02,872 --> 00:21:03,855
+Rym: I don't know if I bought it.
+
+443
+00:21:04,016 --> 00:21:06,063
+Scott: As far as I know, you just always had it.
+
+444
+00:21:06,103 --> 00:21:07,971
+Scott: Like it's always been on the DVD show.
+
+445
+00:21:08,031 --> 00:21:09,156
+Scott: I know forever.
+
+446
+00:21:09,176 --> 00:21:13,336
+Rym: In fact, if you look at pictures of the old geek house, like you'll see it there on the DVD show.
+
+447
+00:21:13,397 --> 00:21:14,382
+Rym: It's sitting there in that.
+
+448
+00:21:14,422 --> 00:21:16,873
+Scott: I do not know when it appeared or from whence it came.
+
+449
+00:21:16,994 --> 00:21:18,320
+Rym: It's like right next to Horatio.
+
+450
+00:21:18,681 --> 00:21:23,000
+Scott: There's some, there's some, you may have bought it at like an early convention for a discount rack.
+
+451
+00:21:23,120 --> 00:21:26,072
+Rym: There's usually a lens man VHS tape hanging out right nearby.
+
+452
+00:21:26,092 --> 00:21:26,895
+Scott: That's exactly right.
+
+453
+00:21:27,457 --> 00:21:27,738
+Rym: Yeah.
+
+454
+00:21:27,819 --> 00:21:30,567
+Rym: So Rumik theater, Rumiko Takahashi.
+
+455
+00:21:31,651 --> 00:21:34,259
+Rym: Guys, you should know who Rumiko Takahashi is.
+
+456
+00:21:34,439 --> 00:21:35,222
+Scott: Yeah, but you know what?
+
+457
+00:21:35,282 --> 00:21:38,392
+Scott: She has not been as popular as late.
+
+458
+00:21:38,553 --> 00:21:42,266
+Scott: It's like, she was huge, huge, huge, huge, the biggest deal.
+
+459
+00:21:42,366 --> 00:21:43,993
+Scott: And now she's sort of faded.
+
+460
+00:21:44,073 --> 00:21:45,720
+Scott: Like what has she done recently today?
+
+461
+00:21:46,141 --> 00:21:46,723
+Scott: Don't know who that is.
+
+462
+00:21:46,883 --> 00:21:47,806
+Rym: American fandom.
+
+463
+00:21:48,127 --> 00:21:50,715
+Rym: She was pretty much only known and Inuyasha.
+
+464
+00:21:50,735 --> 00:21:52,922
+Scott: Yeah, that's it.
+
+465
+00:21:53,223 --> 00:21:56,781
+Rym: Now, if you were an anime fan who actually paid attention, you probably knew her from her.
+
+466
+00:21:56,862 --> 00:22:01,989
+Rym: Say it's her first, of course, or at least you knew her for those three things, but those are like the three biggest, right?
+
+467
+00:22:02,070 --> 00:22:03,879
+Scott: And then I guess Maison Ikkoku comes in fourth.
+
+468
+00:22:05,161 --> 00:22:06,246
+Rym: I really like Maison Ikkoku.
+
+469
+00:22:06,266 --> 00:22:07,169
+Scott: I know that's your jam.
+
+470
+00:22:07,249 --> 00:22:16,015
+Rym: I read all of Maison Ikkoku off the shelf by being a manga cow in media play, media play, talk Walden books.
+
+471
+00:22:16,035 --> 00:22:21,590
+Scott: I remember you reading the last one in media play because it was a long manga series.
+
+472
+00:22:21,610 --> 00:22:22,372
+Rym: It took me years.
+
+473
+00:22:23,535 --> 00:22:33,834
+Rym: So Rumik theater is one of her things because she, if you can say anything about her, I'm not going to say that I'm a huge fan of her work because it gets kind of some of her work.
+
+474
+00:22:33,894 --> 00:22:34,938
+Scott: I really like some of it.
+
+475
+00:22:34,958 --> 00:22:37,667
+Rym: It gets kind of repetitive and same.
+
+476
+00:22:37,687 --> 00:22:40,436
+Scott: A lot of similarities between the works.
+
+477
+00:22:40,697 --> 00:22:40,957
+Rym: Yep.
+
+478
+00:22:41,359 --> 00:22:46,032
+Rym: Inuyasha just goes on and on and on and on and fucking, oh my God.
+
+479
+00:22:46,433 --> 00:22:50,667
+Rym: Ranma starts out just really funny and as it goes on, it's still funny.
+
+480
+00:22:50,687 --> 00:22:54,239
+Scott: It's sort of the same thing over and over again.
+
+481
+00:22:54,380 --> 00:22:57,594
+Rym: Yeah, I think that I think Ranma peaked in the episode with the other bird.
+
+482
+00:22:57,715 --> 00:22:58,920
+Scott: That's the only episode.
+
+483
+00:22:59,300 --> 00:23:00,547
+Scott: That's one of the only episodes I've seen.
+
+484
+00:23:00,587 --> 00:23:02,036
+Scott: I've seen maybe five episodes.
+
+485
+00:23:02,056 --> 00:23:08,144
+Scott: Consider yourself privileged because that's the one that anime club always showed because it was a Christmas episode technically.
+
+486
+00:23:08,365 --> 00:23:08,928
+Rym: Technically.
+
+487
+00:23:09,008 --> 00:23:10,615
+Scott: And it was like the best ones anyway.
+
+488
+00:23:10,635 --> 00:23:10,776
+Scott: Yeah.
+
+489
+00:23:10,816 --> 00:23:15,654
+Rym: We'd also show that, oh my God, that Kimigori orange road Christmas thing.
+
+490
+00:23:15,674 --> 00:23:16,377
+Scott: I never watched that.
+
+491
+00:23:16,577 --> 00:23:18,986
+Rym: Oh my God, we should review all those old shows.
+
+492
+00:23:19,046 --> 00:23:20,231
+Rym: Marmalade boy, let's do it.
+
+493
+00:23:20,713 --> 00:23:22,179
+Scott: You're all by yourself.
+
+494
+00:23:22,220 --> 00:23:23,727
+Rym: Have you ever seen Marmalade boy?
+
+495
+00:23:23,747 --> 00:23:27,183
+Scott: If we're going to do one of those, we should do koto cha first because it's actually funny.
+
+496
+00:23:27,524 --> 00:23:28,448
+Rym: Okay, I could do that.
+
+497
+00:23:28,709 --> 00:23:29,171
+Scott: Go get it.
+
+498
+00:23:29,512 --> 00:23:30,797
+Rym: All right, I'll get it somehow.
+
+499
+00:23:31,239 --> 00:23:37,320
+Rym: So yeah, Rumic Theater is a manga that she, I wanted to say did, but it's actually still going.
+
+500
+00:23:37,800 --> 00:23:39,887
+Rym: It's been going for almost as long as I've been alive.
+
+501
+00:23:40,048 --> 00:23:40,469
+Rym: Whoa.
+
+502
+00:23:40,690 --> 00:23:45,343
+Rym: Original run 1987 through ongoing volumes four.
+
+503
+00:23:45,543 --> 00:23:49,029
+Scott: So it's as old as my brother.
+
+504
+00:23:51,513 --> 00:23:53,677
+Rym: But it was animated.
+
+505
+00:23:54,378 --> 00:24:02,049
+Rym: Not all of it obviously, but there was turned into sort of this slice of life episodic anime thing that a bunch of got these DVDs of and never watch.
+
+506
+00:24:02,069 --> 00:24:04,623
+Rym: And they just seem to be, you'll see them in the bargain bins everywhere.
+
+507
+00:24:04,683 --> 00:24:09,604
+Rym: And after all these years, finally decided to watch one because I've never actually read Rumic Theater.
+
+508
+00:24:09,624 --> 00:24:10,828
+Rym: I've read her other stuff.
+
+509
+00:24:11,009 --> 00:24:11,911
+Scott: I've never read it either.
+
+510
+00:24:12,774 --> 00:24:19,234
+Rym: So we watched one episode of Rumiko Takahashi anthology, the first one, which is title.
+
+511
+00:24:19,254 --> 00:24:25,891
+Rym: Well, the DVD is titled prime primal desires, primal, primal.
+
+512
+00:24:25,911 --> 00:24:27,276
+Rym: I already forget you forget.
+
+513
+00:24:27,296 --> 00:24:29,223
+Scott: It's something like that, but yeah, I don't know.
+
+514
+00:24:29,243 --> 00:24:32,995
+Scott: the title of the episode is the tragedy of P. Oh, there you go.
+
+515
+00:24:34,219 --> 00:24:36,183
+Scott: Tragedy of P kidney stones.
+
+516
+00:24:36,223 --> 00:24:36,584
+Scott: The end.
+
+517
+00:24:38,027 --> 00:24:47,597
+Rym: So if I had to say anything about this anime series ignoring the manga, ignoring any other about this single episode, we don't know.
+
+518
+00:24:47,617 --> 00:24:51,049
+Scott: the other episodes are like extrapolating solely from this one episode.
+
+519
+00:24:51,852 --> 00:24:56,702
+Rym: I would say that it is extremely Rumiko Takahashi.
+
+520
+00:24:58,146 --> 00:25:01,013
+Scott: I guess it's named after is Rumic theater.
+
+521
+00:25:01,093 --> 00:25:04,000
+Rym: It's got her kind of trademark humor.
+
+522
+00:25:04,380 --> 00:25:06,951
+Rym: The character designs are just like straight up her thing.
+
+523
+00:25:06,991 --> 00:25:14,826
+Rym: You show anyone who knows anything about anime, any still from the show and they'll be like, Oh, that's probably Rumiko Takahashi, something, something or someone who's copying her.
+
+524
+00:25:15,027 --> 00:25:16,913
+Rym: Yeah.
+
+525
+00:25:16,933 --> 00:25:21,108
+Rym: And it's just like kind of a slow slice of life that doesn't really have much of a plot.
+
+526
+00:25:21,811 --> 00:25:22,795
+Scott: I think it has a plot.
+
+527
+00:25:22,836 --> 00:25:23,840
+Scott: The plot just doesn't resolve.
+
+528
+00:25:24,661 --> 00:25:24,942
+Scott: Right.
+
+529
+00:25:25,022 --> 00:25:30,224
+Scott: It's what you have here is it's like a story about the normal real life everyday happenings.
+
+530
+00:25:30,344 --> 00:25:34,526
+Scott: Nothing really crazy except for the fact that there's a penguin there, but that's not impossible.
+
+531
+00:25:34,546 --> 00:25:36,273
+Rym: And the penguin is totally normal penguins.
+
+532
+00:25:36,314 --> 00:25:36,936
+Rym: Not magical.
+
+533
+00:25:37,157 --> 00:25:39,523
+Scott: It's like pen pen.
+
+534
+00:25:39,543 --> 00:25:39,784
+Scott: Yeah.
+
+535
+00:25:39,944 --> 00:25:41,068
+Rym: But dumber than pen pen.
+
+536
+00:25:41,088 --> 00:25:42,071
+Rym: More like a real penguin.
+
+537
+00:25:42,492 --> 00:25:44,739
+Scott: Pen pens bigger than P. Yeah.
+
+538
+00:25:44,759 --> 00:25:47,428
+Rym: But pen pens also smarter than P. That's true.
+
+539
+00:25:47,910 --> 00:25:50,117
+Scott: Pen pen is like iron basically.
+
+540
+00:25:50,137 --> 00:25:50,438
+Rym: Yeah.
+
+541
+00:25:50,518 --> 00:25:52,024
+Rym: Pen pens are smart anyway.
+
+542
+00:25:52,044 --> 00:25:58,029
+Scott: Uh, but yeah, it's just about a family that lives in an apartment complex and like apartment complex drama.
+
+543
+00:25:58,270 --> 00:25:58,832
+Scott: Oh my God.
+
+544
+00:25:58,853 --> 00:25:59,837
+Scott: You're not allowed to have pets.
+
+545
+00:25:59,897 --> 00:26:00,239
+Scott: Oh my God.
+
+546
+00:26:00,259 --> 00:26:00,922
+Scott: They have a penguin.
+
+547
+00:26:00,962 --> 00:26:01,485
+Scott: Oh my God.
+
+548
+00:26:01,746 --> 00:26:04,640
+Rym: All of this could have been resolved by punching that one lady in the face.
+
+549
+00:26:04,820 --> 00:26:05,683
+Rym: She was the problem.
+
+550
+00:26:05,864 --> 00:26:13,490
+Scott: So basically the conflict is this one lady's a bitch and is actually trying to enforce the pet law, but no one, the pet rule, not law.
+
+551
+00:26:13,730 --> 00:26:17,403
+Scott: And no one cares about it except these old biddies.
+
+552
+00:26:17,664 --> 00:26:21,098
+Scott: And it's a typical homeowner's association, but it's a Japanese.
+
+553
+00:26:21,138 --> 00:26:25,873
+Rym: homeowners associate that Rubik theater C is so Japanese.
+
+554
+00:26:25,913 --> 00:26:36,248
+Rym: Like the way they, the, the residents of this place, this apartment building confront each other is the most like passive aggressive, creepy thing you'll ever see.
+
+555
+00:26:36,429 --> 00:26:36,629
+Rym: Yeah.
+
+556
+00:26:36,991 --> 00:26:38,375
+Scott: Like, but it's so real.
+
+557
+00:26:38,416 --> 00:26:42,554
+Scott: That's why it's, it's like, you know, people say slice of life and they focus on the slice.
+
+558
+00:26:42,595 --> 00:26:43,580
+Scott: I'm focusing on the life.
+
+559
+00:26:43,660 --> 00:26:46,051
+Scott: Like this is true to life, even though it's animated.
+
+560
+00:26:46,191 --> 00:26:46,392
+Rym: Yep.
+
+561
+00:26:46,432 --> 00:27:03,900
+Rym: Like little touches that you might like, for example, the, the, the wife comes home and there's a habitual problem where her son will make a bunch of noise and then the same bitch lady will come upstairs and in the most passive aggressive way manner complain, she'll be like, uh, your son must be really excited today.
+
+562
+00:27:03,960 --> 00:27:06,752
+Rym: And you stand there stone faced, waiting for a response.
+
+563
+00:27:07,374 --> 00:27:13,476
+Rym: And then after the apology, she'll be like, she'll apologize in response to the main character's apology.
+
+564
+00:27:13,496 --> 00:27:18,377
+Scott: It's like, I try to tolerate it about four out of five times, but sometimes I really just have to come up here.
+
+565
+00:27:18,437 --> 00:27:20,022
+Rym: I apologize for that.
+
+566
+00:27:22,849 --> 00:27:31,456
+Rym: But the, so the kids are all in the apartment and the mother comes home and the camera just pans down as she sees all the shoes piled up in the entryway.
+
+567
+00:27:31,476 --> 00:27:32,279
+Rym: And she's like, oh fuck.
+
+568
+00:27:34,021 --> 00:27:36,935
+Rym: And that's not something that would happen like much of America.
+
+569
+00:27:36,955 --> 00:27:41,914
+Scott: So it's, it's a ridiculous situation and the thing is ridiculous, but it doesn't resolve.
+
+570
+00:27:41,954 --> 00:27:43,319
+Scott: It's just sort of like the end.
+
+571
+00:27:43,660 --> 00:27:47,719
+Scott: So to summarize the full plot, this woman, they, you're just going to no need to watch it.
+
+572
+00:27:47,740 --> 00:27:48,643
+Scott: We'll just summarize it for you.
+
+573
+00:27:48,663 --> 00:27:49,768
+Rym: We'll just summarize it for you.
+
+574
+00:27:50,310 --> 00:27:54,988
+Rym: Cause it, cause it goes, it has a secretive space moment at the end.
+
+575
+00:27:55,108 --> 00:27:57,095
+Rym: It goes all, it goes all free Willy.
+
+576
+00:27:57,176 --> 00:27:59,584
+Rym: And then it goes all, I don't even know.
+
+577
+00:27:59,604 --> 00:28:01,490
+Rym: I don't even know where it goes.
+
+578
+00:28:01,530 --> 00:28:01,891
+Rym: I guess.
+
+579
+00:28:01,931 --> 00:28:02,232
+Rym: Yeah.
+
+580
+00:28:02,694 --> 00:28:15,019
+Rym: So basically this woman, this old woman is being kicked out of her apartment building because she had a little dog and the homeowner's association found out about it and they made her leave.
+
+581
+00:28:15,039 --> 00:28:15,882
+Rym: and she's like, it's fine.
+
+582
+00:28:15,922 --> 00:28:16,665
+Rym: I love my dogs.
+
+583
+00:28:16,685 --> 00:28:17,608
+Rym: I'll just live somewhere else.
+
+584
+00:28:18,431 --> 00:28:20,900
+Rym: And then this bitch lady is there.
+
+585
+00:28:21,421 --> 00:28:27,620
+Rym: And then we explore the bitch lady's life and how she doesn't want anyone to have pets or be happy.
+
+586
+00:28:28,981 --> 00:28:38,734
+Rym: And the reason for this ends up being because she had a pet and she had to give him up because she moved into an apartment building and she followed the rules.
+
+587
+00:28:38,754 --> 00:28:46,966
+Scott: So now she's making sure everyone else follows the rule instead of when she could just be nice and not get rid of the stupid rule, but she's going to be a bitch instead.
+
+588
+00:28:46,986 --> 00:28:49,175
+Rym: And it's actually pretty funny.
+
+589
+00:28:49,396 --> 00:28:50,782
+Rym: Like this is actually enjoyable.
+
+590
+00:28:50,983 --> 00:28:53,273
+Scott: The scene with the penguin in the space is funny.
+
+591
+00:28:53,695 --> 00:28:53,936
+Rym: Okay.
+
+592
+00:28:53,956 --> 00:28:58,491
+Rym: Well the other parts to him, we laughed because it's that sort of slice of life humor.
+
+593
+00:28:58,532 --> 00:29:08,185
+Rym: Like the mom's reactions to this woman and the way characters sort of say like this at one point, the, the, the bitch woman's kid is actually really smart.
+
+594
+00:29:08,586 --> 00:29:13,245
+Rym: And she, the mother needs the kid to lie to his mother about the presence of this penguin.
+
+595
+00:29:13,305 --> 00:29:14,993
+Scott: And the kid does cause he's good.
+
+596
+00:29:15,094 --> 00:29:24,387
+Rym: The kid totally does, but this is a great scene where she's the, the mom is behind the bitch lady and she's just like frantically gesturing to the kid to lie.
+
+597
+00:29:24,969 --> 00:29:28,542
+Rym: And her own son is kind of dumb and doesn't quite get that they're lying.
+
+598
+00:29:28,562 --> 00:29:30,552
+Rym: And then the other kid's like, ah, let's just get out of here.
+
+599
+00:29:30,592 --> 00:29:30,853
+Rym: Come on.
+
+600
+00:29:31,295 --> 00:29:33,263
+Rym: But no, just go, well, I'll tell you later.
+
+601
+00:29:35,189 --> 00:29:39,942
+Rym: So then they have this weird discussion about like what it means to be a pet.
+
+602
+00:29:40,384 --> 00:29:47,048
+Rym: And then she takes the penguin outside and then we get like three solid minutes of panning shots of galaxies.
+
+603
+00:29:47,129 --> 00:29:47,229
+Scott: Yeah.
+
+604
+00:29:47,249 --> 00:29:48,778
+Scott: I think they're trying to the message.
+
+605
+00:29:48,818 --> 00:29:50,806
+Scott: I think she's trying to give us with the story.
+
+606
+00:29:50,887 --> 00:29:54,000
+Scott: is that look, you know, the rule is there for a reason.
+
+607
+00:29:54,040 --> 00:29:59,623
+Scott: It disturbs neighbors, but mostly it's not fair to the pet to make it live in an apartment where it's all cooped up.
+
+608
+00:29:59,643 --> 00:30:00,870
+Scott: Look, you set the penguin free.
+
+609
+00:30:00,890 --> 00:30:01,835
+Scott: You took it out for a walk.
+
+610
+00:30:01,895 --> 00:30:02,840
+Scott: Now look how happy it is.
+
+611
+00:30:03,582 --> 00:30:04,244
+Rym: Ah, space.
+
+612
+00:30:04,826 --> 00:30:09,099
+Rym: But you could take the penguin for a walk and have it live in an apartment.
+
+613
+00:30:09,139 --> 00:30:09,742
+Rym: It would be fine.
+
+614
+00:30:09,782 --> 00:30:10,545
+Rym: And also the pet.
+
+615
+00:30:10,565 --> 00:30:11,791
+Rym: that's the big crisis point.
+
+616
+00:30:11,831 --> 00:30:13,558
+Rym: in the middle of this thing is a cat.
+
+617
+00:30:13,779 --> 00:30:16,310
+Rym: Cats are perfectly fine living in houses and apartments.
+
+618
+00:30:16,370 --> 00:30:17,434
+Scott: That's exactly right.
+
+619
+00:30:18,117 --> 00:30:32,190
+Rym: But I cannot express to you the sheer dissonance between what this appears to be about, which is just passive aggressive lady being extremely passive aggressive and causing trouble for her neighbors and not getting any comeuppance or learning any lessons whatsoever.
+
+620
+00:30:32,291 --> 00:30:32,492
+Rym: Yep.
+
+621
+00:30:32,733 --> 00:30:33,938
+Rym: Her plot never resolves.
+
+622
+00:30:34,200 --> 00:30:35,563
+Rym: She still is complete.
+
+623
+00:30:35,583 --> 00:30:46,286
+Rym: She's, you know, she's like, she's like the bad woman in the beginning of the looks like her acts like her.
+
+624
+00:30:46,307 --> 00:30:56,408
+Rym: And even in the end, when they get rid of the penguin anyway, because the owner, the owner comes back, she's like, if you'd still had the penguin the next day, I would have filed a formal complaint.
+
+625
+00:30:56,468 --> 00:30:57,111
+Scott: Go fuck yourself.
+
+626
+00:30:57,191 --> 00:30:59,642
+Rym: I was just waiting for someone to hit her.
+
+627
+00:30:59,863 --> 00:31:00,284
+Rym: Yeah.
+
+628
+00:31:00,405 --> 00:31:01,550
+Scott: I don't know why that didn't happen.
+
+629
+00:31:02,253 --> 00:31:05,365
+Scott: Uh, but yeah, the real thing is here based on this episode, right?
+
+630
+00:31:05,405 --> 00:31:09,179
+Scott: Do you want to watch more Rumu Kota Gaiji's anthology?
+
+631
+00:31:09,239 --> 00:31:11,307
+Rym: A little, you know what this show is good for?
+
+632
+00:31:11,749 --> 00:31:17,172
+Rym: This is the kind of show that if it was on crunchy roll, you're watching an episode every now and then over dinner.
+
+633
+00:31:17,233 --> 00:31:22,254
+Scott: I think, yeah, I definitely think it's definitely on the same level as like, uh, folk tales and whatnot.
+
+634
+00:31:22,415 --> 00:31:24,483
+Scott: It's just modern ish folk tale.
+
+635
+00:31:24,904 --> 00:31:27,435
+Rym: It's also because it's old and people haven't heard of it.
+
+636
+00:31:27,455 --> 00:31:34,729
+Rym: No one's going to watch it, but I think if you put it on crunchy roll and kind of pushed it the same way you'd push those other kinds of crunchy roll, go search for it.
+
+637
+00:31:34,769 --> 00:31:35,151
+Rym: I don't know.
+
+638
+00:31:35,613 --> 00:31:38,566
+Rym: I pretty much only watch kill la kill right now on crunchy roll.
+
+639
+00:31:38,586 --> 00:31:39,450
+Scott: That's about it.
+
+640
+00:31:39,470 --> 00:31:39,591
+Scott: Yeah.
+
+641
+00:31:39,892 --> 00:31:40,756
+Rym: Until kill la kill.
+
+642
+00:31:40,857 --> 00:31:45,397
+Scott: And also the biking show, but no one else should watch that unless you really fucking love biking.
+
+643
+00:31:45,437 --> 00:31:48,549
+Scott: It is the most generic anime ever to exist.
+
+644
+00:31:48,609 --> 00:31:51,600
+Scott: You should find the generic anime for the thing that you like instead.
+
+645
+00:31:52,281 --> 00:32:02,133
+Rym: But I find interestingly that that statement about this very episodic slice of life show applies to all of Rumiko Takahashi's anime adaptations.
+
+646
+00:32:02,775 --> 00:32:09,414
+Rym: I mean, Ranma is really funny, but if you try to watch it in order, like every episode, it's awful.
+
+647
+00:32:10,377 --> 00:32:11,240
+Rym: It's the kind of show.
+
+648
+00:32:11,300 --> 00:32:13,568
+Rym: It's like the Simpsons just, Oh, Hey, it's on.
+
+649
+00:32:13,628 --> 00:32:15,094
+Rym: Let's watch an episode.
+
+650
+00:32:15,676 --> 00:32:17,301
+Rym: Have we seen every episode at this point?
+
+651
+00:32:17,361 --> 00:32:18,003
+Rym: Who cares?
+
+652
+00:32:19,708 --> 00:32:23,098
+Scott: I guess Inuyasha maybe has to be in order, but really?
+
+653
+00:32:23,278 --> 00:32:23,519
+Scott: No.
+
+654
+00:32:23,659 --> 00:32:25,127
+Scott: It's like, they got crystal number one.
+
+655
+00:32:25,187 --> 00:32:26,675
+Scott: All right, I'll let's watch them get crystal number 35.
+
+656
+00:32:26,675 --> 00:32:26,756
+Scott: Okay.
+
+657
+00:32:27,520 --> 00:32:28,987
+Scott: I believe you forget crystal number 10.
+
+658
+00:32:28,987 --> 00:32:29,690
+Scott: Now crystal number 1,072.
+
+659
+00:32:29,690 --> 00:32:33,265
+Rym: That show is more, they get crystal number one.
+
+660
+00:32:33,326 --> 00:32:34,570
+Rym: There's only one crystal.
+
+661
+00:32:35,132 --> 00:32:35,473
+Rym: Yay.
+
+662
+00:32:35,514 --> 00:32:36,156
+Rym: We've won.
+
+663
+00:32:36,176 --> 00:32:36,838
+Rym: Oops.
+
+664
+00:32:36,979 --> 00:32:39,147
+Rym: And then it shatters into like a billion crystals.
+
+665
+00:32:39,228 --> 00:32:39,449
+Scott: Right.
+
+666
+00:32:39,469 --> 00:32:40,071
+Scott: That's what I'm saying.
+
+667
+00:32:40,111 --> 00:32:40,372
+Rym: Yeah.
+
+668
+00:32:40,975 --> 00:32:45,236
+Rym: It's just, you got to watch like the first two and then you can watch the episodes in any order.
+
+669
+00:32:45,577 --> 00:32:47,545
+Rym: And it's the same way with all these shows.
+
+670
+00:32:48,768 --> 00:32:58,742
+Rym: But I think a lot of anime fans who hear about an old famous show, like a Ranma one half or Ursa Yatsura, they'll try to watch it the way they watch the anime they like today.
+
+671
+00:32:59,103 --> 00:33:02,034
+Rym: They'll try to just start on episode one and power through it.
+
+672
+00:33:02,054 --> 00:33:02,696
+Rym: I do.
+
+673
+00:33:03,017 --> 00:33:09,180
+Scott: Most of the anime that is translated, brought over, marketed heavily, pushed heavily and become popular.
+
+674
+00:33:09,621 --> 00:33:13,558
+Scott: Most of those are either, are shows that are serial regardless of length.
+
+675
+00:33:13,598 --> 00:33:18,539
+Scott: It could be a one piece that's super long or an attack on Titan that's short, but they're all serials.
+
+676
+00:33:18,639 --> 00:33:26,345
+Scott: And the anime, there are plenty of anime that are more like Simpsons where it's completely episodic and a million episodes.
+
+677
+00:33:26,486 --> 00:33:26,706
+Rym: Right.
+
+678
+00:33:26,766 --> 00:33:30,196
+Scott: But those anime, you know, uh, detective Conan, right?
+
+679
+00:33:30,798 --> 00:33:37,441
+Scott: Those anime tend not to be brought over to the U S except I think Lupin is the most of all that was brought over.
+
+680
+00:33:37,903 --> 00:33:40,270
+Scott: And that one is also pushed less heavily.
+
+681
+00:33:40,531 --> 00:33:40,892
+Rym: Right.
+
+682
+00:33:41,694 --> 00:33:43,620
+Scott: So, and this is just one of those though.
+
+683
+00:33:43,740 --> 00:33:53,239
+Rym: This one is much, much shorter, which is interesting because in regular American TV for a long time, there was a huge push to have things that were as episodic as possible.
+
+684
+00:33:53,279 --> 00:33:55,228
+Scott: You can syndicate them in any order and not give a fuck.
+
+685
+00:33:55,389 --> 00:34:00,714
+Rym: But yet anime fans were kind of a niche market and they were really focused on the shows that they would just power through.
+
+686
+00:34:01,437 --> 00:34:04,328
+Rym: Granted, I know the hardcore people who will power through a show like Ranma.
+
+687
+00:34:05,291 --> 00:34:05,994
+Scott: Go you?
+
+688
+00:34:06,074 --> 00:34:06,415
+Scott: Yep.
+
+689
+00:34:06,897 --> 00:34:07,780
+Scott: Has nothing better to do?
+
+690
+00:34:08,040 --> 00:34:10,449
+Rym: Well, I guess that was the only anime you had.
+
+691
+00:34:10,811 --> 00:34:11,112
+Scott: Sure.
+
+692
+00:34:11,132 --> 00:34:13,020
+Rym: I mean, I don't know if I would have or not.
+
+693
+00:34:13,080 --> 00:34:18,112
+Rym: The only reason I didn't was that it was $40 for one VHS tape of Ranma.
+
+694
+00:34:18,132 --> 00:34:22,242
+Scott: I spent $25 for just a million DVDs.
+
+695
+00:34:22,322 --> 00:34:23,563
+Rym: It was 30.
+
+696
+00:34:23,563 --> 00:34:24,927
+Rym: If I was willing to watch the dub.
+
+697
+00:34:31,098 --> 00:34:33,665
+Rym: This has been GeekNights with Rym and Scott.
+
+698
+00:34:33,685 --> 00:34:37,301
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and brand.
+
+699
+00:34:37,360 --> 00:34:37,661
+Rym: Okay.
+
+700
+00:34:37,702 --> 00:34:38,525
+Rym: For the logos.
+
+701
+00:34:38,746 --> 00:34:43,804
+Scott: Be sure to visit our website at frontrowcrew.com for show notes, discussion news, and more.
+
+702
+00:34:44,025 --> 00:34:46,717
+Rym: Remember GeekNights is not one, but four different shows.
+
+703
+00:34:46,879 --> 00:34:51,476
+Rym: Sci-Tech Mondays, gaming Tuesdays, anime comic Wednesdays, and indiscriminate Thursdays.
+
+704
+00:34:51,817 --> 00:34:54,728
+Scott: GeekNights is distributed under a creative commons attribution.
+
+705
+00:34:54,728 --> 00:34:55,812
+Scott: 3.0 license.
+
+706
+00:34:56,254 --> 00:35:02,400
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows it's actually recorded at night.
+

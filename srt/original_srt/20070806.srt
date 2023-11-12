@@ -1,0 +1,3644 @@
+﻿1
+00:00:09,180 --> 00:00:11,405
+Speaker 0: It's Monday, August 6th.
+
+2
+00:00:11,906 --> 00:00:12,528
+Speaker 0: I'm Scott.
+
+3
+00:00:12,809 --> 00:00:14,754
+Speaker 0: I'm Rin, and this is Geek Nights.
+
+4
+00:00:15,296 --> 00:00:18,959
+Speaker 0: Tonight, we teach you how to sniff the packets.
+
+5
+00:00:24,490 --> 00:00:25,368
+Speaker 1: Let's do this!
+
+6
+00:00:29,510 --> 00:00:36,090
+Speaker 0: So my old job, they made me take, I guess, in accordance with some sort of law, this sexual harassment test.
+
+7
+00:00:36,170 --> 00:00:52,404
+Speaker 0: And basically all it does is it's a- it's a test you take online, and it gives you a bunch of information and it asks you ten questions to make sure you understand what is and what is not sexual harassment and what to do when you see sexual harassment, etc, etc, etc, right?
+
+8
+00:00:52,826 --> 00:01:07,362
+Speaker 0: And I don't know why, you know, I don't mind this test so much in principle, but why do they have a test for sexual harassment and not for any other sort of harassment or anything else that you can- you're not allowed to- you know, why don't they have a test for all the other things you're not supposed to do in the workplace?
+
+9
+00:01:07,402 --> 00:01:08,387
+Speaker 1: Like smoke weed?
+
+10
+00:01:08,568 --> 00:01:08,910
+Speaker 0: Yeah.
+
+11
+00:01:09,532 --> 00:01:12,380
+Speaker 1: I'll wager that it comes down to liability and nothing more.
+
+12
+00:01:12,480 --> 00:01:13,644
+Speaker 1: They can say- Pretty much.
+
+13
+00:01:13,944 --> 00:01:18,804
+Speaker 1: If there's any sexual harassment going on in the company, they can say, "We trained all of our employees.
+
+14
+00:01:18,884 --> 00:01:19,608
+Speaker 1: We did our duty.
+
+15
+00:01:19,628 --> 00:01:19,970
+Speaker 0: You came to
+
+16
+00:01:19,990 --> 00:01:20,030
+Speaker 0: us.".
+
+17
+00:01:20,030 --> 00:01:24,550
+Speaker 0: But what if- what if there's, I don't know, something else going on in the- in the company?
+
+18
+00:01:24,972 --> 00:01:26,609
+Speaker 0: They don't have a training video for that.
+
+19
+00:01:27,131 --> 00:01:31,150
+Speaker 1: I think most of those other things end up being criminal as opposed to just a civil lawsuit.
+
+20
+00:01:31,350 --> 00:01:31,491
+Speaker 1: Yeah.
+
+21
+00:01:31,812 --> 00:01:35,890
+Speaker 0: But anyway, the one I took in my previous company was a very simple test.
+
+22
+00:01:36,251 --> 00:01:45,542
+Speaker 0: It basically said this- it basically instructed you and just told you the company's policy straight up, you know, it's so that you couldn't interpret it on your own.
+
+23
+00:01:45,562 --> 00:01:47,630
+Speaker 0: It told you the correct interpretation of it.
+
+24
+00:01:48,050 --> 00:01:51,590
+Speaker 1: What could the policy be other than don't sexually harass people?
+
+25
+00:01:51,670 --> 00:01:54,483
+Speaker 0: Well, it was stuff like, "Is it okay to ask someone on a
+
+26
+00:01:54,523 --> 00:01:54,744
+Speaker 0: date?".
+
+27
+00:01:55,166 --> 00:01:55,970
+Speaker 0: And the answer is yes.
+
+28
+00:01:56,330 --> 00:01:59,624
+Speaker 0: And they're like, "Is it okay to ask someone on a date again after they said
+
+29
+00:01:59,684 --> 00:01:59,865
+Speaker 0: no?".
+
+30
+00:01:59,965 --> 00:02:01,190
+Speaker 0: And the answer is no, you know?
+
+31
+00:02:01,230 --> 00:02:02,134
+Speaker 0: So it's stuff like that.
+
+32
+00:02:02,255 --> 00:02:03,520
+Speaker 0: It's like, "Can you kiss
+
+33
+00:02:03,580 --> 00:02:04,083
+Speaker 0: someone?".
+
+34
+00:02:04,223 --> 00:02:05,087
+Speaker 0: You know, "Can you hug
+
+35
+00:02:05,147 --> 00:02:05,610
+Speaker 0: someone?".
+
+36
+00:02:05,770 --> 00:02:07,259
+Speaker 0: You know, "What's okay and what's not
+
+37
+00:02:07,319 --> 00:02:07,601
+Speaker 0: okay?".
+
+38
+00:02:07,621 --> 00:02:09,190
+Speaker 0: It tells you where the line is, basically.
+
+39
+00:02:09,530 --> 00:02:26,990
+Speaker 1: You know, it just- it always worries me that the fact that these sort of things are somewhat necessary means that there are people out there, people who are otherwise functioning in society, who don't know that, who can't understand that it's not okay to just, I don't know, randomly open mouth kiss some random person at work.
+
+40
+00:02:27,530 --> 00:02:28,112
+Speaker 0: Yeah, anyway.
+
+41
+00:02:28,914 --> 00:02:31,862
+Speaker 0: So, the one I took in my old company wasn't so bad.
+
+42
+00:02:31,902 --> 00:02:34,850
+Speaker 0: It took me five minutes, and I got it all right.
+
+43
+00:02:34,990 --> 00:02:37,057
+Speaker 0: And it was simple, and to the point.
+
+44
+00:02:37,780 --> 00:02:40,890
+Speaker 0: So, the company I work for now didn't really have one set up.
+
+45
+00:02:41,210 --> 00:02:44,549
+Speaker 0: So they, you know, they went online, and there's a bunch for them, you know, to choose from.
+
+46
+00:02:44,950 --> 00:02:49,667
+Speaker 0: For, you know, they can- the company goes online, and they find a test, and they say, "Okay, we'll use this test for our
+
+47
+00:02:49,687 --> 00:02:50,088
+Speaker 0: employees.".
+
+48
+00:02:50,730 --> 00:02:57,010
+Speaker 0: So I don't know what the hell one they fucking picked out, but it took, like, over two hours watching all these bullshit videos.
+
+49
+00:02:57,591 --> 00:03:03,490
+Speaker 0: And not only that, but I had to take the test at the end two times, because the questions were bullshit answers.
+
+50
+00:03:03,651 --> 00:03:05,257
+Speaker 0: Wait, wait, wait, wait, wait a minute.
+
+51
+00:03:05,659 --> 00:03:08,430
+Speaker 1: So you, uh, you failed the sexual harassment test.
+
+52
+00:03:08,530 --> 00:03:09,012
+Speaker 0: Okay, well, no, no.
+
+53
+00:03:09,073 --> 00:03:09,756
+Speaker 0: You ready for this?
+
+54
+00:03:09,857 --> 00:03:10,721
+Speaker 0: Okay, wait, wait, wait.
+
+55
+00:03:10,781 --> 00:03:12,550
+Speaker 0: Okay, so it shows a video, right?
+
+56
+00:03:13,010 --> 00:03:17,469
+Speaker 0: And it doesn't say anything about the video, it just shows a video of someone sexually harassing someone, right?
+
+57
+00:03:18,350 --> 00:03:21,910
+Speaker 1: [laughter] - And then- - I just find that the idea of that funny.
+
+58
+00:03:22,170 --> 00:03:27,070
+Speaker 0: Yeah, well, two actors pretending to sexually harass one, and the other one's the victim, I guess.
+
+59
+00:03:27,290 --> 00:03:37,429
+Speaker 0: Anyway, then, it shows- the question on the screen says, "Which of these are prohibited by your company's sexual harassment
+
+60
+00:03:37,469 --> 00:03:37,850
+Speaker 0: policy?".
+
+61
+00:03:37,990 --> 00:03:38,231
+Speaker 0: Right?
+
+62
+00:03:38,713 --> 00:03:44,250
+Speaker 0: And there's a list of choices, and all of them are prohibited by the company's sexual harassment policy.
+
+63
+00:03:44,410 --> 00:03:50,690
+Speaker 0: - It's like, groping, uh, you know, unwa- you know, uh- - Surprise sodomy.
+
+64
+00:03:50,910 --> 00:03:52,115
+Speaker 0: Yeah, stuff like that, right?
+
+65
+00:03:52,135 --> 00:03:56,210
+Speaker 0: So I'm like, I click "All," and it says, like, three of them are wrong.
+
+66
+00:03:56,290 --> 00:04:01,750
+Speaker 0: And then a voice comes- whenever you get something wrong, a voice comes into your head and tells you, sort of, why you were wrong.
+
+67
+00:04:02,391 --> 00:04:03,757
+Speaker 0: And he's like, "You were wrong.
+
+68
+00:04:04,018 --> 00:04:05,906
+Speaker 0: The guy in the video did not do three of
+
+69
+00:04:06,187 --> 00:04:06,368
+Speaker 0: those.".
+
+70
+00:04:06,890 --> 00:04:09,759
+Speaker 0: And I'm like, "You didn't ask me what the guy in the video did.
+
+71
+00:04:09,779 --> 00:04:13,168
+Speaker 0: You just said which of these are prohibited by the company's
+
+72
+00:04:13,209 --> 00:04:13,670
+Speaker 0: policy.".
+
+73
+00:04:13,690 --> 00:04:26,210
+Speaker 1: That seems to be a very large problem in society as a whole, that a lot of times when people want to test people, if you're smarter than the person who wrote the test, you end up getting things wrong because the person who wrote the test is stupid.
+
+74
+00:04:26,290 --> 00:04:29,410
+Speaker 0: And that's exactly what happened to me, and I had to basically take it twice.
+
+75
+00:04:29,650 --> 00:04:35,269
+Speaker 1: It's like that old question you had, I think, in elementary school about which one of these has the most friction, and one of them was an F1 car.
+
+76
+00:04:35,470 --> 00:04:37,882
+Speaker 0: Yes, yes, okay, so, this is a great story.
+
+77
+00:04:37,902 --> 00:04:39,370
+Speaker 0: I don't know if I've told it on the show before.
+
+78
+00:04:39,450 --> 00:04:40,229
+Speaker 1: Whatever, tell it again.
+
+79
+00:04:40,450 --> 00:04:43,639
+Speaker 0: In fourth grade, right, we were learning about friction, right?
+
+80
+00:04:43,719 --> 00:04:47,730
+Speaker 0: Base- not, you know, coefficients of friction and such, but just, you know, friction.
+
+81
+00:04:48,050 --> 00:04:53,050
+Speaker 1: Speaking of coefficients of friction, why did the cat fall off the slanted tin roof?
+
+82
+00:04:54,652 --> 00:04:56,590
+Speaker 0: Uh, I know this joke, just tell the answer.
+
+83
+00:04:56,770 --> 00:04:57,990
+Speaker 1: I'm not gonna tell the answer, just keep going.
+
+84
+00:04:58,370 --> 00:05:06,470
+Speaker 0: Okay, alright, so, um, right, they were teaching us about friction, and they told us, you know, when things rub together, they get hot.
+
+85
+00:05:07,070 --> 00:05:12,030
+Speaker 0: Certain things, when they, you know, rub together, it's what slows you down, et cetera, et cetera, right?
+
+86
+00:05:12,510 --> 00:05:14,717
+Speaker 0: And they sort of told us, you know, they were teaching it.
+
+87
+00:05:14,858 --> 00:05:25,046
+Speaker 0: so basically, you know, without going into any details at all, uh, you know, that basically they were teaching it wrong, 'cause it was so simplified.
+
+88
+00:05:25,226 --> 00:05:26,510
+Speaker 0: So simplified it was incorrect.
+
+89
+00:05:27,190 --> 00:05:40,450
+Speaker 0: And they told us, you know, ah, something that's all bumpy will have more friction, which I guess is, you know, in most cases, like a big bumpy thing, you know, like you put chains, you know, you put chains on your tire in the winter to get more friction, which is true.
+
+90
+00:05:40,710 --> 00:05:51,270
+Speaker 1: Yeah, but at the same time, I mean, smarter people or people who know more about physics know that, say, if you take metal and you polish it enough and it gets too smooth, it actually ends up having more friction.
+
+91
+00:05:51,930 --> 00:05:52,170
+Speaker 0: Exactly.
+
+92
+00:05:52,631 --> 00:06:03,230
+Speaker 0: So, one of the questions in the book, the science book in fourth grade, when I was in fourth grade, I guess that must have been in 1980, who knows, I don't even know, right?
+
+93
+00:06:04,250 --> 00:06:05,132
+Speaker 0: Maybe early 90s.
+
+94
+00:06:05,572 --> 00:06:11,519
+Speaker 0: The question was, which of these two tires is better for a race car, right?
+
+95
+00:06:12,140 --> 00:06:20,130
+Speaker 0: And obviously, they had told you already that more friction was better, which I didn't, you know, I didn't know back then I was in fourth grade, I wasn't that smarter than everyone else.
+
+96
+00:06:20,530 --> 00:06:22,212
+Speaker 0: I said, okay, more friction is better.
+
+97
+00:06:22,733 --> 00:06:24,434
+Speaker 0: Which of these two tires is more friction?
+
+98
+00:06:24,955 --> 00:06:27,257
+Speaker 0: And there was a picture of a dirt bike tire.
+
+99
+00:06:27,918 --> 00:06:29,880
+Speaker 0: And there was a picture of a race car tire.
+
+100
+00:06:30,000 --> 00:06:40,130
+Speaker 0: And I said, huh, I know from what I've been taught that the bumpier spoked dirt bike tire has more friction and therefore should be faster.
+
+101
+00:06:40,731 --> 00:06:44,894
+Speaker 0: But I also know that race cars use race car tires.
+
+102
+00:06:45,375 --> 00:06:46,516
+Speaker 0: This is a trick question.
+
+103
+00:06:46,556 --> 00:06:48,578
+Speaker 0: And in fourth grade, this was my thinking, right?
+
+104
+00:06:49,078 --> 00:06:53,042
+Speaker 0: But I was like, there must be some reason race cars use race car tires.
+
+105
+00:06:53,322 --> 00:06:54,223
+Speaker 0: that I don't know.
+
+106
+00:06:54,243 --> 00:06:56,065
+Speaker 0: I don't know how to make a race car.
+
+107
+00:06:56,465 --> 00:06:57,766
+Speaker 0: I'm just a fourth grade kid.
+
+108
+00:06:58,087 --> 00:07:01,690
+Speaker 0: I'm going to pick the race car tire because I think this is some sort of trick question.
+
+109
+00:07:02,030 --> 00:07:07,255
+Speaker 0: You know, the obvious answer, you know, according to what I've been taught in this class is the dirt bike tire.
+
+110
+00:07:07,736 --> 00:07:10,078
+Speaker 0: But race cars use the race car tires.
+
+111
+00:07:10,118 --> 00:07:10,839
+Speaker 0: That's what I'm picking.
+
+112
+00:07:10,859 --> 00:07:12,080
+Speaker 0: That must be the right answer.
+
+113
+00:07:12,420 --> 00:07:22,350
+Speaker 0: And now I'm smart enough in this day and age to realize because the race car tire heats up, it gets all sticky and a slick tire is awesome for going around a racetrack.
+
+114
+00:07:23,770 --> 00:07:24,994
+Speaker 1: Normal coefficient of friction.
+
+115
+00:07:25,195 --> 00:07:30,190
+Speaker 1: racing slicks when they're heated up properly are actually adhering themselves to the track like glue.
+
+116
+00:07:30,670 --> 00:07:30,750
+Speaker 0: Yes.
+
+117
+00:07:31,311 --> 00:07:34,596
+Speaker 0: So I was correct in choosing the race car tire.
+
+118
+00:07:34,616 --> 00:07:36,619
+Speaker 0: I mean, you don't see race cars going around.
+
+119
+00:07:36,699 --> 00:07:41,607
+Speaker 0: I mean, if dirt bike tires with bumpy bits on them were better, you'd see F1 cars using them.
+
+120
+00:07:41,847 --> 00:07:43,550
+Speaker 0: You better bet your ass they would be using them.
+
+121
+00:07:43,590 --> 00:07:44,535
+Speaker 1: That's the ticket next year.
+
+122
+00:07:44,555 --> 00:07:45,521
+Speaker 1: We're going to have Schumacher.
+
+123
+00:07:45,541 --> 00:07:46,245
+Speaker 1: He's going to be back.
+
+124
+00:07:46,285 --> 00:07:47,110
+Speaker 1: He's going to have a dirt bike.
+
+125
+00:07:47,270 --> 00:07:47,691
+Speaker 0: I'm sure.
+
+126
+00:07:48,212 --> 00:07:49,654
+Speaker 0: So I chose that.
+
+127
+00:07:49,874 --> 00:07:56,283
+Speaker 0: And of course, the teacher's manual disagreed with me and I complained and I didn't complain enough.
+
+128
+00:07:56,303 --> 00:08:01,190
+Speaker 0: I kind of wish I would have complained more and learned in fourth grade that sticky tires are awesome.
+
+129
+00:08:01,371 --> 00:08:05,670
+Speaker 0: Instead of learning much later, like in 10th grade, that sticky tires were awesome.
+
+130
+00:08:05,910 --> 00:08:08,830
+Speaker 1: Instead, all you really learned is that you were smarter than your educators.
+
+131
+00:08:09,651 --> 00:08:12,376
+Speaker 0: And I'm smarter than the sexual harassment test at work.
+
+132
+00:08:12,736 --> 00:08:18,846
+Speaker 0: I don't feel bad because my other smart co-workers who are also smart had the same problem I did.
+
+133
+00:08:19,647 --> 00:08:21,350
+Speaker 0: And I don't know what the stupid co-workers did.
+
+134
+00:08:21,650 --> 00:08:26,030
+Speaker 1: So you're sure, absolutely sure, that you know how to not sexually harass someone at work?
+
+135
+00:08:27,131 --> 00:08:30,410
+Speaker 0: I was about to sexually harass you, but someone would just put it on the gay evidence pile.
+
+136
+00:08:33,251 --> 00:08:39,121
+Speaker 1: So anyway, in the news, a lot of our friends might have noticed and maybe some of you listeners that I'm not on AIM anymore.
+
+137
+00:08:39,140 --> 00:08:43,730
+Speaker 1: In fact, I haven't been on instant messenger, you know, AOL instant messenger for a long time.
+
+138
+00:08:44,250 --> 00:08:47,299
+Speaker 1: Part of that's because I don't spend a lot of time sitting in front of my computer anymore.
+
+139
+00:08:47,339 --> 00:08:50,307
+Speaker 1: And part of that's just because I really don't like AIM.
+
+140
+00:08:50,608 --> 00:08:51,210
+Speaker 1: I never have.
+
+141
+00:08:51,310 --> 00:08:53,236
+Speaker 1: I've hated it from the moment I started using it.
+
+142
+00:08:53,536 --> 00:08:58,290
+Speaker 1: And every day I was waiting for the time when I could just give it up and give the finger to everybody.
+
+143
+00:08:58,771 --> 00:08:59,232
+Speaker 1: And you know what?
+
+144
+00:08:59,392 --> 00:09:00,795
+Speaker 1: That day came a couple months ago.
+
+145
+00:09:01,416 --> 00:09:08,230
+Speaker 1: And the reason is, I prefer Jabber or Google or some sort of open or semi-open or trustworthy network.
+
+146
+00:09:09,231 --> 00:09:15,430
+Speaker 1: And the real issue here, a lot of people don't realize that when you use AOL instant messenger, you don't have control over anything.
+
+147
+00:09:15,590 --> 00:09:16,814
+Speaker 1: They own your screen name.
+
+148
+00:09:17,376 --> 00:09:19,302
+Speaker 1: All your chats go through their servers.
+
+149
+00:09:19,483 --> 00:09:20,386
+Speaker 1: They can do whatever they want.
+
+150
+00:09:20,406 --> 00:09:21,650
+Speaker 1: They can log everything you say.
+
+151
+00:09:22,290 --> 00:09:24,810
+Speaker 0: Well, Google actually does log everything you say.
+
+152
+00:09:24,850 --> 00:09:26,010
+Speaker 1: Oh yes, but the thing is, I want them to.
+
+153
+00:09:26,010 --> 00:09:27,110
+Speaker 0: So it's not that much different.
+
+154
+00:09:27,571 --> 00:09:33,750
+Speaker 1: I guess the real difference is theoretically you could use a Jabber server on your own, and no one could log it but you and the person you're talking to.
+
+155
+00:09:34,190 --> 00:09:35,012
+Speaker 0: Yep, this is correct.
+
+156
+00:09:35,052 --> 00:09:38,421
+Speaker 0: If we wanted to, I could point our DNS address.
+
+157
+00:09:38,581 --> 00:09:40,887
+Speaker 0: See, before we were using our own Jabber server.
+
+158
+00:09:40,947 --> 00:09:42,130
+Speaker 0: Separate, not using Google.
+
+159
+00:09:42,570 --> 00:09:43,752
+Speaker 0: But it was a pain in the ass.
+
+160
+00:09:44,173 --> 00:09:54,730
+Speaker 0: So I used, I pointed our DNS over at Google so that Google would now provide our Jabber server via Google Chat, which is much more convenient for us since we use Google for domains.
+
+161
+00:09:55,650 --> 00:10:06,370
+Speaker 0: But if we needed to avoid Google and not have Google record our conversation, we could theoretically, actually not theoretically, very really, is that how it's said?
+
+162
+00:10:06,570 --> 00:10:06,928
+Speaker 1: Ah, whatever.
+
+163
+00:10:07,590 --> 00:10:11,490
+Speaker 0: Point our DNS back at our own Jabber server and avoid Google.
+
+164
+00:10:12,070 --> 00:10:14,337
+Speaker 1: But besides all that, I just, I never trusted AOL.
+
+165
+00:10:14,398 --> 00:10:18,130
+Speaker 1: I don't think any sane person who knows anything about the internet has ever trusted AOL.
+
+166
+00:10:18,992 --> 00:10:20,374
+Speaker 1: I don't trust Microsoft either.
+
+167
+00:10:20,915 --> 00:10:28,410
+Speaker 1: And a lot of our friends when we tried to push them toward Jabber or Google or anything other than AOL Instant Messenger, they'd always really resist or get angry.
+
+168
+00:10:28,670 --> 00:10:30,253
+Speaker 1: Or, "Well fine, I just won't chat with you
+
+169
+00:10:30,313 --> 00:10:30,674
+Speaker 1: anymore.".
+
+170
+00:10:31,155 --> 00:10:33,220
+Speaker 1: And whenever we'd say, "Oh, but AOL could do bad
+
+171
+00:10:33,260 --> 00:10:33,620
+Speaker 1: things."
+
+172
+00:10:34,101 --> 00:10:36,527
+Speaker 1: They always say, "Oh, well they never will.
+
+173
+00:10:36,567 --> 00:10:37,789
+Speaker 1: No one would ever do anything like
+
+174
+00:10:37,809 --> 00:10:37,990
+Speaker 1: that.".
+
+175
+00:10:38,871 --> 00:10:40,394
+Speaker 1: Well, MSN started doing that.
+
+176
+00:10:41,055 --> 00:10:50,350
+Speaker 1: MSN currently, as far as it appears, and there seems to be a lot of evidence for this, is secretly censoring things that go through the MSN network.
+
+177
+00:10:50,710 --> 00:10:55,403
+Speaker 1: So if you chat and say certain things to people, the messages just don't get sent.
+
+178
+00:10:55,423 --> 00:10:56,465
+Speaker 1: You don't get an error message.
+
+179
+00:10:56,546 --> 00:10:58,030
+Speaker 1: The message just doesn't get there.
+
+180
+00:10:58,711 --> 00:10:59,035
+Speaker 1: Aha.
+
+181
+00:10:59,116 --> 00:11:00,370
+Speaker 0: What kind of things are they censoring?
+
+182
+00:11:00,390 --> 00:11:07,370
+Speaker 1: Well, right now it looks like they're mostly censoring things that might appear to be in some way a link to some sort of malware.
+
+183
+00:11:07,990 --> 00:11:15,150
+Speaker 1: So if you send, for example, the string .info or .scr, your entire message will be blocked.
+
+184
+00:11:15,858 --> 00:11:16,148
+Speaker 1: Uh huh.
+
+185
+00:11:16,451 --> 00:11:19,627
+Speaker 1: Or gallery.php, profile.php.
+
+186
+00:11:20,190 --> 00:11:24,470
+Speaker 0: But what if I'm linking you to my actual gallery or to my actual profile?
+
+187
+00:11:24,690 --> 00:11:26,017
+Speaker 1: Oh, well the answer to that is simple.
+
+188
+00:11:26,218 --> 00:11:26,661
+Speaker 1: Fuck you.
+
+189
+00:11:26,922 --> 00:11:28,330
+Speaker 1: No, it's not getting through the network.
+
+190
+00:11:28,772 --> 00:11:29,053
+Speaker 0: Huh.
+
+191
+00:11:29,775 --> 00:11:30,177
+Speaker 0: Yeah.
+
+192
+00:11:30,498 --> 00:11:33,690
+Speaker 0: Sounds like MSN is just the best IM network ever.
+
+193
+00:11:34,210 --> 00:11:36,820
+Speaker 1: Granted, I have never known an intelligent person who used MSN.
+
+194
+00:11:36,900 --> 00:11:39,530
+Speaker 1: I'm sure they're out there, but I've never personally known one.
+
+195
+00:11:39,610 --> 00:11:47,530
+Speaker 0: The only people I've known to use MSN that had an excuse were basically people whose job it was to deal with lots of idiots all around.
+
+196
+00:11:47,930 --> 00:11:56,490
+Speaker 0: So they would use Trillion or something like that and have shit work accounts on a bunch of IM networks just to communicate with these people for work purposes.
+
+197
+00:11:56,630 --> 00:11:56,675
+Speaker 0: Ah.
+
+198
+00:11:57,071 --> 00:12:02,910
+Speaker 0: But I've never known anyone who actually uses MSN with all their friends who was also cool and smart.
+
+199
+00:12:03,390 --> 00:12:18,710
+Speaker 1: But what this really illustrates is the idea that instead of patching actual security holes in their operating systems or actually dealing with these problems, Microsoft decides that they know better than you and they just censor things without telling you to protect you from yourself.
+
+200
+00:12:19,312 --> 00:12:26,089
+Speaker 1: Because remember, it's not like you could send someone text like blahblahblah.info and break into someone's computer through MSN.
+
+201
+00:12:26,770 --> 00:12:34,830
+Speaker 1: The problem is someone might send a URL and the person on the other end might open that URL and then click yes to the dialog box that comes up.
+
+202
+00:12:35,310 --> 00:12:39,269
+Speaker 1: And MSN decides that they're not willing to give you the opportunity to click on that box.
+
+203
+00:12:40,370 --> 00:12:41,033
+Speaker 0: So awesome.
+
+204
+00:12:41,555 --> 00:12:45,270
+Speaker 0: So, anyone out there who's using MSN, I don't know why.
+
+205
+00:12:45,611 --> 00:12:46,689
+Speaker 1: Yeah, there's really no reason.
+
+206
+00:12:47,352 --> 00:12:48,956
+Speaker 0: Google Chat exists now.
+
+207
+00:12:49,156 --> 00:12:50,179
+Speaker 0: Jabber is free.
+
+208
+00:12:50,199 --> 00:12:54,590
+Speaker 0: I mean, sure, your friends might not all be using it.
+
+209
+00:12:54,870 --> 00:12:55,373
+Speaker 1: But you know what?
+
+210
+00:12:55,414 --> 00:12:57,730
+Speaker 1: Google Chat interoperates with Jabber.
+
+211
+00:12:58,216 --> 00:12:58,547
+Speaker 0: Yeah, it does.
+
+212
+00:12:58,750 --> 00:13:00,730
+Speaker 1: You can talk to anyone on Jabber through Google.
+
+213
+00:13:01,450 --> 00:13:10,850
+Speaker 0: Yeah, I mean, I don't understand why people aren't, I mean, even if you're not ready to jump ship completely off AOL because you're not going to be able to talk to your family or something, right?
+
+214
+00:13:11,231 --> 00:13:17,170
+Speaker 0: At least get an account on something else, Google Chat or Jabber or something and slowly migrate.
+
+215
+00:13:17,350 --> 00:13:20,825
+Speaker 0: You don't have to jump all at once, but move away from it.
+
+216
+00:13:20,865 --> 00:13:21,970
+Speaker 0: You know it's no good.
+
+217
+00:13:22,550 --> 00:13:23,273
+Speaker 0: You know why?
+
+218
+00:13:23,534 --> 00:13:27,210
+Speaker 0: I mean, you don't have to run away and just drop it, but slowly move out.
+
+219
+00:13:27,311 --> 00:13:29,530
+Speaker 0: Sort of like we're supposed to be moving out of Iraq.
+
+220
+00:13:29,990 --> 00:13:30,086
+Speaker 1: Yeah.
+
+221
+00:13:32,710 --> 00:13:37,890
+Speaker 1: Honestly, I didn't care about this news that much because, like I said, no one really uses MSN, at least no one's smart.
+
+222
+00:13:38,050 --> 00:13:47,270
+Speaker 1: But I'm not going back to AIM, so if anyone out there has been trying to get a hold of me on AIM and wondered how come I'm never online anymore, I don't even have an AIM client right now.
+
+223
+00:13:47,671 --> 00:13:48,569
+Speaker 1: I'm done with that shit.
+
+224
+00:13:50,172 --> 00:13:50,474
+Speaker 0: Awesome.
+
+225
+00:13:50,494 --> 00:13:53,070
+Speaker 0: All right, I'm still using AIM, but I'm moving people out.
+
+226
+00:13:53,190 --> 00:13:56,570
+Speaker 1: Well, I realized that the only people I talked to on AIM were my family.
+
+227
+00:13:56,790 --> 00:14:00,250
+Speaker 0: Oh, and if you have a Gmail account, you have Google Chat, whether you know it or not.
+
+228
+00:14:00,350 --> 00:14:02,945
+Speaker 0: You see that thing on the left-hand side that lets you chat with people?
+
+229
+00:14:03,006 --> 00:14:03,670
+Speaker 0: That's Google Chat.
+
+230
+00:14:04,231 --> 00:14:08,400
+Speaker 0: You can actually connect to that with an AIM client that supports Jabber.
+
+231
+00:14:08,620 --> 00:14:13,250
+Speaker 0: You don't have to open a web browser and visit your Gmail to use that.
+
+232
+00:14:13,750 --> 00:14:25,050
+Speaker 1: I just remember one day I looked at my AIM contact list, and I looked in the other hidden category of all the people I don't talk to, and I realized that there were like 400 people on that list, and I didn't know who any of them were.
+
+233
+00:14:25,470 --> 00:14:27,925
+Speaker 0: Yeah, I cleaned out my AIM, and there was a whole mess of people.
+
+234
+00:14:27,965 --> 00:14:28,650
+Speaker 0: I didn't know who they were.
+
+235
+00:14:28,970 --> 00:14:34,855
+Speaker 0: There were also people that I really- And I was like, "Who are
+
+236
+00:14:34,895 --> 00:14:35,056
+Speaker 0: you?".
+
+237
+00:14:35,619 --> 00:14:37,065
+Speaker 0: And some of them were like, "I don't
+
+238
+00:14:37,085 --> 00:14:37,306
+Speaker 0: know.".
+
+239
+00:14:37,387 --> 00:14:37,909
+Speaker 0: I deleted them.
+
+240
+00:14:39,330 --> 00:14:47,229
+Speaker 1: See, I learned not to do that, because the last time I tried to ask people who they were, I ended up having to talk to people I knew in high school, and it was mostly-
+
+241
+00:14:47,470 --> 00:14:50,990
+Speaker 0: I knew that these people were mostly random internet people I talked to once, so it was safe.
+
+242
+00:14:51,890 --> 00:14:56,850
+Speaker 1: Talking to people I went to high school with made me realize that most of the people I went to high school with didn't go anywhere.
+
+243
+00:14:57,556 --> 00:14:57,928
+Speaker 0: Pretty much.
+
+244
+00:14:58,491 --> 00:14:59,714
+Speaker 1: And lead kind of sad lives.
+
+245
+00:14:59,955 --> 00:15:05,930
+Speaker 1: And the rest of them were all nerds from DDR Freak who were trying to ask me at some point how to build a DDR pad.
+
+246
+00:15:07,399 --> 00:15:08,490
+Speaker 0: Were they still DDR Freaks?
+
+247
+00:15:08,770 --> 00:15:08,926
+Speaker 0: Yes.
+
+248
+00:15:09,390 --> 00:15:09,458
+Speaker 0: Wow.
+
+249
+00:15:10,130 --> 00:15:12,881
+Speaker 1: They're like, one of them was like, "Man, you never got back with
+
+250
+00:15:12,921 --> 00:15:12,982
+Speaker 1: me.".
+
+251
+00:15:13,022 --> 00:15:14,428
+Speaker 1: I'm like, "Dude, that was three years
+
+252
+00:15:14,508 --> 00:15:14,729
+Speaker 1: ago.".
+
+253
+00:15:15,630 --> 00:15:15,693
+Speaker 0: Wow.
+
+254
+00:15:16,452 --> 00:15:16,536
+Speaker 0: Yeah.
+
+255
+00:15:17,132 --> 00:15:18,030
+Speaker 0: I wouldn't even remember.
+
+256
+00:15:18,650 --> 00:15:20,836
+Speaker 1: See, the moral of that story is simple.
+
+257
+00:15:21,217 --> 00:15:24,826
+Speaker 1: If you ever thought, "Hey, I should post on the DDR Freaks forums," don't.
+
+258
+00:15:25,387 --> 00:15:25,848
+Speaker 1: Just don't.
+
+259
+00:15:25,969 --> 00:15:26,510
+Speaker 1: Stay away.
+
+260
+00:15:26,895 --> 00:15:27,969
+Speaker 1: Those people are weird.
+
+261
+00:15:28,191 --> 00:15:29,610
+Speaker 0: Unless you're a super DDR Freak.
+
+262
+00:15:29,890 --> 00:15:31,402
+Speaker 1: Even if you are, stay away.
+
+263
+00:15:31,462 --> 00:15:32,369
+Speaker 0: Those people are weird.
+
+264
+00:15:33,314 --> 00:15:34,009
+Speaker 0: Maybe you're weird.
+
+265
+00:15:35,673 --> 00:15:37,130
+Speaker 1: You're probably not listening to Geek Nights, then.
+
+266
+00:15:37,410 --> 00:15:45,045
+Speaker 0: Alright, so Dell is offering the Ubuntu's on some of their machines, and it's getting pretty popular.
+
+267
+00:15:45,065 --> 00:15:47,310
+Speaker 0: I don't know how well it's selling, but it's definitely good.
+
+268
+00:15:47,590 --> 00:15:55,670
+Speaker 0: And if I had to purchase pre-built computers, I would very much now consider Dell just not having to pay the Windows tax is pretty big for me.
+
+269
+00:15:55,835 --> 00:15:56,004
+Speaker 0: No.
+
+270
+00:15:57,251 --> 00:15:58,635
+Speaker 0: Anyway, and Dell isn't so bad.
+
+271
+00:15:58,655 --> 00:16:04,090
+Speaker 0: I mean, if you're a super nerd and you need the perfect machine, they're not going to give it for you at the right price.
+
+272
+00:16:04,330 --> 00:16:07,230
+Speaker 0: But otherwise, not so bad, as they used to be, anyway.
+
+273
+00:16:08,911 --> 00:16:22,050
+Speaker 0: So, Lenovo, having to, I guess, compete on some level, decided, along with Novell, that they're going to sell Thinkpads, not any of their other stuff, but the Thinkpads with the SUSE Linux.
+
+274
+00:16:22,894 --> 00:16:23,570
+Speaker 1: That's pretty hot.
+
+275
+00:16:23,650 --> 00:16:28,546
+Speaker 0: The enterprise desktop, because apparently a lot of, because that is a business laptop.
+
+276
+00:16:28,566 --> 00:16:29,750
+Speaker 0: You don't see the Thinkpad.
+
+277
+00:16:30,010 --> 00:16:33,050
+Speaker 0: If you go to the Lenovo website, it says consumer business.
+
+278
+00:16:33,251 --> 00:16:39,870
+Speaker 0: And while nerds might realize that if you want a quality laptop, you click on business even if you're just a schmuck at home and they'll still sell you something.
+
+279
+00:16:41,010 --> 00:16:43,990
+Speaker 0: Consumers will always click on consumer and get a piece of shit laptop.
+
+280
+00:16:45,090 --> 00:16:46,950
+Speaker 0: But businesses will click on business.
+
+281
+00:16:47,150 --> 00:16:49,316
+Speaker 0: And apparently, businesses want Linux.
+
+282
+00:16:49,817 --> 00:16:55,010
+Speaker 0: And the best Linux that's aimed at businesses is SUSE Linux Enterprise Desktop.
+
+283
+00:16:55,550 --> 00:17:01,750
+Speaker 0: And they're going to sell Thinkpads that have Sled, that's S-L-E-D, Sled, pre-installed.
+
+284
+00:17:02,190 --> 00:17:05,829
+Speaker 1: See, I find this interesting because, remember, Lenovo used to be part of IBM.
+
+285
+00:17:06,410 --> 00:17:08,069
+Speaker 1: And then that whole wing was sold.
+
+286
+00:17:08,750 --> 00:17:15,550
+Speaker 1: And actually, up until when I left IBM, the companies were, while they were technically separate, they were still effectively together.
+
+287
+00:17:16,173 --> 00:17:20,210
+Speaker 1: We had internal people from both sides and it was this big kind of mishmash.
+
+288
+00:17:20,369 --> 00:17:28,730
+Speaker 1: I'm not sure how far apart they finally pulled, but back then there was an official IBM Red Hat Enterprise Linux that we used on all the laptops.
+
+289
+00:17:29,471 --> 00:17:30,496
+Speaker 1: And it was the official one.
+
+290
+00:17:30,516 --> 00:17:33,050
+Speaker 1: And that was what you used if you wanted to have Linux on a Thinkpad.
+
+291
+00:17:33,731 --> 00:17:37,410
+Speaker 1: I'm really surprised that Lenovo went with a non-Red Hat solution.
+
+292
+00:17:37,991 --> 00:17:47,449
+Speaker 0: Yeah, I'm thinking, it seems like there's this whole bunch of companies, IBM, Lenovo, Novell, Xandros, sort of.
+
+293
+00:17:48,410 --> 00:17:54,290
+Speaker 0: It's like a separate corner from the Microsoft, Apple, Google corner, you know, of technology.
+
+294
+00:17:54,430 --> 00:17:56,330
+Speaker 0: Sort of like the old guard, in a way.
+
+295
+00:17:56,550 --> 00:17:59,270
+Speaker 1: Like if you go to one of those weird companies that has Novell anything.
+
+296
+00:18:00,594 --> 00:18:01,664
+Speaker 0: Like the company I work for.
+
+297
+00:18:02,350 --> 00:18:03,232
+Speaker 0: Oh, Sun also.
+
+298
+00:18:03,332 --> 00:18:11,110
+Speaker 0: Why doesn't this old, like everyone always talks about, you know, some of the new guard companies, Microsoft, Google, like buying up Sun or something like that, right?
+
+299
+00:18:11,170 --> 00:18:25,310
+Speaker 0: I always wondered why doesn't IBM, Sun, you know, Novell merge to sort of become up, you know, to get up and compete with these new guys who are all big and in the business as opposed to sitting on their, you know, in the darkness.
+
+300
+00:18:25,651 --> 00:18:37,030
+Speaker 1: I think part of the reason is they either all compete with each other directly with equivalent products or compete in such different and varied markets that there's really, the overlap just doesn't exist for them to make any business sense.
+
+301
+00:18:37,391 --> 00:18:38,010
+Speaker 0: Yeah, I don't know.
+
+302
+00:18:38,411 --> 00:18:44,250
+Speaker 1: Like IBM merging with another company doesn't make much sense because IBM has its hands in a whole bunch of different pots.
+
+303
+00:18:44,590 --> 00:18:54,650
+Speaker 0: Yeah, but I mean, look, Google and Microsoft, at least they don't merge, but they buy up companies that do things they do because maybe those companies do something better, you know.
+
+304
+00:18:55,071 --> 00:18:59,950
+Speaker 1: I think IBM internally is convinced that no one does anything it does better than it.
+
+305
+00:19:00,270 --> 00:19:03,549
+Speaker 0: That's why they're, you know, just so hip and cool and everyone loves IBM.
+
+306
+00:19:04,050 --> 00:19:04,350
+Speaker 0: You know what?
+
+307
+00:19:04,850 --> 00:19:07,945
+Speaker 0: IBM is selling this awesome new phone that people are willing to pay $700 for.
+
+308
+00:19:09,331 --> 00:19:10,690
+Speaker 1: The thing is, remember, that's not IBM's market.
+
+309
+00:19:11,210 --> 00:19:23,610
+Speaker 1: IBM's market is this whole, I mean, a lot of people out there, a lot of our friends work in IT or CS and whatever, but you always hear the buzzword enterprise and how like there's this whole different world and all the software is different and everything's weird.
+
+310
+00:19:24,213 --> 00:19:27,690
+Speaker 1: And a lot of people are refreshing into college think, oh, that word enterprise is just bullshit.
+
+311
+00:19:27,830 --> 00:19:28,590
+Speaker 1: It's not any different.
+
+312
+00:19:29,010 --> 00:19:31,289
+Speaker 1: That's just an excuse to sell people more expensive things.
+
+313
+00:19:32,030 --> 00:19:45,930
+Speaker 1: And while that is true, about 75 percent of the time, the fact remains that just because of the sheer scale of it, that whole market is like this this unchartable, unfathomable, stupid world that you don't want to ever get involved in.
+
+314
+00:19:46,513 --> 00:19:47,749
+Speaker 0: Yep, yep, yep, yep.
+
+315
+00:19:48,531 --> 00:19:52,550
+Speaker 0: So, yeah, you can now get a ThinkPad with Linux if you are savvy, I guess.
+
+316
+00:19:52,710 --> 00:19:53,030
+Speaker 0: I don't know.
+
+317
+00:19:53,411 --> 00:20:04,230
+Speaker 1: I find it funny, too, that the company I work for now and other companies I've interacted with, they either don't know what Linux is or they still brush it and Google and all these things off as just flash in the pan crap.
+
+318
+00:20:05,010 --> 00:20:08,450
+Speaker 1: And they talk about how Novell is the future or Windows architecture.
+
+319
+00:20:08,571 --> 00:20:09,649
+Speaker 0: Novell is all Linux-y, though.
+
+320
+00:20:10,090 --> 00:20:11,810
+Speaker 1: No, but Novell Windows is the future.
+
+321
+00:20:11,950 --> 00:20:17,070
+Speaker 1: And they're actually worried about the fact that Novell is kind of dropping away from this Windows boat.
+
+322
+00:20:17,730 --> 00:20:18,830
+Speaker 0: What the hell are these guys?
+
+323
+00:20:19,413 --> 00:20:20,070
+Speaker 0: Even better, I don't know.
+
+324
+00:20:20,111 --> 00:20:21,050
+Speaker 0: Do these guys use computers?
+
+325
+00:20:22,215 --> 00:20:22,748
+Speaker 1: Mostly, no.
+
+326
+00:20:23,012 --> 00:20:24,630
+Speaker 0: Do they use, like, telephones?
+
+327
+00:20:25,211 --> 00:20:42,230
+Speaker 1: Even worse, I really don't get all these people in companies who... The company will use Novell to do their networky stuff in a Windows network when every single thing that they're using it for was already done natively by Active Directory that they already paid for because they already have Windows.
+
+328
+00:20:43,053 --> 00:20:43,710
+Speaker 0: What are they doing?
+
+329
+00:20:44,154 --> 00:20:44,606
+Speaker 0: I don't know.
+
+330
+00:20:45,858 --> 00:20:46,450
+Speaker 0: I don't know.
+
+331
+00:20:47,255 --> 00:20:48,890
+Speaker 1: I really hate being in IT sometimes.
+
+332
+00:20:49,211 --> 00:20:55,290
+Speaker 0: Basically, I think a lot of that kind of stuff actually is because you have a guy who knows nothing about IT, right?
+
+333
+00:20:55,850 --> 00:21:00,109
+Speaker 0: A vendor from Novell comes in and says, "Hey, stuff, stuff, stuff, stuff,
+
+334
+00:21:00,129 --> 00:21:00,350
+Speaker 0: stuff.".
+
+335
+00:21:00,410 --> 00:21:02,363
+Speaker 0: And the guy says, "Well, what did this do for me?
+
+336
+00:21:02,424 --> 00:21:03,149
+Speaker 0: Why is it worth my
+
+337
+00:21:03,189 --> 00:21:03,370
+Speaker 0: money?".
+
+338
+00:21:03,410 --> 00:21:06,809
+Speaker 0: And the guy says, "Well, it does this, it does this, it does this, it does this, it does
+
+339
+00:21:06,829 --> 00:21:06,930
+Speaker 0: this.".
+
+340
+00:21:07,531 --> 00:21:08,888
+Speaker 0: And those are all things he needs to do.
+
+341
+00:21:09,390 --> 00:21:12,210
+Speaker 0: And he doesn't realize that Windows does that already on its own.
+
+342
+00:21:13,032 --> 00:21:15,070
+Speaker 0: And he's sold because he needs something that does that.
+
+343
+00:21:15,310 --> 00:21:16,390
+Speaker 1: I think it's far simpler than that.
+
+344
+00:21:16,430 --> 00:21:17,909
+Speaker 1: I think it's just the sunk cost fallacy.
+
+345
+00:21:18,512 --> 00:21:26,830
+Speaker 1: They already went into that boat for whatever reason, and now they can't justify the expense of getting out of the boat, and they can't justify the loss of all the capital they've sunk in that boat.
+
+346
+00:21:27,635 --> 00:21:28,530
+Speaker 1: And thus, the boat sinks.
+
+347
+00:21:28,790 --> 00:21:32,150
+Speaker 0: That is the case for people who haven't done it yet, but I'm talking about the initial doing.
+
+348
+00:21:32,330 --> 00:21:33,528
+Speaker 1: I don't know if anyone new does it.
+
+349
+00:21:34,452 --> 00:21:36,790
+Speaker 1: It might just be all these old stupid companies.
+
+350
+00:21:37,251 --> 00:21:38,610
+Speaker 0: I think that new people do do it.
+
+351
+00:21:39,011 --> 00:21:40,409
+Speaker 1: I just can't fathom that.
+
+352
+00:21:40,770 --> 00:21:41,629
+Speaker 0: Yeah, yeah.
+
+353
+00:21:42,311 --> 00:21:42,948
+Speaker 0: Okay, so.
+
+354
+00:21:50,411 --> 00:21:51,449
+Speaker 1: Things of the day.
+
+355
+00:21:52,173 --> 00:22:05,585
+Speaker 1: Alright, so on the Bacon Report, there's a video from Fox News, and this video is basically a Fox News reporter lending a lot of credence to the idea that "OMG aliens, government conspiracy, blah blah
+
+356
+00:22:05,626 --> 00:22:05,927
+Speaker 1: blah.".
+
+357
+00:22:08,218 --> 00:22:09,509
+Speaker 0: You know, I realized something today.
+
+358
+00:22:10,010 --> 00:22:12,330
+Speaker 0: There was actually a picture on the net today.
+
+359
+00:22:12,910 --> 00:22:23,170
+Speaker 0: It was a really blurry picture of what appeared to be a new iMac, because I think you may know that Apple is supposedly coming out with new iMacs soon, right?
+
+360
+00:22:23,210 --> 00:22:24,410
+Speaker 1: Alright, I have a new idea.
+
+361
+00:22:24,890 --> 00:22:37,010
+Speaker 1: The next time we think Apple's going to announce a product, let's take a black piece of cardboard, make it real shiny with some lacquer, put some LEDs in it, move it around, and take a really blurry picture of it.
+
+362
+00:22:37,010 --> 00:22:39,249
+Speaker 0: We can just take a normal picture and apply a blurry filter to it.
+
+363
+00:22:39,650 --> 00:22:44,030
+Speaker 0: But the point is that it seems like, obviously, this is not real.
+
+364
+00:22:44,150 --> 00:22:48,150
+Speaker 0: The thing that the Apple iMac this person posted a picture of was not true.
+
+365
+00:22:48,271 --> 00:22:49,010
+Speaker 0: It was a hoax, right?
+
+366
+00:22:49,530 --> 00:22:52,130
+Speaker 0: But by making the picture blurry, right?
+
+367
+00:22:52,570 --> 00:22:56,467
+Speaker 0: It sort of gave the viewer, like even me, for the first second.
+
+368
+00:22:56,507 --> 00:23:02,550
+Speaker 0: when I looked at it, my initial reaction was it was a covert picture taken with a cell cam, right?
+
+369
+00:23:02,611 --> 00:23:03,528
+Speaker 0: Or something like that.
+
+370
+00:23:04,012 --> 00:23:12,310
+Speaker 0: And it sort of gives it validity in a way that it's blurry, when the reality is it's blurry because it was hoaxed and they're covering up their poor Photoshop job.
+
+371
+00:23:12,772 --> 00:23:16,210
+Speaker 0: So the alien pictures are always blurry.
+
+372
+00:23:16,550 --> 00:23:18,290
+Speaker 1: Now here's the thing that I find interesting.
+
+373
+00:23:18,510 --> 00:23:21,988
+Speaker 1: One, when I was a little kid, I did believe that there were UFOs in town.
+
+374
+00:23:22,370 --> 00:23:23,069
+Speaker 1: I also did.
+
+375
+00:23:23,270 --> 00:23:29,570
+Speaker 1: Now the reason is I'd sit there at night at my grandma's house reading Fate magazine because she had a bunch of them lying around.
+
+376
+00:23:29,710 --> 00:23:32,350
+Speaker 0: I read a bunch of crazy crap and I saw a bunch of crazy crap on TV.
+
+377
+00:23:32,510 --> 00:23:35,250
+Speaker 1: And on TV all the time on Unsolved Mysteries.
+
+378
+00:23:35,890 --> 00:23:37,110
+Speaker 0: And various other shows.
+
+379
+00:23:37,330 --> 00:23:40,590
+Speaker 1: Unsolved Mysteries alone, that show probably tainted my childhood.
+
+380
+00:23:42,475 --> 00:23:43,446
+Speaker 1: That show just messed me up.
+
+381
+00:23:44,111 --> 00:23:48,710
+Speaker 0: Yeah, I'm glad I'm corrected and I still don't believe that show.
+
+382
+00:23:48,810 --> 00:23:52,190
+Speaker 0: But think about it, when we were kids watching that, adults are watching that, believing it too.
+
+383
+00:23:52,530 --> 00:23:58,130
+Speaker 1: I know, but when I was a kid, you know, it'd always be like, there was a serial killer and he killed a bunch of kids.
+
+384
+00:23:58,130 --> 00:24:03,870
+Speaker 0: This one that really scared me was like, there was a hotel and George Washington's ghost is there and he kills people.
+
+385
+00:24:04,570 --> 00:24:06,267
+Speaker 1: He's coming, he's coming, he's coming.
+
+386
+00:24:08,031 --> 00:24:12,070
+Speaker 1: But I used to believe, because why would the TV lie?
+
+387
+00:24:12,510 --> 00:24:17,350
+Speaker 1: Why would this man, who looks very intelligent on the TV, talking about this?
+
+388
+00:24:17,430 --> 00:24:18,370
+Speaker 1: I mean, look, he's got evidence.
+
+389
+00:24:19,033 --> 00:24:20,849
+Speaker 1: Look at all these blurry photos that people took.
+
+390
+00:24:21,530 --> 00:24:22,875
+Speaker 1: Now, how come?
+
+391
+00:24:22,895 --> 00:24:27,070
+Speaker 1: in the last 50 years no one's ever taken a single non-blurry photo of a UFO?
+
+392
+00:24:27,571 --> 00:24:28,930
+Speaker 0: We have HD cameras.
+
+393
+00:24:29,571 --> 00:24:34,490
+Speaker 0: My digital camera is like, what, six or five to seven megapixels?
+
+394
+00:24:34,510 --> 00:24:36,330
+Speaker 0: I don't even remember how many megapixels there is.
+
+395
+00:24:36,651 --> 00:24:41,490
+Speaker 1: And I saw a seaplane flying over the Hudson and I went, oh, cool.
+
+396
+00:24:41,570 --> 00:24:43,890
+Speaker 1: And I went and snapped and took a picture of, you know what?
+
+397
+00:24:44,291 --> 00:24:45,108
+Speaker 0: With your cell cam?
+
+398
+00:24:45,330 --> 00:24:47,750
+Speaker 1: With my cell cam while I was hanging from a cliff.
+
+399
+00:24:48,333 --> 00:24:48,878
+Speaker 1: And you know what?
+
+400
+00:24:49,442 --> 00:24:50,330
+Speaker 1: It came out fine.
+
+401
+00:24:50,932 --> 00:24:52,330
+Speaker 1: You can see that it's a biplane.
+
+402
+00:24:52,831 --> 00:24:55,390
+Speaker 1: Maybe if I applied a Gaussian filter, I could say it was a UFO.
+
+403
+00:24:56,101 --> 00:24:56,310
+Speaker 1: Yeah.
+
+404
+00:24:56,390 --> 00:25:00,210
+Speaker 1: With wings and a propeller and seaplane legs.
+
+405
+00:25:01,791 --> 00:25:10,170
+Speaker 0: So, what it comes down to is people are taking blurry pictures these days and they're somehow believing them and they're still believing them.
+
+406
+00:25:10,310 --> 00:25:16,610
+Speaker 0: And I think all we need to do to clear up this alien UFO bullshit, because there are no aliens and there are no UFOs visiting Earth.
+
+407
+00:25:16,750 --> 00:25:18,737
+Speaker 0: Well, yeah, odds are.
+
+408
+00:25:18,777 --> 00:25:24,530
+Speaker 1: there's probably some form of life of some kind, whatever you might define life out there in the universe somewhere.
+
+409
+00:25:24,550 --> 00:25:30,030
+Speaker 0: Some sort of biological, possibly carbon-based organism out in the universe somewhere.
+
+410
+00:25:30,070 --> 00:25:31,210
+Speaker 0: Whatever, besides Earth.
+
+411
+00:25:31,310 --> 00:25:33,230
+Speaker 1: Some sort of self-organizing system.
+
+412
+00:25:33,550 --> 00:25:33,617
+Speaker 1: Yes.
+
+413
+00:25:33,850 --> 00:25:40,229
+Speaker 1: However, there are not little green men in saucers coming to Earth and abducting cows to implant into people or whatever they do.
+
+414
+00:25:40,490 --> 00:25:42,750
+Speaker 0: No, there most definitely are not.
+
+415
+00:25:43,230 --> 00:25:46,709
+Speaker 1: Now, I mean, the people who believe these things just...
+
+416
+00:25:47,113 --> 00:25:47,789
+Speaker 0: Crazy hicks.
+
+417
+00:25:47,990 --> 00:25:49,890
+Speaker 1: Yeah, but that's not the problem.
+
+418
+00:25:49,970 --> 00:25:57,930
+Speaker 1: The fact that a news station, not even Unsolved Mysteries, which, while it acted like it was serious, it wasn't really serious.
+
+419
+00:25:58,760 --> 00:25:59,509
+Speaker 1: This is the news!
+
+420
+00:25:59,970 --> 00:26:04,570
+Speaker 1: The news should not just be giving any sort of airtime to these nutjobs.
+
+421
+00:26:05,390 --> 00:26:09,230
+Speaker 1: And let me tell you, the guy that they interview on this is quite a nutjob.
+
+422
+00:26:09,750 --> 00:26:10,409
+Speaker 0: Super nutjob.
+
+423
+00:26:10,650 --> 00:26:21,610
+Speaker 1: However, to Fox's credit, the guy who is interviewing him, while he definitely played the sensationalist bullshit card and definitely lent a lot more credulity to this man than he deserved.
+
+424
+00:26:21,790 --> 00:26:22,008
+Speaker 0: Credence.
+
+425
+00:26:22,651 --> 00:26:23,730
+Speaker 1: I wanted to say credulity.
+
+426
+00:26:23,870 --> 00:26:24,270
+Speaker 1: Well, you're right.
+
+427
+00:26:24,270 --> 00:26:25,529
+Speaker 1: Because I already said credence before.
+
+428
+00:26:25,812 --> 00:26:26,250
+Speaker 0: That's fine.
+
+429
+00:26:26,330 --> 00:26:27,390
+Speaker 0: He was very credulous.
+
+430
+00:26:27,724 --> 00:26:27,870
+Speaker 1: Yeah.
+
+431
+00:26:28,671 --> 00:26:29,489
+Speaker 1: And credulity is a word.
+
+432
+00:26:29,970 --> 00:26:30,249
+Speaker 0: No, it's not.
+
+433
+00:26:30,330 --> 00:26:30,704
+Speaker 0: Yes, it is.
+
+434
+00:26:31,751 --> 00:26:33,289
+Speaker 0: I guess it's a cromulent word.
+
+435
+00:26:33,592 --> 00:26:34,430
+Speaker 1: It is perfectly cromulent.
+
+436
+00:26:35,750 --> 00:26:40,830
+Speaker 1: Anyway, there is one moment where this guy... The Fox News guy must know that this is bullshit.
+
+437
+00:26:40,991 --> 00:26:41,868
+Speaker 1: He's just doing his job.
+
+438
+00:26:42,471 --> 00:26:48,050
+Speaker 1: Because after the crazy guy goes on this long rant about how the governments are covering it up, and they're going to release, and blah, blah, blah.
+
+439
+00:26:49,712 --> 00:26:54,129
+Speaker 1: The Fox guy has this smirk that he had for just a second, and then he quashes it out.
+
+440
+00:26:54,690 --> 00:26:58,086
+Speaker 1: And then he asks, trying not to laugh, "So, uh, how do we know
+
+441
+00:26:58,126 --> 00:26:58,268
+Speaker 1: this?".
+
+442
+00:27:00,032 --> 00:27:03,010
+Speaker 1: And the crazy guy stops for a second and basically says nothing.
+
+443
+00:27:03,670 --> 00:27:03,750
+Speaker 1: Yep.
+
+444
+00:27:03,890 --> 00:27:07,109
+Speaker 1: He basically says, "Well, if you pay attention like I do, you just, you know.
+
+445
+00:27:07,874 --> 00:27:08,589
+Speaker 1: It's all out there.
+
+446
+00:27:08,911 --> 00:27:09,465
+Speaker 1: You just got to pay
+
+447
+00:27:09,485 --> 00:27:09,670
+Speaker 1: attention.".
+
+448
+00:27:10,652 --> 00:27:23,170
+Speaker 0: I think what we need to do is we need to make a law that... Well, first of all, we need to make a law that says if you're going to put a camera on any flying thing, a helicopter, a plane, whatever, it better be a damn super awesome HD camera.
+
+449
+00:27:23,532 --> 00:27:27,369
+Speaker 0: that won't be, like, and if something is bright, because it's always a bright light.
+
+450
+00:27:27,890 --> 00:27:33,530
+Speaker 0: It has to have that, you know, auto-dimming kind of thing where you can still see what it is, even if it's got a bright light on it, right?
+
+451
+00:27:34,313 --> 00:27:35,670
+Speaker 0: My old cell phone had that.
+
+452
+00:27:35,850 --> 00:27:42,350
+Speaker 0: You'd shine it at, like, your lamp, and it would be bright for a second, and then it would get dim, and you could actually take a picture of the light bulb pointing the camera at it.
+
+453
+00:27:42,730 --> 00:27:47,190
+Speaker 0: So if my old cell phone can have that, so can the cameras on a 747.
+
+454
+00:27:47,190 --> 00:27:48,148
+Speaker 1: You know why this wouldn't work?
+
+455
+00:27:48,671 --> 00:27:57,426
+Speaker 1: Because then, when we have a million pictures of car headlights and stars and gas balloons and whatever, all the alien nudge-obs are just going to say, "Well, you haven't taken pictures of any
+
+456
+00:27:57,487 --> 00:27:57,609
+Speaker 1: aliens.".
+
+457
+00:27:57,771 --> 00:27:59,649
+Speaker 0: And that is why I have a second plan.
+
+458
+00:28:00,950 --> 00:28:10,950
+Speaker 0: The second plan is we get together a collection, and we purchase the highest quality digital SLR cameras on the market, the Nikon, D80, whatever they are, right?
+
+459
+00:28:11,372 --> 00:28:15,010
+Speaker 0: And we donate them to all the big UFOlogist people.
+
+460
+00:28:15,150 --> 00:28:16,470
+Speaker 0: Just donate them to them.
+
+461
+00:28:16,530 --> 00:28:17,350
+Speaker 1: You know what'll happen?
+
+462
+00:28:17,750 --> 00:28:19,389
+Speaker 1: They're just going to take blurry photos.
+
+463
+00:28:23,470 --> 00:28:34,430
+Speaker 1: [laughter] I mean, these people are either scammers or a little bit brighter than the people who get a picture of a dust mote floating in the flash and think it's a ghost.
+
+464
+00:28:35,190 --> 00:28:37,169
+Speaker 1: Or, sorry, sorry, a psychic orb.
+
+465
+00:28:38,290 --> 00:28:38,742
+Speaker 0: Okay, so...
+
+466
+00:28:39,070 --> 00:28:40,950
+Speaker 1: But that's not my thing of the day.
+
+467
+00:28:41,475 --> 00:28:42,150
+Speaker 0: Oh, my God.
+
+468
+00:28:42,390 --> 00:28:47,310
+Speaker 1: My thing of the day is the bacon report because it has the best sight design I've ever seen.
+
+469
+00:28:47,650 --> 00:28:56,206
+Speaker 1: There's a permanent graphic on the right that is a picture of bacon, and on the top, the text is "nom nom nom," and on the bottom of it, it is "om nom nom
+
+470
+00:28:56,307 --> 00:28:56,528
+Speaker 1: nom."
+
+471
+00:28:57,834 --> 00:29:01,250
+Speaker 1: And at the bottom of the site, there's a permanent graphic of a suitcase made of bacon.
+
+472
+00:29:02,572 --> 00:29:03,828
+Speaker 1: That is my thing of the day.
+
+473
+00:29:04,759 --> 00:29:05,110
+Speaker 1: All right.
+
+474
+00:29:05,310 --> 00:29:07,910
+Speaker 1: Irrespective of what happens to be on the site to which I am linking.
+
+475
+00:29:09,052 --> 00:29:10,250
+Speaker 0: Um, nom nom.
+
+476
+00:29:10,750 --> 00:29:11,690
+Speaker 1: Nom nom nom nom.
+
+477
+00:29:11,772 --> 00:29:12,610
+Speaker 0: Nom nom nom nom.
+
+478
+00:29:12,771 --> 00:29:13,550
+Speaker 1: I kind of want some bacon.
+
+479
+00:29:14,151 --> 00:29:16,747
+Speaker 0: I don't really want any bacon, but I guess if you want bacon...
+
+480
+00:29:17,351 --> 00:29:19,230
+Speaker 1: Well, we let that Stu Leonard's bacon go bad.
+
+481
+00:29:19,351 --> 00:29:20,990
+Speaker 1: We only ate two of the three packages.
+
+482
+00:29:22,135 --> 00:29:23,370
+Speaker 0: Oh, two out of the three is not bad.
+
+483
+00:29:23,632 --> 00:29:24,729
+Speaker 0: Only one package going bad.
+
+484
+00:29:25,673 --> 00:29:26,869
+Speaker 0: Next time, I'll only buy two packages.
+
+485
+00:29:27,510 --> 00:29:28,730
+Speaker 0: All right, check this out.
+
+486
+00:29:28,892 --> 00:29:29,569
+Speaker 0: It's real simple.
+
+487
+00:29:29,730 --> 00:29:30,189
+Speaker 0: I'm checking it.
+
+488
+00:29:30,330 --> 00:29:31,529
+Speaker 0: It's a real simple thing of the day.
+
+489
+00:29:32,231 --> 00:29:35,756
+Speaker 0: You remember what the Internet was like in, say, 1997?
+
+490
+00:29:35,756 --> 00:29:36,030
+Speaker 1: Awesome.
+
+491
+00:29:36,173 --> 00:29:36,949
+Speaker 1: There were no ads.
+
+492
+00:29:37,411 --> 00:29:40,529
+Speaker 1: Every website was functional, unless you went to Geocities.
+
+493
+00:29:41,150 --> 00:29:41,264
+Speaker 0: Right.
+
+494
+00:29:41,811 --> 00:29:43,009
+Speaker 0: You know what Dig is like right now?
+
+495
+00:29:43,756 --> 00:29:44,088
+Speaker 1: Yeah, I do.
+
+496
+00:29:44,510 --> 00:29:47,292
+Speaker 0: All right, imagine if Dig was in 1997.
+
+497
+00:29:47,292 --> 00:29:47,726
+Speaker 1: You know what?
+
+498
+00:29:48,710 --> 00:29:50,289
+Speaker 1: Functionality wouldn't really be diminished.
+
+499
+00:29:50,910 --> 00:29:54,750
+Speaker 0: No, so here is a Photoshop I get, or it's probably not a Photoshop.
+
+500
+00:29:55,010 --> 00:29:58,010
+Speaker 0: A guy, I think, did this with HTML, which wouldn't be too hard.
+
+501
+00:29:58,110 --> 00:29:58,543
+Speaker 0: I could do it.
+
+502
+00:29:59,111 --> 00:30:00,330
+Speaker 0: And then took a screenshot of it.
+
+503
+00:30:00,530 --> 00:30:01,310
+Speaker 1: I'll bet he used tables.
+
+504
+00:30:01,571 --> 00:30:02,250
+Speaker 0: Yeah, there are tables.
+
+505
+00:30:02,610 --> 00:30:08,150
+Speaker 0: And he basically made a mock-up of what Dig would have looked like in 1997, complete with hilarious headlines.
+
+506
+00:30:08,470 --> 00:30:22,610
+Speaker 1: You know, it says a lot that while Dig looks a lot... I mean, now we have, like, Ajax and things, and we can do fancy stuff, and while the faster computers and faster network did make even if a site is functionally good, it can be functionally good and pretty at the same time.
+
+507
+00:30:22,731 --> 00:30:29,828
+Speaker 0: I would read some of these headlines, but now that I think about which ones to read, it would be hard to resist reading all of them, so you can read them on your own.
+
+508
+00:30:30,250 --> 00:30:30,928
+Speaker 0: But think about this.
+
+509
+00:30:31,490 --> 00:30:39,450
+Speaker 1: The fact that while websites have gotten better looking, the most functional websites are still the websites from 1997.
+
+510
+00:30:39,450 --> 00:30:40,330
+Speaker 1: Text links.
+
+511
+00:30:40,990 --> 00:30:41,330
+Speaker 0: And Google.
+
+512
+00:30:41,890 --> 00:30:42,127
+Speaker 1: And Google.
+
+513
+00:30:42,970 --> 00:30:45,110
+Speaker 1: Granted, Google hasn't changed much, pretty much ever.
+
+514
+00:30:45,693 --> 00:30:46,750
+Speaker 0: Nope, nope, not really.
+
+515
+00:30:47,010 --> 00:30:48,310
+Speaker 0: But they're not as old as 1996.
+
+516
+00:30:48,310 --> 00:30:56,949
+Speaker 1: Man, there was a time when Yahoo-- I used Yahoo because their little search site where you had the little thing you typed the stuff in looked a lot like Google does now.
+
+517
+00:30:57,490 --> 00:30:58,929
+Speaker 1: It was kind of empty, and it just worked.
+
+518
+00:30:59,490 --> 00:31:06,609
+Speaker 0: Yeah, I used to use Alta Vista and Web-- I used to use WebCrawler a lot because their website was really slick, but their search results were kind of bad.
+
+519
+00:31:07,170 --> 00:31:14,229
+Speaker 1: Yeah, thing is, though, when I think back, it's hard to imagine actually using anything but Google, even back before I knew Google existed, even back before Google did exist.
+
+520
+00:31:14,774 --> 00:31:21,250
+Speaker 0: Well, I think what it was is that Google was-- Yahoo worked in the olden days because it was a manually set up directory.
+
+521
+00:31:21,550 --> 00:31:22,550
+Speaker 1: And there weren't that many websites.
+
+522
+00:31:22,770 --> 00:31:28,748
+Speaker 0: And there weren't that many websites, so-- Remember all those-- Yahoo never gave you 404 links or anything like that, even though it did.
+
+523
+00:31:29,112 --> 00:31:29,668
+Speaker 1: All the time.
+
+524
+00:31:29,930 --> 00:31:36,310
+Speaker 0: Yes, but it was vastly superior to the other sort of automatic spidered search engines.
+
+525
+00:31:36,510 --> 00:31:41,287
+Speaker 1: I mean, that was a time when you could go to-- Well, I don't even know if Borders and Barnes & Noble were like they are now back then.
+
+526
+00:31:41,855 --> 00:31:45,590
+Speaker 1: But you go to a bookstore, and they'd have yellow pages of the Internet.
+
+527
+00:31:46,271 --> 00:31:48,948
+Speaker 1: And they'd list a good percentage of the websites out there.
+
+528
+00:31:49,811 --> 00:31:50,629
+Speaker 0: I think that's enough of that.
+
+529
+00:31:50,910 --> 00:31:53,910
+Speaker 0: We could do a whole show on old search engines.
+
+530
+00:31:54,632 --> 00:31:54,906
+Speaker 1: Uh-huh.
+
+531
+00:31:55,170 --> 00:32:07,270
+Speaker 1: Right, anyway, so tonight, we haven't done any of those how computers work or explained it in a while, and we realized that one thing we haven't talked about that I know a lot of you are interested in is very simply packet sniffing or packet capturing.
+
+532
+00:32:07,890 --> 00:32:12,248
+Speaker 0: All right, do you remember back when you were talking about some networking, I forget which show it was.
+
+533
+00:32:12,910 --> 00:32:13,031
+Speaker 1: We
+
+534
+00:32:13,071 --> 00:32:30,030
+Speaker 0: talked about how when you're trying to send packets, right, especially to people on the exact same LAN as you, right, you're basically sending the packets to everyone, but only the people who have the correct IP or MAC address pay attention to those packets, and everyone else ignores them.
+
+535
+00:32:30,130 --> 00:32:55,217
+Speaker 0: So if RIM has MAC address 1, and I have MAC address 2, and Joe Bob has MAC address 3, and I want to send something to RIM, I go, I send the packets out, and they go to everyone, Joe Bob, RIM, Mary Sue, everyone gets the packets, but because the packet says, "I am for MAC address 1," which is RIM, RIM is the only one who actually gets it, and everyone else's network card says, "Get the hell out of here.
+
+536
+00:32:55,277 --> 00:32:56,284
+Speaker 0: You're not my number.
+
+537
+00:32:56,466 --> 00:32:56,687
+Speaker 0: Stay
+
+538
+00:32:56,708 --> 00:32:56,990
+Speaker 0: away.".
+
+539
+00:32:57,432 --> 00:33:03,030
+Speaker 0: And that way, you feel like you're sending packets to one person when you're actually sending them to everyone.
+
+540
+00:33:03,270 --> 00:33:16,070
+Speaker 1: Now, the way that worked, I think we talked about it briefly, was just that the destination address is just a bunch of 1s and 0s, and those 1s and 0s are converted into electricity via the Manchester encoding mechanism and sent out to the whole place.
+
+541
+00:33:16,310 --> 00:33:28,948
+Speaker 1: They're sent out on every wire, and every network card gets them, turns them into 1s and 0s, does some binary math with its own address, and if they match, then it passes the packet on to higher-level stuff, and if it doesn't match, it ignores it.
+
+542
+00:33:29,630 --> 00:33:31,990
+Speaker 1: Now, you might be thinking, "What if I were evil?
+
+543
+00:33:32,612 --> 00:33:36,628
+Speaker 1: What if I made a special network card that accepted any
+
+544
+00:33:36,709 --> 00:33:37,010
+Speaker 1: packet?".
+
+545
+00:33:37,950 --> 00:33:38,434
+Speaker 0: Guess what?
+
+546
+00:33:38,978 --> 00:33:40,370
+Speaker 0: Every network card can do that.
+
+547
+00:33:40,451 --> 00:33:41,710
+Speaker 1: Well, well, well, not really.
+
+548
+00:33:43,210 --> 00:33:45,230
+Speaker 0: I've never met a network card that couldn't.
+
+549
+00:33:45,470 --> 00:33:52,170
+Speaker 1: Not so much nowadays, but back in the day, especially with Token Ring, but also with Ethernet, see, the issue is, it's called promiscuous mode.
+
+550
+00:33:52,570 --> 00:34:00,570
+Speaker 1: Normally, a network card is in non-promiscuous mode, where it only sees packets that are directly addressed to it or a broadcast, and otherwise, it can't see anything, can't do anything.
+
+551
+00:34:00,972 --> 00:34:03,308
+Speaker 1: Your computer can't even tell you that a packet came in.
+
+552
+00:34:04,250 --> 00:34:09,109
+Speaker 1: If a network card is in promiscuous mode, it'll see every single packet on the network, no matter what.
+
+553
+00:34:09,690 --> 00:34:14,750
+Speaker 1: Back in the Token Ring days, network cards could always, by default, go into promiscuous mode.
+
+554
+00:34:15,250 --> 00:34:21,050
+Speaker 1: Many of them were physically disabled from being able to do so for security reasons before they were shipped to consumers.
+
+555
+00:34:21,409 --> 00:34:22,610
+Speaker 0: Well, that's Token Ring, though.
+
+556
+00:34:23,516 --> 00:34:24,650
+Speaker 1: It works in the same principle.
+
+557
+00:34:24,791 --> 00:34:25,327
+Speaker 0: I know, I know.
+
+558
+00:34:26,011 --> 00:34:37,429
+Speaker 1: And also, there were network cards that, whenever they went into promiscuous mode, would, by some mechanism, send out packets or something to warn the network that, "Hey, I'm listening, I'm listening,".
+
+559
+00:34:37,931 --> 00:34:44,349
+Speaker 1: and a lot of intelligent networking equipment back in the day would see that and say, "Hey, hey, hey," and immediately shut down that link.
+
+560
+00:34:46,011 --> 00:34:49,688
+Speaker 1: However, such things are much rarer now than they used to be.
+
+561
+00:34:50,290 --> 00:34:57,810
+Speaker 0: Basically, nowadays, if you have a network card, you can put it in promiscuous mode with the right software and see the packets, and no one will know.
+
+562
+00:34:58,130 --> 00:34:59,350
+Speaker 1: Now, think about how trivial this is.
+
+563
+00:34:59,471 --> 00:35:06,850
+Speaker 1: All the packets go to everyone, so basically, on any given LAN, barring anything like switches, I can look at the traffic everyone's got.
+
+564
+00:35:07,350 --> 00:35:20,510
+Speaker 0: So if you go to a LAN party and they bring a hub, not a switch, a hub, it has to be a hub, and it's like a 50-port hub and everyone plugs into it, and you open up your packet sniffer, you can see everything everyone's doing.
+
+565
+00:35:20,851 --> 00:35:26,730
+Speaker 0: So let's say someone logs into their email and they didn't encrypt their email password.
+
+566
+00:35:27,010 --> 00:35:27,542
+Speaker 1: Via, say, SSL.
+
+567
+00:35:28,555 --> 00:35:30,650
+Speaker 0: You just saw their email password.
+
+568
+00:35:31,050 --> 00:35:31,908
+Speaker 1: It's just right in there.
+
+569
+00:35:32,210 --> 00:35:32,515
+Speaker 0: It's there.
+
+570
+00:35:32,535 --> 00:35:33,450
+Speaker 0: It's in plain text.
+
+571
+00:35:33,570 --> 00:35:34,989
+Speaker 0: You can see it with your eyeballs.
+
+572
+00:35:35,632 --> 00:35:39,010
+Speaker 0: If I showed you how this works, it's so stupidly easy.
+
+573
+00:35:39,470 --> 00:35:43,906
+Speaker 0: If you have the software installed, you literally push a button, and there it is.
+
+574
+00:35:45,111 --> 00:35:47,190
+Speaker 0: Oh, look, email, password, username.
+
+575
+00:35:47,330 --> 00:35:47,777
+Speaker 0: There it is.
+
+576
+00:35:47,980 --> 00:35:48,488
+Speaker 0: Oh, look at that.
+
+577
+00:35:48,910 --> 00:35:53,169
+Speaker 0: And then you could go and log in and read their email, and there's nothing stopping you.
+
+578
+00:35:53,470 --> 00:36:11,750
+Speaker 1: Now, there was a time when this was a significant security risk for networks because there was a time when Ethernet was all hub-based, and in fact, generally, all Ethernet networks and companies and wherever were one gigantic broadcast domain, meaning every packet went to everyone on the network no matter what.
+
+579
+00:36:12,152 --> 00:36:18,950
+Speaker 0: So you had, say, 1,000 computers, and if you turned on your packet sniffer, you'd probably crash your computer because there's just so many goddamn packets.
+
+580
+00:36:19,070 --> 00:36:29,110
+Speaker 1: See, the thing is you wouldn't because we had some packet sniffers that were "portable" at IBM that we used just because we had them, and we didn't have any good laptops laying around to use for this purpose.
+
+581
+00:36:30,232 --> 00:36:32,969
+Speaker 1: They were bigger than my current PC.
+
+582
+00:36:33,650 --> 00:36:35,270
+Speaker 1: They weighed about 90 pounds.
+
+583
+00:36:35,730 --> 00:36:36,483
+Speaker 1: I think they were 286s.
+
+584
+00:36:37,950 --> 00:36:38,287
+Speaker 1: Oh, wow.
+
+585
+00:36:38,510 --> 00:36:40,690
+Speaker 1: They had these displays.
+
+586
+00:36:41,210 --> 00:36:43,970
+Speaker 1: They were kind of like an old gas plasma in theory.
+
+587
+00:36:44,050 --> 00:36:46,129
+Speaker 1: I don't even know how they worked, but they were orange and weird.
+
+588
+00:36:47,150 --> 00:36:54,309
+Speaker 1: And basically, they ran a special version of DOS that had a packet sniffer on it, and you put gigantic network cards in it, and you could sniff networks.
+
+589
+00:36:54,997 --> 00:36:56,190
+Speaker 0: Yeah, but with special hardware.
+
+590
+00:36:56,410 --> 00:37:08,249
+Speaker 0: I mean, if you took a normal consumer 286, and you ran the equivalent of some packet-sniffing software on it on a network of 1,000 computers, your RAMs would be the full very soon.
+
+591
+00:37:08,610 --> 00:37:11,750
+Speaker 1: But then again, there wasn't generally that much traffic on those networks.
+
+592
+00:37:11,990 --> 00:37:12,330
+Speaker 1: That is true.
+
+593
+00:37:12,690 --> 00:37:14,290
+Speaker 1: Those networks were generally slow and full of collisions.
+
+594
+00:37:14,690 --> 00:37:16,890
+Speaker 0: Yeah, but it would be pretty bad.
+
+595
+00:37:17,152 --> 00:37:18,349
+Speaker 0: Much worse than it would be today.
+
+596
+00:37:18,710 --> 00:37:25,830
+Speaker 1: But also along those lines, the security threat was mostly that a lot of software was poorly written, and people didn't worry about security.
+
+597
+00:37:26,570 --> 00:37:29,810
+Speaker 1: Everything was in clear text, and passwords were just on the network all the time.
+
+598
+00:37:29,870 --> 00:37:32,310
+Speaker 0: Well, because no one had the CPU power to encrypt.
+
+599
+00:37:32,550 --> 00:37:43,290
+Speaker 0: I mean, even if you were smart enough to write your software securely that encrypted all the outgoing traffic, the CPU, it would take you like five minutes to send a part of an email.
+
+600
+00:37:43,450 --> 00:37:44,150
+Speaker 0: It would be ridiculous.
+
+601
+00:37:45,071 --> 00:37:48,822
+Speaker 0: And not only that, but let's say you were even smarter, and you said, "Let's switch the
+
+602
+00:37:48,863 --> 00:37:49,186
+Speaker 0: network.".
+
+603
+00:37:49,591 --> 00:37:51,470
+Speaker 0: You couldn't afford switches in those days.
+
+604
+00:37:51,470 --> 00:37:55,850
+Speaker 1: Well, basically the best you had were there were bridges, which were kind of like a switch with only two ends.
+
+605
+00:37:56,230 --> 00:38:02,730
+Speaker 1: And you'd stick them between big boundaries of the network to try and partition the network and block some of that unneeded traffic.
+
+606
+00:38:02,810 --> 00:38:04,310
+Speaker 1: But even then, you could get a lot of passwords.
+
+607
+00:38:04,710 --> 00:38:10,345
+Speaker 0: Yeah, I mean, even if you put a bridge on like every office, you've got like 100 people in your office on 250 port hubs.
+
+608
+00:38:11,491 --> 00:38:11,873
+Speaker 0: That's it.
+
+609
+00:38:12,175 --> 00:38:14,670
+Speaker 0: It's enough to get a lot of sensitive information.
+
+610
+00:38:15,210 --> 00:38:20,510
+Speaker 1: Now, a lot of people tried to come up with ways to detect sniffing and somehow eliminate it.
+
+611
+00:38:20,510 --> 00:38:24,209
+Speaker 1: Because, like I said, a lot of network cards would warn the network that they were in promiscuous mode.
+
+612
+00:38:24,890 --> 00:38:29,529
+Speaker 1: It wasn't that hard to make a network card that just didn't warn the network back then.
+
+613
+00:38:30,030 --> 00:38:30,354
+Speaker 0: You know what?
+
+614
+00:38:30,415 --> 00:38:33,250
+Speaker 0: If you get a network card now, it probably doesn't warn the network.
+
+615
+00:38:33,810 --> 00:38:34,517
+Speaker 1: Well, usually not.
+
+616
+00:38:34,941 --> 00:38:35,930
+Speaker 1: Almost never, in fact.
+
+617
+00:38:36,350 --> 00:38:47,310
+Speaker 1: But even back then, with physical means, you could make devices that could listen to the network but physically could not transmit on the network, or software-wise just knew not to ever send stuff out.
+
+618
+00:38:47,430 --> 00:38:48,470
+Speaker 0: Yeah, I mean, think about it.
+
+619
+00:38:48,490 --> 00:38:55,429
+Speaker 0: When you look at the network cable, right, some of those pins are the in-pins that get the data, and some of those pins are the out-pins.
+
+620
+00:38:55,810 --> 00:39:00,910
+Speaker 0: What if I just made a network cable that didn't have the out-pins, and I plugged it in, and I went in promiscuous mode?
+
+621
+00:39:01,210 --> 00:39:03,550
+Speaker 0: Now I can see everything, and no one knows I'm there.
+
+622
+00:39:03,710 --> 00:39:07,690
+Speaker 1: The thing is, that only worked with the old, you know, the T-connector kind of Ethernet networks.
+
+623
+00:39:07,970 --> 00:39:12,730
+Speaker 1: Because with Ethernet as we use it now, the link light wouldn't come on, and you wouldn't get any connection at all.
+
+624
+00:39:13,110 --> 00:39:13,417
+Speaker 1: I know.
+
+625
+00:39:13,498 --> 00:39:14,050
+Speaker 0: I'm just saying.
+
+626
+00:39:14,390 --> 00:39:18,429
+Speaker 1: There are ways to do it, but it requires somewhat complicated and intelligent electronics.
+
+627
+00:39:19,410 --> 00:39:26,737
+Speaker 1: Now I'm not going to get into the really interesting parts, because they're kind of esoteric, but the point is, if you've ever wondered what packet sniffing was, that's it.
+
+628
+00:39:26,778 --> 00:39:27,550
+Speaker 1: It's really that simple.
+
+629
+00:39:28,810 --> 00:39:43,550
+Speaker 1: Nowadays, it's really not useful from a hacker, cracker, whatever, get people's passwords perspective, because one, networks are almost always fully switched, and two, you really don't have access to large broadcast domains or anything these days.
+
+630
+00:39:43,912 --> 00:39:50,070
+Speaker 0: Yes, if you wanted to sniff someone for, you know, bad purposes these days, it's quite difficult.
+
+631
+00:39:50,230 --> 00:39:53,590
+Speaker 0: For example, at our house, we have switches and we have a router.
+
+632
+00:39:54,110 --> 00:39:57,570
+Speaker 0: So basically, if you sniff, you'll see your own traffic.
+
+633
+00:39:57,770 --> 00:39:59,710
+Speaker 0: You won't see anyone else's traffic whatsoever.
+
+634
+00:40:00,130 --> 00:40:03,749
+Speaker 1: Well, you'll see all the broadcast traffic on the network, which can tell you a lot.
+
+635
+00:40:04,190 --> 00:40:04,260
+Speaker 0: Yep.
+
+636
+00:40:04,570 --> 00:40:16,070
+Speaker 1: Because, for example, even if something like two computers are talking to each other on a dedicated switch link separate, and the same network, the initial package they send, the ARPs to figure out who's where, are broadcast.
+
+637
+00:40:16,530 --> 00:40:24,290
+Speaker 1: So I can compile a database of which PCs are where and who has what IP addresses and all sorts of fun information, even though I don't see the actual traffic that's being sent.
+
+638
+00:40:24,810 --> 00:40:37,689
+Speaker 0: Another thing you could do, let's say if you can compromise the physical security, you could say get a hub, go to where the router is, plug your hub in there, and then sniff on that end, and that, you know, that won't be as, it won't be the same.
+
+639
+00:40:37,811 --> 00:40:38,667
+Speaker 1: That wouldn't really work.
+
+640
+00:40:39,032 --> 00:40:41,890
+Speaker 0: It would help, you could see all the stuff that's going in and out of the network.
+
+641
+00:40:42,070 --> 00:40:45,150
+Speaker 0: You just couldn't see, like, you know, who's it going to if you're on the other side of a net.
+
+642
+00:40:45,550 --> 00:40:59,030
+Speaker 1: Well, there's more trouble than that, because the moment you introduce a hub, I don't want to get into all the technical details, but basically hubs eliminate the idea of full duplex, which is trivially detectable and will cause an immediate degradation in performance.
+
+643
+00:40:59,150 --> 00:40:59,930
+Speaker 1: You'll be caught immediately.
+
+644
+00:41:00,471 --> 00:41:04,130
+Speaker 0: Yeah, but I'm just saying, it would be a way that you could sniff a whole bunch of action.
+
+645
+00:41:04,373 --> 00:41:04,849
+Speaker 0: Not really.
+
+646
+00:41:05,091 --> 00:41:09,370
+Speaker 1: A much better way would be to compromise the switch of the router, and then replicate a port.
+
+647
+00:41:09,411 --> 00:41:09,970
+Speaker 0: That's not easy.
+
+648
+00:41:11,154 --> 00:41:12,190
+Speaker 1: It's a lot easier than you think.
+
+649
+00:41:12,310 --> 00:41:13,650
+Speaker 1: A lot of people use default passwords.
+
+650
+00:41:14,152 --> 00:41:15,510
+Speaker 0: Yeah, it's still not easy.
+
+651
+00:41:15,690 --> 00:41:15,825
+Speaker 0: Anyway.
+
+652
+00:41:16,010 --> 00:41:19,468
+Speaker 1: It's much easier than physically compromising it and installing a hub.
+
+653
+00:41:19,791 --> 00:41:21,410
+Speaker 0: Not if you're at some LAN party and you're sneaky.
+
+654
+00:41:21,891 --> 00:41:25,650
+Speaker 1: If you're at some LAN party, it's physically easier to compromise the switch of the router.
+
+655
+00:41:26,050 --> 00:41:30,709
+Speaker 0: Anyway, so, how do you packet sniff, and why would you want to in this day and age?
+
+656
+00:41:30,970 --> 00:41:41,070
+Speaker 1: Well, the primary use of packet sniffing, and a lot of you IT junkies and people who want to get into computer science or IT should know about this, is for network troubleshooting or firewall design.
+
+657
+00:41:41,371 --> 00:41:45,569
+Speaker 0: Yep, let's say I'm sitting around, and something's weird's going on.
+
+658
+00:41:45,770 --> 00:41:50,830
+Speaker 0: Like, maybe I realize that maybe someone's doing something bad or trying to attack my computer.
+
+659
+00:41:51,732 --> 00:41:59,570
+Speaker 0: I turn on my packet sniffer, and I put some filters so that I don't see every packet, but only the packets I'm looking for, and I just sit there and watch for a few minutes.
+
+660
+00:42:00,071 --> 00:42:05,830
+Speaker 0: And then I read through, and I look at the packets, because they're pretty easy to read, and I say, "Hey, look at that packet.
+
+661
+00:42:05,910 --> 00:42:13,668
+Speaker 0: That came from this computer I'd ever heard of, and it's coming into my computer on this weird port, and it says weird stuff in
+
+662
+00:42:13,689 --> 00:42:13,729
+Speaker 0: it.".
+
+663
+00:42:13,850 --> 00:42:16,890
+Speaker 0: Or maybe I see, "Hey, my computer sent out this packet.
+
+664
+00:42:17,011 --> 00:42:17,878
+Speaker 0: What's in that packet?
+
+665
+00:42:17,939 --> 00:42:19,170
+Speaker 0: It looks like an email packet.
+
+666
+00:42:19,591 --> 00:42:21,310
+Speaker 0: Why does it say something about Viagra?
+
+667
+00:42:21,851 --> 00:42:23,284
+Speaker 0: My computer's sending spam.
+
+668
+00:42:23,425 --> 00:42:23,909
+Speaker 0: Oh, no, it's...".
+
+669
+00:42:24,611 --> 00:42:31,830
+Speaker 1: Or say my network is just slowing down, and my router and my switches and everything are really having a hard time keeping up, and the network's just getting saturated.
+
+670
+00:42:32,416 --> 00:42:33,244
+Speaker 1: "Ha, I wonder what's going
+
+671
+00:42:33,366 --> 00:42:33,406
+Speaker 1: on.".
+
+672
+00:42:33,911 --> 00:42:35,021
+Speaker 1: Fire up the packet sniffer.
+
+673
+00:42:35,162 --> 00:42:35,970
+Speaker 1: Start poking around.
+
+674
+00:42:36,551 --> 00:42:39,189
+Speaker 1: "Hey, Scott's computer's sending out a lot of runts.
+
+675
+00:42:39,772 --> 00:42:40,589
+Speaker 1: I wonder what's going on.
+
+676
+00:42:40,630 --> 00:42:41,706
+Speaker 1: It looks like his network card is
+
+677
+00:42:41,747 --> 00:42:41,950
+Speaker 1: failing.".
+
+678
+00:42:42,652 --> 00:42:43,280
+Speaker 0: It could be.
+
+679
+00:42:43,503 --> 00:42:43,969
+Speaker 0: It could be.
+
+680
+00:42:44,650 --> 00:42:46,489
+Speaker 0: So, how do you do it?
+
+681
+00:42:47,230 --> 00:42:51,208
+Speaker 1: Well, download a program called Wireshark, install it, and run it.
+
+682
+00:42:51,530 --> 00:42:52,448
+Speaker 0: That's pretty much it.
+
+683
+00:42:52,610 --> 00:42:56,930
+Speaker 0: I mean, the program used to be called... There are a lot of other packet-sniffing programs out there.
+
+684
+00:42:56,930 --> 00:42:57,790
+Speaker 1: Don't bother with them.
+
+685
+00:42:57,850 --> 00:42:58,890
+Speaker 0: None of them matter.
+
+686
+00:42:59,150 --> 00:43:03,270
+Speaker 1: Well, I will say NetX-Ray is really nice, but NetX-Ray costs money.
+
+687
+00:43:03,691 --> 00:43:04,710
+Speaker 1: It's not worth the money.
+
+688
+00:43:04,950 --> 00:43:07,490
+Speaker 0: So, there used to be a program called Ethereal.
+
+689
+00:43:07,970 --> 00:43:08,930
+Speaker 1: Not Ethereal.
+
+690
+00:43:10,071 --> 00:43:10,155
+Speaker 0: Yeah.
+
+691
+00:43:10,871 --> 00:43:12,729
+Speaker 1: I had an argument with a coworker about that.
+
+692
+00:43:12,850 --> 00:43:13,510
+Speaker 0: It is pronounced Ethereal.
+
+693
+00:43:13,850 --> 00:43:15,730
+Speaker 0: If you pronounce it any other way, you're wrong.
+
+694
+00:43:16,773 --> 00:43:29,990
+Speaker 0: That program still exists, but the people who originally worked on that program, all the developers on that project, moved on to a different project, which is now called Wireshark, which is basically the new Ethereal.
+
+695
+00:43:30,171 --> 00:43:32,470
+Speaker 0: And Ethereal, basically no one's working on it.
+
+696
+00:43:32,650 --> 00:43:35,030
+Speaker 0: It's old and busted, and Wireshark is the new hotness.
+
+697
+00:43:35,472 --> 00:43:36,769
+Speaker 0: And Wireshark is free.
+
+698
+00:43:37,271 --> 00:43:38,848
+Speaker 0: You can just go and get it and use it.
+
+699
+00:43:39,230 --> 00:43:40,690
+Speaker 1: Runs on Windows, runs on Linux.
+
+700
+00:43:40,930 --> 00:43:42,350
+Speaker 0: It runs on every major OS.
+
+701
+00:43:42,530 --> 00:43:44,950
+Speaker 0: You install it, you run it, you can sniff the packets.
+
+702
+00:43:45,370 --> 00:43:46,410
+Speaker 0: That's all there is to it.
+
+703
+00:43:47,072 --> 00:43:53,010
+Speaker 0: To get usefulness out of it, you sort of have to know about IP and stuff like that, but it's not complicated.
+
+704
+00:43:53,770 --> 00:44:02,829
+Speaker 1: Well, actually, if you want to learn a lot about how networking works, one thing you can do is packet-sniff and just look at the packets and try to piece together what's going on.
+
+705
+00:44:03,150 --> 00:44:05,349
+Speaker 0: Yeah, for example, turn your computer on.
+
+706
+00:44:06,676 --> 00:44:07,530
+Speaker 0: Install Wireshark.
+
+707
+00:44:07,931 --> 00:44:09,750
+Speaker 0: Don't do anything with the network at all.
+
+708
+00:44:09,890 --> 00:44:10,530
+Speaker 0: Don't do anything.
+
+709
+00:44:11,010 --> 00:44:12,910
+Speaker 0: Open Firefox, open Wireshark.
+
+710
+00:44:13,130 --> 00:44:14,770
+Speaker 0: Set Wireshark to sniff the packets.
+
+711
+00:44:15,271 --> 00:44:20,970
+Speaker 0: Then visit one website and then tell Wireshark to stop sniffing the packets after you've finished visiting the website.
+
+712
+00:44:21,450 --> 00:44:23,909
+Speaker 0: Now look at the packets that Wireshark sniffed.
+
+713
+00:44:24,391 --> 00:44:32,823
+Speaker 0: You'll see exactly how your computer contacted the web server, asked for the web page, how the web server told you, "Hi, I'm here.
+
+714
+00:44:33,165 --> 00:44:34,150
+Speaker 0: Here's your web page.
+
+715
+00:44:34,332 --> 00:44:34,877
+Speaker 0: Are we done?
+
+716
+00:44:34,897 --> 00:44:35,523
+Speaker 0: Yes, we're done.
+
+717
+00:44:35,603 --> 00:44:35,866
+Speaker 0: Okay,
+
+718
+00:44:35,947 --> 00:44:36,169
+Speaker 0: cool.".
+
+719
+00:44:36,411 --> 00:44:46,350
+Speaker 0: You can see the web page in the packets, how the actual HTML and all the images themselves got sent to you via packets, and you can learn a lot just by looking at it.
+
+720
+00:44:46,611 --> 00:44:48,410
+Speaker 1: And it's not that hard to figure out what you're looking at.
+
+721
+00:44:48,450 --> 00:44:52,590
+Speaker 1: I mean, you're going to see the to address, an IP address, the from address, an IP address.
+
+722
+00:44:52,892 --> 00:44:54,267
+Speaker 1: It'll look up names of things for you.
+
+723
+00:44:54,571 --> 00:44:55,710
+Speaker 0: You'll see the actual HTML.
+
+724
+00:44:55,891 --> 00:44:57,930
+Speaker 0: You'll see words like HTTP GET.
+
+725
+00:44:58,851 --> 00:45:01,050
+Speaker 0: It's not like hidden secret information.
+
+726
+00:45:01,070 --> 00:45:01,978
+Speaker 0: It's ASCII text.
+
+727
+00:45:02,038 --> 00:45:03,430
+Speaker 0: You can read it with your eyeballs.
+
+728
+00:45:03,550 --> 00:45:04,010
+Speaker 0: It's English.
+
+729
+00:45:04,550 --> 00:45:06,670
+Speaker 0: Most of what you're getting sent is text in English.
+
+730
+00:45:07,110 --> 00:45:13,648
+Speaker 0: It's not like encoded into some weird... Unless it's encrypted, like you try to visit your bank's website, this isn't going to work.
+
+731
+00:45:14,150 --> 00:45:16,730
+Speaker 0: But if you visit Google, it's going to work really nicely.
+
+732
+00:45:17,953 --> 00:45:19,168
+Speaker 1: Right, so that's pretty much it.
+
+733
+00:45:19,550 --> 00:45:21,090
+Speaker 0: Yeah, I don't know what else to say.
+
+734
+00:45:21,230 --> 00:45:23,928
+Speaker 1: Well, I have a bunch of interesting things I can say about packet sniffing.
+
+735
+00:45:24,394 --> 00:45:27,230
+Speaker 1: Some of it's a little esoteric, but I think you'll all find this interesting.
+
+736
+00:45:27,730 --> 00:45:27,906
+Speaker 1: Alrighty.
+
+737
+00:45:28,090 --> 00:45:33,830
+Speaker 1: One, you might be thinking, "Alright, Rim and Scott, but I thought you said that pretty much all modern Ethernet networks are fully switched.
+
+738
+00:45:34,271 --> 00:45:35,549
+Speaker 1: So how would packet sniffing work?
+
+739
+00:45:35,690 --> 00:45:37,303
+Speaker 1: Because you're only ever going to see traffic from
+
+740
+00:45:37,323 --> 00:45:37,686
+Speaker 1: yourself.".
+
+741
+00:45:38,230 --> 00:45:44,790
+Speaker 1: Well, one, in most modern networks, a network technician, if they need to do any troubleshooting, can do something called port replication.
+
+742
+00:45:45,411 --> 00:45:53,805
+Speaker 1: And basically, you can take a port on the switch and have it mirror another port on the switch, maybe the port where the server that you're trying to troubleshoot the trouble is.
+
+743
+00:45:54,730 --> 00:46:02,468
+Speaker 1: So then, I can packet sniff the conversation between two computers while I am not on their actual switch segment and then troubleshoot from there.
+
+744
+00:46:03,476 --> 00:46:04,070
+Speaker 0: That's pretty cool.
+
+745
+00:46:04,650 --> 00:46:12,490
+Speaker 1: However, a nice little warning is that port replication actually is very resource intensive for a lot of older switches.
+
+746
+00:46:13,151 --> 00:46:22,330
+Speaker 1: And a lot of people who use it indiscriminately or leave ports forwarding in this manner all the time will actually substantially degrade the performance of their networks.
+
+747
+00:46:22,754 --> 00:46:26,409
+Speaker 1: This happens often when you have a network that is run by some guy who has a CCNA.
+
+748
+00:46:26,691 --> 00:46:31,550
+Speaker 0: It sounds to me like the kind of thing you would do only when there's trouble and then you undo it when there's no trouble.
+
+749
+00:46:31,830 --> 00:46:36,227
+Speaker 1: Two, let's say I work for, I don't know, a big company, let's say IBM.
+
+750
+00:46:36,871 --> 00:46:39,450
+Speaker 1: And let's say I got this remote site somewhere in Connecticut.
+
+751
+00:46:39,894 --> 00:46:46,429
+Speaker 1: that's got a bunch of computers at it and I got a bunch of computers here, servers and then servers on both ends and workstations on both ends.
+
+752
+00:46:46,972 --> 00:46:49,730
+Speaker 1: And I have a bunch of traffic going between these two sites.
+
+753
+00:46:50,710 --> 00:46:58,650
+Speaker 1: But I want to protect my real IBM network from this outside vendor network that I don't trust fully because it's not my company.
+
+754
+00:46:58,730 --> 00:47:00,050
+Speaker 1: I can't fully trust what's out there.
+
+755
+00:47:00,110 --> 00:47:01,750
+Speaker 1: I don't have control over the IT situation.
+
+756
+00:47:02,231 --> 00:47:04,527
+Speaker 1: So I want to build a firewall that only lets the traffic through.
+
+757
+00:47:04,567 --> 00:47:04,990
+Speaker 1: that I want.
+
+758
+00:47:05,811 --> 00:47:13,149
+Speaker 1: I could read the documentation for every single piece of software and every single client and write a gigantic set of filters that would take forever.
+
+759
+00:47:14,032 --> 00:47:27,750
+Speaker 1: Or I could sniff that link for, say, a week straight and then do some statistical analysis on that data, figure out from that all the different traffic patterns and then semi-automatically generate my firewall rules.
+
+760
+00:47:29,396 --> 00:47:29,480
+Speaker 1: Yeah.
+
+761
+00:47:30,270 --> 00:47:32,850
+Speaker 1: That saved me so much time.
+
+762
+00:47:33,310 --> 00:47:33,643
+Speaker 1: Good God.
+
+763
+00:47:34,430 --> 00:47:41,728
+Speaker 0: Yeah, because you would just look, you know, if you know that there's nothing hokey and scary going on right now, you can look and see what's going on.
+
+764
+00:47:42,471 --> 00:47:50,541
+Speaker 0: And let's say during normal, non-evil traffic patterns have people on ports 80 and 20/20 and 22 and 15 and nothing else.
+
+765
+00:47:53,590 --> 00:47:56,449
+Speaker 0: Then you could just say, "Hey, firewall, block every port except those four
+
+766
+00:47:56,489 --> 00:47:56,670
+Speaker 0: ports.".
+
+767
+00:47:57,270 --> 00:48:04,889
+Speaker 0: And then nobody is going to complain that their stuff isn't working and pretty much anything evil is going to be blocked out.
+
+768
+00:48:05,670 --> 00:48:05,787
+Speaker 1: Right.
+
+769
+00:48:05,990 --> 00:48:10,569
+Speaker 1: So let's say I'm one of the more nefarious types and I'm trying to break into a system.
+
+770
+00:48:11,250 --> 00:48:15,190
+Speaker 1: Now, say I compromise some guy's computer on a food company.
+
+771
+00:48:15,291 --> 00:48:17,830
+Speaker 1: I get some guy to download my stupid porn bot.
+
+772
+00:48:18,290 --> 00:48:18,707
+Speaker 1: Through AIM.
+
+773
+00:48:19,050 --> 00:48:21,190
+Speaker 1: Yep, through AIM and I break into his computer.
+
+774
+00:48:21,710 --> 00:48:25,530
+Speaker 1: So now I have owned this guy's box and I don't want to spam or anything.
+
+775
+00:48:25,670 --> 00:48:28,410
+Speaker 1: I want to do some uplink action and bust up this whole company's network.
+
+776
+00:48:29,050 --> 00:48:32,370
+Speaker 1: So I just start running my packet capturing program.
+
+777
+00:48:32,993 --> 00:48:33,249
+Speaker 1: All right.
+
+778
+00:48:33,632 --> 00:48:34,890
+Speaker 1: I'm not going to see all the traffic.
+
+779
+00:48:35,192 --> 00:48:39,189
+Speaker 1: I might see this guy's stuff, but this is some low-level idiot in the receiving area or the mail room.
+
+780
+00:48:39,250 --> 00:48:40,410
+Speaker 0: Yeah, I already have his computer.
+
+781
+00:48:40,590 --> 00:48:41,749
+Speaker 0: What's his password going to get me?
+
+782
+00:48:41,890 --> 00:48:42,867
+Speaker 0: The computer I've already got?
+
+783
+00:48:43,552 --> 00:48:43,870
+Speaker 0: Useless.
+
+784
+00:48:44,092 --> 00:48:45,830
+Speaker 1: I don't need to sniff his packets to get his password.
+
+785
+00:48:45,970 --> 00:48:47,169
+Speaker 1: I've already installed a keylogger.
+
+786
+00:48:47,330 --> 00:48:49,670
+Speaker 1: I know the passwords to every credit card he's ever owned.
+
+787
+00:48:50,114 --> 00:48:50,609
+Speaker 0: Ah, awesome.
+
+788
+00:48:50,910 --> 00:48:51,888
+Speaker 1: So I don't need to worry about that.
+
+789
+00:48:52,510 --> 00:48:57,470
+Speaker 1: But now I'm running my packet sniffer and I don't see the traffic a lot, but I see a lot of the ARP requests.
+
+790
+00:48:58,050 --> 00:49:02,670
+Speaker 1: I see a lot of the stuff that the Cisco routers and switches send around to figure out what's on the network.
+
+791
+00:49:03,410 --> 00:49:11,930
+Speaker 1: Over time, I can build from all of this indirect information a large database or map of a lot of the equipment that's out there on the network.
+
+792
+00:49:12,392 --> 00:49:18,090
+Speaker 1: And as a result, I can start to figure out what things out there I might be able to compromise next.
+
+793
+00:49:18,570 --> 00:49:23,809
+Speaker 0: And if you can compromise a router or a switch, you are in the business, as they say.
+
+794
+00:49:24,290 --> 00:49:28,470
+Speaker 1: Maybe I'll start seeing all the SNMP community strings because those pretty much aren't encrypted.
+
+795
+00:49:28,990 --> 00:49:38,810
+Speaker 1: And from there, I can start getting all sorts of information and you hop and hop and hop until eventually you get to a computer that's on some sort of management network and then you just own everything.
+
+796
+00:49:38,991 --> 00:49:46,330
+Speaker 0: Or you get some sort of computer that has a database full of valuable information worth millions, and then you send a note with some ransom.
+
+797
+00:49:47,254 --> 00:49:49,090
+Speaker 1: All right, now let's say I'm in a hurry.
+
+798
+00:49:49,270 --> 00:49:51,770
+Speaker 1: Let's say I don't have the time to take 20 on this roll.
+
+799
+00:49:52,211 --> 00:49:53,609
+Speaker 1: I've got to get some information quick.
+
+800
+00:49:54,312 --> 00:49:55,589
+Speaker 1: And I want to sniff the whole network.
+
+801
+00:49:55,992 --> 00:49:58,090
+Speaker 1: But I can't sniff the whole network because the network switched.
+
+802
+00:49:58,790 --> 00:50:04,770
+Speaker 1: All right, I can do things to switches to make them forget their tables of which host is where.
+
+803
+00:50:05,150 --> 00:50:14,529
+Speaker 1: Because you see, if a switch gets a packet and they know where the destination of that packet is, they just send that packet out the port where they know the PC or those PCs are.
+
+804
+00:50:15,291 --> 00:50:39,469
+Speaker 1: If a switch doesn't know where a PC is, either because that PC is not in its database or it's seen that PC in two different places in too short a span of time so it doesn't know where it is, or the database internally that it uses got so big that it started dropping entries, then it sends it out all parts because it always errs on the side of get the data where it's going as opposed to drop the data that I don't need to send.
+
+805
+00:50:40,590 --> 00:50:47,110
+Speaker 1: Say I flood a switch with a bunch of random crap to make it forget the things it actually knows.
+
+806
+00:50:47,631 --> 00:50:53,130
+Speaker 1: Now I put it in flooding mode for just about everything, and now I can sniff the network as though that switch were a hub.
+
+807
+00:50:53,914 --> 00:50:55,109
+Speaker 0: Oh, I got to learn how to do that.
+
+808
+00:50:55,351 --> 00:50:56,899
+Speaker 1: It's really trivial to do.
+
+809
+00:50:56,919 --> 00:50:58,930
+Speaker 1: I could write for you a Python script that would do it.
+
+810
+00:50:58,990 --> 00:50:59,690
+Speaker 0: Oh, that's awesome.
+
+811
+00:50:59,872 --> 00:51:00,448
+Speaker 1: It's really cool.
+
+812
+00:51:00,810 --> 00:51:03,950
+Speaker 0: Does it work on all switches, or would a fancy switch know better?
+
+813
+00:51:04,151 --> 00:51:10,189
+Speaker 1: Some switches can detect things like this, but there's not a lot they can do to prevent it.
+
+814
+00:51:10,490 --> 00:51:20,146
+Speaker 0: Well, wouldn't a switch that's super expensive and has a lot of memory and a crazy powerful CPU, even if you flooded it, it would still be able to handle it, so it wouldn't bother to--.
+
+815
+00:51:20,430 --> 00:51:23,069
+Speaker 1: All right, well, for a crappy switch, you just flood it, and then it can't remember anymore.
+
+816
+00:51:23,170 --> 00:51:24,850
+Speaker 0: Yeah, our switch would definitely forget real quick.
+
+817
+00:51:24,990 --> 00:51:31,010
+Speaker 1: But for an intelligent switch, you have to be more clever because remember, like I said, and we talked about this in the show we did about networking.
+
+818
+00:51:31,694 --> 00:51:32,470
+Speaker 1: I think we did, at least.
+
+819
+00:51:33,072 --> 00:51:37,110
+Speaker 1: A switch knows where the hosts are based on where packets come from.
+
+820
+00:51:37,550 --> 00:51:44,471
+Speaker 1: If it sees a packet from Bob come in on port 8, it knows that Bob is on port 8, and it only sends stuff for Bob to port 8.
+
+821
+00:51:44,471 --> 00:52:05,589
+Speaker 1: If I can just send stuff from a bunch of addresses that I make up so I can send packets that look like they're from Bob from the port I'm on, now the switch has seen Bob from two different ports, and it doesn't know what to do because now it thinks there might be a loop in the network or something, so by default it's gonna start flooding more and more traffic over more and more ports just to cover its ass.
+
+822
+00:52:06,470 --> 00:52:07,788
+Speaker 0: Or maybe it'll just send--.
+
+823
+00:52:07,970 --> 00:52:11,010
+Speaker 0: If something comes in for Bob, it'll send it to you and Bob.
+
+824
+00:52:11,470 --> 00:52:12,729
+Speaker 1: No, switches don't do that usually.
+
+825
+00:52:13,071 --> 00:52:14,370
+Speaker 0: Ah, 'cause that would be really tricky.
+
+826
+00:52:14,370 --> 00:52:20,790
+Speaker 0: 'cause then you could get just the one person that you know is on the switch and get them onto your port and then see their traffic.
+
+827
+00:52:21,110 --> 00:52:28,609
+Speaker 1: I mean, I guess theoretically that's possible, but that is dangerous because part of the reason switches do it the way they do it is to make sure that there aren't network loops.
+
+828
+00:52:29,533 --> 00:52:38,630
+Speaker 1: Network loops are mostly taken care of by something called the Spanning Tree Protocol, but all that junk, the details beyond what I've just said are I think well beyond the scope of this episode.
+
+829
+00:52:38,830 --> 00:52:51,921
+Speaker 0: Yes, the point is packets on the internets get sent around and they bounce around in a lot of different places, and if you have a network card connected to the right place, you can see any packet that goes by, even if it's not a packet.
+
+830
+00:52:51,941 --> 00:52:55,468
+Speaker 0: that's for you, and it's trivial to do-- It's not for you.
+
+831
+00:52:55,711 --> 00:53:03,610
+Speaker 0: It's trivial to do with freely available software, and it is useful to do this for troubleshooting as well as malicious purposes.
+
+832
+00:53:04,270 --> 00:53:06,830
+Speaker 1: Now, I've got one more interesting-- And educational purposes.
+
+833
+00:53:07,211 --> 00:53:16,269
+Speaker 1: That I might find this interesting, and after I go through all the questions, I'll decide whether or not to answer them now or see if any of you know the answers, or maybe you can come up with the answers.
+
+834
+00:53:17,051 --> 00:53:27,470
+Speaker 1: And I'll tell you that all of these questions were questions that were asked of me during my course of study at RIT, and I eventually-- So RIT is going to sue us for giving away free RIT applications by proxy?
+
+835
+00:53:27,831 --> 00:53:32,470
+Speaker 1: I effectively answered all these questions on my own, and if you can answer these questions, just think about it.
+
+836
+00:53:32,811 --> 00:53:38,690
+Speaker 1: You'll learn a lot of insight into how networks work, and it's kind of a lateral thinking logical puzzle.
+
+837
+00:53:39,370 --> 00:53:44,350
+Speaker 1: So say I set up a sniffer that doesn't do the warn the network thing or anything.
+
+838
+00:53:44,390 --> 00:53:45,970
+Speaker 1: It doesn't do anything weird.
+
+839
+00:53:46,634 --> 00:53:47,809
+Speaker 1: It just sniffs the network.
+
+840
+00:53:48,470 --> 00:53:54,809
+Speaker 1: How could Joey Jojo Shabadoo, the system administrator, detect that I am sniffing his network?
+
+841
+00:53:56,792 --> 00:53:57,949
+Speaker 1: Can you think of any answers, Scott?
+
+842
+00:53:58,070 --> 00:53:58,847
+Speaker 1: I'll just do this with you.
+
+843
+00:53:59,452 --> 00:54:00,030
+Speaker 0: I'm thinking.
+
+844
+00:54:00,451 --> 00:54:08,970
+Speaker 1: Usually we're talking about programming or Web 2.0 stuff that I don't know a lot about, and Scott's always punting me with the CS knowledge, but every now and then we delve into the IT territory.
+
+845
+00:54:09,471 --> 00:54:10,129
+Speaker 0: All right, so let's see.
+
+846
+00:54:10,310 --> 00:54:12,210
+Speaker 0: How would I know that someone's sniffing?
+
+847
+00:54:12,270 --> 00:54:16,670
+Speaker 0: Well, does the sniffing, the fact that he's doing that, impact his performance in any way?
+
+848
+00:54:16,931 --> 00:54:19,190
+Speaker 1: It does not impact the performance of the network in any way.
+
+849
+00:54:19,330 --> 00:54:20,210
+Speaker 1: I'm not flooding switches.
+
+850
+00:54:20,230 --> 00:54:22,988
+Speaker 0: What about the performance of his networking, specifically?
+
+851
+00:54:23,991 --> 00:54:25,068
+Speaker 1: Not in a way you could detect.
+
+852
+00:54:26,654 --> 00:54:30,250
+Speaker 1: I mean, computers are fast enough now to where that's not going to be an issue at all.
+
+853
+00:54:30,690 --> 00:54:34,670
+Speaker 1: You could run a packet capture 24/7 on a gigabit link with little trouble.
+
+854
+00:54:35,450 --> 00:54:35,749
+Speaker 0: All right.
+
+855
+00:54:36,050 --> 00:54:40,726
+Speaker 0: Well, what if perhaps I could create some sort of fake traffic?
+
+856
+00:54:42,471 --> 00:54:43,630
+Speaker 1: All right, now you're thinking.
+
+857
+00:54:43,790 --> 00:54:45,888
+Speaker 1: That's in fact exactly how you do it.
+
+858
+00:54:46,692 --> 00:54:58,930
+Speaker 1: What you do, if you're really worried about sniffing or you suspect that someone is sniffing your network, is that you have addresses that are sending data out, but they're not sending data to anyone in particular.
+
+859
+00:54:59,570 --> 00:55:04,790
+Speaker 1: No one who is not shady or a piece of networking equipment will ever see this data.
+
+860
+00:55:05,050 --> 00:55:13,110
+Speaker 1: And furthermore, no one is ever going to ARP for or do a DNS lookup for any of these IP addresses.
+
+861
+00:55:13,910 --> 00:55:23,570
+Speaker 1: So if you see someone who suddenly starts looking up the IP addresses and names of those special things, that can set off all sorts of warning bells that someone is sniffing the network.
+
+862
+00:55:24,151 --> 00:55:24,889
+Speaker 0: Oh, maliciously.
+
+863
+00:55:25,070 --> 00:55:29,809
+Speaker 0: I mean, if they sniffed and never did anything about it, they just sat there sniffing, you wouldn't see them.
+
+864
+00:55:30,190 --> 00:55:40,430
+Speaker 0: But if they actually, they would see this fake traffic going around to like IP address something something 100, and then they would start to investigate machine number 100, which is just a fake machine.
+
+865
+00:55:40,530 --> 00:55:41,970
+Speaker 0: It might not even be an actual machine.
+
+866
+00:55:42,312 --> 00:55:44,490
+Speaker 0: It might just be a piece of software pretending to be a machine.
+
+867
+00:55:44,670 --> 00:55:52,222
+Speaker 1: Not only that, but a lot of people sniffing, if they're not careful, their PC, because it sees this information coming in, or the sniffing software they're using.
+
+868
+00:55:52,262 --> 00:55:58,230
+Speaker 1: if they set the options wrong, will just DNS lookup all the things it sees to get more information about the network.
+
+869
+00:55:58,832 --> 00:56:05,430
+Speaker 1: And as a result, suddenly, Joey Joe's computer is hitting the DNS server for a million different IP addresses.
+
+870
+00:56:05,550 --> 00:56:26,990
+Speaker 0: And your DNS server is smart enough to say, you know, you program it in such a way to say, "Hey, if anyone is looking for the names of these IP addresses or the IP addresses of these names, or if anyone tries to do any of this stuff, if anyone tries to connect to this machine, which isn't a real machine, send me an email that tells me that and tells me who it is.
+
+871
+00:56:27,090 --> 00:56:28,144
+Speaker 0: That way I can go and arrest
+
+872
+00:56:28,185 --> 00:56:28,326
+Speaker 0: them.".
+
+873
+00:56:29,612 --> 00:56:30,649
+Speaker 1: And that's pretty much it.
+
+874
+00:56:30,750 --> 00:56:35,610
+Speaker 1: Everything beyond that is, I think, really too technical for the scope of this particular show, like I've already said.
+
+875
+00:56:36,070 --> 00:56:40,250
+Speaker 0: So, don't go packet sniffing on networks where you're not in charge.
+
+876
+00:56:40,590 --> 00:56:52,630
+Speaker 1: Yeah, if you work at a company, even though you're not likely to get anything useful out of it, you probably shouldn't packet sniff without the express permission of the IT people, or you're probably going to get in trouble.
+
+877
+00:56:53,031 --> 00:56:55,730
+Speaker 0: If you're caught, which is, I don't know how likely it is, depending.
+
+878
+00:56:55,990 --> 00:56:58,290
+Speaker 0: I mean, working in a small office, probably not.
+
+879
+00:56:58,671 --> 00:57:00,930
+Speaker 0: However-- But it's not a good idea.
+
+880
+00:57:01,210 --> 00:57:12,030
+Speaker 1: One thing you can do to avoid 99% of the possible detection, you can sniff in non-promiscuous mode, and then you will, in fact, only see the traffic that is going to you and from you.
+
+881
+00:57:12,372 --> 00:57:12,983
+Speaker 0: That is true.
+
+882
+00:57:13,003 --> 00:57:13,350
+Speaker 1: You can't do that.
+
+883
+00:57:13,350 --> 00:57:17,348
+Speaker 1: And all the broadcast traffic and a lot of the bibby-doos and things, depending on how the switches are set up.
+
+884
+00:57:18,260 --> 00:57:19,434
+Speaker 1: But anyway-- I just like saying
+
+885
+00:57:19,495 --> 00:57:19,858
+Speaker 1: "bibby-do."
+
+886
+00:57:19,898 --> 00:57:21,350
+Speaker 1: I've been wanting to say it the whole time.
+
+887
+00:57:21,511 --> 00:57:24,990
+Speaker 0: On your home network-- Bridge Protocol Data Unit or something like that.
+
+888
+00:57:25,090 --> 00:57:31,270
+Speaker 0: On your home network, where there's no chance of you doing anything bad or that could get you in trouble, download Wireshark.
+
+889
+00:57:31,390 --> 00:57:33,210
+Speaker 0: You should probably link to it in the notes there.
+
+890
+00:57:33,271 --> 00:57:33,809
+Speaker 0: I think I will.
+
+891
+00:57:34,111 --> 00:57:36,029
+Speaker 0: And download it and try to run it.
+
+892
+00:57:36,713 --> 00:57:39,550
+Speaker 0: This documentation, if you can't figure out how to use it, it's pretty easy.
+
+893
+00:57:40,450 --> 00:57:44,790
+Speaker 0: And look at packets on the internets and learn things by looking at them.
+
+894
+00:57:44,890 --> 00:57:45,830
+Speaker 0: They're not complicated.
+
+895
+00:57:52,620 --> 00:57:54,660
+Speaker 1: This has been Geek Nights with Rim and Scott.
+
+896
+00:57:54,920 --> 00:57:57,300
+Speaker 1: Special thanks to DJ Pretzel for the opening music.
+
+897
+00:57:58,040 --> 00:58:09,220
+Speaker 0: Be sure to visit our website at www.frontroadcrew.com, where you'll find show notes, links, our awesome forum, a link to our Frapper map, and links to all the RSS feeds.
+
+898
+00:58:09,823 --> 00:58:15,439
+Speaker 1: We say feeds plural because Geek Nights airs four nights a week, covering four different brands of geekery.
+
+899
+00:58:16,040 --> 00:58:17,539
+Speaker 1: Mondays are science and technology.
+
+900
+00:58:17,720 --> 00:58:20,120
+Speaker 1: Tuesdays we have video games, board games, and RPGs.
+
+901
+00:58:20,700 --> 00:58:22,760
+Speaker 1: Wednesdays are anime, manga, comic nights.
+
+902
+00:58:23,060 --> 00:58:26,100
+Speaker 1: And Thursdays are the catch-alls for various rants and tomfoolery.
+
+903
+00:58:26,640 --> 00:58:31,619
+Speaker 0: You can send us feedback by email to geeknights@frontroadcrew.com.
+
+904
+00:58:32,301 --> 00:58:34,599
+Speaker 0: Or you can send audio feedback via Odeo.
+
+905
+00:58:35,000 --> 00:58:38,160
+Speaker 0: Just click the link that says "send me an Odeo" on the right side of our website.
+
+906
+00:58:38,562 --> 00:58:43,619
+Speaker 1: If you like what you hear, you can catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+907
+00:58:43,940 --> 00:58:47,000
+Speaker 1: For the complete archives, visit the website, which has everything.
+
+908
+00:58:47,800 --> 00:58:52,553
+Speaker 0: Geek Nights is distributed under a Creative Commons attribution non-commercial share-alike 2.5 license.
+
+909
+00:58:54,140 --> 00:59:00,160
+Speaker 0: This means you can do whatever you want with it, as long as you give us credit, don't make money, and share it in kind.
+
+910
+00:59:01,020 --> 00:59:04,460
+Speaker 0: Geek Nights is recorded live with no studio and no audience.
+
+911
+00:59:04,902 --> 00:59:08,000
+Speaker 0: But unlike those other late shows, it's actually recorded at night.
+

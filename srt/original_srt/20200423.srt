@@ -1,0 +1,3504 @@
+﻿1
+00:00:08,860 --> 00:00:12,130
+Speaker 0: It's Thursday April 23rd 2020.
+
+2
+00:00:12,130 --> 00:00:12,912
+Speaker 0: I'm rim.
+
+3
+00:00:13,534 --> 00:00:15,379
+Speaker 0: I'm Scott and this is geek nights.
+
+4
+00:00:15,419 --> 00:00:26,660
+Speaker 0: tonight We are going to revive an ancient ancient geek nights tradition a series titled how to not suck tonight how to not suck at baking.
+
+5
+00:00:27,583 --> 00:00:28,596
+Speaker 1: Let's do this.
+
+6
+00:00:30,364 --> 00:00:32,520
+Speaker 0: So yeah, we're just plugging along doing the show from home.
+
+7
+00:00:32,640 --> 00:00:37,277
+Speaker 0: Hopefully the stream on YouTube is looking good because we're still using a new pipeline that I'm tweaking.
+
+8
+00:00:37,738 --> 00:00:40,972
+Speaker 0: on Monday We'll talk about that pipeline and explain what we're doing it a little more depth.
+
+9
+00:00:41,253 --> 00:00:42,660
+Speaker 0: because I got some fancy.
+
+10
+00:00:43,101 --> 00:00:43,883
+Speaker 0: Well, not fancy.
+
+11
+00:00:43,903 --> 00:00:49,600
+Speaker 0: I actually got the lowest tier most bootleg possible hardware that I'm gonna try out this weekend.
+
+12
+00:00:50,342 --> 00:00:51,651
+Speaker 1: Oh, yeah, you gotta let me know how that works.
+
+13
+00:00:51,752 --> 00:00:52,759
+Speaker 1: And if it's good, I'll buy one.
+
+14
+00:00:53,302 --> 00:00:55,891
+Speaker 0: Yeah, because I bought the cheap one like the one that you sent me.
+
+15
+00:00:55,932 --> 00:00:58,140
+Speaker 0: I bought on Amazon instead of from Alibaba.
+
+16
+00:00:59,083 --> 00:01:01,401
+Speaker 0: So I paid like an extra $40.
+
+17
+00:01:01,401 --> 00:01:03,793
+Speaker 0: All right, whatever just but it arrived.
+
+18
+00:01:04,355 --> 00:01:04,919
+Speaker 0: it powered up.
+
+19
+00:01:05,441 --> 00:01:10,020
+Speaker 0: I bought some wasabi batteries instead of the even more dubious bootleg batteries that I saw.
+
+20
+00:01:10,040 --> 00:01:10,522
+Speaker 0: that's what I.
+
+21
+00:01:10,542 --> 00:01:31,859
+Speaker 1: that's also what I was gonna do cuz I that it seems like a lot of the I guess we're getting off topic here, but a lot of the various not super Pro AV equipment that you can buy like lights and Recorders and encoders and these little you know, the cheapo versions of these sorts of things for video at home.
+
+22
+00:01:32,643 --> 00:01:35,598
+Speaker 1: I'll take these particular model of Sony battery.
+
+23
+00:01:35,618 --> 00:01:36,803
+Speaker 0: Yep I have.
+
+24
+00:01:37,265 --> 00:01:41,200
+Speaker 0: I have three of the actual Sony battery and I have a pile of wasabi ones, right?
+
+25
+00:01:41,360 --> 00:01:43,667
+Speaker 1: And it's like a battery that Sony camcorders use.
+
+26
+00:01:43,788 --> 00:01:47,500
+Speaker 1: so they're basically like hey most people are using these Sony camcorders.
+
+27
+00:01:47,641 --> 00:01:48,765
+Speaker 1: They have these batteries.
+
+28
+00:01:48,866 --> 00:01:53,786
+Speaker 1: Let's make our stuff use the same battery and it must be a battery That's easy to interface with or something.
+
+29
+00:01:54,047 --> 00:01:58,100
+Speaker 0: Yeah, but as a result the two little prong holes and like the top, right?
+
+30
+00:01:58,200 --> 00:02:05,660
+Speaker 1: So it's like I got Panasonic shit and now I have to like, you know If I want a battery power any of this other stuff, I have to go out and buy Sony battery.
+
+31
+00:02:05,680 --> 00:02:08,241
+Speaker 1: Yeah, so even better for devices I don't have.
+
+32
+00:02:08,383 --> 00:02:14,540
+Speaker 0: all my cameras are Panasonic, but every other device I have including my LED panels are Sony battery compatible.
+
+33
+00:02:15,541 --> 00:02:22,160
+Speaker 0: Well, so I just have two piles of batteries and thankfully the two batteries for my camcorder were free because of the camera replacement.
+
+34
+00:02:22,723 --> 00:02:22,944
+Speaker 1: Yep.
+
+35
+00:02:22,984 --> 00:02:23,145
+Speaker 1: Yep.
+
+36
+00:02:23,185 --> 00:02:23,386
+Speaker 1: Yep.
+
+37
+00:02:23,788 --> 00:02:25,256
+Speaker 0: But yeah so far I've streamed.
+
+38
+00:02:25,617 --> 00:02:38,178
+Speaker 0: you've streamed 5.7 gigabytes of data to me and I have streamed another 5.6 gigabytes of data to myself and then I've streamed 14 gigabytes of that to myself again And then I've streamed it to YouTube from there.
+
+39
+00:02:39,002 --> 00:02:43,200
+Speaker 1: Yeah, but to YouTube we're sending way less because youtubers under six megabits per second.
+
+40
+00:02:43,701 --> 00:02:46,450
+Speaker 1: Yeah, your your your encoder is chopping that down.
+
+41
+00:02:46,591 --> 00:02:57,460
+Speaker 0: Yep, and I'm using 61% of my Total horsepower on this machine to make this one using 12% I mean, I'm running to OBS and 12 and an nginx RTMP server.
+
+42
+00:02:58,411 --> 00:02:58,640
+Speaker 1: Okay.
+
+43
+00:02:59,683 --> 00:03:00,974
+Speaker 0: So yeah, there is some news.
+
+44
+00:03:01,256 --> 00:03:03,506
+Speaker 0: So Pax penny arcade Expo.
+
+45
+00:03:03,587 --> 00:03:07,400
+Speaker 0: as you know, we are not attending any conventions nor are we performing at any conventions?
+
+46
+00:03:07,520 --> 00:03:09,407
+Speaker 1: Obviously until we're not gonna.
+
+47
+00:03:09,467 --> 00:03:13,080
+Speaker 1: right we might be but we're not gonna say we are until we are 100%.
+
+48
+00:03:13,080 --> 00:03:14,466
+Speaker 1: No, we are but I can't.
+
+49
+00:03:14,988 --> 00:03:24,267
+Speaker 0: I can't say with certainty Pax West is the first Possible convention we would appear at as in the best case Scenario in the world is.
+
+50
+00:03:24,307 --> 00:03:29,744
+Speaker 1: we attend and perform at Pax West like right if you go to Pax West Thinking we're gonna be there.
+
+51
+00:03:29,864 --> 00:03:30,727
+Speaker 1: We might not be there.
+
+52
+00:03:30,807 --> 00:03:34,017
+Speaker 0: Yeah, like it happened kinetic on I'm not like.
+
+53
+00:03:34,097 --> 00:03:41,540
+Speaker 0: they've said they're still gonna happen But as we know conventions can't really say they're not gonna happen until they're forced to say they're not gonna happen in most right.
+
+54
+00:03:41,620 --> 00:03:50,040
+Speaker 1: So so penny arcade announced that Pax West as of right now They want it to happen and they haven't canceled it yet and they're planning for it to happen.
+
+55
+00:03:50,220 --> 00:03:58,126
+Speaker 1: Yeah, you shouldn't buy badges until you shouldn't buy tickets until I mean airplane tickets hotel rooms until Badges.
+
+56
+00:03:58,166 --> 00:03:59,880
+Speaker 0: go on saying this is not like a normal year.
+
+57
+00:03:59,980 --> 00:04:05,603
+Speaker 0: We're like I booked my flights for packs before they even start selling badges because I know I'm going Right.
+
+58
+00:04:05,623 --> 00:04:21,358
+Speaker 1: So this is because they posted an announcement that they're not canceled and I said, hey, yeah guys Conventions can't really announce that they're canceled because for example they might have a contract with the Convention Center now and that contract says you have to pay us to rent our building for these few days.
+
+59
+00:04:21,860 --> 00:04:23,307
+Speaker 1: and If they just say you know what?
+
+60
+00:04:23,427 --> 00:04:25,799
+Speaker 1: Nah, I don't wanna then the Convention Center could be like.
+
+61
+00:04:25,819 --> 00:04:27,706
+Speaker 1: well We don't care if you have your convention or not.
+
+62
+00:04:27,746 --> 00:04:28,789
+Speaker 1: You got to pay right.
+
+63
+00:04:28,910 --> 00:04:34,939
+Speaker 1: capitalism doesn't care about your human factors and care I like when you cancel a plane ticket, it's not refundable, right?
+
+64
+00:04:35,620 --> 00:04:41,376
+Speaker 1: So but if an act of God were to happen like say a pandemic forcing them to cancel or
+
+65
+00:04:41,396 --> 00:04:42,740
+Speaker 0: smissure in some cases
+
+66
+00:04:43,444 --> 00:04:53,300
+Speaker 1: Right, so let's say the governor of Washington State says yeah No large gatherings more than a hundred people and that over and that time period includes PAX West PAX West as well.
+
+67
+00:04:54,164 --> 00:04:55,069
+Speaker 1: We didn't want to cancel.
+
+68
+00:04:55,110 --> 00:05:00,360
+Speaker 1: We just we just had to yep It's not we want to put the kids now they don't have to pay the convention center, right?
+
+69
+00:05:00,620 --> 00:05:10,094
+Speaker 1: So that's why these events even though they might want to cancel right now They can't until they can you know, and there also might be other things.
+
+70
+00:05:10,175 --> 00:05:11,640
+Speaker 1: who knows what their agreements are?
+
+71
+00:05:11,700 --> 00:05:13,333
+Speaker 1: They might have insurance that pays out.
+
+72
+00:05:13,374 --> 00:05:13,716
+Speaker 1: Who knows?
+
+73
+00:05:13,817 --> 00:05:21,318
+Speaker 1: Yep So as a result, you know penny arcade, I guess says Ryan Hartman replied to me right from penny arcade.
+
+74
+00:05:21,358 --> 00:05:21,920
+Speaker 1: So it's public.
+
+75
+00:05:21,960 --> 00:05:22,683
+Speaker 1: It's out there on reddit.
+
+76
+00:05:22,703 --> 00:05:23,566
+Speaker 1: You can see the comment.
+
+77
+00:05:23,646 --> 00:05:24,749
+Speaker 1: So it's not a secret.
+
+78
+00:05:25,071 --> 00:05:32,660
+Speaker 1: Yeah, very carefully words, obviously He said we he says we were not forced to make an announcement because of some insurance clause.
+
+79
+00:05:32,801 --> 00:05:42,873
+Speaker 1: it's like okay, you weren't forced to make an announcement, but You didn't you know deny the fact that yeah, if you just cancel of your own volition, you could be both I would suspect.
+
+80
+00:05:42,954 --> 00:05:43,638
+Speaker 0: and I do not know.
+
+81
+00:05:43,699 --> 00:05:53,055
+Speaker 0: again We have no knowledge about the internal workings of this, but I know at other non pax conventions It's not that we've had anyone has had to say anything.
+
+82
+00:05:53,176 --> 00:05:57,128
+Speaker 0: It's more that Not saying anything is also an option.
+
+83
+00:05:57,168 --> 00:06:00,920
+Speaker 0: You just can't say certain specific things yet, but I also not.
+
+84
+00:06:01,863 --> 00:06:13,076
+Speaker 1: Not saying anything also leads to lots of you know, while saying something can always get you a bad reaction Not saying anything can also get a bad reaction like hey, how come we haven't heard from X?
+
+85
+00:06:13,217 --> 00:06:15,228
+Speaker 1: right but nothing You don't say anything.
+
+86
+00:06:15,369 --> 00:06:15,671
+Speaker 1: I'm not.
+
+87
+00:06:15,691 --> 00:06:16,195
+Speaker 1: why have it?
+
+88
+00:06:16,961 --> 00:06:24,300
+Speaker 0: I'm not a lawyer but not saying anything can get you in trouble with humans But it will often not get you in trouble with lawyers, right?
+
+89
+00:06:24,380 --> 00:06:29,115
+Speaker 1: I'm just saying like, you know PR wise right if you don't say anything at all Someone might be like, how can we have it canceled yet?
+
+90
+00:06:29,155 --> 00:06:29,720
+Speaker 1: You got it, right?
+
+91
+00:06:29,920 --> 00:06:31,917
+Speaker 0: But if you're like I saw that what's all that happened?
+
+92
+00:06:31,937 --> 00:06:32,240
+Speaker 0: whistle.
+
+93
+00:06:32,501 --> 00:06:34,413
+Speaker 0: We just got to get out of these contracts like.
+
+94
+00:06:34,453 --> 00:06:36,522
+Speaker 0: that's gonna get you in trouble Right.
+
+95
+00:06:36,583 --> 00:06:39,076
+Speaker 1: I saw like that happened with the bike club in New York City, right?
+
+96
+00:06:39,096 --> 00:06:39,760
+Speaker 1: They didn't cancel.
+
+97
+00:06:39,901 --> 00:06:42,359
+Speaker 1: They're like, yeah, we still want to ride, you know, they didn't say anything.
+
+98
+00:06:42,480 --> 00:06:44,914
+Speaker 1: Yeah, and people were like, how come you haven't canceled all the rides yet?
+
+99
+00:06:44,954 --> 00:06:45,477
+Speaker 1: They're like fine.
+
+100
+00:06:45,517 --> 00:06:49,916
+Speaker 1: We canceled Yeah, right, but you know some people who were like, yeah, we don't.
+
+101
+00:06:49,957 --> 00:06:50,800
+Speaker 1: they said something.
+
+102
+00:06:50,840 --> 00:06:56,700
+Speaker 1: They said we're not sure if we want to cancel yet, then people come out, you know for and against right?
+
+103
+00:06:56,940 --> 00:06:58,040
+Speaker 1: Yeah and start yapping.
+
+104
+00:06:58,241 --> 00:07:00,328
+Speaker 0: So but Ryan gave a really really can't.
+
+105
+00:07:00,368 --> 00:07:03,984
+Speaker 0: you can't win response here because basically what it sounds like from and you can read the Like.
+
+106
+00:07:04,004 --> 00:07:13,579
+Speaker 0: don't think I'm gonna put words in Ryan's mouth But they're basically saying look we want to do packs if we can like we're hopeful But at the same time like don't buy your plane tickets yet guys.
+
+107
+00:07:14,123 --> 00:07:18,405
+Speaker 1: Seriously, and if you do Get refundable plane tickets.
+
+108
+00:07:18,465 --> 00:07:20,311
+Speaker 1: I heard from I don't know if this is true.
+
+109
+00:07:20,431 --> 00:07:26,215
+Speaker 1: I heard that Alaska Airlines which goes to Seattle Yeah is having refundable tickets for like the rest of the year.
+
+110
+00:07:26,235 --> 00:07:28,545
+Speaker 1: So Yeah, they go.
+
+111
+00:07:28,605 --> 00:07:30,175
+Speaker 1: So I go and that's true.
+
+112
+00:07:30,195 --> 00:07:30,638
+Speaker 1: It's inside.
+
+113
+00:07:31,325 --> 00:07:32,320
+Speaker 1: Don't trust that.
+
+114
+00:07:32,360 --> 00:07:32,781
+Speaker 1: I said it.
+
+115
+00:07:32,822 --> 00:07:46,600
+Speaker 0: verify it before you buy because I had made plans with Emily to travel to Japan like way before any of this Was even like before any of this happened And then we canceled to avoid flying through China and booked somewhere else and then had to cancel those.
+
+116
+00:07:46,961 --> 00:07:54,442
+Speaker 0: I ended up having like 10 grand worth of plane tickets that I couldn't use waiting for refunds for a significant amount of time Right.
+
+117
+00:07:54,462 --> 00:08:01,789
+Speaker 1: That's the thing is even if you can get your refund make sure you can afford to have your money tied up Because air China was very wealthy.
+
+118
+00:08:01,829 --> 00:08:03,697
+Speaker 1: You shouldn't be sending him any money on patreon.
+
+119
+00:08:03,717 --> 00:08:04,300
+Speaker 1: Look at all the money.
+
+120
+00:08:04,340 --> 00:08:05,967
+Speaker 0: Yeah air China was really good.
+
+121
+00:08:06,007 --> 00:08:07,554
+Speaker 0: They were like, yes, we'll give you a refund.
+
+122
+00:08:07,615 --> 00:08:08,780
+Speaker 0: the world's fucked right now.
+
+123
+00:08:08,880 --> 00:08:09,683
+Speaker 0: Jesus like I like.
+
+124
+00:08:09,843 --> 00:08:15,220
+Speaker 0: air China was great, but the refund could be given to me within six to eight weeks.
+
+125
+00:08:15,541 --> 00:08:32,472
+Speaker 0: So I was lucky that I had enough like space on my credit card to just hold on to that until they gave me my money back, but jail actually wouldn't let me cancel until like Shockingly close to like the dude the deadline for flying They did eventually let my cancer.
+
+126
+00:08:32,493 --> 00:08:37,880
+Speaker 0: basically every week They extended how far out they'd let you cancel for a refund by one week.
+
+127
+00:08:37,940 --> 00:08:44,120
+Speaker 0: So every week they pushed it one more week one more week one more week and eventually after like four weeks I could cancel.
+
+128
+00:08:45,160 --> 00:08:45,983
+Speaker 1: No, whatever.
+
+129
+00:08:46,063 --> 00:08:55,106
+Speaker 0: Yep, but if any of you out there are in a situation where like you have non refundable things and you got screwed by all this Charge back at the credit card.
+
+130
+00:08:55,186 --> 00:08:57,473
+Speaker 0: That is the secret hack of the world.
+
+131
+00:08:57,975 --> 00:08:58,777
+Speaker 0: use it together.
+
+132
+00:08:59,018 --> 00:08:59,660
+Speaker 0: use it in peace.
+
+133
+00:08:59,901 --> 00:09:01,447
+Speaker 0: Do not use it on small-time artists.
+
+134
+00:09:02,029 --> 00:09:04,960
+Speaker 1: You just have to be aware of the consequences of doing that.
+
+135
+00:09:05,221 --> 00:09:07,010
+Speaker 0: Yes, if you charge that I do it.
+
+136
+00:09:07,071 --> 00:09:08,880
+Speaker 1: what if you do it when you shouldn't have done it?
+
+137
+00:09:08,920 --> 00:09:09,844
+Speaker 1: Then you could be in trouble.
+
+138
+00:09:10,205 --> 00:09:13,720
+Speaker 1: You also might for example say you sign up for like an online service.
+
+139
+00:09:13,901 --> 00:09:14,804
+Speaker 1: Yeah, they scam you.
+
+140
+00:09:15,165 --> 00:09:18,014
+Speaker 1: so or you you right so you charge back.
+
+141
+00:09:18,436 --> 00:09:19,760
+Speaker 1: Well now they banned you forever.
+
+142
+00:09:19,881 --> 00:09:21,027
+Speaker 1: It's like you have to be willing to.
+
+143
+00:09:21,610 --> 00:09:29,500
+Speaker 0: yeah, you're burning bridges when you charge back But charging back right now when this is an emergency can often be the way to protect yourself.
+
+144
+00:09:29,580 --> 00:09:31,728
+Speaker 1: There are also sometimes fees for charging back.
+
+145
+00:09:32,130 --> 00:09:33,053
+Speaker 1: Yeah, if it's not fraud.
+
+146
+00:09:33,635 --> 00:09:34,598
+Speaker 0: Yeah, it depends.
+
+147
+00:09:35,020 --> 00:09:40,120
+Speaker 0: There's a lot of situations but Google charging back if you are desperate because of a situation like that.
+
+148
+00:09:40,180 --> 00:09:47,959
+Speaker 0: I'm sure there's someone out there listening who is like holding on to some plane tickets or an Airbnb Reservation or something that they got screwed over on.
+
+149
+00:09:49,125 --> 00:09:50,219
+Speaker 1: All right, you got any other news?
+
+150
+00:09:50,366 --> 00:10:03,615
+Speaker 0: Yeah So if you didn't notice we haven't talked about it at all because we generally try to avoid talking about Movies that are not that don't have a date Because movies can get done like post-production is done.
+
+151
+00:10:03,896 --> 00:10:05,020
+Speaker 0: The film is ready.
+
+152
+00:10:05,401 --> 00:10:08,696
+Speaker 0: It's about to be mailed to movie theaters and then the film disappears forever.
+
+153
+00:10:08,756 --> 00:10:09,720
+Speaker 0: No one sees it like that.
+
+154
+00:10:10,041 --> 00:10:14,640
+Speaker 1: Look how many look how many stories there have been about live-action Akira live-action evangelical.
+
+155
+00:10:15,851 --> 00:10:22,722
+Speaker 1: As long as I can remember probably the entire millennium there have been ongoing stories about those two things and those two things have never Happened.
+
+156
+00:10:22,782 --> 00:10:23,646
+Speaker 1: it probably never will have.
+
+157
+00:10:23,687 --> 00:10:27,490
+Speaker 0: yep, but there is a dune Movie coming.
+
+158
+00:10:27,974 --> 00:10:30,128
+Speaker 1: It's Another one another one.
+
+159
+00:10:30,289 --> 00:10:34,669
+Speaker 0: Yeah, the problem is the dune movies I wanted to see are the ones that didn't come out.
+
+160
+00:10:35,271 --> 00:10:36,898
+Speaker 1: the judge draw ski whatever, right?
+
+161
+00:10:37,700 --> 00:10:44,653
+Speaker 1: So if people don't know or you've probably if you you know, we did do it as a book club book You should go read at least the first dune book and then be done with it.
+
+162
+00:10:44,813 --> 00:10:48,933
+Speaker 1: Yeah, don't read any other dune books Just read about other dune books spoilers.
+
+163
+00:10:49,496 --> 00:10:50,160
+Speaker 1: Yeah anyway.
+
+164
+00:10:51,141 --> 00:10:55,840
+Speaker 1: So yeah, the there was the dune movie that actually came out which is something to see.
+
+165
+00:10:55,920 --> 00:10:58,732
+Speaker 0: Yeah, I would not say it's terrible, but it is not great.
+
+166
+00:10:59,374 --> 00:11:07,133
+Speaker 1: No, but I mean it's it's just Movies, it's notable No worthy to go at the Prince of nothing.
+
+167
+00:11:07,153 --> 00:11:09,255
+Speaker 0: I Remember it.
+
+168
+00:11:10,301 --> 00:11:12,011
+Speaker 1: No, you know fear is the mind killer.
+
+169
+00:11:12,031 --> 00:11:13,680
+Speaker 1: you got to know you got to know your nerdy shit, right?
+
+170
+00:11:14,861 --> 00:11:20,599
+Speaker 1: And then there were these other dune movies that didn't actually get finished much like the Akira and Evangelion.
+
+171
+00:11:20,639 --> 00:11:24,975
+Speaker 1: live-action Dude is what it is possible to approach right?
+
+172
+00:11:24,996 --> 00:11:26,140
+Speaker 1: There's a documentary right?
+
+173
+00:11:26,280 --> 00:11:26,521
+Speaker 1: It's judge.
+
+174
+00:11:26,581 --> 00:11:34,369
+Speaker 1: Oskie's dune is like there's a documentary of the movie about movies that didn't get made Right and how great that they were gonna be.
+
+175
+00:11:34,530 --> 00:11:36,017
+Speaker 1: who knows that they're actually gonna be great?
+
+176
+00:11:36,077 --> 00:11:38,419
+Speaker 1: the doc, you know It could just be showing them in a great light.
+
+177
+00:11:39,503 --> 00:11:44,439
+Speaker 0: I think it definitely would have been memorable even if it wasn't great like the one that did come out.
+
+178
+00:11:44,479 --> 00:11:46,824
+Speaker 0: Yeah But the new one.
+
+179
+00:11:46,844 --> 00:11:49,172
+Speaker 0: that's coming from what I have read.
+
+180
+00:11:49,252 --> 00:11:54,548
+Speaker 0: cuz I follow that maudib style Twitter account Which is like maudib maudib maudu.
+
+181
+00:11:54,588 --> 00:11:55,110
+Speaker 0: Yeah, it's.
+
+182
+00:11:56,885 --> 00:11:57,713
+Speaker 0: It is an A+.
+
+183
+00:11:58,580 --> 00:12:05,999
+Speaker 1: Basically, this account has spent like maudib sounds like a snack that like kids are dipping dip dabs Yeah, something like that.
+
+184
+00:12:06,361 --> 00:12:16,460
+Speaker 0: but that Twitter account mostly existed just a shitpost dune memes that really Did not make sense to most people who are not so the bed and the best kind of dune exactly.
+
+185
+00:12:17,042 --> 00:12:19,370
+Speaker 0: but that accounts been talking a lot about the movie and I've been.
+
+186
+00:12:19,410 --> 00:12:19,631
+Speaker 0: actually.
+
+187
+00:12:19,651 --> 00:12:24,940
+Speaker 0: I actually started reading about like who they cast and I looked at some of the stills from the principal photography.
+
+188
+00:12:25,901 --> 00:12:33,332
+Speaker 0: I'm not saying it's gonna be good, but it has a chance of being good and I'm pretty confident It's actually gonna come out.
+
+189
+00:12:34,240 --> 00:12:37,168
+Speaker 0: Oh Like it looks like it's gonna come out.
+
+190
+00:12:37,650 --> 00:12:39,840
+Speaker 1: I mean that second Blade Runner movie came out, right?
+
+191
+00:12:40,240 --> 00:12:52,154
+Speaker 0: Yeah, and that Blade Runner movie, uh, if you have not seen the second Blade Runner movie You should go see it because it is actually fantastic Like I say this being in loving the original Blade Runner.
+
+192
+00:12:52,174 --> 00:12:53,780
+Speaker 0: It is a worthy sequel.
+
+193
+00:12:54,562 --> 00:12:55,265
+Speaker 1: Yeah, ain't bad.
+
+194
+00:12:55,566 --> 00:12:59,780
+Speaker 0: Like it is it is equally good but different good for different reasons.
+
+195
+00:13:00,344 --> 00:13:06,180
+Speaker 1: You know, not that Ghostbusters came out right new Right, so the duo they're actually successfully releasing these things.
+
+196
+00:13:06,521 --> 00:13:15,771
+Speaker 0: but I have over the last few weeks moved from being aware that there is a dune movie coming to being Cautiously optimistic about liking the dune.
+
+197
+00:13:15,791 --> 00:13:16,613
+Speaker 1: That's a dangerous.
+
+198
+00:13:16,633 --> 00:13:17,356
+Speaker 1: That's dangerous place.
+
+199
+00:13:17,396 --> 00:13:18,319
+Speaker 0: I know it's dangerous.
+
+200
+00:13:18,359 --> 00:13:20,485
+Speaker 1: That's why I am not going to that.
+
+201
+00:13:20,805 --> 00:13:30,553
+Speaker 0: I'm not going there with you fast forward going alone gig nights gig nights on April 23rd 2030 when Scott's like hey, weren't you excited about that dune movie?
+
+202
+00:13:30,573 --> 00:13:31,455
+Speaker 0: that never came out.
+
+203
+00:13:31,496 --> 00:13:39,759
+Speaker 1: and I'll be like, yeah I'll be like, oh I'm gonna go see live-action Akira tomorrow Got my tickets already.
+
+204
+00:13:41,482 --> 00:13:44,679
+Speaker 0: And a brief little news not a meta moment because it's not technically gig nights.
+
+205
+00:13:45,001 --> 00:13:49,220
+Speaker 0: But Emily and I watched Dumbo again the other night recorded and we're gonna record a podcast.
+
+206
+00:13:49,360 --> 00:13:51,447
+Speaker 1: Did you watch original racist Dumbo?
+
+207
+00:13:51,848 --> 00:13:54,095
+Speaker 0: We watched the Disney Plus version.
+
+208
+00:13:54,797 --> 00:13:55,900
+Speaker 1: has it been d-racist?
+
+209
+00:13:56,521 --> 00:13:57,845
+Speaker 0: So it has the crew we'll talk about.
+
+210
+00:13:57,865 --> 00:14:07,798
+Speaker 0: so we're gonna do a podcast and talk about that because there are two Things in that movie that need to be discussed that are related to racism and it is not only two.
+
+211
+00:14:08,441 --> 00:14:10,619
+Speaker 0: There are two specific things.
+
+212
+00:14:11,442 --> 00:14:17,382
+Speaker 0: Okay, I think there's a lot more than but there are two that are very specific and relevant to this discourse that we are going To discuss.
+
+213
+00:14:17,803 --> 00:14:20,693
+Speaker 1: but I'm like a Dumbo, you know Dumbo terms of.
+
+214
+00:14:21,596 --> 00:14:22,920
+Speaker 0: I learned something about Dumbo.
+
+215
+00:14:22,980 --> 00:14:23,464
+Speaker 0: I didn't know.
+
+216
+00:14:23,604 --> 00:14:24,832
+Speaker 0: Dumbo is one of the first movies.
+
+217
+00:14:24,853 --> 00:14:25,980
+Speaker 0: Do you synthesize voices?
+
+218
+00:14:27,521 --> 00:14:27,802
+Speaker 1: Really?
+
+219
+00:14:27,883 --> 00:14:31,136
+Speaker 1: Yeah, there is a for which I didn't know that and a lot of things about Dumbo.
+
+220
+00:14:31,156 --> 00:14:32,220
+Speaker 0: when the train is talking.
+
+221
+00:14:32,300 --> 00:14:36,573
+Speaker 0: That is a like full-on fucking synthesized voice similar to.
+
+222
+00:14:36,593 --> 00:14:40,183
+Speaker 1: I thought it was a person talking into like a like a. you know Kazoo type thing.
+
+223
+00:14:40,284 --> 00:14:47,787
+Speaker 0: No, it's more akin to the early instruments where you could talk through your guitar Because when it's like I think I can't.
+
+224
+00:14:47,807 --> 00:14:50,419
+Speaker 1: I think yeah, it's like a person talking through like a filter.
+
+225
+00:14:50,539 --> 00:14:55,524
+Speaker 0: Yes It's basically a person talking through an early synthesizer So, but that's not.
+
+226
+00:14:55,564 --> 00:14:57,774
+Speaker 1: it's not a synthesizer for persons talking into it.
+
+227
+00:14:57,814 --> 00:15:04,680
+Speaker 1: that's just like a. you know I'll talk about it when we do the podcast and synthesizer would be like sin a star where it's like rotten coward.
+
+228
+00:15:05,061 --> 00:15:09,374
+Speaker 0: Yes, but it was a synthetic voice and I can explain the details.
+
+229
+00:15:09,615 --> 00:15:13,579
+Speaker 0: It's kind of like how Fantasia had that ridiculously complicated nine-track audio.
+
+230
+00:15:14,081 --> 00:15:21,299
+Speaker 0: This was like an early version of modern voice synth technology with a lot of limitations and a lot of.
+
+231
+00:15:22,621 --> 00:15:23,445
+Speaker 0: What did I describe this?
+
+232
+00:15:23,465 --> 00:15:24,268
+Speaker 0: to chase the other day?
+
+233
+00:15:24,288 --> 00:15:26,518
+Speaker 0: the audio equivalent of rotoscoping.
+
+234
+00:15:28,700 --> 00:15:33,620
+Speaker 0: But we're not gonna upload the Dumbo episode yet because we got too excited and watch Dumbo first.
+
+235
+00:15:33,981 --> 00:15:40,840
+Speaker 0: So we have not yet watched and recorded an episode on a movie that came out before Dumbo and after Fantasia the reluctant dragon.
+
+236
+00:15:41,721 --> 00:15:43,167
+Speaker 1: I haven't heard of the reluctant dragon ever.
+
+237
+00:15:43,348 --> 00:15:43,629
+Speaker 1: Really?
+
+238
+00:15:43,649 --> 00:15:44,412
+Speaker 0: I've heard of it.
+
+239
+00:15:44,432 --> 00:15:46,560
+Speaker 0: I've just never seen it, but I'm a Pete's dragon.
+
+240
+00:15:47,223 --> 00:15:48,971
+Speaker 0: Oh, yeah, I remember Pete's dragon as a kid.
+
+241
+00:15:49,032 --> 00:15:49,594
+Speaker 1: I don't know.
+
+242
+00:15:49,695 --> 00:15:50,780
+Speaker 1: I don't know the reluctant dragon.
+
+243
+00:15:51,304 --> 00:16:03,760
+Speaker 0: I as a kid loved the shit out of Pete's dragon But I suspect I do not want to watch that movie again Lest I ruin my memories because I do not think that movie is good and I suspect that it will not hold up.
+
+244
+00:16:05,021 --> 00:16:06,649
+Speaker 1: Dumbo holds up except for the racism.
+
+245
+00:16:06,749 --> 00:16:09,080
+Speaker 0: Yeah, and the racism is less.
+
+246
+00:16:09,944 --> 00:16:13,220
+Speaker 0: It is not as bad as the racism in Fantasia.
+
+247
+00:16:14,060 --> 00:16:16,668
+Speaker 1: Good Lord says white person.
+
+248
+00:16:16,909 --> 00:16:20,440
+Speaker 0: Yeah, go go watch Fantasia and look at what they cut out.
+
+249
+00:16:20,540 --> 00:16:23,891
+Speaker 0: I'm really glad Disney cut that out of the Disney.
+
+250
+00:16:23,931 --> 00:16:26,880
+Speaker 1: I don't really remember what racism was cut out of Fantasia.
+
+251
+00:16:26,960 --> 00:16:29,615
+Speaker 0: Yeah, there are some centaurs that have been removed for a really good reason.
+
+252
+00:16:30,500 --> 00:16:31,423
+Speaker 1: Oh Yeah, they are.
+
+253
+00:16:31,603 --> 00:16:33,008
+Speaker 1: I do not remember those centaurs.
+
+254
+00:16:33,048 --> 00:16:35,938
+Speaker 1: But then again, I've seen Dumbo maybe a hundred times.
+
+255
+00:16:35,958 --> 00:16:44,428
+Speaker 0: They're so bad that many less temporary newspapers like Contemporary newspapers to when Fantasia come came out.
+
+256
+00:16:44,468 --> 00:16:45,932
+Speaker 0: We're like, holy shit.
+
+257
+00:16:45,952 --> 00:16:46,775
+Speaker 0: That was racist.
+
+258
+00:16:47,657 --> 00:16:48,139
+Speaker 1: Oh, wow.
+
+259
+00:16:48,179 --> 00:16:58,164
+Speaker 0: Yeah But otherwise Let's get into things of the day.
+
+260
+00:16:58,185 --> 00:16:58,588
+Speaker 0: What do you got?
+
+261
+00:17:00,291 --> 00:17:07,199
+Speaker 1: So yeah, so this is dude, I actually still don't know if it's a Korean dude or a Japanese dude But what does it matter right?
+
+262
+00:17:07,440 --> 00:17:08,145
+Speaker 1: I think they live it.
+
+263
+00:17:08,185 --> 00:17:08,929
+Speaker 1: they live in Korea.
+
+264
+00:17:09,371 --> 00:17:14,263
+Speaker 1: They clearly speak Japanese and Korean and English and this dude is named night tempo.
+
+265
+00:17:14,364 --> 00:17:22,270
+Speaker 1: That's the only name I know of this person And I discovered night tempo because I went to a future funk.
+
+266
+00:17:22,790 --> 00:17:28,760
+Speaker 1: You know dance, I guess party club show whatever when that was still a thing you could do.
+
+267
+00:17:29,830 --> 00:17:47,949
+Speaker 1: And night tempo appeared and I was like at first I saw this person in the crowd who looked like a time traveler from 80s Japan wearing like a full Puma like windbreak II tracksuit kind of thing That was clearly vintage that right and like those giant glasses, right?
+
+268
+00:17:49,491 --> 00:17:55,633
+Speaker 1: And this this really wild haircut and I was like that person looks like they just were a time traveler from 80s Japan.
+
+269
+00:17:55,674 --> 00:17:57,190
+Speaker 1: what are they, you know, that's pretty cool.
+
+270
+00:17:57,672 --> 00:18:01,770
+Speaker 1: And then that person who is you know, like before the show they were down, you know low.
+
+271
+00:18:01,911 --> 00:18:03,418
+Speaker 1: So I thought that they were like an attendee.
+
+272
+00:18:03,820 --> 00:18:05,067
+Speaker 1: No, that was night tempo.
+
+273
+00:18:05,087 --> 00:18:05,670
+Speaker 1: who right?
+
+274
+00:18:07,556 --> 00:18:13,825
+Speaker 1: So Night tempo is like been like increasing their.
+
+275
+00:18:14,306 --> 00:18:17,597
+Speaker 1: I don't know how you say this Prominence, I don't know whatever.
+
+276
+00:18:17,737 --> 00:18:19,283
+Speaker 0: right for once with a capital P.
+
+277
+00:18:19,885 --> 00:18:21,370
+Speaker 1: Yeah, so think about this, right?
+
+278
+00:18:21,430 --> 00:18:24,463
+Speaker 1: There are a lot of nerds out there who have nostalgia, right?
+
+279
+00:18:24,543 --> 00:18:25,085
+Speaker 1: That's love.
+
+280
+00:18:25,266 --> 00:18:26,932
+Speaker 1: That's like most nerds I think and have.
+
+281
+00:18:26,952 --> 00:18:33,250
+Speaker 1: a lot of nerds have a nostalgia for a specific thing and they'll often express this nostalgia by like collecting, right?
+
+282
+00:18:34,636 --> 00:18:34,941
+Speaker 1: you know.
+
+283
+00:18:34,961 --> 00:18:39,550
+Speaker 1: or Getting into communities of people who share the nostalgia, right?
+
+284
+00:18:40,494 --> 00:18:50,314
+Speaker 1: But you know It's very rare that a nerd with nostalgia for something who's right will then sort of actually help To revive that thing.
+
+285
+00:18:50,334 --> 00:18:51,678
+Speaker 1: Yeah, it's like.
+
+286
+00:18:51,938 --> 00:18:56,650
+Speaker 1: it's like how many model train nerds are out there right with their hardcore model train nostalgia.
+
+287
+00:18:56,791 --> 00:19:00,210
+Speaker 0: But who's driving the model train community to get them on Twitch, right?
+
+288
+00:19:00,270 --> 00:19:00,672
+Speaker 1: They can't.
+
+289
+00:19:01,194 --> 00:19:08,750
+Speaker 1: none of them can push the model train community forward any more Than the model trains that they set up during holiday season and then tear down.
+
+290
+00:19:10,071 --> 00:19:10,993
+Speaker 1: That's their peak.
+
+291
+00:19:11,234 --> 00:19:20,750
+Speaker 0: the speed running community was pretty moribund until a few people like really worked to push it Broader into the mainstream and make it more accessible and interesting.
+
+292
+00:19:21,914 --> 00:19:28,299
+Speaker 1: right exactly, so you know the Night tempo has nostalgia for.
+
+293
+00:19:28,600 --> 00:19:31,710
+Speaker 1: you know, showa idols showa era Japan.
+
+294
+00:19:31,910 --> 00:19:39,515
+Speaker 1: Yeah, you know things like red plastic cassette Walkman Urisei Yatsura wristwatches.
+
+295
+00:19:39,876 --> 00:19:46,726
+Speaker 1: the point is right that this the the number one thing that night tempo is all about is old City pop music from the 80s, right?
+
+296
+00:19:47,430 --> 00:19:55,849
+Speaker 1: So a lot of people don't know city pop music if they weren't Japanese people in the 80s right and it's sort of just the genre sort of disappeared mostly.
+
+297
+00:19:56,611 --> 00:20:00,324
+Speaker 1: But there happens to be this overlap of anime.
+
+298
+00:20:00,344 --> 00:20:08,390
+Speaker 1: nerds who watched 80s anime Who have heard these sorts of sounds right like if you listen to like the original Macross TV soundtrack.
+
+299
+00:20:09,135 --> 00:20:11,230
+Speaker 1: It's very city pop, right?
+
+300
+00:20:12,170 --> 00:20:15,250
+Speaker 1: You just didn't realize that that was the genre at the time, right?
+
+301
+00:20:15,990 --> 00:20:20,150
+Speaker 1: And you know the most famous city pop song at least in the West perhaps in the world.
+
+302
+00:20:20,210 --> 00:20:23,688
+Speaker 1: you know his plastic love by Maria Takeuchi, right.
+
+303
+00:20:23,708 --> 00:20:29,501
+Speaker 1: and Maria Takeuchi She was being interviewed somewhere, right?
+
+304
+00:20:29,541 --> 00:20:32,190
+Speaker 1: I just saw a short very brief clip, right?
+
+305
+00:20:32,813 --> 00:20:38,962
+Speaker 1: And in this clip she says right Arigato night tempo son.
+
+306
+00:20:39,284 --> 00:20:42,750
+Speaker 1: Ooh So that would be like if 4x games died.
+
+307
+00:20:43,110 --> 00:20:50,480
+Speaker 1: no one played them and then I went out and I made some remixes of and mods for civilization and they got popular.
+
+308
+00:20:50,500 --> 00:21:00,029
+Speaker 1: and Sid Meyer was like, thank you Scott Rubin right For bringing back 4x games and making people care about them again.
+
+309
+00:21:01,282 --> 00:21:14,225
+Speaker 1: So you know if you have any nostalgia for the city pop sound because you watch old anime or not or you're a Japanese person from the 80s or I don't know but It's good music
+
+310
+00:21:15,851 --> 00:21:21,008
+Speaker 0: Jax while you're talking these are that that like reverberating echo of that synth bass beat.
+
+311
+00:21:21,108 --> 00:21:21,509
+Speaker 0: Oh, man
+
+312
+00:21:22,413 --> 00:21:50,281
+Speaker 1: right, so night tempo just released the third and final installment of His series Showa idols groove in which he takes hit tracks from Showa era idols right and remixes them to make them bangin for the 2020s As if a time traveler as it's as if the coolest DJ from 80s Japan time traveled to 2020 and learned how to use a computer.
+
+313
+00:21:50,302 --> 00:21:52,849
+Speaker 1: Yeah, right that could make music.
+
+314
+00:21:54,391 --> 00:22:02,682
+Speaker 1: So Yeah, you got you have to go to band camp to get these because I'm pretty sure you can't put this one's on Spotify But some of his other music is on Spotify.
+
+315
+00:22:02,703 --> 00:22:04,630
+Speaker 1: that can be put on Spotify, right?
+
+316
+00:22:04,910 --> 00:22:11,477
+Speaker 1: So but band camp is the way to go and this particular album is pay what you want So you can download it for $0 $1.
+
+317
+00:22:11,477 --> 00:22:17,726
+Speaker 0: Oh, man I scroll down and it's like oh if you like this you'll also like the first thing I see.
+
+318
+00:22:17,766 --> 00:22:20,369
+Speaker 0: there is sailorwave Which I'm already familiar with.
+
+319
+00:22:20,993 --> 00:22:28,829
+Speaker 1: Yes, so there's a if you don't know there's a company I think it's in Hong Kong called neon city records and it's someone who basically has.
+
+320
+00:22:29,493 --> 00:22:45,254
+Speaker 1: There's a story about neon city records actually on bandcamp if you search for it I don't have the link right now that tells the story of how they were created But what I hear it is basically someone had the ability to produce vinyl records and cassette tapes and Like this kind of music.
+
+321
+00:22:45,655 --> 00:22:58,738
+Speaker 1: so they made a little tiny record company and got all of these similar sounding people together Right to make music and they do very limited runs of vinyl albums and cassette tapes Right, so you could buy.
+
+322
+00:22:58,778 --> 00:23:00,690
+Speaker 1: show idols grew its price sold out now, right?
+
+323
+00:23:00,830 --> 00:23:01,975
+Speaker 1: Because they only make so many.
+
+324
+00:23:02,317 --> 00:23:04,949
+Speaker 1: but you could have bought this album on cassette or vinyl, right?
+
+325
+00:23:05,851 --> 00:23:14,115
+Speaker 1: And they do really fancy production like neon colored records, you know, really awesome artwork inserts in the tapes Of course, I wouldn't buy any of those cuz.
+
+326
+00:23:14,797 --> 00:23:16,403
+Speaker 0: yeah, I don't want physical things anymore.
+
+327
+00:23:16,624 --> 00:23:17,868
+Speaker 1: I'll take I'll take the mp3s, please.
+
+328
+00:23:19,651 --> 00:23:22,128
+Speaker 1: Maybe maybe you want a vinyl that just sounds shittier.
+
+329
+00:23:25,690 --> 00:23:31,330
+Speaker 0: So speaking of sound my thing of the day, you know Nintendo Labo like the cool cardboard thing where you can just like make stuff.
+
+330
+00:23:31,854 --> 00:23:42,268
+Speaker 0: what are the things you can make is a little keyboard and And you can make these little like waveform things you stick in and that determines what sample will play when you plan your tiny little like synth keyboard
+
+331
+00:23:42,993 --> 00:23:43,197
+Speaker 1: mm-hmm,
+
+332
+00:23:43,605 --> 00:23:48,664
+Speaker 0: so It turns out it actually does just look at the like.
+
+333
+00:23:48,985 --> 00:23:55,623
+Speaker 0: the shape of that Specific waveform like the piece that you put in is the sample.
+
+334
+00:23:55,723 --> 00:23:59,518
+Speaker 0: It's actually the shape of the wave of the sample Mm-hmm.
+
+335
+00:23:59,538 --> 00:24:03,596
+Speaker 1: So this people don't realize that The Nintendo joy cons?
+
+336
+00:24:03,636 --> 00:24:04,900
+Speaker 1: if you have some joy cons nearby.
+
+337
+00:24:04,961 --> 00:24:05,603
+Speaker 1: look at the front.
+
+338
+00:24:05,763 --> 00:24:10,641
+Speaker 1: They have a little infrared camera on the front And there's almost nothing that uses that.
+
+339
+00:24:10,762 --> 00:24:14,483
+Speaker 1: but Labo uses it excessively Yep, so that's what's.
+
+340
+00:24:14,563 --> 00:24:15,410
+Speaker 1: that's how they're doing that.
+
+341
+00:24:15,470 --> 00:24:17,117
+Speaker 0: so this video is not gonna get into.
+
+342
+00:24:17,157 --> 00:24:18,824
+Speaker 0: like all the cool stuff you can do with a Nintendo thing.
+
+343
+00:24:18,844 --> 00:24:31,449
+Speaker 0: the video shows how Because the shape of those samples is the actual wave how you can isolate Any sound or sample you want as long as you can make it short enough.
+
+344
+00:24:32,293 --> 00:24:36,790
+Speaker 0: 3d print your own sample and use it with the Nintendo Labo keyboard.
+
+345
+00:24:37,334 --> 00:24:38,240
+Speaker 1: I mean you get 3d.
+
+346
+00:24:38,300 --> 00:24:39,690
+Speaker 1: printing would get you a lot of precision.
+
+347
+00:24:39,791 --> 00:24:42,051
+Speaker 1: But you could just take a piece of cardboard and yeah You
+
+348
+00:24:42,071 --> 00:24:45,628
+Speaker 0: can cut this out of construction paper if you really wanted to and it would totally work
+
+349
+00:24:46,231 --> 00:24:48,378
+Speaker 1: Usually be good at cutting and be really precise and
+
+350
+00:24:48,398 --> 00:24:58,998
+Speaker 0: you have to understand audio enough to be able to basically go to audition and zoom all the way in to a wave where you see individual points and then Like isolate the point at which it loops
+
+351
+00:24:59,359 --> 00:25:07,172
+Speaker 1: and then you have to you'd have to scale the image and print it properly Onto a piece of paper and then cut the paper along the line very precisely Yeah,
+
+352
+00:25:07,212 --> 00:25:10,446
+Speaker 0: but he shows you can just do this in like Photoshop like it'll totally work.
+
+353
+00:25:10,808 --> 00:25:13,102
+Speaker 1: and yeah You just have to know that the math it's not.
+
+354
+00:25:13,122 --> 00:25:13,424
+Speaker 1: it's not hard.
+
+355
+00:25:13,444 --> 00:25:14,859
+Speaker 0: You don't need to know the math at all Just draw it.
+
+356
+00:25:15,611 --> 00:25:18,150
+Speaker 1: Well, I mean the math to scale the thing to the right size.
+
+357
+00:25:18,290 --> 00:25:20,719
+Speaker 0: It doesn't matter as long as it's proportionally the same.
+
+358
+00:25:20,739 --> 00:25:21,422
+Speaker 0: It does not matter.
+
+359
+00:25:22,024 --> 00:25:23,369
+Speaker 1: Oh really it scales on its own.
+
+360
+00:25:23,529 --> 00:25:25,417
+Speaker 0: Yeah It's just a proportional thing.
+
+361
+00:25:25,457 --> 00:25:26,561
+Speaker 0: Just get the wave file.
+
+362
+00:25:27,083 --> 00:25:28,610
+Speaker 1: So Nintendo's doing the math for you.
+
+363
+00:25:29,083 --> 00:25:30,474
+Speaker 0: Yeah so it's pretty easy.
+
+364
+00:25:30,514 --> 00:25:33,926
+Speaker 0: the video is like eight minutes long and a lot of it's just set up like.
+
+365
+00:25:33,946 --> 00:25:35,491
+Speaker 0: it explains exactly how to Do it.
+
+366
+00:25:35,813 --> 00:25:42,138
+Speaker 0: and if you don't have like audition and the fancy software it even shows you like Here's all the tools you can use to just make this happen.
+
+367
+00:25:42,158 --> 00:25:46,010
+Speaker 1: You should just make a Mario Paint set Swan Gameboy mushroom.
+
+368
+00:25:46,291 --> 00:25:50,124
+Speaker 0: Oh, he goes and gets some some Donkey Kong Country samples and sticks them in here.
+
+369
+00:25:51,007 --> 00:25:51,368
+Speaker 1: Oh nice.
+
+370
+00:25:51,428 --> 00:26:00,963
+Speaker 0: Yeah All right, in a moment geek nice book club is the tale of Hanjo Because we tell of Genji not Hanjo, yeah, cuz we're not.
+
+371
+00:26:01,465 --> 00:26:08,330
+Speaker 0: we're not Hanzoing through this book Hanjoing through it because turns out we only read when we're pooping outside of our own house and riding the subway.
+
+372
+00:26:09,053 --> 00:26:10,922
+Speaker 1: I kept saying that my policy was.
+
+373
+00:26:11,002 --> 00:26:12,770
+Speaker 1: I even just told this to my co-workers the other day.
+
+374
+00:26:12,770 --> 00:26:14,450
+Speaker 1: Everyone's like reading any books and I'm like man.
+
+375
+00:26:14,510 --> 00:26:22,196
+Speaker 1: I had this policy of like when you're on the subway don't open a game on your phone only open the Kindle app on your Phone right now.
+
+376
+00:26:22,898 --> 00:26:24,122
+Speaker 1: I don't ride the subway.
+
+377
+00:26:24,182 --> 00:26:26,088
+Speaker 1: So I don't reckon open the Kindle app, right?
+
+378
+00:26:26,128 --> 00:26:26,830
+Speaker 1: I got all this other shit.
+
+379
+00:26:26,991 --> 00:26:27,432
+Speaker 1: I'm at home.
+
+380
+00:26:27,492 --> 00:26:28,597
+Speaker 1: I can like play my switch.
+
+381
+00:26:28,978 --> 00:26:30,685
+Speaker 1: All right, I can play my computer.
+
+382
+00:26:30,966 --> 00:26:32,030
+Speaker 1: I can do all kinds of stuff.
+
+383
+00:26:32,070 --> 00:26:34,826
+Speaker 1: Why would I you know, why would I sit on my phone with the Kindle app?
+
+384
+00:26:34,926 --> 00:26:41,858
+Speaker 0: Yeah Yep, and most of my free time is spent either futzing around with like this streaming kit We set up so Scott's face can appear.
+
+385
+00:26:41,878 --> 00:26:43,225
+Speaker 0: I had all those things like.
+
+386
+00:26:43,246 --> 00:26:44,090
+Speaker 0: we're working on projects.
+
+387
+00:26:44,150 --> 00:26:53,093
+Speaker 0: I'm working on a lot of stuff also playing a lot of overwatch and a lot of Civ 6 like a lot of Civ 6.
+
+388
+00:26:53,093 --> 00:26:54,781
+Speaker 1: Mmm, I'm playing a little bit of Civ 6.
+
+389
+00:26:54,781 --> 00:26:56,650
+Speaker 0: Yeah, but you've been playing in our live games.
+
+390
+00:26:56,971 --> 00:27:05,772
+Speaker 0: I never thought I'd get to a point when I'm you know approaching 40 and Yet I will sit down for four hours and play civilization alive with other people Like.
+
+391
+00:27:05,792 --> 00:27:08,645
+Speaker 1: well, this is letting us get a little taste of the retirement home.
+
+392
+00:27:08,665 --> 00:27:19,024
+Speaker 0: Yeah early I feel like our generation more so than all many generations before us looks forward to retirement Assuming we overthrow capitalism and have an actual socialist democracy.
+
+393
+00:27:19,626 --> 00:27:20,550
+Speaker 0: So retirement happen.
+
+394
+00:27:21,272 --> 00:27:24,482
+Speaker 0: I look forward to having infinite free time and no responsibilities.
+
+395
+00:27:24,783 --> 00:27:31,262
+Speaker 0: Even if I'm in like a really simple cubicle home Playing like King Arthur Pendragon with like all of my friends.
+
+396
+00:27:31,844 --> 00:27:32,465
+Speaker 1: I got it ready.
+
+397
+00:27:32,505 --> 00:27:32,947
+Speaker 1: I'm working on.
+
+398
+00:27:32,967 --> 00:27:33,368
+Speaker 0: I got it.
+
+399
+00:27:33,428 --> 00:27:34,070
+Speaker 0: sit right over there.
+
+400
+00:27:34,090 --> 00:27:35,017
+Speaker 0: It's still in the shrink-wrap.
+
+401
+00:27:35,057 --> 00:27:36,790
+Speaker 0: I'm gonna open a shrink-wrap when I turn six.
+
+402
+00:27:36,950 --> 00:27:37,432
+Speaker 1: We're gonna.
+
+403
+00:27:37,793 --> 00:27:39,299
+Speaker 1: we're gonna come out when we're super old.
+
+404
+00:27:39,339 --> 00:27:41,486
+Speaker 1: I can be like I've been preparing this campaign for 30 years.
+
+405
+00:27:41,527 --> 00:27:41,848
+Speaker 0: Let's go.
+
+406
+00:27:42,069 --> 00:27:47,100
+Speaker 0: Yep I I'm gonna play so many like RPGs when I'm old.
+
+407
+00:27:47,160 --> 00:27:49,407
+Speaker 0: It's gonna be a good time, but we're not there yet.
+
+408
+00:27:49,909 --> 00:27:53,558
+Speaker 0: So otherwise Don't have any conventions to talk about.
+
+409
+00:27:53,718 --> 00:27:56,650
+Speaker 0: don't have any like projects to talk about until we release them.
+
+410
+00:27:56,710 --> 00:27:59,989
+Speaker 0: We're not gonna reveal all these projects until we actually do them.
+
+411
+00:28:00,391 --> 00:28:04,828
+Speaker 0: So we actually are forced to do them and not just get the feel-good feelings from saying we're gonna do them.
+
+412
+00:28:06,151 --> 00:28:15,437
+Speaker 0: So let's talk about baking cuz that's the other thing We're spending a lot of our time on and considering there's basically nowhere I can get bread flour I think everyone else is doing the same thing.
+
+413
+00:28:16,160 --> 00:28:17,425
+Speaker 1: Well, we got a ton of bread flour.
+
+414
+00:28:17,525 --> 00:28:19,291
+Speaker 1: I mean, yeah, we got a ton of regular Flour.
+
+415
+00:28:19,412 --> 00:28:23,444
+Speaker 0: Yeah, I have 44 more pounds of regular flour hanging out in there.
+
+416
+00:28:23,464 --> 00:28:25,430
+Speaker 1: Well, I got plenty of bread flour also.
+
+417
+00:28:25,571 --> 00:28:31,110
+Speaker 1: Yeah, yeah, I mean baking is something I've always You know been into even before college, right?
+
+418
+00:28:31,170 --> 00:28:38,629
+Speaker 1: I used to bake when I was I'd make banana breads and cookies back in my middle, you know, even elementary school I guess I don't know like way more than me.
+
+419
+00:28:38,730 --> 00:28:46,159
+Speaker 0: I really only baked in like middle middle in high school and then in college I didn't like I technically baked but in college I was just looking for calories.
+
+420
+00:28:46,199 --> 00:28:52,387
+Speaker 0: So my baking was mostly restricted to Johnny cakes and like yeah, I can cornbread from a mix.
+
+421
+00:28:52,448 --> 00:28:56,610
+Speaker 0: isn't baking Technically baking the worst possible form of baking?
+
+422
+00:28:57,192 --> 00:29:01,250
+Speaker 1: Yeah, I mean, you know as soon as my mom let me lick the spoon with the cookie dough on it, right?
+
+423
+00:29:01,391 --> 00:29:04,150
+Speaker 1: I was like, I gotta learn how to make that cookie dough on my own.
+
+424
+00:29:04,593 --> 00:29:07,250
+Speaker 0: I remember the moment as a kid of wait, I can just make cookies.
+
+425
+00:29:07,692 --> 00:29:10,730
+Speaker 0: I could just go into the kitchen and when I'm done there's cookies, right?
+
+426
+00:29:10,810 --> 00:29:11,051
+Speaker 1: It's like.
+
+427
+00:29:11,071 --> 00:29:13,142
+Speaker 1: however, I was like I gotta be able to do that.
+
+428
+00:29:13,584 --> 00:29:14,810
+Speaker 1: Yeah, that's something I got to learn.
+
+429
+00:29:14,950 --> 00:29:16,597
+Speaker 1: So I've been doing it ever since right?
+
+430
+00:29:16,637 --> 00:29:21,138
+Speaker 1: So I know a lot of people out there are like, ah, I can't bake Suck it bacon.
+
+431
+00:29:21,198 --> 00:29:21,742
+Speaker 1: I can't do it.
+
+432
+00:29:21,802 --> 00:29:22,749
+Speaker 1: Right, right, right.
+
+433
+00:29:23,291 --> 00:29:26,885
+Speaker 1: So I get to tell you how not to suck at baking because I think that's a bunch of bullshit.
+
+434
+00:29:26,906 --> 00:29:29,234
+Speaker 1: cuz baking is super easy Especially compared to cooking.
+
+435
+00:29:29,736 --> 00:29:36,356
+Speaker 1: because cooking right is a little bit sort of like Performing jazz or improv music.
+
+436
+00:29:36,416 --> 00:29:44,050
+Speaker 1: right you have to understand, you know the rules of music or food Right, and then you had to sort of mix things up, right?
+
+437
+00:29:44,130 --> 00:29:45,758
+Speaker 1: You can sort of you know, you know what to be.
+
+438
+00:29:45,778 --> 00:29:47,225
+Speaker 1: you could add more ingredient less.
+
+439
+00:29:47,285 --> 00:29:53,730
+Speaker 1: It doesn't matter too much Right, you can throw in a different ingredient because it's not gonna be too much of a big deal, right?
+
+440
+00:29:53,990 --> 00:29:55,256
+Speaker 1: You know you heat up some oil in a pan.
+
+441
+00:29:55,276 --> 00:29:56,381
+Speaker 1: You throw some stuff in there.
+
+442
+00:29:56,461 --> 00:29:56,903
+Speaker 1: You cook it.
+
+443
+00:29:57,325 --> 00:29:58,048
+Speaker 1: Whatever right?
+
+444
+00:29:58,068 --> 00:30:01,741
+Speaker 1: It's cooking Whereas baking is like chemistry.
+
+445
+00:30:02,002 --> 00:30:03,750
+Speaker 0: Yeah, but that's an important point.
+
+446
+00:30:03,830 --> 00:30:10,913
+Speaker 0: The fact that it's chemistry the not to say that there is an art artistry and nuance to baking but a lot of like dinner cooking.
+
+447
+00:30:11,375 --> 00:30:19,108
+Speaker 0: you can kind of just fudge it like you learn some fundamentals and you can kind of just wing recipes and Even if you're not super precise things kind of just work.
+
+448
+00:30:19,148 --> 00:30:19,390
+Speaker 0: fine.
+
+449
+00:30:19,851 --> 00:30:34,149
+Speaker 0: But at the same time if you if someone just reads our recipe to cook a complex like regular dish But isn't like a really good cook and like doesn't know all these things that the rest of you might not say You could follow all the directions and still get something that tastes bad.
+
+450
+00:30:34,631 --> 00:30:44,269
+Speaker 0: But baking if the ingredients are real like you're not using the wrong ingredients and you follow the directions Precisely on a well-known recipe it will just work
+
+451
+00:30:45,131 --> 00:30:51,378
+Speaker 1: Right, so like you're cooking, you know, you'll see a lot of cooks will have to like add some salt taste it Yeah, add some salt taste it.
+
+452
+00:30:51,478 --> 00:30:52,623
+Speaker 1: Okay, it's got enough salt.
+
+453
+00:30:52,684 --> 00:30:54,150
+Speaker 1: How do you even know there's enough salt baking?
+
+454
+00:30:54,530 --> 00:30:55,194
+Speaker 1: You know taste it.
+
+455
+00:30:55,335 --> 00:30:59,858
+Speaker 1: you're gonna get diseases if you taste that raw flour, okay You can't you know tasting the baking right?
+
+456
+00:30:59,898 --> 00:31:02,870
+Speaker 1: You're doing a whole bunch of stuff and then you taste it when it's done.
+
+457
+00:31:03,011 --> 00:31:05,190
+Speaker 0: Yeah, and now they can cookies be like, you know what?
+
+458
+00:31:05,331 --> 00:31:10,155
+Speaker 0: I'll just put in a little more baking soda give it a little pop like no You know
+
+459
+00:31:10,235 --> 00:31:14,827
+Speaker 1: if you're developing a baking recipe you might be doing that like a little more a little less which
+
+460
+00:31:14,887 --> 00:31:17,757
+Speaker 0: is not something I am Even remotely interested in doing when
+
+461
+00:31:17,777 --> 00:31:21,169
+Speaker 1: you're trying to figure out right what you want the final recipe to be.
+
+462
+00:31:21,457 --> 00:31:26,619
+Speaker 1: Yeah Once you have a recipe already Right you do exactly what that recipe says.
+
+463
+00:31:27,141 --> 00:31:33,930
+Speaker 1: in order you follow all the instructions and you follow them Exactly as they are written with no changes whatsoever.
+
+464
+00:31:34,070 --> 00:31:37,019
+Speaker 0: It says a quarter teaspoon of cream of tartar.
+
+465
+00:31:37,079 --> 00:31:40,850
+Speaker 0: put exactly one quarter teaspoon of cream of tartar and put it in.
+
+466
+00:31:41,291 --> 00:31:44,845
+Speaker 0: When it says to put it in don't mix it in early don't mix it in late.
+
+467
+00:31:45,146 --> 00:31:46,812
+Speaker 0: Don't fuck with it Right.
+
+468
+00:31:46,932 --> 00:31:49,840
+Speaker 1: And also if you can you want to increase your precision?
+
+469
+00:31:49,860 --> 00:31:53,470
+Speaker 1: I highly recommend scales because you can see like a cup of flour.
+
+470
+00:31:53,610 --> 00:31:54,295
+Speaker 1: Yeah, it's like.
+
+471
+00:31:54,315 --> 00:31:56,850
+Speaker 1: yeah, there are ways to measure a cup of flour, right?
+
+472
+00:31:56,910 --> 00:31:57,153
+Speaker 1: You don't.
+
+473
+00:31:57,193 --> 00:32:04,474
+Speaker 1: what you want to do is, you know You get your cup and you sort of you know, make sure the the flour is sort of like, you know Not densely packed.
+
+474
+00:32:04,695 --> 00:32:06,140
+Speaker 1: you want to sort of be like light and fluffy.
+
+475
+00:32:06,461 --> 00:32:17,929
+Speaker 1: you can even use a flour sifter To sort of work some air into the flour to fluff it up if it's all dense And then measure the one cup of flour and you'll get a better more precise one cup.
+
+476
+00:32:19,311 --> 00:32:33,926
+Speaker 1: But really if you have a scale you want to find recipes that say this many grams Right, and then you can get exactly the right amounts and your recipe is going to come out much more Exactly like what it looks like in the.
+
+477
+00:32:33,946 --> 00:32:35,815
+Speaker 1: you know the picture in the book
+
+478
+00:32:36,196 --> 00:32:48,466
+Speaker 0: and I guess because this is the how to not suck episode the main advice I have for all of You is baking is a great thing to get into Especially during the current global pandemic because it's hard to get fresh bread and things for obvious reasons.
+
+479
+00:32:48,807 --> 00:32:50,070
+Speaker 0: You can just make your own.
+
+480
+00:32:50,975 --> 00:32:52,605
+Speaker 1: The other thing is that it's not just weighing.
+
+481
+00:32:52,746 --> 00:32:54,797
+Speaker 1: other tricks You can do to be more precise.
+
+482
+00:32:54,897 --> 00:32:59,738
+Speaker 1: and the baking is you know, you mix something in a bowl Scrape down the sides of the bowl.
+
+483
+00:32:59,778 --> 00:33:02,930
+Speaker 1: that's ingredient you have there right on the sides of the bowl.
+
+484
+00:33:03,312 --> 00:33:07,534
+Speaker 1: You don't want to lose that and just right be being lazy You also.
+
+485
+00:33:07,554 --> 00:33:23,530
+Speaker 1: it's not just the precision of the ingredients and the order of operations and timings It's also the temperature and the humidity if your oven is Inconsistent nothing you do before like to the recipe will solve that problem.
+
+486
+00:33:24,052 --> 00:33:26,199
+Speaker 1: You need to get a thermometer that goes in the oven.
+
+487
+00:33:26,219 --> 00:33:32,102
+Speaker 1: that is not the thermometer that's part of the oven unless you have extremely Fancy oven right and that way you can check.
+
+488
+00:33:32,202 --> 00:33:34,010
+Speaker 1: even people with extremely fancy ovens do this.
+
+489
+00:33:34,070 --> 00:33:39,758
+Speaker 1: Anyway, yeah so that you can see the true temperature in the oven With that little thermometer I have.
+
+490
+00:33:39,778 --> 00:33:58,411
+Speaker 1: they're very cheap and inexpensive oven thermometers But also the temperature in the space you're in based on what you're baking The humidity in your apartment or the temperature in your apartment or also the altitude If you're in Colorado or something, right all of those things can mess with your chemistry Even
+
+491
+00:33:58,452 --> 00:34:07,354
+Speaker 0: if you're doing like baby for babies first bacon where you're buying a mix and just kind of throwing it together where the mix Did all the precision work for you notice how it always says on the back Here's the directions.
+
+492
+00:34:07,775 --> 00:34:11,790
+Speaker 0: unless you're at high altitude then do these alternate directions, right?
+
+493
+00:34:11,969 --> 00:34:14,379
+Speaker 1: Also, you might even have to depending on what you're making.
+
+494
+00:34:14,478 --> 00:34:17,330
+Speaker 1: things might affect it like the water that comes out of your tap.
+
+495
+00:34:18,831 --> 00:34:27,518
+Speaker 1: I've heard of things like yeah, you know, the water we have here is potable, but it contains something that you know messes with your Cook at baking that happens.
+
+496
+00:34:27,659 --> 00:34:29,909
+Speaker 1: for beer brew go to the grocery store, right?
+
+497
+00:34:30,010 --> 00:34:32,501
+Speaker 1: They go to the grocery store and they buy a distilled water in a jug.
+
+498
+00:34:32,621 --> 00:34:41,869
+Speaker 0: like remember when Pete way back Our friend was making some beer and it it tasted Exactly the way you would imagine a band-aid would taste if you ate it.
+
+499
+00:34:42,750 --> 00:34:49,250
+Speaker 0: Yeah, and it turned out it was because of some radicals in the water because of the nature of the water supply he was using.
+
+500
+00:34:50,170 --> 00:34:50,373
+Speaker 1: Right.
+
+501
+00:34:50,393 --> 00:34:52,103
+Speaker 1: So now the next thing you got to worry about is you're good.
+
+502
+00:34:52,123 --> 00:34:52,989
+Speaker 1: You got the instructions.
+
+503
+00:34:52,989 --> 00:34:54,938
+Speaker 1: You're gonna follow them precisely right?
+
+504
+00:34:54,958 --> 00:34:57,368
+Speaker 1: He needs the good tools, right?
+
+505
+00:34:57,388 --> 00:35:01,807
+Speaker 1: Yeah You know, you don't need like, you know, the tools aren't gonna make a big difference, right?
+
+506
+00:35:01,847 --> 00:35:02,490
+Speaker 1: It's sort of like golf.
+
+507
+00:35:02,631 --> 00:35:06,850
+Speaker 1: It's like yeah, you can have the Tiger Woods golf clubs and you could give Tiger Woods some shitty golf clubs.
+
+508
+00:35:06,850 --> 00:35:08,110
+Speaker 1: You'll still kick your ass, right?
+
+509
+00:35:09,155 --> 00:35:14,420
+Speaker 0: Just make your life easier like they're not like you can get by with shittier tools But you'll just be happier if you have better exactly.
+
+510
+00:35:14,540 --> 00:35:16,550
+Speaker 1: I made cookies and things my whole life.
+
+511
+00:35:16,751 --> 00:35:24,869
+Speaker 1: I would just take a metal bowl a cheap metal bowl and I would mix using a big like a Tablespoon like the kind you would eat soup with not even a special mixing spoon.
+
+512
+00:35:25,252 --> 00:35:26,941
+Speaker 0: Oh, whatever kids like watching The Simpsons.
+
+513
+00:35:26,982 --> 00:35:30,510
+Speaker 0: my parents every time they were baking They would grab one of us kids.
+
+514
+00:35:30,550 --> 00:35:34,890
+Speaker 0: Sometimes both of us hand us a bowl and a spoon and make us sit there and just mix while we're watching TV.
+
+515
+00:35:35,833 --> 00:35:37,458
+Speaker 1: Yeah, and it's like I would just mix with.
+
+516
+00:35:37,598 --> 00:35:43,134
+Speaker 1: you know, whatever we had and it'll totally work, yeah, it doesn't matter too much But there are.
+
+517
+00:35:43,174 --> 00:35:47,088
+Speaker 1: sometimes a tool will drastically make your life easier, right?
+
+518
+00:35:47,850 --> 00:35:54,390
+Speaker 1: So some of the essential tools that you're gonna want for baking almost anything right is the stand mixer.
+
+519
+00:35:54,430 --> 00:35:56,342
+Speaker 0: Oh my god, our French is not.
+
+520
+00:35:56,362 --> 00:35:57,510
+Speaker 0: gave us a stand mixer.
+
+521
+00:35:57,570 --> 00:36:00,701
+Speaker 0: Yeah, I wish I'd bought one of those before earlier.
+
+522
+00:36:00,721 --> 00:36:02,848
+Speaker 1: the stand mixer is about.
+
+523
+00:36:03,109 --> 00:36:06,740
+Speaker 1: it's not Just about saving yourself the arm effort of mixing.
+
+524
+00:36:06,760 --> 00:36:10,050
+Speaker 1: it saves so much time, right?
+
+525
+00:36:10,130 --> 00:36:12,329
+Speaker 1: Oh, you don't realize how much time it saves.
+
+526
+00:36:12,511 --> 00:36:13,334
+Speaker 1: It's like before.
+
+527
+00:36:13,414 --> 00:36:18,235
+Speaker 1: I would mix a batch of cookies and I'd sit there mixing for like several minutes And it would take a while.
+
+528
+00:36:18,295 --> 00:36:21,749
+Speaker 1: like making cookies would be like, you know, a many hour thing.
+
+529
+00:36:21,789 --> 00:36:24,161
+Speaker 1: now It's like making cookies takes like no time at all.
+
+530
+00:36:24,181 --> 00:36:24,864
+Speaker 1: It's like oh it's done.
+
+531
+00:36:24,924 --> 00:36:30,370
+Speaker 0: I get all the ingredients in the mixer It's going I turn around to do other prep and then everything's ready and they go straight into the oven.
+
+532
+00:36:31,333 --> 00:36:32,120
+Speaker 1: It's super.
+
+533
+00:36:32,443 --> 00:36:33,270
+Speaker 1: it's about efficiency.
+
+534
+00:36:34,251 --> 00:36:39,310
+Speaker 1: You're also probably gonna want like based on what you're baking if you need a whisk, right?
+
+535
+00:36:39,670 --> 00:36:44,930
+Speaker 1: You're gonna want like a whisk that is like the right strength and size for what you're doing.
+
+536
+00:36:44,930 --> 00:36:50,008
+Speaker 1: Yeah, right, especially if you have to use a technique like say whipping cream into a meringue or something.
+
+537
+00:36:50,069 --> 00:36:54,830
+Speaker 1: Hey You know, sometimes you can do it in the stand mixer with the whisk attachment.
+
+538
+00:36:55,131 --> 00:37:01,321
+Speaker 1: Yeah, but if you're doing it by hand in the bowl, which you might do for reasons, you know If you got a crappy whisk, it's it might.
+
+539
+00:37:01,361 --> 00:37:07,070
+Speaker 1: you might have a lot of trouble doing it Where if you have a better whisk, it's like oh look it whipped right because I got a high-quality whisk.
+
+540
+00:37:07,091 --> 00:37:15,099
+Speaker 0: Yep Make sure you've got all the things that a lot of younger people out of college like they were in your house when you live With your family, but you never thought to buy them.
+
+541
+00:37:15,481 --> 00:37:17,690
+Speaker 0: get those rubber spatula scrapers.
+
+542
+00:37:18,731 --> 00:37:21,980
+Speaker 0: Yeah, get like several of those of varying sizes.
+
+543
+00:37:22,421 --> 00:37:25,550
+Speaker 1: You're also probably gonna want like like a metal scraper.
+
+544
+00:37:25,670 --> 00:37:29,270
+Speaker 1: It's usually it's like just like it's like a metal rectangle with a handle on it.
+
+545
+00:37:29,350 --> 00:37:34,850
+Speaker 1: Yep, right that you can use to like cut dough right and also scrape things off the counter.
+
+546
+00:37:35,131 --> 00:37:38,569
+Speaker 0: They're also just generally useful for like all sorts of cooking like when you don't use it.
+
+547
+00:37:39,695 --> 00:37:42,357
+Speaker 1: Yeah, it's a very it's a very good Cooking tool.
+
+548
+00:37:42,377 --> 00:37:44,370
+Speaker 1: also a rolling pin is gonna be important.
+
+549
+00:37:44,490 --> 00:37:48,889
+Speaker 0: Yep, get get a like a real like stone looking rolling pin.
+
+550
+00:37:49,451 --> 00:37:50,094
+Speaker 1: Well the did so.
+
+551
+00:37:50,114 --> 00:37:53,270
+Speaker 1: the stone and the wood rolling pins actually have different uses not true?
+
+552
+00:37:53,910 --> 00:37:57,329
+Speaker 1: Sometimes you might be doing something like rolling out.
+
+553
+00:37:58,611 --> 00:38:00,015
+Speaker 1: Maybe you're laminating some dough.
+
+554
+00:38:00,035 --> 00:38:11,930
+Speaker 1: It's a laminate, so I was gonna talk about this also, but there's certain baking techniques you have to learn Right and that this is where like you know there is maybe some skill and practice, but it doesn't matter too much, right?
+
+555
+00:38:12,150 --> 00:38:27,549
+Speaker 1: so laminating is like an example of a skill where you're basically taking butter and dough and Folding it and rolling it fold roll fold roll to create layers And that's why when you like open up a croissant you see like these layers of flakiness Is because they laminated it so many times.
+
+556
+00:38:29,153 --> 00:38:36,730
+Speaker 1: So that's like a skill that you can build is is Laminating but like if you try to make a croissant, and you sort of suck at laminating you'll still get a croissant.
+
+557
+00:38:36,911 --> 00:38:38,903
+Speaker 1: It's not like if you follow the instructions.
+
+558
+00:38:38,923 --> 00:38:39,970
+Speaker 1: You're still gonna get a croissant.
+
+559
+00:38:40,030 --> 00:38:43,462
+Speaker 1: It's just like the beauty of the croissant might be lessened right?
+
+560
+00:38:43,482 --> 00:38:43,783
+Speaker 1: yeah, it's.
+
+561
+00:38:43,944 --> 00:38:47,760
+Speaker 1: it's flakiness might not be as Amazing and perfect looking.
+
+562
+00:38:47,800 --> 00:38:49,371
+Speaker 0: it might look sort of junkie Do is?
+
+563
+00:38:49,611 --> 00:39:00,388
+Speaker 0: the progression should be make basic stuff first and just like make sure the things you're making taste good And then increase the complexity of what even the ugly croissant is still gonna taste delicious as long as you did it.
+
+564
+00:39:00,608 --> 00:39:01,411
+Speaker 1: other parts Right.
+
+565
+00:39:01,511 --> 00:39:02,455
+Speaker 1: it's just your skill on.
+
+566
+00:39:02,475 --> 00:39:04,261
+Speaker 1: the technique is contributing to like.
+
+567
+00:39:04,321 --> 00:39:10,650
+Speaker 1: the is for taking you from like you know Delicious to like excellent you know professional level yeah.
+
+568
+00:39:11,392 --> 00:39:22,829
+Speaker 0: But even with just like basic stuff like how to not suck make like the simplest bread the simplest sugar cookie like make really really Simple stuff first and you'll learn all the basic techniques really quick because they're not hard.
+
+569
+00:39:23,331 --> 00:39:28,690
+Speaker 1: Yeah, making the fancy things are just you know the same as making the simple things only with extra ingredients.
+
+570
+00:39:29,758 --> 00:39:33,360
+Speaker 0: You know JB in the livestream pointed out something a very specific tool to get.
+
+571
+00:39:33,741 --> 00:39:36,631
+Speaker 0: have more than one set of all your measuring spoons and Cups.
+
+572
+00:39:36,651 --> 00:39:44,969
+Speaker 0: a lot of people have just one measuring cup of every size and one measuring spoon of every size That gets old real quick unless you only bake like once a week.
+
+573
+00:39:45,775 --> 00:39:47,186
+Speaker 1: You also want to get like a lot of?
+
+574
+00:39:48,552 --> 00:39:55,190
+Speaker 1: Right of various sizes, and then we want to measure all your ingredients in advance into the bowls and then start baking.
+
+575
+00:39:55,270 --> 00:40:04,199
+Speaker 1: It's like okay combine this into that and this into that and this into that rather than measure add measure add measure add because now Things are mixing while you're measuring, and it's like
+
+576
+00:40:04,239 --> 00:40:13,633
+Speaker 0: oh, no you're in a hurry sometimes the rest of you'll be like while It's mixing slowly introduce ingredient wise you've got to be ready to introduce it at that point or you're gonna Have a problem.
+
+577
+00:40:14,135 --> 00:40:16,325
+Speaker 1: yeah, I mean, that's just a death general for all cooking though.
+
+578
+00:40:16,345 --> 00:40:18,875
+Speaker 1: Not just baking true But yeah the point.
+
+579
+00:40:18,895 --> 00:40:27,345
+Speaker 1: I was talking about laminating because if you have a stone Rolling pin that is great because when you're laminating you want to keep it cold right.
+
+580
+00:40:27,385 --> 00:40:28,589
+Speaker 1: you don't want that butter to melt.
+
+581
+00:40:28,669 --> 00:40:30,074
+Speaker 1: you want That solid butter to be.
+
+582
+00:40:30,295 --> 00:40:40,509
+Speaker 1: you know the cold butter to be folded right and the wooden rolling pin Would not stay as cold right and you might end up You know melting your butter and not getting as good.
+
+583
+00:40:41,292 --> 00:40:49,633
+Speaker 0: I guess what I would say is you probably want one good stone rolling pin like a traditional looking one like the one you see In old movies where someone's like menacing someone with them And then I
+
+584
+00:40:49,734 --> 00:40:50,457
+Speaker 1: don't ever like one
+
+585
+00:40:50,638 --> 00:40:54,169
+Speaker 0: and then have like a wooden rolling like the rolling pin That's the longer skinnier one.
+
+586
+00:40:54,873 --> 00:41:00,880
+Speaker 1: Yeah, I have one that's sort of like a weird shape where it's sort of like looks like a club You're gonna hit someone with but it's sort of fatter in the middle.
+
+587
+00:41:00,900 --> 00:41:02,025
+Speaker 1: It's fine.
+
+588
+00:41:02,326 --> 00:41:07,991
+Speaker 1: Whatever yeah Yeah, the high quality tools will make your life Easier.
+
+589
+00:41:08,292 --> 00:41:17,905
+Speaker 1: you're also gonna want like you know that like I said the measuring devices the scales the instant read thermometer all these you know The oven thermometer these sorts of things yeah,
+
+590
+00:41:17,925 --> 00:41:25,720
+Speaker 0: which which leads to Figure out the biases of your oven like doesn't run hot or cold And then you can use that just to make your life easier.
+
+591
+00:41:25,821 --> 00:41:27,710
+Speaker 1: like so I found out that my I moved recently.
+
+592
+00:41:27,851 --> 00:41:32,457
+Speaker 1: I found out that the oven because I have the thermometer I've had it for a long time was going cold.
+
+593
+00:41:32,959 --> 00:41:34,805
+Speaker 1: so I the oven actually has a setting.
+
+594
+00:41:34,845 --> 00:41:37,154
+Speaker 1: I looked up in the manual I could Adjust the oven.
+
+595
+00:41:37,174 --> 00:41:40,709
+Speaker 1: so I adjusted the oven to plus 15. so now the oven runs.
+
+596
+00:41:41,412 --> 00:41:46,250
+Speaker 1: You know the oven's internal thermometer is like oh I was off by 15 degrees and now it's correct not bad.
+
+597
+00:41:46,912 --> 00:41:49,182
+Speaker 1: So you know you can adjust that kind of shit on your oven.
+
+598
+00:41:49,222 --> 00:41:50,990
+Speaker 1: get the manual for the oven and check it out.
+
+599
+00:41:51,892 --> 00:41:56,459
+Speaker 1: Yeah, so we were talking about getting better equipment Obviously getting better ingredients.
+
+600
+00:41:56,620 --> 00:41:58,189
+Speaker 1: I don't know how much needs to be said about that.
+
+601
+00:41:58,290 --> 00:41:59,675
+Speaker 0: Yeah, but one but the nuance there.
+
+602
+00:41:59,977 --> 00:42:10,190
+Speaker 0: learn that there are ingredients that people don't realize are distinct And if you start baking you have to not mix them up like baking soda and baking powder are two different things.
+
+603
+00:42:10,712 --> 00:42:11,918
+Speaker 1: Oh, yeah, they're not even remotely.
+
+604
+00:42:11,958 --> 00:42:16,639
+Speaker 0: the red flower and all-purpose flour are very similar but they are not the same right.
+
+605
+00:42:16,659 --> 00:42:20,595
+Speaker 1: the bread flour has a lot more gluten than the All-purpose flour.
+
+606
+00:42:21,036 --> 00:42:23,825
+Speaker 1: so you know some people can't eat gluten these days.
+
+607
+00:42:23,845 --> 00:42:24,829
+Speaker 1: It's a hot topic right?
+
+608
+00:42:24,849 --> 00:42:33,370
+Speaker 1: yeah The gluten is basically like stretchy goop right that creates like the the structure of the dough.
+
+609
+00:42:33,673 --> 00:42:37,850
+Speaker 1: Right with its with its right Form I guess right it's like glue.
+
+610
+00:42:38,472 --> 00:42:44,891
+Speaker 1: So if you know you get it wet and it starts to activate right and then you it sort of holds the shape of the dough Together.
+
+611
+00:42:44,951 --> 00:42:52,070
+Speaker 1: so when your dough is rising the gluten the strength of the structure that you have made is holding the gases in the dough.
+
+612
+00:42:52,431 --> 00:42:53,033
+Speaker 1: Mmm, right.
+
+613
+00:42:53,334 --> 00:42:59,916
+Speaker 1: so if your structure is too weak the gas will get out and your bread will be Right all flat.
+
+614
+00:43:00,720 --> 00:43:08,850
+Speaker 1: if the structure is too strong It can't really be too strong, but I guess if it's too strong you would need even more gas to stretch the dough out.
+
+615
+00:43:08,930 --> 00:43:14,370
+Speaker 1: But that's just fine because you can just wait longer for more gas to form which is good because then more flavor develops.
+
+616
+00:43:14,834 --> 00:43:16,290
+Speaker 1: So it's like a gluten can't be too strong.
+
+617
+00:43:16,731 --> 00:43:21,928
+Speaker 1: But if the if a different kind of flour doesn't have as much gluten you can't get that added strength.
+
+618
+00:43:22,229 --> 00:43:25,135
+Speaker 1: Yeah So yeah, that's the other thing.
+
+619
+00:43:25,175 --> 00:43:32,699
+Speaker 1: so you know most baking things out there cookies cakes all this sort of stuff Do not involve yeast right.
+
+620
+00:43:33,141 --> 00:43:34,306
+Speaker 1: there's no yeast going on.
+
+621
+00:43:34,367 --> 00:43:35,110
+Speaker 1: It's not alive.
+
+622
+00:43:35,471 --> 00:43:40,125
+Speaker 0: Yeah, so you know sort of like baking soda thing some sort of acid like.
+
+623
+00:43:40,165 --> 00:43:41,870
+Speaker 0: there's different ways to make that happen.
+
+624
+00:43:42,031 --> 00:43:48,070
+Speaker 1: You mix that you take the dry ingredients you take the wet you mix in the wet ingredient Oh the dry into the wet and you're right, whatever.
+
+625
+00:43:48,872 --> 00:44:05,509
+Speaker 1: but once you get a yeast into the picture because you're making a bread or a yeasted donut or You know anything with yeast involved because you're getting that rising action and also that sort of you know lactic Alcohol fermented kind of flavor sourness in there as well.
+
+626
+00:44:06,534 --> 00:44:09,264
+Speaker 1: Now you're working with something that's alive right.
+
+627
+00:44:09,304 --> 00:44:10,529
+Speaker 1: yeast is a living thing.
+
+628
+00:44:11,653 --> 00:44:13,238
+Speaker 1: So it's very temperamental right.
+
+629
+00:44:13,298 --> 00:44:29,510
+Speaker 1: and now those things I was talking about before the temperature in your room The humidity in your apartment the time that you wait for it to rise Yeah The the structure of the glutens all that stuff suddenly matters way more once yeast is in the picture.
+
+630
+00:44:30,093 --> 00:44:32,968
+Speaker 1: Anything with yeast is harder than something that is not yeast.
+
+631
+00:44:33,189 --> 00:44:57,748
+Speaker 0: Yep That's why I'd recommend if you've never baked before Like maybe even just buy one of those packets of the grocery store Just make it first just to get familiar with like kitchen stuff Like some of you might be fresh out of college and not know how to do anything But make like cookies first because cookies especially simple cookies like a sugar cookie It's kind of hard like even if you mess up the recipe at multiple steps along the way, they'll still turn out.
+
+632
+00:44:57,849 --> 00:45:00,878
+Speaker 1: Okay Like the other thing with right.
+
+633
+00:45:01,099 --> 00:45:03,290
+Speaker 1: so when it comes to yeast there's three kinds.
+
+634
+00:45:03,290 --> 00:45:06,170
+Speaker 1: There's three major kinds of yeast that you're gonna find in your life.
+
+635
+00:45:07,472 --> 00:45:11,527
+Speaker 1: The one you've probably seen the most is the active dry yeast that comes in little paper packet.
+
+636
+00:45:11,668 --> 00:45:12,110
+Speaker 1: Yeah, right.
+
+637
+00:45:12,593 --> 00:45:14,689
+Speaker 1: Then there's the instant yeast which is what I use.
+
+638
+00:45:15,911 --> 00:45:22,269
+Speaker 1: And then there's the fresh yeast which is sort of it feels like clay or like a putty of some kind, right?
+
+639
+00:45:23,174 --> 00:45:31,090
+Speaker 1: so the fresh yeast Is like actually pretty fancy and good but there's not a lot of like yeast in it.
+
+640
+00:45:31,170 --> 00:45:33,568
+Speaker 1: There's a lot of like cakey stuff right in there.
+
+641
+00:45:34,011 --> 00:45:45,850
+Speaker 1: So you sort of sometimes need to use more of it than you need to use with the other yeasts And also it doesn't stay good for very long Right, so you have to put it in the fridge and use it quickly, right?
+
+642
+00:45:46,190 --> 00:45:48,005
+Speaker 1: Which is why they sell it in very small amounts.
+
+643
+00:45:48,065 --> 00:45:50,256
+Speaker 1: the fresh yeast It's also the hardest to use.
+
+644
+00:45:50,316 --> 00:45:55,554
+Speaker 1: so I wouldn't use the fresh yeast unless you're like pro and you know what you're doing And it calls for it.
+
+645
+00:45:55,594 --> 00:46:00,430
+Speaker 1: Right the instant yeast is like the most powerful yeast, right?
+
+646
+00:46:00,590 --> 00:46:05,647
+Speaker 1: It's like these really fine dry little granules of yeast and 100% of them are alive.
+
+647
+00:46:06,550 --> 00:46:06,952
+Speaker 1: They're all.
+
+648
+00:46:07,032 --> 00:46:08,538
+Speaker 1: every yeast in there is a living yeast.
+
+649
+00:46:08,899 --> 00:46:09,843
+Speaker 1: That's why it's instant yeast.
+
+650
+00:46:09,883 --> 00:46:10,787
+Speaker 1: It's like ready to go, right?
+
+651
+00:46:12,512 --> 00:46:14,828
+Speaker 1: But it only lasts like so long.
+
+652
+00:46:15,572 --> 00:46:23,190
+Speaker 1: So you got like freeze it or put it in the fridge because like they'll they're all alive at the start But then they'll all die and they won't work anymore.
+
+653
+00:46:24,892 --> 00:46:30,820
+Speaker 1: So if your recipe is calling for the active dry yeast You want to use less.
+
+654
+00:46:31,122 --> 00:46:32,530
+Speaker 1: you can look up online conversions.
+
+655
+00:46:32,911 --> 00:46:37,022
+Speaker 1: You're gonna be using less instant yeast if you use instant yeast because it's stronger, right?
+
+656
+00:46:37,623 --> 00:46:43,919
+Speaker 1: The active dry yeast is more like Preserved kind of yeast but only like.
+
+657
+00:46:43,959 --> 00:46:48,090
+Speaker 1: some percentage of the yeasts in there are alive and the other ones have died, right?
+
+658
+00:46:49,030 --> 00:46:50,821
+Speaker 1: Because I guess they've been dried out or whatever.
+
+659
+00:46:50,881 --> 00:46:52,310
+Speaker 1: I don't know that all those details.
+
+660
+00:46:53,251 --> 00:46:57,990
+Speaker 1: I just know that in the active dry yeast less of the yeasts that are in the package are actually living.
+
+661
+00:46:59,372 --> 00:47:05,306
+Speaker 1: So that's why a lot of times and they're sort of sleeping right where the instant yeast They're all alive and ready to go the active dry yeast.
+
+662
+00:47:05,406 --> 00:47:05,970
+Speaker 1: They're sleeping.
+
+663
+00:47:06,352 --> 00:47:18,410
+Speaker 1: So a lot of the active dry yeast recipes you have to wake them up first and like some water Right or something like that and then use them And you'll be using more of that yeast because like I said some of it is dead.
+
+664
+00:47:18,530 --> 00:47:30,850
+Speaker 1: So you need to use more to get the same number of live yeasts If you get fancy down the road You might like be cultivating and maintaining like specific yeast strains that do particular things that you care about.
+
+665
+00:47:31,172 --> 00:47:33,650
+Speaker 0: But I doubt many of you will get to that level of baking.
+
+666
+00:47:34,592 --> 00:47:40,450
+Speaker 1: But well people go to the people do the sourdough starter and yeah, the thing with the sourdough starter is it tastes great.
+
+667
+00:47:40,570 --> 00:47:51,484
+Speaker 1: It's really good to have this, you know living sort of pet you have that you can add to recipes, you know It's like this ingredient that never runs out And you can use it for all kinds of great stuff.
+
+668
+00:47:51,524 --> 00:47:52,310
+Speaker 1: It tastes amazing.
+
+669
+00:47:52,893 --> 00:47:54,259
+Speaker 1: You don't need to buy yeast anymore.
+
+670
+00:47:54,540 --> 00:47:54,741
+Speaker 1: Right?
+
+671
+00:47:54,782 --> 00:47:57,433
+Speaker 1: The problem is is the sourdough starter Like I said is a pet.
+
+672
+00:47:57,594 --> 00:47:58,537
+Speaker 1: you have to keep feeding it.
+
+673
+00:47:58,998 --> 00:48:08,950
+Speaker 1: All right, so if you're feeding it you either have to a Keep feeding it flour all the time and then discard a whole bunch of it.
+
+674
+00:48:08,990 --> 00:48:09,656
+Speaker 1: So it's like you go.
+
+675
+00:48:09,717 --> 00:48:17,353
+Speaker 1: you take it you throw out most of it Then you add a bunch of flour and now it eats the new flour you've added and it stays alive For a longer period.
+
+676
+00:48:17,433 --> 00:48:20,261
+Speaker 1: yeah, some people feed like once or twice a day, right?
+
+677
+00:48:20,702 --> 00:48:28,390
+Speaker 1: So if you're doing this sourdough starter It's like man, you're going through a lot of flour right discarding possibly some of it.
+
+678
+00:48:28,794 --> 00:48:33,780
+Speaker 1: And if you're not discarding it, man You are baking a lot of things that include that sourdough starter.
+
+679
+00:48:33,820 --> 00:48:37,410
+Speaker 1: discard right like there's so many recipes out there, right?
+
+680
+00:48:37,470 --> 00:48:43,256
+Speaker 1: but it's like are you really gonna eat sourdough pancakes every morning and Make sourdough bread every night?
+
+681
+00:48:43,757 --> 00:48:48,813
+Speaker 1: and it's like you'll be buried in bread and you'll be going through so much more flour because you're constantly Baking.
+
+682
+00:48:48,853 --> 00:48:50,099
+Speaker 1: right the recipes aren't like.
+
+683
+00:48:50,721 --> 00:48:52,510
+Speaker 1: oh, yeah, just take sourdough starter and bake it.
+
+684
+00:48:52,550 --> 00:48:53,333
+Speaker 1: The recipe is like.
+
+685
+00:48:53,353 --> 00:48:57,290
+Speaker 1: yes sourdough starter goes in to your normal baking as an ingredient.
+
+686
+00:48:57,390 --> 00:48:59,338
+Speaker 1: You still you know, you bake that bread at night.
+
+687
+00:48:59,659 --> 00:49:02,350
+Speaker 1: sourdough bread isn't just sourdough starter plus fire.
+
+688
+00:49:02,571 --> 00:49:04,858
+Speaker 1: Yeah, sourdough starter a little bit.
+
+689
+00:49:05,239 --> 00:49:07,646
+Speaker 0: Don't just put your sourdough starter in the right.
+
+690
+00:49:07,706 --> 00:49:08,910
+Speaker 0: That's not just starter.
+
+691
+00:49:09,010 --> 00:49:10,458
+Speaker 1: It's like to make a sourdough bread.
+
+692
+00:49:10,538 --> 00:49:17,050
+Speaker 1: you make you take a bunch of flour water salt And then instead of adding yeast you put in a little bit of sourdough starter.
+
+693
+00:49:17,672 --> 00:49:18,897
+Speaker 1: Right, and it's like.
+
+694
+00:49:18,977 --> 00:49:23,855
+Speaker 1: so if you're baking us if you want your sourdough starter to not get thrown out You're baking a bread every night.
+
+695
+00:49:23,875 --> 00:49:28,710
+Speaker 1: Just using flour for bread every night and flour to keep feeding the starter.
+
+696
+00:49:29,051 --> 00:49:30,155
+Speaker 1: So that's the reason I've never done.
+
+697
+00:49:30,195 --> 00:49:34,329
+Speaker 1: that is just because I had to buy so much flour go through so much flour bake.
+
+698
+00:49:34,470 --> 00:49:40,570
+Speaker 1: all Right, it's good for retired people who are gonna be playing Pendragon and have people over constantly.
+
+699
+00:49:41,215 --> 00:49:45,658
+Speaker 0: So I did see on the Wikipedia page There's actually a a formal definition of.
+
+700
+00:49:45,698 --> 00:49:49,029
+Speaker 0: there are 11 things that must occur for something to be considered baking.
+
+701
+00:49:50,015 --> 00:49:51,689
+Speaker 1: Mmm, interesting a fat smell.
+
+702
+00:49:53,033 --> 00:49:59,065
+Speaker 0: Okay gases form and expand Microorganisms die, you know what they used to still be alive when you eat your bread.
+
+703
+00:49:59,166 --> 00:50:00,150
+Speaker 1: No, it dies in the fire.
+
+704
+00:50:00,371 --> 00:50:03,339
+Speaker 0: Yep, sugar dissolves any egg melt or gluten.
+
+705
+00:50:03,359 --> 00:50:11,046
+Speaker 0: proteins coagulate starches gelatinize or solidify Liquids evaporate the mayard browning occurs on the crust.
+
+706
+00:50:11,086 --> 00:50:13,792
+Speaker 0: if there is a crust Enzymes are denatured.
+
+707
+00:50:14,693 --> 00:50:15,895
+Speaker 0: the nutrient changes.
+
+708
+00:50:15,915 --> 00:50:16,956
+Speaker 0: There's a whole section.
+
+709
+00:50:16,976 --> 00:50:19,640
+Speaker 0: I'm not going to read about what that means and the pectin breaks down.
+
+710
+00:50:21,292 --> 00:50:26,189
+Speaker 0: So those are the 11 events that according to this must occur concurrently during baking.
+
+711
+00:50:26,994 --> 00:50:29,269
+Speaker 1: What if you're baking doesn't do all of those things?
+
+712
+00:50:30,052 --> 00:50:33,845
+Speaker 0: Then I guess like it seems like it's still baking.
+
+713
+00:50:33,865 --> 00:50:35,250
+Speaker 0: I'm just skimming through this article.
+
+714
+00:50:35,330 --> 00:50:36,917
+Speaker 0: I'm just looking for a pedantic argument.
+
+715
+00:50:36,937 --> 00:50:39,467
+Speaker 1: I feel like any one of those would make something baking.
+
+716
+00:50:39,829 --> 00:50:51,761
+Speaker 0: Yeah It seems like the real definition is around if those things occur as part of the cooking with grains And they could not occur at room temperature Mm-hmm.
+
+717
+00:50:52,451 --> 00:51:04,712
+Speaker 1: Anyway, yeah the final thing about baking is that you know all these things we talk about like precision and following instructions and all That stuff that is just to get you from ingredients to good tasting food Right.
+
+718
+00:51:05,133 --> 00:51:11,210
+Speaker 1: the final part of baking that you can optionally do is the arts and crafts mode.
+
+719
+00:51:11,431 --> 00:51:15,928
+Speaker 1: Yeah, it's like you can make a delicious ass ugly cake and it will be fucking delicious.
+
+720
+00:51:15,948 --> 00:51:22,432
+Speaker 1: my go-to I like a lumpy cookie, but to make a beautiful cake right now It's like okay.
+
+721
+00:51:22,473 --> 00:51:23,577
+Speaker 1: I've prepared this frosting.
+
+722
+00:51:23,617 --> 00:51:24,882
+Speaker 1: I've prepared this cake batter.
+
+723
+00:51:24,942 --> 00:51:25,906
+Speaker 1: I baked cakes.
+
+724
+00:51:26,388 --> 00:51:28,644
+Speaker 1: right now I have to construct a cake right.
+
+725
+00:51:29,007 --> 00:51:33,430
+Speaker 1: it's like well You can just take the cake slap the frosting on and it'll taste fine.
+
+726
+00:51:33,450 --> 00:51:36,038
+Speaker 0: That's my go-to cuz I've tried to get a taste before.
+
+727
+00:51:36,599 --> 00:51:37,743
+Speaker 1: it's not gonna taste better.
+
+728
+00:51:37,903 --> 00:51:45,679
+Speaker 1: if you put the frosting on artfully It doesn't increase the flavor But it's definitely a part of baking as a hobby.
+
+729
+00:51:45,800 --> 00:51:46,802
+Speaker 1: is arts and crafts right?
+
+730
+00:51:47,043 --> 00:51:49,209
+Speaker 1: cake decorating cookie decorating?
+
+731
+00:51:49,972 --> 00:51:56,888
+Speaker 1: There are some baking things like royal icing that taste awful, but you use them for decorating or Right all this sorts of stuff
+
+732
+00:51:57,231 --> 00:52:05,662
+Speaker 0: We used to kind of often as kids like we had all the piping stuff to like Decorate sugar cookies and cakes and we were all kind of cookie
+
+733
+00:52:05,682 --> 00:52:07,868
+Speaker 1: getting cookie cutters into different shapes.
+
+734
+00:52:08,229 --> 00:52:30,410
+Speaker 1: Yeah You know rolling things out right into like spiral shapes doing like some checkerboard cookie Right, you know like this is these extra techniques and steps you can do to beautify the the foods that you're making without necessarily Increasing the flavor or nutrition or edibleness in any way, right?
+
+735
+00:52:30,530 --> 00:52:32,096
+Speaker 0: I guess you got to figure out your line between.
+
+736
+00:52:32,116 --> 00:52:34,626
+Speaker 0: is your goal to make this a hobby to make food?
+
+737
+00:52:35,088 --> 00:52:36,254
+Speaker 0: is your goal just To make food?
+
+738
+00:52:36,274 --> 00:52:38,730
+Speaker 0: or is your goal to make this a full-on hobby, right?
+
+739
+00:52:38,790 --> 00:52:45,985
+Speaker 1: So I think kind of like that where it's sort of optional right where it's like some hobbies It's like yeah, you got a you know, if I look at say photography, right?
+
+740
+00:52:46,005 --> 00:52:47,050
+Speaker 1: It's like I take photos.
+
+741
+00:52:47,431 --> 00:52:52,150
+Speaker 1: Well, if I don't like doing the Photoshop part, which I don't yeah, my photos sort of don't get out there.
+
+742
+00:52:53,390 --> 00:53:02,943
+Speaker 1: Right, neither one of them are flicker in a while Right, but with baking it's like yeah, you can do the baking part And if you're not into the arts and crafts part, you don't have to do it.
+
+743
+00:53:03,004 --> 00:53:04,150
+Speaker 1: people still gonna eat the food.
+
+744
+00:53:04,391 --> 00:53:05,880
+Speaker 0: Yeah, I will never turn.
+
+745
+00:53:05,940 --> 00:53:17,590
+Speaker 1: it's not this how ugly it is Right, so it's multidisciplinary, but you can ignore One of the disciplines if you only like the arts and crafts and don't like the food part that comes before it.
+
+746
+00:53:18,411 --> 00:53:18,792
+Speaker 1: Guess what?
+
+747
+00:53:18,873 --> 00:53:21,080
+Speaker 1: You can just do arts and crafts without food.
+
+748
+00:53:21,201 --> 00:53:24,172
+Speaker 1: Yep, or find someone else to make the food for you I don't know.
+
+749
+00:53:24,212 --> 00:53:29,350
+Speaker 0: Yep, or find someone else who wants to eat the food that make it all worthwhile Mm-hmm.
+
+750
+00:53:30,193 --> 00:53:34,206
+Speaker 1: But yeah arts and crafts is definitely a big aspect of baking.
+
+751
+00:53:34,346 --> 00:53:35,450
+Speaker 1: that's out there, right?
+
+752
+00:53:36,472 --> 00:53:43,196
+Speaker 1: You know you can no matter what you're baking candies you could do candy like Sucks, it's super.
+
+753
+00:53:43,316 --> 00:53:44,621
+Speaker 1: candy making is dangerous.
+
+754
+00:53:44,661 --> 00:53:45,323
+Speaker 1: You got to do lunch.
+
+755
+00:53:45,363 --> 00:53:46,708
+Speaker 1: You can do sugar work though.
+
+756
+00:53:46,768 --> 00:53:47,270
+Speaker 1: You can do.
+
+757
+00:53:47,671 --> 00:53:49,276
+Speaker 1: No, there's a lot of like.
+
+758
+00:53:49,497 --> 00:53:50,681
+Speaker 0: this is baking.
+
+759
+00:53:51,143 --> 00:54:01,190
+Speaker 0: if you mess up and don't follow the procedure Usually all you're gonna do is make something that tastes really bad But with candy you're gonna start a fire or burn yourself most likely or destroy kitchen equipment.
+
+760
+00:54:01,692 --> 00:54:07,449
+Speaker 1: The point is candy making is an aspect of baking where you can really get very very creative and artsy.
+
+761
+00:54:08,692 --> 00:54:14,710
+Speaker 1: All sorts of you know things with sugar at different levels, right, you know You cuz cuz you need doing sugar work.
+
+762
+00:54:14,750 --> 00:54:25,370
+Speaker 1: You got everything from like hard candies all the way up to like caramels and everywhere in between, you know, stretchy taffies Right, all that stuff is just cooking sugar to different temperatures, right?
+
+763
+00:54:26,050 --> 00:54:27,356
+Speaker 1: You've got like tempering chocolate.
+
+764
+00:54:27,376 --> 00:54:34,350
+Speaker 1: you can temper chocolate which is a sort of a somewhat tricky technique but once you do it, you can like start coating things in chocolate or
+
+765
+00:54:35,673 --> 00:54:37,250
+Speaker 0: Temper like the same thing you do to a sword
+
+766
+00:54:39,132 --> 00:54:48,090
+Speaker 1: Sort of yeah, basically tempering chocolate is where you raise it to a temperature You lower it then you raise it again while you're mixing it like crazy and you're very precise about the temperatures.
+
+767
+00:54:49,193 --> 00:55:03,710
+Speaker 1: You also seed it with chocolate at different stages But regardless the result is you're controlling the temperature of the chocolate to get it to crystallize Into a particular, you know at a molecular level into a particular crystal structure of the chocolate.
+
+768
+00:55:03,991 --> 00:55:04,835
+Speaker 1: So it's still chocolate.
+
+769
+00:55:04,855 --> 00:55:06,100
+Speaker 1: It didn't like change its flavor.
+
+770
+00:55:06,200 --> 00:55:10,250
+Speaker 0: Well, just like if you make a sword and temper it It's still just metal, right?
+
+771
+00:55:10,370 --> 00:55:33,830
+Speaker 1: You just got the sugar like the chocolate molecules to line up in a particular structure so that you get Chocolate that is shiny and hard that snaps like right Whereas you know the same chocolate if you don't get it into that sort of Shape could be bendy or melty or sticky or sort of cloudy looking not nice and shiny Mmm, right.
+
+772
+00:55:34,731 --> 00:55:39,590
+Speaker 1: So if you want to like coat things in chocolate, you kind of need to do tempering, right?
+
+773
+00:55:39,630 --> 00:55:43,270
+Speaker 1: It's like it's like one of those techniques like laminating that you'd have to learn and do.
+
+774
+00:55:43,651 --> 00:55:45,257
+Speaker 1: Yeah, but it's but it's.
+
+775
+00:55:45,357 --> 00:55:49,210
+Speaker 1: usually you would only temper chocolate since it doesn't really change the flavor of the chocolate.
+
+776
+00:55:49,230 --> 00:55:53,802
+Speaker 1: It does change the texture which could matter for the eating experience somewhat.
+
+777
+00:55:54,323 --> 00:55:56,829
+Speaker 1: but most of it is about the the looks right?
+
+778
+00:55:58,151 --> 00:56:03,969
+Speaker 1: You can just coat something in soft chocolate and how much difference is anyone gonna gonna care really, right?
+
+779
+00:56:04,790 --> 00:56:06,750
+Speaker 1: Yeah, it's great if you buy a fancy chocolate.
+
+780
+00:56:06,872 --> 00:56:17,545
+Speaker 0: So, uh The last piece of advice I have for you is when if you can't get a hold of bread flour and you want to make Bread Google for how to just get wheat gluten and mix it into your flour.
+
+781
+00:56:17,586 --> 00:56:21,750
+Speaker 0: Like there's way yes, but There's ways to fix that problem.
+
+782
+00:56:22,131 --> 00:56:23,556
+Speaker 0: If you can't get bread flour.
+
+783
+00:56:23,737 --> 00:56:27,510
+Speaker 1: bread flour is just you know, all-purpose flour is just you know.
+
+784
+00:56:27,570 --> 00:56:28,975
+Speaker 1: It's just a regular old flour.
+
+785
+00:56:28,995 --> 00:56:30,380
+Speaker 1: So that's another thing right?
+
+786
+00:56:30,420 --> 00:56:30,480
+Speaker 1: is?
+
+787
+00:56:30,520 --> 00:56:33,330
+Speaker 1: people talk about like, you know white flour and whole wheat flour.
+
+788
+00:56:33,791 --> 00:56:40,091
+Speaker 1: Right, unless you're dealing with like other kinds of flour like, you know almond flour or something Right.
+
+789
+00:56:40,653 --> 00:56:42,498
+Speaker 1: white flour is also wheat flour.
+
+790
+00:56:42,819 --> 00:56:45,426
+Speaker 1: Yeah, there's white wheat and whole wheat.
+
+791
+00:56:45,767 --> 00:56:46,529
+Speaker 1: They're both wheats.
+
+792
+00:56:47,254 --> 00:56:48,928
+Speaker 1: It's not like white flour isn't wheat?
+
+793
+00:56:49,532 --> 00:56:50,980
+Speaker 1: Right, it's just old.
+
+794
+00:56:51,080 --> 00:57:00,636
+Speaker 1: the white flour is only endosperms, I think yeah Yeah, thought the wheat has.
+
+795
+00:57:00,656 --> 00:57:04,906
+Speaker 1: the wheat kernel has several parts and it goes into the mill right.
+
+796
+00:57:04,926 --> 00:57:13,930
+Speaker 1: it gets milled at a flour mill and then it gets crushed and They can separate out the different parts of the the wheat right the wheat kernel.
+
+797
+00:57:14,291 --> 00:57:17,061
+Speaker 1: So the white flour is just endosperms only.
+
+798
+00:57:17,081 --> 00:57:21,142
+Speaker 1: I think that's the part that's kept in the white flour Whereas the whole wheat flour is.
+
+799
+00:57:21,162 --> 00:57:23,336
+Speaker 1: they didn't separate it It's just all the flour.
+
+800
+00:57:23,517 --> 00:57:26,049
+Speaker 1: all the parts of the wheat kernel are still there just crushed up.
+
+801
+00:57:27,390 --> 00:57:31,250
+Speaker 1: So yeah, don't don't think that white flour is somehow not wheat.
+
+802
+00:57:31,818 --> 00:57:32,347
+Speaker 1: It's still wheat.
+
+803
+00:57:33,092 --> 00:57:38,748
+Speaker 1: but all-purpose flour is generally just white wheat flour with a certain level of gluten in it.
+
+804
+00:57:39,170 --> 00:57:43,225
+Speaker 1: and Bread flour is typically the same thing only with more gluten in it.
+
+805
+00:57:43,265 --> 00:57:48,444
+Speaker 1: because you're gonna be making bread You need more gluten and whole wheat flour is just the whole wheat.
+
+806
+00:57:48,845 --> 00:57:50,250
+Speaker 1: We didn't separate out the parts.
+
+807
+00:57:51,193 --> 00:57:56,330
+Speaker 1: So if you're making like a whole wheat bread very rarely will a whole wheat bread be a hundred percent whole wheat flour.
+
+808
+00:57:56,914 --> 00:58:04,270
+Speaker 1: usually you'll be doing something like You know white bread flour or 50% whole wheat something like that.
+
+809
+00:58:04,270 --> 00:58:06,969
+Speaker 0: Yeah, but the recipe you're following will tell you what to use.
+
+810
+00:58:07,592 --> 00:58:13,950
+Speaker 0: Yes, and if it doesn't specify if a recipe is just like just use flour nine times out of ten all-purpose flour, right?
+
+811
+00:58:14,070 --> 00:58:17,301
+Speaker 1: But like say rye flour, that's a different grain.
+
+812
+00:58:17,361 --> 00:58:17,903
+Speaker 1: That's not wheat.
+
+813
+00:58:18,244 --> 00:58:19,147
+Speaker 0: Yeah, it's rye.
+
+814
+00:58:19,287 --> 00:58:20,070
+Speaker 1: rye is not wheat.
+
+815
+00:58:20,473 --> 00:58:22,310
+Speaker 0: Don't don't make sugar cookies with rye flour.
+
+816
+00:58:22,350 --> 00:58:25,289
+Speaker 0: It'll do well, right maybe depending on what you want it to do, right?
+
+817
+00:58:25,490 --> 00:58:27,641
+Speaker 1: But it's like if you make a rye bread, well, guess what?
+
+818
+00:58:27,702 --> 00:58:28,506
+Speaker 1: It's not a wheat bread.
+
+819
+00:58:28,566 --> 00:58:29,230
+Speaker 1: It's a rye bread.
+
+820
+00:58:29,491 --> 00:58:30,234
+Speaker 1: What is right?
+
+821
+00:58:30,254 --> 00:58:32,744
+Speaker 0: cookie with rye flour would taste like you.
+
+822
+00:58:33,266 --> 00:58:33,869
+Speaker 1: probably not good.
+
+823
+00:58:34,870 --> 00:58:38,682
+Speaker 1: But Yeah, you know learn about flour.
+
+824
+00:58:38,702 --> 00:58:40,530
+Speaker 0: Oh, it's the same people make them.
+
+825
+00:58:40,873 --> 00:58:48,327
+Speaker 1: They don't look if you particularly good though If you can't get bread flour take white all-purpose flour and add some gluten to it.
+
+826
+00:58:48,347 --> 00:58:49,170
+Speaker 1: You can just get gluten.
+
+827
+00:58:50,292 --> 00:58:54,210
+Speaker 1: And also just last thing if you're doing some gluten-free bacon, you can't get any gluten in there.
+
+828
+00:58:54,632 --> 00:58:56,139
+Speaker 1: There's a lot of other things you can do.
+
+829
+00:58:56,240 --> 00:58:57,204
+Speaker 1: most common.
+
+830
+00:58:57,285 --> 00:58:58,290
+Speaker 1: I see is xanthan gum.
+
+831
+00:58:58,611 --> 00:59:02,430
+Speaker 1: Yeah, cuz xanthan gum is gummy like gluten, but it's not gluten.
+
+832
+00:59:02,531 --> 00:59:04,750
+Speaker 1: So it won't get a person sick who has celiac disease.
+
+833
+00:59:05,292 --> 00:59:13,256
+Speaker 1: so you can usually you know take a no gluten flour and you mix in some xanthan gum and To a certain amount and there you go.
+
+834
+00:59:13,297 --> 00:59:21,845
+Speaker 1: You have some sort of physical structure that can contain gas And you've got you know the rest of the parts of flour right and you're.
+
+835
+00:59:22,026 --> 00:59:23,350
+Speaker 1: you get some yeasts in there.
+
+836
+00:59:23,411 --> 00:59:25,797
+Speaker 1: they could eat it and You know make a bread.
+
+837
+00:59:26,480 --> 00:59:31,664
+Speaker 0: Yeah, I think we've gone on long enough And also, I'm actually literally gonna go bake some cookies.
+
+838
+00:59:31,845 --> 00:59:34,961
+Speaker 1: probably after the show I'm gonna I'm gonna go eat some kind of dinner.
+
+839
+00:59:35,022 --> 00:59:38,798
+Speaker 1: I guess they'll see what's in the freezer Cuz I just saw the other night.
+
+840
+00:59:38,879 --> 00:59:46,669
+Speaker 0: I made some really like Trust me sugar cookies are like the simplest possible thing you can bake and it's almost impossible to mess them up.
+
+841
+00:59:47,191 --> 00:59:48,095
+Speaker 1: I forgot to turn on the.
+
+842
+00:59:48,175 --> 00:59:54,174
+Speaker 1: it's been getting dark while we've been doing the show and I forgot to turn on this light on the stream here That I have.
+
+843
+00:59:54,194 --> 00:59:55,962
+Speaker 1: I got this light and I didn't even use it.
+
+844
+00:59:56,223 --> 00:59:57,630
+Speaker 0: Oh, I think I lost Scott on the discord.
+
+845
+00:59:58,530 --> 01:00:01,883
+Speaker 1: Yeah, I think you did because I bumped something anyway has appeared.
+
+846
+01:00:02,445 --> 01:00:03,188
+Speaker 1: I did all right.
+
+847
+01:00:03,630 --> 01:00:12,460
+Speaker 0: Yeah, this has been geek nights with rim and Scott special.
+
+848
+01:00:12,540 --> 01:00:17,300
+Speaker 0: Thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+849
+01:00:17,581 --> 01:00:19,568
+Speaker 1: Be sure to visit our website at front row.
+
+850
+01:00:19,608 --> 01:00:22,600
+Speaker 1: crew calm for show notes discussion news and more.
+
+851
+01:00:22,880 --> 01:00:33,816
+Speaker 0: Remember geek nights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays Night's is distributed under a Creative Commons attribution 3.0 license.
+
+852
+01:00:35,081 --> 01:00:38,170
+Speaker 1: Geek nights is recorded live with no studio and no audience.
+
+853
+01:00:38,351 --> 01:00:39,836
+Speaker 1: But unlike those other late shows.
+
+854
+01:00:39,956 --> 01:00:55,520
+Speaker 0: It's actually recorded at night And the patreon patrons for this particular episode of geek nights is something that I will read as soon as this page loads.
+
+855
+01:00:56,981 --> 01:00:59,612
+Speaker 0: I've hope you're all enjoying the fact that we got the streams going again.
+
+856
+01:01:00,014 --> 01:01:01,400
+Speaker 0: We're gonna tweak that pipeline.
+
+857
+01:01:01,641 --> 01:01:05,380
+Speaker 0: I'm gonna watch the two streams we did and futz around a little bit over the weekend.
+
+858
+01:01:05,902 --> 01:01:10,439
+Speaker 0: Try out some new hardware and we will be ready to rock with some more stuff.
+
+859
+01:01:11,542 --> 01:01:13,214
+Speaker 0: Stay tuned for other secret projects.
+
+860
+01:01:13,234 --> 01:01:16,285
+Speaker 0: We're working on And also stay tuned.
+
+861
+01:01:16,305 --> 01:01:23,167
+Speaker 0: I think we're gonna try to get a new ten episode done with this new pipeline Before the end of May.
+
+862
+01:01:23,247 --> 01:01:25,920
+Speaker 0: that might seem like a ways out, but I got some other project to finish first.
+
+863
+01:01:26,000 --> 01:01:30,360
+Speaker 0: But now is the perfect time to crank our way through the antenna show.
+
+864
+01:01:30,821 --> 01:01:36,885
+Speaker 0: But anyway right now I leave you with all this of names Alan Joyce, I'd even nickel mighty gradient Just like a dude guy.
+
+865
+01:01:36,906 --> 01:01:37,712
+Speaker 0: short option link age.
+
+866
+01:01:37,752 --> 01:01:38,620
+Speaker 0: you hold the key to my heart.
+
+867
+01:01:38,982 --> 01:01:40,251
+Speaker 0: She said you're moving with your auntie.
+
+868
+01:01:40,271 --> 01:01:43,388
+Speaker 0: know, Kalin Bel Air Clinton Walton J Best friend from New Zealand Ryan parent dropa letter.
+
+869
+01:01:43,449 --> 01:01:52,320
+Speaker 0: Nicholas Brando Chris mid give the thirst for hydrated Ganon drenneli Tenebra Sh Chris Reimer Finn Sean Klein Thomas on children about hurl Sean Yeager and a bunch of other people.
+
+870
+01:01:52,320 --> 01:01:53,343
+Speaker 0: I don't want me to say their names.
+
+871
+01:01:53,885 --> 01:01:54,687
+Speaker 0: Stay safe out there.
+
+872
+01:01:54,707 --> 01:01:58,920
+Speaker 0: And now I leave you with something that is actually really good advice.
+
+873
+01:02:00,541 --> 01:02:03,340
+Speaker 1: Did my mother always say about taking care of my eyes?
+
+874
+01:02:08,122 --> 01:02:12,560
+Speaker 0: Well, first of all never put salt in the right never puts ever puts ever puts put salt.
+
+875
+01:02:12,600 --> 01:02:13,846
+Speaker 1: It's all put put put put.
+
+876
+01:02:13,886 --> 01:02:16,800
+Speaker 0: so ever put forever never always put salt in your eyes.
+

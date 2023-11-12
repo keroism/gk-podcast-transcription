@@ -1,0 +1,2992 @@
+1
+00:00:09,820 --> 00:00:11,507
+Scott: It's Monday April 9th.
+
+2
+00:00:11,889 --> 00:00:12,471
+Scott: I'm Scott.
+
+3
+00:00:12,691 --> 00:00:13,213
+Rym: I'm Rym.
+
+4
+00:00:13,434 --> 00:00:14,939
+Scott: This is GeekNights.
+
+5
+00:00:15,823 --> 00:00:19,419
+Scott: Tonight we teach you all about the domain name service.
+
+6
+00:00:21,822 --> 00:00:22,858
+Scott: Let's do this.
+
+7
+00:00:25,670 --> 00:00:28,180
+Rym: So I've been slowly putting together a new computer bit by bit.
+
+8
+00:00:28,241 --> 00:00:38,884
+Rym: I've mentioned it briefly every now and again And I've watched the price come down from two thousand dollars to about a thousand dollars over the last few months for effectively the same If not more powerful computer.
+
+9
+00:00:39,606 --> 00:00:46,273
+Scott: Yeah, I mean we pretty much just need something that can run the hotness games Encode the podcast faster.
+
+10
+00:00:46,293 --> 00:00:53,080
+Rym: well most important I need a very powerful machine with a lot of RAM so I can do a lot of audio editing in real-time real quickly.
+
+11
+00:00:53,160 --> 00:00:55,090
+Rym: So I can experiment around a lot plus.
+
+12
+00:00:55,512 --> 00:00:56,759
+Rym: I want to have a fast computer.
+
+13
+00:00:57,883 --> 00:01:05,871
+Rym: Despite all the years I've had computers I've only owned four total because I keep one forever And then I eventually it dies.
+
+14
+00:01:05,952 --> 00:01:11,060
+Rym: I spent a ton of money to get another one That's super powerful, and then eventually it dies years and years and years later.
+
+15
+00:01:12,080 --> 00:01:17,577
+Rym: But the thing is I've been leaning surprisingly toward Intel and a core to duo.
+
+16
+00:01:18,138 --> 00:01:21,514
+Scott: Yeah, I know It's like if you asked me a year or two ago.
+
+17
+00:01:21,534 --> 00:01:22,800
+Scott: I wouldn't even thought of Intel.
+
+18
+00:01:22,800 --> 00:01:23,439
+Scott: I'd be like Intel.
+
+19
+00:01:23,460 --> 00:01:27,360
+Scott: Why would you buy one of those because you know a penny in four days a penny in four is a crap food well?
+
+20
+00:01:27,921 --> 00:01:32,340
+Rym: And before then you could buy an AMD chip for 200 bucks or get an Intel chip.
+
+21
+00:01:32,400 --> 00:01:34,106
+Rym: It was the same speed for like 800 bucks.
+
+22
+00:01:34,247 --> 00:01:39,205
+Scott: Yeah, it's pretty ridiculous, but now these core two duos, man They are the hotness.
+
+23
+00:01:39,346 --> 00:01:40,251
+Scott: They're incredibly hot.
+
+24
+00:01:40,592 --> 00:01:41,215
+Scott: I wouldn't work.
+
+25
+00:01:41,356 --> 00:01:42,743
+Rym: god damn They're slight.
+
+26
+00:01:42,783 --> 00:01:46,420
+Rym: they were still slightly more expensive than the AMD's, but they performed a lot better.
+
+27
+00:01:46,521 --> 00:01:48,040
+Rym: They were generally better architecture.
+
+28
+00:01:48,203 --> 00:01:55,686
+Rym: I thought all right I'm going Intel and I've been watching Intel and making Intel systems with core two duos And I just picked out that all.
+
+29
+00:01:55,766 --> 00:01:56,689
+Rym: everything was all said.
+
+30
+00:01:56,950 --> 00:02:02,302
+Rym: I was gonna get the e6 600 core to duo and everything was gonna Be awesome Today.
+
+31
+00:02:02,749 --> 00:02:08,555
+Rym: today AMD announced like 50% price cuts across most of their line now.
+
+32
+00:02:08,895 --> 00:02:16,517
+Rym: I can get the highest-end Athlon 64 x2 for like a hundred dollars less than the core to do.
+
+33
+00:02:16,617 --> 00:02:17,279
+Rym: I was looking at.
+
+34
+00:02:18,662 --> 00:02:21,720
+Rym: Yeah, so now I'm looking at AMD motherboards.
+
+35
+00:02:21,740 --> 00:02:28,280
+Scott: That's fine because the Andy motherboards are actually a lot nicer than the Intel motherboards And they're also friendlier to people building computers.
+
+36
+00:02:28,521 --> 00:02:32,600
+Rym: Yeah, well unless you spend 300 bucks to get those awesome 8-bit Intel motherboards.
+
+37
+00:02:33,201 --> 00:02:34,692
+Scott: Yeah, those things though.
+
+38
+00:02:34,974 --> 00:02:35,860
+Scott: They're just out of control.
+
+39
+00:02:35,960 --> 00:02:36,161
+Scott: I don't.
+
+40
+00:02:36,201 --> 00:02:37,667
+Scott: it's like too much thing is now.
+
+41
+00:02:37,687 --> 00:02:40,960
+Rym: I gotta hold out cuz April 22nd when Intel drops their prices.
+
+42
+00:02:41,201 --> 00:02:43,180
+Rym: Yeah, I just don't think they're gonna drop them enough.
+
+43
+00:02:43,260 --> 00:02:46,201
+Rym: I don't think they're gonna drop the price of the core 2 by 50%.
+
+44
+00:02:46,201 --> 00:02:51,840
+Scott: I'm still dealing with one new computer and sitting on my lap, so it's gonna be a while before I buy another new computer.
+
+45
+00:02:52,002 --> 00:02:53,119
+Rym: I'm really looking forward to this.
+
+46
+00:02:53,401 --> 00:02:54,045
+Rym: I mean I've been.
+
+47
+00:02:54,266 --> 00:02:59,190
+Rym: I got a touch of it when I got Jameson here And I started doing that new computer thing to it.
+
+48
+00:02:59,250 --> 00:03:00,033
+Scott: Yes, okay.
+
+49
+00:03:00,054 --> 00:03:00,636
+Scott: That's a $20 computer.
+
+50
+00:03:02,222 --> 00:03:05,211
+Scott: He's saying the $20 computer is better than yours actually.
+
+51
+00:03:05,251 --> 00:03:16,227
+Rym: It's not despite the fact that the processor is About 70% faster and better architecture than my current main computer Because of the motherboard.
+
+52
+00:03:16,227 --> 00:03:16,648
+Rym: $20.
+
+53
+00:03:16,648 --> 00:03:18,112
+Scott: well one.
+
+54
+00:03:18,533 --> 00:03:19,776
+Rym: It's a crap motherboard.
+
+55
+00:03:19,836 --> 00:03:20,357
+Rym: It's the worst.
+
+56
+00:03:20,718 --> 00:03:21,440
+Rym: It's $20.
+
+57
+00:03:21,440 --> 00:03:22,185
+Scott: What do you expect?
+
+58
+00:03:22,467 --> 00:03:23,031
+Scott: all right you get.
+
+59
+00:03:23,051 --> 00:03:24,440
+Scott: so you should be happy it works.
+
+60
+00:03:24,540 --> 00:03:27,579
+Rym: That's a miracle in it aside from the fact that the video barely works.
+
+61
+00:03:28,161 --> 00:03:29,525
+Rym: Thus the onboard sound.
+
+62
+00:03:30,106 --> 00:03:35,380
+Rym: if the processor gets taxed at all I can hear it making noise in the sound card.
+
+63
+00:03:35,541 --> 00:03:36,598
+Scott: It's just so awesome.
+
+64
+00:03:37,920 --> 00:03:43,537
+Rym: But despite the fact that this computer is so much faster than my current computer one.
+
+65
+00:03:43,557 --> 00:03:49,434
+Rym: this thing's running Ubuntu Which while the great is not the most optimized Linux to $20 motherboard.
+
+66
+00:03:49,876 --> 00:03:53,519
+Rym: so my old Thunderbird gigahertz Run circles around this thing.
+
+67
+00:03:54,173 --> 00:04:02,145
+Rym: Yeah Gen 2 is pretty awesome despite the fact that this is a gen 2 that has not been updated in any way in About a year.
+
+68
+00:04:02,165 --> 00:04:04,700
+Rym: yeah, I'm running an old-ass Firefox.
+
+69
+00:04:05,022 --> 00:04:12,720
+Rym: I type to merge and it didn't just say oh you got to update your profile Blinking red text and it basically said what the fuck are you trying to do?
+
+70
+00:04:12,940 --> 00:04:14,879
+Scott: That's what happens on the hosting if I try to do that.
+
+71
+00:04:17,040 --> 00:04:19,298
+Scott: So I Usually make lunch at work.
+
+72
+00:04:19,601 --> 00:04:24,871
+Scott: You know I buy I bring a loaf of bread and the peanut butter and a jelly to work And I have one knife at work that I wash.
+
+73
+00:04:24,972 --> 00:04:26,620
+Rym: It's peanut butter jelly time.
+
+74
+00:04:26,881 --> 00:04:33,380
+Scott: Yeah, that's right peanut butter and it's really economical because I get a lot of lunch because two sandwiches pretty filling.
+
+75
+00:04:33,942 --> 00:04:34,666
+Scott: It's real easy.
+
+76
+00:04:34,686 --> 00:04:36,393
+Scott: I don't have to leave work and waste time.
+
+77
+00:04:36,413 --> 00:04:46,269
+Scott: I can leave work slightly earlier and no one complains because I sat there all day, and it's really cheap because a loaf of bread is like two bucks and A peanut butter and jelly.
+
+78
+00:04:46,289 --> 00:04:47,835
+Scott: you buy it once at last week's.
+
+79
+00:04:48,056 --> 00:04:52,051
+Rym: see I try that but one No number of peanut butter and jellies will save me.
+
+80
+00:04:52,653 --> 00:04:54,460
+Scott: I can be sated by two peanut butter and jellies.
+
+81
+00:04:54,561 --> 00:04:54,966
+Rym: I can't.
+
+82
+00:04:55,310 --> 00:04:56,120
+Rym: I just can't do it.
+
+83
+00:04:56,160 --> 00:05:00,806
+Rym: So I always buy some ham or some turkey or something some sort of meat And then I need some other stuff.
+
+84
+00:05:00,826 --> 00:05:06,539
+Rym: because just a sandwich like two pieces of bread and a piece of ham After a couple days at that that's really gonna get to you.
+
+85
+00:05:06,720 --> 00:05:10,075
+Rym: Yeah, but if I buy different kinds of meat then I don't save any money.
+
+86
+00:05:10,095 --> 00:05:11,159
+Rym: I might as well eat out every day.
+
+87
+00:05:11,903 --> 00:05:18,394
+Scott: So today, you know I knew I was out of bread at work and I didn't have a loaf of bread to bring to work.
+
+88
+00:05:18,857 --> 00:05:26,677
+Scott: and when I Looked around near work for a place to buy a loaf of bread, and I couldn't I didn't look very hard But I couldn't find one in my cursory search.
+
+89
+00:05:26,879 --> 00:05:31,114
+Rym: well Yeah, contrary to popular block radius there are grocery stores in New York City.
+
+90
+00:05:31,134 --> 00:05:31,555
+Scott: There are.
+
+91
+00:05:31,596 --> 00:05:36,431
+Scott: they're just you know not Obvious, they're not like super stop and shops or Wegmans or anything.
+
+92
+00:05:36,712 --> 00:05:36,872
+Rym: well.
+
+93
+00:05:36,932 --> 00:05:39,020
+Rym: They're also not right next to the area you work.
+
+94
+00:05:39,381 --> 00:05:39,962
+Scott: That's correct.
+
+95
+00:05:39,982 --> 00:05:47,338
+Scott: It's just clothing stores there, so it was very lucky that Emily randomly called me and said hey Do you want to go get lunch and I was like yes?
+
+96
+00:05:50,283 --> 00:05:56,851
+Scott: So we just started walking you know randomly Towards the Chinatown area looking for a place to eat whatever.
+
+97
+00:05:57,412 --> 00:06:04,238
+Scott: and she said first we passed by this place that sold Candy, and it was all sorts of Asian candies, and you just shoveled them.
+
+98
+00:06:04,258 --> 00:06:07,471
+Rym: ah I really like Asian games, so it was.
+
+99
+00:06:07,712 --> 00:06:08,254
+Scott: I went in there.
+
+100
+00:06:08,295 --> 00:06:09,380
+Scott: the place is called.
+
+101
+00:06:09,561 --> 00:06:22,159
+Scott: I'm looking at the bag hold on aji Ichiban And I went in there And I looked at the candy and they had some dried fruits And you know usual stuff, and then I see the marshmallows that are filled with gummy.
+
+102
+00:06:23,040 --> 00:06:25,803
+Rym: Marshmallows that are filled with gummy are Amazing.
+
+103
+00:06:26,124 --> 00:06:28,294
+Rym: these are almost better than a koala.
+
+104
+00:06:28,314 --> 00:06:29,700
+Scott: Yeah, I don't know if you ever seen these things.
+
+105
+00:06:29,740 --> 00:06:30,846
+Scott: It's basically it's.
+
+106
+00:06:31,128 --> 00:06:49,560
+Scott: it's a. it's like a white powdery Disc that's about an inch in diameter Maybe a little over an inch in diameter, and it's squishy and inside of it It's made of marshmallow, but the middle of it has a gummy Artificial fruit flavor stuff in it and it's individually wrapped, and they had every flavor of this stuff.
+
+107
+00:06:50,063 --> 00:06:57,480
+Scott: I had only thought there was a strawberry flavor So I shoveled strawberry and apple and I didn't want to shovel anymore because that would have been too much and that cost me like.
+
+108
+00:06:59,260 --> 00:07:03,760
+Scott: Then we kept walking looking for a place to eat and Emily said there was a place that had dumplings on the cheap.
+
+109
+00:07:04,141 --> 00:07:05,407
+Scott: But she didn't see it.
+
+110
+00:07:05,568 --> 00:07:06,994
+Scott: We only we saw it on the way back.
+
+111
+00:07:07,014 --> 00:07:07,316
+Scott: You're like.
+
+112
+00:07:07,517 --> 00:07:07,918
+Scott: Oh there.
+
+113
+00:07:07,938 --> 00:07:08,200
+Scott: It is.
+
+114
+00:07:08,380 --> 00:07:09,927
+Rym: Yeah, that's got to really suck.
+
+115
+00:07:09,947 --> 00:07:12,880
+Rym: you like you want to eat a dumpling and you can't find the this place.
+
+116
+00:07:12,900 --> 00:07:15,558
+Scott: She said for like a dollar you can get a bunch of dumplings.
+
+117
+00:07:15,659 --> 00:07:16,899
+Rym: god I gotta go there get some time.
+
+118
+00:07:17,101 --> 00:07:19,752
+Scott: I'm gonna go there probably with some co-workers if I get a chance.
+
+119
+00:07:19,873 --> 00:07:21,380
+Scott: I feel like hey, let's go to the dumpling house.
+
+120
+00:07:22,421 --> 00:07:27,548
+Scott: Anyway instead we went to this random Chinese Lunch bakery type place.
+
+121
+00:07:27,708 --> 00:07:34,992
+Scott: I got a pork bun, and I got this like Danish Roll twisty kind of bun with a hot dog in it.
+
+122
+00:07:35,032 --> 00:07:35,915
+Scott: It's actually pretty good.
+
+123
+00:07:35,936 --> 00:07:36,939
+Scott: They were a dollar each.
+
+124
+00:07:37,944 --> 00:07:42,283
+Scott: It was real cheap, and then we walked outside, and there was this place I saw.
+
+125
+00:07:42,403 --> 00:07:43,569
+Scott: you know what this place is called.
+
+126
+00:07:43,589 --> 00:07:44,453
+Rym: What was it called?
+
+127
+00:07:44,915 --> 00:07:45,960
+Scott: egg custard King?
+
+128
+00:07:47,020 --> 00:07:48,176
+Rym: That's not a good all right.
+
+129
+00:07:48,841 --> 00:07:55,560
+Rym: So way back at RIT none of us well these most of us had never been to a dim sum breakfast a Chinese breakfast.
+
+130
+00:07:56,283 --> 00:08:12,860
+Rym: We're basically people will come by and they've got a cart full of stuff And you point at little tiny servings of various things And they just put them on the table and you just keep doing this until you're full and they'll be like little Dumpling thing with red bean paste in it or some tripe for all these little things, and they're all awesome.
+
+131
+00:08:13,102 --> 00:08:14,012
+Rym: We need to ever try.
+
+132
+00:08:14,032 --> 00:08:17,179
+Rym: I Do not hate trife.
+
+133
+00:08:18,043 --> 00:08:19,329
+Scott: You don't get it on purpose.
+
+134
+00:08:19,450 --> 00:08:42,412
+Rym: I will not go out of my way to ingest right Unlike cat who can eat like four pounds of it despite the fact that she's Anyway, and one of the things that they will have called an egg custard, and it's a little tiny pastry And it's basically just a little like pie crust shell and inside of it is a custard made from effectively egg yolk Yep, and not a lot else as far as I can tell.
+
+135
+00:08:42,673 --> 00:08:50,060
+Rym: nope there are about 5,000 calories each And They're delectable yes.
+
+136
+00:08:50,100 --> 00:08:51,404
+Scott: So I went in.
+
+137
+00:08:51,565 --> 00:08:52,307
+Scott: we went in to the.
+
+138
+00:08:52,368 --> 00:08:56,463
+Scott: we were hesitant to actually go into the custard King like after we went ate at the bakery.
+
+139
+00:08:56,503 --> 00:09:00,639
+Scott: we walked over there and looked at the custard King and we were like That's dangerous.
+
+140
+00:09:02,101 --> 00:09:05,474
+Rym: Our friend Luke almost ate my hand trying to get half of an egg custard.
+
+141
+00:09:05,494 --> 00:09:13,007
+Scott: so I went in to the custard King The egg custard King and I saw egg custards and many Among other things.
+
+142
+00:09:13,449 --> 00:09:18,932
+Scott: but not only do they have plain egg custards They had quite a few different flavors of egg custard.
+
+143
+00:09:19,433 --> 00:09:20,859
+Rym: What flavor could you have other than egg?
+
+144
+00:09:21,480 --> 00:09:23,567
+Scott: Well egg custards were 75 cents each.
+
+145
+00:09:23,648 --> 00:09:23,969
+Scott: They had.
+
+146
+00:09:23,989 --> 00:09:25,193
+Scott: ah they had egg.
+
+147
+00:09:25,253 --> 00:09:28,323
+Scott: they had Strawberry.
+
+148
+00:09:28,343 --> 00:09:32,316
+Scott: I forget the other flavors, but I strawberry egg, but I had honeydew.
+
+149
+00:09:32,336 --> 00:09:33,098
+Scott: honeydew.
+
+150
+00:09:33,800 --> 00:09:35,126
+Scott: I had a honeydew egg custard.
+
+151
+00:09:35,146 --> 00:09:36,913
+Rym: you had a money melon egg custard.
+
+152
+00:09:36,933 --> 00:09:37,516
+Scott: That's right.
+
+153
+00:09:37,536 --> 00:09:43,624
+Rym: I Imagine because any five said because you're talking about this that it was as good as I could imagine It was.
+
+154
+00:09:44,008 --> 00:09:51,820
+Scott: it was basically you bit into it And it tasted like well crust and then it tasted like egg custard and then it tasted like I guess honeydew.
+
+155
+00:09:52,281 --> 00:09:54,490
+Rym: We should probably do a show on all these Asian foods.
+
+156
+00:09:54,530 --> 00:09:57,059
+Scott: We like I don't know we do too many food shows.
+
+157
+00:09:57,381 --> 00:09:59,127
+Rym: We actually we've held off on that for a while.
+
+158
+00:09:59,147 --> 00:10:02,339
+Scott: I know but I feel bad doing food shows in a geek show.
+
+159
+00:10:02,821 --> 00:10:04,470
+Rym: Hey, I think the worst was way back.
+
+160
+00:10:04,570 --> 00:10:06,560
+Rym: We got our friend Adam on the show cuz he's really funny.
+
+161
+00:10:06,620 --> 00:10:11,177
+Rym: We like having him on the show, but we didn't have a topic so we ended up talking about.
+
+162
+00:10:11,237 --> 00:10:12,140
+Scott: that was your idea.
+
+163
+00:10:12,180 --> 00:10:13,511
+Scott: I wanted to talk about something else.
+
+164
+00:10:13,713 --> 00:10:16,759
+Scott: You didn't suggest anything I didn't have an idea, but I knew I didn't want that one.
+
+165
+00:10:17,263 --> 00:10:22,124
+Scott: Yeah, I don't have to know what I want to know what I don't want And you know what I do want.
+
+166
+00:10:22,164 --> 00:10:25,135
+Scott: I want egg custards anyway in the news.
+
+167
+00:10:25,637 --> 00:10:26,540
+Scott: Oh, yeah, and one more thing.
+
+168
+00:10:26,580 --> 00:10:29,632
+Scott: I'm looking for the bean curd King if anyone knows where bean curd King is.
+
+169
+00:10:29,652 --> 00:10:33,592
+Rym: Ah, I Don't know what I like more red bean or black bean.
+
+170
+00:10:34,054 --> 00:10:34,940
+Scott: I'm a red bean fan.
+
+171
+00:10:35,000 --> 00:10:38,517
+Rym: I think I'm more of a red bean fan, but I cannot deny the black bean is delectable.
+
+172
+00:10:38,537 --> 00:10:40,065
+Rym: All right I said delectable twice.
+
+173
+00:10:40,126 --> 00:10:41,151
+Rym: I feel like hedonism pot.
+
+174
+00:10:41,231 --> 00:10:45,480
+Scott: Let's do the show anyway especially you hedonism bot.
+
+175
+00:10:46,461 --> 00:10:50,260
+Rym: Anyway, so blu-ray and HD VD have one thing.
+
+176
+00:10:51,701 --> 00:10:52,624
+Rym: Yeah, I like that.
+
+177
+00:10:52,704 --> 00:11:00,204
+Scott: well, maybe I could say HD squared VD HD DVD.
+
+178
+00:11:00,385 --> 00:11:04,219
+Rym: Well if I simplified further it would technically be HVD to the third.
+
+179
+00:11:04,731 --> 00:11:08,310
+Rym: because But then again, is it HD - DVD?
+
+180
+00:11:08,571 --> 00:11:10,900
+Rym: cuz then it's all sorts of pain in the ass.
+
+181
+00:11:11,721 --> 00:11:14,769
+Scott: HD parenthesis D to the VD.
+
+182
+00:11:14,789 --> 00:11:17,557
+Rym: I don't know D to the VD.
+
+183
+00:11:17,617 --> 00:11:18,580
+Rym: the fuck did you get that?
+
+184
+00:11:19,044 --> 00:11:20,058
+Scott: I was just making shit up.
+
+185
+00:11:20,862 --> 00:11:25,420
+Rym: Anyway, one thing they share in common is the DRM in them.
+
+186
+00:11:25,460 --> 00:11:34,020
+Rym: You might know how DVDs all have CSS and then the Linux community responded with D CSS that removed CSS and allowed you to watch DVDs.
+
+187
+00:11:34,444 --> 00:11:37,689
+Rym: Yes I'm not gonna go into all the technical detail.
+
+188
+00:11:37,709 --> 00:11:40,440
+Scott: That's like we could do a whole show with the story of DC SS.
+
+189
+00:11:40,985 --> 00:11:42,539
+Rym: But I'll put this in real simple terms.
+
+190
+00:11:43,122 --> 00:11:50,089
+Rym: Win DVD is this garbage program that lets you watch DVDs on in windows Which I don't understand why.
+
+191
+00:11:50,109 --> 00:11:52,260
+Scott: you know, you need like a special program.
+
+192
+00:11:52,320 --> 00:11:53,725
+Scott: Well, because watch DVDs.
+
+193
+00:11:53,765 --> 00:11:58,040
+Rym: well because you can't have a program that decodes DVD without paying the license fee.
+
+194
+00:11:58,441 --> 00:12:00,992
+Rym: That's why there were no technically windows media player.
+
+195
+00:12:01,012 --> 00:12:01,273
+Scott: do it.
+
+196
+00:12:01,675 --> 00:12:02,900
+Rym: No, cuz they didn't pay the license.
+
+197
+00:12:03,561 --> 00:12:06,342
+Rym: I thought it could it might now but back in the day It didn't.
+
+198
+00:12:06,442 --> 00:12:10,040
+Scott: because I guess I think if you have the windows media center you can do it.
+
+199
+00:12:10,281 --> 00:12:13,171
+Rym: Yeah, but the point is way back in the day when win DVD was spawned.
+
+200
+00:12:13,774 --> 00:12:15,500
+Rym: You couldn't play DVDs on a computer.
+
+201
+00:12:16,124 --> 00:12:22,373
+Scott: Yeah, you had people had DVD roms But you couldn't actually watch DVDs if you put the DVD in the DVD.
+
+202
+00:12:22,433 --> 00:12:23,740
+Rym: rightly because there was no soft.
+
+203
+00:12:23,780 --> 00:12:26,410
+Rym: There was no soft and partly because computers weren't fast enough.
+
+204
+00:12:26,470 --> 00:12:31,039
+Scott: Yeah, you could only use the DVD ROM to To get data off of D.
+
+205
+00:12:31,180 --> 00:12:39,224
+Rym: I had a friend who had a hardware DVD decoder plugged into his video card with the special the only way Internal cable.
+
+206
+00:12:39,384 --> 00:12:39,585
+Scott: Yep.
+
+207
+00:12:39,886 --> 00:12:44,560
+Scott: That was the only way to watch DVDs on a computer originally was to have a DVD ROM.
+
+208
+00:12:44,962 --> 00:12:53,060
+Scott: Connect the DVD ROM to a video card To an other card that connected to the video card with cables that were inside and all weird.
+
+209
+00:12:53,184 --> 00:13:01,443
+Rym: Well, no There was those other ones those horrible video cards where you had to have a VGA coming out of your video card Into this DVD thing and then out of the DV monitor.
+
+210
+00:13:01,504 --> 00:13:16,636
+Scott: basically it was a card with a chip on it and all that chip did was take DVD data and MPEG-2 and convert it into something you could see that your monitor understands anyway Not go into technical detail even though I've already said that.
+
+211
+00:13:16,656 --> 00:13:27,070
+Rym: Yep The DRM that is on these things is in win DVD 8 because otherwise win DVD 8 wouldn't be able to play HD DVD or blu-ray.
+
+212
+00:13:27,171 --> 00:13:29,520
+Scott: of course win DVD paid to get that stuff right?
+
+213
+00:13:29,941 --> 00:13:38,898
+Rym: well win DVD and on all appearances did not do their due diligence in protecting the Decryption method or the key or whatever they've got.
+
+214
+00:13:39,240 --> 00:13:43,580
+Scott: So someone with a copy of win DVD busted it open and figured out how to break HD DVD.
+
+215
+00:13:44,021 --> 00:13:50,560
+Rym: So it looks like someone started using this busted key to rip HD content and put it on bit torrent.
+
+216
+00:13:51,446 --> 00:13:59,280
+Rym: And as far as I can read from this article It looks like the people responsible for a ACS encryption have revoked this key.
+
+217
+00:13:59,661 --> 00:14:00,644
+Rym: And that is the news.
+
+218
+00:14:00,744 --> 00:14:15,060
+Rym: ladies and gentlemen for you see if you have a DVD player that plays blu-ray or HD DVD and some hacker out there Compromises the key that your player uses your players just gonna stop working because they're gonna revoke the keys your player uses.
+
+219
+00:14:15,281 --> 00:14:22,300
+Scott: yep, any new disc is gonna use a different key and It's actually to update your player to play those.
+
+220
+00:14:22,340 --> 00:14:23,945
+Rym: it's actually more complicated than that.
+
+221
+00:14:24,065 --> 00:14:32,100
+Rym: really new discs will it include in them a list of revoked keys and Fuck up any DVD player that they get put in?
+
+222
+00:14:33,364 --> 00:14:35,140
+Rym: So it'll say by the way your keys revoked.
+
+223
+00:14:35,422 --> 00:14:39,527
+Rym: So the only way to avoid getting your key revoked is to not ever buy a new HD.
+
+224
+00:14:39,708 --> 00:14:41,098
+Scott: also give you a new key.
+
+225
+00:14:41,983 --> 00:14:45,280
+Scott: Well see by default no, how do you get the new key?
+
+226
+00:14:45,622 --> 00:14:48,280
+Rym: Well it depends on whether or not your player has a method.
+
+227
+00:14:48,401 --> 00:14:54,666
+Rym: Maybe your manufacturer will be lucky or you'll be lucky and they'll send you a special DVD That'll patch it or something.
+
+228
+00:14:54,987 --> 00:14:58,840
+Rym: or maybe because I know I think blu-ray players are mandated to have an Ethernet hole.
+
+229
+00:14:59,088 --> 00:15:05,699
+Scott: Yeah I know that like the original HD DVD players were actually Linux computers that they would that Toshiba was giving.
+
+230
+00:15:05,719 --> 00:15:11,790
+Rym: yeah But not all HD DVD players Apparently have to have this port.
+
+231
+00:15:11,851 --> 00:15:14,722
+Rym: so there might be HD DVD players that aren't Updateable.
+
+232
+00:15:15,043 --> 00:15:19,706
+Rym: and even then with the blu-ray you're gonna have to connect to the internet and do a bunch of stuff to make it Work again.
+
+233
+00:15:19,726 --> 00:15:25,179
+Rym: Wow Luckily for people who use win DVD win DVD can just send out a patch.
+
+234
+00:15:25,985 --> 00:15:29,606
+Rym: Uh-huh, but this does not bode well for yon consumer.
+
+235
+00:15:29,626 --> 00:15:38,720
+Rym: if you can have a piece of hardware that plays media and Based on the arbitrary actions of people you have nothing involved with that hardware could cease to function.
+
+236
+00:15:39,680 --> 00:15:42,746
+Rym: awesome This is the first case of this.
+
+237
+00:15:42,786 --> 00:15:46,500
+Scott: so or even worse you'll need an internet connection to watch DVDs.
+
+238
+00:15:47,104 --> 00:15:49,298
+Rym: So of course the internet is all abuzz about it.
+
+239
+00:15:50,162 --> 00:15:50,403
+Rym: I can't.
+
+240
+00:15:50,483 --> 00:15:55,020
+Rym: I'll wait to see what the exact details are as to whether exactly what happened here.
+
+241
+00:15:55,583 --> 00:16:05,720
+Rym: I'm sure now if this is especially if this is a proof of concept We're gonna see a lot more of this because there's nothing hacker punk kids like more than causing problems like this for normal consumers
+
+242
+00:16:06,163 --> 00:16:15,140
+Scott: You know, but really I have no sympathy because Cause the problems for themselves and people who buy their DRM products get what they deserve.
+
+243
+00:16:15,472 --> 00:16:25,827
+Rym: Yeah The only reason I am NOT jumping on any sort of HD bandwagon is that every five minutes they change the standards or do whatever they can to DRM me a little bit more and it Costs a lot of money.
+
+244
+00:16:25,847 --> 00:16:26,313
+Scott: and who cares?
+
+245
+00:16:26,616 --> 00:16:32,600
+Rym: Yeah Granted it's almost to the point where it might be worth it if I had a bunch of money laying around and it weren't DRM.
+
+246
+00:16:32,982 --> 00:16:44,478
+Scott: Yeah, I mean just to make free up some room in the living room Yeah, and put a flat screen on the wall instead of yeah, so for anyone out there He uses instant messaging which should be most people.
+
+247
+00:16:45,581 --> 00:16:46,966
+Scott: You might use aim.
+
+248
+00:16:47,086 --> 00:16:48,271
+Scott: You might use ICQ.
+
+249
+00:16:48,351 --> 00:16:48,772
+Scott: Who knows?
+
+250
+00:16:49,013 --> 00:16:50,438
+Rym: if you're a loser you might use MSN.
+
+251
+00:16:52,443 --> 00:16:52,745
+Scott: Who knows?
+
+252
+00:16:52,765 --> 00:16:53,852
+Scott: I don't care what you use.
+
+253
+00:16:53,932 --> 00:16:54,475
+Rym: if you're awesome.
+
+254
+00:16:54,495 --> 00:16:55,200
+Rym: You probably use jabber.
+
+255
+00:16:55,300 --> 00:17:01,560
+Scott: Yeah, only awesome people use jabber and all jabber users are awesome and Google Chat is basically just jabber.
+
+256
+00:17:02,282 --> 00:17:03,888
+Scott: It's jabber powered by Google, which is fine.
+
+257
+00:17:04,349 --> 00:17:09,449
+Scott: no matter what protocol you're using for instant messaging You probably have some client or another.
+
+258
+00:17:09,911 --> 00:17:12,200
+Scott: maybe use the one that goes with your instant messenger.
+
+259
+00:17:12,260 --> 00:17:19,898
+Scott: You might use the actual MSN client or you know, you maybe use the actual AOL AIM client Maybe use trillion or something like that.
+
+260
+00:17:20,079 --> 00:17:25,040
+Scott: Maybe you're like me and you use PSI or PSI or PSI or whatever you want to say it.
+
+261
+00:17:25,079 --> 00:17:25,561
+Scott: I don't care.
+
+262
+00:17:26,022 --> 00:17:29,916
+Scott: but a very popular one is the open-source gaim or game.
+
+263
+00:17:29,936 --> 00:17:33,649
+Rym: However, you want to pronounce it It's pronounced gaim as far as I'm concerned game.
+
+264
+00:17:33,669 --> 00:17:34,692
+Rym: people could die in a fire.
+
+265
+00:17:35,033 --> 00:17:35,956
+Scott: I agree with Rym.
+
+266
+00:17:35,976 --> 00:17:37,059
+Scott: It is gaim.
+
+267
+00:17:37,782 --> 00:17:39,467
+Rym: This game sounds lame.
+
+268
+00:17:39,728 --> 00:17:40,290
+Scott: It doesn't.
+
+269
+00:17:40,330 --> 00:17:52,700
+Scott: game sounds like something I play or talk about on Tuesdays anyway, anyway G aim is a very awesome client that I used to use but I don't use anymore only because it doesn't fully support jabber.
+
+270
+00:17:52,840 --> 00:17:55,671
+Scott: And you'd think jabber is the open source protocol.
+
+271
+00:17:55,711 --> 00:17:57,819
+Scott: It should support that one better than the other ones.
+
+272
+00:17:58,201 --> 00:18:01,720
+Rym: Yeah, as far as I can tell the developers of GM is lazy.
+
+273
+00:18:02,208 --> 00:18:02,697
+Scott: I think so.
+
+274
+00:18:03,261 --> 00:18:04,846
+Scott: But GM is a pretty good.
+
+275
+00:18:04,866 --> 00:18:10,084
+Scott: I am client if you're not using jabber and it allows you to sign into a whole bunch of Things at once.
+
+276
+00:18:10,144 --> 00:18:11,993
+Scott: and they've been doing a lot of updates to it.
+
+277
+00:18:12,094 --> 00:18:13,440
+Rym: Yeah tabs all sorts of fun.
+
+278
+00:18:13,460 --> 00:18:14,685
+Scott: So it has some cool features.
+
+279
+00:18:14,726 --> 00:18:17,378
+Scott: It's much better than using the standard AOL client.
+
+280
+00:18:17,398 --> 00:18:17,880
+Scott: That's for sure.
+
+281
+00:18:18,041 --> 00:18:26,555
+Rym: yeah, I mean pretty much if you're not using PSI or gaim or Adium I don't know what you're doing because there really aren't many better ones than those three.
+
+282
+00:18:26,575 --> 00:18:27,980
+Scott: Oh me bow calm.
+
+283
+00:18:28,545 --> 00:18:29,474
+Rym: Oh me bow calm.
+
+284
+00:18:29,555 --> 00:18:36,900
+Scott: Yep Anyway, gee aim originally was called GTK plus AOL instant messenger because all it was was an open source.
+
+285
+00:18:37,261 --> 00:18:46,471
+Scott: Yeah, well instant messenger that ran and G used the GTK plus GUI live and apparently AOL said hey You can't have AOL instant messenger in the name of your product.
+
+286
+00:18:46,732 --> 00:18:51,219
+Scott: Yep, so they changed the name to gee aim and AOL kind of laid off.
+
+287
+00:18:51,661 --> 00:18:55,955
+Scott: But then later AOL started to harass them a little bit more a little bit more a little bit more.
+
+288
+00:18:55,975 --> 00:19:01,619
+Scott: and so finally Just now without telling anyone they decided on their own.
+
+289
+00:19:02,222 --> 00:19:02,945
+Scott: Because they didn't.
+
+290
+00:19:02,986 --> 00:19:05,417
+Scott: they weren't able to reveal the reason they were changing the name.
+
+291
+00:19:05,457 --> 00:19:10,980
+Rym: most likely AOL forced them to not reveal it and AOL sued them or threatened to sue them and had some sort of deal.
+
+292
+00:19:11,167 --> 00:19:18,580
+Scott: Yeah Anyway, GM is now called pigeon PID G in and not like the bird or the Pokemon Pidgeotto.
+
+293
+00:19:18,821 --> 00:19:19,783
+Scott: No, not like that.
+
+294
+00:19:20,305 --> 00:19:28,025
+Scott: It's pigeon as in what happens when people who know different languages try to communicate and create a new Combined language of some sorts.
+
+295
+00:19:28,787 --> 00:19:34,162
+Scott: a good example of a pigeon would be from two or three centuries ago in Canton.
+
+296
+00:19:34,423 --> 00:19:42,025
+Scott: as in Cantonese Canton there's Americans there were Chinese people there Portuguese people and they couldn't really Communicate very well.
+
+297
+00:19:42,447 --> 00:19:58,780
+Scott: So a pigeon was created sort of not intentionally But it just happens this third language that sort of combines all three in a bastardized way So that these three groups of people who don't speak each other's language you can communicate to trade fun stuff.
+
+298
+00:19:59,304 --> 00:20:04,487
+Rym: Now while this is a very apt name I'm gonna keep calling it Phoenix.
+
+299
+00:20:04,587 --> 00:20:05,429
+Rym: I mean Firebird.
+
+300
+00:20:05,469 --> 00:20:06,532
+Rym: I mean GA.
+
+301
+00:20:06,974 --> 00:20:08,017
+Scott: I mean the revolution.
+
+302
+00:20:08,037 --> 00:20:10,498
+Scott: Yeah, I mean the way Capstone.
+
+303
+00:20:12,341 --> 00:20:16,840
+Scott: Yes, I used to think that changing names of things people would always stick with the old name forever.
+
+304
+00:20:17,483 --> 00:20:19,191
+Scott: But no people are gonna call this pigeon.
+
+305
+00:20:19,211 --> 00:20:20,517
+Scott: from pretty much now on I give up.
+
+306
+00:20:20,698 --> 00:20:21,000
+Scott: I don't know.
+
+307
+00:20:21,080 --> 00:20:22,839
+Rym: I really think I won't call it pigeon.
+
+308
+00:20:23,442 --> 00:20:28,420
+Rym: Well hardly because unlike other things this game looks like G aim.
+
+309
+00:20:28,842 --> 00:20:31,277
+Rym: It looks like AOL instant messenger only better.
+
+310
+00:20:32,061 --> 00:20:35,032
+Scott: The thing is I've seen some screenshots and they're changing the look of it.
+
+311
+00:20:35,052 --> 00:20:37,060
+Rym: Ah, I don't want him to change the look of it.
+
+312
+00:20:37,080 --> 00:20:39,900
+Scott: Well, they're not really changing the layout but they're changing like the colors and stuff.
+
+313
+00:20:39,920 --> 00:20:41,164
+Scott: So definitely not.
+
+314
+00:20:41,766 --> 00:20:46,500
+Scott: doesn't look like GM, but I like got some blue in there and I like the lame thin gray.
+
+315
+00:20:47,142 --> 00:20:48,509
+Rym: I'm sure here's what bothers.
+
+316
+00:20:48,529 --> 00:20:51,080
+Scott: you can change your GTK theme to make it look however you want.
+
+317
+00:20:51,100 --> 00:20:52,968
+Rym: People are allowed to change their names whatever.
+
+318
+00:20:53,229 --> 00:20:55,840
+Rym: I mean it worked for Firefox, but here's my issue.
+
+319
+00:20:56,363 --> 00:20:58,580
+Rym: G aim called itself G aim GA.
+
+320
+00:20:58,781 --> 00:21:01,810
+Rym: I am because AOL was messing with him over the name.
+
+321
+00:21:02,311 --> 00:21:10,815
+Rym: now AOL back then never used AIM aim in any official capacity at all and apparently then eventually they did.
+
+322
+00:21:10,895 --> 00:21:18,840
+Rym: apparently they trademarked it Fairly recently and now they're going after GM despite the fact that GM took the name GM long before.
+
+323
+00:21:20,260 --> 00:21:24,755
+Scott: Yeah, yeah, of course AOL has had like aim calm for a long time.
+
+324
+00:21:24,955 --> 00:21:25,899
+Rym: Yeah, but how long?
+
+325
+00:21:26,019 --> 00:21:29,380
+Scott: I know We got to figure out what the dates on that stuff, but I don't really care about that.
+
+326
+00:21:29,440 --> 00:21:31,779
+Scott: The point is GM is changing its name.
+
+327
+00:21:32,443 --> 00:21:33,689
+Scott: It's kind of annoying.
+
+328
+00:21:33,729 --> 00:21:35,879
+Scott: yet another open source project has changed the name.
+
+329
+00:21:43,462 --> 00:21:52,478
+Rym: From this distant vantage point the earth might not seem of any particular interest But for us it's different.
+
+330
+00:21:53,724 --> 00:21:56,807
+Rym: consider again that dot That's here.
+
+331
+00:21:56,827 --> 00:21:59,616
+Rym: That's home That's us.
+
+332
+00:22:00,423 --> 00:22:08,300
+Rym: Well, you've just heard is an excerpt from Carl Sagan's pale blue dot Which is a very excellent book and if you haven't read it, you really should.
+
+333
+00:22:08,921 --> 00:22:14,240
+Rym: I mean, I knew the name Carl Sagan, but Scott asked me once who was a sci-fi author, right?
+
+334
+00:22:14,600 --> 00:22:15,165
+Scott: Because that's right.
+
+335
+00:22:15,225 --> 00:22:16,737
+Scott: That's what I associated the name with.
+
+336
+00:22:16,817 --> 00:22:17,120
+Scott: I don't know.
+
+337
+00:22:17,542 --> 00:22:21,659
+Scott: I mean, I knew he was a famous person who had to do with science or science fiction or something.
+
+338
+00:22:21,679 --> 00:22:28,736
+Scott: and Now I think I have to go and check it out because I feel kind of dumb Only knowing the name and not knowing anything else.
+
+339
+00:22:29,038 --> 00:22:30,203
+Rym: Yes Well, the thing is pale.
+
+340
+00:22:30,243 --> 00:22:48,598
+Rym: blue dot was written partly because way back Voyager 1 which got very very far away from planet earth Took a picture of earth a very famous picture where earth is literally this tiny Tiny barely visible speck amidst a sea of billions of specks in a Sunbeam.
+
+341
+00:22:48,818 --> 00:22:54,780
+Rym: all by itself Basically what my thing of the day is and this has been on all over dig and ever.
+
+342
+00:22:54,861 --> 00:23:05,560
+Rym: I'm sure a lot of people have seen it, but I think it bears mentioning This is an excerpt of Carl Sagan reading his own book and Carl Sagan is a very engaging reader and writer.
+
+343
+00:23:05,881 --> 00:23:07,588
+Scott: Yeah, he sounds like a narrator.
+
+344
+00:23:07,648 --> 00:23:08,853
+Scott: Like I didn't think that was him.
+
+345
+00:23:09,294 --> 00:23:10,620
+Scott: I thought it was just some guy reading it.
+
+346
+00:23:11,023 --> 00:23:12,399
+Rym: So again, if you've never read this book.
+
+347
+00:23:12,661 --> 00:23:18,460
+Rym: This is a very eloquent and beautiful explanation of a lot of concepts that you really should be at least a little bit familiar with.
+
+348
+00:23:18,882 --> 00:23:22,058
+Scott: Of course, if you're crazy, you'll just say I don't believe any of that stuff.
+
+349
+00:23:22,079 --> 00:23:24,793
+Scott: He said Earth is the center of the universe.
+
+350
+00:23:24,853 --> 00:23:25,660
+Scott: It's bigger than everything.
+
+351
+00:23:26,741 --> 00:23:28,117
+Scott: Jupiter is just an illusion.
+
+352
+00:23:32,183 --> 00:23:34,805
+Scott: Okay Yeah, is that all you get?
+
+353
+00:23:35,327 --> 00:23:38,376
+Scott: yeah, all right, so I gotta hear a video for you.
+
+354
+00:23:38,537 --> 00:23:41,285
+Scott: this video is 30-seconds log.
+
+355
+00:23:41,787 --> 00:23:45,462
+Scott: it is well worth more than 30 seconds It's.
+
+356
+00:23:45,683 --> 00:23:48,519
+Rym: we really shouldn't explain what this video is because you've got.
+
+357
+00:23:48,559 --> 00:23:53,234
+Scott: well I want to tell you this video contains what I would call a Russian hacker.
+
+358
+00:23:53,575 --> 00:23:55,260
+Rym: I would call it Russian ingenuity.
+
+359
+00:23:55,781 --> 00:24:07,777
+Scott: Yes, see hackers are many things and but the main the core of what a hacker is someone who takes things and gets more out of them than you expect.
+
+360
+00:24:07,837 --> 00:24:11,493
+Scott: someone who takes the toaster and turns it into a computer.
+
+361
+00:24:11,573 --> 00:24:16,649
+Scott: someone who takes a Pencil and turns it into a slingshot.
+
+362
+00:24:16,950 --> 00:24:22,082
+Rym: someone who takes some duct tape and a rubber band and makes a car drive another 40,000 miles Exactly.
+
+363
+00:24:22,604 --> 00:24:32,695
+Scott: This is a Russian hacker who is using a machine in a way that it was not intended But to great effect and also for great humor.
+
+364
+00:24:33,117 --> 00:24:38,733
+Rym: good god Just watch this and you'll see what we mean in Soviet Russia.
+
+365
+00:24:38,753 --> 00:24:43,237
+Rym: I Can't believe you tried to make a Soviet Russia joke.
+
+366
+00:24:44,446 --> 00:24:45,231
+Rym: What are you gonna say?
+
+367
+00:24:45,653 --> 00:24:46,519
+Rym: boat paddles you?
+
+368
+00:24:47,360 --> 00:24:48,563
+Rym: Joke makes you a lot.
+
+369
+00:24:49,085 --> 00:24:50,027
+Rym: What were you?
+
+370
+00:24:50,067 --> 00:24:55,080
+Scott: were you gonna say after that you own hacker because in normally hackers own you?
+
+371
+00:24:55,285 --> 00:24:55,615
+Scott: I don't know.
+
+372
+00:24:57,675 --> 00:24:59,144
+Rym: Yeah That wasn't funny.
+
+373
+00:24:59,204 --> 00:24:59,765
+Scott: now wasn't?
+
+374
+00:25:00,247 --> 00:25:01,731
+Scott: that's all I could think of right?
+
+375
+00:25:02,513 --> 00:25:17,265
+Rym: so all that aside for the last several weeks We've been doing various how computers work or how computers work in layman's term Mondays Which have been greeted with a great amount of enthusiasm from people in the forums and from the countless emails We've been getting about them.
+
+376
+00:25:17,606 --> 00:25:23,131
+Scott: I mean originally we didn't like these episodes so much but now Seems like people like them a lot.
+
+377
+00:25:23,231 --> 00:25:23,492
+Rym: Mmm.
+
+378
+00:25:23,874 --> 00:25:25,080
+Scott: It's getting better for us to do them.
+
+379
+00:25:25,220 --> 00:25:26,765
+Rym: Well, I think part of it was early on.
+
+380
+00:25:26,785 --> 00:25:33,886
+Rym: we went into great technical depth on very narrow subjects and most people just glazed Over and didn't care about what a flip-flop was.
+
+381
+00:25:33,906 --> 00:25:38,540
+Rym: Yeah, so then we tried to be more accessible and everything started working out.
+
+382
+00:25:38,681 --> 00:25:40,278
+Rym: I mean, we're not doing the dumb.
+
+383
+00:25:40,922 --> 00:25:52,659
+Rym: DNS translates names into numbers the end But at the same time I'm not gonna talk about what the serial numbers mean or how exactly you should set up a caching DNS So that's not necessary.
+
+384
+00:25:53,488 --> 00:26:07,765
+Rym: But at the same time DNS or domain name service or domain name system or whatever you want to call it Regardless whether you know about it is one of the most important things on the internet and it's also something that you interact with Constantly, I mean
+
+385
+00:26:07,845 --> 00:26:10,574
+Scott: without it technically the internet could work.
+
+386
+00:26:10,936 --> 00:26:12,139
+Scott: It would just suck ass.
+
+387
+00:26:12,521 --> 00:26:19,420
+Rym: Actually, I would submit that now with the age of Google you would you could really do just fine without domain names.
+
+388
+00:26:19,922 --> 00:26:24,060
+Rym: Perhaps I almost never type URLs in I just type things into Google.
+
+389
+00:26:24,433 --> 00:26:30,736
+Scott: Yes But there are things where the domain name service allows people to do pretty tricky stuff.
+
+390
+00:26:30,776 --> 00:26:42,106
+Scott: For example, if you email well Especially when people have web applications, you know, you write a web application and you say hey web application You know connect to this You know URL and get stuff.
+
+391
+00:26:42,146 --> 00:26:51,194
+Scott: and then if that person who runs that other URL is free to move their server around And stuff can still work without people having to rewrite web applications all the time.
+
+392
+00:26:51,414 --> 00:26:55,770
+Rym: Well, you see all DNS does is You've got IP addresses on the internet.
+
+393
+00:26:55,790 --> 00:26:59,389
+Rym: You might remember we talked about IP addresses So you should least understand what that is.
+
+394
+00:26:59,530 --> 00:27:01,600
+Scott: Every machine on the internet has an IP address.
+
+395
+00:27:01,660 --> 00:27:03,186
+Rym: It's effectively your address.
+
+396
+00:27:03,487 --> 00:27:07,100
+Rym: And if you want to go to Google you type in Google's address, which is actually a number.
+
+397
+00:27:07,662 --> 00:27:09,752
+Rym: Well numbers kind of suck to remember.
+
+398
+00:27:10,053 --> 00:27:14,228
+Rym: I mean who wants to remember that 21.21.1 is the thing you want to connect to?
+
+399
+00:27:14,249 --> 00:27:25,432
+Scott: yeah I mean imagine if like you're watching a commercial and it was like for Ford cars and they said hey You want to check out information on Ford cars go to 6 2 5 4 5 2 7 9 3. who knows crazy numbers?
+
+400
+00:27:28,547 --> 00:27:29,419
+Scott: Yes, it wouldn't work.
+
+401
+00:27:29,801 --> 00:27:35,820
+Rym: So what DNS does is it's a system whereby you can have names that are authoritatively?
+
+402
+00:27:36,560 --> 00:27:37,945
+Rym: Assigned to these numbers.
+
+403
+00:27:38,427 --> 00:27:42,123
+Rym: So if I want to go to Google, I don't know their number, but I know their name Google.
+
+404
+00:27:42,405 --> 00:27:49,754
+Rym: so I type www.google.com and DNS translates that into the address of Google and sends all my stuff to Google.
+
+405
+00:27:50,055 --> 00:27:51,260
+Scott: Yeah, you type in the name.
+
+406
+00:27:51,922 --> 00:27:58,200
+Scott: Some computer somewhere will tell you how in a second figures out what number that name is equal to gives you the number.
+
+407
+00:27:58,703 --> 00:28:06,820
+Scott: You don't actually see the number unless you want to look at it And then your computer once it knows the number can actually talk to the server and do all its business now on its base.
+
+408
+00:28:07,221 --> 00:28:07,603
+Rym: That's it.
+
+409
+00:28:07,924 --> 00:28:08,325
+Scott: that's all.
+
+410
+00:28:08,345 --> 00:28:09,269
+Scott: it's all it does.
+
+411
+00:28:09,309 --> 00:28:10,393
+Scott: it doesn't do anything else.
+
+412
+00:28:10,834 --> 00:28:23,574
+Rym: and if you have an ISP Which obviously you do because you're getting on the internet somehow They probably gave you if they didn't set it up automatically via something called DHCP or dynamic host configuration protocol Which I don't think we've talked about but
+
+413
+00:28:23,634 --> 00:28:24,420
+Scott: I will talk about it soon.
+
+414
+00:28:24,661 --> 00:28:27,632
+Rym: We'll talk about it at some point even though it's also actually very simple.
+
+415
+00:28:27,813 --> 00:28:31,792
+Rym: it is at least on this level Yes, but they'll provide you one.
+
+416
+00:28:31,832 --> 00:28:39,780
+Rym: they run a DNS server So whenever you want to type something in to go somewhere all the questions you ask all the names that get turned into numbers.
+
+417
+00:28:40,362 --> 00:28:45,460
+Rym: It's all done by that DNS server that your ISP runs so you don't even have to run an ISP server or anything yep?
+
+418
+00:28:45,540 --> 00:28:48,512
+Scott: So you want to visit front row crew calm you'd go open up your browser.
+
+419
+00:28:48,532 --> 00:28:49,797
+Scott: type in front recruit calm.
+
+420
+00:28:50,078 --> 00:28:54,700
+Scott: your browser Goes and it says it goes to your ISP's DNS server.
+
+421
+00:28:54,780 --> 00:29:03,428
+Scott: So if your ISP is I don't know Roadrunner it goes to the Roadrunner DNS server and says hey Roadrunner DNS server What's the IP address of front row crew calm?
+
+422
+00:29:03,789 --> 00:29:06,800
+Rym: and it tells you yep now behind the scenes?
+
+423
+00:29:08,180 --> 00:29:11,030
+Rym: Roadrunner comms a DNS server might not know.
+
+424
+00:29:11,050 --> 00:29:13,660
+Rym: it might only know about all the Roadrunner stuff.
+
+425
+00:29:13,740 --> 00:29:18,299
+Scott: Yeah, what if nobody who uses Roadrunner ever went to front row crew calm before?
+
+426
+00:29:19,822 --> 00:29:22,279
+Scott: The server never bothered to find out the number it doesn't know.
+
+427
+00:29:22,801 --> 00:29:33,641
+Rym: So what it does and all DNS servers for the most part do this is if it doesn't know the answer it Knows who it can ask to get the answer and in turn those people know who they can ask to get the next answer and Goes
+
+428
+00:29:33,741 --> 00:29:34,344
+Scott: all the way up
+
+429
+00:29:34,806 --> 00:29:37,499
+Rym: and at the top of the internet you might have heard about every.
+
+430
+00:29:37,539 --> 00:29:37,620
+Rym: now.
+
+431
+00:29:37,680 --> 00:29:42,678
+Rym: And then there are these attacks on the root servers of the internet, and you might have wondered what that was.
+
+432
+00:29:43,180 --> 00:29:44,625
+Rym: well It turns out the DNS.
+
+433
+00:29:45,007 --> 00:29:49,866
+Rym: if you keep going up and servers keep asking higher up servers Eventually there's a top.
+
+434
+00:29:50,328 --> 00:29:53,460
+Rym: the top are the 13 root DNS servers.
+
+435
+00:29:53,781 --> 00:29:57,112
+Scott: They're scattered around the world aren't they named like ABCD.
+
+436
+00:29:57,193 --> 00:29:58,979
+Rym: They are in fact named ABCD.
+
+437
+00:29:59,902 --> 00:30:06,147
+Rym: There are only 13 of them partly due to a limitation of the way They were named and the way they were assigned early on.
+
+438
+00:30:06,488 --> 00:30:10,380
+Rym: that limitation remains and also 13 has been more than enough to satisfy the world.
+
+439
+00:30:10,540 --> 00:30:13,810
+Scott: People have keep trying to attack these servers to completely dis.
+
+440
+00:30:13,910 --> 00:30:24,177
+Scott: if they were successful in disabling all these servers the internet would still work Almost 90% for a long time yep But you just wouldn't know be able to turn names into numbers as quickly or maybe not at all.
+
+441
+00:30:24,378 --> 00:30:25,161
+Rym: actually no It's.
+
+442
+00:30:25,543 --> 00:30:27,051
+Rym: it's much less than that.
+
+443
+00:30:27,332 --> 00:30:39,255
+Rym: if the root server stopped working Due to caching and the fact that the majority of traffic is known and a lot of people keep copies of other DNS databases 99% of web traffic would still continue on as normal.
+
+444
+00:30:39,617 --> 00:30:47,216
+Rym: awesome But anyway more of a long-term problem with there being no authoritative answer And there'd be a lot of ways you could screw with people.
+
+445
+00:30:47,638 --> 00:30:55,464
+Scott: anyway people have tried to attack these things with varying measures of success and no one has been able to make a dent in the Functioning of the DNS system.
+
+446
+00:30:55,625 --> 00:31:00,360
+Rym: I think once four or five of them were taken down which wasn't even half so it wasn't an issue.
+
+447
+00:31:00,982 --> 00:31:05,435
+Scott: I think the guys did more damage when they attacked Akamai than when they attacked the DNS.
+
+448
+00:31:05,556 --> 00:31:06,378
+Rym: I remember that.
+
+449
+00:31:06,398 --> 00:31:09,404
+Scott: yeah It was in I think like the second year college Maybe.
+
+450
+00:31:09,425 --> 00:31:11,680
+Scott: I don't remember when that happened But I remember it happening.
+
+451
+00:31:12,302 --> 00:31:26,913
+Rym: So I guess before we go any further because obviously we're stretching here is this DNS is actually very simple without going into great technical Detail yep, but you type in a URL you know www.frontrowcrew.com or www.google.com and there are a lot
+
+452
+00:31:27,074 --> 00:31:27,737
+Scott: or dotnet
+
+453
+00:31:28,119 --> 00:31:31,487
+Rym: of Misconceptions as to what all those parts mean.
+
+454
+00:31:31,848 --> 00:31:33,532
+Rym: so we're gonna break it down very simply.
+
+455
+00:31:34,053 --> 00:31:35,336
+Rym: now you type them in.
+
+456
+00:31:35,356 --> 00:31:44,980
+Rym: you know from right to left www.frontrowcrew.com, but the way The way it's organized and the way computers look at him is actually backwards.
+
+457
+00:31:45,080 --> 00:31:52,817
+Rym: So the way you would write that URL as far as the computer is concerned would be dot com dot front row crew dot www.
+
+458
+00:31:54,243 --> 00:31:57,240
+Rym: It goes from least specific to most specific.
+
+459
+00:31:57,602 --> 00:32:02,848
+Rym: It's a big tree a big hierarchy and at the top There's one thing the root the dot.
+
+460
+00:32:03,149 --> 00:32:05,960
+Rym: because everything has the root and the dot you leave it out.
+
+461
+00:32:06,281 --> 00:32:12,880
+Rym: So you don't type dot or www.frontrowcrew.com dot because it's assumed that you're going to the root.
+
+462
+00:32:12,981 --> 00:32:13,566
+Rym: That's the top.
+
+463
+00:32:13,606 --> 00:32:15,240
+Rym: It's like root in a Linux computer.
+
+464
+00:32:15,240 --> 00:32:21,320
+Scott: Yeah Remember how we talked about how all the servers keep asking the next guy asking the next guy and they eventually ask the root servers.
+
+465
+00:32:21,822 --> 00:32:26,420
+Scott: Well, the computers are arranged in a hierarchy and the names are also in a hierarchy.
+
+466
+00:32:27,003 --> 00:32:29,900
+Rym: So I want to go to www.frontrowcrew.com.
+
+467
+00:32:30,941 --> 00:32:42,131
+Rym: My computer goes to my ISP's DNS server and now I'm gonna not go over the how it Actually works now because there's a lot of tricks to make it faster and better But this is how it works in theory.
+
+468
+00:32:42,413 --> 00:32:43,560
+Rym: And this is what you should really know.
+
+469
+00:32:43,801 --> 00:32:49,568
+Rym: It's kind of like knowing the OSI model even though a lot of things violated Jump around and layers are all weird.
+
+470
+00:32:49,608 --> 00:32:55,068
+Rym: Sometimes the concept is still solid and this is how it works Logistically and effectively.
+
+471
+00:32:55,671 --> 00:33:01,512
+Rym: so it asks the root root server All right, I'm looking for the root and it says I'm the root.
+
+472
+00:33:01,612 --> 00:33:02,334
+Rym: what are you looking for?
+
+473
+00:33:02,776 --> 00:33:04,140
+Rym: then it says all right root.
+
+474
+00:33:04,662 --> 00:33:07,331
+Rym: Who would I ask to find out where calm is?
+
+475
+00:33:07,351 --> 00:33:09,680
+Rym: and the root server would say go there?
+
+476
+00:33:10,040 --> 00:33:14,611
+Rym: So then I go there and say all right calm I want to know where front row crew is.
+
+477
+00:33:14,631 --> 00:33:17,684
+Rym: and it would say front row crew Dot-com is there.
+
+478
+00:33:18,185 --> 00:33:21,575
+Rym: and then I would go to front row crew dot-com and I would ask it.
+
+479
+00:33:21,836 --> 00:33:23,954
+Rym: All right in front row crew Where is?
+
+480
+00:33:24,481 --> 00:33:25,083
+Rym: Www.
+
+481
+00:33:25,103 --> 00:33:26,468
+Rym: and it would say right there.
+
+482
+00:33:26,488 --> 00:33:32,600
+Scott: Yeah, and that's how come you know, for example yesterday We set up Wes Knopf dot front row crew dot-com, right?
+
+483
+00:33:32,980 --> 00:33:37,794
+Scott: You can set up all sorts of things under your domain all sorts of different machines.
+
+484
+00:33:38,216 --> 00:33:40,464
+Rym: now here in lies the common misconception.
+
+485
+00:33:40,926 --> 00:33:41,690
+Rym: a lot of people.
+
+486
+00:33:41,971 --> 00:33:49,355
+Rym: they see a web browser and you see that HTTP colon slash slash and it's always there and very few people realize that.
+
+487
+00:33:49,676 --> 00:33:54,415
+Rym: what that does is it says I'm going to use the hypertext transport port protocol.
+
+488
+00:33:54,736 --> 00:33:57,848
+Rym: That is the protocol I'm using to connect to whatever I'm gonna type next.
+
+489
+00:33:58,230 --> 00:34:01,200
+Rym: but because you're on the web everything you're doing is HTTP.
+
+490
+00:34:01,763 --> 00:34:02,910
+Rym: So it doesn't really matter.
+
+491
+00:34:02,990 --> 00:34:04,580
+Rym: It's just there on every URL.
+
+492
+00:34:04,660 --> 00:34:10,760
+Scott: Yeah, sometimes you might do FTP or something else But that's not very often and usually use a different piece of software to do that.
+
+493
+00:34:11,161 --> 00:34:15,476
+Scott: So your web browser is pretty much ninety nine point nine percent of the time always going to be HTTP.
+
+494
+00:34:15,879 --> 00:34:19,799
+Rym: now Www a lot of people think is also something like that.
+
+495
+00:34:20,101 --> 00:34:21,799
+Rym: Www means World Wide Web, right?
+
+496
+00:34:22,199 --> 00:34:27,300
+Rym: So I type Www and that means I'm going on the World Wide Web and then I'm going to front row crew dot-com.
+
+497
+00:34:27,462 --> 00:34:28,737
+Scott: Oh, it doesn't mean that.
+
+498
+00:34:29,281 --> 00:34:36,745
+Rym: Very simply if you look at a URL the further right you go the more general it is and the further left you go The more specific it is.
+
+499
+00:34:37,146 --> 00:34:38,532
+Rym: So on the far right, you've got calm.
+
+500
+00:34:38,813 --> 00:34:40,360
+Rym: That's a top-level domain.
+
+501
+00:34:40,964 --> 00:34:51,119
+Rym: These there are very few of them Gov int org net is Info edu and there's different countries.
+
+502
+00:34:51,822 --> 00:34:54,449
+Rym: So starting there move a little bit to the left.
+
+503
+00:34:54,511 --> 00:34:55,554
+Rym: now front row crew.
+
+504
+00:34:56,136 --> 00:34:57,360
+Rym: that is a domain.
+
+505
+00:34:58,002 --> 00:35:00,308
+Rym: So I can have front row crew comm.
+
+506
+00:35:00,388 --> 00:35:04,458
+Rym: it is the front row crew domain inside of the comm top level domain.
+
+507
+00:35:04,839 --> 00:35:08,210
+Rym: now Front row crew net could be something totally different.
+
+508
+00:35:08,250 --> 00:35:12,165
+Rym: front row crew dot int could be something totally different from all that Comm int gov.
+
+509
+00:35:12,185 --> 00:35:15,100
+Rym: all these top-level domains are entirely separate.
+
+510
+00:35:16,224 --> 00:35:17,498
+Rym: Now here's the interesting part.
+
+511
+00:35:18,400 --> 00:35:19,966
+Rym: Www is not a domain.
+
+512
+00:35:20,468 --> 00:35:21,733
+Rym: It's the name of a computer.
+
+513
+00:35:22,094 --> 00:35:23,640
+Rym: It doesn't mean World Wide Web.
+
+514
+00:35:23,921 --> 00:35:30,018
+Rym: Sure, it tends to stand for that and a lot of people use Www to be the name of their web server.
+
+515
+00:35:31,041 --> 00:35:31,524
+Rym: Www dot.
+
+516
+00:35:31,565 --> 00:35:33,780
+Rym: front row crew comm takes you to our web server.
+
+517
+00:35:34,301 --> 00:35:36,629
+Rym: But we could have foobar dot.
+
+518
+00:35:36,649 --> 00:35:38,875
+Rym: front row crew comm and that could be our web server.
+
+519
+00:35:39,036 --> 00:35:41,324
+Rym: There is no inherent meaning in Www.
+
+520
+00:35:41,566 --> 00:35:44,420
+Rym: it is just a commonly used name of a web server.
+
+521
+00:35:44,761 --> 00:35:47,993
+Scott: Yeah, I could put any name I wanted there and point it at any IP address.
+
+522
+00:35:48,033 --> 00:35:50,383
+Scott: I want a name any IP address It doesn't matter.
+
+523
+00:35:50,443 --> 00:35:52,715
+Scott: I could make a name and point it at someone else's IP address.
+
+524
+00:35:52,735 --> 00:35:53,580
+Scott: Nothing they could do about it.
+
+525
+00:35:53,700 --> 00:35:57,777
+Rym: I could have multiple World Wide Web servers running internet stuff.
+
+526
+00:35:58,058 --> 00:35:59,561
+Rym: so I could have Www dot.
+
+527
+00:35:59,582 --> 00:36:03,816
+Rym: front row crew comm that has a web page I could have Rym dot front row crew comm.
+
+528
+00:36:03,856 --> 00:36:05,080
+Rym: that has my personal blog.
+
+529
+00:36:05,583 --> 00:36:06,449
+Scott: You could do anything.
+
+530
+00:36:06,510 --> 00:36:08,000
+Scott: you want any name any number?
+
+531
+00:36:08,782 --> 00:36:18,454
+Rym: Now in general the one on the far right is always the top-level domain and the one on the far left is always the name Of the computer you were connecting to in the middle.
+
+532
+00:36:18,474 --> 00:36:19,660
+Rym: You can have a whole bunch of others.
+
+533
+00:36:19,881 --> 00:36:20,884
+Rym: You see you have a domain.
+
+534
+00:36:21,225 --> 00:36:23,893
+Rym: you can have subdomains under that and subdomains under that.
+
+535
+00:36:24,395 --> 00:36:28,291
+Rym: so we could have the domain foobar dot front row crew comm.
+
+536
+00:36:28,552 --> 00:36:33,900
+Rym: and then inside of foobar we could have Www and Wesnoth and FTP and all those things.
+
+537
+00:36:34,281 --> 00:36:36,488
+Scott: Www dot www dot.
+
+538
+00:36:36,628 --> 00:36:37,611
+Scott: front row crew comm.
+
+539
+00:36:37,992 --> 00:36:50,520
+Rym: yep, so if you look at the top-level country domains Which is something you might have run into if you ever go to Japanese websites or actually also things like delicious Yeah, or UK websites because remember the internet basically started in the United States.
+
+540
+00:36:50,580 --> 00:37:02,979
+Rym: so there was comm edu and all these things and People just never really thought about the fact that there would be other countries someday on the internet or that it might matter because there's also Country codes dot us is a top-level domain.
+
+541
+00:37:03,271 --> 00:37:03,397
+Rym: Yep.
+
+542
+00:37:03,580 --> 00:37:09,255
+Rym: So if you want a comm within us comm is a subdomain of us in that case.
+
+543
+00:37:09,575 --> 00:37:14,479
+Rym: so you could have foobar comm or foobar dot co dot us.
+
+544
+00:37:15,485 --> 00:37:16,559
+Rym: That might sound weird.
+
+545
+00:37:16,941 --> 00:37:37,480
+Rym: That's because for various reasons that you don't need to worry about whenever people use the top-level domains That aren't the normal ones whenever they use something other than comm in edu But something like us or JP or CX its Convention that the one next under that like comm edu whatever will be shortened to two digits.
+
+546
+00:37:38,122 --> 00:37:40,209
+Rym: I forget exactly why because it really doesn't matter.
+
+547
+00:37:40,330 --> 00:37:47,290
+Scott: yep, so if we were in Japan our URL would probably Www dot front row crew dot co dot JP.
+
+548
+00:37:47,511 --> 00:37:47,711
+Rym: Yep.
+
+549
+00:37:47,731 --> 00:37:57,234
+Rym: That's basically the comm domain within the JP domain Mm-hmm and then front row crew is the domain inside of both of those and then Www is the name of our web server.
+
+550
+00:37:57,295 --> 00:37:58,000
+Rym: you see how this works.
+
+551
+00:37:58,080 --> 00:38:02,980
+Rym: It's actually really simple other than all the little intricacies and things that don't really matter.
+
+552
+00:38:03,302 --> 00:38:05,374
+Scott: Yes, see the real trick of DNS.
+
+553
+00:38:05,434 --> 00:38:06,440
+Scott: is that okay?
+
+554
+00:38:06,580 --> 00:38:08,627
+Scott: Yeah, all it is is turning names into numbers.
+
+555
+00:38:09,008 --> 00:38:17,397
+Scott: to turn names into numbers on such a worldwide scale is Incredibly complex and there's a billion secret things that go on that you don't have to understand.
+
+556
+00:38:17,417 --> 00:38:18,200
+Scott: so don't worry about it.
+
+557
+00:38:18,280 --> 00:38:28,140
+Rym: However the fact that is so complex is the reason that for example a lot of people wonder How come there's so few top-level domains, there's no reason why I shouldn't be able to have anything I want.
+
+558
+00:38:28,200 --> 00:38:31,433
+Rym: Why can't I have Bob dot Rym or just a domain?
+
+559
+00:38:31,473 --> 00:38:36,178
+Rym: That's just calm or Bubba-dub bubba-dub bubba-dub bubba if I want it.
+
+560
+00:38:37,322 --> 00:38:38,408
+Scott: There's no reason not to.
+
+561
+00:38:38,569 --> 00:38:40,400
+Scott: I vote for the Bubba top-level domain.
+
+562
+00:38:40,540 --> 00:38:47,180
+Rym: It's necessary except for the fact that the only reason DNS works is because it's a distributed database.
+
+563
+00:38:47,322 --> 00:38:48,339
+Rym: It's all over the world.
+
+564
+00:38:48,862 --> 00:38:56,640
+Rym: Every domain has its own DNS server taken care of it and you ask all the way up the chain And then you ask all the way back down the chain to eventually get to where you're going.
+
+565
+00:38:57,182 --> 00:39:00,600
+Rym: So each server only needs to know about its own tiny part of the internet.
+
+566
+00:39:01,142 --> 00:39:06,120
+Rym: Or if it's a bigger server it only needs to know where to ask all those other parts of the internet.
+
+567
+00:39:06,543 --> 00:39:15,200
+Rym: So the server is taking care of the comm top-level domain Only need to know about comm and the root servers only need to know where the server that takes care of comm is.
+
+568
+00:39:15,862 --> 00:39:18,514
+Scott: Yeah, the root server doesn't know about front row crew.
+
+569
+00:39:18,574 --> 00:39:19,840
+Scott: it doesn't know crap about front row crew.
+
+570
+00:39:19,840 --> 00:39:23,974
+Scott: Yeah, it knows about comm net or us and all that.
+
+571
+00:39:24,014 --> 00:39:24,796
+Scott: That's all it knows.
+
+572
+00:39:24,857 --> 00:39:25,800
+Rym: That's all it ever does.
+
+573
+00:39:26,141 --> 00:39:29,880
+Rym: In fact, that's the only thing the root servers will ever answer for you as far as you're concerned.
+
+574
+00:39:30,000 --> 00:39:32,912
+Scott: Yeah, if you go to the root server and say hey, where's front row crew comm?
+
+575
+00:39:32,933 --> 00:39:33,455
+Scott: it says calm.
+
+576
+00:39:33,515 --> 00:39:41,896
+Scott: that way calm that You have these 13 giant super important computers and all they ever say is calm calm calm calm.
+
+577
+00:39:42,117 --> 00:39:47,117
+Scott: or calm calm calm Japan calm calm Germany calm calm.
+
+578
+00:39:48,182 --> 00:39:57,140
+Rym: So it's critical that the entire structure is hierarchical that there's a tree Starting from a root and then branching out from there because you can have any number of branches.
+
+579
+00:39:57,200 --> 00:40:00,090
+Rym: Well, there is technically a limit on the number of branches.
+
+580
+00:40:00,110 --> 00:40:03,544
+Scott: Yes, the number of letters in the language actually No, it's.
+
+581
+00:40:03,646 --> 00:40:05,080
+Rym: it's actually fairly complicated.
+
+582
+00:40:05,421 --> 00:40:20,087
+Rym: You can have any number of subdomains up to a certain number and each subdomain can be up to I think 260 63 characters or so so long as the total URL does not exceed 255 characters.
+
+583
+00:40:20,248 --> 00:40:22,099
+Rym: there's a bunch of arbitrary rules out there.
+
+584
+00:40:22,421 --> 00:40:30,166
+Scott: We should set up like in a lab a bunch of DNS servers and just make try to make it as crazy as we possibly can With how many subdomains as we can.
+
+585
+00:40:30,226 --> 00:40:33,680
+Rym: you can trivially look up the exact rules of what works and what I want.
+
+586
+00:40:33,780 --> 00:40:36,590
+Scott: I actually try it and like do it why it'll run.
+
+587
+00:40:36,790 --> 00:40:42,679
+Rym: it'll either work or not or you can fucks with bind to make it Even if it wasn't supposed to work, oh really that sounds fun.
+
+588
+00:40:42,961 --> 00:40:48,600
+Rym: You can do a lot of DNS servers will fudge things in order to make it faster or more reliable.
+
+589
+00:40:49,380 --> 00:40:58,489
+Rym: Verisign actually got in trouble a while ago by not following the rules and setting it up so that if you typed in a Domain for their servers that wasn't an actual domain.
+
+590
+00:40:58,970 --> 00:41:02,780
+Rym: It would take you to their web page show you an advertisement and all sorts of nasty.
+
+591
+00:41:02,900 --> 00:41:08,523
+Scott: Yeah, I remember when they tried that it was like if you typed in any URL that Wasn't?
+
+592
+00:41:08,784 --> 00:41:10,631
+Scott: that didn't map to anything like it was.
+
+593
+00:41:10,691 --> 00:41:11,755
+Scott: there was nothing set for that.
+
+594
+00:41:11,776 --> 00:41:12,900
+Scott: No one had that domain.
+
+595
+00:41:13,261 --> 00:41:15,811
+Scott: It would always go to Verisign's magic search page.
+
+596
+00:41:16,072 --> 00:41:16,855
+Rym: It was bad news.
+
+597
+00:41:16,955 --> 00:41:17,798
+Scott: It was very bad news.
+
+598
+00:41:18,200 --> 00:41:22,854
+Rym: now You might wonder who runs these 13 servers that are scattered all over the world.
+
+599
+00:41:23,175 --> 00:41:24,700
+Rym: who gets to decide who gets domain?
+
+600
+00:41:24,820 --> 00:41:26,969
+Rym: I mean we want front row crew calm.
+
+601
+00:41:27,290 --> 00:41:35,400
+Rym: What if the evil front row crew at the B I T anime club decided that they wanted the front row crew because of their business?
+
+602
+00:41:35,460 --> 00:41:37,960
+Scott: Yeah, I mean what if let's let's pick a random country.
+
+603
+00:41:38,600 --> 00:41:43,420
+Scott: Zimbabwe was in charge of running all the rude servers, and they decided they didn't like front row crew.
+
+604
+00:41:43,742 --> 00:41:46,340
+Scott: Hey, just take our domain away, and then what could we do about it?
+
+605
+00:41:46,500 --> 00:41:54,779
+Rym: Yeah, I mean what's to stop a registrar a person who gives out domain names or doing all that stuff from saying alright front row Crew we see you're getting kind of popular there.
+
+606
+00:41:55,242 --> 00:41:58,120
+Rym: Give us ten grand or we're taking away your domain and giving it to a porn site.
+
+607
+00:41:58,281 --> 00:42:05,730
+Scott: yeah, I mean the hierarchy is very resilient from a Standpoint of performance and a system that is very hard to destroy.
+
+608
+00:42:06,031 --> 00:42:16,010
+Scott: however in terms of controlling the hierarchy If you're in you if you're holding on to all this stuff at the top You can control all the stuff down low as well.
+
+609
+00:42:16,431 --> 00:42:23,818
+Rym: now the answer is I guess not surprisingly Incredibly complicated and currently subject to a great deal of controversy.
+
+610
+00:42:24,019 --> 00:42:32,127
+Rym: yes I'm going to dumb this down to the point that it may no longer even be technically correct however as far as anyone else Out there is concerned.
+
+611
+00:42:32,167 --> 00:42:33,480
+Rym: This is effectively how it works.
+
+612
+00:42:33,982 --> 00:42:38,276
+Rym: There is an organization called I can the internet corporation for assigned names and numbers.
+
+613
+00:42:38,939 --> 00:42:41,282
+Rym: they control Dns.
+
+614
+00:42:41,863 --> 00:42:56,258
+Rym: they let registrars like Verisign or whoever who want to control com or edu or whatever Pay for the privilege of being able to control those domains, and they're semi regulated by.
+
+615
+00:42:56,418 --> 00:42:56,819
+Rym: I can.
+
+616
+00:42:57,060 --> 00:42:57,843
+Scott: yeah I'm pretty sure.
+
+617
+00:42:57,883 --> 00:43:00,837
+Scott: Verisign controls come and I don't know who can.
+
+618
+00:43:00,897 --> 00:43:02,599
+Rym: it's complicated Don't worry about it.
+
+619
+00:43:03,162 --> 00:43:04,888
+Rym: And then it leases all the way down.
+
+620
+00:43:05,129 --> 00:43:08,000
+Rym: and then there are places like I don't know go daddy or we use what Gandhi.
+
+621
+00:43:08,120 --> 00:43:11,757
+Scott: Yeah, we use a french registrar gandigandi.net.
+
+622
+00:43:11,897 --> 00:43:12,400
+Scott: They're pretty good.
+
+623
+00:43:12,813 --> 00:43:24,976
+Rym: Yeah And really simply if you want a domain you just go to any person who is licensed by these people to give out domains And they have to follow a very strict procedure to have the right to give out domains.
+
+624
+00:43:25,297 --> 00:43:32,320
+Rym: it includes like a $50,000 non-refundable application fee and if they decide to not let you do it well you're out 50 grand
+
+625
+00:43:32,821 --> 00:43:45,040
+Scott: Yeah, and then they configure dns servers in various places to you know point your name at the IP address that you desire and Point your email at the various IP addresses you desire if you want that.
+
+626
+00:43:45,301 --> 00:43:56,815
+Rym: But if you want a domain all you do is go to one of these people and you say I want a domain and you Tell them which one you want and you pay them some small amount of money And it's yours and they'll set up the DNS for you and all that 99% of the time.
+
+627
+00:43:56,835 --> 00:43:59,087
+Scott: Yep I mean, what do we pay?
+
+628
+00:43:59,107 --> 00:44:00,193
+Scott: I think I pay like $30 a year private.
+
+629
+00:44:01,541 --> 00:44:04,614
+Scott: I think it's euros actually, so it's hard to tell exactly how much we pay.
+
+630
+00:44:04,775 --> 00:44:05,980
+Rym: So what if there's contention?
+
+631
+00:44:06,320 --> 00:44:09,353
+Rym: What if two people want the same same domain first come first serve?
+
+632
+00:44:09,393 --> 00:44:09,754
+Scott: That's it.
+
+633
+00:44:09,875 --> 00:44:10,999
+Rym: It's first come first serve.
+
+634
+00:44:12,060 --> 00:44:14,768
+Scott: It's it's and you can give up your domain to someone else.
+
+635
+00:44:15,170 --> 00:44:18,580
+Scott: Basically once you have control of a domain it's locked in.
+
+636
+00:44:18,843 --> 00:44:19,759
+Scott: No one else can take it.
+
+637
+00:44:19,820 --> 00:44:23,680
+Scott: So if someone who has a DNS server, like let's say Rym has a DNS server, right?
+
+638
+00:44:24,140 --> 00:44:28,136
+Scott: I bought front recruit calm Rym on his DNS server because he could do whatever he wants to.
+
+639
+00:44:28,176 --> 00:44:31,540
+Scott: his server says Front recruit calm is something else blah.
+
+640
+00:44:32,446 --> 00:44:33,178
+Scott: It's not gonna work.
+
+641
+00:44:33,448 --> 00:44:36,489
+Rym: Yeah Because we have these root servers and everything above.
+
+642
+00:44:36,910 --> 00:44:43,090
+Rym: so anyone in the world trying to get to the site Isn't gonna ask my piddly little DNS server.
+
+643
+00:44:43,311 --> 00:44:48,392
+Rym: They're gonna ask a real DNS server or if they're paranoid They're gonna ask a root DNS server and go from there.
+
+644
+00:44:48,914 --> 00:44:54,660
+Rym: It's so difficult Normally to compromise DNS in any realistic way.
+
+645
+00:44:54,941 --> 00:44:55,122
+Rym: Yeah,
+
+646
+00:44:55,443 --> 00:45:07,046
+Scott: but if I wanted to give Rym my domain that I already owned there are things you can do to like say Okay it is okay for someone to take my domain away from me and you flick a switch and then someone could you can give it To someone and they give you money.
+
+647
+00:45:07,146 --> 00:45:15,367
+Rym: now this did lead to the problem of cyber squatting Whereby say I know that there's some hot young company called I don't know pen soft and they're gonna.
+
+648
+00:45:15,909 --> 00:45:21,451
+Rym: they're gonna go live and they're gonna need a website and all this business Say I just go and get pens off for five bucks.
+
+649
+00:45:21,893 --> 00:45:23,540
+Scott: Yeah, pen soft comm is mine now.
+
+650
+00:45:23,821 --> 00:45:32,434
+Rym: Well now I can extort them for practically any amount of money I want and just say hey I'll give you a pen soft comm for a thousand dollars.
+
+651
+00:45:32,454 --> 00:45:41,311
+Scott: Oh That sucks, yeah, I have to deal with like pin soft or something else I don't know and there's very little recourse you have against this.
+
+652
+00:45:41,914 --> 00:45:43,480
+Scott: Yeah, there's not much you can do.
+
+653
+00:45:43,620 --> 00:45:51,127
+Scott: If you're lucky and you're in a country with certain laws and they're in the same country as you Maybe you can do something.
+
+654
+00:45:51,147 --> 00:45:51,850
+Scott: I think there have been.
+
+655
+00:45:51,870 --> 00:45:54,420
+Scott: I think there's at least one successful suing case.
+
+656
+00:45:54,754 --> 00:46:07,042
+Rym: Yeah It really depends on the situation for example if Ford Motor Company somehow lapsed and didn't Update their domain and I bought it out from under them when they didn't renew it and then I tried to extort him and sell It back.
+
+657
+00:46:07,162 --> 00:46:09,111
+Scott: they just be like a trademark infringement give back.
+
+658
+00:46:09,191 --> 00:46:10,698
+Rym: the judges would probably just give it to them.
+
+659
+00:46:10,878 --> 00:46:13,779
+Rym: Yeah Yeah, but at the same time you got to worry about that.
+
+660
+00:46:14,141 --> 00:46:22,439
+Rym: There's also a scandal lately where if you go to a lot of registrars and you type in their little box that says hey Is this domain free?
+
+661
+00:46:23,060 --> 00:46:30,219
+Rym: There's people who watch that information and if they see someone type a domain in they register it Knowing that you want it and then they try to sell it to you.
+
+662
+00:46:30,814 --> 00:46:37,671
+Scott: Yeah There's a lot of crazy people out there who they watch the news and they watch the internet and winning Depending on what's going on in the world.
+
+663
+00:46:37,691 --> 00:46:39,120
+Scott: They'll just buy up domains.
+
+664
+00:46:39,942 --> 00:46:50,876
+Rym: The other problem with controversy lately is that I can and all of this is basically run 99% by the United States which kind of bothers the rest of the world.
+
+665
+00:46:51,136 --> 00:47:00,620
+Rym: yet at the same time No one else has ever really stepped up to Actually be responsible for this and the UN while a lot of people say oh the UN should take it over.
+
+666
+00:47:01,343 --> 00:47:03,274
+Rym: I scoff at that for a lot of reasons.
+
+667
+00:47:03,375 --> 00:47:03,696
+Scott: Yes.
+
+668
+00:47:03,817 --> 00:47:09,396
+Scott: I've read many Articles about what various people at the UN have said about them taking DNS and whatnot
+
+669
+00:47:09,436 --> 00:47:18,558
+Rym: and it comes down to the fact that The people involved with the UN and a lot of foreign countries who say DNS should be democratized to the world Don't understand the technology at all.
+
+670
+00:47:18,940 --> 00:47:23,400
+Rym: And if the US handed it over to them, it would basically fuck the internet up.
+
+671
+00:47:23,460 --> 00:47:31,698
+Scott: Yeah the thing is politics and technology don't mix and what these people want to do is they want to get their politics all over our Technology because they don't know about the technology.
+
+672
+00:47:32,642 --> 00:47:37,038
+Scott: We need to change it this way because that works with our politics and then up.
+
+673
+00:47:37,459 --> 00:47:40,396
+Scott: sorry It's now everything's broken because you had to be an ass.
+
+674
+00:47:40,838 --> 00:47:50,488
+Rym: luckily However, I can is very highly watched by a lot of people and it would be incredibly difficult for I can to do anything shady.
+
+675
+00:47:50,749 --> 00:47:53,440
+Scott: Yeah, basically I can is is very careful with everything.
+
+676
+00:47:53,501 --> 00:48:01,000
+Scott: It does that, you know Like recently they said no xxx domain and stuff like that because the second they slip up people are gonna be all over their case.
+
+677
+00:48:01,505 --> 00:48:04,838
+Scott: They're they're kind of very How do you say?
+
+678
+00:48:06,101 --> 00:48:07,385
+Rym: They have a tenuous grasp.
+
+679
+00:48:07,405 --> 00:48:12,663
+Rym: That's the word I was looking for and luckily they've been doing a pretty bang-up job All things considered.
+
+680
+00:48:12,703 --> 00:48:17,743
+Rym: I mean think of this the internet is the wild wild west, you know www.
+
+681
+00:48:18,064 --> 00:48:27,719
+Rym: it's the sea of worms and Trojans and elite AOL kids oars and Garbage and child porn and drug trafficking and everything horrible ever.
+
+682
+00:48:28,182 --> 00:48:31,774
+Rym: Meat-spin and goatse and Each other left and right.
+
+683
+00:48:31,875 --> 00:48:32,217
+Rym: It's chaos.
+
+684
+00:48:32,901 --> 00:48:38,730
+Rym: the only reason your computer is not hacked 24/7 is because you're probably behind some sort of net and It's just.
+
+685
+00:48:38,851 --> 00:48:39,580
+Rym: it's just nightmare.
+
+686
+00:48:40,061 --> 00:48:48,180
+Rym: Imagine having to be the arbiter for the entire world when it comes to what names people can use on to internet.
+
+687
+00:48:48,963 --> 00:48:49,967
+Rym: That is what I can.
+
+688
+00:48:49,987 --> 00:48:53,160
+Rym: rough has to deal with every single day.
+
+689
+00:48:53,742 --> 00:48:55,467
+Scott: Yeah, I remember when they first created.
+
+690
+00:48:55,568 --> 00:48:59,180
+Scott: I can cuz he used to just I think it was just very signed before then.
+
+691
+00:48:59,240 --> 00:48:59,825
+Scott: I don't remember.
+
+692
+00:49:00,349 --> 00:49:01,820
+Scott: or no network solutions, right?
+
+693
+00:49:02,481 --> 00:49:02,942
+Scott: I don't remember.
+
+694
+00:49:03,403 --> 00:49:05,610
+Scott: but when I remember when they created I can.
+
+695
+00:49:05,650 --> 00:49:07,776
+Scott: everyone was like I'm skeptical of this.
+
+696
+00:49:07,917 --> 00:49:08,258
+Scott: I can.
+
+697
+00:49:08,298 --> 00:49:09,625
+Scott: they're not gonna be able To handle it.
+
+698
+00:49:09,666 --> 00:49:10,755
+Scott: Everything's gonna be fucked up.
+
+699
+00:49:10,836 --> 00:49:12,622
+Scott: Oh, no But they've.
+
+700
+00:49:12,642 --> 00:49:13,344
+Scott: they've done.
+
+701
+00:49:13,404 --> 00:49:14,849
+Scott: All right much better than expected.
+
+702
+00:49:14,869 --> 00:49:16,574
+Scott: I mean, we're still it still works.
+
+703
+00:49:17,236 --> 00:49:18,540
+Scott: It's a miracle unto itself.
+
+704
+00:49:19,190 --> 00:49:19,889
+Rym: Here it is All right.
+
+705
+00:49:20,100 --> 00:49:27,066
+Rym: The original mandate for I can was actually from the US government and it was when Bill Clinton and George W Bush were both in power.
+
+706
+00:49:27,347 --> 00:49:41,920
+Rym: It was a long-term thing and on January 30th 1998 the National telecommunications and Information Administration An agency of the US Department of Commerce issued for comment quote a proposal to improve the technical management of internet names and addresses.
+
+707
+00:49:42,680 --> 00:49:44,709
+Rym: Blah blah blah blah I can.
+
+708
+00:49:44,850 --> 00:49:45,895
+Rym: it's actually these.
+
+709
+00:49:45,935 --> 00:49:47,806
+Rym: there are many more paragraphs here I'm not gonna read.
+
+710
+00:49:48,410 --> 00:49:49,579
+Scott: you can read it yourself people.
+
+711
+00:49:49,800 --> 00:49:50,924
+Rym: yeah, just go to the Wikipedia on.
+
+712
+00:49:51,004 --> 00:49:52,227
+Rym: I can if you actually care.
+
+713
+00:49:52,729 --> 00:50:04,398
+Scott: the fact remains that what I can does has almost no effect on how the internet works currently and You don't have to worry about it on the personal level but in the grand scheme it is super important.
+
+714
+00:50:04,940 --> 00:50:09,320
+Rym: now We jumped around a little bit partly because there's not a lot to say about how DNS were I mean?
+
+715
+00:50:09,460 --> 00:50:16,111
+Scott: Yeah, the episode really could just been hey DNS if you ask for what you know What number goes this name, and then it tells you the end.
+
+716
+00:50:16,392 --> 00:50:20,019
+Rym: yeah, however if you're interested Let us know in the forums or email us.
+
+717
+00:50:20,523 --> 00:50:31,145
+Rym: We could do another episode in the near future on DNS servers and talk actually about how a DNS server really works and how to set one up why you would need one All kinds of stuff like that.
+
+718
+00:50:31,205 --> 00:50:39,094
+Rym: yep because there's a lot of fun stuff there how to configure a domain how to configure a domain In your house, maybe yep how email works with DNS now.
+
+719
+00:50:39,134 --> 00:50:47,639
+Scott: It's actually kind of complicated I'll think all will say is that email is weird and requires DNS to do special things in order for email to work.
+
+720
+00:50:47,899 --> 00:51:14,520
+Rym: the only Other thing I'll bring up because this is another common misconception that people seem to think that because you have a dot org domain You got to be a nonprofit or if you're a dot edu you technically have to be a school and all that business and Those rules have become laxer and laxer of time has gone on especially for dot org and dot-com and dotnet and effectively What top-level domain something uses is not a good indication of what that thing actually is.
+
+721
+00:51:15,021 --> 00:51:17,351
+Rym: Yeah, except dot biz which basically means.
+
+722
+00:51:17,773 --> 00:51:24,610
+Scott: I'm a shady and/or craptacular company Or dot foreign country which means I'm from that foreign country.
+
+723
+00:51:24,770 --> 00:51:26,455
+Rym: Yes, usually granted.
+
+724
+00:51:26,475 --> 00:51:32,974
+Rym: There was a big business in People who at the countries read domains like dot TV or dot CX selling.
+
+725
+00:51:33,255 --> 00:51:34,439
+Rym: don't their domain names.
+
+726
+00:51:34,499 --> 00:51:37,099
+Scott: yes CX is the Christmas Islands.
+
+727
+00:51:37,782 --> 00:51:42,360
+Scott: So you know the Christmas Islands obviously is not gonna have a lot of domains because they're not very large.
+
+728
+00:51:42,862 --> 00:51:47,803
+Scott: So they were selling their domains to other people and all around the world And that's that.
+
+729
+00:51:48,024 --> 00:51:50,800
+Scott: thus you get goat C dot CX and many other things like that.
+
+730
+00:51:50,880 --> 00:51:51,422
+Rym: Yeah, of course.
+
+731
+00:51:51,462 --> 00:51:56,217
+Rym: then they realized after all these years exactly what go to dot CX was and promptly destroyed it.
+
+732
+00:51:56,778 --> 00:52:03,800
+Rym: sigh Yeah, well a small piece of the internet is fallen as that was like the fall of the Western Roman Empire right there.
+
+733
+00:52:04,664 --> 00:52:07,318
+Rym: Now we've got the corrupt meatspin Empire to take its place.
+
+734
+00:52:07,418 --> 00:52:16,306
+Rym: no This has been GeekNights with Rym and Scott.
+
+735
+00:52:16,386 --> 00:52:18,908
+Rym: special thanks to DJ pretzel for the opening music.
+
+736
+00:52:19,569 --> 00:52:30,770
+Scott: be sure to visit our website at www.frontroadcrew.com Where you'll find show notes links our awesome forum a link to our frapper map and links to all the RSS feeds.
+
+737
+00:52:31,331 --> 00:52:36,990
+Rym: We say feeds plural because GeekNights airs four nights a week covering four different brands of geekery.
+
+738
+00:52:37,534 --> 00:52:41,669
+Rym: Mondays are science and technology Tuesdays We have video games board games and RPGs.
+
+739
+00:52:42,212 --> 00:52:47,210
+Rym: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+740
+00:52:48,071 --> 00:52:56,110
+Scott: You can send us feedback by email to GeekNights at front row crew calm Or you can send audio feedback via audio.
+
+741
+00:52:56,511 --> 00:53:00,989
+Scott: Just click the link that says send me an audio on the right side of our website if you like what you hear.
+
+742
+00:53:01,069 --> 00:53:05,225
+Rym: you can Catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+743
+00:53:05,245 --> 00:53:08,597
+Rym: for the complete archives Visit the website which has everything.
+
+744
+00:53:08,617 --> 00:53:15,155
+Scott: GeekNights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+745
+00:53:15,637 --> 00:53:19,010
+Scott: this means you can do whatever you want with it as long as you give us credit.
+
+746
+00:53:19,473 --> 00:53:21,650
+Scott: Don't make money and share it in kind.
+
+747
+00:53:22,491 --> 00:53:27,926
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+748
+00:53:28,226 --> 00:53:29,530
+Scott: It's actually recorded at night.
+

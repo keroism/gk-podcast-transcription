@@ -1,0 +1,4080 @@
+﻿1
+00:00:08,460 --> 00:00:08,840
+Speaker 0: 
+
+2
+00:00:08,635 --> 00:00:12,293
+Speaker 1: It's Monday August 7th 2017.
+
+3
+00:00:12,293 --> 00:00:12,774
+Speaker 1: I'm rim.
+
+4
+00:00:12,934 --> 00:00:17,949
+Speaker 1: I'm Scott and this is geek nights tonight the AV technology of public speaking.
+
+5
+00:00:19,591 --> 00:00:20,625
+Speaker 0: Let's do this.
+
+6
+00:00:22,316 --> 00:00:27,460
+Speaker 1: So as you guys know I Basically am a product manager like my day job is a product manager.
+
+7
+00:00:27,561 --> 00:00:28,905
+Speaker 1: So that means a lot of things.
+
+8
+00:00:28,985 --> 00:00:47,869
+Speaker 1: but I encountered a problem that was kind of funny Because most of the software I have product managed or dealt with and basically my entire professional career Has been like back-end enterprise software like the crap that a company uses to manage their nonsense or like
+
+9
+00:00:48,271 --> 00:00:48,934
+Speaker 0: monitoring
+
+10
+00:00:48,954 --> 00:00:51,143
+Speaker 1: of like IT operations and all that kind of crap.
+
+11
+00:00:51,786 --> 00:00:59,110
+Speaker 1: so uh Very rarely our operating systems other than Windows or maybe Linux used in those kinds of places.
+
+12
+00:00:59,895 --> 00:01:02,834
+Speaker 1: But anyway, I got a ticket came across my desk And it was.
+
+13
+00:01:03,236 --> 00:01:07,598
+Speaker 1: it was notable because I saw something that I have not Ever seen.
+
+14
+00:01:07,638 --> 00:01:10,070
+Speaker 1: I guess I've seen it maybe once in my entire professional career.
+
+15
+00:01:11,011 --> 00:01:30,804
+Speaker 1: someone was complaining that something didn't work on OS X. all right, and basically, I got this swing GUI for like this enterprise II software and someone want like Java web start even someone wants to run it on Their Mac and you might think but rim and Scott isn't Java portable?
+
+16
+00:01:31,285 --> 00:01:32,770
+Speaker 1: and the answer is now with gooies.
+
+17
+00:01:34,071 --> 00:01:39,470
+Speaker 1: The reality is that very little GUI code is portable in a reasonable way unless it's a web page.
+
+18
+00:01:40,312 --> 00:01:42,084
+Speaker 0: So I mean a swing GUI was gonna.
+
+19
+00:01:42,185 --> 00:01:42,810
+Speaker 0: It's gonna work.
+
+20
+00:01:42,911 --> 00:01:43,920
+Speaker 0: It's just not gonna look.
+
+21
+00:01:43,940 --> 00:01:44,828
+Speaker 0: it's gonna look weird.
+
+22
+00:01:45,140 --> 00:01:54,402
+Speaker 1: No so on Linux because generally most people who make swing gooies these days either make a it's like on Linux only or Expected to be mostly on Linux or suspected mostly on Windows.
+
+23
+00:01:54,462 --> 00:01:56,270
+Speaker 1: if you could like mess with the look and feel.
+
+24
+00:01:56,711 --> 00:01:58,770
+Speaker 0: No one's testing it and all the different.
+
+25
+00:01:59,592 --> 00:02:01,117
+Speaker 0: But you know it's gonna load.
+
+26
+00:02:01,679 --> 00:02:16,552
+Speaker 1: so yet on OS X what I found because I recall this coming up But maybe one time ever my life is that a lot of swing gooies Just won't load on OS X now in the old days like the old old days or even like old like like Apple before OS 10.
+
+27
+00:02:16,552 --> 00:02:19,460
+Speaker 1: The problem is usually that Mac's had their own Java.
+
+28
+00:02:20,122 --> 00:02:22,730
+Speaker 1: You know there's like Oracle Java, and then there's Apple Java.
+
+29
+00:02:22,890 --> 00:02:24,476
+Speaker 1: Yeah, and Apple Java just didn't work for shit.
+
+30
+00:02:24,497 --> 00:02:27,689
+Speaker 1: with most swing gooies especially with Java web star was involved.
+
+31
+00:02:27,930 --> 00:02:32,790
+Speaker 1: no But in the modern era they kind of dropped that and you can just put Oracle Java there.
+
+32
+00:02:33,374 --> 00:02:35,167
+Speaker 1: And there's a lot of reasons why we know
+
+33
+00:02:36,811 --> 00:02:39,201
+Speaker 0: You're not supposed to even have Java these days if you can avoid it
+
+34
+00:02:39,342 --> 00:02:47,889
+Speaker 1: yep, but there's a lot of OS specific calls that you can make in gooies and oftentimes you end up having to make those just to make a thing work.
+
+35
+00:02:47,909 --> 00:02:49,794
+Speaker 1: and Frankly I was shocked.
+
+36
+00:02:49,814 --> 00:03:08,190
+Speaker 1: this thing even worked in Linux because one of the things this thing can do is on its own internally generate a PDF Using system libraries and system calls and that worked on Linux amazingly, but can't even get to that point on OS X. So that was just interesting.
+
+37
+00:03:08,371 --> 00:03:15,095
+Speaker 1: And I'm really shocked that someone's using OS X in the world that I live in and I almost want to find out more about Like what the deal is like.
+
+38
+00:03:15,175 --> 00:03:19,210
+Speaker 0: why is OS X is really popular, but I just is weird for a finance person.
+
+39
+00:03:19,310 --> 00:03:24,812
+Speaker 1: It's weird for like someone who does operations or like DevOps to run a Mac Mmm.
+
+40
+00:03:24,993 --> 00:03:27,561
+Speaker 0: I mean and not I mean anywhere else, but finance.
+
+41
+00:03:27,581 --> 00:03:29,867
+Speaker 0: That's not unusual at all, but in finance.
+
+42
+00:03:29,887 --> 00:03:35,521
+Speaker 1: It's unusual yeah It's unusual in like industrial DevOps as well I think for a lot of reasons.
+
+43
+00:03:35,541 --> 00:03:40,063
+Speaker 0: it's certain industries But you know overall the most office II type places.
+
+44
+00:03:40,083 --> 00:03:49,510
+Speaker 1: you're gonna see a lot of Macs going on yeah But at the same time most office II places don't really have DevOps Mmm, or if they do that's usually like a separate team or it's outsourced software.
+
+45
+00:03:50,750 --> 00:03:59,465
+Speaker 1: But yeah the funniest thing was we literally didn't have like any Macs to even test on because that's not even the thing we support.
+
+46
+00:03:59,485 --> 00:04:00,650
+Speaker 0: you went to the Apple store and bought one.
+
+47
+00:04:00,731 --> 00:04:03,070
+Speaker 1: So well actually I borrowed the CEO just has a MacBook.
+
+48
+00:04:03,271 --> 00:04:09,001
+Speaker 1: So I just borrowed it from him and likes plopped in the developers desk And I was like let's see if this even works at all.
+
+49
+00:04:09,242 --> 00:04:11,370
+Speaker 1: Let's go have fun spend a day poking at this.
+
+50
+00:04:13,111 --> 00:04:14,255
+Speaker 1: So yeah, it's Monday.
+
+51
+00:04:14,275 --> 00:04:14,516
+Speaker 1: Well.
+
+52
+00:04:14,536 --> 00:04:15,820
+Speaker 1: We'll talk about why.
+
+53
+00:04:15,861 --> 00:04:22,481
+Speaker 1: that's notable when we get to metamoment, but there is a lot of news and As always geek nights Monday is not just about technology.
+
+54
+00:04:22,501 --> 00:04:24,670
+Speaker 1: It's about the social ramifications of technology.
+
+55
+00:04:24,951 --> 00:04:26,295
+Speaker 0: It should just be about technology.
+
+56
+00:04:26,436 --> 00:04:29,827
+Speaker 1: Yeah, you really want to talk about how gedit doesn't have a maintainer anymore.
+
+57
+00:04:29,847 --> 00:04:31,454
+Speaker 0: That's not Interesting.
+
+58
+00:04:31,835 --> 00:04:36,764
+Speaker 0: whether even if you are talking about name an interesting technology news There aren't a lot.
+
+59
+00:04:36,805 --> 00:04:42,819
+Speaker 1: yeah Plus I feel like colloquially Technology news basically covers the shit.
+
+60
+00:04:42,839 --> 00:04:44,304
+Speaker 1: That's on like gizmodo and whatever.
+
+61
+00:04:44,425 --> 00:04:45,950
+Speaker 0: I mean most technology news.
+
+62
+00:04:46,030 --> 00:04:55,957
+Speaker 0: I've said this a zillion times, but 90% of technology news is actually either Business news or it's some other kind of news But it's like related to technology.
+
+63
+00:04:55,978 --> 00:05:00,897
+Speaker 0: somehow like you'll see some news that should be in the finance part of the newspaper But because it's about Google.
+
+64
+00:05:00,958 --> 00:05:02,426
+Speaker 0: It's in the tech part of the newspaper.
+
+65
+00:05:02,486 --> 00:05:03,832
+Speaker 0: It's like really Well.
+
+66
+00:05:03,852 --> 00:05:07,082
+Speaker 1: the funniest thing is that we also technically when we founded geek nights.
+
+67
+00:05:07,263 --> 00:05:11,080
+Speaker 1: You know 12 years ago Monday is Science and technology.
+
+68
+00:05:11,120 --> 00:05:12,710
+Speaker 1: Where's the last time we talked about science?
+
+69
+00:05:14,311 --> 00:05:19,289
+Speaker 1: There is a news about a big radio telescope in China that literally can't hire anyone to run it.
+
+70
+00:05:19,771 --> 00:05:20,093
+Speaker 0: Why not?
+
+71
+00:05:20,455 --> 00:05:22,770
+Speaker 1: because there's no one qualified enough who's willing to work there?
+
+72
+00:05:24,390 --> 00:05:26,265
+Speaker 0: no, and they don't have a Chinese person.
+
+73
+00:05:26,567 --> 00:05:35,929
+Speaker 1: the Requirements of the job from what I can gather There's maybe like someone said that there's maybe between 20 and 40 people in the world who are qualified to do that kind of job.
+
+74
+00:05:37,012 --> 00:05:39,299
+Speaker 0: They can't trains who was doing it before no one.
+
+75
+00:05:39,360 --> 00:05:42,469
+Speaker 1: it's a new new radio telescope as far as I can tell who made it.
+
+76
+00:05:42,933 --> 00:05:43,276
+Speaker 1: I don't know.
+
+77
+00:05:43,317 --> 00:05:48,570
+Speaker 1: I didn't person who made it should be Talk about science because you know how much I know about this.
+
+78
+00:05:48,771 --> 00:05:49,454
+Speaker 1: No, I read.
+
+79
+00:05:49,835 --> 00:05:52,949
+Speaker 1: I read a two-sentence summary of an article that I didn't click on.
+
+80
+00:05:52,989 --> 00:05:56,682
+Speaker 0: yet I just can't imagine whoever made the thing knows how to operate it.
+
+81
+00:05:56,722 --> 00:05:58,569
+Speaker 0: that person's job is not operating it.
+
+82
+00:05:58,870 --> 00:06:01,600
+Speaker 0: Uh, so I or training someone to operate it.
+
+83
+00:06:01,640 --> 00:06:02,704
+Speaker 0: Yeah, it's.
+
+84
+00:06:02,724 --> 00:06:04,210
+Speaker 1: no it's not just operating it.
+
+85
+00:06:04,270 --> 00:06:06,329
+Speaker 0: Have you ever built something you don't know how to use?
+
+86
+00:06:08,358 --> 00:06:10,334
+Speaker 1: Yeah, yeah I have that have you?
+
+87
+00:06:10,354 --> 00:06:15,850
+Speaker 1: I have built things that have great UX's to do tasks that I do not fully understand.
+
+88
+00:06:16,951 --> 00:06:18,035
+Speaker 1: That is the thing I have done.
+
+89
+00:06:18,597 --> 00:06:19,299
+Speaker 1: that has happened.
+
+90
+00:06:19,921 --> 00:06:22,590
+Speaker 0: But I mean we're talking like someone manufactured this physical.
+
+91
+00:06:22,731 --> 00:06:25,730
+Speaker 1: No, the job is not like point the radio telescope.
+
+92
+00:06:25,830 --> 00:06:29,902
+Speaker 1: The job is like manage the entire operation of the telescope facility.
+
+93
+00:06:30,183 --> 00:06:32,670
+Speaker 1: radio telescopes aren't just devices their entire facilities.
+
+94
+00:06:33,531 --> 00:06:37,083
+Speaker 1: Like this involves like managing the physical plant.
+
+95
+00:06:37,284 --> 00:06:39,170
+Speaker 1: see I threw that word in there and all that nonsense.
+
+96
+00:06:39,511 --> 00:06:45,889
+Speaker 1: But again, I know two sentences more about this story than you do and that's why I'm not talking about it on gig nights.
+
+97
+00:06:47,991 --> 00:06:53,890
+Speaker 1: I brought it up as an illustrative point as to why we don't talk about science on gig nights because we are not scientists.
+
+98
+00:06:54,755 --> 00:07:03,168
+Speaker 1: I remember like eight years ago We said something we we said one thing about viruses and got three complaints about how wrong we were from scientists.
+
+99
+00:07:03,248 --> 00:07:03,428
+Speaker 0: Mm-hmm.
+
+100
+00:07:04,752 --> 00:07:05,794
+Speaker 0: So yeah, we so wrong.
+
+101
+00:07:05,955 --> 00:07:14,096
+Speaker 1: but at the same time this news is pretty closely cloven to Technology as it is practice.
+
+102
+00:07:14,116 --> 00:07:20,094
+Speaker 0: Well, I mean this has been the biggest news of tech all week is basically someone who works at Google Sent out.
+
+103
+00:07:20,175 --> 00:07:32,650
+Speaker 0: I guess I don't know how some screed some sort of internal Documentation or internal Communicate is at best a diatribe, but I would probably simply just call it a incoherent screen.
+
+104
+00:07:32,831 --> 00:07:40,800
+Speaker 0: It's just a memo from a that guy who works at Google to all the other Google employees And basically saying all the that guy stuff.
+
+105
+00:07:40,961 --> 00:07:41,262
+Speaker 0: Yep.
+
+106
+00:07:41,523 --> 00:07:43,730
+Speaker 0: His diversity stuff is no good.
+
+107
+00:07:43,770 --> 00:07:47,282
+Speaker 1: Yeah, I mean all the women who work with me are incompetent.
+
+108
+00:07:47,442 --> 00:07:49,670
+Speaker 0: Yeah, it's like, you know, there's genetic differences.
+
+109
+00:07:49,771 --> 00:07:52,792
+Speaker 0: That's why they don't know how to use a computer Like the dirt.
+
+110
+00:07:52,812 --> 00:07:57,490
+Speaker 1: but they're all that awful nonsense that's always there in the undercurrent of like every technology.
+
+111
+00:07:57,530 --> 00:08:02,988
+Speaker 0: So, I mean there's nothing really to say about the the dude and his his you know memo or whatever.
+
+112
+00:08:03,008 --> 00:08:03,530
+Speaker 0: that is that guy.
+
+113
+00:08:03,570 --> 00:08:05,059
+Speaker 0: Yeah, this is that guy.
+
+114
+00:08:05,260 --> 00:08:12,410
+Speaker 0: But what I do want to talk about is How that guy got to work at Google in the first place, right?
+
+115
+00:08:12,510 --> 00:08:20,570
+Speaker 0: They have these crazy interview processes with multi layers of you know And all this stuff and you have to be really skilled to even work at Google, right?
+
+116
+00:08:20,570 --> 00:08:23,942
+Speaker 0: Because even though they're paying a lot and desperate to hire people all the time.
+
+117
+00:08:23,982 --> 00:08:24,885
+Speaker 0: They're still choosy.
+
+118
+00:08:25,166 --> 00:08:26,350
+Speaker 0: They reject tons of people.
+
+119
+00:08:26,470 --> 00:08:28,056
+Speaker 0: Yeah, so why?
+
+120
+00:08:28,136 --> 00:08:29,661
+Speaker 0: how is it that they let?
+
+121
+00:08:29,942 --> 00:08:32,289
+Speaker 0: and you know, there's even a part of the hiring process.
+
+122
+00:08:32,330 --> 00:08:34,981
+Speaker 0: We're like a whole bunch of people have to give unanimous thumbs up.
+
+123
+00:08:35,020 --> 00:08:37,230
+Speaker 0: even one thumbs down on you will make you not hired.
+
+124
+00:08:37,337 --> 00:08:37,510
+Speaker 1: Yep.
+
+125
+00:08:37,590 --> 00:08:43,208
+Speaker 0: Now I think now that did qualify that this guy got unanimous thumbs up from several all everyone who interviewed him.
+
+126
+00:08:44,053 --> 00:08:45,900
+Speaker 1: Alright, so that thumbs up thumbs down thing.
+
+127
+00:08:45,980 --> 00:08:48,370
+Speaker 1: I think that only applies to certain management positions.
+
+128
+00:08:49,156 --> 00:08:57,130
+Speaker 0: The point is someone who is a who has Working at Google and is in a position high enough such that they can share a memo with the entire company.
+
+129
+00:08:57,832 --> 00:08:59,075
+Speaker 0: Everyone at all of Google.
+
+130
+00:08:59,295 --> 00:08:59,556
+Speaker 1: Yep.
+
+131
+00:08:59,797 --> 00:09:06,156
+Speaker 0: I mean credit was hired by Google's very very supposedly thorough and difficult interview process.
+
+132
+00:09:06,337 --> 00:09:18,584
+Speaker 1: as we learned from key girl con a lot of organizations even big ones have a way to send a message to a lot of people and I Can email team at my current company and send something to literally everyone who works for
+
+133
+00:09:18,604 --> 00:09:28,590
+Speaker 0: I actually have an access to an email System where I could send email from anyone so I could send it legit verify DKM emails like from the CEO to whoever.
+
+134
+00:09:29,414 --> 00:09:29,795
+Speaker 1: You know what?
+
+135
+00:09:29,916 --> 00:09:32,709
+Speaker 1: Actually I if I wanted to I could do the same thing.
+
+136
+00:09:34,033 --> 00:09:35,657
+Speaker 0: I would not receive the replies.
+
+137
+00:09:35,697 --> 00:09:36,780
+Speaker 0: the CEO would receive them.
+
+138
+00:09:37,021 --> 00:09:37,282
+Speaker 0: Yeah.
+
+139
+00:09:37,603 --> 00:09:38,585
+Speaker 0: Yeah, I could send.
+
+140
+00:09:38,645 --> 00:09:46,390
+Speaker 0: I could send emails from the CEO Well or anyone else I guess an emails from rim, yeah, well because you managed our email system.
+
+141
+00:09:46,691 --> 00:09:49,928
+Speaker 0: So yeah, I'm you know, but at night I could do rim at Broadway.
+
+142
+00:09:49,948 --> 00:09:50,109
+Speaker 0: calm.
+
+143
+00:09:51,256 --> 00:09:57,146
+Speaker 1: Well think of it this way like, you know I used to work in DevOps right like for a broker dealer like big deal for all the security in the world.
+
+144
+00:09:57,166 --> 00:10:02,765
+Speaker 1: in the end There's a small number of people who have root on a system that could theoretically do anything.
+
+145
+00:10:02,825 --> 00:10:05,810
+Speaker 1: cuz like there's root I get used for things sometimes.
+
+146
+00:10:06,010 --> 00:10:10,242
+Speaker 0: Anyway, the point is they hired this guy even with their crazy interview process.
+
+147
+00:10:10,283 --> 00:10:17,488
+Speaker 0: and what this tells me and is something that I need People to realize right is that there are people at Google.
+
+148
+00:10:17,508 --> 00:10:26,643
+Speaker 0: this, you know Even though this guy is clearly a minority if you at least judging by the voices on the internet Yeah, and you know from what I'm not an oppressed minority the literal opposite of that.
+
+149
+00:10:26,764 --> 00:10:28,750
+Speaker 0: No, he's a physical minority.
+
+150
+00:10:28,750 --> 00:10:29,070
+Speaker 0: You know what?
+
+151
+00:10:29,270 --> 00:10:33,646
+Speaker 0: It's like if you counted all the Google employees and forced them to vote yay or nay on this guy.
+
+152
+00:10:33,666 --> 00:10:37,329
+Speaker 0: with no other voting option You would get mostly nays on this guy.
+
+153
+00:10:37,490 --> 00:10:41,866
+Speaker 1: yep, because when you meet of that guy most people realize he's that guy.
+
+154
+00:10:41,966 --> 00:10:54,691
+Speaker 0: you would get a Scary number of yeas, even though they're less than the nays People who agree with this guy there is a scary number of them and they're working at Google a company with access to all your personal Information.
+
+155
+00:10:54,972 --> 00:10:58,221
+Speaker 0: so so the thing is it's not just the Google right.
+
+156
+00:10:58,241 --> 00:11:02,253
+Speaker 0: you look at all these companies that like you're always complaining about stuff For example Twitter.
+
+157
+00:11:02,614 --> 00:11:04,920
+Speaker 0: why you know delete these insensitive tweets.
+
+158
+00:11:05,241 --> 00:11:08,430
+Speaker 0: YouTube why you not close the accounts on all these videos?
+
+159
+00:11:08,670 --> 00:11:09,833
+Speaker 0: Yeah, right and they're.
+
+160
+00:11:09,933 --> 00:11:16,030
+Speaker 0: part of the reason is because the people working there some of them are that guys.
+
+161
+00:11:16,431 --> 00:11:19,845
+Speaker 0: Yeah, they don't just fire all of that guys like they should like.
+
+162
+00:11:19,926 --> 00:11:22,289
+Speaker 0: I would in fact I wouldn't hire them in the first place.
+
+163
+00:11:22,591 --> 00:11:35,270
+Speaker 1: But as we learned on the rail ride once again for whatever reason you and I have this like Dunyane like ability to see that guy from a meet from the furthest horizon.
+
+164
+00:11:35,433 --> 00:11:42,906
+Speaker 1: We see them in the distance And we're like that guy and then they open their mouth and we look at each other and we're like confirm Can I get a job where all I do is?
+
+165
+00:11:43,650 --> 00:11:43,931
+Speaker 0: Companies?
+
+166
+00:11:43,951 --> 00:11:52,560
+Speaker 0: when they're interviewing people I come in and interview them as like a disinterested party just to tell when it comes to Specifically the misogynistic version of that guy.
+
+167
+00:11:52,621 --> 00:11:56,895
+Speaker 1: The one thing I can say is that well, this is like a racist and Misogyny.
+
+168
+00:11:57,178 --> 00:12:05,684
+Speaker 1: I can say pretty definitively Any woman who talks to that guy for even a second realizes it immediately.
+
+169
+00:12:05,725 --> 00:12:07,470
+Speaker 0: you think how many people at Google?
+
+170
+00:12:07,670 --> 00:12:09,978
+Speaker 0: Do you think we're interviewed by even one woman?
+
+171
+00:12:10,038 --> 00:12:11,564
+Speaker 1: That's what I'm getting at.
+
+172
+00:12:11,764 --> 00:12:17,547
+Speaker 1: even the purpose of diversity Google isn't just to meet some quota of like this.
+
+173
+00:12:17,607 --> 00:12:20,754
+Speaker 0: many of this Interviewed this guy.
+
+174
+00:12:21,015 --> 00:12:27,196
+Speaker 0: where that guys it is very unlikely that any of them Were ladies or not white people.
+
+175
+00:12:27,216 --> 00:12:32,210
+Speaker 1: but the purpose of diversity is to literally have a diversity of perspective and opinions.
+
+176
+00:12:32,392 --> 00:12:37,782
+Speaker 1: so if Some women had interviewed that guy they might have recognized it was that guy.
+
+177
+00:12:37,842 --> 00:12:44,172
+Speaker 1: but it's even more subtle than that because I've been through Google's interview process multiple times.
+
+178
+00:12:44,272 --> 00:12:48,359
+Speaker 1: I've actually gone through a lot of interview processes over the years partly just to see.
+
+179
+00:12:48,379 --> 00:12:54,634
+Speaker 1: and There is a common thread with tech companies like Google.
+
+180
+00:12:55,376 --> 00:13:05,767
+Speaker 1: they seem to Narrowly focus the parameters of how their applicants are rated to exclude Testing for that guy?
+
+181
+00:13:05,988 --> 00:13:08,580
+Speaker 1: testing for empathy testing for racism?
+
+182
+00:13:09,001 --> 00:13:10,185
+Speaker 1: They mostly test for.
+
+183
+00:13:10,527 --> 00:13:12,393
+Speaker 1: can you do an arbitrary logic puzzle?
+
+184
+00:13:13,015 --> 00:13:14,320
+Speaker 1: Can you talk about?
+
+185
+00:13:15,402 --> 00:13:17,518
+Speaker 1: the business process that we're hiring you for?
+
+186
+00:13:18,661 --> 00:13:26,634
+Speaker 1: Finding out if you have domain knowledge finding out if you have basic intelligence like they Really constrain what they're asking about and what they're interviewing about.
+
+187
+00:13:27,175 --> 00:13:30,134
+Speaker 1: They don't ask about hobbies they don't ask about like your real life.
+
+188
+00:13:30,598 --> 00:13:40,010
+Speaker 1: and They don't do the thing like when I interview people I ask subtle shibboleth questions because I'm looking for things like Do you use keywords that imply that you know the things?
+
+189
+00:13:40,070 --> 00:13:42,177
+Speaker 1: I don't have to actually grow your technology skills.
+
+190
+00:13:43,000 --> 00:13:53,113
+Speaker 1: I Give them the opportunities to use shibboleths that might appear on say red pill or Storm for you know, the kinds of things that a normal person would never say.
+
+191
+00:13:53,635 --> 00:14:03,009
+Speaker 1: but if a white dude I'm talking to says certain words I pretty much assume they're a Nazi or a racist and just discount them immediately Like I try to find that out.
+
+192
+00:14:03,190 --> 00:14:08,952
+Speaker 0: and just in case anyone wasn't aware in the United States We had the freedom of speech whatever but you don't have.
+
+193
+00:14:08,972 --> 00:14:10,880
+Speaker 0: you have no freedom of speech at work.
+
+194
+00:14:11,060 --> 00:14:20,679
+Speaker 0: So you I could literally fires if I was a boss of a company and someone walked in with an Eagles Jersey I legally could and Maybe would fire them.
+
+195
+00:14:21,242 --> 00:14:26,786
+Speaker 0: Well, yeah, just for that reason and no other reason and the law would just be like, all right Yeah, you can do that.
+
+196
+00:14:27,088 --> 00:14:35,308
+Speaker 1: My most company has worked for in Subordination to your direct line manager is a fireable offense Even if the dress code was like.
+
+197
+00:14:35,348 --> 00:14:39,289
+Speaker 0: you may wear sports jerseys it because the see I'm the CEO I own the company.
+
+198
+00:14:39,309 --> 00:14:40,300
+Speaker 0: you can make an arbitrary rule.
+
+199
+00:14:40,320 --> 00:14:45,500
+Speaker 0: No, we can just be like, I don't fuck the Eagles what that who even hired you Eagles fan get fuck out of here.
+
+200
+00:14:45,540 --> 00:14:46,151
+Speaker 0: You got it.
+
+201
+00:14:46,172 --> 00:14:52,400
+Speaker 1: Goodbye But that basically the whole system of hiring in most of technology.
+
+202
+00:14:52,420 --> 00:14:56,615
+Speaker 0: so obviously if you can do that you can fire this guy for no other reason than this memo.
+
+203
+00:14:56,776 --> 00:14:58,081
+Speaker 0: but and you wouldn't get you Couldn't?
+
+204
+00:14:58,101 --> 00:15:02,260
+Speaker 1: you couldn't fight back though that guys who have infiltrated, you know real society.
+
+205
+00:15:02,682 --> 00:15:16,286
+Speaker 1: there's sort of an extra subtle problem where they coach their Vile opinions under the guise of every argument having two sides and every argument having equal weight or Fake science.
+
+206
+00:15:16,567 --> 00:15:24,998
+Speaker 1: Yep by simplifying or making story They'll use the word objectivity and have no idea what that word actually means or have no like.
+
+207
+00:15:25,038 --> 00:15:25,720
+Speaker 1: they use that word.
+
+208
+00:15:26,081 --> 00:15:32,140
+Speaker 0: They use the word objectivity right because they're only discussing, you know, like oh, I'm just gonna tell it's a genetic difference.
+
+209
+00:15:32,382 --> 00:15:34,459
+Speaker 0: I'm making a scientific argument here, right?
+
+210
+00:15:34,781 --> 00:15:37,110
+Speaker 0: I'm not saying anything about feelings or any.
+
+211
+00:15:37,150 --> 00:15:39,520
+Speaker 0: it's just all numbers and genes and stuff.
+
+212
+00:15:39,922 --> 00:15:43,277
+Speaker 0: but your information is inaccurate that you are using.
+
+213
+00:15:43,378 --> 00:15:47,712
+Speaker 1: so Yep, but uh, I don't know.
+
+214
+00:15:47,732 --> 00:15:49,520
+Speaker 1: I mean, I don't know what to do about this.
+
+215
+00:15:49,881 --> 00:15:58,336
+Speaker 1: I feel like the problem would fix itself if there were a More diverse and empathetic circuit of how job interviews are done.
+
+216
+00:15:58,476 --> 00:15:59,620
+Speaker 1: I think I can't happen.
+
+217
+00:15:59,721 --> 00:16:01,915
+Speaker 1: It's just because the intention is chicken already there.
+
+218
+00:16:02,016 --> 00:16:02,620
+Speaker 0: It's a chicken egg.
+
+219
+00:16:02,902 --> 00:16:04,579
+Speaker 0: Companies already have these people there.
+
+220
+00:16:05,001 --> 00:16:10,480
+Speaker 0: So it's how can you become more diverse if the people making hiring decisions are these people?
+
+221
+00:16:11,140 --> 00:16:11,823
+Speaker 0: Right to begin with.
+
+222
+00:16:11,964 --> 00:16:14,655
+Speaker 1: so the other day I was on the subway basically had to just fire everyone.
+
+223
+00:16:14,675 --> 00:16:21,284
+Speaker 0: and then you know Like if I started a company, I thought like I should have a rule that if you know, even sadly I'm a white dude.
+
+224
+00:16:21,887 --> 00:16:24,180
+Speaker 0: If I make a company I should be the only white dude there.
+
+225
+00:16:24,301 --> 00:16:27,019
+Speaker 0: Everyone else should either be only straight white dude.
+
+226
+00:16:28,445 --> 00:16:30,695
+Speaker 0: Every single other person at are you 100% straight?
+
+227
+00:16:31,739 --> 00:16:39,020
+Speaker 0: I mean Like every single other person at the company besides me should be not dude not white not straight.
+
+228
+00:16:39,341 --> 00:16:41,029
+Speaker 0: Well, at least one of the three or
+
+229
+00:16:41,089 --> 00:16:56,540
+Speaker 1: the very least like I guess when I whenever it like is, you know I am in an industry that's heavily male at least is I pretty much always tried to give anyone who's not like me Way more benefit of the doubt and sort of always do the opposite for anyone who is like a cishet white.
+
+230
+00:16:57,507 --> 00:16:58,899
+Speaker 1: But even that is not enough.
+
+231
+00:16:58,960 --> 00:17:05,871
+Speaker 0: Yeah, if you're a white dude you better you got to be like fucking amazing for me to Being hired right cuz it is shocking.
+
+232
+00:17:06,051 --> 00:17:12,919
+Speaker 0: Well, I guess I also I also give Sometimes I'll give credit to like, you know straight white dudes at least if they're from a different country.
+
+233
+00:17:13,301 --> 00:17:13,988
+Speaker 0: No, right.
+
+234
+00:17:14,349 --> 00:17:14,592
+Speaker 0: Yeah.
+
+235
+00:17:14,613 --> 00:17:15,540
+Speaker 1: Well, it's more matter.
+
+236
+00:17:15,579 --> 00:17:20,999
+Speaker 1: you got to put everything in context, but in this case like these people exist throughout technology.
+
+237
+00:17:21,020 --> 00:17:26,409
+Speaker 1: and I saw I've ran into these two dudes on the subway Not that long ago.
+
+238
+00:17:26,489 --> 00:17:28,020
+Speaker 1: I was just sitting on the subway long train home.
+
+239
+00:17:28,060 --> 00:17:39,247
+Speaker 1: we were stuck and these two white dudes who are in their like mid 20s are standing there and they must have just met at like a networking event and I think they both worked in finance because they they had that look and they had that attitude and they had that dress
+
+240
+00:17:39,429 --> 00:17:39,651
+Speaker 0: I know.
+
+241
+00:17:39,672 --> 00:17:48,392
+Speaker 1: and They're talking to each other and like it's so hard to date in the city and the subways cars totally quiet so everyone on the subway car is just giving them the side.
+
+242
+00:17:48,432 --> 00:18:00,200
+Speaker 1: I listening to them and slowly They come out to each other as being conservative Mm-hmm, and then immediately they're like, oh man and they hug each other and they're like you just can't talk about this stuff.
+
+243
+00:18:00,300 --> 00:18:11,120
+Speaker 1: Like if I say anything about Trump and I don't like really like rag on him then like any woman I'm dating just like immediately breaks up with me and like I have to hide this and like I'm afraid to come out to them.
+
+244
+00:18:11,763 --> 00:18:15,500
+Speaker 1: And it's apparent that shitheads like that are the minority.
+
+245
+00:18:16,068 --> 00:18:21,650
+Speaker 1: but they've infiltrated Organizations and because of the way hiring is done.
+
+246
+00:18:21,670 --> 00:18:27,307
+Speaker 1: They are not selected out of those organizations and they have undue power in those organizations.
+
+247
+00:18:27,869 --> 00:18:42,416
+Speaker 1: and it was weird to see two of the most privileged people I've ever met on the subway Using all the language of an oppressed minority to talk about the fact that they feel Discriminated against because their political opinions are literally vile.
+
+248
+00:18:42,436 --> 00:18:42,737
+Speaker 1: Mm-hmm.
+
+249
+00:18:43,802 --> 00:18:48,039
+Speaker 1: so in other news This has been making the rounds but you know Hyperloop.
+
+250
+00:18:50,107 --> 00:18:51,759
+Speaker 1: I don't want to talk about the technology of it.
+
+251
+00:18:51,960 --> 00:18:57,784
+Speaker 0: Listen if there's some crazy guy out there who says he's got another fucking like perpetual motion machine He doesn't make the news, right?
+
+252
+00:18:58,125 --> 00:19:02,740
+Speaker 0: Why just cuz it's Elon Musk rich asshole who used to work who has money because he worked at PayPal.
+
+253
+00:19:04,321 --> 00:19:05,547
+Speaker 0: How he does the crazy?
+
+254
+00:19:05,588 --> 00:19:06,814
+Speaker 0: perpetually no idea.
+
+255
+00:19:06,974 --> 00:19:08,100
+Speaker 0: and suddenly it's in the news.
+
+256
+00:19:08,140 --> 00:19:09,310
+Speaker 0: It's like why do we got to talk about it?
+
+257
+00:19:09,350 --> 00:19:10,580
+Speaker 0: Just cuz some rich guys doing it.
+
+258
+00:19:10,620 --> 00:19:22,699
+Speaker 1: well, there's a big difference between a crazy, you know crazy guy has a vision for how we're gonna connect the subways together across the whole country and Same crazy guy also has billions of dollars to throw at it.
+
+259
+00:19:23,061 --> 00:19:25,853
+Speaker 0: Yeah, but it's like, you know, just the rich guy just writing the news.
+
+260
+00:19:25,913 --> 00:19:27,520
+Speaker 0: It's like I'm tired of hearing about this asshole.
+
+261
+00:19:27,520 --> 00:19:36,088
+Speaker 1: Yeah but so on one hand It's easy for armchair engineers like us even to point out the flaws in the system because we don't actually like.
+
+262
+00:19:36,229 --> 00:19:59,960
+Speaker 1: I haven't read all the papers on the engineering of Hyperloop and how Feasible it actually is but there's a narrative that's been poking around in the media lately Saying that It's actually way more feasible to build than people realize and the primary thing holding it back Is that city governments and state governments and federal governments aren't willing to give?
+
+263
+00:20:00,120 --> 00:20:02,373
+Speaker 1: Permits to actually build these things.
+
+264
+00:20:02,393 --> 00:20:03,680
+Speaker 0: Yeah, I'm tired of reading news.
+
+265
+00:20:03,741 --> 00:20:05,301
+Speaker 0: That is about you know The news.
+
+266
+00:20:05,402 --> 00:20:07,811
+Speaker 0: rich guys are doing this and the news is also.
+
+267
+00:20:08,052 --> 00:20:11,143
+Speaker 0: this is written by a rich guy so that it's easier for him To do what he wants.
+
+268
+00:20:11,405 --> 00:20:11,666
+Speaker 1: Yep.
+
+269
+00:20:12,268 --> 00:20:15,220
+Speaker 0: So you think I must write paid for those stories or you know.
+
+270
+00:20:15,802 --> 00:20:20,220
+Speaker 0: Or basically hung out with reporters and got him to write those stories or his PR people did it?
+
+271
+00:20:20,340 --> 00:20:22,660
+Speaker 0: You know because he's basically blaming everyone else for his problems.
+
+272
+00:20:22,861 --> 00:20:24,994
+Speaker 0: It's like but I feel like the okay rich guy.
+
+273
+00:20:25,034 --> 00:20:25,960
+Speaker 0: we should bend over for you.
+
+274
+00:20:26,100 --> 00:20:26,542
+Speaker 0: No, how about?
+
+275
+00:20:26,562 --> 00:20:28,288
+Speaker 0: we should make things harder for you of anything?
+
+276
+00:20:28,769 --> 00:20:32,100
+Speaker 1: It's not just coming up with a good technology idea.
+
+277
+00:20:32,221 --> 00:20:34,110
+Speaker 1: This is true of war.
+
+278
+00:20:34,130 --> 00:20:37,966
+Speaker 1: This is true of space travel And this is true of mass transit.
+
+279
+00:20:38,367 --> 00:20:45,060
+Speaker 1: a good idea or even a good technology or even a provable working Technology is not actually the hard part.
+
+280
+00:20:45,622 --> 00:20:50,140
+Speaker 1: I mean there already exists way better subway cars than what we have in New York City today.
+
+281
+00:20:50,160 --> 00:20:51,546
+Speaker 0: Yeah, we can have subway.
+
+282
+00:20:51,787 --> 00:20:59,040
+Speaker 0: they exist today subway trains that are awesome luxurious fast safe and drive themselves.
+
+283
+00:20:59,584 --> 00:21:03,586
+Speaker 0: We don't need to invent anything new We just need to buy them and install them.
+
+284
+00:21:04,028 --> 00:21:06,916
+Speaker 1: but buying them installing them is a complicated process because
+
+285
+00:21:07,157 --> 00:21:11,393
+Speaker 0: probably a trillion dollar Hundreds of billions of dollars the same
+
+286
+00:21:11,494 --> 00:21:21,989
+Speaker 1: taxpayer driven municipal and state and federal tax system that would pay for that is the same taxes and has to pay for like Education and there's not infinite money.
+
+287
+00:21:22,049 --> 00:21:23,174
+Speaker 1: So which one do you pick?
+
+288
+00:21:23,616 --> 00:21:24,680
+Speaker 1: or like feasibility?
+
+289
+00:21:25,000 --> 00:21:26,787
+Speaker 1: Oh, we'll just build a tunnel under New York City.
+
+290
+00:21:27,269 --> 00:21:28,173
+Speaker 1: Good fucking luck.
+
+291
+00:21:28,234 --> 00:21:29,740
+Speaker 1: building a tunnel under New York City.
+
+292
+00:21:30,182 --> 00:21:33,840
+Speaker 1: No one knows what's down there like literally no one.
+
+293
+00:21:33,940 --> 00:21:41,426
+Speaker 0: I read that the Second Avenue subway at least is way deeper than it needed to be and in fact That's why it costs so much money.
+
+294
+00:21:41,487 --> 00:21:42,732
+Speaker 0: is because they made it so deep.
+
+295
+00:21:42,792 --> 00:22:01,111
+Speaker 0: and the reason they made it so deep is Because to make it at the normal depth, which is would have been possible to do would have required Just a lot of wrangling of bureaucracy to get various utilities like phone water gas internet Etc Verizon you got Verizon Con Edison, etc.
+
+296
+00:22:01,372 --> 00:22:03,480
+Speaker 0: to all get their shit together, right?
+
+297
+00:22:04,622 --> 00:22:10,120
+Speaker 0: There wasn't enough political will to get those people in the room and force them to get their shit together.
+
+298
+00:22:10,601 --> 00:22:15,457
+Speaker 0: So instead they just spent a huge pile of money to just dig deeper and avoid all because it's like.
+
+299
+00:22:15,778 --> 00:22:23,167
+Speaker 0: well same time Rather waste a bunch of money then do some work now So that bureaucracy like digging deeper.
+
+300
+00:22:23,187 --> 00:22:32,862
+Speaker 1: it might in the end of cost just as much to act because that bureaucracy is protecting poorly documented and physically Difficult situation.
+
+301
+00:22:32,922 --> 00:22:35,370
+Speaker 0: right but you could have gotten it done.
+
+302
+00:22:35,531 --> 00:22:40,180
+Speaker 0: and the thing is if you would have got made on it wouldn't have cost taxpayers money to get it done.
+
+303
+00:22:40,280 --> 00:22:44,680
+Speaker 0: It would have cost all those companies money to get it done because you basically just write a law base.
+
+304
+00:22:44,760 --> 00:22:50,103
+Speaker 0: Effectively that says you all have to sort your shit out because the subway is coming through and we're gonna have meetings to sort Your shit out.
+
+305
+00:22:50,143 --> 00:22:50,686
+Speaker 0: that doesn't cost.
+
+306
+00:22:50,707 --> 00:22:51,713
+Speaker 0: so it's not taxpayers?
+
+307
+00:22:51,773 --> 00:22:52,055
+Speaker 0: anything.
+
+308
+00:22:52,075 --> 00:22:52,820
+Speaker 1: not quite that easy.
+
+309
+00:22:52,900 --> 00:22:56,519
+Speaker 1: So I was researching this a little bit and I learned some fun stuff about even like the big dig, right?
+
+310
+00:22:57,821 --> 00:23:05,912
+Speaker 1: So literally digging those tunnels even after they forced all those changes and like had a guaranteed plan They ran into pipes that no one knew what they were.
+
+311
+00:23:05,932 --> 00:23:06,575
+Speaker 1: Mm-hmm.
+
+312
+00:23:06,917 --> 00:23:07,560
+Speaker 1: What do you do then?
+
+313
+00:23:08,141 --> 00:23:10,338
+Speaker 1: It's how much money it cost even to find out what that pipe is.
+
+314
+00:23:11,222 --> 00:23:16,560
+Speaker 1: One of them they ran into a pipe destroying the pipe and it also destroyed the tunnel boring machine.
+
+315
+00:23:17,442 --> 00:23:22,017
+Speaker 1: so then they had to put another tunnel boring machine in to get to the first one to fix it.
+
+316
+00:23:22,859 --> 00:23:45,038
+Speaker 1: and the reality is Cities have huge amounts of infrastructure and the concerns go so much beyond simply having good technology That yes hyperloop might be technologically feasible But to make it pragmatically feasible is probably a 30 or 40 year project and I don't feel like the people involved in it Have the staying power to make that
+
+317
+00:23:45,118 --> 00:23:45,280
+Speaker 0: happen.
+
+318
+00:23:45,340 --> 00:23:54,731
+Speaker 0: I also feel like in 30 or 40 years will invent something better and with that it'll be like oh this things have done And then it'll take us 30 or 40 years to get that in place.
+
+319
+00:23:54,952 --> 00:23:57,340
+Speaker 1: no meanwhile, we'll have just gotten new subway cars.
+
+320
+00:23:59,661 --> 00:24:00,985
+Speaker 1: So it's a complicated problem.
+
+321
+00:24:01,046 --> 00:24:02,711
+Speaker 0: is the teleporting in that time?
+
+322
+00:24:02,952 --> 00:24:07,986
+Speaker 1: so we did a show recently about passwords and Just to drive that point home.
+
+323
+00:24:08,568 --> 00:24:13,531
+Speaker 1: if you use last pass which seems to be the most popular of those passwords It's a very popular one.
+
+324
+00:24:13,733 --> 00:24:14,659
+Speaker 0: It's also I've heard of it.
+
+325
+00:24:14,961 --> 00:24:15,583
+Speaker 1: It's really like.
+
+326
+00:24:16,125 --> 00:24:20,240
+Speaker 1: it's not perfectly secure, but it's pretty secure on average.
+
+327
+00:24:20,441 --> 00:24:22,712
+Speaker 0: I mean, it's it's had its problems.
+
+328
+00:24:22,873 --> 00:24:30,880
+Speaker 0: I would never use it personally I would never recommend using it, but if you must if your alternative is to do garbage, this is better than garbage.
+
+329
+00:24:31,363 --> 00:24:32,229
+Speaker 1: Oh, yeah, so guess what.
+
+330
+00:24:32,249 --> 00:24:33,740
+Speaker 1: it has a free tier and a paid tier, right?
+
+331
+00:24:34,000 --> 00:24:34,301
+Speaker 0: What is that?
+
+332
+00:24:34,342 --> 00:24:36,310
+Speaker 0: What do you pay get for when you use the paid tier?
+
+333
+00:24:36,471 --> 00:24:38,560
+Speaker 1: if I know because I don't use services like this.
+
+334
+00:24:38,621 --> 00:24:49,979
+Speaker 1: But here's what's happening they're taking a bunch of the features that were in the free tier and moving them into the pay tier and they need money and They're substantially raising the price of the pay tier doubling it.
+
+335
+00:24:51,720 --> 00:24:53,665
+Speaker 1: so here's some things this implies.
+
+336
+00:24:53,926 --> 00:24:59,479
+Speaker 1: one if you ever rely on a free service either some day it's gonna cost you money.
+
+337
+00:24:59,499 --> 00:25:04,513
+Speaker 1: or You're the product or it's fake like there aren't that many options.
+
+338
+00:25:05,175 --> 00:25:06,318
+Speaker 1: and two or someday.
+
+339
+00:25:06,338 --> 00:25:06,940
+Speaker 1: I'd love to monetize.
+
+340
+00:25:08,282 --> 00:25:12,580
+Speaker 1: And two if they're doing this I worry that last pass is not financially viable.
+
+341
+00:25:13,564 --> 00:25:24,835
+Speaker 1: I don't think you want to trust a company that may be having financial trouble With the keys to your entire kingdom, yeah It's like Oh last pass just like shuts down because they ran out of money either.
+
+342
+00:25:24,855 --> 00:25:30,015
+Speaker 0: or you know Situation a of today is you might be forced to suddenly be paying.
+
+343
+00:25:30,135 --> 00:25:31,420
+Speaker 0: What does it cost for the pay tier?
+
+344
+00:25:31,700 --> 00:25:33,680
+Speaker 0: I don't even know you might be forced to pay money.
+
+345
+00:25:33,861 --> 00:25:35,668
+Speaker 1: Oh, so one it's not.
+
+346
+00:25:35,688 --> 00:25:42,672
+Speaker 1: the last pass premium has now doubled in price to $24 a year, that's not that expensive.
+
+347
+00:25:42,913 --> 00:25:44,360
+Speaker 0: So yeah that big a deal.
+
+348
+00:25:44,460 --> 00:25:49,780
+Speaker 0: But in principle, however, if they have they go under or something, it's like you're trapped.
+
+349
+00:25:50,001 --> 00:25:52,713
+Speaker 0: It is possibly screwed based on how they're.
+
+350
+00:25:52,813 --> 00:25:54,420
+Speaker 0: I don't know how exactly their system works.
+
+351
+00:25:54,540 --> 00:25:57,570
+Speaker 0: If anything stored in the cloud that might disappear or who knows what.
+
+352
+00:25:57,790 --> 00:26:01,376
+Speaker 0: yeah, you could potentially be in trouble if they like go out of business.
+
+353
+00:26:03,241 --> 00:26:10,320
+Speaker 0: Does all the systems that we recommended like dice where super Gen vest or even just making up passwords memorizing?
+
+354
+00:26:10,904 --> 00:26:12,940
+Speaker 0: It was password cards.
+
+355
+00:26:13,502 --> 00:26:22,319
+Speaker 0: None of those things can be suddenly shut down because you're not dependent on any cloud-based thing Yep, and cloud-based commercial venture has to make money somehow.
+
+356
+00:26:22,864 --> 00:26:28,091
+Speaker 0: mm-hmm, uh You definitely don't want to trust your security to someone with a profit motive.
+
+357
+00:26:28,512 --> 00:26:30,960
+Speaker 1: Nope, unless their profit motive is maintaining your security.
+
+358
+00:26:31,493 --> 00:26:38,439
+Speaker 1: maybe Like if Gmail had a serious like Google two-factor or like Gmail if there was a gigantic security hole.
+
+359
+00:26:38,479 --> 00:26:41,919
+Speaker 1: suddenly That would really hurt their ability to continue making money from it.
+
+360
+00:26:42,221 --> 00:26:48,400
+Speaker 1: They have a vested interest in a certain degree of security sure, but obviously there's a much deeper topic there.
+
+361
+00:26:48,783 --> 00:27:03,140
+Speaker 1: So really tiny news, but this is good news Even though you still can't trust Lenovo because they Lenovo does with that malware so long ago, but Lenovo is ditching all its Android nonsense and They're going to put stock Android on all their future smartphones.
+
+362
+00:27:03,441 --> 00:27:07,240
+Speaker 0: I heard that this is actually in response to customer demand, which is really interesting.
+
+363
+00:27:07,822 --> 00:27:09,408
+Speaker 0: Customers have demanded this forever.
+
+364
+00:27:09,488 --> 00:27:11,054
+Speaker 0: First of all, I've demanded.
+
+365
+00:27:11,074 --> 00:27:16,220
+Speaker 0: as long as Android phones have existed They're suddenly listening to customers, which is like, oh wow, they're listening to customers.
+
+366
+00:27:16,320 --> 00:27:24,560
+Speaker 0: But then the other thing is well, why are other companies either a the customers aren't telling them this or be aren't listening to customers?
+
+367
+00:27:24,941 --> 00:27:29,394
+Speaker 0: Yeah, I mean well, so even Sony I still wouldn't buy Lenovo because Lenovo.
+
+368
+00:27:29,454 --> 00:27:37,640
+Speaker 1: but I mean I have a Sony phone and it's a weird phone and I love the Physicality of it so much that I put up with the fact that it's a Sony branch of Android.
+
+369
+00:27:38,442 --> 00:27:45,099
+Speaker 1: I think the only reason I've been able to put up with it is that it's like 98% stock and it doesn't get in my way.
+
+370
+00:27:45,119 --> 00:27:48,371
+Speaker 1: and Shockingly, it actually is getting timely updates.
+
+371
+00:27:48,532 --> 00:27:57,940
+Speaker 1: Like I just get updates regularly yeah, so Even then I still would rather have stock Android and it bothers me that it's not stock Android.
+
+372
+00:27:58,040 --> 00:27:59,449
+Speaker 0: Can't you just flash it with stock Android?
+
+373
+00:27:59,770 --> 00:28:02,691
+Speaker 1: Uh, because it's a weird Sony phone I kind of don't want to go down that road.
+
+374
+00:28:02,711 --> 00:28:07,358
+Speaker 1: Mm-hmm Because I really really like this phone and it kind of works as is.
+
+375
+00:28:08,562 --> 00:28:16,660
+Speaker 1: But this is kind of good news and I'm really hoping that this portends More people giving up on take Android and make it worse just for their own fun.
+
+376
+00:28:16,801 --> 00:28:27,181
+Speaker 0: I think what you'll see is if people start buying Lenovo phones Then if that gives them a competitive advantage in the marketplace if people choose Lenovo phones because of the stock You
+
+377
+00:28:27,221 --> 00:28:28,806
+Speaker 1: shouldn't because you can't trust Lenovo
+
+378
+00:28:29,107 --> 00:28:35,676
+Speaker 0: right but you know if someone else won't listen to us right then you'll see Other companies be forced to do the same thing.
+
+379
+00:28:35,858 --> 00:28:44,680
+Speaker 1: Yeah so, uh, I Guess the last news is actually pretty interesting and there's a much broader topic here.
+
+380
+00:28:44,780 --> 00:28:54,940
+Speaker 1: so this article is fairly just to get you thinking about it, but When GPS became commonly available and was usable by normal people that was actually a pretty big deal.
+
+381
+00:28:55,281 --> 00:28:58,212
+Speaker 0: GPS used to and was like first like a military.
+
+382
+00:28:58,392 --> 00:29:00,962
+Speaker 0: only thing like you couldn't access it Right.
+
+383
+00:29:01,082 --> 00:29:01,684
+Speaker 0: It was not a thing.
+
+384
+00:29:01,724 --> 00:29:06,220
+Speaker 0: normal people could not find out their exact latitude and longitude to several decimal digits.
+
+385
+00:29:06,501 --> 00:29:16,020
+Speaker 0: Yeah, you know it was just not available, you know, and then I think it was available to like maybe boat people next You know, like it was not a thing that was you know allowed.
+
+386
+00:29:16,141 --> 00:29:16,483
+Speaker 0: It's like
+
+387
+00:29:16,503 --> 00:29:17,147
+Speaker 1: there was like
+
+388
+00:29:17,207 --> 00:29:19,199
+Speaker 0: and now your phone can fucking do it really well
+
+389
+00:29:19,460 --> 00:29:35,420
+Speaker 1: Yep, and the militaries of the world rely heavily on GPS because actually rangefinding target finding like Navigation if you don't know it like it is difficult to express briefly how utterly challenging those problems actually are.
+
+390
+00:29:35,661 --> 00:29:35,883
+Speaker 0: Right.
+
+391
+00:29:36,145 --> 00:29:38,440
+Speaker 0: It's it's basically the system is like kind of a miracle.
+
+392
+00:29:38,520 --> 00:29:41,880
+Speaker 0: We have all these satellites in space that cost us a bunch of money But now they're up there.
+
+393
+00:29:41,940 --> 00:29:46,929
+Speaker 1: So we're good and you can hit a button and see on a map exactly where your ship is Middle of the Pacific Ocean.
+
+394
+00:29:46,949 --> 00:30:02,423
+Speaker 0: satellites are basically covering hitting Almost the entire earth effectively the entire earth with these signals so that no matter where you are You can basically use a device to listen to this signal and do some math and then your device will tell you exactly your latitude and longitude.
+
+395
+00:30:02,946 --> 00:30:04,675
+Speaker 0: so and it's like it's freaking.
+
+396
+00:30:04,695 --> 00:30:13,720
+Speaker 1: fantastic, but Knowing where you are if GPS becomes unavailable is a difficult problem to say the least.
+
+397
+00:30:13,821 --> 00:30:15,051
+Speaker 0: But why would it become unavailable?
+
+398
+00:30:15,071 --> 00:30:16,080
+Speaker 0: It's satellites in space.
+
+399
+00:30:16,261 --> 00:30:22,200
+Speaker 0: What can anyone do besides like shoot out the satellites in space interfere with the GPS signals that aren't that strong or spoof them?
+
+400
+00:30:22,340 --> 00:30:25,234
+Speaker 1: Or otherwise just jam them so that now your GPS can't get a lock.
+
+401
+00:30:25,375 --> 00:30:26,018
+Speaker 0: Can you do that?
+
+402
+00:30:26,078 --> 00:30:32,660
+Speaker 1: Yeah or Knock down the satellites, which is way easier than putting satellites up.
+
+403
+00:30:32,881 --> 00:30:34,085
+Speaker 0: It's definitely possible.
+
+404
+00:30:34,145 --> 00:30:36,715
+Speaker 0: But no, I don't think there has been to my knowledge.
+
+405
+00:30:36,735 --> 00:30:38,120
+Speaker 0: I keep thinking about that.
+
+406
+00:30:38,160 --> 00:30:43,451
+Speaker 1: I've been thinking about that because there hasn't been a major war involving Equivtech countries about a certain level.
+
+407
+00:30:43,471 --> 00:30:45,280
+Speaker 0: I've been thinking about that for a long time.
+
+408
+00:30:45,380 --> 00:30:49,040
+Speaker 0: Oh Scott, we don't want to take out the TV satellites, but how come Scott?
+
+409
+00:30:49,942 --> 00:30:54,880
+Speaker 1: Read so I'm weird and I read a lot about military technology.
+
+410
+00:30:54,900 --> 00:30:59,554
+Speaker 1: Yeah I don't care about what that is a that has been a big fucking deal for a long time.
+
+411
+00:30:59,875 --> 00:31:00,276
+Speaker 1: the.
+
+412
+00:31:00,377 --> 00:31:10,495
+Speaker 1: the theory goes that if there were ever a conflict between modern equiv tech nations like US and China, yeah, or They would just kill each other.
+
+413
+00:31:10,515 --> 00:31:11,000
+Speaker 0: satellites, right?
+
+414
+00:31:11,300 --> 00:31:20,437
+Speaker 1: Like basically everyone would just destroy everyone else's satellites and everyone's in the dark because that hurts a country like the US Way more than it hurts another country.
+
+415
+00:31:22,940 --> 00:31:23,865
+Speaker 0: Xcom help us.
+
+416
+00:31:23,945 --> 00:31:24,347
+Speaker 0: No.
+
+417
+00:31:24,467 --> 00:31:25,612
+Speaker 0: Yeah satellites.
+
+418
+00:31:25,693 --> 00:31:27,320
+Speaker 0: No, we can't X come without those.
+
+419
+00:31:27,480 --> 00:31:39,469
+Speaker 1: So this is an article that will give you some flavors of information about the previous technology That was used before GPS and why it is so much harder to jam It's not quite as good.
+
+420
+00:31:39,630 --> 00:31:41,340
+Speaker 0: Well uses antennas like on the ground.
+
+421
+00:31:41,360 --> 00:31:48,595
+Speaker 1: Yeah and if you really want to go into this go read about how like Bombers found their targets during World War two.
+
+422
+00:31:48,736 --> 00:31:49,400
+Speaker 0: isn't the way it works?
+
+423
+00:31:49,420 --> 00:32:02,186
+Speaker 0: You basically just have multiple antennas on the ground and broadcasting and you know where the antenna is Right because you program you hard code in like this antenna is at this coordinate and then your device picks up the radio signals From the very powerful antennas.
+
+424
+00:32:02,206 --> 00:32:02,668
+Speaker 0: You don't need that.
+
+425
+00:32:02,930 --> 00:32:04,215
+Speaker 0: You just need to be in the radius.
+
+426
+00:32:04,276 --> 00:32:05,180
+Speaker 0: It's got alright.
+
+427
+00:32:05,461 --> 00:32:09,258
+Speaker 1: How do you tell based on a single radio signal how far away it is?
+
+428
+00:32:10,623 --> 00:32:11,832
+Speaker 0: So you had to be within two?
+
+429
+00:32:13,320 --> 00:32:14,564
+Speaker 0: Towers not one.
+
+430
+00:32:14,624 --> 00:32:19,963
+Speaker 0: just being near one tower isn't good enough because all you can calculate is how far away from the one tower Am I?
+
+431
+00:32:20,043 --> 00:32:22,439
+Speaker 0: you don't know if you're knowing you even do that?
+
+432
+00:32:23,741 --> 00:32:30,184
+Speaker 0: Yeah, cuz you know what the original signal like strength is and you get that how strong the one years where it is It gets a little.
+
+433
+00:32:30,204 --> 00:32:33,960
+Speaker 0: that's like if you shout at me and I'm like, oh well, it's the it's the inverse square law.
+
+434
+00:32:34,221 --> 00:32:41,393
+Speaker 0: So if you're sure I know if I know the original decibels of your shout And then I know that the shout that I heard was half that many decibels.
+
+435
+00:32:41,493 --> 00:32:43,420
+Speaker 0: I know that I'm this far away from you.
+
+436
+00:32:43,641 --> 00:32:44,871
+Speaker 0: I just don't know which direction.
+
+437
+00:32:44,911 --> 00:32:45,940
+Speaker 0: I am far away from you.
+
+438
+00:32:46,000 --> 00:32:50,240
+Speaker 1: So basically what you're describing is kind of World War two era technology.
+
+439
+00:32:50,662 --> 00:33:02,299
+Speaker 0: Yeah, but if you have two towers like Lord of the Rings Then you can hear both towers and now suddenly you not only know how far away you are Exactly where you are.
+
+440
+00:33:02,621 --> 00:33:18,157
+Speaker 1: so I guess the gist of all this is the Battlestar Galactica problem and There is some real reason why some of these older radio navigation technologies might be re-enabled or rebuilt globally pretty much only for military
+
+441
+00:33:18,298 --> 00:33:18,419
+Speaker 0: use
+
+442
+00:33:19,163 --> 00:33:21,074
+Speaker 1: Because like from this article
+
+443
+00:33:21,174 --> 00:33:22,220
+Speaker 0: you wouldn't use it in your phone.
+
+444
+00:33:22,240 --> 00:33:22,661
+Speaker 0: Oh, yeah, these.
+
+445
+00:33:22,681 --> 00:33:24,587
+Speaker 0: so this kind of technology can't really be put in the phone.
+
+446
+00:33:29,100 --> 00:33:32,500
+Speaker 1: The antenna is too big like this is like old big technology.
+
+447
+00:33:32,560 --> 00:33:36,113
+Speaker 1: Okay, like be long like 90 to 110 kilohertz.
+
+448
+00:33:36,153 --> 00:33:38,080
+Speaker 0: You can put it in a boat or a plane just fine.
+
+449
+00:33:38,100 --> 00:33:50,996
+Speaker 1: Yeah Yeah but this is an interesting problem and you could learn a lot about this like the use of old technology or redundant systems and radio navigation because It's relevant.
+
+450
+00:33:51,016 --> 00:33:58,600
+Speaker 1: nowadays North Korea has repeatedly blocked GPS along its border because that would be a highly effective way to make it difficult for say the u.s.
+
+451
+00:33:58,740 --> 00:34:02,339
+Speaker 1: Or South Korea to target their installations if there were a sudden.
+
+452
+00:34:02,761 --> 00:34:09,312
+Speaker 0: I didn't realize their technology was good enough to block GPS blocking Signals or jamming them to the point that they're useless.
+
+453
+00:34:09,594 --> 00:34:13,871
+Speaker 0: pretty easy to do Mmm, I didn't think that they were like smart enough.
+
+454
+00:34:13,993 --> 00:34:15,600
+Speaker 1: Think about how easy it is to block Wi-Fi.
+
+455
+00:34:15,761 --> 00:34:17,858
+Speaker 0: Did they even have GPS in North Korea?
+
+456
+00:34:18,581 --> 00:34:20,199
+Speaker 1: Yeah, they can get GPS signals.
+
+457
+00:34:26,851 --> 00:34:29,243
+Speaker 1: but anyway things of the day.
+
+458
+00:34:29,283 --> 00:34:29,786
+Speaker 1: what do you got?
+
+459
+00:34:30,369 --> 00:34:30,570
+Speaker 0: so?
+
+460
+00:34:31,512 --> 00:34:36,826
+Speaker 0: You know when you're rendering graphics, you know 3d computer graphics for video games, especially right.
+
+461
+00:34:37,206 --> 00:34:39,513
+Speaker 0: you have to render them in But it real time.
+
+462
+00:34:39,533 --> 00:34:53,138
+Speaker 0: so like if you're doing 60 FPS video game you need to render the full resolution of your screen 60 times every second in order to you know be decent right if you're rendering something like fucking a movie You don't have to do that shit.
+
+463
+00:34:53,179 --> 00:34:54,704
+Speaker 0: You can like take all fucking day.
+
+464
+00:34:54,724 --> 00:34:56,290
+Speaker 0: You can render like a frame per day.
+
+465
+00:34:56,371 --> 00:34:57,860
+Speaker 0: I mean, you know, that's probably too slow.
+
+466
+00:34:57,921 --> 00:34:58,988
+Speaker 0: The movie will come out in 20 years.
+
+467
+00:34:59,350 --> 00:35:02,850
+Speaker 1: Well go read about how long it took to render the original Toy Story, right?
+
+468
+00:35:03,010 --> 00:35:06,270
+Speaker 0: It's like the Toy Story looks like crap now, but the computers were crap then right?
+
+469
+00:35:06,450 --> 00:35:09,909
+Speaker 0: So it's like your computer could render Toy Story these days, but not those days.
+
+470
+00:35:10,371 --> 00:35:28,047
+Speaker 0: So, you know, you just let the thing render super long time and that's why computer graphics and movies a lot of them Especially the ones that are used for like just special effects in non completely computer generated movies like You know Like you CG to like show someone getting shot or something or who knows what and like it looks 100% real.
+
+471
+00:35:28,851 --> 00:35:29,132
+Speaker 0: Why?
+
+472
+00:35:29,213 --> 00:35:32,230
+Speaker 0: because they didn't have to render 60 frames in a single second.
+
+473
+00:35:32,290 --> 00:35:36,566
+Speaker 0: They could render the 60 frames in like a few hours and spend all the time in the world rendering it.
+
+474
+00:35:36,707 --> 00:35:41,770
+Speaker 0: Absolutely perfectly Anyway, so there are different rendering methods, right?
+
+475
+00:35:41,910 --> 00:35:48,022
+Speaker 0: So when you're use it when you're rendering for a video game You can't use certain methods of rendering because they're too slow.
+
+476
+00:35:48,504 --> 00:35:59,434
+Speaker 0: and one of the methods one of the most Simple basic and most like I've programmed raytraces before right is ray tracing and the way ray tracing works is you basically create You know a scene.
+
+477
+00:35:59,454 --> 00:36:06,520
+Speaker 0: you're like, oh, well, there's a cube here and there's a flat surface here And there's a big red ball over there and there's a person there.
+
+478
+00:36:06,560 --> 00:36:07,785
+Speaker 0: over here you model the.
+
+479
+00:36:08,126 --> 00:36:13,964
+Speaker 0: you know The the physical space right and the reflective properties of each material.
+
+480
+00:36:14,486 --> 00:36:31,709
+Speaker 0: and then you create a light source And you basically shoot lines out from that light source and they bounce off all the surfaces and you're basically Simulating photons and then you simulate an eyeball somewhere and after shooting all these arrays everywhere you figure out which ones hit the
+
+481
+00:36:31,809 --> 00:36:32,030
+Speaker 1: eyeball.
+
+482
+00:36:33,231 --> 00:36:36,725
+Speaker 1: Right, you basically recalculate everything that could happen, right?
+
+483
+00:36:36,745 --> 00:36:49,378
+Speaker 0: Yeah, you're basically simulating effectively simulating all these rays of light to hit every part of the scene and You know hit the eyeball and then you whatever Something hits the eyeball, you know what color all the pixels on the screen are.
+
+484
+00:36:49,459 --> 00:36:51,588
+Speaker 0: and then now you can draw a picture of what it looks like.
+
+485
+00:36:51,649 --> 00:37:02,410
+Speaker 0: and if you Do this and if you shoot enough lines and do enough samples of each pixel It looks like super real and incredible assuming that your model is detailed enough, right?
+
+486
+00:37:02,490 --> 00:37:06,450
+Speaker 0: I mean most of the models we did were like a cube in which case it looks like a cube.
+
+487
+00:37:06,712 --> 00:37:16,519
+Speaker 0: You could have just drawn a cube with like a pen but you know if you can get a really accurate model of like a person and you program in the reflective properties and the you Know the properties of the light source.
+
+488
+00:37:16,921 --> 00:37:18,109
+Speaker 0: It looks real basically.
+
+489
+00:37:18,129 --> 00:37:26,946
+Speaker 0: so You know, the dream has been to use ray tracing like a video game But doing that you can't render a whole screen 60 times a second.
+
+490
+00:37:27,146 --> 00:37:28,030
+Speaker 0: It just can't be done.
+
+491
+00:37:28,992 --> 00:37:32,881
+Speaker 0: but what if your game is really sort of not great looking?
+
+492
+00:37:33,462 --> 00:37:36,489
+Speaker 0: and what if you have a really brand new awesome supercomputer?
+
+493
+00:37:36,509 --> 00:37:41,219
+Speaker 0: and What if you lower the sampling rate so that it's kind of noisy looking?
+
+494
+00:37:41,921 --> 00:37:42,563
+Speaker 0: here you go.
+
+495
+00:37:42,583 --> 00:37:49,410
+Speaker 0: This is quake - a love story Quake - rendered with ray tracing in real time.
+
+496
+00:37:49,672 --> 00:37:57,006
+Speaker 1: The craziest thing is like you watch the whole video But toward the end like the shadows of these dudes walking around make it really apparent.
+
+497
+00:37:57,026 --> 00:37:58,190
+Speaker 1: What the hell's going on here.
+
+498
+00:37:58,372 --> 00:37:59,261
+Speaker 0: Oh, yeah, look at that.
+
+499
+00:37:59,463 --> 00:38:00,109
+Speaker 1: Oh my god.
+
+500
+00:38:00,357 --> 00:38:05,674
+Speaker 0: So yeah You can see it gets really noisy a lot because the sampling rate is so low And other parts.
+
+501
+00:38:05,694 --> 00:38:06,917
+Speaker 0: so they turn the sampling rate up.
+
+502
+00:38:06,957 --> 00:38:16,850
+Speaker 0: You can see the frame rate drop significantly and it's quake - so it doesn't look You know anything quick - it still looks like quake - though the models themselves are still blocky old models.
+
+503
+00:38:16,930 --> 00:38:19,301
+Speaker 1: I played quake - in software only mode.
+
+504
+00:38:19,342 --> 00:38:21,130
+Speaker 1: my friend can at a voodoo card.
+
+505
+00:38:21,511 --> 00:38:24,543
+Speaker 1: Yeah, so he could actually use OpenGL to render on a video car.
+
+506
+00:38:24,563 --> 00:38:26,410
+Speaker 0: I had a TNT - I was using open here.
+
+507
+00:38:26,450 --> 00:38:29,110
+Speaker 1: I got a creative graphics blaster extreme around that time.
+
+508
+00:38:29,251 --> 00:38:40,450
+Speaker 0: But the point is is like you can get an idea of when our you know Rendering technology gets even even better than it is now like something like maybe 10 years out when you've got the Nvidia.
+
+509
+00:38:43,052 --> 00:38:49,164
+Speaker 0: We can probably be applying this to like much better-looking game but at the same time reach the dream at the same time.
+
+510
+00:38:49,546 --> 00:38:56,688
+Speaker 1: look at how Barely, they can do it with an ancient game and modern computers are crazy powerful.
+
+511
+00:38:56,989 --> 00:39:00,861
+Speaker 1: Yep So this is a really simple thing of the day.
+
+512
+00:39:00,961 --> 00:39:03,070
+Speaker 1: I bumped into it and it was funnier than I expected.
+
+513
+00:39:04,312 --> 00:39:06,421
+Speaker 1: It's just these kids and they video themselves.
+
+514
+00:39:06,462 --> 00:39:07,084
+Speaker 1: It's from like 2013.
+
+515
+00:39:07,084 --> 00:39:08,149
+Speaker 1: It's kind of an old video.
+
+516
+00:39:08,892 --> 00:39:15,870
+Speaker 1: They just they picked ten laws of the things that are illegal to do in Britain and they just went and did.
+
+517
+00:39:16,411 --> 00:39:23,930
+Speaker 1: They specifically had to be things that are currently still illegal and that people have been cited for in recent memories.
+
+518
+00:39:23,990 --> 00:39:31,210
+Speaker 1: So it can't be like thou shalt not walk a dog on the left side of a street Which is around on a Tuesday not like talking an elevator in New York.
+
+519
+00:39:31,370 --> 00:39:39,769
+Speaker 1: Yeah, so they went and broke nine of these laws and video themselves doing it And it's just kind of funny.
+
+520
+00:39:40,331 --> 00:39:40,813
+Speaker 1: I think more.
+
+521
+00:39:40,893 --> 00:39:42,778
+Speaker 1: but the only one that they faked is.
+
+522
+00:39:42,859 --> 00:39:46,850
+Speaker 1: one of the laws was you can't shoot cannons in the city.
+
+523
+00:39:47,211 --> 00:39:51,487
+Speaker 0: Why don't I get a really tiny handheld cannon like pew firing a cannon within 300 yards of a house?
+
+524
+00:39:52,852 --> 00:39:53,576
+Speaker 1: So they were like.
+
+525
+00:39:53,878 --> 00:39:55,590
+Speaker 1: that's actually a really reasonable law.
+
+526
+00:39:56,112 --> 00:39:58,100
+Speaker 1: I don't think anyone should be able to fire a cannon within 300.
+
+527
+00:39:58,100 --> 00:40:08,189
+Speaker 0: They could have just chosen a different law Yeah, but instead they made a little CG cannon on a hill and they're like, yeah I would have just done gotten a tiny real cannon and gun pew pew.
+
+528
+00:40:08,612 --> 00:40:10,522
+Speaker 1: I feel like the law might define what a cannon is.
+
+529
+00:40:10,562 --> 00:40:10,884
+Speaker 1: I don't know.
+
+530
+00:40:10,904 --> 00:40:11,929
+Speaker 1: I didn't delve too much into it.
+
+531
+00:40:12,090 --> 00:40:18,669
+Speaker 0: I mean still a tiny tiny cannon that actually uses gunpowder and shoots a tiny ball and she shoot it into like You know a bucket or something.
+
+532
+00:40:18,750 --> 00:40:20,890
+Speaker 1: I knew a guy when I worked at IBM who had one of those on his desk.
+
+533
+00:40:20,950 --> 00:40:24,724
+Speaker 1: You could literally like put a tiny pellet into it and like put some flash powder into it.
+
+534
+00:40:24,864 --> 00:40:26,249
+Speaker 1: Yeah fire it you could do it.
+
+535
+00:40:26,651 --> 00:40:28,639
+Speaker 0: There's no limit on the smallness of a cannon.
+
+536
+00:40:28,679 --> 00:40:36,185
+Speaker 1: as tiny as it was it was louder than you expected Oh, yeah, and it would shoot that tiny little ball like through really hard cardboard.
+
+537
+00:40:36,265 --> 00:40:37,630
+Speaker 0: It's still a fucking cannon ball.
+
+538
+00:40:37,791 --> 00:40:39,504
+Speaker 1: Yeah, it's basically just a tiny gun.
+
+539
+00:40:39,544 --> 00:40:44,369
+Speaker 0: Yes Gunpowder, you don't put gunpowder in non guns.
+
+540
+00:40:45,951 --> 00:40:50,130
+Speaker 1: So in the moment, uh, we mentioned this the other night and I'm gonna mention it again.
+
+541
+00:40:50,692 --> 00:40:57,901
+Speaker 1: If you ever tried to join the geek nights forum, which is a pretty rockin forum It is at community dot front row career calm.
+
+542
+00:40:57,941 --> 00:40:59,810
+Speaker 0: do not go to forum dot front row career calm.
+
+543
+00:40:59,890 --> 00:41:02,923
+Speaker 0: That is the old legacy forum that is locked for all eternity.
+
+544
+00:41:03,164 --> 00:41:04,630
+Speaker 0: It's frozen in time.
+
+545
+00:41:04,891 --> 00:41:10,530
+Speaker 1: It has that legacy forum has hundreds of thousands of posts and tens of thousands of topic.
+
+546
+00:41:10,571 --> 00:41:11,830
+Speaker 0: It is full of much content.
+
+547
+00:41:11,951 --> 00:41:16,470
+Speaker 0: But all the activity if you want to talk to people is on the new forum at community different recruit.
+
+548
+00:41:16,530 --> 00:41:16,791
+Speaker 0: I calm.
+
+549
+00:41:16,831 --> 00:41:18,699
+Speaker 0: the old one is just an archive.
+
+550
+00:41:18,840 --> 00:41:27,486
+Speaker 1: if you're watching this live stream like You should be in this forum because I feel like you've already gone like way beyond casual fan.
+
+551
+00:41:27,566 --> 00:41:28,369
+Speaker 0: all sad 14 people.
+
+552
+00:41:29,211 --> 00:41:39,830
+Speaker 0: Yeah, if you're if you're listening to this podcast in mp3 form and you're so sad that you're not I mean already pretty sad listening to geek nights, but if you're so sad you want geek nights in real time.
+
+553
+00:41:40,312 --> 00:41:42,078
+Speaker 0: It's on YouTube live now.
+
+554
+00:41:42,178 --> 00:41:43,623
+Speaker 0: most times we do it.
+
+555
+00:41:43,663 --> 00:41:49,937
+Speaker 0: Yep, if it's not around six ish Eastern time on the appropriate day.
+
+556
+00:41:49,957 --> 00:41:54,090
+Speaker 1: Yep, but if you want to talk about all this other people are four is pretty great.
+
+557
+00:41:54,170 --> 00:41:57,369
+Speaker 1: But if you sign up for our forum, it asks you to prove you're human.
+
+558
+00:41:58,272 --> 00:42:07,858
+Speaker 1: You have to actually convince Scott or myself that you know who we are or some Somehow prove right that you're not about.
+
+559
+00:42:07,898 --> 00:42:14,150
+Speaker 0: someone wrote in that form field something like want to discuss video games And it's like that's not good enough, right?
+
+560
+00:42:14,550 --> 00:42:15,393
+Speaker 0: Someone else wrote.
+
+561
+00:42:15,834 --> 00:42:18,641
+Speaker 0: what do you see and that means?
+
+562
+00:42:18,901 --> 00:42:21,087
+Speaker 0: Oh, that's that person definitely knows.
+
+563
+00:42:21,488 --> 00:42:27,566
+Speaker 0: Yeah, right You have to write something like just say like you're a listen like saying I'm a geek nights listener.
+
+564
+00:42:27,607 --> 00:42:28,670
+Speaker 0: that enough that's enough.
+
+565
+00:42:28,851 --> 00:42:31,823
+Speaker 1: If you're like eight people gaga, not only you're approved.
+
+566
+00:42:31,863 --> 00:42:40,612
+Speaker 0: I'm probably gonna email you and be like, hey, right You need to write something in there that indicates to me that you're a human being and you are actually a listener of this Podcast.
+
+567
+00:42:40,672 --> 00:42:48,889
+Speaker 0: if you just write like want to discuss things or looking for a friend or fan of something That's gonna be like I want to argue about fruit.
+
+568
+00:42:49,730 --> 00:42:51,095
+Speaker 0: Yeah, that's a big dick cuz.
+
+569
+00:42:51,155 --> 00:42:53,903
+Speaker 1: I further I'd got like 200 160 pose that would get you in for sure out of nowhere.
+
+570
+00:42:57,871 --> 00:42:59,659
+Speaker 1: Otherwise our book club book was doing.
+
+571
+00:42:59,679 --> 00:43:00,161
+Speaker 1: we're done with it.
+
+572
+00:43:00,202 --> 00:43:01,930
+Speaker 1: The next book is the fifth season.
+
+573
+00:43:02,352 --> 00:43:04,950
+Speaker 0: Yep, it looks pretty good by NK jemisin.
+
+574
+00:43:05,030 --> 00:43:05,471
+Speaker 0: So it's.
+
+575
+00:43:05,552 --> 00:43:11,610
+Speaker 0: it's the hot fantasy sci-fi of the past, you know recent times much more recent than doing at least.
+
+576
+00:43:11,750 --> 00:43:14,639
+Speaker 0: Yeah, even though I guess it's still a few years old probably.
+
+577
+00:43:15,060 --> 00:43:16,284
+Speaker 0: but yeah, we're gonna get on that.
+
+578
+00:43:16,324 --> 00:43:17,448
+Speaker 0: biz get with the times.
+
+579
+00:43:17,628 --> 00:43:20,682
+Speaker 1: and also In a few weeks is PAX West.
+
+580
+00:43:20,722 --> 00:43:21,506
+Speaker 1: We're gonna be there.
+
+581
+00:43:21,646 --> 00:43:24,039
+Speaker 0: Oh my god I just all my in.
+
+582
+00:43:24,260 --> 00:43:33,096
+Speaker 0: I use Google inbox for my email and You know when I get emails like a convention, I'll just snooze them and then I'll be like, oh these are emails Like I bought plane tickets.
+
+583
+00:43:33,458 --> 00:43:35,370
+Speaker 0: I don't need to have these sitting in my inbox.
+
+584
+00:43:35,610 --> 00:43:37,536
+Speaker 0: Yeah, go away come back.
+
+585
+00:43:37,617 --> 00:43:47,888
+Speaker 1: Like when the convention is soon all my PAX West emails reappeared this morning Yep, and that dread presence beyond the horizon mark for our eyes is in Seattle.
+
+586
+00:43:48,108 --> 00:43:51,276
+Speaker 1: Yeah And also that panel we're doing on quitting.
+
+587
+00:43:51,798 --> 00:43:58,118
+Speaker 1: it started as being basically just like a clone of our old quitting panel But it's actually way different now.
+
+588
+00:43:58,139 --> 00:43:58,640
+Speaker 1: Uh-huh.
+
+589
+00:43:58,721 --> 00:44:00,326
+Speaker 0: You say this every time and it's never true.
+
+590
+00:44:00,426 --> 00:44:01,510
+Speaker 1: Did you even look at the slides yet?
+
+591
+00:44:01,771 --> 00:44:03,423
+Speaker 1: No, it's basically a completely different panel.
+
+592
+00:44:03,504 --> 00:44:06,941
+Speaker 0: Uh-huh I'm gonna have to start making panels again.
+
+593
+00:44:06,981 --> 00:44:07,704
+Speaker 0: I just need an idea.
+
+594
+00:44:07,744 --> 00:44:08,648
+Speaker 1: Hey Dave, we take turns.
+
+595
+00:44:08,708 --> 00:44:09,130
+Speaker 1: you did a few.
+
+596
+00:44:09,590 --> 00:44:12,870
+Speaker 0: I'm gonna make good panels that are actually a hundred percent original.
+
+597
+00:44:13,091 --> 00:44:15,890
+Speaker 1: This was the thing is it's more that we did our panel on quitting.
+
+598
+00:44:15,970 --> 00:44:25,649
+Speaker 1: But we mostly talked about like all different kinds of quitting like people who quit before a game and during the game And why this one is only people who rage quit from ongoing games.
+
+599
+00:44:26,556 --> 00:44:34,626
+Speaker 1: So it's a very narrow and specific Focused panel based on things I learned from doing the panel before and I did some research - mm-hmm.
+
+600
+00:44:35,107 --> 00:44:36,595
+Speaker 1: I got some stuff in here Mm-hmm.
+
+601
+00:44:37,992 --> 00:44:43,151
+Speaker 1: Also, I got a really good animated gif that's relevant and an important headline Mm-hmm.
+
+602
+00:44:43,572 --> 00:45:00,203
+Speaker 1: from when all right a team called the RIT Tigers beat a team the Newman whatevers In a game of hockey 24 goals to zero and how that might have been mean and how.
+
+603
+00:45:00,704 --> 00:45:02,729
+Speaker 1: maybe they should have rage quit that game.
+
+604
+00:45:03,952 --> 00:45:05,969
+Speaker 0: It's almost we wanted our money's worth.
+
+605
+00:45:06,292 --> 00:45:13,309
+Speaker 1: It's noble of them that they didn't Much like the could the non men mansions that stood and bared there next to the men that came for them.
+
+606
+00:45:14,654 --> 00:45:17,114
+Speaker 1: I'm thinking our prince nothing a lot But yeah We're gonna be this packs.
+
+607
+00:45:17,676 --> 00:45:23,455
+Speaker 1: that is also relevant because a bunch of you have been bothering me mostly on the patreon About the utenna show.
+
+608
+00:45:23,475 --> 00:45:24,760
+Speaker 1: Yeah, it's coming back.
+
+609
+00:45:24,860 --> 00:45:26,124
+Speaker 1: But wait until after packs.
+
+610
+00:45:26,185 --> 00:45:30,859
+Speaker 1: cuz I got a lot of shit to do before packs But it is coming back and I'm doing work on it.
+
+611
+00:45:31,561 --> 00:45:36,681
+Speaker 1: Yeah speaking of panels and public speaking We've never actually done a show on this.
+
+612
+00:45:36,821 --> 00:45:38,650
+Speaker 0: Are you sure I'm pretty confident?
+
+613
+00:45:39,090 --> 00:45:40,173
+Speaker 0: I'm not a hundred percent sure.
+
+614
+00:45:40,274 --> 00:45:45,330
+Speaker 1: and also it's actually kind of changed a lot sure like just in the last few years.
+
+615
+00:45:45,410 --> 00:45:49,009
+Speaker 1: I think it changed more than in like the 20 years before that.
+
+616
+00:45:49,230 --> 00:45:56,410
+Speaker 0: But anyway, we want to talk about the AV equipment and setup for having a room in which public speaking is going to occur.
+
+617
+00:45:56,851 --> 00:45:57,071
+Speaker 0: So
+
+618
+00:45:57,432 --> 00:46:04,450
+Speaker 1: a presentation at a library or a panel at a convention or a lecture at a TED talk on a stage
+
+619
+00:46:04,650 --> 00:46:18,690
+Speaker 0: Right, so there's a lot of stuff going on there and it's it's similar to like a lot of the stuff that you'll see for Like, you know if you're doing like stage stuff for like theater But it's a lot less because you don't need all the crazy lighting you just turn lights on so that you can see the person
+
+620
+00:46:18,810 --> 00:46:26,174
+Speaker 1: But at the same time it's a lot more than most Organizers of things give the people who need it.
+
+621
+00:46:26,755 --> 00:46:36,947
+Speaker 1: and I feel like because one nerd conventions sort of Appropriated the word panel to mean literally anything that happens in a room on a stage when really
+
+622
+00:46:37,007 --> 00:46:37,910
+Speaker 0: things that aren't panels
+
+623
+00:46:38,030 --> 00:46:47,389
+Speaker 1: Yeah, so but also nerd conventions are all work at least for a long time Especially if you don't get it like PAX is run by people who don't know shit about this stuff.
+
+624
+00:46:48,491 --> 00:47:02,510
+Speaker 1: So as a result a lot of people got used to very poor Technology being provided to them and have a very poor understanding of what is actually Really appropriate to give people who are doing a presentation of some kind in public, right?
+
+625
+00:47:02,590 --> 00:47:09,630
+Speaker 0: So the number one thing obviously we're gonna start with the most important right is you need some Microphones and you need people to be able to hear what's coming out of the microphone, right?
+
+626
+00:47:09,830 --> 00:47:16,210
+Speaker 0: Yep So at the highest end you're gonna have some kind of crazy things like we have which is like the country man Which is like a thing that goes over your ear.
+
+627
+00:47:16,250 --> 00:47:21,370
+Speaker 0: These are the TED talk and it's a little tiny stick that comes out in the front of your face and it's totally wireless.
+
+628
+00:47:21,990 --> 00:47:28,327
+Speaker 0: Yeah The wireless stuff is a big pain because it's different everywhere there that you go and it's way expensive.
+
+629
+00:47:28,447 --> 00:47:29,370
+Speaker 0: and it's way expensive.
+
+630
+00:47:29,490 --> 00:47:32,884
+Speaker 0: So you don't buy this stuff you rent it unless you are a building.
+
+631
+00:47:32,904 --> 00:47:43,215
+Speaker 0: that like if you are a building And you're gonna have you know public speaking occurring in you like like let's say you are a college and you're have a you're building A theater in the college.
+
+632
+00:47:43,516 --> 00:47:46,389
+Speaker 0: you might just install a wireless thing that's gonna work in there.
+
+633
+00:47:46,771 --> 00:47:51,089
+Speaker 0: But if you're a person who goes around talking you don't buy that and bring it with you.
+
+634
+00:47:51,330 --> 00:47:54,423
+Speaker 0: No, because you're gonna need a different thing every place you go.
+
+635
+00:47:54,483 --> 00:47:56,010
+Speaker 1: Yeah, we look I looked into it cuz way back.
+
+636
+00:47:56,030 --> 00:47:57,606
+Speaker 1: we're like, why don't we just buy wireless stuff?
+
+637
+00:47:57,627 --> 00:48:05,467
+Speaker 1: and A few listeners who you know work in a TV for a living emailed us and every one of them said don't buy it Do not buy it.
+
+638
+00:48:05,654 --> 00:48:06,275
+Speaker 1: Yes trap.
+
+639
+00:48:06,396 --> 00:48:14,895
+Speaker 0: and if you if you're like a Convention and you're renting out a building and the rooms don't have the stuff you need you rent it from someone to bring it To there and set up.
+
+640
+00:48:14,915 --> 00:48:16,382
+Speaker 0: who knows they're doing so.
+
+641
+00:48:16,984 --> 00:48:25,430
+Speaker 1: in terms of those microphones You pretty much definitely need one microphone per person who's going to be talking?
+
+642
+00:48:25,602 --> 00:48:35,110
+Speaker 0: Yeah a lot of times People have a whole bunch of people talking in the room and the room is being used by many many people at least a convention And there aren't enough microphones for everybody.
+
+643
+00:48:35,991 --> 00:48:49,974
+Speaker 1: Yeah, not having enough microphones to have one per person or Not having a like a system where there is not one per person And if you if you don't have one per person you have to have the wireless handheld kind so they can pass it to each Other.
+
+644
+00:48:49,994 --> 00:48:51,850
+Speaker 1: yeah, actually I found that that's almost worse.
+
+645
+00:48:52,257 --> 00:48:57,350
+Speaker 0: It's not great But it's still better than like everyone leaning in to these sticks that are on the table that don't move.
+
+646
+00:48:57,430 --> 00:49:07,189
+Speaker 1: I think it's worse because I've noticed just from years of experience Also like sitting in panel rooms at PAX being like a live streaming team if and even a kinetic on if it's all.
+
+647
+00:49:07,249 --> 00:49:08,814
+Speaker 1: if there's A wireless mic people are passing.
+
+648
+00:49:09,115 --> 00:49:18,622
+Speaker 1: whoever's holding it will be fucking with it when other people are talking and making noise with it Yeah, and they'll put it down All the time and they won't fucking pass it.
+
+649
+00:49:19,044 --> 00:49:20,550
+Speaker 1: Yeah, they just won't actually ever pass.
+
+650
+00:49:20,610 --> 00:49:24,450
+Speaker 0: It's also the kind of microphone that's basically a stick that comes up off the table.
+
+651
+00:49:24,510 --> 00:49:36,803
+Speaker 0: Yep this should only ever be used on a Turn when someone is standing at the lectern and talking like or if you're at a table like a commencement speech at a college or something you might be standing at a lectern and talking.
+
+652
+00:49:36,863 --> 00:49:40,209
+Speaker 0: or if you're the president at a press conference you're Standing there and talking at a lectern.
+
+653
+00:49:40,310 --> 00:49:42,097
+Speaker 0: Well if otherwise do not use those.
+
+654
+00:49:42,157 --> 00:49:46,272
+Speaker 0: I seen a lot of places that will have a long table and they'll set up like four Of those.
+
+655
+00:49:46,574 --> 00:49:49,250
+Speaker 0: and yeah four people can sit at the table and talk.
+
+656
+00:49:49,631 --> 00:49:52,541
+Speaker 0: But it really sucks to do it that way and it doesn't.
+
+657
+00:49:52,582 --> 00:49:54,930
+Speaker 0: it forces those people to be stuck at the table.
+
+658
+00:49:55,251 --> 00:49:57,097
+Speaker 0: And if there's more than four people it sucks.
+
+659
+00:49:57,358 --> 00:50:01,030
+Speaker 0: and if someone else comes in doesn't use those it sucks cuz they're there.
+
+660
+00:50:01,433 --> 00:50:01,836
+Speaker 0: It's like it's.
+
+661
+00:50:01,877 --> 00:50:02,582
+Speaker 0: if they're just bad.
+
+662
+00:50:02,723 --> 00:50:06,198
+Speaker 1: only on lecterns I'll qualify that they are fine.
+
+663
+00:50:06,560 --> 00:50:23,288
+Speaker 1: if the thing that is happening is actually a panel There are exactly the same number of people as they are those microphones who are forced to sit at them and they expect to sit And they are expected to sit which might seem crazy, but like we don't sit when we do presentations.
+
+664
+00:50:23,348 --> 00:50:23,950
+Speaker 0: This is true.
+
+665
+00:50:24,070 --> 00:50:27,990
+Speaker 0: However, I find that you know conventions at least are doing the stupid table thing.
+
+666
+00:50:28,150 --> 00:50:30,863
+Speaker 0: Yeah, if you have a real panel like a good panel.
+
+667
+00:50:30,903 --> 00:50:41,186
+Speaker 0: you have chairs Then you don't have a table in front of the people and then the people have like lavalier You know microphones pinned on and that's how you make a classy looking panel.
+
+668
+00:50:41,226 --> 00:50:47,649
+Speaker 0: if it's actually a panel Yeah of you know of people all talking But you know in that you don't put a table in front of the people hiding them.
+
+669
+00:50:48,273 --> 00:50:50,949
+Speaker 0: Right you do the classy thing where there's just chairs.
+
+670
+00:50:51,793 --> 00:51:01,935
+Speaker 1: So it depends, but the point is and even in all those cases You you need to have a mixer and a system to manage those levels And you need someone.
+
+671
+00:51:01,975 --> 00:51:06,210
+Speaker 0: some people are gonna be louder than other people even with the exact same microphone for everyone.
+
+672
+00:51:06,311 --> 00:51:08,724
+Speaker 0: Someone's one of them is gonna be louder for some reason.
+
+673
+00:51:08,824 --> 00:51:09,428
+Speaker 0: who knows what?
+
+674
+00:51:09,649 --> 00:51:16,790
+Speaker 0: yeah Just the volumes and all the different inputs to make sure that everyone sounds the same loudness to the audience.
+
+675
+00:51:16,930 --> 00:51:20,381
+Speaker 0: If you don't have guy quieter make quiet whispery person louder.
+
+676
+00:51:20,481 --> 00:51:24,818
+Speaker 1: if you don't have independent control over all those microphones You're already gonna have a problem.
+
+677
+00:51:24,958 --> 00:51:27,210
+Speaker 1: Oh, yeah now the reality is at most nerdy conventions.
+
+678
+00:51:27,512 --> 00:51:30,669
+Speaker 1: It's awful and no one cares uh-huh, and they just deal with it.
+
+679
+00:51:31,272 --> 00:51:33,802
+Speaker 0: But that's not too much effort to get it exactly right.
+
+680
+00:51:33,922 --> 00:51:35,810
+Speaker 1: yep pecs gets it exactly right.
+
+681
+00:51:35,830 --> 00:51:38,467
+Speaker 0: I have a person in every room managing it all constantly.
+
+682
+00:51:38,588 --> 00:51:42,590
+Speaker 0: yep I mean I've done that job someone's job to only do that and nothing else.
+
+683
+00:51:42,791 --> 00:51:47,495
+Speaker 1: You know you're gonna like a concert like a fancy thing and you see that person You're sitting in from a giant mixer board.
+
+684
+00:51:47,957 --> 00:51:51,929
+Speaker 1: They're literally just like listening to all the audio and constantly fucking with everything.
+
+685
+00:51:51,949 --> 00:51:56,710
+Speaker 0: yeah The other thing you need to worry about is the is from the listening angle not the talking angle.
+
+686
+00:51:56,851 --> 00:51:58,629
+Speaker 0: Yeah is depending on the shape of the room.
+
+687
+00:51:59,011 --> 00:51:59,834
+Speaker 0: You know some.
+
+688
+00:52:00,034 --> 00:52:06,388
+Speaker 0: some rooms have like built-in speakers in the ceiling and you can just use them right and they'll probably be fine If it's just talking going on.
+
+689
+00:52:06,731 --> 00:52:09,562
+Speaker 0: But if you have any kind of music or something those are probably gonna be really shitty.
+
+690
+00:52:09,823 --> 00:52:21,952
+Speaker 0: unless the room has a great sound system Built in so you got to bring your own speakers, and if the room is long It's a long room you need extra speakers in the back otherwise people in the back Can't hear.
+
+691
+00:52:22,053 --> 00:52:32,095
+Speaker 1: you cannot just put stacks at the front if the room is long because either It'll be way too loud to the people in the front or it'll be way too quiet for the people in the back you need To put a set.
+
+692
+00:52:32,276 --> 00:52:32,639
+Speaker 0: you know it.
+
+693
+00:52:32,981 --> 00:52:36,761
+Speaker 0: basically you put a set in the front And then maybe a set halfway down and another set.
+
+694
+00:52:36,781 --> 00:52:38,690
+Speaker 0: maybe even right the more the better.
+
+695
+00:52:38,771 --> 00:52:49,778
+Speaker 0: But two is usually enough for the longest rooms I've seen yeah, and that way even someone who's sitting farthest away from the front ones or even all the way in the back is Gonna be able to hear the speakers.
+
+696
+00:52:49,918 --> 00:52:50,560
+Speaker 1: now luckily.
+
+697
+00:52:50,580 --> 00:52:52,366
+Speaker 1: This is not music.
+
+698
+00:52:52,447 --> 00:52:53,470
+Speaker 1: No one's performing.
+
+699
+00:52:53,530 --> 00:52:55,922
+Speaker 1: We're not talking about if you're if you're doing a musical set.
+
+700
+00:52:56,043 --> 00:52:57,470
+Speaker 1: This is a totally different ballgame.
+
+701
+00:52:57,571 --> 00:52:58,799
+Speaker 1: I don't know that that's like.
+
+702
+00:52:59,363 --> 00:53:00,309
+Speaker 1: that's a lot.
+
+703
+00:53:00,832 --> 00:53:08,310
+Speaker 1: But because it's people talking they don't need monitors meaning They don't need something feeding their own audio back to them.
+
+704
+00:53:08,430 --> 00:53:11,130
+Speaker 0: Yeah, they don't need to have monitors on the stage in front of them.
+
+705
+00:53:11,190 --> 00:53:14,083
+Speaker 0: They don't have or a lot of people these use in-ear monitors.
+
+706
+00:53:14,103 --> 00:53:15,067
+Speaker 1: Yeah, you don't need any of that.
+
+707
+00:53:15,087 --> 00:53:15,750
+Speaker 0: You don't need those.
+
+708
+00:53:16,870 --> 00:53:19,522
+Speaker 1: Provided that I'd probably turn it down because it would just mess me up.
+
+709
+00:53:19,562 --> 00:53:21,390
+Speaker 0: if you're talking you don't need to hear yourself talk.
+
+710
+00:53:21,470 --> 00:53:25,095
+Speaker 0: But if you're singing you need to not only hear yourself sing But you all.
+
+711
+00:53:25,215 --> 00:53:28,250
+Speaker 0: you also need to hear the music so you can sing along to it properly.
+
+712
+00:53:28,732 --> 00:53:32,725
+Speaker 0: But you know the music coming out of speakers is too delayed for you.
+
+713
+00:53:32,846 --> 00:53:33,910
+Speaker 0: if you're on you know it's not good.
+
+714
+00:53:34,271 --> 00:53:44,510
+Speaker 1: Do not put the speakers Too close to the people who are on stage and especially do not put them behind the stage.
+
+715
+00:53:44,510 --> 00:53:45,510
+Speaker 0: That's how you get the feedback.
+
+716
+00:53:49,015 --> 00:53:49,881
+Speaker 1: And the other thing you know.
+
+717
+00:53:49,921 --> 00:53:58,530
+Speaker 0: if anyone didn't know this already I think it's common sense, but just in case someone doesn't know the reason that a feedback happens is because it's feed back.
+
+718
+00:53:58,631 --> 00:53:58,995
+Speaker 0: You haven't.
+
+719
+00:53:59,299 --> 00:54:00,230
+Speaker 0: you have an amplifier.
+
+720
+00:54:00,411 --> 00:54:06,050
+Speaker 0: So you talk into the microphone and the sound that goes in the microphone gets louder and then comes out of the speaker, right?
+
+721
+00:54:06,556 --> 00:54:20,698
+Speaker 0: If it comes out of the speaker It's now louder than it started and that louder sound goes into the microphone again And it gets louder again And it gets goes back into the microphone in a loop and it keeps getting louder all the time And it can't get any louder.
+
+722
+00:54:20,718 --> 00:54:27,600
+Speaker 0: so the amplifier just maxes out and the maxed out sound is It really hurts everyone's ears because it's so ridiculously loud.
+
+723
+00:54:27,620 --> 00:54:30,750
+Speaker 0: Yeah, so it's the amplifier amplifying itself over and over again.
+
+724
+00:54:30,910 --> 00:54:34,988
+Speaker 0: So that's why you can't have the sound that comes out of the speakers go into the microphone.
+
+725
+00:54:35,269 --> 00:54:41,823
+Speaker 1: now There are clever ways to Catch or remove feedback from all live audio.
+
+726
+00:54:41,883 --> 00:54:43,549
+Speaker 0: However, you are not using those.
+
+727
+00:54:43,609 --> 00:54:57,090
+Speaker 0: Yes No as much as those systems exist for the vast majority of public speaking even like kind of the bigger stuff we do even a big Fancy professional concert places someone will still mess up and there can be feedback because they don't use that shit.
+
+728
+00:54:57,411 --> 00:54:58,254
+Speaker 1: Yeah, I mean yet.
+
+729
+00:54:58,355 --> 00:55:02,210
+Speaker 1: I mean this mixer actually I have that I can integrate into those kind of systems.
+
+730
+00:55:02,210 --> 00:55:14,750
+Speaker 1: I have ways to do that live but there are consequences and those systems are complicated and Unless you have dedicated professional staff running everything you do not want to use complicated systems.
+
+731
+00:55:15,192 --> 00:55:16,620
+Speaker 1: No, because they are complicated.
+
+732
+00:55:16,640 --> 00:55:18,250
+Speaker 0: All right, so that's that's the audio situation.
+
+733
+00:55:18,493 --> 00:55:29,746
+Speaker 1: There's a couple more pieces of the audio Because people talking a lot of hearing will want to play videos and they need the audio from those videos to go into the system.
+
+734
+00:55:30,589 --> 00:55:36,990
+Speaker 1: and Most organizations most conventions have no way to accomplish this.
+
+735
+00:55:37,933 --> 00:55:39,981
+Speaker 0: So people are gonna be playing video.
+
+736
+00:55:40,061 --> 00:55:44,589
+Speaker 0: if they're playing video from like, you know a DVD or something You're just getting you know, no one's bringing their own player.
+
+737
+00:55:44,911 --> 00:55:45,112
+Speaker 0: It's like.
+
+738
+00:55:45,152 --> 00:55:49,030
+Speaker 0: you need to set up just players and stuff in advance if people are gonna use them, right?
+
+739
+00:55:49,310 --> 00:55:50,433
+Speaker 0: Yeah, which you could just set them up.
+
+740
+00:55:50,473 --> 00:55:50,895
+Speaker 0: You're good.
+
+741
+00:55:51,276 --> 00:56:00,030
+Speaker 0: But if people are bringing laptops, right laptops are either a Going to have a regular headphone jack of some kind, right?
+
+742
+00:56:00,150 --> 00:56:11,870
+Speaker 0: and if they have that you need to have basically a special box that takes in headphone input and Outputs into the mixer and usually has power and some kind of amplifier or something, right?
+
+743
+00:56:11,930 --> 00:56:13,314
+Speaker 0: They sell these boxes that do this.
+
+744
+00:56:13,696 --> 00:56:22,667
+Speaker 0: you need those boxes because you can't just run a cable from someone's phone Into the mixer but rim and Scott that XLR cable is like a hundred feet long.
+
+745
+00:56:22,727 --> 00:56:23,450
+Speaker 1: Why is it different?
+
+746
+00:56:23,490 --> 00:56:24,495
+Speaker 1: The answer is they're different.
+
+747
+00:56:24,515 --> 00:56:25,921
+Speaker 1: they work differently it does.
+
+748
+00:56:25,961 --> 00:56:27,186
+Speaker 0: you can't do that, right?
+
+749
+00:56:27,327 --> 00:56:28,050
+Speaker 0: It doesn't work that way.
+
+750
+00:56:28,070 --> 00:56:28,959
+Speaker 0: You need to buy these boxes.
+
+751
+00:56:28,979 --> 00:56:29,868
+Speaker 0: You need to have them right?
+
+752
+00:56:30,210 --> 00:56:30,914
+Speaker 0: Yep other.
+
+753
+00:56:31,155 --> 00:56:41,209
+Speaker 0: however today I was gonna talk about this in the video section but some people a lot of people now are using HDMI and HDMI can not only carries video but can carry audio.
+
+754
+00:56:42,011 --> 00:56:53,170
+Speaker 0: So if you are taking HDMI from people's, you know laptops or devices Which you very may well be you need to be able to handle the audio that's coming over that HDMI.
+
+755
+00:56:53,371 --> 00:56:57,610
+Speaker 0: You can get it out of there and send it to your mixer while without messing with the video part.
+
+756
+00:56:58,234 --> 00:57:00,629
+Speaker 0: You can do this and if you can do it, you should do it.
+
+757
+00:57:00,730 --> 00:57:10,570
+Speaker 0: So the funny thing a lot of it is someone will not do this and the audio will go into the projector And a lot of projectors will have speakers built into them crappy ones.
+
+758
+00:57:10,610 --> 00:57:14,930
+Speaker 0: You'll hear audio coming out of the projector and it's not going to the audio system.
+
+759
+00:57:15,091 --> 00:57:20,510
+Speaker 0: If this is the case, you can actually solve this by taking an audio out cable from the projector and putting into the mixer.
+
+760
+00:57:20,670 --> 00:57:22,638
+Speaker 0: Yep, right, but people don't do that.
+
+761
+00:57:22,678 --> 00:57:25,990
+Speaker 0: So it's like this tiny crappy speaker in the projector is making noise.
+
+762
+00:57:26,110 --> 00:57:27,937
+Speaker 0: Everyone's like what is going on?
+
+763
+00:57:28,278 --> 00:57:29,642
+Speaker 0: How come I can't hear the video.
+
+764
+00:57:29,743 --> 00:57:31,930
+Speaker 0: It's like I can hear it, but it sounds so distant.
+
+765
+00:57:31,991 --> 00:57:33,382
+Speaker 0: How come it's not coming out of the speaker?
+
+766
+00:57:33,604 --> 00:57:36,873
+Speaker 0: That's why Don't let that happen.
+
+767
+00:57:37,335 --> 00:57:42,670
+Speaker 1: as a side note what I see most commonly that happens is people who present and this is like a separate problem.
+
+768
+00:57:42,690 --> 00:57:51,924
+Speaker 1: We're not gonna get into people who don't know how to tell their laptop to send the audio out Speaker hole versus the HDMI have no idea how their own laptop works.
+
+769
+00:57:52,125 --> 00:57:53,027
+Speaker 0: Yeah at all.
+
+770
+00:57:53,128 --> 00:57:53,368
+Speaker 0: Nope.
+
+771
+00:57:53,809 --> 00:57:54,492
+Speaker 0: Nope They don't know.
+
+772
+00:57:54,793 --> 00:58:02,422
+Speaker 1: so you're gonna have to have someone in that room who knows how laptops work in a general sense But I digress in terms of video.
+
+773
+00:58:02,664 --> 00:58:19,070
+Speaker 1: the conventional wisdom conventional gig inventions that Has existed until I'd say about two years ago this started to change is that you should assume that everyone will have VGA And if you present anywhere you should assume that they will take VGA and pretty much every convention will say have VGA.
+
+774
+00:58:19,994 --> 00:58:21,482
+Speaker 1: I have found just in the last couple years.
+
+775
+00:58:21,925 --> 00:58:22,910
+Speaker 1: That is no longer the case.
+
+776
+00:58:23,010 --> 00:58:31,934
+Speaker 1: I've been to conventions where they do not have VGA for me to plug into and I there's so many people who have laptops that Cannot output VGA
+
+777
+00:58:32,055 --> 00:58:40,050
+Speaker 0: in newer laptops and newer devices only have HDMI or just mini DisplayPort or DisplayPort outputs and do not have VGA output
+
+778
+00:58:41,033 --> 00:58:42,642
+Speaker 1: Only have HDMI input.
+
+779
+00:58:42,703 --> 00:58:52,310
+Speaker 0: and also it's an Places you go to based on how new they are or how recently they've been updated And what their projector is is gonna have VGA or HDMI.
+
+780
+00:58:52,491 --> 00:58:59,104
+Speaker 0: So if you're going to do lectures at places or whatever you bring every goddamn adapt You need to be able to output either one.
+
+781
+00:58:59,144 --> 00:59:05,841
+Speaker 0: you make sure it works And if you're setting up the tech in the room You need to be able to accept either one of those two.
+
+782
+00:59:05,902 --> 00:59:08,170
+Speaker 0: VGA and HDMI are the only ones you need to support.
+
+783
+00:59:08,631 --> 00:59:12,839
+Speaker 0: you might need mini DisplayPort is also good to have in case someone doesn't have the adapter for that.
+
+784
+00:59:12,859 --> 00:59:16,329
+Speaker 0: and You know, you need to be able to handle all of those.
+
+785
+00:59:16,993 --> 00:59:19,445
+Speaker 0: We can't just force people into use one anymore.
+
+786
+00:59:19,485 --> 00:59:20,410
+Speaker 0: You got to have the full set.
+
+787
+00:59:20,591 --> 00:59:25,067
+Speaker 1: Yep, and this this is a break from the advice we've given for a decade because it's different now.
+
+788
+00:59:25,087 --> 00:59:25,488
+Speaker 1: Mm-hmm.
+
+789
+00:59:26,091 --> 00:59:31,314
+Speaker 1: so along those lines there is resolution and Aspect ratio.
+
+790
+00:59:31,334 --> 00:59:31,595
+Speaker 0: right.
+
+791
+00:59:31,635 --> 00:59:46,977
+Speaker 0: so presentation older projectors are gonna be a four-thirds aspect ratio Which is like an old square TV, but newer ones are gonna be 16 9 and the problem is if you're making You know slides for your lecture or whatever Do you make them 16 9?
+
+792
+00:59:46,977 --> 00:59:48,022
+Speaker 0: do you make them 4 3?
+
+793
+00:59:48,022 --> 00:59:51,076
+Speaker 0: and the answer is you make both which is a pain Yeah, so I don't anymore.
+
+794
+00:59:51,096 --> 00:59:53,750
+Speaker 0: or at least make sure they look good on either shape screen.
+
+795
+00:59:54,051 --> 00:59:59,150
+Speaker 0: Yeah, and make sure you know how to make your laptop display it without stretching and distorting it on any shape screen.
+
+796
+00:59:59,230 --> 01:00:05,090
+Speaker 1: So the problem was in the old days if you outputted 16 9 or 16 10 from your laptop the projector was shitty.
+
+797
+01:00:05,170 --> 01:00:06,598
+Speaker 1: Oh, just squish it make it look awful.
+
+798
+01:00:06,618 --> 01:00:19,349
+Speaker 1: So you pretty much had to make everything 4 by 3 and Do your own letterboxing or whatever if you want it to be look different, but nowadays usually the projectors I'll take a lot of different aspect ratios just fine and kind of deal with it.
+
+799
+01:00:19,851 --> 01:00:26,290
+Speaker 1: But conventions or people are running the event will often just fuck up the projectors configuration.
+
+800
+01:00:27,517 --> 01:00:29,715
+Speaker 1: so Two or three years ago.
+
+801
+01:00:29,775 --> 01:00:33,210
+Speaker 1: I pretty much would always say do 4 by 3 because that's the safest.
+
+802
+01:00:34,132 --> 01:00:35,223
+Speaker 1: But I we switch.
+
+803
+01:00:35,263 --> 01:00:40,690
+Speaker 1: cuz my tool was like Why don't you guys switch and he goes to way more events than we do and he does AV like for like he knows the shit.
+
+804
+01:00:41,273 --> 01:00:49,571
+Speaker 1: so we took him up on it and we switch and We got burned by it at one packs, but it really looked good at like two other packs Is?
+
+805
+01:00:50,174 --> 01:00:53,710
+Speaker 1: I feel like it works out more often than it burns us.
+
+806
+01:00:53,770 --> 01:00:59,290
+Speaker 1: So I've switched to 16 by 9 now for our panels, but I never put important information on the edge.
+
+807
+01:00:59,773 --> 01:01:01,890
+Speaker 1: So if it gets squished, it'll be okay.
+
+808
+01:01:02,171 --> 01:01:07,010
+Speaker 0: The point is if you're running the room you want to make sure you know, you can't have two projectors, right?
+
+809
+01:01:07,090 --> 01:01:07,593
+Speaker 0: That's ridiculous.
+
+810
+01:01:07,613 --> 01:01:10,930
+Speaker 1: You just need to have a modern projector that can do both fine.
+
+811
+01:01:10,990 --> 01:01:12,419
+Speaker 1: You need someone who knows how to configure.
+
+812
+01:01:12,439 --> 01:01:17,662
+Speaker 0: you need to be able to support though Right either one and have it show up if it's letterbox.
+
+813
+01:01:17,703 --> 01:01:19,208
+Speaker 0: It's not a big deal, right?
+
+814
+01:01:19,248 --> 01:01:21,938
+Speaker 0: It's like, okay We're using less of the screen, but I don't care right?
+
+815
+01:01:21,998 --> 01:01:26,755
+Speaker 0: It's it's showing right and so you can tell the person why it's Looking that way.
+
+816
+01:01:26,775 --> 01:01:28,141
+Speaker 1: Yeah, so here's the real moral.
+
+817
+01:01:28,182 --> 01:01:29,930
+Speaker 0: I think it just has to show up on the screen.
+
+818
+01:01:30,010 --> 01:01:30,754
+Speaker 0: Some people can read it.
+
+819
+01:01:31,256 --> 01:01:37,356
+Speaker 1: Generally if you're doing an event like once or twice a year Probably shouldn't own a projector.
+
+820
+01:01:37,637 --> 01:01:42,797
+Speaker 1: No, you should probably just rent them every year because they change Yeah, and they get they.
+
+821
+01:01:42,857 --> 01:01:43,179
+Speaker 1: also.
+
+822
+01:01:43,219 --> 01:01:45,530
+Speaker 0: if you own a projector you got to deal with shit like bulbs.
+
+823
+01:01:46,130 --> 01:01:47,617
+Speaker 0: Yeah, kind of the nonsense.
+
+824
+01:01:47,657 --> 01:01:48,199
+Speaker 0: you'd rent them.
+
+825
+01:01:48,219 --> 01:01:49,043
+Speaker 0: They'll always be perfect.
+
+826
+01:01:49,143 --> 01:01:50,670
+Speaker 1: Yeah, it's kind of like with the wireless systems.
+
+827
+01:01:51,111 --> 01:02:00,108
+Speaker 1: owning it will cost you more in the long term term than just renting it unless you Like run events as a job right and you use the projector.
+
+828
+01:02:00,148 --> 01:02:02,096
+Speaker 0: the same About the wireless stuff.
+
+829
+01:02:02,116 --> 01:02:08,519
+Speaker 0: The only time you should be buying this sort of equipment is If you own a space.
+
+830
+01:02:08,780 --> 01:02:10,950
+Speaker 0: you own a theater you own an auditorium.
+
+831
+01:02:11,292 --> 01:02:13,890
+Speaker 0: You need to put technology in the auditorium permanently.
+
+832
+01:02:14,433 --> 01:02:17,350
+Speaker 0: The other time you would own it is if you are a company that rents it out.
+
+833
+01:02:17,490 --> 01:02:23,509
+Speaker 0: Otherwise do not own any of this stuff because you will not use it enough even if you use it every day.
+
+834
+01:02:24,073 --> 01:02:27,674
+Speaker 0: Right, if you're traveling and you're the speaker person It's it.
+
+835
+01:02:27,715 --> 01:02:28,740
+Speaker 0: what's the point you're getting?
+
+836
+01:02:28,821 --> 01:02:30,570
+Speaker 0: every place you go is gonna have stuff for you.
+
+837
+01:02:30,610 --> 01:02:31,540
+Speaker 0: Why are you owning this?
+
+838
+01:02:31,580 --> 01:02:32,085
+Speaker 0: for no reason?
+
+839
+01:02:32,287 --> 01:02:41,185
+Speaker 0: Yep The only thing we own is microphones that can be plugged in anywhere because a lot of places Only give us the handheld kind or the shitty kind but it's we.
+
+840
+01:02:41,326 --> 01:02:42,450
+Speaker 0: everything else is up to them.
+
+841
+01:02:42,530 --> 01:02:49,767
+Speaker 0: We're just gonna plug into their stuff and obviously if we can't because their system is crappy Well, just use whatever microphones they give us and deal with it.
+
+842
+01:02:49,928 --> 01:02:54,804
+Speaker 1: Yep So this is a very important thing that most the conventions especially just don't.
+
+843
+01:02:54,844 --> 01:02:58,969
+Speaker 1: do you need to have monitors multiple if possible.
+
+844
+01:02:59,553 --> 01:03:02,910
+Speaker 0: You don't need this but it's extremely extremely helpful and recommend.
+
+845
+01:03:02,991 --> 01:03:13,970
+Speaker 1: Well, so here's that for a small event You only don't need it because usually the person who's presenting has a laptop in front of them anyway Mm-hmm, but in a more professional setting the laptop won't actually be in front of them.
+
+846
+01:03:14,178 --> 01:03:19,329
+Speaker 0: Yeah Their laptop is gonna be like wherever the wires are and they might not be near where that is.
+
+847
+01:03:19,691 --> 01:03:20,554
+Speaker 1: So you need.
+
+848
+01:03:20,574 --> 01:03:24,890
+Speaker 0: so now they can't see what slide they're on without turning around and looking back at the big screen.
+
+849
+01:03:25,016 --> 01:03:32,933
+Speaker 1: Yep So you need screens showing them what they are showing the audience and ideally you want those to be like down on the floor by The audience.
+
+850
+01:03:33,175 --> 01:03:35,790
+Speaker 1: so you're looking at the audience when you're looking at them, right?
+
+851
+01:03:35,910 --> 01:03:46,730
+Speaker 0: So normally where the audio monitors would be right because you don't have those because it's their own singing you put video monitors Actual monitors that show what's on the big screen to the person who's on the stage.
+
+852
+01:03:47,173 --> 01:03:51,277
+Speaker 0: So now they can see what's going on Right and they know what slide they're on.
+
+853
+01:03:51,558 --> 01:03:54,490
+Speaker 0: but they're still facing forward to our the audience the whole time and it's awesome.
+
+854
+01:03:54,791 --> 01:04:05,330
+Speaker 0: So in the old days where we couldn't rely on that at all and when laptops like my oldest laptop couldn't display I mean even panels that have that you'll see I'll be looking at the big screen or the laptop a lot.
+
+855
+01:04:05,390 --> 01:04:08,445
+Speaker 0: But when the panels do have it, I still use it plenty.
+
+856
+01:04:08,465 --> 01:04:08,847
+Speaker 0: It's great.
+
+857
+01:04:09,028 --> 01:04:23,623
+Speaker 1: Yep Like I our panels I could not do them the way that we do them without that because we you know we do like 80 slides in an hour because we make slide transitions like as Beats in the talk meaning I really need to reflect.
+
+858
+01:04:23,683 --> 01:04:29,344
+Speaker 1: see if I double-click by accident And I don't have something to look at the panel is gonna literally be off forever.
+
+859
+01:04:29,625 --> 01:04:32,432
+Speaker 1: Mm-hmm a Concurrent to that.
+
+860
+01:04:32,753 --> 01:04:35,982
+Speaker 1: you need to have countdown timers in the room.
+
+861
+01:04:36,002 --> 01:04:39,110
+Speaker 0: Those are also not guaranteed absolutely necessary.
+
+862
+01:04:39,210 --> 01:04:42,270
+Speaker 1: Yeah, I don't trust they'll be there and I are extremely helpful.
+
+863
+01:04:42,451 --> 01:04:44,700
+Speaker 1: My clicker has won my watch has won.
+
+864
+01:04:44,820 --> 01:04:47,250
+Speaker 1: Scott's watch has won like I'm paranoid about it.
+
+865
+01:04:47,531 --> 01:04:57,990
+Speaker 1: But if you run an event and you care about technology and like having things go the countdown timer has to be there Has to be accurate assuming that the person has a limited time for their talk, which almost always is the case.
+
+866
+01:04:57,990 --> 01:05:00,079
+Speaker 0: Yes, so that way the person knows.
+
+867
+01:05:00,099 --> 01:05:02,590
+Speaker 0: Oh my I'm almost out of time, right?
+
+868
+01:05:02,830 --> 01:05:06,210
+Speaker 0: Um, you know, they can see I had to pace themselves if you don't have a clock there.
+
+869
+01:05:06,471 --> 01:05:08,684
+Speaker 0: That's big and prominent and in their field of view.
+
+870
+01:05:08,724 --> 01:05:18,790
+Speaker 0: all the time though Everyone who talks you no matter how pro there will lose track of time Yep, and either run long or run short and more importantly professionals like are used to that.
+
+871
+01:05:18,911 --> 01:05:24,419
+Speaker 1: Like if that's not there It's really hard for me because I am deeply.
+
+872
+01:05:24,479 --> 01:05:25,161
+Speaker 1: it's like I like.
+
+873
+01:05:25,261 --> 01:05:32,415
+Speaker 1: it's instinctual to use that and I time myself very specifically Along those lines too.
+
+874
+01:05:33,077 --> 01:05:41,690
+Speaker 1: You need to have ways to cut off audio and kick people out And technologically you should be able to cut off their mics.
+
+875
+01:05:42,370 --> 01:05:43,796
+Speaker 1: Cuz shit might go down.
+
+876
+01:05:43,956 --> 01:05:44,378
+Speaker 0: That's right.
+
+877
+01:05:44,418 --> 01:05:49,405
+Speaker 0: If you just have people in there and you can't turn the microphones off Yeah, baba booey baba booey might happen.
+
+878
+01:05:49,425 --> 01:05:50,572
+Speaker 0: Mm-hmm You need.
+
+879
+01:05:50,652 --> 01:05:58,830
+Speaker 0: that's why you want the tech person sitting there at the mixer and if that person starts spouting profanities You can just mute them and then call security.
+
+880
+01:05:59,111 --> 01:06:08,890
+Speaker 0: Yep, and you don't have them continuing to spout profanities very loudly because you can't take the microphone away from them But you can still turn off the microphone remotely and they can't come over and mess with the mixer.
+
+881
+01:06:09,913 --> 01:06:10,759
+Speaker 0: They wouldn't even know what to do.
+
+882
+01:06:10,800 --> 01:06:18,586
+Speaker 1: Probably anyway, yep so Anything else that you could learn about this technology is basically like they're all actually just skills.
+
+883
+01:06:18,606 --> 01:06:20,898
+Speaker 1: that like anyone who's ever been a roadie For a band.
+
+884
+01:06:20,918 --> 01:06:27,190
+Speaker 0: Yeah, or like everybody's Worry about so much more difficult shit like audio monitoring lighting that changes the light.
+
+885
+01:06:27,230 --> 01:06:30,550
+Speaker 0: I mean lighting is important, but it doesn't change while the person is talking.
+
+886
+01:06:30,670 --> 01:06:32,155
+Speaker 0: Maybe you didn't?
+
+887
+01:06:32,195 --> 01:06:38,786
+Speaker 0: you turn up more lights when they're done and dim them a little bit when they start or maybe you do a Spotlight thing and a Ted but you don't.
+
+888
+01:06:38,968 --> 01:06:39,612
+Speaker 1: yeah It's not.
+
+889
+01:06:39,652 --> 01:06:43,250
+Speaker 0: it's not lighting that changes with scenes or different songs or anything.
+
+890
+01:06:43,290 --> 01:06:45,481
+Speaker 0: It's one lighting dirt for the whole thing the end.
+
+891
+01:06:45,662 --> 01:06:49,482
+Speaker 1: so in a panel or presentation though You do have to balance the three.
+
+892
+01:06:49,523 --> 01:06:50,810
+Speaker 1: there's three areas to worry about.
+
+893
+01:06:50,830 --> 01:06:53,340
+Speaker 1: This is like a crash course in lighting 101 for your kids.
+
+894
+01:06:53,681 --> 01:06:57,313
+Speaker 1: There's the house lights stage lights Projection.
+
+895
+01:06:57,474 --> 01:06:59,370
+Speaker 1: those three things have to be in balance.
+
+896
+01:06:59,772 --> 01:07:05,288
+Speaker 1: You gently the house lights are not that important and you if you can it's better to dim them to put the focus on the people in front of the room.
+
+897
+01:07:06,311 --> 01:07:08,821
+Speaker 1: You don't want them to be out because then people can't take notes.
+
+898
+01:07:08,861 --> 01:07:11,190
+Speaker 0: It's not a dark movie situation, right?
+
+899
+01:07:11,670 --> 01:07:12,414
+Speaker 0: Oh, you need to.
+
+900
+01:07:12,474 --> 01:07:15,770
+Speaker 0: you want people to be able to see where they're walking to see their neighbors, right?
+
+901
+01:07:15,930 --> 01:07:16,191
+Speaker 0: There's.
+
+902
+01:07:16,211 --> 01:07:21,530
+Speaker 1: ideally you want the stage to be bright but to in to not splash onto the projection.
+
+903
+01:07:22,192 --> 01:07:28,970
+Speaker 1: But the reality is most spaces that panels are in that's impossible like a kinetic on the lowest light setting.
+
+904
+01:07:29,051 --> 01:07:31,890
+Speaker 1: That's not off has lights like on the screen.
+
+905
+01:07:31,990 --> 01:07:35,910
+Speaker 0: You need the projection itself to be bright enough that everyone in the room can see it clearly.
+
+906
+01:07:35,970 --> 01:07:40,770
+Speaker 0: You might need more than one screen even right, you know have two projectors showing the same thing, right?
+
+907
+01:07:40,970 --> 01:07:44,010
+Speaker 0: That way, you know you people on the left and people on the right can see it.
+
+908
+01:07:44,030 --> 01:07:45,509
+Speaker 0: It's good and really wide rooms.
+
+909
+01:07:45,610 --> 01:07:50,090
+Speaker 0: Yeah There's people sitting on the way right side of the room with the projectors in the way left can't see anything.
+
+910
+01:07:50,150 --> 01:07:52,300
+Speaker 0: So you want two projectors one on the right one on the left.
+
+911
+01:07:52,642 --> 01:07:54,370
+Speaker 0: You'll see this a lot like big arenas.
+
+912
+01:07:54,450 --> 01:07:58,990
+Speaker 0: They'll have like screens on the left and right side of the stage showing, you know, it's the same idea.
+
+913
+01:07:59,271 --> 01:08:03,204
+Speaker 1: But but generally the important thing is usually you'll have to compromise like usually.
+
+914
+01:08:03,525 --> 01:08:08,285
+Speaker 1: just the way these things are set up You won't be able to have the screen be in a dark area.
+
+915
+01:08:08,305 --> 01:08:11,289
+Speaker 1: So it's easy to see and Brightly light the front of the room.
+
+916
+01:08:11,832 --> 01:08:26,200
+Speaker 1: so if you have to choose between the two you have to always you have to be able to make a spot judgment between Are the people presenting primarily the slides or whatever is on the screen or are they themselves the Presentation and light the appropriate one?
+
+917
+01:08:26,300 --> 01:08:27,444
+Speaker 1: and that's it another.
+
+918
+01:08:27,464 --> 01:08:29,250
+Speaker 0: there are also some advanced techniques All right.
+
+919
+01:08:29,250 --> 01:08:30,562
+Speaker 0: So first advanced technique.
+
+920
+01:08:30,944 --> 01:08:38,399
+Speaker 0: and you know Usually you won't do this if you won't have to know to do this because you're paying someone to do this for you And they just do it.
+
+921
+01:08:38,459 --> 01:08:40,330
+Speaker 0: but the double up projector, right?
+
+922
+01:08:40,550 --> 01:08:41,676
+Speaker 0: You know take more.
+
+923
+01:08:41,716 --> 01:08:53,410
+Speaker 0: you could take multiple projectors and as long as they're identical Projectors and you put them in like this brace you put them together Physically one on top of the other right stacked and then they project the exact same image.
+
+924
+01:08:53,531 --> 01:08:57,149
+Speaker 0: But you aim the top one a little bit down and aim the bottom one a little bit up.
+
+925
+01:08:57,491 --> 01:09:02,050
+Speaker 0: So they're projecting the exact same thing to the exact same spot.
+
+926
+01:09:02,533 --> 01:09:05,609
+Speaker 0: So basically you're really just doubling the bulb power.
+
+927
+01:09:06,171 --> 01:09:12,510
+Speaker 0: So this is how you can get a ridiculously bright projection, you know, because you can't get a brighter bulb You can't get a better projector.
+
+928
+01:09:12,609 --> 01:09:21,064
+Speaker 0: just get more projectors and aim them all at the exact same spot for super precisely lined up and you'll get this Ridiculously bright image bouncing off the wall.
+
+929
+01:09:21,145 --> 01:09:27,666
+Speaker 0: and bonus point Even if the room is really bright that Projected image will be so much brighter that you'll be able to see it no matter what.
+
+930
+01:09:27,746 --> 01:09:30,479
+Speaker 1: but bonus points now You're ever done and see if a projector dies.
+
+931
+01:09:30,499 --> 01:09:34,336
+Speaker 0: Yeah, if a projector dies, okay Well, it's kind of dim now.
+
+932
+01:09:34,395 --> 01:09:42,330
+Speaker 0: It's half as bright, but you can just turn the brightness up all the way on the remaining one and You still have an image there even though a bulb blew out.
+
+933
+01:09:42,450 --> 01:09:51,585
+Speaker 1: This is also why you rent this technology because if you rent projectors from good places You can say give me double projectors and they'll just do it rather than you having to own.
+
+934
+01:09:51,604 --> 01:09:53,050
+Speaker 0: you might even have to ask for it.
+
+935
+01:09:53,069 --> 01:09:53,752
+Speaker 0: They'll just know.
+
+936
+01:09:53,773 --> 01:10:01,478
+Speaker 0: you just say I need projection in this room on both sides of this stage and they say oh Well, this room is big and we're not gonna be able to turn the house lights off We're gonna need double projectors in here.
+
+937
+01:10:01,498 --> 01:10:02,444
+Speaker 0: They don't even tell you they're doing.
+
+938
+01:10:02,465 --> 01:10:02,968
+Speaker 0: they just do it.
+
+939
+01:10:03,431 --> 01:10:05,488
+Speaker 0: Yeah, right because you don't need to know details like that.
+
+940
+01:10:06,051 --> 01:10:07,134
+Speaker 1: So little subtle things.
+
+941
+01:10:07,515 --> 01:10:26,510
+Speaker 1: if you have wireless microphones or microphones in a crowd or anything either physically like put them in a stand that can't be rotated or Do something to ensure like if you have to like talk to the people who are presenting To make sure that they never walk out in front of a mile they speaker holding a microphone.
+
+942
+01:10:26,911 --> 01:10:31,025
+Speaker 0: Yeah, another thing with the wireless microphones if you're providing them is the batteries.
+
+943
+01:10:31,085 --> 01:10:32,710
+Speaker 1: the batteries are just gonna die constantly.
+
+944
+01:10:33,216 --> 01:10:47,883
+Speaker 0: Use up so much battery You don't even realize you need to bring with you a crap ton of the appropriate batteries Especially how long this event is going to run and you want to check them In between every single time anyone uses them constantly.
+
+945
+01:10:47,983 --> 01:10:52,302
+Speaker 0: Yep, right, you know, even if it's like, okay That person only used one of the three bars.
+
+946
+01:10:52,322 --> 01:10:53,710
+Speaker 0: We can just leave this battery alone.
+
+947
+01:10:54,293 --> 01:10:56,850
+Speaker 0: But you cannot have the battery die while someone's up there.
+
+948
+01:10:56,971 --> 01:11:02,706
+Speaker 0: So if it's down to one bar Even if it might even it can probably make it to the end of the next talk or whatever.
+
+949
+01:11:03,027 --> 01:11:03,750
+Speaker 0: replace that shit.
+
+950
+01:11:03,991 --> 01:11:06,070
+Speaker 0: Yes, it cannot go out mid talk.
+
+951
+01:11:06,271 --> 01:11:09,663
+Speaker 0: It cannot happen and the microphones are not made in such a way.
+
+952
+01:11:09,703 --> 01:11:11,349
+Speaker 0: where they have like redundant batteries in them.
+
+953
+01:11:12,555 --> 01:11:14,549
+Speaker 0: It's just when that battery dies they die.
+
+954
+01:11:15,192 --> 01:11:28,295
+Speaker 0: So make sure that it's definitely guaranteed to have enough power to last the length of the talk That is about to happen plus a nice buffer before you know, you allow that battery to be used Otherwise new one.
+
+955
+01:11:28,778 --> 01:11:29,482
+Speaker 1: I guess the last thing.
+
+956
+01:11:29,502 --> 01:11:32,010
+Speaker 1: and like roadies and like AV people This is like babies first.
+
+957
+01:11:32,131 --> 01:11:38,829
+Speaker 1: But like say you're actually setting up a room like this Even if it's like a really simple event and you think it's easy and you've got it.
+
+958
+01:11:39,311 --> 01:11:48,968
+Speaker 1: There's some basic you need to like label all the cables make to make a little diagram even if you draw it crappily of like where all the microphones are on the stage and put it next to your mixer.
+
+959
+01:11:48,988 --> 01:11:50,655
+Speaker 1: and Label which ones which?
+
+960
+01:11:50,976 --> 01:11:57,244
+Speaker 1: because if something goes wrong and someone's way too loud or way too quiet You see it's like oh god rims being too loud rims.
+
+961
+01:11:57,304 --> 01:11:59,588
+Speaker 0: microphone to three Yep - all right.
+
+962
+01:12:00,855 --> 01:12:04,790
+Speaker 0: And then you turn Scott down by accident while he's hot while Scott's talking you turn him down.
+
+963
+01:12:04,810 --> 01:12:17,410
+Speaker 1: It's like oops label all your cables on both ends and maybe once in the middle like Organize all the cables effectively like all this basic stuff that it's hard to sort of explain what to do without spending an hour.
+
+964
+01:12:17,531 --> 01:12:20,110
+Speaker 1: So just go read like a roadie blog or something.
+
+965
+01:12:20,672 --> 01:12:21,354
+Speaker 1: It's not hard.
+
+966
+01:12:21,675 --> 01:12:28,175
+Speaker 1: but do more preparation and more labeling than you think is Necessary or even reasonable.
+
+967
+01:12:28,195 --> 01:12:31,889
+Speaker 1: it couldn't hurt like whatever you think you is a reasonable amount of labeling double it.
+
+968
+01:12:32,070 --> 01:12:33,659
+Speaker 0: Yeah, it's it's very hard.
+
+969
+01:12:33,699 --> 01:12:35,690
+Speaker 0: It does not a lot of things you can do that would hurt.
+
+970
+01:12:35,830 --> 01:12:37,255
+Speaker 0: It's just things you can forget to do.
+
+971
+01:12:37,296 --> 01:12:37,717
+Speaker 0: that would hurt.
+
+972
+01:12:37,757 --> 01:12:48,641
+Speaker 0: Yeah, so putting in more effort might be wasted effort But you can't really make things bad by trying harder like run a couple extra XLR cables Even if you don't have that many microphones.
+
+973
+01:12:48,742 --> 01:12:54,886
+Speaker 1: that might save your ass Mm-hmm, if you have like if you have an extra laptop that you just keep that's there.
+
+974
+01:12:54,927 --> 01:12:58,600
+Speaker 1: in case like the laptop They're using dies like they shouldn't expect that.
+
+975
+01:12:58,921 --> 01:13:00,648
+Speaker 1: but that's the kind of thing that'll save your event.
+
+976
+01:13:00,949 --> 01:13:01,473
+Speaker 0: Mm-hmm Just
+
+977
+01:13:01,715 --> 01:13:10,027
+Speaker 1: plan for every eventuality Put extra redundant technology in and frankly rent almost all of the actual physical equipment and you're getting
+
+978
+01:13:10,087 --> 01:13:12,455
+Speaker 0: including staff to manage yeah, and
+
+979
+01:13:12,515 --> 01:13:23,207
+Speaker 1: have at least one person who either does this professionally or Actually knows what they're doing and actually actually knows Mm-hmm, and I'm just really hungry.
+
+980
+01:13:23,227 --> 01:13:23,489
+Speaker 1: So I'm so.
+
+981
+01:13:30,274 --> 01:13:32,810
+Speaker 1: This has been geek nights with rim and Scott special.
+
+982
+01:13:32,870 --> 01:13:37,610
+Speaker 1: Thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+983
+01:13:37,931 --> 01:13:39,898
+Speaker 0: Be sure to visit our website at front row.
+
+984
+01:13:39,938 --> 01:13:42,930
+Speaker 0: crew calm for show notes discussion news and more.
+
+985
+01:13:43,210 --> 01:13:50,610
+Speaker 1: Remember geek nights is not one but four different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+986
+01:13:50,991 --> 01:13:54,146
+Speaker 0: Geek nights is distributed under a Creative Commons attribution 3.0 license.
+
+987
+01:13:55,412 --> 01:14:15,687
+Speaker 0: Geek nights is recorded live with no studio and no audience, but unlike those other late shows It's actually recorded at night and the patreon page runs for this episode of geek nights.
+
+988
+01:14:15,947 --> 01:14:20,321
+Speaker 1: are Alan Joyce Heidi McNichol Amanda to shed roundabout dot.
+
+989
+01:14:20,341 --> 01:14:20,381
+Speaker 1: mp3.
+
+990
+01:14:20,884 --> 01:14:21,750
+Speaker 1: my stady calm.
+
+991
+01:14:22,372 --> 01:14:23,796
+Speaker 1: William Eisneros Jeremy minor.
+
+992
+01:14:24,096 --> 01:14:26,644
+Speaker 1: life and death and love and birth and peace and war on the planet earth.
+
+993
+01:14:27,125 --> 01:14:35,670
+Speaker 1: a genuine bonafide electrified six-car Monorail Nicholas Brando captain Chinguac asi Rebecca Dunn the terrible secret of space for two one creations.
+
+994
+01:14:36,312 --> 01:14:41,069
+Speaker 1: Even if we were to pull out today and if they would come take our base.
+
+995
+01:14:41,431 --> 01:14:45,730
+Speaker 1: Sherman Van Horrell Rella Val James David White Rochelle, Montanona Superboy.
+
+996
+01:14:46,151 --> 01:14:48,137
+Speaker 1: I paid five bucks to make rims a pickle.
+
+997
+01:14:48,619 --> 01:15:05,090
+Speaker 1: Sailor Vista Matthew Smith Don Schleich chart ovation Joshiro Joe star Sean Yeager Sam Cordery Clinton Walton Ren from New Zealand Ryan Perrin drew open lander Brian Sidroni Finn Chris midkiff Chris Knox Daniel Redman Sean Klein Chris Reimer and Thomas Hahn.
+
+998
+01:15:05,451 --> 01:15:06,114
+Speaker 1: And I'm hungry.
+
+999
+01:15:06,214 --> 01:15:09,426
+Speaker 1: and now I leave you with look over there across the street.
+
+1000
+01:15:09,547 --> 01:15:09,687
+Speaker 0: Yeah.
+
+1001
+01:15:10,109 --> 01:15:11,335
+Speaker 0: Yeah Mm-hmm.
+
+1002
+01:15:12,159 --> 01:15:12,802
+Speaker 0: See that lady.
+
+1003
+01:15:12,822 --> 01:15:17,529
+Speaker 1: Yes What kind of hairstyle does she have?
+
+1004
+01:15:18,832 --> 01:15:20,487
+Speaker 0: That looks like a bouffant.
+
+1005
+01:15:21,280 --> 01:15:23,332
+Speaker 0: Yes Bouffant.
+
+1006
+01:15:23,654 --> 01:15:24,959
+Speaker 1: Yes a bouffant.
+
+1007
+01:15:25,320 --> 01:15:27,890
+Speaker 0: Yeah, actually I couldn't help noticing that myself.
+
+1008
+01:15:28,172 --> 01:15:31,349
+Speaker 0: It's sort of what you might call a a bulbous bouffant.
+
+1009
+01:15:32,175 --> 01:15:34,209
+Speaker 1: Yes, a bulbous bouffant.
+
+1010
+01:15:34,452 --> 01:15:36,279
+Speaker 0: bulbous bouffant.
+
+1011
+01:15:36,562 --> 01:15:39,189
+Speaker 1: bouffant blubber galoshes.
+
+1012
+01:15:40,793 --> 01:15:41,728
+Speaker 0: Bulbous bouffant.
+
+1013
+01:15:43,330 --> 01:15:47,486
+Speaker 0: Macadamia Gazebo.
+
+1014
+01:15:49,190 --> 01:15:51,079
+Speaker 0: Macadamia gazebo.
+
+1015
+01:15:51,119 --> 01:15:52,485
+Speaker 0: bulbous bouffant.
+
+1016
+01:15:52,746 --> 01:15:55,194
+Speaker 0: macadamia gazebo.
+
+1017
+01:15:55,255 --> 01:15:56,503
+Speaker 0: bulbous bouffant.
+
+1018
+01:15:56,946 --> 01:15:59,374
+Speaker 1: macadamia gazebo.
+
+1019
+01:15:59,414 --> 01:16:06,800
+Speaker 0: bulbous bouffant blubber macadamia blubber gazebo bouffant plethora blubber.
+
+1020
+01:16:06,820 --> 01:16:28,050
+Speaker 0: gazebo blubber plethora Blue Blue Bathroom [MUSIC].
+

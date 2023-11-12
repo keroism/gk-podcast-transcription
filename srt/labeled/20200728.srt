@@ -1,0 +1,3556 @@
+1
+00:00:08,380 --> 00:00:11,951
+Rym: It's Tuesday July 28th 2020.
+
+2
+00:00:11,951 --> 00:00:14,939
+Rym: I'm Rym I'm Scott and this is GeekNights.
+
+3
+00:00:14,959 --> 00:00:21,060
+Rym: tonight We are talking about exercise games like ring fit adventure or the NES power pad.
+
+4
+00:00:22,702 --> 00:00:23,433
+Scott: Let's do this.
+
+5
+00:00:26,511 --> 00:00:39,262
+Rym: so uh Despite the fact that we want to play a lot of tabletop games online because trapped at home It's actually weirdly hard to get people to play a tabletop game online for a lot of reasons like it's not just a problem We're having.
+
+6
+00:00:39,342 --> 00:00:47,290
+Scott: like man a listener emailed me and was like, hey you want to play Y&Y and I'm like, yeah I got the app I buy pre-ordered that game.
+
+7
+00:00:47,310 --> 00:00:48,353
+Scott: Let's play.
+
+8
+00:00:48,474 --> 00:00:49,377
+Scott: come to our discord.
+
+9
+00:00:49,417 --> 00:00:50,180
+Scott: come to our forum.
+
+10
+00:00:50,180 --> 00:00:51,106
+Scott: Let's set a game up.
+
+11
+00:00:51,146 --> 00:00:51,710
+Scott: Let's go.
+
+12
+00:00:51,790 --> 00:00:52,132
+Scott: He's like.
+
+13
+00:00:52,213 --> 00:00:53,320
+Scott: he's like I'll gift you a copy.
+
+14
+00:00:53,360 --> 00:00:54,284
+Scott: I'm like, you know, I got a gift.
+
+15
+00:00:54,304 --> 00:00:55,509
+Scott: be a copy coffee.
+
+16
+00:00:55,529 --> 00:00:57,297
+Scott: It's like let's play that Y&Y.
+
+17
+00:00:57,317 --> 00:00:57,940
+Scott: I haven't heard back.
+
+18
+00:00:58,321 --> 00:01:01,133
+Rym: I feel like half the time when I try to start an online game.
+
+19
+00:01:01,434 --> 00:01:04,756
+Rym: It's for people all saying yes Let's play and then the game never started.
+
+20
+00:01:06,128 --> 00:01:07,420
+Rym: Yeah, that just seems like a thing.
+
+21
+00:01:07,520 --> 00:01:20,980
+Rym: so lately what Scott and I and few of our friends have been into is playing these 18xx games primarily because That 18xx dot games website has a really really good implementation of a bunch of these games.
+
+22
+00:01:21,401 --> 00:01:24,390
+Rym: That makes it really easy to play them completely async.
+
+23
+00:01:24,791 --> 00:01:28,060
+Rym: It's like play by mail, but it updates in real time.
+
+24
+00:01:28,120 --> 00:01:36,037
+Rym: So like if I'm actually looking at the game and Scott's taking his turn I'll see him like laying track and doing his turn literally live.
+
+25
+00:01:36,418 --> 00:01:39,350
+Scott: but well I mean they're using the way the website works is it's?
+
+26
+00:01:39,510 --> 00:01:39,651
+Scott: it's?
+
+27
+00:01:39,872 --> 00:01:52,065
+Scott: you know, there have been other implementations of web-based Asynchronous board game app before like that play that that thing we used to play hacienda on on like Feel by web.
+
+28
+00:01:52,727 --> 00:01:54,333
+Scott: There's other like Brett spiel welt.
+
+29
+00:01:54,413 --> 00:01:58,229
+Scott: I think there's like been a bunch of them But a lot of them are really bad interfaces.
+
+30
+00:01:58,390 --> 00:02:05,696
+Scott: Yeah, and a lot of them were just not great But with what's really made it not suck is the invention of web sockets, right?
+
+31
+00:02:05,756 --> 00:02:10,503
+Scott: So basically You know then, you know A WebSocket
+
+32
+00:02:10,524 --> 00:02:22,159
+Rym: for you not nerds is a way for a website to make a web request to a web server But what that does is open basically a socket or a connection for the web server to just stream data back to you.
+
+33
+00:02:23,122 --> 00:02:42,358
+Scott: Yeah, it's instead of you know, making HTTP requests like get posts right and getting responses for each one You are instead, you know constantly sending data back and forth freely as if it was, you know On any old TCP IP connection, but not just that but also just the advancement and fanciness of JavaScript.
+
+34
+00:02:42,378 --> 00:02:45,551
+Scott: these days You know, you're allowed to make a single page app.
+
+35
+00:02:45,571 --> 00:02:46,515
+Scott: So you're load the game.
+
+36
+00:02:46,576 --> 00:02:47,520
+Scott: It's in a single page.
+
+37
+00:02:47,882 --> 00:02:48,464
+Scott: You're not shit.
+
+38
+00:02:48,485 --> 00:02:50,716
+Scott: You're reloading the page every time you do something.
+
+39
+00:02:50,876 --> 00:02:55,080
+Scott: Yeah, right You're just clicking and it feels like it's in your browser, but you're playing a game.
+
+40
+00:02:55,100 --> 00:02:58,760
+Scott: It works on iPad works on your phone kinda the screens kind of small on the phone.
+
+41
+00:02:58,920 --> 00:02:59,904
+Rym: Yeah, I've done.
+
+42
+00:02:59,944 --> 00:03:01,389
+Rym: I've done a few turns on my phone though.
+
+43
+00:03:01,911 --> 00:03:05,183
+Scott: Yeah, and the implementation is just really good You can.
+
+44
+00:03:05,465 --> 00:03:07,720
+Scott: you know, they're constantly, you know, they set up deployment.
+
+45
+00:03:07,822 --> 00:03:13,640
+Scott: So we're like, you know The the app will just sort of like you'll reload and you'll like there'll be improvements to the app because it's a web app.
+
+46
+00:03:13,700 --> 00:03:15,512
+Scott: You don't need to like download patches or anything.
+
+47
+00:03:15,552 --> 00:03:16,720
+Scott: It's just constantly improving.
+
+48
+00:03:18,381 --> 00:03:19,946
+Scott: And yeah, you can just play these games.
+
+49
+00:03:20,087 --> 00:03:22,756
+Scott: We did, you know several 18xx shows.
+
+50
+00:03:22,776 --> 00:03:28,080
+Rym: Yeah, it's since those shows We played more of them that we're not reviewing because we don't want this just to turn into train nights.
+
+51
+00:03:28,682 --> 00:03:34,685
+Scott: Yeah, but we just keep playing these games because it's so easy to do and it's one of the only ones that we can actually Get people to play.
+
+52
+00:03:34,705 --> 00:03:37,880
+Rym: We just played like three in a row like rapid fire.
+
+53
+00:03:38,812 --> 00:03:49,826
+Rym: Yep It's funny because when he plays this in a packs It's like a three ish hour experience when we know what we're doing and it's not 2038 computer makes it a lot faster Yep, the computer also the computer.
+
+54
+00:03:49,846 --> 00:03:57,088
+Rym: I can do things like make her out make another route the games just calculating like everything just moves faster Yep, so I turn every way.
+
+55
+00:03:57,268 --> 00:04:06,331
+Rym: if you've always wanted to play one of these train games that we've talked about like we've reviewed a bunch of them recently on GeekNights 18xx dot games you can just play them if any.
+
+56
+00:04:06,491 --> 00:04:09,878
+Scott: if any listener wants to learn to play a train game They look scary.
+
+57
+00:04:10,040 --> 00:04:13,772
+Scott: They look like the kind of game that you know, only some expert gamer can play.
+
+58
+00:04:13,812 --> 00:04:18,880
+Scott: but trust me the games are not any more Complicated than you know any other board game.
+
+59
+00:04:19,040 --> 00:04:20,524
+Rym: You know all the rules.
+
+60
+00:04:20,584 --> 00:04:21,308
+Rym: to Dune.
+
+61
+00:04:21,629 --> 00:04:25,040
+Rym: this games will actually feel really soon is maybe not a great example.
+
+62
+00:04:25,300 --> 00:04:30,699
+Rym: Well, cuz Dune has all these fiddly rules that no one remembers and I have to reteach literally every time we play.
+
+63
+00:04:31,981 --> 00:04:34,873
+Scott: But you know, I mean games like, you know, a settlers or a carcass.
+
+64
+00:04:34,933 --> 00:04:35,977
+Scott: It's not a complicated game.
+
+65
+00:04:36,038 --> 00:04:38,706
+Rym: It's complicated - it's it's hard to be good.
+
+66
+00:04:39,148 --> 00:04:42,160
+Rym: It's like the rules of go are extremely simple.
+
+67
+00:04:42,280 --> 00:04:47,760
+Rym: We can teach you go in like two minutes, but good luck winning a game of go, right?
+
+68
+00:04:48,747 --> 00:04:54,577
+Scott: But yeah, we We've been talking about him a lot on the show since we've been trapped inside because that's the games are playing.
+
+69
+00:04:54,617 --> 00:04:58,836
+Rym: since trapped inside It's gonna say out of the last three games are three player games.
+
+70
+00:04:58,957 --> 00:04:59,640
+Rym: I won two of them.
+
+71
+00:04:59,700 --> 00:05:00,687
+Rym: I'm feeling pretty good about that.
+
+72
+00:05:00,707 --> 00:05:02,460
+Scott: I mean I won one.
+
+73
+00:05:02,562 --> 00:05:13,839
+Rym: Yeah But it's you know We used to talk a lot in our talks at cons around the three player games problem that in almost any Interactive three player game there are vanishingly few exceptions to this.
+
+74
+00:05:14,502 --> 00:05:35,598
+Rym: Generally what will happen no matter what the rules of the game are if the players can interact with each other at all and it's Not just like Yahtzee then two of the players either two of the players will get way ahead and the third player is just eliminated immediately have no chance of winning or One player will run away with the game and the other two players are just tied for last place forever.
+
+75
+00:05:35,678 --> 00:05:36,240
+Rym: The game's over.
+
+76
+00:05:36,802 --> 00:05:40,719
+Rym: There's almost no exception to this among skilled players in any three player game on earth.
+
+77
+00:05:42,442 --> 00:05:45,418
+Rym: And so far the data I have from us playing three player train games.
+
+78
+00:05:47,281 --> 00:05:48,705
+Rym: Pretty it's happening that way.
+
+79
+00:05:49,568 --> 00:05:57,300
+Scott: I think actually though if you look at it, right what every game we've played We're three player is two players have like strong starts.
+
+80
+00:05:57,681 --> 00:06:03,020
+Scott: Yeah, one person has like a weak start because there's not another like option for a strong start.
+
+81
+00:06:03,020 --> 00:06:04,452
+Rym: Well, look at Tigger's new for eighties.
+
+82
+00:06:04,513 --> 00:06:14,095
+Rym: the same thing happens If it's you me and Joey Jojo I get on the good spots you get on some good spots and Joey Jojo is looking at The board where there's all these leaders everywhere trying to figure out like where can I what if
+
+83
+00:06:14,135 --> 00:06:15,300
+Scott: you just made a game?
+
+84
+00:06:15,820 --> 00:06:17,285
+Scott: Where there's more good spots?
+
+85
+00:06:17,445 --> 00:06:24,350
+Scott: if there were three good spots and everyone and the game is more open and less tight Which obviously would make it less fun and lame.
+
+86
+00:06:24,390 --> 00:06:26,360
+Rym: Yeah turns it more into some city.
+
+87
+00:06:26,400 --> 00:06:30,954
+Rym: It's like playing Civ 6 with a big world but a small number of players, right?
+
+88
+00:06:31,035 --> 00:06:31,596
+Scott: Exactly.
+
+89
+00:06:31,677 --> 00:06:32,720
+Scott: It's just like oh everyone.
+
+90
+00:06:32,820 --> 00:06:39,033
+Scott: Oh, everyone has an awesome, you know, oh, yeah Awesome time and then we'll see what the game will be decided in.
+
+91
+00:06:39,054 --> 00:06:43,300
+Scott: the late game is set in the early game But anyway, there's actually huge gaming news.
+
+92
+00:06:43,480 --> 00:06:45,307
+Rym: If you have not seen this it's actually like.
+
+93
+00:06:45,347 --> 00:07:00,626
+Rym: this is such a big deal that it's gonna be another several weeks before the world of games journalism and games Enthusiasts has fully unpacked this and started to like delve into the secrets that have been not only the unpacking of it itself But also the.
+
+94
+00:07:00,887 --> 00:07:04,649
+Scott: there's several several indirect Consequences going on.
+
+95
+00:07:04,790 --> 00:07:06,801
+Scott: Oh, yeah and side and side effects Right.
+
+96
+00:07:06,821 --> 00:07:13,479
+Scott: So the news is is this thing that has been called by the community the giga league the giga leak?
+
+97
+00:07:14,340 --> 00:07:28,264
+Scott: someone somehow got a bunch of materials that are 99% definitely legitimate material development materials from inside Nintendo like SNES era Onward.
+
+98
+00:07:28,806 --> 00:07:34,142
+Scott: Yeah, we're talking, you know, not just but like SNES and 64 Like.
+
+99
+00:07:34,162 --> 00:07:47,151
+Scott: yeah, we're talking like just rough drafts, you know stuff that Nintendo game developers worked on artists worked on right Prototypes, you know other design documents and things like.
+
+100
+00:07:47,171 --> 00:07:50,600
+Rym: here's the level like if you're a nerd that's between developers.
+
+101
+00:07:50,661 --> 00:07:56,494
+Rym: Yeah like raw source code comments and commentary development tools that people have been able to like already.
+
+102
+00:07:56,795 --> 00:07:59,088
+Rym: someone compiled one of these developer tools and Ran it.
+
+103
+00:07:59,292 --> 00:08:06,156
+Scott: I saw Yep, it's just the amount and varied it'd be the the stuff that's in here being possible to fake right.
+
+104
+00:08:06,196 --> 00:08:07,139
+Scott: so it lends all of it.
+
+105
+00:08:07,700 --> 00:08:08,182
+Scott: So it's so much.
+
+106
+00:08:08,202 --> 00:08:21,519
+Rym: legitimacy like this ranges from high quality voice samples in Star Fox 64 that we never heard because they couldn't put them in the game to Confirmation that there was a 3d Luigi in Super Mario 64 that they didn't use.
+
+107
+00:08:22,422 --> 00:08:29,360
+Scott: Yeah, you know just the amount of stuff is absolutely crazy unused Pokemon unused Star Fox 2 characters.
+
+108
+00:08:29,622 --> 00:08:32,344
+Scott: Right, you can't even begin To like.
+
+109
+00:08:32,384 --> 00:08:36,799
+Scott: it would be the job for a Nintendo podcast to go through and talk about the significance of each lead.
+
+110
+00:08:36,840 --> 00:08:38,345
+Rym: You could make a podcast.
+
+111
+00:08:38,365 --> 00:08:42,720
+Rym: you can make a brand new podcast that is just about the giga leak and have years of shows.
+
+112
+00:08:43,182 --> 00:08:46,516
+Scott: Yeah, you just every single item in the giga leak you do one show on like.
+
+113
+00:08:46,577 --> 00:08:47,320
+Scott: oh look what we found.
+
+114
+00:08:47,380 --> 00:08:48,344
+Scott: Let's talk about this right.
+
+115
+00:08:48,364 --> 00:08:52,320
+Rym: there is probably more fodder for this than there was from the entirety of the run of Firefly.
+
+116
+00:08:53,202 --> 00:08:56,019
+Scott: Sure, so but I'd like to talk about the meta on this.
+
+117
+00:08:56,501 --> 00:09:00,110
+Scott: Meta is you know a is this cool right?
+
+118
+00:09:00,130 --> 00:09:01,714
+Scott: It's on the one hand, right?
+
+119
+00:09:01,954 --> 00:09:06,085
+Scott: This is good for games History preservation.
+
+120
+00:09:06,286 --> 00:09:06,547
+Rym: Yep.
+
+121
+00:09:06,708 --> 00:09:13,757
+Scott: This is the kind of stuff that needs to be in museums exactly and the fact that it's still this material survived is good.
+
+122
+00:09:13,777 --> 00:09:19,240
+Scott: and But the fact that it's like well, I guess Nintendo was keeping it, right?
+
+123
+00:09:19,320 --> 00:09:22,057
+Scott: So they were doing a good job of keeping it because it hasn't been lost.
+
+124
+00:09:22,319 --> 00:09:30,980
+Rym: Yep I mean I've worked at companies that lost things within like five years of creating them Right, and we've seen for example the Nintendo store.
+
+125
+00:09:31,041 --> 00:09:38,056
+Scott: They've showed they've put on display Like, you know old like papers from drawing the original Super Mario Brothers levels and stuff.
+
+126
+00:09:38,076 --> 00:09:39,520
+Scott: So Nintendo definitely keeps archives.
+
+127
+00:09:39,721 --> 00:09:50,119
+Scott: So, you know at least in this particular case I don't know how justified it is for a historical preservation perspective because Nintendo seems to do a good job with that But they're not sharing it.
+
+128
+00:09:50,200 --> 00:09:51,465
+Scott: So it's like you're not sharing it.
+
+129
+00:09:51,545 --> 00:09:56,262
+Rym: how useful is feeling Nintendo would have never shared a lot of this Exactly.
+
+130
+00:09:56,683 --> 00:10:07,280
+Scott: So it's like if you're a private company that has Intellectual properties that you develop but you're and even if you're preserving them, right if you're keeping them internally, right?
+
+131
+00:10:07,380 --> 00:10:14,080
+Scott: So think of like a music company, right and they've got songs and those songs have entered the public domain, right?
+
+132
+00:10:14,160 --> 00:10:18,960
+Scott: They're so old right, but the record company is the only one who has the original recording.
+
+133
+00:10:19,040 --> 00:10:21,051
+Scott: It's just not a recording that's out in the world yet.
+
+134
+00:10:21,091 --> 00:10:22,800
+Scott: It hasn't been digitized, right?
+
+135
+00:10:23,100 --> 00:10:31,815
+Scott: They have a vinyl record somewhere in a vault or a DAT tape in a vault or something That recordings in the public domain, but they just don't put it out there.
+
+136
+00:10:31,855 --> 00:10:32,920
+Scott: They're just holding on to it.
+
+137
+00:10:33,060 --> 00:10:33,583
+Scott: Yeah, right.
+
+138
+00:10:34,025 --> 00:10:44,036
+Scott: I think there should you know, if I was in charge of the world, I'd be like no You are compelled by law to release all arts that are public domain for the good of the world.
+
+139
+00:10:44,177 --> 00:10:45,360
+Scott: Yeah, right too bad.
+
+140
+00:10:46,224 --> 00:10:56,523
+Scott: So this stuff is not old enough to be legally public domain, but If I had to say 14 or years or less will be public domain This stuff is.
+
+141
+00:10:56,844 --> 00:10:58,650
+Scott: is this less than 14 years old?
+
+142
+00:10:59,011 --> 00:10:59,553
+Scott: Yeah.
+
+143
+00:10:59,593 --> 00:11:00,496
+Scott: Yeah it is.
+
+144
+00:11:00,737 --> 00:11:05,647
+Scott: Okay, so I Got no problems with that morally speaking.
+
+145
+00:11:05,808 --> 00:11:05,948
+Rym: Yep.
+
+146
+00:11:06,049 --> 00:11:08,740
+Rym: I've seen the people who are come the people who are mad about this.
+
+147
+00:11:08,760 --> 00:11:10,567
+Rym: They're obviously like Nintendo executives.
+
+148
+00:11:10,969 --> 00:11:12,234
+Scott: Well, Nintendo executives are mad.
+
+149
+00:11:12,274 --> 00:11:20,820
+Rym: What's weird though is I see multiple Commentaries from non Nintendo people saying that this is bad for Nintendo or hurts Nintendo in some way or hurts fans in some way.
+
+150
+00:11:21,489 --> 00:11:22,139
+Scott: I don't think it hurts.
+
+151
+00:11:22,501 --> 00:11:36,354
+Scott: I think the the legitimate complaint that I saw from non Nintendo game developers is like hey, you know Imagine if you were like, you know Pretty much in any industry right and your your rough drafts, right?
+
+152
+00:11:36,675 --> 00:11:38,240
+Scott: We're like revealed to the world.
+
+153
+00:11:38,744 --> 00:11:45,070
+Scott: It's like well I could give you a bad Reputation Theoretically except we already get this from a lot of authors.
+
+154
+00:11:45,110 --> 00:11:46,093
+Rym: how many authors die?
+
+155
+00:11:46,314 --> 00:11:50,290
+Rym: and then all their drafts and notes that they told Their family to burn upon their death are published it.
+
+156
+00:11:50,310 --> 00:11:52,120
+Scott: Well, that's after this after they're dead, right?
+
+157
+00:11:52,240 --> 00:11:57,639
+Scott: It's like developers like still alive and like you see their shitty work and it's like you really think that some it's like.
+
+158
+00:11:58,161 --> 00:11:58,763
+Rym: But it also.
+
+159
+00:11:58,864 --> 00:12:00,772
+Rym: I'd have my kind of thing that actually happens.
+
+160
+00:12:00,852 --> 00:12:08,020
+Rym: I think that's like a hyper Yeah, but I'm saying that you can even argue against the hypothetical seeing the shitty work in the rough drafts.
+
+161
+00:12:08,501 --> 00:12:09,665
+Rym: That's how things get made.
+
+162
+00:12:09,685 --> 00:12:14,580
+Rym: a lot of people younger people today don't understand that you make a lot of shit to make something good.
+
+163
+00:12:15,741 --> 00:12:15,921
+Rym: Like.
+
+164
+00:12:16,302 --> 00:12:19,050
+Rym: look at the earliest prototypes of overwatch.
+
+165
+00:12:19,351 --> 00:12:23,753
+Rym: It's gray boxes one character playing a shitty Look at FPS with each other.
+
+166
+00:12:25,224 --> 00:12:25,989
+Scott: So I do think.
+
+167
+00:12:26,029 --> 00:12:27,035
+Scott: there however is you know?
+
+168
+00:12:29,161 --> 00:12:33,372
+Scott: Some people like hey, well, you know regardless of this particular leak, right?
+
+169
+00:12:33,412 --> 00:12:36,280
+Scott: They're like oh leaks in general are bad, right?
+
+170
+00:12:36,360 --> 00:12:50,571
+Scott: It's like, you know, like the people like was at certain conventions would like steal USB sticks from boots and stuff Right that that's happened a few times right, um But honestly, you know, just my personal opinion is like.
+
+171
+00:12:50,651 --> 00:13:01,519
+Rym: I think actually if you're a company who's making any art It's like I can't be out of if you're big enough because small companies that tends to be extremely personal information.
+
+172
+00:13:02,901 --> 00:13:05,391
+Scott: Right, well there is personal information in this leak.
+
+173
+00:13:05,652 --> 00:13:05,832
+Scott: like.
+
+174
+00:13:05,913 --> 00:13:06,254
+Scott: it's like.
+
+175
+00:13:06,274 --> 00:13:08,382
+Scott: there's like chats between developers It's not.
+
+176
+00:13:08,402 --> 00:13:19,560
+Scott: that contains a lot of you know non game related stuff Which I think is not the things we were looking for right and are not particularly relevant to the game's history, right?
+
+177
+00:13:19,660 --> 00:13:19,962
+Scott: It's like.
+
+178
+00:13:20,424 --> 00:13:21,108
+Scott: it's like okay.
+
+179
+00:13:21,128 --> 00:13:22,536
+Scott: You know, it's like you want to see all the work.
+
+180
+00:13:22,576 --> 00:13:23,320
+Scott: I'm doing at work.
+
+181
+00:13:23,440 --> 00:13:27,680
+Scott: It's like okay go ahead right, but it's like you see my chats from the co-workers.
+
+182
+00:13:27,780 --> 00:13:31,616
+Scott: Well, they're boring because my chats with co-workers aren't inappropriate.
+
+183
+00:13:31,657 --> 00:13:45,383
+Rym: now being public you might see like me talking to like head of development division a about X and then telling someone else a very different story like someone could piece together narratives right, but there could also be like HR talks.
+
+184
+00:13:45,464 --> 00:13:50,080
+Scott: right now, you know, obviously I wouldn't be talking at work with like, you know telling HR actual stuff.
+
+185
+00:13:50,301 --> 00:13:53,640
+Scott: But there might be like hey, you know, you might see a message from me to HR.
+
+186
+00:13:53,740 --> 00:13:57,239
+Scott: That's like hey, can I come see you and it's like oh it's got had to go to HR.
+
+187
+00:14:00,161 --> 00:14:05,968
+Rym: Journalists though usually try to handle this well in the sense that and this isn't journalist This is just a leak right into the internet.
+
+188
+00:14:06,128 --> 00:14:15,376
+Rym: Yep, but the leak happen anyway, but the journalists responsibility is to focus on the interesting notable things about the industry at the production, but they're not.
+
+189
+00:14:15,416 --> 00:14:18,465
+Scott: journalists is everyday people you can just download.
+
+190
+00:14:18,486 --> 00:14:24,039
+Scott: this whole thing is looking through it yourself to try to find good stuff and it's so big that Not everyone's found all the good stuff yet.
+
+191
+00:14:24,124 --> 00:14:38,895
+Rym: Yep But I'm saying most people won't and if most of the people who do deep dives in it Just sidestep talking about things that aren't interesting or relevant and are just personal That will prevent a lot of the possible harms of this kind of leak.
+
+192
+00:14:39,116 --> 00:14:41,889
+Rym: because the reality is Leaks like this are going to happen.
+
+193
+00:14:41,929 --> 00:14:47,199
+Rym: They can't be stopped and once the information is out there I feel like you're obligated to use it for the good of all.
+
+194
+00:14:47,942 --> 00:14:52,560
+Scott: I think you're actually you know, I think the argument that I was actually making was like yeah people are you know?
+
+195
+00:14:52,640 --> 00:15:04,965
+Scott: there may be some consequences from leaks, but in my the way I see things is like a Companies rarely have anything to lose and usually have something to gain by being more open than they are right.
+
+196
+00:15:05,006 --> 00:15:16,600
+Scott: and companies are Overly the end of the government also are more secretive than necessary and that extra secrecy actually causes harm Even though that's the you know, the people doing the secrecy are looking to prevent.
+
+197
+00:15:18,121 --> 00:15:26,204
+Scott: Also believe that it's morally justified to undo that secrecy when you know Appropriate which is a lot.
+
+198
+00:15:26,305 --> 00:15:36,555
+Rym: Here's a really prosaic example a lot of angry neckbeard gamer nerds who harass game developers Literally like think that it is easy and fast to make triple-a games.
+
+199
+00:15:36,656 --> 00:15:47,589
+Rym: like they think that Developers are like screwing them over by not introducing this feature that they demanded on the internet because they literally have no idea What it actually like how much it actually cost to make a game.
+
+200
+00:15:47,930 --> 00:15:50,780
+Rym: or look at how many small-time studios did a Kickstarter?
+
+201
+00:15:51,500 --> 00:15:59,755
+Rym: Got more money than they expected like expected a million got 10 million only to discover that the game they wanted to make will cost 400 million to make
+
+202
+00:16:00,843 --> 00:16:01,004
+Scott: Mmm,
+
+203
+00:16:01,728 --> 00:16:07,959
+Rym: like this kind of information will probably Honestly help the game industry in the long run far more than will harm it.
+
+204
+00:16:08,341 --> 00:16:14,880
+Scott: Well, I think the one the most interesting story I saw is actually if a very interest like something you wouldn't think about.
+
+205
+00:16:15,020 --> 00:16:20,020
+Scott: But so there was a. I forget the name of the online community and I don't have it on my screen right now.
+
+206
+00:16:20,160 --> 00:16:21,849
+Scott: So, of course, I'm not gonna remember.
+
+207
+00:16:21,869 --> 00:16:23,900
+Scott: I don't even know what to Google for to find this story.
+
+208
+00:16:24,321 --> 00:16:27,130
+Scott: But there was an online community that was dedicated.
+
+209
+00:16:27,231 --> 00:16:28,475
+Scott: Oh, I remember it was there.
+
+210
+00:16:28,535 --> 00:16:33,426
+Scott: They were dedicated to finding Like reverse engineering.
+
+211
+00:16:33,467 --> 00:16:36,319
+Scott: I think it was Pokemon and like finding glitches and stuff, right?
+
+212
+00:16:38,021 --> 00:16:41,825
+Scott: But apparently now that is is leaked Right.
+
+213
+00:16:42,270 --> 00:16:50,700
+Scott: There's no There's no point anymore in reverse engineering and trying to find, you know, see what you can figure out from the game.
+
+214
+00:16:50,720 --> 00:16:54,660
+Scott: You know the binary of the game because it's all just out there.
+
+215
+00:16:54,800 --> 00:17:01,000
+Scott: So any help that that community receives in the future could be tainted because that could be coming from a leaker, right?
+
+216
+00:17:01,700 --> 00:17:03,930
+Scott: Yeah, well, which then it would be a reverse engineer.
+
+217
+00:17:04,151 --> 00:17:06,160
+Rym: Yeah, there's a technical argument to be made there.
+
+218
+00:17:06,160 --> 00:17:14,200
+Rym: That's similar to what happened with all those Java lawsuits that I do not want to try to explain to all of you right now But go google like IBM Java API lawsuits.
+
+219
+00:17:15,321 --> 00:17:23,959
+Scott: It's like if you have a. it's like if you're playing a game of clue Right and everyone's playing clue and then someone just comes opens the envelope and throw it shows everyone the cards.
+
+220
+00:17:24,079 --> 00:17:25,166
+Scott: Yep It's like alright.
+
+221
+00:17:25,186 --> 00:17:35,760
+Rym: Well, there's no point in playing clue anymore But if your hobby is to explore something that could theoretically be explored or solved You have to be ready for the fact that your hobby might end one day it did.
+
+222
+00:17:35,901 --> 00:17:36,946
+Scott: So that's exactly what happened.
+
+223
+00:17:36,987 --> 00:17:38,917
+Scott: is this community just they called it quits.
+
+224
+00:17:38,938 --> 00:17:41,147
+Scott: They're like, yep We're done as of right now.
+
+225
+00:17:41,288 --> 00:18:04,689
+Scott: if someone else wants to carry on doing this stuff, you know Acknowledging that your work will be you know, not the same as the work we've been doing you can go right ahead and do that, but we this weird basically stopping and archiving at this point right now and Anything in the future will be someone else, you know you can free to take our work as a starting point for your new work, right, but We're done here over right?
+
+226
+00:18:04,991 --> 00:18:11,051
+Rym: I feel like if it weren't for the pandemic Magfest would have at least one or two panels going deep on this stuff.
+
+227
+00:18:11,894 --> 00:18:13,860
+Rym: Maybe maybe they'll have them in an online form.
+
+228
+00:18:15,101 --> 00:18:33,747
+Scott: Yeah, I'd be interested to see if this you know, because I have seen a lot of anti, you know Leak tweeters out there, you know reasonable, you know, not like, you know Nintendo employees but like, you know people in the game dev industry And I'd really love to have someone come and defend Unnecessary secrecy.
+
+229
+00:18:34,048 --> 00:18:34,229
+Scott: like.
+
+230
+00:18:34,249 --> 00:18:42,436
+Rym: there's one guy Mike not gonna hide my own opinion I want to argue against this Ars Technica article as one guy Mike Mika He says the Nintendo leak is bad on so many levels.
+
+231
+00:18:42,516 --> 00:18:52,074
+Rym: that hurts them It hurts fans and it turns the topic of preservation into a topic of security and tightening the grip on intellectual property Regardless of its historical or educational value history.
+
+232
+00:18:52,234 --> 00:18:53,400
+Scott: I do think that that is true.
+
+233
+00:18:53,560 --> 00:18:59,859
+Scott: Is that after because this leak happened and companies just don't like leaks they're going to make it harder to leak?
+
+234
+00:19:00,543 --> 00:19:06,420
+Scott: Right, it's like okay, there's been a leak So now companies are gonna tighten it to make it harder for there to be another leak.
+
+235
+00:19:06,561 --> 00:19:06,883
+Scott: It's like.
+
+236
+00:19:07,285 --> 00:19:09,358
+Scott: well, at least the first leak was a big one.
+
+237
+00:19:09,853 --> 00:19:18,330
+Rym: Yeah The thing is interesting though is leaks of more like recent games like modern games at least for me personally Just as a fan level are not at all interesting.
+
+238
+00:19:18,350 --> 00:19:20,679
+Rym: I'm really only interested in leaks of old weird stuff.
+
+239
+00:19:21,081 --> 00:19:21,343
+Scott: I'm late.
+
+240
+00:19:21,363 --> 00:19:24,680
+Scott: Yeah, you want to see leaks of old weird unseen stuff?
+
+241
+00:19:24,820 --> 00:19:27,110
+Scott: You don't want to see stuff like a leak of like here's.
+
+242
+00:19:27,150 --> 00:19:29,059
+Rym: how did its load balancing like?
+
+243
+00:19:29,099 --> 00:19:31,168
+Rym: Yeah I'm an IT professional like that's not.
+
+244
+00:19:31,208 --> 00:19:34,260
+Rym: none of that is particularly interesting to me, right?
+
+245
+00:19:34,320 --> 00:19:36,960
+Scott: But you look at like, you know, especially a lot of the YouTube channels out.
+
+246
+00:19:37,181 --> 00:19:42,920
+Rym: Why is there a sprite of Luigi flipping off Bowser right like retro game mechanics explained?
+
+247
+00:19:43,060 --> 00:19:45,351
+Scott: He's like showing you how they did Pokemon sprite compression.
+
+248
+00:19:45,411 --> 00:19:46,175
+Scott: It's like well that dude.
+
+249
+00:19:46,215 --> 00:19:47,300
+Scott: It's like that's an awesome channel.
+
+250
+00:19:47,440 --> 00:19:49,668
+Scott: Yeah, that dude had to figure that out, right?
+
+251
+00:19:49,708 --> 00:19:52,920
+Scott: It's like well, what if they just told us how they did it?
+
+252
+00:19:53,661 --> 00:19:54,768
+Scott: That'll be awesome.
+
+253
+00:19:54,788 --> 00:19:56,700
+Scott: Yeah, we wouldn't have to waste our time.
+
+254
+00:19:58,061 --> 00:20:03,560
+Rym: Anyway, yep, I generally are toward more information being better, but obviously there are caveats and exceptions to their internet.
+
+255
+00:20:04,122 --> 00:20:19,540
+Scott: They're definitely exceptions, but I'm just saying in general and also but yeah if any Apple employees if any You know video game industry people want to come and defend the unnecessary secrecy and have a little you know Good faith debate on it, right?
+
+256
+00:20:20,521 --> 00:20:21,806
+Scott: And I already see it in advance.
+
+257
+00:20:21,826 --> 00:20:24,999
+Scott: There are definitely circumstances in which the secrecy is necessary.
+
+258
+00:20:25,199 --> 00:20:28,958
+Scott: Yep I just think it's way less than every company in the whole world.
+
+259
+00:20:30,582 --> 00:20:32,717
+Scott: All I think a lot of their fears are unfounded.
+
+260
+00:20:32,737 --> 00:20:36,820
+Rym: Yep So in some other news you may have seen rumblings of this.
+
+261
+00:20:36,840 --> 00:20:43,709
+Rym: There's a lot going on here and it's we're not gonna get into like all the ethical Questions around this because that would be an entire show and then some.
+
+262
+00:20:44,110 --> 00:20:49,277
+Rym: but basically if you weren't aware the United States Army had a twitch channel.
+
+263
+00:20:50,522 --> 00:20:54,056
+Scott: The army has the military has been recruiting, you know kids forever.
+
+264
+00:20:54,297 --> 00:20:57,124
+Scott: Yeah, it's a volunteer Military or America's Army.
+
+265
+00:20:57,204 --> 00:21:02,920
+Rym: the the military has especially decided that going after gamers is a very good approach for a lot of reasons.
+
+266
+00:21:03,482 --> 00:21:09,348
+Scott: Yep, so I mean this is you know, since I guess when we were in college They've been doing this and doing it more and more and more.
+
+267
+00:21:09,428 --> 00:21:10,291
+Scott: you see them whenever.
+
+268
+00:21:10,392 --> 00:21:16,572
+Scott: whenever we go to any gaming convention There is almost always some sort of military ish presence there with.
+
+269
+00:21:16,673 --> 00:21:20,929
+Rym: I know a bunch of those guys because the same guys Their job at the army is to go around.
+
+270
+00:21:20,949 --> 00:21:21,270
+Rym: I like.
+
+271
+00:21:21,311 --> 00:21:24,462
+Rym: I got them to present a ConnectiCon a bunch of times Right.
+
+272
+00:21:24,522 --> 00:21:27,493
+Scott: It's like, you know, and then they try to recruit people to.
+
+273
+00:21:27,654 --> 00:21:28,517
+Scott: you know, who gamers?
+
+274
+00:21:28,597 --> 00:21:29,340
+Scott: it's a game convention.
+
+275
+00:21:29,440 --> 00:21:31,889
+Scott: Everyone there's a gamer they try to recruit people into now.
+
+276
+00:21:31,909 --> 00:21:35,140
+Rym: This isn't just like Oh trick some gamer nerd in the joint in the army.
+
+277
+00:21:35,606 --> 00:21:49,044
+Rym: it's also Literally Enders game style like people who are good at certain kinds of kinds of games are Good at certain kinds of military things that people need to do like the skills Literally do transfer.
+
+278
+00:21:49,465 --> 00:21:51,309
+Rym: good at certain kinds of flight sims.
+
+279
+00:21:51,670 --> 00:21:54,638
+Rym: You're gonna be good at flying drones like literally.
+
+280
+00:21:55,279 --> 00:21:57,085
+Rym: no joke No exaggeration.
+
+281
+00:21:57,105 --> 00:21:57,708
+Scott: Oh, you're good at.
+
+282
+00:21:57,848 --> 00:21:58,932
+Scott: you're good at driving a car.
+
+283
+00:21:58,972 --> 00:21:59,374
+Scott: Guess what?
+
+284
+00:21:59,414 --> 00:22:01,020
+Scott: The military has a lot of drivers.
+
+285
+00:22:01,200 --> 00:22:02,104
+Scott: Yeah, a lot.
+
+286
+00:22:02,465 --> 00:22:06,360
+Scott: There's a lot of whose job whose job in the military is drive a truck.
+
+287
+00:22:06,621 --> 00:22:13,560
+Rym: so basically their twitch stream like they're trying to get into eSports and Talk about eSports use this as recruiting tools.
+
+288
+00:22:13,580 --> 00:22:18,700
+Rym: They have a twitch screen there's a stream and they have this sergeant just like do any sports stuff online.
+
+289
+00:22:19,861 --> 00:22:26,700
+Rym: The problem for them is that people on the internet have a rightly nuanced opinion of the United States military.
+
+290
+00:22:27,221 --> 00:22:32,717
+Rym: So people kept coming into the switch channel and being like, what about the war crimes war crime me daddy.
+
+291
+00:22:32,757 --> 00:22:33,660
+Rym: Can I war crime?
+
+292
+00:22:34,480 --> 00:22:40,300
+Scott: Yep, so, you know you most of the military's recruiting in the past via video games and like we said it goes way back.
+
+293
+00:22:40,380 --> 00:22:41,185
+Scott: Remember that there was.
+
+294
+00:22:41,427 --> 00:22:43,520
+Scott: I just remembered there was that America's Army FPS.
+
+295
+00:22:43,680 --> 00:22:47,616
+Scott: They actually made an FPS right out to try to recruit people way back.
+
+296
+00:22:47,756 --> 00:22:49,806
+Rym: people made fun of it But I saw what was coming.
+
+297
+00:22:49,866 --> 00:22:50,308
+Rym: I saw that.
+
+298
+00:22:50,449 --> 00:22:52,259
+Rym: I saw how legitimate that was as a tool.
+
+299
+00:22:53,301 --> 00:22:56,226
+Scott: Yeah, America's Army Unreal Engine 3 from 2002.
+
+300
+00:22:56,226 --> 00:23:02,531
+Scott: So in 2002 it came out and in I guess 2013 was the last version.
+
+301
+00:23:02,591 --> 00:23:04,780
+Scott: the point is this they have a single they have an FPS.
+
+302
+00:23:05,022 --> 00:23:07,520
+Scott: That is the actual official US Army FPS.
+
+303
+00:23:07,901 --> 00:23:13,981
+Rym: So anyway, because of the point is the twin the army twist channel started banning these people like you do Like.
+
+304
+00:23:14,001 --> 00:23:16,157
+Rym: if someone comes into our channel and fucks around we'll ban them.
+
+305
+00:23:16,600 --> 00:23:17,563
+Scott: That's trying to make.
+
+306
+00:23:17,643 --> 00:23:23,379
+Scott: is that all the previous video game recruiting methods they used were one directional, right?
+
+307
+00:23:23,479 --> 00:23:23,660
+Scott: It was.
+
+308
+00:23:25,002 --> 00:23:27,329
+Scott: It was like oh, here's we're releasing this video game.
+
+309
+00:23:27,470 --> 00:23:28,513
+Scott: You can play it right.
+
+310
+00:23:28,854 --> 00:23:32,160
+Scott: you can come and meet us Right at a booth.
+
+311
+00:23:32,603 --> 00:23:35,060
+Scott: It's like are you gonna go up to a booth with some army dude?
+
+312
+00:23:35,221 --> 00:23:37,473
+Scott: Standing there and be like war criminal.
+
+313
+00:23:38,237 --> 00:23:39,142
+Scott: Yeah, right It's like.
+
+314
+00:23:39,383 --> 00:23:41,131
+Scott: that's a kind of thing a hippie does right?
+
+315
+00:23:41,171 --> 00:23:45,098
+Scott: is they throw some paint on the person outside the Right, and then they run away.
+
+316
+00:23:45,847 --> 00:23:46,090
+Scott: It's like.
+
+317
+00:23:46,131 --> 00:23:46,880
+Scott: no it you know.
+
+318
+00:23:47,001 --> 00:23:51,794
+Scott: Even people who are like, you know We're like war crimes aren't gonna walk up to a dude and be like war crimes.
+
+319
+00:23:51,854 --> 00:23:54,387
+Scott: The dude will be like, yeah So go away.
+
+320
+00:23:54,408 --> 00:23:56,259
+Scott: Okay, like leave me alone, bro.
+
+321
+00:23:57,524 --> 00:23:58,739
+Rym: So a bunch happened here.
+
+322
+00:23:59,022 --> 00:24:10,593
+Rym: They started banning people from their channel for bringing up war crimes But a bunch of lawyers immediately jumped in and pointed out that for once This is a free speech issue because this is the literal US military.
+
+323
+00:24:10,854 --> 00:24:17,134
+Scott: They cannot restrict your speech Exactly, so they can't ban actual censorship.
+
+324
+00:24:17,154 --> 00:24:18,619
+Scott: for once the government is doing it.
+
+325
+00:24:18,941 --> 00:24:22,634
+Rym: So last I checked they have stopped streaming on Twitch like they is.
+
+326
+00:24:22,815 --> 00:24:23,497
+Scott: that is correct.
+
+327
+00:24:23,537 --> 00:24:24,260
+Scott: That is what happened.
+
+328
+00:24:24,420 --> 00:24:25,244
+Scott: Yeah, because it was.
+
+329
+00:24:25,264 --> 00:24:32,531
+Scott: it was the first time that they tried to recruit in a forum in which you know There was some sort of chat room and people could talk back at them.
+
+330
+00:24:32,651 --> 00:24:38,232
+Scott: and people talked back because it wasn't just Pete It wasn't just an opportunity for them to get their message out.
+
+331
+00:24:38,332 --> 00:24:38,533
+Scott: It was.
+
+332
+00:24:38,553 --> 00:24:52,440
+Scott: it was like if you tweet at them It's like okay, whoever's following the person who tweeted will see that right, but it's not in this forum of A chat room next to a person who's seeing the chat room right where they're like inundated and had enforced to respond.
+
+333
+00:24:52,841 --> 00:24:54,910
+Scott: They usually don't put themselves in that sort of position.
+
+334
+00:24:54,950 --> 00:24:57,220
+Scott: And as soon as they do it didn't work.
+
+335
+00:24:57,681 --> 00:25:01,857
+Rym: Yep, the main thing people doing to troll them is just asking the same question over and over again.
+
+336
+00:25:01,897 --> 00:25:03,363
+Rym: What's your favorite u.s War crime.
+
+337
+00:25:04,026 --> 00:25:05,070
+Scott: Yeah, that's a good question.
+
+338
+00:25:05,312 --> 00:25:07,100
+Rym: So there's a bunch of other stuff going on.
+
+339
+00:25:07,140 --> 00:25:11,773
+Rym: They were doing contests on their stream But apparently they weren't even giving out the prizes.
+
+340
+00:25:11,813 --> 00:25:13,563
+Rym: like there's another scandal I heard with.
+
+341
+00:25:13,643 --> 00:25:14,848
+Scott: I heard rumors about that.
+
+342
+00:25:14,888 --> 00:25:17,920
+Scott: that part is just weird because they definitely have the money to give out the prizes.
+
+343
+00:25:18,161 --> 00:25:20,075
+Scott: Yeah, why would you not just give out the prizes?
+
+344
+00:25:20,135 --> 00:25:20,578
+Scott: I don't get it.
+
+345
+00:25:20,941 --> 00:25:22,589
+Rym: So there's a lot of biz going on.
+
+346
+00:25:22,609 --> 00:25:24,620
+Scott: if you go see them at a booth, right?
+
+347
+00:25:25,242 --> 00:25:26,747
+Scott: You know want to get recruited or whatever.
+
+348
+00:25:26,767 --> 00:25:28,674
+Scott: like they give you med swag, it's not fake.
+
+349
+00:25:28,854 --> 00:25:29,115
+Scott: It's like.
+
+350
+00:25:29,457 --> 00:25:30,480
+Scott: I don't got a fake the swag.
+
+351
+00:25:32,561 --> 00:25:34,496
+Rym: I do remember when I was in high school.
+
+352
+00:25:34,879 --> 00:25:40,999
+Rym: the The Marines and the Air Force came to our high school and they really were going after the band kids like way hard.
+
+353
+00:25:41,961 --> 00:25:44,312
+Scott: Yeah, because you're already good at marching and push-ups and all the shit.
+
+354
+00:25:44,332 --> 00:25:45,880
+Scott: I didn't do made me not do marching band.
+
+355
+00:25:45,960 --> 00:25:49,132
+Rym: Yep, so I remember I actually went into the marine office.
+
+356
+00:25:49,172 --> 00:25:50,678
+Rym: I was like, I'll talk to you guys.
+
+357
+00:25:50,718 --> 00:25:52,852
+Rym: I'm curious Let's go and I took their stupid test.
+
+358
+00:25:52,892 --> 00:25:54,000
+Rym: I got a perfect scar on it.
+
+359
+00:25:54,080 --> 00:25:58,300
+Rym: They're like and the guy literally just straight-up lied to me because I knew the deal.
+
+360
+00:25:58,360 --> 00:26:04,052
+Rym: Like I wasn't gonna sign up for the Marines, but the dude was literally telling me Yeah, we can get you out of basic early.
+
+361
+00:26:04,093 --> 00:26:10,797
+Rym: You won't have to do any of that stuff You'll just join the band immediately and you'll just be a professional trumpet player for the US Marine Corps like he.
+
+362
+00:26:11,722 --> 00:26:13,294
+Rym: He made this direct promise.
+
+363
+00:26:13,355 --> 00:26:15,565
+Rym: That was Definitely a lie.
+
+364
+00:26:15,585 --> 00:26:18,775
+Scott: I mean when I was younger and more naive I did.
+
+365
+00:26:18,976 --> 00:26:23,520
+Scott: I did say things like oh, yeah I'll join the military as long as I don't have to do one push-up ever.
+
+366
+00:26:23,781 --> 00:26:30,046
+Scott: I never have to shoot anyone or be shot at and I could do exactly the job I want and I'm in charge of that Job, and no one can tell me what to do.
+
+367
+00:26:30,348 --> 00:26:32,056
+Scott: And of course that is not a possibility.
+
+368
+00:26:32,076 --> 00:26:37,718
+Scott: Yep, but this Was unless I'm immediately promoted to like I don't know.
+
+369
+00:26:37,738 --> 00:26:48,639
+Rym: president I uh, he did start screaming at me though and it ended prematurely because when he asked me to sign up I basically said no I was already accepted RIT And then he got mad at me for wasting his time.
+
+370
+00:26:50,440 --> 00:26:55,802
+Rym: So there's a lot going on here and you can read the link to a way for article that covers the important part about the First Amendment.
+
+371
+00:26:55,842 --> 00:27:07,700
+Rym: pretty well all you nerds who complain about free speech because some twitch channel bans you for saying racist shit This is the only time free speech has actually for real been an issue.
+
+372
+00:27:08,282 --> 00:27:09,427
+Rym: That's aiming space.
+
+373
+00:27:09,989 --> 00:27:12,520
+Scott: So I just end this conversation with an interesting question.
+
+374
+00:27:12,620 --> 00:27:14,807
+Scott: Oh, so you you go into the.
+
+375
+00:27:15,169 --> 00:27:18,600
+Scott: if it still existed you go into the army chat on twitch, right?
+
+376
+00:27:19,302 --> 00:27:25,040
+Scott: And it we've already determined that they can't ban you from that chat because that would be actual government censorship, right?
+
+377
+00:27:25,720 --> 00:27:30,900
+Scott: What if someone were to go into that chat and instead of asking for a favorite war crimes said a bunch of racist shit?
+
+378
+00:27:31,181 --> 00:27:33,488
+Rym: Yeah, the problem is that's real tough.
+
+379
+00:27:34,170 --> 00:27:35,995
+Scott: Is it now impossible?
+
+380
+00:27:36,095 --> 00:27:37,560
+Scott: is the can the government now?
+
+381
+00:27:38,000 --> 00:27:48,340
+Scott: you can be banned from every twitch channel except no matter how horrible or racist or sexist or Disgusting shit you say in the are and the government twitch channel.
+
+382
+00:27:48,682 --> 00:27:52,824
+Scott: You can't be blocked banned kicked or so There is the except the.
+
+383
+00:27:53,185 --> 00:27:57,999
+Rym: these the proper exceptions to free speech that are generally constitutionally agreed upon in the?
+
+384
+00:27:58,039 --> 00:28:03,636
+Rym: u.s Still apply me including that vague obscenity piece mmm.
+
+385
+00:28:03,920 --> 00:28:10,396
+Rym: Non-informational obscenity could theoretically be used in that case as could incitement to violence.
+
+386
+00:28:10,576 --> 00:28:11,178
+Rym: That's another one.
+
+387
+00:28:11,218 --> 00:28:14,800
+Scott: I'm sure that's one You know and it's actually pretty easy.
+
+388
+00:28:14,860 --> 00:28:15,402
+Scott: What if the shit?
+
+389
+00:28:15,442 --> 00:28:15,824
+Scott: what if that?
+
+390
+00:28:15,864 --> 00:28:20,020
+Scott: what if the government opens up a slack chat or discord and I can post photos and I?
+
+391
+00:28:20,180 --> 00:28:23,385
+Scott: start posting porn, uh You're probably okay.
+
+392
+00:28:23,425 --> 00:28:26,353
+Rym: This is the government really like can't get into this space.
+
+393
+00:28:26,554 --> 00:28:27,176
+Rym: is the moral.
+
+394
+00:28:27,898 --> 00:28:37,323
+Scott: I know right anyway Yeah, let's just leave that one be because it's time for the Things of the day.
+
+395
+00:28:37,343 --> 00:28:37,827
+Rym: What do you got?
+
+396
+00:28:39,714 --> 00:28:41,170
+Scott: What do I have seed?
+
+397
+00:28:42,517 --> 00:28:49,967
+Scott: All right, so This video started out in a very sad way for me because they're like hey is the Minecraft title screen?
+
+398
+00:28:49,987 --> 00:28:56,470
+Scott: you open up Minecraft You see all those you know the main menu right which says you know start Minecraft multiplayer settings quick game, right?
+
+399
+00:28:56,550 --> 00:28:57,921
+Scott: You know all the terms and conditions.
+
+400
+00:28:58,042 --> 00:29:04,683
+Scott: button right whatever and You know in the corner it tells you what version of Minecraft you have.
+
+401
+00:29:04,704 --> 00:29:06,030
+Scott: you're running right here.
+
+402
+00:29:06,030 --> 00:29:09,010
+Scott: You're looking at that title screen, and they're like for most of Minecraft's life.
+
+403
+00:29:09,131 --> 00:29:13,630
+Scott: This is the title screen that most players know and I'm like I don't know that title screen.
+
+404
+00:29:13,971 --> 00:29:14,634
+Scott: And then they're like.
+
+405
+00:29:15,056 --> 00:29:18,410
+Scott: originally the title screen was a wall of bricks, and I'm like that's a title screen.
+
+406
+00:29:18,510 --> 00:29:22,644
+Rym: I remember all the bricks is the only title screen I ever knew of until I saw this video.
+
+407
+00:29:22,885 --> 00:29:25,574
+Scott: apparently wall of bricks is Ridiculously old.
+
+408
+00:29:25,594 --> 00:29:26,879
+Rym: you know wall of bricks is for us.
+
+409
+00:29:27,180 --> 00:29:29,047
+Rym: It's fallen empires in magic.
+
+410
+00:29:29,548 --> 00:29:37,670
+Scott: exactly This is the title screen that is apparently existed for most of Minecraft's existence And I played Minecraft so briefly and so long ago that I don't know this one.
+
+411
+00:29:37,750 --> 00:29:38,995
+Scott: I know the free the older one.
+
+412
+00:29:39,396 --> 00:29:43,150
+Rym: I'm thinking about playing Minecraft again because of the VR, but that's a separate conversation.
+
+413
+00:29:43,150 --> 00:29:44,373
+Scott: No, that's not the worst.
+
+414
+00:29:44,393 --> 00:29:48,425
+Rym: exploring someone's world in VR seems super fun but anyway.
+
+415
+00:29:48,970 --> 00:30:03,110
+Scott: So the the title screen that they're referring to is basically the same menu of buttons right and on a. you know before you start Playing Minecraft and in the background is a blurry image of a Minecraft world right just one.
+
+416
+00:30:03,451 --> 00:30:08,687
+Scott: You know it looks like someone's playing Minecraft and took a screenshot and made it blurry and put it behind the buttons.
+
+417
+00:30:08,888 --> 00:30:11,737
+Rym: a normal person Would just not ever think about that.
+
+418
+00:30:12,420 --> 00:30:13,222
+Scott: no, but the play.
+
+419
+00:30:13,262 --> 00:30:34,394
+Scott: the Minecraft nerds of the universe said hey That photo is clearly somebody at Minecraft right must have taken Minecraft started a new game right walked around to find a good-looking spot yeah took a screenshot and Blurred it and saved it and made that Title screen on purpose.
+
+420
+00:30:34,414 --> 00:30:35,598
+Scott: a game developer did that?
+
+421
+00:30:35,799 --> 00:30:38,910
+Rym: yep the only alternative is some concept artist just drew it from scratch.
+
+422
+00:30:38,970 --> 00:30:41,629
+Rym: But that seems highly unlikely seems highly unlikely so.
+
+423
+00:30:42,214 --> 00:30:44,090
+Scott: Minecraft's are procedurally generated worlds.
+
+424
+00:30:44,631 --> 00:30:57,427
+Scott: It should be possible to figure out the exact seed that was used to generate that world and then Generate that seed and then you should be able to play Minecraft in the same world that the home.
+
+425
+00:30:57,648 --> 00:31:00,357
+Scott: the title screen Screenshot was taken from.
+
+426
+00:31:00,739 --> 00:31:02,630
+Rym: that is the plot to a sci-fi movie.
+
+427
+00:31:03,451 --> 00:31:05,357
+Scott: But how would you ever find this seed?
+
+428
+00:31:05,377 --> 00:31:13,545
+Scott: There's so many like you know the orders of magnitude numbers of Possible Minecraft worlds as like more than atoms in the universe.
+
+429
+00:31:13,585 --> 00:31:14,850
+Scott: It's one of those enormous numbers, right?
+
+430
+00:31:15,410 --> 00:31:17,689
+Scott: How could you ever figure it out the exact one?
+
+431
+00:31:19,010 --> 00:31:22,664
+Scott: Somehow they figured out the exact one because otherwise it wouldn't be a thing of the day.
+
+432
+00:31:22,724 --> 00:31:25,917
+Scott: and how they figured it out I'm not going to explain to you.
+
+433
+00:31:26,560 --> 00:31:27,805
+Scott: You're gonna have to watch the video.
+
+434
+00:31:27,865 --> 00:31:28,950
+Rym: It is only eight minutes long.
+
+435
+00:31:29,031 --> 00:31:29,695
+Rym: You can watch it.
+
+436
+00:31:30,118 --> 00:31:39,926
+Scott: It is a fascinating piece of Detective computer digital detective work that is maybe one of the best I've seen.
+
+437
+00:31:39,946 --> 00:31:42,217
+Scott: so Check this out.
+
+438
+00:31:42,559 --> 00:31:50,113
+Scott: Even if you don't care about Minecraft It's also good if you care about computers and don't care about video games at all is Awesome biz.
+
+439
+00:31:50,736 --> 00:31:52,763
+Rym: so my thing is pretty simple now.
+
+440
+00:31:53,365 --> 00:31:57,341
+Rym: I'll admit the guy who runs this channel This is not my style like this guy's a little annoying.
+
+441
+00:31:57,422 --> 00:31:59,190
+Rym: I hate it's just a personal pet peeve.
+
+442
+00:31:59,210 --> 00:32:00,318
+Rym: I'm not impinging upon this 50.
+
+443
+00:32:00,318 --> 00:32:09,232
+Scott: I saw this video also and yeah This is the editing in this video and the voice narration in this video is a very annoying YouTube internet guy And I'm not.
+
+444
+00:32:09,353 --> 00:32:10,578
+Rym: there's a specific thing like.
+
+445
+00:32:10,598 --> 00:32:11,883
+Rym: I don't mind this content.
+
+446
+00:32:11,944 --> 00:32:13,490
+Scott: He is presenting is excellent.
+
+447
+00:32:13,610 --> 00:32:17,562
+Rym: I don't mind the shake it off because everyone's got a station format irks me.
+
+448
+00:32:17,743 --> 00:32:20,150
+Rym: What bothers me is jump cut audio editing.
+
+449
+00:32:20,511 --> 00:32:22,358
+Rym: I'd say this is like a pet on the side.
+
+450
+00:32:22,659 --> 00:32:27,863
+Rym: most of the content on the internet made by amateurs is like this But I can't listen to anything that does this.
+
+451
+00:32:28,447 --> 00:32:35,910
+Rym: it's when If you can't read a script in one go and you also can't just extemporaneously speak like Scott and I do
+
+452
+00:32:36,615 --> 00:32:36,736
+Scott: the
+
+453
+00:32:36,797 --> 00:32:48,563
+Rym: third way to go is You just fumble through what you're gonna say and then you just edit it together into something sensible later And you can tell because the audio will jump constantly like.
+
+454
+00:32:48,583 --> 00:32:50,630
+Rym: they'll say three words you hear an edit.
+
+455
+00:32:50,871 --> 00:32:52,337
+Rym: They'll say another word you hear an edit.
+
+456
+00:32:52,377 --> 00:32:53,140
+Rym: They say two more words.
+
+457
+00:32:53,341 --> 00:32:54,325
+Rym: You can hear an edit.
+
+458
+00:32:54,365 --> 00:32:55,470
+Rym: it like jumps a lot.
+
+459
+00:32:55,953 --> 00:32:58,649
+Rym: It's even worse if they do it while their face is on video.
+
+460
+00:32:59,472 --> 00:33:03,185
+Rym: I see people do that, but I cannot listen to anything that does that.
+
+461
+00:33:03,205 --> 00:33:12,377
+Rym: the other complaint about this video But I promise the video like what the video is is still good is that it explains something far less Complicated than Scott's thing of the day.
+
+462
+00:33:12,678 --> 00:33:14,405
+Rym: yet Scott's thing of the day was an 8 minute and 23 second video.
+
+463
+00:33:15,892 --> 00:33:28,090
+Rym: This is a 40 minute and 19 second video Explaining something that I could explain in maybe 8 to 10 minutes If I were to fast fast forward through his many many stolen stock photo images.
+
+464
+00:33:28,190 --> 00:33:29,957
+Rym: Yep, but they might be purchased.
+
+465
+00:33:30,117 --> 00:33:31,422
+Rym: I buy stock images.
+
+466
+00:33:31,442 --> 00:33:33,068
+Scott: The watermarks are still on all of them.
+
+467
+00:33:33,670 --> 00:33:36,769
+Rym: Oh I Didn't notice that because I skipped around.
+
+468
+00:33:37,171 --> 00:33:40,503
+Scott: Anyway, I noticed that every stock photo has this giant watermark all over.
+
+469
+00:33:40,523 --> 00:33:42,650
+Rym: civilization 6 is a pretty good is a very good game.
+
+470
+00:33:42,690 --> 00:33:55,287
+Rym: we play it multiplayer like we have a good time with it, but civilization 6 single-player is not actually that fun because the AI's are Just really really stupid and broken and like the single-player game is not that fun.
+
+471
+00:33:55,367 --> 00:33:56,050
+Rym: as a result, right?
+
+472
+00:33:56,392 --> 00:34:19,230
+Scott: I have not personally figured out You know bothered to learn how the AI's behave because it's too much work for not really a lot of payoff I have I have But I have determined that many many many other people are basically able to mind read the AI and manipulate them into making the game Trivially easy even on the hardest difficulties because they can just get the AI to do whatever they want.
+
+473
+00:34:19,290 --> 00:34:25,351
+Rym: Yeah, basically Civ 5 is a is honestly with the AI is a more satisfying single-player experience still than Civ 6.
+
+474
+00:34:25,351 --> 00:34:29,228
+Rym: I think Civ 6 is just too complex for there to be a good AI yet.
+
+475
+00:34:30,429 --> 00:34:33,409
+Rym: Maybe so, but so we play Civ 6 with people like humans.
+
+476
+00:34:34,312 --> 00:34:36,221
+Rym: This video is not gonna work against humans.
+
+477
+00:34:36,241 --> 00:34:37,628
+Rym: So do not even think you can try it.
+
+478
+00:34:37,688 --> 00:34:55,710
+Rym: However People talk about in a lot of games like in Pokemon the Nuzlocke challenge or whatever like people like to make their own hard modes of video games, so This is a video of a hard mode challenge in civilization 6 but the hard mode is quote No city win challenge.
+
+479
+00:34:56,530 --> 00:34:57,456
+Scott: Literally game.
+
+480
+00:34:57,677 --> 00:34:59,890
+Scott: Yes without building any cities.
+
+481
+00:34:59,930 --> 00:35:00,914
+Scott: You not your first one.
+
+482
+00:35:00,934 --> 00:35:02,801
+Scott: you first settler and you don't.
+
+483
+00:35:02,821 --> 00:35:06,616
+Scott: you never build a city with that settler But you somehow win the game.
+
+484
+00:35:07,138 --> 00:35:09,650
+Scott: and this video is legit, you know anything about civilization.
+
+485
+00:35:09,753 --> 00:35:10,651
+Scott: That's insane like.
+
+486
+00:35:10,812 --> 00:35:12,697
+Rym: that's like trying to even sieve five.
+
+487
+00:35:12,717 --> 00:35:15,104
+Rym: there's one civilization Venice where their whole shick is.
+
+488
+00:35:15,405 --> 00:35:19,979
+Rym: you can only ever have one city and It's almost impossible to win the game with that sieve.
+
+489
+00:35:20,461 --> 00:35:22,410
+Rym: but and against humans it is impossible.
+
+490
+00:35:22,491 --> 00:35:26,541
+Rym: you're just done, but This video he does it.
+
+491
+00:35:26,902 --> 00:35:28,449
+Rym: It's pretty funny how he does it.
+
+492
+00:35:29,573 --> 00:35:33,406
+Rym: It's actually worth watching just to see like how this comes together.
+
+493
+00:35:33,426 --> 00:35:34,590
+Rym: It is impressive.
+
+494
+00:35:34,690 --> 00:35:39,470
+Rym: My head is off to you the sniffing bread for beating Civ 6 without ever building a city.
+
+495
+00:35:40,792 --> 00:35:41,797
+Scott: Yep, just legit.
+
+496
+00:35:41,817 --> 00:35:42,179
+Scott: No cheat.
+
+497
+00:35:42,219 --> 00:35:42,621
+Scott: No cheating.
+
+498
+00:35:42,702 --> 00:35:44,028
+Rym: Yeah, so good stuff.
+
+499
+00:35:44,772 --> 00:35:46,177
+Rym: Just I'll buy it.
+
+500
+00:35:46,257 --> 00:35:51,476
+Rym: like if you see this if you listen to this podcast and you email me I will mail you a teleprompter.
+
+501
+00:35:51,917 --> 00:35:52,880
+Rym: I have an extra one.
+
+502
+00:35:53,161 --> 00:35:54,024
+Rym: I'll mail it to you.
+
+503
+00:35:54,445 --> 00:35:55,529
+Rym: Just so you don't have to jump at it.
+
+504
+00:35:57,411 --> 00:35:59,170
+Rym: Anyway in a moment, we're stuck inside.
+
+505
+00:35:59,230 --> 00:35:59,853
+Rym: We can't do much.
+
+506
+00:36:00,154 --> 00:36:04,050
+Rym: stay tuned as we keep trying to make stuff as we try to figure out how to record.
+
+507
+00:36:04,471 --> 00:36:06,357
+Rym: Don't like six or seven panels.
+
+508
+00:36:06,397 --> 00:36:10,930
+Rym: We're gonna be doing across a bunch of conventions in the early fall that are all going online.
+
+509
+00:36:11,574 --> 00:36:14,693
+Rym: That is more of a challenge than we expected for a lot of reasons so stay tuned on that.
+
+510
+00:36:14,713 --> 00:36:24,445
+Rym: that is consuming a lot of my time as I figure out the logistics of this and also Every convention that does panel submissions is doing things very differently now because it's a weird world.
+
+511
+00:36:24,785 --> 00:36:32,677
+Rym: So the producers stuff I normally do for GeekNights is involving a lot more emails and conversations Where previously it was.
+
+512
+00:36:33,039 --> 00:36:35,330
+Rym: someone would email me once saying what do you want to do this year?
+
+513
+00:36:35,470 --> 00:36:37,097
+Rym: And I respond back with a list of things.
+
+514
+00:36:37,539 --> 00:36:38,886
+Rym: I actually have to do a lot for once.
+
+515
+00:36:39,107 --> 00:36:39,770
+Rym: It's kind of a pain.
+
+516
+00:36:41,151 --> 00:36:42,770
+Rym: Yep, what else we got going on?
+
+517
+00:36:44,553 --> 00:36:46,250
+Scott: The club book is still the tale of Genji.
+
+518
+00:36:46,376 --> 00:36:52,210
+Rym: Yeah I'm not reading it until it's cold outside because every time I'm not doing this said he wouldn't read till it's warm outside.
+
+519
+00:36:52,230 --> 00:36:54,590
+Scott: now You're not reading till it's cold outside because what is warm outside?
+
+520
+00:36:54,770 --> 00:37:07,250
+Rym: I thought I would be have time outside To read like at the beach like if I could change one thing and it couldn't be a material thing Like if I couldn't fix the world, but I could make one immaterial change to the world.
+
+521
+00:37:07,612 --> 00:37:13,283
+Rym: I would swap the weather of last summer and this summer Because last summer we had a lottery weekends couldn't go to the beach that much.
+
+522
+00:37:13,624 --> 00:37:18,101
+Rym: this summer has been 99% perfect beach weekends that I can't go to the beach.
+
+523
+00:37:18,623 --> 00:37:22,196
+Rym: if this summer had been last summer We would have read like 10 more books.
+
+524
+00:37:22,879 --> 00:37:25,890
+Scott: Well, some people are going to the beach, but it's like I'm not going to the beach.
+
+525
+00:37:26,472 --> 00:37:27,335
+Scott: I'm not going either.
+
+526
+00:37:27,395 --> 00:37:31,700
+Rym: You know, I'll go to a beach if I can get to a beach by myself and there's no one there but me.
+
+527
+00:37:32,851 --> 00:37:39,256
+Scott: Well, I was thinking we could like find a house that has its own private beach like on the beach As long as you don't own the house.
+
+528
+00:37:39,317 --> 00:37:44,736
+Scott: who cares if that house has a risk of being blown away at a tropical storm as Long as we're not in it when the tropical storm comes?
+
+529
+00:37:45,278 --> 00:37:49,470
+Scott: and then we could get to that house by a teleportation or boat or something.
+
+530
+00:37:49,490 --> 00:37:54,910
+Rym: Yeah, and only truly like mutually quarantining people are allowed to go to this house, right?
+
+531
+00:37:54,990 --> 00:38:01,047
+Scott: And then we just you know Quit our jobs and stay at that house and then come back before it's cold and then give.
+
+532
+00:38:01,127 --> 00:38:02,534
+Rym: actually I could work From.
+
+533
+00:38:02,634 --> 00:38:03,661
+Rym: I can work from anywhere.
+
+534
+00:38:03,701 --> 00:38:05,010
+Rym: It's not like I have to go to an office for that.
+
+535
+00:38:05,832 --> 00:38:07,381
+Scott: But what would such a beach house have?
+
+536
+00:38:07,442 --> 00:38:08,709
+Scott: internet and would I want to work?
+
+537
+00:38:09,630 --> 00:38:10,775
+Rym: Yeah, the problem is I wouldn't want to work.
+
+538
+00:38:11,458 --> 00:38:14,249
+Rym: Yeah, at least now I kind of like work.
+
+539
+00:38:15,092 --> 00:38:18,770
+Rym: I don't think I would work if I was just at the beach right there would not be working.
+
+540
+00:38:18,972 --> 00:38:19,516
+Rym: I would be quitting.
+
+541
+00:38:19,536 --> 00:38:21,289
+Scott: the only other met a moment I have is again.
+
+542
+00:38:21,992 --> 00:38:28,770
+Scott: You should come to all the places that we exist on the internet like our website and our discord and we have Twitter's and YouTube's.
+
+543
+00:38:28,790 --> 00:38:29,534
+Scott: We got everything.
+
+544
+00:38:29,554 --> 00:38:32,528
+Scott: I don't know how you found this podcast if you didn't find any of those other things.
+
+545
+00:38:32,568 --> 00:38:43,292
+Scott: Yeah You should check all those things out and If you want to learn how to play a train game because you need something to occupy You know all the spare time in your life I will.
+
+546
+00:38:43,794 --> 00:38:47,726
+Scott: any of us will be glad to teach anyone to play train games.
+
+547
+00:38:48,187 --> 00:38:49,874
+Scott: It is not that hard You know, we should do.
+
+548
+00:38:49,954 --> 00:38:53,149
+Scott: just come to our discord and I can teach you train games for free.
+
+549
+00:38:53,330 --> 00:38:55,509
+Scott: I will do this as a free service.
+
+550
+00:38:55,690 --> 00:38:57,418
+Scott: We can slip this on game teaching.
+
+551
+00:38:57,558 --> 00:38:57,980
+Rym: like you.
+
+552
+00:38:58,020 --> 00:39:00,490
+Rym: take out an 18 Chesapeake and I'll take 18 46.
+
+553
+00:39:00,490 --> 00:39:07,617
+Rym: We could just make one-off panel videos just like we do, you know all the learn and win X. we can make a learn and we're not.
+
+554
+00:39:07,677 --> 00:39:14,590
+Scott: I could definitely make one better than the other people who have made them already because I've Seen some of the ones out there and some of them are good, but none of them are like amazing.
+
+555
+00:39:14,691 --> 00:39:18,541
+Scott: I feel like I could do better But I still feel like a personal teaching is the best.
+
+556
+00:39:18,561 --> 00:39:20,450
+Scott: that includes like answering your question true.
+
+557
+00:39:20,872 --> 00:39:25,890
+Rym: That's why as much as like playing well, that's why even though we have video of like our learning win, Puerto Rico.
+
+558
+00:39:25,990 --> 00:39:32,038
+Rym: I love running that panel because I love sitting down with a bunch of people and like teaching them Directly how to play.
+
+559
+00:39:32,058 --> 00:39:32,702
+Rym: it's like you said.
+
+560
+00:39:32,742 --> 00:39:34,976
+Scott: if you want to know how to play Contact us.
+
+561
+00:39:35,016 --> 00:39:37,269
+Scott: and if you want to play I don't know happen to that listener who?
+
+562
+00:39:37,830 --> 00:39:40,681
+Scott: emailed me and never emailed me a second time after I replied.
+
+563
+00:39:40,721 --> 00:39:44,340
+Scott: but if you want to play there is a digital app for yellow and Yanksy on Steam.
+
+564
+00:39:44,683 --> 00:39:45,389
+Scott: it's not free.
+
+565
+00:39:46,691 --> 00:39:53,189
+Scott: But if you have that app and you want to play multiplayer yellow and Yanksy Contact us via any mechanism.
+
+566
+00:39:54,154 --> 00:39:54,662
+Scott: Let's play.
+
+567
+00:39:54,846 --> 00:39:58,876
+Rym: Yeah All right, so I guess we'll get into it.
+
+568
+00:39:59,037 --> 00:40:00,803
+Rym: a ring vid adventure is.
+
+569
+00:40:00,843 --> 00:40:02,890
+Rym: we're not gonna review ring vid adventure in depth.
+
+570
+00:40:02,930 --> 00:40:03,614
+Rym: We're gonna talk about it.
+
+571
+00:40:03,674 --> 00:40:06,007
+Rym: I've got it played it once and that's I played it a bit.
+
+572
+00:40:06,068 --> 00:40:06,430
+Rym: I like it.
+
+573
+00:40:06,510 --> 00:40:07,072
+Rym: I like it a lot.
+
+574
+00:40:07,554 --> 00:40:15,296
+Rym: But basically we want to talk about these kinds like this concept of Exercise games in general.
+
+575
+00:40:15,617 --> 00:40:19,890
+Scott: because well, we got to narrow this down because technically every sport is an exercise game.
+
+576
+00:40:19,910 --> 00:40:33,000
+Rym: Well, yeah and also like I realized already it's even worse than that because there are a lot of games and physical exertion or physical skill But they are not necessarily exercise in any meaningful way.
+
+577
+00:40:33,080 --> 00:40:42,649
+Rym: case in point that arm wrestling arcade game that we keep talking about That is not an exercise game because you don't play it long enough to exercise and nor would any reasonable person do so.
+
+578
+00:40:43,814 --> 00:40:44,644
+Scott: That is true.
+
+579
+00:40:44,765 --> 00:40:56,921
+Scott: However I think if you try to narrow it down by like something that's trying to make you exercise as your as your criteria Right, you're gonna start including a lot of things like every sport ever.
+
+580
+00:40:56,941 --> 00:41:00,290
+Scott: Hey, well, it's like you're exercising if you just play basketball.
+
+581
+00:41:00,852 --> 00:41:05,874
+Rym: I think the difference is let's let's narrow it down to video games because that makes it a lot easier Right.
+
+582
+00:41:06,176 --> 00:41:25,270
+Scott: I think what we really I think we do want to talk about that include the box, you know, the the arm wrestling thing because the way I see it is we're talking about You know sports right where they with a physical With a with a software digital component to them, right?
+
+583
+00:41:25,690 --> 00:41:30,350
+Scott: But that would include things like Formula One or any car racing where the car has software, right true.
+
+584
+00:41:30,430 --> 00:41:31,616
+Scott: So I don't want to include that.
+
+585
+00:41:32,098 --> 00:41:39,350
+Scott: what I want to include is basically any Sport where there's a digital video game component, right?
+
+586
+00:41:40,050 --> 00:42:02,352
+Scott: but the basically, I don't know how to word this correctly, but where the software is Basically doing all of the scoring and judging like the whole point of the thing is that you the human being do physical activity, right and You the physical activity is then measured by software.
+
+587
+00:42:02,412 --> 00:42:05,700
+Scott: that then or that then tells you how well you have done.
+
+588
+00:42:06,023 --> 00:42:11,453
+Rym: I want to go in a much more different direction Based on rings of adventure and focus on game.
+
+589
+00:42:11,493 --> 00:42:11,935
+Scott: well ring fit.
+
+590
+00:42:11,975 --> 00:42:12,960
+Scott: adventure fits that cat.
+
+591
+00:42:13,000 --> 00:42:25,090
+Rym: It does fit that category, but my category is more games where if it if an average normal gamer plays a normal Expected reasonable amount of this game like one play session.
+
+592
+00:42:25,752 --> 00:42:35,760
+Rym: They will have gotten what the government would consider a workout Like a game has caused you to work out regardless of if you would have otherwise.
+
+593
+00:42:36,688 --> 00:42:37,920
+Scott: But that's basketball.
+
+594
+00:42:39,181 --> 00:42:40,085
+Rym: Well video game we're just.
+
+595
+00:42:40,105 --> 00:42:41,089
+Rym: we're talking about video games here.
+
+596
+00:42:41,510 --> 00:42:49,368
+Scott: so it has to be a video game and you would have gotten a workout Cuz yeah if we did because yeah But the nature of playing basketball.
+
+597
+00:42:49,448 --> 00:42:52,980
+Rym: you will you will definitely get a workout if you try to play basketball at all.
+
+598
+00:42:55,341 --> 00:42:57,027
+Rym: We can talk about the other kind you could have.
+
+599
+00:42:57,208 --> 00:42:59,957
+Scott: you could have a very advanced flight simulator.
+
+600
+00:42:59,997 --> 00:43:00,700
+Scott: that's like for real.
+
+601
+00:43:00,801 --> 00:43:02,439
+Scott: That'll be a kind of a workout, right?
+
+602
+00:43:03,102 --> 00:43:09,340
+Rym: No, because the usually the formal definitions of this involve things like heart rate elevated above a certain amount for a certain heart.
+
+603
+00:43:09,400 --> 00:43:12,274
+Scott: It's not gonna elevate if I put you in like some crazy s flight cement.
+
+604
+00:43:12,315 --> 00:43:13,360
+Scott: It's moving you all around.
+
+605
+00:43:13,561 --> 00:43:15,408
+Rym: I've flown planes before not at all.
+
+606
+00:43:15,689 --> 00:43:19,544
+Rym: Maybe if it was an f-16 simulator, but not like a Like it's.
+
+607
+00:43:19,564 --> 00:43:20,566
+Scott: you know, it's really.
+
+608
+00:43:20,747 --> 00:43:21,509
+Scott: it's really pushing you.
+
+609
+00:43:21,549 --> 00:43:23,133
+Rym: Yeah, but it's not pushing your muscles.
+
+610
+00:43:23,194 --> 00:43:24,738
+Rym: Really you're wearing a flight suit.
+
+611
+00:43:25,159 --> 00:43:26,990
+Rym: So And you're like Anna.
+
+612
+00:43:27,010 --> 00:43:30,440
+Rym: you're strapped into a chair Maybe your neck a bit, but you're not gonna get a workout.
+
+613
+00:43:30,560 --> 00:43:32,768
+Scott: I don't think it could be a racing simulator.
+
+614
+00:43:32,788 --> 00:43:42,480
+Scott: We're lazy simulator would count driving an f1 car with a hundred percent Whole bunch right, you know, especially if it's simulating any amount of g-forces on your body.
+
+615
+00:43:42,621 --> 00:43:45,544
+Rym: Yeah, I think you need the g-forces though It definitely doesn't count.
+
+616
+00:43:45,785 --> 00:43:48,980
+Rym: but I want to take an aside before we get into that and talk about these arm wrestling arcade.
+
+617
+00:43:48,980 --> 00:43:51,840
+Scott: But if someone's real weak and just like pushing the a buttons a workout for them?
+
+618
+00:43:51,861 --> 00:43:54,206
+Rym: Oh, yeah That line is different for all sorts of people.
+
+619
+00:43:54,246 --> 00:44:00,190
+Rym: like what constitutes physical activity in a workout actually is a really big sliding scale depending on Your goals, right?
+
+620
+00:44:00,211 --> 00:44:12,140
+Scott: You could also have a game like Maybe pop and music right and someone could play pop and music in a way where they're like And it's really like an are a tiring arm workout for them, but someone else could play it with like their fingers.
+
+621
+00:44:12,200 --> 00:44:14,032
+Rym: He's like, well look at that with DDR.
+
+622
+00:44:14,233 --> 00:44:15,420
+Scott: That's like they would be a thing.
+
+623
+00:44:15,521 --> 00:44:16,899
+Scott: It would be a finger workout.
+
+624
+00:44:17,181 --> 00:44:29,921
+Rym: I guess the fanboy playing DDR with their arms on the bar doing the fanboy pump gets way less Effective exercise than someone doing the exact same song but actually dancing and not holding the bar Hmm.
+
+625
+00:44:30,604 --> 00:44:37,647
+Scott: That's why I think the my criteria of just the games where you're just being measured on Assuming you play it in good faith, right?
+
+626
+00:44:37,668 --> 00:44:52,840
+Scott: You're being measured based on some sort of you know Some sort of aspect of your physical bodies exertions, right and not just on something like timing of button presses Which I guess is still your physical exertions, but you you know, there's still some sort of line there.
+
+627
+00:44:52,880 --> 00:44:55,380
+Rym: Well, I think there's definitely like if we were gonna do a panel on this.
+
+628
+00:44:55,521 --> 00:44:58,100
+Rym: I feel like these would be like two different sections of the right.
+
+629
+00:44:58,120 --> 00:45:07,998
+Scott: It would be like, you know if you if you the human being are stronger right you will get a higher score at arm-wrestle the robot or hit the hammer on the thing and make it hit the bell.
+
+630
+00:45:08,259 --> 00:45:12,539
+Scott: or You know DDR if you're better at cardio, you'll be better at DDO.
+
+631
+00:45:16,365 --> 00:45:17,595
+Rym: There are very much two sides of this.
+
+632
+00:45:17,676 --> 00:45:27,040
+Rym: it's the Games that ortho games that judge your skill in the manner you described or games that Trick or enable you into doing a traditional workout.
+
+633
+00:45:28,440 --> 00:45:32,920
+Scott: But I don't think there's that many games that trick you into doing a traditional workout.
+
+634
+00:45:33,000 --> 00:45:35,680
+Scott: There's a lot that have tried but a lot of them are just sort of failure.
+
+635
+00:45:35,702 --> 00:45:36,824
+Rym: Yeah I feel like ring fit.
+
+636
+00:45:36,844 --> 00:45:45,560
+Scott: adventure and DDR are like the height of that right now like literally Right, if you look on like the Wii and Wii U it's like when after the Wii fit the original Wii fit came.
+
+637
+00:45:45,861 --> 00:45:47,026
+Scott: There was like a bunch of clones.
+
+638
+00:45:47,046 --> 00:45:48,412
+Scott: It was like an EA fit.
+
+639
+00:45:48,453 --> 00:45:50,080
+Rym: None of them did well as far as I could tell.
+
+640
+00:45:50,140 --> 00:45:50,582
+Scott: It's like yeah.
+
+641
+00:45:50,683 --> 00:45:54,460
+Scott: No, there's like the place, you know, the PlayStation ones you use for Johan Sebastian Jones.
+
+642
+00:45:54,621 --> 00:46:00,080
+Scott: Oh, I think there's a lot of games that attempt to use those for various fitness things that are all just shovelware.
+
+643
+00:46:00,121 --> 00:46:01,539
+Scott: There's like tons and tons of shovelware.
+
+644
+00:46:01,901 --> 00:46:07,417
+Scott: There's other games though that are like could be fitness II but maybe aren't trying to be like this.
+
+645
+00:46:07,437 --> 00:46:08,600
+Scott: the Just Dance game.
+
+646
+00:46:08,781 --> 00:46:11,088
+Scott: Oh, yeah, you know you're like.
+
+647
+00:46:11,108 --> 00:46:11,751
+Scott: I think the wasn't.
+
+648
+00:46:11,771 --> 00:46:14,560
+Rym: the DVR was originally intended to be more dancing.
+
+649
+00:46:14,680 --> 00:46:19,736
+Rym: But you notice in recent DDR machines, they show you calories and really focus on the fitness aspect.
+
+650
+00:46:20,439 --> 00:46:20,840
+Scott: That's true.
+
+651
+00:46:21,704 --> 00:46:29,780
+Scott: dance rush a little bit You know depending on how you play it because like you can you can sort of still play dance rush in good faith without exercising.
+
+652
+00:46:29,821 --> 00:46:33,279
+Rym: Yeah But like ring fit adventure you'd like that.
+
+653
+00:46:33,741 --> 00:46:34,263
+Rym: That's probably.
+
+654
+00:46:34,283 --> 00:46:42,140
+Rym: I think it's the height of that genre because ring fit adventure really does make you do like a real broad spectrum cardio workout.
+
+655
+00:46:43,021 --> 00:46:43,482
+Scott: Right, it's like.
+
+656
+00:46:43,522 --> 00:46:44,465
+Scott: it also gamifies.
+
+657
+00:46:44,505 --> 00:46:50,200
+Rym: it like a peloton would count technically because they like gamifies a little bit and shows you a terrain.
+
+658
+00:46:50,340 --> 00:46:51,525
+Rym: But it's not a fun game.
+
+659
+00:46:51,585 --> 00:46:53,352
+Rym: ring fit adventure is like a real game.
+
+660
+00:46:53,392 --> 00:46:53,995
+Scott: fight the monster.
+
+661
+00:46:54,035 --> 00:46:55,320
+Scott: No, but you know about Swift?
+
+662
+00:46:56,561 --> 00:47:02,420
+Scott: No, I can guess with what it is Swift is basically you get yourself a bike trainer, right any kind?
+
+663
+00:47:02,781 --> 00:47:04,709
+Rym: Oh and it shows the course and you're racing someone
+
+664
+00:47:04,890 --> 00:47:25,760
+Scott: you put your you put your bike on it and you put this TV in Front of you and it shows you like a little avatar on a bicycle and you basically load in a real course from the real world and then depending on how much equipment you have hooked up to your trainer like you could have it Automatically make pedaling easier and harder or elevate the front of your bike as you're going up or down hills, right?
+
+665
+00:47:25,920 --> 00:47:29,216
+Scott: Yeah, and you can also do it multiplayer so you can it.
+
+666
+00:47:29,839 --> 00:47:35,320
+Scott: you know You can see other your friends like we could go and like race each other up some mountain in France.
+
+667
+00:47:35,420 --> 00:47:38,537
+Rym: Yep, and while that is a game and serves all these purposes to your point.
+
+668
+00:47:38,577 --> 00:47:39,140
+Rym: I see where you're going.
+
+669
+00:47:39,501 --> 00:47:41,187
+Rym: It's not that old.
+
+670
+00:47:41,227 --> 00:47:45,220
+Rym: that basically is motivation for someone who is already doing that kind of activity in the real world.
+
+671
+00:47:45,645 --> 00:47:49,464
+Rym: It's it ranges into like Existing right.
+
+672
+00:47:49,524 --> 00:47:49,826
+Scott: It's like.
+
+673
+00:47:49,906 --> 00:47:54,367
+Scott: it's like the virtual golf right where like you do indoor golf It's you hit a ball to a screen.
+
+674
+00:47:54,387 --> 00:47:57,240
+Scott: It's like you're training to do indoor golf or whatever.
+
+675
+00:47:58,461 --> 00:47:58,964
+Rym: Yeah, ring fit.
+
+676
+00:47:58,984 --> 00:47:59,688
+Rym: adventure is more.
+
+677
+00:47:59,969 --> 00:48:00,472
+Scott: Hey nerd.
+
+678
+00:48:00,693 --> 00:48:01,980
+Rym: It's like you want to beat this dragon.
+
+679
+00:48:02,222 --> 00:48:02,826
+Rym: Well, guess what?
+
+680
+00:48:02,846 --> 00:48:04,620
+Rym: Your abs are gonna get real strong by accident.
+
+681
+00:48:06,521 --> 00:48:19,080
+Rym: Maybe yeah, if you actually do the workouts, but maybe my aside here is on this website I found which I'll link to because I was trying to like learn about that arm wrestling game because we We were weirdly obsessed with that back in the day in Wildwood.
+
+682
+00:48:19,522 --> 00:48:22,736
+Rym: But I saw a line here that said the game was distributed to 150 arcades across Japan.
+
+683
+00:48:24,162 --> 00:48:29,020
+Rym: It was recalled less than one month later due to reports of three players breaking their arms.
+
+684
+00:48:30,260 --> 00:48:36,979
+Rym: three players Mm-hmm the apparently Atlas made this game like the Atlas ATL us the Atlas you all know.
+
+685
+00:48:37,681 --> 00:48:44,359
+Rym: Okay, so I wondered is that true or is that just this person with a blog like making something up?
+
+686
+00:48:45,481 --> 00:48:50,380
+Rym: So I go in and I look and I trust another two blogs said it must be true.
+
+687
+00:48:50,782 --> 00:48:53,799
+Rym: Yeah, well, no, so I tried to find like a real news reporting on this.
+
+688
+00:48:54,421 --> 00:49:03,158
+Rym: Okay, and the news report I found is an article from August 22nd 2007 and CBS quote headline arm-wrestling machine breaks arms.
+
+689
+00:49:05,401 --> 00:49:06,626
+Rym: Lose the game of chess to a good arm.
+
+690
+00:49:06,646 --> 00:49:08,674
+Scott: wrestled a robot and my arm broke.
+
+691
+00:49:08,895 --> 00:49:10,260
+Rym: lose the game of chess to a computer.
+
+692
+00:49:10,401 --> 00:49:13,814
+Rym: You could bruise your ego lose an arm wrestling match to a Japanese arcade game.
+
+693
+00:49:13,895 --> 00:49:14,979
+Rym: It could break your arm.
+
+694
+00:49:15,581 --> 00:49:20,260
+Rym: distributor Atlas Co says it will remove all 150 arm spirit wrestling games from our Japanese arcades.
+
+695
+00:49:20,702 --> 00:49:21,989
+Rym: So that story did happen.
+
+696
+00:49:22,331 --> 00:49:23,920
+Rym: However, I found yet another rabbit hole.
+
+697
+00:49:24,998 --> 00:49:33,520
+Rym: Uh Atlas issued a really sexist official statement in response to this like publicly not that long ago.
+
+698
+00:49:33,620 --> 00:49:39,747
+Rym: This is 2007 thought the basically and it was a lot older than 2007. know that into.
+
+699
+00:49:39,787 --> 00:49:41,916
+Rym: the game you're thinking of is a different arcade game.
+
+700
+00:49:41,976 --> 00:49:44,866
+Rym: This is an Atlas Equivalent of that game.
+
+701
+00:49:45,469 --> 00:49:47,420
+Scott: Okay, so that it's not the original arm wrestling.
+
+702
+00:49:47,601 --> 00:49:50,271
+Rym: Oh, you want to talk about the original arm wrestling game.
+
+703
+00:49:50,332 --> 00:49:52,380
+Rym: those goes go back to the electromechanical era.
+
+704
+00:49:52,783 --> 00:49:53,710
+Scott: That's what I'm talking about.
+
+705
+00:49:54,032 --> 00:49:59,500
+Rym: like 20s era There are 1920s arm wrestling machines that probably did break a lot of people's arms.
+
+706
+00:49:59,821 --> 00:50:06,808
+Rym: The one we played a lot was called arm champs or arm champs, too Okay, but the Atlas one.
+
+707
+00:50:07,230 --> 00:50:19,600
+Rym: when it broke all these arms this Atlas spokesperson Ayano is sakeyama said Officially and I'm quoting here the machine isn't that strong much less so than a muscular man.
+
+708
+00:50:20,124 --> 00:50:24,850
+Rym: Even women should be able to beat it Mm-hmm, and he went on to say that there were cut.
+
+709
+00:50:24,890 --> 00:50:29,839
+Rym: they were recalling the game as a precaution But not because they thought the game was actually dangerous.
+
+710
+00:50:30,821 --> 00:50:33,412
+Scott: You're correct arm champs is definitely the one that we played.
+
+711
+00:50:33,452 --> 00:50:35,300
+Scott: I guess I'll chance wasn't breaking anyone's arm.
+
+712
+00:50:35,501 --> 00:50:40,280
+Rym: No, because it's bad much better controls, I guess they also went on to say that quote.
+
+713
+00:50:40,661 --> 00:50:45,319
+Rym: We think that maybe some players get overexcited and twist their arms in an unnatural way.
+
+714
+00:50:46,404 --> 00:50:49,999
+Scott: Say though, it's been a long time since I've looked at or played an arm champs.
+
+715
+00:50:51,043 --> 00:50:53,454
+Scott: If you look at arm champs, it is hella racist.
+
+716
+00:50:53,896 --> 00:50:58,929
+Scott: Yep Like what a racist game this.
+
+717
+00:50:59,210 --> 00:51:07,200
+Rym: take Mike Tyson's punch out and like Way worse death it up quite a bit Like there's a lot of rabbit holes going down.
+
+718
+00:51:07,280 --> 00:51:09,613
+Rym: So then I wondered how cuz I like.
+
+719
+00:51:09,673 --> 00:51:18,984
+Rym: arm wrestling is not a sport Enjoy and I always had a perception that was dangerous because I had seen videos that Scott many other people probably saw in the pre YouTube days of the internet.
+
+720
+00:51:19,225 --> 00:51:23,320
+Rym: there's one video that made the rounds of someone's arm breaking badly arm wrestling.
+
+721
+00:51:23,601 --> 00:51:25,850
+Rym: But I wondered how common is that really?
+
+722
+00:51:26,151 --> 00:51:33,239
+Rym: so I tried to Google for it and Google immediately suggested to search results.
+
+723
+00:51:34,301 --> 00:51:39,460
+Rym: Can you break your arm arm wrestling and how do you stop your arm from breaking during arm wrestling?
+
+724
+00:51:40,521 --> 00:51:43,195
+Rym: Yeah, apparently arm wrestling is super fucking dangerous.
+
+725
+00:51:43,215 --> 00:51:44,039
+Rym: You should never do it.
+
+726
+00:51:44,461 --> 00:51:49,799
+Rym: It is not a sport that is safe to do and people who try to get good at it are really prone to hurting themselves badly.
+
+727
+00:51:50,681 --> 00:51:51,042
+Scott: Okay.
+
+728
+00:51:51,082 --> 00:51:52,667
+Scott: Well, I wasn't any good at it to begin with
+
+729
+00:51:52,968 --> 00:52:09,018
+Rym: I know because we discovered that our friend a friend of ours Was able to play this game in a Wildwood and she was able to exert exactly 40 pounds of force because the game told you how many pounds of force you actually exerted in the end and Then I remember that she proceeded to beat you.
+
+730
+00:52:10,180 --> 00:52:11,957
+Scott: Yeah, I definitely can't exert 40 pounds.
+
+731
+00:52:12,762 --> 00:52:13,725
+Scott: Yeah, Scott's.
+
+732
+00:52:13,885 --> 00:52:18,059
+Rym: uh, Scott has a lot of power below the waist, but your arms are basically just sticks.
+
+733
+00:52:18,881 --> 00:52:19,546
+Rym: You're like a rabbit.
+
+734
+00:52:19,566 --> 00:52:21,820
+Rym: You got a stick leg and a jump leg and really nothing to tell it.
+
+735
+00:52:21,860 --> 00:52:22,062
+Rym: There's.
+
+736
+00:52:22,102 --> 00:52:24,439
+Rym: no there's a stick leg and a jump leg and nothing else.
+
+737
+00:52:24,963 --> 00:52:27,358
+Rym: The jump leg is big and muscly and the stick leg is the literal stick.
+
+738
+00:52:29,061 --> 00:52:38,138
+Rym: Mmm, I'm getting pretty close to that myself though, cuz I'm running a lot and not doing a lot of house lately I Push up I can't.
+
+739
+00:52:39,080 --> 00:52:41,349
+Scott: Yeah, if I could do one I could try.
+
+740
+00:52:41,369 --> 00:52:45,940
+Scott: I could try to do one and then do two and then do three can't Do is if you could do zero you're in a little trouble.
+
+741
+00:52:46,483 --> 00:52:49,760
+Rym: So I guess what I like about ring fit adventure because we've already gone on for over an hour.
+
+742
+00:52:49,821 --> 00:52:50,635
+Rym: I guess it was a good show.
+
+743
+00:52:51,081 --> 00:53:00,474
+Rym: but I really like ring fit adventure because Most games I see that try to do this feel like corporate gamification bullshit.
+
+744
+00:53:00,514 --> 00:53:01,537
+Rym: Like they're not fun.
+
+745
+00:53:01,878 --> 00:53:04,009
+Rym: It's clearly We turn this thing.
+
+746
+00:53:04,049 --> 00:53:06,542
+Rym: You don't want to do into a game Like.
+
+747
+00:53:06,623 --> 00:53:10,079
+Rym: it just feels really low effort and like not fun.
+
+748
+00:53:10,920 --> 00:53:15,660
+Rym: This feels like a real game like you want to level up to beat that thing.
+
+749
+00:53:15,760 --> 00:53:18,732
+Rym: Well, you're gonna be doing this particular kind of crunch because it's more powerful.
+
+750
+00:53:19,314 --> 00:53:27,559
+Rym: the specific little thing I liked is that it makes you squeeze the thing every time you want to basically press a And that actually gets moderately tiring as the game goes on.
+
+751
+00:53:28,061 --> 00:53:32,740
+Scott: Well, actually what you know, even if you play in good faith, right, you're not trying to trick the game.
+
+752
+00:53:32,800 --> 00:53:34,600
+Scott: Yeah, letting you do less exercise.
+
+753
+00:53:34,862 --> 00:53:38,204
+Scott: You don't need to squeeze very much when you're just like in the menus You can just sort of tap it.
+
+754
+00:53:38,264 --> 00:53:40,334
+Scott: true and that's and that's it only does seems to.
+
+755
+00:53:40,434 --> 00:53:43,059
+Rym: I didn't confirm this 100% But I looked at some profile stuff.
+
+756
+00:53:43,401 --> 00:53:47,875
+Rym: It seems to calibrate how much it makes you do it based on that initial set up.
+
+757
+00:53:47,896 --> 00:53:49,240
+Scott: for the menus though, right?
+
+758
+00:53:49,420 --> 00:53:50,949
+Rym: Yeah, but for all the other stuff in the game.
+
+759
+00:53:51,211 --> 00:54:00,151
+Scott: Yes for all the other stuff in the game It does calibrate to your strengths assuming that you honestly, you know in player I did the calibration process yesterday.
+
+760
+00:54:00,171 --> 00:54:04,759
+Rym: I did the setup and I maxed it out with both pull and push.
+
+761
+00:54:05,723 --> 00:54:08,092
+Scott: Yeah, I thought I think pull I only got to 90.
+
+762
+00:54:08,092 --> 00:54:08,835
+Scott: I don't know.
+
+763
+00:54:08,855 --> 00:54:17,060
+Scott: Anyway, the point is Sorry, so if you if you play honestly right a the game makes you run in place
+
+764
+00:54:17,301 --> 00:54:21,260
+Rym: Yeah, and it notices if you slack off like pretty well, actually
+
+765
+00:54:21,804 --> 00:54:29,798
+Scott: Yeah, and it does this because you have a weeb Thing strapped to your leg, right and it's pretty good at telling when you're running or doing any other leg movement.
+
+766
+00:54:29,919 --> 00:54:34,739
+Scott: Yeah and The thing is is normally if I go outside and run it sucks.
+
+767
+00:54:35,941 --> 00:54:39,897
+Scott: The thing here that it does it doesn't make running not suck.
+
+768
+00:54:40,720 --> 00:54:41,767
+Scott: It distracts you.
+
+769
+00:54:41,807 --> 00:54:49,244
+Scott: you're running but you're Looking at the screen to do other shit and you forget that you're running Right.
+
+770
+00:54:49,686 --> 00:55:00,220
+Scott: So you're basically it's sort of like when you're in pain in the hospital You're playing you're reading a newspaper and you forget about the pain and then you stop reading the paper and you're like hurts.
+
+771
+00:55:00,380 --> 00:55:03,513
+Rym: I can see that because I see a lot of people fail it like regular exercise.
+
+772
+00:55:03,573 --> 00:55:06,585
+Rym: because like I run a lot Running outside is fun.
+
+773
+00:55:06,605 --> 00:55:07,448
+Rym: I do it because it's fun.
+
+774
+00:55:07,729 --> 00:55:09,275
+Rym: running on a treadmill sucks ass.
+
+775
+00:55:09,375 --> 00:55:11,364
+Rym: I hate every second of it I'm looking.
+
+776
+00:55:11,384 --> 00:55:14,740
+Rym: I'm desperate for anything to distract me from the fact that I'm on a treadmill.
+
+777
+00:55:15,624 --> 00:55:18,164
+Scott: Yeah So yeah, it does that.
+
+778
+00:55:18,344 --> 00:55:19,147
+Scott: secondly, right?
+
+779
+00:55:19,207 --> 00:55:23,120
+Scott: It's like, okay, you're squeezing the thing, but it's not just like congrats you squeezed, right?
+
+780
+00:55:23,160 --> 00:55:33,940
+Scott: It's like while you're running you're trying to shoot these boxes and stuff on the side of the track Right and it's like basically you're playing a sort of an actual video game like there's an obstacle course.
+
+781
+00:55:34,041 --> 00:55:37,580
+Scott: It's like, you know, yeah jump higher and you'll grab all those coins, right?
+
+782
+00:55:38,401 --> 00:55:42,656
+Scott: You know be running faster when you jump to go further and skip more of the track.
+
+783
+00:55:42,716 --> 00:55:43,920
+Rym: and one thing I'll say it gave me.
+
+784
+00:55:44,060 --> 00:55:49,998
+Rym: It gives you a little bit of the same flow state that a serious athlete gets doing the activity where they are an expert.
+
+785
+00:55:50,018 --> 00:55:54,919
+Rym: like, you know Video games People who work out a lot get a flow state in physical activities, too.
+
+786
+00:55:55,381 --> 00:55:57,989
+Rym: This gives a lot of people who may not have experienced that.
+
+787
+00:55:58,009 --> 00:56:10,338
+Scott: with a lot of physical activities that like body mind as one flow State right much like with DDR You're not attempting to exercise and then there's a thing that's measuring you right.
+
+788
+00:56:10,699 --> 00:56:13,172
+Scott: instead You're trying to play a video game.
+
+789
+00:56:13,393 --> 00:56:14,620
+Scott: It's an actual video game.
+
+790
+00:56:14,740 --> 00:56:21,520
+Scott: You're trying to beat the game and get a high score and it just so happens that the inputs for the video game Happened to be exercise.
+
+791
+00:56:22,521 --> 00:56:25,837
+Scott: So it's like you're playing this video game and then when you're done, it's like, oh, oops.
+
+792
+00:56:25,877 --> 00:56:28,868
+Scott: I exercised Yep, and the game is actually fun.
+
+793
+00:56:28,908 --> 00:56:30,734
+Rym: Like that's that's the biggest it's not.
+
+794
+00:56:30,814 --> 00:56:33,485
+Scott: it's not like the most fun game ever But it's not bad.
+
+795
+00:56:33,525 --> 00:56:35,274
+Rym: Yeah, I've enjoyed playing it.
+
+796
+00:56:35,294 --> 00:56:36,360
+Rym: I'm gonna continue playing it.
+
+797
+00:56:37,961 --> 00:56:38,946
+Scott: It's you, you know.
+
+798
+00:56:39,307 --> 00:56:42,140
+Scott: run through a track right collect coins and stuff.
+
+799
+00:56:43,421 --> 00:56:47,259
+Scott: Fight a fight a boss with it are you know, try to eliminate its HP down to zero.
+
+800
+00:56:48,601 --> 00:56:53,260
+Scott: The ring that talks to you is super annoying no matter which of the two voice options you pick for it.
+
+801
+00:56:53,664 --> 00:56:54,311
+Rym: I kind of like that.
+
+802
+00:56:54,351 --> 00:56:55,039
+Rym: It's annoying though.
+
+803
+00:56:55,769 --> 00:56:58,269
+Scott: Yeah The boss is actually way cooler than the.
+
+804
+00:56:58,570 --> 00:57:00,959
+Scott: I would rather be on the side of the dragon than the side of the row.
+
+805
+00:57:00,979 --> 00:57:02,243
+Rym: the buff Dragon is the best.
+
+806
+00:57:02,263 --> 00:57:14,144
+Rym: did you see I see a lot of people on the internet have played this game and in Realized midway through how weirdly hot and buff that hot buff dragon is Extremely hot and buff.
+
+807
+00:57:14,185 --> 00:57:15,974
+Scott: Yep, and then there's a whole bunch of saw.
+
+808
+00:57:15,994 --> 00:57:18,244
+Scott: I haven't played any of the side games I just played the main.
+
+809
+00:57:18,465 --> 00:57:19,470
+Rym: Yeah, I haven't touched any.
+
+810
+00:57:19,490 --> 00:57:20,494
+Rym: there's other modes.
+
+811
+00:57:20,535 --> 00:57:21,298
+Rym: There's a rhythm game.
+
+812
+00:57:21,318 --> 00:57:22,744
+Rym: There's all the stuff I haven't even touched yet.
+
+813
+00:57:23,306 --> 00:57:24,028
+Scott: Yeah, but it's like.
+
+814
+00:57:24,048 --> 00:57:31,018
+Scott: yeah, but if you just play that main game, I think like frequently I think that's more exercise than most people get.
+
+815
+00:57:31,239 --> 00:57:37,720
+Scott: yeah So like and as long as I play it honestly instead of like trying to trick it into thinking that you've played right?
+
+816
+00:57:37,880 --> 00:57:41,420
+Scott: Yep, looking at you power kind of hard to trick it though, right?
+
+817
+00:57:41,600 --> 00:57:47,614
+Scott: It's like you could put the leg one in your hand and sort of shake it a lot I guess but you're working out your arm then.
+
+818
+00:57:47,634 --> 00:57:50,261
+Scott: Yeah, I guess you can.
+
+819
+00:57:50,322 --> 00:57:53,132
+Scott: it's harder to trick it with the ring because the switch would know.
+
+820
+00:57:53,553 --> 00:58:00,120
+Scott: if this if the we if the if the Joy con you could use Arduinos and servos to build two robots to control.
+
+821
+00:58:01,163 --> 00:58:03,651
+Scott: You could basically make fake joy cons to get.
+
+822
+00:58:03,671 --> 00:58:06,200
+Scott: that are specifically made for cheating at this game.
+
+823
+00:58:06,883 --> 00:58:09,818
+Rym: What I want to see an SGD Q is some speed runs of this game, though
+
+824
+00:58:10,903 --> 00:58:20,836
+Scott: Another interesting thing is they have this sort of lazy mode where it's like you basically turn your switch off And you just hold the ring and you like watch a movie on Netflix or something.
+
+825
+00:58:21,037 --> 00:58:21,860
+Scott: Oh, that's a great.
+
+826
+00:58:21,900 --> 00:58:23,446
+Rym: That's I used like when I was a kid.
+
+827
+00:58:23,747 --> 00:58:33,280
+Rym: what I would do when I was watching movies like or just watching TV or like Watching stuff on the internet is I just sit there lifting weights the whole time while I was watching stuff Just like right like here poking, right?
+
+828
+00:58:33,481 --> 00:58:39,399
+Scott: So you basically that has this mode AFK mode or whatever where you I forget what it's actually called It might be called AFK mode where?
+
+829
+00:58:40,861 --> 00:58:48,012
+Scott: Yeah, you just do something else and take the ring with you and squeeze the ring a bunch and then when you go back It'll be like hey you squeeze the ring.
+
+830
+00:58:48,032 --> 00:58:49,950
+Scott: this much Good job.
+
+831
+00:58:50,092 --> 00:58:53,919
+Rym: Yeah Squeezing the rings pretty good exercise to the rings pretty durable.
+
+832
+00:58:55,142 --> 00:59:03,820
+Scott: And the most clever thing I think is the use of the infrared sensor on the front of the joy To measure your heart rates moderately accurately.
+
+833
+00:59:05,741 --> 00:59:06,383
+Scott: That's not too bad.
+
+834
+00:59:06,764 --> 00:59:13,230
+Rym: Yeah, so I'd like honestly I'd recommend if you got a switch like this is a pretty good game to get And it's starting to be back in stock.
+
+835
+00:59:13,270 --> 00:59:14,659
+Rym: It's easier to get than it was a month ago.
+
+836
+00:59:15,301 --> 00:59:22,814
+Scott: Yeah, it's like if you have a switch if you want to exercise if you don't have you if video games motivate you to do things.
+
+837
+00:59:24,402 --> 00:59:27,300
+Scott: You know you like playing video games you don't like exercising.
+
+838
+00:59:28,141 --> 00:59:33,439
+Scott: You know this is definitely not too bad and regardless of your physical fitness level right because let's.
+
+839
+00:59:33,499 --> 00:59:40,282
+Scott: you know I've tried it and you know I've seen people who are both weak and strong try it and it seems to make everyone kind of Sweat.
+
+840
+00:59:40,302 --> 00:59:43,115
+Scott: so yeah, it's it's not easy for anybody.
+
+841
+00:59:43,135 --> 00:59:45,165
+Scott: the only game But no one.
+
+842
+00:59:45,466 --> 00:59:47,516
+Scott: it doesn't seem undoable for anyone either.
+
+843
+00:59:47,536 --> 00:59:50,708
+Scott: Yeah like everyone I know who played it like beat it that you know it is.
+
+844
+00:59:51,049 --> 00:59:54,080
+Scott: you know it seems to have like the right level of difficulty.
+
+845
+00:59:54,242 --> 00:59:58,780
+Scott: No one's like oh, man I couldn't even beat level one and no one else is like I breeze through it.
+
+846
+00:59:58,780 --> 01:00:00,852
+Scott: It was so easy unless they cheated or something.
+
+847
+01:00:00,933 --> 01:00:06,740
+Rym: yep, man We didn't even get to talk about old weird crap like the power pad, so I think there's a topic here.
+
+848
+01:00:06,780 --> 01:00:08,758
+Rym: Maybe there's a panel in the future around this stuff.
+
+849
+01:00:09,681 --> 01:00:10,950
+Scott: Maybe I need to eat dinners.
+
+850
+01:00:11,010 --> 01:00:11,232
+Scott: Yep.
+
+851
+01:00:11,333 --> 01:00:12,299
+Rym: I do too, so I think we're done.
+
+852
+01:00:13,342 --> 01:00:15,880
+Rym: This has been GeekNights with Rym and Scott.
+
+853
+01:00:15,940 --> 01:00:20,795
+Rym: Special thanks to DJ pretzel for the opening music cat leave for web design and Brando K for the logos.
+
+854
+01:00:21,016 --> 01:00:22,963
+Scott: be sure to visit our website At front row.
+
+855
+01:00:23,003 --> 01:00:26,054
+Scott: crew calm for show notes discussion news and more.
+
+856
+01:00:26,295 --> 01:00:33,700
+Rym: remember GeekNights is not one But for different shows sci-tech Mondays gaming Tuesdays anime comic Wednesdays and indiscriminate Thursdays.
+
+857
+01:00:34,061 --> 01:00:37,216
+Scott: GeekNights is distributed under a Creative Commons attribution 3.0 license.
+
+858
+01:00:38,481 --> 01:00:43,235
+Scott: GeekNights is recorded live with no studio and no audience, but unlike those other late shows.
+
+859
+01:00:43,376 --> 01:00:52,480
+Rym: It's actually recorded at night And the patreon patrons for this episode of GeekNights are Alan Joyce heavy, manuco Marty greenie.
+
+860
+01:00:52,540 --> 01:00:53,164
+Rym: It's just like a dude.
+
+861
+01:00:53,224 --> 01:00:54,732
+Rym: guys are tovish and Graham Finch.
+
+862
+01:00:54,994 --> 01:00:56,040
+Rym: You hold the key to my heart.
+
+863
+01:00:56,342 --> 01:00:58,174
+Rym: She gave me a kiss and she gave me my ticket.
+
+864
+01:00:58,235 --> 01:01:00,044
+Rym: Clinton Walton J Banch ran from New Zealand.
+
+865
+01:01:00,084 --> 01:01:12,737
+Rym: Ryan parent Nicholas Brando Chris midkiff the thirst for hydrated Ganon dread Lily Tenebrae Chris Reimer Finn Sean Klein Shervin on her and a whole bunch of people who do not want me to say their name.
+
+866
+01:01:12,757 --> 01:01:15,272
+Rym: Ah Yep, it's real hot outside.
+
+867
+01:01:15,292 --> 01:01:20,857
+Rym: Uh We're busy trying to make all our panels for cons still working on some strategy.
+
+868
+01:01:20,897 --> 01:01:21,720
+Rym: get the antenna going.
+
+869
+01:01:22,744 --> 01:01:24,412
+Rym: I don't have much else to update you on today.
+
+870
+01:01:24,793 --> 01:01:28,302
+Rym: So now I just leave you with Determines.
+
+871
+01:01:28,362 --> 01:01:32,073
+Scott: minerals very high numbers silica here and meals get longer.
+
+872
+01:01:32,234 --> 01:01:34,220
+Scott: other vitamins make your bones and stronger.
+
+873
+01:01:34,603 --> 01:01:38,631
+Scott: Anti-wrinkle make you look younger 95% water.
+
+874
+01:01:38,893 --> 01:01:41,967
+Scott: kidney cleanser Graduated detox fiber.
+
+875
+01:01:42,027 --> 01:01:43,632
+Scott: good regularly attack your body.
+
+876
+01:01:43,652 --> 01:01:44,154
+Scott: good things.
+
+877
+01:01:44,214 --> 01:01:45,157
+Scott: Don't be a traitor.
+
+878
+01:01:45,197 --> 01:01:46,160
+Scott: get the cucumber.
+
+879
+01:01:46,341 --> 01:01:47,207
+Scott: Cut it in a slice.
+
+880
+01:01:47,468 --> 01:01:49,240
+Scott: put it in a jug of water overnight.
+
+881
+01:01:49,521 --> 01:01:51,630
+Scott: You know what you get for a fraction of the price.
+
+882
+01:01:52,012 --> 01:01:53,739
+Scott: energy drink full of electrolytes.
+
+883
+01:01:53,980 --> 01:01:59,156
+Scott: Roaring salad is a one of the user has a base for your vegetable juice and that surprise.
+
+884
+01:01:59,196 --> 01:02:00,320
+Scott: put a slice on your eyes.
+
+885
+01:02:00,420 --> 01:02:02,470
+Scott: Take away the dryness revitalize.
+
+886
+01:02:02,590 --> 01:02:04,559
+Scott: Oh, yes one thing I have left.
+
+887
+01:02:04,780 --> 01:02:06,789
+Scott: Cocomba can answer every bad breath.
+
+888
+01:02:06,850 --> 01:02:09,080
+Scott: Watch where the bacteria that cause the odor.
+
+889
+01:02:09,161 --> 01:02:11,279
+Scott: cucumber water instead of soda.
+

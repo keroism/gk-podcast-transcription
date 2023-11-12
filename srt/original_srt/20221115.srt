@@ -1,0 +1,3052 @@
+﻿1
+00:00:08,380 --> 00:00:09,889
+Speaker 1: It's Tuesday, November 15th, 2022.
+
+2
+00:00:09,889 --> 00:00:10,090
+Speaker 1: I'm Rym.
+
+3
+00:00:13,280 --> 00:00:13,786
+Speaker 0: - And I'm Scott.
+
+4
+00:00:13,806 --> 00:00:15,040
+Speaker 1: - And this is Geek Nights.
+
+5
+00:00:15,200 --> 00:00:18,179
+Speaker 1: Tonight we are talking about comms in games.
+
+6
+00:00:19,261 --> 00:00:20,479
+Speaker 1: Like voice chat and such.
+
+7
+00:00:22,542 --> 00:00:23,558
+Speaker 0: Let's do this.
+
+8
+00:00:25,361 --> 00:00:34,800
+Speaker 1: So yeah, like, I predicted when, you know, the bad guy bought Twitter that it was going to be a faster decline than most people expected.
+
+9
+00:00:35,601 --> 00:00:39,920
+Speaker 1: But not like an instant, like, straight down decline.
+
+10
+00:00:40,280 --> 00:00:41,260
+Speaker 0: I thought it would be instant.
+
+11
+00:00:42,041 --> 00:00:51,160
+Speaker 1: I thought it would be like, cool people all leave, the platform is effectively dead, but like a lot of people still use it and it's kind of still going for a while until it eventually goes bankrupt or gets bought.
+
+12
+00:00:51,160 --> 00:00:52,479
+Speaker 0: I mean, it is still going for a while.
+
+13
+00:00:53,461 --> 00:00:59,280
+Speaker 1: It is for now, but I did not expect there to already be things that stopped working this quickly.
+
+14
+00:01:01,084 --> 00:01:03,280
+Speaker 0: Man, you know what it takes to run one of these fucking things?
+
+15
+00:01:03,541 --> 00:01:04,063
+Speaker 1: Oh, yeah, I do.
+
+16
+00:01:04,123 --> 00:01:08,100
+Speaker 1: My literal job is like that scale of enterprise technology.
+
+17
+00:01:09,623 --> 00:01:25,680
+Speaker 1: And basically, for those of you who aren't a technologist, what my guess as to what happened here is that that dipshit laid off so many people that the company can't do what you may have heard this term, KTLO, or keep the lights on work.
+
+18
+00:01:26,322 --> 00:01:33,100
+Speaker 1: That is the work that engineers and support people do to keep things that you've already built as a company just running.
+
+19
+00:01:33,502 --> 00:01:34,510
+Speaker 1: You're not doing anything new.
+
+20
+00:01:34,551 --> 00:01:35,640
+Speaker 1: You're not making anything better.
+
+21
+00:01:36,041 --> 00:01:39,600
+Speaker 1: You're just making sure that what you've already got continues to function.
+
+22
+00:01:40,340 --> 00:01:43,840
+Speaker 1: And typically in a large company, that is the work that nobody wants to do.
+
+23
+00:01:43,960 --> 00:01:44,865
+Speaker 1: It's not interesting.
+
+24
+00:01:45,729 --> 00:01:47,760
+Speaker 1: It's often seen as a cost center.
+
+25
+00:01:48,260 --> 00:01:53,519
+Speaker 1: People who are bad business people really like to cut that first, not understanding the consequences of it.
+
+26
+00:01:54,261 --> 00:02:00,299
+Speaker 1: And they basically, I think Twitter fired literally everyone who does the KTLO for the entire company.
+
+27
+00:02:02,800 --> 00:02:16,019
+Speaker 1: So my advice to you then is if you rely on Twitter for anything important, like single sign on to some other service, get off of that real quick, because I don't know how long Twitter is going to even stay up at this point.
+
+28
+00:02:18,440 --> 00:02:20,069
+Speaker 1: So yeah, we'll see how that goes.
+
+29
+00:02:20,531 --> 00:02:22,200
+Speaker 1: It's a fascinating trash fire to watch.
+
+30
+00:02:22,660 --> 00:02:24,230
+Speaker 1: I have 100% abandoned Twitter.
+
+31
+00:02:24,271 --> 00:02:25,579
+Speaker 1: I'm not even looking at it anymore.
+
+32
+00:02:27,960 --> 00:02:29,678
+Speaker 0: Let's, you know, things come and go.
+
+33
+00:02:30,564 --> 00:02:32,915
+Speaker 0: So I've been through this episode on this already.
+
+34
+00:02:34,242 --> 00:02:36,060
+Speaker 1: Yeah, I've been through this many times in my life.
+
+35
+00:02:36,222 --> 00:02:37,380
+Speaker 1: So I haven't even looked at Twitter.
+
+36
+00:02:37,680 --> 00:02:39,110
+Speaker 0: I'm not going to go through it again ever.
+
+37
+00:02:39,191 --> 00:02:47,800
+Speaker 0: I'm going to set up something that is, you know, as long as HTTP is still a thing, that's the only thing I'm going to depend on still being the thing, right?
+
+38
+00:02:47,920 --> 00:02:54,760
+Speaker 0: So I'll make some system whereby as long as there are web pages, I'm good with that system forever.
+
+39
+00:02:54,961 --> 00:02:57,840
+Speaker 0: And if other thing platforms come and go, I'm still good.
+
+40
+00:02:58,041 --> 00:02:58,202
+Speaker 1: Yep.
+
+41
+00:02:58,282 --> 00:03:01,620
+Speaker 1: That's why I got a domain just rimmed on social that I'll use for whatever.
+
+42
+00:03:02,080 --> 00:03:03,439
+Speaker 1: And I threw up a lot of domains.
+
+43
+00:03:03,760 --> 00:03:09,939
+Speaker 1: I threw up a crapo microblog that I'm just using to replace how I used to shitpost to Twitter and try to syndicate everywhere as a test.
+
+44
+00:03:10,341 --> 00:03:13,440
+Speaker 1: I'm just going to go fast and loose and try all this, but so far it's working out.
+
+45
+00:03:13,901 --> 00:03:24,819
+Speaker 1: I don't actually miss the kinds of replies I would get on Twitter as much as I expected, because all the people who are replying to my syndicated tweets, not that many of them are left.
+
+46
+00:03:25,000 --> 00:03:27,380
+Speaker 1: Most of the people who normally would reply to my tweets have also quit Twitter.
+
+47
+00:03:27,380 --> 00:03:28,396
+Speaker 1: So I'm not missing anything.
+
+48
+00:03:30,360 --> 00:03:34,719
+Speaker 1: Anyway, I had some good conversations in the replies and Twitter.
+
+49
+00:03:37,906 --> 00:03:38,799
+Speaker 1: I guess you fixed your chair.
+
+50
+00:03:39,721 --> 00:03:40,186
+Speaker 0: Yeah.
+
+51
+00:03:40,327 --> 00:03:41,619
+Speaker 0: The replacement armrest came.
+
+52
+00:03:42,060 --> 00:03:43,258
+Speaker 0: It doesn't go back and forth.
+
+53
+00:03:44,423 --> 00:03:46,000
+Speaker 0: So I was like, well, you know what?
+
+54
+00:03:46,040 --> 00:03:48,040
+Speaker 0: The one on the left side of the chair is still working.
+
+55
+00:03:48,161 --> 00:03:49,359
+Speaker 0: I'll just leave that one there.
+
+56
+00:03:49,520 --> 00:03:52,940
+Speaker 0: I could replace them both, but like, eh, it doesn't matter if they don't match.
+
+57
+00:03:53,220 --> 00:03:54,400
+Speaker 1: I thought, I guess that doesn't matter.
+
+58
+00:03:54,781 --> 00:04:00,700
+Speaker 1: But then as I said that, I unconsciously slid my right armrest.
+
+59
+00:04:00,900 --> 00:04:03,939
+Speaker 1: I angled it out to the right a little bit, and then I angled my left one in a little bit.
+
+60
+00:04:04,361 --> 00:04:07,600
+Speaker 1: And I realized I actually changed the angles on these pretty much constantly during the day.
+
+61
+00:04:08,041 --> 00:04:09,800
+Speaker 0: The angle doesn't move that much.
+
+62
+00:04:10,284 --> 00:04:11,559
+Speaker 0: It's a very small amount.
+
+63
+00:04:12,240 --> 00:04:13,930
+Speaker 1: The Aeron-1 moves a lot more than this one does.
+
+64
+00:04:15,883 --> 00:04:16,077
+Speaker 1: Okay.
+
+65
+00:04:16,482 --> 00:04:22,960
+Speaker 1: I don't remember exactly how much yours moves, because the Aeron-1 will go like 30, 40 degrees in either direction.
+
+66
+00:04:24,784 --> 00:04:25,679
+Speaker 0: Yeah, it doesn't move as much.
+
+67
+00:04:25,800 --> 00:04:32,020
+Speaker 0: It does not, you know, but even so, it's like, even if I made both of them non-moving, it's like, eh, whatever.
+
+68
+00:04:32,460 --> 00:04:32,551
+Speaker 1: Yeah.
+
+69
+00:04:33,560 --> 00:04:37,100
+Speaker 0: I'll just have a backup arm, left armrest now in case the left one ever breaks.
+
+70
+00:04:38,182 --> 00:04:38,836
+Speaker 1: So you got any news?
+
+71
+00:04:40,488 --> 00:04:40,779
+Speaker 0: Uh, yeah.
+
+72
+00:04:40,881 --> 00:04:49,000
+Speaker 0: So there's this game that just came out of, you know, I don't know if it was announced a while ago and just nobody noticed, but as far as, you know, we're concerned, it came out of nowhere.
+
+73
+00:04:49,681 --> 00:04:51,799
+Speaker 0: And it was released today.
+
+74
+00:04:51,880 --> 00:04:52,003
+Speaker 0: Yeah.
+
+75
+00:04:52,820 --> 00:04:58,158
+Speaker 0: This new pentamint game that came out that suddenly everyone sees and is like, holy shit, what is this?
+
+76
+00:04:59,122 --> 00:05:05,239
+Speaker 0: It's a game where it's basically an adventure game, but there's a little bit of murder mystery going on.
+
+77
+00:05:05,621 --> 00:05:08,460
+Speaker 0: There's a little bit of puzzle going on, right?
+
+78
+00:05:08,820 --> 00:05:12,320
+Speaker 0: It's a little bit choose your own adventure, a little bit of visual novel going on.
+
+79
+00:05:12,420 --> 00:05:17,259
+Speaker 1: So what's funny is my first instinct, because I'm about to geek by Disco Elysium now that I've played a bunch of it.
+
+80
+00:05:17,400 --> 00:05:25,019
+Speaker 1: And, uh, I thought, wow, actually parts of this look a lot like Disco Elysium and people in the YouTube comments on this trailer all saying the same thing.
+
+81
+00:05:26,221 --> 00:05:33,680
+Speaker 0: But if you, the art style of the game looks like some sort of illustrated manuscript, right?
+
+82
+00:05:34,920 --> 00:05:36,773
+Speaker 0: You know, tapestry kind of deal.
+
+83
+00:05:38,140 --> 00:05:43,660
+Speaker 1: I really like the one day, eight hours remain like that, that time thing that that showed a few times the rondel.
+
+84
+00:05:44,889 --> 00:05:45,038
+Speaker 0: Yep.
+
+85
+00:05:45,841 --> 00:05:49,600
+Speaker 0: It could be some kind of, uh, you know, Majora's Mask deal.
+
+86
+00:05:49,640 --> 00:05:50,678
+Speaker 0: I haven't played it, so I don't know.
+
+87
+00:05:50,920 --> 00:05:53,740
+Speaker 0: But we looked at the trailer, the game came out.
+
+88
+00:05:53,860 --> 00:05:55,259
+Speaker 0: Everyone is hype on this game.
+
+89
+00:05:56,503 --> 00:05:58,120
+Speaker 0: So we're going to play it, play it soon.
+
+90
+00:05:58,381 --> 00:06:00,820
+Speaker 0: Probably released today, literally today.
+
+91
+00:06:00,980 --> 00:06:02,080
+Speaker 0: I might play it after dinner.
+
+92
+00:06:02,460 --> 00:06:05,299
+Speaker 1: Single player game season for a little while, weirdly.
+
+93
+00:06:07,366 --> 00:06:07,899
+Speaker 1: Now this looks good.
+
+94
+00:06:07,940 --> 00:06:08,358
+Speaker 1: I'll play it too.
+
+95
+00:06:08,460 --> 00:06:09,239
+Speaker 1: This will be an easy show.
+
+96
+00:06:10,444 --> 00:06:12,999
+Speaker 1: Uh, I just got to finish my first run through of Disco Elysium.
+
+97
+00:06:13,039 --> 00:06:15,460
+Speaker 1: first, because my news is a geek bite.
+
+98
+00:06:16,041 --> 00:06:17,920
+Speaker 1: I am late to the party on this game.
+
+99
+00:06:18,100 --> 00:06:21,421
+Speaker 1: It came out in 2019.
+
+100
+00:06:21,421 --> 00:06:28,319
+Speaker 1: Pretty much from when this game came out, a lot of people I followed on social media, a lot of people I talked to, they just wouldn't shut up about it.
+
+101
+00:06:28,661 --> 00:06:36,980
+Speaker 1: And then eventually it faded, not from public conversation, but from my social circles, because the people who were talking about it just talked about it amongst themselves.
+
+102
+00:06:37,600 --> 00:06:39,180
+Speaker 0: But the one player game, people beat it.
+
+103
+00:06:39,240 --> 00:06:40,199
+Speaker 0: They stopped talking about it.
+
+104
+00:06:40,280 --> 00:06:43,720
+Speaker 0: But I knew, I knew like generally what it was.
+
+105
+00:06:43,860 --> 00:06:45,600
+Speaker 0: It's some kind of detective-y deal, right?
+
+106
+00:06:46,100 --> 00:06:54,680
+Speaker 1: So the reason I think why this still has a wide undercurrent of conversation is it's, there's a lot of shit posting and memes about this game.
+
+107
+00:06:54,761 --> 00:06:55,719
+Speaker 1: Like you're seeing that.
+
+108
+00:06:55,981 --> 00:06:59,520
+Speaker 1: And there's a lot of people who will play through it many, many times.
+
+109
+00:06:59,722 --> 00:07:01,179
+Speaker 1: Like try to do weird stuff.
+
+110
+00:07:01,821 --> 00:07:05,080
+Speaker 1: They're going to go off the grid, like in that game in Rick and Morty, Roy.
+
+111
+00:07:05,622 --> 00:07:18,460
+Speaker 1: So I actually, despite all of that, all I knew about this game going into it, I'm trying to do this more as play games as blind as possible, just to see like, what's the game present to me on its own?
+
+112
+00:07:18,781 --> 00:07:19,458
+Speaker 1: The author is dead.
+
+113
+00:07:19,640 --> 00:07:20,480
+Speaker 1: Social media is dead.
+
+114
+00:07:20,560 --> 00:07:21,160
+Speaker 1: The world is dead.
+
+115
+00:07:21,200 --> 00:07:22,260
+Speaker 1: There's just me in this game.
+
+116
+00:07:22,760 --> 00:07:28,079
+Speaker 1: So what I knew going in was Disco Elysium is some sort of adventure game.
+
+117
+00:07:30,480 --> 00:07:34,300
+Speaker 1: You play a fucked up guy and everyone just would leave it at that.
+
+118
+00:07:34,665 --> 00:07:35,519
+Speaker 1: You play a fucked up guy.
+
+119
+00:07:35,660 --> 00:07:36,320
+Speaker 1: What do you mean by that?
+
+120
+00:07:36,420 --> 00:07:36,798
+Speaker 1: Just play it.
+
+121
+00:07:36,860 --> 00:07:37,237
+Speaker 1: You'll see.
+
+122
+00:07:38,500 --> 00:07:40,300
+Speaker 1: And it's about communism.
+
+123
+00:07:40,740 --> 00:07:41,797
+Speaker 1: That's all I knew going in.
+
+124
+00:07:42,620 --> 00:07:55,800
+Speaker 1: Having played a bunch of it, I'm going to weirdly go out on a limb and say that this game is closer to Quest for Glory, the series, than most other games people would compare it to.
+
+125
+00:07:57,640 --> 00:07:59,779
+Speaker 1: Weirdly specifically close to Quest for Glory.
+
+126
+00:08:00,565 --> 00:08:01,540
+Speaker 1: I'll explain that in a minute.
+
+127
+00:08:01,580 --> 00:08:04,980
+Speaker 1: What this game is, to actually answer your question, it is a single player.
+
+128
+00:08:05,140 --> 00:08:06,120
+Speaker 0: I didn't ask any questions.
+
+129
+00:08:06,422 --> 00:08:07,596
+Speaker 1: Yeah, single player adventure game.
+
+130
+00:08:09,282 --> 00:08:10,939
+Speaker 1: Well, cause you don't play games mostly.
+
+131
+00:08:12,040 --> 00:08:21,300
+Speaker 1: So you, you wake up as a dude, this fucked up guy from what appears to be a hangover in a fucked up hotel room that may or may not have been trashed by you.
+
+132
+00:08:21,682 --> 00:08:23,780
+Speaker 1: The water's running, the sink's busted.
+
+133
+00:08:24,262 --> 00:08:26,540
+Speaker 1: You're like passed out in a pile of detritus.
+
+134
+00:08:26,820 --> 00:08:29,340
+Speaker 1: Your tie is like swinging from the ceiling fan.
+
+135
+00:08:30,122 --> 00:08:32,080
+Speaker 1: There's a tapering, like a reel to reel recorder.
+
+136
+00:08:32,421 --> 00:08:34,880
+Speaker 1: And someone has fucked it up and destroyed all the recordings.
+
+137
+00:08:35,804 --> 00:08:36,740
+Speaker 1: And you don't know anything.
+
+138
+00:08:37,120 --> 00:08:38,460
+Speaker 1: You don't know what, you don't know about the world.
+
+139
+00:08:38,541 --> 00:08:39,940
+Speaker 1: You have complete and total amnesia.
+
+140
+00:08:40,460 --> 00:08:53,040
+Speaker 1: And it is just a walk around point and click adventure game like Deja Vu, the classic NES game where you wake up with amnesia in a stall of a bathroom with a gun.
+
+141
+00:08:54,183 --> 00:08:55,359
+Speaker 0: An old amnesia cliche.
+
+142
+00:08:55,700 --> 00:08:58,060
+Speaker 0: People just, you know, get away from that one.
+
+143
+00:08:58,341 --> 00:09:11,060
+Speaker 1: This game actually, the gameplay is fascinating because it has some of the most impressive quality of life enhancements to the classic adventure game genre that I've ever seen.
+
+144
+00:09:11,921 --> 00:09:20,555
+Speaker 1: This type of gameplay makes adventure games eminently playable to a modern audience who have zero nostalgia for the old adventure games of the past.
+
+145
+00:09:20,635 --> 00:09:21,419
+Speaker 1: in a really good way.
+
+146
+00:09:23,163 --> 00:09:26,440
+Speaker 1: One, it's really open world in that you can kind of do anything.
+
+147
+00:09:26,621 --> 00:09:29,240
+Speaker 1: So like you stumble out of your hotel room, maybe.
+
+148
+00:09:29,460 --> 00:09:30,960
+Speaker 1: Maybe you die in your hotel room.
+
+149
+00:09:31,060 --> 00:09:31,516
+Speaker 1: That can happen.
+
+150
+00:09:32,921 --> 00:09:33,840
+Speaker 1: You stagger downstairs.
+
+151
+00:09:34,120 --> 00:09:38,900
+Speaker 1: You're in this beat up looking like post-Soviet vaguely feeling hotel.
+
+152
+00:09:39,702 --> 00:09:43,240
+Speaker 1: And this guy walks up to you and he's like, "Oh, I guess you're over your hangover, partner.
+
+153
+00:09:43,740 --> 00:09:47,618
+Speaker 1: Shall we go investigate the murder that we are here to do because we are
+
+154
+00:09:47,658 --> 00:09:47,980
+Speaker 1: cops?".
+
+155
+00:09:48,821 --> 00:09:51,714
+Speaker 1: And you either just got to try to play along and not let on that.
+
+156
+00:09:51,754 --> 00:09:53,597
+Speaker 1: you literally don't even know who you are.
+
+157
+00:09:54,341 --> 00:09:57,800
+Speaker 1: Or you can just admit to the guy like, "Oh, I have no idea what the fuck is going on.
+
+158
+00:09:58,003 --> 00:09:58,698
+Speaker 1: I have total amnesia.
+
+159
+00:09:58,940 --> 00:09:59,329
+Speaker 1: Please help
+
+160
+00:09:59,370 --> 00:09:59,432
+Speaker 1: me.".
+
+161
+00:10:00,302 --> 00:10:11,160
+Speaker 1: And the freedom the game gives you in terms of how you react to characters, what you say to them, how you approach puzzles is so wide that it is actually approaching open world.
+
+162
+00:10:11,720 --> 00:10:15,919
+Speaker 1: This game could literally be you don't even bother with the murder and you go off trying to make communism happen.
+
+163
+00:10:16,481 --> 00:10:21,860
+Speaker 1: This game could be you try to make a dance club and then you die in the dance club happy.
+
+164
+00:10:21,920 --> 00:10:25,780
+Speaker 1: and that is the end of your arc because you have brought a brand new drug trade to town.
+
+165
+00:10:26,460 --> 00:10:28,579
+Speaker 1: The game just goes off in all these crazy directions.
+
+166
+00:10:29,401 --> 00:10:31,960
+Speaker 1: But the quality of life enhancements are one like quest for glory.
+
+167
+00:10:32,700 --> 00:10:36,900
+Speaker 1: The game has decision trees where some things you say will permanently affect the game.
+
+168
+00:10:37,020 --> 00:10:40,140
+Speaker 1: Some things you do or say will just provide information.
+
+169
+00:10:40,741 --> 00:10:46,112
+Speaker 1: But sometimes there's a stat based block like it'll tell you straight up what the stakes are.
+
+170
+00:10:46,501 --> 00:10:58,720
+Speaker 1: So say you happen to, I don't know, find a radio and call your precinct because you figured out what precinct you work for and you don't want them to know that you have amnesia and you don't want them to know that you lost your badge.
+
+171
+00:10:59,281 --> 00:11:04,379
+Speaker 1: And in the course of that conversation, one of the other cops is like, "He fucked up and lost his badge.
+
+172
+00:11:04,760 --> 00:11:05,879
+Speaker 1: Make him describe his gun.
+
+173
+00:11:06,200 --> 00:11:07,435
+Speaker 1: For all we know, he lost his gun
+
+174
+00:11:07,496 --> 00:11:07,658
+Speaker 1: too.".
+
+175
+00:11:08,041 --> 00:11:14,614
+Speaker 1: And your dialogue choice, classic Monkey Island style is either, "Wait, I had a gun" or "Oh shit, my
+
+176
+00:11:14,655 --> 00:11:14,879
+Speaker 1: gun.".
+
+177
+00:11:15,543 --> 00:11:18,940
+Speaker 1: And then you have options and one of the options requires a skill test.
+
+178
+00:11:19,600 --> 00:11:22,200
+Speaker 1: Convince them you did not lose your gun.
+
+179
+00:11:22,940 --> 00:11:25,300
+Speaker 1: The game tells you what the odds are of succeeding.
+
+180
+00:11:26,080 --> 00:11:31,520
+Speaker 1: It tells you what you would have needed to do or would need to do to make the odds of passing that check better.
+
+181
+00:11:32,080 --> 00:11:36,380
+Speaker 1: It even tells you, could you attempt this again in the future if you fail?
+
+182
+00:11:36,862 --> 00:11:39,320
+Speaker 1: Or is this a line in the sand?
+
+183
+00:11:39,420 --> 00:11:43,359
+Speaker 1: The story is going to be radically different whether or not you succeed or fail right now.
+
+184
+00:11:43,963 --> 00:11:47,180
+Speaker 1: It tells you all of the stakes up front directly.
+
+185
+00:11:47,560 --> 00:11:51,919
+Speaker 0: Is it one of those ones where you play, you die, and then you start over again until... Actually, no.
+
+186
+00:11:52,180 --> 00:11:58,500
+Speaker 1: This game is more like you play, you fuck up, and those fuck-ups actually make the game more interesting.
+
+187
+00:11:58,861 --> 00:12:00,520
+Speaker 1: Like being really good at the game.
+
+188
+00:12:00,560 --> 00:12:02,760
+Speaker 0: You start up but it ends and then you start over?
+
+189
+00:12:03,442 --> 00:12:06,360
+Speaker 1: No, you pretty much play the game all the way until you solve the story.
+
+190
+00:12:06,900 --> 00:12:10,660
+Speaker 1: You're really only... You'll die occasionally sometimes because it's funny.
+
+191
+00:12:10,780 --> 00:12:12,079
+Speaker 0: But some way you come back to life?
+
+192
+00:12:12,281 --> 00:12:14,740
+Speaker 1: No, you just start over but you save your game so it doesn't matter.
+
+193
+00:12:15,540 --> 00:12:16,900
+Speaker 0: Oh, save game and not from the beginning.
+
+194
+00:12:17,120 --> 00:12:18,040
+Speaker 1: Yeah, you can just save your game.
+
+195
+00:12:18,902 --> 00:12:22,420
+Speaker 1: You can make a million save files, try things, save scum if you want to.
+
+196
+00:12:22,460 --> 00:12:23,420
+Speaker 1: The game does not care.
+
+197
+00:12:23,840 --> 00:12:26,699
+Speaker 1: The game is not a die, you learn something.
+
+198
+00:12:26,920 --> 00:12:30,436
+Speaker 0: All of the choices that don't have the warning of this is going to change.
+
+199
+00:12:30,476 --> 00:12:30,878
+Speaker 0: the world.
+
+200
+00:12:30,939 --> 00:12:38,405
+Speaker 0: warning are just sort of like flavor side quest things and the big choice things are the ones that are actually the.
+
+201
+00:12:38,445 --> 00:12:41,897
+Speaker 0: choose your own adventure linchpin points that take you to the different endings.
+
+202
+00:12:42,261 --> 00:12:44,340
+Speaker 1: That is the primary mechanism of the game.
+
+203
+00:12:44,480 --> 00:12:45,640
+Speaker 1: I'm not sure if there are multiple endings.
+
+204
+00:12:45,780 --> 00:12:46,739
+Speaker 1: I haven't even beaten the game yet.
+
+205
+00:12:46,880 --> 00:12:51,377
+Speaker 1: There are multiple ends, but there is one overarching story.
+
+206
+00:12:51,537 --> 00:12:52,220
+Speaker 1: that's happening.
+
+207
+00:12:52,461 --> 00:12:57,320
+Speaker 0: Yeah, but there's always one ending that's like the big, the real one, right?
+
+208
+00:12:57,341 --> 00:12:58,039
+Speaker 0: Every game does that.
+
+209
+00:12:58,080 --> 00:13:16,374
+Speaker 1: But it's more about how does everyone in the world end up by the end and the decisions you make are very subtle sometimes because while big decisions that will affect big plot have this strict gatekeeping and it's very upfront about it, little minor things might matter too.
+
+210
+00:13:16,980 --> 00:13:17,639
+Speaker 1: Like there's an example.
+
+211
+00:13:17,780 --> 00:13:23,900
+Speaker 1: There's one character you're talking to and you're doing something for them, but they might be evil and working for the evil Megacorp.
+
+212
+00:13:25,160 --> 00:13:34,140
+Speaker 1: So once you do something for them in the dialogue, you might reveal just in the course of the actual text of what you're saying to this person some information.
+
+213
+00:13:34,401 --> 00:13:43,639
+Speaker 1: And if you happen to reveal that information to this character, they don't react to it to you, but they go off and do big stuff that will completely fuck up the world and completely change things.
+
+214
+00:13:44,221 --> 00:13:46,800
+Speaker 1: And the only indication you would have is a secondary system.
+
+215
+00:13:47,680 --> 00:13:51,280
+Speaker 1: The game has a help system built in, but the help system is part of the game.
+
+216
+00:13:52,000 --> 00:13:54,880
+Speaker 1: When you start the game, you make a character just like in Quest for Glory.
+
+217
+00:13:55,060 --> 00:13:56,157
+Speaker 1: You can put stats in.
+
+218
+00:13:57,401 --> 00:13:58,203
+Speaker 1: You can put points in.
+
+219
+00:13:58,244 --> 00:14:14,180
+Speaker 1: stats like effectively strength or endurance or shivers or imagination or conceptualization or basic logic or like there's a huge skill tree and those skills do a variety of things.
+
+220
+00:14:14,380 --> 00:14:18,020
+Speaker 1: But the coolest thing they do is say you have a high stat and I don't know shivers.
+
+221
+00:14:18,920 --> 00:14:31,480
+Speaker 1: When you're at a point in the game where a cop who has amnesia might like get a shiver or like get a bad feeling about something that would matter, the game will pop up and be like, "Ooh, you got a shiver.
+
+222
+00:14:31,721 --> 00:14:35,959
+Speaker 1: If you tell this person this thing right now, bad things will
+
+223
+00:14:36,039 --> 00:14:36,240
+Speaker 1: happen.".
+
+224
+00:14:37,081 --> 00:14:39,598
+Speaker 1: Let's say you level up another stat unrelatedly.
+
+225
+00:14:40,001 --> 00:14:51,780
+Speaker 1: That other stat might have a different voice in your own head, pop in and say, "Hey, if you tell this person this thing, here is exactly what they will do with this information because you have conceptualization.
+
+226
+00:14:51,980 --> 00:14:59,032
+Speaker 1: You can, your character can understand the concept of like what could happen or what could be based on what I
+
+227
+00:14:59,093 --> 00:14:59,254
+Speaker 1: know.".
+
+228
+00:14:59,900 --> 00:15:04,800
+Speaker 1: So by leveling up different stats, you get different kinds of hints and different kinds of direction in the game.
+
+229
+00:15:05,480 --> 00:15:13,380
+Speaker 1: Sometimes those voices are bad and will lie to you and will tell you to do drugs and it's not a good idea usually, but sometimes it is a good idea to do drugs.
+
+230
+00:15:14,280 --> 00:15:20,340
+Speaker 1: The game's so wide open and so high concept, it has a third primary set of mechanics.
+
+231
+00:15:21,321 --> 00:15:27,657
+Speaker 1: Every now and then, based on things you learn in the game, your character unlocks a thought like, "What would communism be
+
+232
+00:15:27,737 --> 00:15:27,979
+Speaker 1: like?".
+
+233
+00:15:28,883 --> 00:15:32,018
+Speaker 1: Or, "Maybe I should figure out like what to do about my
+
+234
+00:15:32,099 --> 00:15:32,340
+Speaker 1: life.".
+
+235
+00:15:32,641 --> 00:15:35,798
+Speaker 1: Or, "Jamrock, I should learn, I should think about what that town's
+
+236
+00:15:35,838 --> 00:15:36,039
+Speaker 1: like.".
+
+237
+00:15:36,682 --> 00:15:44,759
+Speaker 1: And you can equip thoughts to your character and they level up over the course of you playing the game and unlock further thoughts.
+
+238
+00:15:45,101 --> 00:15:53,419
+Speaker 1: So your character might figure out an opinion on communism over the course of the game, which itself will also impact the story and your choices.
+
+239
+00:15:55,344 --> 00:15:56,640
+Speaker 1: So there's a lot going on here.
+
+240
+00:15:56,840 --> 00:16:03,758
+Speaker 1: This is like the most fully evolved form of a traditional point and click murder mystery adventure game I have ever seen.
+
+241
+00:16:05,603 --> 00:16:10,728
+Speaker 0: Yeah, the way you describe it, it just sounds like a choose your own adventure book, but there's actually one big one.
+
+242
+00:16:10,748 --> 00:16:11,552
+Speaker 1: that's the main one.
+
+243
+00:16:13,340 --> 00:16:20,839
+Speaker 0: And then lots and lots of small ones sort of layered on top of each other, like fattening it up a whole bunch.
+
+244
+00:16:21,422 --> 00:16:30,080
+Speaker 0: And then a lot of the choices that you could choose, like you might get to the, if there was actually a book, you get to the bottom of a page, there might only be two choices.
+
+245
+00:16:30,620 --> 00:16:35,477
+Speaker 0: But if you do other things, then like more choices magically appear, right?
+
+246
+00:16:36,560 --> 00:16:37,440
+Speaker 0: And so it's, you know.
+
+247
+00:16:37,520 --> 00:16:39,980
+Speaker 1: Yeah, but you also have stats and you can level.
+
+248
+00:16:40,320 --> 00:16:46,700
+Speaker 0: Right, but the stats are fundamentally just a thing to click on that will end up adding more choices, right?
+
+249
+00:16:46,800 --> 00:16:47,479
+Speaker 1: Not necessarily.
+
+250
+00:16:47,721 --> 00:16:48,659
+Speaker 1: They do some other things too.
+
+251
+00:16:48,780 --> 00:16:52,991
+Speaker 1: The game does a lot of things it's not going to tell you it'll do over the course of the game.
+
+252
+00:16:53,160 --> 00:16:54,860
+Speaker 1: It'll often surprise you in interesting ways.
+
+253
+00:16:55,422 --> 00:16:58,119
+Speaker 1: And you can also go anywhere and talk to anyone at any time.
+
+254
+00:16:59,041 --> 00:17:00,509
+Speaker 0: Right, but those are just more.
+
+255
+00:17:00,589 --> 00:17:04,359
+Speaker 0: choose your own adventure choices, but they're all layering on top of each other, right?
+
+256
+00:17:04,380 --> 00:17:10,880
+Speaker 0: And unlocking in different ways with different systems to sort of become a whole greater than the sum of the parts.
+
+257
+00:17:10,880 --> 00:17:11,578
+Speaker 0: And the end result.
+
+258
+00:17:12,060 --> 00:17:16,819
+Speaker 0: If you literally just didn't have those systems and we're just like, here's every single.
+
+259
+00:17:16,920 --> 00:17:23,319
+Speaker 0: choose your own adventure choice, just, you know, like all the time, like, you know, it wouldn't come across in the same way.
+
+260
+00:17:23,480 --> 00:17:28,840
+Speaker 1: And I guess what really makes it shine is one, the writing is absolutely hilarious.
+
+261
+00:17:29,664 --> 00:17:31,040
+Speaker 1: Like it is really well written.
+
+262
+00:17:31,202 --> 00:17:32,700
+Speaker 1: It is really well voice acted.
+
+263
+00:17:33,062 --> 00:17:35,480
+Speaker 1: The story is actually really compelling.
+
+264
+00:17:35,961 --> 00:17:46,080
+Speaker 1: But the things that really spoke to me playing it were that one, the characters all act very human and react to you in a very sensible way.
+
+265
+00:17:46,502 --> 00:17:51,980
+Speaker 1: You could solve the mystery entirely on your own as a human playing this game and interacting with the characters.
+
+266
+00:17:52,340 --> 00:18:00,860
+Speaker 1: And the way people respond to you is very scarily realistic to the point that it feels more like an open world freeform role playing game.
+
+267
+00:18:01,440 --> 00:18:05,518
+Speaker 1: Like it feels shockingly open just by the nature of how it's set up.
+
+268
+00:18:07,500 --> 00:18:10,971
+Speaker 1: So I have a strong positive opinion.
+
+269
+00:18:11,152 --> 00:18:13,460
+Speaker 1: just so far, only two and a half days into this game.
+
+270
+00:18:14,722 --> 00:18:25,420
+Speaker 1: And I highly recommend everyone play it, partly because Elysium, Disco Elysium, the final cut, which include add some voice acting and some other stuff is on like super sale on Steam right now.
+
+271
+00:18:25,560 --> 00:18:27,913
+Speaker 1: I paid 17 bucks for this $65 AAA game.
+
+272
+00:18:34,210 --> 00:18:37,110
+Speaker 1: But anyway, things of the day.
+
+273
+00:18:37,310 --> 00:18:44,330
+Speaker 1: So this is an excerpt from the most recent PBS News Hour from last night.
+
+274
+00:18:44,832 --> 00:18:48,530
+Speaker 1: And it is actually a really good segment that I think everyone should watch.
+
+275
+00:18:49,231 --> 00:19:00,490
+Speaker 1: It is a it's talking about the New Deal, the original, the FDR New Deal, the New Deal that probably saved America, the kind of thing America would need to do again to save itself.
+
+276
+00:19:01,031 --> 00:19:09,370
+Speaker 1: But what it's covering is one, the fact that very few Americans realize how impactful the New Deal was like.
+
+277
+00:19:09,732 --> 00:19:11,870
+Speaker 1: There's a lot of reasons why there's a lot of propaganda.
+
+278
+00:19:12,090 --> 00:19:13,229
+Speaker 1: A lot of people don't talk about it.
+
+279
+00:19:13,552 --> 00:19:16,350
+Speaker 1: A lot of this history is sort of obscured people.
+
+280
+00:19:16,490 --> 00:19:18,828
+Speaker 0: You know, I only hear about it in school, at least.
+
+281
+00:19:19,150 --> 00:19:25,539
+Speaker 0: I don't even know if people still hear about in school, but like, you know, I heard about it in school and it was it was.
+
+282
+00:19:25,580 --> 00:19:31,409
+Speaker 0: it was like in one class they talked about it for like, you know, maybe one segment, like one test on it.
+
+283
+00:19:31,490 --> 00:19:31,598
+Speaker 0: Right.
+
+284
+00:19:31,891 --> 00:19:32,173
+Speaker 0: It's like.
+
+285
+00:19:32,716 --> 00:19:34,590
+Speaker 0: and they were you know, they didn't say that much.
+
+286
+00:19:34,650 --> 00:19:40,770
+Speaker 0: They're just like, yeah, you know, there were some programs and things, you know, to help the country recover.
+
+287
+00:19:41,932 --> 00:19:44,729
+Speaker 0: And then, you know, yeah, that that was that.
+
+288
+00:19:45,672 --> 00:19:49,909
+Speaker 0: And that and they're like, that's why we have Social Security is like it's like a holdover from those days.
+
+289
+00:19:49,991 --> 00:19:50,884
+Speaker 0: That's why it's still here.
+
+290
+00:19:51,692 --> 00:19:54,010
+Speaker 0: So what I would urge all of you to know, that's all they say.
+
+291
+00:19:54,411 --> 00:19:59,485
+Speaker 0: And I think most people, you know, who don't pay attention in school never don't remember that at all.
+
+292
+00:19:59,850 --> 00:20:07,205
+Speaker 0: Yeah, you know, and even if you do pay attention in school, unless you look into it more, that's all you're going to know.
+
+293
+00:20:07,551 --> 00:20:13,489
+Speaker 1: Yeah, but so one, this video alone is a good thing to like send to someone or get someone to watch.
+
+294
+00:20:13,650 --> 00:20:19,430
+Speaker 1: It's only six minutes long, who you might suspect doesn't know much about this and try to, you know, make them more of a socialist.
+
+295
+00:20:20,052 --> 00:20:22,950
+Speaker 1: But the project it's talking about is actually even cooler.
+
+296
+00:20:24,231 --> 00:20:28,590
+Speaker 1: Most of what the New Deal did, the actual details were never formally documented.
+
+297
+00:20:29,050 --> 00:20:32,890
+Speaker 1: The New Deal was extremely federated, and that's something a lot of people don't understand.
+
+298
+00:20:33,251 --> 00:20:42,030
+Speaker 1: The federal government didn't like Soviet style micromanage all the way down, like build this like that, put this here, build a refinery there.
+
+299
+00:20:42,470 --> 00:20:56,129
+Speaker 1: They really left it to a giant hierarchy of increasingly local administrators to the point that down at the bottom, individual towns, individual counties, they would take the money and the direction they got from the feds up at the top.
+
+300
+00:20:56,712 --> 00:20:59,710
+Speaker 1: And they would do things that made sense for their local area.
+
+301
+00:21:00,051 --> 00:21:04,910
+Speaker 1: And a lot of that was very effective, but none of those people kept good records.
+
+302
+00:21:05,430 --> 00:21:11,729
+Speaker 1: You expect like some bumblefuck town in Tennessee in the 30s and 40s to keep records of anything that we still have today.
+
+303
+00:21:12,510 --> 00:21:25,530
+Speaker 1: So this project is a long attempt to create a digital database of all the infrastructure and things in detail that the New Deal actually built everywhere in America.
+
+304
+00:21:25,911 --> 00:21:34,169
+Speaker 1: And even what they've collected so far is staggering in scale compared to what even people who know about the New Deal actually think.
+
+305
+00:21:35,510 --> 00:21:42,010
+Speaker 0: Yeah, I mean, you know, you'll walk around, you know, a town maybe, especially if you're walking near like some historic, you know, kind of kind of thing.
+
+306
+00:21:42,751 --> 00:21:48,650
+Speaker 0: And you'll occasionally you'll see a plaque here and there and it's like, ah, this is a WPA project.
+
+307
+00:21:48,870 --> 00:21:50,390
+Speaker 0: This thing you're looking at here, right?
+
+308
+00:21:51,130 --> 00:21:55,250
+Speaker 0: You know, but it's like how much stuff was a WPA project that doesn't fucking say it.
+
+309
+00:21:55,471 --> 00:21:57,789
+Speaker 0: Doesn't have a plaque because it wasn't fancy a lot.
+
+310
+00:21:58,132 --> 00:21:58,237
+Speaker 1: Yeah.
+
+311
+00:21:59,012 --> 00:22:08,510
+Speaker 1: I mean, a lot of random probably half the shit we've got a lot of city halls in small towns, a lot of staircases that like connect to a trail that you haven't thought about.
+
+312
+00:22:09,192 --> 00:22:12,770
+Speaker 1: Some roads, a lot of bridges, way more than people expect.
+
+313
+00:22:14,290 --> 00:22:14,360
+Speaker 0: Yep.
+
+314
+00:22:15,671 --> 00:22:16,128
+Speaker 1: So what do you got?
+
+315
+00:22:17,631 --> 00:22:28,350
+Speaker 0: Oh, so, you know, we've been talking for a few years now about, you know, computers playing against people at games, especially games like chess and go.
+
+316
+00:22:28,810 --> 00:22:30,690
+Speaker 0: It's like, you know, this topic is going to be around a while.
+
+317
+00:22:31,830 --> 00:22:36,987
+Speaker 0: Someone did something that was, you know, theoretically was like in the back of everyone's mind.
+
+318
+00:22:37,051 --> 00:22:37,200
+Speaker 0: Right.
+
+319
+00:22:37,532 --> 00:22:38,470
+Speaker 0: As like a possibility.
+
+320
+00:22:38,832 --> 00:22:41,190
+Speaker 0: But no, they went ahead and did it and published a paper on it.
+
+321
+00:22:41,230 --> 00:22:46,530
+Speaker 0: And the title of the paper is adversarial policies beat professional level go AIs.
+
+322
+00:22:46,680 --> 00:22:46,810
+Speaker 0: Right.
+
+323
+00:22:46,911 --> 00:22:48,529
+Speaker 0: So what is what did they do?
+
+324
+00:22:49,271 --> 00:22:57,163
+Speaker 0: So you had a professional level go AI, a computer that can play the game of go better than any person, even the best go players on earth.
+
+325
+00:22:57,244 --> 00:22:58,650
+Speaker 0: that would beat me immediately.
+
+326
+00:22:59,335 --> 00:23:00,369
+Speaker 0: They can't beat this thing.
+
+327
+00:23:00,492 --> 00:23:00,682
+Speaker 0: Right.
+
+328
+00:23:00,972 --> 00:23:01,909
+Speaker 0: I can't beat this thing.
+
+329
+00:23:02,231 --> 00:23:03,669
+Speaker 0: No person can beat this thing.
+
+330
+00:23:03,795 --> 00:23:04,009
+Speaker 0: Right.
+
+331
+00:23:04,731 --> 00:23:15,790
+Speaker 0: But the way that these things are set up, these computers work is they're not brute forcing all of go because it's computationally impossible without, you know, using the entire universe as a computer.
+
+332
+00:23:17,190 --> 00:23:19,550
+Speaker 0: So they, you know, use machine learning.
+
+333
+00:23:19,550 --> 00:23:19,701
+Speaker 0: Right.
+
+334
+00:23:19,890 --> 00:23:27,989
+Speaker 0: They have a database, you know, where they've, they've created a neural network based on go games that, that, that have already been played out.
+
+335
+00:23:28,298 --> 00:23:28,569
+Speaker 0: Right.
+
+336
+00:23:29,770 --> 00:23:43,850
+Speaker 0: However, this means that they're ready to handle go games that, you know, that are like or close enough to the ones that they've already seen in their massive, massive collection of go games, which is a database.
+
+337
+00:23:44,071 --> 00:23:48,970
+Speaker 0: You know, the, the, the data source for that is go games that people have actually played.
+
+338
+00:23:50,010 --> 00:23:50,368
+Speaker 0: Right.
+
+339
+00:23:51,091 --> 00:24:04,992
+Speaker 0: So it's, everyone's thinking in the back of their mind, like, well, what if I come at this computer and I just play like all fucked up and stupid with all kinds of moves that make no sense that no one's ever done and have board states that, you know, it's never seen.
+
+340
+00:24:05,555 --> 00:24:08,989
+Speaker 0: that don't line up with, you know, the, the network that's been trained, right.
+
+341
+00:24:09,170 --> 00:24:11,429
+Speaker 0: It was trained on this data set of, of games.
+
+342
+00:24:12,291 --> 00:24:16,770
+Speaker 0: I'll just play games, play moves that are going to be outside of that data set.
+
+343
+00:24:16,896 --> 00:24:17,089
+Speaker 0: Right.
+
+344
+00:24:17,714 --> 00:24:19,830
+Speaker 0: It's never seen anything like this in its training.
+
+345
+00:24:20,361 --> 00:24:20,550
+Speaker 0: Right.
+
+346
+00:24:20,890 --> 00:24:32,168
+Speaker 0: Now, if you play against a human and you were like one of the best human go player on earth and I did something way outside that made no sense, they would just play according to what made sense and destroy me.
+
+347
+00:24:32,430 --> 00:24:32,550
+Speaker 0: Right.
+
+348
+00:24:32,790 --> 00:24:40,610
+Speaker 0: It's like, if you, if you go play baseball and try to be like, you know what, I'm going to bunt, bunt, bunt, bunt, bunt, I'm going to run for home.
+
+349
+00:24:40,774 --> 00:24:41,430
+Speaker 1: Like, yeah, sure.
+
+350
+00:24:41,910 --> 00:24:42,326
+Speaker 1: Go for it.
+
+351
+00:24:43,054 --> 00:24:44,089
+Speaker 0: It's like, yeah, guess what?
+
+352
+00:24:44,210 --> 00:24:47,430
+Speaker 0: Against professional baseball players, that's not going to work.
+
+353
+00:24:47,590 --> 00:24:51,649
+Speaker 0: You're just going to get out, out, out, basketball, half court shots only, right.
+
+354
+00:24:52,030 --> 00:24:53,530
+Speaker 0: You're just going to miss them all and lose.
+
+355
+00:24:53,698 --> 00:24:53,867
+Speaker 0: Right.
+
+356
+00:24:54,311 --> 00:25:02,090
+Speaker 0: But basically against a go AI that's been made on this machine learning frameworks, or perhaps even a chess one that was made the same way.
+
+357
+00:25:02,931 --> 00:25:13,128
+Speaker 0: If you can play these moves outside of its training data set, it basically, you know, it doesn't know what the fuck to do and it does bad moves because it doesn't.
+
+358
+00:25:13,852 --> 00:25:15,930
+Speaker 1: And then you can beat it really easily.
+
+359
+00:25:16,150 --> 00:25:18,450
+Speaker 1: Take the all half court shots example.
+
+360
+00:25:19,231 --> 00:25:27,250
+Speaker 1: Imagine if you had a bunch of robots with AI's playing basketball and they broke because they had their logic basically assumed you immediately come into the offensive zone.
+
+361
+00:25:27,410 --> 00:25:28,110
+Speaker 1: Like you cross over.
+
+362
+00:25:28,330 --> 00:25:32,210
+Speaker 0: It's like their defense is set up to assume that you're going to play a normal offense.
+
+363
+00:25:32,351 --> 00:25:36,630
+Speaker 0: If you just make all half court shots, they won't even try to defend you because they've never seen that happen.
+
+364
+00:25:36,750 --> 00:25:40,890
+Speaker 1: So imagine they get confused and they're just standing by the net and you just win.
+
+365
+00:25:41,110 --> 00:25:42,490
+Speaker 0: They're defending the three point line.
+
+366
+00:25:42,510 --> 00:25:46,109
+Speaker 0: They're defending, you know, the paint and it's like, you're just taking half court shots.
+
+367
+00:25:46,150 --> 00:25:49,488
+Speaker 0: You can take your sweet ass time, line them up carefully, right?
+
+368
+00:25:49,950 --> 00:25:52,468
+Speaker 0: And maybe down, you know, dunk enough of them in there.
+
+369
+00:25:53,911 --> 00:25:58,290
+Speaker 0: It's like that a little, you know, as long as, and so that's basically what they did.
+
+370
+00:25:58,470 --> 00:26:06,637
+Speaker 0: And in this paper, it's like they actually took that theoretical hypothetical situation and they did it and it worked and it worked.
+
+371
+00:26:06,637 --> 00:26:12,808
+Speaker 0: 99 greater than 99% of the time they beat this one particular go AI.
+
+372
+00:26:13,270 --> 00:26:15,601
+Speaker 1: Like it worked way, way good, very well.
+
+373
+00:26:17,610 --> 00:26:24,436
+Speaker 1: If they gave the AI significant search capacities, like they put a bunch of resources at it, it dropped down to 50%.
+
+374
+00:26:24,436 --> 00:26:25,110
+Speaker 0: Yeah, right.
+
+375
+00:26:25,350 --> 00:26:31,331
+Speaker 1: Which is still way better than humans do against AIs traditionally, which is 0%.
+
+376
+00:26:31,331 --> 00:26:37,570
+Speaker 0: Yes, but it's still fascinating that something that was like one of those, yeah, in theory kind of deals.
+
+377
+00:26:37,590 --> 00:26:38,509
+Speaker 0: It's like, nope, nope.
+
+378
+00:26:38,671 --> 00:26:40,010
+Speaker 0: It actually does have this weakness.
+
+379
+00:26:40,155 --> 00:26:40,569
+Speaker 0: Here it is.
+
+380
+00:26:40,690 --> 00:26:41,709
+Speaker 0: We did exploit the weakness.
+
+381
+00:26:41,990 --> 00:26:42,829
+Speaker 0: The weak spot is here.
+
+382
+00:26:43,130 --> 00:26:43,546
+Speaker 0: Here it is.
+
+383
+00:26:44,191 --> 00:26:49,010
+Speaker 0: It's a 90, it's a 50 to 99% effective weak spot right here for real.
+
+384
+00:26:49,190 --> 00:26:53,430
+Speaker 1: And this actually leads into one, this is actually the meta plot of Westworld.
+
+385
+00:26:53,731 --> 00:26:58,426
+Speaker 1: If you watch the show, like once they get out of the place and get into the real world, this is the plot.
+
+386
+00:26:58,990 --> 00:27:03,550
+Speaker 1: But two, this is actually a topic that is part of my professional life.
+
+387
+00:27:04,231 --> 00:27:12,906
+Speaker 1: The future I see, this is my professional opinion, especially for operations, for serious jobs involving serious things, is augmented AI.
+
+388
+00:27:14,030 --> 00:27:19,810
+Speaker 1: Humans augmenting their decisions with AI, but humans are still inputting into the equation.
+
+389
+00:27:20,170 --> 00:27:36,410
+Speaker 1: Because what this shows is one example of how AIs are objectively better at a lot of things, but humans are still better at, with very low resource expenditure, having a very high success rate at discarding objectively stupid ideas.
+
+390
+00:27:36,913 --> 00:27:41,745
+Speaker 1: That is something computers cannot do well, and that is something that human brains are uniquely capable of doing.
+
+391
+00:27:43,331 --> 00:27:50,148
+Speaker 1: So the most powerful thing in the world would be a professional Go player who has access to a professional Go API.
+
+392
+00:27:50,771 --> 00:27:52,630
+Speaker 1: That is unbeatable by anything.
+
+393
+00:27:54,610 --> 00:28:00,205
+Speaker 0: Oh, what if you had two professional Go players who both have access to an AI to help them play?
+
+394
+00:28:00,670 --> 00:28:04,370
+Speaker 0: I think would it, would it, would it just be the same result as AI versus AI?
+
+395
+00:28:05,692 --> 00:28:09,589
+Speaker 1: I think it would, but either one of them would be able to beat any unassisted AI.
+
+396
+00:28:11,635 --> 00:28:12,130
+Speaker 1: Is my guess.
+
+397
+00:28:12,470 --> 00:28:17,004
+Speaker 0: Because they would, because they would start out by doing something wild that would mess up the other AI.
+
+398
+00:28:18,211 --> 00:28:29,410
+Speaker 1: And of course those examples, like those, those ideas sort of break down in these toy problems because the kinds of problems this approach is actually aimed at are messy things that could never be solved by computers.
+
+399
+00:28:29,510 --> 00:28:34,788
+Speaker 1: Like imagine someone running the logistics operations for a giant container shipping company.
+
+400
+00:28:35,471 --> 00:28:40,288
+Speaker 1: AI plus human is going to do better at that than AI or human, probably for as long as humans exist.
+
+401
+00:28:40,610 --> 00:28:53,310
+Speaker 0: Yeah, for real world applications, I think, you know, it's like, we're always, it seems like we're going to have some human there at some point to basically whose job it is is to take these cases where, you know, I could see that being the thing, right?
+
+402
+00:28:53,330 --> 00:28:59,650
+Speaker 0: It's like we already have like self-driving car, but there's a person there when the car is messed up, who then has to take over.
+
+403
+00:29:00,030 --> 00:29:07,929
+Speaker 0: It's like, so I could see that being the way the world works is like, yeah, you know, there's some machine that runs a factory and someone sits there and their job is to watch it.
+
+404
+00:29:08,350 --> 00:29:15,630
+Speaker 0: But if it ever messes up, then the person has to be ready to push a button and do type in an instruction.
+
+405
+00:29:15,970 --> 00:29:26,350
+Speaker 1: And also think about one of the big problems we face as a society is that technology is used very rarely with any ethical compass or moral compass for all the reasons we talk about a lot.
+
+406
+00:29:26,370 --> 00:29:32,950
+Speaker 1: We don't need to get into that, but AIs by themselves might do things that are counter to the mission.
+
+407
+00:29:33,332 --> 00:29:37,910
+Speaker 1: And AI can't understand the true full intent of what we want to use it for.
+
+408
+00:29:38,292 --> 00:29:39,889
+Speaker 1: It only understands what we tell it to do.
+
+409
+00:29:40,671 --> 00:29:58,849
+Speaker 1: So if we build increasingly complex AI driven machine learning driven systems that control broad aspects of society in a better functioning society, one of the jobs humans will have is tuning that AI, not just dealing with it when it fails, not just sitting there with the stop button, but like tuning it and guiding it.
+
+410
+00:29:59,390 --> 00:30:03,968
+Speaker 0: And I think constantly improving it, teaching it these bad scenarios so it knows what to do in them.
+
+411
+00:30:04,050 --> 00:30:08,370
+Speaker 1: But I also think there are humans who will sort of step beyond that and they will serve.
+
+412
+00:30:08,691 --> 00:30:18,850
+Speaker 1: their job will be to ensure that the AIs are achieving the human intent and not their own purposes or nefarious late capitalist purposes.
+
+413
+00:30:19,352 --> 00:30:25,629
+Speaker 1: The problem is for the foreseeable future, the humans hired to do that work are hired by the late capitalist people.
+
+414
+00:30:26,532 --> 00:30:30,870
+Speaker 1: As we saw with Twitter, humans who do the right thing in these situations tend to just get fired.
+
+415
+00:30:31,170 --> 00:30:33,665
+Speaker 1: So we're not there yet, but that is a future job.
+
+416
+00:30:35,110 --> 00:30:39,290
+Speaker 1: Human ethics AI officer in the meta moment.
+
+417
+00:30:39,650 --> 00:30:40,609
+Speaker 1: The geek nice book club book.
+
+418
+00:30:40,731 --> 00:30:41,570
+Speaker 1: I leave the unseen.
+
+419
+00:30:42,130 --> 00:30:48,829
+Speaker 1: I'm going to start reading it probably this weekend or or or I propose to you.
+
+420
+00:30:49,312 --> 00:30:51,530
+Speaker 1: Do we both agree that we just read the world?
+
+421
+00:30:51,650 --> 00:30:55,349
+Speaker 1: We make first get it out of the way because I kind of want to read that real quick.
+
+422
+00:30:56,510 --> 00:30:56,787
+Speaker 0: I don't know.
+
+423
+00:30:56,890 --> 00:30:57,190
+Speaker 0: We'll see.
+
+424
+00:30:57,370 --> 00:30:58,009
+Speaker 0: We'll see what's doing.
+
+425
+00:30:58,130 --> 00:30:58,470
+Speaker 0: Who knows?
+
+426
+00:30:58,550 --> 00:30:59,089
+Speaker 1: You just all right.
+
+427
+00:30:59,190 --> 00:31:01,650
+Speaker 1: We'll do the usual thing, whichever one of us.
+
+428
+00:31:01,770 --> 00:31:02,669
+Speaker 0: You don't got to do what I do.
+
+429
+00:31:02,790 --> 00:31:03,709
+Speaker 0: Just do whatever you're going to do.
+
+430
+00:31:04,051 --> 00:31:05,950
+Speaker 1: I'm just saying I'm going to start reading a leaf.
+
+431
+00:31:06,153 --> 00:31:06,447
+Speaker 1: The unseen.
+
+432
+00:31:06,730 --> 00:31:13,590
+Speaker 1: The moment you tell me that you've started reading a leaf, the unseen, you're just going to follow me because if you don't, I read one page already.
+
+433
+00:31:13,878 --> 00:31:14,048
+Speaker 1: Fuck.
+
+434
+00:31:14,330 --> 00:31:14,530
+Speaker 1: All right.
+
+435
+00:31:14,550 --> 00:31:17,510
+Speaker 1: I'm going to start reading it unless you're lying.
+
+436
+00:31:18,212 --> 00:31:19,249
+Speaker 0: No, I read like one page.
+
+437
+00:31:19,518 --> 00:31:19,750
+Speaker 1: Okay.
+
+438
+00:31:19,912 --> 00:31:20,785
+Speaker 1: I'm going to start reading it then.
+
+439
+00:31:23,630 --> 00:31:24,548
+Speaker 0: Literally one page.
+
+440
+00:31:25,090 --> 00:31:28,250
+Speaker 0: I downloaded it like a while ago before I even chose it as the book club book.
+
+441
+00:31:28,310 --> 00:31:30,410
+Speaker 0: I read one page and then I put it aside.
+
+442
+00:31:30,792 --> 00:31:33,430
+Speaker 0: Not because it was bad, but because it wasn't reading time.
+
+443
+00:31:33,511 --> 00:31:34,689
+Speaker 0: I was just like checking it out.
+
+444
+00:31:34,950 --> 00:31:35,019
+Speaker 1: Yep.
+
+445
+00:31:35,671 --> 00:31:38,109
+Speaker 1: We will be live on Sunday at packs unplugged.
+
+446
+00:31:38,230 --> 00:31:39,849
+Speaker 1: Maybe just me, most likely the two of us.
+
+447
+00:31:39,990 --> 00:31:45,370
+Speaker 1: It's an easy day trip and I do have a devil device I can use to transport us there.
+
+448
+00:31:45,730 --> 00:31:49,590
+Speaker 1: It only costs society a small amount, but it'll be convenient for us.
+
+449
+00:31:49,710 --> 00:31:50,348
+Speaker 1: We can take the car.
+
+450
+00:31:51,030 --> 00:31:53,790
+Speaker 1: But why is this game taking four hours?
+
+451
+00:31:53,991 --> 00:31:55,710
+Speaker 1: Is our panel at packs unplugged on Sunday?
+
+452
+00:31:56,230 --> 00:32:02,610
+Speaker 1: I realized I haven't made a post about it yet because I gave up on most of my posts while I was sorting out my fucking microblog.
+
+453
+00:32:02,810 --> 00:32:04,130
+Speaker 1: So I got to set all that up.
+
+454
+00:32:04,230 --> 00:32:05,107
+Speaker 1: I will make the post tonight.
+
+455
+00:32:06,411 --> 00:32:08,890
+Speaker 1: Otherwise, stay tuned for what we do in the future.
+
+456
+00:32:09,450 --> 00:32:11,530
+Speaker 1: Follow us on non-Twitter places.
+
+457
+00:32:11,650 --> 00:32:13,410
+Speaker 1: Do not assume that Twitter will stick around.
+
+458
+00:32:14,575 --> 00:32:15,469
+Speaker 1: I am microblogging.
+
+459
+00:32:15,830 --> 00:32:21,110
+Speaker 1: There is a Mastodon you can follow me on, though I do not see anything that someone replies to it.
+
+460
+00:32:21,430 --> 00:32:24,610
+Speaker 1: It is purely a feed of things I post in various places.
+
+461
+00:32:24,730 --> 00:32:26,207
+Speaker 1: It's not like a social thing I'm going to use.
+
+462
+00:32:26,770 --> 00:32:28,648
+Speaker 1: But if you want to subscribe to me there, go for it.
+
+463
+00:32:29,911 --> 00:32:31,330
+Speaker 1: The Geek Nights Forum is rocking.
+
+464
+00:32:31,953 --> 00:32:33,350
+Speaker 1: Geek Nights Discord rocking.
+
+465
+00:32:33,832 --> 00:32:38,010
+Speaker 1: If you know me, send me a friend request on Discord with all your friends.
+
+466
+00:32:38,810 --> 00:32:43,470
+Speaker 1: Make sure the people you know online, you have multiple ways to contact them because no platform will last forever.
+
+467
+00:32:45,750 --> 00:32:46,208
+Speaker 1: What else we got?
+
+468
+00:32:46,350 --> 00:32:47,569
+Speaker 1: Any other meta bits?
+
+469
+00:32:50,737 --> 00:32:51,770
+Speaker 1: I see you're looking off to the side.
+
+470
+00:32:51,890 --> 00:32:53,910
+Speaker 1: You're clearly reading something and not paying attention to the show.
+
+471
+00:32:53,990 --> 00:32:56,810
+Speaker 1: So we'll move right on to comms and games.
+
+472
+00:32:58,210 --> 00:32:58,869
+Speaker 0: This is your idea.
+
+473
+00:32:59,290 --> 00:32:59,379
+Speaker 1: Yeah.
+
+474
+00:32:59,751 --> 00:33:10,950
+Speaker 1: So a long time ago, I basically always had voice chat because from the era of... We'll talk about video games first because there's a whole other world of other types of communication.
+
+475
+00:33:11,130 --> 00:33:25,689
+Speaker 1: But in competitive versus or even cooperative video games that you could play against people for most people, for most of video game history, this wasn't a concern because you can only really play games with other people in the same room at the same time.
+
+476
+00:33:26,130 --> 00:33:29,190
+Speaker 1: So comms was you're yelling at each other in the same room.
+
+477
+00:33:29,230 --> 00:33:32,389
+Speaker 1: You're playing, I don't know, Goldeneye and you're either in the room or you aren't.
+
+478
+00:33:32,812 --> 00:33:34,050
+Speaker 1: If you're not in the room, you're not playing.
+
+479
+00:33:34,190 --> 00:33:34,648
+Speaker 1: So that was that.
+
+480
+00:33:37,331 --> 00:33:40,690
+Speaker 1: But with Doom, when Doom came out, Doom was a game.
+
+481
+00:33:40,770 --> 00:33:43,670
+Speaker 1: There were games that came out before Doom, of course, that had multiplayer.
+
+482
+00:33:44,151 --> 00:33:49,630
+Speaker 1: But I could dial one of my friends with the modem and we could play Doom against each other remotely.
+
+483
+00:33:50,271 --> 00:34:02,070
+Speaker 1: And in that era, when I was using a computer and a dial-up modem to dial the phone number of a friend to play one-on-one Doom deathmatch, both of us, our families had two phone lines.
+
+484
+00:34:02,690 --> 00:34:06,770
+Speaker 1: We would be on the phone with phone line one talking while we played.
+
+485
+00:34:07,210 --> 00:34:09,670
+Speaker 1: And we had phone line two dedicated to playing the game.
+
+486
+00:34:10,409 --> 00:34:13,730
+Speaker 0: So, I mean, even if you didn't have the two phone lines, right?
+
+487
+00:34:14,190 --> 00:34:18,510
+Speaker 0: How could you arrange the dial on the second phone line, right?
+
+488
+00:34:18,530 --> 00:34:21,290
+Speaker 0: It's like if you only had the one phone line each, what would you do?
+
+489
+00:34:21,489 --> 00:34:24,025
+Speaker 0: Like at school, tell each other, all right, at exactly 5 p.m.
+
+490
+00:34:25,195 --> 00:34:26,010
+Speaker 0: Sync your watches.
+
+491
+00:34:26,590 --> 00:34:28,690
+Speaker 0: You open up your modem and I'll dial.
+
+492
+00:34:29,170 --> 00:34:31,310
+Speaker 0: And here's the number and we'll hope it works.
+
+493
+00:34:31,650 --> 00:34:34,270
+Speaker 0: And then if you feel like it doesn't work, it's like, how do you coordinate?
+
+494
+00:34:34,751 --> 00:34:37,270
+Speaker 0: You start trying to call them on the phone, but they're trying to modem.
+
+495
+00:34:37,389 --> 00:34:37,572
+Speaker 0: -Yeah.
+
+496
+00:34:37,594 --> 00:34:38,530
+Speaker 0: -They don't pick up the phone.
+
+497
+00:34:38,750 --> 00:34:47,370
+Speaker 0: It's like, you know, there was no way to arrange that sort of multiplayer video gaming unless you had two lines where on one line, you're talking to each other.
+
+498
+00:34:47,752 --> 00:34:50,310
+Speaker 0: And on the second line, you're doing the dial-up biz.
+
+499
+00:34:50,771 --> 00:34:53,409
+Speaker 0: Or unless you had some other mechanism, like, I don't know.
+
+500
+00:34:53,570 --> 00:34:58,427
+Speaker 0: -Fucking cell phone or walkie-talkie.
+
+501
+00:34:58,447 --> 00:34:59,290
+Speaker 1: -I'm talking this was before.
+
+502
+00:34:59,650 --> 00:35:02,150
+Speaker 0: You live next door to each other and you have walkie-talkies and radios.
+
+503
+00:35:02,190 --> 00:35:06,130
+Speaker 1: I use walkie-talkies to do this, actually, because they would reach a couple blocks.
+
+504
+00:35:06,290 --> 00:35:07,550
+Speaker 1: We had big CB radios.
+
+505
+00:35:08,110 --> 00:35:12,890
+Speaker 1: So we would use CB radio to coordinate online gaming and even do online voice sometimes.
+
+506
+00:35:13,634 --> 00:35:14,529
+Speaker 1: Like while we're playing a game.
+
+507
+00:35:15,171 --> 00:35:16,450
+Speaker 0: Yeah, you could, you know, something, right?
+
+508
+00:35:16,470 --> 00:35:19,044
+Speaker 0: But there wasn't, there weren't that many choices in the 90s, right?
+
+509
+00:35:20,351 --> 00:35:22,050
+Speaker 0: So we're available to everyday people.
+
+510
+00:35:22,151 --> 00:35:24,166
+Speaker 0: So that was your options.
+
+511
+00:35:25,050 --> 00:35:25,927
+Speaker 1: Yeah, that was pretty much it.
+
+512
+00:35:26,771 --> 00:35:29,070
+Speaker 1: And games, of course, did not incorporate this.
+
+513
+00:35:29,250 --> 00:35:34,470
+Speaker 1: In games, however, once you were in a game, you could usually text chat with people.
+
+514
+00:35:34,530 --> 00:35:36,069
+Speaker 1: You could send little messages, type stuff.
+
+515
+00:35:36,852 --> 00:35:40,270
+Speaker 1: And that was a big part about how people would play games and communicate for a long time.
+
+516
+00:35:40,590 --> 00:35:43,950
+Speaker 1: Imagine a team game of some Quake mod, like Capture the Flag.
+
+517
+00:35:44,411 --> 00:35:51,050
+Speaker 1: If you're on a team and you're playing seriously, either you all set up some like party line, like a phone number.
+
+518
+00:35:51,210 --> 00:36:02,438
+Speaker 1: You'd all dial it like literally dial into with a literal dial to have a voice chat among your team while you were playing a serious match, which my friends who were in clans did legitimately like.
+
+519
+00:36:02,479 --> 00:36:04,390
+Speaker 1: they paid for this stuff and had infrastructure.
+
+520
+00:36:05,194 --> 00:36:07,070
+Speaker 1: Or you would just type messages.
+
+521
+00:36:07,350 --> 00:36:11,089
+Speaker 1: There was early games, had team chat and and all chat for a reason.
+
+522
+00:36:12,084 --> 00:36:12,229
+Speaker 0: Yep.
+
+523
+00:36:12,750 --> 00:36:20,770
+Speaker 0: And the only problem with typing messages is that when you when you're typing, you can't also be like playing at the same time.
+
+524
+00:36:21,110 --> 00:36:23,430
+Speaker 0: It's like you're using the keyboard to type a message.
+
+525
+00:36:23,571 --> 00:36:29,421
+Speaker 0: You have to even if you type really fast and have a good keyboard shortcut and whatnot, it's like you can't.
+
+526
+00:36:29,864 --> 00:36:30,670
+Speaker 0: you know, you're stuck.
+
+527
+00:36:30,810 --> 00:36:35,770
+Speaker 0: That's a point in time in which you're not pushing like WASD to move like your characters standing still.
+
+528
+00:36:36,423 --> 00:36:36,570
+Speaker 0: Right.
+
+529
+00:36:36,690 --> 00:36:39,390
+Speaker 0: In Counter Strike, you could chat with your goat, your dead teammates.
+
+530
+00:36:39,551 --> 00:36:42,930
+Speaker 0: Once you died, you couldn't smartly they configured it through.
+
+531
+00:36:43,030 --> 00:36:47,910
+Speaker 0: You couldn't tell the living people what was up to tell them where the enemies were hiding.
+
+532
+00:36:48,076 --> 00:36:48,449
+Speaker 0: Good move.
+
+533
+00:36:50,851 --> 00:36:54,690
+Speaker 0: But, you know, in like Quake, it's like you could chat with everyone or just your team.
+
+534
+00:36:54,831 --> 00:36:57,910
+Speaker 0: But it's like, you know, you got to stop quaking when you do that.
+
+535
+00:36:58,214 --> 00:36:59,070
+Speaker 0: It's not very helpful.
+
+536
+00:36:59,410 --> 00:37:03,390
+Speaker 1: So the funniest thing about text chat in that era was there were two competing cultures.
+
+537
+00:37:03,690 --> 00:37:12,370
+Speaker 1: Some of the people I play games with were very adamant that if you saw someone was just standing still, you should never shoot them because you're being a jerk.
+
+538
+00:37:12,470 --> 00:37:13,749
+Speaker 1: They're clearly typing something.
+
+539
+00:37:14,513 --> 00:37:18,070
+Speaker 1: I was of the correct enlightened idea that you play to win the game.
+
+540
+00:37:19,032 --> 00:37:19,286
+Speaker 0: That's right.
+
+541
+00:37:20,010 --> 00:37:23,524
+Speaker 0: It's like if the game wanted you to be, you know, to let.
+
+542
+00:37:23,825 --> 00:37:26,230
+Speaker 0: it's like, yeah, there's a cost to communication, right?
+
+543
+00:37:26,290 --> 00:37:28,990
+Speaker 0: You better be hiding or something, right?
+
+544
+00:37:29,230 --> 00:37:29,339
+Speaker 0: Yeah.
+
+545
+00:37:30,111 --> 00:37:34,369
+Speaker 0: So free voice wanted you to be invincible when typing, then they wouldn't let you be invincible while typing.
+
+546
+00:37:34,511 --> 00:37:42,929
+Speaker 0: And that would have been a problem because then the technique in the game would have been as soon as you see someone open up the text chat and they can't kill you.
+
+547
+00:37:43,176 --> 00:37:43,409
+Speaker 0: Right.
+
+548
+00:37:43,573 --> 00:37:44,450
+Speaker 0: And they can't get a frag.
+
+549
+00:37:44,690 --> 00:37:45,808
+Speaker 0: And then you wait for them to leave.
+
+550
+00:37:45,970 --> 00:37:51,610
+Speaker 0: I remember some later games would even show or you surprise them and you press enter and you shoot, right?
+
+551
+00:37:52,190 --> 00:37:58,469
+Speaker 1: Some later games would even show a little like icon over people when they were typing, which was just which means up easy targets.
+
+552
+00:37:58,730 --> 00:37:59,185
+Speaker 0: There they are.
+
+553
+00:37:59,510 --> 00:37:59,963
+Speaker 0: Bam, bam, bam.
+
+554
+00:38:00,450 --> 00:38:00,847
+Speaker 0: So look at this.
+
+555
+00:38:01,994 --> 00:38:06,130
+Speaker 1: Even back then, we had the concept of text chat versus voice chat.
+
+556
+00:38:07,371 --> 00:38:12,830
+Speaker 1: And we had the concept of voice chat or text versus voice and team versus all.
+
+557
+00:38:12,990 --> 00:38:20,129
+Speaker 1: We had these concepts even in the pretty early days of online competitive games and cooperative games.
+
+558
+00:38:20,391 --> 00:38:20,850
+Speaker 1: That was all there.
+
+559
+00:38:20,970 --> 00:38:21,406
+Speaker 1: That was the thing.
+
+560
+00:38:22,470 --> 00:38:24,330
+Speaker 0: Even if you played hearts online, you had a little chat room.
+
+561
+00:38:25,590 --> 00:38:35,570
+Speaker 1: But these were unrestricted communications means, which all of us from later eras know wasn't a problem until it was a problem.
+
+562
+00:38:35,670 --> 00:38:38,710
+Speaker 1: And once that became a problem, it became the problem.
+
+563
+00:38:39,712 --> 00:38:43,750
+Speaker 0: It's basically a chat room with a bunch of randos, and that's not a great place, especially
+
+564
+00:38:44,031 --> 00:38:56,710
+Speaker 1: in an era before the concept of like kicking people off servers and blocking people like it really only worked because back then you'd only play games with people you prearranged with as soon as there were servers and queues and ladders and matchmaking.
+
+565
+00:38:57,230 --> 00:39:00,510
+Speaker 0: This became and it became easy for just any old person to join.
+
+566
+00:39:00,650 --> 00:39:10,930
+Speaker 0: It wasn't the only the realm of the vastly dedicated, the only people who were playing in those early days were not just people who are technically sophisticated, which was sort of gatekeeping.
+
+567
+00:39:11,052 --> 00:39:12,309
+Speaker 0: That is good that that's gone.
+
+568
+00:39:13,030 --> 00:39:27,870
+Speaker 0: But people who cared about doing this, playing this game so much that they were going to spend a lot of money and time to make it work are just less likely to also be the kind of person who is just going to do all that effort.
+
+569
+00:39:28,250 --> 00:39:29,369
+Speaker 0: Just to type racist slurs.
+
+570
+00:39:29,630 --> 00:39:31,029
+Speaker 0: That's like, that's not what it's like.
+
+571
+00:39:31,311 --> 00:39:34,250
+Speaker 0: They're doing that because they want to play the game somewhat seriously.
+
+572
+00:39:34,753 --> 00:39:37,730
+Speaker 0: So there were, you know, there were, were there people who are shitty?
+
+573
+00:39:38,059 --> 00:39:38,290
+Speaker 0: Yeah.
+
+574
+00:39:38,370 --> 00:39:44,950
+Speaker 0: Cause there's shitty people who just, you know, who did this, who happened to also be bad people, but it was, you know, less right.
+
+575
+00:39:45,230 --> 00:39:47,609
+Speaker 0: Whereas once it became accessible, just anyone could do it.
+
+576
+00:39:47,971 --> 00:39:51,230
+Speaker 0: Well, people were playing games that didn't care so much about the game.
+
+577
+00:39:51,290 --> 00:39:54,329
+Speaker 0: It was just sort of like a time wasting activity for them.
+
+578
+00:39:54,971 --> 00:40:00,949
+Speaker 0: And if it wasn't that fun for them, they had more fun typing racist slurs than they had actually playing the game.
+
+579
+00:40:01,151 --> 00:40:02,668
+Speaker 0: So that's when it got bad.
+
+580
+00:40:04,030 --> 00:40:09,750
+Speaker 1: So in the Quake 2 era, I did something that I thought was clever.
+
+581
+00:40:10,730 --> 00:40:24,350
+Speaker 1: And then I discovered that other people playing in the clans and like COQ types had already been doing, you know, those games you could script and mod and like do it, like just do a bunch of crazy crap, like give yourself extra types of commands and like a 180 flip or whatever.
+
+582
+00:40:24,791 --> 00:40:32,670
+Speaker 1: So I made a bunch of commands on my keyboard that would, with one click of a button, type a message to everyone else in the team.
+
+583
+00:40:33,270 --> 00:40:38,950
+Speaker 1: So I made all these mappings and they were generic enough to like sniper in mid.
+
+584
+00:40:39,510 --> 00:40:44,988
+Speaker 1: So I could just, if a sniper shot me in mid, I would just hit that and I could tell my team, hey, there's a sniper in mid.
+
+585
+00:40:45,470 --> 00:40:54,069
+Speaker 1: Or move forward, fall back, all these basic commands, which is a modern sensibility of how a lot of games should do this.
+
+586
+00:40:54,230 --> 00:41:01,549
+Speaker 1: Not just because you can then, in some games, if you don't want to have unrestricted communication channels, maybe remove them.
+
+587
+00:41:02,110 --> 00:41:14,269
+Speaker 1: But also, this is a very profound accessibility feature for people who can't hear or can't talk because suddenly I can communicate in the game in a way that people playing the game could see, even if they can't hear my voice.
+
+588
+00:41:15,311 --> 00:41:19,625
+Speaker 0: Or people, right, people can hear because there could be like, you know, counter strike, right?
+
+589
+00:41:19,750 --> 00:41:25,750
+Speaker 0: It's like you could just open up the like the voice menu and press like a number and it would be like circle around back, you know.
+
+590
+00:41:26,252 --> 00:41:28,944
+Speaker 0: And in tribes, they added in, there was a huge.
+
+591
+00:41:29,045 --> 00:41:32,570
+Speaker 0: tribes is the one that really, I think, you know, tribes two had this to the green.
+
+592
+00:41:32,611 --> 00:41:33,249
+Speaker 1: Oh my God.
+
+593
+00:41:34,873 --> 00:41:44,000
+Speaker 0: By default, you would press V and V would open up this huge menu that would categorize different possible, you know, there was a whole waypoint a soon.
+
+594
+00:41:47,872 --> 00:41:51,950
+Speaker 0: So everything was like two or three single presses in a row.
+
+595
+00:41:52,031 --> 00:41:53,061
+Speaker 0: So it always start with V, right?
+
+596
+00:41:54,193 --> 00:41:56,170
+Speaker 0: So you'd be like V for voice, right?
+
+597
+00:41:56,230 --> 00:41:56,890
+Speaker 0: To say something.
+
+598
+00:41:57,351 --> 00:42:04,350
+Speaker 0: Then you'd be like, I don't remember exactly what the choices were, but like I for insult and then like, you know, I don't know.
+
+599
+00:42:04,611 --> 00:42:07,966
+Speaker 0: You could, Chazbot was like one of the things you could say that was like basically like, damn.
+
+600
+00:42:08,218 --> 00:42:08,390
+Speaker 0: Right.
+
+601
+00:42:08,510 --> 00:42:10,870
+Speaker 0: So you'd be like, you're like VI V something.
+
+602
+00:42:11,090 --> 00:42:14,750
+Speaker 0: S it'd be like chat and your guy would a say the word out loud.
+
+603
+00:42:15,132 --> 00:42:15,870
+Speaker 0: Chazbot, right?
+
+604
+00:42:16,130 --> 00:42:24,170
+Speaker 0: Everyone would hear that your characters voice actors saying the word Chazbot and the word Chazbot would appear in the chat next to your name.
+
+605
+00:42:24,891 --> 00:42:34,410
+Speaker 0: So people who couldn't hear could see that, you know, Scott said Chazbot and people who could hear didn't could keep the chat closed and heard the word Chazbot.
+
+606
+00:42:34,812 --> 00:42:40,387
+Speaker 0: And you didn't really have to stop playing because you typed in a really quick command like, like you went V something, something like that, right?
+
+607
+00:42:41,214 --> 00:42:42,350
+Speaker 0: Not going to mess up your game.
+
+608
+00:42:42,410 --> 00:42:48,229
+Speaker 0: You can keep playing and no one else has like look away from the screen to read it unless, you know, they really had to.
+
+609
+00:42:49,152 --> 00:42:50,929
+Speaker 1: Now, is this as good?
+
+610
+00:42:51,311 --> 00:42:54,330
+Speaker 0: Nobody could say racist slurs because racist slurs weren't in the menu.
+
+611
+00:42:55,030 --> 00:43:00,230
+Speaker 1: So is this as good as just open voice comes with your team from a operational play perspective?
+
+612
+00:43:00,650 --> 00:43:01,189
+Speaker 1: Absolutely not.
+
+613
+00:43:01,770 --> 00:43:08,348
+Speaker 1: Is it a good, valuable feature to exist alongside that or even an exclusion of it if the game has a problem with this?
+
+614
+00:43:08,899 --> 00:43:09,170
+Speaker 1: Absolutely.
+
+615
+00:43:09,410 --> 00:43:11,989
+Speaker 0: I mean, for for public play, right?
+
+616
+00:43:12,290 --> 00:43:19,429
+Speaker 0: The protection by making that the only communication mechanism, which is like what Hearthstone did, where you can only say like six things or whatever, right?
+
+617
+00:43:19,831 --> 00:43:23,030
+Speaker 0: It provides a great protection against abuse and harassment.
+
+618
+00:43:23,751 --> 00:43:33,030
+Speaker 0: And if the menu choices are, you know, vast enough, you're not losing that much in terms of, you know, team communication.
+
+619
+00:43:34,792 --> 00:43:43,130
+Speaker 0: But if you're doing a serious competitive game, right, like real esports championship, then it's like, yeah, you need to actually just be able to fully talk to people.
+
+620
+00:43:44,151 --> 00:43:46,910
+Speaker 0: It's not going to cut it, but that's not most cases.
+
+621
+00:43:47,151 --> 00:43:47,788
+Speaker 0: So what's the big deal?
+
+622
+00:43:48,390 --> 00:43:56,049
+Speaker 1: Now, it's interesting because this leads to a situation that I've seen in Overwatch where I prefer to play with people who have voice on.
+
+623
+00:43:56,370 --> 00:43:57,530
+Speaker 1: Like, it's just easier to communicate.
+
+624
+00:43:57,710 --> 00:43:59,230
+Speaker 1: It's easier to coordinate, like, whatever.
+
+625
+00:43:59,310 --> 00:43:59,670
+Speaker 1: That's fine.
+
+626
+00:43:59,952 --> 00:44:01,190
+Speaker 1: I only play competitive anyway.
+
+627
+00:44:02,972 --> 00:44:09,117
+Speaker 1: But if you join a game with randos as opposed to coming in with a team, there might be a few people on your team.
+
+628
+00:44:09,137 --> 00:44:10,510
+Speaker 1: for whatever reason, just don't join voice.
+
+629
+00:44:10,891 --> 00:44:12,669
+Speaker 1: Maybe they join and listen, even if they don't talk.
+
+630
+00:44:12,953 --> 00:44:13,946
+Speaker 1: Maybe they don't join at all.
+
+631
+00:44:14,950 --> 00:44:16,100
+Speaker 0: Maybe they have good reasons, right?
+
+632
+00:44:17,570 --> 00:44:18,768
+Speaker 0: Maybe they can't talk.
+
+633
+00:44:19,450 --> 00:44:41,270
+Speaker 0: Maybe they have a voice that has an accent or a tone or a pitch that would result in them receiving harassment and they don't want to expose some information about themselves that would be garnished or whatever through just hearing their voice.
+
+634
+00:44:42,091 --> 00:44:47,469
+Speaker 0: Or even maybe they don't have the technological capabilities or sophistication to set it up.
+
+635
+00:44:47,850 --> 00:44:52,210
+Speaker 0: Maybe there is sounds in their house around them they don't want anyone hearing.
+
+636
+00:44:52,690 --> 00:44:57,989
+Speaker 1: Maybe Emily is working on a project and I can't be super loud next to her playing this one match, so I got to be quiet.
+
+637
+00:44:58,430 --> 00:45:07,130
+Speaker 0: Yeah, there are tons and tons of valid reasons for someone to not use the voice chat while they're playing a game.
+
+638
+00:45:07,190 --> 00:45:09,470
+Speaker 1: There is a fairly well-documented phenomenon.
+
+639
+00:45:09,631 --> 00:45:12,749
+Speaker 1: I'm not saying this is just data to internalize.
+
+640
+00:45:14,111 --> 00:45:20,470
+Speaker 1: If a team has all six people in voice, they were objectively more likely to win every time, across the board, without exception.
+
+641
+00:45:22,531 --> 00:45:28,050
+Speaker 1: And the fun side effect was that a lot of people will join a game like that with their friends.
+
+642
+00:45:28,150 --> 00:45:31,250
+Speaker 1: Like when we play Fortnite, we never use the Fortnite chat.
+
+643
+00:45:31,350 --> 00:45:33,749
+Speaker 1: We're in our own Discord chatting with each other.
+
+644
+00:45:34,710 --> 00:45:40,334
+Speaker 1: Occasionally we'll play in a mode where our rando gets put on our team and we just don't hear what they say.
+
+645
+00:45:40,354 --> 00:45:42,347
+Speaker 1: and they don't hear what we say and they're kind of just.
+
+646
+00:45:42,427 --> 00:45:43,467
+Speaker 1: we just treat them like an NPC.
+
+647
+00:45:44,230 --> 00:45:47,850
+Speaker 1: That's probably worse for them objectively.
+
+648
+00:45:48,851 --> 00:45:49,315
+Speaker 0: They just also.
+
+649
+00:45:49,396 --> 00:45:50,649
+Speaker 0: it's also worse for your team.
+
+650
+00:45:50,830 --> 00:45:55,010
+Speaker 1: It is, but it's better for us having fun while we're playing the game.
+
+651
+00:45:56,192 --> 00:45:58,327
+Speaker 0: So I mean, but that's the thing back in the day, right?
+
+652
+00:45:58,950 --> 00:46:08,010
+Speaker 0: You know, not it's sort of a newer thing that video games having, you know, I guess newer for us, it's not actually new where video games included the voice chat in the game.
+
+653
+00:46:08,270 --> 00:46:11,650
+Speaker 0: It wasn't until like Steam added that functionality, right?
+
+654
+00:46:11,810 --> 00:46:13,209
+Speaker 0: Early Counter Strike didn't have that.
+
+655
+00:46:13,411 --> 00:46:14,665
+Speaker 0: It was like added at some point.
+
+656
+00:46:15,251 --> 00:46:17,970
+Speaker 1: I remember people used to run Ventrilo servers for that, right?
+
+657
+00:46:18,250 --> 00:46:33,688
+Speaker 0: You would run Ventrilo or TeamSpeak in order and then you would have to tell people like, hey, you know, maybe you'd put it in like the server title or description or you just tell your friends, everyone join this speak server Ventrilo or TeamSpeak and then we'll join this game server, right?
+
+658
+00:46:34,150 --> 00:46:37,130
+Speaker 0: This is when we finally had real internet and I didn't have to use dial up anymore.
+
+659
+00:46:38,812 --> 00:46:45,370
+Speaker 0: And then it would be basically the same as using discord nowadays to do your voice chat separately from the in game voice chat.
+
+660
+00:46:45,792 --> 00:46:49,890
+Speaker 0: And even though that's not as much of a thing anymore, it's still a thing.
+
+661
+00:46:50,251 --> 00:47:08,760
+Speaker 0: In fact, if you want to do voice chat for any online game on Nintendo Switch, the way that works is you have to open up the Nintendo Switch online app on your phone or other mobile device and then do the voice chat in that app and you'll be able to talk to the other people in the same game as you like.
+
+662
+00:47:08,780 --> 00:47:12,430
+Speaker 0: if you're playing someone in like, I don't know, fucking Mario Tennis and Mario Kart or something, right?
+
+663
+00:47:12,770 --> 00:47:14,890
+Speaker 0: But you can't do it just with the switch alone.
+
+664
+00:47:15,235 --> 00:47:16,149
+Speaker 0: They don't support that.
+
+665
+00:47:16,250 --> 00:47:19,149
+Speaker 0: You can't like plug a microphone into the switch and just talk.
+
+666
+00:47:19,677 --> 00:47:20,249
+Speaker 0: They don't do that.
+
+667
+00:47:20,450 --> 00:47:25,290
+Speaker 0: You have to go to the switch online app separately as if it was TeamSpeak or Ventrilo.
+
+668
+00:47:26,798 --> 00:47:27,190
+Speaker 1: It's awful.
+
+669
+00:47:27,250 --> 00:47:31,369
+Speaker 1: Nintendo, like everyone understands why Nintendo does it the way they do it.
+
+670
+00:47:31,810 --> 00:47:42,770
+Speaker 1: But Nintendo is like above and beyond on the protections to the point that I don't think I've ever used a Nintendo communications mechanism on purpose since DictoChat.
+
+671
+00:47:45,151 --> 00:47:46,044
+Speaker 1: I think that's literally it.
+
+672
+00:47:47,330 --> 00:47:51,710
+Speaker 1: So modern games like contemporary current games, Overwatch does this.
+
+673
+00:47:51,990 --> 00:47:52,928
+Speaker 1: Other games do this too.
+
+674
+00:47:53,652 --> 00:47:54,910
+Speaker 1: They do something even cooler.
+
+675
+00:47:55,352 --> 00:47:59,309
+Speaker 1: The environmental ambient sounds will also have visual triggers now.
+
+676
+00:47:59,711 --> 00:48:04,690
+Speaker 1: So you have an accessibility thing where even if you won't hear something, you might see it and vice versa.
+
+677
+00:48:05,170 --> 00:48:12,010
+Speaker 1: But two, the characters themselves will call things out that you as a player saw.
+
+678
+00:48:12,650 --> 00:48:13,254
+Speaker 1: Like if like.
+
+679
+00:48:13,295 --> 00:48:15,309
+Speaker 1: it has obviously heuristics for this.
+
+680
+00:48:15,652 --> 00:48:16,470
+Speaker 1: So here's an example.
+
+681
+00:48:16,853 --> 00:48:17,790
+Speaker 1: Say I'm playing Overwatch.
+
+682
+00:48:18,397 --> 00:48:18,970
+Speaker 1: I'm the tank.
+
+683
+00:48:19,092 --> 00:48:19,488
+Speaker 1: I'm D.Va.
+
+684
+00:48:19,670 --> 00:48:23,090
+Speaker 1: I fly forward ahead of the team to the point and I get hit by a sniper.
+
+685
+00:48:23,272 --> 00:48:24,830
+Speaker 1: Like I don't die because I'm a tank.
+
+686
+00:48:25,131 --> 00:48:27,569
+Speaker 1: But like there's a sniper to the right and they hit me.
+
+687
+00:48:28,410 --> 00:48:34,750
+Speaker 1: My character will on her own say in a way that my teammates can hear.
+
+688
+00:48:35,272 --> 00:48:37,530
+Speaker 1: There's a sniper by the point.
+
+689
+00:48:39,191 --> 00:48:40,778
+Speaker 1: So I don't even have to just sort of.
+
+690
+00:48:40,798 --> 00:48:46,710
+Speaker 0: they just basically put certain situations that will trigger the automated voice menu from tribes.
+
+691
+00:48:47,133 --> 00:48:49,710
+Speaker 0: And what you don't have to actually type it in yourself.
+
+692
+00:48:49,810 --> 00:49:02,130
+Speaker 1: But the beauty of this is that starts to reduce the advantage a team where all six people are in voice actively using it over a team where one or more people aren't in voice for whatever reason.
+
+693
+00:49:03,010 --> 00:49:11,050
+Speaker 0: I think it also helps if you are playing on a team where some of the members of your team are bots who can't talk and communicate.
+
+694
+00:49:11,230 --> 00:49:13,630
+Speaker 0: Well, now they have some sort of automatic communication.
+
+695
+00:49:16,513 --> 00:49:19,010
+Speaker 1: And I think we're going to see continued evolution in this space.
+
+696
+00:49:19,636 --> 00:49:21,029
+Speaker 1: I don't have any like prescriptive.
+
+697
+00:49:21,270 --> 00:49:22,909
+Speaker 1: This is what games should do.
+
+698
+00:49:23,171 --> 00:49:23,950
+Speaker 1: Every game is different.
+
+699
+00:49:24,050 --> 00:49:25,729
+Speaker 1: Every game designer has to make their own decisions.
+
+700
+00:49:26,491 --> 00:49:32,789
+Speaker 1: But I do personally like being in voice with the people I'm playing games with generally pretty much across the board.
+
+701
+00:49:33,151 --> 00:49:36,109
+Speaker 1: But that's also a privilege that I can just quit a game if someone's being a jerk.
+
+702
+00:49:37,390 --> 00:49:40,070
+Speaker 0: Not that I think the ideal the ideal scenario.
+
+703
+00:49:40,401 --> 00:49:40,590
+Speaker 0: Right.
+
+704
+00:49:40,670 --> 00:49:55,910
+Speaker 0: Which is, I think, been done a few times, but it's not really been like fully done is where the in-game communication that is happening is actually like mirrored by in the canon of the games world.
+
+705
+00:49:56,504 --> 00:49:56,670
+Speaker 0: Right.
+
+706
+00:49:56,810 --> 00:49:58,449
+Speaker 0: So like maybe there's an MMO.
+
+707
+00:49:58,690 --> 00:50:03,890
+Speaker 0: And if you just talk, only the people who are like standing close enough to you can hear you.
+
+708
+00:50:04,051 --> 00:50:04,629
+Speaker 1: Bunch of games do that.
+
+709
+00:50:05,616 --> 00:50:05,810
+Speaker 0: Yeah.
+
+710
+00:50:06,171 --> 00:50:10,210
+Speaker 0: But there's not like a bunch that do it like super, super well.
+
+711
+00:50:10,392 --> 00:50:11,770
+Speaker 0: And it's like this huge thing.
+
+712
+00:50:11,856 --> 00:50:11,988
+Speaker 0: Right.
+
+713
+00:50:12,657 --> 00:50:13,869
+Speaker 0: You know, a game like that.
+
+714
+00:50:14,190 --> 00:50:19,849
+Speaker 0: But maybe you also have like there's a radio in the game and you actually dial frequencies on it and talk to people.
+
+715
+00:50:20,051 --> 00:50:21,169
+Speaker 0: It's been tried a few times.
+
+716
+00:50:22,310 --> 00:50:22,430
+Speaker 0: Snake.
+
+717
+00:50:22,570 --> 00:50:31,310
+Speaker 0: But it's not like, you know, it's like that sort of thing where it's like, yeah, the in-game voice chat is actually an item or an ability in the game.
+
+718
+00:50:31,451 --> 00:50:35,110
+Speaker 0: Like it's a real thing that works in some sort of real way.
+
+719
+00:50:35,691 --> 00:50:39,130
+Speaker 0: You know, you can't just pop up a chat box and type whatever the heck you want.
+
+720
+00:50:39,210 --> 00:50:39,324
+Speaker 0: Right.
+
+721
+00:50:39,450 --> 00:50:41,210
+Speaker 0: Because that's not a thing you can do in real life.
+
+722
+00:50:41,291 --> 00:50:42,350
+Speaker 0: There are a lot of good.
+
+723
+00:50:42,890 --> 00:50:48,968
+Speaker 0: You could give players smartphones in the game and then, you know, they could, you know, if it was like a Pokemon MMO.
+
+724
+00:50:49,660 --> 00:50:49,870
+Speaker 0: Right.
+
+725
+00:50:50,130 --> 00:50:56,710
+Speaker 0: Everyone could open up their Pokedex and type in someone's trainer ID and text them in the game in a way that makes sense in the world.
+
+726
+00:50:57,290 --> 00:50:57,809
+Speaker 1: I guess I don't know.
+
+727
+00:50:58,150 --> 00:51:00,529
+Speaker 1: Digetic sound in a competitive game is a mixed bag.
+
+728
+00:51:01,352 --> 00:51:03,949
+Speaker 1: Really depends on exactly what what this game's deal is.
+
+729
+00:51:04,962 --> 00:51:05,130
+Speaker 0: Yeah.
+
+730
+00:51:05,370 --> 00:51:10,530
+Speaker 0: I just said, you know, this kind of thing has been experimented with and been done sometimes.
+
+731
+00:51:11,013 --> 00:51:13,110
+Speaker 0: But it's never been done like big time.
+
+732
+00:51:18,590 --> 00:51:20,610
+Speaker 1: This has been Geek Nights with Rim and Scott.
+
+733
+00:51:20,830 --> 00:51:23,030
+Speaker 1: Special thanks to DJ Pretzel for the opening music.
+
+734
+00:51:23,270 --> 00:51:25,730
+Speaker 1: Kat Lee for web design and Brando K for the logos.
+
+735
+00:51:26,190 --> 00:51:31,150
+Speaker 0: Be sure to visit our website at frontrowcrew.com for show notes, discussion news and more.
+
+736
+00:51:31,510 --> 00:51:34,070
+Speaker 1: Remember, Geek Nights is not one, but four different shows.
+
+737
+00:51:34,370 --> 00:51:38,810
+Speaker 1: SciTech Mondays, Gaming Tuesdays, Anime Comic Wednesdays and Indiscriminate Thursdays.
+
+738
+00:51:39,250 --> 00:51:42,346
+Speaker 0: Geek Nights is distributed under a Creative Commons Attribution 3.0 license.
+
+739
+00:51:43,593 --> 00:51:46,650
+Speaker 0: Geek Nights is recorded live with no studio and no audience.
+
+740
+00:51:46,890 --> 00:51:49,770
+Speaker 0: But unlike those other late shows, it's actually recorded at night.
+
+741
+00:52:46,732 --> 00:52:47,446
+Speaker 1: At their request.
+
+742
+00:52:52,550 --> 00:52:55,569
+Speaker 1: And anyway, I'm just gonna leave you tonight with about this.
+
+743
+00:52:55,810 --> 00:52:57,049
+Speaker 1: What is Hasperaat?
+
+744
+00:52:57,350 --> 00:52:57,642
+Speaker 1: Hasperaat.
+
+745
+00:52:58,010 --> 00:52:58,344
+Speaker 1: Hasperaat.
+
+746
+00:52:58,770 --> 00:52:59,104
+Speaker 1: Hasperaat.
+
+747
+00:52:59,450 --> 00:52:59,826
+Speaker 1: Hasperaat.
+
+748
+00:53:00,330 --> 00:53:00,664
+Speaker 1: Hasperaat.
+
+749
+00:53:01,690 --> 00:53:02,066
+Speaker 1: Hasperaat.
+
+750
+00:53:03,332 --> 00:53:03,687
+Speaker 1: Hasperaat.
+
+751
+00:53:03,870 --> 00:53:04,308
+Speaker 1: Hasperaat.
+
+752
+00:53:04,851 --> 00:53:05,310
+Speaker 1: Hasperaat.
+
+753
+00:53:05,590 --> 00:53:05,869
+Speaker 0: Hasperaat.
+
+754
+00:53:06,193 --> 00:53:06,486
+Speaker 1: Hasperaat.
+
+755
+00:53:06,671 --> 00:53:07,026
+Speaker 1: Hasperaat.
+
+756
+00:53:07,970 --> 00:53:08,346
+Speaker 1: Hasperaat.
+
+757
+00:53:08,791 --> 00:53:09,229
+Speaker 1: Hasperaat.
+
+758
+00:53:09,390 --> 00:53:09,610
+Speaker 1: Hasperaat.
+
+759
+00:53:09,610 --> 00:53:09,870
+Speaker 1: Hasperaat.
+
+760
+00:53:10,510 --> 00:53:11,289
+Speaker 1: It's a pajama dish.
+
+761
+00:53:11,990 --> 00:53:12,428
+Speaker 1: Very spicy.
+
+762
+00:53:13,090 --> 00:53:15,450
+Speaker 1: Sometimes it's some kind of burrito or wrap.
+
+763
+00:53:16,011 --> 00:53:17,470
+Speaker 1: One time it looks more like a bowl of chili.
+

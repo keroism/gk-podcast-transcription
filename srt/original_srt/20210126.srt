@@ -1,0 +1,2716 @@
+﻿1
+00:00:07,820 --> 00:00:09,395
+Speaker 0: - It's Tuesday, January 26th, 2021.
+
+2
+00:00:09,395 --> 00:00:09,656
+Speaker 0: I'm Rem.
+
+3
+00:00:09,676 --> 00:00:10,078
+Speaker 0: - I'm Scott.
+
+4
+00:00:13,730 --> 00:00:15,115
+Speaker 0: - And this is Geek Nights.
+
+5
+00:00:15,155 --> 00:00:19,570
+Speaker 0: Tonight, we are talking about Hades, the video game.
+
+6
+00:00:20,790 --> 00:00:21,895
+Speaker 1: - Let's do this.
+
+7
+00:00:21,915 --> 00:00:30,193
+Speaker 0: - So yeah, I'm doing my work, you know, work from home, like you do during COVID, especially if you have the kind of job that me and Scott have.
+
+8
+00:00:30,675 --> 00:00:39,652
+Speaker 0: I'm doing my work, and there's a really important thing I'm working on, like, with some people, like, right then and there, like, finish a thing for a meeting that's about to happen.
+
+9
+00:00:40,395 --> 00:00:52,197
+Speaker 0: And I'm doing some, like, fuckery in Excel, and, well, I'll share in Excel, like, a Google cheat or whatever, but my work PC that I'm remoted into starts to get a little slow, like, wait, what's going on?
+
+10
+00:00:52,237 --> 00:00:55,738
+Speaker 0: Like, it's, like, moving slow, like, I'm trying to put this formula in, it's not working.
+
+11
+00:00:55,758 --> 00:01:15,256
+Speaker 1: - I was trying to do, I was testing a server, 'cause there was, it was slow, something was making it slow, and I was trying to figure out what was making it slow, and as I'm typing, my typing in the SSH connection is sluggish, and I open up top, and there are no processes using up the CPU or memory, the server seems fine in top.
+
+12
+00:01:15,276 --> 00:01:20,170
+Speaker 0: - Same thing, I literally opened Task Manager, like, what, do I have too many Chrome tabs open, like, what's going on?
+
+13
+00:01:20,270 --> 00:01:23,867
+Speaker 1: - And then I look at my NAS, my NAS is blinking, I'm like, oh, is it doing something?
+
+14
+00:01:24,048 --> 00:01:34,934
+Speaker 1: So I go to my NAS, and that's quick as the dickens, right, it, like, loads right up immediately, and I check my NAS's activity, and it's, like, yeah, not doing much, just chilling, you know, hard drives, like, how we do, right?
+
+15
+00:01:35,737 --> 00:01:52,291
+Speaker 1: And then I try to do a Google search, and it's slow as balls, and I'm, like, got two different computers, my work computer's on a VPN to work, my regular computer's not, and both of them are kind of slow networky, like, just doing a Google search, so I'm, like, uh...
+
+16
+00:01:52,312 --> 00:01:58,130
+Speaker 0: - But what was weird is, at first, the things I suspected, that I had a local ISP problem.
+
+17
+00:01:58,750 --> 00:01:58,952
+Speaker 1: - Same.
+
+18
+00:01:58,972 --> 00:02:11,600
+Speaker 0: - But then, like, random stuff was 100% fine, like, YouTube was just 100% fine, but random stuff, like, the single sign on for, like, one particular thing was timing out.
+
+19
+00:02:12,845 --> 00:02:27,550
+Speaker 0: Thankfully, because of the nature of my work, I got a pretty early report to figure out what was going on, there was a Verizon ISP outage, and pretty quickly, the world figured out that it was, like, one fiber bundle got cut in Brooklyn, and caused a massive outage in the entire Northeast.
+
+20
+00:02:29,930 --> 00:02:34,122
+Speaker 1: - Why are these fiber cables so poorly secured?
+
+21
+00:02:34,142 --> 00:02:37,053
+Speaker 0: - Well, there's a lot of ways fiber cables get broken.
+
+22
+00:02:37,133 --> 00:02:39,490
+Speaker 0: Remember, my job used to be dealing with that kind of crap.
+
+23
+00:02:39,810 --> 00:02:42,810
+Speaker 1: - Right, and how come there isn't more, you know, redundancy?
+
+24
+00:02:43,550 --> 00:02:45,142
+Speaker 0: - Uh, there is redundancy, here's the problem.
+
+25
+00:02:45,163 --> 00:02:46,070
+Speaker 1: - Not enough.
+
+26
+00:02:46,570 --> 00:02:48,902
+Speaker 0: - When a big, well, there's two things going on here.
+
+27
+00:02:49,405 --> 00:02:51,392
+Speaker 0: This is where I can talk about my professional opinion.
+
+28
+00:02:51,914 --> 00:03:07,350
+Speaker 0: On one hand, during COVID, because of just the extra demands on the internet that are not normally there, like, the orders of magnitude more people streaming video constantly, there's a lot more traffic going around than there would be normally at this time.
+
+29
+00:03:07,410 --> 00:03:08,194
+Speaker 0: - True, true, true.
+
+30
+00:03:08,214 --> 00:03:24,259
+Speaker 0: - Simultaneously, no top two, like, no level one, level two, like, the ISPs that actually run the infrastructure of the internet, there's no reason for them to build out, like, full path redundancy for that level of traffic, because a lot of that traffic will eventually go away.
+
+31
+00:03:26,246 --> 00:03:27,510
+Speaker 0: So, we're in this situation--.
+
+32
+00:03:27,530 --> 00:03:33,613
+Speaker 1: - Well, also, think about how much bandwidth is going, like, how much, like, fiber is going to office buildings.
+
+33
+00:03:33,654 --> 00:03:36,042
+Speaker 1: That's basically dark fiber now, right?
+
+34
+00:03:36,062 --> 00:03:41,702
+Speaker 0: - Except in my case, where I remote to my physical desktop sitting in that building, because that is easier.
+
+35
+00:03:41,722 --> 00:03:47,502
+Speaker 1: - Sure, and then it's, other, you know, but you're still, it's still.
+
+36
+00:03:47,542 --> 00:03:48,747
+Speaker 1: bandwidth is going to your home.
+
+37
+00:03:48,787 --> 00:03:50,090
+Speaker 1: that wouldn't be, right?
+
+38
+00:03:50,110 --> 00:03:52,478
+Speaker 1: The home bandwidth use is, like, way up.
+
+39
+00:03:53,462 --> 00:03:59,065
+Speaker 1: And Verizon isn't, you know, Verizon, Comcast, whoever the home people are, they're not charging more money right now.
+
+40
+00:03:59,126 --> 00:04:00,050
+Speaker 1: They couldn't get away with it.
+
+41
+00:04:00,071 --> 00:04:00,973
+Speaker 1: People would riot.
+
+42
+00:04:00,994 --> 00:04:12,919
+Speaker 0: - Yep, but the other thing going on is that when a major link goes down somewhere, like, the internet, like, routing protocols, we've talked about this in ancient episodes of Geek Nights, will, like, route around the problem.
+
+43
+00:04:13,380 --> 00:04:20,184
+Speaker 0: However, that process does take time, and there's a period where routes get weird.
+
+44
+00:04:20,224 --> 00:04:27,961
+Speaker 0: So, like, you might make, you might try to hit the same service twice, and one time it takes one route through the internet, and the next time it takes another radically different route for the internet.
+
+45
+00:04:27,981 --> 00:04:43,357
+Speaker 1: - Yeah, but when that, when it works, right, I'm like, I'm sure there's been plenty of times, actually, like, probably way more times than we know, where something was cut or broken or a router exploded or a data center went on fire or a power outage somewhere.
+
+46
+00:04:43,377 --> 00:04:45,604
+Speaker 0: - Fun fact, I caused a data center fire once.
+
+47
+00:04:45,624 --> 00:04:48,152
+Speaker 1: - Right, a fiber cable was cut, right?
+
+48
+00:04:48,172 --> 00:04:55,626
+Speaker 1: There were probably tons of instances where those things happened, and you never noticed because the routing worked, and it was, there was another route, and it was fine.
+
+49
+00:04:55,646 --> 00:05:08,689
+Speaker 0: - The problem was things that transited the Verizon network, which are very common for working and the kinds of things people are doing right now had to get rerouted, like, at this high level, coupled with.
+
+50
+00:05:09,510 --> 00:05:27,198
+Speaker 0: normally the redundancy of the internet is such that when a big link like that goes down, there's plenty of capacity and, like, all the other ways to get to places that it does recover more quickly, but now there was just so much more traffic to reroute, like, elevated traffic, there's less redundancy right now.
+
+51
+00:05:27,841 --> 00:05:39,582
+Speaker 0: The final thing that's going on, and this is a long-term trend, the internet itself is a lot less redundant than it used to be because people generally access a smaller number of services with a higher, like, total usage.
+
+52
+00:05:39,602 --> 00:05:49,280
+Speaker 1: - And even if you think you're using a lot of services, all those services are hosted in fewer data, not every company, like, has its own data center, like, in the 90s or whatever, right?
+
+53
+00:05:49,862 --> 00:05:58,981
+Speaker 1: All the companies in the 90s that had their own data center, right, they just ended up making the data center their business or a part of their business and everyone else went into those data centers.
+
+54
+00:05:59,001 --> 00:06:03,461
+Speaker 0: - Yeah, but if, like, routes to Amazon go down, most of the internet stops working.
+
+55
+00:06:03,481 --> 00:06:20,686
+Speaker 1: - Right, like, it used to be that, like, every single freaking person in the 90s who was selling books, selling shit online had to get servers into a data center somewhere, and now one of those people, you know, sold so many books, they made their own data center, and now half the world's sites are in that one data center.
+
+56
+00:06:20,706 --> 00:06:30,123
+Speaker 0: - Yep, you know, there's a tweet, I quote it a lot, but, and it's not, it's about this, but it's also about the fact that there aren't a lot of, like, independent websites anymore.
+
+57
+00:06:30,444 --> 00:06:32,773
+Speaker 0: There used to be more websites and I miss them.
+
+58
+00:06:32,793 --> 00:06:32,813
+Speaker 0: -
+
+59
+00:06:33,797 --> 00:06:53,385
+Speaker 1: Yeah, there, I mean, there still are actually quite a lot, it's just you can't really find them because, you know, they don't really show up in Google, right, and a lot of them aren't, they're not, even if you search for what was on them, you, they wouldn't be the top result, and even if they were, it's like, you know, it's like those kinds of sites are not...
+
+60
+00:06:53,405 --> 00:06:54,891
+Speaker 0: - Like, there was a time when...
+
+61
+00:06:54,911 --> 00:06:56,577
+Speaker 1: - It's in the Google index somewhere!
+
+62
+00:06:56,597 --> 00:06:56,617
+Speaker 1: -
+
+63
+00:06:56,838 --> 00:07:13,998
+Speaker 0: Like, that Geek Nights forum used to be weirdly prominent in Google searches, partly because that was during the Web 2.0 era, where over time, a lot of that kind of content moved into social media networks and, like, got aggregated very differently, and we just happened to maintain a website that had a lot of content that was independent.
+
+64
+00:07:14,018 --> 00:07:14,138
+Speaker 0: - Like,
+
+65
+00:07:14,158 --> 00:07:36,340
+Speaker 1: you could search, you could maybe some anime only we reviewed or something, and maybe, we'll be in the Google search results somewhere, but not high up, there's gonna be a lot of tweets or Pinterest posts about that anime, or, you know, Anime News Network may have an article about it, or the
+
+66
+00:07:36,420 --> 00:07:44,867
+Speaker 0: official site for it, Wikipedia page for it... - Also, the prevalence of e-commerce, most of the results you'll get will be e-commerce and aggregator sites and, like...
+
+67
+00:07:44,887 --> 00:07:47,776
+Speaker 1: - Even add the word "review" to get those out of there.
+
+68
+00:07:47,856 --> 00:07:52,611
+Speaker 1: You still won't see a lot of, you know, too many independent websites.
+
+69
+00:07:52,651 --> 00:07:54,858
+Speaker 1: I guess Anime News Network is sort of an independent website.
+
+70
+00:07:54,878 --> 00:07:55,480
+Speaker 0: - It is.
+
+71
+00:07:55,500 --> 00:07:58,670
+Speaker 0: - Yeah, but yeah.
+
+72
+00:07:58,930 --> 00:08:02,669
+Speaker 0: - I tried that, I was looking for a Pazukiki Musume, because not many people reviewed that.
+
+73
+00:08:03,610 --> 00:08:06,457
+Speaker 1: - No, I don't think so.
+
+74
+00:08:06,477 --> 00:08:13,456
+Speaker 0: - So anyway, there is actually some fascinating news that has been developing and is continuing to develop rapidly.
+
+75
+00:08:13,476 --> 00:08:18,530
+Speaker 1: - This is, is it really, it's sort of a gaming news, sort of, right?
+
+76
+00:08:18,550 --> 00:08:19,713
+Speaker 0: - It's gaming in two ways.
+
+77
+00:08:19,994 --> 00:08:22,720
+Speaker 0: It's about a game, and it's about GameStop.
+
+78
+00:08:22,740 --> 00:08:29,155
+Speaker 1: - Yeah, so this is extremely Geek Nights news.
+
+79
+00:08:29,316 --> 00:08:30,580
+Speaker 1: So here's the deal, right?
+
+80
+00:08:31,222 --> 00:08:33,207
+Speaker 1: GameStop is in the shitter, right?
+
+81
+00:08:33,347 --> 00:08:38,602
+Speaker 1: It's, people are, A, not buying physical games much anymore, right?
+
+82
+00:08:38,643 --> 00:08:43,136
+Speaker 1: And if they are, they're not buying them at Amazon or Target.com or whatever.
+
+83
+00:08:43,157 --> 00:08:48,234
+Speaker 0: - That also means there's less secondary market for kids to sell games back to GameStop.
+
+84
+00:08:48,254 --> 00:08:53,210
+Speaker 1: - Yep, so that, you know, the kids being able to sell and buy games has gone down.
+
+85
+00:08:54,671 --> 00:09:00,875
+Speaker 1: But just in general, people are buying digital games, you know, they're not buying physical games, GameStop is in the pooper, right?
+
+86
+00:09:00,915 --> 00:09:03,162
+Speaker 1: Toys R Us is gone also, completely, right?
+
+87
+00:09:03,583 --> 00:09:10,067
+Speaker 1: Anyway, so GameStop stock, right, stock market is supposed to represent the value of companies, right?
+
+88
+00:09:10,087 --> 00:09:16,414
+Speaker 1: You want to buy companies that are undervalued, where the price of the stock is less than the actual work the company's doing, right?
+
+89
+00:09:16,836 --> 00:09:22,779
+Speaker 1: You know, it's like you buy Apple stock before they make an iPhone, then they make an iPhone, and it goes up, right?
+
+90
+00:09:22,880 --> 00:09:23,522
+Speaker 1: Common sense.
+
+91
+00:09:23,542 --> 00:09:23,824
+Speaker 1: - Yep.
+
+92
+00:09:23,844 --> 00:09:29,444
+Speaker 1: - And the selling would be the opposite, like, oh, that new iPhone is shit, sell, right?
+
+93
+00:09:29,484 --> 00:09:31,953
+Speaker 1: Android's gonna kick their ass this quarter, whatever, right?
+
+94
+00:09:31,973 --> 00:09:33,397
+Speaker 0: - Here's where things get a little weird.
+
+95
+00:09:33,859 --> 00:09:42,432
+Speaker 0: In like olden times, the stock market, like equities is what we're talking about, that's the term for this, buying equity in a company like GameStop.
+
+96
+00:09:42,452 --> 00:09:49,471
+Speaker 1: - Yeah, you technically and actually own part of the company when you buy its stock, but, you know.
+
+97
+00:09:49,491 --> 00:09:53,786
+Speaker 0: - You are a shareholder, but that is, there's two types of stock markets.
+
+98
+00:09:54,308 --> 00:10:09,450
+Speaker 0: Like, all this is necessary to understand what the hell's going on here, and I'm also going to preface this by saying, despite my day job and everything I know about this stuff, we are not giving advice, we are not lawyers, we are not stock advisors, we are not advising you to do anything in particular at all.
+
+99
+00:10:09,730 --> 00:10:11,941
+Speaker 1: - There's a lot of laws about this shit, and we're not breaking any of them.
+
+100
+00:10:11,961 --> 00:10:12,222
+Speaker 1: - Nope.
+
+101
+00:10:12,765 --> 00:10:25,106
+Speaker 0: And I also have a lot of extra restrictions on what I say and what I do, so I'm going to be very circumspect about this, but the stock market, the idea is there is a primary market and a secondary market.
+
+102
+00:10:25,568 --> 00:10:31,349
+Speaker 0: Anytime you hear about stock trading, that is the secondary market, because the primary market only exists once.
+
+103
+00:10:31,449 --> 00:10:33,457
+Speaker 0: That is when a company IPOs.
+
+104
+00:10:33,878 --> 00:10:37,210
+Speaker 0: A company says, we are going to issue parts of ourselves out to the world.
+
+105
+00:10:37,591 --> 00:10:41,041
+Speaker 0: You can buy those shares so that we will have cash.
+
+106
+00:10:41,462 --> 00:10:49,249
+Speaker 0: We will then use that cash to do something, and for giving us that cash, we give you a stake in the company, so you can share those profits.
+
+107
+00:10:49,269 --> 00:10:56,317
+Speaker 1: - It's the only reason the stock market even exists is because you're a company, and you could just use business loans and remain a private company forever.
+
+108
+00:10:56,337 --> 00:10:58,144
+Speaker 0: - A lot of companies do it.
+
+109
+00:10:58,666 --> 00:10:59,589
+Speaker 0: I highly recommend it.
+
+110
+00:10:59,649 --> 00:11:01,354
+Speaker 0: It's way better than having shareholders.
+
+111
+00:11:01,374 --> 00:11:02,518
+Speaker 1: - It's a good deal.
+
+112
+00:11:02,598 --> 00:11:10,824
+Speaker 1: I like it, but sometimes if no one wants to give you a loan or you want a pile of money, you can sell shares.
+
+113
+00:11:10,845 --> 00:11:17,450
+Speaker 1: If you sell 49% of your shares, you can just hold the other 51% forever, and no one can make you sell them.
+
+114
+00:11:17,850 --> 00:11:20,459
+Speaker 0: - Now really, there's three things that those shares do.
+
+115
+00:11:21,121 --> 00:11:26,178
+Speaker 0: Number one, they technically give you a say in how the company is run, but that doesn't matter to you.
+
+116
+00:11:26,198 --> 00:11:30,292
+Speaker 1: - You have to own so many of them to have a say, it won't matter.
+
+117
+00:11:30,312 --> 00:11:33,061
+Speaker 0: - Your TD Ameritrade proxy vote does not matter.
+
+118
+00:11:33,081 --> 00:11:34,886
+Speaker 1: - No, it doesn't.
+
+119
+00:11:35,328 --> 00:11:36,571
+Speaker 1: I click on it anyway, though.
+
+120
+00:11:36,591 --> 00:11:48,910
+Speaker 0: - Some companies, but not as many as used to, will give dividends, meaning every quarter, every month, or whatever schedule, they'll pay you your percentage of the company's profits.
+
+121
+00:11:49,890 --> 00:11:51,254
+Speaker 1: - Dividends are a good deal.
+
+122
+00:11:51,274 --> 00:11:52,357
+Speaker 1: I like dividends.
+
+123
+00:11:52,377 --> 00:11:54,283
+Speaker 0: - Dividends are a... -
+
+124
+00:11:54,423 --> 00:12:11,522
+Speaker 1: If you are a person who is just a normal person and you just want to collect free money, basically what you do is you let evil people, the evil people who are ruining the world, hold part of your money, and all that, you know, you hear like, you know, rich guy becomes billions richer, right?
+
+125
+00:12:11,582 --> 00:12:16,499
+Speaker 1: You will get some tiny fraction of that money just slowly dribbling into your account.
+
+126
+00:12:16,519 --> 00:12:21,474
+Speaker 0: - Ostensibly, they're paying you for the risk of they might lose your money.
+
+127
+00:12:21,494 --> 00:12:22,779
+Speaker 0: - Sure.
+
+128
+00:12:22,799 --> 00:12:25,307
+Speaker 0: - There's a few ways to look at it, but here's the key.
+
+129
+00:12:25,708 --> 00:12:27,574
+Speaker 0: Dividends aren't that common.
+
+130
+00:12:27,855 --> 00:12:31,387
+Speaker 0: A lot of big stocks don't actually pay any dividends anymore.
+
+131
+00:12:31,809 --> 00:12:33,033
+Speaker 0: It used to be a lot more common.
+
+132
+00:12:33,053 --> 00:12:40,144
+Speaker 1: - Nope, and a lot of them that do pay dividends, they pay out a tiny dividend, like something like 50 cents a share, or that's even, that's kind of big.
+
+133
+00:12:40,164 --> 00:12:41,691
+Speaker 0: - Well, depending on the share price.
+
+134
+00:12:42,072 --> 00:12:45,261
+Speaker 0: Dividends are usually expressed as a percentage of the share price.
+
+135
+00:12:45,282 --> 00:12:48,953
+Speaker 1: - Yeah, five percent would be a very large dividend.
+
+136
+00:12:48,973 --> 00:12:52,970
+Speaker 0: - Yeah, like, I'm very happy to get two or three percent from some of the stocks I own.
+
+137
+00:12:53,510 --> 00:12:56,547
+Speaker 1: - Right, like, for example, you could buy, I think IBM is something like five percent.
+
+138
+00:12:56,647 --> 00:13:01,569
+Speaker 1: It's usually stocks like that, like cruddy-duddy-fuddy companies that have the big dividend, right?
+
+139
+00:13:01,589 --> 00:13:14,795
+Speaker 1: So, like, you buy some IBM or some AT&T or something like that, and it's like, you'll, yeah, okay, who knows if this style, you know, is IBM on the way out probably, right, whatever, but you'll just be making five percent of your money.
+
+140
+00:13:14,835 --> 00:13:16,423
+Speaker 1: Better than a savings account by a lot.
+
+141
+00:13:16,443 --> 00:13:24,674
+Speaker 0: - Yep, but also that makes sense, because ostensibly you own a tiny percent of that company, so the company pays you that tiny percent of whatever money it makes.
+
+142
+00:13:24,714 --> 00:13:25,879
+Speaker 0: Like, that makes sense.
+
+143
+00:13:26,100 --> 00:13:27,767
+Speaker 0: That, like, is an intrinsic value.
+
+144
+00:13:27,787 --> 00:13:32,930
+Speaker 1: - They should be going to be giving it to the employees who made that money, but that's a story for another time.
+
+145
+00:13:33,130 --> 00:13:34,636
+Speaker 0: - Well, I mean, we're communists now, so...
+
+146
+00:13:34,656 --> 00:13:36,101
+Speaker 1: - Yes, of course.
+
+147
+00:13:36,121 --> 00:13:38,470
+Speaker 0: - Well, we're closer to neo-communists, actually.
+
+148
+00:13:38,510 --> 00:13:40,880
+Speaker 0: I've been reading more about the neo-communist movement in the 70s.
+
+149
+00:13:40,900 --> 00:13:47,610
+Speaker 1: - I'm just saying is that all this stuff is basically under the assumption of, like, all right, we have evil capitalism, now what?
+
+150
+00:13:47,650 --> 00:13:48,193
+Speaker 0: - Yeah, yeah, we're...
+
+151
+00:13:48,213 --> 00:13:50,825
+Speaker 1: - The obvious, which is destroy this evil capitalism.
+
+152
+00:13:50,845 --> 00:13:51,710
+Speaker 1: so we don't have to do this.
+
+153
+00:13:51,950 --> 00:13:55,830
+Speaker 0: - Yep, but we're talking about the reality of capitalism as it is today in America.
+
+154
+00:13:56,350 --> 00:13:56,711
+Speaker 0: - Yes.
+
+155
+00:13:56,732 --> 00:13:58,258
+Speaker 0: - Don't think we're endorsing any of this.
+
+156
+00:13:58,278 --> 00:14:00,125
+Speaker 1: - So, all that being said...
+
+157
+00:14:00,145 --> 00:14:01,210
+Speaker 0: - No, there's one more important part.
+
+158
+00:14:01,490 --> 00:14:02,193
+Speaker 0: - Then you can do your bit.
+
+159
+00:14:02,213 --> 00:14:02,454
+Speaker 1: - Oh, okay.
+
+160
+00:14:02,474 --> 00:14:07,675
+Speaker 0: - The last important thing is that's one way to make money from the stock market to get dividends paid.
+
+161
+00:14:07,716 --> 00:14:11,852
+Speaker 0: The other thing the stock market provides is a secondary market.
+
+162
+00:14:11,932 --> 00:14:13,176
+Speaker 0: That is actual stock trading.
+
+163
+00:14:13,617 --> 00:14:24,129
+Speaker 0: I might own some IBM and Scott thinks that that IBM is worth more than what RIM paid for it and might offer to buy it from me for more than I paid IBM for it.
+
+164
+00:14:25,011 --> 00:14:27,180
+Speaker 0: That's what all stock trading is, the secondary market.
+
+165
+00:14:27,502 --> 00:14:34,708
+Speaker 0: Someone owns the stock and someone else decides that it is worth more or less than what that person believes it is worth.
+
+166
+00:14:36,091 --> 00:14:39,525
+Speaker 0: And if they can agree on a price, they will sell it and move it around.
+
+167
+00:14:39,826 --> 00:14:54,980
+Speaker 0: So the third way people make money on the stock market is by buying a stock, hoping that other people will believe that that stock is more valuable in the future so that they can sell it and make a profit by the difference between what they paid for it and what they sold it for.
+
+168
+00:14:55,000 --> 00:15:14,137
+Speaker 0: The interesting thing about that that leads into what Scott's about to say is that what determines that price is not necessarily the value of the company, because what is the value of the company, especially if a stock does not pay dividends?
+
+169
+00:15:14,157 --> 00:15:24,249
+Speaker 1: - Yeah, I mean, so by all logic, the price of GameStop, what is it worth to someone to be one of the owners of GameStop, right?
+
+170
+00:15:24,269 --> 00:15:26,618
+Speaker 1: Let's say you had Ellen Musk's money, right?
+
+171
+00:15:26,879 --> 00:15:27,702
+Speaker 1: Jeff Bezos' money.
+
+172
+00:15:28,084 --> 00:15:29,770
+Speaker 1: You could just buy GameStop, right?
+
+173
+00:15:30,050 --> 00:15:31,917
+Speaker 1: You could just become the owner of GameStop.
+
+174
+00:15:32,339 --> 00:15:36,819
+Speaker 1: It's like, how much would you be willing to pay to be the owner of all the GameStops?
+
+175
+00:15:36,919 --> 00:15:38,790
+Speaker 1: If you own all these little retail stores and all these huge game discs?
+
+176
+00:15:38,870 --> 00:15:41,122
+Speaker 0: - Divide that by the number of shares, there's a share price.
+
+177
+00:15:41,222 --> 00:15:47,807
+Speaker 0: It's a lot more complicated than that, but it comes down to how much property does that company own?
+
+178
+00:15:47,827 --> 00:15:49,132
+Speaker 0: Do they own physical things?
+
+179
+00:15:49,172 --> 00:15:50,759
+Speaker 0: Do they have a vault of gold somewhere?
+
+180
+00:15:50,779 --> 00:15:59,170
+Speaker 1: - Right, because if you did buy all those shares, which you absolutely could at a price, you would then be literally the owner of GameStop.
+
+181
+00:15:59,330 --> 00:16:02,650
+Speaker 1: You could go to the GameStop employees and boss them around, and you're the boss.
+
+182
+00:16:03,310 --> 00:16:05,620
+Speaker 1: You could say the CEO is gonna be rimmed.
+
+183
+00:16:05,640 --> 00:16:07,528
+Speaker 0: - Say a company owns like a strip mall.
+
+184
+00:16:07,589 --> 00:16:07,890
+Speaker 0: Guess what?
+
+185
+00:16:07,950 --> 00:16:09,196
+Speaker 0: That's your strip mall now.
+
+186
+00:16:09,217 --> 00:16:11,730
+Speaker 1: - Yeah, you could put whatever stores you want in there.
+
+187
+00:16:11,910 --> 00:16:25,400
+Speaker 0: - Which means there's almost a floor on the stock price of a company in that if a stock price gets low enough, the stock price could get lower than the value of the physical things that company owns, at which point it often makes sense to buy that stock.
+
+188
+00:16:25,421 --> 00:16:37,306
+Speaker 1: - There's an interesting, semi-weird, maybe not perfect dude who recently just bought Radio Shack out of its remains and is selling t-shirts with the Radio Shack logo, because they own it now.
+
+189
+00:16:37,326 --> 00:16:38,351
+Speaker 1: They can do whatever the hell they want.
+
+190
+00:16:38,492 --> 00:16:39,457
+Speaker 1: Sell Radio Shack t-shirts.
+
+191
+00:16:39,497 --> 00:16:42,831
+Speaker 1: They own the trademark, among all the other property that is included.
+
+192
+00:16:42,852 --> 00:16:57,837
+Speaker 1: - So basically, at its peak, GameStop, during the 2007 holiday season, when people are buying Wii's for the holiday, the Wii just came out, it's holiday time, GameStop is at its highest price ever.
+
+193
+00:16:57,897 --> 00:16:58,941
+Speaker 1: That makes perfect sense.
+
+194
+00:16:59,403 --> 00:17:05,684
+Speaker 1: That is a stock market working, invisible hand of capitalism as it was supposed to be by the book.
+
+195
+00:17:05,704 --> 00:17:12,887
+Speaker 0: - Yep, went down a little bit, came up again to a similar price in 2013 because of, again, retail forces.
+
+196
+00:17:13,147 --> 00:17:20,920
+Speaker 0: There was a lot of reasons why people are going to GameStops, and then for all the reasons we discussed, there was a decline.
+
+197
+00:17:21,180 --> 00:17:30,807
+Speaker 0: To the point to where, in the year of our lore 2020, I'm sure GameStop's worth about four bucks, because GameStop doesn't do anything for you in the modern world.
+
+198
+00:17:30,827 --> 00:17:34,260
+Speaker 1: - Yeah, GameStop's in the shitter, you know, rightly so.
+
+199
+00:17:34,280 --> 00:17:35,585
+Speaker 0: - Wasn't even COVID.
+
+200
+00:17:35,625 --> 00:17:37,311
+Speaker 0: This happened long before COVID.
+
+201
+00:17:37,332 --> 00:17:47,188
+Speaker 1: - Right, and so, being in the shitter, even at four dollars, right, it's so low, like no one's even willing to pay five, like five dollars is a breakfast sandwich.
+
+202
+00:17:47,248 --> 00:17:57,059
+Speaker 1: No one's willing to buy, to trade, someone's sitting there with a breakfast sandwich, right, and, or they could own, be an owner of GameStop.
+
+203
+00:17:57,079 --> 00:18:01,032
+Speaker 0: - One whole share of GameStop, and Scott's like, "I want to keep my bacon, egg, and
+
+204
+00:18:01,052 --> 00:18:01,313
+Speaker 0: cheese.".
+
+205
+00:18:01,333 --> 00:18:04,268
+Speaker 1: - And people are saying, "I'm going to keep the breakfast
+
+206
+00:18:04,288 --> 00:18:04,569
+Speaker 1: sandwich.".
+
+207
+00:18:05,131 --> 00:18:06,234
+Speaker 1: That's how worthless it is.
+
+208
+00:18:07,899 --> 00:18:12,253
+Speaker 1: And yet, there's something you can do, which is selling short, right, so.
+
+209
+00:18:12,273 --> 00:18:15,568
+Speaker 0: - I want to hear you explain this, I think you understand it pretty well now.
+
+210
+00:18:15,588 --> 00:18:27,039
+Speaker 1: - I only have sell short, so, normally, if you owned your game, if you own the share of GameStop, like you already had one, right, you're like, you're like, "Wow, GameStop ain't worth five bucks, I'd rather have a breakfast sandwich.
+
+211
+00:18:27,059 --> 00:18:28,989
+Speaker 1: that continue to be an owner of GameStop.
+
+212
+00:18:29,731 --> 00:18:34,468
+Speaker 1: I'm going to sell this to someone who will give me five bucks, and I'll go buy a breakfast
+
+213
+00:18:34,488 --> 00:18:34,869
+Speaker 1: sandwich.".
+
+214
+00:18:35,110 --> 00:18:37,943
+Speaker 0: - Now, let's pretend options and all that other stuff don't exist.
+
+215
+00:18:37,963 --> 00:18:39,711
+Speaker 1: - Yeah, we don't need to talk about that.
+
+216
+00:18:39,731 --> 00:18:49,389
+Speaker 0: - You can bet on a stock being more valuable in the future by buying it, but the only way to bet on a stock being less valuable in the future is to sell it if you already have it.
+
+217
+00:18:49,409 --> 00:18:49,429
+Speaker 0: -
+
+218
+00:18:50,010 --> 00:19:27,116
+Speaker 1: Right, right, so you're sitting there and you're saying, "GameStop, that ain't worth a breakfast sandwich," but you don't own any GameStop, so you can't sell any GameStop if you don't own any, right, that's like, you know, imagine if like, you know, Black Lotus Magic Cards, I remember them being 300 bucks when I was a kid, but if you thought, "They ain't 300, they worth 200," right, I know what I'll do, I'll sell you a Black Lotus for, you know, that I don't even have, right, I'll borrow a Black Lotus from someone else, and I'll say, "Hey, listen, I'm borrowing this Black Lotus from you, but here's a promise, I am required by law to give you another Black Lotus to replace this one that you're giving me.
+
+219
+00:19:27,397 --> 00:20:04,173
+Speaker 1: You're guaranteed to get one back at some point in the future, it's no skin off your back, you're going to end up with the same Black Lotus you started with, right, I'm just going to borrow this for a sec, right, you go and you sell it for 300 dollars, right, so now you're sitting there with a few hundred dollars, and you wait, because you know it ain't worth 300 dollars, it's going to go down, right, and it goes down to 200, so you buy a Black Lotus for 200, you give that Black Lotus you just bought back to the person you borrowed it from, so they don't care, they started with a Black Lotus, they ended with a Black Lotus, no problem, right, the person that you, you know, sold a Black Lotus to for 300, well, they were, they were a cool, right,
+
+220
+00:20:04,574 --> 00:20:14,433
+Speaker 0: but whatever, I lent Scott my Black Lotus, a year later he gives it back to me, and maybe he pays me a fee, like, oh yeah, here's 10 bucks for the privilege of borrowing your Black Lotus, sure,
+
+221
+00:20:14,713 --> 00:20:18,225
+Speaker 1: but I made 100 bucks, 90 bucks, depending on the fee, right,
+
+222
+00:20:18,546 --> 00:20:23,490
+Speaker 0: and meanwhile for my side, that 10 bucks doesn't sound like a lot, but what did I risk, I didn't risk anything,
+
+223
+00:20:24,610 --> 00:20:29,836
+Speaker 1: you had no risk whatsoever, you just let someone borrow your Black Lotus with an absolute guarantee that you would get one back,
+
+224
+00:20:30,097 --> 00:21:10,350
+Speaker 0: now why doesn't everyone, one, the two things questions people ask about this is, one, doesn't, isn't this evil and corrupting, the answer is kind of no, because it's a good way to inject bad news into the stock market, otherwise there's this idea that everyone could kind of agree to never sell anything and make false valuations go up forever, like, it's a way to say no, that stock is worth too much, and I'm gonna prove it, I'm gonna bet money that it's worth too much, but, right, the other thing that can happen is if the opposite happens, you'll hear people who are learning about stocks talk about this idea of unlimited losses, if I buy a stock for 100 bucks and it goes down to zero, my maximum loss is 100 bucks, if I,
+
+225
+00:21:10,390 --> 00:21:29,822
+Speaker 1: you can't lose, your stock can't go lower than zero, right, if you buy, you know, all the GameStop, it's like, what's the worst that can happen, GameStop goes out of business, the stock is worth zero dollars, and all the money you spent is gone, right, but that's it, you don't lose all the money you didn't spend, you still have, it's perfectly safe, but
+
+226
+00:21:29,862 --> 00:21:38,856
+Speaker 0: I lend Scott my Black Lotus, he sells it for 300 bucks, Black Lotus has become worth a thousand dollars, I'm gonna tell Scott I want my fucking Black Lotus back right now,
+
+227
+00:21:39,900 --> 00:21:53,831
+Speaker 1: and now I have to go and I sold the Black Lotus, I sold RIM's original Black Lotus for 300, he needs one, I promised him, I have to give him one back, they cost a million dollars now, they cost a billion dollars now, they cost a trillion dollars in the,
+
+228
+00:21:53,911 --> 00:22:00,132
+Speaker 0: in the game, in the Train Game 1817 that we recently reviewed, there might not be any to buy at all,
+
+229
+00:22:01,315 --> 00:22:04,784
+Speaker 1: yeah, and you have to get, you have to, you have no choice,
+
+230
+00:22:04,804 --> 00:22:05,606
+Speaker 0: you can't not,
+
+231
+00:22:06,327 --> 00:23:00,807
+Speaker 1: you can't not do it, and so you could lose all your money, like you could short one share of like GameStop, some worthless stock, just one share, and if the price of that stock just skyrockets to the roof, you just lost everything you own, your house, your car, right, so it's like, you know, you need to be able to do this to inject the bad news in the market, but doing it is risking you, even if you do it a tiny bit, you're risking your entire everything, all your dollars, right, garnish future wages, like you're just boned, so people smartly shorted GameStop a lot, because it ain't worth a breakfast sandwich, it's worth less than a breakfast sandwich, it's worth nothing, so everyone shorted it, tried, tried to make it go down even more, which is what you should be doing, common sense, it's the same common sense that makes it go up when it's holiday season and the Wii just came out, pretty
+
+232
+00:23:00,847 --> 00:23:13,840
+Speaker 0: normal thing, but now cue a Reddit board called WallStreetBets, which someone described in a news article I read as what if a bunch of Redditors like found a Bloomberg terminal,
+
+233
+00:23:14,683 --> 00:23:34,219
+Speaker 1: yeah, so these people, A, are nerds, care about GameStop for some reason, and they saw, because it's public information, hey, everyone and their mother is selling short on GameStop, right, smartly so, all right, what if a bunch of us just bought GameStop,
+
+234
+00:23:34,541 --> 00:23:38,193
+Speaker 0: it's like four bucks, it's cheap, I can buy a lot of shares, even
+
+235
+00:23:38,233 --> 00:23:56,126
+Speaker 1: if you're not wealthy, even if you just got like 100 bucks, you can buy 20 something shares, you know, you could buy some shares, right, let's all start together buying GameStop shares, they're so cheap, and all those people who sold short are gonna get boned,
+
+236
+00:23:56,286 --> 00:23:56,567
+Speaker 0: now,
+
+237
+00:23:56,727 --> 00:23:56,968
+Speaker 1: and
+
+238
+00:23:57,549 --> 00:24:28,939
+Speaker 0: in the old days, like, this isn't real, this is not a pump and dump scheme, but basically it is against the law to manipulate a stock price on purpose to do something, like, I can't put about your fake press out to trick other people into buying a stock so that I just bought so that I can then sell it after they all buy in, but the question that happened here, and you can read these articles to get the specifics, because, like, we're not going to explain everything that happened, if a flash mob buys a stock
+
+239
+00:24:29,260 --> 00:24:44,308
+Speaker 1: and pumps everyone independently, it doesn't seem like you can't identify someone as, like, an instigator, right, it's like a bunch of people all simultaneously and somewhat organized, but somewhat independently just did this thing at the same time, kind
+
+240
+00:24:44,369 --> 00:24:45,191
+Speaker 0: of as a joke,
+
+241
+00:24:46,495 --> 00:24:55,768
+Speaker 1: kind of real, right, and normally in the past there wouldn't even, you know, because E-Trade type stuff has been around since, like, the late 90s, yeah, you could buy stocks, retail
+
+242
+00:24:55,828 --> 00:24:57,896
+Speaker 0: investors rarely impact the market.
+
+243
+00:24:57,956 --> 00:25:10,330
+Speaker 1: for a lot of reasons I don't want to get into, there is not even those, like, day trading people, like, well, that's their hobby, right, there's not enough of those people and enough money in those people to, like, move the market, you know what could move the market?
+
+244
+00:25:10,670 --> 00:25:13,178
+Speaker 1: A pension fund can move the market, right, an
+
+245
+00:25:13,560 --> 00:25:16,449
+Speaker 0: investment for my hedge fund, right,
+
+246
+00:25:16,509 --> 00:25:44,516
+Speaker 1: it's like those, you know, a mutual fund of some kind, right, those people are, like, have billions and billions of dollars that, like, they could just, like, for example, like, you know, some pension fund in your state could just, like, buy GameStop and it wouldn't even be a big deal because it's such a small time thing, right, so individual people just investing their spare change, right, with E-Trade or TD Ameritrade or any of those things, it was not enough money total to move the needle on any kind of real company,
+
+247
+00:25:44,877 --> 00:25:45,178
+Speaker 0: right,
+
+248
+00:25:45,740 --> 00:25:46,663
+Speaker 1: but I guess now
+
+249
+00:25:46,703 --> 00:25:50,494
+Speaker 0: there is the combination of the number of internet nerds who did.
+
+250
+00:25:50,574 --> 00:26:15,286
+Speaker 0: this coupled with the sheer amount of shorting that was happening led to a fascinating situation where, as of right now, when the stock market closed, uh, GameStop is worth, or at least was trading at almost $148 a share, which is more than double what that stock was worth at the peak of GameStop's actual success,
+
+251
+00:26:15,988 --> 00:26:18,334
+Speaker 1: right, now the company isn't doing any better, oh,
+
+252
+00:26:18,374 --> 00:26:25,353
+Speaker 0: not even better or worse, literally nothing changed with GameStop itself,
+
+253
+00:26:25,895 --> 00:26:29,450
+Speaker 1: GameStops are the same shitty store as they were yesterday, they have different owners.
+
+254
+00:26:29,530 --> 00:26:29,691
+Speaker 1: now,
+
+255
+00:26:29,731 --> 00:26:34,766
+Speaker 0: the only thing that happened is the ownership, these redditors decided to do this,
+
+256
+00:26:35,768 --> 00:26:47,366
+Speaker 1: they could, if they hold long enough, they could vote and put in a new board of GameStop eventually if they collectively act in that manner, so that is a thing that could happen,
+
+257
+00:26:47,868 --> 00:26:51,911
+Speaker 0: uh, I think we've drilled on this a little bit long for an episode of Geek Nights, it's going to be about something else,
+
+258
+00:26:52,132 --> 00:26:53,478
+Speaker 1: it's such a fascinating news, it
+
+259
+00:26:53,618 --> 00:27:06,672
+Speaker 0: is, like, read, I'm going to link to a bunch of different articles that give a lot of different perspectives on this, uh, but again, I cannot stress enough, we are not advising anything, do not, do not do anything, do not take any action based on any words.
+
+260
+00:27:06,752 --> 00:27:07,174
+Speaker 0: we have
+
+261
+00:27:07,274 --> 00:27:11,088
+Speaker 1: said, here's my personal advice based on no skills, this
+
+262
+00:27:11,108 --> 00:27:14,442
+Speaker 0: is Scott's advice, I am not in any way associated with Scott for this purpose,
+
+263
+00:27:15,045 --> 00:27:16,050
+Speaker 1: yeah, don't do anything,
+
+264
+00:27:16,870 --> 00:27:17,051
+Speaker 0: just
+
+265
+00:27:17,071 --> 00:27:24,853
+Speaker 1: live your, just live your life, don't ignore any investment nonsense, no coins, no GameStops, no nothing, just,
+
+266
+00:27:25,816 --> 00:27:27,541
+Speaker 0: especially your fucking coins, I need,
+
+267
+00:27:27,882 --> 00:27:28,544
+Speaker 1: I can't even
+
+268
+00:27:28,564 --> 00:27:31,575
+Speaker 0: get, like, a used 1080 right now because of your fucking coins,
+
+269
+00:27:31,595 --> 00:27:36,332
+Speaker 1: no gambling, right, no casinos, no stocks, don't touch any of this
+
+270
+00:27:36,373 --> 00:27:44,174
+Speaker 0: bullshit, 50% of the times I gambled in a casino, it was fucking awesome, I still use that pen I bought with the money we won,
+
+271
+00:27:45,016 --> 00:27:46,681
+Speaker 1: if it's not monopoly money, don't do it,
+
+272
+00:27:48,265 --> 00:28:01,656
+Speaker 0: so, a real brief other news, well, we'll, we'll talk about this again, probably in the future, because there's more going on, but basically, Microsoft tried to, well, announce they were increasing the price of what, Xbox Gold,
+
+273
+00:28:02,859 --> 00:28:04,083
+Speaker 1: essentially, you know, try
+
+274
+00:28:04,123 --> 00:28:32,626
+Speaker 0: to convince people to just go all the way and upgrade to buy the Xbox Game Pass, like, Xbox, like, it's one of those things where consoles have, like, Microsoft has the thing and, like, Nintendo has it too, you gotta pay them to be able to use their, like, online network to play games online, with various amounts of, like, benefits to doing so, but separately, they're trying to get into a broader market by selling the Game Pass, so people could, like, play these games on their PCs,
+
+275
+00:28:32,746 --> 00:28:58,719
+Speaker 1: and it's a different service, Xbox Game Pass is sort of in between Google Stadia and Netflix of games, right, it's, like, it's not a bad deal on the, on its face value, but I will tell you, personal experience with Xbox Game Pass, I had a free trial of Xbox Game Pass, I put it on my PC, and I tried to run it, and it didn't fucking work, so I uninstalled that shit, it's trash, don't do it, that's my, that's what I gotta say about it, fuck 'em,
+
+276
+00:28:59,341 --> 00:29:04,281
+Speaker 0: I mean, it's tough, this is the kind of news where I don't have that much insight, partly because,
+
+277
+00:29:04,462 --> 00:29:05,968
+Speaker 1: and this is on a normal Windows 10 PC,
+
+278
+00:29:07,932 --> 00:29:08,394
+Speaker 0: yeah, why wouldn't
+
+279
+00:29:08,414 --> 00:29:10,101
+Speaker 1: it work, it's a Microsoft thing,
+
+280
+00:29:10,382 --> 00:29:32,845
+Speaker 0: I don't like gaming on a PC or a Switch, like, I haven't owned a, like, mainline console in a long time, yeah, because there's not a lot of value here, but this article talks about it in depth, but basically, Microsoft is doing this, on one hand, they're trying to expand to not just be a console company, like, they seem to have this idea, which we've talked about on Geek Nights for over a decade, that, well,
+
+281
+00:29:32,865 --> 00:29:35,779
+Speaker 1: the original idea of the original Xbox, that they didn't follow through,
+
+282
+00:29:35,799 --> 00:30:03,624
+Speaker 0: yep, that the platform is not Xbox, the platform is Windows, you can use any Windows PC to play these games, if it's powerful enough, or if you don't want to deal with that, buy an Xbox, and it'll be guaranteed to play those games, that was kind of like this long-term idea, however, the PC market would sort of cannibalize the console market, and vice versa, they would sort of compete with each other, and Microsoft makes money in the consoles as competition with other consoles on their own,
+
+283
+00:30:05,048 --> 00:30:05,168
+Speaker 1: so
+
+284
+00:30:05,208 --> 00:30:21,795
+Speaker 0: it's a weird situation, that it's hard to say what Microsoft should do differently, but what everyone agrees on, is that what they did here just pissed everybody off so badly, that they almost immediately announced that they're undoing the entire plan,
+
+285
+00:30:22,697 --> 00:30:31,763
+Speaker 1: yep, I mean, it's sort of wrong to charge, I mean, even Nintendo Online or whatever, right?
+
+286
+00:30:31,863 --> 00:30:37,590
+Speaker 0: I mean, it's tricky, because on one hand, what about when I talk about Adobe software, like, it makes sense to charge a subscription.
+
+287
+00:30:37,670 --> 00:30:37,951
+Speaker 0: No, no,
+
+288
+00:30:37,992 --> 00:31:01,186
+Speaker 1: no, no, you're not paying, if you were paying for software, that's one thing, right, like, the Xbox Game Pass is fine, right, you're paying for software, right, but the, oh, you have all these games that you bought, but you can't play them online unless you pay for Xbox Live, oh, you bought all these games, but you can't play them online, multiplayer, unless you join, play for PlayStation Network, whatever it's called, right, of course,
+
+289
+00:31:01,207 --> 00:31:08,876
+Speaker 0: that counterpoint there is, unlike PCs, you're not running your own server on your console, so they are providing infrastructure to make this happen,
+
+290
+00:31:09,859 --> 00:31:13,433
+Speaker 1: even if you play, if you buy Overwatch, you don't have to pay for Blizzard,
+
+291
+00:31:13,715 --> 00:31:25,179
+Speaker 0: ah, you got right into it, the counterpoint to that is, if I start an Overwatch server, it's not fucking running on my PC, like the Quake 2 days, Blizzard just provides that, and I'm not paying a monthly fee for Overwatch,
+
+292
+00:31:25,199 --> 00:31:42,197
+Speaker 1: yeah, no, you're not, it's like, any PC game you buy on Steam, it's like, yeah, the multiplayer is like included in the game for free, if they tried to charge you extra, if you bought Civ 6, and they were like, oh yeah, if you want to play Civ 6 multiplayer online, you have to pay us five bucks a month, no one would fucking pay that, they would be like, hell no, that's
+
+293
+00:31:42,278 --> 00:32:01,570
+Speaker 0: ridiculous, that's why I'm so suspicious of these things, because it really feels like, from my perspective, that paying for these services is basically a way to force people who can't afford or don't have access to a quote "real gaming PC", like, consoles are cheaper, it's a way to monetize the people who have fewer options.
+
+294
+00:32:02,410 --> 00:32:20,350
+Speaker 1: And want to play online, people who want to play online multiplayer, but aren't, you know, or, you know, gonna have a PC, right, for whatever reason, right, uh, anyway, Xbox Game Pass is a good deal, and there's a news here that says it has 18 million subscribers now.
+
+295
+00:32:20,450 --> 00:32:22,904
+Speaker 0: Yeah, so you can read this article to see all the details.
+
+296
+00:32:22,944 --> 00:32:23,870
+Speaker 1: If you can get it to work.
+
+297
+00:32:25,531 --> 00:32:42,250
+Speaker 0: The funny thing is, there's a nice table on the site, actually, this is The Verge, that shows what the prices are for the Playstation 1, the Xbox 1, the Nintendo 1, and you can sort of think about it, the Nintendo 1 is actually, like, the cheapest one by far.
+
+298
+00:32:43,310 --> 00:32:43,631
+Speaker 1: Oh yeah.
+
+299
+00:32:49,922 --> 00:33:06,418
+Speaker 0: But anyway, things of the day, so I think a while back, I made a thing of the day, it was this video that was, like, this rotoscoped-looking animation, this guy, Joel Haver, like, this guy is a contender for Neil Cicieregi in Level of Humor, like, I want to see where he goes, his channel is great,
+
+300
+00:33:07,001 --> 00:33:22,530
+Speaker 1: but, uh, the way he taught, I've never seen this guy before, you linked it to me, I didn't watch the whole video, but I watched enough to see what the deal was, and at least his sort of voice was vaguely Mitch Hedbergian.
+
+301
+00:33:22,690 --> 00:33:37,237
+Speaker 0: Yeah, like, he's kind of, like, awkward and halting, but on purpose for comedic effect, and, like, he's doing live comedy sketches that are not on the level of guaranteed video, but they're in the same ballpark.
+
+302
+00:33:37,698 --> 00:33:41,430
+Speaker 1: I'm just saying, I liked that it wasn't a Yelly YouTube guy.
+
+303
+00:33:41,710 --> 00:34:02,106
+Speaker 0: Yeah, but he also made these animations that are really funny, like, he made this series of animations about, like, RPGs, and they look like they have a really, like, particular style that I hadn't seen before, and we, Scott and I both try to avoid linking to the same channel, like, too often, because that just feels cheap, but he uploaded something interesting.
+
+304
+00:34:02,528 --> 00:34:31,230
+Speaker 0: He uploaded a video about how he animated all those other videos, and just tells you exactly these tools, this process, this is exactly how to do it, and then the whole second half of the video makes a point that Scott and I make a lot, and he makes it really eloquently about how people might say the kind of process he uses is cheating, like, it's not really rotoscoping, he's using these tools to, like, automate it, and his answer is basically, what the fuck is wrong with you?
+
+305
+00:34:31,750 --> 00:34:35,870
+Speaker 0: Anything that makes the creative process more accessible is a net benefit to society.
+
+306
+00:34:36,310 --> 00:34:37,454
+Speaker 0: Are computers cheating?
+
+307
+00:34:38,598 --> 00:34:40,263
+Speaker 0: Is musical notation cheating?
+
+308
+00:34:40,605 --> 00:34:49,014
+Speaker 0: Like, what is the line between a tool that makes you more effective at expressing your creative ideas versus a tool that lets you cheat at being creative?
+
+309
+00:34:49,476 --> 00:34:54,212
+Speaker 1: You didn't make your furniture with nothing but a pointy rock and a tree, right?
+
+310
+00:34:54,272 --> 00:34:56,598
+Speaker 1: You used a power tool as cheating.
+
+311
+00:34:57,220 --> 00:35:05,650
+Speaker 0: But the other thing about this is that the process that he outlines, Scott, you and I could do this, like, literally, with no help from anyone.
+
+312
+00:35:05,990 --> 00:35:08,866
+Speaker 1: I mean, and the other thing is, like, oh, yeah, you know, people call it cheating.
+
+313
+00:35:09,067 --> 00:35:11,315
+Speaker 1: I watched enough to see what the process was.
+
+314
+00:35:11,796 --> 00:35:12,558
+Speaker 1: It's not easy.
+
+315
+00:35:12,839 --> 00:35:13,821
+Speaker 0: It's still a lot of work.
+
+316
+00:35:13,881 --> 00:35:22,494
+Speaker 0: You got, like, this tool, you got to understand the concept of a keyframe, and you have to have an idea, like, what are you going to animate?
+
+317
+00:35:23,117 --> 00:35:23,740
+Speaker 1: And you have to draw?
+
+318
+00:35:23,760 --> 00:35:23,840
+Speaker 1: Yeah.
+
+319
+00:35:23,860 --> 00:35:27,136
+Speaker 1: There's not no drawing, there's just a lot less drawing.
+
+320
+00:35:27,177 --> 00:35:31,241
+Speaker 0: Well, you can just trace over yourself and make it kind of derpy, which he does on purpose for comedic effects.
+
+321
+00:35:31,261 --> 00:35:34,216
+Speaker 1: Right, but it's not, even drawing as well as he does is not trivial.
+
+322
+00:35:34,256 --> 00:35:34,457
+Speaker 1: True.
+
+323
+00:35:35,521 --> 00:35:49,490
+Speaker 0: But, yeah, if you just, if you watch this video, you could literally follow this process and make a video that looks just like what he's uploaded, and that would be a good, like, way to learn how to use things like Adobe Premiere, to be honest.
+
+324
+00:35:50,450 --> 00:35:50,571
+Speaker 1: Yeah.
+
+325
+00:35:51,113 --> 00:35:55,993
+Speaker 0: I'm also excited that the tool he used, that Ebsyn thing, is just a free tool, like, that someone made.
+
+326
+00:35:56,053 --> 00:35:57,237
+Speaker 1: There's a lot of stuff like that.
+
+327
+00:35:57,397 --> 00:35:57,678
+Speaker 1: Yeah.
+
+328
+00:35:58,440 --> 00:36:14,431
+Speaker 1: Anyway, so we have done videos in the past featuring people with various disabilities showing people who don't have disabilities and, you know, or don't know what it's like, you know, how they deal with stuff, right?
+
+329
+00:36:15,335 --> 00:36:19,912
+Speaker 1: It's like, you know, if you have this problem, how do you deal with this in everyday life?
+
+330
+00:36:19,993 --> 00:36:20,958
+Speaker 1: It's like, this is how.
+
+331
+00:36:21,058 --> 00:36:27,202
+Speaker 1: And it's, like, fascinating, because if you don't know anyone who has that problem, then you don't know what the solution is.
+
+332
+00:36:28,566 --> 00:36:36,232
+Speaker 1: And this one was one that I definitely didn't know before I watched the video, and the answer was obvious, but still fascinating and interesting.
+
+333
+00:36:36,734 --> 00:36:46,063
+Speaker 1: It's if you're a blind person, you cannot see or cannot see well, you're legally blind, perhaps, and you need to, say, pour a beverage.
+
+334
+00:36:47,326 --> 00:36:49,673
+Speaker 1: What if it's a hot beverage in particular, right?
+
+335
+00:36:50,395 --> 00:36:55,992
+Speaker 1: Missing the cup or, you know, spill overflowing the cup would be particularly hazardous.
+
+336
+00:36:57,397 --> 00:37:01,210
+Speaker 1: How do you do this without another human being just, like, doing it for you?
+
+337
+00:37:02,111 --> 00:37:08,435
+Speaker 1: There is a way that they do it, because obviously it's 2021 and we've figured that shit out, but what is that way?
+
+338
+00:37:09,277 --> 00:37:15,398
+Speaker 1: Ooh, watch this thing of the day to find out and learn valuable information about people who cannot see.
+
+339
+00:37:15,419 --> 00:37:17,830
+Speaker 0: It's an elegant solution and a good channel.
+
+340
+00:37:20,532 --> 00:37:23,319
+Speaker 0: All right, in the meta moment, still can't fucking go anywhere.
+
+341
+00:37:24,844 --> 00:37:30,507
+Speaker 0: I guess I had a, not really a snow day, but a snow hour where I couldn't work because I couldn't access anything.
+
+342
+00:37:30,548 --> 00:37:30,970
+Speaker 0: That was fun.
+
+343
+00:37:34,650 --> 00:37:37,727
+Speaker 0: Probably gonna start reading The Tale of Hanzo again pretty soon.
+
+344
+00:37:39,090 --> 00:37:41,299
+Speaker 1: I came close, like, a few times.
+
+345
+00:37:42,142 --> 00:37:44,793
+Speaker 0: I also am almost done reading a non-fiction book that I've been reading.
+
+346
+00:37:45,496 --> 00:37:52,264
+Speaker 1: I was about to, and, like, three comic books came in the mail and that basically was, like, they, like, stuck their way in between me and Hanzo.
+
+347
+00:37:52,705 --> 00:37:55,455
+Speaker 0: Yep, and also tonight, it's a busy day.
+
+348
+00:37:55,475 --> 00:37:58,833
+Speaker 0: We're recording geek nights, I had to work, and then I'm playing some more Blades in the Dark.
+
+349
+00:37:58,873 --> 00:38:03,895
+Speaker 0: I'm actually playing more RPGs than I have in recent memory during COVID, which has been a pretty good time.
+
+350
+00:38:03,976 --> 00:38:11,110
+Speaker 1: Oh man, I have to eat, there's a women's hockey game on right this second, and then there's a Rangers game at seven, and I have to eat food after this show.
+
+351
+00:38:11,150 --> 00:38:17,276
+Speaker 0: Yep, I'm gonna try to watch the Rangers game while I order Grubhub and get ready to play the Blades in the Dark game that starts in a half hour.
+
+352
+00:38:18,239 --> 00:38:18,581
+Speaker 1: Oh boy.
+
+353
+00:38:18,761 --> 00:38:29,478
+Speaker 0: Geek nights might upload into the feed pretty late tonight, just FYI, and Emily is gonna use the streaming rig right here to stream the film festival because her laptop battery exploded.
+
+354
+00:38:30,421 --> 00:38:30,722
+Speaker 1: Oh no.
+
+355
+00:38:31,123 --> 00:38:33,831
+Speaker 0: And we're building a new workstation for her.
+
+356
+00:38:34,332 --> 00:38:36,801
+Speaker 1: I guess you don't need a laptop, you're not going places.
+
+357
+00:38:36,861 --> 00:38:37,784
+Speaker 0: Yep, exactly.
+
+358
+00:38:38,085 --> 00:38:42,402
+Speaker 0: Also, the kind of work Emily does, she actually needs a more powerful computer than what I have.
+
+359
+00:38:43,908 --> 00:38:46,357
+Speaker 0: i9s actually ain't that expensive compared to i7s.
+
+360
+00:38:46,417 --> 00:38:51,675
+Speaker 1: Yeah, if only you could have waited, you could have gotten, like, a Mac with an M2.
+
+361
+00:38:51,996 --> 00:38:53,682
+Speaker 0: Yeah, can't wait though, need it now.
+
+362
+00:38:53,983 --> 00:39:01,691
+Speaker 0: But I'm looking at a 10 core, like, 3.8 gigahertz i9 for the kind of stuff Emily does, that would actually be a significant game.
+
+363
+00:39:01,812 --> 00:39:07,310
+Speaker 1: I don't know, AMD is kind of killing it right now, it's hard to go down the Intel route.
+
+364
+00:39:10,031 --> 00:39:20,204
+Speaker 1: Anyway, so this game came out that is like the talk of the town, probably game of the year, right, 2020 I'm guessing, called Hades from Supergiant Games.
+
+365
+00:39:20,264 --> 00:39:24,762
+Speaker 0: Yeah, there's been buzz since, like, 2018 because I think it had an early access.
+
+366
+00:39:24,923 --> 00:39:30,650
+Speaker 1: Right, so this is the people that made Bastion, which I played and beat, which was that game with the narrator, the action RPG.
+
+367
+00:39:31,391 --> 00:39:31,752
+Speaker 1: Yeah.
+
+368
+00:39:31,772 --> 00:39:34,240
+Speaker 1: And then they made, what were the other two games they made?
+
+369
+00:39:34,280 --> 00:39:35,204
+Speaker 1: Pyre?
+
+370
+00:39:35,505 --> 00:39:40,964
+Speaker 1: Pyre was the fiery one, and what was the other one, what was it, I forget.
+
+371
+00:39:41,105 --> 00:39:41,687
+Speaker 0: I'm trying to remember.
+
+372
+00:39:41,707 --> 00:39:43,273
+Speaker 1: I have all of them, they came in a bundle.
+
+373
+00:39:43,474 --> 00:39:43,655
+Speaker 1: Yep.
+
+374
+00:39:44,016 --> 00:39:44,137
+Speaker 1: Anyway.
+
+375
+00:39:44,157 --> 00:39:59,769
+Speaker 0: But this one got a lot of buzz, like, way before I played it, partly because the art and the story and the dating sim aspects of it were extremely popular among a group of people who wouldn't necessarily always be down for what is basically an action RPG.
+
+376
+00:40:01,312 --> 00:40:04,945
+Speaker 0: So there was, like, the buzz was coming at me from a lot of sources.
+
+377
+00:40:05,005 --> 00:40:07,092
+Speaker 0: I normally don't get video game buzz from.
+
+378
+00:40:07,112 --> 00:40:08,096
+Speaker 0: Right,
+
+379
+00:40:08,116 --> 00:40:36,260
+Speaker 1: well I think the thing was, is Bastion was such a huge hit, because that was in, like, the early days of indie games, relatively speaking, right, that was like, you know, it feels like it was around, I didn't look up the year, but it feels like it was around the time of, like, you know, after Braid, I guess, maybe Super Meat Boy One times, right, a long while ago, right, and then Transistor and Pyre came out after that, and it was like, both of those games were sort of sold as from the people who brought you Bastion.
+
+380
+00:40:36,581 --> 00:40:37,103
+Speaker 1: Yeah.
+
+381
+00:40:37,565 --> 00:40:48,553
+Speaker 1: But they weren't as big a hit, and now that I have both those games, because they got them together with Hades and, like, Bundle, I played them, and I can kind of see why, like, I couldn't, I wasn't that interested in playing them further.
+
+382
+00:40:48,593 --> 00:41:00,149
+Speaker 1: I could still see the super giant sort of artistry in the music and the story and the art, but game-wise, I wasn't interested in playing them really very much at all.
+
+383
+00:41:00,269 --> 00:41:01,011
+Speaker 1: Yeah, I've
+
+384
+00:41:01,031 --> 00:41:15,210
+Speaker 0: run into that a lot with games where, even if the story and the art and the music and, like, everything about them is great, if the game is just like, like, a typical action RPG, I tend to get bored pretty quick, like, if the game is too similar to what I've played before.
+
+385
+00:41:15,390 --> 00:41:17,562
+Speaker 1: Pyre and Transistor were not action RPGs.
+
+386
+00:41:17,582 --> 00:41:25,490
+Speaker 0: They were not, but I'm just saying, generally, a lot of games have great art and story and end up just being simple action RPG or indie platformer.
+
+387
+00:41:25,970 --> 00:41:26,111
+Speaker 1: Yeah.
+
+388
+00:41:26,231 --> 00:41:29,225
+Speaker 1: Transistor is kind of action RPG, kind of not.
+
+389
+00:41:29,245 --> 00:41:30,049
+Speaker 1: Pyre definitely is not.
+
+390
+00:41:30,069 --> 00:41:30,973
+Speaker 1: Did we review Transistor?
+
+391
+00:41:30,993 --> 00:41:36,233
+Speaker 1: I've only ever, the only time, no, we definitely, because the only time I played it was a few minutes recently.
+
+392
+00:41:37,937 --> 00:41:58,177
+Speaker 1: But anyway, Hades, on the other hand, right, Hades is basically somebody, instead of trying to be super revolutionary and break new ground, which is what I think you could see them trying to do with Transistor, Pyre, even Bastion, right, sort of, right, trying new things, Hades is like, what's hot now, right?
+
+393
+00:41:58,277 --> 00:41:59,620
+Speaker 1: What are people into now?
+
+394
+00:42:00,281 --> 00:42:01,764
+Speaker 1: What do we know works?
+
+395
+00:42:02,385 --> 00:42:09,850
+Speaker 1: Let's write and then incorporate all of the things that we're good at as super giant games.
+
+396
+00:42:10,510 --> 00:42:18,317
+Speaker 1: Story, characters, narration, artwork, animation, music, right, all that good stuff that they do A+ on all of these games, right?
+
+397
+00:42:18,638 --> 00:42:23,091
+Speaker 1: Bring those into the fold, and what do you know, a mega crazy hit game.
+
+398
+00:42:23,131 --> 00:42:24,255
+Speaker 1: So what's Hades all about?
+
+399
+00:42:25,359 --> 00:42:26,944
+Speaker 1: It's Greek gods, right?
+
+400
+00:42:26,985 --> 00:42:28,530
+Speaker 1: Great theme, nice and public domain.
+
+401
+00:42:28,530 --> 00:42:34,310
+Speaker 0: You won't spoil anything, but roughly, you're the son of Hades, and he's keeping you in hell.
+
+402
+00:42:34,350 --> 00:42:37,831
+Speaker 0: You're like grounded, like you're down in the underworld, you're grounded, you're not allowed to leave.
+
+403
+00:42:38,513 --> 00:42:44,210
+Speaker 0: Meanwhile, the Olympian gods are all like, yo dawg, we'll help you get out.
+
+404
+00:42:45,430 --> 00:42:47,979
+Speaker 1: Yeah, you know, all of them, like Zeus is like, what's up?
+
+405
+00:42:49,204 --> 00:42:50,950
+Speaker 1: Artemis is like, hey, come on, let's...
+
+406
+00:42:51,570 --> 00:42:53,710
+Speaker 0: Artemis is the first one I gave maximum gifts to.
+
+407
+00:42:56,110 --> 00:42:59,550
+Speaker 1: But they're like, you know, my boy is Dionysus, right?
+
+408
+00:43:00,150 --> 00:43:02,589
+Speaker 0: Dionysus, I think, is my favorite of the gods, actually.
+
+409
+00:43:03,970 --> 00:43:05,014
+Speaker 1: Yeah, of course.
+
+410
+00:43:05,134 --> 00:43:14,685
+Speaker 1: Anyway, so all the Greek gods that are not in hell, right, the Mount Olympus ones, are like, yo, come on out, son of Hades, come up to the earth, right?
+
+411
+00:43:15,287 --> 00:43:17,956
+Speaker 1: Come out to Mount Olympus and chill with us, right?
+
+412
+00:43:18,017 --> 00:43:19,001
+Speaker 1: It'll be totally sweet.
+
+413
+00:43:19,483 --> 00:43:21,873
+Speaker 1: We're Greek gods, we're bored, and we got nothing better to do.
+
+414
+00:43:21,914 --> 00:43:25,629
+Speaker 0: But they're still Greek gods, so they're all kind of low-key beefing with each other.
+
+415
+00:43:26,530 --> 00:43:30,463
+Speaker 1: But, you know, but they're also beefing with Hades, like, hey, it'll make Hades so mad if we.
+
+416
+00:43:33,491 --> 00:43:38,084
+Speaker 1: So you're the son of Hades, and you try to leave hell.
+
+417
+00:43:38,505 --> 00:43:41,113
+Speaker 1: And you do this in an action RPG way, right?
+
+418
+00:43:41,153 --> 00:43:46,374
+Speaker 1: You walk and you push buttons to swing your sword or shoot your bow and arrow, you pick a weapon each time, right?
+
+419
+00:43:47,097 --> 00:43:48,321
+Speaker 1: And you try to make your way out.
+
+420
+00:43:48,481 --> 00:44:02,070
+Speaker 1: And it's a very Slay the Spire style roguelike situation, where every time that you leave, you're sort of following the same general kind of progression of like, okay, this part of hell, then this part, these enemies, then those enemies.
+
+421
+00:44:02,512 --> 00:44:04,459
+Speaker 1: But the rooms are procedurally generated.
+
+422
+00:44:04,760 --> 00:44:08,253
+Speaker 1: You're choosing which kind of room to go to next, like Slay the Spire.
+
+423
+00:44:08,674 --> 00:44:12,487
+Speaker 0: And some of the bosses you fight change based on story events.
+
+424
+00:44:12,548 --> 00:44:21,981
+Speaker 0: Like, you're fighting this one fury at this one spot for a while, but eventually you get there and there's a different fury, and she says different stuff, and then you learn some things.
+
+425
+00:44:22,001 --> 00:44:27,016
+Speaker 1: And of course, you die, and you go back to fucking hell, because that's what happens when you die.
+
+426
+00:44:27,036 --> 00:44:34,304
+Speaker 1: You just come right out of the pool of blood, there's your dad, you're back, you just die, and you appear in your house, and that actually makes sense, plot-wise.
+
+427
+00:44:34,405 --> 00:44:37,897
+Speaker 0: I love how Hades, every time, is just like, are you finished yet?
+
+428
+00:44:37,978 --> 00:44:39,222
+Speaker 0: Like, was that fun?
+
+429
+00:44:39,523 --> 00:44:45,246
+Speaker 1: It's like, if Link dies, like, Link dies, you save and quit, and you're back at Link's house, that doesn't make any fucking sense.
+
+430
+00:44:45,387 --> 00:44:45,568
+Speaker 1: Yeah.
+
+431
+00:44:45,628 --> 00:44:46,854
+Speaker 1: But this makes perfect sense.
+
+432
+00:44:46,914 --> 00:44:50,531
+Speaker 1: It's like, yeah, you die, you're back at your house, perfect for a roguelike, play again.
+
+433
+00:44:50,792 --> 00:44:55,450
+Speaker 0: And everyone, basically everyone knows you're trying to escape, and is kind of with you, except Hades.
+
+434
+00:44:55,792 --> 00:44:59,585
+Speaker 0: So like, like Achilles is there, he's like, "Yo, dawg, I stole another weapon for
+
+435
+00:44:59,625 --> 00:44:59,786
+Speaker 0: you.".
+
+436
+00:45:01,190 --> 00:45:03,739
+Speaker 1: Uh, the Minotaur and Theseus are not with you.
+
+437
+00:45:03,759 --> 00:45:04,441
+Speaker 0: No, they are not.
+
+438
+00:45:05,244 --> 00:45:05,906
+Speaker 0: They are not.
+
+439
+00:45:05,926 --> 00:45:07,231
+Speaker 1: They do not want you to escape.
+
+440
+00:45:07,271 --> 00:45:12,570
+Speaker 0: Man, fuck them, 'cause I love how Zagreus is like, "Oh, man, you guys are awesome, I'm a big fan, you wanna
+
+441
+00:45:12,611 --> 00:45:12,992
+Speaker 0: spar?".
+
+442
+00:45:13,032 --> 00:45:16,905
+Speaker 0: And they're like, "No, we're, uh, we're actually going to kill you, for real, fuck
+
+443
+00:45:16,945 --> 00:45:17,085
+Speaker 0: you.".
+
+444
+00:45:17,105 --> 00:45:19,532
+Speaker 1: Yeah, Achilles is totally with you.
+
+445
+00:45:20,795 --> 00:45:21,136
+Speaker 1: Anyway.
+
+446
+00:45:22,479 --> 00:45:26,795
+Speaker 1: But yeah, you do this over and over in a roguelike fashion, and each time is a different run.
+
+447
+00:45:26,816 --> 00:45:33,887
+Speaker 1: You're, during your run, you're choosing and getting different abilities from the different gods, so every time you go, it's a new experience.
+
+448
+00:45:34,008 --> 00:45:37,822
+Speaker 1: "Oh, this time I got abilities from Dionysus, this time I got abilities from
+
+449
+00:45:38,304 --> 00:45:38,745
+Speaker 1: Hermes.".
+
+450
+00:45:38,785 --> 00:45:41,792
+Speaker 0: And like Slay the Spire, they're not balanced.
+
+451
+00:45:42,133 --> 00:45:46,706
+Speaker 0: If you get a combo that is OP, awesome, roll with it.
+
+452
+00:45:47,028 --> 00:46:01,809
+Speaker 0: Like, one time I had the spear, and I got something that made the spear longer, and I got the Artemis thing that makes you do extra crits with it, and I got the thing that makes you hit faster twice, so I could basically just, like, power down a boss to nothing from a distance with the spear, doing nothing but my regular attack.
+
+453
+00:46:02,613 --> 00:46:03,235
+Speaker 1: Yep, yep.
+
+454
+00:46:03,316 --> 00:46:09,199
+Speaker 1: So it's like, every time you play, it's a completely new experience, it doesn't really get old very easily, right?
+
+455
+00:46:09,259 --> 00:46:10,423
+Speaker 1: It's fresh every time.
+
+456
+00:46:10,563 --> 00:46:17,549
+Speaker 0: And the gameplay loop is not the typical action RPG gameplay loop of, "You can spam and take a lot of damage," that you often see out there.
+
+457
+00:46:17,569 --> 00:46:24,993
+Speaker 0: The game, much like Slay the Spire, is a lot about, "Don't take damage, be clever, treat the fight almost like a
+
+458
+00:46:25,194 --> 00:46:25,515
+Speaker 0: puzzle.".
+
+459
+00:46:26,257 --> 00:46:29,790
+Speaker 1: Hit points are the resource that are hard to recover.
+
+460
+00:46:29,851 --> 00:46:35,894
+Speaker 1: You don't just, like, you know, if you take, if you lose half your hit points in a room in the next room, you don't have them back, right?
+
+461
+00:46:36,516 --> 00:46:42,494
+Speaker 1: So they are a resource that you can sort of spend, but it's, you can refresh them sometimes, but not so easily.
+
+462
+00:46:42,515 --> 00:46:50,344
+Speaker 1: So yeah, you basically get to make it from the beginning to the end of the game, in one shot, without dying too many times.
+
+463
+00:46:50,364 --> 00:46:54,740
+Speaker 0: But it's interesting how, like, as you play, the game has stateful progression, too.
+
+464
+00:46:54,840 --> 00:46:57,309
+Speaker 0: Like, you can slowly level yourself up to make the game easier.
+
+465
+00:46:57,410 --> 00:47:09,199
+Speaker 1: Every single time you die and you go back home, you can spend some of the resources you got to sort of permanently upgrade in, like, the magic mirror or whatever, or upgrade the weapons abilities with the hearts and things like that.
+
+466
+00:47:10,420 --> 00:47:13,933
+Speaker 1: And then that way, future runs become easier and easier as you go, right?
+
+467
+00:47:14,334 --> 00:47:18,808
+Speaker 0: But while those matter a lot, a lot of it is you will get better at the game.
+
+468
+00:47:18,888 --> 00:47:28,102
+Speaker 0: Like, for that first whole area, even if you never leveled up anything, you'll just get good enough to be able to do the entire thing without ever taking a hit.
+
+469
+00:47:28,745 --> 00:47:32,160
+Speaker 1: Yeah, the first time I went and played the game, I died in, like, the first area.
+
+470
+00:47:32,240 --> 00:47:35,530
+Speaker 1: I didn't even get to the first boss, right?
+
+471
+00:47:35,590 --> 00:47:41,449
+Speaker 0: But now, when those big fat guys are coming at you, I'm just like, "Well, behind buff and I'm
+
+472
+00:47:41,489 --> 00:47:41,690
+Speaker 0: good.".
+
+473
+00:47:42,272 --> 00:47:48,672
+Speaker 1: Yeah, it's like, now after playing 30-something runs, the first area is like Mario 1-1.
+
+474
+00:47:49,274 --> 00:47:50,939
+Speaker 1: There's no way a Goomba could hit me.
+
+475
+00:47:52,160 --> 00:47:53,467
+Speaker 1: You know, I'm not even that good at the game.
+
+476
+00:47:53,607 --> 00:47:54,411
+Speaker 0: I cannot stress enough.
+
+477
+00:47:54,451 --> 00:48:00,176
+Speaker 0: the variety of things you can upgrade in the course of a run is the secret sauce, just like in Slay the Spire.
+
+478
+00:48:00,217 --> 00:48:09,166
+Speaker 0: There are so many different directions of upgrading that will lead to radically interesting and sometimes emergent behaviors.
+
+479
+00:48:09,246 --> 00:48:13,843
+Speaker 0: Like, you'll figure out a degenerate strategy with the spear and a certain kind of thing.
+
+480
+00:48:15,048 --> 00:48:27,671
+Speaker 1: And this is something I want to point out that I've also seen other game developers and designers talking about in, you know, the community, is that how many games out there are, like, giving you items that are, like, plus 10%?
+
+481
+00:48:27,671 --> 00:48:28,072
+Speaker 1: Whatever.
+
+482
+00:48:28,553 --> 00:48:34,354
+Speaker 1: And it's like, you get that, and now the game is still basically the same after getting it, right?
+
+483
+00:48:34,555 --> 00:48:36,723
+Speaker 1: It doesn't feel rewarding to get something like that.
+
+484
+00:48:37,125 --> 00:48:49,080
+Speaker 1: While there are many items and upgrades in in Hades that are plus x percent, they also all, right, do something significant and noticeable that change the game.
+
+485
+00:48:49,500 --> 00:48:56,626
+Speaker 0: Yep, like, getting any upgrades feels very powerful and radically changes how you interact with, like, the next level.
+
+486
+00:48:57,148 --> 00:49:01,183
+Speaker 1: Like, every single thing you can choose just changes the way the game is played.
+
+487
+00:49:01,404 --> 00:49:10,538
+Speaker 1: The same way that, like, when you play Super Metroid, like, okay, you know, they're not like, "Hey, Samus, your regular shot is the same, only does 10% more
+
+488
+00:49:10,578 --> 00:49:10,738
+Speaker 1: damage.".
+
+489
+00:49:11,220 --> 00:49:12,123
+Speaker 1: It's like, they don't do that.
+
+490
+00:49:12,364 --> 00:49:14,933
+Speaker 1: They do, you have a space jump now, right?
+
+491
+00:49:15,274 --> 00:49:18,428
+Speaker 1: Or, like, the game is completely different once you have a space jump.
+
+492
+00:49:18,790 --> 00:49:20,680
+Speaker 0: Like, the sword does a bunch of, like, sword stuff.
+
+493
+00:49:20,920 --> 00:49:21,422
+Speaker 0: The spear?
+
+494
+00:49:21,724 --> 00:49:22,548
+Speaker 0: Totally different game.
+
+495
+00:49:22,668 --> 00:49:25,060
+Speaker 0: Might as well be a different game to play with the spear.
+
+496
+00:49:25,540 --> 00:49:26,282
+Speaker 0: The shield?
+
+497
+00:49:26,683 --> 00:49:28,047
+Speaker 0: The fucking gun?
+
+498
+00:49:28,067 --> 00:49:29,952
+Speaker 1: Yeah, there's a gun.
+
+499
+00:49:29,972 --> 00:49:30,874
+Speaker 1: Just a gun.
+
+500
+00:49:31,396 --> 00:49:32,318
+Speaker 1: Spoilers gun.
+
+501
+00:49:32,358 --> 00:49:32,900
+Speaker 0: Yeah, spoiler.
+
+502
+00:49:32,920 --> 00:49:34,565
+Speaker 0: Well, you know why it's not a spoiler?
+
+503
+00:49:34,886 --> 00:49:40,142
+Speaker 0: If you go to map your controls, there's an unbound default key for reload.
+
+504
+00:49:40,463 --> 00:49:41,546
+Speaker 0: That is not explained.
+
+505
+00:49:42,108 --> 00:49:42,649
+Speaker 1: No, it's not.
+
+506
+00:49:42,670 --> 00:49:43,693
+Speaker 0: Spoilers, there's a gun.
+
+507
+00:49:44,555 --> 00:49:50,093
+Speaker 1: Yeah, so the other final component of this game, right, is the dating sim part.
+
+508
+00:49:50,193 --> 00:50:06,870
+Speaker 1: So there, of all the different, you know, things you can collect when you're in a run, some of the things are only good for that run, some of the things you bring back to level yourself up, right, level your weapons up, but there are these alcoholic beverages that you acquire, right?
+
+509
+00:50:07,773 --> 00:50:08,696
+Speaker 1: What are they called again?
+
+510
+00:50:08,716 --> 00:50:10,362
+Speaker 0: I think, isn't it just an ambrosia?
+
+511
+00:50:11,225 --> 00:50:12,350
+Speaker 1: Oh, ambrosia, that's what it is.
+
+512
+00:50:12,390 --> 00:50:14,238
+Speaker 1: Yeah, the, you know, the nectar of the gods.
+
+513
+00:50:14,358 --> 00:50:24,880
+Speaker 0: So anytime you get a favor, like, you know, like, you see the icon of a particular god, and you can accept the favor, or you can give that god a gift, and you can also give gifts to a lot of the non-gods that are just around.
+
+514
+00:50:25,040 --> 00:50:35,693
+Speaker 1: Give them a gift, and, right, but basically anytime you encounter any character in the game that's not you, any NPC, most of the NPCs that talk, at least, gods.
+
+515
+00:50:35,854 --> 00:50:37,660
+Speaker 0: I wish I could give something to that chef.
+
+516
+00:50:39,300 --> 00:50:40,346
+Speaker 1: Oh, you can't give anything to the chef.
+
+517
+00:50:40,728 --> 00:50:42,016
+Speaker 1: The medusa, the cute medusa head.
+
+518
+00:50:42,036 --> 00:50:43,402
+Speaker 0: Oh, I gave the medusa head a few.
+
+519
+00:50:43,442 --> 00:50:44,204
+Speaker 0: She's super cute.
+
+520
+00:50:44,345 --> 00:50:45,588
+Speaker 1: I gave the medusa head the most.
+
+521
+00:50:47,895 --> 00:50:49,259
+Speaker 1: The dog, a Cerberus.
+
+522
+00:50:49,279 --> 00:50:50,724
+Speaker 0: Cerberus got my first gift.
+
+523
+00:50:51,487 --> 00:50:52,813
+Speaker 1: I don't think you can do for the dad.
+
+524
+00:50:53,114 --> 00:50:54,440
+Speaker 1: You can't give it to Hades, I don't think.
+
+525
+00:50:54,560 --> 00:50:55,685
+Speaker 0: I think you can, actually.
+
+526
+00:50:55,866 --> 00:50:56,950
+Speaker 1: Maybe you can, actually.
+
+527
+00:50:56,970 --> 00:50:57,673
+Speaker 1: I don't remember.
+
+528
+00:50:57,995 --> 00:51:07,936
+Speaker 1: But basically, even characters you encounter during a run, right, like Sisyphus, you see him during runs, you can, if you have an ambrosia, you can give it to them, and that will increase their favor with you.
+
+529
+00:51:07,956 --> 00:51:08,840
+Speaker 1: They'll like you more.
+
+530
+00:51:09,320 --> 00:51:11,547
+Speaker 0: This is the dating sim part of the game.
+
+531
+00:51:11,608 --> 00:51:26,987
+Speaker 1: If they like you more, A, they give you a cool item to use during runs, which is good, and B, that you sort of get cozy with them and they sort of, you sort of unlock plot and things with them, right?
+
+532
+00:51:27,047 --> 00:51:33,107
+Speaker 0: You know, like Artemis told me some things that were interesting once I maxed out my affection with her.
+
+533
+00:51:33,127 --> 00:51:44,395
+Speaker 1: Yeah, it's like whenever I talk to the medusa head, she's like all nervous and I'm always, instead of me saying like, you know, at first, like the first time I talked to the medusa head, it's like, hey, and then she like runs away.
+
+534
+00:51:44,495 --> 00:51:49,029
+Speaker 1: Now I talk to the medusa head and it's like, hey baby, how's it going?
+
+535
+00:51:50,072 --> 00:51:53,300
+Speaker 0: I gave one to the Fury and that was a fun bit to go down.
+
+536
+00:51:54,260 --> 00:51:54,461
+Speaker 1: Yep.
+
+537
+00:51:55,724 --> 00:51:57,168
+Speaker 0: But the cool part about it is...
+
+538
+00:51:57,429 --> 00:52:06,860
+Speaker 1: The point is, this mechanic is, even if you've like completely dominated the game, it's like you want to play to get more so you can do this to all the characters.
+
+539
+00:52:06,940 --> 00:52:16,238
+Speaker 0: Yep, that's the loop I found because in a normal action RPG like this, I'd play like I'll run to the end and when I finish the run, I'll often just quit like, okay, that was my run.
+
+540
+00:52:16,258 --> 00:52:17,142
+Speaker 0: I'm gonna go do something else.
+
+541
+00:52:17,523 --> 00:52:25,672
+Speaker 0: But then I land back in hell and I really want to go talk to everybody, give a gift to someone, and like see what other plot things I might have uncovered.
+
+542
+00:52:26,514 --> 00:52:28,681
+Speaker 1: Yeah, and also unlock other, right?
+
+543
+00:52:28,701 --> 00:52:29,505
+Speaker 1: There's still more.
+
+544
+00:52:29,545 --> 00:52:31,677
+Speaker 1: It's gonna be different even though you've beaten the game.
+
+545
+00:52:31,737 --> 00:52:33,448
+Speaker 1: If you go on a run again, it's a roguelike.
+
+546
+00:52:33,488 --> 00:52:34,615
+Speaker 1: You know there's gonna be infinite runs.
+
+547
+00:52:34,655 --> 00:52:35,320
+Speaker 1: It's not a spoiler.
+
+548
+00:52:36,601 --> 00:52:39,653
+Speaker 1: The ending that you'll get, there's like more and more endings.
+
+549
+00:52:39,753 --> 00:52:43,064
+Speaker 1: So the more times you beat the game, you get more stuff there.
+
+550
+00:52:43,084 --> 00:52:47,155
+Speaker 1: And also, there's just new things to do.
+
+551
+00:52:47,536 --> 00:52:52,113
+Speaker 1: You haven't run out of things until you've beaten the game many, many, many times, right?
+
+552
+00:52:52,795 --> 00:52:53,679
+Speaker 1: I only beat it once.
+
+553
+00:52:53,799 --> 00:52:58,337
+Speaker 1: I didn't beat it many, many times, but it still felt like a lot was there left to do.
+
+554
+00:52:58,397 --> 00:52:59,120
+Speaker 1: if I go back to it.
+
+555
+00:52:59,300 --> 00:53:03,820
+Speaker 0: Yep, like the plot that you uncover, you start to feel like, oh, I see where this is all going.
+
+556
+00:53:04,281 --> 00:53:12,043
+Speaker 0: All I'm going to say is it is surprisingly complex, and there's a lot going on you can unlock in this game.
+
+557
+00:53:12,063 --> 00:53:13,970
+Speaker 1: It's a Greek mythology plot, right?
+
+558
+00:53:14,030 --> 00:53:17,341
+Speaker 0: But I also appreciate how it's not super dialogue heavy.
+
+559
+00:53:17,402 --> 00:53:25,235
+Speaker 0: It's like you'll see an interaction, and like the interactions are just very interesting and pleasant, but they also don't overstay their welcome.
+
+560
+00:53:25,255 --> 00:53:28,329
+Speaker 0: It's not like you're reading just like pages and pages of lore.
+
+561
+00:53:28,429 --> 00:53:30,337
+Speaker 0: It's like, well, Medusa, you have different conversations.
+
+562
+00:53:31,961 --> 00:53:34,630
+Speaker 1: Yep, I don't read pages and pages of lore, right?
+
+563
+00:53:34,790 --> 00:53:41,160
+Speaker 1: It's basically sort of like the amount of text you'd get in a Zelda game, but only with voice acting instead of, ah!
+
+564
+00:53:41,620 --> 00:53:48,892
+Speaker 0: Yep, and you have fun little bits like I got my Artemis really up, and then I started getting my Ares really up, and the two of them are kind of low-key beefing.
+
+565
+00:53:49,293 --> 00:53:53,369
+Speaker 0: And now that beefing kind of happens in the dialogue I have.
+
+566
+00:53:53,449 --> 00:53:57,462
+Speaker 0: Ares will be like, ah, you've got that stink of her on you again.
+
+567
+00:53:59,346 --> 00:54:09,209
+Speaker 0: Like fun stuff happens, and it's interesting enough to keep you playing the game even when you really should go to bed, even if you would have stopped.
+
+568
+00:54:10,453 --> 00:54:16,178
+Speaker 0: And you can even give a gift to Skelly, the skeleton whose sole purpose is to learn a new weapon when you get it.
+
+569
+00:54:18,345 --> 00:54:25,311
+Speaker 1: Yep, so the only thing I want to say about this game is the only negative is that there's no multiplayer, right?
+
+570
+00:54:25,352 --> 00:54:30,170
+Speaker 1: This is the best of games I've played, of action RPGs I've played, right?
+
+571
+00:54:30,230 --> 00:54:32,499
+Speaker 0: Oh, if I could play co-op in this game...
+
+572
+00:54:33,061 --> 00:54:37,079
+Speaker 1: Right, just forget about the roguelike parts of the game, forget about all that stuff.
+
+573
+00:54:37,139 --> 00:54:49,319
+Speaker 1: Just the way the character controls action RPG-wise, right, is better than like any... It's like better than a Zelda, better than a Secret of Mana, better than any...
+
+574
+00:54:50,042 --> 00:54:52,050
+Speaker 0: The frame timing just feels right.
+
+575
+00:54:52,210 --> 00:54:54,760
+Speaker 0: When you get hit, it's your own goddamn fault.
+
+576
+00:54:55,120 --> 00:54:56,343
+Speaker 0: Nothing feels cheesy.
+
+577
+00:54:57,346 --> 00:55:04,343
+Speaker 1: Nope, it's like there isn't another action RPG that controls as perfectly and nicely as this one does.
+
+578
+00:55:04,363 --> 00:55:13,964
+Speaker 1: I really wish there was a co-op way to play just with an action RPG that controls like this one.
+
+579
+00:55:14,365 --> 00:55:23,817
+Speaker 1: Just take the controls from this game and maybe the art style, the 3/4 review, I guess, and just make another action RPG that's a co-op one.
+
+580
+00:55:23,837 --> 00:55:26,410
+Speaker 1: There's tons of co-op action RPGs out there, but they're all kind of meh.
+
+581
+00:55:26,470 --> 00:55:36,944
+Speaker 0: If I had to articulate it, it's that like hit boxes and what damages you is like the right level, coupled with, like I said earlier, it's almost a puzzle.
+
+582
+00:55:37,065 --> 00:55:38,130
+Speaker 0: It is execution.
+
+583
+00:55:38,150 --> 00:55:40,620
+Speaker 0: You have to time things and jump around, and it's an action game.
+
+584
+00:55:40,640 --> 00:55:43,471
+Speaker 1: And you can actually see what's going on, right?
+
+585
+00:55:43,632 --> 00:55:45,419
+Speaker 1: You can see things and dodge them.
+
+586
+00:55:46,302 --> 00:55:49,252
+Speaker 0: But you can play this game without ever getting hit.
+
+587
+00:55:49,312 --> 00:55:54,029
+Speaker 0: You can treat it like a puzzle that requires you to execute to solve the puzzle.
+
+588
+00:55:54,370 --> 00:55:56,840
+Speaker 0: And a lot of action RPGs really fail in that regard.
+
+589
+00:55:57,360 --> 00:56:00,134
+Speaker 1: And you encounter enemies that you've encountered on previous runs.
+
+590
+00:56:00,174 --> 00:56:02,123
+Speaker 1: You know how those enemies behave, right?
+
+591
+00:56:02,143 --> 00:56:09,373
+Speaker 1: So for example, there's a room in the lava area that you can get sometimes where there's a bunch of witches that shoot lots and lots of projectiles everywhere, right?
+
+592
+00:56:10,016 --> 00:56:19,457
+Speaker 1: So if you have a deflect ability, that room can be so easy because you deflect all these projectiles and they go right back to where they came from and you beat it in two seconds.
+
+593
+00:56:19,598 --> 00:56:20,622
+Speaker 0: But you know what I started doing?
+
+594
+00:56:21,285 --> 00:56:32,003
+Speaker 0: I used to focus on upgrades that like complemented my own actual skills in the game, but I realized that what I needed to do is focus on the upgrades that cover for the things I am dog shit at.
+
+595
+00:56:32,785 --> 00:56:41,512
+Speaker 1: Anyway, but the point is if you don't have deflect and you get in that room and it's like a bullet hell situation, right?
+
+596
+00:56:41,652 --> 00:56:42,937
+Speaker 1: And it's like, yeah, it's the same room.
+
+597
+00:56:42,957 --> 00:56:44,685
+Speaker 1: You encountered it two runs ago, right?
+
+598
+00:56:44,705 --> 00:56:51,609
+Speaker 1: You know this room, but because you have a completely different, you know, loadout this time, you didn't get any deflect abilities.
+
+599
+00:56:51,850 --> 00:56:59,937
+Speaker 1: You have to figure out using the abilities that you've got, how are you going to deal with this bullet hell room?
+
+600
+00:57:00,378 --> 00:57:02,529
+Speaker 1: How are you going to dodge all these things and not get killed?
+
+601
+00:57:02,549 --> 00:57:03,897
+Speaker 1: Because it could be super dangerous.
+
+602
+00:57:03,977 --> 00:57:09,557
+Speaker 1: if you didn't, you could also end up thinking like, hmm, is the bullet hell room coming soon?
+
+603
+00:57:09,737 --> 00:57:11,443
+Speaker 1: Maybe I should take a deflect ability.
+
+604
+00:57:11,824 --> 00:57:18,046
+Speaker 1: But last time I played, I died at the end boss and the deflect ability wasn't that useful on the end boss.
+
+605
+00:57:18,147 --> 00:57:22,523
+Speaker 1: I need some ability to help me with that, you know, and the alternative choice.
+
+606
+00:57:22,884 --> 00:57:31,054
+Speaker 0: Oh, these group attack cards are really good to get me through like the birds that attack you in the second floor, but they suck against the boss.
+
+607
+00:57:31,395 --> 00:57:34,206
+Speaker 1: Is the end boss going to be the time boy or is it going to be?
+
+608
+00:57:34,367 --> 00:57:37,380
+Speaker 0: The problem is if I get a million powers, it's always the bird.
+
+609
+00:57:37,741 --> 00:57:40,208
+Speaker 0: If I don't have any powers, it's always the time boss.
+
+610
+00:57:41,110 --> 00:57:41,371
+Speaker 1: Sure.
+
+611
+00:57:42,654 --> 00:57:49,754
+Speaker 1: So yeah, so if you like an action RPG, if you like a roguelike, if you just like the story bits, right?
+
+612
+00:57:50,196 --> 00:57:57,060
+Speaker 1: Any one of those things is good enough to be like, yeah, just even if you only like one of those parts, it's enough.
+
+613
+00:57:57,140 --> 00:58:06,290
+Speaker 1: The game is so good at that part that it's worth doing the parts you don't care so much about to extract the pleasure of the part you do.
+
+614
+00:58:06,712 --> 00:58:11,008
+Speaker 1: And if you happen to enjoy all three of those things, this is the greatest game you've ever seen.
+
+615
+00:58:11,229 --> 00:58:11,470
+Speaker 0: Yep.
+
+616
+00:58:11,551 --> 00:58:16,890
+Speaker 0: Like I would almost look to this as an example of a game that was polished to the right degree.
+
+617
+00:58:17,673 --> 00:58:18,254
+Speaker 1: Indeed.
+
+618
+00:58:18,335 --> 00:58:18,676
+Speaker 1: Yes.
+
+619
+00:58:18,796 --> 00:58:20,803
+Speaker 1: Very much the correct amount of polishing.
+
+620
+00:58:21,526 --> 00:58:26,765
+Speaker 0: And if I wasn't playing Blades in the Dark, like imminently, I would probably just play a little bit of Hades before bed.
+
+621
+00:58:26,785 --> 00:58:28,972
+Speaker 1: I mean, I would.
+
+622
+00:58:29,052 --> 00:58:34,469
+Speaker 1: It's like I beat it and I stopped, but I could just go back to it.
+
+623
+00:58:34,750 --> 00:58:36,476
+Speaker 1: I've had the urge to go back to it.
+
+624
+00:58:36,577 --> 00:58:43,221
+Speaker 1: And it's just the only reason I haven't is because I'm telling myself, it's like, no, I need to do more than one thing in my life.
+
+625
+00:58:43,782 --> 00:58:44,002
+Speaker 0: Right.
+
+626
+00:58:45,324 --> 00:58:47,447
+Speaker 1: So yeah, play that Hades.
+
+627
+00:58:47,487 --> 00:58:49,029
+Speaker 1: The hype is legit.
+
+628
+00:58:54,758 --> 00:58:56,984
+Speaker 0: This has been Geek Nights with Rim and Scott.
+
+629
+00:58:57,044 --> 00:59:02,206
+Speaker 0: Special thanks to DJ Pretzel for the opening music, Kat Lee for web design and Brando K for the logos.
+
+630
+00:59:02,406 --> 00:59:07,465
+Speaker 1: Be sure to visit our website at frontrowcrew.com for show notes, discussion news, and more.
+
+631
+00:59:07,686 --> 00:59:10,378
+Speaker 0: Remember, Geek Nights is not one, but four different shows.
+
+632
+00:59:10,518 --> 00:59:15,136
+Speaker 0: SciTech Mondays, Gaming Tuesdays, Anime Comic Wednesdays, and Indiscriminate Thursdays.
+
+633
+00:59:15,477 --> 00:59:19,473
+Speaker 1: Geek Nights is distributed under a Creative Commons Attribution 3.0 license.
+
+634
+00:59:19,894 --> 00:59:22,967
+Speaker 1: Geek Nights is recorded live with no studio and no audience.
+
+635
+00:59:23,168 --> 00:59:26,060
+Speaker 1: But unlike those other late shows, it's actually recorded at night.
+
+636
+00:59:26,620 --> 00:59:51,180
+Speaker 0: And the Patreon Patrons for this episode of Geek Nights are Alan Joyce, Heidi McNichol, Link Iggi, Graham Finch, You Hold the Key to My Heart, Now Go Through the Last Year or So of Podcasts and Make Rim Sing, Clinton Walton, Wren from New Zealand, Ryan Perrin, Review Mad Bull, 30 Far Cowards, Dread, Lily, Tenebrae, Just Like a Dude Guy, Chris Reimer, Finn, Sherman von Horl, and a bunch of people who do not want me to say their names.
+
+637
+00:59:51,600 --> 00:59:53,005
+Speaker 0: I gotta congratulate Lack of Cheese.
+
+638
+00:59:53,085 --> 01:00:04,982
+Speaker 0: We started a play your damn turn, play by mail game of Civilization VI with random leaders like fucking forever ago before like multiple expansions had come out.
+
+639
+01:00:05,444 --> 01:00:09,760
+Speaker 0: The game came to a conclusion and I will just share the way that Lack of Cheese won.
+
+640
+01:00:10,340 --> 01:00:14,231
+Speaker 0: Despite Lack of Cheese winning, I lost, the game ended, they won.
+
+641
+01:00:14,251 --> 01:00:22,220
+Speaker 0: and I lost on my turn because for reasons, there was only one city left following a religion that would have prevented that victory.
+
+642
+01:00:23,281 --> 01:00:36,696
+Speaker 0: He had frigates off their shores about to take this city and I took it first, thus triggering the end game because I accidentally let my religion get overrun due to a flood of missionaries.
+
+643
+01:00:36,736 --> 01:00:37,618
+Speaker 0: So my hat is off to you.
+
+644
+01:00:37,658 --> 01:00:38,300
+Speaker 0: That was super fun.
+
+645
+01:00:38,780 --> 01:00:42,797
+Speaker 0: Maybe we'll start up another Civilization VI game with the listener out there.
+
+646
+01:00:42,857 --> 01:00:43,460
+Speaker 0: So stay tuned.
+
+647
+01:00:43,480 --> 01:00:45,506
+Speaker 0: I post something in the Geek Nights Discord about that.
+
+648
+01:00:46,028 --> 01:00:50,081
+Speaker 0: But for now, I leave you with a little Joel Haver.
+
+649
+01:00:50,102 --> 01:00:53,235
+Speaker 0: Hey boss, you think this guy behind us is a little suspicious?
+
+650
+01:00:53,436 --> 01:00:59,020
+Speaker 2: You mean the one that hit eight stop lights, three cars, two pedestrians, and then drove on the sidewalk for five blocks?
+
+651
+01:00:59,360 --> 01:01:00,505
+Speaker 0: Yeah, that one.
+
+652
+01:01:00,686 --> 01:01:01,971
+Speaker 2: Nah, he's over 40 feet back.
+
+653
+01:01:01,991 --> 01:01:02,453
+Speaker 2: He's fine.
+
+654
+01:01:02,594 --> 01:01:03,056
+Speaker 2: Oh, he is?
+
+655
+01:01:03,237 --> 01:01:06,310
+Speaker 2: As we say in the mob, if you're over 40 feet back, you ain't suspicious.
+
+656
+01:01:06,330 --> 01:01:07,355
+Speaker 0: We do say that, yeah.
+
+657
+01:01:07,456 --> 01:01:10,290
+Speaker 2: This joker on the other hand, a little too close for comfort, huh bud?
+
+658
+01:01:10,451 --> 01:01:14,446
+Speaker 1: Obeying all the traffic laws at a comfortable distance, we got to get out of here.
+
+659
+01:01:16,953 --> 01:01:28,676
+Speaker 2: All right, so I know we were just in the car for 20 minutes and I had ample opportunity to tell you this then, but now that we are on a leisurely stroll from the car to the casino in full earshot of everyone, I will disclose to you the secrets.
+
+660
+01:01:29,299 --> 01:01:33,007
+Speaker 2: So anyway, the whole operation is run by Tony... Who's there?
+
+661
+01:01:33,027 --> 01:01:35,713
+Speaker 2: It must've been my imagination.
+
+662
+01:01:38,359 --> 01:01:40,708
+Speaker 2: The whole operation is run by Tony... Did you hear something?
+
+663
+01:01:41,270 --> 01:01:42,234
+Speaker 2: I thought I just heard something.
+
+664
+01:01:43,278 --> 01:01:44,462
+Speaker 2: Must've been my imagination.
+
+665
+01:01:45,685 --> 01:01:47,831
+Speaker 2: The whole operation is run by Tony Lazuto.
+
+666
+01:01:48,853 --> 01:01:49,716
+Speaker 0: Tony Lazuto?
+
+667
+01:01:50,277 --> 01:01:51,620
+Speaker 0: You're telling me Tony was that?
+
+668
+01:01:53,202 --> 01:01:54,484
+Speaker 1: I swear I saw something.
+
+669
+01:01:56,886 --> 01:01:59,089
+Speaker 2: Tony Lazuto, you're telling me... Did you hear something?
+
+670
+01:01:59,730 --> 01:02:00,474
+Speaker 2: I thought I just heard something.
+
+671
+01:02:00,494 --> 01:02:01,422
+Speaker 1: My must've been playing tricks on me.
+
+672
+01:02:01,442 --> 01:02:02,129
+Speaker 2: Must've been my imagination.
+
+673
+01:02:02,149 --> 01:02:03,073
+Speaker 1: I swear I saw someone.
+
+674
+01:02:03,776 --> 01:02:04,659
+Speaker 2: Tony, what was that?
+
+675
+01:02:05,000 --> 01:02:05,964
+Speaker 2: I thought I just heard something.
+
+676
+01:02:05,984 --> 01:02:06,405
+Speaker 2: Who's out there?
+
+677
+01:02:07,228 --> 01:02:08,574
+Speaker 2: Must've been my imagination.
+
+678
+01:02:09,578 --> 01:02:11,927
+Speaker 2: The whole operation is run by Tony Lazuto.
+
+679
+01:02:11,948 --> 01:02:12,369
+Speaker 0: Tony Lazuto?
+

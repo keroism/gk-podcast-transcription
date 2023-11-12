@@ -1,0 +1,3424 @@
+1
+00:00:09,340 --> 00:00:11,429
+Rym: It's Monday February 12th.
+
+2
+00:00:11,710 --> 00:00:12,131
+Rym: I'm Rym.
+
+3
+00:00:12,593 --> 00:00:16,865
+Rym: I'm Scott, and this is GeekNights Tonight in layman's terms.
+
+4
+00:00:16,926 --> 00:00:21,199
+Rym: we talk about the parts of computer networking that you might actually care about.
+
+5
+00:00:22,883 --> 00:00:23,893
+Scott: Let's do this.
+
+6
+00:00:25,561 --> 00:00:30,360
+Scott: Well for anyone who maybe listens to only Monday it is the official ness.
+
+7
+00:00:31,082 --> 00:00:35,740
+Scott: I am the job quitting and the new job getting and the weird grammar using.
+
+8
+00:00:36,263 --> 00:00:38,719
+Scott: Indeed be be fair.
+
+9
+00:00:39,981 --> 00:00:44,179
+Scott: No, I finally quit my job of sit in the middle of nowhere and do nothing.
+
+10
+00:00:44,663 --> 00:00:46,719
+Rym: I get paid a lot of money to do that.
+
+11
+00:00:47,073 --> 00:00:50,011
+Scott: Yeah And get paid a lot of money to sit in the middle of nowhere and do nothing.
+
+12
+00:00:50,112 --> 00:01:03,080
+Scott: I quit that job and now I get Paid 35 percent more to sit in the city and do something the same Something similar some things to what I was supposed to be doing but for somebody else.
+
+13
+00:01:03,301 --> 00:01:12,740
+Rym: So basically someone's paying you more money to actually do your job Exactly, and now you get to take a train instead of driving which while driving is actually cheaper.
+
+14
+00:01:13,541 --> 00:01:16,815
+Rym: Even as far as we drive the train is so much nicer.
+
+15
+00:01:16,995 --> 00:01:18,100
+Scott: the train is so much nicer.
+
+16
+00:01:18,240 --> 00:01:23,980
+Scott: And you know I will have to leave a bit earlier in the morning, and I'll get home a little bit later.
+
+17
+00:01:23,980 --> 00:01:28,560
+Rym: You'd better not try to take a shower between about six thirty and seven thirty.
+
+18
+00:01:29,143 --> 00:01:30,730
+Scott: No probably leaving the hat.
+
+19
+00:01:30,770 --> 00:01:33,981
+Scott: the train that I'm gonna take leaves at 705.
+
+20
+00:01:33,981 --> 00:01:37,094
+Scott: I'll probably be taking a shower between six and six thirty.
+
+21
+00:01:37,155 --> 00:01:38,199
+Rym: you know it's sad.
+
+22
+00:01:38,219 --> 00:01:41,516
+Rym: lately I used to get up around six and leave the house before seven.
+
+23
+00:01:42,119 --> 00:01:48,664
+Rym: now I wake up around seven and I run out the door with a Red Bull by like 745.
+
+24
+00:01:48,664 --> 00:01:49,932
+Scott: yeah, well, let's see.
+
+25
+00:01:49,972 --> 00:02:06,700
+Scott: yeah when I worked in the city I would wake up at five thirty six be at the train at 705 and I'd get home about six Like a 12-hour day, and then when I was working the middle of nowhere You know towards the end when I was getting lazy I was like leaving a little bit after eight and getting home at like five.
+
+26
+00:02:07,823 --> 00:02:16,511
+Rym: Yeah, yeah But see if I had a train commute instead of a driving commute while my driving commute commute is actually fairly short the fact that I could basically not have my morning commute.
+
+27
+00:02:16,551 --> 00:02:18,018
+Rym: You know I get up shower all this stuff.
+
+28
+00:02:18,360 --> 00:02:20,410
+Rym: once I'm on the train just go to sleep.
+
+29
+00:02:20,731 --> 00:02:22,460
+Rym: someone will wake me up when I get to Grand Central.
+
+30
+00:02:23,022 --> 00:02:27,080
+Scott: Yeah, even if no one no other passengers and the train will wake you up.
+
+31
+00:02:27,120 --> 00:02:33,510
+Scott: There's a person after the train gets to the station their job is to walk down the train Collect stuff for the lost and found etc.
+
+32
+00:02:33,550 --> 00:02:33,932
+Scott: etc.
+
+33
+00:02:34,052 --> 00:02:35,579
+Scott: They will wake you up if you're sleeping there.
+
+34
+00:02:35,659 --> 00:02:37,168
+Rym: Yep Yep, and then on the way home.
+
+35
+00:02:37,289 --> 00:02:39,040
+Rym: I can do stuff like read manga.
+
+36
+00:02:39,080 --> 00:02:42,837
+Rym: I can't read manga while I'm driving my car as much as I've tried to.
+
+37
+00:02:42,857 --> 00:02:44,564
+Scott: yeah I am definitely.
+
+38
+00:02:44,584 --> 00:02:55,680
+Scott: I will definitely pick up probably the reading rate and the DS game playing rate and Decrease the podcast listening rate, but you know what honestly more and more I've been listening to fewer and fewer podcasts.
+
+39
+00:02:56,240 --> 00:02:57,004
+Scott: Yeah, me.
+
+40
+00:02:57,105 --> 00:02:59,497
+Scott: I mean I haven't listened to a pen radio in months.
+
+41
+00:02:59,637 --> 00:02:59,959
+Scott: It's just.
+
+42
+00:03:00,921 --> 00:03:02,086
+Rym: It's kind of lost its charm.
+
+43
+00:03:02,548 --> 00:03:04,235
+Rym: Yeah, not podcasting just pen radio.
+
+44
+00:03:04,596 --> 00:03:07,460
+Rym: No yeah, yeah I mean I still listen to Byzantine emperors.
+
+45
+00:03:07,460 --> 00:03:08,713
+Rym: It's just I don't know.
+
+46
+00:03:08,794 --> 00:03:13,900
+Rym: some podcasts I used to listen to have gotten long to the point where I can't listen to them at all.
+
+47
+00:03:14,000 --> 00:03:14,785
+Rym: They're just so long.
+
+48
+00:03:14,845 --> 00:03:15,711
+Rym: I'll never get to the end.
+
+49
+00:03:15,731 --> 00:03:21,676
+Scott: Yeah, well anyway I don't start the new job until March 1st, and I don't have to work until then.
+
+50
+00:03:21,716 --> 00:03:22,419
+Scott: I got nothing to do.
+
+51
+00:03:23,121 --> 00:03:24,445
+Rym: Yeah, you're a homemaker.
+
+52
+00:03:24,666 --> 00:03:28,157
+Scott: I'm gonna be doing some awesome shit between now and then starting tomorrow.
+
+53
+00:03:28,297 --> 00:03:37,938
+Rym: right go to the dentist Outstanding followed probably by a rousing game of Super Mario World some autoerotic stimulation in the privacy of the home.
+
+54
+00:03:37,958 --> 00:03:43,260
+Rym: I Imagine you're gonna do some grocery shopping and make copies for Katsucon.
+
+55
+00:03:43,280 --> 00:03:45,829
+Scott: Yeah, it's about it that that's.
+
+56
+00:03:45,950 --> 00:03:46,391
+Scott: that's a.
+
+57
+00:03:46,492 --> 00:03:53,380
+Rym: that's a good guess yep, and of course before we go any further We're gonna remind everyone all week mostly because we're going to be gone starting Thursday.
+
+58
+00:03:53,500 --> 00:03:56,632
+Rym: But this weekend from Thursday until Sunday.
+
+59
+00:03:56,672 --> 00:04:02,650
+Rym: We are going to be in Washington DC at Katsucon at the Omni Shoreham Hotel.
+
+60
+00:04:02,891 --> 00:04:05,700
+Rym: yep Katsucon is one of my favorite anime conventions.
+
+61
+00:04:05,861 --> 00:04:07,225
+Rym: It's also one of the largest.
+
+62
+00:04:07,346 --> 00:04:10,316
+Scott: it's one of the top 10 biggest anime conventions in the United States.
+
+63
+00:04:10,758 --> 00:04:11,420
+Rym: It's a great con.
+
+64
+00:04:11,520 --> 00:04:19,190
+Rym: It's also more of an older crowd kind like most of the people there tend to be more our age as opposed to Oda khan Where it's people three to four years younger than us.
+
+65
+00:04:19,209 --> 00:04:21,079
+Scott: That's not to say that there won't be punk kids there.
+
+66
+00:04:22,382 --> 00:04:29,068
+Scott: The percentage of punk kids will be less than the percentage of punk kids that say Kinetic khan anime next or Oda khan.
+
+67
+00:04:29,309 --> 00:04:32,178
+Rym: it also is very special khan in that it's I mean mostly.
+
+68
+00:04:32,218 --> 00:04:34,246
+Rym: now the cons I go to aren't hotel cons.
+
+69
+00:04:34,306 --> 00:04:37,319
+Rym: They're convention center cons meaning they end.
+
+70
+00:04:38,860 --> 00:04:40,647
+Rym: Yep now we're going.
+
+71
+00:04:40,687 --> 00:04:46,975
+Rym: I mean pretty much anime central and Katsucon are the only hotel cons I've gone to in a long time, and it's a totally different vibe.
+
+72
+00:04:46,995 --> 00:04:49,101
+Rym: You know they go 24/7.
+
+73
+00:04:49,101 --> 00:04:53,358
+Rym: People tend to stay in the bar all night mostly staffers who should be working.
+
+74
+00:04:53,378 --> 00:05:00,980
+Scott: yeah 24/7 khan is definitely a completely different experience than a convention khan that closes and you actually go to bed at some point.
+
+75
+00:05:01,191 --> 00:05:02,872
+Rym: Yeah I mean penga khan was great like that.
+
+76
+00:05:02,933 --> 00:05:08,820
+Rym: nothing was better than Wandering out of the room at 3 in the morning and seal seeing like Neil Gaiman just wandering around looking for something to do.
+
+77
+00:05:09,262 --> 00:05:10,610
+Scott: Hey, I think what kind was excellent.
+
+78
+00:05:11,093 --> 00:05:13,387
+Scott: Yeah, all right, so What's it?
+
+79
+00:05:13,549 --> 00:05:14,640
+Scott: What news is going on here?
+
+80
+00:05:15,040 --> 00:05:26,751
+Rym: Well, it looks like I don't remember the name of the guy who doesn't really matter But someone in the legislature of New York State is putting forth an interesting idea in regards to traffic law And I'm not sure how I feel about this.
+
+81
+00:05:26,771 --> 00:05:36,520
+Rym: all right basically They want to make it a crime punishable by a fine and whatever just like DUI or all that other stuff to drive while tired.
+
+82
+00:05:37,363 --> 00:05:41,659
+Rym: Huh now on one hand a good number of accidents.
+
+83
+00:05:41,900 --> 00:05:42,983
+Rym: well I won't say accidents.
+
+84
+00:05:43,344 --> 00:05:51,910
+Rym: our traffic collisions in the United States are caused very obviously indirectly By people falling asleep at the wheel or being too tired to pay attention.
+
+85
+00:05:52,090 --> 00:05:56,244
+Rym: that is true, but on the other hand tired is a 100% subjective.
+
+86
+00:05:58,841 --> 00:06:05,860
+Scott: Well, I'm sure there might be a way to measure some sort of tiredness But it's not as easy as say the breathalyzer test for alcohol in this yeah.
+
+87
+00:06:05,960 --> 00:06:06,964
+Scott: But then again, it's not like you.
+
+88
+00:06:07,245 --> 00:06:09,534
+Scott: they can just walk up and judge you like you're 2.1.
+
+89
+00:06:09,534 --> 00:06:12,569
+Scott: Tired That's 0.3 over the limit.
+
+90
+00:06:12,710 --> 00:06:23,150
+Rym: You're getting a ticket even though at the same time I'm not gonna get into it But I take issue with I mean what not to be perfectly clear people who drive drunk are jackasses To be in jail.
+
+91
+00:06:23,533 --> 00:06:23,856
+Scott: yep.
+
+92
+00:06:24,077 --> 00:06:36,114
+Rym: however It seems like groups like mad have pushed the in some places the top like the level at which you are now a drunk driver Way below the point where alcohol has any measurable effect.
+
+93
+00:06:36,476 --> 00:06:37,760
+Scott: Yes, that is definitely the case.
+
+94
+00:06:37,840 --> 00:06:39,749
+Scott: I mean the law in Connecticut was like 0.1.
+
+95
+00:06:39,749 --> 00:06:42,340
+Scott: It's like if you have one beer you can't drink.
+
+96
+00:06:42,541 --> 00:06:47,440
+Scott: I mean okay sure someone who drinks should not drive one beer you can drive.
+
+97
+00:06:47,984 --> 00:06:58,204
+Scott: I think I would drive in a car if the person Driving if I knew that they had only if they just drank one beer and they hadn't drunk in anything else and say 24 Hours, and that was it.
+
+98
+00:06:58,706 --> 00:06:59,509
+Scott: I would let them drive.
+
+99
+00:06:59,810 --> 00:07:00,874
+Scott: Yeah, I would have no problem.
+
+100
+00:07:01,035 --> 00:07:02,079
+Rym: I mean in very much.
+
+101
+00:07:02,199 --> 00:07:10,127
+Rym: I am Super in for in favor of sobriety tests straight-up test to see if this person is yeah I don't even really mind.
+
+102
+00:07:10,509 --> 00:07:12,178
+Scott: you know so much the roadblocks.
+
+103
+00:07:12,238 --> 00:07:19,646
+Scott: however You know rights freedom and fringing they might be if it's just they look to make sure you're wearing your seat belt And they you know.
+
+104
+00:07:19,786 --> 00:07:21,515
+Scott: make sure you're not drunk seat belt.
+
+105
+00:07:21,595 --> 00:07:22,680
+Scott: not drunk seat belt not drunk.
+
+106
+00:07:22,680 --> 00:07:23,804
+Scott: I don't really have a problem with that.
+
+107
+00:07:24,025 --> 00:07:30,200
+Rym: and see the thing is most drunk drivers because all the statistics about Alcohol related accidents are kind of skewed in this country.
+
+108
+00:07:30,260 --> 00:07:37,619
+Rym: But in general if someone's actually a drunk driver if you've pulled them over It'll probably be obvious just by looking at them.
+
+109
+00:07:38,402 --> 00:07:41,952
+Rym: Hey, yeah, but it looks like the rule they're proposing.
+
+110
+00:07:41,972 --> 00:07:49,899
+Rym: you stumbled out of that bar into my car, dude Yeah, Rummy No one will believe it if we soak him in Rome.
+
+111
+00:07:52,521 --> 00:07:56,638
+Rym: But it seems like the rule they're looking at would be if you haven't slept in the past 24 hours.
+
+112
+00:07:58,381 --> 00:07:59,364
+Scott: That's an okay rule.
+
+113
+00:07:59,445 --> 00:08:01,451
+Rym: I think the thing is it's how did they prove me?
+
+114
+00:08:01,652 --> 00:08:14,173
+Rym: because I have oh yeah one you just lie - I have only gone without sleep for a span of more than 24 hours Two or three times in my life yep, and you know sadly in all of those times.
+
+115
+00:08:14,293 --> 00:08:16,800
+Rym: I ended that streak by driving somewhere.
+
+116
+00:08:18,702 --> 00:08:31,600
+Rym: Actually What the longest I ever stayed up was in high school, and I'm not gonna tell the whole story But I ended up staying awake for just about three days straight and at the end of it all I was driving home to go to bed.
+
+117
+00:08:32,325 --> 00:08:43,880
+Rym: And then I woke up like well first I'm driving and I see a red light and I'm like I should stop for that red light and then I stop about 500 feet past the red light, but then then I mean the next thing.
+
+118
+00:08:43,919 --> 00:08:52,478
+Rym: I know I woke up and I had apparently just parked my car Realizing that I shouldn't be driving and just gone to sleep parked at the side of the road perfectly legally.
+
+119
+00:08:52,499 --> 00:08:53,706
+Scott: yeah That's what I would do.
+
+120
+00:08:53,766 --> 00:08:57,886
+Scott: I mean I always think about it every time And I feel tired.
+
+121
+00:08:58,047 --> 00:09:05,029
+Scott: I say man, I should stop, but I've never actually done it because I've never been I've never reached the point at which.
+
+122
+00:09:05,371 --> 00:09:06,836
+Scott: I just couldn't drive anymore.
+
+123
+00:09:06,937 --> 00:09:09,760
+Scott: if I reach that point I would absolutely pull over and go to sleep.
+
+124
+00:09:09,881 --> 00:09:18,978
+Rym: I've reached that point dozens of times in my life and every one of those times I've pulled over and taken a 15-minute nap which always gave me enough power to keep going the rest of the way.
+
+125
+00:09:19,058 --> 00:09:23,133
+Scott: the other thing Is I've always been tired close to the destination, so I just make it.
+
+126
+00:09:23,535 --> 00:09:24,940
+Scott: yeah, yeah, I've never not made it.
+
+127
+00:09:25,000 --> 00:09:26,446
+Scott: So I'm obviously doing something right.
+
+128
+00:09:26,507 --> 00:09:29,560
+Rym: the worst time ever I was driving back from Rochester.
+
+129
+00:09:29,680 --> 00:09:31,146
+Rym: I was just bored out of my skull.
+
+130
+00:09:31,166 --> 00:09:37,709
+Rym: so I went out to Rochester from Poughkeepsie to visit so and I ended up staying Five or six hours later than I'd intended.
+
+131
+00:09:38,211 --> 00:09:41,080
+Rym: so I was driving back a five and a half hour drive.
+
+132
+00:09:41,667 --> 00:09:47,317
+Rym: I'd left it like 11 at night and I had worked the next day which I obviously didn't go to.
+
+133
+00:09:47,337 --> 00:09:50,578
+Rym: I ended up just Parking at a rest stop and sleeping through the night.
+
+134
+00:09:51,621 --> 00:09:54,916
+Rym: Wow cuz after about three hours of driving, I just knew I couldn't make it.
+
+135
+00:09:54,936 --> 00:09:56,528
+Rym: there was no way I could have made it home.
+
+136
+00:09:56,568 --> 00:09:56,770
+Rym: It was.
+
+137
+00:09:56,850 --> 00:09:57,920
+Rym: I was so miserable.
+
+138
+00:09:58,421 --> 00:10:05,300
+Rym: Yeah, of course that was also the time I. I was sleeping at the rest stop right and then I woke up kind of halfway.
+
+139
+00:10:05,441 --> 00:10:06,465
+Rym: And here's the thing.
+
+140
+00:10:06,505 --> 00:10:14,019
+Rym: imagine this you're asleep you wake up the first thing you notice Is that you're in a car in the driver's seat with the steering wheel in front of you?
+
+141
+00:10:15,001 --> 00:10:20,680
+Rym: And the second thing you think is that the last thing you remember is driving somewhere and trying not to fall asleep.
+
+142
+00:10:21,222 --> 00:10:23,852
+Rym: So I jumped and panicked and tried to turn the wheel and it wouldn't turn.
+
+143
+00:10:23,872 --> 00:10:33,758
+Rym: and then I look around and I see that I'm parked next to a trucker in a rest stop and this trucker's just looking at me with this look on his face on what the Fuck is up with that guy?
+
+144
+00:10:35,301 --> 00:10:37,389
+Rym: Yeah, but yeah, I don't know how I feel about this.
+
+145
+00:10:37,409 --> 00:10:40,340
+Rym: I probably want to read the actual law in general.
+
+146
+00:10:40,420 --> 00:10:49,852
+Rym: I really don't have any problem with police officers writing tickets to people who are demonstratively Demonstrably, yes, but I wanted to say it all the way through.
+
+147
+00:10:49,873 --> 00:10:58,262
+Rym: Yeah, obviously Impaired for whatever reason I mean really it doesn't matter how you're impaired the fact remains you are Impaired.
+
+148
+00:10:58,503 --> 00:11:01,820
+Rym: if you're actually testably impaired you shouldn't be driving and it's okay if you get a ticket.
+
+149
+00:11:02,041 --> 00:11:12,700
+Scott: I think what it really is gonna end up boiling down to is that if you caused an accident being Because of tiredness or sleepiness at the wheel that you will be hit harder, which is fine by me.
+
+150
+00:11:13,021 --> 00:11:15,536
+Rym: Yeah, well they do that now with alcohol, which I'm also fine with.
+
+151
+00:11:15,677 --> 00:11:19,159
+Scott: Yep, mostly All right, so honey bees.
+
+152
+00:11:19,923 --> 00:11:21,290
+Scott: Mmm, we like honey bees.
+
+153
+00:11:21,310 --> 00:11:21,873
+Scott: They make honey.
+
+154
+00:11:21,973 --> 00:11:23,159
+Rym: I had some honey a little while ago.
+
+155
+00:11:24,000 --> 00:11:29,909
+Scott: apparently there is a Mysterious illness killing lots of honey bees.
+
+156
+00:11:30,009 --> 00:11:31,654
+Rym: Wait, is this that fungus thing from?
+
+157
+00:11:31,794 --> 00:11:33,840
+Scott: no it they don't know what it is.
+
+158
+00:11:33,920 --> 00:11:34,907
+Scott: It's a complete mystery.
+
+159
+00:11:35,411 --> 00:11:49,007
+Scott: It is true though that when they've dissected some of the dead bees there was a high number of Fungi bacteria and other organisms in the bees because the bees Immune systems have been weakened.
+
+160
+00:11:49,469 --> 00:11:52,640
+Scott: so it could be be aids or something like that, but we don't know.
+
+161
+00:11:52,942 --> 00:11:55,440
+Scott: It's a mysterious bee illness killing bees everywhere.
+
+162
+00:11:55,687 --> 00:11:56,159
+Rym: That's just real.
+
+163
+00:11:56,200 --> 00:12:02,259
+Rym: I mean that hearkens back to all those weird parasites that grow inside of bugs But the bugs are still alive and then other bugs come out of them.
+
+164
+00:12:02,762 --> 00:12:05,215
+Scott: Oh, you want to hear something even freakier, right?
+
+165
+00:12:05,576 --> 00:12:18,331
+Scott: Ah, great Normally first of all normally when you have like bees dying in a beehive You know and the you often find the dead bees littered around the hive, you know It's like there's a beehive.
+
+166
+00:12:18,554 --> 00:12:19,160
+Scott: bees die.
+
+167
+00:12:19,421 --> 00:12:34,380
+Scott: You see dead bee corpses lying around, you know, if a bee dies in the hive a worker carries it out Just drops it on the ground, you know, yeah with this mystery disease The bees are apparently flying away from the hive before dying, huh?
+
+168
+00:12:34,981 --> 00:12:36,406
+Rym: That's really kind of creepy.
+
+169
+00:12:37,128 --> 00:12:37,990
+Rym: maybe they know.
+
+170
+00:12:38,090 --> 00:12:41,260
+Rym: maybe it causes some sort of bee neuroses.
+
+171
+00:12:42,581 --> 00:12:48,140
+Rym: Maybe the bees are trying to escape from the crazy alien monster that is invading their hive.
+
+172
+00:12:48,581 --> 00:12:53,920
+Scott: Also, normally when you have a bee colony that's weakened and there's fewer bees in it because a lot of them die.
+
+173
+00:12:54,521 --> 00:13:00,900
+Scott: Those beehives would usually be overrun by bees from other colonies or other things that would go after the honey.
+
+174
+00:13:01,000 --> 00:13:07,480
+Rym: See I know about that because actually there's this long-running series on corrosion about beekeepers Which is actually really really good and I highly recommend it.
+
+175
+00:13:07,500 --> 00:13:10,920
+Scott: Like you have a beehive right and all of a sudden half the bees in the beehive die.
+
+176
+00:13:11,382 --> 00:13:16,280
+Scott: Well, now the beehive is pretty weak and no one is only half as many bees to defend the honey treasure.
+
+177
+00:13:16,804 --> 00:13:18,156
+Scott: So someone's gonna come and take it.
+
+178
+00:13:18,721 --> 00:13:26,874
+Scott: Apparently if your hive is struck with a mystery illness It might be weeks before anything else comes to attack the hive to get the honey, huh?
+
+179
+00:13:27,416 --> 00:13:28,800
+Scott: So it's really kind of freaky.
+
+180
+00:13:29,282 --> 00:13:31,652
+Rym: I don't like the sound of this but we better stock up on honey.
+
+181
+00:13:32,195 --> 00:13:32,376
+Scott: Yeah.
+
+182
+00:13:32,396 --> 00:13:33,380
+Scott: Well, you see this is the thing.
+
+183
+00:13:33,541 --> 00:13:35,159
+Scott: Apparently I didn't even realize this.
+
+184
+00:13:35,820 --> 00:13:37,866
+Scott: Obviously bees are made used to make honey.
+
+185
+00:13:38,027 --> 00:13:38,729
+Scott: That's obvious.
+
+186
+00:13:38,849 --> 00:13:39,150
+Scott: Yes.
+
+187
+00:13:39,651 --> 00:13:46,160
+Scott: Also bees are purposefully brought to Agricultural farms pollinate pollinate things.
+
+188
+00:13:46,243 --> 00:13:52,182
+Scott: Yes This guy drove a truck full of bees across the country and when he got there most of the bees are dead because they got The disease
+
+189
+00:13:52,684 --> 00:13:52,985
+Rym: great
+
+190
+00:13:53,387 --> 00:14:01,396
+Scott: and it's like, you know, they could have the bees do it to make more bees but it costs a lot of money and if the disease comes you have to do it again and again.
+
+191
+00:14:01,416 --> 00:14:06,212
+Scott: and if you keep having To just keep trying to make more bees too many times keep playing.
+
+192
+00:14:06,233 --> 00:14:08,360
+Scott: you feel bankrupt trying to make more bees.
+
+193
+00:14:09,934 --> 00:14:18,230
+Rym: You know I just think back to that episode of El Hazzard where Jenna is like I need more bugger him and the queen Insect woman is like, all right come with me.
+
+194
+00:14:18,511 --> 00:14:18,732
+Rym: Yep.
+
+195
+00:14:19,013 --> 00:14:19,636
+Rym: He's like what.
+
+196
+00:14:19,857 --> 00:14:20,500
+Rym: where are we going?
+
+197
+00:14:23,851 --> 00:14:27,046
+Scott: No, I love that part Too bad.
+
+198
+00:14:27,066 --> 00:14:28,319
+Rym: it's not that easy to make bees.
+
+199
+00:14:29,308 --> 00:14:32,324
+Rym: Yeah but That's kind of creepy.
+
+200
+00:14:32,425 --> 00:14:36,160
+Scott: Yeah, the other thing though is I don't know if people realize this.
+
+201
+00:14:36,240 --> 00:14:43,829
+Scott: You know when you go to the grocery store and you see maple syrup made from real maple trees in Canada All right, or maybe somewhere else and next to it.
+
+202
+00:14:43,849 --> 00:14:45,534
+Scott: You see the fake maple syrup.
+
+203
+00:14:45,554 --> 00:14:47,560
+Scott: That's just made with sugar or corn syrup.
+
+204
+00:14:47,761 --> 00:14:50,109
+Scott: Yeah, the stuff they give you at the diner and Jemima.
+
+205
+00:14:50,350 --> 00:14:57,996
+Scott: Yeah, Jemima and Jemima is not from a maple tree Just so you know people and Jemima is not from a maple tree or a log cabin.
+
+206
+00:14:58,076 --> 00:15:04,300
+Scott: it is yeah log cabin It's just sugar and they process it to make it into maple syrup in a factory.
+
+207
+00:15:04,400 --> 00:15:06,632
+Rym: So, you know, I actually don't mind log cabin at all.
+
+208
+00:15:06,793 --> 00:15:09,223
+Scott: Well, it's like if I don't know It.
+
+209
+00:15:09,324 --> 00:15:14,340
+Scott: actually it almost tastes like the real thing almost so it's not so bad.
+
+210
+00:15:14,340 --> 00:15:22,841
+Scott: Well, I think whichever one I want at the time cuz at the grocery store I will always buy real maple syrup, but in a diner if they give me the crappy fake stuff I'll eat it.
+
+211
+00:15:23,263 --> 00:15:26,532
+Rym: But see if you can't tell that much then why is spending frou-frou money?
+
+212
+00:15:26,632 --> 00:15:31,500
+Scott: because I can tell I just you know And I prefer the better real syrup.
+
+213
+00:15:31,801 --> 00:15:33,687
+Scott: But I'll I will suffer the fakes.
+
+214
+00:15:33,728 --> 00:15:38,725
+Rym: but you yell at me when I buy the fancy bottle of wine as opposed as a slightly Less fancy bottle of wine.
+
+215
+00:15:38,745 --> 00:15:46,716
+Scott: All right, there would be a difference if one bottle of wine was made with sugar Just flavored to taste like grapes and one was made with actual grape.
+
+216
+00:15:46,756 --> 00:15:47,840
+Rym: Yeah, there is wine like that.
+
+217
+00:15:47,900 --> 00:15:50,392
+Rym: Remember that bottle of red wine I opened the other day.
+
+218
+00:15:50,472 --> 00:15:52,100
+Scott: Is that not made with actual grapes?
+
+219
+00:15:52,401 --> 00:15:52,882
+Rym: It was.
+
+220
+00:15:53,023 --> 00:15:57,398
+Rym: but when you look at the ingredients on a bottle of wine, if it says anything it says wine.
+
+221
+00:15:58,442 --> 00:16:02,677
+Rym: That was a bottle of wine that was cheap enough to have things other than just wine in it.
+
+222
+00:16:03,079 --> 00:16:21,260
+Scott: No anyway There it might not be apparent to everyone but in most parts of the United States At least most parts of the United States that I've been to there is a law Eve my opinion an evil protectionist anti-capitalist line that says you cannot make honey.
+
+223
+00:16:21,661 --> 00:16:26,740
+Scott: I mean if you go to the grocery store, all of the honey is honey from bees.
+
+224
+00:16:26,961 --> 00:16:28,948
+Scott: they don't sell honey just made with sugar.
+
+225
+00:16:28,968 --> 00:16:36,640
+Scott: there's no reason that we couldn't just take sugar and Make something that is exactly or close to being exactly like honey.
+
+226
+00:16:37,022 --> 00:16:39,800
+Scott: I would probably still buy the honey from bees, but that's not the point.
+
+227
+00:16:40,181 --> 00:16:47,922
+Scott: There's a law that says we can't do that meant to support beekeepers and it keeps the price of honey up and the supply of honey Lower.
+
+228
+00:16:48,324 --> 00:16:53,620
+Scott: but now if there's a bee disease the price of honey is gonna go way up like stupid crazy.
+
+229
+00:16:53,760 --> 00:16:56,430
+Rym: We should start making some bootleg honey and cash in.
+
+230
+00:16:56,811 --> 00:16:59,320
+Scott: you could get in so much trouble making bootleg honey.
+
+231
+00:16:59,340 --> 00:17:00,286
+Scott: You have no idea.
+
+232
+00:17:00,407 --> 00:17:01,313
+Rym: I'm all about it.
+
+233
+00:17:01,776 --> 00:17:03,303
+Scott: It's all you I mean you could.
+
+234
+00:17:03,644 --> 00:17:10,991
+Scott: I imagine that if you had a big enough bootleg honey operation and they caught you You might get in worse trouble than someone with a meth lab.
+
+235
+00:17:11,392 --> 00:17:13,339
+Rym: It'd be just like the whiskey rebellion.
+
+236
+00:17:13,849 --> 00:17:17,128
+Scott: Yeah Yeah, oh, maybe we should do.
+
+237
+00:17:17,148 --> 00:17:18,093
+Scott: it'd be the honey rebellion.
+
+238
+00:17:18,193 --> 00:17:19,880
+Rym: actually we could just be balls instead.
+
+239
+00:17:20,242 --> 00:17:23,759
+Rym: I know where there's a bunch of beekeepers really close to our house.
+
+240
+00:17:24,040 --> 00:17:26,660
+Scott: You had to go get some bee suits and poach the honey.
+
+241
+00:17:26,861 --> 00:17:30,257
+Rym: Well, remember that park that we used to drive by all the time and you always wondered what was there one.
+
+242
+00:17:31,001 --> 00:17:34,139
+Rym: I went biking over there and there's a whole bunch of bees.
+
+243
+00:17:34,741 --> 00:17:42,322
+Scott: Yeah, like commercial bees beekeeping is pretty popular in the like the Northeast area where I've seriously considered it Cuz.
+
+244
+00:17:42,463 --> 00:17:45,747
+Rym: the more I read about it on corrosion It looks like a very interesting hobby.
+
+245
+00:17:45,767 --> 00:17:49,160
+Rym: if I wasn't doing a podcast I probably would have tried at least once to have bees.
+
+246
+00:17:49,562 --> 00:17:53,679
+Scott: Yeah, I mean, I wouldn't mind to have like one bee box, but I think I handle more than one, you know.
+
+247
+00:17:54,622 --> 00:17:56,508
+Rym: Yeah, according to every beekeeper guy though.
+
+248
+00:17:56,548 --> 00:17:58,595
+Rym: You get stung like a thousand times.
+
+249
+00:17:58,655 --> 00:18:00,040
+Scott: Yeah, I'm gonna avoid that.
+
+250
+00:18:00,663 --> 00:18:01,428
+Scott: That's not pleasant.
+
+251
+00:18:01,931 --> 00:18:15,889
+Rym: But anyway, horrible bee disease things of the day Oh snaps Didn't you want to try to follow up with?
+
+252
+00:18:15,949 --> 00:18:16,793
+Rym: my awesome?
+
+253
+00:18:16,833 --> 00:18:18,500
+Rym: Hitler was born to be alive theme week.
+
+254
+00:18:19,042 --> 00:18:21,030
+Scott: Oh, I don't know if I'm gonna do exactly that.
+
+255
+00:18:21,050 --> 00:18:22,456
+Scott: I'm still thinking about something.
+
+256
+00:18:22,476 --> 00:18:24,535
+Scott: That's so amazing You know, I'm working on it.
+
+257
+00:18:25,000 --> 00:18:34,474
+Scott: But this week I will do a theme week regardless and since I only have to do three things It shouldn't be too hard because we're not gonna do things today on Thursday because we're going to katsukan.
+
+258
+00:18:34,835 --> 00:18:35,939
+Rym: All right katsukan.
+
+259
+00:18:36,139 --> 00:18:43,972
+Scott: Yep Yeah, but basically I found this really cool video From back in the day of some jazz action.
+
+260
+00:18:44,073 --> 00:18:45,979
+Scott: I figured I'd follow up your disco with some jazz.
+
+261
+00:18:45,999 --> 00:18:47,743
+Scott: and What's his name?
+
+262
+00:18:48,104 --> 00:18:50,312
+Scott: Brubaker Dave Brubeck Dave Brubeck?
+
+263
+00:18:50,774 --> 00:18:52,179
+Scott: Yeah Brubaker is a comic guy.
+
+264
+00:18:53,941 --> 00:19:16,580
+Scott: Dave Brubeck and his band playing an awesome song and the guy does an awesome drum solo on a rather minimalist Drum set which I think is really impressive, you know And I just reminded me I look at all bands now and when you see a drummer in a band They got a bajillion drums and a whole bunch of stuff this guy That drum set looks like the thing that you can buy for a couple hundred bucks and like media play.
+
+265
+00:19:17,041 --> 00:19:23,466
+Scott: Media plays still existed, you know, it's the cheapest drum set for a little kid That actually is real drums yet.
+
+266
+00:19:23,887 --> 00:19:28,059
+Scott: He's playing a really awesome drum solo on it and that's pretty damn cool.
+
+267
+00:19:28,741 --> 00:19:30,307
+Rym: See I could recommend.
+
+268
+00:19:30,327 --> 00:19:32,656
+Rym: I mean do you have any more things the day for this thing?
+
+269
+00:19:32,696 --> 00:19:40,160
+Scott: Cuz I mean, yeah YouTube basically anyone out there if you like videos of old-timey jazz, that's really awesome.
+
+270
+00:19:40,501 --> 00:19:43,489
+Scott: YouTube is like a treasure trove.
+
+271
+00:19:43,710 --> 00:19:44,452
+Scott: Holy crap.
+
+272
+00:19:44,733 --> 00:19:50,049
+Scott: It's impossible not to find Yeah, awesome jazz on YouTube or Google video.
+
+273
+00:19:50,069 --> 00:19:52,135
+Rym: I mean, I guess I would generally recommend count.
+
+274
+00:19:52,175 --> 00:19:59,318
+Rym: Basie is always good Buddy rich my man my absolute man mostly cuz I like playing all his stuff.
+
+275
+00:19:59,599 --> 00:20:04,940
+Scott: Yep Yeah, so I'm gonna bring this one's really good and I'll bring two more to you this week tomorrow the next day.
+
+276
+00:20:05,342 --> 00:20:06,270
+Scott: All right, so awesome.
+
+277
+00:20:06,733 --> 00:20:07,519
+Rym: can't argue with that.
+
+278
+00:20:07,720 --> 00:20:21,480
+Rym: I mean Hitler born to be alive was one thing but I don't think Hitler born to be alive in terms of raw I don't know ability or Actual impact on the world has anything on actual jazz from the golden ages of jazz?
+
+279
+00:20:21,941 --> 00:20:25,611
+Scott: Yeah, maybe we should I don't know pick a different genre of music each time.
+
+280
+00:20:25,992 --> 00:20:30,539
+Scott: Who knows I call techno damn Easy.
+
+281
+00:20:32,261 --> 00:20:36,080
+Rym: It's not so easy because there's more kinds of techno than there are days.
+
+282
+00:20:36,240 --> 00:20:39,472
+Scott: I still want to do a show explaining all the different kinds of techno.
+
+283
+00:20:39,512 --> 00:20:40,957
+Scott: Well electronic music.
+
+284
+00:20:40,977 --> 00:20:43,964
+Scott: Yeah Electronic dance music.
+
+285
+00:20:44,064 --> 00:20:47,134
+Rym: Yeah, cuz I mean you don't want there is non dance electronic.
+
+286
+00:20:47,154 --> 00:20:48,177
+Rym: Well, there's electro pop.
+
+287
+00:20:48,719 --> 00:20:59,311
+Scott: Yeah Be a good show cuz a lot of people you go up to them and you're like Techno house industrial trance and they don't know the difference between those things.
+
+288
+00:20:59,331 --> 00:21:01,497
+Rym: Don't forget my favorite my boys.
+
+289
+00:21:01,718 --> 00:21:12,348
+Scott: Happy hardcore Yeah, and those are all completely different genres of music and most people just call it all techno when it's not the case Even though usually in casual conversation I call it all techno because it.
+
+290
+00:21:12,489 --> 00:21:14,320
+Scott: I also call it all techno and casual.
+
+291
+00:21:14,922 --> 00:21:24,360
+Rym: Like if I I only will break it up if I'm talking to I don't know a DJ or if I'm at a dance And I want to ask for a specific kind of music.
+
+292
+00:21:24,400 --> 00:21:29,185
+Scott: It's also interesting to learn about the origins of all the different genres, you know Cuz they're actually.
+
+293
+00:21:29,546 --> 00:21:32,319
+Scott: some of them are pretty recently created and it's pretty cool.
+
+294
+00:21:32,801 --> 00:21:43,156
+Rym: Also, if you type any one of those genres of electronic music into the Pirates Bay You'll pretty much find 10 and 15 CD compilations of everything you'd ever want from them.
+
+295
+00:21:43,417 --> 00:21:43,578
+Scott: Yep.
+
+296
+00:21:44,079 --> 00:21:46,326
+Scott: All right What are we talking about today?
+
+297
+00:21:46,586 --> 00:21:48,131
+Scott: Well, we're talking about your thing today.
+
+298
+00:21:48,873 --> 00:21:49,434
+Rym: Uh, yeah.
+
+299
+00:21:49,595 --> 00:21:49,835
+Scott: Okay.
+
+300
+00:21:50,277 --> 00:21:51,440
+Rym: No, I didn't great.
+
+301
+00:21:52,002 --> 00:21:52,243
+Scott: Okay.
+
+302
+00:21:52,383 --> 00:21:55,132
+Rym: Yeah, if you can't tell we stayed up late pretty much all weekend.
+
+303
+00:21:55,915 --> 00:21:56,336
+Scott: I didn't.
+
+304
+00:21:56,657 --> 00:21:57,420
+Scott: I don't have work to do.
+
+305
+00:21:57,460 --> 00:21:58,748
+Scott: I've been sleeping and going ahead.
+
+306
+00:21:58,769 --> 00:21:59,453
+Scott: That's why I caught it.
+
+307
+00:21:59,674 --> 00:22:00,097
+Rym: Wait a minute.
+
+308
+00:22:00,137 --> 00:22:00,560
+Rym: Wait a minute.
+
+309
+00:22:00,640 --> 00:22:06,420
+Rym: But when I came home and I said you you were so tired you were talking about tired you were yeah.
+
+310
+00:22:06,501 --> 00:22:09,000
+Rym: And then when I asked how could you be so tired you said?
+
+311
+00:22:09,242 --> 00:22:11,722
+Rym: Well, I got up early and I did stuff all day I did.
+
+312
+00:22:11,762 --> 00:22:15,180
+Scott: I got up at 830 which is when my body woke up and I wasn't tired.
+
+313
+00:22:15,702 --> 00:22:19,976
+Rym: So, uh, what do you mean all this extra sleep business and get an extra sleep?
+
+314
+00:22:20,418 --> 00:22:22,731
+Rym: Uh-huh We'll see how you feel when you start working again.
+
+315
+00:22:22,751 --> 00:22:35,722
+Rym: Yeah, I like ass but anyway this I've seen this floating around on the internet bit by bit and I want to just Point it out and talk about it because I think it's both a good flash video and at the same time a kind of bad Flash video.
+
+316
+00:22:36,022 --> 00:23:03,840
+Rym: it's a little video that someone put together that describes very simply how instant runoff voting works Which is a very interesting system you can use in Political voting or really any kind of voting that more often in most cases will give you a better representation of what a large number of people actually Want in a candidate in cases where there are more than two people running in an election.
+
+317
+00:23:04,321 --> 00:23:09,096
+Rym: Yep, and IRVs are used in a bunch of places in the world.
+
+318
+00:23:09,136 --> 00:23:10,380
+Rym: I mean Australia uses them.
+
+319
+00:23:11,364 --> 00:23:14,600
+Rym: I forget what other places I think Ireland but I don't ever offhand.
+
+320
+00:23:14,861 --> 00:23:22,678
+Scott: There are places in the world that use instant runoff voting as opposed to the kind of voting that everyone else uses Which is just you direct voting.
+
+321
+00:23:23,241 --> 00:23:26,573
+Rym: Now remember instant runoff is one very specific kind and there are.
+
+322
+00:23:26,593 --> 00:23:28,440
+Scott: there are many kinds of voting there.
+
+323
+00:23:29,701 --> 00:23:31,446
+Rym: There's all sorts of similar.
+
+324
+00:23:31,787 --> 00:23:32,369
+Scott: Imagine a world.
+
+325
+00:23:32,409 --> 00:23:34,074
+Scott: We're like dig for the president.
+
+326
+00:23:34,675 --> 00:23:35,859
+Scott: great dig dig dig dig dig.
+
+327
+00:23:36,682 --> 00:23:37,707
+Scott: There's all kinds of voting.
+
+328
+00:23:38,390 --> 00:23:40,620
+Rym: vote for this picture of my cat to be president.
+
+329
+00:23:40,905 --> 00:23:47,576
+Rym: I Don't know how I feel about the fact that a lot of dig front stories now are just a picture on flicker.
+
+330
+00:23:47,596 --> 00:23:49,822
+Rym: Yeah All right.
+
+331
+00:23:49,983 --> 00:23:53,980
+Rym: Yeah, but anyway, so there are a bunch of different kinds of runoff voting.
+
+332
+00:23:54,303 --> 00:23:56,298
+Rym: The one in particular of interest is IRV.
+
+333
+00:23:56,500 --> 00:23:59,380
+Rym: It's the one that's been gaining a lot of steam in the United States lately.
+
+334
+00:23:59,561 --> 00:24:04,980
+Rym: There are a lot of people who are proponents of it and there are websites and flash videos like this explaining how it works.
+
+335
+00:24:05,201 --> 00:24:08,960
+Rym: And I'd say you should all watch it because it gives a really good rundown of how the system works.
+
+336
+00:24:09,000 --> 00:24:11,739
+Rym: Basically, you rank a bunch of candidates in the order that you like them.
+
+337
+00:24:12,243 --> 00:24:15,000
+Rym: It then counts everyone's first choice and it's a normal vote.
+
+338
+00:24:15,622 --> 00:24:18,553
+Rym: If a candidate has a majority they win and the it's over.
+
+339
+00:24:19,095 --> 00:24:21,446
+Rym: if no one has a majority They drop.
+
+340
+00:24:21,486 --> 00:24:24,000
+Rym: whatever candidate has the least votes.
+
+341
+00:24:24,547 --> 00:24:33,879
+Rym: then they take Everyone who voted for that candidate and use their second choice instead of their first choice and you keep going down the line Until someone gets the majority of the votes.
+
+342
+00:24:35,081 --> 00:24:36,405
+Scott: What aren't people gonna need?
+
+343
+00:24:36,425 --> 00:24:38,933
+Scott: to have as many choices as there are candidates?
+
+344
+00:24:38,973 --> 00:24:42,505
+Scott: like if there's five candidates You're gonna need to make four choices.
+
+345
+00:24:42,806 --> 00:24:44,170
+Rym: Well, you don't need to the.
+
+346
+00:24:44,230 --> 00:24:47,380
+Rym: the system can be run in a bunch of different ways.
+
+347
+00:24:47,682 --> 00:24:56,520
+Rym: I mean you could do it where no one needs a majority But you use the majority in the first set and then you just count the second or the third or whatever arbitrary set as gold.
+
+348
+00:24:57,023 --> 00:25:00,059
+Rym: You can do whatever you want and there's no rule as to how it has to be done.
+
+349
+00:25:01,341 --> 00:25:01,462
+Rym: The.
+
+350
+00:25:01,582 --> 00:25:07,121
+Rym: the thing that I just want to point out is that this video while it very simply describes the the voting system Yeah,
+
+351
+00:25:07,221 --> 00:25:21,111
+Scott: it is clear that this video this flash video is pro and sin right off voting yes, and it is attempting to explain it in a and present it in a favorable light to someone who Isn't gonna think too hard about it now.
+
+352
+00:25:21,151 --> 00:25:25,833
+Rym: while it is a very favorable thing anyway And I'm very much for it in in most cases.
+
+353
+00:25:26,435 --> 00:25:27,500
+Rym: It does have problems.
+
+354
+00:25:27,540 --> 00:25:37,110
+Rym: There is no such thing as a voting system that does not as probably have problems or that will always no matter what the circumstances Accurately reflect the view of the majority.
+
+355
+00:25:37,371 --> 00:25:39,339
+Rym: There's just no way to really do it.
+
+356
+00:25:39,842 --> 00:25:42,713
+Rym: And I also worry that a system like this might confuse people in the.
+
+357
+00:25:42,754 --> 00:25:46,467
+Scott: well, okay, there's no Practical way to do it.
+
+358
+00:25:46,607 --> 00:25:48,134
+Scott: You could use psychic powers.
+
+359
+00:25:48,154 --> 00:25:51,240
+Rym: I Don't know if we get brain scanners enough.
+
+360
+00:25:51,300 --> 00:26:01,440
+Scott: I mean everyone just plugs in one day and then they show you all the candidates and then they make you read all their Platforms and they see when your brain is happy and when it's not happy and then they pick based on that.
+
+361
+00:26:02,743 --> 00:26:03,592
+Rym: Yeah, all right.
+
+362
+00:26:03,795 --> 00:26:04,280
+Rym: Yeah, I don't know.
+
+363
+00:26:04,280 --> 00:26:15,540
+Rym: I just thought this was interesting and the reason I actually picked it was that I was going to use my favorite episode of space Ghost ever space ghost and the fire ants which just overall it's my favorite space ghost.
+
+364
+00:26:15,641 --> 00:26:23,200
+Rym: I was gonna talk all about space ghost and What was great about it and how you had to watch it to actually enjoy it as opposed to it being just stupid.
+
+365
+00:26:23,870 --> 00:26:29,880
+Rym: But uh Warner went on a rampage and got almost every piece of space ghost on the internet taken down.
+
+366
+00:26:30,301 --> 00:26:35,219
+Rym: So I I could not in a short span of time find a link to my previous thing of the day.
+
+367
+00:26:36,744 --> 00:26:39,138
+Rym: If I find it, I will use it as my thing of the day ASAP.
+
+368
+00:26:40,700 --> 00:26:46,860
+Rym: Okay, but anyway, you're listening to a podcast which means in some way you have used the internet once or twice.
+
+369
+00:26:48,125 --> 00:26:49,258
+Scott: Use the Internet's OMG.
+
+370
+00:26:50,460 --> 00:26:53,611
+Rym: Now I remember when I used to play games online.
+
+371
+00:26:54,013 --> 00:26:59,440
+Rym: one time I was playing quake 2 on a server and There was an argument someone was accusing someone else of cheating.
+
+372
+00:27:00,062 --> 00:27:04,720
+Rym: The server was run by some 12 year old moron who accused a friend of mine of cheating.
+
+373
+00:27:05,242 --> 00:27:15,476
+Rym: now the rationale for his accusation was one that the guy was doing really well and To that his IP address had zero in it, which he swore you can't do.
+
+374
+00:27:15,496 --> 00:27:16,960
+Rym: this guy's totally hacking.
+
+375
+00:27:17,000 --> 00:27:19,619
+Rym: He has a zero in his IP address and then he banned the hell.
+
+376
+00:27:20,940 --> 00:27:22,346
+Scott: Okay, that guy doesn't know shit.
+
+377
+00:27:22,887 --> 00:27:23,168
+Rym: Yeah.
+
+378
+00:27:23,209 --> 00:27:27,854
+Rym: See the thing is a lot of people know what IP addresses are DNS and all that.
+
+379
+00:27:27,874 --> 00:27:30,830
+Rym: you type www.google.com and you get somewhere.
+
+380
+00:27:31,192 --> 00:27:36,620
+Rym: you have two computers in your house and You might know how to use a windows share to get files from one to the other one or whatever.
+
+381
+00:27:37,083 --> 00:27:43,825
+Rym: but a lot of people don't really know how IP addresses and Internet connections work.
+
+382
+00:27:44,527 --> 00:27:47,856
+Scott: It's actually you know, it's not so complicated.
+
+383
+00:27:47,876 --> 00:27:48,859
+Scott: You can't understand it.
+
+384
+00:27:49,281 --> 00:27:52,839
+Scott: It's just not really obvious and there are some tricks going on there.
+
+385
+00:27:53,040 --> 00:27:57,414
+Scott: Yep, you're not gonna know unless someone tells you or you figure it out on a whole.
+
+386
+00:27:57,434 --> 00:28:14,454
+Rym: it is very complicated if you try to take the whole thing in as a whole from Electrons being manipulated on a wire to you getting your gay lesbian furry Hentai girl Pornography whatever you're after on the internet.
+
+387
+00:28:14,515 --> 00:28:15,380
+Scott: Yeah, think about that.
+
+388
+00:28:15,721 --> 00:28:23,348
+Scott: All the internet is is a bunch of pornography copper wires and fiber optic cables Connecting a bunch of machines together.
+
+389
+00:28:23,649 --> 00:28:29,588
+Scott: also wireless connecting a bunch of machines together millions and millions of machines all connected to each other.
+
+390
+00:28:29,648 --> 00:28:37,975
+Scott: somehow and Yet somehow magically information from just about any machine can get to any other machine when you want it to.
+
+391
+00:28:38,297 --> 00:28:47,291
+Rym: and think of this the Information that you're sending and receiving is just waves on Wires that can be translated into ones and zeros.
+
+392
+00:28:47,452 --> 00:28:50,100
+Rym: Yeah, so how do those ones and zeros know where to go?
+
+393
+00:28:50,580 --> 00:28:56,959
+Rym: How do they get specifically on the exact right wire to get from my computers in front of me now?
+
+394
+00:28:57,681 --> 00:29:03,620
+Rym: All the way out to the internet to someone else's computer up the right wire and then into the right program on that computer.
+
+395
+00:29:04,002 --> 00:29:05,311
+Scott: It's crazy when you think about it.
+
+396
+00:29:05,432 --> 00:29:13,900
+Scott: electrons on wires Somehow which are equal porn and they make it all the way around the world in his crazy maze.
+
+397
+00:29:14,040 --> 00:29:18,356
+Scott: That's more complex than any road you've ever driven on and they do it so fast.
+
+398
+00:29:18,778 --> 00:29:19,280
+Scott: It's insane.
+
+399
+00:29:19,521 --> 00:29:23,257
+Rym: I mean think about when I send Scott an instant message in his room while I'm in my room.
+
+400
+00:29:23,658 --> 00:29:30,778
+Rym: the program I'm using goes out to the internet through a bunch of rock network equipment in our house to our server front row.
+
+401
+00:29:30,798 --> 00:29:39,500
+Rym: crew calm in Gets manipulated there comes back into our house goes down a different wire into Scott's computer and then sends him a message.
+
+402
+00:29:40,062 --> 00:29:43,252
+Scott: It's really crazy and you think about it in the big picture.
+
+403
+00:29:43,433 --> 00:29:45,500
+Scott: It's it's absolutely unbelievable that it works.
+
+404
+00:29:45,520 --> 00:29:53,219
+Scott: That's why you always hear computer people say it's a miracle that's even works, you know, cuz it's true It is a miracle that any of this shit works.
+
+405
+00:29:53,661 --> 00:29:57,875
+Rym: Now the thing is while how that all works is super complicated.
+
+406
+00:29:57,895 --> 00:29:59,420
+Rym: There's a lot to it in a lot of steps.
+
+407
+00:29:59,922 --> 00:30:01,751
+Rym: It's actually very simple to understand.
+
+408
+00:30:01,811 --> 00:30:07,575
+Rym: if you break it up into each Individual component and there aren't actually that many components to it aren't there.
+
+409
+00:30:07,635 --> 00:30:08,920
+Scott: seven eight eight.
+
+410
+00:30:09,221 --> 00:30:11,089
+Rym: Well, the thing is we're gonna use the five layer.
+
+411
+00:30:11,450 --> 00:30:13,780
+Rym: Okay, cuz no one uses the full OSI model.
+
+412
+00:30:13,840 --> 00:30:24,340
+Rym: No, but no, but to make a long story short the way an information is sent over networks has been broken up into Depending on how you look at it a number of layers.
+
+413
+00:30:24,662 --> 00:30:28,280
+Rym: So think of it like a big stack of pancakes or a stack a stack of boxes.
+
+414
+00:30:28,842 --> 00:30:46,022
+Rym: you've got a stack of boxes and you start at the top and you put a kind of thing in a box and Then you put that thing in another box and that thing in another box to say I want to write a letter to My friend Adam who lives in a house up with a bunch of other people in Albany, you know I'm male.
+
+415
+00:30:46,504 --> 00:30:48,755
+Rym: so I take my letter and I write the information on it.
+
+416
+00:30:48,815 --> 00:30:49,740
+Scott: The letter is the porn.
+
+417
+00:30:50,182 --> 00:30:53,280
+Rym: Yes, then I write Adams name on the letter.
+
+418
+00:30:53,360 --> 00:30:56,359
+Rym: So Adam knows this letters for him and I sign it saying this letters for me.
+
+419
+00:30:57,102 --> 00:31:01,857
+Rym: Then I encapsulate this letter I fold it up and I put it inside of an envelope.
+
+420
+00:31:02,238 --> 00:31:10,280
+Rym: on the envelope I put different information that says, you know, what city what town what house where it's from where it's going to the postage.
+
+421
+00:31:10,962 --> 00:31:15,580
+Rym: Yep, because the post office the intermediaries don't care what's in my letter.
+
+422
+00:31:15,861 --> 00:31:19,360
+Rym: They don't care who Adam is they don't care that Adams getting my letter.
+
+423
+00:31:19,762 --> 00:31:22,159
+Rym: All they care about is where to deliver the letter.
+
+424
+00:31:22,521 --> 00:31:27,260
+Rym: So I encapsulate it in this envelope and the envelope has all the information that the post office needs.
+
+425
+00:31:27,601 --> 00:31:29,930
+Rym: The post office looks at it figures out where to go.
+
+426
+00:31:30,251 --> 00:31:32,520
+Rym: So it gets to the house where Adam and all his friends live.
+
+427
+00:31:33,240 --> 00:31:34,847
+Rym: Steve grabs it from the mailbox.
+
+428
+00:31:34,887 --> 00:31:35,851
+Rym: He looks at it.
+
+429
+00:31:36,293 --> 00:31:37,217
+Rym: Oh, it's a letter to our house.
+
+430
+00:31:37,257 --> 00:31:37,819
+Rym: He opens it up.
+
+431
+00:31:38,282 --> 00:31:39,693
+Rym: It says Adam on the inside.
+
+432
+00:31:39,834 --> 00:31:40,660
+Rym: Oh, this is for Adam.
+
+433
+00:31:41,222 --> 00:31:49,095
+Rym: so he opens the encapsulation finds the more specific information that wasn't relevant to the outside world and Then he gives it to whoever it has to go to.
+
+434
+00:31:50,262 --> 00:31:54,818
+Rym: The internet works in exactly the same way only with a lot more envelopes.
+
+435
+00:31:55,199 --> 00:31:56,404
+Scott: Yep I mean an envelope.
+
+436
+00:31:56,424 --> 00:32:00,660
+Scott: you put it in another envelope put another envelope and eventually the envelope is just electrons.
+
+437
+00:32:00,700 --> 00:32:05,839
+Scott: And then you take all the envelopes off of the electrons and it turns into prawn.
+
+438
+00:32:05,859 --> 00:32:13,020
+Rym: now We thought originally we'd start podcast from the bottom up because basically it starts at the very bottom that the physical layer the actual.
+
+439
+00:32:13,080 --> 00:32:18,511
+Rym: you Know there's electricity wires Electricity wireless fire all that stuff brimstone.
+
+440
+00:32:19,233 --> 00:32:23,327
+Rym: and then above that there's something called the data link layer And then there's the network layer.
+
+441
+00:32:23,347 --> 00:32:26,500
+Rym: Then there's a transport layer and then there's the application layer.
+
+442
+00:32:27,046 --> 00:32:35,659
+Rym: But if we do that This will probably be really boring and tedious because it would take a long time just to talk about the physical layer And that's the part that you don't really ever interact with.
+
+443
+00:32:36,222 --> 00:32:46,887
+Scott: Yeah, I mean other than plugging wires in how the physical layer works is interesting to us But you don't ever need to know that basically ever like I kind of know it I never need to know it.
+
+444
+00:32:47,330 --> 00:32:48,154
+Scott: if I never knew it.
+
+445
+00:32:48,194 --> 00:32:51,412
+Rym: It wouldn't bother my life in the lead Yep, and if I need to know it, I look it up again.
+
+446
+00:32:51,433 --> 00:32:52,620
+Scott: That's exactly right.
+
+447
+00:32:52,801 --> 00:32:55,680
+Rym: So we're gonna start with and we'll you know, we'll explain what these are.
+
+448
+00:32:55,721 --> 00:32:56,399
+Rym: Don't worry about it.
+
+449
+00:32:56,440 --> 00:33:02,640
+Rym: But we're gonna start with the data link layer and then move into the network layer now just so you know.
+
+450
+00:33:02,740 --> 00:33:03,749
+Rym: So you have a frame of reference.
+
+451
+00:33:03,770 --> 00:33:14,851
+Rym: in case you know something about computers The data link layer is basically Mac addresses and the network layer is basically IP addresses Yep, and you probably have the most interaction with those.
+
+452
+00:33:15,132 --> 00:33:18,881
+Rym: the next layer up for anyone who wants to read ahead is Ports.
+
+453
+00:33:19,365 --> 00:33:21,080
+Rym: you've worked with those, you know use bit torrent.
+
+454
+00:33:21,381 --> 00:33:25,780
+Rym: You have to use certain ports type certain ports in open ports up in the firewall all that stuff.
+
+455
+00:33:25,961 --> 00:33:28,372
+Scott: That's the TCPs and the UDPs and all that stuff.
+
+456
+00:33:28,593 --> 00:33:29,860
+Rym: Yep, and that's the next layer up.
+
+457
+00:33:30,405 --> 00:33:37,660
+Rym: We're not gonna talk about that right now Yep, and also we're gonna go very briefly about the data link layer because you know, it's not really that complicated.
+
+458
+00:33:37,680 --> 00:33:39,834
+Scott: Yeah, unless you wanted all the stupid details.
+
+459
+00:33:40,056 --> 00:33:40,680
+Rym: I mean think of this.
+
+460
+00:33:40,800 --> 00:33:45,776
+Rym: Let's say you've got a simple network a non-intelligent network a flat network.
+
+461
+00:33:46,137 --> 00:33:47,120
+Rym: You've got your house, right?
+
+462
+00:33:47,140 --> 00:33:49,919
+Rym: You've got a hub that you bought and you've got three computers connected to it.
+
+463
+00:33:50,281 --> 00:33:55,560
+Scott: So you have three computers and they're all have wires connecting every single computer.
+
+464
+00:33:55,660 --> 00:33:58,730
+Scott: So every computer has a wire going from it to every other computer.
+
+465
+00:33:58,911 --> 00:34:02,121
+Scott: somehow because there's a hub and that's basically what a hub is Yep.
+
+466
+00:34:02,523 --> 00:34:08,687
+Rym: So let's say you want to send information from computer a to computer B. Oh How do the computers do that?
+
+467
+00:34:08,888 --> 00:34:11,300
+Scott: I mean, it's just wires connecting the computers, right?
+
+468
+00:34:11,360 --> 00:34:15,030
+Scott: So how would one computer know which information goes to who?
+
+469
+00:34:15,091 --> 00:34:18,400
+Scott: how does it guide it along one wire instead of another wire?
+
+470
+00:34:18,540 --> 00:34:21,340
+Rym: It's basically how do you send information?
+
+471
+00:34:21,880 --> 00:34:35,060
+Rym: period to another computer When all computers are equal on the same flat network where they can all see each other and that's why it's called the data link Layer, it's the lowest logical layer where you set up a data link between two computers.
+
+472
+00:34:35,360 --> 00:34:39,840
+Rym: So two computers come up with a way to talk to each other and send data between themselves.
+
+473
+00:34:40,101 --> 00:34:40,241
+Rym: Mm-hmm.
+
+474
+00:34:40,683 --> 00:34:43,493
+Scott: The way it is done is with the magical.
+
+475
+00:34:43,674 --> 00:34:45,239
+Scott: Well the way there's many ways to do it.
+
+476
+00:34:45,260 --> 00:34:49,237
+Scott: I mean I could come up with a brand new way of doing it right now and just implement it and it work.
+
+477
+00:34:49,318 --> 00:34:51,060
+Rym: probably as We're talking we're going to talk.
+
+478
+00:34:51,080 --> 00:34:53,629
+Scott: We're going to talk about the way that it is done with.
+
+479
+00:34:53,829 --> 00:35:01,059
+Rym: you know ether nets and the things that you use on the Internet's every Day, yes I mean if you know more about networking than what we're talking about right now.
+
+480
+00:35:01,642 --> 00:35:05,018
+Rym: We also know but most of you don't care so we're not gonna get into that.
+
+481
+00:35:05,118 --> 00:35:05,480
+Scott: that's right.
+
+482
+00:35:05,540 --> 00:35:11,140
+Scott: Well, the way it is commonly done these days is with a MAC address your network card.
+
+483
+00:35:11,360 --> 00:35:16,514
+Scott: The thing in your computer that the wire plugs into has a MAC address.
+
+484
+00:35:16,715 --> 00:35:18,660
+Rym: This is a very large number.
+
+485
+00:35:18,760 --> 00:35:23,600
+Rym: It's a hexadecimal number and as on any given network, this number is unique.
+
+486
+00:35:23,680 --> 00:35:27,720
+Rym: There are so many of them that no two computers in a house.
+
+487
+00:35:28,202 --> 00:35:31,760
+Rym: The odds of them having the same number are so remote that it'll never happen.
+
+488
+00:35:31,981 --> 00:35:35,732
+Scott: Usually the beginning of the number is the same for like every like.
+
+489
+00:35:35,792 --> 00:35:43,120
+Scott: if you buy a three comm card and another three comm Card the beginning of the number will probably be the same for both cards, you know.
+
+490
+00:35:43,220 --> 00:35:45,327
+Scott: But the entire number is never the same.
+
+491
+00:35:45,829 --> 00:35:49,320
+Scott: also a lot of cards allow you to just change the number to whatever you want.
+
+492
+00:35:49,741 --> 00:35:54,120
+Rym: So so if you really wanted to you could cause a problem for yourself by making all your Mac address.
+
+493
+00:35:54,521 --> 00:35:59,916
+Scott: Two computers on the same network have the same exact Mac address that they're not different at all.
+
+494
+00:36:00,237 --> 00:36:01,140
+Scott: That will not work.
+
+495
+00:36:01,221 --> 00:36:02,139
+Scott: They'll have a problem.
+
+496
+00:36:02,745 --> 00:36:11,920
+Scott: but for all intents and purposes The Mac addresses will always be unique and the odds of them not being unique by accident are so ludicrously small.
+
+497
+00:36:12,083 --> 00:36:12,918
+Scott: It's not a concern.
+
+498
+00:36:13,602 --> 00:36:16,410
+Rym: So basically to simplify greatly.
+
+499
+00:36:16,470 --> 00:36:17,333
+Rym: just so this is easy.
+
+500
+00:36:17,895 --> 00:36:26,520
+Rym: if you want to talk to another computer What your computer says is I have information for Mac address X and ever issues single-digit numbers.
+
+501
+00:36:26,741 --> 00:36:28,609
+Rym: Yeah, so you have computers one, two, three and four.
+
+502
+00:36:28,850 --> 00:36:31,120
+Rym: Yep, and they have Mac addresses one, two, three and four.
+
+503
+00:36:31,321 --> 00:36:35,080
+Rym: Yep, so computer one says I have data for computer three.
+
+504
+00:36:35,401 --> 00:36:38,679
+Rym: Here it is and it sends it out to the network and all the computers see it.
+
+505
+00:36:38,800 --> 00:36:42,000
+Scott: Yep, because I mean there's just dumb wires connecting every computer.
+
+506
+00:36:42,120 --> 00:36:45,031
+Scott: It can't choose to set it's only sending it out one wire.
+
+507
+00:36:45,232 --> 00:36:46,497
+Scott: every computer hears this.
+
+508
+00:36:46,737 --> 00:36:47,420
+Scott: it's like yelling.
+
+509
+00:36:47,621 --> 00:36:49,772
+Scott: It's like hey, I got something for number three.
+
+510
+00:36:49,792 --> 00:36:51,379
+Scott: It's on for number three.
+
+511
+00:36:51,701 --> 00:36:58,160
+Rym: Yep, and number one and number four by every other computer no matter how many there are has logic inside of it.
+
+512
+00:36:58,200 --> 00:37:03,260
+Rym: There could be software or hardware that looks at that number and says that is not for me.
+
+513
+00:37:03,762 --> 00:37:06,233
+Rym: I will ignore it or that is for me.
+
+514
+00:37:06,695 --> 00:37:07,900
+Rym: I will take it and process.
+
+515
+00:37:08,000 --> 00:37:09,226
+Scott: Yep, so number one goes.
+
+516
+00:37:09,447 --> 00:37:13,465
+Scott: I got something for number three and two and four go Oh, they don't do shit.
+
+517
+00:37:13,586 --> 00:37:16,560
+Scott: and number three goes me me me me me me me me me me me me me me.
+
+518
+00:37:16,761 --> 00:37:18,326
+Scott: that's me now.
+
+519
+00:37:18,407 --> 00:37:24,311
+Rym: the drawbacks of this are that every computer hears every conversation that goes on in the entire network.
+
+520
+00:37:24,633 --> 00:37:26,682
+Rym: yeah and a number of other problems.
+
+521
+00:37:26,984 --> 00:37:30,320
+Rym: the thing is while computers hear the information they don't look at it.
+
+522
+00:37:30,722 --> 00:37:34,340
+Rym: it's like if I start talking to Scott in French and Scott understands French.
+
+523
+00:37:34,701 --> 00:37:37,311
+Rym: but to use Adam again Adam is taking her.
+
+524
+00:37:37,351 --> 00:37:40,706
+Rym: he doesn't understand French he can't understand what I'm saying.
+
+525
+00:37:41,249 --> 00:37:44,706
+Rym: but if I hadn't wanted to be tricky he could go into promiscuous mode.
+
+526
+00:37:45,290 --> 00:37:46,657
+Scott: yeah we're not gonna talk about that.
+
+527
+00:37:46,677 --> 00:37:50,056
+Rym: yeah but just in case anyone wondered people you know you hear that word a lot.
+
+528
+00:37:50,176 --> 00:38:01,847
+Rym: all promiscuous mode is is where you have a computer and not only will it listen to the stuff that's for it but you can tell it to listen to everything it hears on the wire regardless of who it's for.
+
+529
+00:38:02,389 --> 00:38:12,047
+Scott: this is why if you plug into a hub or a Wi-Fi network you know usually with some other people around and there's no switches or routers between you and them.
+
+530
+00:38:12,107 --> 00:38:17,357
+Scott: you're just on a hub that you can see what they're doing on the internet by entering promiscuous mode.
+
+531
+00:38:17,418 --> 00:38:18,384
+Scott: that's a security yeah.
+
+532
+00:38:18,445 --> 00:38:23,320
+Rym: so Adam can sit there with a French to English dictionary and figure out what we were saying even though he shouldn't really be listening.
+
+533
+00:38:23,460 --> 00:38:24,043
+Rym: and oh he should.
+
+534
+00:38:24,103 --> 00:38:24,807
+Rym: and there is no.
+
+535
+00:38:24,847 --> 00:38:26,756
+Rym: well I can't say there's no way.
+
+536
+00:38:27,017 --> 00:38:28,987
+Rym: there is almost no way for us to figure out.
+
+537
+00:38:29,007 --> 00:38:29,691
+Rym: this is happening.
+
+538
+00:38:29,953 --> 00:38:32,467
+Scott: yeah we're not gonna get into the way you hear it out.
+
+539
+00:38:32,507 --> 00:38:33,854
+Scott: there is a way to figure it out.
+
+540
+00:38:33,935 --> 00:38:35,887
+Rym: there is some awesome stuff I can talk about.
+
+541
+00:38:35,907 --> 00:38:40,914
+Rym: if there's anyone out there who's interested we can do an episode about the more technical aspects of all.
+
+542
+00:38:40,954 --> 00:38:47,218
+Scott: yeah we could do like how to detect hackers on your network and stuff interesting but complicated stuff.
+
+543
+00:38:47,459 --> 00:38:49,690
+Rym: if you guys want a technical episode like that let us know.
+
+544
+00:38:49,850 --> 00:38:50,895
+Rym: yeah anyway.
+
+545
+00:38:51,036 --> 00:39:01,647
+Rym: so number three goes me me me me me me me me and number one here's that and they just talk back and forth and to ignores the whole conversation and if two wants to talk he talks to whoever and it just works.
+
+546
+00:39:01,948 --> 00:39:06,616
+Rym: yep now obviously this is and this is how computers worked for a long time because there weren't that many computers.
+
+547
+00:39:07,160 --> 00:39:08,630
+Rym: so you've got one network now like this.
+
+548
+00:39:08,711 --> 00:39:11,970
+Scott: yeah I mean you would have computers networked like with a daisy chain.
+
+549
+00:39:11,990 --> 00:39:13,015
+Scott: we're like computer.
+
+550
+00:39:13,176 --> 00:39:23,247
+Scott: one would be plugged into two two would be plugged into three three would be plugged into four and if they wanted to talk it just went back and forth down the row or even if they were all with a hub.
+
+551
+00:39:23,287 --> 00:39:24,533
+Rym: so they all had their own wires.
+
+552
+00:39:24,875 --> 00:39:29,138
+Rym: it was still as though it was one big wire where every conversation is everywhere.
+
+553
+00:39:29,178 --> 00:39:31,067
+Rym: now imagine if the whole internet was like that.
+
+554
+00:39:31,449 --> 00:39:41,520
+Rym: it would grind to a halt because anytime someone looking at pornography on a Chinese computer from France my computer is gonna hear that conversation and so is every other computer in the world.
+
+555
+00:39:42,120 --> 00:39:44,129
+Scott: Imagine hearing all the porn in the world at once.
+
+556
+00:39:44,731 --> 00:39:48,987
+Rym: that's far worse than any Lovecraftian horror it is.
+
+557
+00:39:49,528 --> 00:39:51,555
+Scott: I think it's a new Lovecraftian horror.
+
+558
+00:39:52,317 --> 00:40:00,611
+Scott: Wow hearing the internet porndulu there's probably a website about that and it's not it's it's probably you know what.
+
+559
+00:40:00,812 --> 00:40:04,028
+Rym: I can almost say with certainty that there effectively are hentai about that.
+
+560
+00:40:04,310 --> 00:40:05,354
+Scott: yeah all right.
+
+561
+00:40:05,395 --> 00:40:06,018
+Rym: so all right.
+
+562
+00:40:06,058 --> 00:40:07,485
+Scott: so how do we solve that problem?
+
+563
+00:40:07,525 --> 00:40:09,716
+Scott: yes well how do we defeat porndulu?
+
+564
+00:40:09,796 --> 00:40:12,551
+Rym: we were talking as though there's one network the network in your house.
+
+565
+00:40:13,135 --> 00:40:15,063
+Rym: now what if you have more than one network.
+
+566
+00:40:15,425 --> 00:40:19,238
+Rym: now to skip a lot a network is segregated.
+
+567
+00:40:19,298 --> 00:40:24,062
+Rym: so we've got the flat network in my house and then we've got another flat network up in Adams house.
+
+568
+00:40:24,263 --> 00:40:32,164
+Rym: so he has his three computers one two and three and I have my three computers A B and C and all three of my computers can talk and all three his computers can talk.
+
+569
+00:40:32,606 --> 00:40:36,063
+Rym: but none of those computers know my computers exist and vice-versa.
+
+570
+00:40:36,524 --> 00:40:38,191
+Rym: how can they talk to each other?
+
+571
+00:40:38,653 --> 00:40:39,858
+Rym: that is what an internet is.
+
+572
+00:40:39,878 --> 00:40:42,973
+Rym: you see you see you know uppercase internet lowercase internet.
+
+573
+00:40:43,536 --> 00:40:44,843
+Rym: there can be an internet.
+
+574
+00:40:44,923 --> 00:40:47,737
+Rym: an internet is just multiple networks connected together.
+
+575
+00:40:47,838 --> 00:40:53,000
+Scott: yep when someone says the internet with a capital I they are talking about the internet.
+
+576
+00:40:53,080 --> 00:41:02,465
+Scott: the thing that this podcast is being delivered to you on the series of tubes yes is the capital I internet yes which refers specifically to either internet one or internet two.
+
+577
+00:41:02,685 --> 00:41:08,384
+Scott: yep lowercase I internet is just networks that are connected to each other.
+
+578
+00:41:08,605 --> 00:41:11,115
+Scott: or maybe you could say they are internet work.
+
+579
+00:41:11,316 --> 00:41:12,641
+Scott: oh oh oh.
+
+580
+00:41:12,702 --> 00:41:14,107
+Scott: that's lowercase I internet.
+
+581
+00:41:14,468 --> 00:41:16,517
+Rym: now this is layer three the network layer.
+
+582
+00:41:17,239 --> 00:41:19,647
+Rym: it's also the IP layer IP addresses.
+
+583
+00:41:20,048 --> 00:41:31,650
+Rym: you see all an IP address is is a set of numbers that tell you if you know how to read it what network a computer is on and then on that network which computer it is.
+
+584
+00:41:31,710 --> 00:41:33,035
+Rym: so it's kind of like a street address.
+
+585
+00:41:33,959 --> 00:41:40,186
+Rym: so if a MAC address is my name Rym or Scott's name Scott then an IP address is the address on the front of our house.
+
+586
+00:41:40,608 --> 00:41:42,517
+Scott: yep it's like you find our house.
+
+587
+00:41:42,819 --> 00:41:45,009
+Scott: you know it's like the network is the roads.
+
+588
+00:41:45,029 --> 00:41:46,616
+Scott: you find our house by our address.
+
+589
+00:41:47,058 --> 00:41:55,229
+Scott: but there's two MAC addresses here Rym and Scott and then you need to figure out which one of those and you'd open up the envelope and it would say Rym or Scott inside and then you deliver to the right place.
+
+590
+00:41:55,610 --> 00:42:05,734
+Rym: now it used to be that you know IP addresses are number dot number dot number dot number used to be broken up where all networks boundaries were on those numbers.
+
+591
+00:42:05,794 --> 00:42:09,049
+Scott: so say in the olden days when there weren't so many computers.
+
+592
+00:42:09,089 --> 00:42:23,500
+Rym: so the way this works and I promise it'll make sense say you've got an IP address 129 dot 21 dot 21 dot one that is actually a very useful DNS server that you can all hit as much as you want.
+
+593
+00:42:24,082 --> 00:42:27,073
+Rym: hooray it's always up and it's at RIT awesome.
+
+594
+00:42:27,113 --> 00:42:28,177
+Rym: it's also easy to remember.
+
+595
+00:42:28,719 --> 00:42:30,666
+Rym: but you know if you got this IP address 129 dot 21 dot 21 dot one.
+
+596
+00:42:30,707 --> 00:42:36,687
+Rym: now this would be let's say this would be a class B address.
+
+597
+00:42:37,370 --> 00:42:43,187
+Rym: so in the old days the 129 dot 21 was the network address.
+
+598
+00:42:43,207 --> 00:42:52,333
+Rym: so 129 dot 21 dot 0.0 was one network as far as the every IP address from 129 21 0 0 through 129 21 255 255.
+
+599
+00:42:52,333 --> 00:43:00,862
+Scott: it was all the same network.
+
+600
+00:43:01,263 --> 00:43:03,290
+Scott: that's what 200. that's a lot of computers.
+
+601
+00:43:03,490 --> 00:43:05,216
+Rym: yes a lot of computers.
+
+602
+00:43:05,477 --> 00:43:05,858
+Scott: yeah.
+
+603
+00:43:06,259 --> 00:43:18,472
+Rym: so you know 129.21.0.0 is the network but the IP address is 129.21.21.1. the dot is the specific computer in that network.
+
+604
+00:43:18,874 --> 00:43:29,146
+Rym: so when I send a packet out when I want to send data to that computer I put in the IP address 129.21.21.1. it goes out to the internet and hits a router.
+
+605
+00:43:29,730 --> 00:43:33,471
+Rym: the router doesn't care what computer it's going to because that would be stupid.
+
+606
+00:43:33,511 --> 00:43:35,482
+Rym: it would have to know wherever computer in the world was.
+
+607
+00:43:36,044 --> 00:43:38,753
+Rym: it only actually cares where the networks are.
+
+608
+00:43:39,135 --> 00:43:44,253
+Rym: so it sees Oh 129.21. that network is this way.
+
+609
+00:43:44,353 --> 00:43:46,059
+Scott: yep I think about what a router is.
+
+610
+00:43:46,139 --> 00:43:47,406
+Scott: it's basically a machine.
+
+611
+00:43:47,566 --> 00:43:53,493
+Scott: it's a really a computer with a bunch of network cables coming into it and each one goes someplace different.
+
+612
+00:43:54,015 --> 00:44:05,398
+Scott: and all the router really has to do when you get right down to it is take stuff in from a wire and figure out which other wire maybe even the same wire to send it out on.
+
+613
+00:44:05,619 --> 00:44:07,708
+Scott: you know it's it's it's like a mail sorting guy.
+
+614
+00:44:08,211 --> 00:44:25,220
+Scott: so when it comes in he says this is 129 and the router is configured to know if it says 129 it goes out that wire and he sends it out that wire and it gets to another router and another router and the routers as you get closer they know more about where it's supposed to go.
+
+615
+00:44:25,320 --> 00:44:32,466
+Rym: yep so 129 and then 21 and eventually it gets to the edge of the RIT network the 129.21 network.
+
+616
+00:44:32,827 --> 00:44:40,234
+Rym: the router on the outside at the edge and the whole world knows nothing about what's behind that router because they don't have to.
+
+617
+00:44:40,877 --> 00:44:51,591
+Rym: that router doesn't know anything about the rest of the world other than how to get out but it knows everything about the stuff inside of it or at least I mean it could be broken up into little sub networks within.
+
+618
+00:44:51,652 --> 00:44:52,557
+Rym: but don't worry about that.
+
+619
+00:44:52,959 --> 00:44:55,631
+Rym: so that net that computer says all right I'm the 129.21 network.
+
+620
+00:44:55,651 --> 00:44:58,844
+Rym: this packet is obviously for me.
+
+621
+00:44:59,266 --> 00:45:09,102
+Rym: so it looks inside and says oh it's going to 21.1. and it says it wants to send it to 21.1. and there's a computer called 21.1. now the data link layer.
+
+622
+00:45:09,142 --> 00:45:11,069
+Rym: those MAC addresses are still there.
+
+623
+00:45:11,531 --> 00:45:12,776
+Rym: how does what?
+
+624
+00:45:12,796 --> 00:45:14,984
+Rym: how does my computer know that 121 that 21.1 is my name.
+
+625
+00:45:15,004 --> 00:45:21,825
+Rym: I know what my MAC address is and I know what my IP address is.
+
+626
+00:45:22,127 --> 00:45:27,309
+Rym: but how does the wire get to me if it's not a flat network if it's not all one giant network?
+
+627
+00:45:27,931 --> 00:45:31,287
+Rym: the answer is the router will then do something called ARP.
+
+628
+00:45:31,348 --> 00:45:33,801
+Rym: this gets a little technical and you can probably just work.
+
+629
+00:45:33,821 --> 00:45:34,523
+Rym: not worry about it.
+
+630
+00:45:34,563 --> 00:45:39,404
+Rym: but just so you know the router will basically say I have got something for 129.21.21.1.
+
+631
+00:45:39,404 --> 00:45:40,647
+Rym: I know you're on this network.
+
+632
+00:45:40,667 --> 00:45:47,689
+Rym: I know you're here and I know you can hear me.
+
+633
+00:45:48,131 --> 00:45:51,444
+Rym: and it sends this as a broadcast to everyone on the network.
+
+634
+00:45:52,327 --> 00:45:57,584
+Rym: the computer who has that IP address responds to the MAC address that asked with.
+
+635
+00:45:58,246 --> 00:46:02,038
+Rym: I am 21.1. you now know my MAC address.
+
+636
+00:46:02,238 --> 00:46:05,149
+Rym: you can now have a data link with me and send me that data.
+
+637
+00:46:05,169 --> 00:46:05,671
+Rym: yep.
+
+638
+00:46:05,752 --> 00:46:06,354
+Scott: so check it out.
+
+639
+00:46:06,776 --> 00:46:08,663
+Scott: my my MAC address is secret.
+
+640
+00:46:08,723 --> 00:46:09,426
+Scott: Rym doesn't know it.
+
+641
+00:46:10,430 --> 00:46:11,674
+Scott: Rym I don't know.
+
+642
+00:46:11,815 --> 00:46:12,779
+Scott: I'm looking for Rym.
+
+643
+00:46:12,799 --> 00:46:16,684
+Scott: I know his IP address but I don't know that it's Rym and I don't know his MAC address either.
+
+644
+00:46:17,086 --> 00:46:20,121
+Scott: but since we're on the same network we're connected to the same hub.
+
+645
+00:46:20,684 --> 00:46:21,045
+Scott: you know it.
+
+646
+00:46:21,648 --> 00:46:22,471
+Scott: I gotta give it to him.
+
+647
+00:46:22,591 --> 00:46:28,035
+Rym: there's no other way and he knows that I will hear any conversation on the network so he can broadcast.
+
+648
+00:46:28,256 --> 00:46:30,968
+Rym: he can shout say anyone answer me.
+
+649
+00:46:30,988 --> 00:46:32,735
+Rym: I have a question and I'll hear it.
+
+650
+00:46:32,856 --> 00:46:37,158
+Scott: all I know is the IP address I'm looking for and my own MAC address which isn't very helpful.
+
+651
+00:46:37,259 --> 00:46:39,871
+Scott: so I say is there anyone with this IP address?
+
+652
+00:46:39,891 --> 00:46:44,249
+Scott: I know you're there and Rym says that is me and this is my MAC address.
+
+653
+00:46:44,309 --> 00:46:45,594
+Scott: now I know rims MAC address.
+
+654
+00:46:45,976 --> 00:46:47,724
+Scott: now we forget about the IP addresses.
+
+655
+00:46:47,764 --> 00:46:49,193
+Scott: we do the thing we talked about before.
+
+656
+00:46:49,233 --> 00:46:50,682
+Scott: we just I know his MAC address.
+
+657
+00:46:50,702 --> 00:46:54,503
+Scott: he knows mine because I told it to him and we I send him whatever he needs to be sent.
+
+658
+00:46:54,544 --> 00:46:57,681
+Scott: the IP addresses go away once you get to the end of the IP layer.
+
+659
+00:46:57,902 --> 00:47:00,756
+Rym: yep because you see we said you know MAC addresses are unique.
+
+660
+00:47:01,078 --> 00:47:01,782
+Rym: they can't they're not.
+
+661
+00:47:01,863 --> 00:47:06,326
+Rym: you'll never have two MAC addresses that are the same on a network outside of one network.
+
+662
+00:47:06,768 --> 00:47:09,199
+Rym: you could all have every other computer out there.
+
+663
+00:47:09,219 --> 00:47:10,611
+Rym: you don't care what the MAC address is.
+
+664
+00:47:10,671 --> 00:47:19,400
+Rym: that's why you don't need to know anyone's MAC address ever to connect to them as long as the IP addresses aren't the same yep but you don't know what their IP what their MAC address is.
+
+665
+00:47:19,420 --> 00:47:25,360
+Rym: you only know what the IP address is and IP the networking routing protocol send its.
+
+666
+00:47:25,481 --> 00:47:27,229
+Rym: it makes a way to connect networks.
+
+667
+00:47:27,429 --> 00:47:34,156
+Rym: so your data gets to the network and then in the network that network figures out the MAC address and sends it.
+
+668
+00:47:34,578 --> 00:47:43,087
+Rym: so there is no way for me in my house to find out the MAC address of anything in Adam's house nor with that information.
+
+669
+00:47:43,147 --> 00:47:44,192
+Rym: help me at all.
+
+670
+00:47:44,332 --> 00:47:49,135
+Scott: yep to send information between different computer networks you need the IP address.
+
+671
+00:47:49,155 --> 00:47:55,625
+Scott: that's basically the address of the different networks and once in the network that is supposed to get the stuff gets it.
+
+672
+00:47:55,785 --> 00:47:58,458
+Scott: so someone sends something to my network when I heat.
+
+673
+00:47:58,478 --> 00:47:59,543
+Scott: they know my IP address.
+
+674
+00:47:59,603 --> 00:48:00,848
+Scott: I eventually get the goods.
+
+675
+00:48:01,511 --> 00:48:03,319
+Scott: then I just need the MAC address.
+
+676
+00:48:03,339 --> 00:48:05,935
+Scott: I don't need this IP address anymore because it's on the right network.
+
+677
+00:48:05,996 --> 00:48:16,210
+Rym: now now you're probably thinking all right Rym and Scott you just said all this but then how come if I'm connecting to a computer on my same network I have to type the IP address and not the MAC address?
+
+678
+00:48:16,572 --> 00:48:20,550
+Rym: and the answer is because even then it works the exact same way.
+
+679
+00:48:20,590 --> 00:48:30,922
+Rym: your computer goes through the motions and says I have something for this IP address and that's the router and the route and it sends the data to the router and the router says that's right here.
+
+680
+00:48:31,425 --> 00:48:36,069
+Rym: I'm gonna send this right back where it came from and ask for the MAC address of whose business this is.
+
+681
+00:48:36,531 --> 00:48:37,355
+Scott: yep you know how you're.
+
+682
+00:48:37,536 --> 00:48:40,935
+Scott: when you set up your network connection on your computer there's a default gateway.
+
+683
+00:48:40,955 --> 00:48:41,740
+Scott: you know.
+
+684
+00:48:41,941 --> 00:48:57,024
+Scott: basically if you're trying to send something on you with your computer to an IP address right if you try to send something to an IP address that's on your network that you're on right now then you can send it to the guy who's there right now.
+
+685
+00:48:57,184 --> 00:49:01,983
+Rym: yep cuz see your computer at all times knows two things about the world.
+
+686
+00:49:02,385 --> 00:49:05,176
+Rym: it knows what network it is on currently.
+
+687
+00:49:05,457 --> 00:49:09,459
+Rym: it knows what network it is living in and then it has the default gateway that Scott brought up.
+
+688
+00:49:09,560 --> 00:49:23,119
+Scott: yep and so if an IP address that you're looking for with your computer if your computer will know if that IP address is on the network that you're already on so it'll just send stuff to that IP address and do the whole art thing yep
+
+689
+00:49:23,199 --> 00:49:24,667
+Rym: it'll it'll do the MAC address thing.
+
+690
+00:49:24,707 --> 00:49:27,743
+Rym: it won't even ask the router because it knows I'm on this network.
+
+691
+00:49:27,924 --> 00:49:31,699
+Rym: if I try to mail a letter to Scott I know where Scott is.
+
+692
+00:49:31,719 --> 00:49:32,603
+Rym: I just do it here.
+
+693
+00:49:32,704 --> 00:49:33,688
+Rym: I don't tell the router.
+
+694
+00:49:33,829 --> 00:49:35,979
+Rym: I know any mail for Conklin Street.
+
+695
+00:49:35,999 --> 00:49:37,345
+Rym: I just bring right back here.
+
+696
+00:49:37,506 --> 00:49:40,318
+Scott: yep now the default gateway is what it says.
+
+697
+00:49:40,379 --> 00:49:44,836
+Scott: it's the default gateway the gateway to the rest of the world the default one.
+
+698
+00:49:45,217 --> 00:49:58,905
+Scott: so if you ever have something to send somewhere and it's not someone who's right here because you know if it's someone who's right here because it's someone living in your house they're on the same network as you you by default give it to the default gateway.
+
+699
+00:49:59,186 --> 00:50:01,036
+Scott: you say hey you're the default gateway.
+
+700
+00:50:01,116 --> 00:50:04,237
+Scott: take this and put it on the Internet's because I don't know where it's supposed to go.
+
+701
+00:50:04,277 --> 00:50:05,965
+Scott: it doesn't go here it goes somewhere else.
+
+702
+00:50:06,307 --> 00:50:07,412
+Scott: you take it now.
+
+703
+00:50:07,432 --> 00:50:13,762
+Scott: the default gateway is usually like if you have a Wi-Fi router in your house or a cable modem that's your default gateway.
+
+704
+00:50:13,842 --> 00:50:14,726
+Scott: that little thing right there.
+
+705
+00:50:15,128 --> 00:50:16,996
+Rym: yep and you don't know.
+
+706
+00:50:17,016 --> 00:50:20,618
+Rym: your computer doesn't know anything about the wide world of the internet out there.
+
+707
+00:50:20,638 --> 00:50:29,117
+Rym: it does knows is if I don't know where this is I asked that guy and that guy I'll take care of it and that guy doesn't actually know where anything is.
+
+708
+00:50:29,197 --> 00:50:35,324
+Rym: either in this case he usually sends it to the giant router that your ISP has and that router knows where stuff is.
+
+709
+00:50:35,605 --> 00:50:39,442
+Scott: yeah there you know most routers that you're going to encounter.
+
+710
+00:50:39,803 --> 00:50:42,172
+Scott: basically they do the same thing.
+
+711
+00:50:42,253 --> 00:50:51,557
+Scott: they either it's on this network and we're gonna take care of it right here or it's somewhere else default gateway the routers that actually choose where stuff has to go.
+
+712
+00:50:51,577 --> 00:50:57,864
+Scott: you will never handle in your life based almost never unless you're working at an ISP or something like that.
+
+713
+00:50:58,106 --> 00:50:58,267
+Scott: yep
+
+714
+00:50:58,569 --> 00:51:11,270
+Rym: and the only other thing I'd really like to bring up a little bit because a lot of people don't know what these are and they're a source of great confusion and problems the world round and I'm gonna do this in the most non-technical way possible
+
+715
+00:51:11,290 --> 00:51:11,914
+Scott: the subnet mask.
+
+716
+00:51:11,934 --> 00:51:14,084
+Rym: gonna talk about the subnet mask I'll see it.
+
+717
+00:51:14,345 --> 00:51:20,668
+Rym: you all see you know IP address subnet mask and not many people know what that subnet mask is.
+
+718
+00:51:20,689 --> 00:51:22,377
+Rym: and you wonder you know why is it there?
+
+719
+00:51:22,598 --> 00:51:23,985
+Rym: how come it's always a bunch of 255s?
+
+720
+00:51:24,246 --> 00:51:26,417
+Rym: yeah well what's the deal there?
+
+721
+00:51:26,477 --> 00:51:33,602
+Scott: well remember how we just said that your computer knows if an IP address is on this network or some other network.
+
+722
+00:51:34,064 --> 00:51:39,507
+Scott: the subnet mask is how you figure out if something is on this network or some other network.
+
+723
+00:51:39,648 --> 00:51:41,838
+Rym: now subnet mask used to not be necessary.
+
+724
+00:51:41,978 --> 00:51:42,280
+Rym: it used to.
+
+725
+00:51:42,340 --> 00:51:43,667
+Rym: you know they used to break the internet up.
+
+726
+00:51:43,909 --> 00:51:49,371
+Rym: if you look at the IP addresses along those dots no class a was the first dot.
+
+727
+00:51:49,391 --> 00:51:51,358
+Rym: so any number up to a certain number.
+
+728
+00:51:51,378 --> 00:52:01,544
+Rym: you knew intrinsically well how big the network was how much of that number described the network and how much of that number described the actual computer in the network.
+
+729
+00:52:01,905 --> 00:52:06,581
+Rym: for example in the the 129 21 21 1 it was a class B network.
+
+730
+00:52:06,902 --> 00:52:19,894
+Rym: the subnet mask was 255 255 0.0. so effectively the network was 129 dot 21 dot 0.0 and the rest of that number was the computer.
+
+731
+00:52:20,335 --> 00:52:21,619
+Rym: so the subnet mask.
+
+732
+00:52:21,980 --> 00:52:28,591
+Rym: now the reason the subnet mask seems weird is because you're looking at it in decimal or possibly in hexadecimal.
+
+733
+00:52:29,012 --> 00:52:30,077
+Rym: that's the only reason.
+
+734
+00:52:30,117 --> 00:52:38,027
+Rym: it looks weird because if you turn that IP address into binary into ones and zeros you'll find that that 255 is.
+
+735
+00:52:38,228 --> 00:52:41,480
+Rym: it fills that part of the number before that dot with all ones.
+
+736
+00:52:42,001 --> 00:52:53,352
+Rym: yep so a subnet mask of 255 255 dot 0.0 says the first two numbers are all ones and the second two numbers are all zeros.
+
+737
+00:52:53,955 --> 00:53:08,798
+Rym: and when you want to figure out what network you're on you take the IP address which you know could 129.21 to 21.1. so what you essentially do is if you do an and you know we talked about logic a long time ago you do is the first episode of how computers work.
+
+738
+00:53:08,939 --> 00:53:11,071
+Rym: yeah the one that everyone thought was too complicated.
+
+739
+00:53:11,091 --> 00:53:17,821
+Rym: yeah so to skip all that basically think of it this way if you got ones you pass the data through and keep it.
+
+740
+00:53:17,942 --> 00:53:19,348
+Rym: if you got zeros you ignore it.
+
+741
+00:53:19,850 --> 00:53:23,124
+Scott: so it's like wearing a mask which is why it's called a mask.
+
+742
+00:53:23,164 --> 00:53:26,039
+Scott: you know let's say you know it's like half of my face.
+
+743
+00:53:26,140 --> 00:53:32,501
+Scott: if it's 255 255 0 0 then the first two 255 are all ones and the second half is all zeros.
+
+744
+00:53:32,521 --> 00:53:36,541
+Scott: so I got a mask covering half of my face and the other half of my face shows through.
+
+745
+00:53:36,942 --> 00:53:50,059
+Rym: so the 255 255 0 0 subnet mask lets the 129.21 through and gets rid of the 21.1. so now you know I what network you were describing exactly.
+
+746
+00:53:50,079 --> 00:53:55,763
+Rym: you can take an IP address and with that subnet mask extract the network you are on from it.
+
+747
+00:53:55,964 --> 00:53:56,145
+Scott: yep.
+
+748
+00:53:56,205 --> 00:53:59,219
+Scott: so basically you take the subnet mask which is like a mask.
+
+749
+00:53:59,259 --> 00:54:06,633
+Scott: you are in your face and if I'm looking for an IP address I take that IP address that I'm looking for and I apply it to the subnet mask.
+
+750
+00:54:06,693 --> 00:54:21,109
+Scott: I put this mask over that IP address and I look at the bits left over and by looking at those leftover bits I can tell if it's an if it's an IP address that is on my network or if is an IP address on some other network.
+
+751
+00:54:21,671 --> 00:54:26,257
+Scott: and if it is on some other network I just send the information to the default gateway cuz he'll take care of it.
+
+752
+00:54:26,559 --> 00:54:28,851
+Scott: and if it's on my network then I'll take care of it.
+
+753
+00:54:29,193 --> 00:54:34,398
+Scott: yep and the reason this is important because now I'll tell an anecdote of a messed up subnet mask.
+
+754
+00:54:34,620 --> 00:54:38,598
+Rym: but basically back in the day you know you always broke networks up by the dots.
+
+755
+00:54:38,959 --> 00:54:50,451
+Rym: but now we have something called CIDR which stands for classless inter domain routing and to not bother you with the details it basically means you can break up the networks in places other than the dots.
+
+756
+00:54:51,154 --> 00:54:54,284
+Rym: yep so you could have a subnet mask of 255 255 255 128 holy crap you're crazy.
+
+757
+00:54:54,304 --> 00:54:55,046
+Rym: and they don't.
+
+758
+00:54:55,066 --> 00:55:01,867
+Rym: most people don't use that notation anymore.
+
+759
+00:55:01,907 --> 00:55:03,215
+Rym: they use this slash notation.
+
+760
+00:55:03,235 --> 00:55:14,269
+Rym: so you might see an IP address like 129 21 21 1 slash 24. basically all that number is is the number of ones in that mask.
+
+761
+00:55:14,570 --> 00:55:25,002
+Rym: so if you write the IP address out in binary and then you write that number of ones out in binary and make the rest zeros you can do an operation between those two and get the network out of any IP address.
+
+762
+00:55:25,465 --> 00:55:29,144
+Scott: yeah here's a tale of a messed up subnet mask to tell you what the problem here is.
+
+763
+00:55:29,204 --> 00:55:29,405
+Scott: right.
+
+764
+00:55:29,988 --> 00:55:35,615
+Scott: so we had this hosting and I configured you know a static IP address which means I had to type in all the information.
+
+765
+00:55:36,238 --> 00:55:38,505
+Scott: I made a typo while doing the subnet mask.
+
+766
+00:55:38,926 --> 00:55:46,905
+Scott: it turned out to be 255 000 instead of 255 255. do you know?
+
+767
+00:55:47,587 --> 00:55:48,369
+Scott: I typed it wrong?
+
+768
+00:55:49,633 --> 00:55:50,776
+Scott: I 255 turned into a zero.
+
+769
+00:55:51,037 --> 00:55:52,844
+Scott: so a bunch of ones were missing.
+
+770
+00:55:53,105 --> 00:55:54,030
+Rym: so what did this mean?
+
+771
+00:55:54,110 --> 00:55:54,372
+Rym: why?
+
+772
+00:55:54,452 --> 00:55:55,316
+Rym: why is this an issue?
+
+773
+00:55:55,376 --> 00:56:01,258
+Scott: well what happened was is I think the IP address was like 64 63 or something like that?
+
+774
+00:56:01,278 --> 00:56:02,141
+Scott: yeah it was weird.
+
+775
+00:56:02,602 --> 00:56:04,929
+Scott: but the point is what happened?
+
+776
+00:56:05,210 --> 00:56:13,821
+Scott: the computer when it would look for an IP address right that had the same like normally I think the IP address of the computer.
+
+777
+00:56:13,861 --> 00:56:16,450
+Scott: let's say it was 64 63 dot whatever.
+
+778
+00:56:17,092 --> 00:56:22,809
+Scott: okay normally if something else is 64 63 that's on the same network.
+
+779
+00:56:23,090 --> 00:56:23,331
+Scott: right.
+
+780
+00:56:23,812 --> 00:56:31,277
+Scott: this computer because the 255 was zero it thought that anything that began with 64 was the same network.
+
+781
+00:56:31,538 --> 00:56:33,304
+Scott: so I forgot about the 63.
+
+782
+00:56:33,304 --> 00:56:33,525
+Rym: yep.
+
+783
+00:56:33,646 --> 00:56:39,628
+Rym: so if there's a 64 out there in the world like 64 dot one right and Scott example dig yep.
+
+784
+00:56:39,869 --> 00:56:47,358
+Scott: so the computer when it would try to contact dig would say all right I'll looking for this 64 65 IP address.
+
+785
+00:56:47,378 --> 00:56:48,442
+Scott: is that on the same network?
+
+786
+00:56:48,744 --> 00:57:08,308
+Scott: yes it is when it wasn't because only 64 63 is on the same network not 64 65 and it would try to send it thinking it was right there and it wouldn't send it to the default gateway and the computer was unable to communicate with anything that had an IP address beginning with 64. that was not actually on the same network yep.
+
+787
+00:57:08,448 --> 00:57:10,758
+Rym: all because the subnet mask was too small.
+
+788
+00:57:10,779 --> 00:57:15,322
+Rym: it was looking at too small a part of the IP address to figure out what network it was on.
+
+789
+00:57:15,663 --> 00:57:19,222
+Rym: so as a result it thought it was on a much larger network than it really was.
+
+790
+00:57:19,262 --> 00:57:24,488
+Scott: it's like if you thought your whole house if you thought the address of your whole house was 64 instead of 64 33.
+
+791
+00:57:24,488 --> 00:57:31,099
+Rym: so if you thought that Bill Gates lived in your house you thought that everyone named Bill lived in your house exact.
+
+792
+00:57:31,119 --> 00:57:33,470
+Rym: so if you want to call Bob you look in the phone book.
+
+793
+00:57:33,671 --> 00:57:34,596
+Rym: you want to call Bill.
+
+794
+00:57:34,616 --> 00:57:38,694
+Rym: any bill Bill Gates Bill Watterson bill Pat whoever.
+
+795
+00:57:38,895 --> 00:57:44,747
+Rym: you just kept yelling their name out and wonder why they don't answer when the only person who actually lived in your house was Bill Jones.
+
+796
+00:57:45,450 --> 00:57:49,772
+Scott: you know and Bill Jones would still get his stuff because you thought he lived in your house and he did.
+
+797
+00:57:50,275 --> 00:57:52,911
+Scott: but Bill Gates you thought he lived in your house and he didn't.
+
+798
+00:57:53,012 --> 00:57:56,232
+Scott: she would never send out his mail and you would thus be unable to communicate with him.
+
+799
+00:57:56,674 --> 00:58:02,948
+Scott: well I hope I mean we tried to not be technical but it's kind of hard not to when you have all these numbers that are hard to get around.
+
+800
+00:58:03,049 --> 00:58:09,363
+Rym: yep also the fact that that while the concepts themselves are simple I realized after the fact as I kept you know picturing.
+
+801
+00:58:09,384 --> 00:58:17,367
+Rym: cuz I teach this to people a lot because people always ask and usually we draw pictures that make it so much easier and I realized halfway through that we can't do that.
+
+802
+00:58:17,508 --> 00:58:19,540
+Rym: no we can't on the internet with a podcast.
+
+803
+00:58:19,982 --> 00:58:23,398
+Scott: well there are still plenty of websites with plenty of pictures you know.
+
+804
+00:58:23,479 --> 00:58:28,537
+Scott: I think our goal is to mostly use you know metaphorical examples and such.
+
+805
+00:58:28,778 --> 00:58:28,959
+Rym: yep.
+
+806
+00:58:29,361 --> 00:58:43,740
+Rym: however as I've given this disclaimer before if anyone decides to say your metaphor wasn't perfect or whatever cuz I see you doing that to us and we're wrong with you I'll just warn you that we know on a very low level how it works.
+
+807
+00:58:44,001 --> 00:58:46,311
+Rym: I mean I wouldn't know all this shit.
+
+808
+00:58:46,572 --> 00:58:48,380
+Scott: this is why we're doing a podcast on it.
+
+809
+00:58:48,400 --> 00:58:54,978
+Scott: we're just not explaining all the details and getting everything exactly perfect and everything God because that's what's the point in that?
+
+810
+00:58:55,159 --> 00:58:55,882
+Rym: yeah the thing of this.
+
+811
+00:58:56,303 --> 00:59:05,274
+Rym: I took two classes at RIT that were basically just how these two layers and the layer above it work and nothing more.
+
+812
+00:59:05,495 --> 00:59:11,706
+Scott: yep I took one whole class on that and then I took other classes where I had to write software that actually dealt with this shit.
+
+813
+00:59:11,726 --> 00:59:19,556
+Rym: hell I took a class on exactly how you turn ones and zeros into voltage on a wire and all the different ways to do it.
+
+814
+00:59:20,158 --> 00:59:22,305
+Rym: yeah craziness I guess.
+
+815
+00:59:22,325 --> 00:59:31,983
+Rym: my question to all of you before we head out for the night was you know we did this in a very non-technical way and we obviously couldn't cover a lot of detail and a lot of interesting things that we kept wanting to talk about.
+
+816
+00:59:32,545 --> 00:59:33,911
+Rym: are you guys interested in this?
+
+817
+00:59:34,293 --> 00:59:38,128
+Scott: I would be interesting or was it complicated and boring?
+
+818
+00:59:38,149 --> 00:59:46,726
+Rym: I would not at all be opposed to doing the same topic with a much higher level of technicality not technicality a much higher technical level.
+
+819
+00:59:47,228 --> 00:59:52,897
+Rym: however I don't know if there's how many of you would actually care about that or how many of you who would care about it.
+
+820
+00:59:53,058 --> 00:59:58,304
+Scott: yeah does anyone actually care about how the electricity goes over the wires that the computers understand?
+
+821
+00:59:58,545 --> 01:00:06,138
+Rym: or do you care how IP addresses really work and how network cards parse them out by doing a binary logic on the subnet masks?
+
+822
+01:00:06,198 --> 01:00:19,558
+Rym: yeah do you care about like ipv6 because all we've been talking about is ipv4 which is what everyone uses yep or do you care how an ARP really works and what specific like how does a computer know a broadcast from a non broadcast?
+
+823
+01:00:19,859 --> 01:00:21,627
+Rym: or these things called multicast?
+
+824
+01:00:21,688 --> 01:00:27,253
+Scott: or all the already care about like how a switch does its thing or how a router actually does its thing?
+
+825
+01:00:27,273 --> 01:00:29,201
+Scott: you know it's complicated stuff.
+
+826
+01:00:29,402 --> 01:00:31,970
+Rym: yeah basically give us some direction in the forums.
+
+827
+01:00:32,111 --> 01:00:42,335
+Rym: you know www.frontroadcrew.com as to what you want to hear about networking wise and what level of technical difficulty you want and we can serve it up.
+
+828
+01:00:42,396 --> 01:00:45,467
+Rym: this is one of the few topics we actually know what we're talking about.
+
+829
+01:00:45,829 --> 01:00:47,013
+Scott: yep all right.
+
+830
+01:00:47,655 --> 01:00:49,763
+Rym: so come see us at Katsucon.
+
+831
+01:00:50,184 --> 01:00:55,746
+Scott: yeah Katsucon this weekend this weekend in DC yes come see us for awesome.
+
+832
+01:00:55,766 --> 01:01:00,150
+Rym: we'll be doing awesome the whole time we'll be live in the video game room pretty much any time.
+
+833
+01:01:00,191 --> 01:01:01,518
+Rym: we're not doing some other event.
+
+834
+01:01:01,538 --> 01:01:03,929
+Rym: we're running an anime match game which is always fun.
+
+835
+01:01:04,351 --> 01:01:05,516
+Rym: we'll be podcasting.
+
+836
+01:01:05,536 --> 01:01:09,698
+Rym: oh this is recording live at the con pretty much the whole time the whole time.
+
+837
+01:01:09,718 --> 01:01:11,205
+Scott: do you have enough storage space for all that?
+
+838
+01:01:11,225 --> 01:01:14,218
+Rym: I imagine we will bring multiple computers.
+
+839
+01:01:14,358 --> 01:01:17,649
+Scott: we've also got some stuffs that will bring.
+
+840
+01:01:18,070 --> 01:01:20,036
+Rym: yes stuffs stuffs.
+
+841
+01:01:20,357 --> 01:01:21,360
+Scott: we won't say what stuffs.
+
+842
+01:01:21,940 --> 01:01:24,664
+Scott: yeah don't expect too much but don't expect nothing.
+
+843
+01:01:33,498 --> 01:01:35,684
+Rym: this has been GeekNights with Rym and Scott.
+
+844
+01:01:35,765 --> 01:01:38,275
+Rym: special thanks to DJ pretzel for the opening music.
+
+845
+01:01:38,958 --> 01:01:50,282
+Scott: be sure to visit our website at www.frontroadcrew.com where you'll find show notes links our awesome forum a link to our crapper map and links to all the RSS feeds.
+
+846
+01:01:50,704 --> 01:01:56,428
+Rym: we say feeds plural because GeekNights airs four nights a week covering four different brands of geekery.
+
+847
+01:01:56,910 --> 01:02:01,249
+Rym: Mondays are science and technology Tuesdays we have video games board games and RPGs.
+
+848
+01:02:01,591 --> 01:02:07,077
+Rym: Wednesdays are anime manga comic nights and Thursdays are the catch-alls for various rants and tomfoolery.
+
+849
+01:02:07,479 --> 01:02:12,616
+Scott: you can send us feedback by email to GeekNights at front row crew calm.
+
+850
+01:02:13,218 --> 01:02:15,588
+Scott: or you can send audio feedback via audio.
+
+851
+01:02:15,890 --> 01:02:20,352
+Scott: just click the link that says send me an audio on the right side of our website if you like what you hear.
+
+852
+01:02:20,432 --> 01:02:24,614
+Rym: you can catch the last 100 episodes in iTunes or in your favorite podcatcher.
+
+853
+01:02:24,835 --> 01:02:27,970
+Rym: for the complete archives visit the website which has everything.
+
+854
+01:02:27,990 --> 01:02:33,435
+Scott: GeekNights is distributed under a Creative Commons attribution non-commercial share alike 2.5 license.
+
+855
+01:02:35,023 --> 01:02:41,090
+Scott: this means you can do whatever you want with it as long as you give us credit don't make money and share it in kind.
+
+856
+01:02:41,110 --> 01:02:48,858
+Scott: GeekNights is recorded live with no studio and no audience but unlike those other late shows it's actually recorded at night.
+
