@@ -1,0 +1,3920 @@
+﻿1
+00:00:08,460 --> 00:00:10,318
+Speaker 1: It's Tuesday, November 14th, 2023.
+
+2
+00:00:10,318 --> 00:00:10,619
+Speaker 1: I'm Rym.
+
+3
+00:00:13,752 --> 00:00:14,230
+Speaker 0: I'm Scott.
+
+4
+00:00:14,430 --> 00:00:15,497
+Speaker 1: And this is Geek Knights.
+
+5
+00:00:15,537 --> 00:00:17,750
+Speaker 1: Tonight, we're reviewing Cobalt Core.
+
+6
+00:00:18,570 --> 00:00:19,548
+Speaker 0: Let's do this.
+
+7
+00:00:20,470 --> 00:00:32,710
+Speaker 1: So, uh, you listen to Geek Knights, you know that when we were young, we dabbled in AMD because there was a time when an AMD CPU cost, like, a fifth of an Intel and was faster.
+
+8
+00:00:33,430 --> 00:00:36,046
+Speaker 0: Well, it was basically, you know, the Pentium 3 came out.
+
+9
+00:00:36,066 --> 00:00:36,810
+Speaker 0: I had a Pentium 3.
+
+10
+00:00:36,810 --> 00:00:38,899
+Speaker 0: That was the first computer I built, right?
+
+11
+00:00:38,959 --> 00:00:42,531
+Speaker 0: Not the first one I owned, but the first one I built was Pentium 3.
+
+12
+00:00:42,531 --> 00:00:52,790
+Speaker 0: And then, you know, when that became, when that was running its course and was ready for it to be replaced, you looked around at the world and there were Pentium 4s, which are very, very expensive, first of all.
+
+13
+00:00:53,374 --> 00:00:54,290
+Speaker 0: And not that fast.
+
+14
+00:00:55,811 --> 00:00:59,910
+Speaker 0: Uh, well, you know, there was lots of, you know, they were pretty fast, relatively speaking.
+
+15
+00:01:00,091 --> 00:01:04,030
+Speaker 0: But there was, basically, it's like, what were you getting for your money?
+
+16
+00:01:04,631 --> 00:01:07,750
+Speaker 0: It was not a good price performance ratio, right?
+
+17
+00:01:08,451 --> 00:01:14,714
+Speaker 0: And, meanwhile, AMD was out there with all these Athlon CPUs that were actually like, "Hey, they work.
+
+18
+00:01:15,296 --> 00:01:18,568
+Speaker 0: They're way cheaper in terms of the performance you
+
+19
+00:01:18,588 --> 00:01:18,789
+Speaker 0: get.".
+
+20
+00:01:19,312 --> 00:01:21,229
+Speaker 0: And pretty much everyone was all in on them.
+
+21
+00:01:21,871 --> 00:01:25,270
+Speaker 1: Yeah, it was right when, it was the case, because the K6s were, like, not quite there.
+
+22
+00:01:25,310 --> 00:01:32,489
+Speaker 1: The K7s were, that was like 800 megahertz, 900 megahertz, breaking the gigahertz barrier with that Thunderbird like a little while later.
+
+23
+00:01:33,350 --> 00:01:34,729
+Speaker 0: Yeah, and it's like, yeah, okay.
+
+24
+00:01:36,250 --> 00:01:39,790
+Speaker 0: And, you know, people were, you know, you could get the AMD video cards, but I didn't.
+
+25
+00:01:39,950 --> 00:01:42,630
+Speaker 0: I stuck with the Nvidia ones, but it's like the AMD CPUs.
+
+26
+00:01:42,970 --> 00:01:46,069
+Speaker 0: It's like everything worked just normally with them.
+
+27
+00:01:46,470 --> 00:01:50,069
+Speaker 0: There wasn't, you know, so that's what we went with in those days.
+
+28
+00:01:51,230 --> 00:01:59,990
+Speaker 0: Until, like, you know, the mid-2000s-ish, when Intel, when Geeknight started, and they came out with, like, core duos, and they, you know, and that sort of thing.
+
+29
+00:02:00,030 --> 00:02:01,830
+Speaker 0: That's when we stopped using those.
+
+30
+00:02:03,054 --> 00:02:04,869
+Speaker 0: And the one thing is, like, yeah, did they work?
+
+31
+00:02:05,390 --> 00:02:07,970
+Speaker 0: You know, yeah, when they worked, they worked, right?
+
+32
+00:02:08,130 --> 00:02:09,704
+Speaker 0: But, it's like...
+
+33
+00:02:10,330 --> 00:02:10,892
+Speaker 1: Very telling.
+
+34
+00:02:11,273 --> 00:02:19,149
+Speaker 1: Every AMD thing I ever had didn't post successfully the first time I tried to turn it on, and then I had to fuss with it, and then it worked.
+
+35
+00:02:19,733 --> 00:02:22,569
+Speaker 1: Every Intel I've ever had posted the first time.
+
+36
+00:02:23,691 --> 00:02:24,150
+Speaker 1: Without exception.
+
+37
+00:02:24,810 --> 00:02:28,910
+Speaker 0: Yeah, but, in my experience, which is not data, we know, it's just anecdotes, right?
+
+38
+00:02:29,030 --> 00:02:42,370
+Speaker 0: There were reliability issues in the early 2000s, when I was using those AMDs, and the one AMD video card we did have lying around, for some strange reason, that we put in the earliest busted HCDC.
+
+39
+00:02:42,450 --> 00:02:44,650
+Speaker 1: We couldn't get the S-video out to work on Linux.
+
+40
+00:02:44,990 --> 00:02:47,870
+Speaker 0: Yeah, it was, it just, like, didn't work properly, right?
+
+41
+00:02:48,090 --> 00:02:55,770
+Speaker 0: But, you know, in the experience that I personally had, every time that I used Intel and NVIDIA things, they worked.
+
+42
+00:02:56,090 --> 00:03:07,650
+Speaker 0: You know, there might have been other issues around, you know, even my computers are not 100% perfect, there's always some tiny issue, but I have the least issues of anyone I know when it comes to computers and technology.
+
+43
+00:03:08,610 --> 00:03:15,510
+Speaker 1: I have to say, my current computer, which is pushing, like, this is a sixth generation Intel, and it's still basically perfect.
+
+44
+00:03:15,570 --> 00:03:30,269
+Speaker 0: Yeah, and so we've entered another era now, where people, nerds especially, are again going towards AMD, and their price-performance ratios, and even AMD video cards, right?
+
+45
+00:03:30,750 --> 00:03:32,096
+Speaker 0: And it's like, do they work?
+
+46
+00:03:32,377 --> 00:03:35,130
+Speaker 0: It's like, clearly, they work when they work, right?
+
+47
+00:03:35,551 --> 00:03:48,125
+Speaker 0: But, again, anecdotally, not based on data or benchmarks or any sort of anything like that, just anecdotally, the people I know who have AMD equipment have some issues.
+
+48
+00:03:48,487 --> 00:03:49,570
+Speaker 0: They have issues, right?
+
+49
+00:03:49,930 --> 00:03:59,779
+Speaker 1: So, some friends of ours, a friend of ours just got, like, a new AMD setup and talking to the other AMD people about, like, what to get, and there's a Discord thread that is very long.
+
+50
+00:03:59,820 --> 00:04:17,410
+Speaker 1: of all the fucking problems they had, like, trying to get it to work the way they wanted, that was very funny, and simultaneously, I haven't even been playing Overwatch the other day, and in the middle of the match, like, someone on my team just disconnects, like, fuck, we're gonna lose now, like, we're screwed.
+
+51
+00:04:18,310 --> 00:04:31,320
+Speaker 1: And, like, we lose the game because a player's out for a minute, but they came back, and they're like, sorry, my game crashed, and I'm just like, why do you have an AMD GPU?
+
+52
+00:04:31,882 --> 00:04:35,030
+Speaker 1: And this kid responds, like, how did you know I have an AMD?
+
+53
+00:04:35,250 --> 00:04:38,948
+Speaker 0: Well, first of all, it's a one out of two chance of guessing, right?
+
+54
+00:04:39,391 --> 00:04:41,589
+Speaker 0: It's already a 50/50 of guessing correctly.
+
+55
+00:04:41,990 --> 00:04:59,089
+Speaker 1: But I'd say it's a little better than 50/50 because my anecdotal, again, just pure anecdotes, everyone I know who has problems with Overwatch has an AMD, and when I Googled for it, found a bunch of Reddit threads that people have in trouble with AMD, didn't find anything about any GTX whatever video card.
+
+56
+00:05:00,050 --> 00:05:14,470
+Speaker 0: Right, well, I mean, it could be this conspiracy theory talk, right, but there's some truth to it, in that I know, for a fact, from things I've heard and seen, that game developers, game engine makers work closely with AMD and Nvidia.
+
+57
+00:05:14,670 --> 00:05:14,911
+Speaker 0: Oh, our
+
+58
+00:05:14,991 --> 00:05:35,930
+Speaker 1: own friends, when we were, you and I were accused of, like, talking from experience and not from industry perspective around our favoritism toward Nvidia, and one of our very, like, skilled game developer friends directly said, no, they're not wrong, we mostly focus on Nvidia, and Nvidia mostly doesn't have problems.
+
+59
+00:05:36,210 --> 00:05:44,270
+Speaker 0: Right, but I'm not talking about, like, game developers focusing on Nvidia, I'm talking about actual direct working with business relationships, right?
+
+60
+00:05:44,610 --> 00:05:48,530
+Speaker 0: I know for a fact the Nvidia driver contains lots of code.
+
+61
+00:05:48,790 --> 00:05:50,369
+Speaker 1: Lots of, if Call of Duty, do this.
+
+62
+00:05:51,130 --> 00:05:58,610
+Speaker 0: Exactly, it literally has code exactly like that, like, if the game that is being played is this, do this.
+
+63
+00:05:58,870 --> 00:06:05,950
+Speaker 0: Like, they work that closely with AAA game developers especially when there's issues to make sure that their shit works perfectly.
+
+64
+00:06:06,270 --> 00:06:12,230
+Speaker 0: I'm sure AMD also does that to some extent, but it could be, right, you know, and this is the conspiracy theory part.
+
+65
+00:06:12,411 --> 00:06:14,047
+Speaker 1: Well, they're not doing a great job of it if they are.
+
+66
+00:06:14,771 --> 00:06:31,170
+Speaker 0: Well, I'm sure it could be, and this is conspiracy theory talk again, that Nvidia does that so well, right, to such an extent that it's, like, anti-competitive behavior to where sort of the fix is in, in that shit will work with them and not with AMD.
+
+67
+00:06:31,350 --> 00:06:45,870
+Speaker 0: Not because of hardware inferiority or anything like that, but simply out of just that's how it is, because you work so closely with me, we made sure our shit worked perfectly, and we didn't test it so much with their shit, and that's the problem.
+
+68
+00:06:46,010 --> 00:06:53,130
+Speaker 0: It's not actually something AMD did, it's just something there wasn't as many resources put into that.
+
+69
+00:06:53,270 --> 00:07:12,010
+Speaker 1: Also, an aside, every game developer I know who does, like, coding and heavy work, regardless of, like, what the company does and, like, what relationships they have with the industry, their own gaming PCs, they religiously have Nvidia and Intel.
+
+70
+00:07:12,830 --> 00:07:30,829
+Speaker 0: Yeah, I mean, that's the thing, it's like, you know, even if, you know, they're not working with Nvidia or targeting it or thinking about it, right, the vast majority of game makers' computers have Nvidia boards in them, right, you're not, they're not, and so the result of that is just going to be that sort of.
+
+71
+00:07:30,909 --> 00:07:38,230
+Speaker 0: naturally, that's what is going to be optimized for, right, because they're optimizing it for the computer that they're using.
+
+72
+00:07:39,411 --> 00:07:45,025
+Speaker 0: And so, it's like, if, you know, if that's the case, it's like, yeah, is AMD actually inferior?
+
+73
+00:07:45,045 --> 00:07:57,170
+Speaker 0: They're giving you that better price-performance ratio, but in terms of your real-world computing, gaming, it's like, you're going to pay more for the Nvidia, you're going to get the stability and the reliability.
+
+74
+00:07:57,370 --> 00:08:22,050
+Speaker 0: And now, if you're short on money or you enjoy messing with your broken computer or breaking your computer on purpose and breaking shit that, you know, it ain't broke, just because you like fixing it and then complaining even though you're the one who broke it or whatever, it's like, you know, you just like to look at numbers and your benchmarks and not actually use your computer to do anything, you just like playing with your computer for no purpose.
+
+75
+00:08:22,390 --> 00:08:22,808
+Speaker 1: Yeah, it's funny.
+
+76
+00:08:23,210 --> 00:08:39,001
+Speaker 0: Okay, go and get an AMD hardware, but if you're someone who is using your computer as a tool to accomplish tasks and to create things and to do things, you, the highest priority should be your computer works.
+
+77
+00:08:39,342 --> 00:08:42,030
+Speaker 0: You care if your benchmark number is bigger, right?
+
+78
+00:08:42,311 --> 00:08:44,195
+Speaker 0: I need a computer that is on.
+
+79
+00:08:44,315 --> 00:08:51,310
+Speaker 0: If it renders the video in 30 seconds and crashes at the 29th second, I'd rather have it render in two minutes and not crash.
+
+80
+00:08:52,170 --> 00:09:09,010
+Speaker 0: So, if you got the money, even after all these years, you know, argue, provide data or whatever, but I'm still anti-AMD based on, you know, pure anecdotal data.
+
+81
+00:09:09,430 --> 00:09:18,670
+Speaker 1: I mean, my workstation, partly because losing an episode of "Gig Nights" that we've recorded is the worst fucking thing on earth.
+
+82
+00:09:18,990 --> 00:09:24,145
+Speaker 1: Like, that is, that, the few times it happened, that was like being punched right, right in the heart.
+
+83
+00:09:24,426 --> 00:09:25,690
+Speaker 1: It was, it was just awful.
+
+84
+00:09:27,291 --> 00:09:30,315
+Speaker 1: This computer is like eight years old that I'm making "Gig Nights" on.
+
+85
+00:09:30,355 --> 00:09:39,490
+Speaker 1: And when I made it, my only mission was to make it last as long as possible without having to ever open it or do anything to it at all.
+
+86
+00:09:39,650 --> 00:09:42,539
+Speaker 1: I wanted it to just work for as long as possible.
+
+87
+00:09:42,599 --> 00:09:46,170
+Speaker 1: And I put a lot of time and effort into building a computer that would just work.
+
+88
+00:09:46,270 --> 00:09:50,037
+Speaker 1: And here I am in the year 2023 with an i7-6700K, and it is still perfect other than Adobe Creative Cloud.
+
+89
+00:09:57,011 --> 00:09:58,149
+Speaker 0: Windows 11 doesn't support it.
+
+90
+00:09:58,210 --> 00:09:59,933
+Speaker 1: Windows 11 doesn't support it for no good reason.
+
+91
+00:10:00,333 --> 00:10:10,710
+Speaker 1: But also, I encountered my first bottleneck that mattered, that was the CPU, and it is a game you might have heard of called Adobe Lightroom.
+
+92
+00:10:12,032 --> 00:10:16,550
+Speaker 1: The new Lightroom cannot work appropriately.
+
+93
+00:10:16,910 --> 00:10:29,549
+Speaker 0: Lightroom is a little bit slow on my 8700K here, but I think what I'm going to do, I think I've decided, right, is they got the new MacBook M3, and I'm like, all right, this is what, you know, I was planning on computer next year, right?
+
+94
+00:10:30,350 --> 00:10:33,965
+Speaker 0: But Apple came and they're like, aha, we're coming at you months early.
+
+95
+00:10:34,005 --> 00:10:35,350
+Speaker 0: And I'm like, why you do this, right?
+
+96
+00:10:36,693 --> 00:10:43,370
+Speaker 0: But I'm just going to buy, you know, the craziest one, obviously not the 16-inch one, the smaller one, right?
+
+97
+00:10:43,770 --> 00:10:53,210
+Speaker 0: But the fastest processor one, and not the most RAM they sell, because they really, and not the most storage, but, you know, enough, right?
+
+98
+00:10:54,172 --> 00:10:56,990
+Speaker 0: I'll pay for some ridiculously overpriced upgrades.
+
+99
+00:10:57,070 --> 00:11:03,270
+Speaker 1: I think I just saw an article on Waypo that argued that the way Apple charges for RAM might arguably be illegal.
+
+100
+00:11:04,011 --> 00:11:04,492
+Speaker 0: It should be.
+
+101
+00:11:04,933 --> 00:11:05,654
+Speaker 0: It really should be.
+
+102
+00:11:06,936 --> 00:11:16,370
+Speaker 0: It's really heinous because, like, seriously, you can buy like, you know, like 64 gigabytes of RAM on sticks for like, you know, hundreds.
+
+103
+00:11:16,470 --> 00:11:18,340
+Speaker 1: And even the argument of, oh, but it's ECC.
+
+104
+00:11:18,421 --> 00:11:20,070
+Speaker 1: ECC is not that much more expensive.
+
+105
+00:11:20,370 --> 00:11:22,637
+Speaker 0: I don't think it's, no, it's, I don't think it's ECC at all.
+
+106
+00:11:22,737 --> 00:11:27,210
+Speaker 0: I think what it, I don't think it is, but it is, it is integrated RAM.
+
+107
+00:11:27,370 --> 00:11:31,502
+Speaker 0: It's like, it's not, you know, replaceable, you know, it's the same stuff.
+
+108
+00:11:31,602 --> 00:11:34,250
+Speaker 0: It's just, it's, you know, it's like, it's right next to the chip.
+
+109
+00:11:34,310 --> 00:11:35,654
+Speaker 0: So it's not exactly identical.
+
+110
+00:11:35,734 --> 00:11:39,845
+Speaker 0: It does justify some markup, but not a 300% markup.
+
+111
+00:11:39,885 --> 00:11:41,610
+Speaker 0: And the storage is even more criminal.
+
+112
+00:11:42,050 --> 00:11:48,250
+Speaker 1: Apple stops using ECC with Intel processors that aren't Xeon, according to the internet.
+
+113
+00:11:49,491 --> 00:11:50,877
+Speaker 0: Yeah.
+
+114
+00:11:51,781 --> 00:11:52,163
+Speaker 0: Let me see.
+
+115
+00:11:52,183 --> 00:11:53,508
+Speaker 0: I think I wrote it down here.
+
+116
+00:11:57,332 --> 00:11:57,633
+Speaker 0: Okay.
+
+117
+00:11:57,813 --> 00:11:59,296
+Speaker 0: So yeah.
+
+118
+00:11:59,496 --> 00:12:06,808
+Speaker 0: You can buy a Samsung 990 Pro M2 SSD with four terabytes of storage for under $300, right?
+
+119
+00:12:08,930 --> 00:12:17,250
+Speaker 0: To upgrade, right, an M3 Mac, Macbook Pro that just came out, they default to one terabyte of storage.
+
+120
+00:12:17,791 --> 00:12:23,504
+Speaker 0: If you want to upgrade them two from one to four, so you're adding three terabytes, right?
+
+121
+00:12:23,524 --> 00:12:25,950
+Speaker 0: You're adding three, you're not buying four, you're adding three.
+
+122
+00:12:27,431 --> 00:12:28,313
+Speaker 0: They will charge you $1,000.
+
+123
+00:12:28,313 --> 00:12:32,701
+Speaker 0: So that's a 300% markup versus just buying M2 drives that are $300 each.
+
+124
+00:12:39,430 --> 00:12:43,295
+Speaker 0: Yeah, it's definitely a criminal markup.
+
+125
+00:12:44,256 --> 00:12:47,580
+Speaker 0: But, you know, that is what it is.
+
+126
+00:12:47,600 --> 00:12:55,870
+Speaker 0: So what I'm going to attempt, and I guess I can always return it, but I think this will, I think this will work out because it's still, you know, we talk about Intel.
+
+127
+00:12:56,050 --> 00:12:59,275
+Speaker 0: It's like, I've used the Apple M chip at work.
+
+128
+00:12:59,455 --> 00:13:02,639
+Speaker 0: now for, you know, since the M2 Air came out.
+
+129
+00:13:02,759 --> 00:13:10,870
+Speaker 0: And it's like this little thin, tiny wafer thing here is by far the fastest computer in the house.
+
+130
+00:13:11,070 --> 00:13:12,472
+Speaker 0: And it's not even remotely close.
+
+131
+00:13:14,194 --> 00:13:15,456
+Speaker 0: It doesn't even have fans in it.
+
+132
+00:13:15,917 --> 00:13:16,177
+Speaker 0: Right.
+
+133
+00:13:16,437 --> 00:13:25,850
+Speaker 0: So it's like you basically, if you can justify it by saying, all right, the, the, the, the, the upcharge on the storage and the RAM.
+
+134
+00:13:25,950 --> 00:13:33,002
+Speaker 0: It's basically just sort of subsidized by the CPU, which is absolutely insane that they have over there.
+
+135
+00:13:33,943 --> 00:13:37,810
+Speaker 0: But what I'm going to do is I'm going to get that and use that for all my computing biz.
+
+136
+00:13:38,330 --> 00:13:38,490
+Speaker 0: Right.
+
+137
+00:13:38,891 --> 00:13:42,720
+Speaker 0: The iPad Pro I have, I think is going to not be supported in a year.
+
+138
+00:13:43,722 --> 00:13:47,290
+Speaker 0: And I'll just sort of let it fade and I won't replace it because I'll have a MacBook.
+
+139
+00:13:47,691 --> 00:13:47,871
+Speaker 0: Right.
+
+140
+00:13:47,992 --> 00:13:49,054
+Speaker 0: It's the same purpose.
+
+141
+00:13:49,555 --> 00:13:54,446
+Speaker 0: And then this computer that's five, six years old now, I'm not going to get rid of it.
+
+142
+00:13:54,606 --> 00:13:56,270
+Speaker 0: I'm going to use steam stream.
+
+143
+00:13:58,031 --> 00:13:58,231
+Speaker 0: Right.
+
+144
+00:13:58,251 --> 00:14:01,759
+Speaker 0: And just keep it over in the corner there with just power and network cable.
+
+145
+00:14:02,260 --> 00:14:04,244
+Speaker 0: And then, oh, look, I can play all the games still.
+
+146
+00:14:04,364 --> 00:14:07,370
+Speaker 0: There's nothing I can't do because I still have a Windows computer in the corner.
+
+147
+00:14:07,851 --> 00:14:10,935
+Speaker 0: I just don't actually need to, you know, use it directly.
+
+148
+00:14:11,856 --> 00:14:22,390
+Speaker 0: And if I ever reach a point where I want to play some games and they either don't run on Mac or don't run on this old Windows computer, then I'll get a new Windows computer.
+
+149
+00:14:22,490 --> 00:14:25,435
+Speaker 0: That's just basically a video card in a box.
+
+150
+00:14:25,716 --> 00:14:25,976
+Speaker 0: Right.
+
+151
+00:14:26,056 --> 00:14:28,520
+Speaker 0: And as small as possible, cram it in a corner.
+
+152
+00:14:28,921 --> 00:14:31,826
+Speaker 0: And again, use the steam stream situation.
+
+153
+00:14:32,367 --> 00:14:34,170
+Speaker 0: And I think this, this plan is going to work.
+
+154
+00:14:34,591 --> 00:14:35,352
+Speaker 0: And you know what?
+
+155
+00:14:35,933 --> 00:14:38,177
+Speaker 0: If the plan doesn't work, I can change.
+
+156
+00:14:38,217 --> 00:14:40,100
+Speaker 0: I could do a new plan in five years.
+
+157
+00:14:40,421 --> 00:14:43,306
+Speaker 0: I could always, even if I can't return the Mac, I wait too long.
+
+158
+00:14:43,747 --> 00:14:45,169
+Speaker 0: I'll be able to sell it, I think.
+
+159
+00:14:45,350 --> 00:14:45,510
+Speaker 0: Right.
+
+160
+00:14:45,790 --> 00:14:46,010
+Speaker 0: Yeah.
+
+161
+00:14:46,671 --> 00:14:50,135
+Speaker 1: And if the plan works, like maybe I'll go down a similar road.
+
+162
+00:14:50,175 --> 00:14:50,535
+Speaker 1: We'll see.
+
+163
+00:15:04,310 --> 00:15:06,933
+Speaker 0: But it's literally my primary computer.
+
+164
+00:15:06,993 --> 00:15:10,817
+Speaker 0: It's not like the side, like you have a laptop, it's like a side laptop.
+
+165
+00:15:10,837 --> 00:15:11,437
+Speaker 0: But like before
+
+166
+00:15:11,457 --> 00:15:24,410
+Speaker 1: it repacks, I open that laptop and I like download a PDF of the panel and download the video of the pre-roll, like the open it, the walk-in stuff and like synchronize it and do some Windows updates because I really only use the thing at cons and work travel.
+
+167
+00:15:24,410 --> 00:15:28,899
+Speaker 0: It's like, no, this will be my main computer, the primary one that does all the things.
+
+168
+00:15:28,979 --> 00:15:29,199
+Speaker 0: Right.
+
+169
+00:15:29,239 --> 00:15:31,985
+Speaker 0: And this other Windows computer will have steam on it.
+
+170
+00:15:32,526 --> 00:15:34,730
+Speaker 0: And that's it pretty much mostly.
+
+171
+00:15:36,170 --> 00:15:45,770
+Speaker 1: So anyway, in some news, when Scott sent me a link to this and we didn't talk about it because we skipped shows for a while, all he said was, this is a very geek night story.
+
+172
+00:15:46,030 --> 00:15:47,181
+Speaker 0: There's a lot of geek night stories.
+
+173
+00:15:47,382 --> 00:15:48,149
+Speaker 0: I say that a lot.
+
+174
+00:15:48,350 --> 00:15:48,711
+Speaker 0: You do.
+
+175
+00:15:48,812 --> 00:15:55,550
+Speaker 1: But this one is like hyper geek nights and crosses almost every intersection of everything we talk about in games.
+
+176
+00:15:56,030 --> 00:15:57,088
+Speaker 0: We got a few of those tonight.
+
+177
+00:15:57,550 --> 00:15:57,670
+Speaker 1: Yep.
+
+178
+00:15:58,091 --> 00:16:09,404
+Speaker 1: So this article on patch is titled pickleball brawl players hash out gripes anti-Semitism on Upper East Side courts.
+
+179
+00:16:09,604 --> 00:16:14,710
+Speaker 1: And what this boils down to, to summarize, you're not aware there's a sport called pickleball.
+
+180
+00:16:15,051 --> 00:16:17,836
+Speaker 1: Now, you might think it's new, but it's not.
+
+181
+00:16:17,896 --> 00:16:19,439
+Speaker 1: This is a sport from the 70s.
+
+182
+00:16:20,862 --> 00:16:24,710
+Speaker 1: It has come and gone in waves of fad.
+
+183
+00:16:25,490 --> 00:16:31,290
+Speaker 1: Like right now, like in the late 80s and early 90s, pickleball was huge and then it disappeared and now it's back.
+
+184
+00:16:31,711 --> 00:16:33,600
+Speaker 1: So it comes and goes in waves.
+
+185
+00:16:33,660 --> 00:16:34,544
+Speaker 1: It's not new.
+
+186
+00:16:34,644 --> 00:16:35,770
+Speaker 1: It's been around for a long time.
+
+187
+00:16:36,251 --> 00:16:48,990
+Speaker 1: And if I had to describe it, if you don't know what pickleball is, it's basically tennis, but it removes most of the requirements for athleticism and focuses more like it's a different kind.
+
+188
+00:16:49,230 --> 00:16:53,190
+Speaker 1: It's the same kind of game, but like you don't have to be super fit to be really good.
+
+189
+00:16:53,390 --> 00:16:56,730
+Speaker 0: It's basically in between ping pong and tennis, but slower.
+
+190
+00:16:57,510 --> 00:17:00,790
+Speaker 1: I'd argue ping pong requires way more physical skill.
+
+191
+00:17:01,010 --> 00:17:01,880
+Speaker 0: I'm talking about size.
+
+192
+00:17:02,041 --> 00:17:02,810
+Speaker 0: Size wise.
+
+193
+00:17:03,530 --> 00:17:03,925
+Speaker 1: Size wise.
+
+194
+00:17:03,946 --> 00:17:04,050
+Speaker 1: Yeah.
+
+195
+00:17:05,070 --> 00:17:08,349
+Speaker 0: It's smaller than a tennis court, but bigger than a ping pong.
+
+196
+00:17:08,950 --> 00:17:15,250
+Speaker 1: Well, it was originally designed to be playable on like a tennis court, but you play like just in part of the tennis court.
+
+197
+00:17:15,829 --> 00:17:16,011
+Speaker 0: Yeah.
+
+198
+00:17:16,232 --> 00:17:19,386
+Speaker 0: It's a little bit sort of like playing wiffle ball, but like wiffle tennis, right?
+
+199
+00:17:19,406 --> 00:17:20,270
+Speaker 0: Because it's slower.
+
+200
+00:17:20,810 --> 00:17:26,569
+Speaker 1: When I was in middle school and high school, it was the kind of game that like gym classes would just make all the kids play and nobody liked it.
+
+201
+00:17:27,151 --> 00:17:27,330
+Speaker 0: Yeah.
+
+202
+00:17:27,351 --> 00:17:35,010
+Speaker 0: But I mean, it's, you know, on the one hand, I'm not going to say like, oh, it's, it's as, you know, I guess good by whatever measure.
+
+203
+00:17:35,150 --> 00:17:35,311
+Speaker 0: Right.
+
+204
+00:17:35,371 --> 00:17:45,010
+Speaker 0: It's like, you know, this isn't like if you're the champion of pickleball, that's not like a great accomplishment because be, you know, being really good at that is not as hard as being good.
+
+205
+00:17:45,331 --> 00:17:49,950
+Speaker 1: It's like the difference between being really good at a console FPS versus being really good at Counter Strike.
+
+206
+00:17:50,712 --> 00:17:50,913
+Speaker 0: Right.
+
+207
+00:17:50,973 --> 00:17:53,550
+Speaker 0: It's like, you know, it's, it's not as difficult.
+
+208
+00:17:53,670 --> 00:18:06,190
+Speaker 0: But as a sport for people to play recreationally, it's, it's great that this exists because it gives people who aren't, you know, it's like, would you rather have all the old people sitting around, you know, tennis is too hard for the old people.
+
+209
+00:18:06,450 --> 00:18:06,611
+Speaker 0: Right.
+
+210
+00:18:06,692 --> 00:18:09,490
+Speaker 0: It's like better they play pickleball than nothing.
+
+211
+00:18:09,670 --> 00:18:09,891
+Speaker 0: Yeah.
+
+212
+00:18:09,931 --> 00:18:10,111
+Speaker 0: Right.
+
+213
+00:18:10,212 --> 00:18:16,186
+Speaker 1: And I get it to be clear, like, I don't want to imply that I think pickleball is bad in any way in anything we're about to talk about.
+
+214
+00:18:16,226 --> 00:18:17,950
+Speaker 1: Pickleball is fine.
+
+215
+00:18:18,251 --> 00:18:19,013
+Speaker 1: It's a game.
+
+216
+00:18:19,454 --> 00:18:20,135
+Speaker 1: It's a sport.
+
+217
+00:18:20,576 --> 00:18:21,078
+Speaker 1: Go nuts.
+
+218
+00:18:21,318 --> 00:18:22,902
+Speaker 1: Nothing wrong with pickleball.
+
+219
+00:18:23,343 --> 00:18:26,070
+Speaker 0: However, just so you know what it is, it's it's easy tennis.
+
+220
+00:18:27,010 --> 00:18:29,597
+Speaker 0: And I also I do not that I would be any good at it.
+
+221
+00:18:29,637 --> 00:18:29,818
+Speaker 0: Right.
+
+222
+00:18:29,878 --> 00:18:31,924
+Speaker 0: I don't want someone to come and say, oh, you said it's easy.
+
+223
+00:18:31,964 --> 00:18:32,847
+Speaker 0: Well, let's see you play.
+
+224
+00:18:32,887 --> 00:18:34,050
+Speaker 0: It's like, no, I'm terrible.
+
+225
+00:18:35,170 --> 00:18:35,912
+Speaker 0: I'm so bad.
+
+226
+00:18:35,932 --> 00:18:37,494
+Speaker 0: I can't do ping pong tennis.
+
+227
+00:18:37,895 --> 00:18:39,177
+Speaker 0: Maybe I could do bad.
+
+228
+00:18:39,197 --> 00:18:44,686
+Speaker 1: And if the other person is, it's partly funny that the people who are really into it right now are acting like it is like they keep.
+
+229
+00:18:44,746 --> 00:18:45,587
+Speaker 1: all the stories are.
+
+230
+00:18:45,647 --> 00:18:47,370
+Speaker 1: it's the fastest growing sport in America.
+
+231
+00:18:47,370 --> 00:18:53,101
+Speaker 1: And while that is it is technically true, it has been the fastest growing sport in America at multiple points in the past.
+
+232
+00:18:53,161 --> 00:18:53,983
+Speaker 1: And then it disappeared.
+
+233
+00:18:54,283 --> 00:18:55,927
+Speaker 0: So it's been.
+
+234
+00:18:55,967 --> 00:18:56,427
+Speaker 0: I think it's.
+
+235
+00:18:56,568 --> 00:18:57,690
+Speaker 0: it's got some staying power.
+
+236
+00:18:57,890 --> 00:18:58,732
+Speaker 0: It does.
+
+237
+00:18:58,852 --> 00:19:07,849
+Speaker 1: But any game that gets popular, that is competitive, runs into every problem we have talked about on gig nights for the last 18 years.
+
+238
+00:19:08,630 --> 00:19:14,518
+Speaker 1: So now there is big drama around pickleball like I couldn't even.
+
+239
+00:19:14,538 --> 00:19:23,110
+Speaker 0: Well, the fundamental problem is that unlike other sports, right, tennis ish sports and pickleball also require space.
+
+240
+00:19:23,691 --> 00:19:28,500
+Speaker 0: And it's a lot of space for a very small number of players at a time.
+
+241
+00:19:28,580 --> 00:19:28,740
+Speaker 0: Right.
+
+242
+00:19:28,821 --> 00:19:29,862
+Speaker 0: A whole tennis court.
+
+243
+00:19:30,103 --> 00:19:32,768
+Speaker 0: You can have just like two people, maybe four, maybe four.
+
+244
+00:19:33,329 --> 00:19:33,870
+Speaker 0: And that's it.
+
+245
+00:19:33,970 --> 00:19:34,190
+Speaker 0: Right.
+
+246
+00:19:34,230 --> 00:19:38,958
+Speaker 0: It's like that same space could have a basketball court with 10 people playing.
+
+247
+00:19:38,978 --> 00:19:39,379
+Speaker 0: Yeah.
+
+248
+00:19:39,479 --> 00:19:39,820
+Speaker 0: Right.
+
+249
+00:19:40,921 --> 00:19:44,006
+Speaker 0: That same space could have like a mini soccer field.
+
+250
+00:19:44,367 --> 00:19:44,727
+Speaker 0: Right.
+
+251
+00:19:44,908 --> 00:19:46,290
+Speaker 0: With with a lot of people playing.
+
+252
+00:19:46,690 --> 00:19:49,094
+Speaker 1: Meanwhile, the other the far extreme of that is golf.
+
+253
+00:19:50,577 --> 00:19:51,198
+Speaker 0: Yes, golf.
+
+254
+00:19:51,859 --> 00:19:57,669
+Speaker 0: But but the thing is, even though one golf hole could have like, you know, can still have maybe eight people.
+
+255
+00:19:57,929 --> 00:19:58,230
+Speaker 0: Right.
+
+256
+00:19:58,390 --> 00:19:58,611
+Speaker 0: Yeah.
+
+257
+00:19:58,631 --> 00:20:04,180
+Speaker 1: But count the number of acres versus the number of humans actively playing the game at one time.
+
+258
+00:20:04,641 --> 00:20:07,445
+Speaker 0: Right now, in New York City, space is at a premium.
+
+259
+00:20:07,486 --> 00:20:10,170
+Speaker 0: It's not like the suburbs where you can play pickleball, no problem.
+
+260
+00:20:10,890 --> 00:20:15,059
+Speaker 0: So with the result of that, the suburbs, you can't play pickleball, no problem anymore.
+
+261
+00:20:15,140 --> 00:20:16,282
+Speaker 1: I found a bunch of other articles.
+
+262
+00:20:16,302 --> 00:20:19,790
+Speaker 1: There's big drama in the suburbs, too, because depends on how crowded the sub.
+
+263
+00:20:19,870 --> 00:20:22,194
+Speaker 1: Well, most suburbs have like.
+
+264
+00:20:22,314 --> 00:20:31,530
+Speaker 1: there's tennis courts around like if you live in suburban America, there are just random tennis courts like at high schools, in apartment complexes, like next to them in parks.
+
+265
+00:20:32,110 --> 00:20:34,473
+Speaker 1: And they're very usually just free and can just play on them.
+
+266
+00:20:35,054 --> 00:20:36,316
+Speaker 1: And it's not really a big deal.
+
+267
+00:20:36,776 --> 00:20:48,090
+Speaker 1: But the drama in most of these suburbs over the last year is that the tennis courts that were moderately used, but like weren't a crunch are suddenly completely filled with pickleball people.
+
+268
+00:20:48,450 --> 00:20:52,776
+Speaker 1: So one, the tennis players can't play tennis because people are playing pickleball pickleball on the tennis courts.
+
+269
+00:20:53,236 --> 00:20:56,520
+Speaker 1: And two, the pickleball people, there's way more of them.
+
+270
+00:20:56,580 --> 00:21:01,526
+Speaker 1: And they're all mad because no one's organizing the line or enforcing the rules.
+
+271
+00:21:01,567 --> 00:21:04,330
+Speaker 1: they're making up over how long anyone gets to play in this free place.
+
+272
+00:21:04,911 --> 00:21:05,172
+Speaker 0: Yeah.
+
+273
+00:21:05,232 --> 00:21:06,935
+Speaker 0: Well, so that's the thing in New York City.
+
+274
+00:21:07,135 --> 00:21:07,356
+Speaker 0: Right.
+
+275
+00:21:07,436 --> 00:21:14,690
+Speaker 0: When we have a space constraint, they devised a system of permits for tennis, tennis permit in New York City.
+
+276
+00:21:14,750 --> 00:21:25,430
+Speaker 0: If you want to play any minutes or you have a membership at the Racquet Club, but you're there by a private tennis court or you pay a hundred bucks to get like you want to play tennis on a public tennis court.
+
+277
+00:21:25,470 --> 00:21:28,094
+Speaker 0: You need a permit in a New York City park.
+
+278
+00:21:28,395 --> 00:21:28,595
+Speaker 0: Right.
+
+279
+00:21:28,695 --> 00:21:31,199
+Speaker 0: And there's a reason that they had that system of permits.
+
+280
+00:21:31,460 --> 00:21:37,630
+Speaker 0: And, you know, people watching the courts was because that sport has a lot of space dedicated to a few people.
+
+281
+00:21:38,171 --> 00:21:44,210
+Speaker 0: And when demand exceeds the acreage available, they need to do some rationing.
+
+282
+00:21:44,490 --> 00:21:50,650
+Speaker 1: It's the same problem that is solved in arcades by people putting quarters on the rim of the DDR machine.
+
+283
+00:21:51,370 --> 00:21:51,891
+Speaker 0: Exactly.
+
+284
+00:21:51,971 --> 00:22:03,690
+Speaker 0: So here we have a situation, though, with pickleball is somebody set up some pickleball courts right in a public place and basically with their own private equipment.
+
+285
+00:22:04,070 --> 00:22:08,350
+Speaker 0: Nonetheless, they're just letting the public use it just out of the generousness of their own heart.
+
+286
+00:22:09,011 --> 00:22:11,159
+Speaker 0: This guy comes every day, sets up the nets.
+
+287
+00:22:11,580 --> 00:22:11,801
+Speaker 0: Right.
+
+288
+00:22:11,941 --> 00:22:14,310
+Speaker 0: And at the end of the day, he takes them home and he lets everyone play.
+
+289
+00:22:14,912 --> 00:22:16,478
+Speaker 0: But there is no.
+
+290
+00:22:16,498 --> 00:22:19,690
+Speaker 0: this is not official in any way, shape or form.
+
+291
+00:22:20,172 --> 00:22:20,373
+Speaker 0: Right.
+
+292
+00:22:20,433 --> 00:22:22,202
+Speaker 0: There is no permitting system.
+
+293
+00:22:22,604 --> 00:22:23,650
+Speaker 0: It's on public land.
+
+294
+00:22:24,954 --> 00:22:28,770
+Speaker 0: And it's like no one really has a problem with the land being used that way.
+
+295
+00:22:28,950 --> 00:22:29,171
+Speaker 0: Right.
+
+296
+00:22:29,332 --> 00:22:30,475
+Speaker 0: You know, it's a public park.
+
+297
+00:22:30,596 --> 00:22:35,070
+Speaker 0: Most people want to play pickleball versus the other things that were being done in that park.
+
+298
+00:22:35,370 --> 00:22:39,530
+Speaker 1: But the pickleball people are fighting with the other pickleball people over how pickleball is going to go down.
+
+299
+00:22:40,173 --> 00:22:40,535
+Speaker 0: Exactly.
+
+300
+00:22:40,555 --> 00:22:42,243
+Speaker 0: There's no official system.
+
+301
+00:22:42,384 --> 00:22:43,630
+Speaker 0: It's a. it's a public park.
+
+302
+00:22:43,790 --> 00:22:45,154
+Speaker 0: Everyone has a right to be there.
+
+303
+00:22:45,596 --> 00:22:50,050
+Speaker 0: But you have spaces that are only limited to a few people at a time.
+
+304
+00:22:50,472 --> 00:22:54,210
+Speaker 0: And there's no official rationing system or anything in place whatsoever.
+
+305
+00:22:54,730 --> 00:22:55,653
+Speaker 1: Arcades have the same problem.
+
+306
+00:22:55,693 --> 00:23:00,990
+Speaker 1: Like that system in quotes where people would put their token on the DDR machine to take their turn.
+
+307
+00:23:01,771 --> 00:23:03,621
+Speaker 1: No cop is enforcing that.
+
+308
+00:23:03,741 --> 00:23:05,410
+Speaker 1: Like you could just go up and play.
+
+309
+00:23:05,791 --> 00:23:06,775
+Speaker 1: And unless sometimes.
+
+310
+00:23:07,036 --> 00:23:07,196
+Speaker 0: Yeah.
+
+311
+00:23:07,216 --> 00:23:10,950
+Speaker 0: But sometimes people just ignore that system and fights in the arcade.
+
+312
+00:23:11,210 --> 00:23:11,771
+Speaker 1: Exactly.
+
+313
+00:23:12,714 --> 00:23:19,630
+Speaker 1: Because the same reason why if a convention, you know, a nerd con says you can't line up for the autograph thing until four hours before.
+
+314
+00:23:20,131 --> 00:23:20,894
+Speaker 1: Then what happens?
+
+315
+00:23:21,215 --> 00:23:23,041
+Speaker 1: A bunch of people don't line up.
+
+316
+00:23:23,262 --> 00:23:25,670
+Speaker 1: They form a mob where the line is going to happen.
+
+317
+00:23:25,950 --> 00:23:26,111
+Speaker 0: Right.
+
+318
+00:23:26,291 --> 00:23:32,910
+Speaker 0: If you're playing Street Fighter in the arcade and there's a general rule of loser walks, that's the socially accepted rule.
+
+319
+00:23:33,030 --> 00:23:34,475
+Speaker 0: But it's not an enforced rule.
+
+320
+00:23:34,957 --> 00:23:38,910
+Speaker 0: If I lose and I just put a quarter in and keep playing, what are you going to punch me?
+
+321
+00:23:39,590 --> 00:23:39,731
+Speaker 0: Right.
+
+322
+00:23:39,771 --> 00:23:41,059
+Speaker 0: You'll be the one to go to jail.
+
+323
+00:23:41,099 --> 00:23:41,844
+Speaker 0: You can't stop me.
+
+324
+00:23:41,864 --> 00:23:42,769
+Speaker 0: You got to call the cops.
+
+325
+00:23:42,970 --> 00:23:43,853
+Speaker 1: Cops don't give a shit.
+
+326
+00:23:43,913 --> 00:23:45,941
+Speaker 1: Nor have you broken any law or rule.
+
+327
+00:23:46,624 --> 00:23:46,784
+Speaker 0: Right.
+
+328
+00:23:46,804 --> 00:23:48,370
+Speaker 0: It's like, what's the owner of the arcade going to do?
+
+329
+00:23:48,430 --> 00:23:49,053
+Speaker 0: They don't give a fuck.
+
+330
+00:23:49,133 --> 00:23:50,017
+Speaker 0: I put my quarter in.
+
+331
+00:23:50,057 --> 00:23:50,740
+Speaker 0: It's my play.
+
+332
+00:23:50,881 --> 00:23:51,102
+Speaker 0: Yeah.
+
+333
+00:23:51,122 --> 00:23:51,302
+Speaker 0: Right.
+
+334
+00:23:51,383 --> 00:23:52,126
+Speaker 0: I'm standing here.
+
+335
+00:23:52,166 --> 00:23:52,930
+Speaker 0: You can't move me.
+
+336
+00:23:53,351 --> 00:23:53,551
+Speaker 0: Right.
+
+337
+00:23:53,652 --> 00:23:57,203
+Speaker 0: It's like I wouldn't recommend behaving in the way I just described.
+
+338
+00:23:57,263 --> 00:23:59,470
+Speaker 0: I would recommend following the social convention.
+
+339
+00:24:00,111 --> 00:24:01,334
+Speaker 0: But that's a thing.
+
+340
+00:24:01,435 --> 00:24:01,595
+Speaker 0: Right.
+
+341
+00:24:01,876 --> 00:24:07,910
+Speaker 0: It's not a real rule the way that, yeah, if you don't have the tennis permit in New York City, yeah, the police will come.
+
+342
+00:24:08,751 --> 00:24:08,891
+Speaker 0: Right.
+
+343
+00:24:08,951 --> 00:24:10,916
+Speaker 0: And make you stop playing tennis eventually.
+
+344
+00:24:10,957 --> 00:24:11,277
+Speaker 0: Right.
+
+345
+00:24:11,518 --> 00:24:16,270
+Speaker 1: So arcade people can sort out the DDR machine, but the pickleball people don't seem to be able to sort out pickleball.
+
+346
+00:24:17,111 --> 00:24:17,271
+Speaker 0: No.
+
+347
+00:24:17,351 --> 00:24:18,154
+Speaker 0: And it's even worse.
+
+348
+00:24:18,234 --> 00:24:24,510
+Speaker 0: Not only are they fighting over who plays, but there is the same thing we've talked about in Competitive vs Casual.
+
+349
+00:24:24,891 --> 00:24:25,112
+Speaker 0: Right.
+
+350
+00:24:25,172 --> 00:24:30,866
+Speaker 0: Where some of the pickleball players are for serious and some of them are just like, not serious at all.
+
+351
+00:24:32,550 --> 00:24:33,873
+Speaker 1: Because it's so perfect.
+
+352
+00:24:34,174 --> 00:24:40,190
+Speaker 1: Quote, this debate has led to a number of flash points over the summer, including players refusing to leave courts when their time was up.
+
+353
+00:24:40,510 --> 00:24:46,023
+Speaker 1: And a scene where Albert removed other nets during the game to set up his own for his boring routine.
+
+354
+00:24:46,063 --> 00:24:48,830
+Speaker 1: Like he interrupted someone's game because he was doing his own thing.
+
+355
+00:24:49,571 --> 00:25:06,050
+Speaker 1: But the thing that people seem to be the most mad about, other than the space and the time, is, quote, people are mad that sometimes there are hour long waits to play games that aren't worth it if they happen to get paired with less skilled players.
+
+356
+00:25:06,510 --> 00:25:15,490
+Speaker 1: And the skilled players are arguing they should be entitled to a special skilled court time for high skill only people so they don't have to play with the noobs.
+
+357
+00:25:16,997 --> 00:25:19,850
+Speaker 1: Why do you think there's matchmaking in every fucking video game?
+
+358
+00:25:20,570 --> 00:25:20,790
+Speaker 0: Right.
+
+359
+00:25:20,891 --> 00:25:32,710
+Speaker 0: So my suggestion there is if you are really that skilled, and pickleball is such an important part of your life, and you want to play a lot of pickleball, and you value it that much.
+
+360
+00:25:32,972 --> 00:25:35,290
+Speaker 1: Join a pickleball club, join a team, join a league.
+
+361
+00:25:35,390 --> 00:25:38,795
+Speaker 0: And you care about it that much, and you really are that good.
+
+362
+00:25:39,596 --> 00:25:49,430
+Speaker 0: Pay to join the racquet club with money, and you can play pickleball all fucking day nonstop against other people who are also caring about it so much that they are paying money as well.
+
+363
+00:25:49,430 --> 00:25:53,210
+Speaker 1: Yeah, the YMCA has a free ladder for every racquet sport you can imagine.
+
+364
+00:25:53,930 --> 00:25:54,090
+Speaker 0: Right.
+
+365
+00:25:54,431 --> 00:25:55,814
+Speaker 0: Join the racquet club.
+
+366
+00:25:55,835 --> 00:25:56,897
+Speaker 0: There are lots of them.
+
+367
+00:25:56,957 --> 00:26:00,967
+Speaker 0: There are lots of racquet clubs all around the city for every weird ass sport.
+
+368
+00:26:02,470 --> 00:26:07,197
+Speaker 0: You can play squash, you can play racquetball, you can play pickleball, you can play tennis.
+
+369
+00:26:07,918 --> 00:26:12,505
+Speaker 0: I don't know if you can play high life, but basically everything with balls and nets and walls.
+
+370
+00:26:12,565 --> 00:26:15,710
+Speaker 0: Volleyball, water volleyball, it's like fucking everything.
+
+371
+00:26:15,710 --> 00:26:16,812
+Speaker 0: But it also leads to something else.
+
+372
+00:26:16,992 --> 00:26:21,599
+Speaker 1: This matchmaking system that they are complaining about is also not official or anything.
+
+373
+00:26:21,659 --> 00:26:29,350
+Speaker 1: Like when I was a kid, you wanted to play tennis, you didn't just go to a tennis court and assume someone would randomly be assigned to play with you.
+
+374
+00:26:29,691 --> 00:26:32,929
+Speaker 1: You went with someone and you two were going to play tennis against each other.
+
+375
+00:26:34,111 --> 00:26:34,291
+Speaker 0: Yep.
+
+376
+00:26:34,451 --> 00:26:42,150
+Speaker 0: So what's happening here is that people are showing up to this public park knowing that this is a big pickleball community and they're showing up alone.
+
+377
+00:26:42,850 --> 00:26:43,151
+Speaker 0: Right.
+
+378
+00:26:43,511 --> 00:26:45,956
+Speaker 0: And like, you know, a team will leave a game.
+
+379
+00:26:45,976 --> 00:26:46,938
+Speaker 0: Right.
+
+380
+00:26:47,058 --> 00:26:51,245
+Speaker 0: And then you'll come in with like whoever else got there and has been waiting the longest.
+
+381
+00:26:51,526 --> 00:26:51,746
+Speaker 0: Right.
+
+382
+00:26:51,806 --> 00:26:52,868
+Speaker 0: Is who you're going to be with.
+
+383
+00:26:52,928 --> 00:26:53,148
+Speaker 0: Right.
+
+384
+00:26:53,168 --> 00:26:53,990
+Speaker 0: You're not just, you know.
+
+385
+00:26:54,710 --> 00:26:57,514
+Speaker 0: Otherwise, it's like I'll show up in the morning early.
+
+386
+00:26:57,674 --> 00:26:58,656
+Speaker 0: I'll be in line.
+
+387
+00:26:58,736 --> 00:27:00,899
+Speaker 0: And then when my friends get there, I'm like, you can't.
+
+388
+00:27:01,019 --> 00:27:01,920
+Speaker 0: It doesn't work that way.
+
+389
+00:27:02,200 --> 00:27:02,360
+Speaker 0: Right.
+
+390
+00:27:02,441 --> 00:27:09,390
+Speaker 1: So and now the casual players are accusing the people who care about the game more of being basically Nazis.
+
+391
+00:27:09,831 --> 00:27:14,823
+Speaker 1: And then the people who are better at the game are accusing the less skilled players of hogging court time.
+
+392
+00:27:14,863 --> 00:27:17,229
+Speaker 0: A bunch of adults acting like children.
+
+393
+00:27:17,249 --> 00:27:17,810
+Speaker 0: What else is new?
+
+394
+00:27:17,970 --> 00:27:25,238
+Speaker 1: So if pickleball continues to be popular, it isn't just the fourth wave of it becoming a fad and coming and going.
+
+395
+00:27:25,679 --> 00:27:28,782
+Speaker 1: I feel like New York City is going to say, all right, y'all fucked up.
+
+396
+00:27:29,143 --> 00:27:30,284
+Speaker 1: It's 100 bucks a year.
+
+397
+00:27:30,304 --> 00:27:33,808
+Speaker 1: There's going to be municipal pickleball courts and we're going to regulate it like we do tennis.
+
+398
+00:27:34,148 --> 00:27:35,670
+Speaker 1: The tennis people don't get into fistfights.
+
+399
+00:27:38,750 --> 00:27:41,492
+Speaker 1: So, yeah, this is why there's matchmaking in competitive FPS.
+
+400
+00:27:42,973 --> 00:27:43,574
+Speaker 1: So what's your news?
+
+401
+00:27:43,594 --> 00:27:44,474
+Speaker 1: This Pokemon thing?
+
+402
+00:27:45,315 --> 00:27:46,296
+Speaker 0: Yeah.
+
+403
+00:27:46,956 --> 00:27:49,298
+Speaker 0: So another very geek night story.
+
+404
+00:27:49,378 --> 00:27:51,039
+Speaker 0: So there were some Pokemon championships.
+
+405
+00:27:51,059 --> 00:27:52,400
+Speaker 0: We're talking about the video game here.
+
+406
+00:27:52,420 --> 00:27:53,021
+Speaker 0: Right.
+
+407
+00:27:53,481 --> 00:27:55,423
+Speaker 0: And it is basically, you know, we know Pokemon.
+
+408
+00:27:55,443 --> 00:27:56,103
+Speaker 0: You're listening to this.
+
+409
+00:27:56,143 --> 00:27:58,605
+Speaker 0: You know, Pokemon is two components to being good at Pokemon.
+
+410
+00:27:58,625 --> 00:28:04,869
+Speaker 0: Number one is you have to put together a team of six Pokemon that are trained.
+
+411
+00:28:05,350 --> 00:28:05,590
+Speaker 0: Right.
+
+412
+00:28:05,770 --> 00:28:07,052
+Speaker 0: And have very high stats.
+
+413
+00:28:07,332 --> 00:28:07,593
+Speaker 0: Right.
+
+414
+00:28:07,673 --> 00:28:08,474
+Speaker 0: And how do you do that?
+
+415
+00:28:08,574 --> 00:28:08,975
+Speaker 0: Grinding.
+
+416
+00:28:09,015 --> 00:28:14,542
+Speaker 0: That's how you get IVs and EVs and ruining your life, feeding them the right foods, breeding them.
+
+417
+00:28:14,863 --> 00:28:15,083
+Speaker 0: Right.
+
+418
+00:28:15,103 --> 00:28:20,170
+Speaker 0: You just spent hours and hours and hours training the Pokemon to get them to be the strongest.
+
+419
+00:28:21,071 --> 00:28:28,117
+Speaker 0: And once you've done that, it's like now you have a chance to enter the second part of Pokemon, which is the actual battle.
+
+420
+00:28:28,237 --> 00:28:32,741
+Speaker 0: Choose which Pokemon you're going to send out first and choose which move you're going to use.
+
+421
+00:28:33,101 --> 00:28:37,325
+Speaker 0: And a sort of rock, paper, scissor battle that also involves Pokemon knowledge.
+
+422
+00:28:37,885 --> 00:28:40,788
+Speaker 0: And it's actually kind of an OK ish kind of game.
+
+423
+00:28:40,828 --> 00:28:41,228
+Speaker 0: Right.
+
+424
+00:28:41,328 --> 00:28:43,009
+Speaker 1: I like Pokemon battle as a concept.
+
+425
+00:28:43,470 --> 00:28:43,630
+Speaker 0: Right.
+
+426
+00:28:43,730 --> 00:28:47,455
+Speaker 0: But it's like, you know, Pokemon battle is not so bad a game, really.
+
+427
+00:28:47,515 --> 00:28:50,279
+Speaker 0: It's not too far off from like, you know, competitive game.
+
+428
+00:28:50,299 --> 00:28:53,163
+Speaker 1: But IV and IV training is just poison for the soul.
+
+429
+00:28:53,804 --> 00:28:58,169
+Speaker 0: Training is a competition that tests who invested the most time.
+
+430
+00:28:58,410 --> 00:28:58,610
+Speaker 0: Right.
+
+431
+00:28:59,051 --> 00:28:59,952
+Speaker 0: So what?
+
+432
+00:29:00,032 --> 00:29:12,688
+Speaker 0: So if you are to hold a Pokemon competition and you are to say that people must legitimately train all their Pokemon, what you're saying is that nobody has a chance of winning this competition.
+
+433
+00:29:12,708 --> 00:29:13,249
+Speaker 0: You could enter.
+
+434
+00:29:13,289 --> 00:29:13,790
+Speaker 0: Go right ahead.
+
+435
+00:29:14,311 --> 00:29:21,800
+Speaker 0: But you can only have a chance of winning if you have already spent X hours of your life training the Pokemon.
+
+436
+00:29:22,081 --> 00:29:22,301
+Speaker 0: Right.
+
+437
+00:29:22,662 --> 00:29:26,326
+Speaker 0: If you are not willing to sacrifice that many hours of your life, you can enter.
+
+438
+00:29:26,647 --> 00:29:29,130
+Speaker 0: But you can't win this thing unless you have insane luck.
+
+439
+00:29:29,170 --> 00:29:40,250
+Speaker 1: If you couldn't play tennis against anyone or pickleball, unless you stood in your house for 40 hours a week for a year, just bouncing the ball on your racket and then you play tennis.
+
+440
+00:29:40,650 --> 00:29:40,810
+Speaker 0: Yeah.
+
+441
+00:29:40,870 --> 00:29:45,456
+Speaker 0: The hours you spend on, you know, I think in competitions in general.
+
+442
+00:29:45,736 --> 00:29:46,037
+Speaker 0: Right.
+
+443
+00:29:46,137 --> 00:29:49,501
+Speaker 0: If you're talking about a fair competition where there are prizes at stake.
+
+444
+00:29:49,621 --> 00:29:56,590
+Speaker 0: where this is actually meaningful, nobody should get an advantage that is directly linked to time invested.
+
+445
+00:29:56,730 --> 00:29:56,931
+Speaker 0: Right.
+
+446
+00:29:57,131 --> 00:30:01,718
+Speaker 0: We don't give veteran sports athletes like free points when the game starts.
+
+447
+00:30:01,879 --> 00:30:02,059
+Speaker 0: Right.
+
+448
+00:30:02,079 --> 00:30:03,401
+Speaker 0: We don't let them use.
+
+449
+00:30:03,562 --> 00:30:06,647
+Speaker 1: Old gummy Joe has been playing hockey for 40 years.
+
+450
+00:30:06,947 --> 00:30:08,610
+Speaker 1: His team gets an extra point when the game starts.
+
+451
+00:30:09,330 --> 00:30:09,450
+Speaker 0: Yeah.
+
+452
+00:30:09,530 --> 00:30:10,512
+Speaker 0: It's like we don't do that.
+
+453
+00:30:10,592 --> 00:30:10,712
+Speaker 0: Right.
+
+454
+00:30:10,752 --> 00:30:14,378
+Speaker 0: We don't let old gummy Joe use us an illegal stick.
+
+455
+00:30:14,759 --> 00:30:17,203
+Speaker 0: You know, we don't let him have upgraded equipments.
+
+456
+00:30:17,584 --> 00:30:17,784
+Speaker 0: Right.
+
+457
+00:30:17,844 --> 00:30:21,450
+Speaker 0: If we actually if there's prizes on the line, then it should be a fair competition.
+
+458
+00:30:22,191 --> 00:30:27,139
+Speaker 0: And the only thing that should matter are people's skills and not just time invested.
+
+459
+00:30:27,199 --> 00:30:29,824
+Speaker 0: So everyone knows open secret.
+
+460
+00:30:29,824 --> 00:30:33,710
+Speaker 0: 90 plus percent of Pokemon competitive players cheat.
+
+461
+00:30:33,950 --> 00:30:40,820
+Speaker 0: They use software to craft and create the ideal Pokemon, their ideal Pokemon team.
+
+462
+00:30:40,981 --> 00:30:47,130
+Speaker 0: There might not be an ideal Pokemon team, but their ideal team so they don't have to grind and sacrifice hours of their life.
+
+463
+00:30:47,651 --> 00:30:55,350
+Speaker 0: They could instead spend the time in their life practicing the battle part, the actual game part, and be better at that, the actual skill game.
+
+464
+00:30:55,790 --> 00:30:58,774
+Speaker 1: I'll say right now, pure direct value judgment.
+
+465
+00:30:59,475 --> 00:31:00,116
+Speaker 1: Absolutely.
+
+466
+00:31:00,136 --> 00:31:02,479
+Speaker 1: I think that's fine.
+
+467
+00:31:02,940 --> 00:31:10,290
+Speaker 1: If the Pokemon you bring to the Pokemon tournament is legitimately possible without cheating at the Pokemon game.
+
+468
+00:31:10,330 --> 00:31:14,378
+Speaker 1: Like you can't bring an unknown with infinite stats like that.
+
+469
+00:31:14,418 --> 00:31:20,330
+Speaker 0: They're not making these people are not making Pokemon that could not have been trained.
+
+470
+00:31:20,490 --> 00:31:24,877
+Speaker 0: They're not like, haha, I've got a Pikachu that has all a thousand stats.
+
+471
+00:31:24,917 --> 00:31:32,350
+Speaker 0: It's like, no, it has the max stats a Pikachu could have if you spent a whole year training it to perfect.
+
+472
+00:31:32,511 --> 00:31:37,390
+Speaker 1: And you got lucky and got the right Pikachu with the right like hidden stats and whatevers.
+
+473
+00:31:38,070 --> 00:31:39,973
+Speaker 0: Yes, it's possible.
+
+474
+00:31:40,133 --> 00:31:40,834
+Speaker 0: It's illegal.
+
+475
+00:31:41,315 --> 00:31:43,579
+Speaker 0: If you had trained it, it would be legal, right?
+
+476
+00:31:43,719 --> 00:31:50,370
+Speaker 0: There's nothing breaking the rules of the game about it other than they've arbitrarily decided that you have to actually legitimately.
+
+477
+00:31:50,490 --> 00:31:57,770
+Speaker 1: I think the people who get mad about this are the same people who get mad if someone else in an MMO bought gold or levels instead of grinded them.
+
+478
+00:31:58,171 --> 00:31:59,635
+Speaker 0: Well, I think that what's happening here.
+
+479
+00:31:59,735 --> 00:32:05,770
+Speaker 0: Well, I think, you know, well, people who don't have I'm going to make a value judgment and I can make a human judgment.
+
+480
+00:32:06,070 --> 00:32:09,236
+Speaker 0: Those people are people who don't have a lot of skill, right?
+
+481
+00:32:09,577 --> 00:32:11,661
+Speaker 1: I'd also make that same value judge.
+
+482
+00:32:11,701 --> 00:32:15,870
+Speaker 0: They don't value being, you know, they don't value themselves being good at something.
+
+483
+00:32:16,090 --> 00:32:25,461
+Speaker 0: And when they play a game like, say, a JRPG, those games make those people feel good because anyone, regardless of skills, can invest time.
+
+484
+00:32:25,541 --> 00:32:26,883
+Speaker 0: Everyone has time, right?
+
+485
+00:32:27,043 --> 00:32:32,950
+Speaker 0: Even the worst, most disgusting person, the saddest person and the best person all have time.
+
+486
+00:32:33,110 --> 00:32:34,232
+Speaker 0: The same amount of it, right?
+
+487
+00:32:34,292 --> 00:32:34,893
+Speaker 0: Relatively.
+
+488
+00:32:34,993 --> 00:32:45,270
+Speaker 0: So anyone can invest time and a game that rewards you simply for investing time makes you feel like a winner regardless of whether you're actually good or bad.
+
+489
+00:32:45,390 --> 00:32:52,290
+Speaker 1: We've done so many panels on this, the difference between training versus playing or time versus effort.
+
+490
+00:32:52,890 --> 00:32:53,130
+Speaker 0: Right.
+
+491
+00:32:53,170 --> 00:33:04,110
+Speaker 0: And so those people who are feeling like a winner because of time investment and they see somebody else winning more or beating them who hasn't done time investment, but is maybe just actually good at a thing.
+
+492
+00:33:04,711 --> 00:33:05,412
+Speaker 0: They don't like that.
+
+493
+00:33:05,512 --> 00:33:05,692
+Speaker 0: Right.
+
+494
+00:33:05,712 --> 00:33:08,116
+Speaker 0: Because now they're illusion that they're a winner.
+
+495
+00:33:08,337 --> 00:33:12,123
+Speaker 0: That has been the lie that they're holding in front of themselves is now vanished.
+
+496
+00:33:12,523 --> 00:33:12,764
+Speaker 0: Right.
+
+497
+00:33:12,844 --> 00:33:15,047
+Speaker 0: It's like, oh, I'm not actually good at a thing.
+
+498
+00:33:15,067 --> 00:33:16,790
+Speaker 0: I just invested a lot of time.
+
+499
+00:33:17,151 --> 00:33:22,550
+Speaker 0: And it's like they need to make the thing that's making the lie vanish go away to keep the illusion in place.
+
+500
+00:33:24,133 --> 00:33:25,375
+Speaker 0: And so, right.
+
+501
+00:33:25,816 --> 00:33:30,325
+Speaker 0: Like I said, almost all the Pokemon players, I think the players basically agree with us.
+
+502
+00:33:30,385 --> 00:33:31,407
+Speaker 0: They're okay.
+
+503
+00:33:31,588 --> 00:33:32,630
+Speaker 0: The players don't care.
+
+504
+00:33:33,230 --> 00:33:39,940
+Speaker 0: They're okay with people just cheating to get the Pokemon as long as they're not cheating Pokemon.
+
+505
+00:33:40,060 --> 00:33:40,261
+Speaker 0: Right.
+
+506
+00:33:40,281 --> 00:33:42,324
+Speaker 0: They're just didn't spend their life grinding.
+
+507
+00:33:42,784 --> 00:33:46,710
+Speaker 0: But Nintendo operating the tournaments is not okay with that.
+
+508
+00:33:47,110 --> 00:33:57,242
+Speaker 0: So a few people got caught, I guess, somehow having their Pokemon were not legitimately grinded and trained by hand slowly and methodically.
+
+509
+00:33:57,843 --> 00:34:03,609
+Speaker 0: And so those people got disqualified, even though the vast majority of players also, I guess you should just qualify 90% of the field.
+
+510
+00:34:04,490 --> 00:34:04,871
+Speaker 0: I don't know.
+
+511
+00:34:06,735 --> 00:34:14,469
+Speaker 1: But there's no way that many human beings grinded the amount of hours it would take to get the lucky special Dragonite.
+
+512
+00:34:15,230 --> 00:34:15,409
+Speaker 0: Yeah.
+
+513
+00:34:15,531 --> 00:34:16,713
+Speaker 0: With the perfect stats.
+
+514
+00:34:17,112 --> 00:34:17,313
+Speaker 0: Right.
+
+515
+00:34:17,414 --> 00:34:18,155
+Speaker 0: And then you had to do that.
+
+516
+00:34:18,376 --> 00:34:22,443
+Speaker 0: Not you get to do that for six Pokemon, not just for one six whole team.
+
+517
+00:34:22,904 --> 00:34:25,789
+Speaker 0: You don't want to walk in with like five perfect Pokemon in one week.
+
+518
+00:34:25,929 --> 00:34:26,489
+Speaker 0: One right.
+
+519
+00:34:26,949 --> 00:34:29,272
+Speaker 0: They got to all have the best possible set.
+
+520
+00:34:29,351 --> 00:34:39,800
+Speaker 0: So yeah, it's a real shame because I think that, you know, if Nintendo would just let you or in fact make a legitimate way to do this for competitive purposes.
+
+521
+00:34:40,221 --> 00:34:40,501
+Speaker 0: Right.
+
+522
+00:34:41,562 --> 00:34:43,402
+Speaker 0: I think it would actually, I don't think that Pokemon needs boosting.
+
+523
+00:34:43,422 --> 00:34:44,904
+Speaker 1: I think it would make the Pokemon competitive scene better.
+
+524
+00:34:44,924 --> 00:34:48,627
+Speaker 0: Pokemon's already the most popular, most money making intellectual property of all time.
+
+525
+00:34:48,647 --> 00:34:52,350
+Speaker 1: Oh yeah, I think it would just make the scene better and remove this source of drama.
+
+526
+00:34:53,871 --> 00:34:54,031
+Speaker 0: Yep.
+
+527
+00:34:54,112 --> 00:34:55,013
+Speaker 0: But they're not doing that.
+
+528
+00:34:55,074 --> 00:35:01,908
+Speaker 0: So for the time being, it's like you either have to grind, hope you don't get caught or don't play competitive Pokemon.
+
+529
+00:35:01,928 --> 00:35:02,770
+Speaker 0: Those are your three choices.
+
+530
+00:35:03,311 --> 00:35:09,781
+Speaker 1: My advice to you, hack and just don't get caught because you're not cheating in my perspective and I doubt you'll get caught.
+
+531
+00:35:10,823 --> 00:35:13,567
+Speaker 0: Only a few people got caught when almost everyone was cheating.
+
+532
+00:35:13,607 --> 00:35:15,149
+Speaker 0: So go ahead.
+
+533
+00:35:20,510 --> 00:35:23,854
+Speaker 1: But anyway, things of the day.
+
+534
+00:35:23,975 --> 00:35:26,758
+Speaker 1: So this is partly an example.
+
+535
+00:35:27,539 --> 00:35:29,221
+Speaker 1: This isn't going to fool anyone.
+
+536
+00:35:29,301 --> 00:35:31,944
+Speaker 1: It's obviously an AI generated content.
+
+537
+00:35:32,064 --> 00:35:33,326
+Speaker 1: It's labeled as such.
+
+538
+00:35:33,366 --> 00:35:34,387
+Speaker 1: It's intended to be such.
+
+539
+00:35:34,727 --> 00:35:36,810
+Speaker 1: It's basically just a demonstration.
+
+540
+00:35:36,850 --> 00:35:39,152
+Speaker 0: It was before I even saw the label.
+
+541
+00:35:39,333 --> 00:35:40,274
+Speaker 0: Yep, absolutely.
+
+542
+00:35:40,654 --> 00:35:43,477
+Speaker 1: But the title YouTube title video is called AI.
+
+543
+00:35:43,537 --> 00:35:55,710
+Speaker 1: Tom Scott talks about Sneed and basically someone wrote, uh, if you don't know Tom Scott, he's one of those popular YouTubers, but unlike a lot of them, he's acting like his content is pretty good and he doesn't seem like he's a bad person.
+
+544
+00:35:56,451 --> 00:36:07,805
+Speaker 0: As far as I could tell, I didn't even know what his name was, but it's just like, oh, that's that guy who always appears on YouTube, but looks like he's on like, you know, one of those TV cable channels.
+
+545
+00:36:08,005 --> 00:36:08,285
+Speaker 0: Right.
+
+546
+00:36:08,706 --> 00:36:12,190
+Speaker 0: It's like he does like a National Geographic kind of production.
+
+547
+00:36:12,370 --> 00:36:13,051
+Speaker 0: Good content.
+
+548
+00:36:13,351 --> 00:36:18,157
+Speaker 1: It's, it's a little bit of mix of like teaching you something plus some investigative journalism.
+
+549
+00:36:18,237 --> 00:36:29,810
+Speaker 0: Like there's like, it looks like someone's doing a report for like, you know, the BBC or something, but it's just this guy who's on YouTube, but he has a very particular style for one.
+
+550
+00:36:30,370 --> 00:36:39,256
+Speaker 1: And two, he has made so many hours of content that training an AI model to mimic his voice is basically a trivial exercise.
+
+551
+00:36:39,677 --> 00:36:46,521
+Speaker 1: So someone, this YouTube channel just train, had an AI model that will mimic his voice, wrote a script.
+
+552
+00:36:46,581 --> 00:36:58,970
+Speaker 1: that is exactly the kind of thing he would talk about, about a made up thing, which happens to be one of the least noticed jokes in the first 11 years of The Simpsons, Sneed's Feed and Seed.
+
+553
+00:37:00,930 --> 00:37:06,197
+Speaker 1: And it sounds exactly like Tom Scott to my ears.
+
+554
+00:37:06,278 --> 00:37:07,399
+Speaker 1: Like, I know it's fake.
+
+555
+00:37:07,860 --> 00:37:10,583
+Speaker 1: I know it's not him, but it's basically perfect.
+
+556
+00:37:11,805 --> 00:37:12,326
+Speaker 1: So what do you got?
+
+557
+00:37:12,506 --> 00:37:15,450
+Speaker 1: Oh, you've got the best possible Pax Omegathon ever.
+
+558
+00:37:16,690 --> 00:37:16,991
+Speaker 0: Yeah.
+
+559
+00:37:17,131 --> 00:37:21,454
+Speaker 0: So I'm sure most people here know about Rock'em Sock'em robots, which is a toy.
+
+560
+00:37:21,474 --> 00:37:22,755
+Speaker 0: It's also a game.
+
+561
+00:37:23,216 --> 00:37:25,838
+Speaker 0: It's a plastic toy with a little plastic boxing ring.
+
+562
+00:37:25,878 --> 00:37:29,581
+Speaker 0: And both players have basically two little joysticks with buttons on them.
+
+563
+00:37:30,142 --> 00:37:35,787
+Speaker 0: And you can use them to move your road as a plastic robot, like physical plastic robot attached to them.
+
+564
+00:37:36,247 --> 00:37:39,770
+Speaker 0: And you can move the robot a little bit and you push the buttons to punch.
+
+565
+00:37:40,210 --> 00:37:45,396
+Speaker 0: And you're trying to punch the other robot in the head and not get punched in, you're not get your robot punched in the head.
+
+566
+00:37:45,977 --> 00:37:49,360
+Speaker 0: And so as soon as their head pops up out of their body, that's a win.
+
+567
+00:37:49,661 --> 00:37:51,303
+Speaker 0: And you can play to however many points you want.
+
+568
+00:37:51,703 --> 00:37:56,028
+Speaker 0: It's basically like Street Fighter, but physical in the real world, but no people have to get hurt.
+
+569
+00:37:56,628 --> 00:37:57,990
+Speaker 0: Sort of like BattleBots, really.
+
+570
+00:37:58,890 --> 00:38:00,551
+Speaker 1: But also it doesn't actually work that well.
+
+571
+00:38:00,611 --> 00:38:01,452
+Speaker 0: Like no motors.
+
+572
+00:38:01,632 --> 00:38:01,952
+Speaker 0: Yeah.
+
+573
+00:38:02,152 --> 00:38:04,154
+Speaker 1: Like Rock'em Sock'em robots kind of doesn't work.
+
+574
+00:38:04,474 --> 00:38:05,815
+Speaker 1: And I remember we want to, it's
+
+575
+00:38:05,895 --> 00:38:24,888
+Speaker 0: a really cheap, you could make a nice one that worked and was fair, but they're so imprecisely manufactured and poorly manufactured that who wins and loses often ends up being to just like, Oh yeah, this particular Rock'em Sock'em robots, like the mechanism reds head is a little loose and pops up kind of easy and blues is really stiff.
+
+576
+00:38:24,908 --> 00:38:27,370
+Speaker 0: So you're going to win most of the time.
+
+577
+00:38:27,410 --> 00:38:34,179
+Speaker 1: The head of the Omegathon finale at PAX did an AMA and you asked him, what about Rock'em Sock'em robots?
+
+578
+00:38:34,239 --> 00:38:37,584
+Speaker 1: And he literally was like, look, yeah, we thought it was a good idea too.
+
+579
+00:38:38,085 --> 00:38:40,869
+Speaker 1: We tried, we tested, it doesn't fucking work.
+
+580
+00:38:41,349 --> 00:38:41,850
+Speaker 1: It's terrible.
+
+581
+00:38:42,791 --> 00:38:43,432
+Speaker 0: It is terrible.
+
+582
+00:38:43,512 --> 00:38:46,074
+Speaker 0: So what if you could make something like that?
+
+583
+00:38:46,295 --> 00:38:46,915
+Speaker 0: Not terrible.
+
+584
+00:38:46,955 --> 00:38:49,118
+Speaker 0: It's basically puppet fight, right?
+
+585
+00:38:49,158 --> 00:38:59,368
+Speaker 0: Like I've got a marionette, you got a marionette and you know, they both have, you know, they punch and kick each other and there's some mechanism for determining which marionette wins.
+
+586
+00:38:59,448 --> 00:38:59,588
+Speaker 0: Right.
+
+587
+00:38:59,608 --> 00:39:00,890
+Speaker 0: That's basically what it is.
+
+588
+00:39:00,970 --> 00:39:01,150
+Speaker 0: Right.
+
+589
+00:39:01,791 --> 00:39:03,915
+Speaker 0: And that's actually kind of cool because it's real.
+
+590
+00:39:03,935 --> 00:39:12,350
+Speaker 0: Like I said, it's Street Fighter, only the controls are, you know, marionette controls as opposed to, you know, a game pad or a joystick.
+
+591
+00:39:13,590 --> 00:39:19,840
+Speaker 0: Here we have some genius people who have made a certain kind of puppet.
+
+592
+00:39:19,900 --> 00:39:26,930
+Speaker 0: I would guess it's definitely puppet category that has a balloon for a head and an actual sword.
+
+593
+00:39:28,150 --> 00:39:40,000
+Speaker 0: And so these two identical puppets, you control one of them and whoever's head gets popped by a sword first wins as long as the swords are equally sharp and they're manufactured identically.
+
+594
+00:39:40,060 --> 00:39:41,282
+Speaker 0: This seems fair to me.
+
+595
+00:39:41,302 --> 00:39:47,467
+Speaker 0: It looks much more, much more advanced and awesome looking than Rock'em Sock'em robots.
+
+596
+00:39:47,767 --> 00:39:48,768
+Speaker 0: It's equally safe.
+
+597
+00:39:49,048 --> 00:39:51,250
+Speaker 0: It's probably the safest way to have a real sword fight.
+
+598
+00:39:53,471 --> 00:39:54,493
+Speaker 0: It seems like a lot of fun.
+
+599
+00:39:54,533 --> 00:39:56,958
+Speaker 0: I really want to play, but I think it's a one off so far.
+
+600
+00:39:56,998 --> 00:40:02,550
+Speaker 0: Who knows if this will become a, you know, I don't think you could have children play this because they'd hurt themselves with the swords.
+
+601
+00:40:03,110 --> 00:40:12,530
+Speaker 1: Yeah, but two adults at, say, a Penny Arcade Expo, a Megathon finale with a big bespoke version of that on stage, that would be legendary.
+
+602
+00:40:13,251 --> 00:40:15,278
+Speaker 0: Yeah, I think this is just frickin' awesome.
+
+603
+00:40:15,338 --> 00:40:18,249
+Speaker 0: I hope that they get a patent for this and start selling it.
+
+604
+00:40:18,653 --> 00:40:19,087
+Speaker 1: I'd buy it.
+
+605
+00:40:19,830 --> 00:40:19,919
+Speaker 0: Yeah.
+
+606
+00:40:20,810 --> 00:40:22,438
+Speaker 1: I mean, I almost bought Clask.
+
+607
+00:40:22,598 --> 00:40:24,246
+Speaker 1: Clask I almost bought, but I didn't.
+
+608
+00:40:24,327 --> 00:40:24,950
+Speaker 1: I would buy this.
+
+609
+00:40:26,210 --> 00:40:30,310
+Speaker 0: I mean, even if you don't use this a lot, this is so, it's just the fact that this is it.
+
+610
+00:40:30,350 --> 00:40:34,110
+Speaker 1: You bust this out at a party once and it pays for itself no matter how much it costs.
+
+611
+00:40:34,791 --> 00:40:35,316
+Speaker 0: I know, right?
+
+612
+00:40:35,396 --> 00:40:36,203
+Speaker 0: I'd pay a few hundred.
+
+613
+00:40:36,486 --> 00:40:36,849
+Speaker 0: Anyway.
+
+614
+00:40:37,811 --> 00:40:46,390
+Speaker 1: In the meta moment, the Geek Nights Book Club book, the last of the Murderbot Diaries, or at least the next Murderbot Diary, I bet there'll be more, came out today.
+
+615
+00:40:47,230 --> 00:40:47,977
+Speaker 0: Oh, did it really?
+
+616
+00:40:47,997 --> 00:40:49,410
+Speaker 0: I was about to look it up.
+
+617
+00:40:49,590 --> 00:40:51,860
+Speaker 1: Today was the day I had on my calendar.
+
+618
+00:40:51,900 --> 00:40:52,784
+Speaker 1: that said it comes out.
+
+619
+00:40:53,045 --> 00:40:54,070
+Speaker 1: I did not confirm.
+
+620
+00:40:55,130 --> 00:40:56,330
+Speaker 0: I'm confirming, you just keep talking.
+
+621
+00:40:56,330 --> 00:40:56,511
+Speaker 0: Yep.
+
+622
+00:40:56,812 --> 00:41:01,770
+Speaker 1: So, the Murderbot Diaries, the whole set of them, all the Murderbots are the Geek Nights Book Club.
+
+623
+00:41:02,450 --> 00:41:07,149
+Speaker 1: Since, unless I am wrong and Scott's about to correct me, the last one, or the most recent one, just came out.
+
+624
+00:41:07,691 --> 00:41:08,577
+Speaker 1: Read that one.
+
+625
+00:41:08,778 --> 00:41:09,443
+Speaker 1: Read all of them.
+
+626
+00:41:09,463 --> 00:41:10,350
+Speaker 1: They're very short reads.
+
+627
+00:41:10,810 --> 00:41:14,410
+Speaker 1: And in a few weeks, we're going to do the episode on the collected Murderbot Diaries.
+
+628
+00:41:15,370 --> 00:41:16,413
+Speaker 0: System collapse.
+
+629
+00:41:16,734 --> 00:41:18,639
+Speaker 0: Book seven of seven.
+
+630
+00:41:18,659 --> 00:41:22,510
+Speaker 0: The Murderbot Diaries is on sale.
+
+631
+00:41:23,020 --> 00:41:23,230
+Speaker 1: Yes.
+
+632
+00:41:24,031 --> 00:41:24,526
+Speaker 1: Right now.
+
+633
+00:41:25,431 --> 00:41:26,776
+Speaker 1: I really like these books.
+
+634
+00:41:27,017 --> 00:41:28,422
+Speaker 1: I got a lot to say about them.
+
+635
+00:41:29,024 --> 00:41:30,590
+Speaker 1: I think it'll be a good book club episode.
+
+636
+00:41:31,050 --> 00:41:39,270
+Speaker 1: So, I highly recommend you read a bunch of them because I really want to talk about it in the context of assuming you've read these books.
+
+637
+00:41:40,910 --> 00:41:41,790
+Speaker 1: Murderbot is a delightful character.
+
+638
+00:41:41,850 --> 00:41:42,333
+Speaker 0: November 14th.
+
+639
+00:41:42,394 --> 00:41:43,440
+Speaker 0: It was released today.
+
+640
+00:41:43,460 --> 00:41:44,688
+Speaker 0: I guess I know what I'm doing later.
+
+641
+00:41:44,828 --> 00:41:45,070
+Speaker 0: Alright.
+
+642
+00:41:45,591 --> 00:41:48,469
+Speaker 0: If I- Even though I am still reading The Iliad, though.
+
+643
+00:41:49,231 --> 00:41:49,612
+Speaker 1: Oh, yeah.
+
+644
+00:41:49,793 --> 00:41:50,496
+Speaker 1: The Iliad.
+
+645
+00:41:50,576 --> 00:41:53,790
+Speaker 1: I feel like we might have to do a pause and do a special book club just on that book.
+
+646
+00:41:53,890 --> 00:41:55,970
+Speaker 0: We don't need to do an episode on it just because I'm reading it.
+
+647
+00:41:56,210 --> 00:41:57,077
+Speaker 1: I think we should do an episode on it.
+
+648
+00:41:57,641 --> 00:41:58,689
+Speaker 1: I feel like I'll have a lot to say.
+
+649
+00:42:00,652 --> 00:42:01,928
+Speaker 0: We're going to go to Pax Unplugged.
+
+650
+00:42:02,370 --> 00:42:02,451
+Speaker 1: Yep.
+
+651
+00:42:02,471 --> 00:42:05,010
+Speaker 1: We're going to be at Pax Unplugged doing two events.
+
+652
+00:42:05,250 --> 00:42:10,770
+Speaker 1: We are teaching the basics of trick taking, including how to be good at them, or at least reasonably good at them.
+
+653
+00:42:11,472 --> 00:42:12,174
+Speaker 1: We're not pros.
+
+654
+00:42:12,194 --> 00:42:17,050
+Speaker 1: We're not the best trick taking players in the world, but I'm going to say we're pretty good at trick taking games.
+
+655
+00:42:17,170 --> 00:42:20,869
+Speaker 1: And if you follow our advice, you'll be most of your friends at most trick taking games.
+
+656
+00:42:22,411 --> 00:42:24,296
+Speaker 1: And we're doing a panel.
+
+657
+00:42:24,296 --> 00:42:29,390
+Speaker 1: 59 minutes of us talking about nothing but worker placement.
+
+658
+00:42:30,310 --> 00:42:38,670
+Speaker 1: And the more sub-research I've done to put these slides together, yeah, we could do a four-hour panel on worker placement and not run out of stuff to say.
+
+659
+00:42:39,436 --> 00:42:40,430
+Speaker 0: I mean, that's a pretty big one.
+
+660
+00:42:40,530 --> 00:42:41,352
+Speaker 1: It is a pretty big one.
+
+661
+00:42:41,593 --> 00:42:47,470
+Speaker 1: We picked the easiest one that we have the most opinions about first because that makes it easy for us to make a panel.
+
+662
+00:42:49,633 --> 00:42:52,489
+Speaker 1: If we talk about Rondels, that's going to be a harder one to put together, I think.
+
+663
+00:42:53,670 --> 00:42:53,740
+Speaker 0: Yep.
+
+664
+00:42:54,950 --> 00:42:56,701
+Speaker 1: So, yeah, we'll see you at Pax Unplugged.
+
+665
+00:42:56,721 --> 00:42:57,385
+Speaker 1: We're going to be there.
+
+666
+00:42:57,405 --> 00:42:58,190
+Speaker 1: It's going to be a good time.
+
+667
+00:42:58,330 --> 00:43:00,056
+Speaker 1: If you're there, say hi, play some games.
+
+668
+00:43:00,919 --> 00:43:04,090
+Speaker 1: And I feel like we should just get right into Cobalt Core.
+
+669
+00:43:04,590 --> 00:43:13,010
+Speaker 0: So, when we were at Pax West, one of the games we saw in the expo hall that I saw briefly from -- I didn't play it.
+
+670
+00:43:13,090 --> 00:43:17,685
+Speaker 0: I just saw -- maybe I played it for like two seconds, but I just saw it briefly and I could tell right away.
+
+671
+00:43:17,725 --> 00:43:18,748
+Speaker 0: I'm like, "That's the
+
+672
+00:43:18,788 --> 00:43:19,029
+Speaker 0: game.".
+
+673
+00:43:19,350 --> 00:43:22,299
+Speaker 0: I could see right from here that that's one of the games.
+
+674
+00:43:22,339 --> 00:43:23,202
+Speaker 0: I got to take a photo.
+
+675
+00:43:23,242 --> 00:43:24,305
+Speaker 0: I got to write it down.
+
+676
+00:43:24,346 --> 00:43:25,770
+Speaker 0: I got to add it to my Steam wish list.
+
+677
+00:43:26,331 --> 00:43:27,549
+Speaker 0: That's going to be one of the games.
+
+678
+00:43:27,930 --> 00:43:33,102
+Speaker 1: I similarly -- I took a photo with my phone because that's how I remind myself.
+
+679
+00:43:33,503 --> 00:43:36,210
+Speaker 1: this is something to check into a few months after the con.
+
+680
+00:43:37,031 --> 00:43:39,256
+Speaker 1: And Scott and I both had the same opinion.
+
+681
+00:43:39,316 --> 00:43:43,868
+Speaker 1: We saw it and we said, "Wow, that's just FTL crossed with Slay the
+
+682
+00:43:43,888 --> 00:43:44,209
+Speaker 1: Spire.".
+
+683
+00:43:44,590 --> 00:43:47,130
+Speaker 1: And those are both great, so I assume this is going to be great.
+
+684
+00:43:48,130 --> 00:43:50,650
+Speaker 0: Yeah, there are many games that are trying to be Slay the Spire.
+
+685
+00:43:50,750 --> 00:43:50,818
+Speaker 0: Yep.
+
+686
+00:43:51,330 --> 00:43:54,530
+Speaker 0: Just like there's many games that are trying to be Vampire Survivors, right?
+
+687
+00:43:55,030 --> 00:43:59,430
+Speaker 0: And most of them, you know, are okay to, you know, different varying levels of quality.
+
+688
+00:43:59,570 --> 00:44:01,770
+Speaker 1: But kind of like how there's a lot of deck buildings.
+
+689
+00:44:02,210 --> 00:44:03,530
+Speaker 0: Yeah, I've played a handful.
+
+690
+00:44:03,831 --> 00:44:10,147
+Speaker 1: Like there's a lot of deck builders out there, like tabletop ones, but Dominion kind of is just better than 99% of them.
+
+691
+00:44:12,410 --> 00:44:14,704
+Speaker 1: Same thing, Slay the Spire is just better than 99% of its clones.
+
+692
+00:44:16,630 --> 00:44:26,608
+Speaker 0: But Cobalt Core, having played this one, I was like, "Okay, let's see how it, you know, compares to the others in this sort of category of solo, rogue deck building kind of
+
+693
+00:44:26,648 --> 00:44:26,949
+Speaker 0: deals.".
+
+694
+00:44:28,253 --> 00:44:32,950
+Speaker 0: And I got to say, this is the first one that might actually be better than Slay the Spire.
+
+695
+00:44:33,151 --> 00:44:33,773
+Speaker 1: I would agree.
+
+696
+00:44:33,933 --> 00:44:36,502
+Speaker 1: It is added, because Slay the Spire is as good as it is.
+
+697
+00:44:36,542 --> 00:44:38,850
+Speaker 1: Like, I still play it, like, just kind of often.
+
+698
+00:44:39,193 --> 00:44:40,030
+Speaker 0: I haven't played it in years.
+
+699
+00:44:40,030 --> 00:44:42,850
+Speaker 1: Well, because I'm trying to hit Ascension 20 with every character, and I'm getting close.
+
+700
+00:44:43,190 --> 00:44:43,290
+Speaker 0: Okay.
+
+701
+00:44:45,450 --> 00:44:55,590
+Speaker 1: But Slay the Spire does have some fairly narrow boundaries of what is possible, and you're kind of always just looking for the broken, infinite, lucky combo.
+
+702
+00:44:57,450 --> 00:45:01,150
+Speaker 1: But it's within pretty hard bounds of what cards can do.
+
+703
+00:45:01,673 --> 00:45:03,950
+Speaker 1: Now, on the other side, FTL, another game.
+
+704
+00:45:04,670 --> 00:45:22,630
+Speaker 1: FTL's main flaw, if I have to ascribe to it a primary flaw, is that no matter how good you are at it, you are so deeply beholden to randomly getting the items and weapons you want, that you can't apply that much, like, planning to FTL.
+
+705
+00:45:23,531 --> 00:45:25,895
+Speaker 1: This game has solved both of those problems.
+
+706
+00:45:26,736 --> 00:45:35,890
+Speaker 1: In terms of comparing it to Slay the Spire, it added a few more degrees of freedom to what is possible, and that opens up the fucking game in a way you wouldn't believe.
+
+707
+00:45:36,510 --> 00:45:43,890
+Speaker 1: And compared to FTL, it gets rid of the things that just fuck you randomly in FTL, and gives you all the good parts of FTL.
+
+708
+00:45:44,971 --> 00:45:48,810
+Speaker 0: So, the way this game works is, obviously, you have a deck of cards, right?
+
+709
+00:45:49,270 --> 00:45:52,410
+Speaker 0: And on your turn, you have some, you know, three energy, right?
+
+710
+00:45:52,870 --> 00:45:55,078
+Speaker 0: And you can play three energy worth of cards.
+
+711
+00:45:55,660 --> 00:45:58,370
+Speaker 0: All the rest of the cards get discarded, and then you draw a new hand.
+
+712
+00:45:59,652 --> 00:46:07,550
+Speaker 0: And what you're doing is, those cards, what they're interacting with, in Slay the Spire, you just have a character who is attacking and defending against enemies.
+
+713
+00:46:08,071 --> 00:46:09,596
+Speaker 0: Here, you have a spaceship.
+
+714
+00:46:10,097 --> 00:46:14,490
+Speaker 0: And the spaceship has pieces, right, that are each in a column.
+
+715
+00:46:14,970 --> 00:46:20,690
+Speaker 0: And one of those, depending on the ship you have, but the normal ship you're going to start with has a cannon in one of those columns.
+
+716
+00:46:20,930 --> 00:46:25,710
+Speaker 0: So when you shoot, you're only doing damage in that column, and the enemy is opposite you.
+
+717
+00:46:26,110 --> 00:46:34,530
+Speaker 0: So you want to play a card that attacks when your cannon is in the same column as a piece of the enemy's ship, so that you can hit them.
+
+718
+00:46:34,872 --> 00:46:37,590
+Speaker 1: And you can play a card that attacks for some amount of damage.
+
+719
+00:46:38,191 --> 00:46:42,409
+Speaker 0: And you can also play cards that put up shields, which just block incoming damage.
+
+720
+00:46:42,610 --> 00:46:45,810
+Speaker 1: Well, put up persistent shields until you've filled them, or temporary shields.
+
+721
+00:46:46,070 --> 00:46:50,870
+Speaker 1: You can play cards that give you the ability to move your ship, arbitrarily.
+
+722
+00:46:51,830 --> 00:47:01,810
+Speaker 1: So you're banking this resource now of not just shields and damage and life, but I have eight moves of my ship, so I might move my ship a bunch to the right or a bunch to the left.
+
+723
+00:47:02,091 --> 00:47:06,990
+Speaker 1: In this infinite sea of movement, and the enemy ship also moves, you can play cards that just move you.
+
+724
+00:47:07,470 --> 00:47:08,815
+Speaker 1: You can play cards that shoot missiles.
+
+725
+00:47:09,096 --> 00:47:12,990
+Speaker 1: You can play cards that drop drones and things of various kinds.
+
+726
+00:47:13,970 --> 00:47:17,109
+Speaker 0: Yep, it's like there's quite a lot of things that you can do.
+
+727
+00:47:18,971 --> 00:47:28,770
+Speaker 0: And it's like, wow, there's really a lot of different systems going on here that are all interacting with each other in ways that make sense, and it doesn't actually get complicated.
+
+728
+00:47:29,693 --> 00:47:34,790
+Speaker 0: It's like they added a lot of systems without it becoming a mess, right?
+
+729
+00:47:34,870 --> 00:47:39,361
+Speaker 0: It's like, wow, usually when people add that many systems, it becomes a big bag of nonsense, right?
+
+730
+00:47:43,330 --> 00:47:48,090
+Speaker 0: But it's like, no, it all kind of works together, and it's actually an interesting challenge.
+
+731
+00:47:48,290 --> 00:47:57,370
+Speaker 0: You're like, okay, these are the cards I have, what order can I play them in to do the most damage to the enemy and have the least damage to myself?
+
+732
+00:47:57,591 --> 00:48:01,950
+Speaker 0: And you repeat that over and over and over again until you win or lose.
+
+733
+00:48:02,930 --> 00:48:10,930
+Speaker 1: And I guess, so it has surpassed some of the limitations of Slave Aspire, like it's just better in terms of the options you have available and the degrees of freedom.
+
+734
+00:48:11,411 --> 00:48:18,830
+Speaker 1: It's better than FTL in that it gets rid of the parts of FTL that actually are not fun, but scratches that same itch.
+
+735
+00:48:19,510 --> 00:48:26,290
+Speaker 1: And then it's also got this dimension of cute characters and funny dialogue, and there is a plot.
+
+736
+00:48:27,211 --> 00:48:30,419
+Speaker 0: So the way it works is you start with these three characters, right?
+
+737
+00:48:30,459 --> 00:48:34,630
+Speaker 0: And each character has a set of starting cards that go in your deck.
+
+738
+00:48:35,831 --> 00:48:43,030
+Speaker 0: And then you unlock more characters, and whenever you start a run, you choose which three characters you're going to bring with you.
+
+739
+00:48:43,350 --> 00:48:52,490
+Speaker 0: Now, even though there's only, I think, eight characters, if you unlock all of them, and that's not a spoiler because there's like eight squares on the left, it shows you that.
+
+740
+00:48:53,111 --> 00:48:54,293
+Speaker 0: You just don't know who they all are.
+
+741
+00:48:56,698 --> 00:48:57,960
+Speaker 0: You can combine any three.
+
+742
+00:48:58,562 --> 00:49:02,870
+Speaker 0: So it's like, unlike Slave Aspire, where there's basically like three characters.
+
+743
+00:49:03,290 --> 00:49:04,069
+Speaker 0: I don't know if they add any more.
+
+744
+00:49:04,230 --> 00:49:04,627
+Speaker 1: Yeah, there's four.
+
+745
+00:49:06,711 --> 00:49:08,141
+Speaker 1: Well, you haven't played with the fourth one.
+
+746
+00:49:08,161 --> 00:49:09,410
+Speaker 1: You should check out that fourth character.
+
+747
+00:49:09,410 --> 00:49:10,270
+Speaker 0: Which one's the fourth one?
+
+748
+00:49:10,390 --> 00:49:10,727
+Speaker 0: The monk.
+
+749
+00:49:12,571 --> 00:49:15,590
+Speaker 0: Oh, I think I stopped playing like shortly when that came out, yeah.
+
+750
+00:49:16,591 --> 00:49:21,690
+Speaker 0: Anyway, there's like, if you choose three of eight, how many possible combinations are there?
+
+751
+00:49:22,214 --> 00:49:23,524
+Speaker 1: Oh, God.
+
+752
+00:49:23,544 --> 00:49:24,270
+Speaker 1: A lot, actually.
+
+753
+00:49:24,790 --> 00:49:25,592
+Speaker 0: A lot, yeah.
+
+754
+00:49:25,652 --> 00:49:33,030
+Speaker 0: So it's like, there's a lot of different options for your starting deck, and each character, their starting cards have like a completely different system.
+
+755
+00:49:33,170 --> 00:49:37,740
+Speaker 0: One character has like pretty basic, a lot of shield cards with a few attack cards.
+
+756
+00:49:37,800 --> 00:49:42,110
+Speaker 0: Another character has a lot of attack cards and a lot of immediate movement.
+
+757
+00:49:42,530 --> 00:49:47,049
+Speaker 0: Another character has a lot of move how you want to move kind of cards, right?
+
+758
+00:49:48,411 --> 00:49:53,390
+Speaker 0: Another character has a lot of, you know, missiles and obstacles to play with the middle system, right?
+
+759
+00:49:53,530 --> 00:49:58,410
+Speaker 0: That's going, you know, automatic turrets and meteors and all those sorts of, and so on and so forth.
+
+760
+00:49:59,331 --> 00:50:05,850
+Speaker 0: Each character has a completely different like system of way their cards work, almost like a different color in Magic the Gathering, right?
+
+761
+00:50:07,671 --> 00:50:13,750
+Speaker 0: And then you go on a run with like this completely, and you can't actually customize your deck too much.
+
+762
+00:50:14,051 --> 00:50:24,910
+Speaker 0: It's really easy to add garbage cards to your deck, but it's actually kind of difficult to like remove cards, and it's pretty rare to get upgraded cards.
+
+763
+00:50:25,190 --> 00:50:28,196
+Speaker 1: So the cards end up like a lot of good tabletop war games.
+
+764
+00:50:28,597 --> 00:50:34,550
+Speaker 1: They give you like the boundaries of what are the possibilities for this turn, like what are my options?
+
+765
+00:50:35,411 --> 00:50:39,470
+Speaker 1: So imagine you're the captain of the ship, and you're like, engineering, what do you got for me?
+
+766
+00:50:39,550 --> 00:50:43,089
+Speaker 1: And they're like, well, I can launch some drones or we can fire the cannon, but I can't do both.
+
+767
+00:50:44,912 --> 00:50:45,152
+Speaker 0: Yep.
+
+768
+00:50:45,313 --> 00:50:50,390
+Speaker 0: And so then, so all that customization is going on, and then you can unlock different ships, right?
+
+769
+00:50:50,630 --> 00:50:53,690
+Speaker 0: And the different ships are arranged differently and have different abilities.
+
+770
+00:50:54,651 --> 00:51:01,630
+Speaker 0: My favorite one, I guess, is the one where you have two cannons, and you can freely alternate between the two cannons.
+
+771
+00:51:01,770 --> 00:51:06,065
+Speaker 0: And occasionally, if you get a mega upgrade, fire both of them simultaneously.
+
+772
+00:51:06,828 --> 00:51:07,470
+Speaker 0: That's really great.
+
+773
+00:51:07,470 --> 00:51:15,949
+Speaker 1: The most fun I had is I had the basic ship, but I got the one thing that shoots every time you move, and I got another thing that like... Move a lot.
+
+774
+00:51:16,310 --> 00:51:16,471
+Speaker 1: Yep.
+
+775
+00:51:16,692 --> 00:51:18,378
+Speaker 1: And I just spam them, and you know what?
+
+776
+00:51:18,559 --> 00:51:21,310
+Speaker 1: Just like Slay the Spire, and this is where this kind of game can shine.
+
+777
+00:51:22,070 --> 00:51:23,955
+Speaker 1: They don't need to be balanced.
+
+778
+00:51:24,276 --> 00:51:28,768
+Speaker 1: Occasionally, just getting a combo that's utterly broken is really, really fun.
+
+779
+00:51:31,172 --> 00:51:38,250
+Speaker 0: I mean, I also got the upgrade that shoot when you move and then move a lot, and I was just moving to the right a whole bunch.
+
+780
+00:51:38,410 --> 00:51:42,788
+Speaker 0: And it'd be like this strafing run with broadsides, like doo, doo, doo, doo, doo.
+
+781
+00:51:43,991 --> 00:51:51,690
+Speaker 0: And then I made it all the way to the final boss, and I lost because I was all in on that, and I didn't have enough defense, right?
+
+782
+00:51:52,030 --> 00:51:56,130
+Speaker 0: And even though I was doing a ton of damage, it wasn't enough damage to put away a final boss.
+
+783
+00:51:56,150 --> 00:51:59,830
+Speaker 1: I never lost a run until I switched to hard difficulty, and I lost my first run.
+
+784
+00:52:00,630 --> 00:52:05,090
+Speaker 0: No, I lost once or twice on normal, and once or twice on hard.
+
+785
+00:52:06,230 --> 00:52:10,490
+Speaker 0: But I think one of the ones I lost was the very first one, and I didn't understand what the fuck was going on.
+
+786
+00:52:10,670 --> 00:52:18,370
+Speaker 1: I won my first one, but it was kind of lucky, honestly, because I misunderstood some mechanics, but it didn't matter because I got really lucky.
+
+787
+00:52:20,251 --> 00:52:25,170
+Speaker 0: On normal, I've only ever died to, other than the first run, I've only died to the final boss.
+
+788
+00:52:26,010 --> 00:52:28,330
+Speaker 0: I've obviously only died to really hard guys.
+
+789
+00:52:29,572 --> 00:52:32,170
+Speaker 0: But there is a hardest difficulty, so who knows what the hell's going on.
+
+790
+00:52:32,170 --> 00:52:32,967
+Speaker 1: I haven't touched that yet.
+
+791
+00:52:33,630 --> 00:52:40,710
+Speaker 1: But I guess to give some examples, because you could probably do a whole panel talking about the deep design of this game.
+
+792
+00:52:41,270 --> 00:52:46,610
+Speaker 1: But to zoom in on a few specific examples to show you where this has surpassed the games that it is based on.
+
+793
+00:52:47,051 --> 00:52:48,134
+Speaker 1: And it's clearly based on them.
+
+794
+00:52:48,174 --> 00:52:53,770
+Speaker 1: There is no universe where the designers of this game did not sit down and say, "We're gonna cross FTL and Slay the
+
+795
+00:52:53,790 --> 00:52:53,930
+Speaker 1: Spire.".
+
+796
+00:52:53,950 --> 00:52:56,490
+Speaker 0: No, without Slay the Spire, Cobalt Core does not exist.
+
+797
+00:52:56,830 --> 00:52:58,669
+Speaker 1: Without FTL, I don't know if this game exists.
+
+798
+00:52:59,230 --> 00:53:00,040
+Speaker 0: Who knows, but...
+
+799
+00:53:00,850 --> 00:53:02,610
+Speaker 1: So example one, in Slay the Spire...
+
+800
+00:53:02,650 --> 00:53:04,990
+Speaker 0: I think without FTL, Slay the Spire might not exist.
+
+801
+00:53:05,051 --> 00:53:06,229
+Speaker 1: I think that's true as well.
+
+802
+00:53:07,010 --> 00:53:09,170
+Speaker 1: So here's a very specific example.
+
+803
+00:53:09,491 --> 00:53:12,449
+Speaker 1: In Slay the Spire, there's cards, and they all have a unique thing.
+
+804
+00:53:13,092 --> 00:53:18,490
+Speaker 1: You can, over various ways over the course of the game, upgrade a card, and this game has the same mechanic.
+
+805
+00:53:18,890 --> 00:53:24,390
+Speaker 1: But Slay the Spire, it's just, here's the card, here is the upgraded, slightly better version of that card.
+
+806
+00:53:24,870 --> 00:53:30,290
+Speaker 1: This game, every card, you can choose what aspect of it to upgrade.
+
+807
+00:53:30,690 --> 00:53:36,290
+Speaker 1: So, multi-shot, a card that costs one energy and just does two attacks.
+
+808
+00:53:36,650 --> 00:53:40,770
+Speaker 1: Well, you could make it cheaper, or you could make it do more damage.
+
+809
+00:53:41,838 --> 00:53:42,450
+Speaker 1: Pick your poison.
+
+810
+00:53:43,110 --> 00:53:45,750
+Speaker 0: Every card has an A upgrade and a B upgrade.
+
+811
+00:53:46,150 --> 00:53:53,629
+Speaker 1: That level of choosing your tuning removes one of the big frustrations of Slay the Spire of, "You just might not get what you
+
+812
+00:53:53,649 --> 00:53:53,830
+Speaker 1: want.".
+
+813
+00:53:53,870 --> 00:54:01,130
+Speaker 1: Like, you can decide the direction you want to take your deck with more granularity in this game, and that is more satisfying to the player.
+
+814
+00:54:02,931 --> 00:54:06,530
+Speaker 0: Another funny example, there's this guy you can meet randomly.
+
+815
+00:54:08,111 --> 00:54:13,750
+Speaker 0: Oh, Dracula's great, but there's a guy who will give you, for free, a completely worthless card.
+
+816
+00:54:14,110 --> 00:54:23,410
+Speaker 0: Like, one of the examples is a card that, I think it costs one, or it costs one or zero, but it basically does three attacks for zero damage each.
+
+817
+00:54:23,690 --> 00:54:26,330
+Speaker 0: So it just goes like, pew, pew, pew, nothing, nothing, nothing, right?
+
+818
+00:54:26,611 --> 00:54:29,910
+Speaker 0: And he also has a card that's like, move right, move left, move right, move left.
+
+819
+00:54:30,252 --> 00:54:32,485
+Speaker 0: It's like, you just end up back where you started.
+
+820
+00:54:32,546 --> 00:54:33,290
+Speaker 0: It doesn't do anything.
+
+821
+00:54:33,730 --> 00:54:38,630
+Speaker 1: Now think back, we both had that power once, you play a card that every time you move you shoot, suddenly that card's really useful.
+
+822
+00:54:39,230 --> 00:54:45,510
+Speaker 0: Right, it's like these completely garbage cards, but if you get the perfect combo with them, they're insane.
+
+823
+00:54:45,810 --> 00:54:50,770
+Speaker 0: Like, there are some abilities that are like, yeah, add X damage to every attack.
+
+824
+00:54:50,990 --> 00:54:55,406
+Speaker 0: It's like, wait, so suddenly three zero strength attacks is now three.
+
+825
+00:54:55,466 --> 00:54:56,449
+Speaker 0: seventh strength attacks.
+
+826
+00:54:56,770 --> 00:54:58,470
+Speaker 0: Twenty-one damage, eat it, right?
+
+827
+00:54:59,132 --> 00:55:00,860
+Speaker 0: Which is a lot in this game.
+
+828
+00:55:00,920 --> 00:55:03,130
+Speaker 0: Like, three damage is a lot in this game.
+
+829
+00:55:04,331 --> 00:55:08,325
+Speaker 0: Each battle is generally like, it takes a little while to wear out the enemy.
+
+830
+00:55:08,345 --> 00:55:09,770
+Speaker 0: You're not getting a lot of one-hit kills.
+
+831
+00:55:09,910 --> 00:55:14,190
+Speaker 1: And you're making a lot of honestly challenging tactical decisions.
+
+832
+00:55:14,871 --> 00:55:22,489
+Speaker 1: Like, do I eat some damage, or like, wear down my shields, but just go apeshit on that cockpit, because I already cracked the cockpit.
+
+833
+00:55:22,529 --> 00:55:22,870
+Speaker 1: It's weak.
+
+834
+00:55:24,271 --> 00:55:32,050
+Speaker 0: I think the luckiest I ever got was there's a guy you can visit who will rearrange the pieces of your ship randomly, and I always let him do it.
+
+835
+00:55:32,230 --> 00:55:32,904
+Speaker 1: I always let him do it.
+
+836
+00:55:33,410 --> 00:55:37,463
+Speaker 0: He makes your hull stronger by two, and I'm like, yeah, all right, I'll deal with the rearrangement.
+
+837
+00:55:37,523 --> 00:55:39,530
+Speaker 0: Give me the two hull, which is HP.
+
+838
+00:55:40,271 --> 00:55:50,690
+Speaker 0: He put my cannon all the way on the right, and I was like, oh my god, I just hung out with only my cannon hitting the enemy, and the rest of my ship way to the left where the enemy couldn't hit it.
+
+839
+00:55:51,030 --> 00:55:56,190
+Speaker 0: And I just kept moving left so that they couldn't hit me unless they hit me in the cannon, right?
+
+840
+00:55:56,530 --> 00:56:01,210
+Speaker 0: But it's like, only my cannon was just poking the right side of their ship, right?
+
+841
+00:56:01,911 --> 00:56:04,930
+Speaker 0: I won that one so easily with that setup.
+
+842
+00:56:05,490 --> 00:56:08,606
+Speaker 1: So here's another example now of where this has surpassed FTL.
+
+843
+00:56:10,110 --> 00:56:17,550
+Speaker 1: FTL, you get money, like scrap, over the course of the game, and it's kind of like fiddly random amounts, so you'll have some amount of this currency.
+
+844
+00:56:18,111 --> 00:56:28,090
+Speaker 1: And then you'll encounter shops, and you can buy things with the currency, but 90% of the time, you do not have enough currency to buy anything interesting that you want to buy.
+
+845
+00:56:28,773 --> 00:56:30,370
+Speaker 1: Or you're very limited in what you can buy.
+
+846
+00:56:30,730 --> 00:56:35,810
+Speaker 1: In this game, if you come to a shop, the options always boil down to get a thing.
+
+847
+00:56:35,990 --> 00:56:36,832
+Speaker 1: There's no currency.
+
+848
+00:56:36,952 --> 00:56:43,650
+Speaker 1: It's just get a thing, get a better thing, but pay some extra penalty for it, or do a different thing.
+
+849
+00:56:43,770 --> 00:56:49,490
+Speaker 1: Like, every option is equal but different, but you always get to avail the option.
+
+850
+00:56:49,610 --> 00:56:58,808
+Speaker 1: You never get to a shop, and sorry, you only have 187 scrap, and the thing you want to buy costs 200, and everything that costs under 187 sucks.
+
+851
+00:57:00,230 --> 00:57:01,579
+Speaker 1: Fuck you that FTL had.
+
+852
+00:57:02,103 --> 00:57:03,029
+Speaker 0: Every space is good.
+
+853
+00:57:03,210 --> 00:57:07,010
+Speaker 0: If something has a cost, and it's not free, it's always something you have.
+
+854
+00:57:07,630 --> 00:57:09,322
+Speaker 0: Alright, you can have this.
+
+855
+00:57:09,423 --> 00:57:10,450
+Speaker 0: I'll take one of your cards.
+
+856
+00:57:11,311 --> 00:57:12,539
+Speaker 0: Oh, you can have this.
+
+857
+00:57:12,559 --> 00:57:14,290
+Speaker 0: I'm going to take some of your hull off your ship.
+
+858
+00:57:15,412 --> 00:57:20,090
+Speaker 0: You can have this, but you have to add a bunch of garbage cards to your deck, and then I'll let you have it.
+
+859
+00:57:20,090 --> 00:57:21,654
+Speaker 1: Do you want a free artifact?
+
+860
+00:57:22,035 --> 00:57:27,230
+Speaker 1: Do you want your choice of four artifacts, but I'm going to do some damage to you, or do you just want to heal yourself?
+
+861
+00:57:28,191 --> 00:57:32,344
+Speaker 0: Right, it's like there's always, basically, there's no separate currency.
+
+862
+00:57:32,585 --> 00:57:34,210
+Speaker 0: Every option is always possible.
+
+863
+00:57:35,050 --> 00:57:35,511
+Speaker 1: I love that.
+
+864
+00:57:37,495 --> 00:57:41,443
+Speaker 1: That is a tabletop design pattern as opposed to a video game design pattern.
+
+865
+00:57:41,724 --> 00:57:44,530
+Speaker 1: I'm sick of fiddly currencies unless it's an 18xx game.
+
+866
+00:57:45,071 --> 00:57:48,450
+Speaker 0: You're making meaningful and tough decisions at every stop along the way.
+
+867
+00:57:48,731 --> 00:57:51,150
+Speaker 1: I'd say every decision you make in this game is meaningful.
+
+868
+00:57:52,250 --> 00:57:53,307
+Speaker 0: Or at least, you know, it's tough.
+
+869
+00:57:53,470 --> 00:57:57,307
+Speaker 1: It's like you have a shitty deck because you're stupid, and then you draw all bad cards.
+
+870
+00:57:57,327 --> 00:57:57,930
+Speaker 1: What are you going to do?
+
+871
+00:57:58,391 --> 00:58:00,067
+Speaker 1: That's one turn in a round.
+
+872
+00:58:00,410 --> 00:58:01,372
+Speaker 0: You can get unlucky.
+
+873
+00:58:01,873 --> 00:58:16,210
+Speaker 0: So the last thing is the game has a plot, and the way the plot is revealed is that the three characters that you've chosen to go on your ship with you are chatting and interacting with all the people you meet along the way at all the different stops, including the enemies that you fight.
+
+874
+00:58:16,871 --> 00:58:24,590
+Speaker 0: And then when you beat one run, because it's roguelike, you choose one of the three characters in your ship to regain one of their memories.
+
+875
+00:58:24,750 --> 00:58:28,810
+Speaker 0: Because basically it's that old trope of a time loop and everyone's lost all their memory.
+
+876
+00:58:29,390 --> 00:58:35,030
+Speaker 0: And so you can only choose one of the three characters that's on your ship to regain one of their memories.
+
+877
+00:58:35,470 --> 00:58:43,070
+Speaker 0: And so in order to regain all the characters' memories, well, I said there's eight characters if you unlock them all, times three.
+
+878
+00:58:43,230 --> 00:58:46,877
+Speaker 0: So you have to beat the game 24 times, right?
+
+879
+00:58:46,897 --> 00:58:53,910
+Speaker 0: And you have to beat the game with each character in your ship three times each, right?
+
+880
+00:58:54,030 --> 00:58:55,720
+Speaker 0: You can't ignore one of the characters.
+
+881
+00:58:55,760 --> 00:58:57,430
+Speaker 0: You gotta go all of them, basically.
+
+882
+00:58:57,630 --> 00:59:00,310
+Speaker 1: Now thankfully all the characters are fun and useful and interesting.
+
+883
+00:59:00,471 --> 00:59:01,548
+Speaker 0: So far, at least.
+
+884
+00:59:02,330 --> 00:59:03,810
+Speaker 1: Yeah, I don't have every character.
+
+885
+00:59:04,350 --> 00:59:06,186
+Speaker 0: Yeah, no, I think I have six out of eight.
+
+886
+00:59:06,408 --> 00:59:06,650
+Speaker 0: Anyway.
+
+887
+00:59:08,471 --> 00:59:11,498
+Speaker 0: But it's like, you have to do all that, and then I don't know what happens after that.
+
+888
+00:59:11,538 --> 00:59:16,710
+Speaker 0: There might be more content beyond that, but the story is being revealed as I play.
+
+889
+00:59:18,311 --> 00:59:23,990
+Speaker 0: And that gives it a lot of replay value, but it doesn't have the sort of insane replay value.
+
+890
+00:59:24,170 --> 00:59:30,708
+Speaker 0: I guess in some sense, you might say that Slay the Spire has more replay value, because like Rym said, to get every character to 20 takes a lot.
+
+891
+00:59:31,871 --> 00:59:39,050
+Speaker 1: But also, to get every character to 20, like to be clear, no matter how skilled you are at that game, it is a random game.
+
+892
+00:59:39,931 --> 00:59:43,750
+Speaker 0: No, but it's mostly like doing the same kind of thing.
+
+893
+00:59:43,990 --> 00:59:46,553
+Speaker 1: Yeah, like I'm playing the poison lady, and what am I doing?
+
+894
+00:59:46,833 --> 00:59:50,898
+Speaker 1: I'm trying to do the poison thing, and I'm hoping I get the cards that let me do the poison thing.
+
+895
+01:00:01,590 --> 01:00:15,230
+Speaker 0: And then there's additional difficulty levels, I guess, but you're getting to this more complete end, but it's like there's more that drives you to keep playing than just beat the game with more difficult numbers.
+
+896
+01:00:15,330 --> 01:00:15,571
+Speaker 1: That is true.
+
+897
+01:00:15,591 --> 01:00:22,010
+Speaker 1: Like Slay the Spire, if I don't get the cards I want by the second floor, I'll just restart.
+
+898
+01:00:22,190 --> 01:00:26,230
+Speaker 0: But I mean, I'm talking about driving you to even launch the game and play it at all.
+
+899
+01:00:26,691 --> 01:00:40,068
+Speaker 0: It's like if you don't care about optimizing numbers, if you just beat Slay the Spire with one character, or like each character once, and you don't care about getting the high score or anything like that, then why would you beat it on a higher ascension?
+
+900
+01:00:40,109 --> 01:00:41,170
+Speaker 0: What's the incentive for you?
+
+901
+01:00:41,430 --> 01:00:57,570
+Speaker 0: Whereas here, there's an incentive to story the characters, the more dramatically different setups and ships and things, there's more that makes you want to open and launch the game and try again than just, "Can I play the same game again with bigger numbers this
+
+902
+01:00:57,610 --> 01:00:57,750
+Speaker 0: time?".
+
+903
+01:00:57,790 --> 01:01:08,050
+Speaker 1: But also, Slay the Spire, choosing what cards to add to your deck is the only decision that matters other than the map if you know how to play the game and are good at it.
+
+904
+01:01:08,450 --> 01:01:16,090
+Speaker 1: Like, you're not going to fuck up playing a round of a fight in Slay the Spire if you're even reasonably good at Slay the Spire.
+
+905
+01:01:16,890 --> 01:01:27,810
+Speaker 1: This game, no matter what you're doing and where you are in the game, every round of combat is a reasonably interesting decision with rare exceptions where you get a really bad draw occasionally.
+
+906
+01:01:28,292 --> 01:01:28,989
+Speaker 0: Or a really good draw.
+
+907
+01:01:29,110 --> 01:01:31,781
+Speaker 1: Or a really good draw like, "Yes, fire the Photonic
+
+908
+01:01:31,821 --> 01:01:32,162
+Speaker 1: Cannon.".
+
+909
+01:01:32,222 --> 01:01:34,110
+Speaker 1: Of course I'm firing the Photonic Cannon.
+
+910
+01:01:34,270 --> 01:01:36,480
+Speaker 0: Oh, I can play this card and win this battle.
+
+911
+01:01:36,500 --> 01:01:37,444
+Speaker 0: I play it.
+
+912
+01:01:37,746 --> 01:01:38,288
+Speaker 0: Next battle.
+
+913
+01:01:38,348 --> 01:01:38,690
+Speaker 0: Let's go.
+
+914
+01:01:40,751 --> 01:01:56,310
+Speaker 0: If you enjoy a roguelike game, a deck-building game, a Slay the Spire-ish game, a single-player game, a game with cute pixelated space, animals, and ships, what's the full price of the game?
+
+915
+01:01:56,610 --> 01:01:57,175
+Speaker 1: I don't even know.
+
+916
+01:01:57,195 --> 01:01:57,801
+Speaker 1: Ten bucks?
+
+917
+01:01:57,841 --> 01:01:58,850
+Speaker 1: Like, it's not expensive.
+
+918
+01:01:59,170 --> 01:01:59,875
+Speaker 0: I'm checking right now.
+
+919
+01:01:59,896 --> 01:02:01,790
+Speaker 0: It's on Steam and it's on the Switch.
+
+920
+01:02:02,471 --> 01:02:08,561
+Speaker 1: I would advise, if you have a Switch, get it on the Switch because it has the same UX as Slay the Spire.
+
+921
+01:02:08,661 --> 01:02:14,070
+Speaker 1: It's really fast and easy to play on the Switch and I think you'll play it more if you can carry it with you.
+
+922
+01:02:15,031 --> 01:02:22,850
+Speaker 0: I would say that you should get it on Steam because we don't know when the Switch eShop will close and if you buy it on Steam, you will have this game forever.
+
+923
+01:02:23,050 --> 01:02:26,487
+Speaker 1: Well, I do own Slay the Spire on both the Switch and Steam, so...
+
+924
+01:02:27,490 --> 01:02:32,074
+Speaker 0: If you really like spending money to buy a game two times, sure.
+
+925
+01:02:32,475 --> 01:02:34,376
+Speaker 0: Go knock yourself out.
+
+926
+01:02:34,917 --> 01:02:36,799
+Speaker 0: I will always prioritize getting a game.
+
+927
+01:02:36,839 --> 01:02:49,770
+Speaker 0: If a game's on Steam, I'm getting it on Steam because Steam is 20+ years old and no Nintendo eShop has lasted more than like 10 years, so, you know, right?
+
+928
+01:02:51,011 --> 01:02:53,256
+Speaker 1: I'd say there's a 5% chance.
+
+929
+01:02:53,637 --> 01:02:58,470
+Speaker 1: the current iteration of the eShop is the one that'll just persist console to console forever.
+
+930
+01:02:58,830 --> 01:03:03,649
+Speaker 0: There does seem to be some hints that it will continue, but there are no guarantees and history has not...
+
+931
+01:03:04,630 --> 01:03:05,052
+Speaker 1: Hey, I said 5%!
+
+932
+01:03:05,052 --> 01:03:05,454
+Speaker 1: To be clear.
+
+933
+01:03:08,950 --> 01:03:09,170
+Speaker 0: So, yeah.
+
+934
+01:03:09,631 --> 01:03:12,156
+Speaker 0: There is a sale on Cobalt Core on Steam right now.
+
+935
+01:03:12,196 --> 01:03:12,857
+Speaker 0: It is $18 instead of $20.
+
+936
+01:03:12,857 --> 01:03:35,910
+Speaker 0: I would pay $20 no problem, but if you want to save... If you want to save $2, you have 18 hours from the time of this recording to go on Steam and buy a copy of Cobalt Core from developer Rocket Rat Games, who has also made what other games?
+
+937
+01:03:36,450 --> 01:03:39,618
+Speaker 0: Steam had an error and could not tell me what other games that they have made.
+
+938
+01:03:39,959 --> 01:03:40,359
+Speaker 0: Let me try.
+
+939
+01:03:40,420 --> 01:03:40,580
+Speaker 0: Nope!
+
+940
+01:03:40,720 --> 01:03:41,683
+Speaker 0: They still can't tell me.
+
+941
+01:03:41,763 --> 01:03:42,966
+Speaker 0: Let's see what the publisher.
+
+942
+01:03:43,587 --> 01:03:44,730
+Speaker 0: Probably also an error.
+
+943
+01:03:45,050 --> 01:03:45,949
+Speaker 1: Brace yourself, I think?
+
+944
+01:03:46,390 --> 01:03:46,652
+Speaker 0: Yes.
+
+945
+01:03:46,773 --> 01:03:47,801
+Speaker 0: Brace yourself, games.
+
+946
+01:03:47,862 --> 01:03:48,910
+Speaker 0: What else have they published?
+
+947
+01:03:49,275 --> 01:03:50,289
+Speaker 1: Crypt of the Necrodancer.
+
+948
+01:03:51,211 --> 01:03:51,815
+Speaker 0: That's a good one.
+
+949
+01:03:51,835 --> 01:03:53,525
+Speaker 0: Yep, it's just not loading.
+
+950
+01:03:53,585 --> 01:03:54,450
+Speaker 0: Alright, well, whatever.
+
+951
+01:03:57,111 --> 01:04:02,990
+Speaker 0: I give this game on Steam, I give it an extremely positive rating on Steam.
+
+952
+01:04:03,330 --> 01:04:05,156
+Speaker 0: I'd say it's great.
+
+953
+01:04:06,360 --> 01:04:09,170
+Speaker 1: This is where you can't compare a game like this to Breath of the Wild.
+
+954
+01:04:09,690 --> 01:04:13,240
+Speaker 1: But for what this is, this is 10 out of 10 for what it is.
+
+955
+01:04:14,423 --> 01:04:16,830
+Speaker 1: If you like this kind of thing, 10 out of 10, no notes.
+
+956
+01:04:22,001 --> 01:04:24,247
+Speaker 1: This has been Geek Nights with Rim and Scott.
+
+957
+01:04:24,287 --> 01:04:29,280
+Speaker 1: Special thanks to DJ Pretzel for the opening music, Kat Lee for web design, and Brando K for the logos.
+
+958
+01:04:29,660 --> 01:04:34,680
+Speaker 0: Be sure to visit our website at FrontRowCrew.com for show notes, discussion news, and more.
+
+959
+01:04:34,960 --> 01:04:37,627
+Speaker 1: Remember, Geek Nights is not one, but four different shows.
+
+960
+01:04:37,747 --> 01:04:42,360
+Speaker 1: Sci-Tech Mondays, Gaming Tuesdays, Anime Comic Wednesdays, and Indiscriminate Thursdays.
+
+961
+01:04:42,701 --> 01:04:45,876
+Speaker 0: Geek Nights is distributed under a Creative Commons Attribution 3.0 license.
+
+962
+01:04:47,180 --> 01:04:50,230
+Speaker 0: Geek Nights is recorded live with no studio and no audience.
+
+963
+01:04:50,411 --> 01:04:53,300
+Speaker 0: But unlike those other late shows, it's actually recorded at night.
+
+964
+01:04:53,581 --> 01:05:09,820
+Speaker 1: And the Patreon patrons for this episode of Geek Nights are... ...a bunch of people who are under that $5 threshold, which is a totally fine place to be.
+
+965
+01:05:11,201 --> 01:05:12,926
+Speaker 1: Yeah, keep opening.
+
+966
+01:05:13,769 --> 01:05:17,220
+Speaker 1: Bugs, feedback, thoughts about the new website as we continue to tweak this.
+
+967
+01:05:17,920 --> 01:05:22,320
+Speaker 1: This will be the first episode where, theoretically, the forum post will happen automatically.
+
+968
+01:05:22,520 --> 01:05:24,799
+Speaker 1: We don't have to make it by hand, so we'll see what that looks like.
+
+969
+01:05:25,561 --> 01:05:33,760
+Speaker 1: So yeah, I leave you tonight, as I'm about to go play some Blades of the Dark with...
+
+970
+01:05:58,001 --> 01:06:00,979
+Speaker 0: ...do this with our crew, unless the trap's useless if he's not feeling it.
+
+971
+01:06:01,643 --> 01:06:02,931
+Speaker 0: But everyone is feeling it.
+
+972
+01:06:02,971 --> 01:06:04,239
+Speaker 0: Do you even feel stuff right now?
+
+973
+01:06:05,364 --> 01:06:06,699
+Speaker 0: Uh, here we go again.
+
+974
+01:06:07,601 --> 01:06:09,289
+Speaker 0: Hey, what's the matter, fly guy?
+
+975
+01:06:09,330 --> 01:06:10,455
+Speaker 0: Why you tryin' to puff me by?
+
+976
+01:06:10,495 --> 01:06:11,440
+Speaker 1: No need to be shy.
+
+977
+01:06:11,640 --> 01:06:15,219
+Speaker 0: Come give me a try, 'cause I know you can't resist my exotic little vibes.
+
+978
+01:06:15,802 --> 01:06:17,197
+Speaker 0: Marco, you are ruining the plan!
+
+979
+01:06:17,640 --> 01:06:18,809
+Speaker 0: Hold up, it's working.
+
+980
+01:06:19,031 --> 01:06:20,120
+Speaker 0: Look at this wise man.
+
